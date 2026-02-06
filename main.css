@@ -8,6 +8,12 @@
   --color-Furina-aqua-cyan: #6AC6E8;
   --color-Furina-frost-white: #FAFBFC;
   --color-Furina-misty-blue: #C4D7ED;
+  --color-Furina-vivid-sapphire: #5670E9;
+  --color-Furina-luminous-hydro: #70DBFF;
+  --color-Furina-bright-periwinkle: #8DA4F1;
+  --color-Furina-vintage-gold: #CDA368;
+  --color-Furina-vintage-gold-light: #EDC368;
+  --color-Furina-vintage-gold-ultra-light : #FDD368;
 
   --text-color: black;
   --background-color: var(--color-Furina-frost-white);
@@ -19,13 +25,15 @@
   --hover-color-link: rgba(0, 100, 255, .1);
   --target-color: rgb(67, 92, 255);
 
-  --link-color: var(--color-Furina-royal-blue);
+  --link-color: var(--color-Furina-vivid-sapphire);
   --slug-color: var(--color-Furina-aqua-cyan);
   --logo-color: var(--color-Furina-deep-navy);
   --logo-hover-color: #88d;
   --span-taxon-color: #88d;
   --article-taxon-color: #88d;
   --mark-color: rgb(255, 255, 151);
+
+  --marginleft: 28px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -153,7 +161,7 @@ h4 {
 }
 
 h1 {
-  font-weight: 800;
+  font-weight: 700;
   color: #000000;
   margin-bottom: 0;
 }
@@ -161,30 +169,50 @@ h1 {
 h2 {
   font-weight: 750;
   color: #2a2f94;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   border-bottom: 1px solid #88d;
   padding-bottom: 1px; /* 增加底部内边距让横线和文字有间距 */
+}
+
+h2::before {
+  content: "\2726"; /* ✦ 的Unicode转义码 */
+  display: inline-block;
+  margin-right: 0.3em;
+  color: var(--color-Furina-vintage-gold-light);
+  font-weight: normal;
 }
 
 h3 {
   font-weight: 700;
   color: #474bba;
-  margin-bottom: 0;
+  margin-bottom: 5px;
+}
+
+h3::before {
+  content: "\2726"; /* ✦ 的Unicode转义码 */
+  display: inline-block;
+  margin-left: 0.06em;
+  margin-right: 0.36em;
+  color: var(--color-Furina-vintage-gold-ultra-light);
+  font-weight: normal;
 }
 
 h4 {
+  text-indent: var(--marginleft);
   font-weight: 700;
   color: #696cd9;
   margin-bottom: 0;
 }
 
 h5 {
+  text-indent: var(--marginleft);
   font-weight: 700;
   color: #8a8ff4;
   margin-bottom: 0;
 }
 
 h6 {
+  text-indent: var(--marginleft);
   font-weight: 700;
   color: #aaaff4;
   margin-bottom: 0;
@@ -213,6 +241,7 @@ h6 {
 h5,
 h6,
 p {
+  margin-left: var(--marginleft);
   margin-top: 0;
 }
 
@@ -485,4 +514,25 @@ nav#toc a.bullet {
   padding-left: 0.2em;
   padding-right: 0.2em;
   text-decoration: none;
+}
+
+ul {
+    margin: 0 0 0 0;
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 8px;
+    padding-left: 16px;
+    position: relative;
+    color: var(--text-secondary);
+}
+
+ul li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    top: 0;
+    /*color: var(--color-Furina-vintage-gold-ultra-light);*/
+    font-size: 0.9em;
 }
