@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>解析函子</title><link rel="stylesheet" href="./main.css">
+<meta name="viewport" content="width=device-width"><title>解析函子 (多项式函子)</title><link rel="stylesheet" href="./main.css">
 <link rel="stylesheet" href="./typst.css"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
@@ -55,9 +55,10 @@
       minRuleThickness: 0.05,
     });
   });
-</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="解析函子"><header><h1><span class="taxon">Wiki. </span>解析函子 <a class="slug" href="./解析函子.html">[解析函子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>解析函子是解析函数的<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>.</p>
-<p>解析函子 $\mathsf{Ani}_{/X}\to \mathsf{Ani}_{/Y}$ 均可写成 $t_! p_* s^*$ 的形式, 其中 $t,p,s$ 如下图, 且 $p$ 的纤维有限而离散:
+</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="解析函子"><header><h1><span class="taxon">Wiki. </span>解析函子 (多项式函子) <a class="slug" href="./解析函子.html">[解析函子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><strong>解析函子</strong> (<strong>多项式函子</strong>) 是解析函数 (多项式) 的<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>.</p>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./LCCC.html" title="局部积闭范畴 [LCCC]">局部积闭范畴</a></span>.</p>
+<p>解析函子 $\mathcal C_{/X}\to \mathcal C_{/Y}$ 均可写成 $t_! p_* s^*$ 的形式, 其中 $t,p,s$ 如下图, 且 $p$ 的纤维有限而离散:
 $$
 X \overset{s}{\leftarrow} E \overset{p}{\rightarrow} B \overset{t}{\rightarrow} Y
 $$
@@ -66,8 +67,8 @@ $t_!$ 是 $t^*$ 的左伴随, $p_*$ 是 $p^*$ 的右伴随.
 <ul>
 <li>$s^*$ 是在每个 $e\in E$ 上放一个来自 $X$ 的东西,</li>
 <li>$p_*$ 是对每个 $b \in B$ 将 $b$ 上的一堆<strong>有限个</strong>东西相乘 (见<span class="link local"><a href="./依值积.html" title="依值积 [依值积]">依值积</a></span>),</li>
-<li>$t_!$ 是对每个 $y\in Y$ 将 $y$ 上的一堆东西相加 (见<span class="link local"><a href="./依值和.html" title="依值和 [依值和]">依值和</a></span>)</li>
-<li>因此 $t_! p_* s^*$ 就是 “拿 $X$ 个不同的东西, 每个可以拿多份, 共有 $E$ 份; 然后将这 $E$ 份分成 $B$ 组, 每组有限个; 将每一组乘起来, 将这 $B$ 个乘积再分成 $Y$ 组, 每一组加起来”. 这正是<strong>解析函数</strong>的直观.</li>
+<li>$t_!$ 是对每个 $y\in Y$ 将 $y$ 上的一堆东西相加 (见<span class="link local"><a href="./依值和.html" title="依值和 [依值和]">依值和</a></span>);</li>
+<li>因此 $t_! p_* s^*$ 就是 “拿 $X$ 个不同的东西, 每个可以拿多份, 共有 $E$ 份; 然后将这 $E$ 份分成 $B$ 组, 每组有限个; 将每一组乘起来, 将这 $B$ 个乘积再分成 $Y$ 组, 每一组加起来”. 这正是解析函数 (多项式) 的直观.</li>
 </ul>
 </details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>解析单子 <a class="slug" href="./解析单子.html">[解析单子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
 
