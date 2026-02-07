@@ -58,7 +58,7 @@
 </script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="多项式函子"><header><h1><span class="taxon">Wiki. </span>多项式函子 <a class="slug" href="./多项式函子.html">[多项式函子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <h2>定义</h2>
-<p>设 $\mathcal C$ 为<span class="link local"><a href="./LCCC.html" title="局部积闭范畴 [LCCC]">局部积闭范畴</a></span> (如<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>).
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./LCCC.html" title="局部积闭范畴 [LCCC]">局部积闭范畴</a></span> (如<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>), 固定两个对象 $X,Y\in\mathcal C$.
 定义<strong>多项式函子</strong> $\mathcal C_{/X}\to \mathcal C_{/Y}$ 为形如 $t_! p_* s^*$ 的函子, 其中 $t,p,s$ 如下图:
 $$
 X \overset{s}{\leftarrow} E \overset{p}{\rightarrow} B \overset{t}{\rightarrow} Y
@@ -71,6 +71,36 @@ $t_!$ 是 $t^*$ 的左伴随, $p_*$ 是 $p^*$ 的右伴随.
 <li>$t_!$ 是对每个 $y\in Y$ 将 $y$ 上的一堆东西相加 (见<span class="link local"><a href="./依值和.html" title="依值和 [依值和]">依值和</a></span>);</li>
 <li>因此 $t_! p_* s^*$ 就是 “拿 $X$ 个不同的东西, 每个可以拿多份, 共有 $E$ 份; 然后将这 $E$ 份分成 $B$ 组, 每组有限个; 将每一组乘起来, 将这 $B$ 个乘积再分成 $Y$ 组, 每一组加起来”. 这正是<strong>多项式</strong>的直观, 只是这里每一项的 “次数” 以及 “项数” 都未必有限.</li>
 </ul>
+<h2>性质</h2>
+<h3>复合</h3>
+<p>多项式的重要性质是: 多项式的<strong>复合</strong>仍是多项式. 多项式函子也是如此.</p>
+<p>文献中记载着一种使用巨大交换图的证明 (见 <span class="link local"><a href="./GHK-analytic-monads.html" title="∞-Operads as Analytic Monads [GHK-analytic-monads]">Gepner–Haugseng–Kock</a></span> 定理 2.1.8), 但我们使用一种类似于<span class="link local"><a href="./依值类型论.html" title="依值类型论 [依值类型论]">依值类型论</a></span>的表述, 这样似乎更直观, 因为在语法的形式上, 它和 “多项式的复合仍是多项式” 的证明完全一致. 实际上这和那个巨大交换图证明说的是同一件事.</p>
+<p>首先, 将图 $X \overset{s}{\leftarrow} E \overset{p}{\rightarrow} B \overset{t}{\rightarrow} Y$ 给出的多项式函子记为
+$$
+A(x) \mapsto \sum_{b\in t^{-1}(y)} \prod_{e\in p^{-1}(b)} A(s(e)).
+$$
+现设有两个图</p>
+<ul>
+<li>$X \overset{s}{\leftarrow} E \overset{p}{\rightarrow} B \overset{t}{\rightarrow} Y$,</li>
+<li>$Y \overset{u}{\leftarrow} F \overset{q}{\rightarrow} C \overset{v}{\rightarrow} Z$.</li>
+</ul>
+<p>那么两个多项式函子的复合为
+$$
+A(x) \mapsto \sum_{c\in v^{-1}(z)} \prod_{f\in q^{-1}(c)}  \sum_{b\in t^{-1}(u(f))} \prod_{e\in p^{-1}(b)} A(s(e)).\,\,\,\,\,(\star)
+$$
+我们的想法是将中间的 “和的积” 展开为 “积的和”, 从而将 $\Sigma\Pi\Sigma\Pi$ 化简为 $\Sigma\Sigma\Pi\Pi$, 再化简为 $\Sigma\Pi$.
+$$
+\begin{aligned}
+&amp;\prod_{f\in q^{-1}(c)}\sum_{b\in t^{-1}(u(f))} B(b)\\
+&amp;=\sum_{g\colon (f: q^{-1}(c))\to t^{-1}(u(f))}\prod_{f\in q^{-1}(c)}B(g(f)),
+\end{aligned}
+$$
+其中 $(f: q^{-1}(c))\to t^{-1}(u(f))$ 是<span class="link local"><a href="./依值积.html" title="依值积 [依值积]">依值积</a></span>类型 $\prod_{f: q^{-1}(c)}t^{-1}(u(f))$ 的简写.
+于是 $(\star)$ 的右端等于
+$$
+\sum_{c\in v^{-1}(z),g\colon (f: q^{-1}(c))\to t^{-1}(u(f))}\prod_{f\in q^{-1}(c), e\in p^{-1}(g(f))} A(s(e)).
+$$
+这便证明了它是多项式函子.</p>
 </details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>解析函子 (算畴理论) <a class="slug" href="./解析函子.html">[解析函子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
 
 </div></body></html>
