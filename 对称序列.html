@@ -58,15 +58,17 @@
 </script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="对称序列"><header><h1><span class="taxon">Wiki. </span>对称序列 <a class="slug" href="./对称序列.html">[对称序列]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>对称序列是一种可用于定义<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的结构.</p>
+<p>对称序列可视为<span class="link local"><a href="./解析函子.html" title="解析函子 (算畴理论) [解析函子]">多项式函子</a></span>的 “系数”, 对称序列上有一个幺半结构和一个对称幺半结构, 分别对应多项式函子的复合与乘积.</p>
 <h2>定义</h2>
-<p>考虑有限集合与双射构成的范畴 $\mathsf{Fin}^{\simeq}$, 配备无交并构成对称幺半范畴. (它是由一个对象生成的自由对称幺半范畴.)</p>
+<p>考虑有限集合与双射构成的范畴 $\mathsf{Fin}^{\simeq}$, 配备无交并构成对称幺半范畴. 它是由一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>对称幺半范畴. 它也是所有有限对称群的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>的无交并:
+$$
+\mathsf{Fin}^{\simeq} \simeq \bigsqcup_{n\geq 0} \mathbf{B}S_n.
+$$</p>
 <p><span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半范畴</a></span> $\mathcal C$ 中的对称序列是函子
 $$
 \mathsf{Fin}^{\simeq} \to \mathcal C.
 $$</p>
-<p>更直白地说,
-一个对称序列就是一列 $\Sigma_n$-表示.
-(群 $G$ 在 $\mathcal C$ 的对象上的表示就是 $\mathbf{B}G$ 到 $\mathcal C$ 的函子).</p>
+<p>给出一个对称序列就是对每个 $n$ 给出对称群 $S_n$ 的一个<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">表示</a></span>.</p>
 <h2>性质</h2>
 <h3>对称幺半结构</h3>
 <p>设对称幺半范畴 $\mathcal C$ 具有<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>, 且 $X\otimes -$ 保持余积. 那么对称序列上还有一个由 <span class="link local"><a href="./Day卷积.html" title="Day 卷积 [Day卷积]">Day 卷积</a></span>给出的对称幺半结构; 具体地,
@@ -74,7 +76,8 @@ $$
 (X\otimes Y)_n = \bigsqcup_{p+q=n} \operatorname{Ind}_{\Sigma_p\times\Sigma_q}^{\Sigma_n} (X_p\otimes Y_q).
 $$
 其中 $\operatorname{Ind}$ 是沿 $\Sigma_p\times \Sigma_q\hookrightarrow\Sigma_n$ 的 <span class="link local"><a href="./诱导表示.html" title="诱导表示 [诱导表示]">诱导表示</a></span>, 即限制表示的左伴随.</p>
-<h3>线性空间的对称序列</h3>
+<h3>泛性质</h3>
+<p>todo: 自由对称幺半充实范畴</p>
 <p>固定一个域 $k$, 记 $\mathsf{Vect}$ 为 $k$-线性空间范畴的<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>. $\mathsf{Vect}$ 中的对称序列构成的范畴是
 $$
 \mathsf{Vect}^\Sigma:= \mathsf{Fun}(\mathsf{Fin}^{\simeq},\mathsf{Vect}) \simeq \prod_{n\geq 1} \mathsf{Rep}(\Sigma_n).
@@ -83,6 +86,12 @@ $$
 $$
 \mathsf{Vect}^\Sigma \simeq \mathsf{Fun}^{\text{SymMon}}(\mathsf{Vect}^\Sigma,\mathsf{Vect}^\Sigma) \simeq \operatorname{End}(U).
 $$</p>
+<h3>与自函子的关系</h3>
+<p>设 $\mathcal C$ 为幺半范畴, 有合适的余极限. 那么对称序列 $A \colon \mathsf{Fin}^{\simeq}\to\mathcal C$, 给出自函子 $\mathcal C\to\mathcal C$,
+$$
+X\mapsto \bigsqcup_{n\geq 0} A(n)\otimes_{S_n}X^{\otimes n} = \int_{\mathsf{Fin}^{\simeq}}A(n)\otimes X^{\otimes n}.
+$$
+且该函子为<span class="link local"><a href="./解析函子.html" title="解析函子 (算畴理论) [解析函子]">解析函子</a></span>.</p>
 </details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>算畴 <a class="slug" href="./算畴.html">[算畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
 
 </div></body></html>
