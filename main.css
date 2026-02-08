@@ -17,6 +17,7 @@
 
   --text-color: black;
   --background-color: var(--color-Furina-frost-white);
+  --block-background-color : #FFFFFF;
   --shadow-color: rgba(27, 63, 143, 0.05);
 
   --background-color-pre: rgba(0, 100, 100, 0.04);
@@ -42,8 +43,12 @@
     --text-color: white;
     --background-color: #2f2f2f;
 
+    --color-Furina-deep-navy: #B5C0F5;
+    --color-Furina-royal-blue: #D6EBFF;
+
     --background-color-pre: rgba(100, 100, 100, 0.2);
     --background-color-code: rgba(150, 150, 150, 0.2);
+    --block-background-color: #3a3a3a;
 
     --hover-color-block: rgba(100, 162, 255, 0.00);
     --hover-color-link: rgba(100, 162, 255, .2);
@@ -163,13 +168,12 @@ h4 {
 
 h1 {
   font-weight: 700;
-  color: #000000;
   margin-bottom: 0;
 }
 
 h2 {
   font-weight: 750;
-  color: #2a2f94;
+  color: var(--color-Furina-deep-navy);
   margin-bottom: 10px;
   border-bottom: 1px solid #88d;
   padding-bottom: 1px; /* 增加底部内边距让横线和文字有间距 */
@@ -185,7 +189,7 @@ h2::before {
 
 h3 {
   font-weight: 700;
-  color: #474bba;
+  color: var(--color-Furina-royal-blue);
   margin-bottom: 5px;
 }
 
@@ -326,7 +330,7 @@ section.block>details[open] {
 .block {
   /* width: fit-content; */
   border-radius: var(--radius);
-  background-color: #FFFFFF;
+  background-color: var(--block-background-color);
   box-shadow: 0 2px 12px var(--shadow-color);
 }
 
