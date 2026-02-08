@@ -57,6 +57,7 @@
   });
 </script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="多项式函子"><header><h1><span class="taxon">Wiki. </span>多项式函子 <a class="slug" href="./多项式函子.html">[多项式函子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
+<p><strong>多项式函子</strong>是多项式函数 (形式幂级数) 的<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>. 另见<span class="link local"><a href="./解析函子.html" title="解析函子 (算畴理论) [解析函子]">解析函子</a></span>.</p>
 <h2>定义</h2>
 <p>设 $\mathcal C$ 为<span class="link local"><a href="./LCCC.html" title="局部积闭范畴 [LCCC]">局部积闭范畴</a></span> (如<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>), 固定两个对象 $X,Y\in\mathcal C$.
 定义<strong>多项式函子</strong> $\mathcal C_{/X}\to \mathcal C_{/Y}$ 为形如 $t_! p_* s^*$ 的函子, 其中 $t,p,s$ 如下图:
@@ -69,8 +70,9 @@ $t_!$ 是 $t^*$ 的左伴随, $p_*$ 是 $p^*$ 的右伴随.
 <li>$s^*$ 是在每个 $e\in E$ 上放一个来自 $X$ 的东西,</li>
 <li>$p_*$ 是对每个 $b \in B$ 将 $b$ 上的一堆东西相乘 (见<span class="link local"><a href="./依值积.html" title="依值积 [依值积]">依值积</a></span>),</li>
 <li>$t_!$ 是对每个 $y\in Y$ 将 $y$ 上的一堆东西相加 (见<span class="link local"><a href="./依值和.html" title="依值和 [依值和]">依值和</a></span>);</li>
-<li>因此 $t_! p_* s^*$ 就是 “拿 $X$ 个不同的东西, 每个可以拿多份, 共有 $E$ 份; 然后将这 $E$ 份分成 $B$ 组, 每组有限个; 将每一组乘起来, 将这 $B$ 个乘积再分成 $Y$ 组, 每一组加起来”. 这正是<strong>多项式</strong>的直观, 只是这里每一项的 “次数” 以及 “项数” 都未必有限.</li>
+<li>因此 $t_! p_* s^*$ 就是 “拿 $X$ 个不同的东西, 每个可以拿多份, 共有 $E$ 份; 然后将这 $E$ 份分成 $B$ 组; 将每一组乘起来, 将这 $B$ 个乘积再分成 $Y$ 组, 每一组加起来”. 这正是<strong>多项式</strong>的直观, 只是这里每一项的 “次数” 以及 “项数” 都未必有限.</li>
 </ul>
+<p>注. 当 $p\colon E\to B$ 的纤维离散且有限时, 所得的多项式函子是<span class="link local"><a href="./解析函子.html" title="解析函子 (算畴理论) [解析函子]">解析函子</a></span>.</p>
 <h2>性质</h2>
 <h3>复合</h3>
 <p>多项式的重要性质是: 多项式的<strong>复合</strong>仍是多项式. 多项式函子也是如此.</p>
