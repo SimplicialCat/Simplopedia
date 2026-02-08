@@ -3,17 +3,17 @@
   --content-gap: 15px;
   --radius: 5px;
 
-  --color-Furina-deep-navy: #253055;
-  --color-Furina-royal-blue: #465BAF;
+  --color-Furina-deep-navy: #253085;
+  --color-Furina-royal-blue: #465BCF;
   --color-Furina-aqua-cyan: #6AC6E8;
   --color-Furina-frost-white: #FAFBFC;
   --color-Furina-misty-blue: #C4D7ED;
   --color-Furina-vivid-sapphire: #5670E9;
   --color-Furina-luminous-hydro: #70DBFF;
   --color-Furina-bright-periwinkle: #8DA4F1;
-  --color-Furina-vintage-gold: #CDA368;
-  --color-Furina-vintage-gold-light: #EDC368;
-  --color-Furina-vintage-gold-ultra-light : #FDD368;
+  --color-Furina-vintage-gold: #BD9368;
+  --color-Furina-vintage-gold-light: #DDB368;
+  --color-Furina-vintage-gold-ultra-light : #FDF388;
 
   --text-color: black;
   --background-color: var(--color-Furina-frost-white);
@@ -183,7 +183,32 @@ h2::before {
   content: "\2726"; /* ✦ 的Unicode转义码 */
   display: inline-block;
   margin-right: 0.3em;
-  color: var(--color-Furina-vintage-gold-light);
+  /*color: var(--color-Furina-vintage-gold-light);*/
+  /* 替换 color 属性，改为以下背景和裁剪属性 */
+  background: linear-gradient(
+    150deg,
+    var(--color-Furina-vintage-gold-ultra-light) 30%,
+    var(--color-Furina-vintage-gold-light) 60%,
+    var(--color-Furina-vintage-gold) 90%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* 将文字颜色设为透明以显示背景 */
+  /* 组合径向渐变（中心高光）和线性渐变（基础色调） */
+  /*background: radial-gradient(
+      ellipse at center,
+      var(--color-Furina-vintage-gold-ultra-light) 20%,
+      transparent 70%
+    ),
+    linear-gradient(
+      to bottom,
+      var(--color-Furina-vintage-gold-light),
+      var(--color-Furina-vintage-gold)
+    );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; */
+  filter: drop-shadow(0px 1px 1px rgba(184, 150, 131, 0.5)); /* 可选：增加与主色呼应的柔和投影 */
   font-weight: normal;
 }
 
@@ -198,7 +223,16 @@ h3::before {
   display: inline-block;
   margin-left: 0.06em;
   margin-right: 0.36em;
-  color: var(--color-Furina-vintage-gold-ultra-light);
+  /*color: var(--color-Furina-vintage-gold-ultra-light);*/
+  background: linear-gradient(
+    150deg,
+    var(--color-Furina-vintage-gold-ultra-light) 20%,
+    var(--color-Furina-vintage-gold-light) 90%,
+    var(--color-Furina-vintage-gold) 95%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   font-weight: normal;
 }
 
@@ -533,7 +567,7 @@ ul li {
     margin-bottom: 8px;
     padding-left: 16px;
     position: relative;
-    color: var(--text-secondary);
+    /*color: var(--text-secondary);*/
 }
 
 ul li::before {
