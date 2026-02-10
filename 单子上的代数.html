@@ -71,9 +71,9 @@ TX &amp; \to &amp; X.
 \end{array}
 $$
 其中两个映射 $TTX \to TX$ 分别来自 $T$ 带有的自然变换 $T^2\to T$ 以及 $X$ 带有的态射 $TX\to X$.</p>
-<p>更一般地, 对范畴 $I$, 函子范畴 $\mathsf{Fun}(I,\mathcal C)$ 也是 $\operatorname{End}(\mathcal C)$ 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>, 从而可以定义 $X\colon I\to\mathcal C$ 上的 $T$-<strong>左模</strong> (或称 $T$-代数) 结构.</p>
+<p>更一般地, 对范畴 $I$, 函子范畴 $\mathsf{Fun}(I,\mathcal C)$ 也是 $\operatorname{End}(\mathcal C)$ 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>, 从而可以定义 $X\colon I\to\mathcal C$ 上的 $T$-<strong>左模</strong> (或称 $T$-代数) 结构. 它包含一个自然变换 $TX \to X$ 以及左模的条件.</p>
 <h3>右模, 双模</h3>
-<p>另一个概念是单子上的<strong>右模</strong>. 对范畴 $J$, 函子范畴 $\mathsf{Fun}(\mathcal C,J)$ 是 $\operatorname{End}(\mathcal C)$ 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">右模</a></span>, 从而可以定义 $Y\colon \mathcal C\to J$ 上的 $T$-<strong>右模</strong>结构.</p>
+<p>另一个概念是单子上的<strong>右模</strong>. 对范畴 $J$, 函子范畴 $\mathsf{Fun}(\mathcal C,J)$ 是 $\operatorname{End}(\mathcal C)$ 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">右模</a></span>, 从而可以定义 $Y\colon \mathcal C\to J$ 上的 $T$-<strong>右模</strong>结构. 它包含一个自然变换 $YT \to Y$, 以及右模的条件.</p>
 <p>进一步, 对于两个范畴 $\mathcal C,\mathcal D$, $\mathcal C$ 上的单子 $T$ 与 $\mathcal D$ 上的单子 $S$, 定义 $(T,S)$-<strong>双模</strong>为函子 $X\colon \mathcal D\to\mathcal C$, 同时具有相容的 $T$-左模和 $S$-右模结构, 即有如下交换图.
 $$
 \begin{array}
@@ -86,6 +86,8 @@ $$</p>
 <h2>性质</h2>
 <h3>自由–遗忘伴随</h3>
 <p>对于 $\mathcal C$ 上的单子 $T$, 记 $\mathcal C^T$ 为 $\mathcal C$ 中 $T$-代数的范畴, $U\colon \mathcal C^T\to\mathcal C$ 为遗忘函子, 其左伴随 (“自由 $T$-代数” 函子) 为 $F\colon \mathcal C\to\mathcal C^T$, $F(X) = TX$. 这对伴随给出 $\mathcal C^T$ 上的<span class="link local"><a href="./余单子.html" title="余单子 [余单子]">余单子</a></span> $FU$ (见<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">伴随给出单子</a></span>).</p>
+<h3>杠构造</h3>
+<p>类似于给定结合代数 $A$ 上的右模 $M$ 和左模 $N$ 可作相对张量积 $M\otimes_A N$, 给定单子 $T$ 上的右模和左模也可作 “相对张量积”, 见<span class="link local"><a href="./双边杠构造.html" title="双边杠构造 [双边杠构造]">双边杠构造</a></span>.</p>
 <h2>例</h2>
 <h3>伴随的典范模结构</h3>
 <p>对于函子 $F\colon \mathcal C\to\mathcal D$, $G\colon \mathcal D\to\mathcal C$ 之间的一对<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $F\dashv G$ <span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span> $T= GF$,</p>

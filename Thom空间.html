@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>“Thom 空间”</title><link rel="stylesheet" href="./main.css">
+<meta name="viewport" content="width=device-width"><title>Thom 空间</title><link rel="stylesheet" href="./main.css">
 <link rel="stylesheet" href="./typst.css"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
@@ -55,23 +55,34 @@
       minRuleThickness: 0.05,
     });
   });
-</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="Thom空间"><header><h1><span class="taxon">Wiki. </span>“Thom 空间” <a class="slug" href="./Thom空间.html">[Thom空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>#代数拓扑</p>
+</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="Thom空间"><header><h1><span class="taxon">Wiki. </span>Thom 空间 <a class="slug" href="./Thom空间.html">[Thom空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Thom 空间是一种由<span class="link local"><a href="./向量丛.html" title="向量丛 [向量丛]">向量丛</a></span> “扭曲” 的<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span>.</p>
+<p>另见 <span class="link local"><a href="./Thom谱.html" title="Thom 谱 [Thom谱]">Thom 谱</a></span>.</p>
 <h2>定义</h2>
-<p>对于空间 $X$ 上的向量丛 $V$, 定义其 Thom 空间为商空间
+<p>对于空间 $X$ 上的向量丛 $\xi\colon V\to X$, 定义其 Thom 空间为<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>
 $$
-\operatorname{Thom}(X,V)=D(V)/S(V),
+X^\xi := \operatorname{cofiber} (V\setminus X \hookrightarrow V)\simeq \operatorname{cofiber}(S(V)\hookrightarrow D(V)),
 $$
 其中 $D(V)$, $S(V)$ 分别为圆盘丛与球丛.</p>
 <h2>性质</h2>
+<h3>函子性</h3>
+<p>对于映射 $f\colon Y\to X$ 与 $X$ 上的向量丛 $\xi$, 有自然的映射
+$$
+Y^{f^*\xi} \to X^\xi.
+$$</p>
+<h3>幺半性</h3>
+<p>设 $\xi\boxplus\eta\colon V\times W\to X\times Y$ 为两个向量丛的外直和, 则
+$$
+(X\times Y)^{\xi\boxplus\eta} \simeq X^\xi\wedge Y^\eta.
+$$</p>
+<h3>稳定性</h3>
 <p>$$
-\operatorname{Thom}(X\times Y,V\times W) = \operatorname{Thom}(X,V)\wedge \operatorname{Thom}(Y,W).
-$$
-$$
-\operatorname{Thom}(X,V\oplus\mathbb{R}^n) = \Sigma^n\operatorname{Thom}(X,V).
-$$
-$$
-\operatorname{Thom}(X,\mathbb{R}^n) = \Sigma^n X_+.
+X^{\xi\oplus\mathbb{R}^n} = \Sigma^n X^\xi.
+$$</p>
+<h3>平凡丛的 Thom 空间</h3>
+<p>$$
+X^{\mathbb{R}^n} = \Sigma^n X.
 $$</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Thom谱.html" title="Thom 谱 [Thom谱]">Thom 谱</a></span>, <span class="link local"><a href="./广义上同调中的定向.html" title="“广义上同调中的定向” [广义上同调中的定向]">广义上同调中的定向</a></span></p>
