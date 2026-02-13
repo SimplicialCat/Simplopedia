@@ -79,23 +79,12 @@ $$
 困难并不在于人的智力不能理解代数的定义, 而在于他们长久以来的信念的动摇: 原来我所认识的这个数的系统不是唯一存在的, 唯一合理的数的系统; 事实恰恰相反, 这种系统要多少就有多少. 例如在一个代数中, 我们可以随心所欲地加入一个满足指定的代数方程的元素. 回想历史上人们对虚数 $i$ 的引入曾产生多么大的抵触: 在实数中加入一个满足 $i^2 = -1$ 的元素, 而这个方程在实数中没有任何道理.
 人们不是不能对这个方程进行运算, 而是不能接受自古以来熟悉的系统, 实数的代数 $\mathbb{R}$, 被外来者污染, 以至于失去它不可撼动的地位.</p>
 <p>当然, 现在的人们早已不再对各式各样的代数产生恐慌. 复代数几何的基础 $\mathbb{C}$, $p$-进几何的基础 $\mathbb{Z}_p$, 已经是每一个数学家如数家珍的代数对象. 人们研究的代数中的运算也不断丰富, Lie 代数, Poisson 代数, Hopf 代数, … 这些结构在各自的领域中发光发热.</p>
-<p>让我们总结从研究实数的运算到研究抽象代数发生的观念转变:</p>
+<p>总结从研究实数的运算到研究抽象代数发生的观念转变:</p>
 <ul>
 <li>一个<strong>代数</strong>是一个带有结构的<strong>集合</strong>, “实数” 不过是那个特殊的代数 $\mathbb{R}$ 的元素;</li>
 <li>通过<strong>四则运算</strong>, 我们不仅是在研究实数的规律, 而且可以研究任何代数中的规律, 不依赖于这些集合中元素的具体形式.</li>
 </ul>
-<p>如果读者已经完全理解了到此为止的论述, 那么现在我要提升一个叫做范畴层级的东西了.</p>
-<table><thead><tr><th>范畴层级</th><th>0</th><th>1</th></tr></thead><tbody>
-<tr><td>对象</td><td>实数</td><td>集合</td></tr>
-<tr><td>语言</td><td>四则运算</td><td><span class="link local"><a href="./一阶语言.html" title="一阶语言与一阶逻辑 [一阶语言]">一阶语言</a></span></td></tr>
-<tr><td>全体对象</td><td>实数的全体 $\mathbb{R}$</td><td>集合的全体 $\mathsf{Set}$</td></tr>
-<tr><td>抽象概念</td><td>代数 <br> = 带结构的集合</td><td><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> <br> = 带结构的范畴</td></tr>
-</tbody></table>
-<p><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴</a></span>是集合概念的某种推广; 范畴中有<strong>对象</strong>, 正如集合中有元素; 但不同在于集合中的元素只有相等或不相等两种关系, 而范畴中的对象可以有多种且不对称的关系, 称为<strong>态射</strong>.</p>
-<p>最经典的范畴是集合的范畴: 其中对象为集合, 态射 $X\to Y$ 为集合之间的映射.</p>
-<p>一般说的范畴的概念又称为 $1$-范畴, 它处在一个无穷高的阶梯的第 $1$ 层; 而集合的概念在第 $0$ 层, 集合又可称为 $0$-范畴. 我们发现全体 $0$-范畴构成一个 $1$-范畴; 事实上全体 $n$-范畴也构成一个 $(n+1)$-范畴, 这个无穷高的阶梯中每一层的对象的全体构成上一层的一个最基本的对象.</p>
-<p>范畴的对象之间也可以谈论相等, 但区别在于两个对象之间可能有多种不同方式相等, 甚至一个对象和自身也可能有多种不同方式相等, 这称为<strong>对称性</strong>. (题外话: 可以说这是范畴层级的提升带来的麻烦, 但我更倾向于反过来说: 这是限制范畴层级造成的虚妄的便利. 一切用于表示 “一类事物的全体” 的概念本来就该是<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>或<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>, 然后在上面附加<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断性</a></span>得到各种特殊的概念.)</p>
-<p>让我们看看集合范畴 $\mathsf{Set}$ 的性质. 它不是一个赤裸的范畴, 正如 $\mathbb{R}$ 不是一个赤裸的集合. 它的对象 (也就是集合) 之间有加法 $+$ 和乘法 $\times$ 的运算:
+<p>现在提升一个范畴层级, 看看集合范畴 $\mathsf{Set}$ 的性质. 它不是一个赤裸的范畴, 正如 $\mathbb{R}$ 不是一个赤裸的集合. 它的对象 (也就是集合) 之间有加法 $+$ 和乘法 $\times$ 的运算:
 $A+B$ 是两个集合的无交并, 其元素为 $l(a)$ 或 $r(b)$; $A\times B$ 是两个集合的积, 其元素为 $(a,b)$. 加法和乘法都有交换律, 结合律: $A+B\simeq B+A$, $(A+B)+C\simeq A+(B+C)$ 等等. 乘法对加法有分配律: $A\times (B+C) \simeq A\times B + A\times C$. 由此可得
 $$
 (A+B)^2 \simeq A^2 + 2 \times A\times B + B^2.
@@ -111,8 +100,9 @@ $$
 $$
 由此可见, 只要一个范畴中具有拉回, 那么 $\{a\in A\mid f(a) = b\}$ 这样的表达式就有意义, 而不需要对象 $A$ 真的是由一个一个的元素组成.</p>
 <p>经过如此多的铺垫, 如果我现在告诉读者, 我们自古以来熟悉的这个集合范畴, 并不是唯一存在的, 唯一合理的 “集合的范畴”, 我们使用的数学语言描述的不一定是集合, 而可能是任何适当结构的范畴的对象, 不知读者是否还会像只熟悉实数的古人见到虚数那样感到恐慌.</p>
+<p>更关键的是, 我们很多时候不需要关心范畴中的对象的具体构造, 这便是综合数学的核心观念; 这种观念无非是抽象代数的核心观念的一次范畴化.</p>
 <p>将集合范畴 $\mathsf{Set}$ 的性质抽象出来, 得到一种允许通常数学语言在其中获得语义的范畴的概念, 这就是<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>.</p>
-<p>我将说明: 在以<span class="link local"><a href="./意象理论.html" title="意象理论 [意象理论]">意象理论</a></span>为主要表现方式的<span class="link local"><a href="./综合数学.html" title="综合数学 [综合数学]">综合数学</a></span>中,</p>
+<p>在以<span class="link local"><a href="./意象理论.html" title="意象理论 [意象理论]">意象理论</a></span>为主要表现方式的<span class="link local"><a href="./综合数学.html" title="综合数学 [综合数学]">综合数学</a></span>中,</p>
 <ul>
 <li>一个<strong></strong><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>是一个带有结构的<strong>范畴</strong>, “集合” 不过是那个最基本的意象 $\mathsf{Set}$ 的对象;</li>
 <li>通过<strong></strong><span class="link local"><a href="./一阶语言.html" title="一阶语言与一阶逻辑 [一阶语言]">一阶逻辑</a></span>, 我们不仅是在研究集合的规律, 而且可以研究任何<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>中的规律, 不依赖于这些范畴中对象的具体形式.</li>
@@ -124,7 +114,15 @@ $$
 D = \{x\in R \mid x^2 = 0\}.
 $$
 一条重要的公理是: 对任意函数 $f\colon D\to R$, 存在唯一的 $a,b\in R$ 满足对任意 $d\in D$, 有 $f(d) = ad+b$. 对任意 “集合” $M$, 定义其切向量为映射 $v\colon D \to M$; 定义 $M$ 的切丛为 $M^D \to M,v\mapsto v(0)$. 微分几何最重要的概念就这样产生了.</p>
-<p>如果认为上述理论谈论的是普通的集合范畴, 就会发现它简直是天方夜谭. 实直线上平方为零的元素只有 $0$, 又怎能表达切向量这样的概念呢?</p>
+<p>如果认为上述理论谈论的是普通的集合范畴, 就会发现它简直是天方夜谭. 实直线上平方为零的元素只有 $0$, 又怎能表达切向量这样的概念呢? 感兴趣的读者可以进一步阅读<span class="link local"><a href="./SDG-notes.html" title="综合微分几何讲稿 [SDG-notes]">综合微分几何讲稿</a></span>. 结论是, 我们应当认为综合微分几何谈论的是一种满足特定条件的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>中的对象. 综合数学的每一个分支, 都可视为对所讨论的意象作某种约束. 任何一个满足约束的意象都可以作为这个学科的模型, 而这个学科所产生的定理在所有模型中同样成立.</p>
+<p>最后让我用一个表格总结本文.</p>
+<table><thead><tr><th>范畴层级</th><th>0</th><th>1</th></tr></thead><tbody>
+<tr><td>对象</td><td>实数</td><td>集合</td></tr>
+<tr><td>语言</td><td>四则运算</td><td><span class="link local"><a href="./一阶语言.html" title="一阶语言与一阶逻辑 [一阶语言]">一阶语言</a></span></td></tr>
+<tr><td>全体对象</td><td>实数的全体 $\mathbb{R}$</td><td>集合的全体 $\mathsf{Set}$</td></tr>
+<tr><td>抽象概念</td><td>代数 <br> = 带结构的集合</td><td><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> <br> = 带结构的范畴</td></tr>
+<tr><td>约束</td><td>代数方程</td><td>公理</td></tr>
+</tbody></table>
 </details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="notion" style="margin-bottom: 0.4em;"><header><h1><span class="taxon"><span class="link local"><a href="./notion.html" title="观念 [notion]">notion</a></span></span>综合数学 <a class="slug" href="./综合数学.html">[综合数学]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
 
 </div></body></html>
