@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width"><title>综合微分几何 (4.5) Weil 代数与形式平展性</title><link rel="stylesheet" href="./main.css">
+<link rel="stylesheet" href="./typst.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    font-family: "Inria Sans", sans-serif;
+  }
+
+  pre,
+  code {
+    font-family: monospace;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Inria Sans", sans-serif;
+  }
+
+  nav {
+    font-family: "Inria Sans", sans-serif;
+  }
+
+  thead {
+    font-family: "Inria Sans", sans-serif;
+  }
+</style><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"
+  integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"
+  integrity="sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+  integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"
+  integrity="sha384-HORx6nWi8j5/mYA+y57/9/CZc5z8HnEw4WUZWy5yOn9ToKBv1l58vJaufFAn9Zzi" crossorigin="anonymous"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+        { left: '\\(', right: '\\)', display: false },
+        { left: '\\[', right: '\\]', display: true }
+      ],
+      strict: false,
+      throwOnError: false,
+      minRuleThickness: 0.05,
+    });
+  });
+</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="notes"><details open><summary id="SDG-4-Weil"><header><h1><span class="taxon"><span class="link local"><a href="./notes.html" title="讲稿, 笔记 [notes]">notes</a></span></span>综合微分几何 (4.5) Weil 代数与形式平展性 <a class="slug" href="./SDG-4-Weil.html">[SDG-4-Weil]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><p>主目录: <span class="link local"><a href="./SDG-notes.html" title="综合微分几何讲稿 [SDG-notes]">综合微分几何讲稿</a></span></p>
+<h2>谱</h2>
+<p>在数学上, 一个代数的谱是一个与之对应的几何对象. 代数与谱的对应是反变的. 下面的定义来自综合代数几何.</p>
+<p><strong>定义</strong>. $R$-代数 $A$ 的谱 $\operatorname{spec}_R A$ (或简记为 $\operatorname{spec}A$) 是 $A$ 到 $R$ 的所有 $R$-代数同态的 “集合”.</p>
+<p><strong>注</strong>. $\operatorname{spec}R$ 是一个点. $\operatorname{spec}A$ 的一个点是 $\operatorname{spec}R$ 到 $\operatorname{spec}A$ 的映射, 也即 $A$ 到 $R$ 的代数同态.</p>
+<p><strong>例</strong>. 设 $A$ 是有限表现 $R$-代数, 也即 $A$ 同构于某个有限元多项式环商掉一个有限生成理想得到的环:
+$$
+A \simeq R[x_1,\cdots,x_n]/(f_1,\cdots,f_m).
+$$
+那么 $\operatorname{spec}A$ 是 $R^n$ 中由方程 $f_1= \cdots =f_m=0$ 确定的子 “集”:
+$$
+\operatorname{spec}A = \{(x_1,\cdots,x_n)\in R^n \colon  f_1=\cdots=f_m=0\}.
+$$</p>
+<h2>Weil 代数与 K–L 公理</h2>
+<p><strong>定义</strong>. Weil 代数, 又称局部 Artin 代数, 是指形如
+$$
+W = R \oplus N
+$$
+的有限维 $R$-代数, 其中投影 $\pi_1\colon W \to R$ 为代数同态, 且 $N = \ker\pi_1$ 的元素都是幂零元.</p>
+<p>称 $N$ 为 Weil 代数 $W$ 的增广理想 (ideal of augmentation).</p>
+<blockquote>
+<p>在几何上, 投影 $\pi_1 \colon W \to R$ 对应着一个点 $\operatorname{spec}R$ 到 $\operatorname{spec}W$ 的嵌入. 将 $W$ 的元素视为 $\operatorname{spec}W$ 上的函数, 那么 $\pi_1$ 即是函数在一点上取值. $\ker\pi_1$ 中的元素都是幂零元, 即在该点上取值为零的函数都是幂零的. 因此 $\operatorname{spec} W$ 是一个点的无穷小加厚 (infinitesimal thickening).</p>
+</blockquote>
+<p><strong>例</strong>. 我们遇到的第一个 Weil 代数是 $R[x]/(x^2) = R \oplus xR$. 它对应 $R$ 上原点的一阶无穷小邻域 $D$.</p>
+<p>用 Weil 代数可以叙述完整的 Kock–Lawvere 公理. 它规定 $\operatorname{spec}W$ 上的函数正是 $W$ 的元素.</p>
+<p><strong>公理</strong> (Kock–Lawvere). 对任意 Weil 代数 $W$, 映射
+$$
+\alpha \colon W \to R^{\operatorname{spec}W}, f\mapsto (x\mapsto f(x))
+$$
+是一个 $R$-代数同构.</p>
+<p><strong>例</strong>. $W=R[x]/(x^2)$, $\operatorname{spec}W=D$, 映射 $\alpha\colon W \to R^D$ 将 $ax+b$ 对应到 $(d\mapsto a\cdot d+b)$.</p>
+<p><strong>例</strong>. $W = R[x,y]/(x^2,y^2)$, $\operatorname{spec}W=D\times D$, 映射 $\alpha\colon W \to R^{D\times D}$ 将 $a_{00} + a_{10}x+a_{01}y+a_{11}xy$ 对应到 $\big((d_1,d_2)\mapsto a_{00} + a_{10}d_1 +a_{01}d_2 + a_{11}d_1d_2\big)$.</p>
+<h2>平展性</h2>
+<p>有时我们想要在几何对象上选取 “局部坐标”.</p>
+<p><strong>定义</strong>. 对于一族态射 $\mathcal D$, 称映射 $f \colon M \to N$ 为 $\mathcal D$-平展 (étale) 的, 是指对 $\mathcal D$ 中的任意态射 $j \colon J \to K$, 只要有如下交换图,
+$$
+\begin{array}
+	{ccc}
+	J &amp; \overset {j} {\to} &amp; K\\
+	\downarrow &amp;&amp; \downarrow\\
+	M &amp; \underset {f} {\to} &amp; N
+\end{array}
+$$
+就存在唯一的态射 $l \colon K \to M$ 使下图交换.
+$$
+\begin{array}
+	{ccc}
+	J &amp; \overset {j} {\to} &amp; K\\
+	\downarrow &amp; \swarrow_l \! &amp; \downarrow\\
+	M &amp; \underset {f} {\to} &amp; N
+\end{array}
+$$</p>
+<p><strong>注</strong>. 上述结论的 “范畴” (语义) 表述是, 下图是一个拉回.</p>
+<p>$$
+\begin{array}
+	{ccc}
+	M^K &amp; \overset{M^j}{\to} &amp; M^J\\
+	\hspace{-2em} f^K\downarrow &amp;&amp; \downarrow f^J \hspace{-1em} \\
+	N^K &amp; \underset{N^j}{\to} &amp; N^J
+\end{array}
+$$</p>
+<p><strong>命题</strong>. $\mathcal D$-平展态射的乘积与复合仍是 $\mathcal D$-平展的.</p>
+<p>取 $\mathcal D$ 为所有 $1 \to \operatorname{spec}W$ 的态射, $W$ 是 Weil 代数. 此时, $\mathcal D$-平展又称形式平展 (formal-étale).</p>
+<p><strong>例.</strong> 含入映射 $D_\infty \to R$ 是形式平展的, 即任意交换图
+$$
+\begin{array}
+	{ccc}
+	1 &amp; \to &amp; \operatorname{spec}W\\
+	\downarrow &amp;&amp; \downarrow\\
+	D_\infty &amp; \to &amp; R
+\end{array}
+$$
+存在分解 $\operatorname{spec}W \to D_\infty$.</p>
+<p>传统微分几何中, 流形的局部模型是欧氏空间的开集. 作为类比, 我们有如下定义.</p>
+<p><strong>定义</strong> (模型对象). 我们称形式平展单态射 $U \to R^n$ 的定义域 $U$ 为 $n$ 维模型对象 (model object).</p>
+<p><strong>定义</strong> (形式流形). 称对象 $M$ 为 $n$ 维形式流形 (formal manifold), 是指存在联合满 (jointly epic) 的一系列形式平展单态射 $U_i \to M$, 且每个 $U_i$ 为 $n$ 维模型对象. 一族态射 $f_i \colon U_i \to M$ 联合满的定义是对任意两个态射 $g,h\colon M\to N$, 只要 $g\circ f_i = h\circ f_i\,\forall i$, 就有 $g=h$. 联合满态射的直观是覆盖.</p>
+<p><strong>命题</strong>. 形式流形是微线性的.</p>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="notes" style="margin-bottom: 0.4em;"><header><h1><span class="taxon"><span class="link local"><a href="./notes.html" title="讲稿, 笔记 [notes]">notes</a></span></span>综合微分几何讲稿 <a class="slug" href="./SDG-notes.html">[SDG-notes]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+
+</div></body></html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width"><title>综合数学是抽象代数的范畴化</title><link rel="stylesheet" href="./main.css">
+<link rel="stylesheet" href="./typst.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    font-family: "Inria Sans", sans-serif;
+  }
+
+  pre,
+  code {
+    font-family: monospace;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Inria Sans", sans-serif;
+  }
+
+  nav {
+    font-family: "Inria Sans", sans-serif;
+  }
+
+  thead {
+    font-family: "Inria Sans", sans-serif;
+  }
+</style><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"
+  integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"
+  integrity="sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+  integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"
+  integrity="sha384-HORx6nWi8j5/mYA+y57/9/CZc5z8HnEw4WUZWy5yOn9ToKBv1l58vJaufFAn9Zzi" crossorigin="anonymous"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+        { left: '\\(', right: '\\)', display: false },
+        { left: '\\[', right: '\\]', display: true }
+      ],
+      strict: false,
+      throwOnError: false,
+      minRuleThickness: 0.05,
+    });
+  });
+</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="nonmath"><details open><summary id="synthetic"><header><h1><span class="taxon"><span class="link local"><a href="./nonmath.html" title="非数学 [nonmath]">nonmath</a></span></span>综合数学是抽象代数的范畴化 <a class="slug" href="./synthetic.html">[synthetic]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>2026-02-13</p>
+<hr />
+<p><strong>碎碎念</strong>. 这篇文章是关于数学的, 但实在太难说它本身是数学, 姑且贴上个 “非数学” 的标签, 以免受人诟病——即便身负数学严格性的重担的人, 当然也是有资格写 “非数学” 散文的. 读者若从中读不出任何道理, 就把这篇文章当作是我喝了酒发的疯吧. 我写这篇文章的主要目的是为<span class="link local"><a href="./综合数学.html" title="综合数学 [综合数学]">综合数学</a></span> “正名”. 但它并未被 “打倒” (实则是并未被关注), 故谈不上真正的正名; 它只是在我个人的经历中, 在登上大雅之堂的途中受到了一点阻碍, 并且消磨了我对它的热情; 而随着阅历更加丰富, 我在对几篇笔记的偶然反刍之下, 对它产生了新的见解, 不得不记录下来, 好给过去与未来的自己一个交代. 但我写这篇文章的理由未必是读者读这篇文章的理由; 站在读者的立场, 这些事情就不必赘述了.</p>
+<hr />
+<p>我打算不以综合数学的玄而又玄的讨论来开启这篇文章, 而是谈论些众所周知的事情. ——我们来谈论<strong>抽象代数</strong>的起源. 我们的目的不是复原历史的脉络, 而是从现代人的视角来反思抽象代数这个学科存在的理由, 然后对这个理由作一种合理的演绎 (如文章的题目所示, 这种演绎叫做<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>), 来得到<span class="link local"><a href="./综合数学.html" title="综合数学 [综合数学]">综合数学</a></span>这门学科存在的理由, 这便是我想要记录的新的见解.</p>
+<p>所谓代数最初即是在数的运算中, 用符号来代替数的做法. 它最初仅仅是一个从特殊到一般的过程——我们发现
+$$
+(3+5)^2 = 3^2 + 2\cdot 3\cdot 5 + 5^2,
+$$
+$$
+(4+6)^2 = 4^2 + 2\cdot 4\cdot 6 + 6^2,
+$$
+于是我们用符号代替一些具体的元素, 写成如下形状的公式,
+$$
+(a+b)^2 = a^2 + 2ab + b^2,
+$$
+来表达对任何数普遍成立的规律.</p>
+<p>然而随着数学的成熟, 一个细微的观念转变发生了——它是如此细微, 以至于学习现代数学多年的读者们可能都忘了这是一场变革: 用来表示 “一般元素” 的符号 $a,b$, 可以不再表示任何一个具体的元素, 而是变成了完全抽象的, 但仍旧遵循同样规律的东西. 我们开始操作带有这些抽象符号 $a,b$ 的等式, 而不在乎符号之下的内涵, 或者说真正的内涵已经不在那里了: 我们从对具体元素的研究转向了对规律本身的研究.</p>
+<p>于是, “<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">代数</a></span>” 的概念产生了. 一个代数是一些元素的集合, 元素之间可作加法, 乘法等运算, 满足交换律, 结合律, 分配律等性质. 如果仅研究这些运算的规律, 而不依赖于参与运算的元素具体的构造, 那么我们作出的论证就适用于任何一个代数. (若读者有微分几何的相关经验: 这就像是微分几何中若不使用坐标进行计算, 那么计算的结果就适用于任何坐标.) 放弃对一个锚定的具体事物的追求, 反而换来了特殊化到所有具体事物的机会.</p>
+<p>学习现代数学多年的读者们, 可能难以体会 “代数” 这样的概念对一个仅学过实数的运算的人有多么陌生.
+困难并不在于人的智力不能理解代数的定义, 而在于他们长久以来的信念的动摇: 原来我所认识的这个数的系统不是唯一存在的, 唯一合理的数的系统; 事实恰恰相反, 这种系统要多少就有多少. 例如在一个代数中, 我们可以随心所欲地加入一个满足指定的代数方程的元素. 回想历史上人们对虚数 $i$ 的引入曾产生多么大的抵触: 在实数中加入一个满足 $i^2 = -1$ 的元素, 而这个方程在实数中没有任何道理.
+人们不是不能对这个方程进行运算, 而是不能接受自古以来熟悉的系统, 实数的代数 $\mathbb{R}$, 被外来者污染, 以至于失去它不可撼动的地位.</p>
+<p>当然, 现在的人们早已不再对各式各样的代数产生恐慌. 复代数几何的基础 $\mathbb{C}$, $p$-进几何的基础 $\mathbb{Z}_p$, 已经是每一个数学家如数家珍的代数对象. 人们研究的代数中的运算也不断丰富, Lie 代数, Poisson 代数, Hopf 代数, … 这些结构在各自的领域中发光发热.</p>
+<p>让我们总结从研究实数的运算到研究抽象代数发生的观念转变:</p>
+<ul>
+<li>一个<strong>代数</strong>是一个带有结构的<strong>集合</strong>, “实数” 不过是那个特殊的代数 $\mathbb{R}$ 的元素;</li>
+<li>通过<strong>四则运算</strong>, 我们不仅是在研究实数的规律, 而且可以研究任何代数中的规律, 不依赖于这些集合中元素的具体形式.</li>
+</ul>
+<p>如果读者已经完全理解了到此为止的论述, 那么现在我要提升一个叫做范畴层级的东西了.</p>
+<table><thead><tr><th>范畴层级</th><th>0</th><th>1</th></tr></thead><tbody>
+<tr><td>对象</td><td>实数</td><td>集合</td></tr>
+<tr><td>语言</td><td>四则运算</td><td><span class="link local"><a href="./一阶语言.html" title="一阶语言与一阶逻辑 [一阶语言]">一阶语言</a></span></td></tr>
+<tr><td>全体对象</td><td>实数的全体 $\mathbb{R}$</td><td>集合的全体 $\mathsf{Set}$</td></tr>
+<tr><td>抽象概念</td><td>代数 <br> = 带结构的集合</td><td><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> <br> = 带结构的范畴</td></tr>
+</tbody></table>
+<p><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴</a></span>是集合概念的某种推广; 范畴中有<strong>对象</strong>, 正如集合中有元素; 但不同在于集合中的元素只有相等或不相等两种关系, 而范畴中的对象可以有多种且不对称的关系, 称为<strong>态射</strong>.</p>
+<p>最经典的范畴是集合的范畴: 其中对象为集合, 态射 $X\to Y$ 为集合之间的映射.</p>
+<p>一般说的范畴的概念又称为 $1$-范畴, 它处在一个无穷高的阶梯的第 $1$ 层; 而集合的概念在第 $0$ 层, 集合又可称为 $0$-范畴. 我们发现全体 $0$-范畴构成一个 $1$-范畴; 事实上全体 $n$-范畴也构成一个 $(n+1)$-范畴, 这个无穷高的阶梯中每一层的对象的全体构成上一层的一个最基本的对象.</p>
+<p>范畴的对象之间也可以谈论相等, 但区别在于两个对象之间可能有多种不同方式相等, 甚至一个对象和自身也可能有多种不同方式相等, 这称为<strong>对称性</strong>. (题外话: 可以说这是范畴层级的提升带来的麻烦, 但我更倾向于反过来说: 这是限制范畴层级造成的虚妄的便利. 一切用于表示 “一类事物的全体” 的概念本来就该是<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>或<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>, 然后在上面附加<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断性</a></span>得到各种特殊的概念.)</p>
+<p>让我们看看集合范畴 $\mathsf{Set}$ 的性质. 它不是一个赤裸的范畴, 正如 $\mathbb{R}$ 不是一个赤裸的集合. 它的对象 (也就是集合) 之间有加法 $+$ 和乘法 $\times$ 的运算:
+$A+B$ 是两个集合的无交并, 其元素为 $l(a)$ 或 $r(b)$; $A\times B$ 是两个集合的积, 其元素为 $(a,b)$. 加法和乘法都有交换律, 结合律: $A+B\simeq B+A$, $(A+B)+C\simeq A+(B+C)$ 等等. 乘法对加法有分配律: $A\times (B+C) \simeq A\times B + A\times C$. 由此可得
+$$
+(A+B)^2 \simeq A^2 + 2 \times A\times B + B^2.
+$$
+很多时候我们对于集合的操作表面上是在操作集合的元素, 实际上是在操作范畴论结构. 例如, 对于映射 $f\colon A\to B$ 以及 $b\in B$, 取出 $A$ 中满足 $f(a) = b$ 的元素 $a$ 构成的集合 $S = \{a\in A\mid f(a) = b\}$, 实际上是在做范畴论中名为<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>的操作:
+$$
+\begin{array}
+    {ccc}
+    S &amp; \to &amp; 1\\
+    \downarrow &amp; &amp; \downarrow\\
+    A &amp; \underset{f}{\to} &amp; B.
+\end{array}
+$$
+由此可见, 只要一个范畴中具有拉回, 那么 $\{a\in A\mid f(a) = b\}$ 这样的表达式就有意义, 而不需要对象 $A$ 真的是由一个一个的元素组成.</p>
+<p>经过如此多的铺垫, 如果我现在告诉读者, 我们自古以来熟悉的这个集合范畴, 并不是唯一存在的, 唯一合理的 “集合的范畴”, 我们使用的数学语言描述的不一定是集合, 而可能是任何适当结构的范畴的对象, 不知读者是否还会像只熟悉实数的古人见到虚数那样感到恐慌.</p>
+<p>将集合范畴 $\mathsf{Set}$ 的性质抽象出来, 得到一种允许通常数学语言在其中获得语义的范畴的概念, 这就是<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>.</p>
+<p>我将说明: 在以<span class="link local"><a href="./意象理论.html" title="意象理论 [意象理论]">意象理论</a></span>为主要表现方式的<span class="link local"><a href="./综合数学.html" title="综合数学 [综合数学]">综合数学</a></span>中,</p>
+<ul>
+<li>一个<strong></strong><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>是一个带有结构的<strong>范畴</strong>, “集合” 不过是那个最基本的意象 $\mathsf{Set}$ 的对象;</li>
+<li>通过<strong></strong><span class="link local"><a href="./一阶语言.html" title="一阶语言与一阶逻辑 [一阶语言]">一阶逻辑</a></span>, 我们不仅是在研究集合的规律, 而且可以研究任何<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>中的规律, 不依赖于这些范畴中对象的具体形式.</li>
+</ul>
+<p>我们认为的 “带结构的集合”, 不过是最基本的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathsf{Set}$ 中的结构; 而同样的结构发生在任何一个意象中.</p>
+<p>换言之, 随着范畴层级的提升, 我们发现自己从那个 “思想开放” 的 “现代人”, 变成 “抱残守缺” 的 “古人”.</p>
+<p>综合数学的一个出现较早的分支是<span class="link local"><a href="./综合微分几何.html" title="综合微分几何 [综合微分几何]">综合微分几何</a></span>. 它的理论是这样建立的: 首先规定存在一个对象, 称为直线 $R$; 它具有 $0,1$, 加法和乘法, 构成一个代数. 定义<span class="link local"><a href="./一阶无穷小线段.html" title="一阶无穷小线段 [一阶无穷小线段]">一阶无穷小线段</a></span> $D$ 是 $R$ 中平方为零的元素的 “集合”
+$$
+D = \{x\in R \mid x^2 = 0\}.
+$$
+一条重要的公理是: 对任意函数 $f\colon D\to R$, 存在唯一的 $a,b\in R$ 满足对任意 $d\in D$, 有 $f(d) = ad+b$. 对任意 “集合” $M$, 定义其切向量为映射 $v\colon D \to M$; 定义 $M$ 的切丛为 $M^D \to M,v\mapsto v(0)$. 微分几何最重要的概念就这样产生了.</p>
+<p>如果认为上述理论谈论的是普通的集合范畴, 就会发现它简直是天方夜谭. 实直线上平方为零的元素只有 $0$, 又怎能表达切向量这样的概念呢?</p>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="notion" style="margin-bottom: 0.4em;"><header><h1><span class="taxon"><span class="link local"><a href="./notion.html" title="观念 [notion]">notion</a></span></span>综合数学 <a class="slug" href="./综合数学.html">[综合数学]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+
+</div></body></html>

@@ -67,9 +67,14 @@
 <p>这些场合是相互关联的, 例如<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 给出单子 $-\otimes A$, 其上的模即是该单子的代数. <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>和<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>也给出单子. 若一对伴随能够表示为某个单子的自由–遗忘伴随, 则称之为<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性伴随</a></span> (monadic adjunction).</p>
 <h2>性质</h2>
 <h3>结合代数</h3>
-<p>由一个元素或一个对象生成的自由结构 $F$ 常常是某种遗忘函子 $U$ 的余表示对象, $U=\operatorname{Hom}(F,-)$; 且 $F$ 的底层结构具有<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的结构. 这是<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>的简单应用:
+<p>当某种集合或范畴上的结构的遗忘函子 $U\colon \mathcal C \to \mathsf{Set}$ (或 $U\colon \mathcal C\to\mathsf{Cat}$) <span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">余可表</a></span>时,
+它的余表示对象就是由一个元素 (或一个对象) 生成的自由结构 $F(1)$:
 $$
-U(F) = \operatorname{Hom}(F,F) = \operatorname{End}(U).
+U=\operatorname{Hom}_{\mathsf{Set}}(1,U-)=\operatorname{Hom}_{\mathcal C}(F(1),-).
+$$
+且此时 $F(1)$ 的底层结构具有<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的结构. 这是<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>的简单应用:
+$$
+U(F(1)) = \operatorname{Hom}_{\mathcal C}(F(1),F(1)) = \operatorname{End}_{\mathsf{Fun}(\mathcal C,\mathsf{Set})}(U).
 $$</p>
 <p><strong>例</strong>.</p>
 <ul>

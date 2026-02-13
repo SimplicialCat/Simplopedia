@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>“无穷小空间”</title><link rel="stylesheet" href="./main.css">
+<meta name="viewport" content="width=device-width"><title>无穷小对象 (综合微分几何)</title><link rel="stylesheet" href="./main.css">
 <link rel="stylesheet" href="./typst.css"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
@@ -55,9 +55,9 @@
       minRuleThickness: 0.05,
     });
   });
-</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="无穷小空间"><header><h1><span class="taxon">Wiki. </span>“无穷小空间” <a class="slug" href="./无穷小空间.html">[无穷小空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="无穷小空间"><header><h1><span class="taxon">Wiki. </span>无穷小对象 (综合微分几何) <a class="slug" href="./无穷小空间.html">[无穷小空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./综合微分几何.html" title="综合微分几何 [综合微分几何]">综合微分几何</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>在<span class="link local"><a href="./综合微分几何.html" title="综合微分几何 [综合微分几何]">综合微分几何</a></span>中, 最基本的无穷小空间是一阶无穷小对象 $D\subset R$ ($R$ 的定义见<span class="link local"><a href="./环化意象.html" title="“环化意象” [环化意象]">环化意象</a></span>),
+<p>在<span class="link local"><a href="./综合微分几何.html" title="综合微分几何 [综合微分几何]">综合微分几何</a></span>中, 最基本的无穷小空间是<span class="link local"><a href="./直线(SDG).html" title="直线 (综合微分几何) [直线(SDG)]">直线</a></span> $R$ 上的<span class="link local"><a href="./一阶无穷小线段.html" title="一阶无穷小线段 [一阶无穷小线段]">一阶无穷小线段</a></span> $D\subset R$,
 $$
 D = \{x\in R : x^2=0\}.
 $$
@@ -74,13 +74,16 @@ $$
 $$
 D_\infty(n)=\bigcup_k D_k(n).
 $$</p>
+<p>对于 $R$-模 $V$, 定义
+$$
+D_k(V)=\{x\in V: x^{\otimes (k+1)}=0\in V^{\otimes (k+1)}\}.
+$$</p>
 <blockquote>
-<p>我猜测 $D_k$ 可如下内蕴定义: $$D_k(V)=\{x\in V: x^{\otimes (k+1)}=0\in V^{\otimes (k+1)}\}.$$
-不过有一个细节没有想清楚: 对于 $x\in W$, 是否由 $\forall f\colon W\to R f(x)=0$ 可以推出 $x=0$.</p>
+<p>不过有一个细节没有想清楚: 对于 $R$-模 $W$ 以及 $x\in W$, 假设对任意 $R$-模同态 $f\colon W\to R$ 有 $f(x)=0$, 是否可以推出 $x=0$.</p>
 </blockquote>
 <h2>性质</h2>
 <p>$D_k(n)$ 在数乘下封闭: 对 $x\in D_k(n), \lambda\in R$ 有 $\lambda x\in D_k(n)$.</p>
 <p>$D_k(n)$ 在加法下一般不封闭, 但有 $D_k(n) + D_\ell(n)\subset D_{k+\ell}(n)$. 因此, $D_{\infty}(n)$ 在加法下封闭.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“相邻” <a class="slug" href="./相邻.html">[相邻]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>综合微分几何 <a class="slug" href="./综合微分几何.html">[综合微分几何]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“相邻” <a class="slug" href="./相邻.html">[相邻]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="subject" style="margin-bottom: 0.4em;"><header><h1><span class="taxon"><span class="link local"><a href="./subject.html" title="学科 [subject]">subject</a></span></span>综合微分几何 <a class="slug" href="./综合微分几何.html">[综合微分几何]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
 
 </div></body></html>
