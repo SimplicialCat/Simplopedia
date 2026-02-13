@@ -99,16 +99,28 @@ code {
   font-size: 0.9em;
 }
 
-/* !forest */
-table {
-  text-align: left;
-}
-
-/* !forest */
-th {
-  font-weight: normal;
-  padding: 0 1rem;
-}
+    table {
+      text-align: left;
+      border-collapse: collapse;
+      width: 80%;
+      margin: 20px auto;
+    }
+    th, td {
+      font-weight: normal;
+      padding: 10px;
+      text-align: left;
+    }
+    tr {
+      border-bottom: 1px solid var(--color-Furina-bright-periwinkle);
+    }
+    /* 可选：去除表头下方的重复横线（如果表头需要特殊样式） */
+    thead tr {
+      border-bottom: 2px solid var(--color-Furina-deep-navy);
+    }
+    /* 去除最后一行的边框 */
+    tbody tr:last-child {
+      border-bottom: none;
+    }
 
 /* !forest */
 pre>code {
