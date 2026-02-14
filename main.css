@@ -35,7 +35,8 @@
   --article-taxon-color: #88d;
   --mark-color: rgb(255, 255, 151);
 
-  --marginleft: 28px;
+  /*--marginleft: 28px;*/
+  --marginleft: 14px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -151,6 +152,10 @@ pre>code {
 
 .footnote-definition:target>.footnote-definition-label {
   border: 1px solid var(--target-color);
+}
+
+.footnote-definition {
+  margin-left: var(--marginleft);
 }
 
 .display-none {
