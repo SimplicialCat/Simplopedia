@@ -99,8 +99,9 @@ $$
 \end{array}
 $$
 由此可见, 只要一个范畴中具有拉回, 那么 $\{a\in A\mid f(a) = b\}$ 这样的表达式就有意义, 而不需要对象 $A$ 真的是由一个一个的元素组成.</p>
+<p>任意量词 $\forall$ 和存在量词 $\exists$ 也不是只在集合范畴中有意义. 它们分别是<span class="link local"><a href="./依值积.html" title="依值积 [依值积]">依值积</a></span>, <span class="link local"><a href="./依值和.html" title="依值和 [依值和]">依值和</a></span>的特例, 而这两者分别是拉回操作 $\mathcal{C}_{/Y} \to \mathcal{C}_{/X}$ 的左右伴随.</p>
 <p>经过如此多的铺垫, 如果我现在告诉读者, 我们自古以来熟悉的这个集合范畴, 并不是唯一存在的, 唯一合理的 “集合的范畴”, 我们使用的数学语言描述的不一定是集合, 而可能是任何适当结构的范畴的对象, 不知读者是否还会像只熟悉实数的古人见到虚数那样感到恐慌.</p>
-<p>更关键的是, 我们很多时候不需要关心范畴中的对象的具体构造, 这便是综合数学的核心观念; 这种观念无非是抽象代数的核心观念的一次范畴化.</p>
+<p>更关键的是, 就像在抽象代数中我们不需要关心<strong>集合</strong>中的<strong>元素</strong>的具体构造一样, 在综合数学中我们不需要关心<strong>范畴</strong>中的<strong>对象</strong>的具体构造, 这便是综合数学的核心观念; 这种观念无非是抽象代数的核心观念的一次范畴化.</p>
 <p>将集合范畴 $\mathsf{Set}$ 的性质抽象出来, 得到一种允许通常数学语言在其中获得语义的范畴的概念, 这就是<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>.</p>
 <p>在以<span class="link local"><a href="./意象理论.html" title="意象理论 [意象理论]">意象理论</a></span>为主要表现方式的<span class="link local"><a href="./综合数学.html" title="综合数学 [综合数学]">综合数学</a></span>中,</p>
 <ul>
@@ -108,21 +109,26 @@ $$
 <li>通过<strong></strong><span class="link local"><a href="./一阶语言.html" title="一阶语言与一阶逻辑 [一阶语言]">一阶逻辑</a></span>, 我们不仅是在研究集合的规律, 而且可以研究任何<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>中的规律, 不依赖于这些范畴中对象的具体形式.</li>
 </ul>
 <p>我们认为的 “带结构的集合”, 不过是最基本的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathsf{Set}$ 中的结构; 而同样的结构发生在任何一个意象中.</p>
-<p>换言之, 随着范畴层级的提升, 我们发现自己从那个 “思想开放” 的 “现代人”, 变成 “抱残守缺” 的 “古人”.</p>
+<p>换言之, 随着范畴层级的提升, 我们发现自己从那个 “思想开放” 的 “现代人”, 变成了 “抱残守缺” 的 “古人”.</p>
 <p>综合数学的一个出现较早的分支是<span class="link local"><a href="./综合微分几何.html" title="综合微分几何 [综合微分几何]">综合微分几何</a></span>. 它的理论是这样建立的: 首先规定存在一个对象, 称为直线 $R$; 它具有 $0,1$, 加法和乘法, 构成一个代数. 定义<span class="link local"><a href="./一阶无穷小线段.html" title="一阶无穷小线段 [一阶无穷小线段]">一阶无穷小线段</a></span> $D$ 是 $R$ 中平方为零的元素的 “集合”
 $$
 D = \{x\in R \mid x^2 = 0\}.
 $$
 一条重要的公理是: 对任意函数 $f\colon D\to R$, 存在唯一的 $a,b\in R$ 满足对任意 $d\in D$, 有 $f(d) = ad+b$. 对任意 “集合” $M$, 定义其切向量为映射 $v\colon D \to M$; 定义 $M$ 的切丛为 $M^D \to M,v\mapsto v(0)$. 微分几何最重要的概念就这样产生了.</p>
 <p>如果认为上述理论谈论的是普通的集合范畴, 就会发现它简直是天方夜谭. 实直线上平方为零的元素只有 $0$, 又怎能表达切向量这样的概念呢? 感兴趣的读者可以进一步阅读<span class="link local"><a href="./SDG-notes.html" title="综合微分几何讲稿 [SDG-notes]">综合微分几何讲稿</a></span>. 结论是, 我们应当认为综合微分几何谈论的是一种满足特定条件的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>中的对象. 综合数学的每一个分支, 都可视为对所讨论的意象作某种约束. 任何一个满足约束的意象都可以作为这个学科的模型, 而这个学科所产生的定理在所有模型中同样成立.</p>
-<p>最后让我用一个表格总结本文.</p>
+<p>我将目前的类比总结成一个表格.</p>
 <table><thead><tr><th>范畴层级</th><th>0</th><th>1</th></tr></thead><tbody>
 <tr><td>对象</td><td>实数</td><td>集合</td></tr>
 <tr><td>语言</td><td>四则运算</td><td><span class="link local"><a href="./一阶语言.html" title="一阶语言与一阶逻辑 [一阶语言]">一阶语言</a></span></td></tr>
 <tr><td>全体对象</td><td>实数的全体 $\mathbb{R}$</td><td>集合的全体 $\mathsf{Set}$</td></tr>
-<tr><td>抽象概念</td><td>代数 <br> = 带结构的集合</td><td><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> <br> = 带结构的范畴</td></tr>
+<tr><td>抽象概念</td><td>代数 <br> = 带结构的集合</td><td><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> <br> = 带结构的范畴<sup class="footnote-reference" id="synthetic_1-back"><a href="#synthetic_1">1</a></sup></td></tr>
 <tr><td>约束</td><td>代数方程</td><td>公理</td></tr>
 </tbody></table>
+<div class="footnote-definition" id="synthetic_1">
+  <sup class="footnote-definition-label"><a href="#synthetic_1-back">1</a></sup>
+<p>其实一个范畴构成一个意象这件事是<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">性质而非结构</a></span>. 不过这里的结构与 “<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半结构</a></span>” 中的结构是同一种用法.</p>
+</div>
+<p>表格有没有可能向右延申? 有没有可能, 范畴的 $2$-范畴 $\mathsf{Cat}$ 不是唯一合理的 “范畴的范畴”, 而是所有的范畴论语言都可以在一个 “$2$-意象” 中解读? 这种语言该如何设计? 我不知道.</p>
 </details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="notion" style="margin-bottom: 0.4em;"><header><h1><span class="taxon"><span class="link local"><a href="./notion.html" title="观念 [notion]">notion</a></span></span>综合数学 <a class="slug" href="./综合数学.html">[综合数学]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
 
 </div></body></html>
