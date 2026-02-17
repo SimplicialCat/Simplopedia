@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width"><title>教程 : 函子式代数几何 第二节 层论</title><link rel="stylesheet" href="./main.css">
+<link rel="stylesheet" href="./typst.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    font-family: "Inria Sans", sans-serif;
+  }
+
+  pre,
+  code {
+    font-family: monospace;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Inria Sans", sans-serif;
+  }
+
+  nav {
+    font-family: "Inria Sans", sans-serif;
+  }
+
+  thead {
+    font-family: "Inria Sans", sans-serif;
+  }
+</style><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"
+  integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"
+  integrity="sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+  integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"
+  integrity="sha384-HORx6nWi8j5/mYA+y57/9/CZc5z8HnEw4WUZWy5yOn9ToKBv1l58vJaufFAn9Zzi" crossorigin="anonymous"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+        { left: '\\(', right: '\\)', display: false },
+        { left: '\\[', right: '\\]', display: true }
+      ],
+      strict: false,
+      throwOnError: false,
+      minRuleThickness: 0.05,
+    });
+  });
+</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="pedagogy"><details open><summary id="tutorial-funAG-sh"><header><h1><span class="taxon"><span class="link local"><a href="./pedagogy.html" title="教学 [pedagogy]">pedagogy</a></span></span>教程 : 函子式代数几何 第二节 层论 <a class="slug" href="./tutorial-funAG-sh.html">[tutorial-funAG-sh]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>主目录: <span class="link local"><a href="./tutorial-funAG.html" title="教程 : 函子式代数几何 [tutorial-funAG]">教程 : 函子式代数几何</a></span></p>
+<p>上一节: <span class="link local"><a href="./tutorial-funAG-aff.html" title="教程 : 函子式代数几何 第一节 仿射概形 [tutorial-funAG-aff]">第一节 仿射概形</a></span></p>
+<p>我们假设读者已经了解<span class="link local"><a href="./景上的层.html" title="景上的层 [景上的层]">层</a></span>的概念, 本节仅回顾与函子式代数几何相关的一些层论基本事实.</p>
+<h2>点函子与概形</h2>
+<h3>点函子</h3>
+<p>对于一个几何对象 $X$, 我们常常使用它的 “点” 来对 $X$ 有关的对象进行构造与论证, 而常常这里的 “点” 的概念比想象中更灵活: 我们不需要所谈论的点真的是一个最小的不可分割的几何对象; 任何其它几何对象到 $X$ 的一个态射都可以称作一个点. 而当我们采取这种更宽泛的点的概念时, “逐点” 的论证往往会自动具有自然性.</p>
+<p><strong>定义</strong> (仿射概形的点函子). 对于仿射概形 $\operatorname{Spec} A$, 定义其<span class="link local"><a href="./点函子.html" title="点函子 [点函子]">点函子</a></span>为
+$$
+	\operatorname{Spec} A\colon 
+	\mathsf{Ring} \to \mathsf{Set},\quad
+	B\mapsto \operatorname{Hom}_{\mathsf{Ring}}(A,B).
+$$
+称 $(\operatorname{Spec} A)(B) = \operatorname{Hom}_{\mathsf{Ring}}(A,B)$ 的元素为 $\operatorname{Spec} A$ 的 $B$-点.
+将仿射概形对应到其点函子的过程实际上就是<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span>
+$\mathbf{y}\colon \mathsf{Aff} \to \operatorname{Psh}(\mathsf{Aff})$.</p>
+<p><strong>例</strong> (一般线性群, 乘法群). 一般线性群 $\mathrm{GL}_n$ 作为仿射概形的定义为
+$$
+\mathrm{GL}_n = \operatorname{Spec} \mathbb{Z}[x_{11},\cdots,x_{nn}][\det(x)^{-1}],
+$$
+其点函子为
+$$
+A\mapsto \mathrm{GL}_n(A)=\{x\in \mathrm{Mat}_{n\times n}(A)\mid \text{$\det(x)$ 可逆}\}.
+$$
+特别地, 当 $n=1$ 时记
+$$\mathbb{G}_m=\mathrm{GL}_1
+=\operatorname{Spec}\mathbb{Z}[x][x^{-1}],$$
+其点函子为 “乘法群” 函子
+$$
+A\mapsto A^\times = \{x\in A\mid \text{$x$ 可逆}\}.
+$$
+因此称 $\mathbb{G}_m$ 为<span class="link local"><a href="./乘法群概形.html" title="乘法群概形 [乘法群概形]">乘法群概形</a></span>. 由点函子容易看出 $\mathbb{G}_m$ 的群结构, 因为一个环的可逆元关于乘法自然构成群. 群的乘法 $\mathbb{G}_m\times\mathbb{G}_m\to\mathbb{G}_m$ 对应环同态
+$$
+\mathbb{Z}[x][x^{-1}]\to\mathbb{Z}[u][u^{-1}]\otimes \mathbb{Z}[v][v^{-1}],\quad x\mapsto uv.
+$$
+群的取逆 $\mathbb{G}_m\to\mathbb{G}_m$ 对应环同态 $x\mapsto x^{-1}$.</p>
+<p><strong>例</strong> ($\mathbb{G}_m$-作用与分次).</p>
+<p>环 $R$ 上的一个 $\mathbb{Z}$-<span class="link local"><a href="./分次代数.html" title="分次代数 [分次代数]">分次</a></span>是一个分解
+$$
+R =\cdots \oplus R_{-1}\oplus R_0 \oplus R_1 \oplus\cdots,
+$$
+满足对 $r\in R_{n}, s\in R_{m}$ 有 $rs\in R_{n+m}$.
+这等价于 $\operatorname{Spec} R$ 上的一个 $\mathbb{G}_m$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>, 也即一个映射 $\operatorname{Spec} R \times \mathbb{G}_m \to \operatorname{Spec} R$, 满足群作用的条件.
+这个映射以点函子的观点可以如下描述.
+对于环 $A$, 它给出映射
+$$
+\operatorname{Hom}_{\mathsf{Ring}}(R,A)\times A^\times \to \operatorname{Hom}_{\mathsf{Ring}}(R,A),
+$$
+$$
+(\varphi,a)\mapsto
+\big(
+r\mapsto \varphi(r)a^{\deg r}
+\big).
+$$
+(其中 $\deg r$ 为齐次元素 $r$ 的次数, 以线性延拓到非齐次元素.)
+当然也可以用仿射概形作为环的对偶来描述,
+这个作用对应于环同态
+$$
+R\to R\otimes\mathbb{Z}[x][x^{-1}] \simeq R[x][x^{-1}],\quad r\mapsto rx^{\deg r}.
+$$</p>
+<p>更一般地, 对任意交换幺半群 $M$, 考虑幺半群环 $\mathbb{Z}[M]$, 也即 $M$ 自由生成的交换环, 对应的仿射概形 $\operatorname{Spec}\mathbb Z[M]$ 是 $\mathsf{Aff}$ 中的幺半群.
+环 $R$ 的 $M$-分次 $R=\bigoplus_{m\in M}R_m$ 等同于 $\operatorname{Spec}\mathbb Z[M]$-作用.</p>
+<p>见<span class="link local"><a href="./fil-gr.html" title="滤与分次的叠观点 [fil-gr]">滤与分次的叠观点</a></span>.</p>
+<h3>Zariski 覆盖</h3>
+<p><strong>定义</strong> (Zariski 覆盖). 对于仿射概形 $\operatorname{Spec} A$, 定义其 <strong>Zariski 覆盖</strong>为 $\mathsf{Aff}$ 中形如
+$$
+\{D(f_i) \to \operatorname{Spec} A\}_{i\in I}\,(f_i\in A)
+$$
+的一族态射,
+满足 $\{f_i\}_{i\in I}$ 生成 $A$ 的单位理想.</p>
+<p><strong>例</strong>. 考虑一个极端情形, 对于 $A=0$ 为零环,
+空集构成了 $\operatorname{Spec} A$ 的 Zariski 覆盖, 因为零个元素就生成了零环的单位理想.</p>
+<p><strong>命题</strong>. 对环的两个元素 $f,g\in A$ 有
+$D(f)\times _{\operatorname{Spec} A}D(g) \simeq D(fg)$.</p>
+<p><em>证明</em>. 这是因为
+$$
+\begin{aligned}
+    A[f^{-1}]\otimes_A A[g^{-1}]
+    &amp;\simeq
+    A[x,y]/(xf-1,yg-1)\\
+    &amp;\simeq
+    A[z]/(zfg-1)\\
+    &amp;\simeq A[(fg)^{-1}].
+\end{aligned}
+$$</p>
+<p><strong>例</strong>. $D(2) \to\operatorname{Spec}\mathbb{Z}$ 和 $D(3) \to \operatorname{Spec} \mathbb{Z}$ 构成 $\operatorname{Spec} \mathbb{Z}$ 的 Zariski 覆盖.</p>
+<p><strong>命题</strong> (Zariski 覆盖是<span class="link local"><a href="./次典范拓扑.html" title="次典范拓扑 [次典范拓扑]">次典范</a></span>的)
+对任意 Zariski 覆盖 $\{D(f_i) \to \operatorname{Spec} A\}_{i\in I}\,(f_i\in A)$, 有 $\mathsf{Aff}$ 中的余等化子
+$$
+\coprod_{i,j}D(f_if_j) \rightrightarrows
+\coprod_i D(f_i)
+\to \operatorname{Spec} A.
+$$</p>
+<p><em>证明</em>. 要证明有 $\mathsf{Ring}$ 中的<span class="link local"><a href="./等化子.html" title="等化子 [等化子]">等化子</a></span>
+$$
+A \to {\prod_i A[f_i^{-1}]} \rightrightarrows {\prod_{i,j}A[(f_if_j)^{-1}].}
+$$
+具体地, 设 $(x_i/f_i^{n_i})_{i\in I}\in \prod_i A[f_i^{-1}]$ 在两个限制映射下的像相等, 即在 $A[(f_if_j)^{-1}]$ 中有 $x_i/f_i^{n_i} = x_j/f_j^{n_j}$.
+我们要证明存在唯一的 $x\in A$ 使得在 $A[f_i^{-1}]$ 中有 $x/1=x_i/f_i^{n_i}$.</p>
+<p>先考虑 $I$ 为有限集的情形.
+取正整数 $N_{ij}$, 使得
+$(f_if_j)^{N_{ij}} (f_j^{n_j}x_i-f_i^{n_i}x_j)=0$.
+由有限性, 可取正整数 $N=\max\{N_{ij}\mid i,j\in I\}+\max\{n_i\mid i\in I\}$.
+由条件, $\{f_i\}_{i\in I}$ 生成单位理想.
+那么 $\{f_i^N\}_{i\in I}$ 也生成了单位理想.
+设 $1=\sum_{i\in I} a_if_i^N\,(a_i\in A)$.
+令 $x = \sum_{i\in I} a_if_i^{N-n_i}x_i$.
+对任意 $i\in I$,
+容易验证 $x$ 在 $A[f_i^{-1}]$ 中等于 $x_i/f_i^{n_i}$.
+这是因为 $f_i^{n_i}x-x_i=0$.
+这证明了 $x$ 的存在性.
+而 $x$ 的唯一性是因为, 若 $x$ 在每个 $A[f_i^{-1}]$ 中都等于 $0$, 则 $x=0$.</p>
+<p>再来处理 $I$ 为任意集合的情形. 取有限子集 $I_0\subset I$ 使得 $\{f_i\}_{i\in I_0}$ 生成了单位理想. 对 $I_0$ 使用前述构造得到 $x$. 考虑 $i'\in I\setminus I_0$, 对 $I_0\cup \{i'\}$ 再次使用前述构造得到 $x'$. 由唯一性就得到 $x=x'$.</p>
+<p>$\square$</p>
+<h3>概形</h3>
+<p><strong>定义</strong> (空间). 定义<strong>空间</strong>为函子 $X\colon \mathsf{Aff}^{\mathrm{op}} \to \mathsf{Set}$ (也即 $X\colon \mathsf{Ring}\to\mathsf{Set}$).</p>
+<p>当然, 空间一词在数学上有太多不同的含义, 这种空间与那种空间不一定相关联. 不过代数几何使用的空间概念大多都类似这种形式.</p>
+<p><strong>定义</strong> (概形). 称满足如下条件的空间 $X$ 为<strong></strong><span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span>:</p>
+<ul>
+<li>(Zariski 层条件) 对任意 Zariski 覆盖 $\{D(f_i) \to \operatorname{Spec} A\}_{i\in I}\,(f_i\in A)$, 给定一族相容的元素 $s_i\in X(D(f_i))$ (相容的意思是 $s_i,s_j$ 限制在 $D(f_if_j)$ 上相同), 存在唯一的 $s\in X(\operatorname{Spec} A)$ 限制为每个 $s_i$.</li>
+<li>(局部仿射性) $X$ 存在仿射开覆盖 (开覆盖的定义在本节的后文).</li>
+</ul>
+<p>概形的态射即为函子的自然变换. 记概形的范畴为 $\mathsf{Sch}$.</p>
+<p><strong>命题</strong>. 仿射概形是概形. 换言之, 将仿射概形对应到其点函子的米田嵌入穿过概形的范畴, 给出全忠实函子 $\mathbf{y}\colon \mathsf{Aff} \hookrightarrow \mathsf{Sch}$.</p>
+<p><em>证明</em>. 这是由于 Zariski 覆盖是次典范的.</p>
+<p><strong>命题</strong>. 概形 $X$ 是仿射概形在空间范畴中的余极限:
+$$
+	X \simeq \operatorname{colim}_{\operatorname{Spec} A \to X}\operatorname{Spec} A.
+$$</p>
+<p><em>证明</em>. 这是<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>的性质.</p>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="pedagogy" style="margin-bottom: 0.4em;"><header><h1><span class="taxon"><span class="link local"><a href="./pedagogy.html" title="教学 [pedagogy]">pedagogy</a></span></span>教程 : 函子式代数几何 <a class="slug" href="./tutorial-funAG.html">[tutorial-funAG]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+
+</div></body></html>

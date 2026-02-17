@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width"><title>形式化数学</title><link rel="stylesheet" href="./main.css">
+<link rel="stylesheet" href="./typst.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    font-family: "Inria Sans", sans-serif;
+  }
+
+  pre,
+  code {
+    font-family: monospace;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Inria Sans", sans-serif;
+  }
+
+  nav {
+    font-family: "Inria Sans", sans-serif;
+  }
+
+  thead {
+    font-family: "Inria Sans", sans-serif;
+  }
+</style><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"
+  integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"
+  integrity="sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+  integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"
+  integrity="sha384-HORx6nWi8j5/mYA+y57/9/CZc5z8HnEw4WUZWy5yOn9ToKBv1l58vJaufFAn9Zzi" crossorigin="anonymous"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+        { left: '\\(', right: '\\)', display: false },
+        { left: '\\[', right: '\\]', display: true }
+      ],
+      strict: false,
+      throwOnError: false,
+      minRuleThickness: 0.05,
+    });
+  });
+</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="subject"><details open><summary id="形式化数学"><header><h1><span class="taxon"><span class="link local"><a href="./subject.html" title="学科 [subject]">subject</a></span></span>形式化数学 <a class="slug" href="./形式化数学.html">[形式化数学]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>Voevodsky 在一篇关于<span class="link local"><a href="./UF.html" title="泛等基础 [UF]">泛等基础</a></span>的动机的<span class="link local"><a href="./VV-UF.html" title="The Origins and Motivations of Univalent Foundationsn [VV-UF]">文章</a></span>中回忆了促使他研究形式化数学的几次事件:</p>
+<ul>
+<li>在 1999-2000 年, Voevodsky 发现他 1992-1993 年的一篇论文中的关键引理证明有误. 那几年之间, 许多数学家研究并讨论过这篇文章, 但无人指出错误.</li>
+<li>1998 年, C. Simpson 的文章 <em>Homotopy Types of Strict 3-groupoids</em> 包含了一个例子, 说明 Voevodsky 与 Kapranov 1989 年的文章 <em>∞-Groupoids as a Model for a Homotopy Category</em> 的主要结果不成立. 但当时没有人能指出 Voevodsky 与 Kapranov 论证中的具体错误. 这个错误直到 2013 年才被清晰地认识.</li>
+</ul>
+<p>他总结道,</p>
+<blockquote>
+<p>A technical argument by a trusted author, which is hard to check and looks similar to arguments known to be correct, is hardly ever checked in detail.</p>
+<p>由可信的作者给出的技术论证, 如果难以检验, 但又长得像正确的证明, 那么几乎从不会有人仔细验证.</p>
+<p>V. Voevodsky, <span class="link local"><a href="./VV-UF.html" title="The Origins and Motivations of Univalent Foundationsn [VV-UF]">The Origins and Motivations of Univalent Foundations</a></span></p>
+</blockquote>
+<p>接着他认为</p>
+<blockquote>
+<p>… the only long-term solution was somehow to make it possible for me to use computers to verify my abstract, logical, and mathematical constructions.</p>
+<p>唯一的长期解决方案是让计算机能够验证我那些抽象的逻辑和数学构造.</p>
+<p>V. Voevodsky, <span class="link local"><a href="./VV-UF.html" title="The Origins and Motivations of Univalent Foundationsn [VV-UF]">上述引文</a></span></p>
+</blockquote>
+<p>当时形式化数学的系统已经存在, 但没有适合于 Voevodsky 希望做的与<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>有关的数学的系统. Voevodsky 指出问题的根源在于当时人们使用的<span class="link local"><a href="./数学基础.html" title="数学基础 [数学基础]">数学的基础</a></span>不适合于他想做的数学.</p>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Lean <a class="slug" href="./Lean.html">[Lean]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Meta" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Meta. </span>学科 <a class="slug" href="./subject.html">[subject]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+
+</div></body></html>

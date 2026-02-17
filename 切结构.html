@@ -57,7 +57,7 @@
   });
 </script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="切结构"><header><h1><span class="taxon">Wiki. </span>切结构 <a class="slug" href="./切结构.html">[切结构]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p><strong>切结构</strong>是基于流形的切丛的一大类<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构</a></span>的统称, 包括<strong>定向</strong>, <strong>Riemann 度量</strong>, <strong>近复结构</strong>等. 它是流形的切丛对应的 $\mathrm{GL}_n$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>的<span class="link local"><a href="./主丛的约化.html" title="主丛的约化 [主丛的约化]">约化</a></span>.</p>
+<p><strong>切结构</strong>是基于光滑流形的切丛的一大类<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构</a></span>的统称, 包括<strong>定向</strong>, <strong>Riemann 度量</strong>, <strong></strong><span class="link local"><a href="./近复结构.html" title="近复结构 [近复结构]">近复结构</a></span>等. 它是流形的<span class="link local"><a href="./切丛.html" title="切丛 [切丛]">切丛</a></span>对应的 $\mathrm{GL}_n$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>的<span class="link local"><a href="./主丛的约化.html" title="主丛的约化 [主丛的约化]">约化</a></span>.</p>
 <h2>定义</h2>
 <p>设 $p \colon G\to \mathrm{GL}_n$ 为<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>的同态. (这里的 $\mathrm{GL}_n$ 可以是离散群, 也可以是 Lie 群, 甚至可以是<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>群, 依实际需要决定)</p>
 <p>对于 $m\leq n$, 定义 $m$ 维流形 $M$ 上的一个 $p$-结构是 $TM\oplus\mathbb{R}^{n-m}$ 的分类映射 $M\to \mathbf{B}\mathrm{GL}_n$ 的一个提升
@@ -71,6 +71,16 @@ $$
 $$
 那么 $p$-结构的集合是<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">非 Abel 上同调</a></span>的映射 $H^1(M,G) \to H^1(M,\mathrm{GL}_n)$ 之下, 切丛 $TM$ 对应的元素的原像.</p>
 <p>当群同态 $p\colon G\to \mathrm{GL}_n$ 没有歧义, 或有一个公认的选取 (比如 $G$ 是 $\mathrm{GL}_n$ 的 Lie 子群) 时, 也称 $p$-结构为 $G$-结构.</p>
+<h3>带 $p$-结构流形的范畴</h3>
+<p><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>的理论使用如下范畴. 考虑范畴 $\mathsf{Mfd}_n$, 其对象为 $n$ 维光滑流形, 态射空间为光滑<strong>嵌入</strong>的空间 (注意不是光滑映射的空间). 对于群同态 $p \colon G\to \mathrm{GL}_n$, 定义 “带 $p$-结构的 $n$ 维流形的范畴” $\mathsf{Mfd}_n^p$ 为如下拉回.</p>
+<p>$$
+\begin{array}
+{ccc}
+\mathsf{Mfd}_n^p &amp; \to &amp; \mathsf{Ani}_{/\mathbf{B}G}\\
+\downarrow &amp; &amp; \downarrow\\
+\mathsf{Mfd}_n &amp; \to &amp; \mathsf{Ani}_{/\mathbf{B}\mathrm{GL}_n}
+\end{array}
+$$</p>
 <h2>例</h2>
 <p>在 $n$ 维流形上,</p>
 <ul>
@@ -79,7 +89,7 @@ $$
 <li>$\mathrm{GL}_n^+$-结构就是<strong>定向</strong>.</li>
 <li>$\mathrm{SL}_n$-结构称为<strong>体积形式</strong>.</li>
 <li>$\mathrm{O}_n$-结构相当于 <strong>Riemann 度量</strong>.</li>
-<li>$\mathrm{GL}_n(\mathbb{C})\hookrightarrow\mathrm{GL}_{2n}(\mathbb{R})$-结构就是<span class="link local"><a href="./近复结构.html" title="“近复结构” [近复结构]">近复结构</a></span>.</li>
+<li>$\mathrm{GL}_n(\mathbb{C})\hookrightarrow\mathrm{GL}_{2n}(\mathbb{R})$-结构就是<span class="link local"><a href="./近复结构.html" title="近复结构 [近复结构]">近复结构</a></span>.</li>
 <li>$\mathrm{U}_n$-结构又叫<strong>近 Hermite 结构</strong>.</li>
 <li><span class="link local"><a href="./自旋群.html" title="自旋群 [自旋群]">$\mathrm{Spin}_n$</a></span>-结构称为<span class="link local"><a href="./自旋流形.html" title="自旋流形 [自旋流形]">自旋结构</a></span>.</li>
 </ul>

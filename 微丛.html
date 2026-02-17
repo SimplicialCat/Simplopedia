@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width"><title>微丛</title><link rel="stylesheet" href="./main.css">
+<link rel="stylesheet" href="./typst.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    font-family: "Inria Sans", sans-serif;
+  }
+
+  pre,
+  code {
+    font-family: monospace;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Inria Sans", sans-serif;
+  }
+
+  nav {
+    font-family: "Inria Sans", sans-serif;
+  }
+
+  thead {
+    font-family: "Inria Sans", sans-serif;
+  }
+</style><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"
+  integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"
+  integrity="sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+  integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"
+  integrity="sha384-HORx6nWi8j5/mYA+y57/9/CZc5z8HnEw4WUZWy5yOn9ToKBv1l58vJaufFAn9Zzi" crossorigin="anonymous"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+        { left: '\\(', right: '\\)', display: false },
+        { left: '\\[', right: '\\]', display: true }
+      ],
+      strict: false,
+      throwOnError: false,
+      minRuleThickness: 0.05,
+    });
+  });
+</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="微丛"><header><h1><span class="taxon">Wiki. </span>微丛 <a class="slug" href="./微丛.html">[微丛]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>微丛</strong> (microbundle) 是以带基点的拓扑空间 $\mathbb{R}^n$ 为纤维的<span class="link local"><a href="./纤维丛.html" title="纤维丛 [纤维丛]">纤维丛</a></span>, 是<span class="link local"><a href="./向量丛.html" title="向量丛 [向量丛]">向量丛</a></span>的模拟, 但其上没有加法.</p>
+<h2>定义</h2>
+<p>一个<strong>微丛</strong>是拓扑空间之间的一个连续映射 $p\colon E \to B$, 带有截面 $i\colon B\to E$ (称为<strong>零截面</strong>), 且满足如下局部平凡性:
+对任意 $b\in B$, 存在 $b$ 的邻域 $U$ 与 $i(b)$ 的邻域 $V$, 以及 $U$ 上的同构
+$$
+\begin{array}
+    {ccc}
+    \!\!\!\!\!\!\!\!\!\!\! V \cap p^{-1}(U) \!\!\! &amp; \overset{\simeq}{\to} &amp;\!\!\! U\times\mathbb{R}^n\!\!\!\\
+    \downarrow &amp; \swarrow &amp;\\
+    U.\!\!&amp;&amp;
+\end{array}
+$$
+但实际上微丛 $E\to B$ 有用的信息只是零截面 $i(B)$ 的一个 “微小” 邻域. 因为微丛的态射是这样定义的:
+同一个空间 $B$ 上的微丛之间的态射 $E\to E'$ 是零截面邻域上的函数<span class="link local"><a href="./茎.html" title="茎 [茎]">芽</a></span>. 因此, 两个微丛的同构也只需要各自的零截面的一个邻域之间的同构.</p>
+<h2>例</h2>
+<h3>切微丛</h3>
+<p>拓扑流形 $M$ 的<span class="link local"><a href="./切微丛.html" title="切微丛 [切微丛]">切微丛</a></span>定义为 $\mathrm{pr}_1\colon M\times M\to M$, 零截面为<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span> $\Delta\colon M\to M$. 如前所述, 这个微丛实际上有用的信息是 $M$ 的每个点的一个微小的邻域.</p>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>切微丛 <a class="slug" href="./切微丛.html">[切微丛]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+
+</div></body></html>
