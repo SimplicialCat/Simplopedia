@@ -218,6 +218,31 @@ $$
 x\mapsto 4-3\epsilon,\ y\mapsto 3+4\epsilon
 $$
 给出.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="局部化(范畴论)"><header><h1><span class="taxon">Wiki. </span>局部化 (范畴论) <a class="slug" href="./局部化(范畴论).html">[局部化(范畴论)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>在<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中, <strong>局部化</strong>是一种万有的使一些态射变得可逆的方法.</p>
+<p>另见<span class="link local"><a href="./局部化.html" title="局部化 (环) [局部化]">局部化 (环)</a></span>, <span class="link local"><a href="./Bousfield局部化.html" title="Bousfield 局部化 (稳定同伦论) [Bousfield局部化]">Bousfield 局部化 (稳定同伦论)</a></span>.</p>
+<h2>定义</h2>
+<p>设 $\mathcal{C}$ 为范畴, $S$ 为 $\mathcal{C}$ 中的一族态射. 定义 $\mathcal C$ 关于 $S$ 的<strong>局部化</strong>为满足如下条件的范畴 $\mathcal C[S^{-1}]$ 配备函子 $\mathcal C \to \mathcal C[S^{-1}]$:</p>
+<ul>
+<li>对任意函子 $F\colon \mathcal C\to\mathcal D$, 若 $F$ 将 $S$ 中的每个态射变为同构, 则 $F$ 唯一地穿过 $\mathcal C \to \mathcal C[S^{-1}]$, 即存在唯一的 $\mathcal C[S^{-1}] \to \mathcal D$ 以及交换图
+$$
+\begin{array}{ccc}
+\mathcal C &amp; \rightarrow &amp; \mathcal C[S^{-1}] \\
+ &amp; \searrow &amp; \downarrow \\
+ &amp;  &amp; \mathcal D.
+\end{array}
+$$</li>
+</ul>
+<p>等价地, 可定义 $\mathcal C[S^{-1}]$ 为<span class="link local"><a href="./Cat.html" title="范畴的范畴 [Cat]">范畴的范畴 $\mathsf{Cat}$</a></span> 中的如下<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>,
+$$
+\begin{array}{ccc}
+\bigsqcup_S \{\cdot\to\cdot\} &amp; \rightarrow &amp; \bigsqcup_S \{\cdot\leftrightarrow\cdot\} \\
+\downarrow &amp;  &amp; \downarrow \\
+\mathcal C &amp; \rightarrow &amp; \mathcal C[S^{-1}]
+\end{array}
+$$
+其中 $\{\cdot\to\cdot\}$ 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的箭头.</p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="球面"><header><h1><span class="taxon">Wiki. </span>球面 <a class="slug" href="./球面.html">[球面]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>归纳定义</h3>

@@ -85,7 +85,50 @@ $$</p>
 <h3>素理想</h3>
 <p>$A[S^{-1}]$ 的素理想等同于 $A$ 中与 $S$ 不相交的素理想.</p>
 <p>例如, $A_{\mathfrak p}$ 的素理想等同于 $A$ 中<strong>包含于</strong> $\mathfrak p$ 的素理想. (而 $A/\mathfrak p$ 的素理想等同于 $A$ 中<strong>包含</strong> $\mathfrak p$ 的素理想.)</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="pedagogy"><details ><summary id="tutorial-funAG-aff"><header><h1><span class="taxon"><span class="link local"><a href="./pedagogy.html" title="教学 [pedagogy]">pedagogy</a></span></span>教程 : 函子式代数几何 第一节 仿射概形 <a class="slug" href="./tutorial-funAG-aff.html">[tutorial-funAG-aff]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Bousfield局部化"><header><h1><span class="taxon">Wiki. </span>Bousfield 局部化 (稳定同伦论) <a class="slug" href="./Bousfield局部化.html">[Bousfield局部化]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本页面介绍<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的 Bousfield 局部化. 另见<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化 (范畴论)</a></span>, <span class="link local"><a href="./局部化.html" title="局部化 (环) [局部化]">局部化 (环)</a></span>.</p>
+<h2>观念</h2>
+<p>固定一个<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span> $E$. 关于 $E$ 的 Bousfield 局部化提取出 $E$ 表示的<span class="link local"><a href="./广义同调.html" title="广义同调 [广义同调]">同调理论</a></span>可见的同伦信息.
+Bousfield 局部化也可理解为谱的范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 关于 $E$-等价的 <span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">(范畴论) 局部化</a></span>.</p>
+<h2>定义</h2>
+<p>为了定义 $E$-局部谱, 首先需要 $E$-无圈谱, $E$-等价的概念.</p>
+<ul>
+<li>称谱 $X$ 为 $E$-<strong>无圈谱</strong>是指 $E\wedge X = 0$.</li>
+<li>称谱的态射 $f\colon X\to Y$ 为 $E$-<strong>等价</strong>是指如下等价条件之一成立:
+<ul>
+<li>$E\wedge f\colon E\wedge X \to E\wedge Y$ 为等价 (换言之, $f$ 诱导 $E$-<span class="link local"><a href="./广义同调.html" title="广义同调 [广义同调]">同调</a></span>的同构);</li>
+<li>$f$ 的<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维</a></span>为 $E$-无圈谱.</li>
+</ul>
+</li>
+<li>称谱 $X$ 为 $E$-<strong>局部谱</strong>是指如下等价条件之一成立:
+<ul>
+<li>对任意 $E$-等价 $f\colon A\to B$, $[f,X] \colon [B,X] \to [A,X]$ 为同构;</li>
+<li>对任意 $E$-无圈谱 $A$, $[A,X] \simeq 0$.</li>
+</ul>
+</li>
+</ul>
+<p><strong>命题</strong>. 对任意谱 $X$ 存在自然的 (余) <span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
+$$
+{_E}X \to X \overset{\eta}{\to} X_E \to \Sigma ({_E}X),
+$$
+使得</p>
+<ul>
+<li>${_E}X$ 为 $E$-无圈谱,</li>
+<li>$X_E$ 为 $E$-局部谱,</li>
+<li>$\eta\colon X\to X_E$ 为 $E$-等价.</li>
+</ul>
+<p>$E$-局部化可视为 “将 $E$-等价变为等价” 的操作.</p>
+<h2>性质</h2>
+<p><strong>命题</strong>. 设 $E$ 为<span class="link local"><a href="./环谱.html" title="环谱 [环谱]">环谱</a></span>, $X$ 为 $E$-模, 则 $X$ 为 $E$-局部谱.</p>
+<p><strong>证明</strong>. 设 $A$ 为任意 $E$-无圈谱. 那么任意态射 $A\to X$ 可分解为
+$$
+A \overset{1}{\to}E\wedge A\overset{f}{\to}E\wedge X \to X,
+$$
+而 $A\wedge E=0$, 这说明 $[A,X] \simeq 0$.</p>
+<p>另一种说法是, 由于 $X$ 是 $E$-模, $X$ 是 $X\wedge E$ 的收缩, 而对任何谱 $X$, $X\wedge E$ 都是 $E$-局部谱. (好像 $E$-模是 $E$-局部谱这个结论更基本一些.)</p>
+<p><strong>命题</strong>. $E$-局部谱的子范畴关于平移, 收缩, 积 (直和), 余纤维封闭.</p>
+<p>注意, $E$-局部谱的<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">张量积</a></span>不一定是 $E$-局部谱.</p>
+</details></section><section class="block" data-taxon="pedagogy"><details ><summary id="tutorial-funAG-aff"><header><h1><span class="taxon"><span class="link local"><a href="./pedagogy.html" title="教学 [pedagogy]">pedagogy</a></span></span>教程 : 函子式代数几何 第一节 仿射概形 <a class="slug" href="./tutorial-funAG-aff.html">[tutorial-funAG-aff]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>主目录: <span class="link local"><a href="./tutorial-funAG.html" title="教程 : 函子式代数几何 [tutorial-funAG]">教程 : 函子式代数几何</a></span></p>
 <p>这里所指的环是含幺交换环, 其中 $1$ 可能等于 $0$. 若 $1=0$, 则环中所有元素都等于 $0$, 记这个环为 $0$.</p>
 <p>粗略地说, 对于环 $A$, 我们希望有一个空间 $\operatorname{Spec} A$ 使得 $A$ 的元素可视为 $\operatorname{Spec} A$ 上的函数.
@@ -263,6 +306,31 @@ $$</p>
 <h2>性质</h2>
 <p>在 $\mathcal A$ 为 <span class="link local"><a href="./GrothendieckAbel范畴.html" title=" [GrothendieckAbel范畴]">Grothendieck Abel 范畴</a></span>的前提下, $\mathsf {D}(\mathcal A)$ 是<span class="link local"><a href="./稳定∞-范畴.html" title=" [稳定∞-范畴]">稳定无穷范畴</a></span>.</p>
 <h2>相关概念</h2>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="局部化(范畴论)"><header><h1><span class="taxon">Wiki. </span>局部化 (范畴论) <a class="slug" href="./局部化(范畴论).html">[局部化(范畴论)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>在<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中, <strong>局部化</strong>是一种万有的使一些态射变得可逆的方法.</p>
+<p>另见<span class="link local"><a href="./局部化.html" title="局部化 (环) [局部化]">局部化 (环)</a></span>, <span class="link local"><a href="./Bousfield局部化.html" title="Bousfield 局部化 (稳定同伦论) [Bousfield局部化]">Bousfield 局部化 (稳定同伦论)</a></span>.</p>
+<h2>定义</h2>
+<p>设 $\mathcal{C}$ 为范畴, $S$ 为 $\mathcal{C}$ 中的一族态射. 定义 $\mathcal C$ 关于 $S$ 的<strong>局部化</strong>为满足如下条件的范畴 $\mathcal C[S^{-1}]$ 配备函子 $\mathcal C \to \mathcal C[S^{-1}]$:</p>
+<ul>
+<li>对任意函子 $F\colon \mathcal C\to\mathcal D$, 若 $F$ 将 $S$ 中的每个态射变为同构, 则 $F$ 唯一地穿过 $\mathcal C \to \mathcal C[S^{-1}]$, 即存在唯一的 $\mathcal C[S^{-1}] \to \mathcal D$ 以及交换图
+$$
+\begin{array}{ccc}
+\mathcal C &amp; \rightarrow &amp; \mathcal C[S^{-1}] \\
+ &amp; \searrow &amp; \downarrow \\
+ &amp;  &amp; \mathcal D.
+\end{array}
+$$</li>
+</ul>
+<p>等价地, 可定义 $\mathcal C[S^{-1}]$ 为<span class="link local"><a href="./Cat.html" title="范畴的范畴 [Cat]">范畴的范畴 $\mathsf{Cat}$</a></span> 中的如下<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>,
+$$
+\begin{array}{ccc}
+\bigsqcup_S \{\cdot\to\cdot\} &amp; \rightarrow &amp; \bigsqcup_S \{\cdot\leftrightarrow\cdot\} \\
+\downarrow &amp;  &amp; \downarrow \\
+\mathcal C &amp; \rightarrow &amp; \mathcal C[S^{-1}]
+\end{array}
+$$
+其中 $\{\cdot\to\cdot\}$ 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的箭头.</p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="既约环"><header><h1><span class="taxon">Wiki. </span>既约环 <a class="slug" href="./既约环.html">[既约环]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>既约环是满足如下等价条件的环 $R$:</p>

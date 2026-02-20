@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width"><title>全忠实函子</title><link rel="stylesheet" href="./main.css">
+<link rel="stylesheet" href="./typst.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    font-family: "Inria Sans", sans-serif;
+  }
+
+  pre,
+  code {
+    font-family: monospace;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Inria Sans", sans-serif;
+  }
+
+  nav {
+    font-family: "Inria Sans", sans-serif;
+  }
+
+  thead {
+    font-family: "Inria Sans", sans-serif;
+  }
+</style><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"
+  integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"
+  integrity="sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+  integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"
+  integrity="sha384-HORx6nWi8j5/mYA+y57/9/CZc5z8HnEw4WUZWy5yOn9ToKBv1l58vJaufFAn9Zzi" crossorigin="anonymous"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+        { left: '\\(', right: '\\)', display: false },
+        { left: '\\[', right: '\\]', display: true }
+      ],
+      strict: false,
+      throwOnError: false,
+      minRuleThickness: 0.05,
+    });
+  });
+</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="全忠实函子"><header><h1><span class="taxon">Wiki. </span>全忠实函子 <a class="slug" href="./全忠实函子.html">[全忠实函子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><strong>全忠实函子</strong> (fully faithful functor) 又称<strong>全子范畴</strong> (full subcategory), 是满足如下条件的函子 $F\colon \mathcal C\to\mathcal D$: 对任意对象 $X,Y\in\mathcal C$, 映射 $\mathcal C(X,Y) \to \mathcal D(F(X),F(Y))$ 为等价.</p>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Azumaya范畴"><header><h1><span class="taxon">Wiki. </span>Azumaya 范畴 <a class="slug" href="./Azumaya范畴.html">[Azumaya范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>Azumaya 范畴是 <span class="link local"><a href="./Azumaya代数.html" title="Azumaya 代数 [Azumaya代数]">Azumaya 代数</a></span>在<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>中的推广.</p>
+<h2>定义</h2>
+<p>参考 <span class="link local"><a href="./BorceuxVitaleAzumayaCategory.html" title="Azumaya categories [BorceuxVitaleAzumayaCategory]">Borceux–Vitale</a></span>.</p>
+<p>设 $\mathcal V$ 为余完备<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 记 $\mathcal I$ 为单对象且以始对象为态射对象的 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>.</p>
+<p>对于 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span> $A$, 如下条件等价:</p>
+<ol>
+<li>存在 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span> $\mathcal B$, 使得 $A\otimes\mathcal B$ <span class="link local"><a href="./Morita等价.html" title="Morita 等价 [Morita等价]">Morita 等价</a></span>于 $\mathcal I$.</li>
+<li>$\mathcal A\otimes\mathcal A^{\mathrm{op}}$ <span class="link local"><a href="./Morita等价.html" title="Morita 等价 [Morita等价]">Morita 等价</a></span>于 $\mathcal I$.</li>
+<li>$\mathcal A$ 为中心可分 $\mathcal V$-充实范畴, 且典范函子 $\mathcal A\otimes\mathcal A^{\mathrm{op}} \to\mathcal V$ 为 $\mathcal A\otimes\mathcal A^{\mathrm{op}}$-模中的强生成元.</li>
+<li>典范函子 $\mathcal A\otimes\mathcal A^{\mathrm{op}} \to\mathcal V$ <span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实</a></span>, 且作为 $(\mathcal A\otimes\mathcal A^{\mathrm{op}},\mathcal I)$-<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">双模</a></span>, 为小投射强生成元.</li>
+</ol>
+<p><strong>注</strong>. <span class="link local"><a href="./Azumaya代数.html" title="Azumaya 代数 [Azumaya代数]">Azumaya 代数</a></span>是上述概念 $\mathcal V = \mathsf{Mod}(R)$ 的特殊情形.</p>
+<p><span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">充实范畴上的模</a></span>页面解释了上述定义中涉及的概念. 这些概念都是环上的模与代数的类似概念的推广.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="pro-对象"><header><h1><span class="taxon">Wiki. </span>pro-对象 <a class="slug" href="./pro-对象.html">[pro-对象]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>范畴 $\mathcal C$ 的 pro-对象是其对象的形式<span class="link local"><a href="./余滤极限.html" title="余滤极限 [余滤极限]">余滤极限</a></span>.</p>
+<h2>定义</h2>
+<p>范畴 $\mathcal C$ 的 pro-对象的范畴
+$$
+\mathsf{Pro}(\mathcal C) \hookrightarrow \mathsf{Fun}(\mathcal C,\mathsf{Set})^{\mathrm{op}}
+$$
+是<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>在 $\mathsf{Fun}(\mathcal C,\mathsf{Set})^{\mathrm{op}}$ 中的<span class="link local"><a href="./余滤极限.html" title="余滤极限 [余滤极限]">余滤极限</a></span>构成的全子范畴.</p>
+<h2>例</h2>
+<ul>
+<li><span class="link local"><a href="./pro-有限集.html" title="pro-有限集 [pro-有限集]">pro-有限集</a></span></li>
+<li><span class="link local"><a href="./pro-有限群.html" title="pro-有限群 [pro-有限群]">pro-有限群</a></span></li>
+</ul>
+<h2>性质</h2>
+<h3>态射的计算</h3>
+<p>由<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>, 对于 $X\in\mathsf{Pro}(\mathcal C)$ (视为函子 $\mathcal C\to\mathsf{Set}$) 与 $c\in\mathcal C$,
+$$
+\operatorname{Hom}_{\mathsf{Pro}(\mathcal C)}(X,\mathbf{y}(c))\simeq X(c).
+$$
+因此我们可以谈论 “$X$ 到 $c$ 的态射”, 也即 $X(c)$ 的元素.</p>
+<p>由定义和 $\operatorname{Hom}$ 函子保持极限的性质, 可直接得到 pro-对象之间的态射的如下计算.</p>
+<p><strong>命题</strong>. 设 $X,Y\in\mathsf{Pro}(\mathcal C)$ 对应函子 $X,Y\colon \mathcal C\to\mathsf{Set}$.
+$$
+\operatorname{Hom}_{\mathsf{Pro}(\mathcal C)}(X,Y) \simeq \operatorname{lim}_{Y \to d}\operatorname{colim}_{X\to c} \operatorname{Hom}(c,d).
+$$
+其中, $X\to c$ 表示的是 $X$ 到对象 $c\in\mathcal C$ 的 “态射”, 也即 $X(c)$ 的元素.</p>
+<p>具体证明见<span class="link local"><a href="./预层意象.html" title="预层意象 [预层意象]">预层</a></span>页面 “态射的计算” 小节.</p>
+<h3>自由余滤完备化</h3>
+<p>范畴 $\mathcal C$ 的 pro-对象的范畴 $\mathsf{Pro}(\mathcal C)$ 可视为向 $\mathcal C$ 中自由地添加余滤极限的结果. 这体现为如下的结论.</p>
+<p><strong>命题</strong>. 设 $\mathcal C$ 为范畴, $\mathcal D$ 是具有余滤极限的范畴, 有<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实嵌入</a></span> $i\colon \mathcal C\to\mathcal D$, 且 $i$ 的像落在<span class="link local"><a href="./紧对象.html" title="紧对象 [紧对象]">余紧对象</a></span>的子范畴中. 那么 $i$ 可沿 $\mathcal C\to\mathsf{Pro}(\mathcal C)$ <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">右 Kan 扩张</a></span>成为全忠实嵌入 $i\colon \mathsf{Pro}(\mathcal C) \to \mathcal D$; 对于 pro-对象 $X\colon \mathcal C\to\mathsf{Set}$,
+$$
+i(X) = \operatorname{lim}_{X\to c} i(c).
+$$</p>
+<p><em>证明</em>.
+设 $X,Y\in\mathsf{Pro}(\mathcal C)$,
+$$
+\begin{aligned}
+\operatorname{Hom}_{\mathsf{Pro}(\mathcal C)}(X,Y)
+&amp;\simeq
+\operatorname{lim}_{Y\to d}\operatorname{colim}_{X\to c}\operatorname{Hom}_{\mathcal C}(c,d)\\
+&amp;\simeq
+\operatorname{lim}_{Y\to d}\operatorname{colim}_{X\to c}\operatorname{Hom}_{\mathcal D}(i(c),i(d))\\
+&amp;\simeq^*
+\operatorname{lim}_{Y\to d}\operatorname{Hom}_{\mathcal D}(\operatorname{lim}_{X\to c}i(c),i(d))\\
+&amp;\simeq \operatorname{Hom}_{\mathcal D}(\operatorname{lim}_{X\to c}i(c),\operatorname{lim}_{Y\to d}i(d))\\
+&amp;\simeq\operatorname{Hom}_{\mathcal D}(i(X),i(Y)).
+\end{aligned}
+$$
+其中标记为 $\simeq^*$ 的一步使用了 $i(d)$ 的余紧性. $\square$</p>
+<p>上述命题的一个重要应用是将 <span class="link local"><a href="./pro-有限集.html" title="pro-有限集 [pro-有限集]">pro-有限集</a></span>与 <span class="link local"><a href="./pro-有限群.html" title="pro-有限群 [pro-有限群]">pro-有限群</a></span>视为紧 Hausdorff 空间, 因为有限离散空间是紧 Hausdorff 空间范畴 $\mathsf{CHaus}$ 中的余紧对象.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="幂等完备化"><header><h1><span class="taxon">Wiki. </span>幂等完备化 <a class="slug" href="./幂等完备化.html">[幂等完备化]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于范畴 $\mathcal C$, 若存在<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span> $i\colon \mathcal C\to \widetilde {\mathcal C}$ 满足</p>
+<ul>
+<li>$\widetilde {\mathcal C}$ 为<span class="link local"><a href="./幂等完备范畴.html" title="“幂等完备范畴” [幂等完备范畴]">幂等完备范畴</a></span>;</li>
+<li>$\widetilde {\mathcal C}$ 的对象均为 $\mathcal C$ 的对象的收缩;</li>
+</ul>
+<p>则称之为 $\mathcal C$ 的幂等完备化, 或 Cauchy 完备化, 或 Karoubi 闭包.</p>
+<h2>构造</h2>
+<p>对于小范畴 $\mathcal C$, 定义 $\overline{\mathcal C}$ 为 $\widehat {\mathcal C}$ 中<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>的收缩构成的全子范畴, 则米田嵌入 $\mathcal C\to \overline{\mathcal C}$ 为幂等完备化.</p>
+<h2>性质</h2>
+<p>设 $\mathcal C$ 为小范畴. 一个预层 $F\in\widehat {\mathcal C}$ 属于 $\overline{\mathcal C}$ 当且仅当 $\operatorname{Hom}_{\widehat {\mathcal C}}(F,-)$ 保持所有余极限; 此时称 $F$ 为小对象 (tiny object) 或称 $F$ 绝对可表现 (absolutely presentable).</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="米田嵌入"><header><h1><span class="taxon">Wiki. </span>米田嵌入 <a class="slug" href="./米田嵌入.html">[米田嵌入]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>米田嵌入是将范畴 $\mathcal C$ 中的对象视为 $\mathcal C$ 上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>的过程.</p>
+<h2>性质</h2>
+<h3>全忠实性</h3>
+<p>米田嵌入是<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>; 换言之, 可表函子之间的态射等同于原来的对象之间的态射. 这是<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>的一个特殊情形.</p>
+</details></section><section class="block" data-taxon="notion"><details ><summary id="结构"><header><h1><span class="taxon"><span class="link local"><a href="./notion.html" title="观念 [notion]">notion</a></span></span>结构, 性质 <a class="slug" href="./结构.html">[结构]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>在数学用语中, 对于一类事物 $A$,</p>
+<ul>
+<li>说 $A$ 是<strong>结构而非性质</strong>, 意思是 $A$ 的选取不是唯一的, 或 “不典范”;</li>
+<li>说 $A$ 是<strong>性质</strong>, 意思是它只要存在就是唯一的, 或者说只有 “是” 或 “否” 两种情形;</li>
+</ul>
+<p>用<span class="link local"><a href="./同伦类型论.html" title="同伦类型论 [同伦类型论]">同伦类型论</a></span>的话说,</p>
+<ul>
+<li><strong>结构</strong>就是有高阶 ($0$ 阶及以上) <span class="link local"><a href="./同伦群.html" title="同伦群 [同伦群]">同伦信息</a></span>的类型, 例如<span class="link local"><a href="./集合(同伦类型论).html" title="集合 (同伦类型论) [集合(同伦类型论)]">集合</a></span>.</li>
+<li><strong>性质</strong>就是 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>类型, 即<span class="link local"><a href="./命题(同伦类型论).html" title="命题 (同伦类型论) [命题(同伦类型论)]">命题</a></span>.</li>
+</ul>
+<p>通过截断, 可将结构强行变为性质. 这在数学用于中常常表达为: 虽然 $A$ 是结构而非性质, 但 $A$ 的<strong>存在</strong>是一个性质. 这句话的实际含义是取 $A$ 的 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span> $\|A\|$.</p>
+<h2>例</h2>
+<h3>模结构与性质</h3>
+<p>设 $M$ 为 $\mathbb{Z}$-模, 那么 “$M$ 为 $\mathbb{Z}/n\mathbb{Z}$-模” 是<strong>性质</strong>, 因为 $M$ 具有 $\mathbb{Z}/n\mathbb{Z}$-模结构等价于对任意 $x \in M$, $nx=0$. 若 $M$ 具有 $\mathbb{Z}/n\mathbb{Z}$-模结构, 则这个结构是唯一的. 换言之, $M$ 上的 $\mathbb{Z}/n\mathbb{Z}$-模结构构成 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>类型.</p>
+<p>类似地, 设 $M$ 为 $\mathbb{Z}$-模, 那么 “$M$ 为 $\mathbb{Z}[1/n]$-模” 是<strong>性质</strong>, 因为 $M$ 具有 $\mathbb{Z}[1/n]$-模结构等价于对任意 $x \in M$, 存在 $y\in M$, $x=ny$.</p>
+<p>设 $M$ 为 $\mathbb{Z}$-模, 那么 “$M$ 为 <span class="link local"><a href="./p-进整数.html" title="p-进整数 [p-进整数]">$\mathbb{Z}_p$</a></span>-模” 是<strong>结构而非性质</strong>. 直观上, 虽然 $\mathbb{Z}$ 在 $\mathbb{Z}_p$ 中稠密, 但 $M$ 不是拓扑模, 我们谈论的只是模结构, 不能确保 $\mathbb{Z}_p$-模结构唯一. 事实上 $\mathbb{Z}_p\otimes_{\mathbb{Z}}\mathbb{Z}_p$ 不同构于 $\mathbb{Z}_p$, 所以 $\mathbb{Z}_p\otimes_{\mathbb{Z}}\mathbb{Z}_p$ 上有两个不同的 $\mathbb{Z}_p$-模结构.</p>
+<p>一般地, 对于环同态 $A\to B$, 如下条件等价:</p>
+<ul>
+<li>典范的环同态 $B\otimes_A B \to B$ 为同构;</li>
+<li>一个 $A$-模构成 $B$-模是性质;</li>
+<li>遗忘函子 $\mathsf{Mod}(B) \to \mathsf{Mod}(A)$ <span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实</a></span>.</li>
+</ul>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="自反子范畴"><header><h1><span class="taxon">Wiki. </span>自反子范畴 <a class="slug" href="./自反子范畴.html">[自反子范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>自反子范畴是有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>的<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="预层范畴之间的伴随"><header><h1><span class="taxon">Wiki. </span>预层范畴之间的伴随 <a class="slug" href="./预层范畴之间的伴随.html">[预层范畴之间的伴随]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>预层范畴之间的伴随是<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中十分常见的一种现象, 指的是范畴 $\mathcal C$, $\mathcal D$ 之间的函子诱导的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层范畴</a></span> $\widehat {\mathcal C} = \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set}),\widehat {\mathcal D} = \mathsf{Fun}(\mathcal D^{\mathrm{op}},\mathsf{Set})$ 之间的伴随.</p>
+<p>当然, <span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>中也有相应的现象.</p>
+<p>预层范畴之间的伴随是是 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>的特例, 而数学中的许多现象又是它的特例.</p>
+<h2>陈述</h2>
+<p>函子 $f\colon \mathcal C \to \mathcal D$ 诱导<span class="link local"><a href="./预层.html" title="预层 [预层]">预层范畴</a></span> $\widehat {\mathcal C} = \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set}),\widehat {\mathcal D} = \mathsf{Fun}(\mathcal D^{\mathrm{op}},\mathsf{Set})$ 之间的伴随
+$$
+f_! \dashv f^* \dashv f_*,
+$$
+其中</p>
+<ul>
+<li>$f^*\colon \mathsf{Fun}(\mathcal D^{\mathrm{op}},\mathsf{Set}) \to \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set})$ 是预层的拉回 (函子的复合),
+$$
+  (f^* X)(c) = X(f(c)).
+$$</li>
+<li>拉回的左伴随 $f_!$ 是沿 $f$ 的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">左 Kan 扩张</a></span>,
+$$
+  (f_! X)(d) = \operatorname{colim}_{d\to f(c)} X(c).
+$$</li>
+<li>拉回的右伴随 $f_*$ 是沿 $f$ 的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">右 Kan 扩张</a></span>,
+$$
+  (f_* X)(d) = \operatorname{lim}_{f(c)\to d} X(c).
+$$</li>
+</ul>
+<h3>代函子</h3>
+<p>左 Kan 扩张可视为<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>的复合, 右 Kan 扩张可视为<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>的同态集.</p>
+<p>若将 $f\colon \mathcal C\to\mathcal D$ 视为 $\mathcal C$ 到 $\mathcal D$ 的 <span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>
+$$
+\widetilde f\colon \mathcal C\times\mathcal D^{\mathrm{op}} \to\mathsf{Set},\,
+(c,d)\mapsto\operatorname{Hom}_{\mathcal D}(d,f(c)),
+$$
+将 $F\colon \mathcal C^{\mathrm{op}}\to\mathsf{Set}$ 视为 $1$ 到 $\mathcal C$ 的<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>, 那么两者的复合为
+$F\otimes_{\mathcal C}\widetilde f \colon \mathcal D^{\mathrm{op}}\to\mathsf{Set}$,
+$$
+d\mapsto\operatorname{colim}_{c}
+F(c)\times\operatorname{Hom}_{\mathcal D}(d,f(c)).
+$$</p>
+<p>若将 $f\colon \mathcal C\to\mathcal D$ 视为 $\mathcal D$ 到 $\mathcal C$ 的<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>
+$$
+\bar f\colon \mathcal D\times\mathcal C^{\mathrm{op}} \to \mathsf{Set},\,
+(d,c)\mapsto \operatorname{Hom}_{\mathcal D}(f(c),d),
+$$
+将 $F\colon \mathcal C^{\mathrm{op}}\to\mathsf{Set}$ 视为 $1$ 到 $\mathcal C$ 的<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>, 那么 $\widetilde f$ 到 $F$ 的同态集为 $1$ 到 $\mathcal D$ 的<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span> $[\bar f,F]\colon \mathcal D^{\mathrm{op}} \to \mathsf{Set}$,
+$$
+d\mapsto \operatorname{lim}_{c}
+\operatorname{Hom}_{\mathsf{Set}}
+\big({\operatorname{Hom}_{\mathcal D}(f(c),d)},F(c)\big).
+$$</p>
+<h3>伴随诱导预层范畴之间的伴随</h3>
+<p>设 $f\colon \mathcal C \to \mathcal D$, $g\colon \mathcal D\to\mathcal C$ 是一对<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>, $f\dashv g$.
+注意到
+$$
+\mathsf{Psh} = \operatorname{Hom}((-)^{\mathrm{op}},\mathsf{Set})\colon \mathsf{Cat}^{\mathrm{op}}\to\mathsf{Cat}
+$$
+是 $2$-范畴之间的函子, 它保持<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>; 即 $f^*\colon \widehat {\mathcal D} \to \widehat {\mathcal C}$, $g^*\colon \widehat {\mathcal C} \to \widehat {\mathcal D}$ 也是一对伴随, $f^* \dashv g^*$.
+换言之,
+$$
+f^* = g_!,\quad f_* = g^*.
+$$
+这两个等价也可使用 $g_!$, $f_*$ 的具体表达式验证:
+$$
+\begin{aligned}
+(g_! X) (c) &amp;= \operatorname{colim}_{c\to g(d)} X(d) \\
+&amp;= \operatorname{colim}_{f(c)\to d} X(d)\\
+&amp;= X(f(c)) = (f^*X) (c),
+\end{aligned}
+$$
+$$
+\begin{aligned}
+(f_* X) (d) &amp;= \operatorname{lim}_{f(c)\to d} X(c) \\
+&amp;= \operatorname{colim}_{c\to g(d)} X(c)\\
+&amp;= X(g(d)) = (g^*X) (d).
+\end{aligned}
+$$</p>
+<p>总结起来, 对于伴随 $f\dashv g$, 有预层范畴之间的四元伴随
+$$
+f_! \dashv (f^*=g_!) \dashv (f_*=g^*) \dashv g_*.
+$$</p>
+<h2>性质</h2>
+<h3>对可表函子的作用</h3>
+<p>设函子 $f\colon \mathcal C \to \mathcal D$ 诱导<span class="link local"><a href="./预层.html" title="预层 [预层]">预层范畴</a></span> $\widehat {\mathcal C} = \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set}),\widehat {\mathcal D} = \mathsf{Fun}(\mathcal D^{\mathrm{op}},\mathsf{Set})$ 之间的伴随
+$$
+f_! \dashv f^* \dashv f_*,
+$$
+则对于 $c\in \mathcal C$, 有 $f_! \mathbf{y}(c) = \mathbf{y}(f(c))$.</p>
+<h3>先推再拉</h3>
+<p>当 $f\colon \mathcal C\to\mathcal D$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>, 即全子范畴的嵌入时,
+$$
+\begin{aligned}
+f^*f_! X (c) &amp;=
+f_! X(f(c))\\
+&amp;=
+\operatorname{colim}_{f(c) \to f(c')} X(c')\\
+&amp;=
+\operatorname{colim}_{c \to c'} X(c') = X(c),
+\end{aligned}
+$$
+$$
+\begin{aligned}
+f^*f_* X (c) &amp;=
+f_* X(f(c))\\
+&amp;=
+\operatorname{lim}_{f(c') \to f(c)} X(c')\\
+&amp;=
+\operatorname{lim}_{c' \to c} X(c') = X(c),
+\end{aligned}
+$$
+即两个自然映射 $f^*f_*\to X \to f^*f_! X$ 均为同构.</p>
+<h2>例</h2>
+</details></section></details></section></footer></article>
+
+</div></body></html>

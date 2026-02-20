@@ -64,6 +64,7 @@ $$</p>
 <p>游走结构也可理解为 “余<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">分类空间</a></span>”.</p>
 <h2>例</h2>
 <ul>
+<li>游走的箭头 $\{0\to 1\}$ 即为两个对象 $0,1$ 与一个态射 $0\to 1$ 生成的范畴.</li>
 <li><span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span></li>
 <li>$\mathbf{B}\mathbb N$, “游走的自同态”</li>
 </ul>
@@ -138,6 +139,31 @@ $$</p>
 <p>增广单纯形范畴 $\Delta_+$ 是一个<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $[0]$ 生成的自由<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 称 $[0]$ 为<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的结合代数; 也即对任意幺半范畴 $\mathcal M$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$, 存在唯一的幺半函子 $\Delta_+ \to M$, 将 $[0]$ 对应到 $A$.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, <span class="link local"><a href="./单纯范畴.html" title="“单纯范畴” [单纯范畴]">单纯范畴</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="局部化(范畴论)"><header><h1><span class="taxon">Wiki. </span>局部化 (范畴论) <a class="slug" href="./局部化(范畴论).html">[局部化(范畴论)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>在<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中, <strong>局部化</strong>是一种万有的使一些态射变得可逆的方法.</p>
+<p>另见<span class="link local"><a href="./局部化.html" title="局部化 (环) [局部化]">局部化 (环)</a></span>, <span class="link local"><a href="./Bousfield局部化.html" title="Bousfield 局部化 (稳定同伦论) [Bousfield局部化]">Bousfield 局部化 (稳定同伦论)</a></span>.</p>
+<h2>定义</h2>
+<p>设 $\mathcal{C}$ 为范畴, $S$ 为 $\mathcal{C}$ 中的一族态射. 定义 $\mathcal C$ 关于 $S$ 的<strong>局部化</strong>为满足如下条件的范畴 $\mathcal C[S^{-1}]$ 配备函子 $\mathcal C \to \mathcal C[S^{-1}]$:</p>
+<ul>
+<li>对任意函子 $F\colon \mathcal C\to\mathcal D$, 若 $F$ 将 $S$ 中的每个态射变为同构, 则 $F$ 唯一地穿过 $\mathcal C \to \mathcal C[S^{-1}]$, 即存在唯一的 $\mathcal C[S^{-1}] \to \mathcal D$ 以及交换图
+$$
+\begin{array}{ccc}
+\mathcal C &amp; \rightarrow &amp; \mathcal C[S^{-1}] \\
+ &amp; \searrow &amp; \downarrow \\
+ &amp;  &amp; \mathcal D.
+\end{array}
+$$</li>
+</ul>
+<p>等价地, 可定义 $\mathcal C[S^{-1}]$ 为<span class="link local"><a href="./Cat.html" title="范畴的范畴 [Cat]">范畴的范畴 $\mathsf{Cat}$</a></span> 中的如下<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>,
+$$
+\begin{array}{ccc}
+\bigsqcup_S \{\cdot\to\cdot\} &amp; \rightarrow &amp; \bigsqcup_S \{\cdot\leftrightarrow\cdot\} \\
+\downarrow &amp;  &amp; \downarrow \\
+\mathcal C &amp; \rightarrow &amp; \mathcal C[S^{-1}]
+\end{array}
+$$
+其中 $\{\cdot\to\cdot\}$ 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的箭头.</p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="游走的伴随"><header><h1><span class="taxon">Wiki. </span>游走的伴随 <a class="slug" href="./游走的伴随.html">[游走的伴随]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>游走的伴随</strong>是一个具有两个对象的 $2$-范畴 $\mathsf{Adj}$, 任何 $2$-范畴 $\mathcal C$ (例如 $\mathsf{Cat}$) 中的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>等同于函子
@@ -165,6 +191,44 @@ $$</li>
 </ul>
 <h2>性质</h2>
 <p>注意到上述资料中 $\operatorname{Hom}(c,c) = \{\mathrm{id}_c,rl,rlrl,\cdots\} = \Delta_+$ 为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span>, 其中 $rl$ 为<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 故任意伴随中 $rl$ 给出一个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>. 见<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">伴随给出单子</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="结合代数"><header><h1><span class="taxon">Wiki. </span>结合代数 <a class="slug" href="./结合代数.html">[结合代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>结合代数, 又叫 $\mathbb E_1$-代数, <span class="link local"><a href="./A∞-代数.html" title="A∞-代数 [A∞-代数]">$A_\infty$-代数</a></span>, 是若干元素可以<strong>有序</strong>地结合起来的结构. 给定 $n$ 个元素的<strong>有序</strong>组 $(x_1,\cdots,x_n)$, 仅有<strong>唯一</strong>的方式将它们结合起来 $x_1\cdots x_n$, 即结合的最终结果 “与加括号的方式无关”.</p>
+<p>在结合代数的结构之上, 可以考虑 “结合代数中的结合代数” (<span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$-代数</a></span>), “结合代数中的结合代数中的结合代数” ($\mathbb E_3$-代数), …, 以至于无穷. 在无穷处, $\mathbb E_\infty$-代数就是<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>.</p>
+<h2>定义</h2>
+<h3>使用算畴</h3>
+<p>结合代数可定义为<span class="link local"><a href="./A∞-算畴.html" title="结合算畴 [A∞-算畴]">结合算畴</a></span>上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span>. 参见<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>.</p>
+<h3>使用语法范畴</h3>
+<h4>积幺半范畴</h4>
+<p>在<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span>的特殊情形, 结合代数是幺半群的 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>的模型, 即其<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>为有限生成自由幺半群的范畴的对偶, 具体地:</p>
+<ul>
+<li>其对象为有限集;</li>
+<li>态射 $\{x_1,\cdots,x_n\}\to \{y_1,\cdots,y_m\}$ 为形如 $y_i = f_i(x_1,\cdots,x_n)$ 的变量代换, 每个 $f_i$ 为幺半群的理论中的公式, 即 $\{x_1,\cdots,x_n\}$ 上的一个<span class="link local"><a href="./列表.html" title="列表 [列表]">列表</a></span>; 等价地, 一个态射是 $\{y_1,\cdots,y_m\}$ 到 $\{x_1,\cdots,x_n\}$ 生成的自由幺半群的一个集合映射.</li>
+</ul>
+<p>这个范畴也等价于有限生成自由幺半群的范畴的对偶.</p>
+<h4>一般幺半范畴</h4>
+<p>在一般的<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>中, 结合代数可由如下<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>定义:</p>
+<ul>
+<li>其对象为有限全序集 (包括空集);</li>
+<li>其态射为<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span>映射;</li>
+<li>幺半结构为
+$$
+\{a_1 &lt; \cdots &lt; a_n\} \otimes \{b_1 &lt; \cdots &lt; b_m\} = \{a_1 &lt; \cdots &lt; a_n &lt; b_1 &lt; \cdots &lt; b_m\}.
+$$
+注意这个幺半结构<strong>不是</strong>对称幺半结构, <strong>不存在</strong>自然同构 $A\otimes B\simeq B\otimes A$.</li>
+</ul>
+<p>该幺半范畴的底层范畴就是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span> $\Delta_+$, 其中的单点集是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的结合代数.</p>
+<h4>对称幺半范畴</h4>
+<p>在一般的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>中, 结合代数可由如下<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>定义:</p>
+<ul>
+<li>其对象为有限集;</li>
+<li>态射 $X\to Y$ 是一个集合映射 $f\colon X\to Y$ 配备每个点的原像 $f^{-1}(y)$ 的一个<span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序</a></span>;</li>
+<li>对称幺半结构为无交并.</li>
+</ul>
+<p>这个范畴是一个 <span class="link local"><a href="./PROP.html" title="PROP [PROP]">PROP</a></span>.</p>
+<h2>性质</h2>
+<h3>具体表现</h3>
+<p><span class="link local"><a href="./链复形无穷范畴.html" title="链复形无穷范畴 [链复形无穷范畴]">链复形范畴</a></span>中的结合代数有很具体的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 见 <span class="link local"><a href="./A∞-代数.html" title="A∞-代数 [A∞-代数]">$A_\infty$-代数</a></span>.</p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="语法范畴"><header><h1><span class="taxon">Wiki. </span>语法范畴 <a class="slug" href="./语法范畴.html">[语法范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>语法范畴是一个理论的 “<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的模型” 所在的范畴.</p>

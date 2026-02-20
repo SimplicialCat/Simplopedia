@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width"><title>自反子范畴</title><link rel="stylesheet" href="./main.css">
+<link rel="stylesheet" href="./typst.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    font-family: "Inria Sans", sans-serif;
+  }
+
+  pre,
+  code {
+    font-family: monospace;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Inria Sans", sans-serif;
+  }
+
+  nav {
+    font-family: "Inria Sans", sans-serif;
+  }
+
+  thead {
+    font-family: "Inria Sans", sans-serif;
+  }
+</style><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"
+  integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"
+  integrity="sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+  integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/copy-tex.min.js"
+  integrity="sha384-HORx6nWi8j5/mYA+y57/9/CZc5z8HnEw4WUZWy5yOn9ToKBv1l58vJaufFAn9Zzi" crossorigin="anonymous"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+        { left: '\\(', right: '\\)', display: false },
+        { left: '\\[', right: '\\]', display: true }
+      ],
+      strict: false,
+      throwOnError: false,
+      minRuleThickness: 0.05,
+    });
+  });
+</script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="自反子范畴"><header><h1><span class="taxon">Wiki. </span>自反子范畴 <a class="slug" href="./自反子范畴.html">[自反子范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>自反子范畴是有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>的<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>.</p>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="单子性函子"><header><h1><span class="taxon">Wiki. </span>单子性函子 <a class="slug" href="./单子性函子.html">[单子性函子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>许多<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数结构</a></span>可理解为某个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>上的代数. 这种结构构成的范畴到基础范畴有一个<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘函子</a></span>, 我们称这个函子为<strong>单子性函子</strong> (monadic functor).</p>
+<h2>定义</h2>
+<p>设 $G \colon \mathcal D \to \mathcal C$ 为函子, 若有 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $A$, 使得 $G$ 等价于遗忘函子 $\mathsf{Alg}_A(\mathcal C) \to \mathcal C$, 则称之为<strong>单子性函子</strong>.</p>
+<h2>性质</h2>
+<p>单子性函子 $G$ 有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $F$, 即单子 $A$ 的 “自由代数” 函子 $X\mapsto AX$.</p>
+<p><strong>定理</strong>. $G\colon \mathcal D\to\mathcal C$ 为单子性函子当且仅当 $G$ 保守, 且创生 $G$-分裂<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>.</p>
+<h2>例</h2>
+<p>一个出人意料的例子: 紧 Hausdorff 空间的范畴 $\mathsf{CHaus}$ 在集合范畴 $\mathsf{Set}$ 上是单子性的.</p>
+<h3>自反子范畴</h3>
+<p><span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span>的嵌入 $\mathcal D\hookrightarrow\mathcal C$ 是单子性的.</p>
+<h3>下降</h3>
+<p>许多<span class="link local"><a href="./下降.html" title="下降 [下降]">下降</a></span>现象表述为单子性.</p>
+</details></section><section class="block" data-taxon="Reference"><details ><summary id="盲人摸象"><header><h1><span class="taxon">Reference. </span>盲人摸象 <a class="slug" href="./盲人摸象.html">[盲人摸象]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link external"><a href="https://simplicialcat.github.io" title="我 [https://simplicialcat.github.io]">我</a></span></li></ul></div></header></summary>
+<p>项目 (包括 tex 源代码): https://github.com/SimplicialCat/topos</p>
+<p>PDF : https://simplicialcat.github.io/topos.pdf</p>
+<p>2023 年开始的项目, 包含 $1$-<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的基本知识, <span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span>的概念, 以及范畴论和<span class="link local"><a href="./一阶语言.html" title="一阶语言与一阶逻辑 [一阶语言]">一阶逻辑</a></span>基础.</p>
+<h2>内容</h2>
+<ul>
+<li>1 意象的范畴论性质
+<ul>
+<li>1.1 范畴论基本概念</li>
+<li>1.2 意象</li>
+<li>1.3 更多范畴论结构</li>
+</ul>
+</li>
+<li>2 位象: 无点拓扑学
+<ul>
+<li>2.1 基本概念</li>
+<li>2.2 位象的几何性质</li>
+<li>2.3 位象与逻辑</li>
+</ul>
+</li>
+<li>3 意象与空间的概念
+<ul>
+<li>3.1 拓扑空间上的层与平展空间</li>
+<li>3.2 位象上的层与平展空间</li>
+<li>3.3 范畴上的预层</li>
+<li>3.4 景</li>
+<li>3.5 层化与Grothendieck+构造</li>
+<li>3.6 Grothendieck意象</li>
+<li>3.7 Lawvere–Tierney拓扑,内蕴层化与局部化</li>
+<li>3.8 意象之间的态射</li>
+<li>3.9 景之间的态射</li>
+<li>3.10 意象的几何性质</li>
+<li>3.11 Giraud定理</li>
+<li>3.12 等变层与拓扑群胚</li>
+<li>3.13 意象的余极限</li>
+</ul>
+</li>
+<li>4 意象的内语言
+<ul>
+<li>4.1 Mitchell–Bénabou语言</li>
+<li>4.2 Kripke–Joyal语义</li>
+<li>4.3不同意象的内语言的联系</li>
+</ul>
+</li>
+<li>5 语法景与分类意象
+<ul>
+<li>5.1语法范畴:语法–语义对偶</li>
+<li>5.2分类意象</li>
+</ul>
+</li>
+<li>6 意象理论的应用
+<ul>
+<li>(这一章没有完成)</li>
+</ul>
+</li>
+<li>A 范畴论基础
+<ul>
+<li>A.1 $2$-范畴</li>
+<li>A.2 伴随</li>
+<li>A.3 <span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span>与局部化</li>
+<li>A.4 预层范畴与米田嵌入</li>
+<li>A.5 (余)滤范畴和(余)滤(余)极限</li>
+<li>A.6 可表现范畴</li>
+<li>A.7 Kan扩张</li>
+<li>A.8 单子论</li>
+<li>A.9 万有代数</li>
+<li>A.10 纤维范畴与索引范畴</li>
+<li>A.11 下降</li>
+</ul>
+</li>
+<li>B 形式逻辑和范畴逻辑基础
+<ul>
+<li>B.1 一阶逻辑</li>
+<li>B.2 一阶逻辑的范畴语义</li>
+<li>B.3 高阶逻辑</li>
+<li>B.4 类型论</li>
+<li>B.5 模态逻辑</li>
+</ul>
+</li>
+<li>术语和符号表</li>
+<li>参考文献</li>
+</ul>
+</details></section></details></section></footer></article>
+
+</div></body></html>

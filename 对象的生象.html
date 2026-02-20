@@ -108,15 +108,12 @@ $$</p>
 <p>代数闭域的 Brauer 群是平凡群.</p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="Segal空间"><header><h1><span class="taxon">Wiki. </span>Segal 空间 <a class="slug" href="./Segal空间.html">[Segal空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>在<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>语境下, Segal 生象可用于定义 $(\infty,1)$-范畴.</p>
-<p><strong>Rezk 脉</strong>将 $(\infty,1)$-范畴变为单纯生象:
+<p>Segal 空间 (Segal 生象) 可用于定义 $(\infty,1)$-范畴.
+道理是, 假设我们要在<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>概念的基础上定义范畴, 我们可以采用<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>的观念, 对一个假想的 $(\infty,1)$-范畴 $\mathcal C$, 用各个单形 $[n]$ 探测之, 得到<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯</a></span>生象 $N(\mathcal C)$:
 $$
-N \colon \mathsf{Cat} \to \mathsf{sAni},
+N(\mathcal C)_n = \operatorname{Hom}_{\mathsf{Cat}_{(\infty,1)}}([n],\mathcal C) = \operatorname{Fun}([n],\mathcal C)^{\simeq},
 $$
-$$
-N(\mathcal C)_n = \operatorname{Fun}([n],\mathcal C)^{\simeq},
-$$
-其中 $(-)^\simeq$ 表示取范畴的<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>.
+其中 $(-)^\simeq$ 表示取范畴的<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>. 这一过程又称为 <strong>Rezk 脉</strong>.
 函子 $N$ 的像恰为完备 Segal 生象的范畴.</p>
 <h2>定义</h2>
 <p>一个 Segal 生象是一个<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯生象</a></span> $X \colon \Delta^{\mathrm{op}} \to \mathsf{Ani}$, 满足对任意 $m,n\in\mathbb{N}$, 下图为拉回.
@@ -140,6 +137,9 @@ $$</p>
 <h3>完备 Segal 生象</h3>
 <p>对于 Segal 生象 $X$ 中的 $1$-单形 $f \in X_1$, 若 $f$ 既有左逆又有右逆 (具体地, 存在 $\sigma,\tau \in X_2$ 使得 $d_0\sigma = f = d_2\tau$, 且 $d_1\sigma, d_1\tau$ 均落在 $s \colon X_0 \to X_1$ 的像中), 则称 $f$ 为<strong>等价</strong>.</p>
 <p>对于 Segal 生象 $X$, 记 $X_1^{\simeq}\subseteq X_1$ 为 $X_1$ 中的等价构成的子生象; 若 $s \colon X_0 \to X_1^\simeq$ 为生象的等价, 则称 $X$ 为<strong>完备 Segal 生象</strong>.</p>
+<p>完备 Segal 生象也可等价地定义为关于
+$N(0\overset{\simeq}{\to} 1) \to {*}$
+的<span class="link local"><a href="./局部对象.html" title="局部对象 [局部对象]">局部对象</a></span>.</p>
 <p>完备 Segal 生象等同于 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$(\infty,1)$-范畴</a></span>.</p>
 </details></section><section class="block" data-taxon="Notion"><details ><summary id="高阶范畴"><header><h1><span class="taxon">Notion. </span>高阶范畴 <a class="slug" href="./高阶范畴.html">[高阶范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./tutorial-highercat.html" title="教程 : 高阶范畴论 [tutorial-highercat]">教程 : 高阶范畴论</a></span></p>
