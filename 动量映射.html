@@ -90,6 +90,131 @@ $$</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./量子动量映射.html" title="量子动量映射 [量子动量映射]">量子动量映射</a></span></p>
 <p><span class="link local"><a href="./Delzant多面体.html" title="“Delzant 多面体” [Delzant多面体]">Delzant 多面体</a></span></p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Delzant 多面体” <a class="slug" href="./Delzant多面体.html">[Delzant多面体]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Hamilton 向量场” <a class="slug" href="./Hamilton向量场.html">[Hamilton向量场]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“杨–Mills 泛函” <a class="slug" href="./杨--Mills泛函.html">[杨--Mills泛函]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“环面簇” <a class="slug" href="./环面簇.html">[环面簇]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>辛流形 <a class="slug" href="./辛流形.html">[辛流形]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Delzant多面体"><header><h1><span class="taxon">Wiki. </span>“Delzant 多面体” <a class="slug" href="./Delzant多面体.html">[Delzant多面体]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>考虑环面作用, 即环面 $T=(S^1)^n$ 在<span class="link local"><a href="./辛流形.html" title="辛流形 [辛流形]">辛流形</a></span> $X$ 上的作用.</p>
+<p><strong>定理</strong>.</p>
+<p><span class="link local"><a href="./动量映射.html" title="动量映射 [动量映射]">动量映射</a></span> $\Phi\colon X\to \mathfrak t^*$ 的像为多面体, 称为 <strong>Delzant 多面体</strong>.</p>
+<p><strong>证明</strong>.</p>
+<p>第一步, 考虑不动点. 设 $x\in X$ 是 $T$-作用的不动点, 则 $x$ 处的切空间 $V$ 上有 $T$ 的线性作用 (即群表示).</p>
+<p>记 $\Phi_1\colon V\to \mathfrak t^*$ 为切空间上线性作用的动量映射. 研究这个动量映射的原因是, $x$ 的一个邻域与切空间由指数映射相联系, $\Phi_1$ 与 $x$ 的邻域上原来的动量映射相差一个平移.</p>
+<p>选取坐标系可以使得这个 $T$-表示 $V$ 是酉表示, 且
+$$
+\Phi_1\colon  (x,y)\mapsto \pi\sum_{i=1}^n(x_i^2 +y_i^2) \alpha_i,
+$$
+其中 $\alpha_1,\cdots,\alpha_n\in \mathfrak t^*$ 是 $T$-表示的<span class="link local"><a href="./权.html" title="“权” [权]">权</a></span>.</p>
+<p><strong>命题</strong>. 映射 $\Phi_1$ 的像是 (多面体的角)
+$$
+S(\alpha_1,\cdots,\alpha_n) := \Big\{\sum_i s_i\alpha_i\colon s_i\geq 0 \Big\}.
+$$</p>
+<p>第二步, 考虑 $X$ 上的一般点. 设 $x\in X$ 是一般点, $T_1\subset T$ 是其稳定子群, $\mathfrak t_1$ 是对应的 $\mathfrak t$ 的子 Lie 代数, 其对偶映射为 $\pi\colon \mathfrak t^*\to \mathfrak t_1^*$.</p>
+<p>定义 (多面体的棱) $S'(\alpha_1,\cdots,\alpha_n):= \pi^{-1}S(\alpha_1,\cdots,\alpha_n)$.</p>
+<p><strong>命题</strong>. (相对局部凸性) 存在 $x$ 的邻域 $U$, $p=\Phi(x)$ 的邻域 $U'$, 使得
+$$
+\Phi(U)=U'\cap (p+S'(\alpha_1,\cdots,\alpha_n)).
+$$</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Hamilton向量场"><header><h1><span class="taxon">Wiki. </span>“Hamilton 向量场” <a class="slug" href="./Hamilton向量场.html">[Hamilton向量场]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><span class="link local"><a href="./辛流形.html" title="辛流形 [辛流形]">辛流形</a></span> $(M,\omega)$ 上由一个函数 $H$ (称作 Hamilton 量) 确定的向量场 $X_H$, 满足 $dH(Y)=\omega(X_H,Y)$.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./动量映射.html" title="动量映射 [动量映射]">动量映射</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="杨--Mills泛函"><header><h1><span class="taxon">Wiki. </span>“杨–Mills 泛函” <a class="slug" href="./杨--Mills泛函.html">[杨--Mills泛函]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>设 $M$ 是 Riemann 流形, $\mathfrak g$ 是 Lie 代数. Yang–Mills 泛函是取值在<span class="link local"><a href="./联络.html" title="联络 [联络]">联络</a></span>上的泛函
+$$
+\mathcal L = \|F\|^2,
+$$
+其中 $F$ 是联络对应的<span class="link local"><a href="./曲率.html" title="“曲率” [曲率]">曲率</a></span>, $\|-\|$ 来源于 $\Omega^2(M,\mathfrak g)$ 上的一个内积.</p>
+<p>$$
+S=\int \mathcal L \,\text{dVol} = -\int F\wedge\star F
+$$</p>
+<h2>规范不变性</h2>
+<p>“完美 Morse 函数”</p>
+<p>其临界点为 <span class="link local"><a href="./杨--Mills联络.html" title="“杨–Mills 联络” [杨--Mills联络]">杨–Mills 联络</a></span>.</p>
+<h2>与全纯向量丛的联系</h2>
+<p>辛几何与<span class="link local"><a href="./动量映射.html" title="动量映射 [动量映射]">动量映射</a></span>将杨–Mills 泛函与<span class="link local"><a href="./全纯向量丛.html" title="“全纯向量丛” [全纯向量丛]">全纯向量丛</a></span>联系起来. 杨–Mills 理论可用于研究丛的<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="环面簇"><header><h1><span class="taxon">Wiki. </span>“环面簇” <a class="slug" href="./环面簇.html">[环面簇]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>#代数几何</p>
+<p>环面簇 (toric variety) 是一种对应于多面体的代数簇. $X_P$ 到多面体 $P$ 的投影称为动量映射, 它是辛流形上 Lie 群作用的<span class="link local"><a href="./动量映射.html" title="动量映射 [动量映射]">动量映射</a></span>的特例.</p>
+<h2>定义</h2>
+<h3>由锥与扇构造环面簇</h3>
+<p>固定一个格 (有限生成自由交换群) $N$, 对偶格 $M=\operatorname{Hom}(N,\mathbb Z)$, 记 $N_{\mathbb R}=N\otimes_{\mathbb Z}\mathbb{R}$.</p>
+<p>这里所说的锥 (cone) 是指 $N_{\mathbb R}$ 中若干个线性无关的有理元素生成的交换半群 $\mathbb R_{\geq 0}$-模. 锥的面是指其生成元的子集生成的锥. 锥 $\sigma$ 的对偶锥 $\sigma^\vee$ 是 $M_{\mathbb R}$ 中在 $\sigma$ 上取值非负的线性函数构成的锥.</p>
+<p>扇 (fan) 是一系列锥构成的集合 $\Sigma$, 满足 $\Sigma$ 中每个锥的面也在 $\Sigma$ 中, 且每两个锥的交都是一个面.</p>
+<p>对于锥 $\sigma$, 仿射环面簇 (affine toric variety) 定义为 $X_\sigma = \operatorname{Spec}\mathbb Z[\sigma^\vee\cap M]$, 其中 $\sigma^\vee\cap M$ 是有限生成交换幺半群.</p>
+<p>对于扇 $\Sigma$, 环面簇定义为 $X_\Sigma=\operatorname{colim}_{\sigma\in\Sigma}X_\sigma$.</p>
+<h2>例</h2>
+<p>$P$ 为长度 $\ell$ 的线段, $X_P$ 为直径 $\ell$ 的球面, 动量映射将每个纬线映射到一个点.</p>
+<p>$P$ 为 $\mathbb{R}^n$ 中的正象限, $X_P$ 为 $\mathbb{C}^n$.</p>
+<h3>锥与仿射环面簇</h3>
+<p>考虑 $N$ 为 $e_1,e_2$ 生成的格, 记 $M$ 的对偶基为 $x_1,x_2$. 设 $\sigma$ 为 $N_{\mathbb R}$ 中 $e_2,2e_1-e_2$ 生成的锥, 则 $\sigma^\vee\cap M$ 为 $x_1,x_1+x_2,x_1+2x_2$ 生成的幺半群, $X_\sigma=\operatorname{Spec}\mathbb Z[x,xy,xy^2]$.</p>
+<p>设 $\Sigma$ 为 $e_1$ 生成的锥与 $-e_1$ 生成的锥构成的扇, 则 $X_\Sigma$ 为 $\operatorname{Spec}\mathbb {Z}[x]$ 与 $\operatorname{Spec}\mathbb {Z}[x^{-1}]$ 沿 $\operatorname{Spec}\mathbb {Z}[x,x^{-1}]$ 的粘合, 即 $\mathbb P^1$.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="辛流形"><header><h1><span class="taxon">Wiki. </span>辛流形 <a class="slug" href="./辛流形.html">[辛流形]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>辛流形是经典力学 (特别是 Hamilton 力学) 常用的几何背景.</p>
+<h2>定义</h2>
+<p>辛流形是偶数维实流形, 其上有非退化的 $2$-形式 $\omega$, 满足 $d\omega=0$, $\omega^n\neq 0$.</p>
+<h2>性质</h2>
+<p>紧辛流形 $M$ 满足 $H^2(M;\mathbb{R})\neq 0$.</p>
+<h3>乘积辛形式</h3>
+<p>辛流形 $M,N$ 的乘积上的辛形式定义为
+$$
+\omega_{M\times N} = \pi_M^*\omega_M - \pi_N^*\omega_N.
+$$</p>
+<h3>辛映射</h3>
+<p>光滑映射 $f\colon M\to N$ 为辛映射当且仅当 $\Gamma f \subset M\times N$ 为 <span class="link local"><a href="./Lagrange子流形.html" title="“Lagrange 子流形” [Lagrange子流形]">Lagrange 子流形</a></span>.</p>
+<h2>Hamilton 向量场</h2>
+<p>给定函数 $H$ (称为 Hamilton 函数), 满足
+$$
+i_X\omega = - dH
+$$
+的向量场 $X$ 称作 $H$ 对应的 Hamilton 向量场, $X_H$.</p>
+<p><strong>命题</strong>. Hamilton 向量场的流保持辛形式, 即
+$$
+\mathcal L_X\omega =0.
+$$
+这是由于 Cartan 公式 $\mathcal L_X\omega = i_X d\omega + di_X\omega$.</p>
+<p><strong>命题</strong>. Hamilton 向量场的流保持对应的 Hamilton 量, 这是因为
+$$
+dH(X)=-\omega(X,X)=0.
+$$</p>
+<p><strong>命题</strong>. 若向量场 $X$ 的流保持辛形式, 即 $\mathcal L_X\omega=0$, 则 $X$ 局部上为 Hamilton 向量场.</p>
+<h2>Poisson 括号</h2>
+<p>辛流形上的函数具有 <span class="link local"><a href="./Poisson代数.html" title="Poisson 代数 [Poisson代数]">Poisson 括号</a></span>
+$$
+\{f,g\}=X_f g = \omega (X_f, X_g).
+$$
+由定义立得</p>
+<p><strong>命题</strong>.
+$$
+[X_f,X_g]=X_{\{f,g\}}.
+$$</p>
+<h2>Hamilton G-作用</h2>
+<p>设 $G$ 为 Lie 群. $G$ 在 $\mathfrak g$ 上的伴随作用 (左作用) 诱导了其在 $\mathfrak g^*$ 上的余伴随作用 (右作用)
+$$
+\left&lt; \operatorname{Ad}^*_g \mu,\xi\right&gt; = \left&lt; \mu, \operatorname{Ad}_g\xi\right&gt;.
+$$</p>
+<p>现在设 $G$ 左作用于流形 $M$ 上, 从而有映射
+$$
+\mathfrak g \to \operatorname{Vect}(M),\quad \xi \mapsto \xi^{\#}.
+$$
+假设存在<span class="link local"><a href="./动量映射.html" title="动量映射 [动量映射]">动量映射</a></span> $\Phi\colon M\to\mathfrak g^*$, 满足
+$$
+i_{\xi^{\#}}\omega = - d \left&lt;\Phi(x),\xi\right&gt;.
+$$
+等变性:
+$$
+\Phi\circ g = \operatorname{Ad}^*_{g^{-1}}\circ\Phi.
+$$</p>
+<h3>Kirillov–Kostant 辛形式</h3>
+<p>考虑余伴随轨道 $\mathcal O$, 其上有辛形式与<span class="link local"><a href="./动量映射.html" title="动量映射 [动量映射]">动量映射</a></span>.</p>
+<p>对于 $\xi,\eta\in\mathfrak g$, $\mu\in\mathcal O$,
+$$
+\omega(\mu) (\xi (\mu), \eta(\mu)) = \left&lt;\mu,[\xi,\eta]\right&gt;
+$$</p>
+<p>$\mathfrak g^*$ 上有 <span class="link local"><a href="./Poisson代数.html" title="Poisson 代数 [Poisson代数]">Poisson 结构</a></span>:
+$$
+\{f_1,f_2\}(\mu) := \left&lt; \mu, [df_1,df_2]\right&gt;.
+$$</p>
+<h2>可积系统</h2>
+<p><span class="link local"><a href="./可积系统.html" title="可积系统 [可积系统]">可积系统</a></span>是 $2n$ 维辛流形上有 $n$ 个相互交换的 Hamilton 向量场, 即有 $n$ 维圆环的作用.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

@@ -70,6 +70,52 @@ $$
 	X &amp; \to &amp; \mathrm {BGL}(n).
 \end{array}
 $$</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Thom 空间 <a class="slug" href="./Thom空间.html">[Thom空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“复定向上同调理论” <a class="slug" href="./复定向上同调理论.html">[复定向上同调理论]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Thom空间"><header><h1><span class="taxon">Wiki. </span>Thom 空间 <a class="slug" href="./Thom空间.html">[Thom空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Thom 空间是一种由<span class="link local"><a href="./向量丛.html" title="向量丛 [向量丛]">向量丛</a></span> “扭曲” 的<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span>.</p>
+<p>另见 <span class="link local"><a href="./Thom谱.html" title="Thom 谱 [Thom谱]">Thom 谱</a></span>.</p>
+<h2>定义</h2>
+<p>对于空间 $X$ 上的向量丛 $\xi\colon V\to X$, 定义其 Thom 空间为<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>
+$$
+X^\xi := \operatorname{cofiber} (V\setminus X \hookrightarrow V)\simeq \operatorname{cofiber}(S(V)\hookrightarrow D(V)),
+$$
+其中 $D(V)$, $S(V)$ 分别为圆盘丛与球丛.</p>
+<h2>性质</h2>
+<h3>函子性</h3>
+<p>对于映射 $f\colon Y\to X$ 与 $X$ 上的向量丛 $\xi$, 有自然的映射
+$$
+Y^{f^*\xi} \to X^\xi.
+$$</p>
+<h3>幺半性</h3>
+<p>设 $\xi\boxplus\eta\colon V\times W\to X\times Y$ 为两个向量丛的外直和, 则
+$$
+(X\times Y)^{\xi\boxplus\eta} \simeq X^\xi\wedge Y^\eta.
+$$</p>
+<h3>稳定性</h3>
+<p>$$
+X^{\xi\oplus\mathbb{R}^n} = \Sigma^n X^\xi.
+$$</p>
+<h3>平凡丛的 Thom 空间</h3>
+<p>$$
+X^{\mathbb{R}^n} = \Sigma^n X.
+$$</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./Thom谱.html" title="Thom 谱 [Thom谱]">Thom 谱</a></span>, <span class="link local"><a href="./广义上同调中的定向.html" title="“广义上同调中的定向” [广义上同调中的定向]">广义上同调中的定向</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="复定向上同调理论"><header><h1><span class="taxon">Wiki. </span>“复定向上同调理论” <a class="slug" href="./复定向上同调理论.html">[复定向上同调理论]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./广义上同调中的定向.html" title="“广义上同调中的定向” [广义上同调中的定向]">广义上同调中的定向</a></span></p>
+<p>对于环谱 $E$, 称其复可定向是指 $E^2(\mathbb{C}P^\infty)\to E^2(S^2)$ 为满射; 其定向是 $E^2(\mathbb{C}P^\infty)$ 的元素.</p>
+<p><span class="link local"><a href="./环谱.html" title="环谱 [环谱]">环谱</a></span>的定向是第一<span class="link local"><a href="./陈类.html" title="“陈类” [陈类]">陈类</a></span>的推广: 环谱 $E$ 的定向给出一个同构 $E^*(\mathbb CP^\infty)\simeq E^*(*)[t](t.md)$. 由此可以定义 $E$-值第一陈类 $c_1^E=t$. $E$-值第一陈类与线丛的张量积满足
+$$
+c_1^E(L\otimes L') \simeq f(c_1^EL,c_1^E L'),
+$$
+其中 $f$ 为交换环 $R=E^{\text{even}}(*)$ 上的<span class="link local"><a href="./形式群律.html" title="“形式群律” [形式群律]">形式群律</a></span>. 另外, 此时 $t$ 是 $\mathbb{C}P^\infty$ 上万有线丛的 <span class="link local"><a href="./Thom类.html" title="“Thom 类” [Thom类]">Thom 类</a></span>.</p>
+<p>$R$ 上的形式群律等同于 $\operatorname{Spec}R$ 到形式群律模叠 $\operatorname{Spec}L/G$ 的映射.</p>
+<table><thead><tr><th>谱 (上同调理论)</th><th>$\operatorname{Spec}L/G$ 上的拟凝聚层</th><th></th></tr></thead><tbody>
+<tr><td>环谱 (乘性上同调理论)</td><td>$\operatorname{Spec}L/G$ 上的仿射概形</td><td></td></tr>
+<tr><td></td><td></td><td></td></tr>
+</tbody></table>
+<h2>例</h2>
+<p><span class="link local"><a href="./KO.html" title="“KO” [KO]">KO</a></span> 不是复定向上同调理论.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

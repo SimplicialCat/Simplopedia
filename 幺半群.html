@@ -57,6 +57,135 @@
   });
 </script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="幺半群"><header><h1><span class="taxon">Wiki. </span>幺半群 <a class="slug" href="./幺半群.html">[幺半群]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>幺半群与<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>基本上是同义词. 幺半群常常用于特指 $(\mathsf{Set},\times)$ 中的结合代数.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>中心 <a class="slug" href="./中心.html">[中心]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>分次代数 <a class="slug" href="./分次代数.html">[分次代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>对偶 <a class="slug" href="./可对偶对象.html">[可对偶对象]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="中心"><header><h1><span class="taxon">Wiki. </span>中心 <a class="slug" href="./中心.html">[中心]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>群</h3>
+<p>$\mathsf{Set}$ 中的群 $G$ 的中心为
+$$
+Z(G) = \{g\in G | \forall h\in G, gh=hg\}.
+$$</p>
+<p>对更一般的<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> (如<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>群) $G$,
+定义
+$$
+Z(G) := \operatorname{Aut}_{\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)}(\mathrm{id}).
+$$
+换言之, $\mathbf{B}Z(G)$ 是 $\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)$ 在 $\mathrm{id}_{\mathbf{B}G}$ 处的连通分支. 一个生象 $A$ 的连通分支是 $A\to\tau_{\leq 0} A$ 的纤维.
+因此该定义也可等价地陈述如下. 考虑群 $G$ 的<span class="link local"><a href="./群的外自同构.html" title="群的外自同构 [群的外自同构]">外自同构</a></span>群
+$$
+\begin{aligned}
+    \operatorname{Out}(G)&amp;=
+\tau_{\leq 0}
+(\operatorname{Aut}_{\mathsf{Grp}}(G) /_{\mathrm{Ad}} G)\\
+&amp; =\tau_{\leq 0}\operatorname{Aut}(\mathbf{B}G).
+\end{aligned}
+$$
+那么有<span class="link local"><a href="./群短正合列.html" title="群的短正合列 [群短正合列]">短正合列</a></span>
+$$
+\mathbf{B}Z(G) \to \mathsf{Aut}(\mathbf{B}G) \to \operatorname{Out}(G)
+$$
+以及<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
+$$
+\begin{aligned}
+    \mathbf{B}Z(G) &amp;\to \mathsf{Aut}(\mathbf{B}G) \to \operatorname{Out}(G)\\
+\to \mathbf{B}^2Z(G) &amp;\to \mathbf{B}\mathsf{Aut}(\mathbf{B}G) \to \mathbf{B}\operatorname{Out}(G).
+\end{aligned}
+$$</p>
+<h3>环</h3>
+<p>固定交换环 $k$ 作为基环.
+设 $A$ 为 $k$ 上的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. $A$ 的<strong>中心</strong>是与所有元素交换的元素的集合
+$$
+Z(A) = \{a\in A | \forall b\in A, ab=ba\},
+$$
+也是 $A$ 作为 $(A,A)$-双模的自同态的集合
+$$
+Z(A) = \operatorname{End}_{\mathsf{BiMod}(A,A)}(A),
+$$
+也是<span class="link local"><a href="./等化子.html" title="等化子 [等化子]">等化子</a></span>
+$$
+Z(A) = \operatorname{eq}\big(
+    A\rightrightarrows \operatorname{Hom}_k(A,A)
+\big),
+$$
+其中两个映射分别为左乘与右乘.</p>
+<p>回忆 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>中, <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 的恒等态射即是 $A$ 作为 $(A,A)$-双模. 因此, $A$ 的中心又可理解为
+$$
+Z(A) = \operatorname{End}_{\operatorname{End}_{\mathsf{Morita}}(A)}(\mathrm{id}).
+$$</p>
+<p>进一步, Morita 范畴嵌入线性范畴的范畴, 从而<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 的中心也可定义为
+$$
+Z(R) := \operatorname{End}_{\operatorname{End}_{\mathsf{Cat}}(\mathsf{Mod}(A))}(\mathrm{id}).
+$$</p>
+<h3>幺半范畴</h3>
+<p>设 $\mathcal C$ 为 $k$-线性<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>,
+定义 $\mathcal C$ 的 <strong>Drinfeld 中心</strong> $Z(\mathcal C)$ 是一个<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半范畴</a></span>, 可理解为两个函子 $\mathcal C \to \operatorname{Hom}_k(\mathcal C,\mathcal C)$ 的<span class="link local"><a href="./等化子.html" title="等化子 [等化子]">等化子</a></span>, 其对象为 $\mathcal C$ 的对象 $X$ 配备自然变换
+$$
+X\otimes (-) \to (-)\otimes X,
+$$
+满足两个自然变换 $X\otimes (Y\otimes Z)\to (Y\otimes Z)\otimes X$ 相等.</p>
+<h3>2-范畴的对象</h3>
+<p>定义 $2$-范畴 $\mathcal C$ 的对象 $X$ 的<strong>中心</strong>为<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>
+$$
+Z(X) := \operatorname{End}_{\operatorname{End}_{\mathcal C}(X)}(\mathrm{id}_X).
+$$
+它类似于 $\mathcal C$ 在 $X$ 处的二阶<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>.
+由 <span class="link local"><a href="./Eckmann--Hilton论证.html" title="Eckmann–Hilton 论证 [Eckmann--Hilton论证]">Eckmann–Hilton 论证</a></span>, $Z(X)$ 为 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span> 幺半群 (辫幺半群).</p>
+<p>这样定义的中心又称 <span class="link local"><a href="./Hochschild上同调.html" title="Hochschild 上同调 [Hochschild上同调]">Hochschild 上同调</a></span>.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./余中心.html" title="余中心 [余中心]">余中心</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="分次代数"><header><h1><span class="taxon">Wiki. </span>分次代数 <a class="slug" href="./分次代数.html">[分次代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>分次代数是分成不同次数的 “齐次” 部分之和的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 齐次元素的乘积的次数是次数的和.</p>
+<p>次数也可取值于一般的幺半群.</p>
+<h2>定义</h2>
+<p>固定基环 $k$, 设 $M$ 为<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>, 通常 $M = \mathbb{Z}$.</p>
+<p>定义 $k$ 上的 $M$-分次代数为 $k$-代数 $A$ 带有底层 $k$-模的分解
+$$
+A = \bigoplus_{m\in M} A_m,
+$$
+其中 $A_m$ 的元素称为 $m$ 次的<strong>齐次元素</strong>,
+满足齐次元素的乘积仍为齐次元素, 即乘法映射将 $A_m \times A_{m'}$ 映射到 $A_{mm'}$.</p>
+<h3>余模结构</h3>
+<p>设 $M$ 为交换幺半群.</p>
+<p>回忆幺半群代数 $k[M]$ 的双代数结构. 注意到自由 $k$-模函子
+$$
+k[-]\colon (\mathsf{Set},\times) \to (\mathsf{Mod}(k),\otimes)
+$$
+为对称幺半函子, 故将 $(\mathsf{Set},\times)$ 中的交换余交换<span class="link local"><a href="./双代数.html" title="双代数 [双代数]">双代数</a></span> $M$ 对应到 $\mathsf{Mod}(k)$ 中的交换余交换双代数 $k[M]$, 即 $\mathsf{CAlg}(k)$ 中的余交换<span class="link local"><a href="./结合余代数.html" title="结合余代数 [结合余代数]">余代数</a></span>.</p>
+<p>现在, 容易验证 $k$ 上的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span> $A$ 上的 $M$-分次结构等同于 $\mathsf{CAlg}(k)$ 中的余代数 $k[M]$ 上的一个余模结构
+$$
+A \to A[M] := A \otimes_k k[M],
+$$
+将 $m$ 次齐次元素 $a$ 映射到 $a \otimes m$. 其构成代数同态的条件恰好表明齐次元素的乘积的次数是各自次数的和.</p>
+<p><span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">对偶</a></span>地, $\operatorname{Spec}k[M]$ 是<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>范畴中的交换幺半群, $A$ 上的 $M$-分次也等同于 $k$-概形 $\operatorname{Spec}A$ 上的 $\operatorname{Spec}k[M]$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>.</p>
+<h2>性质</h2>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="可对偶对象"><header><h1><span class="taxon">Wiki. </span>对偶 <a class="slug" href="./可对偶对象.html">[可对偶对象]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 定义其对象 $x$ 的<strong>右对偶</strong>为如下数据:</p>
+<ul>
+<li>一个对象 $x'$;</li>
+<li><strong>取值</strong>映射 $\operatorname{ev}\colon x'\otimes x\to 1$;</li>
+<li><strong>余取值</strong>映射 $\operatorname{coev}\colon 1\to x\otimes x'$;</li>
+</ul>
+<p>满足
+$$
+	x \overset{\operatorname{coev}}{\to} x\otimes x'\otimes x \overset{\operatorname{ev}}{\to} x,
+$$
+$$
+	x' \overset{\operatorname{coev}}{\to} x'\otimes x\otimes x' \overset{\operatorname{ev}}{\to} x'
+$$
+均为恒等.</p>
+<p>若将幺半范畴等同于一个对象的 $2$-范畴 (类似于<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>等同于一个对象的范畴), 则对象的左右对偶可视为态射的左右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
+<h2>例</h2>
+<ul>
+<li>线性空间范畴的可对偶对象为有限维线性空间.</li>
+<li>一个环上的模范畴的可对偶对象是有限生成投射模.</li>
+</ul>
+<h3>关系范畴</h3>
+<p>设范畴 $\mathcal C$ 具有终对象 $*$ 以及拉回, 则<span class="link local"><a href="./关系2-范畴.html" title="关系 2-范畴 [关系2-范畴]">关系范畴</a></span> $\mathsf{Corr}(\mathcal C)$ 的每个对象 $X$ 均可对偶, 且对偶为自身; 取值映射和余取值映射分别为
+$$
+	X\times X\overset{\Delta}{\leftarrow} X \rightarrow *,
+$$
+$$
+	* \leftarrow X \overset{\Delta}{\rightarrow} X\times X.
+$$</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

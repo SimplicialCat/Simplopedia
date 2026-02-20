@@ -73,6 +73,130 @@ $$
 <span class="link local"><a href="./n-r-范畴.html" title="(n,r)-范畴 [n-r-范畴]">$(n,r)$-范畴</a></span>的全体构成一个 $(n+1,r+1)$-范畴.</p>
 <h2>相关页面</h2>
 <p><span class="link local"><a href="./naive-highercat.html" title="一种朴素的建立高阶范畴的尝试 [naive-highercat]">一种朴素的建立高阶范畴的尝试</a></span></p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>2-范畴 <a class="slug" href="./2-范畴.html">[2-范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>(n,r)-范畴 <a class="slug" href="./n-r-范畴.html">[n-r-范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="notes" style="margin-bottom: 0.4em;"><header><h1><span class="taxon"><span class="link local"><a href="./notes.html" title="讲稿, 笔记 [notes]">notes</a></span></span>一种朴素的建立高阶范畴的尝试 <a class="slug" href="./naive-highercat.html">[naive-highercat]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>叠 <a class="slug" href="./叠.html">[叠]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="subject" style="margin-bottom: 0.4em;"><header><h1><span class="taxon"><span class="link local"><a href="./subject.html" title="学科 [subject]">subject</a></span></span>形式化数学 <a class="slug" href="./形式化数学.html">[形式化数学]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>生象 <a class="slug" href="./生象.html">[生象]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="subject" style="margin-bottom: 0.4em;"><header><h1><span class="taxon"><span class="link local"><a href="./subject.html" title="学科 [subject]">subject</a></span></span>范畴论 <a class="slug" href="./范畴论.html">[范畴论]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="2-范畴"><header><h1><span class="taxon">Wiki. </span>2-范畴 <a class="slug" href="./2-范畴.html">[2-范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>$2$-范畴是允许至多 $2$ 阶不可逆态射的<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>.</p>
+<p>$2$-范畴的概念在文献中也称为 “弱 $2$-范畴 (weak $2$-category)”, 这是为了区分 2-范畴与<span class="link local"><a href="./严格2-范畴.html" title="严格 2-范畴 [严格2-范畴]">严格 2-范畴</a></span> (strict $2$-category). 两者的区别是, 2-范畴中态射复合的结合律和幺元律是由一个可逆 $2$-态射给出, 是<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构而非性质</a></span>.</p>
+<p>另一个不同的概念是<span class="link local"><a href="./双范畴.html" title="“双范畴” [双范畴]">双范畴</a></span> (double category).</p>
+<h2>定义</h2>
+<h3>传统</h3>
+<p>$2$-范畴 $\mathcal C$ 由如下信息组成:</p>
+<ul>
+<li>一个类 $\operatorname{Ob}(\mathcal C)$, 其中元素称为 $\mathcal C$ 的对象;</li>
+<li>对 $x,y\in\operatorname{Ob}(\mathcal C)$ 有一个小范畴 $\mathcal C (x,y)$, 其中的对象称作 $\mathcal C$ 的 $1$-态射 (横向态射), 态射称作 $\mathcal C$ 的 $2$-态射;</li>
+<li>对 $x,y,z\in\operatorname{Ob}(\mathcal C)$ 有一个函子 $\circ \colon \mathcal C(y,z)\times \mathcal C(x,y) \to \mathcal C(x,z)$, 称作横向复合 (每个 $\mathcal C(x,y)$ 中的复合称作纵向复合);</li>
+<li>自然同构 $l_{x,y} \colon (1_y\circ{-}) \Rightarrow \operatorname{id}_{\mathcal C(x,y)}$, $r_{x,y}\colon ({-}\circ 1_x)\Rightarrow\operatorname{id}_{\mathcal C(x,y)}$, 称作左右单位子;</li>
+<li>结合子.</li>
+</ul>
+<p>这些结构需满足如下<span class="link local"><a href="./融贯.html" title="融贯 [融贯]">融贯</a></span>条件:</p>
+<ul>
+<li>三角形公理 ($g\circ 1\circ f$ 的结合);</li>
+<li>五边形公理 (四个态射的结合).</li>
+</ul>
+<p>所有态射都是等价的 $2$-范畴称为 $2$-群胚.</p>
+<h3>作为弱充实范畴</h3>
+<p>$2$-范畴是<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于 $\mathsf{Cat}$ 的范畴.</p>
+<h2>例</h2>
+<p>范畴的范畴 $\mathsf{Cat}$ 是 $2$-范畴.</p>
+<p>拓扑空间的基本 $2$-群胚是 $2$-群胚.</p>
+<h2>性质</h2>
+<h3>与幺半范畴的联系</h3>
+<p>在 $2$-范畴 $\mathcal C$ 中, 一个对象 $a$ 到自身的态射构成一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $\mathcal C(a,a)$, 其中的 “张量积” 为 $\mathcal C$ 的横向复合.</p>
+<p><span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>可视为仅有一个对象的 $2$-范畴.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="n-r-范畴"><header><h1><span class="taxon">Wiki. </span>(n,r)-范畴 <a class="slug" href="./n-r-范畴.html">[n-r-范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>$(n,r)$-范畴是满足如下条件的<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>:</p>
+<ul>
+<li>其任何 $(n+2)$ 阶态射范畴为单点;</li>
+<li>其任何 $r$ 阶态射范畴为<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>.</li>
+</ul>
+<p>注. 不妨要求 $r\leq n+1$, 因为若任何 $(n+2)$ 阶态射范畴为单点, 则任何 $(n+1)$ 阶态射范畴为<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>.</p>
+<h2>例</h2>
+<ul>
+<li>$(-1,0)$-范畴是<span class="link local"><a href="./命题(同伦类型论).html" title="命题 (同伦类型论) [命题(同伦类型论)]">命题</a></span>.</li>
+<li>$(0,0)$-范畴是<span class="link local"><a href="./集合(同伦类型论).html" title="集合 (同伦类型论) [集合(同伦类型论)]">集合</a></span>.</li>
+<li>$(0,1)$-范畴是<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span>.</li>
+<li>$(1,1)$-范畴就是通常说的 “范畴”.</li>
+<li>$(\infty,0)$-范畴是<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>.</li>
+<li>$(\infty,1)$-范畴是通常说的 “<span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">无穷范畴</a></span>”.</li>
+</ul>
+</details></section><section class="block" data-taxon="notes"><details ><summary id="naive-highercat"><header><h1><span class="taxon"><span class="link local"><a href="./notes.html" title="讲稿, 笔记 [notes]">notes</a></span></span>一种朴素的建立高阶范畴的尝试 <a class="slug" href="./naive-highercat.html">[naive-highercat]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>的概念长久以来缺乏实用的数学基础. 这里实用的意思是, 在严格性的前提下, 贴合实际应用中人们的直觉.</p>
+<p>所以我尝试根据所学为高阶范畴写出一套自洽的基础, 争取让每一条规则都 “理所当然”, 即在任何人设计的理论中都不可能错误; 然后用这些事实搭建出尽量多熟悉的理论.</p>
+<p>建立高阶范畴使用的框架是某种<span class="link local"><a href="./同伦类型论.html" title="同伦类型论 [同伦类型论]">同伦类型论</a></span>, 包括使用嵌套的宇宙层级, 允许高阶归纳类型等特性. 下面除非必要, 我们将省略宇宙这一参数. 为了照顾人类读者, 我们将较多地使用自然语言; 但读者应能将其翻译为类型论语言.</p>
+<hr />
+<h2>基础</h2>
+<p><code>高阶范畴的类型</code> 设有两个宇宙 $\mathsf{Type} : \mathsf{Type}'$. 我们将用一个 (巨大无比的) 归纳类型来定义<strong>高阶范畴的类型</strong> $\mathsf{Cat} : \mathsf{Type}'$, 同时定义许多其它类型. 称 $\mathcal C : \mathsf{Cat}$ 为<strong>高阶范畴</strong>, 或简称<strong>范畴</strong>.</p>
+<p><code>对象的类型</code> 对于一个高阶范畴 $\mathcal C : \mathsf{Cat}$, 可取出其<strong>对象的类型</strong> $\operatorname{Obj}\mathcal C : \mathsf{Type}$. 称 $X : \operatorname{Obj}\mathcal C$ 为高阶范畴 $\mathcal C$ 的<strong>对象</strong>. 为了方便, 我们将用 $X : \mathcal C$ 来代替 $X : \operatorname{Obj}\mathcal C$, 希望这不会引起歧义.</p>
+<p><code>范畴的范畴</code> 设有三个宇宙 $\mathsf{Type} : \mathsf{Type}' : \mathsf{Type}''$, 对应地有范畴的类型 $\mathsf{Cat} : \mathsf{Type}'$, $\mathsf{Cat}' : \mathsf{Type}''$. 那么有一个范畴 $\mathfrak{Cat} : \mathsf{Cat}'$ (暂时为了区分而使用不同的字体), 称为<strong>范畴的范畴</strong>; 其对象的类型 $\operatorname{Obj}\mathfrak {Cat} : \mathsf{Type}'$ 等于 $\mathsf{Cat} : \mathsf{Type}'$. 为了方便, 以后我们将写 $\mathsf{Cat} : \mathsf{Cat}'$.</p>
+<p><code>态射范畴</code> 对于高阶范畴 $\mathcal C : \mathsf{Cat}$ 的对象 $X,Y : \mathcal C$, 可取出<strong>态射范畴</strong> $\operatorname{Hom}_{\mathcal C}(X,Y) : \mathsf{Cat}$, 或简记为 $\mathcal C(X,Y)$.</p>
+<p><strong>例</strong> (函子范畴). 对于高阶范畴 $\mathcal C,\mathcal D : \mathsf{Cat}$, 态射范畴 $\mathsf{Cat}(\mathcal C,\mathcal D) : \mathsf{Cat}$ 又称为<strong>函子范畴</strong> $\mathsf{Fun}(\mathcal C,\mathcal D) : \mathsf{Cat}$. 函子范畴的对象 $f : \mathsf{Fun}(\mathcal C,\mathcal D)$ 称为 $\mathcal C$ 到 $\mathcal D$ 的<strong>函子</strong>, 简记为 $f \colon  \mathcal C \to \mathcal D$. 多元函子如 $f \colon \mathcal C \to \mathsf{Fun}(\mathcal D,\mathcal E)$ 简记为 $f \colon \mathcal C \to \mathcal D \to \mathcal E$ (符号 “$\to$” 是右结合的, 遵从类型论的习惯).</p>
+<p><code>函子作用于对象</code> 对于高阶范畴 $\mathcal C,\mathcal D : \mathsf{Cat}$, 函子 $f\colon \mathcal C\to \mathcal D$, 以及对象 $X : \mathcal C$, 有对象 $f(X) : \mathcal D$.</p>
+<p><code>函子作用于态射</code> 对于高阶范畴 $\mathcal C,\mathcal D : \mathsf{Cat}$, 函子 $f\colon \mathcal C\to \mathcal D$, 以及对象 $X,Y : \mathcal C$, 有函子 $f_{X,Y} \colon \mathcal C(X,Y) \to \mathcal D(f(X),f(Y))$.</p>
+<p><code>对偶</code> 对于高阶范畴 $\mathcal C : \mathsf{Cat}$ 有<strong>对偶</strong> $\mathcal C^{\mathrm{op}} : \mathsf{Cat}$, 其对象的类型 $\operatorname{Ob}\mathcal C^{\mathrm{op}}$ 等于 $\operatorname{Ob}\mathcal C$, 且对于 $X,Y : \mathcal C$, 态射范畴 $\mathcal C^{\mathrm{op}}(X,Y)$ 等于 $\mathcal C (Y,X)$.</p>
+<p><code>态射函子</code> 对高阶范畴 $\mathcal C : \mathsf{Cat}$ 有<strong>态射函子</strong> ${\mathcal C}(-,-) \colon \mathcal C^{\mathrm{op}} \to \mathcal C \to \mathsf{Cat}$.</p>
+<p><strong>注</strong>. 我们没有规定态射可以复合, 因为 ${\mathcal C}(-,-)$ 的函子性已经保证了这件事.</p>
+<p><strong>定理</strong> (态射的复合). 对高阶范畴 $\mathcal C : \mathsf{Cat}$ 的对象 $X,Y,Z : \mathcal C$, 有 $(- \circ -)\colon \mathcal C(Y,Z) \to \mathcal C(X,Y) \to \mathcal C(X,Z)$.</p>
+<p><em>证明</em>. 函子 $\mathcal C(X,-)\colon \mathcal C \to\mathsf{Cat}$ 作用于态射上, 给出 $\mathcal C(Y,Z) \to \mathsf{Cat}(\mathcal C(X,Y),\mathcal{C}(X,Z))$.</p>
+<p><code>类型作为范畴</code> 对任意类型 $A : \mathsf{Type}$ 有一个范畴 $\operatorname{toCat} A : \mathsf{Cat}$; 为了方便, 仍记作 $A : \mathsf{Cat}$. 这种范畴又称为<strong>生象</strong>. 类型 $A$ 作为范畴, 其对象的类型 $\operatorname{Ob}A$ 等于 $A$ 自身. 对于 $A$ 的对象 $X,Y : A$, 态射范畴 $A(X,Y)$ 等于等式类型 $X =_A Y$ 对应的生象. 对任意范畴 $\mathcal C : \mathsf{Cat}$, 函子的类型 $\operatorname{Ob}\mathsf{Fun}(A,\mathcal C)$ 等于函数类型 $A \to \operatorname{Ob}\mathcal C$.</p>
+<p><strong>例</strong> (单点). 单点类型 $1 : \mathsf{Type}$ 作为范畴, 其有一个对象 $\star : 1$.</p>
+<h2>可表现范畴</h2>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="叠"><header><h1><span class="taxon">Wiki. </span>叠 <a class="slug" href="./叠.html">[叠]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>叠</strong>是<span class="link local"><a href="./景.html" title="景 [景]">景</a></span>上取值于<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>的<span class="link local"><a href="./景上的层.html" title="景上的层 [景上的层]">层</a></span>, 也即高阶<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的对象.</p>
+<h2>例</h2>
+<p>对于 Lie 群 $G$ 有一个叠 $\mathbf{B}G$, 它是一个函子 $\mathsf {Mfd}^{\text{op}}\to\mathsf {Grpd}$, 将流形 $U$ 对应到 $U$ 上的 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>的群胚, 将态射 $U\to V$ 对应到主丛的拉回.</p>
+</details></section><section class="block" data-taxon="subject"><details ><summary id="形式化数学"><header><h1><span class="taxon"><span class="link local"><a href="./subject.html" title="学科 [subject]">subject</a></span></span>形式化数学 <a class="slug" href="./形式化数学.html">[形式化数学]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>Voevodsky 在一篇关于<span class="link local"><a href="./UF.html" title="泛等基础 [UF]">泛等基础</a></span>的动机的<span class="link local"><a href="./VV-UF.html" title="The Origins and Motivations of Univalent Foundationsn [VV-UF]">文章</a></span>中回忆了促使他研究形式化数学的几次事件:</p>
+<ul>
+<li>在 1999-2000 年, Voevodsky 发现他 1992-1993 年的一篇论文中的关键引理证明有误. 那几年之间, 许多数学家研究并讨论过这篇文章, 但无人指出错误.</li>
+<li>1998 年, C. Simpson 的文章 <em>Homotopy Types of Strict 3-groupoids</em> 包含了一个例子, 说明 Voevodsky 与 Kapranov 1989 年的文章 <em>∞-Groupoids as a Model for a Homotopy Category</em> 的主要结果不成立. 但当时没有人能指出 Voevodsky 与 Kapranov 论证中的具体错误. 这个错误直到 2013 年才被清晰地认识.</li>
+</ul>
+<p>他总结道,</p>
+<blockquote>
+<p>A technical argument by a trusted author, which is hard to check and looks similar to arguments known to be correct, is hardly ever checked in detail.</p>
+<p>由可信的作者给出的技术论证, 如果难以检验, 但又长得像正确的证明, 那么几乎从不会有人仔细验证.</p>
+<p>V. Voevodsky, <span class="link local"><a href="./VV-UF.html" title="The Origins and Motivations of Univalent Foundationsn [VV-UF]">The Origins and Motivations of Univalent Foundations</a></span></p>
+</blockquote>
+<p>接着他认为</p>
+<blockquote>
+<p>… the only long-term solution was somehow to make it possible for me to use computers to verify my abstract, logical, and mathematical constructions.</p>
+<p>唯一的长期解决方案是让计算机能够验证我那些抽象的逻辑和数学构造.</p>
+<p>V. Voevodsky, <span class="link local"><a href="./VV-UF.html" title="The Origins and Motivations of Univalent Foundationsn [VV-UF]">上述引文</a></span></p>
+</blockquote>
+<p>当时形式化数学的系统已经存在, 但没有适合于 Voevodsky 希望做的与<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>有关的数学的系统. Voevodsky 指出问题的根源在于当时人们使用的<span class="link local"><a href="./数学基础.html" title="数学基础 [数学基础]">数学的基础</a></span>不适合于他想做的数学.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="生象"><header><h1><span class="taxon">Wiki. </span>生象 <a class="slug" href="./生象.html">[生象]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<blockquote>
+<p>Philosophically, “anima” means something like “soul”—and, indeed, the functor from topological spaces to their homotopy category extracts something like the soul of a space: it only remembers data independent of any worldly representation in terms of physical points.</p>
+<p>Kestutis Cesnavicius, Peter Scholze, <span class="link local"><a href="./CesnaviciusScholzePurity.html" title="Purity for flat cohomology [CesnaviciusScholzePurity]">Purity for flat cohomology</a></span></p>
+</blockquote>
+<p>从现代数学的观点, “<strong>生象</strong>” 的概念代替了传统的 “集合” 的概念: 对生象的最好描述就是<strong>一类数学对象的全体构成一个生象</strong>. Anima 有 “灵魂” 之意, 而生象在历史上的来源是从拓扑空间或其它几何对象中提取的同伦信息.</p>
+<p>在<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span> (尤其是<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴论</a></span>) 上, 生象等同于 <span class="link local"><a href="./∞-群胚.html" title="∞-群胚 [∞-群胚]">$\infty$-群胚</a></span>. 但是它值得一个特别的名字, 因为它比范畴的概念更为基本.</p>
+<p>当我们把一类事物放到一起作为一个整体来谈论的时候, “<strong>集合</strong>” 的概念便产生了. 随着数学 (尤其是同伦论, 高阶代数) 的发展, 人们发现数学语言中的 “集合” 有时不能表达实践中的 “一类事物的集体” 这一概念, 其关键的缺陷在于对<strong>何为相等</strong>这一问题的过于草率的回答.</p>
+<p>诚然, 对于基础算术而言, 何为相等不是一个问题: $1+1$ 等于 $2$ 而不等于 $3$; 任何两个数<strong>要么</strong>相等, <strong>要么</strong>不相等, 绝无第三种情形. 但当数学研究的对象从简单的数变成了代数, 拓扑空间, 层, 叠等等越来越复杂的结构时, 这些对象之间的相等不再是一个是或否的命题, 而是一个同样越来越复杂的问题. 甚至一个对象和自身的相等也可能不是一个平凡的命题, 而是存在多个不平凡的途径.</p>
+<p>最终人们走向这样一个观念:</p>
+<p><strong>一类事物的 “集合” 之中, 任何两个事物之间的等式须构成一类新的事物</strong>, 从而这个新的 “集合” 中又可以谈论相等构成的 “集合”, 以至于无穷. 这种革新的 “集合” 概念就是<strong>生象</strong>.</p>
+<p>生象有别于集合的特点在于, 生象 $A$ 中两个元素 $x,y$ 之间的<strong>相等</strong>不一定是一个是或否的<strong>命题</strong>, 而是一个新的<strong>生象</strong> (换言之, 相等是<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构而非性质</a></span>), 记作 $x =_A y$. 一个直观是空间中两个点之间的道路空间.</p>
+<p>当然, 集合是特殊的生象, 集合的定义是任何两个元素之间的相等都是<span class="link local"><a href="./命题(同伦类型论).html" title="命题 (同伦类型论) [命题(同伦类型论)]">命题</a></span>的生象.</p>
+<p>一种适合用于谈论生象的语言是<span class="link local"><a href="./同伦类型论.html" title="同伦类型论 [同伦类型论]">同伦类型论</a></span>.</p>
+<h2>性质</h2>
+<h3>生象的范畴</h3>
+<p>生象的范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 是最基本的 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">∞-范畴</a></span>, 也是最简单的 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span>.</p>
+<h3>生象的表现</h3>
+<p>如下类型的对象可以<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>生象, 其表现的生象有时称为<strong>同伦型</strong>:</p>
+<ul>
+<li><span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span></li>
+<li>拓扑空间</li>
+<li><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> (见<span class="link local"><a href="./∞-意象的形.html" title="意象的形 [∞-意象的形]">意象的形</a></span>)</li>
+</ul>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./生象化.html" title="生象化 [生象化]">生象化</a></span></p>
+</details></section><section class="block" data-taxon="subject"><details ><summary id="范畴论"><header><h1><span class="taxon"><span class="link local"><a href="./subject.html" title="学科 [subject]">subject</a></span></span>范畴论 <a class="slug" href="./范畴论.html">[范畴论]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>范畴</strong>是集合概念的某种推广; 范畴中有<strong>对象</strong>, 正如集合中有元素; 但不同在于集合中的元素只有相等或不相等两种关系, 而范畴中的对象可以有多种且不对称的关系, 称为<strong>态射</strong>.</p>
+<p>最经典的范畴是集合的范畴: 其中对象为集合, 态射 $X\to Y$ 为集合之间的映射.</p>
+<p>一般说的范畴的概念又称为 $1$-范畴, 它处在一个无穷高的阶梯的第 $1$ 层; 而集合的概念在第 $0$ 层, 集合又可称为 $0$-范畴. 我们发现全体 $0$-范畴构成一个 $1$-范畴; 事实上全体 $n$-范畴也构成一个 $(n+1)$-范畴, 这个无穷高的阶梯中每一层的对象的全体构成上一层的一个最基本的对象. 见<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>.</p>
+<p>范畴的对象之间也可以谈论相等, 但区别在于两个对象之间可能有多种不同方式相等, 甚至一个对象和自身也可能有多种不同方式相等, 这称为<strong>对称性</strong>. 另见<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>, <span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

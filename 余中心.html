@@ -57,6 +57,126 @@
   });
 </script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="余中心"><header><h1><span class="taxon">Wiki. </span>余中心 <a class="slug" href="./余中心.html">[余中心]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Hochschild 同调 <a class="slug" href="./Hochschild同调.html">[Hochschild同调]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>中心 <a class="slug" href="./中心.html">[中心]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Hochschild同调"><header><h1><span class="taxon">Wiki. </span>Hochschild 同调 <a class="slug" href="./Hochschild同调.html">[Hochschild同调]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的 <strong>Hochschild 同调</strong>是其 “沿着流形 $S^1$ 的张量积”, 即 $S^1$ 上的<span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>.
+Hochschild 同调又叫 “<span class="link local"><a href="./迹.html" title="迹 [迹]">迹</a></span>”, “<span class="link local"><a href="./余中心.html" title="余中心 [余中心]">余中心</a></span>”.</p>
+<p><span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>的 Hochschild 同调是其与<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span> $S^1$ 的<span class="link local"><a href="./张量积.html" title="张量积 [张量积]">张量积</a></span>.</p>
+<h2>定义</h2>
+<h3>结合代数</h3>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $A$ 为 $\mathcal C$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 定义其 <strong>Hochschild 同调</strong>为
+$$
+\operatorname{HH}_*(A) := A \otimes_{A\otimes A^{\mathrm{op}}} A.
+$$
+这个定义的缺陷是它没能反映 Hochschild 同调的 $S^1$-对称性.</p>
+<h3>交换代数</h3>
+<p>当 $A$ 为<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>时,
+有
+$$
+\mathrm{HH}_*(A) =
+A\otimes_{A\otimes A}A = \operatorname{colim}_{S^1}^{\mathsf{CAlg}(\mathcal C)} A = A^{\otimes S^1}.
+$$
+有典范的态射
+$$
+A \to\mathrm {HH}^*(A),
+$$
+它是 $A$ 到 $S^1$-作用的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>的万有态射, 是<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>的范畴中 $S^1$ 形状的常值图 $A$ 的余极限, 也是 $A\colon *\to \mathsf {CAlg}(\mathcal C)$ 沿 $*\to \mathbf{B}S^1$ 的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">左 Kan 扩张</a></span>.</p>
+<p>而这个余极限 $\operatorname{colim}_{S^1}^{\mathsf{CAlg}(\mathcal C)} A$ 由于 $S^1=*\sqcup_{*\sqcup *}*$, 可计算为
+$$
+\begin{aligned}
+\mathrm {HH}_*(A) &amp;= \operatorname{colim}_* A \otimes_{\operatorname{colim}_{*\sqcup *}A}\operatorname{colim}_* A\\
+&amp; = A\otimes_{A\otimes A}A.
+\end{aligned}
+$$</p>
+<p>记 $X = \operatorname{Spec} A$, 那么作为<span class="link local"><a href="./导出概形.html" title="导出概形 [导出概形]">导出概形</a></span>有
+$$
+\operatorname{Spec}(\operatorname{HH}_*(A)) = X\times_{X\times X} X = X^{S^1} = \mathcal LX,
+$$
+即为 $X$ 的<span class="link local"><a href="./自由环路空间.html" title="自由环路空间 [自由环路空间]">自由环路空间</a></span> $\mathcal L X$.</p>
+<h3>范畴</h3>
+<p><span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成范畴</a></span> $\mathcal C$ 的 Hochschild 同调可定义为如下单纯对象的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>:</p>
+<h2>性质</h2>
+<h3>与 K-理论的关系</h3>
+<blockquote>
+<p>THH and TC are in practice computationally useful approximations to K</p>
+</blockquote>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./Hochschild上同调.html" title="Hochschild 上同调 [Hochschild上同调]">Hochschild 上同调</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="中心"><header><h1><span class="taxon">Wiki. </span>中心 <a class="slug" href="./中心.html">[中心]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>群</h3>
+<p>$\mathsf{Set}$ 中的群 $G$ 的中心为
+$$
+Z(G) = \{g\in G | \forall h\in G, gh=hg\}.
+$$</p>
+<p>对更一般的<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> (如<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>群) $G$,
+定义
+$$
+Z(G) := \operatorname{Aut}_{\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)}(\mathrm{id}).
+$$
+换言之, $\mathbf{B}Z(G)$ 是 $\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)$ 在 $\mathrm{id}_{\mathbf{B}G}$ 处的连通分支. 一个生象 $A$ 的连通分支是 $A\to\tau_{\leq 0} A$ 的纤维.
+因此该定义也可等价地陈述如下. 考虑群 $G$ 的<span class="link local"><a href="./群的外自同构.html" title="群的外自同构 [群的外自同构]">外自同构</a></span>群
+$$
+\begin{aligned}
+    \operatorname{Out}(G)&amp;=
+\tau_{\leq 0}
+(\operatorname{Aut}_{\mathsf{Grp}}(G) /_{\mathrm{Ad}} G)\\
+&amp; =\tau_{\leq 0}\operatorname{Aut}(\mathbf{B}G).
+\end{aligned}
+$$
+那么有<span class="link local"><a href="./群短正合列.html" title="群的短正合列 [群短正合列]">短正合列</a></span>
+$$
+\mathbf{B}Z(G) \to \mathsf{Aut}(\mathbf{B}G) \to \operatorname{Out}(G)
+$$
+以及<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
+$$
+\begin{aligned}
+    \mathbf{B}Z(G) &amp;\to \mathsf{Aut}(\mathbf{B}G) \to \operatorname{Out}(G)\\
+\to \mathbf{B}^2Z(G) &amp;\to \mathbf{B}\mathsf{Aut}(\mathbf{B}G) \to \mathbf{B}\operatorname{Out}(G).
+\end{aligned}
+$$</p>
+<h3>环</h3>
+<p>固定交换环 $k$ 作为基环.
+设 $A$ 为 $k$ 上的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. $A$ 的<strong>中心</strong>是与所有元素交换的元素的集合
+$$
+Z(A) = \{a\in A | \forall b\in A, ab=ba\},
+$$
+也是 $A$ 作为 $(A,A)$-双模的自同态的集合
+$$
+Z(A) = \operatorname{End}_{\mathsf{BiMod}(A,A)}(A),
+$$
+也是<span class="link local"><a href="./等化子.html" title="等化子 [等化子]">等化子</a></span>
+$$
+Z(A) = \operatorname{eq}\big(
+    A\rightrightarrows \operatorname{Hom}_k(A,A)
+\big),
+$$
+其中两个映射分别为左乘与右乘.</p>
+<p>回忆 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>中, <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 的恒等态射即是 $A$ 作为 $(A,A)$-双模. 因此, $A$ 的中心又可理解为
+$$
+Z(A) = \operatorname{End}_{\operatorname{End}_{\mathsf{Morita}}(A)}(\mathrm{id}).
+$$</p>
+<p>进一步, Morita 范畴嵌入线性范畴的范畴, 从而<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 的中心也可定义为
+$$
+Z(R) := \operatorname{End}_{\operatorname{End}_{\mathsf{Cat}}(\mathsf{Mod}(A))}(\mathrm{id}).
+$$</p>
+<h3>幺半范畴</h3>
+<p>设 $\mathcal C$ 为 $k$-线性<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>,
+定义 $\mathcal C$ 的 <strong>Drinfeld 中心</strong> $Z(\mathcal C)$ 是一个<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半范畴</a></span>, 可理解为两个函子 $\mathcal C \to \operatorname{Hom}_k(\mathcal C,\mathcal C)$ 的<span class="link local"><a href="./等化子.html" title="等化子 [等化子]">等化子</a></span>, 其对象为 $\mathcal C$ 的对象 $X$ 配备自然变换
+$$
+X\otimes (-) \to (-)\otimes X,
+$$
+满足两个自然变换 $X\otimes (Y\otimes Z)\to (Y\otimes Z)\otimes X$ 相等.</p>
+<h3>2-范畴的对象</h3>
+<p>定义 $2$-范畴 $\mathcal C$ 的对象 $X$ 的<strong>中心</strong>为<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>
+$$
+Z(X) := \operatorname{End}_{\operatorname{End}_{\mathcal C}(X)}(\mathrm{id}_X).
+$$
+它类似于 $\mathcal C$ 在 $X$ 处的二阶<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>.
+由 <span class="link local"><a href="./Eckmann--Hilton论证.html" title="Eckmann–Hilton 论证 [Eckmann--Hilton论证]">Eckmann–Hilton 论证</a></span>, $Z(X)$ 为 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span> 幺半群 (辫幺半群).</p>
+<p>这样定义的中心又称 <span class="link local"><a href="./Hochschild上同调.html" title="Hochschild 上同调 [Hochschild上同调]">Hochschild 上同调</a></span>.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./余中心.html" title="余中心 [余中心]">余中心</a></span></p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

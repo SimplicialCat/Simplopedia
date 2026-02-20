@@ -89,6 +89,130 @@ $$
 <h3>同伦不变性</h3>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Dirac算子.html" title="Dirac 算子 [Dirac算子]">Dirac 算子</a></span></p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Atiyah–Singer 指标定理 <a class="slug" href="./Atiyah--Singer指标定理.html">[Atiyah--Singer指标定理]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Dolbeault–Dirac 算子” <a class="slug" href="./Dolbeault--Dirac算子.html">[Dolbeault--Dirac算子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Fredholm 算子” <a class="slug" href="./Fredholm算子.html">[Fredholm算子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Hodge 理论” <a class="slug" href="./Hodge理论.html">[Hodge理论]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li><li class="meta-item">Hodge 分解定理, Hodge 定理</li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Todd 类” <a class="slug" href="./Todd类.html">[Todd类]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“椭圆复形” <a class="slug" href="./椭圆复形.html">[椭圆复形]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Atiyah--Singer指标定理"><header><h1><span class="taxon">Wiki. </span>Atiyah–Singer 指标定理 <a class="slug" href="./Atiyah--Singer指标定理.html">[Atiyah--Singer指标定理]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Atiyah–Singer 指标定理在流形上整体地描述微分方程的拓扑.</p>
+<h2>陈述</h2>
+<p><span class="link local"><a href="./椭圆算子.html" title="椭圆算子 [椭圆算子]">椭圆算子</a></span>的<span class="link local"><a href="./拓扑指标.html" title="拓扑指标 [拓扑指标]">拓扑指标</a></span>等于<span class="link local"><a href="./解析指标.html" title="解析指标 [解析指标]">解析指标</a></span>.</p>
+<blockquote>
+<p>Nicolaescu, Notes on the Atiyah-Singer Index Theorem</p>
+</blockquote>
+<p>设 $E$ 为 Dirac 丛, $D$ 为 Dirac 算子, $F^{E/\mathbb S}\in \operatorname{End}_{\mathrm{Cl}(M)}(E)$ 为曲率 (twisting curvature), 定义<span class="link local"><a href="./陈特征.html" title="“陈特征” [陈特征]">陈特征</a></span>
+$$
+\operatorname{ch}^{E/\mathbb S}:= \operatorname{str}^{E/\mathbb S} \exp\left(\frac{i}{2\pi} F^{E/\mathbb S}\right) \in\Omega^\bullet(M),
+$$
+<span class="link local"><a href="./A-hat类.html" title="“A-hat 类” [A-hat类]">A-hat 类</a></span>
+$$
+\widehat{A}(M)=\det \left(\frac{\frac{i}{4\pi}R}{\sinh (\frac{i}{4\pi}R)}\right)^{1/2},
+$$
+那么 Atiyah–Singer 定理是说
+$$
+\operatorname{ind}D=\dim\ker D -\dim\ker D^* =\int_M \widehat{A}(M) \operatorname{ch}^{E/\mathbb S}(E).
+$$</p>
+<blockquote>
+<p>John W. Morgan, The Seiberg–Witten Equations and Applications …, 3.3 节</p>
+</blockquote>
+<p>设 $X$ 为闭可定向 Riemann 四维流形, $\widetilde P$ 是 $X$ 上的自旋结构, $\partial \hspace{-5pt}/$ 为复旋量丛 $S_{\mathbb{C}}^+(\widetilde P)$ 到 $S_{\mathbb{C}}^-(\widetilde P)$ 的 <span class="link local"><a href="./Dirac算子.html" title="Dirac 算子 [Dirac算子]">Dirac 算子</a></span>, 由其<span class="link local"><a href="./象征.html" title="象征 [象征]">象征</a></span>可计算其<span class="link local"><a href="./解析指标.html" title="解析指标 [解析指标]">解析指标</a></span>如下.</p>
+<p>回忆对于 $\pi\colon T^*X\to X$, 象征是 $T^*X$ 上的向量丛 $\pi^* S^+$ 到 $\pi^* S^-$ 的丛同态. 这个丛同态在 $T^*X\setminus X$ (减去零截面) 上的限制是丛的同构. 因此, 象征给出了 $T^*X$ 相对于 $T^*X\setminus X$ 的<span class="link local"><a href="./相对K-群.html" title=" [相对K-群]">相对 K-群 (拓扑)</a></span>的一个元素. Atiyah–Singer 指标定理即是说, 由这个相对 K-理论的元素可计算出解析指标.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Dolbeault--Dirac算子"><header><h1><span class="taxon">Wiki. </span>“Dolbeault–Dirac 算子” <a class="slug" href="./Dolbeault--Dirac算子.html">[Dolbeault--Dirac算子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>在具有自旋结构的 <span class="link local"><a href="./Kähler流形.html" title="Kähler 流形 [Kähler流形]">Kähler 流形</a></span>上, <span class="link local"><a href="./Dolbeault算子.html" title=" [Dolbeault算子]">Dolbeault 上同调</a></span>与其伴随算子之和是 <span class="link local"><a href="./Dirac算子.html" title="Dirac 算子 [Dirac算子]">Dirac 算子</a></span>, 其<span class="link local"><a href="./解析指标.html" title="解析指标 [解析指标]">解析指标</a></span>等于 <span class="link local"><a href="./Todd类.html" title="“Todd 类” [Todd类]">Todd 类</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Fredholm算子"><header><h1><span class="taxon">Wiki. </span>“Fredholm 算子” <a class="slug" href="./Fredholm算子.html">[Fredholm算子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设 $H$ 为 Hilbert 空间, $\mathcal B$ 为 $H$ 上的有界线性算子构成的 Banach 代数. Fredholm 算子是指 $\mathcal B$ 中核与余核维数均有限的算子.</p>
+<p>Fredholm 算子在紧算子误差的意义下可逆, 即 Fredholm 算子是 “有界算子商去紧算子” $\mathcal B(H_1,H_2)/ \mathcal K(H_1,H_2)$ 中的可逆元.</p>
+<p>对于 Fredholm 算子 $T$, 方程 $Tu=0$ 仅有有限个线性无关的解; 且方程 $Tu=v$ 有解只需要 $v$ 满足有限个线性条件.</p>
+<h3>无解算子的情形</h3>
+<p>我们也可对 (稠密子空间上定义的) 无界的闭算子谈论它何时是 Fredholm 算子.</p>
+<h2>指标</h2>
+<p>Fredholm 算子 $T$ 的<span class="link local"><a href="./解析指标.html" title="解析指标 [解析指标]">解析指标</a></span>定义为
+$$
+\operatorname{ind}T=\dim\ker T - \dim\operatorname{coker}T.
+$$
+类似地可定义两个不同 Hilbert 空间之间的 Fredholm 算子.</p>
+<p>指标是连续的, 而只取整数值, 因此对于一族随时间 $t$ 连续变化的 Fredholm 算子 $A_t$, 指标 $\operatorname{ind} A_t$ 与 $t$ 无关.</p>
+<h2>与 K-理论的关系</h2>
+<p>一个可分 Hilbert 空间上 Fredholm 算子的空间是 $0$ 阶<span class="link local"><a href="./拓扑K-理论.html" title="“拓扑 K-理论” [拓扑K-理论]">拓扑 K-理论</a></span>的分类空间.</p>
+<h2>例</h2>
+<p>考虑 $\ell^2 = L^2(\mathbb{Z}_{\geq 0})$ 上的移位算子 $S\colon (x_0,x_1,x_2,\cdots)\mapsto (0,x_0,x_1,\cdots)$. 则 $S$ 为 Fredholm 算子, 且 $\operatorname{ind}S=-1$.</p>
+<p><span class="link local"><a href="./椭圆算子.html" title="椭圆算子 [椭圆算子]">椭圆算子</a></span> (作用在 $L^2$ 空间上) 是无界的 Fredholm 算子, 其指标是非常重要的问题.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Hodge理论"><header><h1><span class="taxon">Wiki. </span>“Hodge 理论” <a class="slug" href="./Hodge理论.html">[Hodge理论]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li><li class="meta-item">Hodge 分解定理, Hodge 定理</li></ul></div></header></summary>
+
+<h2>实流形的 Hodge 理论</h2>
+<p>Hodge 理论研究紧流形上的<span class="link local"><a href="./椭圆算子.html" title="椭圆算子 [椭圆算子]">椭圆算子</a></span>, 如 <span class="link local"><a href="./Laplace算子.html" title="“Laplace 算子” [Laplace算子]">Laplace 算子</a></span>. 它告诉我们指标如何翻译成上同调.</p>
+<h3>调和形式</h3>
+<p><strong>定理</strong>. 紧可定向 Riemann 流形 $M$ 上 $p$ 阶<span class="link local"><a href="./调和形式.html" title="“调和形式” [调和形式]">调和形式</a></span>的空间 $\mathcal H_d^p(M)$ 是<strong>有限维</strong>的. 对于正交投影 $H_d\colon \Omega^p(M) \to \mathcal H_d^p(M)$, 存在 Green 算子 $G_d\colon \Omega^p\to \Omega^p$, 满足</p>
+<ul>
+<li>$G_d H_d = H_d G_d = 0$;</li>
+<li>$d G_d = G_d d$, $d^* G_d = G_d d^*$;</li>
+<li>$H_d + \triangle_d G_d = \operatorname{id}_{\Omega^p}$.</li>
+</ul>
+<p><strong>推论</strong>. 紧可定向 Riemann 流形 $M$ 上任一微分形式可分解为一个调和形式, 一个 $d$ 的像与一个 $d^*$ 的像之和. 若 $\alpha$ 为闭形式, 则 $\alpha$ 可分解为一个调和形式与一个 $d$ 的像之和.</p>
+<p><strong>推论</strong>. $\mathcal H_d^p(M) \simeq H_{\text{dR}}^p(M)$.</p>
+<p>关于这个理论, Futaki 教授推荐 F. Warner 的微分几何书.</p>
+<h3>解析指标</h3>
+<p>Hodge 理论与算子的<span class="link local"><a href="./解析指标.html" title="解析指标 [解析指标]">解析指标</a></span>有关.</p>
+<h2>复流形上全纯向量丛的 Hodge 理论</h2>
+<p>设 $E\to M$ 为<span class="link local"><a href="./全纯向量丛.html" title="“全纯向量丛” [全纯向量丛]">全纯向量丛</a></span>, 则 $E$-值 $(p,q)$-形式上有算子 $\bar\partial_E\colon \Omega^{p,q}(E)\to \Omega^{p,q+1}(E)$, 满足 $\bar\partial_E^2=0$. 见 <span class="link local"><a href="./Dolbeault上同调.html" title="“Dolbeault 上同调” [Dolbeault上同调]">Dolbeault 上同调</a></span>.</p>
+<p>定义 $\Omega^{p,q}(E)$ 上的 $\bar\partial$-Laplace 算子
+$$
+\triangle_{\bar\partial }= \bar\partial \bar\partial ^* + \bar\partial  ^*\bar\partial.
+$$
+$\triangle_{\bar\partial }\alpha = 0$ 等价于 $\bar\partial \alpha = 0$ 且 $\bar\partial ^* \alpha = 0$.</p>
+<p><strong>定理</strong>. (Hodge–Kodaira) 考虑正交投影 $H_{\bar\partial }\colon \Omega^{p,q}(E)\to \mathcal H^{p,q}_{\bar\partial }(E)$, 存在 Green 算子 $G_{\bar\partial }\colon \Omega^{p,q}(E)\to \Omega^{p,q}(E)$ 满足</p>
+<ul>
+<li>$G_{\bar\partial }H_{\bar\partial }=H_{\bar\partial }G_{\bar\partial }=0$;</li>
+<li>$\bar\partial G_{\bar\partial } = G_{\bar\partial }\bar\partial$;</li>
+<li>$H_{\bar\partial }+ \triangle_{\bar\partial }G_{\bar\partial }=\operatorname{id}_{\Omega^{p,q}(E)}$.</li>
+</ul>
+<p><strong>推论</strong>. $\bar\partial$-闭形式可分解为一个 $\bar\partial$-调和形式与一个 $\bar\partial$ 的像的和.</p>
+<p><strong>推论</strong>. $\mathcal H_{\bar\partial }^{p,q}(E)\simeq H^{p,q}_{\bar\partial }(E)$.</p>
+<h2>复射影簇的 Hodge 理论</h2>
+<p>设 $X$ 为复射影流形, 即 $\mathbb CP^n$ 的闭子流形 (参见<span class="link local"><a href="./代数簇.html" title="“代数簇” [代数簇]">代数簇</a></span>), 那么 $X$ 继承 $\mathbb CP^n$ 上的 Riemann 度量而成为 <span class="link local"><a href="./Kähler流形.html" title="Kähler 流形 [Kähler流形]">Kähler 流形</a></span>. 此时 Hodge 定理给出
+$$
+H^r(X,\mathbb C) \simeq \bigoplus_{p+q=r}H^{p,q}(X).
+$$
+其中 <span class="link local"><a href="./Dolbeault上同调.html" title="“Dolbeault 上同调” [Dolbeault上同调]">Dolbeault 上同调</a></span> $H^{p,q}(X)$ 等于<span class="link local"><a href="./凝聚层上同调.html" title="“凝聚层上同调” [凝聚层上同调]">凝聚层上同调</a></span>
+$$
+H^{p,q}(X)\simeq H^q(X,\Omega^p),
+$$
+$\Omega^p$ 为全纯 $p$-形式层.</p>
+<p>Hodge 理论给出了<span class="link local"><a href="./小平消失定理.html" title="“小平消失定理” [小平消失定理]">小平消失定理</a></span>在代数几何上的应用.</p>
+<p>相关概念: <span class="link local"><a href="./Hodge星算子.html" title="“Hodge 星算子” [Hodge星算子]">Hodge 星算子</a></span></p>
+<p><span class="link local"><a href="./p-进Hodge理论.html" title="“p-进 Hodge 理论” [p-进Hodge理论]">p-进 Hodge 理论</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Todd类"><header><h1><span class="taxon">Wiki. </span>“Todd 类” <a class="slug" href="./Todd类.html">[Todd类]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>Todd 类是一种<span class="link local"><a href="./乘性序列.html" title="乘性序列 [乘性序列]">乘性序列</a></span>, 其特征幂级数为
+$$
+Q(x) =\frac{x}{1-e^x} = 1+\frac{x}{2}+\frac{x^2}{12}+\cdots.
+$$
+对于 $X$ 上的复向量丛 $E,F$, $\operatorname{td}(E\oplus F) = \operatorname{td}(E)\operatorname{td}(F)$.</p>
+<p>由 <span class="link local"><a href="./Hirzebruch--Riemann--Roch定理.html" title="“Hirzebruch–Riemann–Roch 定理” [Hirzebruch--Riemann--Roch定理]">Hirzebruch–Riemann–Roch 定理</a></span>, <span class="link local"><a href="./Dolbeault算子.html" title=" [Dolbeault算子]">Dolbeault 上同调</a></span>的<span class="link local"><a href="./解析指标.html" title="解析指标 [解析指标]">解析指标</a></span>等于 Todd 类 (Todd class 或 Todd genus).</p>
+<h2>例</h2>
+<h3>线丛</h3>
+<p>线丛的 Todd 类
+$$
+\operatorname{td}(L) = \frac{c_1(L)}{1- \exp (-c_1(L))}.
+$$</p>
+<h3>代数曲线</h3>
+<p>对于代数曲线 $X$, 其 Todd 类为 $\operatorname{Td}(X)= 1+ c_1(TX)$.</p>
+<h3>代数簇</h3>
+<p>对于代数簇 $X$, 定义 $\operatorname{Td}(X)=\operatorname{td}(T_X)$, 其中 $T_X$ 为 $X$ 的<span class="link local"><a href="./切层.html" title=" [切层]">切丛</a></span>.</p>
+<h2>与 A-hat 类的关系</h2>
+<p>在近复流形 $M$ 上, Todd 类与 <span class="link local"><a href="./A-hat类.html" title="“A-hat 类” [A-hat类]">A-hat 类</a></span>相差 $e^{c_1/2}$.</p>
+<h2>与 Thom 类以及陈特征的关系</h2>
+<p><span class="link external"><a href="https://ncatlab.org/nlab/show/Todd+class" title="nLab [https://ncatlab.org/nlab/show/Todd+class]">nLab</a></span></p>
+<p><span class="link external"><a href="https://ncatlab.org/nlab/show/rational+Todd+class+is+Chern+character+of+Thom+class" title="有理 Todd 类是 Thom 类的陈特征 [https://ncatlab.org/nlab/show/rational+Todd+class+is+Chern+character+of+Thom+class]">有理 Todd 类是 Thom 类的陈特征</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="椭圆复形"><header><h1><span class="taxon">Wiki. </span>“椭圆复形” <a class="slug" href="./椭圆复形.html">[椭圆复形]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>对于微分算子的正合列
+$$
+\cdots \to \Gamma(E_{k+1}) \overset{D_k}{\to} \Gamma(E_{k}) \to \cdots
+$$
+若其<span class="link local"><a href="./象征.html" title="象征 [象征]">象征</a></span>构成的复形
+$$
+\cdots \to \pi^*E_{k+1} \overset{\sigma(D_k)}{\to} \pi^* E_k \to\cdots
+$$
+为正合列, 则称 $(E_\bullet,D_\bullet)$ 椭圆复形.</p>
+<h2>例</h2>
+<p>紧流形 $X$ 上的 de Rham 复形 $(\Omega^\bullet(X),d)$ 是椭圆复形, 其<span class="link local"><a href="./解析指标.html" title="解析指标 [解析指标]">解析指标</a></span>等于 $X$ 的 <span class="link local"><a href="./Euler示性数.html" title="Euler 示性数 [Euler示性数]">Euler 示性数</a></span>.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

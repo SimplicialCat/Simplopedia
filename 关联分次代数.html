@@ -60,6 +60,204 @@
 $$
 \operatorname{gr}_i(X_\bullet) := \operatorname{cofib}(X_{i-1} \to X_i).
 $$</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Poisson 代数 <a class="slug" href="./Poisson代数.html">[Poisson代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>泛包络代数 <a class="slug" href="./泛包络代数.html">[泛包络代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>滤代数 <a class="slug" href="./滤代数.html">[滤代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>滤对象 <a class="slug" href="./滤过.html">[滤过]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>特征簇 <a class="slug" href="./特征簇.html">[特征簇]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>象征 <a class="slug" href="./象征.html">[象征]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Poisson代数"><header><h1><span class="taxon">Wiki. </span>Poisson 代数 <a class="slug" href="./Poisson代数.html">[Poisson代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>交换环 $k$ 上的 Poisson 代数是 $k$-代数 $A$ 带有一个 Lie 括号 $[-,-]$,
+使得 $[a,-] \colon A \to A$ 是 $k$-代数的<span class="link local"><a href="./导子.html" title="导子 [导子]">导子</a></span>; 换言之, $[-,-]$ 是 $A$ 上的双导子 (biderivation).</p>
+<p>注意 Poisson 代数 $A$ 要求是含幺结合代数, 但有时不要求交换.</p>
+<p>流形 $M$ 配备其光滑函数环 $C^\infty(M)$ 的 Poisson 结构, 称为 <span class="link local"><a href="./Poisson流形.html" title="Poisson 流形 [Poisson流形]">Poisson 流形</a></span>.</p>
+<h2>例</h2>
+<p><span class="link local"><a href="./辛流形.html" title="辛流形 [辛流形]">辛流形</a></span> $(X,\omega)$ 上的光滑函数层 $\mathcal O_X$ 具有 Poisson $\mathbb{R}$-代数结构
+$$
+\{f,g\} = \omega(df,dg).
+$$
+这是因为, 辛结构 $\omega$ 是一个同构 $\Omega_X \simeq T_X$, 而映射 $\Omega_X \to T_X = \operatorname{Der}(\mathcal O_X,\mathcal O_X)$ 相当于导子 $\mathcal O_X \to \operatorname{Der}(\mathcal O_X,\mathcal O_X)$, 也即双导子 $\mathcal O_X\otimes\mathcal O_X \to \mathcal O_X$.</p>
+<p><span class="link local"><a href="./Lie代数.html" title="Lie 代数 [Lie代数]">Lie 代数</a></span> $\mathfrak{g}$ 的对称代数 $\operatorname{Sym} \mathfrak{g}$ 具有交换 Poisson 代数结构, 使得生成元 (即 $\mathfrak{g}$ 的元素) Poisson 括号恰为 Lie 括号. 见 <span class="link local"><a href="./KKSPoisson结构.html" title="Kirillov–Kostant–Souriau Poisson 结构 [KKSPoisson结构]">Kirillov–Kostant–Souriau Poisson 结构</a></span>.</p>
+<p>类似地, Lie 代数 $\mathfrak{g}$ 的<span class="link local"><a href="./泛包络代数.html" title="泛包络代数 [泛包络代数]">泛包络代数</a></span> $U\mathfrak{g}$ 具有非交换 Poisson 代数结构, 在生成元上限制为 Lie 括号. 这是下面介绍的几乎交换代数的例子, 其<span class="link local"><a href="./关联分次代数.html" title="关联分次对象 [关联分次代数]">关联分次代数</a></span>同构于 $\operatorname{Sym}\mathfrak{g}$.</p>
+<h3>(几乎) 交换代数</h3>
+<p>几乎交换代数 (almost commutative algebra) 是指有交换的<span class="link local"><a href="./关联分次代数.html" title="关联分次对象 [关联分次代数]">关联分次代数</a></span>的<span class="link local"><a href="./滤代数.html" title="滤代数 [滤代数]">滤代数</a></span>. 几乎交换代数 $F^\bullet A$ 的<span class="link local"><a href="./关联分次代数.html" title="关联分次对象 [关联分次代数]">关联分次代数</a></span> $\operatorname{Gr}^\bullet A$ 上有 Poisson 结构: 对 $x \in \operatorname{Gr}^i A$, $y\in\operatorname{Gr}^j A$,
+分别取 $x,y$ 的代表元 $\tilde{x}\in F^i A$, $\tilde y\in F^j A$, 定义
+$$
+\{x,y\} := [\tilde{x},\tilde{y}].
+$$</p>
+<p>例如 <span class="link local"><a href="./Weyl代数.html" title="Weyl 代数 [Weyl代数]">Weyl 代数</a></span>
+$$
+W =\mathbb{Z}\langle x_1,\cdots,x_n,\partial_1,\cdots,\partial_n\rangle,
+$$
+满足关系 $[x_i,x_j]=[\partial_i,\partial_j]=0$, $[\partial_i,x_j]=\delta_{ij}$, 其关联分次代数即为多项式代数
+$$
+\operatorname{Gr}^\bullet W \simeq \mathbb{Z}[x_1,\cdots,x_n,y_1,\cdots,y_n].
+$$
+这个多项式代数上的 Poisson 结构可表示为
+$$
+\{f,g\} = \sum_i \Big(\frac{\partial f}{\partial x_i}\frac{\partial g}{\partial y_i} - \frac{\partial f}{\partial y_i}\frac{\partial g}{\partial x_i}\Big).
+$$</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="泛包络代数"><header><h1><span class="taxon">Wiki. </span>泛包络代数 <a class="slug" href="./泛包络代数.html">[泛包络代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>以下假设所讨论的 Lie 代数是有限维的.</p>
+<p>Lie 代数 $\mathfrak g$ 的泛包络代数 (universal enveloping algebra) 可定义为
+$$
+U\mathfrak g = T\mathfrak g\Big/ \left&lt;xy-yx-[x,y]\right&gt;.
+$$</p>
+<p>$U\mathfrak g$ 的中心记为 $Z\mathfrak g$, 它同构于 $\mathfrak h$ 上多项式函数在 <span class="link local"><a href="./Weyl群.html" title="Weyl 群 [Weyl群]">Weyl 群</a></span>作用的<span class="link local"><a href="./不变子空间.html" title=" [不变子空间]">不变多项式</a></span> $\mathbb{C}[\mathfrak h^*]^W$.</p>
+<h2>性质</h2>
+<p>$U\mathfrak g$ 的所有左理想和有理想都是有限生成的, 即同时有左右 Noether 性.</p>
+<p>$\mathcal U\mathfrak g$ 是 <span class="link local"><a href="./Hopf代数.html" title="Hopf 代数 [Hopf代数]">Hopf 代数</a></span>.</p>
+<p>$U\mathfrak g$-模范畴是 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>.</p>
+<h3>关联分次代数</h3>
+<p>$U\mathfrak g$ 的<span class="link local"><a href="./关联分次代数.html" title="关联分次对象 [关联分次代数]">关联分次代数</a></span> $\operatorname{gr}U\mathfrak g$ 是交换代数.</p>
+<p><strong>定理</strong> (Poincaré–Birkhoff–Witt)</p>
+<p>态射 $T\mathfrak g\to U\mathfrak g$ 诱导了同构 $\operatorname{Sym}\mathfrak g\to \operatorname{gr}U\mathfrak g$, 且对 $\mathfrak g$ 的任意一组基 $x_1,\cdots,x_n$, $U\mathfrak g$ 有一组基
+$$
+\{x_1^{m_1}\cdots x_n^{m_n}: m_i\in\mathbb N\}.
+$$</p>
+<h3>中心</h3>
+<h4>Harish–Chandra 同构</h4>
+<p>$U\mathfrak g$ 的中心 (作为代数) 满足
+$$
+Z(U\mathfrak g) \simeq \operatorname{Sym}(\mathfrak h)^W.
+$$</p>
+<h3>量子化</h3>
+<p>$U\mathfrak g$ 可视为 $\operatorname{Sym}\mathfrak g\simeq \mathbb{C}[\mathfrak g^*]$ 的形变量子化, 而其中心 “总是 $G$-不变的” $Z(U\mathfrak g)\simeq \mathbb{C}[\mathfrak h^*]^W \simeq \mathbb{C}[\mathfrak g^*]^G$.</p>
+<p>因为 $G$ 在 $U\mathfrak g$ 上的作用保持滤过, 对短正合列
+$$
+0 \to F^{i-1}U\mathfrak g \to F^i U\mathfrak g \to \operatorname{Sym}^i\mathfrak g \to 0
+$$
+用 $G$-不变函子 (在有限维 $\mathfrak g$ 表示范畴上正合), 我们得到
+$$
+\operatorname{gr}Z(\mathfrak g)\simeq (\operatorname{Sym}^i\mathfrak g)^G\simeq (\operatorname{Sym}^i\mathfrak h)^W.
+$$
+(后一个同构是 <span class="link local"><a href="./Chevalley同构.html" title="“Chevalley 同构” [Chevalley同构]">Chevalley 同构</a></span>.)</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="滤代数"><header><h1><span class="taxon">Wiki. </span>滤代数 <a class="slug" href="./滤代数.html">[滤代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>滤代数一般是指域 $k$ 上的<span class="link local"><a href="./滤对象(1-范畴).html" title="1-范畴中的滤对象 [滤对象(1-范畴)]">滤</a></span>向量空间
+$$
+F^\bullet A = (0 = F^0A \subset F^1A \subset\cdots\subset A),
+$$
+配备相容的乘法, 即满足 $F^nA \cdot F^mA \subset F^{n+m}A$.</p>
+<p>滤代数 $F^\bullet A$ 的<span class="link local"><a href="./关联分次代数.html" title="关联分次对象 [关联分次代数]">关联分次代数</a></span>为
+$$
+\operatorname{Gr}A = \bigoplus_n F^n A / F^{n-1} A.
+$$</p>
+<h2>例</h2>
+<p>Lie 代数 $\mathfrak{g}$ 的<span class="link local"><a href="./泛包络代数.html" title="泛包络代数 [泛包络代数]">泛包络代数</a></span> $U\mathfrak{g}$ 是滤代数, 其关联分次代数同构于 $\operatorname{Sym}\mathfrak{g}$ (PBW 定理).</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="滤过"><header><h1><span class="taxon">Wiki. </span>滤对象 <a class="slug" href="./滤过.html">[滤过]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本页讨论一般 $(\infty,1)$-范畴中的滤对象. 另见 <span class="link local"><a href="./滤对象(1-范畴).html" title="1-范畴中的滤对象 [滤对象(1-范畴)]">$1$-范畴中的滤对象</a></span>.</p>
+<h2>定义</h2>
+<p>范畴 $\mathcal C$ 中的<strong>滤对象</strong> (filtered object) 是一个序列
+$$
+X_\bullet = (\cdots\to X_{-1}\to X_0 \to X_1\to \cdots),
+$$
+即偏序集 $(\mathbb Z,\leq)$ 到范畴 $\mathcal C$ 的函子.
+另一种形式的滤对象是
+$$
+X^\bullet = (\cdots \to X_{1} \to X_0 \to X_{-1}\to\cdots),
+$$
+即 $\mathbb Z^{\mathrm{op}}$ 到 $\mathcal C$ 的函子.
+为了区分两种形式的滤对象, 可分别称之为上升滤对象和下降滤对象.</p>
+<p>有时我们想象滤对象中的态射为单射 (含入映射), 但一般 (尤其在 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">∞-范畴</a></span>语境中) 不需要这个条件.</p>
+<p>范畴 $\mathcal C$ 中一个对象 $X$ 的<strong>滤过</strong> (filtration) 是指一个滤对象 $X_\bullet$, 满足 $X\simeq\operatorname{colim}X_\bullet$.</p>
+<h2>例</h2>
+<p>对于 CW 复形 $X$, 有滤过
+$$
+\operatorname{sk}_0X \to \operatorname{sk}_1X \to \cdots.
+$$</p>
+<p>Lie 代数 $\mathfrak g$ 的<span class="link local"><a href="./泛包络代数.html" title="泛包络代数 [泛包络代数]">泛包络代数</a></span> $U\mathfrak g$ 有自然的滤过
+$$
+(U\mathfrak g)_0 \hookrightarrow (U\mathfrak g)_1 \hookrightarrow (U\mathfrak g)_2\hookrightarrow\cdots.
+$$</p>
+<p>流形 (概形) $X$ 上的<span class="link local"><a href="./微分层.html" title="微分算子层 [微分层]">微分算子层</a></span> $\mathcal D_X$ 有自然的滤过
+$$
+(\mathcal D_X)_0 \hookrightarrow (\mathcal D_X)_1 \hookrightarrow (\mathcal D_X)_2 \hookrightarrow\cdots.
+$$</p>
+<h3>典范滤过</h3>
+<p><span class="link local"><a href="./链复形无穷范畴.html" title="链复形无穷范畴 [链复形无穷范畴]">链复形范畴</a></span>或<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>的对象, 即链复形
+$$
+X = (\cdots\to X_1\to X_0 \to X_{-1}\to\cdots)
+$$
+具有典范的上升滤过 (todo: 方向合理吗)
+$$
+\tau_{\leq i} X= (\cdots\to 0 \to \operatorname{cofib}(X_{i+1}\to X_i) \to X_{i-1}\to X_{i-2}\to \cdots).
+$$
+以及典范的下降滤过
+$$
+\tau_{\geq i} X= (\cdots\to X_{i+2}\to X_{i+1} \to \operatorname{fib}(X_{i}\to X_{i-1}) \to 0\to \cdots).
+$$</p>
+<h2>性质</h2>
+<h3>谱序列</h3>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>, 带有 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">t 结构</a></span>且其心为 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span> $\mathcal A$. 那么对 $\mathcal C$ 中的滤对象 $X$ 可构造 $\mathcal A$ 中的<span class="link local"><a href="./谱序列.html" title="谱序列 [谱序列]">谱序列</a></span>. 见<span class="link local"><a href="./滤对象的谱序列.html" title="滤对象的谱序列 [滤对象的谱序列]">滤对象的谱序列</a></span>.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./关联分次代数.html" title="关联分次对象 [关联分次代数]">关联分次对象</a></span></p>
+<p><span class="link local"><a href="./同伦纤维塔.html" title="“同伦纤维塔” [同伦纤维塔]">同伦纤维塔</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="特征簇"><header><h1><span class="taxon">Wiki. </span>特征簇 <a class="slug" href="./特征簇.html">[特征簇]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./线性微分算子.html" title="线性微分算子 [线性微分算子]">线性微分算子</a></span>的<strong>特征簇</strong> (characteristic variety) $\operatorname{Ch}(M)$ 是其<span class="link local"><a href="./主象征.html" title=" [主象征]">象征</a></span>的零点集; 有时特征簇也成为<strong>奇异支集</strong> (singular support), 记为 $\operatorname{SS}(M)$. 特征簇起源于<span class="link local"><a href="./微局部分析.html" title=" [微局部分析]">微局部分析</a></span>.</p>
+<p>对于凝聚 $\mathcal D_X$-模 $M$, 其特征簇 $\operatorname{ch}(M)\subset T^*X$ 定义为 $M$ 的关联分次模 (对于合适的滤过) 的支集. 例如, 若 $M$ 为平坦联络, 则 $\operatorname{ch}(M)$ 为 $T^*X$ 的零截面.</p>
+<p>常相位曲面 (constant phase surface)</p>
+<h2>例</h2>
+<p>$X=\mathbb A^n$, $\mathcal D_X$ 的全局截面是 <span class="link local"><a href="./Weyl代数.html" title="Weyl 代数 [Weyl代数]">Weyl 代数</a></span>, 其生成元为 $x_1,\cdots,x_n,\partial_1,\cdots,\partial_n$, 交换关系为 $[x_i,\partial_j]=\delta_{ij}$. 考虑微分算子阶数的滤过结构, 则在<span class="link local"><a href="./关联分次代数.html" title="关联分次对象 [关联分次代数]">关联分次代数</a></span>的层面上, 所有 $x_i,\partial_j$ 互相交换: 我们得到的是 $T^*\mathbb A^n$ 的坐标环, 即 $2n$ 元多项式环.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="象征"><header><h1><span class="taxon">Wiki. </span>象征 <a class="slug" href="./象征.html">[象征]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>对于流形 $M$ 上的<span class="link local"><a href="./线性微分算子.html" title="线性微分算子 [线性微分算子]">线性微分算子</a></span> $D\colon \Gamma(E)\to \Gamma(F)$, 其<span class="link local"><a href="./象征.html" title="象征 [象征]">象征</a></span> $\sigma(D)$ 对每个余切向量 $w\in T_p^*M$ 指定线性映射
+$$
+\sigma(D)(w)\colon E_p\to F_p.
+$$
+换言之, $\sigma(D)$ 可视为 $\pi^*\operatorname{Hom}(E,F)$ 的截面, 其中 $\pi\colon T^*M\to M$ 为投影. 这里定义的象征又称<strong>主象征</strong> (principal symbol), 因为它只与微分算子中的最高阶导数有关.</p>
+<h2>定义</h2>
+<p>设 $g$ 是一点 $p$ 附近的函数, 满足 $g(p)=0$, $d_pg=w$. 设 $f$ 是向量丛 $E$ 的截面, $f(p)=v$. 设 $D$ 为 $d$ 阶<span class="link local"><a href="./线性微分算子.html" title="线性微分算子 [线性微分算子]">微分算子</a></span>, 定义
+$$
+\sigma(D)(w)(v)=\frac{1}{d!}D(g^d f)_P.
+$$
+我们需要验证上式右端与 $f,g$ 的选取无关. 设 $D$ 的局部坐标表示为
+$$
+D=\sum_{|\alpha|\leq d} A_\alpha\partial^\alpha,
+$$
+由 Leibniz 法则, 对任意多重指标 $\alpha$, 若 $|\alpha|&lt;d$, 在 $\partial^\alpha(g^df)$ 的展开式中每一项都含有 $g$, 因此在 $P$ 处消失. 若 $|\alpha|=d$, 则只有 $\partial^\alpha(g^d)f$ 留下, 而继续展开, 又只有
+$$
+\frac{1}{d!}\left( \prod_{i=1}^n \partial_i^{\alpha_i}g\right) f
+$$
+这一项留下. 那么
+$$
+\sigma(D)(w)(v)=\frac{1}{d!}D(g^d f)_P=\sum_{|\alpha|=d}A_\alpha(v) w^\alpha.
+$$</p>
+<h2>定义 2</h2>
+<p>在<span class="link local"><a href="./微分算子.html" title=" [微分算子]">微分算子</a></span>的代数上, 根据阶数有自然的滤过结构. 记 $\mathscr{D}_k(E)$ 为 $E$ 到自身不超过 $k$ 阶算子的空间, 考虑<span class="link local"><a href="./关联分次代数.html" title="关联分次对象 [关联分次代数]">关联分次代数</a></span>
+$$
+\operatorname{gr}\mathscr{D}(E)=\bigoplus_{k} \mathscr{D}_k(E) \big/ \mathscr{D}_{k-1}(E).
+$$
+那么这个分次代数与 $S(TM)\otimes\operatorname{End}(E)$ 的截面 (也即 $\pi^*\operatorname{End}(E)$ 的截面, 且沿 $T^*M$ 的纤维是多项式) 之间存在自然的同构
+$$
+\sigma_k\colon  \operatorname{gr}_k\mathscr D (E)\to \Gamma(S^kTM\otimes \operatorname{End}(E)),
+$$
+其中 $\sigma_k$ 的定义如下. 对于 $x\in M, \xi\in T^*_xM$, 任取函数 $f$ 使得 $d_xf=\xi$, 定义
+$$
+\sigma_k(D)(\xi) =\lim_{t\to \infty}t^{-k} (e^{-itf}\cdot D \cdot e^{itf})(x)\in \operatorname{End}E_x.
+$$
+上式应当作如下理解: 微分算子 $t^{-k}(e^{-itf}\cdot D\cdot e^{itf})$ 当 $t\to\infty$ 的极限 (实际上就是关于 $t$ 的一个 $k$ 次多项式 $e^{-itf}\cdot D\cdot e^{itf}$ 中 $t^k$ 的系数) 是一个 $0$ 阶微分算子, 也即 $\operatorname{End}E$ 的截面.</p>
+<p>由定义, 也有
+$$
+\sigma_k(D)(\xi)=\frac{(-i)^k}{k!} (\operatorname{ad}f)^kD.
+$$</p>
+<p>注. 象征的不同定义之间可能相差一个变换 $\xi \mapsto i\xi$.</p>
+<h2>性质</h2>
+<p>设 $D_1\colon \Gamma(E)\to \Gamma(F)$, $D_2\colon \Gamma(F)\to\Gamma(G)$, 则对 $w\in T^*M$,
+$$
+\sigma(D_2D_1)(w)=\sigma(D_2)(w)\,\sigma(D_1)(w).
+$$</p>
+<h2>例子</h2>
+<p>丛的映射 $\alpha \colon E\to F$ 可视为零阶微分算子, 其象征为
+$$
+\sigma(\alpha)(w)=\alpha_p,\, w\in T^*_pM.
+$$
+$\wedge^\bullet T^*M$ 到自身的外微分算子 $d$ 的象征为
+$$
+\sigma(d)(w)\mu=w\wedge \mu.
+$$
+$TM$ 上的联络是一个算子 $\nabla\colon TM\to \operatorname{End}(TM)$. 其象征为
+$$
+\sigma(\nabla)(w)X=\omega\otimes X.
+$$
+Laplace 算子的象征为
+$$
+\sigma(\triangle)(w)=\|w\|^2.
+$$</p>
+<h2>无穷小对象</h2>
+<p>象征可看作与 $D$ 相关的无穷小对象.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

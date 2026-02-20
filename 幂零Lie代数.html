@@ -68,6 +68,62 @@
 </ul>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./可解Lie代数.html" title="可解 Lie 代数 [可解Lie代数]">可解 Lie 代数</a></span></p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Cartan 子代数” <a class="slug" href="./Cartan子代数.html">[Cartan子代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>可解 Lie 代数 <a class="slug" href="./可解Lie代数.html">[可解Lie代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Cartan子代数"><header><h1><span class="taxon">Wiki. </span>“Cartan 子代数” <a class="slug" href="./Cartan子代数.html">[Cartan子代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设 $\mathfrak g$ 为 <span class="link local"><a href="./Lie代数.html" title="Lie 代数 [Lie代数]">Lie 代数</a></span>. 定义 $\mathfrak g$ 的 Cartan 子代数为满足如下条件的子代数 $\mathfrak h\leq \mathfrak g$:</p>
+<ul>
+<li>$\mathfrak h$ 是<span class="link local"><a href="./幂零Lie代数.html" title="“幂零 Lie 代数” [幂零Lie代数]">幂零 Lie 代数</a></span>;</li>
+<li>$\mathfrak h$ 的正规化子是自身.</li>
+</ul>
+<h2>例</h2>
+<h3>紧 Lie 群的 Lie 代数</h3>
+<p>设 $G$ 为紧 Lie 群, $\mathfrak g$ 为 $G$ 的 Lie 代数, 则 $\mathfrak g$ 的 Cartan 子代数对应 $G$ 的<span class="link local"><a href="./极大环面.html" title="极大环面 [极大环面]">极大环面</a></span>.</p>
+<h2>性质</h2>
+<h3>三角分解</h3>
+<p>对于 Lie 代数 $\mathfrak g$ 的 Cartan 子代数 $\mathfrak h$, 有<span class="link local"><a href="./三角分解.html" title="“三角分解” [三角分解]">三角分解</a></span>
+$$
+\mathfrak g = \mathfrak n_- \oplus \mathfrak h \oplus \mathfrak n_+.
+$$
+其<span class="link local"><a href="./泛包络代数.html" title="泛包络代数 [泛包络代数]">泛包络代数</a></span>具有 (线性空间) 同构
+$$
+U\mathfrak g\simeq U\mathfrak n_- \otimes U\mathfrak h\otimes U\mathfrak n_+.
+$$</p>
+<h3>Borel 子代数</h3>
+<p>固定 Cartan 子代数以及 <span class="link local"><a href="./Borel子代数.html" title="“Borel 子代数” [Borel子代数]">Borel 子代数</a></span>
+$$
+\mathfrak h\subset \mathfrak b \subset \mathfrak g
+$$
+相当于固定 $\mathfrak g$ 的一个<span class="link local"><a href="./根系.html" title=" [根系]">根</a></span>, 以及其中的正根系.</p>
+<p>$\mathfrak b = \mathfrak h\oplus \mathfrak n$, $\mathfrak n=[\mathfrak b,\mathfrak b]$.</p>
+<h2>权</h2>
+<p>设 $M$ 是 $\mathfrak g$ 的表示. 对于 $\lambda\in \mathfrak h^*$, 定义权空间 (weight space)
+$$
+M_\lambda = \{m\in M: hm=\lambda(h)m\forall h\in\mathfrak h\}.
+$$
+若 $M$ 等于所有 $M_\lambda$ 的直和, 则称其为<span class="link local"><a href="./权模.html" title="“权模” [权模]">权模</a></span> (weight module).</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./半单Lie代数的表示.html" title="“半单 Lie 代数的表示” [半单Lie代数的表示]">半单 Lie 代数的表示</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="可解Lie代数"><header><h1><span class="taxon">Wiki. </span>可解 Lie 代数 <a class="slug" href="./可解Lie代数.html">[可解Lie代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于 Lie 代数 $\mathfrak g$, 定义
+$$
+D \mathfrak g = [\mathfrak g,\mathfrak g],\quad D^{n+1}\mathfrak g = [D^n\mathfrak g,D^n\mathfrak g].
+$$
+若存在正整数 $n$ 使得
+$$
+D^n \mathfrak g = 0,
+$$
+则称 $\mathfrak g$ 为可解 Lie 代数.</p>
+<h2>例</h2>
+<p><span class="link local"><a href="./幂零Lie代数.html" title="“幂零 Lie 代数” [幂零Lie代数]">幂零 Lie 代数</a></span>是可解 Lie 代数.</p>
+<p>$\mathfrak {gl}_n$ 中的上三角矩阵 (也即保持一个旗不变的线性变换, 参见<span class="link local"><a href="./旗流形.html" title="旗流形 [旗流形]">旗流形</a></span>) 构成的 Lie 代数是可解 Lie 代数.</p>
+<h2>性质</h2>
+<p>可解 Lie 代数的子与商均可解.</p>
+<p>可解 Lie 代数的可解扩张可解, 即对于左右两边为可解 Lie 代数的短正合列, 中间项也可解.</p>
+<p><strong>定理</strong> (Lie). 设 $\pi\colon \mathfrak g\to\operatorname{End}_k(V)$ 是有限维可解 Lie 代数 $\mathfrak g$ 的有限维表示, $k$ 代数闭, 则存在所有 $\pi(X)$ 的公共特征向量.</p>
+<p><strong>证明</strong>. 对 $\mathfrak g$ 的维数归纳. 由 $\mathfrak g$ 的可解性, 当然有 $\mathfrak g \supsetneq D\mathfrak g$. 取 $\mathfrak g$ 的子空间 $\mathfrak g_1$ 包含 $D\mathfrak g$, 且 $\dim \mathfrak g_1 = \dim\mathfrak g - 1$. 由于 $[\mathfrak g,\mathfrak g_1] \subset D\mathfrak g \subset \mathfrak g$,</p>
+<p>假设 $\mathfrak g_1$ 的元素已经有公共特征向量 $b \in V$, 那么存在 …</p>
+<p>(见 Knapp, Lie Groups Beyond An Introduction 定理 1.25)</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

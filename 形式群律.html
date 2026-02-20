@@ -81,6 +81,55 @@ $$
 <p><strong>定理</strong> (Quillen). 典范的同态 $L \to \pi_\bullet MU$ 是同构.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./复定向上同调理论.html" title="“复定向上同调理论” [复定向上同调理论]">复定向上同调理论</a></span>, <span class="link local"><a href="./形式谱.html" title="形式谱 [形式谱]">形式谱</a></span>, <span class="link local"><a href="./形式概形.html" title="形式概形 [形式概形]">形式概形</a></span></p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“复定向上同调理论” <a class="slug" href="./复定向上同调理论.html">[复定向上同调理论]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>形式谱 <a class="slug" href="./形式谱.html">[形式谱]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="复定向上同调理论"><header><h1><span class="taxon">Wiki. </span>“复定向上同调理论” <a class="slug" href="./复定向上同调理论.html">[复定向上同调理论]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./广义上同调中的定向.html" title="“广义上同调中的定向” [广义上同调中的定向]">广义上同调中的定向</a></span></p>
+<p>对于环谱 $E$, 称其复可定向是指 $E^2(\mathbb{C}P^\infty)\to E^2(S^2)$ 为满射; 其定向是 $E^2(\mathbb{C}P^\infty)$ 的元素.</p>
+<p><span class="link local"><a href="./环谱.html" title="环谱 [环谱]">环谱</a></span>的定向是第一<span class="link local"><a href="./陈类.html" title="“陈类” [陈类]">陈类</a></span>的推广: 环谱 $E$ 的定向给出一个同构 $E^*(\mathbb CP^\infty)\simeq E^*(*)[t](t.md)$. 由此可以定义 $E$-值第一陈类 $c_1^E=t$. $E$-值第一陈类与线丛的张量积满足
+$$
+c_1^E(L\otimes L') \simeq f(c_1^EL,c_1^E L'),
+$$
+其中 $f$ 为交换环 $R=E^{\text{even}}(*)$ 上的<span class="link local"><a href="./形式群律.html" title="“形式群律” [形式群律]">形式群律</a></span>. 另外, 此时 $t$ 是 $\mathbb{C}P^\infty$ 上万有线丛的 <span class="link local"><a href="./Thom类.html" title="“Thom 类” [Thom类]">Thom 类</a></span>.</p>
+<p>$R$ 上的形式群律等同于 $\operatorname{Spec}R$ 到形式群律模叠 $\operatorname{Spec}L/G$ 的映射.</p>
+<table><thead><tr><th>谱 (上同调理论)</th><th>$\operatorname{Spec}L/G$ 上的拟凝聚层</th><th></th></tr></thead><tbody>
+<tr><td>环谱 (乘性上同调理论)</td><td>$\operatorname{Spec}L/G$ 上的仿射概形</td><td></td></tr>
+<tr><td></td><td></td><td></td></tr>
+</tbody></table>
+<h2>例</h2>
+<p><span class="link local"><a href="./KO.html" title="“KO” [KO]">KO</a></span> 不是复定向上同调理论.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="形式谱"><header><h1><span class="taxon">Wiki. </span>形式谱 <a class="slug" href="./形式谱.html">[形式谱]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>形式谱是某种带有拓扑的环对应的几何对象, 是一个<span class="link local"><a href="./形式概形.html" title="形式概形 [形式概形]">形式概形</a></span>.</p>
+<h2>定义</h2>
+<h3>带理想的环</h3>
+<p>定义进制环 (adic ring) 为环 $A$ 带有一个理想 $I$. 定义进制环 $(A,I)$ 的形式谱为
+$$
+\operatorname{Spf}A = \operatorname{colim}_n\operatorname{Spec}(A/I^n).
+$$
+其中余极限在<span class="link local"><a href="./函子式代数几何.html" title="函子式代数几何 [函子式代数几何]">函子</a></span>范畴 $\mathsf{Fun}(\mathsf{Ring},\mathsf{Set})$ 中取.</p>
+<h3>进制代数</h3>
+<p>对于交换环 $R$, 定义进制 $R$-代数 (adic $R$-algebra) 为 $R$-代数 $A$ 带有一个同态 $A\to R$, 此时那个理想是这个同态的核; 考虑进制 $R$-代数的范畴 $\mathsf {AdicAlg}_R$, 形式谱是这个范畴上的可表函子
+$$
+\operatorname{Spf}A=\operatorname{Hom}_{\mathsf {AdicAlg}_R}(A,-).
+$$</p>
+<h3>带线性拓扑的环</h3>
+<p>定义环上的线性拓扑为一些理想及其陪集作为开集基生成的拓扑. 带有线性拓扑的环以及连续同态构成范畴 $\mathsf {LRing}$. 不带拓扑的环视为离散环, 构成满子范畴 $\mathsf {Ring}\hookrightarrow \mathsf {LRing}$. 定义 $\operatorname{Spf}A\colon \mathsf {Ring}\hookrightarrow\mathsf {LRing}\to\mathsf {Set}$,
+$$
+\operatorname{Spf}A=\operatorname{Hom}_{\mathsf {LRing}}(A,-).
+$$
+可以证明
+$$
+\operatorname{Spf}A\simeq \Big(B\mapsto \operatorname{colim}_{\text{开理想}\,I\subset A}\operatorname{Hom}_{\mathsf {Ring}}(A/I,B)\Big).
+$$
+也即
+$$
+\operatorname{Spf}A\simeq\operatorname{colim}_I\operatorname{Spec}A/I.
+$$
+最后这种定义似乎最为广泛. 对于带线性拓扑的环 $R$, 定义其<span class="link local"><a href="./完备化.html" title=" [完备化]">完备化 (环)</a></span>为
+$$
+\widehat {R} := \operatorname{lim}_I R/I.
+$$</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./形式群律.html" title="“形式群律” [形式群律]">形式群律</a></span></p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

@@ -72,6 +72,160 @@ X = - z_2 \frac{\partial}{\partial  z_1},\quad
 Y = - z_1 \frac{\partial}{\partial  z_2},\quad
 H = - z_1 \frac{\partial}{\partial  z_1} + z_2 \frac{\partial}{\partial  z_2}.
 $$</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Euler 示性数 <a class="slug" href="./Euler示性数.html">[Euler示性数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Hermite 向量空间” <a class="slug" href="./Hermite向量空间.html">[Hermite向量空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“SU(2)” <a class="slug" href="./SU(2).html">[SU(2)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“半单 Lie 代数的表示” <a class="slug" href="./半单Lie代数的表示.html">[半单Lie代数的表示]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“自旋表示” <a class="slug" href="./自旋表示.html">[自旋表示]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“角动量” <a class="slug" href="./角动量.html">[角动量]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Euler示性数"><header><h1><span class="taxon">Wiki. </span>Euler 示性数 <a class="slug" href="./Euler示性数.html">[Euler示性数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>流形</h2>
+<p>流形的 Euler 示性数等于 <span class="link local"><a href="./Euler类.html" title="“Euler 类” [Euler类]">Euler 类</a></span>的积分.</p>
+<p><strong>定理</strong>. 设 $M$ 为紧 <span class="link local"><a href="./Kähler流形.html" title="Kähler 流形 [Kähler流形]">Kähler 流形</a></span>, 定义 (注意符号 $(-1)^q$, 通常的 Euler 示性数此处是 $(-1)^{p+q}$.)
+$$
+\chi_1 (M) :=\sum_{p=0}^n \sum_{q=0}^n (-1)^q h^{p,q}(M),
+$$
+那么 $\chi_1(M) = \tau(M)$ 等于 $M$ 上<span class="link local"><a href="./相交形式.html" title="“相交形式” [相交形式]">相交形式</a></span> ($H^n$ 上的配对) 的指标 (正惯性指数减负惯性指数; $n$ 是奇数时约定流形的指标为 $0$).</p>
+<p><strong>证明</strong>. $n$ 是奇数时, <span class="link local"><a href="./Serre对偶.html" title="“Serre 对偶” [Serre对偶]">Serre 对偶</a></span>给出 $h^{p,q} = h^{n-p,n-q}$, 从而 $\chi_1(M) = 0$.</p>
+<p>$n$ 是偶数时, 考虑调和形式的空间 $\mathcal  B^{p,q}$. 我们的思路是将它分解为可计算的子空间, 同时把 $\tau(M)$ 表示为这些子空间维数的交错和.</p>
+<p>注意到<span class="link local"><a href="./基本形式.html" title="“基本形式” [基本形式]">基本形式</a></span> $\omega$ 是调和形式, 定义 $L\colon \mathcal B^{p,q}\to \mathcal B^{p+1,q+1}$, $\Lambda\colon \mathcal B^{p,q} \to \mathcal B^{p-1,q-1}$,
+$$
+L\colon \alpha\mapsto \omega\alpha,\quad</p>
+<p>\Lambda \colon  \alpha\mapsto (-1)^{p+1} # L # \alpha,
+$$
+则 $L,\Lambda,H=[L,\Lambda] = p+q-n$ 构成 $\mathfrak {sl}_2$ 的表示. 参见<span class="link local"><a href="./sl2的表示.html" title="“sl2的表示” [sl2的表示]">sl2的表示</a></span>.</p>
+<p>经过一些观察, 我们有分解
+$$
+\mathcal B^{p,q} = \mathcal B_0^{p,q} \oplus L \mathcal B_0^{p-1,q-1}\oplus \cdots \oplus L^r\mathcal B_0^{q-r,p-r}\,(r=\min(p,q)),
+$$
+其中 $\mathcal B_0^{p,q} = \ker\Lambda$. 记 $\mathcal B_k^{p,q}:= L^k \mathcal B_0^{p-k,q-k}$.</p>
+<p>回忆 <span class="link local"><a href="./Hodge分解定理.html" title=" [Hodge分解定理]">Hodge 理论</a></span>
+$$
+H^n(M;\mathbb{C})\simeq \bigoplus_{\substack {p+q=n \\ k\leq \min(p,q)}}\mathcal B_k^{p,q},
+$$
+它关于 $H^n$ 上的内积 $\displaystyle (\alpha,\beta) = \int_M \alpha\wedge \# \beta$ 实际上是正交分解.</p>
+<h2>向量丛</h2>
+<p>向量丛的 Euler–Poincaré 特征定义为
+$$
+\chi(X,E) := \sum_{i\geq 0} (-1)^i \dim H^i(X,E).
+$$
+它是 “拓扑不变量”, 在 $X$ 与 $E$ 的 “连续形变” 下不变.</p>
+<h2>截面</h2>
+<p>复流形的 Euler 示性数是其<span class="link local"><a href="./全纯切丛.html" title=" [全纯切丛]">全纯(余)切丛</a></span>的一般位置的截面的零点数.</p>
+<p><strong>例</strong>. $\mathbb{C}P^1$ 上的向量场 $z\frac{\partial}{\partial z}$ 是一个旋转的生成元, 有两个零点, 位于南北极. 向量场 $\frac{\partial}{\partial z}$ 在北极有一个二重零点.</p>
+<h2>最高陈类</h2>
+<p>复流形上的最高<span class="link local"><a href="./陈类.html" title="“陈类” [陈类]">陈类</a></span>又称 <span class="link local"><a href="./Euler类.html" title="“Euler 类” [Euler类]">Euler 类</a></span>, 其积分等于 Euler 数.</p>
+<h2>层</h2>
+<p>Euler 示性数有时比上同调更好计算.</p>
+<p>设 $\mathscr F$ 是 $k$-射影代数簇 $X$ 上的<span class="link local"><a href="./凝聚层.html" title="凝聚层 [凝聚层]">凝聚层</a></span>, 定义
+$$
+\chi(X,\mathscr F)=\sum_{i=0}^{\dim X} (-1)^i \dim_k H^i(X,\mathscr F).
+$$</p>
+<p><strong>命题</strong>. 设 $0\to \mathscr F\to \mathscr G\to \mathscr H\to 0$ 是 $k$-射影代数簇 $X$ 上<span class="link local"><a href="./凝聚层.html" title="凝聚层 [凝聚层]">凝聚层</a></span>的正合列, 那么
+$$
+\chi(X,\mathscr G) = \chi(X,\mathscr F) + \chi (X,\mathscr H).
+$$
+更一般地, 若 $\mathscr F_\bullet$ 是 (有限项) 正合列, 则有 $\sum_i (-1)^i \chi(X,\mathscr F_i)=0$.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Hermite向量空间"><header><h1><span class="taxon">Wiki. </span>“Hermite 向量空间” <a class="slug" href="./Hermite向量空间.html">[Hermite向量空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设 $V$ 是 $\mathbb{C}$-向量空间, 带有双线性型 $h\in \overline{V}^*\otimes_{\mathbb{C}} V^*$ (也即 $h\colon \overline{V}\otimes_{\mathbb{C}} V \to \mathbb{C}$), 满足 $h(\bar v,w)=\overline{h(\bar w,v)}\,(v,w\in V)$, 则称 $V$ 为 <strong>Hermite 向量空间</strong>.</p>
+<p>关于 $\overline{V},\bar v$ 等符号的含义, 参见<span class="link local"><a href="./共轭.html" title="共轭 [共轭]">共轭</a></span>.</p>
+<h2>与 Euclid 向量空间的关系</h2>
+<p>设 $(V,g)$ 是 Euclid 向量空间, 带有相容的近复结构 $J$, 即
+$$
+g(J v,J w)=g(v,w)\,(v,w\in V),
+$$
+或等价地,
+$$
+g(Jv,w) + g(v,J w)=0.\tag{1}
+$$
+此时 $V$ 可视为 $\mathbb{C}$-向量空间 ($\mathbf i v := Jv$) 并定义 Hermite 度量
+$$
+h(\bar v,w) :=g(v,w)+\mathbf i g(\mathbf iv,w)\, (v,w\in V).\tag{2}
+$$
+验证 $h$ 是 Hermite 度量:
+$$
+h(\bar w,v)=g(w,v)+\mathbf i g (\mathbf i w,v)=\overline{h(\bar v,w)}.
+$$
+$$
+h(\bar v,\mathbf i w)=g (v,\mathbf i w)+ \mathbf i g (\mathbf i v, \mathbf i w) = \mathbf i h(\bar v,w).
+$$</p>
+<p>反过来, 给定 Hermite 向量空间 $(V,h)$, 其作为 $\mathbb{R}$-向量空间自然是 Euclid 向量空间: 定义 Riemann 度量 $g$ 为 $h$ 的实部, $\displaystyle g = \frac{1}{2}(h+\bar h)$, 也即 $g(v,w)=\operatorname{Re} h(\bar v,w)\,(v,w\in V).$</p>
+<p>$\bar h \in \overline{V}^*$</p>
+<p>定义<span class="link local"><a href="./基本形式.html" title="“基本形式” [基本形式]">基本形式</a></span> $\omega$ 为 $h$ 的虚部, $\displaystyle\omega = \frac{\mathbf i}{2}(h-\bar h)$.</p>
+<p>写成坐标形式, 设 $V$ 的一组基为 $\{e_i\}$, 对偶基为 $\{e^i\}$, 则
+$$
+h = h_{\bar i j} \overline{e^i} \otimes e^j,
+$$
+$$
+\begin{aligned}
+	g &amp; = \frac{1}{2}(h+\bar h)\\
+	&amp; = \frac{1}{2}\Big(
+	h_{\bar i j} \overline{e^i} \otimes e^j
+	+ h_{\bar j i} \overline{e^i } \otimes e^j
+	\Big)
+\end{aligned}
+$$</p>
+<h3>Euclid 向量空间的 Hermite 扩张</h3>
+<p>对于 Euclid 向量空间 $E$, $E\otimes_{\mathbb{R}}\mathbb{C}$ 上有自然的 Hermite 结构, 称为 $E$ 的 <strong>Hermite 扩张</strong>. 对 $a,b,c,d\in E$ 定义
+$$
+h(\overline{a+\mathbf i b}, c+\mathbf id)= g(a,c)+g(b,d)+\mathbf i \big(g(a,d)-g(b,c)\big).
+$$</p>
+<h2>基本形式</h2>
+<p>对带有相容近复结构的 Euclid 向量空间 $(V,g,J)$, 其基本形式 $\omega$ 定义为
+$$
+\omega (v,w) := g(J v,w).
+$$</p>
+<p>由 $(1)$ 式, $\omega$ 是反对称的.</p>
+<p>由 $(2)$ 式, Hermite 结构, Riemann 度量与基本形式三者之间的关系为
+$$
+h(\bar v,w) = g(v,w) + \mathbf i \omega(v,w).
+$$</p>
+<blockquote>
+<p>注. 本文采用的 Hermite 结构的约定是 $\overline{V}\otimes V$ 上的线性函数, 也即所谓 “第二分量线性”.</p>
+<p>若采用另一约定, $h$ 是 $V\otimes\overline{V}$ 上的线性函数, 所谓 “第一分量线性”, 仍取 $\omega(v,w)=g(Jv,w)$, 则 $h(v,\bar w) = g(v,w) - \mathbf i \omega(v,w)$. (这是 Huybrechts 复几何书上的约定.)</p>
+</blockquote>
+<p>关于 Hermite 向量丛, 参见<span class="link local"><a href="./基本形式.html" title="“基本形式” [基本形式]">基本形式</a></span>.</p>
+<h2>sl(2) 的表示</h2>
+<p>Lefschetz 算子 $L\colon \wedge^k V^* \to \wedge^{k+2}V^*$, $\alpha\mapsto \omega\wedge\alpha$ 以及其对偶算子 $\Lambda$. 令 $H = [L,\Lambda]$. 则 $L$, $\Lambda$ 与 $H$ 的作用构成了 $\mathfrak {sl}(2)$ 的表示. 参见 <span class="link local"><a href="./sl2的表示.html" title="“sl2的表示” [sl2的表示]">sl2的表示</a></span>.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./Hermite向量丛.html" title="“Hermite 向量丛” [Hermite向量丛]">Hermite 向量丛</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="SU(2)"><header><h1><span class="taxon">Wiki. </span>“SU(2)” <a class="slug" href="./SU(2).html">[SU(2)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>$SU(2)$ 是行列式为 $1$ 的二阶酉矩阵的乘法群, 其元素形如
+$$
+\begin{pmatrix}
+\alpha &amp; \beta \\
+-\bar\beta &amp; \bar\alpha
+\end{pmatrix},
+|\alpha|^2 + |\beta|^2 = 1
+$$
+它也同构于单位四元数的乘法群; 有 Lie 群的同构 $SU(2)\simeq \text{Spin}(3)$ (见 <span class="link local"><a href="./自旋群.html" title="自旋群 [自旋群]">自旋群</a></span>).</p>
+<p>$SU(2)$ 的一个<span class="link local"><a href="./极大环面.html" title="极大环面 [极大环面]">极大环面</a></span>是由对角矩阵 $\begin{pmatrix}	\alpha&amp;\\&amp;\bar\alpha\end{pmatrix} (|\alpha|=1)$ 构成的同构于 $U(1)$ 的子群.</p>
+<h2>Lie 代数</h2>
+<p>$\mathfrak {su}(2)$ 的元素形如
+$$
+\begin{pmatrix}
+	iz &amp; x+iy \\
+	-x+iy &amp; -iz
+\end{pmatrix},
+x,y,z\in\mathbb{R}.
+$$</p>
+<p>有 Lie 代数的同构 $\mathfrak {sl}(2,\mathbb{C})\simeq\mathfrak {su}(2)\otimes_{\mathbb{R}}\mathbb{C}$.</p>
+<h2>表示</h2>
+<p>$SU(2)$ 的表示以自旋 $0,\dfrac{1}{2},1,\cdots$ 标记.</p>
+<p>见 <span class="link local"><a href="./sl2的表示.html" title="“sl2的表示” [sl2的表示]">sl2的表示</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="半单Lie代数的表示"><header><h1><span class="taxon">Wiki. </span>“半单 Lie 代数的表示” <a class="slug" href="./半单Lie代数的表示.html">[半单Lie代数的表示]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./sl2的表示.html" title="“sl2的表示” [sl2的表示]">sl2的表示</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="自旋表示"><header><h1><span class="taxon">Wiki. </span>“自旋表示” <a class="slug" href="./自旋表示.html">[自旋表示]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>$SO(n)$ 的表示一一对应于 $\text{Spin}(n)$ 的那些在 $-1$ 上平凡的表示 (注. 这里 $-1$ 是指二重覆盖 $\text{Spin}(n) \to SO(n)$ 的核中的非平凡元素, 不一定是关于原点的反射 $-I$). 而自旋表示一般是指 $-1$ 上非平凡的表示.</p>
+<p>自旋表示的元素称为<span class="link local"><a href="./旋量.html" title="“旋量” [旋量]">旋量</a></span>.</p>
+<p>自旋表示可由 $\text{Spin}(n,\mathbb{C})$ 以及 $\mathfrak {so}(n,\mathbb{C})$ 的表示入手研究.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./sl2的表示.html" title="“sl2的表示” [sl2的表示]">sl2的表示</a></span>, <span class="link local"><a href="./角动量.html" title="“角动量” [角动量]">角动量</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="角动量"><header><h1><span class="taxon">Wiki. </span>“角动量” <a class="slug" href="./角动量.html">[角动量]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>量子力学中的角动量与 $\mathfrak {so}(3,\mathbb C)$ (简记为 $\mathfrak {so}(3)$) 的表示有关.</p>
+<blockquote>
+<p>$\mathfrak {so}(3)$ 的表示就是 $SO(3)$ 的无穷小群作用.</p>
+</blockquote>
+<p>若自伴算子 $L_1,L_2,L_3$ 满足 $[L_1,L_2] = i L_3$ 等等, 那么它们定义了一个 $\mathfrak {so}(3)$ 的表示.</p>
+<p>注意 $L_1,L_2,L_3$ 三者均与 <span class="link local"><a href="./Casimir元素.html" title=" [Casimir元素]">Casimir 元素</a></span> (又称角动量平方) $L^2 := L_1^2 + L_2^2 + L_3^2$ 交换.</p>
+<p>若令 $L_{\pm} = L_1 \pm i L_2$, $L_0 = 2 L_3$, 则有 $[L_0, L_\pm] = \pm 2 L_\pm$, $[L_+,L_-] = L_0$, 这便定义了 $\mathfrak {sl}(2)$ 的一个表示.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./sl2的表示.html" title="“sl2的表示” [sl2的表示]">sl2的表示</a></span>, <span class="link local"><a href="./动量.html" title="“动量” [动量]">动量</a></span></p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

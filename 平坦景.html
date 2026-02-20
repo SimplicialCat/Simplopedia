@@ -56,6 +56,161 @@
     });
   });
 </script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="平坦景"><header><h1><span class="taxon">Wiki. </span>平坦景 <a class="slug" href="./平坦景.html">[平坦景]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Zariski 景, 平展景与平坦景的比较 <a class="slug" href="./Zar-fl-et.html">[Zar-fl-et]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>忠实平坦环同态 <a class="slug" href="./忠实平坦环同态.html">[忠实平坦环同态]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>拟凝聚层的忠实平坦下降 <a class="slug" href="./拟凝聚层的忠实平坦下降.html">[拟凝聚层的忠实平坦下降]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>非 Abel 上同调 <a class="slug" href="./非Abel上同调.html">[非Abel上同调]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Zar-fl-et"><header><h1><span class="taxon">Wiki. </span>Zariski 景, 平展景与平坦景的比较 <a class="slug" href="./Zar-fl-et.html">[Zar-fl-et]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>一个概形上可以建立若干种各有特性的<span class="link local"><a href="./景.html" title="景 [景]">景</a></span>, 之间有粗细的关系, 从而其上的<span class="link local"><a href="./层意象.html" title="层意象 [层意象]">层意象</a></span>之间有<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span>. 同一个对象在不同景中的化身, 即通过这些几何态射的拉回, 其<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>之间有比较函子. 在特殊情况下, 比较函子为同构. 本页面举例说明一些特殊情况.</p>
+<h2>陈述</h2>
+<h3>比较函子的建立</h3>
+<p>记
+$$
+    f\colon \mathsf{Sh}(X_{\mathrm{fl}})\to \mathsf{Sh}(X_{\mathrm{Zar}})
+$$
+为<span class="link local"><a href="./平展意象.html" title="平展意象 [平展意象]">平展意象</a></span>到 <span class="link local"><a href="./Zariski意象.html" title="Zariski 意象 [Zariski意象]">Zariski 意象</a></span>的比较映射, 其中</p>
+<ul>
+<li>右伴随 (前推) 部分 $f_*$ 来自范畴的嵌入 $X_{\mathrm{Zar}}\to X_{\mathrm{fl}}$;</li>
+<li>左伴随 (拉回) $f^*$ 可由层化定义:
+对于 $F\in\mathsf{Sh}(X_{\mathrm{Zar}})$, $f^*F$ 是 $X_{\mathrm{fl}}$ 上的预层 $U\mapsto \operatorname{colim}_{U\to V\to X}F(V)$ 的层化.</li>
+</ul>
+<h3>$\mathbb G_m$ 的比较</h3>
+<p><strong>命题</strong> (<span class="link local"><a href="./MilneEC.html" title="Etale Cohomology [MilneEC]">Milne</a></span> III.4.9, <span class="link local"><a href="./Hilbert定理90.html" title="Hilbert 定理 90 [Hilbert定理90]">Hilbert 定理 90</a></span>). 典范的映射
+$$
+H^1(X_{\mathrm{Zar}},\mathbb G_m) \to H^1(X_{\mathrm{\'et}},\mathbb G_m) \to H^1(X_{\mathrm{fl}},\mathbb G_m)
+$$
+均为同构.</p>
+<p>由于 $f_*$ 将 $\mathbb G_m$ 变为 $\mathbb G_m$. 由 <span class="link local"><a href="./Leray谱序列.html" title="Leray 谱序列 [Leray谱序列]">Leray 谱序列</a></span>
+$$
+    H^p(X_{\mathrm{Zar}},R^qf_*\mathbb G_m)\Rightarrow H^{p+q}(X_{\mathrm{fl}},\mathbb G_m)
+$$
+(来自<span class="link local"><a href="./滤过谱.html" title="滤过谱 [滤过谱]">滤过谱</a></span> $\Gamma_{X_{\mathrm{Zar}}}(\tau_{\leq\bullet}f_*\mathbb G_m)$), 只需证明
+$$
+    R^1f_*\mathbb G_m = 0.
+$$
+其中 $R^1f_*\mathbb G_m$ 是 Zariski 景上的预层 $U\mapsto H^1(U_{\mathrm{fl}},\mathbb G_m)$ 的层化.
+所以只需证明如下命题 (我们甚至可以对一般的 $\mathrm{GL}_n$ 证明):</p>
+<p><strong>命题</strong> (<span class="link local"><a href="./MilneEC.html" title="Etale Cohomology [MilneEC]">Milne</a></span> III.4.10). 设 $A$ 为局部环, $U=\operatorname{Spec}A$, 则
+$$
+H^1(U_{\mathrm{fl}},\mathrm{GL}_n) = 0.
+$$</p>
+<p><em>证明</em>.
+对任意上同调类 $\alpha\in H^1(U_{\mathrm{fl}},\mathrm{GL}_n)$, 存在忠实平坦有限型仿射 $U$-概形 $V=\operatorname{Spec}B$ 以及上圈 $\phi\colon V\times_U V \to \mathrm{GL}_n$ 表现 $\alpha$, 而 $\phi$ 又可视为同构
+$$
+\begin{aligned}
+    B^n\otimes_A B &amp;\simeq B^n \otimes_B (B\otimes_A B) \\
+    &amp;\simeq
+    (B\otimes_A B)^n
+     \overset{\phi}{\to} (B\otimes_A B)^n\\
+    &amp;\simeq (B\otimes_A B)\otimes_B B^n \simeq B\otimes_A B^n,
+\end{aligned}
+$$
+这恰好给出了 $B^n$ 下降为 $A$-模的下降数据 (回忆模的忠实平坦下降, <span class="link local"><a href="./MilneEC.html" title="Etale Cohomology [MilneEC]">Milne</a></span> I.2.21). 由下降理论, $B^n$ 来自于平坦有限生成 $A$-模. 但 $A$ 为局部环, 这样的 $A$-模一定是自由 $A$-模. 于是上圈 $\phi$ 上同调等价于平凡的上圈.
+$\square$</p>
+<h3>$\mathrm{GL}_n$ 的比较</h3>
+<p><strong>定理</strong>.
+在<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span> $X$ 对应的 <span class="link local"><a href="./Zariski景.html" title="Zariski 景 [Zariski景]">Zariski 景</a></span>, <span class="link local"><a href="./平展景.html" title="平展景 [平展景]">平展景</a></span>, <span class="link local"><a href="./平坦景.html" title="平坦景 [平坦景]">平坦景</a></span>上计算同一个群概形 $\mathrm{GL}_n$ (对应的层) 的上同调, 比较映射
+$$
+H^1(X_{\mathrm{Zar}},\mathrm{GL}_n)\to
+H^1(X_{\mathrm{\'et}},\mathrm{GL}_n)\to
+H^1(X_{\mathrm{flat}},\mathrm{GL}_n)
+$$
+均为同构.</p>
+<p>特别地, 对于域 $k$, $H^1(\operatorname{Spec}k,\mathbb G_m)=0$. 这是 <span class="link local"><a href="./Hilbert定理90.html" title="Hilbert 定理 90 [Hilbert定理90]">Hilbert 定理 90</a></span>.</p>
+<p><em>证明概要</em>.</p>
+<ol>
+<li>
+<p>记 $L_n(X_{\mathrm{Zar}})$, $L_n(X_{\mathrm{\'et}})$, $L_n(X_{\mathrm{fl}})$ 分别为 Zariski, 平展和平坦景上局部自由 $n$ 阶 $\mathcal O_X$-模的等价类. 可以证明局部平凡化对应的 <span class="link local"><a href="./非交换Čech上同调.html" title="非交换 Čech 上同调 [非交换Čech上同调]">Čech 上圈</a></span> 给出了双射
+$$
+     L_n(X_{*}) \to H^1(X_{*},\mathrm{GL}_n)\,(*=\mathrm{Zar},\mathrm{\'et},\mathrm{fl}).
+ $$</p>
+</li>
+<li>
+<p>然后证明拉回函子 $M\mapsto M^{\mathrm{fl}}$, $M\mapsto M^{\mathrm{\'et}}$ 给出了双射 $L_n(X_{\mathrm{Zar}}) \to L_n(X_{\mathrm{fl}})$, $L_n(X_{\mathrm{Zar}}) \to L_n(X_{\mathrm{\'et}})$. (拉回函子的具体构造见<span class="link local"><a href="./平展景.html" title="平展景 [平展景]">平展景</a></span>.) 需要证明三件事情:</p>
+<p>(a) 平坦 (平展) 局部自由 $\mathcal O_X$-模均形如 $M^{\mathrm{fl}}$, $M$ 为 Zariski 景上的<span class="link local"><a href="./凝聚层.html" title="凝聚层 [凝聚层]">凝聚</a></span> $\mathcal O_X$-模.</p>
+<p>(b) 设 $M$ 为 Zariski 景上的<span class="link local"><a href="./凝聚层.html" title="凝聚层 [凝聚层]">凝聚</a></span> $\mathcal O_X$-模, 若 $M^{\mathrm{fl}}$ 平坦局部自由, 则 $M$ 局部自由.</p>
+<p>(c) 设 $M,N$ 为 Zariski 景上的局部自由 $\mathcal O_X$-模, 则 $M\simeq N$ 当且仅当 $M^{\mathrm{fl}} \simeq N^{\mathrm{fl}}$.</p>
+<p>(a) 的证明本质上是<span class="link local"><a href="./拟凝聚层的忠实平坦下降.html" title="拟凝聚层的忠实平坦下降 [拟凝聚层的忠实平坦下降]">拟凝聚层的忠实平坦下降</a></span>.</p>
+<p>(b) 的证明用到如下观察: 投射模可由<span class="link local"><a href="./忠实平坦环同态.html" title="忠实平坦环同态 [忠实平坦环同态]">忠实平坦环同态</a></span>探测. 设 $A\to B$ 忠实平坦, 若 $B\otimes_A M$ 为投射 $B$-模, 则 $M$ 为投射 $A$-模. 这是因为 $B\otimes_A \operatorname{Hom}_A(M,-) \simeq \operatorname{Hom}_B(B\otimes_A M, B\otimes_A -)$.</p>
+</li>
+</ol>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="忠实平坦环同态"><header><h1><span class="taxon">Wiki. </span>忠实平坦环同态 <a class="slug" href="./忠实平坦环同态.html">[忠实平坦环同态]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>忠实平坦环同态是<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>的<span class="link local"><a href="./平坦景.html" title="平坦景 [平坦景]">平坦覆盖</a></span>.</p>
+<h2>定义</h2>
+<p>称环同态 $A\to B$ 忠实平坦, 是指
+$$
+{-}\otimes B\colon B\mathsf {Mod}\to A\mathsf {Mod}
+$$
+全忠实且正合.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./平坦环同态.html" title="平坦环同态 [平坦环同态]">平坦环同态</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="拟凝聚层的忠实平坦下降"><header><h1><span class="taxon">Wiki. </span>拟凝聚层的忠实平坦下降 <a class="slug" href="./拟凝聚层的忠实平坦下降.html">[拟凝聚层的忠实平坦下降]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>拟凝聚层的忠实平坦下降, 说的是<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>函子 $\mathsf{QCoh} \colon \mathsf{Sch} \to \mathsf{Cat}$ 是<span class="link local"><a href="./平坦景.html" title="平坦景 [平坦景]">平坦拓扑</a></span>的<span class="link local"><a href="./景上的层.html" title="景上的层 [景上的层]">层</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="非Abel上同调"><header><h1><span class="taxon">Wiki. </span>非 Abel 上同调 <a class="slug" href="./非Abel上同调.html">[非Abel上同调]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>非 Abel 上同调是一种广义的<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>概念, 强调其系数对象并非 Abel 群.</p>
+<p>群 $G$ 系数的 $1$ 阶非 Abel 上同调类一一对应于 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>的等价类.</p>
+<p>非 Abel 上同调的一种计算方法是 <span class="link local"><a href="./非交换Čech上同调.html" title="非交换 Čech 上同调 [非交换Čech上同调]">Čech 上同调</a></span>.</p>
+<h2>性质</h2>
+<h3>长正合列</h3>
+<p>对于群短正合列 $K\to G\to H$ 有<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
+$$
+K\to G\to H\to \mathbf{B}K \to \mathbf{B}G \to \mathbf{B}H,
+$$
+从而有非 Abel 上同调的正合列
+$$
+\begin{aligned}
+H^0(X,K) &amp;\to H^0(X,G) \to H^0(X,H)\\
+\to H^1(X,K) &amp;\to H^1(X,G) \to H^1(X,H).
+\end{aligned}
+$$</p>
+<p>对于 $0$-截断群的<span class="link local"><a href="./中心扩张.html" title="中心扩张 [中心扩张]">中心扩张</a></span>
+$$
+A \to G \to H
+$$
+(即不仅要短正合列, 还要求 $A\to G$ 落在 $G$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>中, 特别地 $A$ 为 Abel 群), 纤维列与长正合列还能增加一项:
+$$
+A\to G \to H \to \mathbf{B}A \to \mathbf{B}G\to\mathbf{B}H
+\to\mathbf{B}^2 A,
+$$
+$$
+\begin{aligned}
+    H^0(X,A) &amp;\to H^0(X,G) \to H^0(X,H)\\
+\to H^1(X,A) &amp;\to H^1(X,G) \to H^1(X,H)\\
+\to H^2(X,A) &amp;.
+\end{aligned}
+$$</p>
+<h3>群结构</h3>
+<p>虽然名为 “非交换” Čech 上同调, 当然它也可以处理交换群.</p>
+<p>对于 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span>-群 $A$, 有 $\mathbf{B}A$ 为<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>, 从而 $H^1(X,A)=\pi_0\operatorname{Hom}(X,\mathbf{B}A)$ 为群.</p>
+<p>具体地, 设 $P_1,P_2$ 为 $X$ 上的 $A$-主丛, 分别由 $p_1,p_2\colon X\to\mathbf{B}A$ 分类. 考虑如下拉回图.
+$$
+\begin{array}
+    {ccccc}
+    P_1\times_X P_2 &amp; \to &amp; * \\
+    \downarrow &amp; &amp; \downarrow \\
+    ? &amp; \to &amp; \mathbf{B} A &amp; \to &amp; *\\
+    \downarrow &amp; &amp; \downarrow &amp; &amp; \downarrow \\
+    X &amp; \underset{(p_1,p_2)}{\to} &amp; \mathbf{B}A\times\mathbf{B}A &amp; \underset{\mu}{\to} &amp; \mathbf{B}A
+\end{array}
+$$
+其中 $\mu$ 为 $\mathbf{B}A$ 的乘法映射, 竖直向下的映射 $\mathbf{B}A\to\mathbf{B}A\times\mathbf{B}A$ 为 $\mathbf{B}(a\mapsto (a^{-1},a))$.
+图中问号位置的对象即是 $P_1$ 与 $P_2$ 在 $H^1(X,A)$ 中的<strong>和</strong>
+$$
+P_1+P_2 := (P_1 \times_X P_2) / A,
+$$
+其中 $A$ 通过 $(p_1,p_2) a = (p_1 a^{-1}, p_2 a)$ <span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>于 $P_1\times_X P_2$ 上.</p>
+<h2>例</h2>
+<h3>Zariski 景, 平展景与平坦景</h3>
+<p><strong>定理</strong>.
+在<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span> $X$ 对应的 <span class="link local"><a href="./Zariski景.html" title="Zariski 景 [Zariski景]">Zariski 景</a></span>, <span class="link local"><a href="./平展景.html" title="平展景 [平展景]">平展景</a></span>, <span class="link local"><a href="./平坦景.html" title="平坦景 [平坦景]">平坦景</a></span>上计算同一个群概形 $\mathrm{GL}_n$ (对应的层) 的上同调, 比较映射
+$$
+H^1(X_{\mathrm{Zar}},\mathrm{GL}_n)\to
+H^1(X_{\mathrm{\'et}},\mathrm{GL}_n)\to
+H^1(X_{\mathrm{flat}},\mathrm{GL}_n)
+$$
+均为同构.</p>
+<p>特别地, 对于域 $k$, $H^1(\operatorname{Spec}k,\mathbb G_m)=0$. 这是 <span class="link local"><a href="./Hilbert定理90.html" title="Hilbert 定理 90 [Hilbert定理90]">Hilbert 定理 90</a></span>.</p>
+<p><em>证明</em>. 见 <span class="link local"><a href="./Zar-fl-et.html" title="Zariski 景, 平展景与平坦景的比较 [Zar-fl-et]">Zariski, 平展与平坦的比较</a></span>.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

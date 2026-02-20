@@ -58,6 +58,123 @@
 </script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="筛余极限"><header><h1><span class="taxon">Wiki. </span>筛余极限 <a class="slug" href="./筛余极限.html">[筛余极限]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>例</h2>
 <p><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯</a></span>图表的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>是筛余极限.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>E_M-算畴 <a class="slug" href="./E_M-算畴.html">[E_M-算畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>分解同调 <a class="slug" href="./分解同调.html">[分解同调]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="E_M-算畴"><header><h1><span class="taxon">Wiki. </span>E_M-算畴 <a class="slug" href="./E_M-算畴.html">[E_M-算畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>$\mathbb E_M$-算畴是指<span class="link local"><a href="./流形.html" title=" [流形]">流形</a></span> $M$ 给出的一个<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>, 其颜色为 $M$ 中的开圆盘 (即 $\mathbb{R}^n$ 到 $M$ 的开嵌入), 运算为不交圆盘的含入.</p>
+<p>$\mathbb{E}_M$ 的颜色的范畴等价于 $M$ 对应的<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span> $\operatorname{Sing}M$. 但是 $\mathbb{E}_M$ 不能由 $\operatorname{Sing}M$ 决定, 而是与 $M$ 的流形结构有关. 更准确地说, 与 $M$ 的切丛 $TM$ 的分类映射 $M \to \mathsf{BTop}(n)$ 有关.
+更一般地, 对任意映射 $B \to \mathsf{BTop}(n)$ 都有 <span class="link local"><a href="./E_B-算畴.html" title="E_B-算畴 [E_B-算畴]">$\mathbb E_B$-算畴</a></span>, 详见此页面.</p>
+<h2>定义</h2>
+<p>记</p>
+<ul>
+<li>$\mathsf{Mfd}_n$ 为 $n$ 维流形以及之间的<strong>嵌入</strong>构成的 $\infty$-范畴,</li>
+<li>$\mathsf{BTop}(n)$ 为其中 $\mathbb{R}^n$ 构成的全子范畴, 它是<span class="link local"><a href="./群.html" title="群 [群]">生象群</a></span> $\mathsf{Top}(n) := \operatorname{Emb}(\mathbb{R}^n,\mathbb{R}^n)$ 的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>,</li>
+</ul>
+<p><strong>注</strong>. 对任意流形 $M\in\mathsf{Mfd}_n$,
+范畴 $\mathsf{BTop}(n)_{/M}$ 实际上是一个<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>, 且等价于 $\operatorname{Sing}M$. 遗忘函子 $\mathsf{BTop}(n)_{/M} \to \mathsf{BTop}(n)$ 等同于映射 $\operatorname{Sing} M \to \mathsf{BTop}(n)$, 它是 $M$ 的<span class="link local"><a href="./切丛.html" title="切丛 [切丛]">切丛</a></span>的分类映射.</p>
+<p>范畴 $\mathsf{BTop}(n)$ 上还有一个<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>结构, 记作 $\mathsf{BTop}(n)^\otimes$, 其 $k$ 元运算为 $k$ 个 $\mathbb{R}^n$ 的无交并到 $\mathbb{R}^n$ 的嵌入.</p>
+<p>接下来定义算畴 $\mathbb E_M$. 其底层范畴为 $\mathsf{BTop}(n)_{/M}$, 运算为 $M$ 的嵌入子流形之间的含入
+$$
+\begin{array}
+{ccc}
+\sqcup_k \mathbb{R}^n &amp;&amp;\\
+\downarrow &amp; \searrow &amp;\\
+\mathbb{R}^n &amp; \to &amp; M.
+\end{array}
+$$
+(注意图中 $\sqcup_k \mathbb{R}^n \to M$ 为嵌入, 即 $k$ 个圆盘互不相交.)
+更严格地说, 算畴 $\mathbb E_M$ 是如下的拉回:
+$$
+\begin{array}
+{ccc}
+\mathbb E_M &amp; \to &amp; \mathsf{BTop}(n)^\otimes \\
+\downarrow &amp; &amp; \downarrow \\
+(\mathsf{BTop}(n)_{/M})^{\sqcup} &amp; \to &amp; (\mathsf{BTop}(n))^{\sqcup}.
+\end{array}
+$$</p>
+<blockquote>
+<p>这里似乎无法用 “纯 $\infty$-范畴” 的语言来描述这个算畴, 无可避免地需要来自流形范畴的同伦信息.</p>
+</blockquote>
+<h2>性质</h2>
+<h3>分解同调</h3>
+<p>对于有<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal O$, 可构造其中 $\mathbb{E}_M$-代数的<span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>
+$$
+\int_M \colon \mathsf{Alg}_{\mathbb E_M}(\mathcal O) \to \mathcal O,
+$$
+$$
+\int_M \mathcal A := \operatorname{colim}_{U\in (\mathsf{Disk}_n)_{/M}} \mathcal A (U).
+$$</p>
+<h3>“环路空间”</h3>
+<p>设 $X \colon \operatorname{Sing}M \to \mathsf{Ani}_{*}$ 为函子, $U\subset M$ 为开集. 定义 $X$ 在 $U$ 上的<strong>紧支集截面</strong>的空间为
+$$
+\Gamma_{\mathrm{c}}(U,X) = \operatorname{colim}_{K\subset U} \Gamma(\operatorname{Sing}M,X) \times_{\Gamma(\operatorname{Sing}(M\setminus K),X)} *,
+$$
+其中 $K\subset U$ 取遍 $U$ 的紧子集.
+那么 $\Gamma_{\mathrm{c}}(U,X)$ 关于 $U,X$ 均有 (协变) 函子性.</p>
+<p>对于流形 $M$ 以及函子 $X\colon\operatorname{Sing}(M) \to \mathsf{Ani}_*$, 可构造 $\mathsf{Ani}$ 中的 $\mathbb{E}_M$-代数 $\Omega_M X$, 使得其颜色 $U\subset M$ ($M$ 的嵌入圆盘) 处的分量为紧支集截面生象 $\Gamma_{\mathrm{c}}(U,X)$.</p>
+<p>例如, 若 $X$ 为取值为带基点生象 $(A,a)$ 的常值函子, $M$ 的维数为 $n$, 则 $\Omega_M X$ 在一个圆盘 $U$ 处的分量等价于 $\Omega^n(A,a)$.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="分解同调"><header><h1><span class="taxon">Wiki. </span>分解同调 <a class="slug" href="./分解同调.html">[分解同调]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>分解同调</strong> (factorization homology), 又叫<strong>手性同调</strong> (chiral homology), 是将 $\mathbb E_n$-代数 “沿 $n$ 维流形作张量积”, 或更一般地将 <span class="link local"><a href="./E_M-算畴.html" title="E_M-算畴 [E_M-算畴]">$\mathbb E_M$-算畴</a></span>的代数在流形 $M$ 上作 “张量积”.</p>
+<p>$n$ 维流形范畴上的任何具有局部性的自然构造都是某个 $\mathbb E_n$-代数的分解同调.</p>
+<p>$S^1$ 上的分解同调即 <span class="link local"><a href="./Hochschild同调.html" title="Hochschild 同调 [Hochschild同调]">Hochschild 同调</a></span>.</p>
+<p>分解同调也可以理解为流形的<span class="link local"><a href="./同调.html" title="同调 [同调]">同调群</a></span>的推广. 由 <span class="link local"><a href="./Dold–Thom定理.html" title="Dold–Thom 定理 [Dold–Thom定理]">Dold–Thom 定理</a></span>, 空间的同调群是其 “$\mathbb N$-系数构形空间” (即空间生成的自由交换幺半群) 的同伦群; 而对于 $\mathbb E_n$-代数 $A$, 可构造标架流形 $M$ 上的 “$A$-系数构形空间”, 直观上标架提供了将 $\mathbb E_n$-代数的元素 “相加” 的方法.</p>
+<h2>定义</h2>
+<p>记 $\mathsf{Mfd}_n$ 为如下<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>: 其对象为 $n$ 维光滑流形, 态射空间为光滑<strong>嵌入</strong>的空间 (注意不是光滑映射的空间), <span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span>结构为流形的不交并 (注意这个结构不是 $\mathsf{Mfd}_n$ 中的余积, 因为两个嵌入 $M_1\to N$, $M_2\to N$ 不一定能给出<strong>嵌入</strong> $M_1\sqcup M_2\to N$).</p>
+<h3>$\mathbb E_n$-代数的分解同调</h3>
+<p>设 $(\mathcal C,\otimes)$ 为<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半范畴</a></span>, $A$ 为其中的 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$-代数</a></span>. 回忆, <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$-代数</a></span>的<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法范畴</a></span>为 “标架 $n$-圆盘范畴” $\mathsf{Disk}_n^{\mathrm{fr}}$ (其对象为若干个 $n$-圆盘的无交并, 态射为保持标架的光滑嵌入). 换言之, $\mathcal C$ 中的 <span class="link local"><a href="./En-算畴.html" title="En-算畴 [En-算畴]">$\mathbb E_n$</a></span>-代数 $A$ 等同于对称幺半函子
+$$
+    A\colon \mathsf{Disk}_n^{\mathrm{fr}} \to \mathcal C.
+$$</p>
+<p>现在设 $M$ 是带<span class="link local"><a href="./切结构.html" title="切结构 [切结构]">标架</a></span>的 $n$ 维光滑流形. 考虑范畴
+$(\mathsf{Disk}_n^{\mathrm{fr}})_{/M}$,
+其对象为嵌入 $\sqcup_k  \mathbb{R}^n \hookrightarrow M$, 态射为包含关系. 定义 $A$ 在 $M$ 上的<strong>分解同调</strong>为
+$$
+\int_M A := \operatorname{colim}_{(\mathsf{Disk}_n^{\mathrm{fr}})_{/M}} A^{\otimes k}= \operatorname{colim}_{\sqcup_k  \mathbb{R}^n \hookrightarrow M}
+A^{\otimes k}.
+$$</p>
+<p>那么分解同调函子
+$$
+\int_{-}A \colon \mathsf{Mfd}_{n}^{\mathrm{fr}} \to \mathcal C
+$$
+是 $A$ 沿 $\mathsf{Disk}_n^{\mathrm{fr}} \hookrightarrow \mathsf{Mfd}_n^{\mathrm{fr}}$ 的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">左 Kan 扩张</a></span>.</p>
+<h3>$\mathbb E_M$-代数的分解同调</h3>
+<p>固定流形 $M$, 记 $\mathsf{Disk}_n$ 为 $\mathsf{Mfd}_n$ 中由 $S\times\mathbb{R}^n$ ($S$ 为有限集) 构成的全子范畴. 有一个直观的函子 $(\mathsf{Disk}_n)_{/M} \to \mathbb E_M^\otimes$ (后者是指 <span class="link local"><a href="./E_M-算畴.html" title="E_M-算畴 [E_M-算畴]">$\mathbb E_M$-算畴</a></span>作为 $\mathsf{Fin}_{*}$ 上的纤维范畴的全空间.) 这个函子允许我们对 $\mathbb{E}_M$-代数 $\mathcal{A}$ 与 $U\in (\mathsf{Disk}_n)_{/M}$ 谈论 $\mathcal{A}$ 的 “$U$ 分量” $\mathcal{A}(U)$.</p>
+<p>对于有<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal O$, 可构造分解同调
+$$
+\int_M \colon \mathsf{Alg}_{\mathbb E_M}(\mathcal O) \to \mathcal O,
+$$
+$$
+\int_M \mathcal A := \operatorname{colim}_{U\in (\mathsf{Disk}_n)_{/M}} \mathcal A (U).
+$$</p>
+<h2>性质</h2>
+<h3>切除性</h3>
+<p>设 $\mathcal C$ 的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span>结构 $\otimes$ 保持每个分量的<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>. 那么对于 $\mathbb E_n$-代数 $A$,
+$$
+\int_{-}A\colon \mathsf{Mfd}_n^{\text{fr}} \to\mathcal C
+$$
+是对称幺半函子. 此时进一步有如下的 $\otimes$-<strong>切除性</strong> (excision):
+对于标架 $n$-流形的 “粘领口” (collar-gluing) 分解
+$$
+	X=X_0\cup_{W\times\mathbb{R}}X_1
+$$
+($X_0$, $X_1$ 为 $X$ 中的开集, $X_0\cap X_1=W\times\mathbb{R}$), 有
+$$
+	\int_X A \simeq \int_{X_0}A{\bigotimes_{\int_{W\times\mathbb{R} }A}}\int_{X_1}A.
+$$
+其中用到 $\int_{W\times\mathbb{R}}A$ 是<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> (因为有对称幺半函子 $W\times -\colon \mathsf{Disk}_1^{\text{fr}} \to \mathsf{Mfd}_n^{\text{fr}}$), 且 $\int_{X_0}A$ 是 $\int_{W\times \mathbb{R}}A$-右模
+(这是因为领口可以再加一个领口, 两个领口可以合成一个领口).</p>
+<h3>例: $S^1$ 的分解同调</h3>
+<p>由于 $S^1$ 可以写成
+$$
+S^1 = \mathbb{R} \cup_{S^0\times\mathbb{R}} \mathbb{R},
+$$
+对任意 $\mathbb E_1$-代数 (即<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>) $A$, 切除性给出一个等价
+$$
+\int_{S^1}A\simeq A\otimes_{A^{\mathrm{op}}\otimes A}A.
+$$
+这便是 <span class="link local"><a href="./Hochschild同调.html" title="Hochschild 同调 [Hochschild同调]">Hochschild 同调</a></span>的一种定义.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

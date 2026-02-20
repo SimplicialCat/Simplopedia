@@ -69,6 +69,115 @@ $$
 $$
 \operatorname{Der}_k(A,M)\simeq\operatorname{Hom}_{\mathsf{Alg}_k}(A,A+M).
 $$</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Kähler 微分 <a class="slug" href="./Kähler微分.html">[Kähler微分]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Poisson 代数 <a class="slug" href="./Poisson代数.html">[Poisson代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Poisson 流形 <a class="slug" href="./Poisson流形.html">[Poisson流形]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>动量映射 <a class="slug" href="./动量映射.html">[动量映射]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>线性微分算子 <a class="slug" href="./线性微分算子.html">[线性微分算子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Kähler微分"><header><h1><span class="taxon">Wiki. </span>Kähler 微分 <a class="slug" href="./Kähler微分.html">[Kähler微分]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Kähler 微分是微分几何中的微分 $1$-形式在<span class="link local"><a href="./代数几何.html" title="代数几何 [代数几何]">代数几何</a></span>中的推广.</p>
+<h2>定义</h2>
+<p>设 $k$ 为交换环, $K$ 为 $k$-代数, 那么存在 $K$ 出发的万有 $k$-<span class="link local"><a href="./导子.html" title="导子 [导子]">导子</a></span> $d_{K/k} \colon K \to \Omega_{K/k}$, 其中 $\Omega_{K/k}$ 称为 Kähler 微分环.</p>
+<p>具体地, $\Omega_{K/k}$ 可构造为
+$$
+ \Omega_{K/k} := (K\otimes_k K)\big/ \big(x\otimes yz\sim ( xy\otimes z + xz\otimes y)\big),
+$$
+(想象 $x\otimes y$ 为 $xdy$.) 此时映射 $d_{K/k}$ 将 $x\in K$ 对应到 $[1\otimes x]\in \Omega_{K/k}$.</p>
+<h2>性质</h2>
+<p>由具体的构造可立刻看出 Kähler 微分环的万有性质如下. 对任意 $K$-模 $M$ 与 $k$-导子 $\delta\colon K\to M$, 存在唯一的同态 $\phi\colon \Omega_{K,k}\to M$ 满足 $\delta = \phi\circ d_{K/k}$.</p>
+<p>特别地, $K$ 到自身的导子对应于 $\operatorname{Hom}_K(\Omega_{K/k},K)$ 的元素.</p>
+<p>$\Omega_{K/k}$ 作为 $K$-模可由 $\{dx\mid x\in K\}$ 生成. 子集 $\{dx\mid x\in K\}$ 构成一个 $k$-线性子空间, 但通常不是整个空间; 其中的元素称为恰当 (exact) 的.</p>
+<h3>函子性</h3>
+<p>对于 $k$-代数同态 $\phi \colon K\to K'$, 存在映射 $d\phi \colon \Omega_{K/k} \to \Omega_{K'/k}$ 与 $d$ 交换.</p>
+<p>这些映射满足链式法则 $d(\phi'\circ\phi)=(d\phi')\circ (d\phi)$.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./微分层.html" title="微分算子层 [微分层]">微分层</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Poisson代数"><header><h1><span class="taxon">Wiki. </span>Poisson 代数 <a class="slug" href="./Poisson代数.html">[Poisson代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>交换环 $k$ 上的 Poisson 代数是 $k$-代数 $A$ 带有一个 Lie 括号 $[-,-]$,
+使得 $[a,-] \colon A \to A$ 是 $k$-代数的<span class="link local"><a href="./导子.html" title="导子 [导子]">导子</a></span>; 换言之, $[-,-]$ 是 $A$ 上的双导子 (biderivation).</p>
+<p>注意 Poisson 代数 $A$ 要求是含幺结合代数, 但有时不要求交换.</p>
+<p>流形 $M$ 配备其光滑函数环 $C^\infty(M)$ 的 Poisson 结构, 称为 <span class="link local"><a href="./Poisson流形.html" title="Poisson 流形 [Poisson流形]">Poisson 流形</a></span>.</p>
+<h2>例</h2>
+<p><span class="link local"><a href="./辛流形.html" title="辛流形 [辛流形]">辛流形</a></span> $(X,\omega)$ 上的光滑函数层 $\mathcal O_X$ 具有 Poisson $\mathbb{R}$-代数结构
+$$
+\{f,g\} = \omega(df,dg).
+$$
+这是因为, 辛结构 $\omega$ 是一个同构 $\Omega_X \simeq T_X$, 而映射 $\Omega_X \to T_X = \operatorname{Der}(\mathcal O_X,\mathcal O_X)$ 相当于导子 $\mathcal O_X \to \operatorname{Der}(\mathcal O_X,\mathcal O_X)$, 也即双导子 $\mathcal O_X\otimes\mathcal O_X \to \mathcal O_X$.</p>
+<p><span class="link local"><a href="./Lie代数.html" title="Lie 代数 [Lie代数]">Lie 代数</a></span> $\mathfrak{g}$ 的对称代数 $\operatorname{Sym} \mathfrak{g}$ 具有交换 Poisson 代数结构, 使得生成元 (即 $\mathfrak{g}$ 的元素) Poisson 括号恰为 Lie 括号. 见 <span class="link local"><a href="./KKSPoisson结构.html" title="Kirillov–Kostant–Souriau Poisson 结构 [KKSPoisson结构]">Kirillov–Kostant–Souriau Poisson 结构</a></span>.</p>
+<p>类似地, Lie 代数 $\mathfrak{g}$ 的<span class="link local"><a href="./泛包络代数.html" title="泛包络代数 [泛包络代数]">泛包络代数</a></span> $U\mathfrak{g}$ 具有非交换 Poisson 代数结构, 在生成元上限制为 Lie 括号. 这是下面介绍的几乎交换代数的例子, 其<span class="link local"><a href="./关联分次代数.html" title="关联分次对象 [关联分次代数]">关联分次代数</a></span>同构于 $\operatorname{Sym}\mathfrak{g}$.</p>
+<h3>(几乎) 交换代数</h3>
+<p>几乎交换代数 (almost commutative algebra) 是指有交换的<span class="link local"><a href="./关联分次代数.html" title="关联分次对象 [关联分次代数]">关联分次代数</a></span>的<span class="link local"><a href="./滤代数.html" title="滤代数 [滤代数]">滤代数</a></span>. 几乎交换代数 $F^\bullet A$ 的<span class="link local"><a href="./关联分次代数.html" title="关联分次对象 [关联分次代数]">关联分次代数</a></span> $\operatorname{Gr}^\bullet A$ 上有 Poisson 结构: 对 $x \in \operatorname{Gr}^i A$, $y\in\operatorname{Gr}^j A$,
+分别取 $x,y$ 的代表元 $\tilde{x}\in F^i A$, $\tilde y\in F^j A$, 定义
+$$
+\{x,y\} := [\tilde{x},\tilde{y}].
+$$</p>
+<p>例如 <span class="link local"><a href="./Weyl代数.html" title="Weyl 代数 [Weyl代数]">Weyl 代数</a></span>
+$$
+W =\mathbb{Z}\langle x_1,\cdots,x_n,\partial_1,\cdots,\partial_n\rangle,
+$$
+满足关系 $[x_i,x_j]=[\partial_i,\partial_j]=0$, $[\partial_i,x_j]=\delta_{ij}$, 其关联分次代数即为多项式代数
+$$
+\operatorname{Gr}^\bullet W \simeq \mathbb{Z}[x_1,\cdots,x_n,y_1,\cdots,y_n].
+$$
+这个多项式代数上的 Poisson 结构可表示为
+$$
+\{f,g\} = \sum_i \Big(\frac{\partial f}{\partial x_i}\frac{\partial g}{\partial y_i} - \frac{\partial f}{\partial y_i}\frac{\partial g}{\partial x_i}\Big).
+$$</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Poisson流形"><header><h1><span class="taxon">Wiki. </span>Poisson 流形 <a class="slug" href="./Poisson流形.html">[Poisson流形]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>Poisson 流形是一个流形 $M$ 配备其光滑函数环 $C^\infty(M)$ 的 <span class="link local"><a href="./Poisson代数.html" title="Poisson 代数 [Poisson代数]">Poisson 结构</a></span>.</p>
+<p>Poisson 流形之间保持 Poisson 结构 (即满足 $\varphi^* \{f,g\} = \{\varphi^* f,\varphi^* g\}$) 的光滑映射 $\varphi$ 称为<strong>典范变换</strong> (canonical transformation).</p>
+<p>Poisson 流形 $M$ 上的每个光滑函数 $h$ 给出 $C^\infty(M)$ 上的一个<span class="link local"><a href="./导子.html" title="导子 [导子]">导子</a></span> $\{-,h\}$, 也即一个向量场 $X_h$.</p>
+<h2>经典力学系统</h2>
+<p>一个 Poisson 流形 $M$ 加上一个取定的函数 $h \in  C^\infty(M)$ 构成一个<span class="link local"><a href="./经典力学系统.html" title=" [经典力学系统]">经典力学系统</a></span>, 其中 $M$ 称为<strong>相空间</strong> (phase space), $h$ 称为 <strong>Hamilton 量</strong>. Hamilton 量的中心化子 (所有满足 $\{f,h\}=0$ 的元素 $f\in C^\infty(M)$ 构成的子代数, 也即所有在向量场 $X_h$ 下不变的函数) 称为<strong>守恒量</strong> (conserved quantities).</p>
+<p>设 Lie 群 $G$ 通过典范变换作用于 Poisson 流形 $M$, 且轨道空间 $M / G$ 仍为流形, 则 $M/G$ 具有 Poisson 结构, 这是一种 <span class="link local"><a href="./Poisson约化.html" title="Poisson 约化 [Poisson约化]">Poisson 约化</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="动量映射"><header><h1><span class="taxon">Wiki. </span>动量映射 <a class="slug" href="./动量映射.html">[动量映射]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>使用动量映射, 我们可以根据群作用的<strong>守恒量</strong> (conserved quantities) 得到<strong>可观测量</strong> (observables).</p>
+<h2>定义</h2>
+<h3>Poisson 流形上的作用</h3>
+<p>设 Lie 群 $G$ 在 <span class="link local"><a href="./Poisson流形.html" title="Poisson 流形 [Poisson流形]">Poisson 流形</a></span> $M$ 上有一 Hamilton 作用, 即存在 Lie 代数同态 $h_{-} \colon \mathfrak{g} \to C^\infty(M)$, 满足 $x\in \mathfrak{g}$ 在作用之下对应的 $M$ 上的向量场等同于 $h_x$ 在 <span class="link local"><a href="./Poisson流形.html" title="Poisson 流形 [Poisson流形]">Poisson 括号</a></span>下对应的<span class="link local"><a href="./导子.html" title="导子 [导子]">导子</a></span> $\{-,h_x\}$.</p>
+<p>此时, 映射 $h_{-}$ 也给出一个映射 $\mu \colon M\to\mathfrak g^*$, 称之为<strong>动量映射</strong> (moment map, 或 momentum map).</p>
+<h3>Poisson 代数上的作用</h3>
+<p>动量映射可以绕过流形, 直接在代数层面谈论. 设代数群 $G$ 作用于 <span class="link local"><a href="./Poisson代数.html" title="Poisson 代数 [Poisson代数]">Poisson 代数</a></span> $P$, 且存在 Lie 代数同态 $h\colon \mathfrak{g} \to P$ 满足 $x\in \mathfrak{g}$ 对应的 $P$ 上的<span class="link local"><a href="./导子.html" title="导子 [导子]">导子</a></span>恰为 $\{-,h_x\}$. 那么映射 $h$ 本身即是动量映射 (在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>另一侧的对应物).</p>
+<p>这种观点与<span class="link local"><a href="./量子动量映射.html" title="量子动量映射 [量子动量映射]">量子动量映射</a></span>直接相关.</p>
+<h2>性质</h2>
+<p>Lie 代数同态 $h_{-} \colon \mathfrak{g} \to C^\infty(M)$ 给出 <span class="link local"><a href="./Poisson代数.html" title="Poisson 代数 [Poisson代数]">Poisson 代数</a></span>同态
+$\operatorname{Sym}\mathfrak{g} \to C^\infty(M)$.</p>
+<h3>等变</h3>
+<p><strong>命题</strong>. 设 $G$ 为连通 Lie 群. 考虑 $G$ 在 $\mathfrak{g}^*$ 上的余伴随作用 $\operatorname{Ad}^*$, 则动量映射 $\mu \colon M \to \mathfrak{g}^*$ 是 $G$-等变映射.</p>
+<p>证明. 由连通性, 只需证明无穷小版本的结论. 记 $x\in\mathfrak{g}$ 对应的 $M$ 上的向量场为 $\xi_x$, 而余伴随作用 $\operatorname{Ad}^*$ 对应的 $\mathfrak{g}$ 在 $\mathfrak{g}^*$ 上的作用为 $\operatorname{ad}^*$,
+$$
+\langle\operatorname{ad}^*_x(\alpha),y\rangle = -\alpha([x,y])\,(x,y\in\mathfrak{g},\alpha\in\mathfrak{g}^*).
+$$
+我们要证明的结论是
+$$
+d_m\mu (\xi_x) = \operatorname{ad}_x^*(\mu(m))\,(m\in M).
+$$
+而这只需将两边与 $y\in\mathfrak{g}$ 配对, 使用 $h_{-}$ 的性质计算
+$$
+\begin{aligned}
+    \langle d_m \mu (\xi_x),y\rangle &amp;=
+    d_m h_y (\xi_x)\\
+    &amp;= -\{h_x,h_y\}(m)\\
+    &amp;= -h_{[x,y]}(m)\\
+    &amp;= -\mu(m)([x,y])= \langle \operatorname{ad}_x^*(\mu(m)),y \rangle.
+\end{aligned}
+$$</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./量子动量映射.html" title="量子动量映射 [量子动量映射]">量子动量映射</a></span></p>
+<p><span class="link local"><a href="./Delzant多面体.html" title="“Delzant 多面体” [Delzant多面体]">Delzant 多面体</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="线性微分算子"><header><h1><span class="taxon">Wiki. </span>线性微分算子 <a class="slug" href="./线性微分算子.html">[线性微分算子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>线性微分算子</strong>是由<span class="link local"><a href="./导子.html" title="导子 [导子]">求导</a></span>生成的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的元素, 是仅依赖于函数的有限阶<span class="link local"><a href="./射流.html" title="射流 [射流]">射流</a></span>的算子.</p>
+<p>另见<span class="link local"><a href="./拟微分算子.html" title="“拟微分算子” [拟微分算子]">拟微分算子</a></span>.</p>
+<h2>定义</h2>
+<h3>由局部坐标定义</h3>
+<p>对于流形上两个复向量丛 $E,F\to M$, 微分算子 $D\colon\Gamma(E)\to \Gamma(F)$ 是线性映射, 局部上由下式给出:
+$$
+D=\sum_\alpha A_\alpha \partial^\alpha,
+$$
+其中 $A_\alpha\colon \mathbb{R}^n\to\operatorname{Hom}(\mathbb{C}^p,\mathbb{C}^q)$.</p>
+<h3>由交换子定义</h3>
+<p>对于 $f\in C^\infty(M)$ 与微分算子 $D\colon \Gamma(E)\to \Gamma(F)$, 定义“交换子“ $[D,f]\colon  \Gamma(E)\to\Gamma(F)$, $s\mapsto D(fs)-f(Ds)$.</p>
+<p>定义 $0$ 阶算子 $D$ 为与任意函数 $f$ 的交换子都为 $0$ 的算子, 这等价于 $D$ 是向量丛的态射.</p>
+<p>归纳地定义 $n$ 阶算子: 若算子 $D$ 与任意函数的交换子都不超过 $(n-1)$ 阶, 则称算子 $D$ 的阶不超过 $n$. 换言之, 算子 $D$ 的阶 $n$ 是满足如下条件的最大整数: $D$ 依次与任意 $n$ 个函数作交换子, 结果都是向量丛的态射.</p>
+<h3>由生成元定义</h3>
+<p>向量丛 $E$ 到自身的微分算子的代数也可定义为由 $\operatorname{End}(E)$ 的截面 (即 $0$ 阶微分算子) 与 $E$ 上所有的协变导数 $\nabla_X$ ($X$ 是向量场) 所共同生成的代数. 这样, 这个代数上就有自然的滤过结构 (但不是分次结构).</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

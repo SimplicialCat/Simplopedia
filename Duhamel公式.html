@@ -60,6 +60,28 @@
 $$
 \frac{d}{dz}e^{-tA_z} = - \int_0^t e^{-(t-s)A_z} \frac{dA_z}{dz} e^{-sA_z} \,ds.
 $$</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“指数映射 (Lie 群)” <a class="slug" href="./指数映射(Lie群).html">[指数映射(Lie群)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="指数映射(Lie群)"><header><h1><span class="taxon">Wiki. </span>“指数映射 (Lie 群)” <a class="slug" href="./指数映射(Lie群).html">[指数映射(Lie群)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>Lie 群上的指数映射是一个光滑映射 $\exp\colon \mathfrak g\to G$, 定义如下. 对 $a\in\mathfrak g$ 令 $\gamma\colon (-\varepsilon,\varepsilon) \to G$ 为满足方程 $\gamma(0)=e$, $\gamma'(t)=L_{\gamma(t)}a$ ($L_{g}$ 为左平移) 的曲线, 定义
+$$
+\exp(a) = \gamma(1).
+$$</p>
+<h2>主丛上的指数映射</h2>
+<p>设 $G$ 是紧 Lie 群, $M$ 是 Riemann 流形, $\pi\colon P\to M$ 是 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>. 设 $\omega$ 为 $P$ 上的<span class="link local"><a href="./联络.html" title="联络 [联络]">联络</a></span>.</p>
+<p>设 $\mathfrak g$ 上有 $\operatorname{Ad}$-不变的内积, 从而 $G$ 上有 Riemann 度量, 给出了 $G$ 上的 <span class="link local"><a href="./Haar测度.html" title="“Haar 测度” [Haar测度]">Haar 测度</a></span>.</p>
+<p>对于 $p\in P$, 切空间 $T_pP$ 是水平空间 $H_pP$ (等同于 $T_xM$) 与垂直空间 (等同于 $\mathfrak g$) 的直和. 这进一步给出了 $P$ 上的 Riemann 度量, 使得二者垂直. (注意这个度量依赖于联络 $\omega$.)</p>
+<p>$\exp\colon T_pP \to \pi^{-1}(x)$</p>
+<p>定义
+$$
+j(a) = \det \left( \frac{1-e^{\operatorname{ad}a}}{\operatorname{ad}a}\right),\quad j(0)=1,
+$$</p>
+<p><strong>命题</strong>.
+$$
+d(\exp a) = j(a)\,da.
+$$
+<strong>证明</strong>. 由 <span class="link local"><a href="./Duhamel公式.html" title="“Duhamel 公式” [Duhamel公式]">Duhamel 公式</a></span>, 对于 $a,b\in \mathfrak g$,
+$$
+\frac{d}{d\varepsilon} \exp(a) \exp(a+\varepsilon b) \Big|_{\varepsilon = 0} = \frac{1-e^{\operatorname{ad}a}}{\operatorname{ad}a} b,
+$$</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

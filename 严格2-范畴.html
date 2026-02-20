@@ -57,6 +57,56 @@
   });
 </script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="严格2-范畴"><header><h1><span class="taxon">Wiki. </span>严格 2-范畴 <a class="slug" href="./严格2-范畴.html">[严格2-范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>所有 $1$-态射, $2$-态射均可逆的严格 $2$-范畴称为<span class="link local"><a href="./严格2-群胚.html" title="严格 2-群胚 [严格2-群胚]">严格 $2$-群胚</a></span>.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>2-范畴 <a class="slug" href="./2-范畴.html">[2-范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>严格 2-群胚 <a class="slug" href="./严格2-群胚.html">[严格2-群胚]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="2-范畴"><header><h1><span class="taxon">Wiki. </span>2-范畴 <a class="slug" href="./2-范畴.html">[2-范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>$2$-范畴是允许至多 $2$ 阶不可逆态射的<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>.</p>
+<p>$2$-范畴的概念在文献中也称为 “弱 $2$-范畴 (weak $2$-category)”, 这是为了区分 2-范畴与<span class="link local"><a href="./严格2-范畴.html" title="严格 2-范畴 [严格2-范畴]">严格 2-范畴</a></span> (strict $2$-category). 两者的区别是, 2-范畴中态射复合的结合律和幺元律是由一个可逆 $2$-态射给出, 是<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构而非性质</a></span>.</p>
+<p>另一个不同的概念是<span class="link local"><a href="./双范畴.html" title="“双范畴” [双范畴]">双范畴</a></span> (double category).</p>
+<h2>定义</h2>
+<h3>传统</h3>
+<p>$2$-范畴 $\mathcal C$ 由如下信息组成:</p>
+<ul>
+<li>一个类 $\operatorname{Ob}(\mathcal C)$, 其中元素称为 $\mathcal C$ 的对象;</li>
+<li>对 $x,y\in\operatorname{Ob}(\mathcal C)$ 有一个小范畴 $\mathcal C (x,y)$, 其中的对象称作 $\mathcal C$ 的 $1$-态射 (横向态射), 态射称作 $\mathcal C$ 的 $2$-态射;</li>
+<li>对 $x,y,z\in\operatorname{Ob}(\mathcal C)$ 有一个函子 $\circ \colon \mathcal C(y,z)\times \mathcal C(x,y) \to \mathcal C(x,z)$, 称作横向复合 (每个 $\mathcal C(x,y)$ 中的复合称作纵向复合);</li>
+<li>自然同构 $l_{x,y} \colon (1_y\circ{-}) \Rightarrow \operatorname{id}_{\mathcal C(x,y)}$, $r_{x,y}\colon ({-}\circ 1_x)\Rightarrow\operatorname{id}_{\mathcal C(x,y)}$, 称作左右单位子;</li>
+<li>结合子.</li>
+</ul>
+<p>这些结构需满足如下<span class="link local"><a href="./融贯.html" title="融贯 [融贯]">融贯</a></span>条件:</p>
+<ul>
+<li>三角形公理 ($g\circ 1\circ f$ 的结合);</li>
+<li>五边形公理 (四个态射的结合).</li>
+</ul>
+<p>所有态射都是等价的 $2$-范畴称为 $2$-群胚.</p>
+<h3>作为弱充实范畴</h3>
+<p>$2$-范畴是<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于 $\mathsf{Cat}$ 的范畴.</p>
+<h2>例</h2>
+<p>范畴的范畴 $\mathsf{Cat}$ 是 $2$-范畴.</p>
+<p>拓扑空间的基本 $2$-群胚是 $2$-群胚.</p>
+<h2>性质</h2>
+<h3>与幺半范畴的联系</h3>
+<p>在 $2$-范畴 $\mathcal C$ 中, 一个对象 $a$ 到自身的态射构成一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $\mathcal C(a,a)$, 其中的 “张量积” 为 $\mathcal C$ 的横向复合.</p>
+<p><span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>可视为仅有一个对象的 $2$-范畴.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="严格2-群胚"><header><h1><span class="taxon">Wiki. </span>严格 2-群胚 <a class="slug" href="./严格2-群胚.html">[严格2-群胚]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>严格 $2$-群胚是所有态射和 $2$-态射均可逆的<span class="link local"><a href="./严格2-范畴.html" title="严格 2-范畴 [严格2-范畴]">严格 $2$-范畴</a></span>.</p>
+<h2>性质</h2>
+<h3>与 2-截断生象的关系</h3>
+<p>设 $X$ 为连通 $2$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span><span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>. 那么 $X$ 的 <span class="link local"><a href="./Postnikov塔.html" title="Postnikov 塔 [Postnikov塔]">Postnikov 塔</a></span>形如
+$$
+X = \tau_{\leq 2} X \to \tau_{\leq 1} X  \to \tau_{\leq 0} X = *.
+$$
+其纤维为
+$$
+K(\pi_1(X),1) = \tau_{\leq 1} X,
+$$
+$$
+K(\pi_2(X),2) = \operatorname{fib}(X\to\tau_{\leq 1}X),
+$$
+从而有<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
+$$
+K(\pi_2(X),2) \to X \to K(\pi_1(X),1).
+$$</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

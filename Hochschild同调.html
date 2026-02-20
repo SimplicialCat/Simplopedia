@@ -100,6 +100,158 @@ $$
 </blockquote>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Hochschild上同调.html" title="Hochschild 上同调 [Hochschild上同调]">Hochschild 上同调</a></span></p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Hochschild 上同调 <a class="slug" href="./Hochschild上同调.html">[Hochschild上同调]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>分解同调 <a class="slug" href="./分解同调.html">[分解同调]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>对称幺半维数 <a class="slug" href="./幺半维数.html">[幺半维数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>粘构形范畴 <a class="slug" href="./粘构形范畴.html">[粘构形范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Hochschild上同调"><header><h1><span class="taxon">Wiki. </span>Hochschild 上同调 <a class="slug" href="./Hochschild上同调.html">[Hochschild上同调]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的 Hochschild 上同调又称<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>.</p>
+<h2>定义</h2>
+<h3>结合代数</h3>
+<p>固定基环 $k$, 定义 $k$ 上的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 的 <strong>Hochschild 上同调</strong>为
+$$
+\mathrm{HH}^* (A) := \operatorname{End}_{A\otimes A^{\mathrm{op}}}(A),
+$$
+其中 $A$ 是 $A\otimes A^{\mathrm{op}}$-左模, 即 $(A,A)$-双模.</p>
+<h3>范畴</h3>
+<p>范畴 $\mathcal C$ 的 Hochschild 上同调 (又叫<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>) 为
+$$
+\operatorname{HH}^*(\mathcal C) :=\operatorname{End}_{\operatorname{End}(\mathcal C)}(\mathrm{id}).
+$$</p>
+<h3>可对偶可表现范畴</h3>
+<p>固定一个基环 $k$. 设 $\mathcal C$ 是 <span class="link local"><a href="./高阶模.html" title="高阶模 [高阶模]">$\mathsf{Pr}_{k}$</a></span> 的<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶对象</a></span>, 记其对偶为 $\mathcal C^\vee$, 定义 $\mathcal C$ 的 Hochschild 同调 $\operatorname{HH}(\mathcal C)\in\mathsf{Mod}_k$ 为如下复合函子的表示对象:
+$$
+\mathsf{Mod}(k) \overset{\mathrm{coev}}{\longrightarrow}\mathcal C\otimes_k\mathcal C^{\vee} \overset{\mathrm{ev}}{\longrightarrow} \mathsf{Mod}(k).
+$$
+更一般地, 对于函子 $f\colon \mathcal C \to \mathcal C$, 定义
+$\operatorname{HH}(\mathcal C,f)\in\mathsf{Mod}_k$ 为如下复合函子的表示对象:
+$$
+\mathsf{Mod}(k) \overset{\mathrm{coev}}{\longrightarrow}\mathcal C\otimes_k\mathcal C^{\vee} \overset{f\otimes\mathrm{id}}{\longrightarrow} \mathcal C\otimes_k\mathcal C^{\vee} \overset{\mathrm{ev}}{\longrightarrow} \mathsf{Mod}(k).
+$$</p>
+<p>特别地, 当 $\mathcal C = \mathsf{LMod}(A)$ 是 $k$-代数 $A$ 上的左模范畴时, $\operatorname{HH}(\mathcal C) = A\otimes_{A\otimes A^{}}$</p>
+<h3>传统定义</h3>
+<p>设 $k$ 为域, $R$ 为 $k$-代数, $M$ 为 $R$ 双模. 考虑<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯</a></span> $R$-模 $C_\bullet(R,M):= M\otimes_k R^{\otimes \bullet}$, 其面映射具体为
+$$
+d_0\colon (m\otimes r_1\otimes \cdots \otimes r_n) \mapsto (m r_1\otimes r_2\otimes\cdots\otimes r_n),
+$$
+$$
+d_i\colon (m\otimes r_1\otimes \cdots \otimes r_n) \mapsto (m\otimes r_1\otimes\cdots\otimes r_ir_{i+1}\otimes\cdots\otimes r_n),
+$$
+$$
+d_n\colon (m\otimes r_1\otimes \cdots \otimes r_n) \mapsto (r_nm\otimes r_1\otimes\cdots\otimes r_{n-1}).
+$$</p>
+<p>对于 $M=R$, 记 $C_n(R)=C_n(R,R)$.
+<strong>Hochschild 同调</strong> $H_\bullet(R,M)$ 即是上述<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯</a></span>模的同调; 对于 $M=R$, 记 $HH_n(R) = H_n(R,R)$.</p>
+<p>类似地定义 <strong>Hochschild 上同调</strong> $H^\bullet (R,M)$ 为复形 $\operatorname{Hom}(R^{\otimes n},M)$ 的上同调, 其中 $\delta=\sum_i (-1)^i \delta_i$, $\delta_i$ 定义为
+$$
+(\delta_0 f)(r_1\otimes\cdots\otimes r_n) =r_1 f(r_2\otimes\cdots\otimes r_n),
+$$
+$$
+(\delta_i f) (r_1\otimes \cdots\otimes r_n) = f(r_1\otimes\cdots\otimes r_ir_{i+1}\otimes\cdots\otimes r_n),
+$$
+$$
+(\delta_n f)(r_1\otimes\cdots\otimes r_n) = f(r_1\otimes\cdots \otimes r_{n-1})r_n.
+$$
+对于 $M=R$, 记 $HH^n(R)=H^n(R,R)$.</p>
+<h2>性质</h2>
+<p>考虑 $R$ 的中心 $Z(R)$, 可以证明 $H_*(R,M)$ 上有 $Z(R)$-双模结构.</p>
+<h2>与 Tor, Ext 的关系</h2>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./Hochschild同调.html" title="Hochschild 同调 [Hochschild同调]">Hochschild 同调</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="分解同调"><header><h1><span class="taxon">Wiki. </span>分解同调 <a class="slug" href="./分解同调.html">[分解同调]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>分解同调</strong> (factorization homology), 又叫<strong>手性同调</strong> (chiral homology), 是将 $\mathbb E_n$-代数 “沿 $n$ 维流形作张量积”, 或更一般地将 <span class="link local"><a href="./E_M-算畴.html" title="E_M-算畴 [E_M-算畴]">$\mathbb E_M$-算畴</a></span>的代数在流形 $M$ 上作 “张量积”.</p>
+<p>$n$ 维流形范畴上的任何具有局部性的自然构造都是某个 $\mathbb E_n$-代数的分解同调.</p>
+<p>$S^1$ 上的分解同调即 <span class="link local"><a href="./Hochschild同调.html" title="Hochschild 同调 [Hochschild同调]">Hochschild 同调</a></span>.</p>
+<p>分解同调也可以理解为流形的<span class="link local"><a href="./同调.html" title="同调 [同调]">同调群</a></span>的推广. 由 <span class="link local"><a href="./Dold–Thom定理.html" title="Dold–Thom 定理 [Dold–Thom定理]">Dold–Thom 定理</a></span>, 空间的同调群是其 “$\mathbb N$-系数构形空间” (即空间生成的自由交换幺半群) 的同伦群; 而对于 $\mathbb E_n$-代数 $A$, 可构造标架流形 $M$ 上的 “$A$-系数构形空间”, 直观上标架提供了将 $\mathbb E_n$-代数的元素 “相加” 的方法.</p>
+<h2>定义</h2>
+<p>记 $\mathsf{Mfd}_n$ 为如下<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>: 其对象为 $n$ 维光滑流形, 态射空间为光滑<strong>嵌入</strong>的空间 (注意不是光滑映射的空间), <span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span>结构为流形的不交并 (注意这个结构不是 $\mathsf{Mfd}_n$ 中的余积, 因为两个嵌入 $M_1\to N$, $M_2\to N$ 不一定能给出<strong>嵌入</strong> $M_1\sqcup M_2\to N$).</p>
+<h3>$\mathbb E_n$-代数的分解同调</h3>
+<p>设 $(\mathcal C,\otimes)$ 为<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半范畴</a></span>, $A$ 为其中的 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$-代数</a></span>. 回忆, <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$-代数</a></span>的<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法范畴</a></span>为 “标架 $n$-圆盘范畴” $\mathsf{Disk}_n^{\mathrm{fr}}$ (其对象为若干个 $n$-圆盘的无交并, 态射为保持标架的光滑嵌入). 换言之, $\mathcal C$ 中的 <span class="link local"><a href="./En-算畴.html" title="En-算畴 [En-算畴]">$\mathbb E_n$</a></span>-代数 $A$ 等同于对称幺半函子
+$$
+    A\colon \mathsf{Disk}_n^{\mathrm{fr}} \to \mathcal C.
+$$</p>
+<p>现在设 $M$ 是带<span class="link local"><a href="./切结构.html" title="切结构 [切结构]">标架</a></span>的 $n$ 维光滑流形. 考虑范畴
+$(\mathsf{Disk}_n^{\mathrm{fr}})_{/M}$,
+其对象为嵌入 $\sqcup_k  \mathbb{R}^n \hookrightarrow M$, 态射为包含关系. 定义 $A$ 在 $M$ 上的<strong>分解同调</strong>为
+$$
+\int_M A := \operatorname{colim}_{(\mathsf{Disk}_n^{\mathrm{fr}})_{/M}} A^{\otimes k}= \operatorname{colim}_{\sqcup_k  \mathbb{R}^n \hookrightarrow M}
+A^{\otimes k}.
+$$</p>
+<p>那么分解同调函子
+$$
+\int_{-}A \colon \mathsf{Mfd}_{n}^{\mathrm{fr}} \to \mathcal C
+$$
+是 $A$ 沿 $\mathsf{Disk}_n^{\mathrm{fr}} \hookrightarrow \mathsf{Mfd}_n^{\mathrm{fr}}$ 的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">左 Kan 扩张</a></span>.</p>
+<h3>$\mathbb E_M$-代数的分解同调</h3>
+<p>固定流形 $M$, 记 $\mathsf{Disk}_n$ 为 $\mathsf{Mfd}_n$ 中由 $S\times\mathbb{R}^n$ ($S$ 为有限集) 构成的全子范畴. 有一个直观的函子 $(\mathsf{Disk}_n)_{/M} \to \mathbb E_M^\otimes$ (后者是指 <span class="link local"><a href="./E_M-算畴.html" title="E_M-算畴 [E_M-算畴]">$\mathbb E_M$-算畴</a></span>作为 $\mathsf{Fin}_{*}$ 上的纤维范畴的全空间.) 这个函子允许我们对 $\mathbb{E}_M$-代数 $\mathcal{A}$ 与 $U\in (\mathsf{Disk}_n)_{/M}$ 谈论 $\mathcal{A}$ 的 “$U$ 分量” $\mathcal{A}(U)$.</p>
+<p>对于有<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal O$, 可构造分解同调
+$$
+\int_M \colon \mathsf{Alg}_{\mathbb E_M}(\mathcal O) \to \mathcal O,
+$$
+$$
+\int_M \mathcal A := \operatorname{colim}_{U\in (\mathsf{Disk}_n)_{/M}} \mathcal A (U).
+$$</p>
+<h2>性质</h2>
+<h3>切除性</h3>
+<p>设 $\mathcal C$ 的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span>结构 $\otimes$ 保持每个分量的<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>. 那么对于 $\mathbb E_n$-代数 $A$,
+$$
+\int_{-}A\colon \mathsf{Mfd}_n^{\text{fr}} \to\mathcal C
+$$
+是对称幺半函子. 此时进一步有如下的 $\otimes$-<strong>切除性</strong> (excision):
+对于标架 $n$-流形的 “粘领口” (collar-gluing) 分解
+$$
+	X=X_0\cup_{W\times\mathbb{R}}X_1
+$$
+($X_0$, $X_1$ 为 $X$ 中的开集, $X_0\cap X_1=W\times\mathbb{R}$), 有
+$$
+	\int_X A \simeq \int_{X_0}A{\bigotimes_{\int_{W\times\mathbb{R} }A}}\int_{X_1}A.
+$$
+其中用到 $\int_{W\times\mathbb{R}}A$ 是<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> (因为有对称幺半函子 $W\times -\colon \mathsf{Disk}_1^{\text{fr}} \to \mathsf{Mfd}_n^{\text{fr}}$), 且 $\int_{X_0}A$ 是 $\int_{W\times \mathbb{R}}A$-右模
+(这是因为领口可以再加一个领口, 两个领口可以合成一个领口).</p>
+<h3>例: $S^1$ 的分解同调</h3>
+<p>由于 $S^1$ 可以写成
+$$
+S^1 = \mathbb{R} \cup_{S^0\times\mathbb{R}} \mathbb{R},
+$$
+对任意 $\mathbb E_1$-代数 (即<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>) $A$, 切除性给出一个等价
+$$
+\int_{S^1}A\simeq A\otimes_{A^{\mathrm{op}}\otimes A}A.
+$$
+这便是 <span class="link local"><a href="./Hochschild同调.html" title="Hochschild 同调 [Hochschild同调]">Hochschild 同调</a></span>的一种定义.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="幺半维数"><header><h1><span class="taxon">Wiki. </span>对称幺半维数 <a class="slug" href="./幺半维数.html">[幺半维数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>中, 一个对象的幺半维数是其恒等映射的<span class="link local"><a href="./迹.html" title="迹 [迹]">迹</a></span>.</p>
+<h2>例</h2>
+<p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>在 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>中的幺半维数是其 <span class="link local"><a href="./Hochschild同调.html" title="Hochschild 同调 [Hochschild同调]">Hochschild 同调</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="粘构形范畴"><header><h1><span class="taxon">Wiki. </span>粘构形范畴 <a class="slug" href="./粘构形范畴.html">[粘构形范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><strong>粘构形范畴</strong> (category of sticky configurations) 是 <span class="link local"><a href="./AndradeMfdInvEn.html" title=" [AndradeMfdInvEn]">Ricardo Andrade 的博士论文</a></span> (以下简称 “原文”) 定义的一个范畴. 对于空间 $X$, 该文定义了一个范畴 $\mathbb M(X)$,</p>
+<ul>
+<li>其对象为 $X$ 中的有限点集;</li>
+<li>态射为 “粘同伦”, 即一种特殊的同伦, 其中两个点 “一旦碰到一起便不会再分开”, 仿佛这些点有 “粘性”.</li>
+</ul>
+<h2>定义</h2>
+<p>记</p>
+<ul>
+<li>$\mathsf{Top}$ 为拓扑空间的范畴;</li>
+<li>$\mathsf{Cat}^{\hookrightarrow}$ 为 $\mathsf{Cat}^{\to}$ 的子范畴, 其对象为子范畴的含入 $\mathcal C_0 \hookrightarrow \mathcal C_1$;</li>
+<li>$\mathsf{Cat}^{\hookrightarrow}_{\mathrm{cart}}$ 为 $\mathsf{Cat}^{\hookrightarrow}$ 的子范畴, 其对象 $\mathcal C_0\hookleftarrow\mathcal C_1$ 满足 $\mathcal C_1$ 具有拉回, 且 $\mathcal C_0$ 中的态射关于拉回稳定, $\mathsf{Cat}^{\hookrightarrow}_{\mathrm{cart}}$ 的态射为保持拉回的函子, $2$-态射为拉回自然变换 (即自然性条件的每个方块均为拉回方块).</li>
+</ul>
+<p><strong>定义</strong> (粘同伦). 考虑 $(\mathcal C_0\hookrightarrow\mathcal C_1)\in\mathsf{Cat}^{\hookrightarrow}$, 以及函子 $F \colon \mathcal C_1 \to \mathsf{Top}$.
+对于 $\mathcal C_1$ 的对象 $x$, 称拓扑空间 $F(x)$ 上的道路 $\alpha$ 为<strong>粘同伦</strong> (sticky homotopy) 是指如下条件成立: 对 $\mathcal C_0$ 中的任意态射 $y\to x$, 若道路 $\alpha$ 在某时刻落入 $F(y)\to F(x)$ 的像, 则它该时刻以后都落在这个像中.</p>
+<p><strong>注</strong>. 粘同伦的概念具有良好的函子性. 设 $\mathcal C = (\mathcal C_0\hookrightarrow\mathcal C_1)\in\mathsf{Cat}^{\hookrightarrow}$, $F\colon \mathcal C_1 \to \mathsf{Top}$,
+考虑拓扑空间 $F(x)$ 的道路范畴 $\operatorname{Path}F(x)$, 它是 $\mathsf{Top}$ 的<span class="link local"><a href="./内范畴.html" title="内范畴 [内范畴]">内范畴</a></span> (粗略地说, 即其对象集和态射集均有拓扑结构), 则粘同伦给出其一个子范畴 $\operatorname{St}F(x) \to \operatorname{Path}F(x)$. 这一构造关于许多东西有函子性, 详见原文 III.3 节. 这里的叙述已经比原文简化了许多, 但仍旧显得过度抽象. 读者可安心地忽略以上内容, 从下一段开始阅读.</p>
+<p>记</p>
+<ul>
+<li>$\mathsf{Fin}$ 为有限集 (即有限离散拓扑空间) 的范畴.</li>
+<li>$\mathsf{Fin}_{\mathrm{surj}}$ 为 $\mathsf{Fin}$ 中由满射构成的子范畴.</li>
+</ul>
+<p>对任意拓扑空间 $X$, 我们的想法是用有限点集 “探测” 之, 得到函子 $\operatorname{Hom}(-,X) \colon \mathsf{Fin}^{\mathrm{op}} \to \mathsf{Top}$. 对于有限集 $S$ 到 $X$ 的映射 $f,g\colon S\to X$ 以及 $f$ 到 $g$ 的同伦 $\alpha$, 若以下条件成立则称之为<strong>粘同伦</strong>:</p>
+<ul>
+<li>对任意满射 $S \to T$, 若同伦 $\alpha$ 在某时刻落入 $\operatorname{Hom}(T,X)\to \operatorname{Hom}(S,X)$ 的像, 则它此后都落在这个像中.</li>
+</ul>
+<p>换言之, 若 $S$ 的两个点在某时刻碰到一起, 则它们此后都保持在一起.</p>
+<p>对每个有限集 $S$ 均有 $\mathsf{Top}$ 的一个<span class="link local"><a href="./内范畴.html" title="内范畴 [内范畴]">内范畴</a></span> $\operatorname{St}\operatorname{Hom}(S,X)$, 其对象为映射 $S\to X$, 态射为粘同伦. 对这一构造进行某种 <span class="link local"><a href="./Grothendieck构造.html" title="Grothendieck 构造 [Grothendieck构造]">Grothendieck 构造</a></span> (即对所有 $S$ 将这些范畴合在一起), 得到 $\mathsf{Top}$ 的一个<span class="link local"><a href="./内范畴.html" title="内范畴 [内范畴]">内范畴</a></span> $\mathbb M^{\mathrm{big}}(X)$ (原文 III.4.4), 表示 “所有有限点集到 $X$ 的映射与粘同伦构成的范畴”, 再取其中的单射 $S\hookrightarrow X$ (所谓<strong>构形</strong>) 构成的子范畴, 得到 $\mathbb M(X)$.</p>
+<h2>例</h2>
+<h3>$S^1$ 的粘构形范畴</h3>
+<p>$S^1$ 的粘构形范畴可给出 <span class="link local"><a href="./Hochschild同调.html" title="Hochschild 同调 [Hochschild同调]">Hochschild 同调</a></span>.</p>
+<p>记 $\mathbb{Z}\mathsf{Poset}$ 为带 $\mathbb{Z}$-作用的偏序集的范畴. 对正整数 $n$ 考虑其中的对象 $x_n$, 底层偏序集为 $(\mathbb{Z},\leq)$, $\mathbb{Z}$-作用由映射 $(-)+n$ 给出. 定义范畴 $\mathcal E$ 为 $\varnothing$ 与 $x_n\,(n\in\mathbb{Z}_{+})$ 在 $\mathbb{Z}\mathsf{Poset}$ 中构成的全子范畴, 原文称之为 <strong>Elmendorf 范畴</strong>.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

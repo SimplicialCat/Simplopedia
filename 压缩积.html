@@ -64,6 +64,62 @@ $$
 (\mathsf{Ani},\times)\overset{(-)_+}{\to}(\mathsf{Ani}_*,\wedge)
 \overset{\Sigma^\infty}{\to}(\mathsf{Sp},\wedge).
 $$</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Bousfield 局部化 (稳定同伦论) <a class="slug" href="./Bousfield局部化.html">[Bousfield局部化]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Sp <a class="slug" href="./Sp.html">[Sp]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Bousfield局部化"><header><h1><span class="taxon">Wiki. </span>Bousfield 局部化 (稳定同伦论) <a class="slug" href="./Bousfield局部化.html">[Bousfield局部化]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本页面介绍<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的 Bousfield 局部化. 另见<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化 (范畴论)</a></span>.</p>
+<h2>观念</h2>
+<p>固定一个<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span> $E$. 关于 $E$ 的 Bousfield 局部化提取出 $E$ 表示的<span class="link local"><a href="./广义同调.html" title="广义同调 [广义同调]">同调理论</a></span>可见的同伦信息.
+Bousfield 局部化也可理解为谱的范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 关于 $E$-等价的 <span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">(范畴论) 局部化</a></span>.</p>
+<h2>定义</h2>
+<p>为了定义 $E$-局部谱, 首先需要 $E$-无圈谱, $E$-等价的概念.</p>
+<ul>
+<li>称谱 $X$ 为 $E$-<strong>无圈谱</strong>是指 $E\wedge X = 0$.</li>
+<li>称谱的态射 $f\colon X\to Y$ 为 $E$-<strong>等价</strong>是指如下等价条件之一成立:
+<ul>
+<li>$E\wedge f\colon E\wedge X \to E\wedge Y$ 为等价 (换言之, $f$ 诱导 $E$-<span class="link local"><a href="./广义同调.html" title="广义同调 [广义同调]">同调</a></span>的同构);</li>
+<li>$f$ 的<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维</a></span>为 $E$-无圈谱.</li>
+</ul>
+</li>
+<li>称谱 $X$ 为 $E$-<strong>局部谱</strong>是指如下等价条件之一成立:
+<ul>
+<li>对任意 $E$-等价 $f\colon A\to B$, $[f,X] \colon [B,X] \to [A,X]$ 为同构;</li>
+<li>对任意 $E$-无圈谱 $A$, $[A,X] \simeq 0$.</li>
+</ul>
+</li>
+</ul>
+<p><strong>命题</strong>. 对任意谱 $X$ 存在自然的 (余) <span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
+$$
+{_E}X \to X \overset{\eta}{\to} X_E \to \Sigma ({_E}X),
+$$
+使得</p>
+<ul>
+<li>${_E}X$ 为 $E$-无圈谱,</li>
+<li>$X_E$ 为 $E$-局部谱,</li>
+<li>$\eta\colon X\to X_E$ 为 $E$-等价.</li>
+</ul>
+<p>$E$-局部化可视为 “将 $E$-等价变为等价” 的操作.</p>
+<h2>性质</h2>
+<p><strong>命题</strong>. 设 $E$ 为<span class="link local"><a href="./环谱.html" title="环谱 [环谱]">环谱</a></span>, $X$ 为 $E$-模, 则 $X$ 为 $E$-局部谱.</p>
+<p><strong>证明</strong>. 设 $A$ 为任意 $E$-无圈谱. 那么任意态射 $A\to X$ 可分解为
+$$
+A \overset{1}{\to}E\wedge A\overset{f}{\to}E\wedge X \to X,
+$$
+而 $A\wedge E=0$, 这说明 $[A,X] \simeq 0$.</p>
+<p>另一种说法是, 由于 $X$ 是 $E$-模, $X$ 是 $X\wedge E$ 的收缩, 而对任何谱 $X$, $X\wedge E$ 都是 $E$-局部谱. (好像 $E$-模是 $E$-局部谱这个结论更基本一些.)</p>
+<p><strong>命题</strong>. $E$-局部谱的子范畴关于平移, 收缩, 积 (直和), 余纤维封闭.</p>
+<p>注意, $E$-局部谱的<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">张量积</a></span>不一定是 $E$-局部谱.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Sp"><header><h1><span class="taxon">Wiki. </span>Sp <a class="slug" href="./Sp.html">[Sp]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴 $\mathsf{Sp}$ 是最基本的<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>, 是<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>的范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 的<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>
+$$
+\mathsf{Sp} := \lim\Big(\cdots\overset{\Omega}{\longrightarrow} \mathsf{Ani}_*
+\overset{\Omega}{\longrightarrow} \mathsf{Ani}_*\Big)
+\in \mathsf{Cat}_{\infty}.
+$$
+其构造思路大致是: 从带基点<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>范畴 <span class="link local"><a href="./Ani_pt.html" title="带基点生象的范畴 [Ani_pt]">$\mathsf{Ani}_*$</a></span> 开始, 强行让<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span> $\Sigma$ 变得可逆, 得到一个新的范畴.</p>
+<h2>性质</h2>
+<p>$\mathsf{Sp}$ 上有<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span> $\wedge$ 与映射谱 $[-,-]$ 给出的<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span><span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半</a></span>结构. 有<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半函子</a></span>
+$$
+(\mathsf{Set},\times) \to (\mathsf{Ani},\times) \overset{(-)_+}{\to} (\mathsf{Ani}_{*/},\wedge) \overset{\Sigma_{\infty}}{\to} (\mathsf{Sp},\wedge).
+$$</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

@@ -65,6 +65,91 @@ $$</p>
 <p>Dedekind ζ-函数的非平凡零点记录了 $\mathcal O_K$ 的素理想分布的信息.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./ζ-函数.html" title="ζ-函数 [ζ-函数]">ζ-函数</a></span></p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Riemann ζ-函数 <a class="slug" href="./Riemannζ-函数.html">[Riemannζ-函数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>ζ-函数 <a class="slug" href="./ζ-函数.html">[ζ-函数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Riemannζ-函数"><header><h1><span class="taxon">Wiki. </span>Riemann ζ-函数 <a class="slug" href="./Riemannζ-函数.html">[Riemannζ-函数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于 $\mathrm{Re}s &gt; 1$,
+$$
+\zeta(s)=\sum_{n\geq 1}n^{-s}=\prod_{p}\frac{1}{1-p^{-s}}.
+$$
+定义 (大写的) Zeta-函数为 $\zeta$ 乘上 “Gamma-因子”
+$$
+Z(s)=\pi^{-s/2}\Gamma(s/2)\zeta(s),
+$$
+其中 $\Gamma$ 在 $\mathrm{Re}s&gt;0$ 时的定义为
+$$
+\Gamma(s)=\int_0^\infty e^{-t}t^s \frac{dt}{t},
+$$
+而在其它处由函数方程延拓:
+$$
+\Gamma(s+1)=s\Gamma(s).
+$$</p>
+<p><strong>定理</strong>. Zeta-函数可延拓为复平面上的亚纯函数, 在 $s=1$ 有一个留数为 $1$ 的单极点, 在 $s=0$ 有一个留数为 $-1$ 的单极点, 没有其它极点. Zeta 函数满足方程
+$$
+Z(s)=Z(1-s).
+$$</p>
+<h2>性质</h2>
+<p>Riemann ζ-函数的倒数是 <span class="link local"><a href="./Möbius函数.html" title="Möbius 函数 [Möbius函数]">Möbius 函数</a></span>对应的 Dirichlet 级数:
+$$
+\zeta(s) = \sum_{n\geq 1}n^{-s} = \Big(\sum_{n\geq 1}\mu(n)n^{-s}\Big)^{-1}.
+$$</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./ζ-函数.html" title="ζ-函数 [ζ-函数]">ζ-函数</a></span></p>
+<p><span class="link local"><a href="./Dedekindζ-函数.html" title="“Dedekind ζ-函数” [Dedekindζ-函数]">Dedekind ζ-函数</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="ζ-函数"><header><h1><span class="taxon">Wiki. </span>ζ-函数 <a class="slug" href="./ζ-函数.html">[ζ-函数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>复代数簇</h3>
+<p>对于光滑复<span class="link local"><a href="./射影簇.html" title="“射影簇” [射影簇]">射影簇</a></span> $X$ 与映射 $f\colon X\to X$, 定义关于 $t$ 的形式幂级数
+$$
+	Z(X,f,t) = \prod_i \det(1-f^*|_{H^i(X,\mathbb{C})} t) ^{(-1)^{i+1}},
+$$</p>
+<h3>有限域上的代数簇</h3>
+<p>对于有限域 $\mathbb F_q$ 上的拟射影代数簇 $X$, 定义
+$$
+Z(X,T) = \exp \left(\sum_{r=1}^{\infty}\frac{T^r}{r}\# X(\mathbb F_{q^r})\right),
+$$
+定义 $\zeta(s) = Z(X,q^{-s})$.</p>
+<h3>函数域</h3>
+<p>设 $K$ 为<span class="link local"><a href="./函数域.html" title="“函数域” [函数域]">函数域</a></span>, $\mathcal O_K$ 为其整数环, 几何上意味着将 $\mathbb A^1=\operatorname{Spec}\mathbb F_q[t]$ <span class="link local"><a href="./正规化.html" title=" [正规化]">正规化</a></span>为光滑仿射曲线 $\mathcal U=\operatorname{Spec}\mathcal O_K$.
+$$
+\zeta(s) = \prod_{\mathfrak p}\frac{1}{1-|\mathcal O_K / \mathfrak p|^{-s}},
+$$
+它是 $T=q^{-s}$ 的形式幂级数. 几何上 $\mathfrak p$ 对应曲线 $U$ 的闭点. 可以证明
+$$
+\zeta(s)=\exp\Bigg(
+	\sum_{n=1}^\infty \frac{q^{-ns}}{n}|U(\mathbb F_{q^n})|
+\Bigg).
+$$
+(取对数, 这是一个好的练习.)</p>
+<p>曲线上的无穷<span class="link local"><a href="./位.html" title="“位” [位]">位</a></span>和其余的位是相似的, 不应区分. 这就是说应该考虑 $\mathbb P^1$ 在曲线中的正规化, 作为射影曲线.</p>
+<p><span class="link local"><a href="./Weil猜想.html" title="“Weil 猜想” [Weil猜想]">Weil 猜想</a></span></p>
+<h3>数域</h3>
+<p>设 $K$ 为<span class="link local"><a href="./数域.html" title="数域 [数域]">数域</a></span>, $\mathcal O_K$ 为其整数环. 定义 <span class="link local"><a href="./Dedekindζ-函数.html" title="“Dedekind ζ-函数” [Dedekindζ-函数]">Dedekind ζ-函数</a></span>
+$$
+\zeta(s) = \sum_{\mathfrak a\subset\mathcal O_K}\frac{1}{(\# \mathcal O_K / \mathfrak a)^s} = \prod_{\mathfrak p\subset\mathcal O_K\,\text{prime}}\left(1-\frac{1}{(\#\mathcal O_K / \mathfrak p)^s}\right)^{-1}.
+$$
+特别地, 当 $\mathcal O_K=\mathbb{Z}$ 时这是 <span class="link local"><a href="./Riemannζ-函数.html" title="Riemann ζ-函数 [Riemannζ-函数]">Riemann ζ-函数</a></span>.</p>
+<h3>椭圆算子</h3>
+<p>对于椭圆算子 $H$, 其 ζ-函数是如下函数的解析延拓:
+$$
+\zeta(s) = \operatorname{tr}\Big(\frac{1}{H}\Big)^s = \text{``}\,\sum_\lambda \lambda ^{-s}\,\text{''}.
+$$
+当 $H$ 是 <span class="link local"><a href="./Riemann面.html" title="“Riemann 面” [Riemann面]">Riemann 面</a></span>上的 <span class="link local"><a href="./Laplace算子.html" title="“Laplace 算子” [Laplace算子]">Laplace 算子</a></span>时, 这称为 Selberg ζ-函数.</p>
+<h2>例</h2>
+<p>$$
+Z(\mathbb A^n,T) = \frac{1}{1-q^n T}.
+$$
+$$
+Z(\mathbb P^n,T) = \frac{1}{(1-T)(1-qT)\cdots (1-q^n T)}.
+$$</p>
+<p><span class="link local"><a href="./椭圆曲线.html" title="“椭圆曲线” [椭圆曲线]">椭圆曲线</a></span> $E_{/\mathbb F_q}$ 的 <span class="link local"><a href="./Frobenius态射.html" title="Frobenius 态射 [Frobenius态射]">Frobenius 态射</a></span>的 $n$ 次方的不动点为 $\# E(\mathbb F_{q^n})$, 也即 $\deg (\mathrm{id}-\mathrm{Frob}^n)$ (?).</p>
+<blockquote>
+<p>Frob act on Tate modules?</p>
+</blockquote>
+<blockquote>
+<p>Generalize to abelian varieties?</p>
+</blockquote>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./函数域类比.html" title="函数域类比 [函数域类比]">函数域类比</a></span></p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

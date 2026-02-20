@@ -100,6 +100,273 @@ $\Omega^n\otimes\mathcal E^*$ 被 $K^{n,*}_{\text{c}}$ (紧支集分布 ?) 消�
 <h2>一般结论</h2>
 <p>Grothendieck 的做法来源于对<span class="link local"><a href="./前推.html" title=" [前推]">直像</a></span> $f_*$ 的右伴随的探索 (它的左伴随是拉回).</p>
 <p>对于 $n$ 维光滑射影概形 $X$,</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Euler 示性数 <a class="slug" href="./Euler示性数.html">[Euler示性数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Fourier–向井变换” <a class="slug" href="./Fourier--向井变换.html">[Fourier--向井变换]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Hirzebruch–Riemann–Roch 定理” <a class="slug" href="./Hirzebruch--Riemann--Roch定理.html">[Hirzebruch--Riemann--Roch定理]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Hitchin 模叠” <a class="slug" href="./Hitchin模叠.html">[Hitchin模叠]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Hodge 星算子” <a class="slug" href="./Hodge星算子.html">[Hodge星算子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Serre 函子” <a class="slug" href="./Serre函子.html">[Serre函子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“亏格” <a class="slug" href="./亏格.html">[亏格]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li><li class="meta-item">拓扑亏格</li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“典范丛” <a class="slug" href="./典范丛.html">[典范丛]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li><li class="meta-item">典范线丛</li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“形变” <a class="slug" href="./形变.html">[形变]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Euler示性数"><header><h1><span class="taxon">Wiki. </span>Euler 示性数 <a class="slug" href="./Euler示性数.html">[Euler示性数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>流形</h2>
+<p>流形的 Euler 示性数等于 <span class="link local"><a href="./Euler类.html" title="“Euler 类” [Euler类]">Euler 类</a></span>的积分.</p>
+<p><strong>定理</strong>. 设 $M$ 为紧 <span class="link local"><a href="./Kähler流形.html" title="Kähler 流形 [Kähler流形]">Kähler 流形</a></span>, 定义 (注意符号 $(-1)^q$, 通常的 Euler 示性数此处是 $(-1)^{p+q}$.)
+$$
+\chi_1 (M) :=\sum_{p=0}^n \sum_{q=0}^n (-1)^q h^{p,q}(M),
+$$
+那么 $\chi_1(M) = \tau(M)$ 等于 $M$ 上<span class="link local"><a href="./相交形式.html" title="“相交形式” [相交形式]">相交形式</a></span> ($H^n$ 上的配对) 的指标 (正惯性指数减负惯性指数; $n$ 是奇数时约定流形的指标为 $0$).</p>
+<p><strong>证明</strong>. $n$ 是奇数时, <span class="link local"><a href="./Serre对偶.html" title="“Serre 对偶” [Serre对偶]">Serre 对偶</a></span>给出 $h^{p,q} = h^{n-p,n-q}$, 从而 $\chi_1(M) = 0$.</p>
+<p>$n$ 是偶数时, 考虑调和形式的空间 $\mathcal  B^{p,q}$. 我们的思路是将它分解为可计算的子空间, 同时把 $\tau(M)$ 表示为这些子空间维数的交错和.</p>
+<p>注意到<span class="link local"><a href="./基本形式.html" title="“基本形式” [基本形式]">基本形式</a></span> $\omega$ 是调和形式, 定义 $L\colon \mathcal B^{p,q}\to \mathcal B^{p+1,q+1}$, $\Lambda\colon \mathcal B^{p,q} \to \mathcal B^{p-1,q-1}$,
+$$
+L\colon \alpha\mapsto \omega\alpha,\quad</p>
+<p>\Lambda \colon  \alpha\mapsto (-1)^{p+1} # L # \alpha,
+$$
+则 $L,\Lambda,H=[L,\Lambda] = p+q-n$ 构成 $\mathfrak {sl}_2$ 的表示. 参见<span class="link local"><a href="./sl2的表示.html" title="“sl2的表示” [sl2的表示]">sl2的表示</a></span>.</p>
+<p>经过一些观察, 我们有分解
+$$
+\mathcal B^{p,q} = \mathcal B_0^{p,q} \oplus L \mathcal B_0^{p-1,q-1}\oplus \cdots \oplus L^r\mathcal B_0^{q-r,p-r}\,(r=\min(p,q)),
+$$
+其中 $\mathcal B_0^{p,q} = \ker\Lambda$. 记 $\mathcal B_k^{p,q}:= L^k \mathcal B_0^{p-k,q-k}$.</p>
+<p>回忆 <span class="link local"><a href="./Hodge分解定理.html" title=" [Hodge分解定理]">Hodge 理论</a></span>
+$$
+H^n(M;\mathbb{C})\simeq \bigoplus_{\substack {p+q=n \\ k\leq \min(p,q)}}\mathcal B_k^{p,q},
+$$
+它关于 $H^n$ 上的内积 $\displaystyle (\alpha,\beta) = \int_M \alpha\wedge \# \beta$ 实际上是正交分解.</p>
+<h2>向量丛</h2>
+<p>向量丛的 Euler–Poincaré 特征定义为
+$$
+\chi(X,E) := \sum_{i\geq 0} (-1)^i \dim H^i(X,E).
+$$
+它是 “拓扑不变量”, 在 $X$ 与 $E$ 的 “连续形变” 下不变.</p>
+<h2>截面</h2>
+<p>复流形的 Euler 示性数是其<span class="link local"><a href="./全纯切丛.html" title=" [全纯切丛]">全纯(余)切丛</a></span>的一般位置的截面的零点数.</p>
+<p><strong>例</strong>. $\mathbb{C}P^1$ 上的向量场 $z\frac{\partial}{\partial z}$ 是一个旋转的生成元, 有两个零点, 位于南北极. 向量场 $\frac{\partial}{\partial z}$ 在北极有一个二重零点.</p>
+<h2>最高陈类</h2>
+<p>复流形上的最高<span class="link local"><a href="./陈类.html" title="“陈类” [陈类]">陈类</a></span>又称 <span class="link local"><a href="./Euler类.html" title="“Euler 类” [Euler类]">Euler 类</a></span>, 其积分等于 Euler 数.</p>
+<h2>层</h2>
+<p>Euler 示性数有时比上同调更好计算.</p>
+<p>设 $\mathscr F$ 是 $k$-射影代数簇 $X$ 上的<span class="link local"><a href="./凝聚层.html" title="凝聚层 [凝聚层]">凝聚层</a></span>, 定义
+$$
+\chi(X,\mathscr F)=\sum_{i=0}^{\dim X} (-1)^i \dim_k H^i(X,\mathscr F).
+$$</p>
+<p><strong>命题</strong>. 设 $0\to \mathscr F\to \mathscr G\to \mathscr H\to 0$ 是 $k$-射影代数簇 $X$ 上<span class="link local"><a href="./凝聚层.html" title="凝聚层 [凝聚层]">凝聚层</a></span>的正合列, 那么
+$$
+\chi(X,\mathscr G) = \chi(X,\mathscr F) + \chi (X,\mathscr H).
+$$
+更一般地, 若 $\mathscr F_\bullet$ 是 (有限项) 正合列, 则有 $\sum_i (-1)^i \chi(X,\mathscr F_i)=0$.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Fourier--向井变换"><header><h1><span class="taxon">Wiki. </span>“Fourier–向井变换” <a class="slug" href="./Fourier--向井变换.html">[Fourier--向井变换]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>Fourier–向井变换是<span class="link local"><a href="./凝聚层的导出范畴.html" title="凝聚层的导出范畴 [凝聚层的导出范畴]">凝聚层的导出范畴</a></span>之间的函子 $D(X)\to D(Y)$, 它是通过核对象 $K\in D(X\times Y)$ 构造的 “积分变换”.</p>
+<p>许多基本的函子, 如<span class="link local"><a href="./直像.html" title="“直像” [直像]">直像</a></span>与<span class="link local"><a href="./逆像.html" title="逆像 [逆像]">逆像</a></span>, 都具有这种形式.</p>
+<p>向井茂于 1981 年最早使用这种变换研究 <span class="link local"><a href="./Abel簇.html" title="“Abel 簇” [Abel簇]">Abel 簇</a></span>与其对偶上的<span class="link local"><a href="./凝聚层的导出范畴.html" title="凝聚层的导出范畴 [凝聚层的导出范畴]">凝聚层的导出范畴</a></span>的等价性, 这类似于 Fourier 变换建立了向量空间与其对偶空间上分布的同构.</p>
+<h2>定义</h2>
+<p>设 $X,Y$ 是光滑代数簇. 对于 $P \in D^b(X\times Y)$, 有函子 $\Phi_P\colon D^b(X)\to D^b(Y)$,
+$$
+\mathcal E \mapsto  p_*(P \otimes q^*\mathcal E).
+$$
+(省略了所有导出记号.)</p>
+<p>投影映射是平坦的, 也即 $q^*$ 没有导出. 若 $P$ 局部自由, 则 $p_*$ 也没有导出.</p>
+<h2>例</h2>
+<h3>恒等</h3>
+<p>对于对角线层 $\Delta\colon X\to X\times X$, $P=\mathcal O_\Delta$ 对应 $\operatorname{id}$.</p>
+<p>$$
+\begin{aligned}
+	\Phi_{\mathcal O_\Delta}(\mathcal E) &amp; \simeq p_*(\Delta_* \mathcal O_X \otimes q^*\mathcal E)\\
+	&amp; \simeq p_* \Delta_* (\Delta^* q^*\mathcal E \otimes\mathcal O_X).
+\end{aligned}
+$$
+这里使用了<span class="link local"><a href="./投影公式.html" title="投影公式 [投影公式]">投影公式</a></span>,
+$$
+Rf_*(\mathcal F^\bullet) \otimes^L \mathcal E \simeq Rf_* (\mathcal F^\bullet \otimes^L Lf^*\mathcal E).
+$$</p>
+<h3>前推与拉回</h3>
+<p>对于 $f\colon X\to Y$ 的 “图像” $\iota \colon X\to X\times Y$, $\Gamma_f := \iota_*\mathcal O_X$, 两个方向的 Fourier–向井变换分别是<span class="link local"><a href="./前推.html" title=" [前推]">直像</a></span> $f_*$ 和<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">逆像</a></span> $f^*$.</p>
+<h3>一族连续变化的层</h3>
+<p>设 $P\in D^b(X\times Y)$ 在 $X$ 上凝聚平坦 (coherent flat). (想象 $Y$ 为参数, $P_x$ 是 $P_{x_0}$ 的形变)</p>
+<p>(待补充)</p>
+<h3>小平–Spencer 映射</h3>
+<p>(待补充)
+$$
+T_{x_0}X \to \operatorname{Ext}^1(P_{x_0},P_{x_0})
+$$
+注意 $T_{x_0}X$ 同构于 $\operatorname{Ext}^1(k(x_0),k(x_0))$.</p>
+<h2>性质</h2>
+<p><strong>定理</strong>. Fourier–向井变换有左右伴随, 且均为 Fourier–向井变换.</p>
+<p>对 $P\in D^b(X\times Y)$, 定义 $P_L = P^\vee \otimes p^* \omega_Y[\dim Y]$ ($p\colon X\times Y\to Y$ 为投影), $P_R = P^\vee \otimes q^*\omega_X [\dim X] \in D^b(Y\times X)$. 参见 <span class="link local"><a href="./Serre对偶.html" title="“Serre 对偶” [Serre对偶]">Serre 对偶</a></span>.</p>
+<p><strong>定理</strong>. 两个 Fourier–向井变换的复合也是 Fourier–向井变换.</p>
+<p>对 $P\in D^b(X\times Y)$, $Q\in D^b(Y\times Z)$, 定义 $R\in D^b(X\times Z)$ 如下.
+$$
+R = (\pi_{XZ})_* ((\pi_{XY})^*P \otimes (\pi_{YZ})^* Q).
+$$
+其中 $\pi_{XZ}$ 是 $X\times Y\times Z$ 到 $X\times Z$ 的投影, 等等.</p>
+<p>如下是 Fourier–向井变换是全忠实函子的判定.</p>
+<p><strong>定理</strong> 设 $X,Y$ 是特征 $0$ 的代数闭域 $k$ 上的光滑<span class="link local"><a href="./射影簇.html" title="“射影簇” [射影簇]">射影簇</a></span>, $P\in D^b(X\times Y)$. Fourier–向井变换 $\Phi$ 是全忠实函子当且仅当对任意闭点 $x,y\in X$,
+$$
+\operatorname{Hom}(\Phi_P(k(x)),\Phi_P(k(y))[i])=
+\begin{cases}
+k, &amp; x=y,i=0\\
+0, &amp; x\neq y\text{ or }i&lt;0 \text{ or }i&gt;\dim X.
+\end{cases}
+$$</p>
+<h2>K-理论版本</h2>
+<p>$\mathcal F^\bullet \in D^b(X)$ 对应 $X$ 的 <span class="link local"><a href="./K-群(拓扑).html" title="“K-群 (拓扑)” [K-群(拓扑)]">K-群 (拓扑)</a></span>中的元素 $[\mathcal F^\bullet]:=\sum (-1)^i[\mathcal F^i] \in K(X)$.</p>
+<p><strong>命题</strong>. $[\mathcal F^\bullet] = \sum (-1)^i [\mathcal H^i (\mathcal F^\bullet)]$.</p>
+<p>定义<span class="link local"><a href="./紧支集直像.html" title="“紧支集直像” [紧支集直像]">紧支集直像</a></span> $f_! \mathcal F := \sum (-1)^i [R^i f_*\mathcal F]$.</p>
+<p><span class="link local"><a href="./K-理论.html" title="“K-理论” [K-理论]">K-理论</a></span>版本的 Fourier–向井变换定义如下. 对 $e\in K(X\times Y)$,
+$$
+\Phi^K_e \colon f\mapsto p_!(e\otimes q^* f).
+$$</p>
+<h2>上同调版本</h2>
+<p>对于 $f\colon X\to Y$, 有 $f_*\colon H^*(X;\mathbb{Q}) \to H^{*+2\dim Y - 2\dim X}(Y;\mathbb{Q})$, 满足<span class="link local"><a href="./投影公式.html" title="投影公式 [投影公式]">投影公式</a></span>
+$$
+f_*(f^*\alpha \cdot \beta) = \alpha \cdot f_*\beta.
+$$
+定义 $\Phi^H\colon H^*(X;\mathbb{Q}) \to H^*(Y;\mathbb{Q})$,
+$$
+\Phi^H\colon \beta\mapsto p_*(\alpha \cdot q^* \beta).
+$$</p>
+<p><span class="link local"><a href="./陈特征.html" title="“陈特征” [陈特征]">陈特征</a></span>是从 <span class="link local"><a href="./K-群(拓扑).html" title="“K-群 (拓扑)” [K-群(拓扑)]">K-群 (拓扑)</a></span>到上同调的函子, 可联系 K-理论和上同调两个版本的 Fouier–向井变换. 两者的关系涉及 <span class="link local"><a href="./Todd类.html" title="“Todd 类” [Todd类]">Todd 类</a></span>: 设 $e\in K(X\times Y)$, 则
+$$
+\Phi^H_{v(e)} (\operatorname{ch}(f)\sqrt{\operatorname{td}X}) = \operatorname{ch}(\Phi^K_e(f)) \sqrt{\operatorname{td}Y}.
+$$
+其中 $v(e) = \operatorname{ch}(e)\sqrt{\operatorname{td}X} \in H^*(X;\mathbb{Q})$ 称为 Fourier–向井向量.</p>
+<p><strong>证明</strong>.
+$$
+\begin{array}
+	{ccccccc}
+	K(X) &amp; \to &amp; K(X\times Y) &amp; \to &amp; K(X\times Y) &amp; \to &amp; K(Y)\\
+	\downarrow &amp;&amp; \downarrow &amp;&amp; \downarrow &amp;&amp; \downarrow\\
+	H^*(X) &amp; \to &amp; H^*(X\times Y) &amp; \to &amp; H^*(X\times Y) &amp; \to &amp; H^*(Y)
+\end{array}
+$$
+中间方块交换是由于 <span class="link local"><a href="./Grothendieck--Riemann--Roch定理.html" title="“Grothendieck–Riemann–Roch 定理” [Grothendieck--Riemann--Roch定理]">Grothendieck–Riemann–Roch 定理</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Hirzebruch--Riemann--Roch定理"><header><h1><span class="taxon">Wiki. </span>“Hirzebruch–Riemann–Roch 定理” <a class="slug" href="./Hirzebruch--Riemann--Roch定理.html">[Hirzebruch--Riemann--Roch定理]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>Hirzebruch–Riemann–Roch 定理是整体复 (代数) 几何中一个十分有用的定理. 它是 <span class="link local"><a href="./Riemann--Roch定理.html" title="“Riemann–Roch 定理” [Riemann--Roch定理]">Riemann–Roch 定理</a></span>的推广, 可视为 <span class="link local"><a href="./Grothendieck--Riemann--Roch定理.html" title="“Grothendieck–Riemann–Roch 定理” [Grothendieck--Riemann--Roch定理]">Grothendieck–Riemann–Roch 定理</a></span>中 $Y$ 为一个点且基域为 $\mathbb{C}$ 的情形.</p>
+<p>对于紧复流形 (或概形) 上的<span class="link local"><a href="./全纯向量丛.html" title="“全纯向量丛” [全纯向量丛]">全纯向量丛</a></span> (或一般的<span class="link local"><a href="./凝聚层.html" title="凝聚层 [凝聚层]">凝聚层</a></span>), 其 <span class="link local"><a href="./Euler示性数.html" title="Euler 示性数 [Euler示性数]">Euler 示性数</a></span>, 即<span class="link local"><a href="./凝聚层上同调.html" title="“凝聚层上同调” [凝聚层上同调]">凝聚层上同调</a></span>的交错和 (对于平凡丛即 <span class="link local"><a href="./Dolbeault算子.html" title=" [Dolbeault算子]">Dolbeault 上同调</a></span>的<span class="link local"><a href="./指标.html" title=" [指标]">解析指标</a></span>), 等于 <span class="link local"><a href="./Todd类.html" title="“Todd 类” [Todd类]">Todd 类</a></span>与<span class="link local"><a href="./陈特征.html" title="“陈特征” [陈特征]">陈特征</a></span>之积:
+$$
+\chi(\mathcal F) =\int_M \operatorname{ch}(\mathcal F)\wedge \operatorname{td}(TM).
+$$
+(积分表示取最高维上同调)</p>
+<h2>曲线的情形</h2>
+<p>对于曲线 $X$ 上的除子 $D$,</p>
+<ul>
+<li><span class="link local"><a href="./可逆层.html" title="“可逆层” [可逆层]">可逆层</a></span> $\mathcal O(D)$ 的<span class="link local"><a href="./陈特征.html" title="“陈特征” [陈特征]">陈特征</a></span>是 $1+c_1(\mathcal O(D))$,</li>
+<li>曲线 $X$ 的 <span class="link local"><a href="./Todd类.html" title="“Todd 类” [Todd类]">Todd 类</a></span>是 $1+c_1(TX)/2$,</li>
+<li>$h^0(\mathcal O(D))$ 就是 $l(D)$,</li>
+<li>$h^1(\mathcal O(D))$ 由 <span class="link local"><a href="./Serre对偶.html" title="“Serre 对偶” [Serre对偶]">Serre 对偶</a></span>等于 $l(K-D)$, 其中 $K$ 是<span class="link local"><a href="./典范除子.html" title=" [典范除子]">典范除子</a></span>.</li>
+</ul>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Hitchin模叠"><header><h1><span class="taxon">Wiki. </span>“Hitchin 模叠” <a class="slug" href="./Hitchin模叠.html">[Hitchin模叠]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<blockquote>
+<p>The Hitchin moduli stack $\mathcal M_G$ is essentially the total space of the cotangent bundle of $\mathrm{Bun}_G$, therefore perverse sheaves on $\mathrm{Bun}_G$ are related to the symplectic geometry of $\mathcal M_G$ via the characteristic cycle construction. — 恽之伟, Hitchin-type moduli spaces in automorphic representation theory</p>
+</blockquote>
+<p><span class="link local"><a href="./主丛的模空间.html" title="“主丛的模空间” [主丛的模空间]">主丛的模空间</a></span>在主丛 $E$ 处的切空间, 即 $E$ 的无穷小形变的空间 $H^1(X,\operatorname{ad}E)$, 由 <span class="link local"><a href="./Serre对偶.html" title="“Serre 对偶” [Serre对偶]">Serre 对偶</a></span>等同于 $H^0(X,\mathcal K_X\otimes\operatorname{ad}E)$, 其元素称为 <span class="link local"><a href="./Higgs场.html" title="“Higgs 场” [Higgs场]">Higgs 场</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Hodge星算子"><header><h1><span class="taxon">Wiki. </span>“Hodge 星算子” <a class="slug" href="./Hodge星算子.html">[Hodge星算子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>固定复 $n$ 维流形上的 Hermite 度量 (即同构 $\overline{T^*X}\simeq TX$), 可得 $(p,q)$-形式与 $(n-p,n-q)$-形式的对应:
+$$
+\begin{aligned}
+	&amp;\wedge^p T^*X \otimes \wedge^q \overline{T^*X}\\
+	\simeq&amp;\wedge^p T^*X \otimes \underbrace{\wedge^n TX \otimes \wedge^n T^*X}_{\text{平凡}} \otimes \wedge^q \overline{T^*X}\\
+	\simeq &amp; (\wedge^p T^*X \otimes \wedge^n TX)\otimes (\wedge^q \overline{T^*X} \otimes \wedge^n \overline{TX})\\
+	\simeq &amp; \wedge^{n-p}TX\otimes\wedge^{n-q}\overline{TX}.
+\end{aligned}
+$$
+最后一步用到了配对
+$$
+\wedge^p T^*X \otimes \wedge^{n-p}T^*X \overset{\wedge}{\longrightarrow} \wedge^n T^*X,
+$$
+配对的非退化性可用 <span class="link local"><a href="./Serre对偶.html" title="“Serre 对偶” [Serre对偶]">Serre 对偶</a></span>证明.</p>
+<p>取向量丛 $E$ 上的 Hermite 结构 $\psi\colon E \overset{\simeq}{\to}\overline{E^*}$. 定义
+$$
+\#\colon E\otimes \mathcal A^{p,q} \to E^*\otimes \mathcal A^{n-p,n-q},\quad
+\# = \psi\otimes \overline{\star}.
+$$
+且 $\widetilde \# = \psi^{-1}\otimes\overline{\star}$. 定义
+$$
+\vartheta = - \widetilde {\#} \bar\partial \#.
+$$
+$$
+\begin{array}
+	{ccc}
+	E\otimes \mathcal A^{p,q} &amp; \to &amp; E^*\otimes \mathcal A ^{n-p,n-q}\\
+	\hspace{-1em}-\vartheta\downarrow &amp;&amp; \downarrow\bar{\partial}\hspace{-1em}\\
+	E\otimes \mathcal A^{p,q-1} &amp; \to &amp; E^*\otimes \mathcal A ^{n-p,n-q+1}
+\end{array}
+$$
+定义内积
+$$
+(\alpha,\beta) = \int_X \alpha\wedge\#\beta,
+$$
+则 $\vartheta$ 是 $\bar\partial$ 的伴随.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Serre函子"><header><h1><span class="taxon">Wiki. </span>“Serre 函子” <a class="slug" href="./Serre函子.html">[Serre函子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>Serre 函子实现了 <span class="link local"><a href="./Serre对偶.html" title="“Serre 对偶” [Serre对偶]">Serre 对偶</a></span>.</p>
+<h2>定义</h2>
+<p>设 $\mathsf A$ 为 $k$-<span class="link local"><a href="./线性范畴.html" title="“线性范畴” [线性范畴]">线性范畴</a></span>. Serre 函子是 $k$-线性等价 $\mathsf A\to \mathsf A$, 具有自然同构
+$$
+\operatorname{Hom}(A,B)\to \operatorname{Hom}(B,S(A))^*.
+$$</p>
+<h2>例</h2>
+<p>设 $X$ 是 $k$ 上的光滑射影代数簇, 那么
+$$
+S_X \colon D^b(X)\to D^b(X)
+$$
+为 Serre 函子.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="亏格"><header><h1><span class="taxon">Wiki. </span>“亏格” <a class="slug" href="./亏格.html">[亏格]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li><li class="meta-item">拓扑亏格</li></ul></div></header></summary>
+
+<p>亏格 (genus) 有多种含义, 它们之间联系紧密.</p>
+<h2>拓扑亏格</h2>
+<p>连通可定向曲面的亏格是其 “洞” 的数量. 球面的亏格为 $0$, 环面的亏格为 $1$.</p>
+<p>带边曲面的亏格与欧拉数的关系为
+$$
+\chi = 2-2g-b,
+$$
+其中 $b$ 为边界的连通分支数.</p>
+<p>对于<span class="link local"><a href="./复曲线.html" title=" [复曲线]">Riemann 面</a></span>, 其拓扑亏格, 算数亏格, 几何亏格三者相等.</p>
+<h2>算数亏格</h2>
+<p>定义<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span> $X$ 的<strong>算数亏格</strong> (arithmetic genus) 为
+$$
+p_a(X) = 1-\chi(X,\mathcal O_X).
+$$
+对于代数闭域上的整射影曲线, $h^0(X,\mathcal O_X)=1$, 故 $p_a(X)= h^1(X,\mathcal O_X).$ (高维的情形, 后者不是特别自然.)</p>
+<p>正则不可约射影复曲线对应的 <span class="link local"><a href="./Riemann面.html" title="“Riemann 面” [Riemann面]">Riemann 面</a></span>的亏格 $g=p_a$.</p>
+<h2>几何亏格</h2>
+<p>$k$ 上的正则不可约射影<span class="link local"><a href="./曲线.html" title="“曲线” [曲线]">曲线</a></span> $C$ 的<strong>几何亏格</strong> (geometric genus) 为 $h^0(C,\Omega_{C/k})$.</p>
+<p>推广到高维情形, 设 $X$ 是 $k$ 上的 $n$ 维光滑代数簇, 考虑<span class="link local"><a href="./典范层.html" title=" [典范层]">典范丛</a></span>
+$$
+\mathscr K_{X/k} := \det \Omega_{X/k} = \Omega_{X/k}^n,
+$$即 “体积形式” 的层 (当 $X$ 为<span class="link local"><a href="./射影簇.html" title="“射影簇” [射影簇]">射影簇</a></span>时它是 <span class="link local"><a href="./Serre对偶.html" title="“Serre 对偶” [Serre对偶]">Serre 对偶</a></span>中的 $\omega_X$). $X$ 的<strong>几何亏格</strong>定义为
+$$
+p_g(X) := h^0(X,\mathscr K_{X/k}).
+$$</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="典范丛"><header><h1><span class="taxon">Wiki. </span>“典范丛” <a class="slug" href="./典范丛.html">[典范丛]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li><li class="meta-item">典范线丛</li></ul></div></header></summary>
+
+<p>$n$ 维复流形 (或代数簇) 的典范丛是其<span class="link local"><a href="./余切丛.html" title=" [余切丛]">切丛</a></span>的 $n$ 次外积. 典范丛与<span class="link local"><a href="./Serre对偶.html" title="“Serre 对偶” [Serre对偶]">Serre 对偶</a></span>有关.</p>
+<p>典范丛的整体截面可定义射影嵌入, 称为典范映射 $\varphi_n \colon X\to \mathbb P(\Gamma(X,\omega_X)^\vee)$. 当 $n$ 充分大时, 典范映射的像 $\operatorname{im}\varphi_n \subset \mathbb P(\Gamma(X,\omega_X^{\otimes n})^\vee)$ 是稳定的, 其维数称为<span class="link local"><a href="./小平维数.html" title="“小平维数” [小平维数]">小平维数</a></span> (Kodaira dimension).</p>
+<h2>定义</h2>
+<h3>复流形</h3>
+<p>对于 $n$ 维复流形 $M$, 定义其上的<strong>典范线丛</strong> (canonical line bundle)
+$$
+K_M :=\wedge^n {T^*}'M,
+$$
+其中 ${T^*}'M$ 为<span class="link local"><a href="./全纯余切丛.html" title=" [全纯余切丛]">全纯(余)切丛</a></span>.</p>
+<h2>伴随公式</h2>
+<h2>陈类</h2>
+<p>典范丛的第一<span class="link local"><a href="./陈类.html" title="“陈类” [陈类]">陈类</a></span>
+$$
+c_1(K_M) = - c_1(\wedge^m T'M) = - c_1(M).
+$$</p>
+<h2>例</h2>
+<h3>典范丛平凡的情形</h3>
+<p><span class="link local"><a href="./K3曲面.html" title="“K3 曲面” [K3曲面]">K3 曲面</a></span>,</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="形变"><header><h1><span class="taxon">Wiki. </span>“形变” <a class="slug" href="./形变.html">[形变]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设 $X$ 是光滑 $k$-代数簇, $(Y,y_0)$ 是带基点<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span>. $X$ 在 $(Y,y_0)$ 上的<strong>形变</strong>是一个平坦<span class="link local"><a href="./紧合映射.html" title="紧合映射 [紧合映射]">紧合映射</a></span> $\mathcal X\to Y$ 与一个同构 $\psi\colon X\to \varphi^{-1}(y_0)$.</p>
+<p><strong>一阶无穷小形变</strong>是 $(\operatorname{Spec}k[x]/(x^2),(x))$ 之上的形变.</p>
+<h2>曲线的无穷小形变</h2>
+<p><span class="link local"><a href="./曲线.html" title="“曲线” [曲线]">曲线</a></span> $C$ 的无穷小形变的空间即为<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>的切空间, 由此可计算模空间的维数. 由 <span class="link local"><a href="./Serre对偶.html" title="“Serre 对偶” [Serre对偶]">Serre 对偶</a></span>,
+$$
+H^1(C,T_C) \simeq H^0 (C,T^\vee_C\otimes\omega_C)^\vee \simeq H^0(C,\omega_C^{\otimes 2}),
+$$
+后一个等式是因为 $T_C^\vee=\omega_C$; 又由 <span class="link local"><a href="./Riemann--Roch定理.html" title="“Riemann–Roch 定理” [Riemann--Roch定理]">Riemann–Roch 定理</a></span>,
+$$
+\dim H^0 (C,\omega_C^{\otimes 2})- \dim H^1(C,\omega_C^{\otimes 2})=\deg(\omega^{\otimes 2})+g-1=3g-3,
+$$
+又因为 $H^1(C,\omega_C^{\otimes 2})=0$ (为什么?), 所以曲线模空间的维数为
+$$
+\dim H^1(C,T_C)=3g-3.
+$$</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

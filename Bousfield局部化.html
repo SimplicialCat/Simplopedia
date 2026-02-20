@@ -98,6 +98,60 @@ $$
 <p>另一种说法是, 由于 $X$ 是 $E$-模, $X$ 是 $X\wedge E$ 的收缩, 而对任何谱 $X$, $X\wedge E$ 都是 $E$-局部谱. (好像 $E$-模是 $E$-局部谱这个结论更基本一些.)</p>
 <p><strong>命题</strong>. $E$-局部谱的子范畴关于平移, 收缩, 积 (直和), 余纤维封闭.</p>
 <p>注意, $E$-局部谱的<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">张量积</a></span>不一定是 $E$-局部谱.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Adams 谱序列” <a class="slug" href="./Adams谱序列.html">[Adams谱序列]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>完备化 (稳定同伦论) <a class="slug" href="./完备化(稳定同伦论).html">[完备化(稳定同伦论)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>局部化 (环) <a class="slug" href="./局部化.html">[局部化]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Adams谱序列"><header><h1><span class="taxon">Wiki. </span>“Adams 谱序列” <a class="slug" href="./Adams谱序列.html">[Adams谱序列]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<blockquote>
+<p>Adams 谱序列是计算<span class="link local"><a href="./配边.html" title="配边 [配边]">配边</a></span>不变量的一种方法, 另一种是指标定理. — 万喆彦, BIMSA 公开课 2023-09-18</p>
+</blockquote>
+<p>Adams 谱序列是计算<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的同伦群的有力工具.</p>
+<p>$$
+\operatorname{Ext}_{\mathcal A_p}^{s,t}(H^*(X,\mathbb{Z}/p),\mathbb{Z}/p) \Rightarrow \pi_{t-s}(X)_p^\wedge
+$$
+其中 $\mathcal A$ 为对应素数 $p$ 的 <span class="link local"><a href="./Steenrod代数.html" title="“Steenrod 代数” [Steenrod代数]">Steenrod 代数</a></span>.</p>
+<p>一般而言, 对于<span class="link local"><a href="./环谱.html" title="环谱 [环谱]">环谱</a></span> $E$, 有 $E$-Adams 谱序列, 其第二页为 $E$-(上) 同调. 它是非稳定同伦论中 <span class="link local"><a href="./Bousfield–Kan谱序列.html" title="“Bousfield–Kan 谱序列” [Bousfield–Kan谱序列]">Bousfield–Kan 谱序列</a></span>的类比.</p>
+<blockquote>
+<p>For $E$ a ring spectrum, hence an E-∞ ring, the totalization of its Amitsur complex cosimplicial spectrum $E^{\wedge\bullet}$ is really the algebraic dual incarnation of the $1$-image factorization of the terminal morphism
+$$
+ \operatorname{Spec}E \to\operatorname{Spec}(\operatorname{Tot}(E^{\wedge\bullet})) \overset{p}{\to} \operatorname{Spec}\mathbb S.
+ $$
+Moreover, a spectrum $X$ is equivalently a quasicoherent sheaf on $\operatorname{Spec}(\mathbb S)$ and $E^{\wedge\bullet}\wedge X$ is accordingly the Sweedler coring that expresses the descent property of $X$ pullled back along the cover $p$, dually the $E$-localization of $X$ (<span class="link local"><a href="./Bousfield局部化.html" title="Bousfield 局部化 (稳定同伦论) [Bousfield局部化]">Bousfield 局部化</a></span>). The Adams spectral sequence may then be seen to be the computation of the homotopy groups of the $E$-localization of $X$ in terms of its restriction to that cover.
+In general, notably for $E=H\mathbb F_p$, the 1-image of $\operatorname{Spec}(E)\to \operatorname{Spec}(\mathbb S)$ is smaller than $\operatorname{Spec}(\mathbb S)$ and therefore this process computes not all of $X$, but just the restriction to that one image (for instance just the $p$-local component). Examples of ring spectra which are “complete” with respect to the sphere spectrum in that the above 1-image coincides with $\operatorname{Spec}(\mathbb S)$ notably includes the complex cobordism cohomology spectrum $E=\mathrm {MU}$. That explains the relevance of the Adams-Novikov spectral sequence (noticing that the wedge summands of $\mathrm MU(p)$ are the BP-spectra) and the close interplay between the ANSS and chromatic homotopy theory.</p>
+</blockquote>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./Adams消解.html" title="“Adams 消解” [Adams消解]">Adams 消解</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="完备化(稳定同伦论)"><header><h1><span class="taxon">Wiki. </span>完备化 (稳定同伦论) <a class="slug" href="./完备化(稳定同伦论).html">[完备化(稳定同伦论)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<h2>定义</h2>
+<p>对于素数 $p$, <span class="link local"><a href="./Moore谱.html" title="Moore 谱 [Moore谱]">Moore 谱</a></span> $M\mathbb{Z}/p$ 处的<span class="link local"><a href="./Bousfield局部化.html" title="Bousfield 局部化 (稳定同伦论) [Bousfield局部化]">局部化</a></span>称为 $p$-<strong>完备化</strong>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="局部化"><header><h1><span class="taxon">Wiki. </span>局部化 (环) <a class="slug" href="./局部化.html">[局部化]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>环 (<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>) 的<strong>局部化</strong>是使其中某些元素成为可逆元的万有的方法.</p>
+<p>在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">几何侧</a></span>, 局部化将环的<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>变成原来的一个子空间.</p>
+<p>另见<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化 (范畴论)</a></span>, <span class="link local"><a href="./Bousfield局部化.html" title="Bousfield 局部化 (稳定同伦论) [Bousfield局部化]">Bousfield 局部化 (稳定同伦论)</a></span>.</p>
+<h2>定义</h2>
+<p>设 $A$ 为环, $S\subset A$ 为子集. 定义 $A$ 关于 $S$ 的<strong>局部化</strong> $A\to A[S^{-1}]$ 为满足如下条件的环同态:</p>
+<ul>
+<li>对任意环同态 $\varphi\colon A \to B$, 若 $\varphi(S)\subset B^\times$, 即 $\varphi$ 将 $S$ 的元素映射到 $B$ 的可逆元, 则 $\varphi$ 唯一地穿过 $A\to A[S^{-1}]$.</li>
+</ul>
+<h3>素理想</h3>
+<p>设 $\mathfrak p\subset A$ 为素理想. 定义 $A$ 在 $\mathfrak p$ <strong>处</strong>的局部化为 $A$ 关于 $\mathfrak p$ <strong>之外</strong>的元素的局部化:
+$$
+A_{\mathfrak p} := A [(A\setminus\mathfrak p)^{-1}].
+$$</p>
+<p>注意此处的记号稍有混淆.</p>
+<h2>性质</h2>
+<h3>分式计算</h3>
+<p>当子集 $S$ 是<strong>乘性</strong> (multiplicative) 子集, 即关于 $A$ 中的乘法封闭时, $A[S^{-1}]$ 的元素有如下具体表达式:
+$$
+A[S^{-1}] = \Big\{ \frac{a}{s} \Bigm| a\in A, s\in S \Big\} / \sim,
+$$
+其中等价关系 $\sim$ 为
+$$
+\frac{a}{s}\sim \frac{a'}{s'}\Leftrightarrow
+\exists t\in S\, t(as'-a's) = 0.
+$$</p>
+<h3>素理想</h3>
+<p>$A[S^{-1}]$ 的素理想等同于 $A$ 中与 $S$ 不相交的素理想.</p>
+<p>例如, $A_{\mathfrak p}$ 的素理想等同于 $A$ 中<strong>包含于</strong> $\mathfrak p$ 的素理想. (而 $A/\mathfrak p$ 的素理想等同于 $A$ 中<strong>包含</strong> $\mathfrak p$ 的素理想.)</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

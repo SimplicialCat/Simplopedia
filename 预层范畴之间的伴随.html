@@ -165,6 +165,86 @@ f_* X(f(c))\\
 $$
 即两个自然映射 $f^*f_*\to X \to f^*f_! X$ 均为同构.</p>
 <h2>例</h2>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Kan 扩张 <a class="slug" href="./Kan扩张.html">[Kan扩张]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>概形的约化 <a class="slug" href="./概形的约化.html">[概形的约化]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Kan扩张"><header><h1><span class="taxon">Wiki. </span>Kan 扩张 <a class="slug" href="./Kan扩张.html">[Kan扩张]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于函子 $f\colon \mathcal C \to \mathcal D$ 以及范畴 $\mathcal E$, 有拉回函子
+$$
+f^*\colon \mathsf {Fun}(\mathcal D,\mathcal E)\to \mathsf {Fun}(\mathcal C,\mathcal E).
+$$
+左右 Kan 扩张
+$$
+\operatorname{LKE}_f,\operatorname{RKE}_f
+\colon \mathsf {Fun}(\mathcal C,\mathcal E)\to \mathsf {Fun}(\mathcal D,\mathcal E)
+$$
+即是 $f^*$ 的左右伴随.</p>
+<h2>性质</h2>
+<h3>计算式</h3>
+<p>左右 Kan 扩张具有用余极限和极限的具体计算式:
+$$
+\operatorname{LKE}_f (F)(d) = \operatorname{colim}_{f(c) \to d} F(c),
+$$
+$$
+\operatorname{RKE}_f (F)(d) = \operatorname{lim}_{d\to f(c)} F(c).
+$$</p>
+<h2>例</h2>
+<table><thead><tr><th>左</th><th>右</th></tr></thead><tbody>
+<tr><td>张量积 $\otimes$</td><td>Hom</td></tr>
+<tr><td>余极限</td><td>极限</td></tr>
+<tr><td>几何实现 (realization)</td><td>全体 (totalization)</td></tr>
+</tbody></table>
+<h3>极限</h3>
+<p>对于指标范畴 $\mathcal I$, 沿 $\mathcal I\to 1$ 的左右 Kan 扩张 $\mathsf {Fun}(\mathcal I,\mathcal C)\to\mathcal C$ 分别为余极限和极限:
+$$
+\operatorname{LKE} (X) = \operatorname{colim}_{i} X(i),
+$$
+$$
+\operatorname{RKE} (X) = \operatorname{lim}_{i} X(i).
+$$</p>
+<h3>几何实现</h3>
+<p>$|{-}|\colon \Delta\to\mathsf {Top}$ 沿<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span> $\mathbf{y}\colon \Delta\to\mathsf {sSet}$ 的左 Kan 扩张 $\mathsf {sSet}\to\mathsf {Top}$ 为单纯集的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>:
+$$
+|X| := \operatorname{colim}_{\Delta^n \to X} |\Delta^n|,
+$$
+其中 $\Delta^n = \mathbf{y}([n])$.</p>
+<h3>预层范畴之间的伴随</h3>
+<p><span class="link local"><a href="./预层范畴之间的伴随.html" title="预层范畴之间的伴随 [预层范畴之间的伴随]">预层范畴之间的伴随</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="概形的约化"><header><h1><span class="taxon">Wiki. </span>概形的约化 <a class="slug" href="./概形的约化.html">[概形的约化]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>陈述</h2>
+<p>记 $\mathsf{Sch}_{\mathrm{red}}\hookrightarrow\mathsf{Sch}$ 为既约概形构成的子范畴. 嵌入函子 $\mathsf{Sch}_{\mathrm{red}}\hookrightarrow\mathsf{Sch}$ 有右伴随; 换言之, 对于既约概形 $X$ 和任意概形 $Y$, 映射 $X\to Y$ 唯一地穿过 $Y_{\mathrm{red}}$.</p>
+<h3>函子式</h3>
+<p><span class="link local"><a href="./既约环.html" title="既约环 [既约环]">既约环</a></span>的子范畴的嵌入 $i\colon \mathsf{Ring}_{\mathrm{red}} \hookrightarrow \mathsf{Ring}$ 有左伴随 $r$, 也即既约仿射概形的子范畴的嵌入有右伴随. 这对伴随诱导了<span class="link local"><a href="./预层范畴之间的伴随.html" title="预层范畴之间的伴随 [预层范畴之间的伴随]">预层范畴之间的四元伴随</a></span>
+$$
+i_! \dashv (i^* = r_!) \dashv (i_* = r^*) \dashv r_*,
+$$</p>
+<p>我们具体写出几个函子的表达式. 约定如下记号:</p>
+<ul>
+<li>$X\in\mathsf{Fun}(\mathsf{Ring},\mathsf{Set})$,</li>
+<li>$Y\in\mathsf{Fun}(\mathsf{Ring}_{\mathrm{red}},\mathsf{Set})$,</li>
+<li>$A\in\mathsf{Ring}$,</li>
+<li>$R\in\mathsf{Ring}_{\mathrm{red}}$.</li>
+</ul>
+<p>那么</p>
+<p>$$
+i_!Y(A) = \operatorname{colim}_{R\to A} Y(R),
+$$
+$$
+i^*X(R) = r_!X (R) = X(R),
+$$
+$$
+i_*Y(A)=r^*Y(A) = Y(A_{\mathrm{red}}),
+$$
+$$
+r_*X(R)=\operatorname{lim}_{R\to A_{\mathrm{red}}} X(A).
+$$</p>
+<p>概形 $X\colon \mathsf{Ring}\to\mathsf{Set}$ 的<strong>约化</strong>为
+$$
+X_{\mathrm{red}} = i_!i^* X\colon A\mapsto \operatorname{colim}_{R\to A} X(R).
+$$</p>
+<p>例如对任意概形 $Y$, 映射 $X_{\mathrm{red}} \to Y$ 给出映射 $i^*X\to i^*Y$, 从而有 $X_{\mathrm{red}} \to Y_{\mathrm{red}}$.</p>
+<p>作为对比, 概形 $X \colon \mathsf{Ring} \to \mathsf{Set}$ 的 <span class="link local"><a href="./deRham空间.html" title="de Rham 空间 [deRham空间]">de Rham 空间</a></span>为
+$$
+X_{\mathrm{dR}} := i_*i^*X\colon A\mapsto X(A_{\mathrm{red}}).
+$$</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

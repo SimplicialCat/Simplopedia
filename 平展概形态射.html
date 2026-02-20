@@ -61,6 +61,81 @@
 <h2>例</h2>
 <p>概形的开浸入都是平展的.</p>
 <p><span class="link external"><a href="https://stacks.math.columbia.edu/tag/02GH" title="Stacks project [https://stacks.math.columbia.edu/tag/02GH]">Stacks project</a></span>: 域 $k$ 上的概形 $X$ 的结构态射 $X\to\operatorname{Spec}(k)$ 平展当且仅当 $X$ 是 $k$ 的若干有限可分扩域的谱的无交并.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Kummer 理论 <a class="slug" href="./Kummer理论.html">[Kummer理论]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>可分扩张 <a class="slug" href="./可分扩张.html">[可分扩张]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“非分歧概形态射” <a class="slug" href="./非分歧概形态射.html">[非分歧概形态射]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Kummer理论"><header><h1><span class="taxon">Wiki. </span>Kummer 理论 <a class="slug" href="./Kummer理论.html">[Kummer理论]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h3>单位根概形</h3>
+<p>设 $n$ 为正整数. 考虑<span class="link local"><a href="./乘法群概形.html" title="乘法群概形 [乘法群概形]">乘法群概形</a></span> $\mathbb G_m = \operatorname{Spec}\mathbb{Z}[x^{\pm 1}]$. 记
+$$
+n\colon \mathbb G_m \to \mathbb G_m
+$$
+为 $n$ 次方映射,
+定义 “$n$ 次单位根” <span class="link local"><a href="./群概形.html" title="群概形 [群概形]">群概形</a></span>为其核:
+$$
+\mu_n := \operatorname{ker}(n\colon \mathbb G_m \to \mathbb G_m).
+$$
+作为<span class="link local"><a href="./函子式代数几何.html" title="函子式代数几何 [函子式代数几何]">函子</a></span> $\mathsf{Ring} \to \mathsf{Set}$, $\mu_n(A)$ 是 $A$ 中 $n$ 次方等于 $1$ 的元素的集合. 作为<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>, $\mu_n = \operatorname{Spec}\mathbb{Z}[x]/(x^n-1)$.</p>
+<h3>基底的选取</h3>
+<p>记 $\zeta_n$ 为 $n$ 次<span class="link local"><a href="./本原单位根.html" title="本原单位根 [本原单位根]">本原单位根</a></span>. Kummer 理论关注的是定义在 $A:=\mathbb{Z}[1/n][\zeta_n]$ 上的概形 $X$, 这种概形 $X$ 满足 $\mathcal O(X)$ 具有本原 $n$ 次单位根, 且 $n$ 在其中可逆.</p>
+<p><span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>到 $A$ 上会产生如下两个重要现象:</p>
+<ul>
+<li>
+<p>由于本原单位根 $\zeta_n$ 的存在, 单位根群 $\mu_n$ 成为 $n$ 阶<strong>循环群</strong> $\mathbb{Z}/n$. 具体地, $A[x]/(x^n-1) \simeq \prod_{i=0}^{n-1} A[x]/(x-\zeta_n^i) \simeq A^n$.</p>
+</li>
+<li>
+<p>由于 $n$ 可逆, 概形态射 $n\colon \mathbb G_m \to\mathbb G_m$ 成为<span class="link local"><a href="./平展概形态射.html" title="“平展概形态射” [平展概形态射]">平展覆盖</a></span> ($y^n-x$ 关于 $y$ 的导数可逆), 从而是<span class="link local"><a href="./平展景.html" title="平展景 [平展景]">平展景</a></span>上的<span class="link local"><a href="./意象中的满射.html" title="意象中的满射 [意象中的满射]">满射</a></span>.</p>
+</li>
+</ul>
+<h3>长正合列</h3>
+<p>对于 $\mathbb{Z}[1/n][\zeta_n]$-<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span> $X$, 其<span class="link local"><a href="./平展景.html" title="平展景 [平展景]">平展景</a></span>上的<span class="link local"><a href="./群短正合列.html" title="群的短正合列 [群短正合列]">短正合列</a></span>
+$$
+0 \to \mu_n \to \mathbb G_m \overset{n}{\to} \mathbb G_m\to 0
+$$
+给出<span class="link local"><a href="./平展上同调.html" title="平展上同调 [平展上同调]">平展上同调</a></span>的长正合列
+$$
+\begin{aligned}
+0 &amp;\to \mu_n(X) \to \mathcal O(X)^* \overset{n}{\to} \mathcal O (X)^*\\
+&amp;\to H^1(X_{\mathrm{\'et}},\mu_n) \to \operatorname{Pic}(X) \overset{n}{\to} \operatorname{Pic}(X),
+\end{aligned}
+$$
+其中 $\operatorname{Pic}(X) = H^1(X,\mathbb G_m)$ 为 <span class="link local"><a href="./Picard群.html" title="Picard 群 [Picard群]">Picard 群</a></span>.
+这个结论也可以表述为正合列
+$$
+0 \to \mathcal O(X)^* / (\mathcal O(X)^*)^n
+\to H^1(X_{\mathrm{\'et}},\mu_n) \to \operatorname{Pic}(X)_n \to 0.
+$$</p>
+<p>设 $X$ 为代数闭域 $k$ 上的完备光滑曲线, 则 <span class="link local"><a href="./Picard群.html" title="Picard 群 [Picard群]">Picard 群</a></span>分解为 $\operatorname{Pic}^0(X)\oplus \mathbb{Z}$, 而 $\operatorname{Pic}^0(X) \simeq \operatorname{Jac}(X)(k)\simeq (\mathbb{Z}/n)^{2g}$, $\operatorname{Jac}(X)$ 为 <span class="link local"><a href="./Jacobi簇.html" title="Jacobi 簇 [Jacobi簇]">Jacobi 簇</a></span>.</p>
+<p><strong>结论</strong>. 设 $X$ 为代数闭域 $k$ 上亏格为 $g$ 的完备连通光滑曲线, 正整数 $n$ 在 $k$ 中可逆, 则
+$$
+H^1(X_{\mathrm{\'et}},\mu_n)\simeq H^1(X_{\mathrm{\'et}},\mathbb{Z}/n)\simeq (\mathbb{Z}/n)^{2g}.
+$$</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="可分扩张"><header><h1><span class="taxon">Wiki. </span>可分扩张 <a class="slug" href="./可分扩张.html">[可分扩张]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于域扩张 $F\hookrightarrow E$, 称 $\alpha\in E$ <strong>可分</strong>是指其极小多项式 $f_\alpha$ 满足 $\operatorname{gcd}(f_\alpha,f_\alpha ') = 1$, 这也等价于 $f_\alpha$ 在 $F$ 的某个<span class="link local"><a href="./代数闭包.html" title="代数闭包 [代数闭包]">代数闭包</a></span>上无重根.</p>
+<p>若 $E$ 的所有元素都可分, 则称域扩张 $F\hookrightarrow E$ 为可分扩张.</p>
+<p>注意这个定义要求可分扩张是代数扩张.</p>
+<p>极大的可分扩张称为<span class="link local"><a href="./可分闭包.html" title="可分闭包 [可分闭包]">可分闭包</a></span>.</p>
+<h2>性质</h2>
+<p>有限可分扩张对应的仿射概形的态射是<span class="link local"><a href="./平展概形态射.html" title="“平展概形态射” [平展概形态射]">平展概形态射</a></span>.</p>
+<h3>迹配对非退化</h3>
+<p><strong>命题</strong>. 域扩张 $F\hookrightarrow E$ 可分当且仅当迹映射给出一个<strong>非退化</strong>双线性型
+$$
+E\times E \to F, (x, y)\mapsto \operatorname{Tr}_{E/F}(xy).
+$$</p>
+<p>见 <span class="link external"><a href="https://stacks.math.columbia.edu/tag/0BIE" title="Stacks Project 0BIE [https://stacks.math.columbia.edu/tag/0BIE]">Stacks Project 0BIE</a></span>.</p>
+<h2>例</h2>
+<h3>不可分扩张的例子</h3>
+<p>$\mathbb{F}_p(x^p) \hookrightarrow \mathbb{F}_p(x)$ 不可分, 因为 $x$ 的极小多项式 $X^p-x^p = (X-x)^p$ 有重根. 这是<span class="link local"><a href="./纯不可分扩张.html" title="纯不可分扩张 [纯不可分扩张]">纯不可分扩张</a></span>的例子.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="非分歧概形态射"><header><h1><span class="taxon">Wiki. </span>“非分歧概形态射” <a class="slug" href="./非分歧概形态射.html">[非分歧概形态射]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>称<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span>态射 $f\colon X\to Y$ 非分歧 (unramified) 是指</p>
+<ul>
+<li>它是<span class="link local"><a href="./有限型概形态射.html" title=" [有限型概形态射]">有限型概形态射</a></span>;</li>
+<li>对每个点 $x\in X$, $\mathcal O_{Y,f(x)}\to\mathcal O_{X,x}$ 是<span class="link local"><a href="./非分歧的局部环同态.html" title="“非分歧的局部环同态” [非分歧的局部环同态]">非分歧的局部环同态</a></span>.</li>
+</ul>
+<h2>例</h2>
+<h3>可分多项式</h3>
+<p>设 $A$ 为环, $B=A[t]/(F)$, $F$ 为首一多项式. 那么 $\operatorname{Spec}(B)\to\operatorname{Spec}(A)$ 非分歧当且仅当 $F$ 可分, 即 $(F,F')$ 等于 $A[t]$ 的单位理想.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./平展概形态射.html" title="“平展概形态射” [平展概形态射]">平展概形态射</a></span></p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

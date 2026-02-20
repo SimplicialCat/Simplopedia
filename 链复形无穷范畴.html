@@ -93,6 +93,246 @@ $$
 <p>对于右正合函子 $\mathcal A\to\mathcal C^\heartsuit$, 称对应的函子 $\mathsf D^-(\mathcal A)\to\mathcal C$ 为其<span class="link local"><a href="./导出函子.html" title="导出函子 [导出函子]">导出函子</a></span>.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">微分分次范畴</a></span>: 充实于 $1$-范畴 $\mathsf {Ch}(\mathsf {Ab})$ 的范畴.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“三角范畴” <a class="slug" href="./三角范畴.html">[三角范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>广义同调 <a class="slug" href="./广义同调.html">[广义同调]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>微分分次 Lie 代数 <a class="slug" href="./微分分次Lie代数.html">[微分分次Lie代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>滤对象 <a class="slug" href="./滤过.html">[滤过]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>稳定范畴 <a class="slug" href="./稳定无穷范畴.html">[稳定无穷范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“链复形范畴的同伦范畴” <a class="slug" href="./链复形范畴的同伦范畴.html">[链复形范畴的同伦范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="三角范畴"><header><h1><span class="taxon">Wiki. </span>“三角范畴” <a class="slug" href="./三角范畴.html">[三角范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>三角范畴是范畴上的一种结构, 最早由 Verdier (1963年) 从<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>的结构抽象而来.</p>
+<h2>定义</h2>
+<p>设 $\mathsf D$ 为加性范畴. (若它是 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>, 则一切都是显然的.) 三角范畴的结构包括<strong>位移函子</strong> (shift functor) $T\colon \mathsf D\to \mathsf D$ (加性等价), 以及一族<strong>特殊三角</strong> (distinguished triangle, 或正合三角 exact triangle) $A\to B\to C\to T(A)$. 有时我们又将 $T(A)$ 记作 $A[1]$, 记 $[n]$ 为其 $n$ 次复合.</p>
+<p>特殊三角满足如下公理.</p>
+<p><strong>TR1</strong>.</p>
+<ol>
+<li>对任意对象 $A$, $A\overset{\operatorname{id}}{\to} A \to 0 \to A[1]$ 是特殊三角.</li>
+<li>同构于特殊三角的三角也是特殊三角.</li>
+<li>任意态射 $f$ 都可补全为特殊三角 $A\overset f\to B\to C\to A[1]$.</li>
+</ol>
+<p><strong>TR2</strong> (旋转公理).</p>
+<p>如下两个三角, 若其中之一是特殊三角, 则另一个也是特殊三角:
+$$
+A \overset{f}{\to} B \overset{g}{\to} C \overset{h}{\to} A[1],
+$$
+$$
+B \overset{g}{\to} C \overset{h}{\to} A[1]\overset{-f[1]}{\to}B[1].
+$$</p>
+<p>通常我们如下画特殊三角:
+$$
+\begin{array}
+	{ccc}
+	X &amp; \to &amp; Y\\
+	&amp;\hspace{-1em}_{+1}\nwarrow\quad\quad\swarrow&amp;\\
+	&amp;Z&amp;
+\end{array}
+$$</p>
+<p><strong>TR3</strong> (锥的弱唯一性).</p>
+<p>存在 (但不唯一) 态射使下图交换:
+$$
+\begin{array}
+	{ccccccc}
+	X &amp; \to &amp; Y &amp; \to &amp; Z &amp; \to &amp; X[1]\\
+	\downarrow &amp; &amp;\downarrow &amp; &amp;\downarrow\exists\hspace{-1em} &amp; &amp;\downarrow\\
+	X' &amp; \to &amp; Y' &amp; \to &amp; Z' &amp; \to &amp; X'[1]
+\end{array}
+$$
+(问题: 什么意义下它唯一? coherence?)</p>
+<p><strong>TR4</strong> (八面体公理).</p>
+<p>(理论成功的关键)</p>
+<p>$$
+\begin{array}
+{ccccccc}
+X &amp; \to &amp; Y &amp; \to &amp; Q_1 &amp; \to &amp; X[1]\\
+&amp; \searrow &amp; \downarrow &amp;&amp; \downarrow &amp;&amp;\\
+&amp;&amp;Z &amp; \to &amp; Q_2 &amp; \to &amp; X[1]\\
+&amp;&amp;\downarrow &amp; \swarrow\\
+&amp;&amp; Q_3\\
+&amp;&amp; \downarrow\\
+&amp;&amp; Y[1]
+\end{array}
+$$
+若有 $X\to Y\to Z$, 则有特殊三角 $Q_1\to Q_2\to Q_3$.</p>
+<h3>同调函子</h3>
+<p>函子 $F\colon  \mathsf D\to\mathsf {Ab}$ 称为<strong>同调函子</strong>是指它将特殊三角 $X\to Y\to Z\to X[1]$ 对应到正合列 $F(X)\to F(Y)\to F(Z)$.</p>
+<p><strong>例</strong>. 对任意 $W\in \mathsf D$, $\operatorname{Hom}(W,-)$ 是同调函子. 这是由于如下图表:
+$$
+\begin{array}
+	{ccccccc}
+	W &amp; = &amp; W &amp; \to &amp; 0 &amp; \to &amp; W[1]\\
+	\downarrow\exists\hspace{-1em} &amp; &amp;\downarrow &amp; &amp;\downarrow &amp; &amp;\downarrow\exists\hspace{-1em}\\
+	X &amp; \to &amp; Y &amp; \to &amp; Z &amp; \to &amp; X[1]
+\end{array}
+$$</p>
+<h2>性质</h2>
+<p>若 $X\overset{f}{\to} Y\overset{g}{\to} Z\to X[1]$ 是特殊三角, 则 $gf=0$. 这是由于如下图表:
+$$
+\begin{array}
+	{ccccccc}
+	X &amp; = &amp; X &amp; \to &amp; 0 &amp; \to &amp; X[1]\\
+	\downarrow &amp; &amp;\downarrow f\hspace{-1em} &amp; &amp;\downarrow\exists\hspace{-1em} &amp; &amp;\downarrow\\
+	X &amp; \underset{f}{\to} &amp; Y &amp; \underset{g}{\to} &amp; Z &amp; \to &amp; X[1]
+\end{array}
+$$</p>
+<h2>同伦范畴</h2>
+<p>加性范畴 $\mathcal A$ 的<span class="link local"><a href="./链复形无穷范畴.html" title="链复形无穷范畴 [链复形无穷范畴]">链复形无穷范畴</a></span> $\mathsf {Ch}(\mathcal A)$ 的<span class="link local"><a href="./同伦范畴.html" title="“同伦范畴” [同伦范畴]">链复形范畴的同伦范畴</a></span> $\mathsf K(\mathcal A)$ (态射是链映射的同伦类) 是三角范畴.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="广义同调"><header><h1><span class="taxon">Wiki. </span>广义同调 <a class="slug" href="./广义同调.html">[广义同调]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>广义同调一般是指空间范畴 (或<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>的范畴) 到 Abel 群范畴 (或<span class="link local"><a href="./链复形无穷范畴.html" title="链复形无穷范畴 [链复形无穷范畴]">链复形范畴</a></span>, <span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>范畴) 的满足某些同调公理的函子, 在空间较好的情形可由<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>表现:
+$$
+E_n(X) = \pi_n(X\wedge E).
+$$</p>
+<p>除了用谱表示的广义同调外, 还有其它一些概念可作为同调的推广, 如<span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>. 详见<span class="link local"><a href="./同调.html" title="同调 [同调]">同调</a></span>.</p>
+<h2>定义</h2>
+<h3>初等定义</h3>
+<p>定义<strong>同调理论</strong>为满足如下条件 (Eilenberg–Steenrod 公理) 的函子
+$$
+H\colon \mathsf{Top}\to\mathsf{Chain}(\mathbb{Z})
+$$
+(这里 $\mathsf{Chain}(\mathbb{Z})$ 是 $\mathbb{Z}$-模链复形构成的 $1$-范畴):</p>
+<ul>
+<li>$H$ 将同伦变为链同伦; (这是说 $H$ 表现了 $\infty$-范畴之间的函子 $\mathsf{Ani}\to\mathsf{Chain}(\mathbb{Z})$, 这里 $\mathsf{Chain}(\mathbb{Z})$ 是关于链同伦等价局部化得到的 $\infty$-范畴, 见<span class="link local"><a href="./链复形无穷范畴.html" title="链复形无穷范畴 [链复形无穷范畴]">链复形 $\infty$-范畴</a></span>.)</li>
+<li>$H$ 将无交并变为直和; (这是说 $H$ 保持余积)</li>
+<li>(切除法则, 或称 Mayer–Vietoris 法则) 设 $Z\to X$, $Z\to Y$ 为闭 CW 子复形, 则 $H(X\cup_Z Y)\simeq \operatorname{Cone}(H(Z)\to H(X)\oplus H(Y))$. (这基本上就是说 $H$ 保持 $\infty$-范畴意义下的推出, 因为映射锥表现的正是 $\infty$-范畴中的推出.)</li>
+</ul>
+<p>对任意 Abel 群 $G$, 存在 (同伦等价意义下) 唯一的同调理论 $H$ 使得 $H(*)\simeq G$.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="微分分次Lie代数"><header><h1><span class="taxon">Wiki. </span>微分分次 Lie 代数 <a class="slug" href="./微分分次Lie代数.html">[微分分次Lie代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>微分分次 Lie 代数是<span class="link local"><a href="./链复形无穷范畴.html" title="链复形无穷范畴 [链复形无穷范畴]">链复形范畴</a></span>中的 <span class="link local"><a href="./Lie代数.html" title="Lie 代数 [Lie代数]">Lie 代数</a></span>.</p>
+<h2>定义</h2>
+<p>微分分次 Lie 代数 (DGLA) $(L,[-,-],d)$ 由 $\mathbb{Z}$-分次线性空间 $L=\bigoplus_{i\in\mathbb{Z}} L^i$, Lie 括号 $[-,-]\colon L^i\times L^j\to L^{i+j}$ 以及微分 $d\colon L^i \to L^{i+1}$ 构成, 满足</p>
+<ul>
+<li>分次交换性
+$$[b,a]=(-1)^{\bar a\bar b}[a,b],$$</li>
+<li>Jacobi 恒等式
+$$
+[a,[b,c]] = [[a,b],c]+ (-1)^{\bar a \bar b}[b,[a,c]],
+$$</li>
+<li>Leibniz 法则
+$$
+d[a,b]=[da,b]+(-1)^{\bar a}[a,db],
+$$</li>
+<li>以及 $dd=0$.</li>
+</ul>
+<p>Jacobi 恒等式可理解为, 对于 $a\in L^i$, $\operatorname{ad}(a)$ 是 $i$ 阶导子.</p>
+<h2>例</h2>
+<p>对微分流形 $M$, Lie 代数 $\mathfrak g$, $M$ 上的 $\mathfrak g$-值微分形式 $\big(\Omega^\bullet(M,\mathfrak g),[-,-],d\big)$ 是微分分次 Lie 代数.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="滤过"><header><h1><span class="taxon">Wiki. </span>滤对象 <a class="slug" href="./滤过.html">[滤过]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本页讨论一般 $(\infty,1)$-范畴中的滤对象. 另见 <span class="link local"><a href="./滤对象(1-范畴).html" title="1-范畴中的滤对象 [滤对象(1-范畴)]">$1$-范畴中的滤对象</a></span>.</p>
+<h2>定义</h2>
+<p>范畴 $\mathcal C$ 中的<strong>滤对象</strong> (filtered object) 是一个序列
+$$
+X_\bullet = (\cdots\to X_{-1}\to X_0 \to X_1\to \cdots),
+$$
+即偏序集 $(\mathbb Z,\leq)$ 到范畴 $\mathcal C$ 的函子.
+另一种形式的滤对象是
+$$
+X^\bullet = (\cdots \to X_{1} \to X_0 \to X_{-1}\to\cdots),
+$$
+即 $\mathbb Z^{\mathrm{op}}$ 到 $\mathcal C$ 的函子.
+为了区分两种形式的滤对象, 可分别称之为上升滤对象和下降滤对象.</p>
+<p>有时我们想象滤对象中的态射为单射 (含入映射), 但一般 (尤其在 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">∞-范畴</a></span>语境中) 不需要这个条件.</p>
+<p>范畴 $\mathcal C$ 中一个对象 $X$ 的<strong>滤过</strong> (filtration) 是指一个滤对象 $X_\bullet$, 满足 $X\simeq\operatorname{colim}X_\bullet$.</p>
+<h2>例</h2>
+<p>对于 CW 复形 $X$, 有滤过
+$$
+\operatorname{sk}_0X \to \operatorname{sk}_1X \to \cdots.
+$$</p>
+<p>Lie 代数 $\mathfrak g$ 的<span class="link local"><a href="./泛包络代数.html" title="泛包络代数 [泛包络代数]">泛包络代数</a></span> $U\mathfrak g$ 有自然的滤过
+$$
+(U\mathfrak g)_0 \hookrightarrow (U\mathfrak g)_1 \hookrightarrow (U\mathfrak g)_2\hookrightarrow\cdots.
+$$</p>
+<p>流形 (概形) $X$ 上的<span class="link local"><a href="./微分层.html" title="微分算子层 [微分层]">微分算子层</a></span> $\mathcal D_X$ 有自然的滤过
+$$
+(\mathcal D_X)_0 \hookrightarrow (\mathcal D_X)_1 \hookrightarrow (\mathcal D_X)_2 \hookrightarrow\cdots.
+$$</p>
+<h3>典范滤过</h3>
+<p><span class="link local"><a href="./链复形无穷范畴.html" title="链复形无穷范畴 [链复形无穷范畴]">链复形范畴</a></span>或<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>的对象, 即链复形
+$$
+X = (\cdots\to X_1\to X_0 \to X_{-1}\to\cdots)
+$$
+具有典范的上升滤过 (todo: 方向合理吗)
+$$
+\tau_{\leq i} X= (\cdots\to 0 \to \operatorname{cofib}(X_{i+1}\to X_i) \to X_{i-1}\to X_{i-2}\to \cdots).
+$$
+以及典范的下降滤过
+$$
+\tau_{\geq i} X= (\cdots\to X_{i+2}\to X_{i+1} \to \operatorname{fib}(X_{i}\to X_{i-1}) \to 0\to \cdots).
+$$</p>
+<h2>性质</h2>
+<h3>谱序列</h3>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>, 带有 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">t 结构</a></span>且其心为 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span> $\mathcal A$. 那么对 $\mathcal C$ 中的滤对象 $X$ 可构造 $\mathcal A$ 中的<span class="link local"><a href="./谱序列.html" title="谱序列 [谱序列]">谱序列</a></span>. 见<span class="link local"><a href="./滤对象的谱序列.html" title="滤对象的谱序列 [滤对象的谱序列]">滤对象的谱序列</a></span>.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./关联分次代数.html" title="关联分次对象 [关联分次代数]">关联分次对象</a></span></p>
+<p><span class="link local"><a href="./同伦纤维塔.html" title="“同伦纤维塔” [同伦纤维塔]">同伦纤维塔</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="稳定无穷范畴"><header><h1><span class="taxon">Wiki. </span>稳定范畴 <a class="slug" href="./稳定无穷范畴.html">[稳定无穷范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>以下的范畴均默认为 $(\infty,1)$-范畴.</p>
+<p>稳定范畴是类似于<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 的, 具有一对互逆的<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>和<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> (<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span>) 函子的范畴.</p>
+<h2>定义</h2>
+<p><strong>稳定范畴</strong>是满足如下条件的范畴 $\mathcal C$:</p>
+<ul>
+<li>$\mathcal C$ 具有有限极限和有限余极限; 特别地, 具有零对象 $0$, 以及态射的纤维, 余纤维;</li>
+<li>$\mathcal C$ 中的拉回方块等同于推出方块; 特别地, <span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>等同于<span class="link local"><a href="./余纤维列.html" title="“余纤维列” [余纤维列]">余纤维列</a></span>;</li>
+<li><span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span>函子 $\Sigma\colon \mathcal C\to\mathcal C$ 与<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>函子 $\Omega\colon \mathcal C\to \mathcal C$ 构成一对互逆的范畴等价.</li>
+</ul>
+<p><strong>记号</strong>. 对稳定范畴的对象 $X$ 以及整数 $n$, 记
+$$
+    X[n] = \Sigma^n X,
+$$
+$$
+    X[-n] = \Omega^n X.
+$$</p>
+<h2>性质</h2>
+<h3>稳定化</h3>
+<p>具有有限极限的范畴都有<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>.</p>
+<h3>谱充实</h3>
+<p>稳定范畴自然地<span class="link local"><a href="./充实.html" title=" [充实]">充实</a></span>于<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴. 对于稳定范畴 $\mathcal C$ 中的对象 $X,Y$, 映射谱 $\underline{\operatorname{Hom}}(X,Y)$ 可如下定义:
+$$
+\underline{\operatorname{Hom}}(X,Y)_n = \operatorname{Hom}(X,Y[n]).
+$$</p>
+<h3>同伦范畴</h3>
+<p>稳定范畴的<span class="link local"><a href="./同伦范畴.html" title="“同伦范畴” [同伦范畴]">同伦范畴</a></span>是<span class="link local"><a href="./三角范畴.html" title="“三角范畴” [三角范畴]">三角范畴</a></span>. 例如两个对象 $X,Y$ 的直和 $X\oplus Y$ 既为范畴论和 $X+Y$, 又为范畴论积 $X\times Y$, 两者同构.</p>
+<h3>对偶对称性</h3>
+<p>稳定范畴的对偶仍是稳定范畴.</p>
+<h2>例</h2>
+<p>$1$-范畴不可能是稳定范畴, 除非它是平凡的 (等价于终范畴 $1$).</p>
+<p><span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴是最基本的稳定范畴, 它是<span class="link local"><a href="./∞Grpd.html" title=" [∞Grpd]">生象</a></span>范畴的<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>.</p>
+<p>对于 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span> $\mathcal A$, 其上的有界链复形范畴 $\operatorname{Ch}^{\text{b}}(\mathcal A)$ 构成稳定无穷范畴. 见<span class="link local"><a href="./链复形无穷范畴.html" title="链复形无穷范畴 [链复形无穷范畴]">链复形无穷范畴</a></span>.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./K-理论.html" title="“K-理论” [K-理论]">K-理论</a></span>, <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">t-结构</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="链复形范畴的同伦范畴"><header><h1><span class="taxon">Wiki. </span>“链复形范畴的同伦范畴” <a class="slug" href="./链复形范畴的同伦范畴.html">[链复形范畴的同伦范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本页介绍<span class="link local"><a href="./链复形无穷范畴.html" title="链复形无穷范畴 [链复形无穷范畴]">链复形无穷范畴</a></span>的<span class="link local"><a href="./同伦范畴.html" title="“同伦范畴” [同伦范畴]">同伦范畴</a></span>.</p>
+<p><span class="link local"><a href="./加性范畴.html" title="加性范畴 [加性范畴]">加性范畴</a></span> $\mathcal A$ 的链复形范畴 $\mathsf {Ch}(\mathcal A)$ 的<span class="link local"><a href="./链复形范畴的同伦范畴.html" title="“链复形范畴的同伦范畴” [链复形范畴的同伦范畴]">链复形范畴的同伦范畴</a></span> $\mathsf K(\mathcal A)$ (态射是链映射的同伦类) 是<span class="link local"><a href="./三角范畴.html" title="“三角范畴” [三角范畴]">三角范畴</a></span>.</p>
+<p>定义 $\mathsf K(\mathcal A)$ 中的逐项分裂序列 (termwise splitting sequence) $0\to A \to B\to C \to 0$ 为存在收缩 $r\colon B\to A$ 与截面 $s\colon C\to B$ 的短正合列.</p>
+<p><strong>例</strong>. 对于 $\alpha\colon A\to B$, <strong>映射锥</strong> $C=B\oplus A[1]$, $C^n=B^n\oplus A^{n+1}$ 构成逐项分裂序列
+$$
+0\to B\to C \to A[1]\to 0,$$其中 $C$ 上的微分
+$$
+d=\begin{pmatrix}
+d_B &amp; \alpha \\
+&amp; -d_A
+\end{pmatrix}.
+$$</p>
+<blockquote>
+<p>“几乎所有” 特殊三角都是映射锥.</p>
+</blockquote>
+<h3>范畴 E(A)</h3>
+<p>令 $E(\mathcal A)$ 为 $\mathsf K(\mathcal A)$ 中正合列的范畴, 它是</p>
+<ul>
+<li>严格满子范畴 (对同构封闭);</li>
+<li>饱和子范畴 (对取直和项封闭);</li>
+<li>三角子范畴 (特殊三角中两者属于这个子范畴, 则第三者属于这个子范畴).</li>
+</ul>
+<p>定义 $\mathsf K(\mathcal A)$ 的子范畴
+$$
+E(\mathcal A)^\perp = \{X\in\mathsf K(\mathcal A):\operatorname{Hom}(E,X)=0\,\forall E\in E(\mathcal A)\}.
+$$</p>
+<p>若一个对象到 $E(\mathcal A)^{\perp}$ 中的对象有<strong>拟同构</strong>, 则这个拟同构的映射锥为 $E(\mathcal A)$ 的对象.</p>
+<p><strong>例</strong>. 内射对象组成的下有界链复形属于 $E(\mathcal A)^\perp$. (这说明内射下有界复形在定义<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>时是一种良好的 “替代”.)</p>
+<p><span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>作为 Verdier 商:
+$$
+\begin{array}
+	{ccccc}
+	E(\mathcal A) &amp;\to&amp; \mathsf K(\mathcal A) &amp;\to&amp; \mathsf D(\mathcal A)\\
+	&amp;&amp; \uparrow &amp; \nearrow \text{equivalence}\hspace{-5em}&amp;\\
+	&amp;&amp; E(\mathcal A)^\perp &amp;&amp;
+\end{array}
+$$
+<span class="link local"><a href="./凝聚层的导出范畴.html" title="凝聚层的导出范畴 [凝聚层的导出范畴]">凝聚层的导出范畴</a></span>的<span class="link local"><a href="./半正交分解.html" title=" [半正交分解]">半正交分解</a></span> (?)</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

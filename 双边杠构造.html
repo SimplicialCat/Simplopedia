@@ -87,6 +87,78 @@ $$</p>
 $$
 \int_M A = |B(D_M, D_n, A)|.
 $$</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>单子上的代数 <a class="slug" href="./单子上的代数.html">[单子上的代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>杠构造 <a class="slug" href="./杠构造.html">[杠构造]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="单子上的代数"><header><h1><span class="taxon">Wiki. </span>单子上的代数 <a class="slug" href="./单子上的代数.html">[单子上的代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>上的<strong>代数</strong>和单子上的<strong>左模</strong>是同义词. 还有另一个不同的概念, 单子上的右模.</p>
+<p>结合代数给出<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>; 在这种意义上, 单子上的代数是<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">结合代数上的模</a></span>的推广.</p>
+<h2>定义</h2>
+<p>范畴 $\mathcal C$ 是自函子范畴 $\operatorname{End}(\mathcal C)$ (作为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 即 $\mathsf{Cat}$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>) 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>, 因此对于 $\mathcal C$ 上的单子 $T$, 即 $\operatorname{End}(\mathcal C)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 可以谈论 $T$ 在 $\mathcal C$ 中的模 (代数).</p>
+<p>具体地, 范畴 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 上的代数 $X$ 包含一个态射 $TX \to X$, 以及交换图
+$$
+\begin{array}
+{ccc}
+TTX &amp; \to &amp; TX \\
+\downarrow &amp;&amp; \downarrow \\
+TX &amp; \to &amp; X.
+\end{array}
+$$
+其中两个映射 $TTX \to TX$ 分别来自 $T$ 带有的自然变换 $T^2\to T$ 以及 $X$ 带有的态射 $TX\to X$.</p>
+<p>更一般地, 对范畴 $I$, 函子范畴 $\mathsf{Fun}(I,\mathcal C)$ 也是 $\operatorname{End}(\mathcal C)$ 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>, 从而可以定义 $X\colon I\to\mathcal C$ 上的 $T$-<strong>左模</strong> (或称 $T$-代数) 结构. 它包含一个自然变换 $TX \to X$ 以及左模的条件.</p>
+<h3>右模, 双模</h3>
+<p>另一个概念是单子上的<strong>右模</strong>. 对范畴 $J$, 函子范畴 $\mathsf{Fun}(\mathcal C,J)$ 是 $\operatorname{End}(\mathcal C)$ 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">右模</a></span>, 从而可以定义 $Y\colon \mathcal C\to J$ 上的 $T$-<strong>右模</strong>结构. 它包含一个自然变换 $YT \to Y$, 以及右模的条件.</p>
+<p>进一步, 对于两个范畴 $\mathcal C,\mathcal D$, $\mathcal C$ 上的单子 $T$ 与 $\mathcal D$ 上的单子 $S$, 定义 $(T,S)$-<strong>双模</strong>为函子 $X\colon \mathcal D\to\mathcal C$, 同时具有相容的 $T$-左模和 $S$-右模结构, 即有如下交换图.
+$$
+\begin{array}
+{ccc}
+TXS &amp; \to &amp; TX \\
+\downarrow &amp; &amp; \downarrow \\
+XS &amp; \to &amp; X.
+\end{array}
+$$</p>
+<h2>性质</h2>
+<h3>自由–遗忘伴随</h3>
+<p>对于 $\mathcal C$ 上的单子 $T$, 记 $\mathcal C^T$ 为 $\mathcal C$ 中 $T$-代数的范畴, $U\colon \mathcal C^T\to\mathcal C$ 为遗忘函子, 其左伴随 (“自由 $T$-代数” 函子) 为 $F\colon \mathcal C\to\mathcal C^T$, $F(X) = TX$. 这对伴随给出 $\mathcal C^T$ 上的<span class="link local"><a href="./余单子.html" title="余单子 [余单子]">余单子</a></span> $FU$ (见<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">伴随给出单子</a></span>).</p>
+<h3>杠构造</h3>
+<p>类似于给定结合代数 $A$ 上的右模 $M$ 和左模 $N$ 可作相对张量积 $M\otimes_A N$, 给定单子 $T$ 上的右模和左模也可作 “相对张量积”, 见<span class="link local"><a href="./双边杠构造.html" title="双边杠构造 [双边杠构造]">双边杠构造</a></span>.</p>
+<h2>例</h2>
+<h3>伴随的典范模结构</h3>
+<p>对于函子 $F\colon \mathcal C\to\mathcal D$, $G\colon \mathcal D\to\mathcal C$ 之间的一对<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $F\dashv G$ <span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span> $T= GF$,</p>
+<ul>
+<li>$F$ 有典范的 $T$-<strong>右模</strong>结构 $FT=FGF \to F$,</li>
+<li>$G$ 有典范的 $T$-<strong>左模</strong>结构 $TG=GFG \to G$.</li>
+</ul>
+<p>见<span class="link local"><a href="./双边杠构造.html" title="双边杠构造 [双边杠构造]">双边杠构造</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="杠构造"><header><h1><span class="taxon">Wiki. </span>杠构造 <a class="slug" href="./杠构造.html">[杠构造]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>对于范畴 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 以及其上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span> $A$, 杠构造 (bar construction) 给出<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>范畴 $\mathcal C^T$ 中的一个<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">增广单纯对象</a></span>
+$$
+\cdots \to^3 TTA \rightrightarrows TA \to A,
+$$
+作为 $\mathcal C$ 的单纯对象, 它是 $A$ 的一种<span class="link local"><a href="./消解.html" title="消解 [消解]">消解</a></span>, 又称<strong>杠消解</strong> (bar resolution).</p>
+<h2>定义</h2>
+<p>给定<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 以及 $T$-代数 $A$, 杠构造 (bar construction) 是<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">增广单纯对象</a></span>
+$$
+B(T,A) = (\cdots \to^3 TTA \rightrightarrows TA \to A),
+$$
+其中的结构映射由 $T$ 与 $A$ 的结构映射给出. 例如两个映射 $TTA \to TA$ 分别来自 $T$ 带有的自然变换 $T^2\to T$ 以及 $A$ 的结构映射 $TA\to A$.</p>
+<p>为具体理解 $B(T,A)$ 的构造, 只需注意到 $T \colon \mathcal C^T \to \mathcal C^T$ 为<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>范畴 $\mathcal C^T$ 上的<span class="link local"><a href="./余单子.html" title="余单子 [余单子]">余单子</a></span>, 也即$\operatorname{End}(\mathcal C^T)$ 中的<span class="link local"><a href="./结合余代数.html" title="结合余代数 [结合余代数]">结合余代数</a></span>, 从而由<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span> $\Delta_+$ 的性质, 其对应一个幺半函子
+$$
+\operatorname{Bar}_T\colon
+\Delta_+^{\text{op}}\to\operatorname{End}(\mathcal C^T).
+$$
+将 $\operatorname{Bar}_T$ 进一步复合 “在 $A$ 处取值” 函子 $\mathrm{ev}_A\colon \operatorname{End}(\mathcal C^T) \to \mathcal C^T$, 得到函子
+$$
+\operatorname{Bar}_T(A)\colon \Delta_+^{\text{op}}\to\mathcal C^T.
+$$
+最后再复合 $U$, 就得到<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">增广单纯对象</a></span>
+$$
+B(T,A)\colon \Delta_+^{\text{op}}\to\mathcal C.
+$$</p>
+<h3>推广</h3>
+<p>杠构造的推广见<span class="link local"><a href="./双边杠构造.html" title="双边杠构造 [双边杠构造]">双边杠构造</a></span>, <span class="link local"><a href="./单纯杠构造.html" title=" [单纯杠构造]">单纯杠构造</a></span>. 使用双边杠构造的记号, 有 $\operatorname{Bar}_T(A)=B(F,T,A)$, $B(T,A)=B(T,T,A)$. 另见<span class="link local"><a href="./循环杠构造.html" title="循环杠构造 [循环杠构造]">循环杠构造</a></span>.</p>
+<h2>例</h2>
+<h3>群</h3>
+<p>设</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

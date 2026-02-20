@@ -60,6 +60,45 @@
 $$
 \operatorname{Hom}_{\mathsf{Corr}(\mathcal C)}(X,Y) = \{X \leftarrow Z \to Y\}.
 $$</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>对偶 <a class="slug" href="./可对偶对象.html">[可对偶对象]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>高阶关系范畴 <a class="slug" href="./高阶关系范畴.html">[高阶关系范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="可对偶对象"><header><h1><span class="taxon">Wiki. </span>对偶 <a class="slug" href="./可对偶对象.html">[可对偶对象]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 定义其对象 $x$ 的<strong>右对偶</strong>为如下数据:</p>
+<ul>
+<li>一个对象 $x'$;</li>
+<li><strong>取值</strong>映射 $\operatorname{ev}\colon x'\otimes x\to 1$;</li>
+<li><strong>余取值</strong>映射 $\operatorname{coev}\colon 1\to x\otimes x'$;</li>
+</ul>
+<p>满足
+$$
+	x \overset{\operatorname{coev}}{\to} x\otimes x'\otimes x \overset{\operatorname{ev}}{\to} x,
+$$
+$$
+	x' \overset{\operatorname{coev}}{\to} x'\otimes x\otimes x' \overset{\operatorname{ev}}{\to} x'
+$$
+均为恒等.</p>
+<p>若将幺半范畴等同于一个对象的 $2$-范畴 (类似于<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>等同于一个对象的范畴), 则对象的左右对偶可视为态射的左右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
+<h2>例</h2>
+<ul>
+<li>线性空间范畴的可对偶对象为有限维线性空间.</li>
+<li>一个环上的模范畴的可对偶对象是有限生成投射模.</li>
+</ul>
+<h3>关系范畴</h3>
+<p>设范畴 $\mathcal C$ 具有终对象 $*$ 以及拉回, 则<span class="link local"><a href="./关系2-范畴.html" title="关系 2-范畴 [关系2-范畴]">关系范畴</a></span> $\mathsf{Corr}(\mathcal C)$ 的每个对象 $X$ 均可对偶, 且对偶为自身; 取值映射和余取值映射分别为
+$$
+	X\times X\overset{\Delta}{\leftarrow} X \rightarrow *,
+$$
+$$
+	* \leftarrow X \overset{\Delta}{\rightarrow} X\times X.
+$$</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="高阶关系范畴"><header><h1><span class="taxon">Wiki. </span>高阶关系范畴 <a class="slug" href="./高阶关系范畴.html">[高阶关系范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>高阶关系范畴是<span class="link local"><a href="./关系2-范畴.html" title="关系 2-范畴 [关系2-范畴]">关系 $2$-范畴</a></span>的推广. 设 $\mathcal C$ 是有拉回的范畴, 其关系 $2$-范畴 $\mathsf{Corr}(\mathcal C)$ 的对象为 $\mathcal C$ 的对象,
+$$
+\operatorname{Hom}_{\mathsf{Corr}(\mathcal C)}(X,Y) = \{X \leftarrow Z \to Y\}.
+$$</p>
+<p>归纳地定义<strong>关系 $n$-范畴</strong> ($n$-category of correspondences) $n\mathsf{Corr}(\mathcal C)$ ($n\geq 2$): 其对象仍为 $\mathcal C$ 的对象,
+$$
+\operatorname{Hom}_{n\mathsf{Corr}(\mathcal C)}(X,Y) = (n-1)\mathsf{Corr}(\operatorname{Hom}_{\mathsf{Corr}(\mathcal C)}(X,Y)).
+$$</p>
+<p>约定 $1\mathsf{Corr}(\mathcal C)= \mathcal C$.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

@@ -61,6 +61,39 @@
 <p>The two-element set carries a structure of Boolean algebra object in the category of compact Hausdorff spaces. So we have two algebraic structures on $\mathbb{F}_2$ whose operations commute with one another (here a compact Hausdorff space is an algebra for the ultrafilter monad, hence ‘algebraic’). This means two things: (1), that the hom-functor $CH(-, \mathbb{F}_2): CH^{op} \to Set$ is a Boolean algebra object, hence canonically lifts to a functor $CH^{op} \to Bool$. That’s one half of Stone duality. But equally well, $\mathbb{F}_2$ is a compact Hausdorff space object in the category of Boolean algebras. So (2), the hom-functor $Bool(-, \mathbb{F}_2): Bool^{op} \to Set$ is a compact Hausdorff space object, hence canonically lifts to a functor $Bool^{op} \to CH$. This is the other half of Stone duality. (All of this can be made set-theoretically rigorous.)</p>
 </blockquote>
 <p>Stone 对偶是<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>的一例.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Boole 代数 <a class="slug" href="./Boole代数.html">[Boole代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="notion" style="margin-bottom: 0.4em;"><header><h1><span class="taxon"><span class="link local"><a href="./notion.html" title="观念 [notion]">notion</a></span></span>谱 (代数–几何对偶) <a class="slug" href="./谱(代数).html">[谱(代数)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“超滤” <a class="slug" href="./超滤.html">[超滤]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Boole代数"><header><h1><span class="taxon">Wiki. </span>Boole 代数 <a class="slug" href="./Boole代数.html">[Boole代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>Boole 代数是具有补运算的<span class="link local"><a href="./分配格.html" title="“分配格” [分配格]">分配格</a></span>.</p>
+<p>Boole 代数与 <span class="link local"><a href="./Boole环.html" title="“Boole 环” [Boole环]">Boole 环</a></span>可以相互转化.</p>
+<h2>性质</h2>
+<p><span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span></p>
+</details></section><section class="block" data-taxon="notion"><details ><summary id="谱(代数)"><header><h1><span class="taxon"><span class="link local"><a href="./notion.html" title="观念 [notion]">notion</a></span></span>谱 (代数–几何对偶) <a class="slug" href="./谱(代数).html">[谱(代数)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本页面谈论<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>中的 “谱” 的广泛概念. 同伦论中的<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>与这个概念没有从属关系, 只是不幸地占有同一个名称. (更不幸的是, 谱代数几何要讨论<span class="link local"><a href="./环谱.html" title="环谱 [环谱]">环谱</a></span>的谱…)</p>
+<hr />
+<p>谱是一种与代数<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">对偶</a></span>的对象. 这里的 “代数” 是非常广泛的概念, 不限于<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 通常, 某种代数的谱 $\operatorname{Spec}A$ 满足这样的性质:</p>
+<ul>
+<li>代数同态 $A \to B$ 对应于谱的映射 $\operatorname{Spec}B\to \operatorname{Spec} A$. (这一事实有时可直接作为函子 $\operatorname{Spec}$ 的定义.)</li>
+<li>特别地, 若 $\operatorname{Spec}B$ 是一个类似于 “点” 的几何对象, 也就是其中没有 “更小” 的部分 (意味着 $B$ 是一个不能 “更小” 的代数), 那么代数同态 $A\to B$ 给出了 $\operatorname{Spec}A$ 的一个 “点”. 这个事实有时是 $\operatorname{Spec}A$ 的定义.</li>
+</ul>
+<h2>例</h2>
+<h3>交换代数</h3>
+<ul>
+<li>交换环的谱是<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>.</li>
+<li>交换 <span class="link local"><a href="./C-星代数.html" title="C*-代数 [C-星代数]">C*-代数</a></span>的谱是<span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>.</li>
+</ul>
+<h3>逻辑学中的代数</h3>
+<ul>
+<li><span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>的谱是其 <span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span>.</li>
+<li><span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span> …</li>
+</ul>
+<h3>综合代数几何</h3>
+<p>…</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="超滤"><header><h1><span class="taxon">Wiki. </span>“超滤” <a class="slug" href="./超滤.html">[超滤]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>集合上的超滤</h3>
+<p>集合 $S$ 上的超滤是 $S$ 的子集的 <span class="link local"><a href="./Boole环.html" title="“Boole 环” [Boole环]">Boole 环</a></span> $2^S$ 到 $2$ 的同态, 也即 $2^S$ 的素理想.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span></p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

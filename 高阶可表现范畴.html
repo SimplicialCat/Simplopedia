@@ -65,6 +65,58 @@
 <li>$n\mathsf{Pr} = \mathsf{Mod}((n-1)\mathsf{Pr})$.</li>
 </ul>
 <p>按上述方法定义的范畴 $n\mathsf{Pr}$ 是 $(\infty ,1)$-范畴, 但可以升级为 $(\infty ,n+1)$-范畴, 参考 <span class="link local"><a href="./StefanichHigherQCoh.html" title="Higher Quasicoherent Sheaves [StefanichHigherQCoh]">Stefanich</a></span>.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>可表现范畴 <a class="slug" href="./可表现范畴.html">[可表现范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>高阶模 <a class="slug" href="./高阶模.html">[高阶模]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="可表现范畴"><header><h1><span class="taxon">Wiki. </span>可表现范畴 <a class="slug" href="./可表现范畴.html">[可表现范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>可表现范畴</strong> $\mathcal C$ 是一个可能很大的范畴, 却能由较小的一族对象 $\mathcal S\hookrightarrow\mathcal C$ 控制.
+此时, $\mathcal C$ 可<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>为预层范畴 $\mathsf{Psh}(\mathcal S)$ 的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>.</p>
+<p><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中的许多结论依赖于范畴的可表现性, 例如<span class="link local"><a href="./伴随函子定理.html" title="伴随函子定理 [伴随函子定理]">伴随函子定理</a></span>, 以及刻画<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的 <span class="link local"><a href="./Giraud公理.html" title="Giraud 公理 [Giraud公理]">Giraud 公理</a></span>.</p>
+<p>另一种重要的观点: 从<span class="link local"><a href="./范畴逻辑.html" title="范畴逻辑 [范畴逻辑]">范畴逻辑学</a></span>的角度, 可表现范畴是<span class="link local"><a href="./本质代数理论.html" title="本质代数理论 [本质代数理论]">本质代数理论</a></span>的<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">模型</a></span>的范畴.</p>
+<h2>定义</h2>
+<p>对于<span class="link local"><a href="./正则基数.html" title="正则基数 [正则基数]">正则基数</a></span> $\kappa$ (通常取为 $\aleph_0$, 见<span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成范畴</a></span>), 称满足如下等价条件的范畴 $\mathcal C$ 为 $\kappa$-可表现范畴:</p>
+<ul>
+<li>$\mathcal C$ 余完备, 且有一族 <span class="link local"><a href="./可表现对象.html" title="可表现对象 [可表现对象]">$\kappa$-可表现对象</a></span>构成的集合, 在 <span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">$\kappa$-滤余极限</a></span>下生成整个范畴.</li>
+<li>$\mathcal C$ 等价于一个小范畴的 <span class="link local"><a href="./Ind范畴.html" title=" [Ind范畴]">$\kappa$-Ind 范畴</a></span>.</li>
+</ul>
+<p>称 $\mathcal C$ 为可表现范畴是指存在一个基数 $\kappa$, $\mathcal C$ 为 $\kappa$-可表现范畴.</p>
+<p>等价的定义是: 有一个小范畴到 $\mathcal C$ 的函子 $j\colon \mathcal S\hookrightarrow\mathcal C$, 使得米田扩张 $\mathsf{Psh}(\mathcal S) \to \mathcal C$ 是预层范畴 $\mathsf{Psh}(\mathcal S)$ 关于某个小态射族 $W \subset \mathsf{Fun}([1],\mathsf{Psh}(\mathcal S))$ 的局部化.</p>
+<p>可表现范畴以及保持余极限的函子构成的范畴记为 $\mathsf{Pr}^{\mathrm{L}}$, 其中 $\mathrm{L}$ 的含义是这些函子是左伴随 (<span class="link local"><a href="./伴随函子定理.html" title="伴随函子定理 [伴随函子定理]">伴随函子定理</a></span>).</p>
+<h2>性质</h2>
+<p>由<span class="link local"><a href="./景.html" title="景 [景]">景</a></span>表现的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>是可表现范畴.</p>
+<h3>张量积</h3>
+<p>可表现范畴的范畴 $\mathsf{Pr}$ 上有一个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>结构, 称为 <strong>Lurie 张量积</strong>.</p>
+<p><strong>命题-定义</strong>. 对于可表现范畴 $\mathcal C,\mathcal D$, 存在万有的可表现范畴 $\mathcal C\otimes\mathcal D$, 带有一个双线性 (即保持每个分量的余极限) 的函子
+$$
+\mathcal C\times \mathcal D \to \mathcal C\otimes\mathcal D.
+$$</p>
+<p>可表现范畴的张量积的单位是 <span class="link local"><a href="./生象.html" title="生象 [生象]">$\mathsf{Ani}$</a></span>.</p>
+<h2>高阶可表现范畴</h2>
+<p>见<span class="link local"><a href="./高阶可表现范畴.html" title="高阶可表现范畴 [高阶可表现范畴]">高阶可表现范畴</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="高阶模"><header><h1><span class="taxon">Wiki. </span>高阶模 <a class="slug" href="./高阶模.html">[高阶模]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>高阶模是 “环上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>” 这一概念的<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>.</p>
+<p>正如环 $A$ 上的模是其谱 $\operatorname{Spec} A$ 上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>, 环 $A$ 上的高阶模是 $\operatorname{Spec} A$ 上的<span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span>.</p>
+<h2>定义</h2>
+<p>一般地, <span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span> $A$ 上的模范畴 $\mathsf{Mod} (A)$ 仍是交换代数, 从而可以继续考虑其上的模. 环 $A$ 上的 $n$ 阶模范畴便是 “取模范畴” 操作的 $n$ 次迭代: “$\mathsf{Mod}^n (A) = \mathsf{Mod} (\mathsf{Mod}^{n-1} (A))$”.</p>
+<p>为了明确上述定义所在的范畴, 我们需要<span class="link local"><a href="./高阶可表现范畴.html" title="高阶可表现范畴 [高阶可表现范畴]">高阶可表现范畴</a></span>的概念. 记 $n\mathsf{Pr}$ 为可表现 $n$-范畴的范畴.</p>
+<h3>环上的高阶模范畴</h3>
+<p><strong>约定</strong>. 这里的 $n$-范畴是指 $(\infty ,n)$-范畴, 环是指 <span class="link local"><a href="./E∞-环.html" title="“E∞-环” [E∞-环]">E∞-环</a></span>, 环上的模范畴 $\mathsf{Mod}(A)$ 在传统情形中称为<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span> $D(A)$. 暂且忽略基数的大小问题.</p>
+<p><strong>定义</strong> ($A$-线性可表现范畴). 对于交换环 $A$, 考虑 $A$-模范畴 $\mathsf{Mod}(A) \in \mathsf{CAlg}(1\mathsf{Pr})$. 定义 “$A$-线性<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>” 构成的对称幺半可表现 $2$-范畴
+$$
+1\mathsf{Pr}_A = \mathsf{Mod}_{1\mathsf{Pr}}(\mathsf{Mod}(A)) \in \mathsf{CAlg}(2\mathsf{Pr}),
+$$
+归纳地定义 “$A$-线性可表现 $n$-范畴” 构成的对称幺半可表现 $(n+1)$-范畴
+$$
+n\mathsf{Pr}_A = \mathsf{Mod}_{n\mathsf{Pr}}((n-1)\mathsf{Pr}_A)\in \mathsf{CAlg}((n+1)\mathsf{Pr}).
+$$</p>
+<h3>可表现范畴上的高阶模范畴</h3>
+<p><strong>定义</strong> ($C$-线性可表现范畴). 更一般地, 对于 $C \in \mathsf{CAlg}(1\mathsf{Pr})$, 也可定义
+$$
+1\mathsf{Pr}_C = \mathsf{Mod}_{1\mathsf{Pr}}(C) \in \mathsf{CAlg}(2\mathsf{Pr}),
+$$
+并归纳定义
+$$
+n\mathsf{Pr}_C = \mathsf{Mod}_{n\mathsf{Pr}}((n-1)\mathsf{Pr}_C) \in \mathsf{CAlg}((n+1)\mathsf{Pr}).
+$$</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

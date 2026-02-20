@@ -70,6 +70,106 @@ $$</li>
 </ul>
 <h2>例</h2>
 <p><span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span> $\pi\colon \mathcal X\to\mathsf{Ani}$ 的<span class="link local"><a href="./∞-意象的形.html" title="意象的形 [∞-意象的形]">形</a></span>是<span class="link local"><a href="./常值层.html" title="常值层 [常值层]">常值层</a></span>函子 $\pi^*\colon \mathsf{Ani} \to \mathcal X$ 的形式左伴随 $\pi_!\colon \mathcal X\to\mathsf{Fun}(\mathsf{Ani},\mathsf{Ani})$ 在 $1\in\mathcal X$ 上的取值.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>意象的形 <a class="slug" href="./∞-意象的形.html">[∞-意象的形]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./意象理论.html" title="意象理论 [意象理论]">意象理论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>脉 <a class="slug" href="./脉.html">[脉]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="∞-意象的形"><header><h1><span class="taxon">Wiki. </span>意象的形 <a class="slug" href="./∞-意象的形.html">[∞-意象的形]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./意象理论.html" title="意象理论 [意象理论]">意象理论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>意象的<strong>形</strong> (shape) 是一个 (<span class="link local"><a href="./pro-对象.html" title="pro-对象 [pro-对象]">pro</a></span>) <span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>; 对此有两种看法.</p>
+<ul>
+<li>我们知道<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>可视为<span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">意象</a></span>. 反过来, 对于一个<span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">意象</a></span>, 我们想找一个与它 “尽可能接近” 的生象, 这就是它的<strong>形</strong>.</li>
+<li><span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">意象</a></span>的形是其<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>的 “同伦型”.</li>
+</ul>
+<h2>定义</h2>
+<p>对于 $\infty$-意象 $\mathcal X$, 有唯一的<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span>
+$$
+    \pi=(\pi^*\dashv \pi_*)\colon \mathcal X\to\mathsf{Ani}.
+$$
+由于<span class="link local"><a href="./常值层.html" title="常值层 [常值层]">常值层</a></span>函子 $\pi^*\colon \mathsf{Ani}\to\mathcal X$ 保持有限极限, 其有<span class="link local"><a href="./形式伴随.html" title="形式伴随 [形式伴随]">形式左伴随</a></span>
+$$
+\pi_!\colon \mathcal X \to \mathsf{Pro}\mathsf{Ani} = \mathsf{Fun}^{\mathrm{lex}}(\mathsf{Ani},\mathsf{Ani})^{\mathrm{op}}.
+$$
+定义 $\mathcal X$ 的<strong>形</strong> (shape) $\Pi \mathcal X$ 为 <span class="link local"><a href="./pro-生象.html" title="pro-生象 [pro-生象]">pro-生象</a></span>
+$$
+\Pi\mathcal X := \pi_!(1).
+$$</p>
+<p>更具体地, 作为 $\mathsf{Fun}(\mathsf{Ani},\mathsf{Ani})^{\mathrm{op}}$ 的对象, $\Pi \mathcal X$ 是左正合函子
+$$
+    \pi_*\pi^*\colon \mathsf{Ani} \to \mathsf{Ani}.
+$$
+(注意 $\pi_*$, $\pi^*$ 均保持有限极限.)</p>
+<h2>性质</h2>
+<p><strong>命题</strong>. 若 $\Pi\mathcal X = \pi_!(1)$ 是生象, 那么
+$$
+\operatorname{Hom}_{\mathsf{Ani}}(\Pi\mathcal X,A)\simeq\operatorname{Hom}_{\mathcal X}(1,\pi^* A)\simeq\operatorname{Hom}_{\mathsf{Ani}}(1,\pi_*\pi^* A)\simeq\pi_*\pi^* A.
+$$</p>
+<p><strong>命题</strong>. 对于<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span> $A$, 有 $\Pi (\mathsf{Ani}_{/A}) = A$.</p>
+<p><strong>命题</strong>. 形函子 $\Pi \colon \mathsf{Topos}\to\mathsf{ProAni}$ 是嵌入 $\mathsf{Ani}_{/-} \colon \mathsf{Ani}\to\mathsf{Topos}$ 的形式左伴随:
+$$
+\operatorname{Hom}_{\mathsf{Topos}}(\mathcal X,\mathsf{Ani}_{/A})\simeq\operatorname{Hom}_{\mathcal X}(1,\pi^* A) \simeq \pi_*\pi^* A.
+$$</p>
+<p>特别地, 当 $\Pi\mathcal X \in\mathsf{Ani}$ 时,
+$$
+\operatorname{Hom}_{\mathsf{Topos}}(\mathcal X,\mathsf{Ani}_{/A})
+\simeq
+\operatorname{Hom}_{\mathsf{Ani}}(\Pi\mathcal X,A).
+$$</p>
+<p><em>证明</em>. 事实上下图为 $\mathsf{Topos}$ 中的拉回,
+$$
+\begin{array}
+    {ccc}
+    \mathcal X_{/\pi^* A} &amp; \to &amp; \mathsf{Ani}_{/A}\\
+    \downarrow &amp; &amp; \downarrow \\
+    \mathcal X &amp; \underset{\pi}{\to} &amp; \mathsf{Ani}
+\end{array}
+$$
+因而
+$$
+\begin{aligned}
+    &amp;\operatorname{Hom}_{\mathsf{Topos}}(\mathcal X,\mathsf{Ani}_{/A})\\
+    &amp;\simeq
+    \operatorname{Hom}_{\mathsf{Topos}_{/\mathcal X}}(\mathcal X,\mathcal X_{/\pi^* A})\\
+    &amp;\simeq \operatorname{Hom}_{\mathcal X}(1,\pi^* A).
+\end{aligned}
+$$</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./平展同伦论.html" title="“平展同伦论” [平展同伦论]">平展同伦论</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="脉"><header><h1><span class="taxon">Wiki. </span>脉 <a class="slug" href="./脉.html">[脉]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<h3>从几何对象中提取单纯集</h3>
+<p>脉的构造常用于提取出几何对象的 “形状”, 产生一个<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>, 而后人们往往关注这个单纯集<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>的<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>.</p>
+<h3>形式右伴随</h3>
+<p>脉函子还可以更抽象地理解为函子 $\Delta \to \mathcal C$ 的<span class="link local"><a href="./形式伴随.html" title="形式伴随 [形式伴随]">形式右伴随</a></span> $\mathcal C \to \widehat {\Delta}=\mathsf{Fun}(\Delta^{\mathrm{op}},\mathsf{Set})$.</p>
+<h3>脉与几何实现</h3>
+<p>脉的构造往往<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>着<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>.</p>
+<h2>定义</h2>
+<p>给定<span class="link local"><a href="./余单纯对象.html" title=" [余单纯对象]">单纯形范畴</a></span>到另一个范畴 $\mathcal C$ 的函子
+$$
+    \Delta_{\mathcal C}\colon \Delta\to \mathcal C,
+$$
+设想 $\Delta_{\mathcal C}([n])$ 为标准单纯形 $[n]\in\Delta$ 的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>. 那么 $\mathcal C$ 中一般的对象 $X$ 可用单纯形来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>: 定义 $X$ 的<strong>脉</strong> (nerve) 为如下<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span> $N(X)$,
+$$
+N(X)_n := \operatorname{Hom}_{\mathcal C}(\Delta_{\mathcal C}[n], X).
+$$</p>
+<p>当然, 上述构造没有用到范畴 $\Delta$ 的任何具体性质.</p>
+<h2>例</h2>
+<h3>奇异单纯集</h3>
+<p>拓扑空间 $X$ 的<span class="link local"><a href="./奇异单纯集.html" title="奇异单纯集 [奇异单纯集]">奇异单纯集</a></span> $\operatorname{Sing}X$ 是对应于如下函子 $\Delta \to \mathsf{Top}$ 的脉:
+$$
+    [n]\mapsto |\Delta^n| := \{(0\leq x_1\leq \cdots \leq x_n\leq 1): x_i\in\mathbb{R}\}.
+$$</p>
+<h3>范畴的脉</h3>
+<p>范畴 $\mathsf C$ 的脉 $N(\mathsf C)$ 是一个<span class="link local"><a href="./拟范畴.html" title="“拟范畴” [拟范畴]">拟范畴</a></span>, 这个脉来自嵌入函子 $\Delta\to\mathsf{Cat}$, 将偏序集 $[n]$ 视为范畴.</p>
+<h3>截面层</h3>
+<p>拓扑空间 $X$ 上的丛的截面层
+$$
+\mathsf{Top}_{/X} \to \mathsf{Psh}(X)
+$$
+可视为一种脉函子, 它来自于 “将开集视为平展空间” 的嵌入函子
+$$
+\operatorname{Open}(X) \to\mathsf{Et}_{/X}\hookrightarrow\mathsf{Top}_{/X}.
+$$
+其对应的几何实现为<span class="link local"><a href="./平展空间.html" title="“平展空间” [平展空间]">平展空间</a></span>
+$$
+\mathsf{Sh}(X)\to\mathsf{Et}_{/X}.
+$$</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

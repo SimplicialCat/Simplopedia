@@ -57,6 +57,115 @@
   });
 </script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="一阶语言的解释"><header><h1><span class="taxon">Wiki. </span>一阶语言的解释 <a class="slug" href="./一阶语言的解释.html">[一阶语言的解释]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./一阶语言.html" title="一阶语言与一阶逻辑 [一阶语言]">一阶语言</a></span>可以在 ($1$-)范畴中获得<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语义</a></span>.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>层语义 <a class="slug" href="./层语义.html">[层语义]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="notion" style="margin-bottom: 0.4em;"><header><h1><span class="taxon"><span class="link local"><a href="./notion.html" title="观念 [notion]">notion</a></span></span>语法–语义对偶 <a class="slug" href="./语法–语义对偶.html">[语法–语义对偶]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="层语义"><header><h1><span class="taxon">Wiki. </span>层语义 <a class="slug" href="./层语义.html">[层语义]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>层语义 (sheaf semantics) 可用于<span class="link local"><a href="./一阶语言的解释.html" title="一阶语言的解释 [一阶语言的解释]">解释</a></span><span class="link local"><a href="./层意象.html" title="层意象 [层意象]">层意象</a></span>的<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>.</p>
+<p>在概形上的层语义中, 结构层不过是内语言中的一个局部环, 向量丛不过是一个自由模. 层语义可以给出代数几何中一些基本概念更简单的定义, 以及一些基本命题更精炼的证明.</p>
+<h2>定义</h2>
+<h3>Kripke–Joyal 语义</h3>
+<p>对语句 $\varphi$, 我们基于对 $\varphi$ 结构的归纳来定义 $U\models\varphi$ 的语义, 其直观是说 $\varphi$ 在 $U$ 上处处成立.
+$$
+\begin{array}
+	{l|l}
+	\text{内蕴} &amp; \text{外蕴} \\
+	\hline
+	U\models\top &amp; U=U\text{ (恒真)}\\
+	U\models\bot &amp; U=\varnothing \\
+	U\models s=t:\mathcal F &amp; s|_U = t|_U\in\Gamma(U,F);\\
+	U\models \bigwedge_{j\in J}\varphi_j &amp; 
+	\forall j,\,U\models\varphi_j;\\
+	U\models \bigvee_{j\in J}\varphi_j &amp; \text{存在开覆盖 }U=\bigcup_i U_i,\\&amp;\quad
+	\text{对任意 } i\text{ 存在 } j, U_i\models\varphi_j;\\
+	U\models \varphi\Rightarrow \psi &amp; \text{对任意开集 }V\subset U,
+	V\models\varphi \text{ 推出 } V\models\psi;\\
+	U\models\forall s:\mathcal F,\varphi(s) &amp; \text{对任意开集 }V\text{ 与 }s\in\Gamma(V,\mathcal F), V\models\varphi(s);\\
+	U\models\exists s:\mathcal F,\varphi(s) &amp; \text{存在开覆盖 }U=\bigcup_i U_i,\\ &amp;\quad\text{对任意 }i\text{ 存在 }s_i\in\Gamma(U_i,\mathcal F), U_i\models\varphi(s).
+\end{array}
+$$
+为了突出所考虑的子意象, 我们也将 $U\models \varphi$ 记作 $\operatorname{Sh}(U)\models \varphi$.</p>
+<h3>简化</h3>
+<p>有的语句如果完全按照上面的定义展开会过于复杂. 如下的语句可以简化.</p>
+<p>$U\models\forall s:\mathcal F. \forall t:\mathcal G. \varphi(s,t)$ 等价于对任意开集 $V\subset U$, 任意截面 $s\in\Gamma(V,\mathcal F), t\in\Gamma(V,\mathcal G)$, 都有 $V\models \varphi(s,t)$.</p>
+<p>$U\models\forall s:\mathcal F. \forall t:\mathcal G. \varphi(s)\Rightarrow \psi(s)$ 等价于对任意开集 $V\subset U$, 任意截面 $s\in\Gamma(V,\mathcal F)$, 都有 $V\models\varphi(s)$ 推出 $V\models \psi(s)$.</p>
+<p>$U\models\exists ! s:\mathcal F. \varphi(s)$ 等价于对任意开集 $V\subset U$, 存在唯一的截面 $s\in\Gamma(V,\mathcal F)$, $V\models \varphi(s)$.</p>
+<h2>性质</h2>
+<h3>局部性</h3>
+<p>层语义是局部的, 即若 $X=\bigcup_i U_i$ 为覆盖, 一条内蕴语句在每个 $\operatorname{Sh}(U_i)$ 的内蕴语言中都成立, 那么它在 $\operatorname{Sh}(X)$ 中也成立. 这有时是优点, 但也带来了一些局限, 我们无法讨论 “一个层由全局截面生成”, “层上同调消失” 等整体的结论.</p>
+<h3>可靠性</h3>
+<p>内语言的可靠性 (soundness) 是指, 假若在<span class="link local"><a href="./直觉主义逻辑.html" title="直觉主义逻辑 [直觉主义逻辑]">直觉主义逻辑</a></span>中一个公式 $\varphi$ 能推出 $\psi$, 那么 $U\models\varphi$ 就能推出 $U\models\psi$. 这个结论的证明也是基于对命题结构的归纳.</p>
+<h3>内蕴构造</h3>
+<p>使用内蕴语言可给出积, 余积, 幂集, 子集的构造, 使得这些构造在内蕴语言下满足直观的性质.</p>
+<p>例如, 若 $\mathcal F$ 为层, $\varphi(s)$ 为一个变量 $s:\mathcal F$ 的公式, 定义
+$$
+\left[\left[\left\{s:\mathcal F \mid \varphi(s)\right\}\right]\right]
+$$
+是由 $U\mapsto \{s\in\Gamma(U,\mathcal F)\mid U \models \varphi(s)\}$ 给出的子层. 例如, 公式 $\varphi$ 的<span class="link local"><a href="./真值.html" title="真值 [真值]">子对象分类子</a></span>是
+$$
+\{x:1 \mid \varphi\} = (U\mapsto \{x\in\Gamma(U,1)\mid U\models \varphi\}),
+$$
+其中 $x$ 是不含于 $\varphi$ 的自由变量.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./叠语义.html" title="“叠语义” [叠语义]">叠语义</a></span></p>
+</details></section><section class="block" data-taxon="notion"><details ><summary id="语法–语义对偶"><header><h1><span class="taxon"><span class="link local"><a href="./notion.html" title="观念 [notion]">notion</a></span></span>语法–语义对偶 <a class="slug" href="./语法–语义对偶.html">[语法–语义对偶]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>常常, 一种数学结构可以表示为一个映射
+$$
+\text{语法} \to \text{语义},
+$$
+其中</p>
+<ul>
+<li>“语法” 是由少量信息<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>的一个较为抽象的结构, 通常是一个代数或一个范畴 (见<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>), 其中的元素或对象记录了某种语言 (如某种<span class="link local"><a href="./一阶语言.html" title="一阶语言与一阶逻辑 [一阶语言]">一阶语言</a></span>);</li>
+<li>“语义” 是某一类较为具体的, 或在实践中自然出现的代数对象;</li>
+<li>这个函子表达的是一个指定的结构相当于<strong>给语法的每个对象赋予一个具体的意义</strong>的过程 (如<span class="link local"><a href="./一阶语言的解释.html" title="一阶语言的解释 [一阶语言的解释]">一阶语言的解释</a></span>); 也称为一个<strong>理论</strong>的<strong>模型</strong>.</li>
+</ul>
+<h3>代数–几何对偶, 与分类空间的联系</h3>
+<p>若将上述的 “语法” 和 “语义” 视为代数对象, 则从<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">对偶</a></span>的几何侧来看, 一个数学结构是一个映射
+$$
+\text{参数空间} \to \text{分类空间},
+$$</p>
+<p>其中</p>
+<ul>
+<li>参数空间是某个在实践中自然出现的几何对象;</li>
+<li><strong>参数空间</strong>是<strong>语义</strong>的对偶;</li>
+<li><strong></strong><span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">分类空间</a></span>是<strong>语法</strong>的对偶;</li>
+<li>这个映射表达的是一个指定的结构相当于<strong>对参数空间的每一个点赋予一个结构</strong>的过程.</li>
+</ul>
+<h2>例</h2>
+<h3>代数方程组的解</h3>
+<p>多项式方程 $f(x)=0$ 在环 $A$ 中的解可以表示为环同态
+$$
+\mathbb{Z}[x]/(f) \to A,
+$$
+其中 $x$ 在 $A$ 中的像即是这个解,</p>
+<ul>
+<li>$\mathbb{Z}[x]/(f)$ 是记录<strong>语法</strong>的代数对象,</li>
+<li>$A$ 是记录<strong>语义</strong>的代数对象.</li>
+</ul>
+<p>(当然, 本例也可推广到多个变量, 多个方程构成的方程组. 类似地, 微分方程组的解可表示为 <span class="link local"><a href="./D-模.html" title="D-模 [D-模]">D-模</a></span>的同态.)</p>
+<p>在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>之下, 环同态 $\mathbb{Z}[x]/(f) \to A$ 对应<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>的映射
+$$
+\operatorname{Spec} A \to \operatorname{Spec}\mathbb{Z}[x]/(f) = \{x\in \mathbb A^1 \mid f(x) = 0\}.
+$$
+其中</p>
+<ul>
+<li>$\operatorname{Spec}A$ 是<strong>参数空间</strong>,</li>
+<li>$\operatorname{Spec}\mathbb{Z}[x]/(f)$ 是方程的解的<strong>分类空间</strong>.</li>
+</ul>
+<h3>交换半群</h3>
+<p>考虑有限集关于无交并构成的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathsf{Fin}^{\sqcup}$,
+以及集合关于乘积构成的对称幺半范畴 $\mathsf{Set}^\times$.
+那么一个对称幺半函子
+$$
+	\mathsf{Fin}^{\sqcup} \to \mathsf{Set}^\times
+$$
+等同于一个交换半群.
+具体地, 交换半群 $A$ 给出函子
+$$
+\{1,\cdots,n\} \mapsto A^n,\quad
+\varnothing\mapsto \{*\},
+$$
+其中映射 $\{1,2\} \to \{1\}$ 对应的映射 $A^2\to A$ 正是 $A$ 上的运算; 映射 $\varnothing\to\{1\}$ 对应的映射 $\{*\}\to A$ 正是其单位元.</p>
+<p>在本例中, $\mathsf{Set}^\times$ 可以替换为任何对称幺半范畴 $\mathcal D$, 称对称幺半函子 $\mathsf{Fin}^\sqcup \to \mathcal D$ 为 $\mathcal D$ 中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>. 例如交换环 $R$ 上的模关于张量积构成的范畴 $\mathsf{Mod}_R^\otimes$ 中的交换代数就是通常说的交换 $R$-代数.
+因此我们借用范畴逻辑学的术语, 称 $\mathsf{Fin}^\sqcup$ 记录了交换代数的<strong>语法</strong> (syntax), 而种种具体的交换代数都是这个范畴到其它对称幺半范畴的函子, 称之为<strong>语义</strong> (semantics).</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

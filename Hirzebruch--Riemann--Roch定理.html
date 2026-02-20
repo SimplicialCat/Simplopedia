@@ -70,6 +70,112 @@ $$
 <li>$h^0(\mathcal O(D))$ 就是 $l(D)$,</li>
 <li>$h^1(\mathcal O(D))$ 由 <span class="link local"><a href="./Serre对偶.html" title="“Serre 对偶” [Serre对偶]">Serre 对偶</a></span>等于 $l(K-D)$, 其中 $K$ 是<span class="link local"><a href="./典范除子.html" title=" [典范除子]">典范除子</a></span>.</li>
 </ul>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Grothendieck–Riemann–Roch 定理” <a class="slug" href="./Grothendieck--Riemann--Roch定理.html">[Grothendieck--Riemann--Roch定理]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Hirzebruch 指标定理” <a class="slug" href="./Hirzebruch指标定理.html">[Hirzebruch指标定理]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Riemann–Roch 定理” <a class="slug" href="./Riemann--Roch定理.html">[Riemann--Roch定理]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Todd 类” <a class="slug" href="./Todd类.html">[Todd类]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Grothendieck--Riemann--Roch定理"><header><h1><span class="taxon">Wiki. </span>“Grothendieck–Riemann–Roch 定理” <a class="slug" href="./Grothendieck--Riemann--Roch定理.html">[Grothendieck--Riemann--Roch定理]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>Grothendieck–Riemann–Roch 定理描述了<span class="link local"><a href="./陈特征.html" title="“陈特征” [陈特征]">陈特征</a></span>沿着<span class="link local"><a href="./紧合映射.html" title="紧合映射 [紧合映射]">紧合映射</a></span> (proper map) $f\colon X\to Y$ 的前推与自然性的差距, 其 “矫正项” 与 <span class="link local"><a href="./Todd类.html" title="“Todd 类” [Todd类]">Todd 类</a></span>有关, 仅取决于 $X$ 和 $Y$ 本身.</p>
+<p>这个定理可视为 <span class="link local"><a href="./Hirzebruch--Riemann--Roch定理.html" title="“Hirzebruch–Riemann–Roch 定理” [Hirzebruch--Riemann--Roch定理]">Hirzebruch–Riemann–Roch 定理</a></span>的<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>版本.</p>
+<p>设 $f\colon X\to Y$ 是光滑代数簇的<span class="link local"><a href="./紧合映射.html" title="紧合映射 [紧合映射]">紧合映射</a></span>.</p>
+<p>令 $K(X)$ 为 $X$ 上的<span class="link local"><a href="./凝聚层.html" title="凝聚层 [凝聚层]">凝聚层</a></span>或局部自由层的 Grothendieck 环 (见 <span class="link local"><a href="./K-理论.html" title="“K-理论” [K-理论]">K-理论</a></span>), 定义同态 $f_k\colon K(X)\to K(Y)$ 为态射 $f$ 的<span class="link local"><a href="./导出前推.html" title="导出前推 [导出前推]">导出前推</a></span>的交错和
+$$
+f_k(F):=\sum (-1)^q R^q f_* F.
+$$
+<span class="link external"><a href="https://en.wikipedia.org/wiki/Grothendieck%E2%80%93Riemann%E2%80%93Roch_theorem" title="Wiki [https://en.wikipedia.org/wiki/Grothendieck%E2%80%93Riemann%E2%80%93Roch_theorem]">Wiki</a></span> 叙述的定理考虑的是 $f_!=\sum (-1)^i R^i f_*\colon K_0(X)\to K_0(Y)$, 其中 $K_0(X)$ 是凝聚层的有界复形的 Grothendieck 群.</p>
+<p>考虑<span class="link local"><a href="./周环.html" title="“周环” [周环]">周环</a></span>的推出映射 $f_*\colon A(X)\to A(Y)$.</p>
+<p><strong>定理</strong> (Grothendieck) 对任意 $\alpha\in K(X)$,
+$$
+\operatorname{ch}(f_k\alpha) \operatorname{td}(T_Y) = f_*(\operatorname{ch}(\alpha)\operatorname{td}(T_X)).
+$$</p>
+<p><span class="link local"><a href="./Euler示性数.html" title="Euler 示性数 [Euler示性数]">Euler 示性数</a></span> $\chi(X,F)$ 可用<span class="link local"><a href="./陈特征.html" title="“陈特征” [陈特征]">陈特征</a></span>表示. 当 $Y$ 是一个点时,
+$$
+\chi(X,F)= \operatorname{ch}\Big(\sum (-1)^q H^q(X,F)\Big).
+$$</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Hirzebruch指标定理"><header><h1><span class="taxon">Wiki. </span>“Hirzebruch 指标定理” <a class="slug" href="./Hirzebruch指标定理.html">[Hirzebruch指标定理]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>Hirzebruch 指标定理揭示了两个<span class="link local"><a href="./配边.html" title="配边 [配边]">配边</a></span>不变量, 即<span class="link local"><a href="./流形的指标.html" title="“流形的指标” [流形的指标]">流形的指标</a></span>和 <span class="link local"><a href="./Pontryagin数.html" title="“Pontryagin 数” [Pontryagin数]">Pontryagin 数</a></span>的关系. 它可用于证明 <span class="link local"><a href="./Hirzebruch--Riemann--Roch定理.html" title="“Hirzebruch–Riemann–Roch 定理” [Hirzebruch--Riemann--Roch定理]">Hirzebruch–Riemann–Roch 定理</a></span>.</p>
+<h2>Hirzebruch 指标定理的另一表述</h2>
+<p>记 Riemann 流形 $M$ 上的偶数维与奇数维微分形式的空间分别为 $\Omega^{\text{even}}, \Omega^{\text{odd}}$. 考虑两个微分算子
+$$
+\begin{aligned}
+	D_0=d+\delta &amp;: \Omega^{\text{even}}\to \Omega^{\text{odd}},\\
+	D_1=d+\delta &amp;: \Omega^{\text{odd}} \to \Omega^{\text{even}}.
+\end{aligned}
+$$
+注意到 Laplace 算子 $\triangle$ 在偶分量和奇分量分别等于 $D_1D_0$ 和 $D_0D_1$.
+由 <span class="link local"><a href="./Hodge理论.html" title="“Hodge 理论” [Hodge理论]">Hodge 理论</a></span>,
+$$
+\begin{aligned}
+\dim \ker D_0 &amp;= \sum_i \dim H^{2i}(M),\\
+\dim \ker D_1 &amp;= \sum_i \dim H^{2i+1}(M).
+\end{aligned}
+$$
+因此
+$$
+\dim\ker D_0 - \dim\ker D_1 = \chi(M).
+$$
+上式的左端可用 $D_0$ 表示. 首先注意到如下命题:</p>
+<p><strong>命题</strong>. $\operatorname{im}\triangle\big|_{\Omega^{\text{even}}} = \operatorname{im}D_0$.</p>
+<p><strong>证明</strong>. 一方面, 显然 $\operatorname{im}\triangle\big|_{\Omega^{\text{even}}}\subset \operatorname{im}D_0$. 另一方面, 由 <span class="link local"><a href="./Hodge分解定理.html" title=" [Hodge分解定理]">Hodge 理论</a></span>以及<span class="link local"><a href="./调和形式.html" title="“调和形式” [调和形式]">调和形式</a></span>的性质,
+$$
+\Omega^\bullet = \ker\triangle\oplus \operatorname{im}\triangle,
+$$
+$$
+\Omega^{\text{even}}=\ker \triangle\big|_{\Omega^{\text{even}}}\oplus  \operatorname{im}\triangle\big|_{\Omega^{\text{even}}}=\ker D_0\oplus \operatorname{im}\triangle\big|_{\Omega^{\text{even}}}.
+$$
+而 $D_0$ 与 $\triangle$ 可交换, 故得
+$$
+\operatorname{im}D_0 \subset \operatorname{im} \triangle\big|_{\Omega^{\text{even}}}.
+$$
+<strong>命题</strong>. $\operatorname{coker}D_0 = \ker D_1$.</p>
+<p><strong>证明</strong>. 由 Hodge 分解定理,
+$$
+\Omega^{\text{odd}}= \ker\triangle\big|
+$$
+$$
+\operatorname{coker}D_0=\Omega^{\text{odd}}/\operatorname{im}D_0=\Omega^{\text{odd}}/ \operatorname{im}\triangle\big|_{\Omega^{\text{even}}} = \mathscr{H} \cap \Omega^{\text{odd}}=\ker D_1,
+$$
+所以
+$$
+\dim \ker D_0 - \dim \operatorname{coker}D_0 = \chi(M).
+$$</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Riemann--Roch定理"><header><h1><span class="taxon">Wiki. </span>“Riemann–Roch 定理” <a class="slug" href="./Riemann--Roch定理.html">[Riemann--Roch定理]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>复分析中, Riemann–Roch 定理描述了给定零点与可能极点的亚纯函数空间的维数. 它将紧 <span class="link local"><a href="./Riemann面.html" title="“Riemann 面” [Riemann面]">Riemann 面</a></span>上的复分析与其<span class="link local"><a href="./拓扑亏格.html" title=" [拓扑亏格]">亏格</a></span>联系起来.</p>
+<p>Riemann–Roch 定理将代数或解析簇 $X$ 上局部自由层 $E$ 的 <span class="link local"><a href="./Euler示性数.html" title="Euler 示性数 [Euler示性数]">Euler 示性数</a></span>表示为 $E$ 与 $X$ 的<span class="link local"><a href="./示性类.html" title="“示性类” [示性类]">示性类</a></span>.</p>
+<p>Riemann–Roch 定理与 <span class="link local"><a href="./Mittag-Leffler问题.html" title="“Mittag-Leffler 问题” [Mittag-Leffler问题]">Mittag-Leffler 问题</a></span>有关.</p>
+<h2>陈述</h2>
+<p>对<span class="link local"><a href="./亏格.html" title="“亏格” [亏格]">亏格</a></span>为 $g$ 的紧<span class="link local"><a href="./曲线.html" title="“曲线” [曲线]">Riemann 面</a></span> $C$ 上的全纯向量丛 $E$,
+$$
+\chi(C,E) = \deg(E) + \operatorname{rk}(E)(1-g).
+$$</p>
+<p>对<span class="link local"><a href="./正则.html" title=" [正则]">正则性</a></span>射影曲线 $C$ 上的<span class="link local"><a href="./除子.html" title="“除子” [除子]">除子</a></span> $D=\sum a_{p}\cdot (p)$, 定义 $\deg D=\sum a_p \deg p$,
+$$
+\chi(C,\mathcal O_C(D))=\deg D + \chi(C,\mathcal O_C).
+$$</p>
+<p>对<span class="link local"><a href="./亏格.html" title="“亏格” [亏格]">亏格</a></span>为 $g$ 的紧 <span class="link local"><a href="./Riemann面.html" title="“Riemann 面” [Riemann面]">Riemann 面</a></span> $M$ 上的任意<span class="link local"><a href="./除子.html" title="“除子” [除子]">除子</a></span> $D$, $H^\bullet(M,\mathcal{O}_D)$ 均为有限维, 且
+$$
+\chi(H^\bullet(M,\mathcal{O}_D)) -\deg D= 1-g.
+$$</p>
+<h2>推广</h2>
+<p><span class="link local"><a href="./Hirzebruch--Riemann--Roch定理.html" title="“Hirzebruch–Riemann–Roch 定理” [Hirzebruch--Riemann--Roch定理]">Hirzebruch–Riemann–Roch 定理</a></span>, <span class="link local"><a href="./Grothendieck--Riemann--Roch定理.html" title="“Grothendieck–Riemann–Roch 定理” [Grothendieck--Riemann--Roch定理]">Grothendieck–Riemann–Roch 定理</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Todd类"><header><h1><span class="taxon">Wiki. </span>“Todd 类” <a class="slug" href="./Todd类.html">[Todd类]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>Todd 类是一种<span class="link local"><a href="./乘性序列.html" title="乘性序列 [乘性序列]">乘性序列</a></span>, 其特征幂级数为
+$$
+Q(x) =\frac{x}{1-e^x} = 1+\frac{x}{2}+\frac{x^2}{12}+\cdots.
+$$
+对于 $X$ 上的复向量丛 $E,F$, $\operatorname{td}(E\oplus F) = \operatorname{td}(E)\operatorname{td}(F)$.</p>
+<p>由 <span class="link local"><a href="./Hirzebruch--Riemann--Roch定理.html" title="“Hirzebruch–Riemann–Roch 定理” [Hirzebruch--Riemann--Roch定理]">Hirzebruch–Riemann–Roch 定理</a></span>, <span class="link local"><a href="./Dolbeault算子.html" title=" [Dolbeault算子]">Dolbeault 上同调</a></span>的<span class="link local"><a href="./解析指标.html" title="解析指标 [解析指标]">解析指标</a></span>等于 Todd 类 (Todd class 或 Todd genus).</p>
+<h2>例</h2>
+<h3>线丛</h3>
+<p>线丛的 Todd 类
+$$
+\operatorname{td}(L) = \frac{c_1(L)}{1- \exp (-c_1(L))}.
+$$</p>
+<h3>代数曲线</h3>
+<p>对于代数曲线 $X$, 其 Todd 类为 $\operatorname{Td}(X)= 1+ c_1(TX)$.</p>
+<h3>代数簇</h3>
+<p>对于代数簇 $X$, 定义 $\operatorname{Td}(X)=\operatorname{td}(T_X)$, 其中 $T_X$ 为 $X$ 的<span class="link local"><a href="./切层.html" title=" [切层]">切丛</a></span>.</p>
+<h2>与 A-hat 类的关系</h2>
+<p>在近复流形 $M$ 上, Todd 类与 <span class="link local"><a href="./A-hat类.html" title="“A-hat 类” [A-hat类]">A-hat 类</a></span>相差 $e^{c_1/2}$.</p>
+<h2>与 Thom 类以及陈特征的关系</h2>
+<p><span class="link external"><a href="https://ncatlab.org/nlab/show/Todd+class" title="nLab [https://ncatlab.org/nlab/show/Todd+class]">nLab</a></span></p>
+<p><span class="link external"><a href="https://ncatlab.org/nlab/show/rational+Todd+class+is+Chern+character+of+Thom+class" title="有理 Todd 类是 Thom 类的陈特征 [https://ncatlab.org/nlab/show/rational+Todd+class+is+Chern+character+of+Thom+class]">有理 Todd 类是 Thom 类的陈特征</a></span>.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

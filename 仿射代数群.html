@@ -58,6 +58,64 @@
 </script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="仿射代数群"><header><h1><span class="taxon">Wiki. </span>“仿射代数群” <a class="slug" href="./仿射代数群.html">[仿射代数群]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Hopf代数.html" title="Hopf 代数 [Hopf代数]">Hopf 代数</a></span>, <span class="link local"><a href="./仿射代数群的表示.html" title="“仿射代数群的表示” [仿射代数群的表示]">仿射代数群的表示</a></span></p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Hopf 代数 <a class="slug" href="./Hopf代数.html">[Hopf代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“仿射代数群的表示” <a class="slug" href="./仿射代数群的表示.html">[仿射代数群的表示]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Hopf代数"><header><h1><span class="taxon">Wiki. </span>Hopf 代数 <a class="slug" href="./Hopf代数.html">[Hopf代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Hopf 代数可视为群的推广; 它具有<span class="link local"><a href="./双代数.html" title="双代数 [双代数]">双代数</a></span>结构与一个对径映射, 对径映射可视为群中取逆运算的推广.</p>
+<p>Hopf 代数上的模范畴是群表示范畴的推广.</p>
+<p>另见<span class="link local"><a href="./量子群.html" title="量子群 [量子群]">量子群</a></span>.</p>
+<p>另见<span class="link local"><a href="./交换Hopf代数.html" title="交换 Hopf 代数 [交换Hopf代数]">交换 Hopf 代数</a></span>.</p>
+<h2>定义</h2>
+<h3>传统定义</h3>
+<p><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半 $1$-范畴</a></span>中的 Hopf 代数是<span class="link local"><a href="./双代数.html" title="双代数 [双代数]">双代数</a></span> $(A,m,\eta,\epsilon,\Delta)$ 带有对径映射 $S\colon A\to A$, 满足
+$$
+m (\mathrm{id} \otimes S) \Delta = m (S \otimes \mathrm{id}) \Delta = \eta\epsilon,
+$$</p>
+<p>若 Hopf 代数满足 $S^2=\mathrm{id}$, 则称之为<strong>对合 Hopf 代数</strong> (involutive Hopf algebra). 有时我们默认这个条件成立.</p>
+<h2>性质</h2>
+<p>Hopf 代数的对偶也是 Hopf 代数.</p>
+<h2>例</h2>
+<h3>群代数</h3>
+<p>对于交换环 $k$ 与群 $G$, 群代数 $k[G]$ 是 Hopf 代数; 其对偶为群 $G$ 上的 $k$-值函数空间 $\operatorname{Hom}(k[G],k)$ 在卷积下构成的代数.</p>
+<p>类似地, 对于有限型代数群 $G$, 其上 <span class="link local"><a href="./D-模.html" title="D-模 [D-模]">D-模</a></span>的范畴 $D\text{-}\mathsf{Mod}(G)$ 是 <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">$\mathsf{DGCat}$</a></span> 中的 Hopf 代数.</p>
+<h3>泛包络代数</h3>
+<p>Lie 代数 $\mathfrak g$ 的<span class="link local"><a href="./泛包络代数.html" title="泛包络代数 [泛包络代数]">泛包络代数</a></span> $\mathcal U\mathfrak g$ 是 Hopf 代数:</p>
+<ul>
+<li>余乘法 $\Delta\colon \mathcal U\mathfrak g\to\mathcal U\mathfrak g\otimes\mathcal U\mathfrak g\simeq\mathcal U(\mathfrak g\times\mathfrak g)$ 由对角映射 $\mathfrak g\to\mathfrak g\times\mathfrak g$ 诱导, 其在 $X\in\mathfrak g$ 上的作用为 $\Delta(X)= X\otimes 1+1\otimes X$.</li>
+<li>对极映射 $S\colon \mathcal U\mathfrak g\to\mathcal U\mathfrak g$ 由 $-\mathrm{id}\colon \mathfrak g\to\mathfrak g$ 诱导.</li>
+</ul>
+<p><span class="link local"><a href="./仿射代数群.html" title="“仿射代数群” [仿射代数群]">仿射代数群</a></span></p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./Cartier对偶.html" title="“Cartier 对偶” [Cartier对偶]">Cartier 对偶</a></span></p>
+<p><span class="link local"><a href="./拟三角Hopf代数.html" title="拟三角 Hopf 代数 [拟三角Hopf代数]">拟三角 Hopf 代数</a></span></p>
+<p><span class="link local"><a href="./交换Hopf代数.html" title="交换 Hopf 代数 [交换Hopf代数]">交换 Hopf 代数</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="仿射代数群的表示"><header><h1><span class="taxon">Wiki. </span>“仿射代数群的表示” <a class="slug" href="./仿射代数群的表示.html">[仿射代数群的表示]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>固定一个域 $k$. 设 $G$ 是 $k$ 上的<span class="link local"><a href="./仿射代数群.html" title="“仿射代数群” [仿射代数群]">仿射代数群</a></span>. 定义 $G$ 表示为 $k$-向量空间 $V$ 以及代数群的同态
+$$
+G \to \mathrm {GL}_V.
+$$</p>
+<p>回忆 $\mathrm {GL}_V$ 是函子 $\mathsf {Alg}_k\to\mathsf {Grp}$, $\mathrm {GL}_V(A)\simeq\operatorname{Aut}_A(A\otimes V)$.</p>
+<h2>性质</h2>
+<h3>与余模的关系</h3>
+<p>$G$ 的表示等同于 <span class="link local"><a href="./Hopf代数.html" title="Hopf 代数 [Hopf代数]">Hopf 代数</a></span> $\mathcal O_G$ 的余模.</p>
+<p>由于 $G\simeq\operatorname{Spec}\mathcal O_G$, 群同态 $G\to\mathrm {GL}_V$ 给出 $\mathrm {GL}_V(\mathcal O_G)$ 的一个元素, 即 $\mathcal O_G\otimes V$ 的 $\mathcal O_G$-线性自同构, 即 $k$-线性映射
+$$
+V\to \mathcal O_G \otimes V.
+$$
+它给出 $V$ 的 $\mathcal O_G$-余模结构.</p>
+<p><strong>命题</strong>. 存在典范的范畴等价 $\mathsf {Rep}(G)\simeq \mathcal O_G\text{-comod}$.</p>
+<h3>与 Lie 代数表示的关系</h3>
+<p>$G$ 的 Lie 代数 $\mathfrak g$ 是 $G$ 在单位元 $e$ 处的切空间
+$$
+\mathfrak g =\operatorname{Lie}(G)= T_eG = \{\varphi\colon \operatorname{Spec}k[x]/(x^2)\to G \mid \varphi(0)=e\}.
+$$
+(其中 $0$ 指的是 $x\mapsto 0$ 对应的映射 $\operatorname{Spec}k\to\operatorname{Spec}k[x]/(x^2)$.)</p>
+<p>另外, 切空间 $T_eG$ 也是导子的空间 $\operatorname{Der}(\mathcal O_G,k_x)$, 其中 $k_x$ 是 $k$ 通过 “在单位元处取值” 的映射 $\mathcal O_G \to k$ 视为 $\mathcal O_G$-模.</p>
+<p>$G$-表示 $G\to\mathrm {GL}_V$ 给出 Lie 代数同态
+$$
+\mathfrak g=\operatorname{Lie}(G)\to\operatorname{Lie}(\mathrm {GL}_V)\simeq \mathfrak {gl}(V).
+$$
+称这样给出的 $\mathfrak g$-表示是可积的. 不是所有 $\mathfrak g$-表示都可积.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

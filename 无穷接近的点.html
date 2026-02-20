@@ -62,6 +62,54 @@ $$
 X(R)\to X(R/I)
 $$
 下的像相同, 则称其为<strong>无穷接近的点</strong> (infinitesimally close points).</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>de Rham 空间 <a class="slug" href="./deRham空间.html">[deRham空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>局部系统 <a class="slug" href="./局部系统.html">[局部系统]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="deRham空间"><header><h1><span class="taxon">Wiki. </span>de Rham 空间 <a class="slug" href="./deRham空间.html">[deRham空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>$X$ 的 de Rham 空间是将 $X$ 上 “<span class="link local"><a href="./无穷接近的点.html" title="无穷接近的点 [无穷接近的点]">无穷接近的点</a></span>等同起来” 得到的空间.</p>
+<p>de Rham 空间是无穷小道路群胚的逆范畴化, 而带平坦联络的向量丛等同于无穷小道路群胚上的等变向量丛, 这解释了 <span class="link local"><a href="./D-模.html" title="D-模 [D-模]">D-模</a></span>为何是带平坦联络的向量丛的推广.</p>
+<h2>定义</h2>
+<h3>函子式</h3>
+<p>以<span class="link local"><a href="./点函子.html" title="点函子 [点函子]">点函子</a></span>表达, 概形 $X$ 的 <strong>de Rham 空间</strong> 是如下函子 $X_{\mathrm{dR}}\colon \mathsf{Ring} \to \mathsf{Set}$,
+$$
+X_{\text{dR}}(R) := X(R/I),
+$$
+其中 $I$ 是 $R$ 的幂零根 (nilpotent radical).</p>
+<h3>对角线形式邻域的商</h3>
+<p>$X_{\text{dR}}$ 也可表示为 $X$ 的商. 定义 $X_{\text{inf}}\to X\times X$ 为对角线的<span class="link local"><a href="./形式邻域.html" title="形式邻域 [形式邻域]">形式邻域</a></span>, 则
+$$
+X_{\text{dR}} = \operatorname{coeq}(X_{\text{inf}}\rightrightarrows X).
+$$</p>
+<h2>性质</h2>
+<h3>D-模</h3>
+<p>$$
+\mathsf {QCoh}(X_{\text{dR}})\simeq D\mathsf {-Mod}(X).
+$$</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="局部系统"><header><h1><span class="taxon">Wiki. </span>局部系统 <a class="slug" href="./局部系统.html">[局部系统]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>生象上</h3>
+<p><span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span> $A$ 上的局部系统就是 $A$ (视为 $\infty$-范畴) 出发的函子. 其它一些种类的几何对象上的局部系统有时可化为其对应的生象上的局部系统.</p>
+<h3>拓扑空间上</h3>
+<p>拓扑空间 $X$ 上的<strong>局部系统</strong> (local system), 又称<strong>局部常值层</strong> $\mathcal L$ 是满足如下条件的层: 每个点 $x$ 都有一个邻域 $U$ 使得 $\mathcal L|_U$ 是<span class="link local"><a href="./常值层.html" title="常值层 [常值层]">常值层</a></span>.</p>
+<p><strong>命题</strong>. 对于道路连通空间, 局部常值的每个点上的茎都 (在同构意义下) 是 $L$. 局部系统一一对应于同态
+$$
+\rho\colon \pi_1(X)\to \operatorname{Aut}L,
+$$
+称为<strong>单值表示</strong> (monodromy representation).</p>
+<p><strong>证明</strong>. 首先, $[0,1]$ 上的局部系统都是常值层, 所以 $X$ 上的环路给出 $L$ 的自同构, 这定义了同态 $\rho\colon \pi_1(X)\to\operatorname{Aut}L$.</p>
+<p>反之, 给定 $\rho$, 考虑万有覆盖 $\widetilde X$ 上的常值层 $\underline{L}$, 其中叠变换 (deck transform) 下与 $\rho$ 等变的截面给出 $X$ 上的局部系统 $\mathcal L(\rho)$,
+$$
+\mathcal L(\rho)(U) =\left\{s\in \underline{L}(\pi^{-1}(U)): \theta \circ s = \rho(\theta) s \forall \theta\in \operatorname{Deck}(\widetilde X / X)\right\}.
+$$
+其中 $\operatorname{Deck}(\widetilde X/X)\simeq\pi_1(X)$.</p>
+<p>由此亦可见, 局部常值等价于拉回到万有覆盖上是常值层.</p>
+<h2>例</h2>
+<p>设 $V$ 为光滑流形 $X$ 上的向量丛, 配有<span class="link local"><a href="./平坦联络.html" title=" [平坦联络]">可积联络</a></span>
+$$
+\nabla\colon V\to V\otimes \Omega_X,
+$$
+则 $V$ 的<strong>平坦截面</strong>构成局部系统.</p>
+<p>进一步, $X$ 上带平坦联络的向量丛的范畴等价于 $X$ 上向量空间局部系统的范畴, 这是 <span class="link local"><a href="./Riemann--Hilbert对应.html" title="“Riemann–Hilbert 对应” [Riemann--Hilbert对应]">Riemann–Hilbert 对应</a></span>的例子.</p>
+<p>向量丛的联络有纯代数的版本. 然而, 由带平坦联络的向量丛到局部系统的对应在本质上是<strong>超越</strong> (transcendental) 的: $X$ 上两点 $x$ 与 $y$ 之间的<strong>道路</strong>没有纯代数的对应概念.</p>
+<p>反思流形上带联络的向量丛, 我们发现 (不严谨地说) 对于<strong>足够接近的</strong>两点 $x,y$, 有<strong>典范的</strong>同构 $V_x\simeq V_y$. 而对于代数簇, Grothendieck 的概形理论可以描述<span class="link local"><a href="./无穷接近的点.html" title="无穷接近的点 [无穷接近的点]">无穷接近的点</a></span>.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

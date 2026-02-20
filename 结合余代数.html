@@ -64,6 +64,100 @@
 $$
 Y\overset{\Delta_Y}{\to} Y\times Y \to X\times Y.
 $$</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>余单子 <a class="slug" href="./余单子.html">[余单子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>分次代数 <a class="slug" href="./分次代数.html">[分次代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>双代数 <a class="slug" href="./双代数.html">[双代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>杠构造 <a class="slug" href="./杠构造.html">[杠构造]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="余单子"><header><h1><span class="taxon">Wiki. </span>余单子 <a class="slug" href="./余单子.html">[余单子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>一个范畴 $\mathcal C$ 中的<strong>余单子</strong> (comonad) 是 $\operatorname{End}(\mathcal C)$ 中的<span class="link local"><a href="./结合余代数.html" title="结合余代数 [结合余代数]">结合余代数</a></span>.</p>
+<p><strong>注意</strong>. 余单子<strong>不是</strong> $\mathcal C^{\text{op}}$ 中的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</p>
+<h2>例</h2>
+<h2>性质</h2>
+<h3>余单子与单纯对象</h3>
+<p>由于<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$ 是 “一个对象生成的自由<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>”, 任意幺半范畴 $M$ 中的幺半对象都对应着函子 $\Delta \to M$, 也即 $M^{\text{op}}$ 中的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯集</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="分次代数"><header><h1><span class="taxon">Wiki. </span>分次代数 <a class="slug" href="./分次代数.html">[分次代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>分次代数是分成不同次数的 “齐次” 部分之和的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 齐次元素的乘积的次数是次数的和.</p>
+<p>次数也可取值于一般的幺半群.</p>
+<h2>定义</h2>
+<p>固定基环 $k$, 设 $M$ 为<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>, 通常 $M = \mathbb{Z}$.</p>
+<p>定义 $k$ 上的 $M$-分次代数为 $k$-代数 $A$ 带有底层 $k$-模的分解
+$$
+A = \bigoplus_{m\in M} A_m,
+$$
+其中 $A_m$ 的元素称为 $m$ 次的<strong>齐次元素</strong>,
+满足齐次元素的乘积仍为齐次元素, 即乘法映射将 $A_m \times A_{m'}$ 映射到 $A_{mm'}$.</p>
+<h3>余模结构</h3>
+<p>设 $M$ 为交换幺半群.</p>
+<p>回忆幺半群代数 $k[M]$ 的双代数结构. 注意到自由 $k$-模函子
+$$
+k[-]\colon (\mathsf{Set},\times) \to (\mathsf{Mod}(k),\otimes)
+$$
+为对称幺半函子, 故将 $(\mathsf{Set},\times)$ 中的交换余交换<span class="link local"><a href="./双代数.html" title="双代数 [双代数]">双代数</a></span> $M$ 对应到 $\mathsf{Mod}(k)$ 中的交换余交换双代数 $k[M]$, 即 $\mathsf{CAlg}(k)$ 中的余交换<span class="link local"><a href="./结合余代数.html" title="结合余代数 [结合余代数]">余代数</a></span>.</p>
+<p>现在, 容易验证 $k$ 上的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span> $A$ 上的 $M$-分次结构等同于 $\mathsf{CAlg}(k)$ 中的余代数 $k[M]$ 上的一个余模结构
+$$
+A \to A[M] := A \otimes_k k[M],
+$$
+将 $m$ 次齐次元素 $a$ 映射到 $a \otimes m$. 其构成代数同态的条件恰好表明齐次元素的乘积的次数是各自次数的和.</p>
+<p><span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">对偶</a></span>地, $\operatorname{Spec}k[M]$ 是<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>范畴中的交换幺半群, $A$ 上的 $M$-分次也等同于 $k$-概形 $\operatorname{Spec}A$ 上的 $\operatorname{Spec}k[M]$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>.</p>
+<h2>性质</h2>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="双代数"><header><h1><span class="taxon">Wiki. </span>双代数 <a class="slug" href="./双代数.html">[双代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $\mathcal C$ 中的双代数是其<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>范畴中的<span class="link local"><a href="./结合余代数.html" title="结合余代数 [结合余代数]">结合余代数</a></span>, 也是其<span class="link local"><a href="./结合余代数.html" title="结合余代数 [结合余代数]">结合余代数</a></span>范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
+<h3>传统定义</h3>
+<p><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半 $1$-范畴</a></span>中的<strong>双代数</strong> (bialgebra) $(A,m,\eta,\epsilon,\Delta)$ 是对象 $A$ 配备如下资料,</p>
+<ul>
+<li>乘法 $m\colon A\otimes A \to A$,</li>
+<li>单位 $\eta\colon 1 \to A$ ($1$ 为幺半范畴的单位),</li>
+<li>余单位 $\epsilon\colon A\to 1$,</li>
+<li>余乘法 $\Delta\colon A\to A\otimes A$,</li>
+</ul>
+<p>满足</p>
+<ul>
+<li>$(A,m,\eta)$ 为<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>,</li>
+<li>$(A,\Delta,\epsilon)$ 为<span class="link local"><a href="./结合余代数.html" title="结合余代数 [结合余代数]">结合余代数</a></span>,</li>
+<li>$\Delta,\epsilon$ 均为结合代数的同态,</li>
+<li>$m,\eta$ 均为结合余代数的同态.</li>
+</ul>
+<h2>性质</h2>
+<h3>模范畴</h3>
+<p><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal C$ 中, 双代数 $A$ 上的 (左) 模范畴具有<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>结构, 两个 $A$-模的张量积上的 $A$-模结构为
+$$
+\begin{aligned}
+A\otimes M\otimes N &amp;\overset{\Delta}{\to} A\otimes A\otimes M \otimes N \\&amp;\to A\otimes M\otimes A\otimes N \\&amp;\to  M\otimes N.
+\end{aligned}
+$$
+抽象地看, 这是由于 $\mathsf{Mod}(-)\colon \mathsf{Alg}^{\mathrm{op}} \to \mathsf{Cat}$ 为<span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">松幺半函子</a></span>, 故将 $\mathsf{Alg}^{\mathrm{op}}$ 中的代数 $A$ 变为 $\mathsf{Cat}$ 中的代数; $\mathsf{Mod}(A)$ 上的幺半结构为
+$$
+\mathsf{Mod}(A)\times\mathsf{Mod}(A)\overset{\otimes}{\to}\mathsf{Mod}(A\otimes A) \overset{\Delta^*}{\to}\mathsf{Mod}(A).
+$$</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="杠构造"><header><h1><span class="taxon">Wiki. </span>杠构造 <a class="slug" href="./杠构造.html">[杠构造]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>对于范畴 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 以及其上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span> $A$, 杠构造 (bar construction) 给出<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>范畴 $\mathcal C^T$ 中的一个<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">增广单纯对象</a></span>
+$$
+\cdots \to^3 TTA \rightrightarrows TA \to A,
+$$
+作为 $\mathcal C$ 的单纯对象, 它是 $A$ 的一种<span class="link local"><a href="./消解.html" title="消解 [消解]">消解</a></span>, 又称<strong>杠消解</strong> (bar resolution).</p>
+<h2>定义</h2>
+<p>给定<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 以及 $T$-代数 $A$, 杠构造 (bar construction) 是<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">增广单纯对象</a></span>
+$$
+B(T,A) = (\cdots \to^3 TTA \rightrightarrows TA \to A),
+$$
+其中的结构映射由 $T$ 与 $A$ 的结构映射给出. 例如两个映射 $TTA \to TA$ 分别来自 $T$ 带有的自然变换 $T^2\to T$ 以及 $A$ 的结构映射 $TA\to A$.</p>
+<p>为具体理解 $B(T,A)$ 的构造, 只需注意到 $T \colon \mathcal C^T \to \mathcal C^T$ 为<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>范畴 $\mathcal C^T$ 上的<span class="link local"><a href="./余单子.html" title="余单子 [余单子]">余单子</a></span>, 也即$\operatorname{End}(\mathcal C^T)$ 中的<span class="link local"><a href="./结合余代数.html" title="结合余代数 [结合余代数]">结合余代数</a></span>, 从而由<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span> $\Delta_+$ 的性质, 其对应一个幺半函子
+$$
+\operatorname{Bar}_T\colon
+\Delta_+^{\text{op}}\to\operatorname{End}(\mathcal C^T).
+$$
+将 $\operatorname{Bar}_T$ 进一步复合 “在 $A$ 处取值” 函子 $\mathrm{ev}_A\colon \operatorname{End}(\mathcal C^T) \to \mathcal C^T$, 得到函子
+$$
+\operatorname{Bar}_T(A)\colon \Delta_+^{\text{op}}\to\mathcal C^T.
+$$
+最后再复合 $U$, 就得到<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">增广单纯对象</a></span>
+$$
+B(T,A)\colon \Delta_+^{\text{op}}\to\mathcal C.
+$$</p>
+<h3>推广</h3>
+<p>杠构造的推广见<span class="link local"><a href="./双边杠构造.html" title="双边杠构造 [双边杠构造]">双边杠构造</a></span>, <span class="link local"><a href="./单纯杠构造.html" title=" [单纯杠构造]">单纯杠构造</a></span>. 使用双边杠构造的记号, 有 $\operatorname{Bar}_T(A)=B(F,T,A)$, $B(T,A)=B(T,T,A)$. 另见<span class="link local"><a href="./循环杠构造.html" title="循环杠构造 [循环杠构造]">循环杠构造</a></span>.</p>
+<h2>例</h2>
+<h3>群</h3>
+<p>设</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

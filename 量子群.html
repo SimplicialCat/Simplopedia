@@ -59,6 +59,36 @@
 <h2>观念</h2>
 <p>量子群是某些 <span class="link local"><a href="./Hopf代数.html" title="Hopf 代数 [Hopf代数]">Hopf 代数</a></span>的别称. 其模范畴是<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半范畴</a></span>.</p>
 <p>重要的例子是 Drinfeld, Jimbo 引入的 $U_q(\mathfrak g)$, 即复半单 Lie 代数的<span class="link local"><a href="./泛包络代数.html" title="泛包络代数 [泛包络代数]">泛包络代数</a></span>的形变.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Hopf 代数 <a class="slug" href="./Hopf代数.html">[Hopf代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Hopf代数"><header><h1><span class="taxon">Wiki. </span>Hopf 代数 <a class="slug" href="./Hopf代数.html">[Hopf代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Hopf 代数可视为群的推广; 它具有<span class="link local"><a href="./双代数.html" title="双代数 [双代数]">双代数</a></span>结构与一个对径映射, 对径映射可视为群中取逆运算的推广.</p>
+<p>Hopf 代数上的模范畴是群表示范畴的推广.</p>
+<p>另见<span class="link local"><a href="./量子群.html" title="量子群 [量子群]">量子群</a></span>.</p>
+<p>另见<span class="link local"><a href="./交换Hopf代数.html" title="交换 Hopf 代数 [交换Hopf代数]">交换 Hopf 代数</a></span>.</p>
+<h2>定义</h2>
+<h3>传统定义</h3>
+<p><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半 $1$-范畴</a></span>中的 Hopf 代数是<span class="link local"><a href="./双代数.html" title="双代数 [双代数]">双代数</a></span> $(A,m,\eta,\epsilon,\Delta)$ 带有对径映射 $S\colon A\to A$, 满足
+$$
+m (\mathrm{id} \otimes S) \Delta = m (S \otimes \mathrm{id}) \Delta = \eta\epsilon,
+$$</p>
+<p>若 Hopf 代数满足 $S^2=\mathrm{id}$, 则称之为<strong>对合 Hopf 代数</strong> (involutive Hopf algebra). 有时我们默认这个条件成立.</p>
+<h2>性质</h2>
+<p>Hopf 代数的对偶也是 Hopf 代数.</p>
+<h2>例</h2>
+<h3>群代数</h3>
+<p>对于交换环 $k$ 与群 $G$, 群代数 $k[G]$ 是 Hopf 代数; 其对偶为群 $G$ 上的 $k$-值函数空间 $\operatorname{Hom}(k[G],k)$ 在卷积下构成的代数.</p>
+<p>类似地, 对于有限型代数群 $G$, 其上 <span class="link local"><a href="./D-模.html" title="D-模 [D-模]">D-模</a></span>的范畴 $D\text{-}\mathsf{Mod}(G)$ 是 <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">$\mathsf{DGCat}$</a></span> 中的 Hopf 代数.</p>
+<h3>泛包络代数</h3>
+<p>Lie 代数 $\mathfrak g$ 的<span class="link local"><a href="./泛包络代数.html" title="泛包络代数 [泛包络代数]">泛包络代数</a></span> $\mathcal U\mathfrak g$ 是 Hopf 代数:</p>
+<ul>
+<li>余乘法 $\Delta\colon \mathcal U\mathfrak g\to\mathcal U\mathfrak g\otimes\mathcal U\mathfrak g\simeq\mathcal U(\mathfrak g\times\mathfrak g)$ 由对角映射 $\mathfrak g\to\mathfrak g\times\mathfrak g$ 诱导, 其在 $X\in\mathfrak g$ 上的作用为 $\Delta(X)= X\otimes 1+1\otimes X$.</li>
+<li>对极映射 $S\colon \mathcal U\mathfrak g\to\mathcal U\mathfrak g$ 由 $-\mathrm{id}\colon \mathfrak g\to\mathfrak g$ 诱导.</li>
+</ul>
+<p><span class="link local"><a href="./仿射代数群.html" title="“仿射代数群” [仿射代数群]">仿射代数群</a></span></p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./Cartier对偶.html" title="“Cartier 对偶” [Cartier对偶]">Cartier 对偶</a></span></p>
+<p><span class="link local"><a href="./拟三角Hopf代数.html" title="拟三角 Hopf 代数 [拟三角Hopf代数]">拟三角 Hopf 代数</a></span></p>
+<p><span class="link local"><a href="./交换Hopf代数.html" title="交换 Hopf 代数 [交换Hopf代数]">交换 Hopf 代数</a></span></p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

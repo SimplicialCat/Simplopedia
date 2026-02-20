@@ -56,6 +56,64 @@
     });
   });
 </script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="向量丛-投射模类比"><header><h1><span class="taxon">Wiki. </span>向量丛-投射模类比 <a class="slug" href="./向量丛-投射模类比.html">[向量丛-投射模类比]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Grothendieck 群” <a class="slug" href="./Grothendieck群.html">[Grothendieck群]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“K-群 (代数)” <a class="slug" href="./K-群(代数).html">[K-群(代数)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>投射模 <a class="slug" href="./投射模.html">[投射模]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“稳定丛” <a class="slug" href="./稳定丛.html">[稳定丛]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Grothendieck群"><header><h1><span class="taxon">Wiki. </span>“Grothendieck 群” <a class="slug" href="./Grothendieck群.html">[Grothendieck群]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>范畴的 Grothendieck 群</h3>
+<p>设 $\mathsf C$ 是<span class="link local"><a href="./加性范畴.html" title="加性范畴 [加性范畴]">加性范畴</a></span>. 定义 Grothendieck 群 $K(\mathsf C)$ 为 $\mathsf C$ 中的同构类在直和下构成的交换半群 $\Phi(\mathsf C)$ 的群化.</p>
+<p>若 $F \colon \mathsf C \to \mathsf C'$ 为加性函子, 则 $F$ 诱导了群同态 $K(\mathsf C) \to K(\mathsf C')$. 这个对应也是保持复合的.</p>
+<h3>相对版本: 函子的 Grothendieck 群</h3>
+<p>Grothendieck 群有<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>版本.</p>
+<blockquote>
+<p>参考 Karoubi II.2 节.</p>
+</blockquote>
+<p><strong>定义</strong> (Banach 范畴). Banach 范畴是一种加性范畴, 其中 $\operatorname{Hom}(E,F)$ 构成 Banach 空间, 态射的复合 $\operatorname{Hom}(E,F)\times \operatorname{Hom}(F,G) \to \operatorname{Hom}(E,G)$ 是双线性函数.</p>
+<p><strong>例</strong>. 紧空间上的向量丛范畴, Banach 代数上的投射模范畴.</p>
+<p><strong>定义</strong> (函子的 Grothendieck 群). 设 $\varphi \colon \mathsf C \to \mathsf D$ 为 Banach 函子. 令 $\Gamma(\varphi)$ 为三元组 $(E,F,\alpha)$ 的集合, $E,F$ 为 $\mathsf C$ 的对象, $\alpha$ 为同构 $\varphi(E)\to\varphi(F)$. 定义两个三元组 $(E,F,\alpha), (E',F',\alpha ')$ 同构是指存在同构 $f\colon E \to E'$, $g\colon F\to F'$, 使得下图交换:
+$$
+\begin{array}{ccc}
+	\varphi(E) &amp; \overset{\alpha}{\to} &amp; \varphi(F)\\
+	\hspace{-2em}\varphi(f)\downarrow &amp;  &amp; \downarrow \varphi(g)\hspace{-2em}\\
+	\varphi(E) &amp; \overset{\alpha'}{\to} &amp; \varphi(F).
+\end{array}
+$$
+称三元组 $(E,F,\alpha)$ 为基本 (elementary) 三元组, 是指 $E=F$, 且 $\alpha$ 在 $\varphi(E)$ 的自同构中同伦于 $\operatorname{id}_{\varphi(E)}$. 定义两个三元组的和是各项的直和.</p>
+<p>定义 $K(\varphi)$ 为 $\Gamma(\varphi)$ 模去基本三元组的商, 也即 $\sigma\sim\sigma'$ 当且仅当存在基本三元组 $\tau,\tau'$ 使得 $\sigma+\tau$ 同构于 $\sigma'+\tau'$.</p>
+<blockquote>
+<p>想象函子 $\varphi\colon \mathsf C \to \mathsf D$ 是由 $\mathsf D$ 的对象 “参数化” 的 “一族范畴”, 函子的 Grothendieck 群可粗略地理解为每个 “纤维” 上的 Grothendieck 群.</p>
+</blockquote>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./向量丛-投射模类比.html" title="向量丛-投射模类比 [向量丛-投射模类比]">向量丛-投射模类比</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="K-群(代数)"><header><h1><span class="taxon">Wiki. </span>“K-群 (代数)” <a class="slug" href="./K-群(代数).html">[K-群(代数)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>代数簇</h3>
+<p>设 $X$ 是<span class="link local"><a href="./代数簇.html" title="“代数簇” [代数簇]">代数簇</a></span>, 考虑 $X$ 上有限秩向量丛的范畴 $\mathcal P(X)$. 定义 $K_0(X)$ 为 $\mathcal P(X)$ 的同构类在 “短正合列中间等于两边之和” 的关系下生成的交换群.</p>
+<h3>仿射簇</h3>
+<p>在 $X=\operatorname{spec}R$ 的情形, $X$ 上的向量丛对应 $R$ 上的有限生成<span class="link local"><a href="./投射模.html" title="投射模 [投射模]">投射模</a></span>.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./K-群(拓扑).html" title="“K-群 (拓扑)” [K-群(拓扑)]">K-群 (拓扑)</a></span>, <span class="link local"><a href="./向量丛-投射模类比.html" title="向量丛-投射模类比 [向量丛-投射模类比]">向量丛-投射模类比</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="投射模"><header><h1><span class="taxon">Wiki. </span>投射模 <a class="slug" href="./投射模.html">[投射模]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>固定一个含幺环 $R$ (不一定交换).</p>
+<h2>定义</h2>
+<p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 上的<strong>投射模</strong>是模范畴 $\mathsf{Mod}(A)$ 的<span class="link local"><a href="./投射对象.html" title="投射对象 [投射对象]">投射对象</a></span>.</p>
+<p>模 $P$ 是投射模当且仅当任意短正合列
+$$
+0 \to A \to B \to P \to 0
+$$
+都分裂, 这也等价于 $P$ 是某个自由模的直和项.</p>
+<p>模 $P$ 是投射模当且仅当函子 $\operatorname{Hom}(P,-)\colon R\mathsf {-Mod} \to \mathsf {Ab}$ 正合. 对于一般的 $P$ 它一定左正合, 但不一定右正合.</p>
+<h2>性质</h2>
+<p>自由 $\Rightarrow$ 投射 $\Rightarrow$ 平坦 $\Rightarrow$ 无挠</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./向量丛-投射模类比.html" title="向量丛-投射模类比 [向量丛-投射模类比]">向量丛-投射模类比</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="稳定丛"><header><h1><span class="taxon">Wiki. </span>“稳定丛” <a class="slug" href="./稳定丛.html">[稳定丛]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>向量丛 (或<span class="link local"><a href="./凝聚层.html" title="凝聚层 [凝聚层]">凝聚层</a></span>) 的斜率 (slope) 是指度数除以阶数:
+$$
+\phi(F) = \frac{\deg (F)}{\operatorname{rank}(F)}.
+$$</p>
+<p>称向量丛为稳定从 (半稳定丛), 是指其所有非平凡子丛的斜率都小于 (小于等于) 本身的斜率.</p>
+<p><span class="link external"><a href="https://ncatlab.org/nlab/show/stable+vector+bundle" title="nLab [https://ncatlab.org/nlab/show/stable+vector+bundle]">nLab</a></span></p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./向量丛-投射模类比.html" title="向量丛-投射模类比 [向量丛-投射模类比]">向量丛-投射模类比</a></span></p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

@@ -72,6 +72,29 @@ $$
 \end{aligned}
 $$
 其中最后一个映射是投影到第一和第三分量.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>相对位置 <a class="slug" href="./相对位置.html">[相对位置]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>陪集空间 <a class="slug" href="./陪集空间.html">[陪集空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="相对位置"><header><h1><span class="taxon">Wiki. </span>相对位置 <a class="slug" href="./相对位置.html">[相对位置]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>设<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ <span class="link local"><a href="./传递作用.html" title="传递作用 [传递作用]">传递</a></span>地作用于集合 $S$, 那么 $S$ 的两个元素有一个<strong>相对位置</strong>的概念, 即有一个映射 $p\colon S\times S\to P$, 其中 $P$ 是所有可能的相对位置的集合, 满足</p>
+<ul>
+<li>$p(s,s') = p(gs,gs')$ ($s,s'\in S, g\in G$), 即群作用不改变两个元素的相对位置;</li>
+<li>对任意映射 $q\colon S\times S \to Q$, 若 $q(s,s') = q(gs,gs')$ ($s,s'\in S, g\in G$), 则 $q$ 唯一地穿过 $p$, 即若两个元素的某种关系被群作用保持, 那么这种关系一定仅依赖于相对位置.</li>
+</ul>
+<p>上面的冗长描述仅仅是为了建立一种直观; 在数学上, “相对位置的集合” 不过是商集
+$$
+P = G \backslash (S \times S).
+$$</p>
+<p>通常这个故事不是从集合 $S$, 而是从 $G$ 的一个子群 $H$ 开始的; 此时集合 $S$ 是陪集空间 $G/H$, 换言之 $H$ 是 $s_0\in S$ 的稳定子群. 那么 “相对位置的集合” 就是<span class="link local"><a href="./双陪集空间.html" title="双陪集空间 [双陪集空间]">双陪集空间</a></span>
+$$
+P = G \backslash ((G/H)\times (G/H)) \simeq H\backslash G / H.
+$$</p>
+<h2>例</h2>
+<p>对于 Lie 群 $G$ 的 Borel 子群 $B$, 陪集空间 $G/B$ 又称<span class="link local"><a href="./旗流形.html" title="旗流形 [旗流形]">旗流形</a></span> $\mathrm{Fl}$. 两个旗的相对位置是 $G$ 的 <span class="link local"><a href="./Weyl群.html" title="Weyl 群 [Weyl群]">Weyl 群</a></span> $B \backslash G / B \simeq W$ 的元素.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="陪集空间"><header><h1><span class="taxon">Wiki. </span>陪集空间 <a class="slug" href="./陪集空间.html">[陪集空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>对于群 $G$ 的子群 $H$, 陪集空间 $G / H$ 是 $G$ 关于 $H$ 的右乘作用的商空间.</p>
+<p>陪集空间 $G / H$ 也可以表示为
+$$
+{*} \times_{\mathbf{B}G} \mathbf{B}H,
+$$
+也即 $G$ 关于子群 $*$ 和 $H$ 的<span class="link local"><a href="./双陪集空间.html" title="双陪集空间 [双陪集空间]">双陪集空间</a></span>.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

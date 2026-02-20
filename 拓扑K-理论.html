@@ -67,6 +67,78 @@
 </blockquote>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./K-群(拓扑).html" title="“K-群 (拓扑)” [K-群(拓扑)]">K-群 (拓扑)</a></span>, <span class="link local"><a href="./约化K-群(拓扑).html" title="“约化 K-群 (拓扑)” [约化K-群(拓扑)]">约化 K-群 (拓扑)</a></span></p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Fredholm 算子” <a class="slug" href="./Fredholm算子.html">[Fredholm算子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“K-理论” <a class="slug" href="./K-理论.html">[K-理论]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“K-群 (拓扑)” <a class="slug" href="./K-群(拓扑).html">[K-群(拓扑)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li><li class="meta-item">相对 K-群</li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“λ-环” <a class="slug" href="./λ-环.html">[λ-环]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>拓扑指标 <a class="slug" href="./拓扑指标.html">[拓扑指标]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Fredholm算子"><header><h1><span class="taxon">Wiki. </span>“Fredholm 算子” <a class="slug" href="./Fredholm算子.html">[Fredholm算子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设 $H$ 为 Hilbert 空间, $\mathcal B$ 为 $H$ 上的有界线性算子构成的 Banach 代数. Fredholm 算子是指 $\mathcal B$ 中核与余核维数均有限的算子.</p>
+<p>Fredholm 算子在紧算子误差的意义下可逆, 即 Fredholm 算子是 “有界算子商去紧算子” $\mathcal B(H_1,H_2)/ \mathcal K(H_1,H_2)$ 中的可逆元.</p>
+<p>对于 Fredholm 算子 $T$, 方程 $Tu=0$ 仅有有限个线性无关的解; 且方程 $Tu=v$ 有解只需要 $v$ 满足有限个线性条件.</p>
+<h3>无解算子的情形</h3>
+<p>我们也可对 (稠密子空间上定义的) 无界的闭算子谈论它何时是 Fredholm 算子.</p>
+<h2>指标</h2>
+<p>Fredholm 算子 $T$ 的<span class="link local"><a href="./解析指标.html" title="解析指标 [解析指标]">解析指标</a></span>定义为
+$$
+\operatorname{ind}T=\dim\ker T - \dim\operatorname{coker}T.
+$$
+类似地可定义两个不同 Hilbert 空间之间的 Fredholm 算子.</p>
+<p>指标是连续的, 而只取整数值, 因此对于一族随时间 $t$ 连续变化的 Fredholm 算子 $A_t$, 指标 $\operatorname{ind} A_t$ 与 $t$ 无关.</p>
+<h2>与 K-理论的关系</h2>
+<p>一个可分 Hilbert 空间上 Fredholm 算子的空间是 $0$ 阶<span class="link local"><a href="./拓扑K-理论.html" title="“拓扑 K-理论” [拓扑K-理论]">拓扑 K-理论</a></span>的分类空间.</p>
+<h2>例</h2>
+<p>考虑 $\ell^2 = L^2(\mathbb{Z}_{\geq 0})$ 上的移位算子 $S\colon (x_0,x_1,x_2,\cdots)\mapsto (0,x_0,x_1,\cdots)$. 则 $S$ 为 Fredholm 算子, 且 $\operatorname{ind}S=-1$.</p>
+<p><span class="link local"><a href="./椭圆算子.html" title="椭圆算子 [椭圆算子]">椭圆算子</a></span> (作用在 $L^2$ 空间上) 是无界的 Fredholm 算子, 其指标是非常重要的问题.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="K-理论"><header><h1><span class="taxon">Wiki. </span>“K-理论” <a class="slug" href="./K-理论.html">[K-理论]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>K-理论由 Grothendieck 在 <span class="link local"><a href="./Riemann--Roch定理.html" title="“Riemann–Roch 定理” [Riemann--Roch定理]">Riemann–Roch 定理</a></span>的推广工作中提出. Atiyah 和 Hirzebruch 发展了与之类似的<span class="link local"><a href="./拓扑K-理论.html" title="“拓扑 K-理论” [拓扑K-理论]">拓扑 K-理论</a></span>.</p>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span>, 其 K-理论是一个<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span> $K(\mathcal C)$, $\pi_0K(\mathcal C)$ 是 $\mathcal C$ 的 Grothendieck 群.</p>
+<h2>例</h2>
+<h3>代数 K-理论</h3>
+<blockquote>
+<p>Historically, the <em>algebraic K-theory</em> of a commutative ring (what today is the <strong>“0th” algebraic K-theory group</strong>) was originally defined to be the Grothendieck group of its symmetric monoidal category of projective modules. Under the relation between modules and vector bundles, this is directly analogous to the basic definition of topological K-theory, whence the common term. (In fact when applied to the <strong>stack of vector bundles</strong> then algebraic K-theory subsumes topological K-theory and also differential K-theory.</p>
+</blockquote>
+<p>Quillen 定义了环 $R$ 的高阶 <span class="link local"><a href="./K-群.html" title=" [K-群]">K-群 (代数)</a></span>, 它是某个空间 $BGL(R)^+$ 的同伦群.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="K-群(拓扑)"><header><h1><span class="taxon">Wiki. </span>“K-群 (拓扑)” <a class="slug" href="./K-群(拓扑).html">[K-群(拓扑)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li><li class="meta-item">相对 K-群</li></ul></div></header></summary>
+
+<p>K-群是<span class="link local"><a href="./拓扑K-理论.html" title="“拓扑 K-理论” [拓扑K-理论]">拓扑 K-理论</a></span>的研究对象.</p>
+<h2>定义</h2>
+<p>拓扑空间 $X$ 上的<span class="link local"><a href="./复向量丛.html" title="“复向量丛” [复向量丛]">复向量丛</a></span>的同构类 $V(X)$ 在 Whitney 和下构成交换半群, 而 $K(X)$ 可定义为其群化.</p>
+<p>由向量丛的拉回, $X\mapsto K(X)$ 是拓扑空间范畴到 Abel 群范畴的反变函子.</p>
+<p>注意到 $K(\mathrm{pt})\simeq\mathbb Z$, 而平凡投影 $p\colon X\to \mathrm{pt}$ 诱导了同态 $p^*\colon K(\mathrm{pt})\to K(X)$. 若选定 $X$ 的基点 $j\colon \mathrm{pt}\to X$, 则 $p^*$ 为 $j^*\colon K(X)\to K(\mathrm{pt})$ 的截面, 即有直和分解
+$$
+K(X)\simeq \widetilde{K}(X)\oplus\mathbb Z.
+$$
+其中 $\widetilde{K}(X)$ 称为<span class="link local"><a href="./约化K-群.html" title=" [约化K-群]">约化 K-群 (拓扑)</a></span>. (更多定义见此页面.)</p>
+<p>另见 <span class="link local"><a href="./Grothendieck群.html" title="“Grothendieck 群” [Grothendieck群]">Grothendieck 群</a></span>.</p>
+<h3>等价定义: 向量丛的复形</h3>
+<p>考虑 $X$ 上向量丛的链复形, 定义复形的<strong>支集</strong> (support) 为不正合的点的集合. 我们只考虑<strong>紧支集</strong>的复形.</p>
+<p>定义 $X$ 上向量丛复形 $E$ 到 $F$ 的同伦为 $X\times I$ 上的复形 $G$, 使得 $G$ 限制在 $X\times 0$ 和 $X\times 1$ 上分别是 $E$ 和 $F$.</p>
+<p>复形的同伦类 $C(X)$ 构成半群, 其中正合 (支集为空) 的复形构成子半群 $C_\varphi (X)$; 定义 $K(X)$ 为商半群 $C(X)/C_\varphi(X)$. 虽然由定义它只是半群, 但事实上它是群.</p>
+<h2>性质</h2>
+<p>$K(X)$ 只与 $X$ 的伦型有关.</p>
+<h2>相对 K-群</h2>
+<p>对于满足同伦扩张性质的空间对 $(X,A)$, 定义<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span> <span class="link local"><a href="./K-群.html" title=" [K-群]">相对 K-群 (拓扑)</a></span>
+$$
+K(X,A):= \widetilde{K}(X/A).
+$$</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="λ-环"><header><h1><span class="taxon">Wiki. </span>“λ-环” <a class="slug" href="./λ-环.html">[λ-环]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<blockquote>
+<p>λ-rings are one incarnation of the representation theory of the symmetric groups</p>
+</blockquote>
+<blockquote>
+<p>λ-rings are all about getting the most for your money when you <strong>decategorify</strong> a <strong>symmetric monoidal abelian category</strong> — for example the category of representations of a group, or the category of vector bundles on a topological space.</p>
+</blockquote>
+<p>λ-环到环的遗忘
+$$
+U \colon \Lambda\mathsf {Ring} \to \mathsf {Ring}
+$$
+有左右伴随 $\operatorname{Symm}\dashv U\dashv W$, 也即自由和余自由 λ-环.</p>
+<p>$\operatorname{Symm}$ 是 “对称函数” 环, 其元素直观上是无穷多变量的无穷多项式, 在变量的任何排列下不变.</p>
+<h2>例</h2>
+<p>空间 $X$ 的<span class="link local"><a href="./拓扑K-理论.html" title="“拓扑 K-理论” [拓扑K-理论]">拓扑 K-理论</a></span> $K(X)$ 具有 λ-环结构.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="拓扑指标"><header><h1><span class="taxon">Wiki. </span>拓扑指标 <a class="slug" href="./拓扑指标.html">[拓扑指标]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>向量丛之间的<span class="link local"><a href="./线性微分算子.html" title="线性微分算子 [线性微分算子]">微分算子</a></span>的拓扑指标是由<span class="link local"><a href="./拓扑K-理论.html" title="“拓扑 K-理论” [拓扑K-理论]">拓扑 K-理论</a></span>给出的一个整数, 其中涉及算子的<span class="link local"><a href="./象征.html" title="象征 [象征]">象征</a></span>.</p>
+<h2>定义</h2>
+<h3>示性类</h3>
+<p>拓扑指标也可定义为<span class="link local"><a href="./陈特征.html" title="“陈特征” [陈特征]">陈特征</a></span>与 <span class="link local"><a href="./Todd类.html" title="“Todd 类” [Todd类]">Todd 类</a></span>之积在整个流形上的积分.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

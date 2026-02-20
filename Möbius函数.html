@@ -74,6 +74,56 @@ $$
 \end{cases}
 $$
 这个性质导致了 <span class="link local"><a href="./Möbius反演.html" title="Möbius 反演 [Möbius反演]">Möbius 反演</a></span>.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Dirichlet 卷积 <a class="slug" href="./Dirichlet卷积.html">[Dirichlet卷积]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Möbius 反演 <a class="slug" href="./Möbius反演.html">[Möbius反演]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Riemann ζ-函数 <a class="slug" href="./Riemannζ-函数.html">[Riemannζ-函数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Dirichlet卷积"><header><h1><span class="taxon">Wiki. </span>Dirichlet 卷积 <a class="slug" href="./Dirichlet卷积.html">[Dirichlet卷积]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于数论函数 $f,g\colon \mathbb{N}_+ \to \mathbb{C}$,
+其 Dirichlet 卷积 $f*g \colon \mathbb{N}_+ \to \mathbb{C}$ 定义为
+$$
+(f*g) (n) = \sum_{ij=n}f(i)g(j).
+$$</p>
+<h2>例</h2>
+<p><span class="link local"><a href="./Möbius函数.html" title="Möbius 函数 [Möbius函数]">Möbius 函数</a></span> $\mu$ 与常值函数 $1$ 的 Dirichlet 卷积是 $\delta$ 函数 (即 Dirichlet 卷积的单位元):
+$$
+\sum_{i|n}\mu(i)=\begin{cases}
+    1 &amp; n=1\\
+    0 &amp; n&gt;1
+\end{cases}
+$$</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Möbius反演"><header><h1><span class="taxon">Wiki. </span>Möbius 反演 <a class="slug" href="./Möbius反演.html">[Möbius反演]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>Möbius 反演说的是对于数论函数 $f,g\colon \mathbb{N}_+ \to\mathbb{C}$,
+若 $f = g * 1$, 则 $g = f * \mu$, 其中 $\mu$ 为 <span class="link local"><a href="./Möbius函数.html" title="Möbius 函数 [Möbius函数]">Möbius 函数</a></span>, 运算 $*$ 为 <span class="link local"><a href="./Dirichlet卷积.html" title="Dirichlet 卷积 [Dirichlet卷积]">Dirichlet 卷积</a></span>.</p>
+<h2>推广: 范畴上的 Möbius 反演</h2>
+<p>见<span class="link local"><a href="./范畴代数.html" title="Möbius 反演 [范畴代数]">范畴代数</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Riemannζ-函数"><header><h1><span class="taxon">Wiki. </span>Riemann ζ-函数 <a class="slug" href="./Riemannζ-函数.html">[Riemannζ-函数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于 $\mathrm{Re}s &gt; 1$,
+$$
+\zeta(s)=\sum_{n\geq 1}n^{-s}=\prod_{p}\frac{1}{1-p^{-s}}.
+$$
+定义 (大写的) Zeta-函数为 $\zeta$ 乘上 “Gamma-因子”
+$$
+Z(s)=\pi^{-s/2}\Gamma(s/2)\zeta(s),
+$$
+其中 $\Gamma$ 在 $\mathrm{Re}s&gt;0$ 时的定义为
+$$
+\Gamma(s)=\int_0^\infty e^{-t}t^s \frac{dt}{t},
+$$
+而在其它处由函数方程延拓:
+$$
+\Gamma(s+1)=s\Gamma(s).
+$$</p>
+<p><strong>定理</strong>. Zeta-函数可延拓为复平面上的亚纯函数, 在 $s=1$ 有一个留数为 $1$ 的单极点, 在 $s=0$ 有一个留数为 $-1$ 的单极点, 没有其它极点. Zeta 函数满足方程
+$$
+Z(s)=Z(1-s).
+$$</p>
+<h2>性质</h2>
+<p>Riemann ζ-函数的倒数是 <span class="link local"><a href="./Möbius函数.html" title="Möbius 函数 [Möbius函数]">Möbius 函数</a></span>对应的 Dirichlet 级数:
+$$
+\zeta(s) = \sum_{n\geq 1}n^{-s} = \Big(\sum_{n\geq 1}\mu(n)n^{-s}\Big)^{-1}.
+$$</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./ζ-函数.html" title="ζ-函数 [ζ-函数]">ζ-函数</a></span></p>
+<p><span class="link local"><a href="./Dedekindζ-函数.html" title="“Dedekind ζ-函数” [Dedekindζ-函数]">Dedekind ζ-函数</a></span></p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

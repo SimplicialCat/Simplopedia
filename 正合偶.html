@@ -67,6 +67,110 @@ $$
 $$</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./导出正合偶.html" title="“导出正合偶” [导出正合偶]">导出正合偶</a></span>, <span class="link local"><a href="./谱序列.html" title="谱序列 [谱序列]">谱序列</a></span></p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“同伦纤维塔” <a class="slug" href="./同伦纤维塔.html">[同伦纤维塔]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“导出正合偶” <a class="slug" href="./导出正合偶.html">[导出正合偶]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>滤过谱 <a class="slug" href="./滤过谱.html">[滤过谱]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>谱序列 <a class="slug" href="./谱序列.html">[谱序列]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="同伦纤维塔"><header><h1><span class="taxon">Wiki. </span>“同伦纤维塔” <a class="slug" href="./同伦纤维塔.html">[同伦纤维塔]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>在<span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">无穷范畴</a></span>中, 一个同伦纤维塔是形如
+$$
+\begin{array}
+	{ccc}
+	\vdots &amp;&amp; \\
+	X_2 &amp; \overset{f_2}{\to} &amp; A_2 \\
+	\downarrow &amp;&amp; \\
+	X_1 &amp; \overset{f_1}{\to} &amp; A_1 \\
+	\downarrow &amp;&amp; \\
+	X_0 &amp; \overset{f_0}{\to} &amp; A_0
+\end{array}
+$$
+的图, 其中 $X_{n+1} \to X_n \overset{f_n}{\to}A_n$ 为同伦纤维列.</p>
+<p>纤维列的同伦群长正合列
+$$
+\pi_\bullet(X_{\bullet+1})\to\pi_\bullet(X_\bullet)\to\pi_\bullet(A_\bullet)\to\pi_{\bullet -1}(X_{\bullet+1})
+$$
+构成 (双分次 Abel 群的) <span class="link local"><a href="./正合偶.html" title="“正合偶” [正合偶]">正合偶</a></span>, 进而产生一个<span class="link local"><a href="./谱序列.html" title="谱序列 [谱序列]">谱序列</a></span>, 其第一页是 $\pi_\bullet (A_\bullet)$.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./滤过谱.html" title="滤过谱 [滤过谱]">滤过谱</a></span></p>
+<p><span class="link local"><a href="./Postnikov塔.html" title="Postnikov 塔 [Postnikov塔]">Postnikov 塔</a></span></p>
+<p><span class="link local"><a href="./Adams谱序列.html" title="“Adams 谱序列” [Adams谱序列]">Adams 谱序列</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="导出正合偶"><header><h1><span class="taxon">Wiki. </span>“导出正合偶” <a class="slug" href="./导出正合偶.html">[导出正合偶]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>设有<span class="link local"><a href="./正合偶.html" title="“正合偶” [正合偶]">正合偶</a></span>
+$$
+\begin{array}
+	{ccc}
+	D &amp; \overset{g}{\to} &amp; D \\
+	&amp;_f\nwarrow&amp;\downarrow^h\\
+	&amp;&amp; E.
+\end{array}
+$$
+定义其导出正合偶为
+$$
+\begin{array}
+	{ccc}
+	\operatorname{im}g &amp; \overset{\bar g}{\to} &amp; \operatorname{im}g \\
+	&amp;_\bar f\nwarrow&amp;\downarrow^{hg^{-1}}\\
+	&amp;&amp; H(E,hf).
+\end{array}
+$$
+注意到因为 $\operatorname{ker}g=\operatorname{im} f$, 所以 $h(\ker g)=\operatorname{im}hf$, 从而 $hg^{-1}\colon \operatorname{im}g \to H(E,hf)$ 是良定的.</p>
+<h2>相关概念</h2>
+<p>重复取导出正合偶给出<span class="link local"><a href="./谱序列.html" title="谱序列 [谱序列]">谱序列</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="滤过谱"><header><h1><span class="taxon">Wiki. </span>滤过谱 <a class="slug" href="./滤过谱.html">[滤过谱]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>一般而言, 一个对象 $X$ 的<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤过</a></span>是指一个序列 $X_\bullet$, 满足 $X$ 是<span class="link local"><a href="./同伦余极限.html" title=" [同伦余极限]">同伦 (余) 极限</a></span> $\operatorname{hocolim}X_\bullet$.</p>
+<p>有时我们称<span class="link local"><a href="./稳定同伦范畴.html" title="“稳定同伦范畴” [稳定同伦范畴]">稳定同伦范畴</a></span>中的序列 $\cdots\to X_2\to X_1 \to X_0=X$ 为滤过谱.</p>
+<h2>性质</h2>
+<h3>谱序列</h3>
+<p>滤过谱给出一个可用于计算同伦群的<span class="link local"><a href="./谱序列.html" title="谱序列 [谱序列]">谱序列</a></span>.</p>
+<p>给定滤过谱 $\cdots\to Y_2\to Y_1\to Y_0$, 记 $A_k$ 为 $Y_{k+1}\to Y_k$ 的<span class="link local"><a href="./同伦余纤维.html" title=" [同伦余纤维]">余纤维列</a></span>, 从而 $Y_{k+1}\to Y_k \to A_k\to \Sigma Y_{k+1}$ 是正合三角. 以 $[X,-]_\bullet$ (定义见<span class="link local"><a href="./稳定同伦范畴.html" title="“稳定同伦范畴” [稳定同伦范畴]">稳定同伦范畴</a></span>) 作用之, 得到如下长正合列,
+$$
+\cdots\to [X,Y_{k+1}]_\bullet \to[X,Y_{k}]_\bullet \to[X,A_{k}]_\bullet \to[X,Y_{k+1}]_{\bullet-1} \to\cdots
+$$
+它也可写为<span class="link local"><a href="./正合偶.html" title="“正合偶” [正合偶]">正合偶</a></span> (exact couple) 的形式 (注意不是交换图),
+$$
+\begin{array}
+	{ccc}
+	[X,Y_\bullet]_\bullet &amp; \to &amp; [X,Y_\bullet]_\bullet\\
+	&amp; \nwarrow &amp; \downarrow\\
+	&amp;&amp; [X,A_\bullet]_\bullet
+\end{array}
+$$
+定义
+$$
+D^{p,p+q}:=[X,Y_p]_q,\ E^{p,p+q}:=[X,A_p]_q.
+$$
+那么正合偶可写为
+$$
+\begin{array}
+	{ccc}
+	D^{\bullet,\bullet} &amp; \overset{i}{\to} &amp; D^{\bullet,\bullet}\\
+	&amp; _k\nwarrow &amp; \downarrow^j\\
+	&amp;&amp; E^{\bullet,\bullet}.
+\end{array}
+$$
+注意到因为 $kj=0$, 所以 $jkjk=0$, 即 $d=jk$ 为 $E^{\bullet,\bullet}$ 上的微分. 见<span class="link local"><a href="./导出正合偶.html" title="“导出正合偶” [导出正合偶]">导出正合偶</a></span>.</p>
+<p>…</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="谱序列"><header><h1><span class="taxon">Wiki. </span>谱序列 <a class="slug" href="./谱序列.html">[谱序列]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>谱序列是计算<span class="link local"><a href="./同伦群.html" title="同伦群 [同伦群]">同伦群</a></span>的一种算法.</p>
+<h2>定义</h2>
+<p>$$
+d_r^{p,q}\colon  E_r^{p,q} \to E_r^{p+r,q-r+1}
+$$
+第 $(r+1)$ 页是第 $r$ 页的上同调.</p>
+<h2>Grothendieck 谱序列</h2>
+<p>对于函子
+$$
+A \overset{F}{\to} B \overset{G}{\to} C,
+$$
+其导出函子满足
+$$
+R(G\circ F) \simeq RG \circ RF.
+$$</p>
+<h2>稳定 ∞-范畴中的滤对象的谱序列</h2>
+<p>设 $\mathcal C$ 为带有 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">t-结构</a></span>的<span class="link local"><a href="./稳定∞-范畴.html" title=" [稳定∞-范畴]">稳定无穷范畴</a></span>. 对于其中的 $\mathbb{Z}$-滤对象 $D_\bullet$, 可构造 $\mathcal C^{\heartsuit}$ 中的谱序列使得
+$$
+E_1^{p,q}=H_{p+q}\operatorname{cofib}(D_p\to D_{p+1}),
+$$
+在某些条件下收敛到 $H_n(\operatorname{colim}_m D_m)$.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./正合偶.html" title="“正合偶” [正合偶]">正合偶</a></span></p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

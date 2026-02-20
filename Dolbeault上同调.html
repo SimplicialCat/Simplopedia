@@ -110,6 +110,67 @@ $$
 $$</p>
 <h2>与自旋结构的联系</h2>
 <p>见 <span class="link local"><a href="./Dolbeault--Dirac算子.html" title="“Dolbeault–Dirac 算子” [Dolbeault--Dirac算子]">Dolbeault–Dirac 算子</a></span>.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Hodge 理论” <a class="slug" href="./Hodge理论.html">[Hodge理论]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li><li class="meta-item">Hodge 分解定理, Hodge 定理</li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>de Rham 定理 <a class="slug" href="./deRham定理.html">[deRham定理]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Hodge理论"><header><h1><span class="taxon">Wiki. </span>“Hodge 理论” <a class="slug" href="./Hodge理论.html">[Hodge理论]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li><li class="meta-item">Hodge 分解定理, Hodge 定理</li></ul></div></header></summary>
+
+<h2>实流形的 Hodge 理论</h2>
+<p>Hodge 理论研究紧流形上的<span class="link local"><a href="./椭圆算子.html" title="椭圆算子 [椭圆算子]">椭圆算子</a></span>, 如 <span class="link local"><a href="./Laplace算子.html" title="“Laplace 算子” [Laplace算子]">Laplace 算子</a></span>. 它告诉我们指标如何翻译成上同调.</p>
+<h3>调和形式</h3>
+<p><strong>定理</strong>. 紧可定向 Riemann 流形 $M$ 上 $p$ 阶<span class="link local"><a href="./调和形式.html" title="“调和形式” [调和形式]">调和形式</a></span>的空间 $\mathcal H_d^p(M)$ 是<strong>有限维</strong>的. 对于正交投影 $H_d\colon \Omega^p(M) \to \mathcal H_d^p(M)$, 存在 Green 算子 $G_d\colon \Omega^p\to \Omega^p$, 满足</p>
+<ul>
+<li>$G_d H_d = H_d G_d = 0$;</li>
+<li>$d G_d = G_d d$, $d^* G_d = G_d d^*$;</li>
+<li>$H_d + \triangle_d G_d = \operatorname{id}_{\Omega^p}$.</li>
+</ul>
+<p><strong>推论</strong>. 紧可定向 Riemann 流形 $M$ 上任一微分形式可分解为一个调和形式, 一个 $d$ 的像与一个 $d^*$ 的像之和. 若 $\alpha$ 为闭形式, 则 $\alpha$ 可分解为一个调和形式与一个 $d$ 的像之和.</p>
+<p><strong>推论</strong>. $\mathcal H_d^p(M) \simeq H_{\text{dR}}^p(M)$.</p>
+<p>关于这个理论, Futaki 教授推荐 F. Warner 的微分几何书.</p>
+<h3>解析指标</h3>
+<p>Hodge 理论与算子的<span class="link local"><a href="./解析指标.html" title="解析指标 [解析指标]">解析指标</a></span>有关.</p>
+<h2>复流形上全纯向量丛的 Hodge 理论</h2>
+<p>设 $E\to M$ 为<span class="link local"><a href="./全纯向量丛.html" title="“全纯向量丛” [全纯向量丛]">全纯向量丛</a></span>, 则 $E$-值 $(p,q)$-形式上有算子 $\bar\partial_E\colon \Omega^{p,q}(E)\to \Omega^{p,q+1}(E)$, 满足 $\bar\partial_E^2=0$. 见 <span class="link local"><a href="./Dolbeault上同调.html" title="“Dolbeault 上同调” [Dolbeault上同调]">Dolbeault 上同调</a></span>.</p>
+<p>定义 $\Omega^{p,q}(E)$ 上的 $\bar\partial$-Laplace 算子
+$$
+\triangle_{\bar\partial }= \bar\partial \bar\partial ^* + \bar\partial  ^*\bar\partial.
+$$
+$\triangle_{\bar\partial }\alpha = 0$ 等价于 $\bar\partial \alpha = 0$ 且 $\bar\partial ^* \alpha = 0$.</p>
+<p><strong>定理</strong>. (Hodge–Kodaira) 考虑正交投影 $H_{\bar\partial }\colon \Omega^{p,q}(E)\to \mathcal H^{p,q}_{\bar\partial }(E)$, 存在 Green 算子 $G_{\bar\partial }\colon \Omega^{p,q}(E)\to \Omega^{p,q}(E)$ 满足</p>
+<ul>
+<li>$G_{\bar\partial }H_{\bar\partial }=H_{\bar\partial }G_{\bar\partial }=0$;</li>
+<li>$\bar\partial G_{\bar\partial } = G_{\bar\partial }\bar\partial$;</li>
+<li>$H_{\bar\partial }+ \triangle_{\bar\partial }G_{\bar\partial }=\operatorname{id}_{\Omega^{p,q}(E)}$.</li>
+</ul>
+<p><strong>推论</strong>. $\bar\partial$-闭形式可分解为一个 $\bar\partial$-调和形式与一个 $\bar\partial$ 的像的和.</p>
+<p><strong>推论</strong>. $\mathcal H_{\bar\partial }^{p,q}(E)\simeq H^{p,q}_{\bar\partial }(E)$.</p>
+<h2>复射影簇的 Hodge 理论</h2>
+<p>设 $X$ 为复射影流形, 即 $\mathbb CP^n$ 的闭子流形 (参见<span class="link local"><a href="./代数簇.html" title="“代数簇” [代数簇]">代数簇</a></span>), 那么 $X$ 继承 $\mathbb CP^n$ 上的 Riemann 度量而成为 <span class="link local"><a href="./Kähler流形.html" title="Kähler 流形 [Kähler流形]">Kähler 流形</a></span>. 此时 Hodge 定理给出
+$$
+H^r(X,\mathbb C) \simeq \bigoplus_{p+q=r}H^{p,q}(X).
+$$
+其中 <span class="link local"><a href="./Dolbeault上同调.html" title="“Dolbeault 上同调” [Dolbeault上同调]">Dolbeault 上同调</a></span> $H^{p,q}(X)$ 等于<span class="link local"><a href="./凝聚层上同调.html" title="“凝聚层上同调” [凝聚层上同调]">凝聚层上同调</a></span>
+$$
+H^{p,q}(X)\simeq H^q(X,\Omega^p),
+$$
+$\Omega^p$ 为全纯 $p$-形式层.</p>
+<p>Hodge 理论给出了<span class="link local"><a href="./小平消失定理.html" title="“小平消失定理” [小平消失定理]">小平消失定理</a></span>在代数几何上的应用.</p>
+<p>相关概念: <span class="link local"><a href="./Hodge星算子.html" title="“Hodge 星算子” [Hodge星算子]">Hodge 星算子</a></span></p>
+<p><span class="link local"><a href="./p-进Hodge理论.html" title="“p-进 Hodge 理论” [p-进Hodge理论]">p-进 Hodge 理论</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="deRham定理"><header><h1><span class="taxon">Wiki. </span>de Rham 定理 <a class="slug" href="./deRham定理.html">[deRham定理]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>陈述</h2>
+<p>设 $X$ 为实流形, 则常值层 $\mathbb{R}$ 的 <span class="link local"><a href="./层上同调.html" title="(Abel) 层上同调 [层上同调]">层上同调</a></span>可由 <span class="link local"><a href="./deRham上同调.html" title="de Rham 上同调 [deRham上同调]">de Rham 上同调</a></span>计算:
+$$
+H^p(X, \mathbb{R}) \simeq H^p_{dR}(X).
+$$</p>
+<h2>证明</h2>
+<p>考虑 $p$-形式层 $\mathcal A^p$, 则有常值层 $\mathbb{R}$ 的<span class="link local"><a href="./细层.html" title="“细层” [细层]">细层</a></span>消解
+$$
+0 \to \mathbb{R} \to \mathcal A^0 \to \mathcal A^1 \to \cdots
+$$
+(其正合性是由于 <span class="link local"><a href="./Poincaré引理.html" title="Poincaré 引理 [Poincaré引理]">Poincaré 引理</a></span>), 故由细层消解的性质,
+$$
+H^p(X,\mathbb{R}) \simeq H^p(\Gamma(\mathcal A^\bullet)).
+$$</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./Hodge理论.html" title="“Hodge 理论” [Hodge理论]">Hodge 理论</a></span>, <span class="link local"><a href="./Dolbeault上同调.html" title="“Dolbeault 上同调” [Dolbeault上同调]">Dolbeault 上同调</a></span></p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

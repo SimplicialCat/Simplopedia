@@ -86,6 +86,119 @@ $$
 $$</p>
 <h3>用余法丛定义余切丛</h3>
 <p>对于 $S$-概形 $X$, 余切丛也可定义为 $X$ 在 $X\times_S X$ 中的<span class="link local"><a href="./余法丛.html" title=" [余法丛]">法丛</a></span>.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>E_M-算畴 <a class="slug" href="./E_M-算畴.html">[E_M-算畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>切微丛 <a class="slug" href="./切微丛.html">[切微丛]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>切结构 <a class="slug" href="./切结构.html">[切结构]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="E_M-算畴"><header><h1><span class="taxon">Wiki. </span>E_M-算畴 <a class="slug" href="./E_M-算畴.html">[E_M-算畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>$\mathbb E_M$-算畴是指<span class="link local"><a href="./流形.html" title=" [流形]">流形</a></span> $M$ 给出的一个<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>, 其颜色为 $M$ 中的开圆盘 (即 $\mathbb{R}^n$ 到 $M$ 的开嵌入), 运算为不交圆盘的含入.</p>
+<p>$\mathbb{E}_M$ 的颜色的范畴等价于 $M$ 对应的<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span> $\operatorname{Sing}M$. 但是 $\mathbb{E}_M$ 不能由 $\operatorname{Sing}M$ 决定, 而是与 $M$ 的流形结构有关. 更准确地说, 与 $M$ 的切丛 $TM$ 的分类映射 $M \to \mathsf{BTop}(n)$ 有关.
+更一般地, 对任意映射 $B \to \mathsf{BTop}(n)$ 都有 <span class="link local"><a href="./E_B-算畴.html" title="E_B-算畴 [E_B-算畴]">$\mathbb E_B$-算畴</a></span>, 详见此页面.</p>
+<h2>定义</h2>
+<p>记</p>
+<ul>
+<li>$\mathsf{Mfd}_n$ 为 $n$ 维流形以及之间的<strong>嵌入</strong>构成的 $\infty$-范畴,</li>
+<li>$\mathsf{BTop}(n)$ 为其中 $\mathbb{R}^n$ 构成的全子范畴, 它是<span class="link local"><a href="./群.html" title="群 [群]">生象群</a></span> $\mathsf{Top}(n) := \operatorname{Emb}(\mathbb{R}^n,\mathbb{R}^n)$ 的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>,</li>
+</ul>
+<p><strong>注</strong>. 对任意流形 $M\in\mathsf{Mfd}_n$,
+范畴 $\mathsf{BTop}(n)_{/M}$ 实际上是一个<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>, 且等价于 $\operatorname{Sing}M$. 遗忘函子 $\mathsf{BTop}(n)_{/M} \to \mathsf{BTop}(n)$ 等同于映射 $\operatorname{Sing} M \to \mathsf{BTop}(n)$, 它是 $M$ 的<span class="link local"><a href="./切丛.html" title="切丛 [切丛]">切丛</a></span>的分类映射.</p>
+<p>范畴 $\mathsf{BTop}(n)$ 上还有一个<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>结构, 记作 $\mathsf{BTop}(n)^\otimes$, 其 $k$ 元运算为 $k$ 个 $\mathbb{R}^n$ 的无交并到 $\mathbb{R}^n$ 的嵌入.</p>
+<p>接下来定义算畴 $\mathbb E_M$. 其底层范畴为 $\mathsf{BTop}(n)_{/M}$, 运算为 $M$ 的嵌入子流形之间的含入
+$$
+\begin{array}
+{ccc}
+\sqcup_k \mathbb{R}^n &amp;&amp;\\
+\downarrow &amp; \searrow &amp;\\
+\mathbb{R}^n &amp; \to &amp; M.
+\end{array}
+$$
+(注意图中 $\sqcup_k \mathbb{R}^n \to M$ 为嵌入, 即 $k$ 个圆盘互不相交.)
+更严格地说, 算畴 $\mathbb E_M$ 是如下的拉回:
+$$
+\begin{array}
+{ccc}
+\mathbb E_M &amp; \to &amp; \mathsf{BTop}(n)^\otimes \\
+\downarrow &amp; &amp; \downarrow \\
+(\mathsf{BTop}(n)_{/M})^{\sqcup} &amp; \to &amp; (\mathsf{BTop}(n))^{\sqcup}.
+\end{array}
+$$</p>
+<blockquote>
+<p>这里似乎无法用 “纯 $\infty$-范畴” 的语言来描述这个算畴, 无可避免地需要来自流形范畴的同伦信息.</p>
+</blockquote>
+<h2>性质</h2>
+<h3>分解同调</h3>
+<p>对于有<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal O$, 可构造其中 $\mathbb{E}_M$-代数的<span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>
+$$
+\int_M \colon \mathsf{Alg}_{\mathbb E_M}(\mathcal O) \to \mathcal O,
+$$
+$$
+\int_M \mathcal A := \operatorname{colim}_{U\in (\mathsf{Disk}_n)_{/M}} \mathcal A (U).
+$$</p>
+<h3>“环路空间”</h3>
+<p>设 $X \colon \operatorname{Sing}M \to \mathsf{Ani}_{*}$ 为函子, $U\subset M$ 为开集. 定义 $X$ 在 $U$ 上的<strong>紧支集截面</strong>的空间为
+$$
+\Gamma_{\mathrm{c}}(U,X) = \operatorname{colim}_{K\subset U} \Gamma(\operatorname{Sing}M,X) \times_{\Gamma(\operatorname{Sing}(M\setminus K),X)} *,
+$$
+其中 $K\subset U$ 取遍 $U$ 的紧子集.
+那么 $\Gamma_{\mathrm{c}}(U,X)$ 关于 $U,X$ 均有 (协变) 函子性.</p>
+<p>对于流形 $M$ 以及函子 $X\colon\operatorname{Sing}(M) \to \mathsf{Ani}_*$, 可构造 $\mathsf{Ani}$ 中的 $\mathbb{E}_M$-代数 $\Omega_M X$, 使得其颜色 $U\subset M$ ($M$ 的嵌入圆盘) 处的分量为紧支集截面生象 $\Gamma_{\mathrm{c}}(U,X)$.</p>
+<p>例如, 若 $X$ 为取值为带基点生象 $(A,a)$ 的常值函子, $M$ 的维数为 $n$, 则 $\Omega_M X$ 在一个圆盘 $U$ 处的分量等价于 $\Omega^n(A,a)$.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="切微丛"><header><h1><span class="taxon">Wiki. </span>切微丛 <a class="slug" href="./切微丛.html">[切微丛]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>拓扑流形的切微丛是一个<span class="link local"><a href="./微丛.html" title="微丛 [微丛]">微丛</a></span>, 是光滑流形的<span class="link local"><a href="./切丛.html" title="切丛 [切丛]">切丛</a></span>的一种模拟.</p>
+<h2>定义</h2>
+<p>拓扑流形 $M$ 的切微丛是 $M$ 上的<span class="link local"><a href="./微丛.html" title="微丛 [微丛]">微丛</a></span> $\mathrm{pr}_1 \colon M\times M \to M$.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="切结构"><header><h1><span class="taxon">Wiki. </span>切结构 <a class="slug" href="./切结构.html">[切结构]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>切结构</strong>是基于光滑流形的切丛的一大类<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构</a></span>的统称, 包括<strong>定向</strong>, <strong>Riemann 度量</strong>, <strong></strong><span class="link local"><a href="./近复结构.html" title="近复结构 [近复结构]">近复结构</a></span>等. 它是流形的<span class="link local"><a href="./切丛.html" title="切丛 [切丛]">切丛</a></span>对应的 $\mathrm{GL}_n$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>的<span class="link local"><a href="./主丛的约化.html" title="主丛的约化 [主丛的约化]">约化</a></span>.</p>
+<h2>定义</h2>
+<p>设 $p \colon G\to \mathrm{GL}_n$ 为<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>的同态. (这里的 $\mathrm{GL}_n$ 可以是离散群, 也可以是 Lie 群, 甚至可以是<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>群, 依实际需要决定)</p>
+<p>对于 $m\leq n$, 定义 $m$ 维流形 $M$ 上的一个 $p$-结构是 $TM\oplus\mathbb{R}^{n-m}$ 的分类映射 $M\to \mathbf{B}\mathrm{GL}_n$ 的一个提升
+$$
+\begin{array}
+	{ccc}
+	&amp;&amp; \mathbf{B}G\\
+	&amp;\nearrow&amp;\downarrow {\scriptsize \mathbf{B}p}\!\!\!\!\\
+	M&amp;\to &amp;\mathbf{B}\mathrm{GL}_n.
+\end{array}
+$$
+那么 $p$-结构的集合是<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">非 Abel 上同调</a></span>的映射 $H^1(M,G) \to H^1(M,\mathrm{GL}_n)$ 之下, 切丛 $TM$ 对应的元素的原像.</p>
+<p>当群同态 $p\colon G\to \mathrm{GL}_n$ 没有歧义, 或有一个公认的选取 (比如 $G$ 是 $\mathrm{GL}_n$ 的 Lie 子群) 时, 也称 $p$-结构为 $G$-结构.</p>
+<h3>带 $p$-结构流形的范畴</h3>
+<p><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>的理论使用如下范畴. 考虑范畴 $\mathsf{Mfd}_n$, 其对象为 $n$ 维光滑流形, 态射空间为光滑<strong>嵌入</strong>的空间 (注意不是光滑映射的空间). 对于群同态 $p \colon G\to \mathrm{GL}_n$, 定义 “带 $p$-结构的 $n$ 维流形的范畴” $\mathsf{Mfd}_n^p$ 为如下拉回.</p>
+<p>$$
+\begin{array}
+{ccc}
+\mathsf{Mfd}_n^p &amp; \to &amp; \mathsf{Ani}_{/\mathbf{B}G}\\
+\downarrow &amp; &amp; \downarrow\\
+\mathsf{Mfd}_n &amp; \to &amp; \mathsf{Ani}_{/\mathbf{B}\mathrm{GL}_n}
+\end{array}
+$$</p>
+<h2>例</h2>
+<p>在 $n$ 维流形上,</p>
+<ul>
+<li>平凡子群 $1\to\mathrm{GL}_n$ 对应的结构即为切丛的平凡化, 称为<strong>标架</strong>.</li>
+<li>$\mathrm{id}_{\mathrm{GL}_n}$-结构等于没有结构.</li>
+<li>$\mathrm{GL}_n^+$-结构就是<strong>定向</strong>.</li>
+<li>$\mathrm{SL}_n$-结构称为<strong>体积形式</strong>.</li>
+<li>$\mathrm{O}_n$-结构相当于 <strong>Riemann 度量</strong>.</li>
+<li>$\mathrm{GL}_n(\mathbb{C})\hookrightarrow\mathrm{GL}_{2n}(\mathbb{R})$-结构就是<span class="link local"><a href="./近复结构.html" title="近复结构 [近复结构]">近复结构</a></span>.</li>
+<li>$\mathrm{U}_n$-结构又叫<strong>近 Hermite 结构</strong>.</li>
+<li><span class="link local"><a href="./自旋群.html" title="自旋群 [自旋群]">$\mathrm{Spin}_n$</a></span>-结构称为<span class="link local"><a href="./自旋流形.html" title="自旋流形 [自旋流形]">自旋结构</a></span>.</li>
+</ul>
+<h2>性质</h2>
+<h3>正合列</h3>
+<p>设 $M$ 为定向 Riemann 流形, 即有一个 $\mathrm{SO}_n$-结构 $M \to \mathbf{B}\mathrm{SO}_n$. 现在问 $M$ 是否具有 $\mathrm{Spin}_n$-结构. 考虑<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
+$$
+\mathbf{B}\mathbb{Z}/2 \to \mathbf{B}\mathrm{Spin}_n \to \mathbf{B}\mathrm{SO}_n \to \mathbf{B}^2\mathbb{Z}/2,
+$$
+它给出<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">非 Abel 上同调</a></span>的正合列
+$$
+H^1(M,\mathbb{Z}/2) \to H^1(M,\mathrm{Spin}_n)\to H^1(M,\mathrm{SO}_n) \to H^2(M,\mathbb{Z}/2),
+$$
+而复合映射 $M \to \mathbf{B}\mathrm{SO}_n \to \mathbf{B}^2\mathbb{Z}/2$ 对应的 $H^2(M,\mathbb{Z}/2)$ 的元素恰为第二 <span class="link local"><a href="./Stiefel--Whitney类.html" title="Stiefel–Whitney 类 [Stiefel--Whitney类]">Stiefel–Whitney 类</a></span> $w_2(M)$.
+故 $M$ 有<span class="link local"><a href="./自旋流形.html" title="自旋流形 [自旋流形]">自旋结构</a></span>当且仅当 $w_2(M)=0$.</p>
+<h3>可积性</h3>
+<p>一些重要的结构如复结构, 辛结构, <span class="link local"><a href="./Kähler结构.html" title=" [Kähler结构]">Kähler 流形</a></span>, 是由 $G$-结构附加某些可积性条件得到的.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

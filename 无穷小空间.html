@@ -84,6 +84,54 @@ $$</p>
 <h2>性质</h2>
 <p>$D_k(n)$ 在数乘下封闭: 对 $x\in D_k(n), \lambda\in R$ 有 $\lambda x\in D_k(n)$.</p>
 <p>$D_k(n)$ 在加法下一般不封闭, 但有 $D_k(n) + D_\ell(n)\subset D_{k+\ell}(n)$. 因此, $D_{\infty}(n)$ 在加法下封闭.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“相邻” <a class="slug" href="./相邻.html">[相邻]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="subject" style="margin-bottom: 0.4em;"><header><h1><span class="taxon"><span class="link local"><a href="./subject.html" title="学科 [subject]">subject</a></span></span>综合微分几何 <a class="slug" href="./综合微分几何.html">[综合微分几何]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="相邻"><header><h1><span class="taxon">Wiki. </span>“相邻” <a class="slug" href="./相邻.html">[相邻]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>在<span class="link local"><a href="./综合微分几何.html" title="综合微分几何 [综合微分几何]">综合微分几何</a></span>中, 对给定的流形 $M$ 与非负整数 $k$, 其上的点有 $k$-阶相邻的关系. 几何学的许多概念可用相邻关系表述, 而不需要分析学.</p>
+<h2>定义</h2>
+<p>$R^n$ 中的两点 $x$, $y$ 称为 $k$-阶相邻 (记作 $x\sim_k y$) 是指 $x-y$ 属于<span class="link local"><a href="./无穷小空间.html" title="无穷小对象 (综合微分几何) [无穷小空间]">无穷小空间</a></span> $D_k(n)$.</p>
+<h2>对角线的 k-阶邻域</h2>
+<p>流形 $M$ 上的 $k$-阶相邻关系给出了 “对角线的 $k$-阶邻域”
+$$
+M_{(k)} := \{(x,y)\in M\times M : x\sim_k y\}.
+$$
+($M_{(k)}$ 本身不是流形.)</p>
+<p>若 $M=V$ 为 $R$ 上的 $n$ 维向量空间, 则有典范同构
+$$
+M_{(k)}\overset{\simeq}{\to} M\times D_{k}(V),\ (x,y)\mapsto (x,y-x).
+$$</p>
+<h2>k-单子与射流</h2>
+<p>对 $x\in M$, 定义 $k$-单子 (monad) $\mathfrak{M}_k(x)$ 为与 $x$ $k$-阶相邻的点的集合.</p>
+<p>对任意空间 $P$, 映射 $\mathfrak M_k(x)\to P$ 称为 $x$ 处 “$M\to P$ 映射的” 一个<span class="link local"><a href="./射流.html" title="射流 [射流]">射流</a></span> (jet). 我们可定义射流函子
+$$
+J^k \colon \mathcal E/M\to \mathcal E/M.
+$$</p>
+<h2>无穷小单形</h2>
+<p>此处我们所指的相邻都是一阶相邻.</p>
+<p>无穷小 $k$-单形是指 $k+1$ 个两两相邻的点. $M$ 上无穷小 $k$ 单形的空间
+$$
+M_{&lt;k&gt;}:=\{(x_0,\cdots,x_k)\in M^{k+1}: \forall i,j,x_i\sim x_j\}
+$$
+可视为 $M$ 上的纤维丛, 投影映射由第一个分量给出. $M_{&lt;k&gt;}$ 是微分形式的基本研究对象.</p>
+<p>$M_{&lt;1&gt;}$ 恰为 “对角线的 $1$ 阶邻域” $M_{(1)}$.</p>
+</details></section><section class="block" data-taxon="subject"><details ><summary id="综合微分几何"><header><h1><span class="taxon"><span class="link local"><a href="./subject.html" title="学科 [subject]">subject</a></span></span>综合微分几何 <a class="slug" href="./综合微分几何.html">[综合微分几何]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>综合微分几何是<span class="link local"><a href="./综合数学.html" title="综合数学 [综合数学]">综合数学</a></span>的微分几何的分支.</p>
+<p>综合微分几何的模型一般是一个包含光滑流形和一些微分几何关心的<span class="link local"><a href="./无穷小空间.html" title="无穷小对象 (综合微分几何) [无穷小空间]">无穷小对象</a></span>的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>, 即其语言可理解为该意象的<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>.</p>
+<p><span class="link local"><a href="./SDG-notes.html" title="综合微分几何讲稿 [SDG-notes]">综合微分几何讲稿</a></span></p>
+<p>todo: 重写</p>
+<p>综合微分几何使用无穷小的空间, 以无坐标的方式, 将 “微分” 的过程变成纯粹的代数.</p>
+<p>综合微分几何的公理始于<span class="link local"><a href="./环化意象.html" title="“环化意象” [环化意象]">环化意象</a></span> $(\mathcal E,R)$. <span class="link local"><a href="./无穷小空间.html" title="无穷小对象 (综合微分几何) [无穷小空间]">无穷小空间</a></span>引入了 $k$-阶<span class="link local"><a href="./相邻.html" title="“相邻” [相邻]">相邻</a></span> $(k=0,1,2,\cdots)$ 的概念, 这个关系在所有映射下不变.</p>
+<h2>开集的概念</h2>
+<p>我们在 $R$ 上公理化地定义开集, 其中最重要的是要求可逆元的集合 $R^*$ 是开集.</p>
+<p>具体地, 我们假定在 $\mathcal E$ 的所有态射中 (先天) 给定了一类态射, 称作 “开含入” (open inclusions), 满足<strong>拉回之下的稳定性</strong> (stability under pullback), 且 $R$ 的可逆元集合到 $R$ 的含入是开含入.</p>
+<blockquote>
+<p>开集的概念有多种不同的选择. 内蕴 (intrinsic) 地定义开集是有可能的, 例如下面讲的形式开; 但形式开的概念会使得 $R$ 不连通. 还有另外一种内蕴的开集的概念, 不会让 $R$ 不连通, 但更复杂.</p>
+</blockquote>
+<p>有了开集, 就可以谈论局部的概念. <strong>流形</strong>是局部微分同胚于向量空间的空间, 即存在一族空间 $\{U_i: i\in I\}$ 与开含入 $U_i\to M$, $U_i\to R^n$, 且所有 $U_i\to M$ 合在一起是满的.</p>
+<blockquote>
+<p>注意, 流形的概念不仅依赖于 “开集” 的概念, 还依赖于 “族” 的概念. 这里指标集 $I$ 是一个外蕴 (external) 的集合, 而不是 $\mathcal E$ 中的空间.</p>
+</blockquote>
+<p>我们假设开集都是 “形式开” 的. 称子集 $M\subset R^n$ <strong>形式开</strong> (formally open) 是指, 若 $a\in M$, $x$ 无穷小, 则 $a+x\in M$. 在综合微分几何中 “开” 的概念常常需要替换为形式开.</p>
+<h2>微积分</h2>
+<p>在综合微分几何中, 微分的技术建立在 <span class="link local"><a href="./KL公理.html" title="Kock–Lawvere 公理 [KL公理]">KL 公理</a></span>之上. KL 公理大致是说<span class="link local"><a href="./无穷小空间.html" title="无穷小对象 (综合微分几何) [无穷小空间]">无穷小空间</a></span>出发的映射都是多项式.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

@@ -84,6 +84,97 @@ $$
 $$
 	* \leftarrow X \overset{\Delta}{\rightarrow} X\times X.
 $$</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Hochschild 上同调 <a class="slug" href="./Hochschild上同调.html">[Hochschild上同调]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>微分分次范畴 <a class="slug" href="./微分分次范畴.html">[微分分次范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>自函子的迹 <a class="slug" href="./自函子的迹.html">[自函子的迹]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>迹 <a class="slug" href="./迹.html">[迹]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Hochschild上同调"><header><h1><span class="taxon">Wiki. </span>Hochschild 上同调 <a class="slug" href="./Hochschild上同调.html">[Hochschild上同调]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的 Hochschild 上同调又称<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>.</p>
+<h2>定义</h2>
+<h3>结合代数</h3>
+<p>固定基环 $k$, 定义 $k$ 上的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 的 <strong>Hochschild 上同调</strong>为
+$$
+\mathrm{HH}^* (A) := \operatorname{End}_{A\otimes A^{\mathrm{op}}}(A),
+$$
+其中 $A$ 是 $A\otimes A^{\mathrm{op}}$-左模, 即 $(A,A)$-双模.</p>
+<h3>范畴</h3>
+<p>范畴 $\mathcal C$ 的 Hochschild 上同调 (又叫<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>) 为
+$$
+\operatorname{HH}^*(\mathcal C) :=\operatorname{End}_{\operatorname{End}(\mathcal C)}(\mathrm{id}).
+$$</p>
+<h3>可对偶可表现范畴</h3>
+<p>固定一个基环 $k$. 设 $\mathcal C$ 是 <span class="link local"><a href="./高阶模.html" title="高阶模 [高阶模]">$\mathsf{Pr}_{k}$</a></span> 的<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶对象</a></span>, 记其对偶为 $\mathcal C^\vee$, 定义 $\mathcal C$ 的 Hochschild 同调 $\operatorname{HH}(\mathcal C)\in\mathsf{Mod}_k$ 为如下复合函子的表示对象:
+$$
+\mathsf{Mod}(k) \overset{\mathrm{coev}}{\longrightarrow}\mathcal C\otimes_k\mathcal C^{\vee} \overset{\mathrm{ev}}{\longrightarrow} \mathsf{Mod}(k).
+$$
+更一般地, 对于函子 $f\colon \mathcal C \to \mathcal C$, 定义
+$\operatorname{HH}(\mathcal C,f)\in\mathsf{Mod}_k$ 为如下复合函子的表示对象:
+$$
+\mathsf{Mod}(k) \overset{\mathrm{coev}}{\longrightarrow}\mathcal C\otimes_k\mathcal C^{\vee} \overset{f\otimes\mathrm{id}}{\longrightarrow} \mathcal C\otimes_k\mathcal C^{\vee} \overset{\mathrm{ev}}{\longrightarrow} \mathsf{Mod}(k).
+$$</p>
+<p>特别地, 当 $\mathcal C = \mathsf{LMod}(A)$ 是 $k$-代数 $A$ 上的左模范畴时, $\operatorname{HH}(\mathcal C) = A\otimes_{A\otimes A^{}}$</p>
+<h3>传统定义</h3>
+<p>设 $k$ 为域, $R$ 为 $k$-代数, $M$ 为 $R$ 双模. 考虑<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯</a></span> $R$-模 $C_\bullet(R,M):= M\otimes_k R^{\otimes \bullet}$, 其面映射具体为
+$$
+d_0\colon (m\otimes r_1\otimes \cdots \otimes r_n) \mapsto (m r_1\otimes r_2\otimes\cdots\otimes r_n),
+$$
+$$
+d_i\colon (m\otimes r_1\otimes \cdots \otimes r_n) \mapsto (m\otimes r_1\otimes\cdots\otimes r_ir_{i+1}\otimes\cdots\otimes r_n),
+$$
+$$
+d_n\colon (m\otimes r_1\otimes \cdots \otimes r_n) \mapsto (r_nm\otimes r_1\otimes\cdots\otimes r_{n-1}).
+$$</p>
+<p>对于 $M=R$, 记 $C_n(R)=C_n(R,R)$.
+<strong>Hochschild 同调</strong> $H_\bullet(R,M)$ 即是上述<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯</a></span>模的同调; 对于 $M=R$, 记 $HH_n(R) = H_n(R,R)$.</p>
+<p>类似地定义 <strong>Hochschild 上同调</strong> $H^\bullet (R,M)$ 为复形 $\operatorname{Hom}(R^{\otimes n},M)$ 的上同调, 其中 $\delta=\sum_i (-1)^i \delta_i$, $\delta_i$ 定义为
+$$
+(\delta_0 f)(r_1\otimes\cdots\otimes r_n) =r_1 f(r_2\otimes\cdots\otimes r_n),
+$$
+$$
+(\delta_i f) (r_1\otimes \cdots\otimes r_n) = f(r_1\otimes\cdots\otimes r_ir_{i+1}\otimes\cdots\otimes r_n),
+$$
+$$
+(\delta_n f)(r_1\otimes\cdots\otimes r_n) = f(r_1\otimes\cdots \otimes r_{n-1})r_n.
+$$
+对于 $M=R$, 记 $HH^n(R)=H^n(R,R)$.</p>
+<h2>性质</h2>
+<p>考虑 $R$ 的中心 $Z(R)$, 可以证明 $H_*(R,M)$ 上有 $Z(R)$-双模结构.</p>
+<h2>与 Tor, Ext 的关系</h2>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./Hochschild同调.html" title="Hochschild 同调 [Hochschild同调]">Hochschild 同调</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="微分分次范畴"><header><h1><span class="taxon">Wiki. </span>微分分次范畴 <a class="slug" href="./微分分次范畴.html">[微分分次范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>域 $k$ 上的微分分次范畴 (differential graded category, “dg category”) 是 “$k$-线性<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span>” 的一种模型, 也等同于充实于 <span class="link local"><a href="./Eilenberg–MacLane谱.html" title="Eilenberg–MacLane 谱 [Eilenberg–MacLane谱]">Eilenberg–MacLane 谱</a></span> $Hk$ 上的模范畴 $\mathsf{Mod}(Hk)$ 的范畴, 或 $\mathsf{Mod}(Hk)$-<span class="link local"><a href="./高阶模.html" title="高阶模 [高阶模]">模</a></span>;
+$$
+\mathsf{DGCat} = \mathsf{Mod}(\mathsf{Mod}(Hk)).
+$$</p>
+<p>微分分次范畴构成<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半 $2$-范畴</a></span> $\mathsf{DGCat}$, 其中的乘法称为 <span class="link local"><a href="./Lurie张量积.html" title="Lurie 张量积 [Lurie张量积]">Lurie 张量积</a></span>. <span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成</a></span>的微分分次范畴是 $\mathsf{DGCat}$ 中的<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶对象</a></span>.</p>
+<p>单对象的微分分次范畴等同于<span class="link local"><a href="./微分分次代数.html" title="微分分次代数 [微分分次代数]">微分分次代数</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="自函子的迹"><header><h1><span class="taxon">Wiki. </span>自函子的迹 <a class="slug" href="./自函子的迹.html">[自函子的迹]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>设 $\mathcal{C}$ 是<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶</a></span> <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>, 则可定义 $\mathcal C$ 的自函子 $F\colon \mathcal C\to\mathcal C$ 的<span class="link local"><a href="./迹.html" title="迹 [迹]">迹</a></span> $\operatorname{Tr}(F) \in \mathsf{Vect}$.</p>
+<h2>例</h2>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="迹"><header><h1><span class="taxon">Wiki. </span>迹 <a class="slug" href="./迹.html">[迹]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>自映射的迹</h3>
+<p>对于<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal C$ 中<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶对象</a></span> $X$ 的自映射 $f\colon X\to X$, 定义<strong>迹</strong> $\operatorname{Tr}(f)\in\operatorname{End}_{\mathcal C}(1)$,
+$$
+    \operatorname{Tr}(f):
+    1 \overset{\operatorname{coev}}{\to} X\otimes X^* \overset{f\otimes\mathrm{id}}{\to} X\otimes X^*\overset{\operatorname{ev}}{\to} 1.
+$$</p>
+<p>对象 $X$ 的恒等映射的迹又叫 $X$ 的<span class="link local"><a href="./幺半维数.html" title="对称幺半维数 [幺半维数]">幺半维数</a></span>
+$$
+\operatorname{dim}X := \operatorname{Tr}(\mathrm{id}_X).
+$$</p>
+<p>考虑范畴
+$$
+\mathsf{End}_{\mathcal C} := \mathsf{Fun}(\mathbf{B}\mathbb{N},\mathcal C)= \{(X,f)\colon X\in\mathcal C, f\in\operatorname{End}_{\mathcal C}(X)\},
+$$
+(其中 $\mathbf{B}\mathbb{N}$ 是 “<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的自同态”)
+那么迹的构造升级为一个函子
+$$
+\operatorname{Tr}\colon \mathsf{End}_\mathcal C \to \operatorname{End}_{\mathcal C}(1).
+$$</p>
+<h3>对象的迹</h3>
+<h2>例</h2>
+<p>当 $\mathcal C = \mathsf{Vect}_k$
+时,
+有限维 $k$-线性空间 $V$ 的自映射的迹即是 $\operatorname{Tr}(f)\cdot \mathrm{id}_{k}$.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

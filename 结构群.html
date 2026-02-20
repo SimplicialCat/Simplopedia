@@ -56,6 +56,113 @@
     });
   });
 </script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="结构群"><header><h1><span class="taxon">Wiki. </span>“结构群” <a class="slug" href="./结构群.html">[结构群]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“复向量丛” <a class="slug" href="./复向量丛.html">[复向量丛]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>挠率 <a class="slug" href="./挠率.html">[挠率]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“结构群的约化” <a class="slug" href="./结构群的约化.html">[结构群的约化]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>自旋群 <a class="slug" href="./自旋群.html">[自旋群]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="复向量丛"><header><h1><span class="taxon">Wiki. </span>“复向量丛” <a class="slug" href="./复向量丛.html">[复向量丛]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>复向量丛是以 $GL_n(\mathbb{C})$ 为<span class="link local"><a href="./结构群.html" title="“结构群” [结构群]">结构群</a></span>的 $\mathbb{C}^n$ 丛.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="挠率"><header><h1><span class="taxon">Wiki. </span>挠率 <a class="slug" href="./挠率.html">[挠率]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>一个<span class="link local"><a href="./联络.html" title="联络 [联络]">联络</a></span>的<strong>挠率</strong>是一个<span class="link local"><a href="./张量.html" title="张量 [张量]">张量</a></span>.</p>
+<h2>定义</h2>
+<h3></h3>
+<p>设 $V$ 为 $n$ 维线性空间, $G \to \mathrm{GL}(V)$ 为 Lie 群同态, 给出 Lie 代数同态
+$$
+\mathfrak g\to \mathfrak{gl}(V) \simeq V\otimes V^*.
+$$
+设流形 $M$ 上有 <span class="link local"><a href="./切结构.html" title="切结构 [切结构]">$G$-结构</a></span>, 即标架丛<span class="link local"><a href="./主丛的约化.html" title="主丛的约化 [主丛的约化]">约化</a></span>为 $G$-主丛 $P$. 那么 $P$ 两个<span class="link local"><a href="./联络.html" title="联络 [联络]">联络</a></span>的差是<span class="link local"><a href="./关联丛.html" title="“关联丛” [关联丛]">关联丛</a></span> $(\mathfrak g\otimes V^*)_P$ 的截面.</p>
+<p>考虑 $G$-表示的同态
+$$
+\sigma\colon \mathfrak g\otimes V^* \to V\otimes V^*\otimes V^* \overset{\wedge}{\longrightarrow} V\otimes \wedge^2 V^*,
+$$
+其中 $\wedge$ 为反对称化, 则有<span class="link local"><a href="./关联丛.html" title="“关联丛” [关联丛]">关联丛</a></span>的映射
+$$
+(\mathfrak g\otimes V^*)_P \to (V\otimes\wedge^2 V^*)_P,
+$$
+也即
+$$
+\operatorname{ad}(P)\otimes T^*M\to TM \otimes \wedge^2 T^*M.
+$$
+联络的挠率是 $TM \otimes \wedge^2 T^*M$ 的截面, 其在上述映射的余核中的像不依赖于联络的选取, 它是无挠联络存在的阻碍.</p>
+<h2>仿射群取值的曲率</h2>
+<p>对于流形 $M$ 线性联络 设想 $TM$ 的<span class="link local"><a href="./结构群.html" title="“结构群” [结构群]">结构群</a></span>为比 $GL_n(\mathbb{R})$ 更大的仿射变换群 $\operatorname{Aff}(\mathbb{R}^n)$. 曲率是取值于 $\operatorname{Aff}(\mathbb{R}^n)$ 的 Lie 代数的 $2$-形式. $\operatorname{Aff}(\mathbb{R}^n)$ 的 Lie 代数可分解为一个 (无穷小) 平移与一个 (无穷小) 线性变换, 而无挠性相当于曲率不含有平移项.</p>
+<h2>恒等算子的协变外微分</h2>
+<p>挠率张量的另一解释. 将 $TM$ 上的恒等算子 $\operatorname{id}$ 视为 $TM$-取值的 $1$-形式, 即 $TM\otimes T^*M$ 的截面. 使用协变外微分 $d^\nabla\colon \Omega^1(M,TM)\to\Omega^2(M,TM)$, 可将挠率张量表示为
+$$
+T=d^\nabla(\operatorname{id}).
+$$</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="结构群的约化"><header><h1><span class="taxon">Wiki. </span>“结构群的约化” <a class="slug" href="./结构群的约化.html">[结构群的约化]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>主丛的约化</h2>
+<p>给定群同态 $\varphi\colon H\to G$ 与 $H$-主丛 $\pi\colon P\to X$, 可构造 $G$-主丛
+$$
+P\times_H G = P \times G \big/ \big((ph,g)\sim (p,hg)\big).
+$$
+其上有 $G$ 的右作用 $(p,g)g'=(p,gg')$.</p>
+<p>若某个 $G$-主丛可表示为 $P\times_H G$ 的形式, 则称其<span class="link local"><a href="./结构群.html" title="“结构群” [结构群]">结构群</a></span>可约化为 $H$.</p>
+<h2>一般丛的约化</h2>
+<p>设 $E\to X$ 是以 $G$ 为结构群的丛, 即为某个 $G$-主丛 $P$ 的关联丛 $E=P\times_\rho F$, $\rho$ 为 $G$ 在 $F$ 上的右作用. 若 $P$ 的结构群可约化为 $H$, 则称 $E$ 的结构群可约化为 $H$. 具体地, 若 $P=P'\times_H G$, 则
+$$E=(P'\times_H G) \times_\rho F=
+	\{(p',g,f)\}\Bigg/
+	{\small 
+(p',hg,f)\sim (p'h,g,f)\atop
+(p',gg',f)\sim (p',g,g'\cdot f)	
+}=P'\times_{\rho'} F,$$
+其中 $\rho'$ 是 $H$ 在 $F$ 上的左作用, $\rho'(h)(f):=\rho(\varphi(h))f$.</p>
+<h2>分类空间</h2>
+<p>结构群的约化即是<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">分类空间</a></span>的函子性: 群同态 $H\to G$ 诱导分类空间的态射 $BH\to BG$.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="自旋群"><header><h1><span class="taxon">Wiki. </span>自旋群 <a class="slug" href="./自旋群.html">[自旋群]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>自旋群 $\mathrm{Spin}_n$ 是 $\mathrm{SO}_n$ 的非平凡二重<span class="link local"><a href="./覆叠.html" title="覆叠 [覆叠]">覆叠</a></span>.</p>
+<p>自旋群可描述<span class="link local"><a href="./费米子.html" title="“费米子” [费米子]">费米子</a></span>的对称性.</p>
+<p>参见<span class="link local"><a href="./自旋表示.html" title="“自旋表示” [自旋表示]">自旋表示</a></span>.</p>
+<h2>性质</h2>
+<h3>巧合同构</h3>
+<p>$$
+\operatorname{Spin}(1)= O(1),
+$$
+$$
+\operatorname{Spin}(2)=U(1)=SO(2),
+$$
+$$
+\underset{B_1}{\operatorname{Spin}(3)}=\underset{C_1}{\mathrm{Sp}(1)}= \underset{A_1}{SU(2)},
+$$
+$$
+\underset{D_2}{\operatorname{Spin}(4)}=\underset{A_1}{SU(2)}\times \underset{A_1}{SU(2)},
+$$
+$$\underset{B_2}{\operatorname{Spin}(5)}=\underset{C_2}{\mathrm{Sp}(2)},$$
+$$
+\operatorname{Spin}(6)=SU(4).
+$$</p>
+<h3>四维情形</h3>
+<p>欧氏和 Minkowski 情形的 $4$ 维流形的<span class="link local"><a href="./结构群.html" title="“结构群” [结构群]">结构群</a></span>分别有二重覆盖
+$$
+\widetilde {SO(4)} = SU(2) \times SU(2) = \operatorname{Spin}(4),
+$$
+$$
+\widetilde {SO_o(1,3)}= SL(2,\mathbb{C})=\operatorname{Spin}(3,1).
+$$
+其中有 $SL(2,\mathbb{C})$ 的表示
+$$
+\mathbb{R}^{1,3}\otimes \mathbb{C} \simeq \mathbb{C}^2 \otimes \overline{\mathbb{C}^2}.
+$$</p>
+<p><span class="link local"><a href="./Minkowski时空.html" title="“Minkowski 时空” [Minkowski时空]">Minkowski 时空</a></span>中的类光方向 (null direction) 可对应于 $S^2$, 或 $\mathbb{C}P^1$. 采用 $\mathbb{C}P^1$ 上的齐次坐标 $\zeta=\xi / \eta$, $SL_2(\mathbb{C})$ 在 $\xi,\eta$ 上的作用相当于在类光方向上的作用, 从而给出了二重覆盖
+$$
+SL_2(\mathbb{C})\to SO^+(1,3).
+$$
+$$
+\begin{pmatrix}
+	\xi\\ \eta
+\end{pmatrix}
+\begin{pmatrix}
+	\overline{\xi}&amp;\overline{\eta}
+\end{pmatrix}
+$$</p>
+<p>将 $\mathbb{R}^4$ 等同于 $2$ 阶 Hermite 矩阵的空间 $H$,
+$$
+x=(x_0,x_1,x_2,x_3)\in\mathbb{R}^4 \quad\mapsto\quad X=\begin{pmatrix} x_0+x_1 &amp; x_2+ix_3 \\ x_2-ix_3 &amp; x_0-x_1 \end{pmatrix}\in H.
+$$
+注意到 $\det X= x_0^2-x_1^2-x_2^2-x_3^2$ 是 Minkowski 范数.</p>
+<p>考虑 $SL_2(\mathbb{C})$ 在 $H$ 上的作用, 对于 $A\in SL_2(\mathbb{C}), X\in H$ 定义
+$$
+A\cdot X := AXA^*,
+$$
+其中 $A^*$ 是 $A$ 的<span class="link local"><a href="./共轭.html" title="共轭 [共轭]">共轭</a></span>转置. 注意到 $\det(AXA^*)=\det(X)$, 即这个作用保持 Minkowski 范数的, 于是定义了同态 $SL_2(\mathbb{C}) \to O(1,3)$. 又因为 $SL_2(\mathbb{C})$ 连通, 故这个群同态的像包含在连通分支 $SO^+(1,3)$ 中.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

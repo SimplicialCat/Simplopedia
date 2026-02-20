@@ -56,6 +56,100 @@
     });
   });
 </script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Reference"><details open><summary id="LurieHA"><header><h1><span class="taxon">Reference. </span>Higher Algebra <a class="slug" href="./LurieHA.html">[LurieHA]</a></h1><div class="metadata"><ul><li class="meta-item">Jacob Lurie</li></ul></div></header></summary>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>E_B-算畴 <a class="slug" href="./E_B-算畴.html">[E_B-算畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>导出范畴 <a class="slug" href="./导出范畴.html">[导出范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>链复形 <a class="slug" href="./链复形.html">[链复形]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="E_B-算畴"><header><h1><span class="taxon">Wiki. </span>E_B-算畴 <a class="slug" href="./E_B-算畴.html">[E_B-算畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>算畴 $\mathbb E_B$ 是 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> (Definition 5.4.2.10) 引入的一个记号, 对任意映射 $B \to \mathsf{BTop}(n)$ 定义一个<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathbb E_B$, 推广了 <span class="link local"><a href="./En-算畴.html" title="En-算畴 [En-算畴]">$\mathbb E_n$-算畴</a></span>.</p>
+<h2>定义</h2>
+<p>记 $\mathsf{BTop}(n)$ 为拓扑群 (<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span><span class="link local"><a href="./群.html" title="群 [群]">群</a></span>) $\mathsf{Top}(n):=\operatorname{Aut}_{\mathsf{Top}}(\mathbb{R}^n)$ 的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>, 也即流形与嵌入构成的 $\infty$-范畴 $\mathsf{Mfd}_n$ 中 $\mathbb{R}^n$ 一个对象构成的全子范畴.</p>
+<p>回忆任何范畴 $\mathcal C$ 均给出算畴 $\mathcal C^{\coprod}$, 其 $m$ 元运算为
+$$
+\operatorname{Hom}(X_1,\cdots,X_m; Y) := \prod_{i=1}^m \operatorname{Hom}_{\mathcal C}(X_i,Y).
+$$</p>
+<p>考虑<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathsf{BTop}(n)^\otimes$, 其 $m$ 元运算为开嵌入 $\sqcup_m\mathbb{R}^n \to \mathbb{R}^n$.</p>
+<p>给定映射 $B\to \mathsf{BTop}(n)$, 定义 $\mathbb E_B$ 为如下算畴:
+$$
+\mathbb E_B := \mathsf{BTop}(n)^\otimes \times_{\mathsf{BTop}(n)^{\coprod}}B^{\coprod}.
+$$</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="导出范畴"><header><h1><span class="taxon">Wiki. </span>导出范畴 <a class="slug" href="./导出范畴.html">[导出范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span> $\mathcal A$ 的<strong>导出范畴</strong>是万有的以 $\mathcal A$ 为<span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">心</a></span>的<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>.</p>
+<p>导出范畴的一个<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">模型</a></span>是将链复形之间的<span class="link local"><a href="./拟同构.html" title="拟同构 [拟同构]">拟同构</a></span>视为同构, 即对拟同构作<span class="link local"><a href="./局部化.html" title="局部化 (环) [局部化]">局部化</a></span>.
+此时 $\mathcal A$ 中的对象可视为聚集在 $0$ 位置的链复形.</p>
+<h2>定义</h2>
+<h3>泛性质</h3>
+<p>参考 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">HA</a></span> 1.3.3 节.</p>
+<h3>模型</h3>
+<p>设 $\mathcal A$ 为 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>. 记 $W$ 为 $\mathcal A$ 中<span class="link local"><a href="./拟同构.html" title="拟同构 [拟同构]">拟同构</a></span>的全体, 定义导出范畴 $\mathsf{D}(\mathcal A)$ 为局部化
+$$
+\mathsf D(\mathcal A) := \mathsf {Ch}(\mathcal A)[W^{-1}].
+$$</p>
+<h2>性质</h2>
+<p>在 $\mathcal A$ 为 <span class="link local"><a href="./GrothendieckAbel范畴.html" title=" [GrothendieckAbel范畴]">Grothendieck Abel 范畴</a></span>的前提下, $\mathsf {D}(\mathcal A)$ 是<span class="link local"><a href="./稳定∞-范畴.html" title=" [稳定∞-范畴]">稳定无穷范畴</a></span>.</p>
+<h2>相关概念</h2>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="链复形"><header><h1><span class="taxon">Wiki. </span>链复形 <a class="slug" href="./链复形.html">[链复形]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>Abel 范畴</h3>
+<p>经典的链复形是 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>中的一列映射</p>
+<p>…</p>
+<h3>一般范畴</h3>
+<p>参考 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">HA</a></span> 1.2.2 节.</p>
+<p>设范畴 $\mathcal C$ 具有零对象 $0$. 考虑一个全序集 $\mathcal J$, 视为范畴; 记 $\mathcal J^{\to}$ 为其箭头范畴. 定义 $\mathcal C$ 中的 $\mathcal J$-链复形为如下资料:</p>
+<ul>
+<li>函子 $F\colon \mathcal J^{\to} \to \mathcal C$;</li>
+<li>对任意 $i\in\mathcal J$, $F(i,i)=0$;</li>
+<li>对任意 $i\leq j\leq k$, 下图为推出方块.
+$$
+\begin{array}
+  {ccc}
+  F(i,j) &amp; \to &amp; F(i,k) \\
+  \downarrow &amp; &amp; \downarrow \\
+  F(j,j) &amp; \to &amp; F(j,k).
+\end{array}
+$$</li>
+</ul>
+<p>记 $\mathsf{Gap}(\mathcal J,\mathcal C)$ 为 $\mathcal C$ 中的 $\mathcal J$-链复形的范畴构成的 $\mathsf{Fun}(\mathcal J^{\to},\mathcal C)$ 的全子范畴.</p>
+<h3>全序集有最小元的情形</h3>
+<p>注意到, 当 $\mathcal J$ 有最小元 $-\infty$ 时, 由于有推出方块
+$$
+\begin{array}
+    {ccc}
+    F(-\infty,j) &amp; \to &amp; F(-\infty,k) \\
+    \downarrow &amp; &amp; \downarrow \\
+    F(j,j)=0 &amp; \to &amp; F(j,k),
+\end{array}
+$$
+也即 $F(j,k)$ 能写成<span class="link local"><a href="./余纤维列.html" title="“余纤维列” [余纤维列]">余纤维</a></span>
+$$
+F(j,k) = \operatorname{cofib}(F(-\infty,j)\to F(-\infty,k)),
+$$
+故一个 $\mathcal J$-链复形 $F$ 完全由函子 $F(-\infty,-)\colon \mathcal J\backslash \{-\infty\}\to\mathcal C$ 决定. 事实上, 上述推出方块的条件表明 $F$ 可由其在子范畴
+$$
+\{(i,j)\mid i=-\infty \lor i=j\}
+$$
+上的限制通过<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">左 Kan 扩张</a></span>复原出来, 而其中 $i=j$ 的部分的值已经规定为 $0$, 所以 $F$ 的信息本质上只有一个函子 $F(-\infty,-)\colon \mathcal J\backslash \{-\infty\} \to \mathcal C$, 并且对这个函子没有任何其它要求, 也即有等价
+$$
+\mathsf{Gap}(\mathcal J,\mathcal C) \simeq \mathsf{Fun}(\mathcal J\backslash\{-\infty\},\mathcal C).
+$$</p>
+<p>特别地, 当 $\mathcal J\backslash\{-\infty\} = (\mathbb{Z},\leq)$ 时, $\mathcal J$-链复形等同于 $\mathcal C$ 中的<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤对象</a></span> $(\mathbb{Z},\leq) \to \mathcal C$, 链复形的每一项是滤对象的一个<span class="link local"><a href="./余纤维列.html" title="“余纤维列” [余纤维列]">余纤维</a></span>.</p>
+<h3>稳定范畴的情形</h3>
+<p>设 $\mathcal C$ 是<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>, $F$ 是 $\mathcal J$-链复形. 由于余纤维列等同于<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>, 从而有同伦群的长正合列
+$$
+\begin{aligned}
+\cdots&amp;\to\pi_n X(i,j) \to \pi_n X(i,k) \to \pi_n F(j,k) \\
+&amp;\to \pi_{n-1} X(i,j) \to\cdots
+\end{aligned}
+$$</p>
+<p>定义谱序列的<strong>第一页</strong>: 对于 $p,q\in\mathbb{Z}$,
+$$
+E_1^{p,q} = \pi_{p+q} X(p-1,p),
+$$
+定义
+$$
+d_1\colon E_1^{p,q} \to E_1^{p-1,q}
+$$
+就是前述长正合列中的同态
+$$
+\delta\colon \pi_{p+q} X(p-1,p) \to \pi_{p+q-1} X(p-2,p-1).
+$$</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

@@ -68,6 +68,43 @@
 <p>The Taniyama conjecture says that the L-series of an elliptic curve over Q is automorphic (more specifically, arises from a modular form). Langlands conjectures that every L-series arising from algebraic geometry is automorphic (in the sense he defined).</p>
 </blockquote>
 <p><span class="link local"><a href="./Langlands对应.html" title="“Langlands 对应” [Langlands对应]">Langlands 对应</a></span></p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“椭圆曲线” <a class="slug" href="./椭圆曲线.html">[椭圆曲线]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“模形式” <a class="slug" href="./模形式.html">[模形式]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="椭圆曲线"><header><h1><span class="taxon">Wiki. </span>“椭圆曲线” <a class="slug" href="./椭圆曲线.html">[椭圆曲线]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><strong>椭圆曲线</strong> (elliptic curve) 是<span class="link local"><a href="./亏格.html" title="“亏格” [亏格]">亏格</a></span>为 $1$ 且有有理点 $e\in X(k)$ 的<span class="link local"><a href="./曲线.html" title="“曲线” [曲线]">曲线</a></span>.</p>
+<p>一般的整系数椭圆曲线形如
+$$
+E \colon y^2 + a_1 xy + a_3 y = x^3 + a_2 x^2 + a_4 x + a_6.
+$$
+在坐标变换 $y=\frac{1}{2}(Y-a_1X-a_3)$, $x=X$ 之下, 上式变为
+$$
+Y^2 = 4X^3 + b_2 X^2 + 2 b_4 X + b_6.
+$$</p>
+<p><strong>定理</strong>. 任何椭圆曲线都可以写成
+$$
+X = \{ y^2 = x^3 + ax + b \} \cup \{\infty\}.
+$$</p>
+<h3>复数上的椭圆曲线</h3>
+<p>复数上的椭圆曲线可等价地定义为</p>
+<ul>
+<li>$\mathbb{C} / \Lambda$, 其中 $\Lambda$ 为格点;</li>
+<li>一维紧复 <span class="link local"><a href="./Lie群.html" title=" [Lie群]">Lie 群</a></span>.</li>
+<li>亏格 $1$ 的 <span class="link local"><a href="./Riemann面.html" title="“Riemann 面” [Riemann面]">Riemann 面</a></span>, 带有一个基点;</li>
+<li>$3$ 次代数曲线.</li>
+</ul>
+<h2>性质</h2>
+<p><strong>命题</strong>. 设 $P,Q$ 是椭圆曲线上两点, 若 $P,Q$ 作为<span class="link local"><a href="./除子.html" title="“除子” [除子]">除子</a></span>等价, 即 $P-Q=\operatorname{div}(f)$, 则 $P=Q$, 即 $f$ 为常数.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./椭圆曲线的模叠.html" title="椭圆曲线的模叠 [椭圆曲线的模叠]">椭圆曲线的模叠</a></span>, <span class="link local"><a href="./谷山–志村猜想.html" title="“谷山–志村猜想” [谷山–志村猜想]">谷山–志村猜想</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="模形式"><header><h1><span class="taxon">Wiki. </span>“模形式” <a class="slug" href="./模形式.html">[模形式]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>模形式是<span class="link local"><a href="./椭圆曲线的模叠.html" title="椭圆曲线的模叠 [椭圆曲线的模叠]">椭圆曲线的模叠</a></span>上的某种微分形式.</p>
+<h2>定义</h2>
+<p>记 $\mathcal M_{\text{ell}}$ 为<span class="link local"><a href="./椭圆曲线的模叠.html" title="椭圆曲线的模叠 [椭圆曲线的模叠]">椭圆曲线的模叠</a></span>, $A \to \mathcal M_{\text{ell}}$ 为万有椭圆曲线, $\Omega^1_{A/S}$ 为其上的逐纤维 <span class="link local"><a href="./Kähler微分.html" title="Kähler 微分 [Kähler微分]">Kähler 微分</a></span>, $e$ 为零截面. 考虑 $\mathcal M_{\text{ell}}$ 上的线丛
+$$
+\omega:=e^*\Omega^1_{A/S}.
+$$
+$k$ 阶模形式是 $\omega^{\otimes k}$ 的截面.</p>
+<h2>相关页面</h2>
+<p><span class="link local"><a href="./谷山–志村猜想.html" title="“谷山–志村猜想” [谷山–志村猜想]">谷山–志村猜想</a></span></p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

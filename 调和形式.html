@@ -68,6 +68,110 @@ $$
 $$
 \bar\partial \alpha = 0, \quad \bar\partial ^* \alpha = 0.
 $$</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Hirzebruch 指标定理” <a class="slug" href="./Hirzebruch指标定理.html">[Hirzebruch指标定理]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Hodge 理论” <a class="slug" href="./Hodge理论.html">[Hodge理论]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li><li class="meta-item">Hodge 分解定理, Hodge 定理</li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“杨–Mills 联络” <a class="slug" href="./杨--Mills联络.html">[杨--Mills联络]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Hirzebruch指标定理"><header><h1><span class="taxon">Wiki. </span>“Hirzebruch 指标定理” <a class="slug" href="./Hirzebruch指标定理.html">[Hirzebruch指标定理]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>Hirzebruch 指标定理揭示了两个<span class="link local"><a href="./配边.html" title="配边 [配边]">配边</a></span>不变量, 即<span class="link local"><a href="./流形的指标.html" title="“流形的指标” [流形的指标]">流形的指标</a></span>和 <span class="link local"><a href="./Pontryagin数.html" title="“Pontryagin 数” [Pontryagin数]">Pontryagin 数</a></span>的关系. 它可用于证明 <span class="link local"><a href="./Hirzebruch--Riemann--Roch定理.html" title="“Hirzebruch–Riemann–Roch 定理” [Hirzebruch--Riemann--Roch定理]">Hirzebruch–Riemann–Roch 定理</a></span>.</p>
+<h2>Hirzebruch 指标定理的另一表述</h2>
+<p>记 Riemann 流形 $M$ 上的偶数维与奇数维微分形式的空间分别为 $\Omega^{\text{even}}, \Omega^{\text{odd}}$. 考虑两个微分算子
+$$
+\begin{aligned}
+	D_0=d+\delta &amp;: \Omega^{\text{even}}\to \Omega^{\text{odd}},\\
+	D_1=d+\delta &amp;: \Omega^{\text{odd}} \to \Omega^{\text{even}}.
+\end{aligned}
+$$
+注意到 Laplace 算子 $\triangle$ 在偶分量和奇分量分别等于 $D_1D_0$ 和 $D_0D_1$.
+由 <span class="link local"><a href="./Hodge理论.html" title="“Hodge 理论” [Hodge理论]">Hodge 理论</a></span>,
+$$
+\begin{aligned}
+\dim \ker D_0 &amp;= \sum_i \dim H^{2i}(M),\\
+\dim \ker D_1 &amp;= \sum_i \dim H^{2i+1}(M).
+\end{aligned}
+$$
+因此
+$$
+\dim\ker D_0 - \dim\ker D_1 = \chi(M).
+$$
+上式的左端可用 $D_0$ 表示. 首先注意到如下命题:</p>
+<p><strong>命题</strong>. $\operatorname{im}\triangle\big|_{\Omega^{\text{even}}} = \operatorname{im}D_0$.</p>
+<p><strong>证明</strong>. 一方面, 显然 $\operatorname{im}\triangle\big|_{\Omega^{\text{even}}}\subset \operatorname{im}D_0$. 另一方面, 由 <span class="link local"><a href="./Hodge分解定理.html" title=" [Hodge分解定理]">Hodge 理论</a></span>以及<span class="link local"><a href="./调和形式.html" title="“调和形式” [调和形式]">调和形式</a></span>的性质,
+$$
+\Omega^\bullet = \ker\triangle\oplus \operatorname{im}\triangle,
+$$
+$$
+\Omega^{\text{even}}=\ker \triangle\big|_{\Omega^{\text{even}}}\oplus  \operatorname{im}\triangle\big|_{\Omega^{\text{even}}}=\ker D_0\oplus \operatorname{im}\triangle\big|_{\Omega^{\text{even}}}.
+$$
+而 $D_0$ 与 $\triangle$ 可交换, 故得
+$$
+\operatorname{im}D_0 \subset \operatorname{im} \triangle\big|_{\Omega^{\text{even}}}.
+$$
+<strong>命题</strong>. $\operatorname{coker}D_0 = \ker D_1$.</p>
+<p><strong>证明</strong>. 由 Hodge 分解定理,
+$$
+\Omega^{\text{odd}}= \ker\triangle\big|
+$$
+$$
+\operatorname{coker}D_0=\Omega^{\text{odd}}/\operatorname{im}D_0=\Omega^{\text{odd}}/ \operatorname{im}\triangle\big|_{\Omega^{\text{even}}} = \mathscr{H} \cap \Omega^{\text{odd}}=\ker D_1,
+$$
+所以
+$$
+\dim \ker D_0 - \dim \operatorname{coker}D_0 = \chi(M).
+$$</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Hodge理论"><header><h1><span class="taxon">Wiki. </span>“Hodge 理论” <a class="slug" href="./Hodge理论.html">[Hodge理论]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li><li class="meta-item">Hodge 分解定理, Hodge 定理</li></ul></div></header></summary>
+
+<h2>实流形的 Hodge 理论</h2>
+<p>Hodge 理论研究紧流形上的<span class="link local"><a href="./椭圆算子.html" title="椭圆算子 [椭圆算子]">椭圆算子</a></span>, 如 <span class="link local"><a href="./Laplace算子.html" title="“Laplace 算子” [Laplace算子]">Laplace 算子</a></span>. 它告诉我们指标如何翻译成上同调.</p>
+<h3>调和形式</h3>
+<p><strong>定理</strong>. 紧可定向 Riemann 流形 $M$ 上 $p$ 阶<span class="link local"><a href="./调和形式.html" title="“调和形式” [调和形式]">调和形式</a></span>的空间 $\mathcal H_d^p(M)$ 是<strong>有限维</strong>的. 对于正交投影 $H_d\colon \Omega^p(M) \to \mathcal H_d^p(M)$, 存在 Green 算子 $G_d\colon \Omega^p\to \Omega^p$, 满足</p>
+<ul>
+<li>$G_d H_d = H_d G_d = 0$;</li>
+<li>$d G_d = G_d d$, $d^* G_d = G_d d^*$;</li>
+<li>$H_d + \triangle_d G_d = \operatorname{id}_{\Omega^p}$.</li>
+</ul>
+<p><strong>推论</strong>. 紧可定向 Riemann 流形 $M$ 上任一微分形式可分解为一个调和形式, 一个 $d$ 的像与一个 $d^*$ 的像之和. 若 $\alpha$ 为闭形式, 则 $\alpha$ 可分解为一个调和形式与一个 $d$ 的像之和.</p>
+<p><strong>推论</strong>. $\mathcal H_d^p(M) \simeq H_{\text{dR}}^p(M)$.</p>
+<p>关于这个理论, Futaki 教授推荐 F. Warner 的微分几何书.</p>
+<h3>解析指标</h3>
+<p>Hodge 理论与算子的<span class="link local"><a href="./解析指标.html" title="解析指标 [解析指标]">解析指标</a></span>有关.</p>
+<h2>复流形上全纯向量丛的 Hodge 理论</h2>
+<p>设 $E\to M$ 为<span class="link local"><a href="./全纯向量丛.html" title="“全纯向量丛” [全纯向量丛]">全纯向量丛</a></span>, 则 $E$-值 $(p,q)$-形式上有算子 $\bar\partial_E\colon \Omega^{p,q}(E)\to \Omega^{p,q+1}(E)$, 满足 $\bar\partial_E^2=0$. 见 <span class="link local"><a href="./Dolbeault上同调.html" title="“Dolbeault 上同调” [Dolbeault上同调]">Dolbeault 上同调</a></span>.</p>
+<p>定义 $\Omega^{p,q}(E)$ 上的 $\bar\partial$-Laplace 算子
+$$
+\triangle_{\bar\partial }= \bar\partial \bar\partial ^* + \bar\partial  ^*\bar\partial.
+$$
+$\triangle_{\bar\partial }\alpha = 0$ 等价于 $\bar\partial \alpha = 0$ 且 $\bar\partial ^* \alpha = 0$.</p>
+<p><strong>定理</strong>. (Hodge–Kodaira) 考虑正交投影 $H_{\bar\partial }\colon \Omega^{p,q}(E)\to \mathcal H^{p,q}_{\bar\partial }(E)$, 存在 Green 算子 $G_{\bar\partial }\colon \Omega^{p,q}(E)\to \Omega^{p,q}(E)$ 满足</p>
+<ul>
+<li>$G_{\bar\partial }H_{\bar\partial }=H_{\bar\partial }G_{\bar\partial }=0$;</li>
+<li>$\bar\partial G_{\bar\partial } = G_{\bar\partial }\bar\partial$;</li>
+<li>$H_{\bar\partial }+ \triangle_{\bar\partial }G_{\bar\partial }=\operatorname{id}_{\Omega^{p,q}(E)}$.</li>
+</ul>
+<p><strong>推论</strong>. $\bar\partial$-闭形式可分解为一个 $\bar\partial$-调和形式与一个 $\bar\partial$ 的像的和.</p>
+<p><strong>推论</strong>. $\mathcal H_{\bar\partial }^{p,q}(E)\simeq H^{p,q}_{\bar\partial }(E)$.</p>
+<h2>复射影簇的 Hodge 理论</h2>
+<p>设 $X$ 为复射影流形, 即 $\mathbb CP^n$ 的闭子流形 (参见<span class="link local"><a href="./代数簇.html" title="“代数簇” [代数簇]">代数簇</a></span>), 那么 $X$ 继承 $\mathbb CP^n$ 上的 Riemann 度量而成为 <span class="link local"><a href="./Kähler流形.html" title="Kähler 流形 [Kähler流形]">Kähler 流形</a></span>. 此时 Hodge 定理给出
+$$
+H^r(X,\mathbb C) \simeq \bigoplus_{p+q=r}H^{p,q}(X).
+$$
+其中 <span class="link local"><a href="./Dolbeault上同调.html" title="“Dolbeault 上同调” [Dolbeault上同调]">Dolbeault 上同调</a></span> $H^{p,q}(X)$ 等于<span class="link local"><a href="./凝聚层上同调.html" title="“凝聚层上同调” [凝聚层上同调]">凝聚层上同调</a></span>
+$$
+H^{p,q}(X)\simeq H^q(X,\Omega^p),
+$$
+$\Omega^p$ 为全纯 $p$-形式层.</p>
+<p>Hodge 理论给出了<span class="link local"><a href="./小平消失定理.html" title="“小平消失定理” [小平消失定理]">小平消失定理</a></span>在代数几何上的应用.</p>
+<p>相关概念: <span class="link local"><a href="./Hodge星算子.html" title="“Hodge 星算子” [Hodge星算子]">Hodge 星算子</a></span></p>
+<p><span class="link local"><a href="./p-进Hodge理论.html" title="“p-进 Hodge 理论” [p-进Hodge理论]">p-进 Hodge 理论</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="杨--Mills联络"><header><h1><span class="taxon">Wiki. </span>“杨–Mills 联络” <a class="slug" href="./杨--Mills联络.html">[杨--Mills联络]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>称<span class="link local"><a href="./联络.html" title="联络 [联络]">联络</a></span> $\nabla$ 为<strong>杨–Mills 联络</strong>, 是指其<span class="link local"><a href="./曲率形式.html" title="“曲率形式” [曲率形式]">曲率形式</a></span>满足
+$$
+\nabla^* R = 0.
+$$
+其中 $\nabla^*$ 是其形式伴随; 这等价于 $R$ 为<span class="link local"><a href="./调和形式.html" title="“调和形式” [调和形式]">调和形式</a></span>.</p>
+<p>$4$ 维情形的杨–Mills 方程可表示为<span class="link local"><a href="./曲率.html" title="“曲率” [曲率]">曲率</a></span>的 (反) 自对偶性 $\star R = \pm R$, 此时称 $\nabla$ (反) 自对偶.</p>
+<p>Atiyah–Singer 证明
+$$
+SD :=\{\nabla: \nabla \text{自对偶} \}\big/ \text{规范等价}
+$$
+(的 Uhlenbeck 紧化) 是有限维流形, 其<span class="link local"><a href="./配边.html" title="配边 [配边]">配边</a></span>类不依赖于 Riemann 度量的选取. Donaldson 证明某个<span class="link local"><a href="./示性类.html" title="“示性类” [示性类]">示性类</a></span> $\beta$ 在 $SD$ 上的积分是 $M$ 的微分不变量 (只取决于微分结构). <span class="link local"><a href="./Seiberg--Witten方程.html" title="“Seiberg–Witten 方程” [Seiberg--Witten方程]">Seiberg–Witten 方程</a></span>分类了 $4$ 维微分结构, 与 Donaldson 不变量相等.</p>
+<p>杨–Mills 联络是杨–Mills 泛函的临界点.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

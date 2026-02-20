@@ -60,6 +60,97 @@
 <p><strong>积</strong> (product), 是以集合 (离散范畴) 为指标的<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和 (范畴论)</a></span></p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Heyting 代数 <a class="slug" href="./Heyting代数.html">[Heyting代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>PROP <a class="slug" href="./PROP.html">[PROP]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>代数理论 <a class="slug" href="./代数理论.html">[代数理论]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>和 (范畴论) <a class="slug" href="./和(范畴论).html">[和(范畴论)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>对称幺半范畴 <a class="slug" href="./对称幺半范畴.html">[对称幺半范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>积闭范畴 <a class="slug" href="./积闭范畴.html">[积闭范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Heyting代数"><header><h1><span class="taxon">Wiki. </span>Heyting 代数 <a class="slug" href="./Heyting代数.html">[Heyting代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Heyting 代数是<span class="link local"><a href="./直觉主义逻辑.html" title="直觉主义逻辑 [直觉主义逻辑]">直觉主义</a></span>命题演算的模型.</p>
+<h2>定义</h2>
+<p>Heyting 代数是一个<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span>, 存在所有有限的<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>和<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>, 且构成<span class="link local"><a href="./积闭范畴.html" title="积闭范畴 [积闭范畴]">积闭范畴</a></span>. 换言之, Heyting 代数中有 $0$, $1$, 指数对象 $y^x$ (通常记作 $x\Rightarrow y$), 而指数对象由如下的伴随关系刻画:
+$$
+z\leq (x\Rightarrow y) \quad \text{iff} \quad z\wedge x \leq y.
+$$</p>
+<h2>性质</h2>
+<p>由基本伴随关系, 可得 (实际上是伴随的单位和余单位态射)
+$$
+x\leq \big( y\Rightarrow (x\wedge y) \big),\quad y\wedge (y\Rightarrow x) \leq x.
+$$
+而由 $1^x\simeq 1$, $x^1\simeq x$ 可得
+$$
+(x\Rightarrow 1) =1,\quad (1\Rightarrow x) =x.
+$$
+由于函子 $x\Rightarrow -$ 有右伴随, 它保持极限, 即
+$$
+(x\Rightarrow (y\wedge z)) = \big( (x\Rightarrow y) \wedge (x \Rightarrow z)\big).
+$$
+等式 $x^{y\times z}\simeq (x^y)^z$ 成为
+$$
+((y\wedge z)\Rightarrow x) = (z\Rightarrow (y\Rightarrow x)).
+$$</p>
+<h2>例</h2>
+<p>对拓扑空间 $X$, 其上开集构成的偏序集为 Heyting 代数. 对于开集 $U, V$,
+$$
+(U \Rightarrow V) = \bigcup_{W\cap U\subset V} W.
+$$
+每个 <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>都是 Heyting 代数, 反之则不然.</p>
+<h2>参考资料</h2>
+<p><span class="link local"><a href="./盲人摸象.html" title="盲人摸象 [盲人摸象]">盲人摸象</a></span> 1.3 节</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="PROP"><header><h1><span class="taxon">Wiki. </span>PROP <a class="slug" href="./PROP.html">[PROP]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>PROP 是指所有对象均形如 $x^{\otimes n}$ 的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>.</p>
+<p><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>是 PROP 的特殊情形: 它的运算 $\otimes$ 是范畴论<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>.</p>
+<p>PROP 又可视为单色<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>: 对于 PROP $\mathcal P$, $\operatorname{Hom}_{\mathcal P}(x^{\otimes n},x)$ 构成一个单色算畴的 $n$-元运算.</p>
+<h2>例</h2>
+<h3>交换运算</h3>
+<p>有限集的范畴 $\mathsf{Fin}$ 配备<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>幺半结构, 是一个 PROP, 因为每个有限集都是有限个单点集的并. 这个 PROP 记录了<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法</a></span>: 对任意对称幺半范畴 $\mathcal C$, 其中的交换代数等同于对称幺半函子 $\mathsf{Fin} \to \mathcal C$.</p>
+<h3>结合运算</h3>
+<p>考虑如下范畴 $\mathcal S$:</p>
+<ul>
+<li>其对象为有限集;</li>
+<li>态射 $X\to Y$ 是一个集合映射 $f\colon X\to Y$ 配备每个点的原像 $f^{-1}(y)$ 的一个<span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序</a></span>.</li>
+</ul>
+<p>这个范畴记录了对称幺半范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的语法. 任意对称幺半范畴 $\mathcal C$ 中的结合代数等同于对称幺半函子 $\mathcal S \to \mathcal C$.</p>
+<h3>小方块</h3>
+<p>如下 PROP 可视为 $\mathsf{Top}$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>或 $(\infty,1)$-范畴, 对应<span class="link local"><a href="./小n-方块算畴.html" title="小方块算畴 [小n-方块算畴]">小方块算畴</a></span>:</p>
+<ul>
+<li>其对象为若干方块 $[0,1]^n$ 的无交并;</li>
+<li>态射 $f \colon \sqcup_k [0,1]^n \to \sqcup_m [0,1]^m$ 为横平竖直的嵌入, 即 $f$ 在每个 $[0,1]^n$ 上的限制均为缩放与平移的复合.</li>
+</ul>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="代数理论"><header><h1><span class="taxon">Wiki. </span>代数理论 <a class="slug" href="./代数理论.html">[代数理论]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>代数</strong>的最初意义是对运算与等式的研究. 一个<strong>代数理论</strong>就是若干种运算和这些运算之间的若干条等式. 代数理论的<strong>模型</strong>就是一个集合 (或一般范畴的对象) 上带有指定的运算, 满足指定的等式.</p>
+<p>一种更抽象的视角是, 运算和等式不过是一个具有有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">乘积</a></span> (<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>) 的范畴的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 故代数理论可 “无坐标” 式地定义为这样的一个范畴, 这个范畴就是它的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>. 而该理论的模型则是语法范畴到 $\mathsf{Set}$ (或一般范畴) 的保持结构的函子.</p>
+<p>还有另一个方向的抽象. 代数理论 $\mathcal T$ 给出一个记录了所有运算与等式的 “自由代数” 函子 $F\colon \mathsf{Set}\to\mathsf{Set}$, 而 $\mathcal T$ 的模型可视为映射 $FX\to X$, 表达了所有运算在 $X$ 上这一具体结构中的求值. 沿这一思路可以继续推广得到<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>的概念.</p>
+<h2>定义</h2>
+<h3>通过语法</h3>
+<p>…</p>
+<h3>通过语法范畴</h3>
+<p>一个代数理论 (的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>) 是一个具有有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>的范畴 $\mathcal T$.</p>
+<p>若范畴 $\mathcal T$ 中有一个对象 $x$ 使得每个对象都形如 $x^n$ ($n\in\mathbb{N}_{\geq 0}$), 则称之为<strong>单类型</strong> (simgle-sorted) 代数理论.</p>
+<p>(单类型) 代数理论有时又称为 <strong></strong><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="和(范畴论)"><header><h1><span class="taxon">Wiki. </span>和 (范畴论) <a class="slug" href="./和(范畴论).html">[和(范畴论)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><strong>和</strong> (sum), 又叫<strong>余积</strong> (coproduct), 是以集合 (离散范畴) 为指标的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积 (范畴论)</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="对称幺半范畴"><header><h1><span class="taxon">Wiki. </span>对称幺半范畴 <a class="slug" href="./对称幺半范畴.html">[对称幺半范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对称幺半范畴是 $(\mathsf{Cat},\times)$ 中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>.</p>
+<h2>性质</h2>
+<p><span class="link local"><a href="./对称幺半范畴的严格化.html" title="对称幺半范畴的严格化 [对称幺半范畴的严格化]">严格化</a></span></p>
+<h2>例</h2>
+<h3>PROP</h3>
+<p>有一类对称幺半范畴范畴常作为<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数结构</a></span>的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>, 称为 <strong></strong><span class="link local"><a href="./PROP.html" title="PROP [PROP]">PROP</a></span> (意为 products &amp; permutations), 它是指所有对象均形如 $x^{\otimes n}$ 的对称幺半范畴.</p>
+<p><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>是 PROP 的特殊情形: 它的运算 $\otimes$ 是范畴论<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>.</p>
+<p>PROP 又可视为单色<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>: 对于 PROP $\mathcal P$, $\operatorname{Hom}_{\mathcal P}(x^{\otimes n},x)$ 构成一个单色算畴的 $n$-元运算.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span>, <span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半 ∞-范畴</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="积闭范畴"><header><h1><span class="taxon">Wiki. </span>积闭范畴 <a class="slug" href="./积闭范畴.html">[积闭范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>积闭范畴 (Cartesian closed category) 是满足如下条件的范畴 $\mathcal C$:</p>
+<ul>
+<li>$\mathcal C$ 具有有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>;</li>
+<li>对任意对象 $X\in\mathcal C$, 函子 $X\times (-)\colon \mathcal C\to\mathcal C$ 有右伴随 $(-)^X\colon \mathcal C\to\mathcal C$, 也即有如下自然同构.
+$$
+\operatorname{Hom}_{\mathcal C}(X\times Y,Z)\simeq\operatorname{Hom}_{\mathcal C}(Y,Z^X).
+$$</li>
+</ul>
+</details></section></details></section></footer></article>
 
 </div></body></html>

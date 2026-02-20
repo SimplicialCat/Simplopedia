@@ -56,6 +56,147 @@
     });
   });
 </script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="局部化(范畴论)"><header><h1><span class="taxon">Wiki. </span>局部化 (范畴论) <a class="slug" href="./局部化(范畴论).html">[局部化(范畴论)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Bousfield 局部化 (稳定同伦论) <a class="slug" href="./Bousfield局部化.html">[Bousfield局部化]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>可表现范畴 <a class="slug" href="./可表现范畴.html">[可表现范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>局部化 (环) <a class="slug" href="./局部化.html">[局部化]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>生象环 <a class="slug" href="./生象环.html">[生象环]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>链复形无穷范畴 <a class="slug" href="./链复形无穷范畴.html">[链复形无穷范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Bousfield局部化"><header><h1><span class="taxon">Wiki. </span>Bousfield 局部化 (稳定同伦论) <a class="slug" href="./Bousfield局部化.html">[Bousfield局部化]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本页面介绍<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的 Bousfield 局部化. 另见<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化 (范畴论)</a></span>.</p>
+<h2>观念</h2>
+<p>固定一个<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span> $E$. 关于 $E$ 的 Bousfield 局部化提取出 $E$ 表示的<span class="link local"><a href="./广义同调.html" title="广义同调 [广义同调]">同调理论</a></span>可见的同伦信息.
+Bousfield 局部化也可理解为谱的范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 关于 $E$-等价的 <span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">(范畴论) 局部化</a></span>.</p>
+<h2>定义</h2>
+<p>为了定义 $E$-局部谱, 首先需要 $E$-无圈谱, $E$-等价的概念.</p>
+<ul>
+<li>称谱 $X$ 为 $E$-<strong>无圈谱</strong>是指 $E\wedge X = 0$.</li>
+<li>称谱的态射 $f\colon X\to Y$ 为 $E$-<strong>等价</strong>是指如下等价条件之一成立:
+<ul>
+<li>$E\wedge f\colon E\wedge X \to E\wedge Y$ 为等价 (换言之, $f$ 诱导 $E$-<span class="link local"><a href="./广义同调.html" title="广义同调 [广义同调]">同调</a></span>的同构);</li>
+<li>$f$ 的<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维</a></span>为 $E$-无圈谱.</li>
+</ul>
+</li>
+<li>称谱 $X$ 为 $E$-<strong>局部谱</strong>是指如下等价条件之一成立:
+<ul>
+<li>对任意 $E$-等价 $f\colon A\to B$, $[f,X] \colon [B,X] \to [A,X]$ 为同构;</li>
+<li>对任意 $E$-无圈谱 $A$, $[A,X] \simeq 0$.</li>
+</ul>
+</li>
+</ul>
+<p><strong>命题</strong>. 对任意谱 $X$ 存在自然的 (余) <span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
+$$
+{_E}X \to X \overset{\eta}{\to} X_E \to \Sigma ({_E}X),
+$$
+使得</p>
+<ul>
+<li>${_E}X$ 为 $E$-无圈谱,</li>
+<li>$X_E$ 为 $E$-局部谱,</li>
+<li>$\eta\colon X\to X_E$ 为 $E$-等价.</li>
+</ul>
+<p>$E$-局部化可视为 “将 $E$-等价变为等价” 的操作.</p>
+<h2>性质</h2>
+<p><strong>命题</strong>. 设 $E$ 为<span class="link local"><a href="./环谱.html" title="环谱 [环谱]">环谱</a></span>, $X$ 为 $E$-模, 则 $X$ 为 $E$-局部谱.</p>
+<p><strong>证明</strong>. 设 $A$ 为任意 $E$-无圈谱. 那么任意态射 $A\to X$ 可分解为
+$$
+A \overset{1}{\to}E\wedge A\overset{f}{\to}E\wedge X \to X,
+$$
+而 $A\wedge E=0$, 这说明 $[A,X] \simeq 0$.</p>
+<p>另一种说法是, 由于 $X$ 是 $E$-模, $X$ 是 $X\wedge E$ 的收缩, 而对任何谱 $X$, $X\wedge E$ 都是 $E$-局部谱. (好像 $E$-模是 $E$-局部谱这个结论更基本一些.)</p>
+<p><strong>命题</strong>. $E$-局部谱的子范畴关于平移, 收缩, 积 (直和), 余纤维封闭.</p>
+<p>注意, $E$-局部谱的<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">张量积</a></span>不一定是 $E$-局部谱.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="可表现范畴"><header><h1><span class="taxon">Wiki. </span>可表现范畴 <a class="slug" href="./可表现范畴.html">[可表现范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>可表现范畴</strong> $\mathcal C$ 是一个可能很大的范畴, 却能由较小的一族对象 $\mathcal S\hookrightarrow\mathcal C$ 控制.
+此时, $\mathcal C$ 可<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>为预层范畴 $\mathsf{Psh}(\mathcal S)$ 的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>.</p>
+<p><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中的许多结论依赖于范畴的可表现性, 例如<span class="link local"><a href="./伴随函子定理.html" title="伴随函子定理 [伴随函子定理]">伴随函子定理</a></span>, 以及刻画<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的 <span class="link local"><a href="./Giraud公理.html" title="Giraud 公理 [Giraud公理]">Giraud 公理</a></span>.</p>
+<p>另一种重要的观点: 从<span class="link local"><a href="./范畴逻辑.html" title="范畴逻辑 [范畴逻辑]">范畴逻辑学</a></span>的角度, 可表现范畴是<span class="link local"><a href="./本质代数理论.html" title="本质代数理论 [本质代数理论]">本质代数理论</a></span>的<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">模型</a></span>的范畴.</p>
+<h2>定义</h2>
+<p>对于<span class="link local"><a href="./正则基数.html" title="正则基数 [正则基数]">正则基数</a></span> $\kappa$ (通常取为 $\aleph_0$, 见<span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成范畴</a></span>), 称满足如下等价条件的范畴 $\mathcal C$ 为 $\kappa$-可表现范畴:</p>
+<ul>
+<li>$\mathcal C$ 余完备, 且有一族 <span class="link local"><a href="./可表现对象.html" title="可表现对象 [可表现对象]">$\kappa$-可表现对象</a></span>构成的集合, 在 <span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">$\kappa$-滤余极限</a></span>下生成整个范畴.</li>
+<li>$\mathcal C$ 等价于一个小范畴的 <span class="link local"><a href="./Ind范畴.html" title=" [Ind范畴]">$\kappa$-Ind 范畴</a></span>.</li>
+</ul>
+<p>称 $\mathcal C$ 为可表现范畴是指存在一个基数 $\kappa$, $\mathcal C$ 为 $\kappa$-可表现范畴.</p>
+<p>等价的定义是: 有一个小范畴到 $\mathcal C$ 的函子 $j\colon \mathcal S\hookrightarrow\mathcal C$, 使得米田扩张 $\mathsf{Psh}(\mathcal S) \to \mathcal C$ 是预层范畴 $\mathsf{Psh}(\mathcal S)$ 关于某个小态射族 $W \subset \mathsf{Fun}([1],\mathsf{Psh}(\mathcal S))$ 的局部化.</p>
+<p>可表现范畴以及保持余极限的函子构成的范畴记为 $\mathsf{Pr}^{\mathrm{L}}$, 其中 $\mathrm{L}$ 的含义是这些函子是左伴随 (<span class="link local"><a href="./伴随函子定理.html" title="伴随函子定理 [伴随函子定理]">伴随函子定理</a></span>).</p>
+<h2>性质</h2>
+<p>由<span class="link local"><a href="./景.html" title="景 [景]">景</a></span>表现的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>是可表现范畴.</p>
+<h3>张量积</h3>
+<p>可表现范畴的范畴 $\mathsf{Pr}$ 上有一个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>结构, 称为 <strong>Lurie 张量积</strong>.</p>
+<p><strong>命题-定义</strong>. 对于可表现范畴 $\mathcal C,\mathcal D$, 存在万有的可表现范畴 $\mathcal C\otimes\mathcal D$, 带有一个双线性 (即保持每个分量的余极限) 的函子
+$$
+\mathcal C\times \mathcal D \to \mathcal C\otimes\mathcal D.
+$$</p>
+<p>可表现范畴的张量积的单位是 <span class="link local"><a href="./生象.html" title="生象 [生象]">$\mathsf{Ani}$</a></span>.</p>
+<h2>高阶可表现范畴</h2>
+<p>见<span class="link local"><a href="./高阶可表现范畴.html" title="高阶可表现范畴 [高阶可表现范畴]">高阶可表现范畴</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="局部化"><header><h1><span class="taxon">Wiki. </span>局部化 (环) <a class="slug" href="./局部化.html">[局部化]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>环 (<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>) 的<strong>局部化</strong>是使其中某些元素成为可逆元的万有的方法.</p>
+<p>在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">几何侧</a></span>, 局部化将环的<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>变成原来的一个子空间.</p>
+<p>另见<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化 (范畴论)</a></span>, <span class="link local"><a href="./Bousfield局部化.html" title="Bousfield 局部化 (稳定同伦论) [Bousfield局部化]">Bousfield 局部化 (稳定同伦论)</a></span>.</p>
+<h2>定义</h2>
+<p>设 $A$ 为环, $S\subset A$ 为子集. 定义 $A$ 关于 $S$ 的<strong>局部化</strong> $A\to A[S^{-1}]$ 为满足如下条件的环同态:</p>
+<ul>
+<li>对任意环同态 $\varphi\colon A \to B$, 若 $\varphi(S)\subset B^\times$, 即 $\varphi$ 将 $S$ 的元素映射到 $B$ 的可逆元, 则 $\varphi$ 唯一地穿过 $A\to A[S^{-1}]$.</li>
+</ul>
+<h3>素理想</h3>
+<p>设 $\mathfrak p\subset A$ 为素理想. 定义 $A$ 在 $\mathfrak p$ <strong>处</strong>的局部化为 $A$ 关于 $\mathfrak p$ <strong>之外</strong>的元素的局部化:
+$$
+A_{\mathfrak p} := A [(A\setminus\mathfrak p)^{-1}].
+$$</p>
+<p>注意此处的记号稍有混淆.</p>
+<h2>性质</h2>
+<h3>分式计算</h3>
+<p>当子集 $S$ 是<strong>乘性</strong> (multiplicative) 子集, 即关于 $A$ 中的乘法封闭时, $A[S^{-1}]$ 的元素有如下具体表达式:
+$$
+A[S^{-1}] = \Big\{ \frac{a}{s} \Bigm| a\in A, s\in S \Big\} / \sim,
+$$
+其中等价关系 $\sim$ 为
+$$
+\frac{a}{s}\sim \frac{a'}{s'}\Leftrightarrow
+\exists t\in S\, t(as'-a's) = 0.
+$$</p>
+<h3>素理想</h3>
+<p>$A[S^{-1}]$ 的素理想等同于 $A$ 中与 $S$ 不相交的素理想.</p>
+<p>例如, $A_{\mathfrak p}$ 的素理想等同于 $A$ 中<strong>包含于</strong> $\mathfrak p$ 的素理想. (而 $A/\mathfrak p$ 的素理想等同于 $A$ 中<strong>包含</strong> $\mathfrak p$ 的素理想.)</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="生象环"><header><h1><span class="taxon">Wiki. </span>生象环 <a class="slug" href="./生象环.html">[生象环]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>传统</h3>
+<p>生象环的范畴是单纯环的范畴关于弱等价的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="链复形无穷范畴"><header><h1><span class="taxon">Wiki. </span>链复形无穷范畴 <a class="slug" href="./链复形无穷范畴.html">[链复形无穷范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设 $\mathcal A$ 为<span class="link local"><a href="./加性范畴.html" title="加性范畴 [加性范畴]">加性范畴</a></span>, 记 $\mathsf {Ch}(\mathcal A)$ 为其中<span class="link local"><a href="./链复形.html" title="链复形 [链复形]">链复形</a></span>的范畴 ($1$-范畴).</p>
+<p>记 $S$ 为 $\mathcal A$ 中<span class="link local"><a href="./链同伦等价.html" title="链同伦等价 [链同伦等价]">链同伦等价</a></span>的全体, 定义<strong>链复形 ∞-范畴</strong>为<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>
+$$
+\mathsf K(\mathcal A) := \mathsf {Ch}(\mathcal A)[S^{-1}].
+$$
+它是一个<span class="link local"><a href="./稳定∞-范畴.html" title=" [稳定∞-范畴]">稳定无穷范畴</a></span>. (它也是 $\mathsf {Ch}(\mathcal A)$ 作为<span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">微分分次范畴</a></span>的<span class="link local"><a href="./微分分次脉.html" title="“微分分次脉” [微分分次脉]">微分分次脉</a></span>.)</p>
+<p>注意与<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>的区别.</p>
+<h2>性质</h2>
+<p><strong>例</strong>. 拓扑空间映射的同伦诱导奇异链复形态射的同伦, 链同伦的两个态射诱导相同的同调群同态; 这就是说同调群 $H_*\colon \mathsf{Top} \to \mathsf{Ab}^{\mathbb{Z}}$ 有如下分解:
+$$
+\mathsf{Top} \overset{\operatorname{Sing}}{\to} \mathsf{K}(\mathsf{Ab}) \overset{H_*}{\to} \mathsf{Ab}^{\mathbb{Z}}.
+$$</p>
+<p><strong>命题</strong>. $\mathsf {Ch}(\mathcal A)$ 上存在一个<span class="link local"><a href="./模型范畴.html" title="“模型范畴” [模型范畴]">模型范畴</a></span>结构使得</p>
+<ul>
+<li>弱等价恰为拟同构;</li>
+<li>余纤维化恰为逐项的单射.</li>
+</ul>
+<p>在这种模型结构中, 纤维性对象与内射对象有关. (k-injectivity?)</p>
+<p><strong>命题</strong>. 存在正合的伴随函子
+$$
+\mathsf K(\mathcal A) \rightleftarrows \mathsf D(\mathcal A),
+$$
+其中右伴随 $\mathsf D(\mathcal A)\to\mathsf K(\mathcal A)$ 全忠实, 左伴随 $\mathsf K(\mathcal A)\to\mathsf D(\mathcal A)$ 是一种纤维性替换, 其核为 $\mathsf K(\mathcal A)$ 中的零调复形.</p>
+<h2>t-结构</h2>
+<p>$\mathsf D(\mathcal A)$ 上有明显的 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">t-结构</a></span> $(\mathsf D(\mathcal A)^{\leq 0},\mathsf D(\mathcal A)^{\geq 0})$, 且 $H^0$ 诱导等价 $\mathsf D(\mathcal A)^\heartsuit \to \mathcal A$.</p>
+<h3>有界导出范畴</h3>
+<p>设 Abel 范畴 $\mathcal A$ 具有足够多内射对象. 定义 $\mathsf D^+(\mathcal A) = N_{\text{dg}}(\mathsf {Ch}^+(\mathcal A_{\text{inj}}))$.</p>
+<p>设 Abel 范畴 $\mathcal A$ 具有足够多投射对象. 定义 $\mathsf D^-(\mathcal A) = N_{\text{dg}}(\mathsf {Ch}^-(\mathcal A_{\text{proj}}))\simeq\mathsf D^{+}(\mathcal A^{\text{op}})^{\text{op}}$.</p>
+<p>$\mathsf D^-(\mathcal A)$ 具有如下泛性质. 对任意带有左完备 t-结构的<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span> $\mathcal C$, 如下资料等价:</p>
+<ul>
+<li>t-右正合函子 $\mathsf D^-(\mathcal A)\to\mathcal C$, 将 $\mathcal A_{\text{proj}}$ 映射到 $\mathcal C^\heartsuit$;</li>
+<li>右正合函子 $\mathcal A\to\mathcal C^\heartsuit$.</li>
+</ul>
+<p>对于右正合函子 $\mathcal A\to\mathcal C^\heartsuit$, 称对应的函子 $\mathsf D^-(\mathcal A)\to\mathcal C$ 为其<span class="link local"><a href="./导出函子.html" title="导出函子 [导出函子]">导出函子</a></span>.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">微分分次范畴</a></span>: 充实于 $1$-范畴 $\mathsf {Ch}(\mathsf {Ab})$ 的范畴.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

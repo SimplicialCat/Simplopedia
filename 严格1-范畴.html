@@ -61,6 +61,101 @@
 <p>严格 $1$-范畴的全体构成一个 $1$-范畴 $\mathsf{Cat}_1^{\mathrm{st}}$, 而 $1$-范畴的全体构成的是一个 $2$-范畴 $\mathsf{Cat}_1$. 因此两者不应当视为同一个概念.</p>
 <h2>例</h2>
 <p><strong>例</strong>. 考虑两个对象 $x,y$ 组成的范畴, $\operatorname{Hom}(x,y) = \operatorname{Hom}(y,x) = \operatorname{Hom}(x,x) = \operatorname{Hom}(y,y) = \{*\}$. 那么这个范畴在 $\mathsf{Cat}_1$ 中等价于单点, 而在 $\mathsf{Cat}_1^{\mathrm{st}}$ 中不等价于单点.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>一阶语言与一阶逻辑 <a class="slug" href="./一阶语言.html">[一阶语言]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>内范畴 <a class="slug" href="./内范畴.html">[内范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>置换范畴 <a class="slug" href="./置换范畴.html">[置换范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>群胚 <a class="slug" href="./群胚.html">[群胚]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Möbius 反演 <a class="slug" href="./范畴代数.html">[范畴代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="一阶语言"><header><h1><span class="taxon">Wiki. </span>一阶语言与一阶逻辑 <a class="slug" href="./一阶语言.html">[一阶语言]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./tutorial-FOL.html" title="教程 : 一阶语言与一阶逻辑 [tutorial-FOL]">教程 : 一阶语言与一阶逻辑</a></span></p>
+<h2>定义</h2>
+<p><strong>定义</strong> (符号表). 一个 (一阶) <strong>符号表</strong> $\Sigma$ 由如下资料构成:</p>
+<ul>
+<li>一族<strong>类型</strong> (types),</li>
+<li>一些<strong>函数符号</strong> (function symbols), 每一个函数符号 $f$ 具有固定的 “输入类型” $A_1,\cdots,A_n$, “输出类型” $B$, 记作 $f \colon (A_1\times \cdots \times A_n) \to B$, 非负整数 $n$ 称为 $f$ 的<strong>元数</strong> (arity); (当 $n=0$ 时, 函数符号 $f$ 是 “零元函数”, 也即类型 $B$ 的<strong>常数</strong> $f : B$.)</li>
+<li>一些<strong>关系符号</strong> (relation symbols), 又叫<strong>谓词</strong> (predicates), 每一个关系符号 $R$ 具有固定的类型 $A_1,\cdots,A_n$, 记作 $R \hookrightarrow A_1\times \cdots\times A_n$, 非负整数 $n$ 称为 $R$ 的元数. (当 $n=0$ 时, 关系符号是 “零元关系”, 也即<strong>原子命题</strong> (atomic proposition).)</li>
+</ul>
+<h2>例</h2>
+<h3>初等算术</h3>
+<h3>群</h3>
+<h3>范畴</h3>
+<p>小范畴的语言的符号表包括</p>
+<ul>
+<li>类型 $O$ (对象), $M$ (态射);</li>
+<li>一元函数符号 $s,t\colon M\to O$ (态射的起点与终点), 一元函数符号 $\operatorname{id}\colon O\to M$ (对象的恒等态射);</li>
+<li>三元关系符号 $C\hookrightarrow M^3$, $C(f,g,h)$ 表达 “$h$ 是 $f$ 与 $g$ 的复合”.</li>
+</ul>
+<p><strong>注</strong>. 范畴中并非任意两个态射都能复合, 故此处表达复合关系使用了三元关系, 而不是二元函数.</p>
+<p><strong>注</strong>. 这里的范畴指的是<span class="link local"><a href="./严格1-范畴.html" title="严格 1-范畴 [严格1-范畴]">严格 $1$-范畴</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="内范畴"><header><h1><span class="taxon">Wiki. </span>内范畴 <a class="slug" href="./内范畴.html">[内范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>内范畴</strong>是范畴<span class="link local"><a href="./内部观点.html" title="内部观点 [内部观点]">内部</a></span>的范畴, 即范畴的<span class="link local"><a href="./一阶语言.html" title="一阶语言与一阶逻辑 [一阶语言]">一阶理论</a></span>在范畴中的<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">模型</a></span>.</p>
+<p>注意这里的范畴是指<span class="link local"><a href="./严格1-范畴.html" title="严格 1-范畴 [严格1-范畴]">严格 $1$-范畴</a></span>.</p>
+<h2>例</h2>
+<h3>拓扑空间范畴的内范畴</h3>
+<p>拓扑空间 $X\in\mathsf{Top}$ 的道路范畴是拓扑空间范畴 $\mathsf{Top}$ 的内范畴, 其对象集为 $X$, 态射集为 $X$ 的 (不限长度的) 道路空间 $\bigcup_{l&gt;0}\operatorname{Hom}([0,l],X)$. 当然, 态射的起点和终点即是道路的起点和终点.</p>
+<h3>Lie 群胚</h3>
+<p>所谓 <strong>Lie 群胚</strong>即是光滑流形范畴 $\mathsf{Mfd}$ 的内群胚.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="置换范畴"><header><h1><span class="taxon">Wiki. </span>置换范畴 <a class="slug" href="./置换范畴.html">[置换范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>置换范畴, 又称<span class="link local"><a href="./严格1-范畴.html" title="严格 1-范畴 [严格1-范畴]">严格</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, 其中严格是指结合律与幺元律严格成立.</p>
+<p>置换范畴是<span class="link local"><a href="./严格1-范畴.html" title="严格 1-范畴 [严格1-范畴]">严格 $1$-范畴</a></span>的范畴 $1\mathsf{Cat}_{\mathrm{str}}$ 中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./严格幺半范畴.html" title="“严格幺半范畴” [严格幺半范畴]">严格幺半范畴</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="群胚"><header><h1><span class="taxon">Wiki. </span>群胚 <a class="slug" href="./群胚.html">[群胚]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>群胚是所有态射均为同构的范畴.</p>
+<h3>严格 1-群胚</h3>
+<p>一个严格 $1$-群胚包含如下资料:</p>
+<ul>
+<li>集合 $G_1,G_0$,</li>
+<li>映射
+<ul>
+<li>$s,t\colon G_1\to G_0$ (起点和终点),</li>
+<li>$e\colon G_0\to G_1$ (单位),</li>
+<li>$i\colon G_1\to G_1$ (逆),</li>
+<li>$m\colon G_1{_s\times_t} G_1 \to G_1$ (纤维积上定义的乘法, 注意 “先走第二个箭头, 再走第一个箭头”) 给出,</li>
+</ul>
+</li>
+</ul>
+<p>满足如下条件,</p>
+<ul>
+<li>(乘法的起止) $s\circ m = s\circ \text{pr}_2$, $t\circ m = t\circ \text{pr}_1$;</li>
+<li>(结合律) …;</li>
+<li>(逆的起止) $s\circ i = t$, $t\circ i = s$;</li>
+<li>(逆的性质) $m\circ (\operatorname{id}_{G_1}\times i)= e\circ t$, $m\circ (i\times \operatorname{id}_{G_1})= e\circ s$;</li>
+<li>(单位的起止) $s\circ e= t\circ e = \operatorname{id}_{G_0}$;</li>
+<li>(单位的性质) $m\circ (e\circ t\times \operatorname{id}_{G_1})=m\circ (\operatorname{id}_{G_1}\times e\circ s)=\operatorname{id}_{G_1}$;</li>
+</ul>
+<p>另见<span class="link local"><a href="./严格1-范畴.html" title="严格 1-范畴 [严格1-范畴]">严格 $1$-范畴</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="范畴代数"><header><h1><span class="taxon">Wiki. </span>Möbius 反演 <a class="slug" href="./范畴代数.html">[范畴代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>固定一个环 $k$. 设 $\mathcal C$ 为<span class="link local"><a href="./严格1-范畴.html" title="严格 1-范畴 [严格1-范畴]">严格 $1$-范畴</a></span>, 满足如下有限性条件: 对任意态射 $f$, 至多存在有限组态射 $(g,h)$ 使得 $f=gh$. 那么 $\mathcal C$ 的态射集上的 (有限支集, 或者不要求有限支集) $k$ 值函数空间 $\operatorname{Fun}(\operatorname{Mor}(\mathcal C),k)$ 上有卷积
+$$
+(\varphi * \psi)(f) = \sum_{f=gh} \varphi(g) \psi(h).
+$$
+这样得到的代数称为<strong>范畴代数</strong> $k\mathcal{C}$, 它是群代数以及 incidence algebra (参考 <span class="link local"><a href="./AndrewKobinZeta.html" title="A Primer on Zeta Functions and Decomposition Spaces [AndrewKobinZeta]">Andrew Kobin</a></span>) 的推广.</p>
+<p>用另一种视角, 有限支集的函数 $\operatorname{Mor}(\mathcal C) \to k$ 相当于以 $\operatorname{Mor}(\mathcal C)$ 为基的自由 $k$-模的元素. 此时卷积等同于
+$$
+\sum a_g g * \sum b_h h = \sum a_g b_h gh.
+$$
+(其中若 $g,h$ 不能复合则 $gh=0$.)</p>
+<p><strong>注</strong>. 等价的 $1$-范畴不一定给出同构的代数; 所以范畴代数的概念的确是对<strong>严格 $1$-范畴</strong> (而不是 $1$-范畴) 定义的概念.</p>
+<p>但是, 如果进一步取范畴代数的 <span class="link local"><a href="./Morita等价.html" title="Morita 等价 [Morita等价]">Morita 等价</a></span>类, 得到的概念又尊重范畴的等价; 即对于范畴等价 $\mathcal C\simeq\mathcal D$, 不一定有 $k\mathcal C\simeq k\mathcal D$, 但 $k\mathcal C$ 与 $k\mathcal D$ <span class="link local"><a href="./Morita等价.html" title="Morita 等价 [Morita等价]">Morita 等价</a></span>.</p>
+<p>范畴代数的构造不是到代数的范畴的函子 (注意到函子 $\mathcal C\to\mathcal D$ 给出线性映射 $k\mathcal C\to k\mathcal D$, 但它不一定保持乘法), 而是到 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>的函子.</p>
+<h2>性质</h2>
+<h3>单位元</h3>
+<p>定义
+$$
+\delta(f) = \begin{cases}
+    1 &amp; f=\mathrm{id}_c\\
+    0 &amp; \text{其它},
+\end{cases}
+$$
+那么 $\delta$ 是卷积的单位元.</p>
+<h3>逆元</h3>
+<p>(todo: 何时可逆)</p>
+<h3>Morita 等价</h3>
+<p><strong>命题</strong>. 若将 $k\mathcal{C}$ 视为单对象 $\mathsf{Vect}_k$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>, 则有
+$$
+[\mathcal C,\mathsf{Vect}_k]\simeq [k\mathcal C,\mathsf{Vect}_k].
+$$
+换言之, $\mathcal C$ (生成的$\mathsf{Vect}_k$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>) 与 $k\mathcal C$ 在充实范畴的意义下 <span class="link local"><a href="./Morita等价.html" title="Morita 等价 [Morita等价]">Morita 等价</a></span>.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

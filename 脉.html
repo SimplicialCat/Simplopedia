@@ -94,6 +94,104 @@ $$
 $$
 \mathsf{Sh}(X)\to\mathsf{Et}_{/X}.
 $$</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>几何实现 (作为米田扩张) <a class="slug" href="./几何实现.html">[几何实现]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>奇异单纯集 <a class="slug" href="./奇异单纯集.html">[奇异单纯集]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“拟范畴” <a class="slug" href="./拟范畴.html">[拟范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>逆环路空间 <a class="slug" href="./逆环路空间.html">[逆环路空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="几何实现"><header><h1><span class="taxon">Wiki. </span>几何实现 (作为米田扩张) <a class="slug" href="./几何实现.html">[几何实现]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>几何实现有两种不同的含义, 本页面介绍的是其作为沿<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span>的 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>的含义. 另见<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现 (作为单纯图表的余极限)</a></span>.</p>
+<p>单纯集 $X$ 可写成其单纯形的余极限:
+$$
+X \simeq \lim_{\longrightarrow \atop \Delta^n\to X} \Delta^n
+$$
+(一般地, 预层总是可以写成<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>的余极限.) 此时 $X$ 的<strong>几何实现</strong>定义为 $\mathsf {Top}$ 中的余极限
+$$
+|X| := \lim_{\longrightarrow \atop \Delta^n\to X} |\Delta^n|.
+$$
+这个过程可表述为 “几何单纯形” 函子 $\Delta \to \mathsf{Top}$ 沿<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span> $\Delta\to\mathsf{sSet}$ 的左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>.
+其中 $\Delta$ 是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>, $\mathsf{sSet}$ 是 $\Delta$ 上的<span class="link local"><a href="./预层意象.html" title="预层意象 [预层意象]">预层范畴</a></span>. 当然 $\Delta$ 可以替换为任何范畴.</p>
+<h2>定义</h2>
+<p>给定余完备范畴 $\mathcal C$ 与函子 $F\colon \Delta \to \mathcal C$, <strong>几何实现</strong>
+$$
+|{-}|\colon \widehat {\Delta} \to \mathcal C
+$$
+就是其沿<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span> $\mathbf{y}\colon \Delta\to\widehat {\Delta}$ 的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">左 Kan 扩张</a></span>:
+$$
+|X| := \operatorname{colim}_{\mathbf{y}(d)\to X}F(d).
+$$</p>
+<h2>性质</h2>
+<p><strong>命题</strong>. 单纯集 $X$ 的几何实现 $|X|$ 是 CW 复形.</p>
+<h3>几何实现保持纤维化</h3>
+<p><strong>定理</strong>. <span class="link local"><a href="./Kan纤维化.html" title=" [Kan纤维化]">Kan 纤维化</a></span>的几何实现是 <span class="link local"><a href="./Serre纤维化.html" title=" [Serre纤维化]">Serre 纤维化</a></span>.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, <span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="奇异单纯集"><header><h1><span class="taxon">Wiki. </span>奇异单纯集 <a class="slug" href="./奇异单纯集.html">[奇异单纯集]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>拓扑空间的奇异单纯集是一种<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>.</p>
+<h2>性质</h2>
+<p>奇异单纯集函子是<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>的右伴随.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="拟范畴"><header><h1><span class="taxon">Wiki. </span>“拟范畴” <a class="slug" href="./拟范畴.html">[拟范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>拟范畴是一种用<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>建立的<span class="link local"><a href="./无穷范畴的模型.html" title="无穷范畴的模型 [无穷范畴的模型]">无穷范畴的模型</a></span>.</p>
+<h2>定义</h2>
+<p>拟范畴是一种特殊的<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span> $C$, 满足弱 Kan 条件, 即 $C$ 中的任意内角形 (inner horn) $\Lambda_i^n \to C (0&lt;i&lt;n)$ 都有填充 (filler). 等价的定义是, 单纯集映射
+$$
+	[\Delta^2,C] \to [\Lambda_1^2,C]
+$$
+是无圈 Kan 纤维化. 这个定义的直观是两个态射的所有复合方式可缩.</p>
+<h2>例</h2>
+<p><span class="link local"><a href="./Kan复形.html" title="“Kan 复形” [Kan复形]">Kan 复形</a></span>是拟范畴.</p>
+<p>范畴的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>是拟范畴.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="逆环路空间"><header><h1><span class="taxon">Wiki. </span>逆环路空间 <a class="slug" href="./逆环路空间.html">[逆环路空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>群 $G$ 的逆环路空间是 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主齐性空间</a></span>的<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>, 也即<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>的<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">分类空间</a></span>.</p>
+<p>在 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span> $\mathcal X$ 中, 逆环路空间函子给出了<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>的范畴 $\mathsf{Grp}(\mathcal X)$ 到带基点连通对象的范畴 $\mathcal X^{\geq 1}_{*/}$ 的等价.</p>
+<p>更一般地, $n$ 阶逆环路空间给出了 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$-群</a></span>的范畴到带基点 $n$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连合</a></span>对象的范畴 $\mathcal X^{\geq n}_{*/}$ 的等价.</p>
+<p>对象 $X$ 到 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$-群</a></span> $A$ 的 $n$ 阶逆环路空间 $\mathbf{B}^n A$ 的映射同伦类称为 $n$ 阶<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span> $H^n(X,A)$.</p>
+<h2>定义</h2>
+<h3>通过几何实现</h3>
+<p>在 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span>中, 群 $G$ 的逆环路空间是<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>
+$$
+\mathbf{B}^\bullet G = (\cdots G\times G\times G \to^4 G\times G \to^3 G\rightrightarrows *)
+$$
+的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span> (余极限).</p>
+<p>而在拓扑空间的 $1$-范畴中, 拓扑群 $G$ 的逆环路空间可<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">实现</a></span>为拓扑空间
+$$
+\begin{aligned}
+    |\mathbf{B}G| &amp;= \bigcup_{(g_1,\cdots,g_n)} |\Delta^n|\\
+    &amp; = \bigcup_n \underbrace{G * G * \cdots * G}_n.
+\end{aligned}
+$$</p>
+<h2>例</h2>
+<ul>
+<li>$\mathbf{B}\mathbb{Z} \simeq S^1$.</li>
+<li>$\mathbf{B}\mathbb{Z}/2 \simeq \mathbb RP^\infty$.</li>
+<li>$\mathbf{B}S^1 \simeq \mathbb{C}P^{\infty}$.</li>
+<li>$\mathbf{B}\mathrm{O}(n)\simeq\mathbf{B}\mathrm{GL}_n(\mathbb{R})=\text{Gr}_n(\mathbb{R}^{\infty})$ 是 <span class="link local"><a href="./Grassmann流形.html" title=" [Grassmann流形]">Grassmann 流形</a></span>, 其 $\mathbb{Z}_2$ 系数上同调类为 <span class="link local"><a href="./Stiefel--Whitney类.html" title="Stiefel–Whitney 类 [Stiefel--Whitney类]">Stiefel–Whitney 类</a></span>:
+$$
+      H^*(\mathbf{B}\mathrm{O}(n);\mathbb{Z}_2)=\mathbb{Z}_2[w_1,\cdots,w_n],
+  $$
+其中 $w_k\in H^k$.</li>
+<li>$\mathbf{B}\mathrm{U}(n)\simeq\mathbf{B}\mathrm{GL}_n(\mathbb{C})=\text{Gr}_n(\mathbb{C}^{\infty})$ 是复 <span class="link local"><a href="./Grassmann流形.html" title=" [Grassmann流形]">Grassmann 流形</a></span>, 其 $\mathbb{Z}$ 系数上同调为<span class="link local"><a href="./陈类.html" title="“陈类” [陈类]">陈类</a></span>:
+$$
+      H^*(\mathbf{B}\mathrm{U}(n);\mathbb{Z})=\mathbb{Z}[c_1,\cdots,c_n],
+  $$
+其中 $c_k\in H^{2k}$.</li>
+</ul>
+<h2>性质</h2>
+<h3>函子性与关联丛</h3>
+<p>对于<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>同态 $\varphi\colon H\to G$, 有 $H$ 通过 $\varphi$ 在 $G$ 上的左乘<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>.
+映射 $\mathbf{B}\varphi\colon \mathbf{B}H\to \mathbf{B}G$ 是 $\mathbf{B}H$ 上的万有 $H$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>通过该作用<span class="link local"><a href="./关联丛.html" title="“关联丛” [关联丛]">关联</a></span>的 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>的分类映射.</p>
+<h3>与 Eilenberg–Maclane 空间的关系</h3>
+<p>对于离散群 $G$, 其分类空间 $\mathbf{B}G$ 是 <span class="link local"><a href="./Eilenberg–MacLane空间.html" title="Eilenberg–MacLane 对象 [Eilenberg–MacLane空间]">Eilenberg–Maclane 空间</a></span> $K(G,1)$.</p>
+<h3>上同调</h3>
+<p>若 $G$ 紧或半单, <span class="link local"><a href="./陈--Weil理论.html" title="“陈–Weil 理论” [陈--Weil理论]">陈–Weil 理论</a></span>给出同构
+$$
+H^*(\mathbf{B}G;\mathbb{C})\simeq \mathbb{C}[\mathfrak g]^G.
+$$
+其中 $\mathbb{C}[\mathfrak g]^G$ 称为<span class="link local"><a href="./不变多项式.html" title="“不变多项式” [不变多项式]">不变多项式</a></span>代数, 从而由不变多项式可以给出<span class="link local"><a href="./示性类.html" title="“示性类” [示性类]">示性类</a></span>.</p>
+<h2>模型</h2>
+<h3>Milnor 构造</h3>
+<p>Milnor 将分类空间 $BG$ 构造为 $n$ 重连接 $G * G * \cdots * G$ 的余极限. (这个构造关于 $G$ 有函子性.)</p>
+<p>等价地, $BG$ 可构造为单对象范畴 $G$ 的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>.</p>
+<h3>有限群</h3>
+<p>对任意有限群 $G$, 取 $G$ 的酉表示, 则可得 $G$ 在 $S^\infty\subset \mathbb{C}^{\infty}$ 上的自由作用, 从而构造 $\mathbf{B}G$.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

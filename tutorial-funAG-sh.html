@@ -185,6 +185,108 @@ $$
 	X \simeq \operatorname{colim}_{\operatorname{Spec} A \to X}\operatorname{Spec} A.
 $$</p>
 <p><em>证明</em>. 这是<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>的性质.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="pedagogy" style="margin-bottom: 0.4em;"><header><h1><span class="taxon"><span class="link local"><a href="./pedagogy.html" title="教学 [pedagogy]">pedagogy</a></span></span>教程 : 函子式代数几何 <a class="slug" href="./tutorial-funAG.html">[tutorial-funAG]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+<h3>闭嵌入与开嵌入</h3>
+<p><strong>定义</strong> (闭嵌入). 满足如下条件的空间映射 $X\to Y$ 称为<strong>闭嵌入</strong>: 对任意 $\operatorname{Spec} A \to Y$, 拉回图
+$$
+\begin{array}{ccc}
+X\times_Y\operatorname{Spec}A &amp; \rightarrow &amp; \operatorname{Spec}A \\
+\downarrow &amp;  &amp; \downarrow \\
+X &amp; \rightarrow &amp; Y
+\end{array}
+$$
+中, 态射 $X\times_Y\operatorname{Spec}A \to \operatorname{Spec} A$ 为仿射概形的闭嵌入, 即形如 $\operatorname{Spec} (A/I)\hookrightarrow \operatorname{Spec} A$.</p>
+<p>空间的闭嵌入与前面定义的仿射概形闭嵌入是相容的. 若 $X\to Y$ 为空间的闭嵌入且 $Y=\operatorname{Spec} A$ 为仿射概形, 考虑沿 $\mathrm{id}_{\operatorname{Spec} A}$ 的拉回, 知 $X\to Y$ 是仿射概形的闭嵌入.</p>
+<p><strong>定义</strong> (补空间). 设 $X\to Y$ 为空间的映射, 定义其<strong>补空间</strong> $Y\setminus X$ 为函子
+$$
+	(Y\setminus X)(A) = \{\operatorname{Spec} A\to Y\mid \operatorname{Spec} A\times_Y X\simeq\varnothing\}.
+$$</p>
+<p>注意, $(Y\setminus X)(A)$ 不等于 $Y(A) \setminus X(A)$.</p>
+<p><strong>定义</strong> (开嵌入). 设 $X\to Y$ 为空间映射.</p>
+<ul>
+<li>若 $Y$ 为仿射概形, 且 $X\to Y$ 同构于一个闭子概形的补空间, 则称之为开嵌入.</li>
+<li>一般地, 若对任意 $\operatorname{Spec} A\to Y$, 拉回图
+$$
+\begin{array}{ccc}
+X\times_Y\operatorname{Spec}A &amp; \rightarrow &amp; \operatorname{Spec}A \\
+\downarrow &amp;  &amp; \downarrow \\
+X &amp; \rightarrow &amp; Y
+\end{array}
+$$
+中, 态射 $X\times_Y\operatorname{Spec}A \to \operatorname{Spec}A$ 为仿射概形的开嵌入, 则称 $X\to Y$ 为开嵌入.</li>
+</ul>
+<p>注意对于一般的空间, 我们不是定义开嵌入为闭嵌入的补空间, 这两个概念并不完全 “对称”.</p>
+<p><strong>记号</strong>. 对于闭嵌入或开嵌入 $i\colon U\to X$, $j\colon V\to X$, 常常记 $U\times_X V$ 为 $U\cap V$; 当 $X$ 上的某对象 (如拟凝聚层) $F$ 可以沿 $i$ 拉回到 $U$ 上时, 记 $i^*F$ 为 $F|_U$.</p>
+<p><strong>例</strong>. 仿射概形的闭嵌入 $\operatorname{Spec} (A/I)\hookrightarrow\operatorname{Spec} A$ 的补空间 $\operatorname{Spec} A \setminus \operatorname{Spec} (A/I)$ 为
+$$
+	B\mapsto \{A\to B\mid A/I\otimes_A B\simeq 0\},
+$$
+其中条件 $A/I\otimes_A B\simeq 0$ 也等价于 $B/IB\simeq 0$, 即 $IB=B$ (作为 $A$-模).</p>
+<p>当 $I=(f)$ 为主理想时, $A/(f)$ 的补空间为
+$$
+B\mapsto \{A\to B\mid fB=B\} = \{A[f^{-1}]\to B\},
+$$
+也即 $\operatorname{Spec} A[f^{-1}]=D(f)$. 例如 $\mathbb G_m$ 是 $0\colon \operatorname{Spec} \mathbb{Z}\hookrightarrow\operatorname{Spec} \mathbb{Z}[x]$ 的补空间, 简记作 $\mathbb{A}^1\setminus 0$.</p>
+<p>但是一般而言 $\operatorname{Spec} A \setminus \operatorname{Spec} (A/I)$ 未必是仿射概形, 例如 $\mathbb{A}^2\setminus 0$ 就不是仿射概形. 注意到 $\mathbb A^2$ 的开子空间 $D(x),D(y)$ 都嵌入 $\mathbb A^2\setminus 0$, 且有如下交换图.
+$$
+\begin{array}{ccc}
+\operatorname{Spec}\mathbb{Z}[x^{\pm 1},y^{\pm 1}]\simeq D(x)\cap D(y) &amp; \rightarrow &amp; D(x) \\
+\downarrow &amp;  &amp; \downarrow \\
+D(y) &amp; \rightarrow &amp; \mathbb A^2\setminus 0
+\end{array}
+$$
+因此对任意映射 $\mathbb A^2\setminus 0 \to \operatorname{Spec} A$, 有环同态 $A\to \mathbb{Z}[x^{\pm 1},y^{\pm 1}]$. 但该环同态的像同时落在 $\mathbb{Z}[x^{\pm 1},y]$ 以及 $\mathbb{Z}[x,y^{\pm 1}]$ 中, 而这两个子环的交集为 $\mathbb{Z}[x,y]$,
+这说明映射 $\mathbb A^2\setminus 0 \to \operatorname{Spec} A$ 穿过 $\mathbb{A}^2$. 因此 $\mathbb A^2\setminus 0$ 不可能是仿射概形.</p>
+<p>另外, 仿射概形之间的映射何时是开嵌入, 也是一个比较复杂的问题. 答案是当且仅当对应的环同态为平坦, 有限表现同态, 且为环范畴中的满态射.</p>
+<p><strong>命题</strong>. 闭嵌入的拉回是闭嵌入, 开嵌入的拉回是开嵌入.
+这就是说在拉回图
+$$
+\begin{array}{ccc}
+X &amp; \rightarrow &amp; Z \\
+\downarrow &amp;  &amp; \downarrow \\
+Y &amp; \rightarrow &amp; W
+\end{array}
+$$
+中, 若 $Z\to W$ 为闭嵌入 (开嵌入), 则 $X\to Y$ 为闭嵌入 (开嵌入).</p>
+<p><em>证明</em>. 任取映射 $\operatorname{Spec}A\to Y$, 作如下拉回图.
+$$
+\begin{array}{ccccc}
+\operatorname{Spec}A\times_Y X &amp; \rightarrow &amp; X &amp; \rightarrow &amp; Z \\
+\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
+\operatorname{Spec}A &amp; \rightarrow &amp; Y &amp; \rightarrow &amp; W
+\end{array}
+$$
+故 $\operatorname{Spec} A\times_Y X\to \operatorname{Spec} A$ 为闭 (开) 嵌入. 这说明 $f$ 是闭 (开) 嵌入.</p>
+<p><strong>命题</strong>. 闭嵌入的复合是闭嵌入.</p>
+<p><strong>命题</strong>. 开嵌入的复合是开嵌入. (这个命题的证明比较困难.)</p>
+<p><strong>定义</strong> (开覆盖). 设 $X$ 为空间. 定义 $X$ 的一个<strong>开覆盖</strong>为一族开嵌入 $\{U_i\to X\}$, 使得对任意 $\operatorname{Spec} A\to X$ ($A\neq 0$) 都存在 $i$, $\operatorname{Spec} A\times_X U_i$ 不为空.
+进一步, 若每个 $U_i$ 为仿射概形, 则称之为<strong>仿射开覆盖</strong>.</p>
+<p>容易验证上述覆盖的概念满足 “覆盖” 应有的性质:
+若 $\{U_i\to X\}$ 为开覆盖, 而对每个 $i$ 有 $\{V_{i,j} \to U_i\mid j\in J_i\}$ 为开覆盖, 则 $\{V_{i,j} \to X\}$ 为开覆盖.</p>
+<p><strong>命题</strong>. 设 $\{D(f_i) \to\operatorname{Spec} A\}$ 是 Zariski 覆盖, 那么它是仿射开覆盖.</p>
+<p><em>证明</em>. 任取映射 $\operatorname{Spec} B\to\operatorname{Spec} A$ ($B\neq 0$), 对应环同态 $\varphi\colon A\to B$,
+那么存在 $f_i$ 使得 $\varphi(f_i)$ 非幂零元, 从而
+$\operatorname{Spec} B\times_{\operatorname{Spec} A}D(f_i) \simeq \operatorname{Spec} (B[\varphi(f_i)^{-1}])\neq\varnothing$.</p>
+<p><strong>命题</strong>. 仿射概形的开覆盖总可以细化为 Zariski 覆盖.</p>
+<p><em>证明</em>. 设 $U \to \operatorname{Spec} A$ 为开嵌入.
+由定义, $U = \operatorname{Spec} A \setminus \operatorname{Spec} (A/I)$.
+我们证明 $U$ 被 $\{D(f)\mid f\in I\}$ 覆盖.
+对任意 $\operatorname{Spec} B\to U$ ($B\neq 0$), 有对应的环同态 $\varphi\colon A\to B$, 且作为 $A$-模有 $B=IB$, 这说明存在 $f\in I$ 使得 $\varphi(f)$ 非幂零元, 从而 $\operatorname{Spec}B\times_{U}D(f)\neq\varnothing$.</p>
+<p><strong>定义</strong> (局部闭嵌入).
+对于空间映射 $X\to Y$, 若其可分解为
+$X\to Z\to Y$, 而 $X\to Z$ 为闭嵌入, $Z\to Y$ 为开嵌入 (注意顺序: 先闭嵌入, 后开嵌入), 则称 $X\to Y$ 为<strong>局部闭嵌入</strong>.</p>
+<p><strong>例</strong>. 映射 $\operatorname{Spec} k[t,t^{-1}] \hookrightarrow\operatorname{Spec} k[x,y]$, $t\mapsto (t,0)$ 为局部闭嵌入.</p>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="pedagogy"><details ><summary id="tutorial-funAG"><header><h1><span class="taxon"><span class="link local"><a href="./pedagogy.html" title="教学 [pedagogy]">pedagogy</a></span></span>教程 : 函子式代数几何 <a class="slug" href="./tutorial-funAG.html">[tutorial-funAG]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./代数几何.html" title="代数几何 [代数几何]">代数几何</a></span>起源于这样一个见解:
+代数对象 (如环) 与几何对象 (如拓扑空间) 之间存在某种<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">对偶</a></span>关系.
+每个环都应当视为某个空间上的函数环, 这个空间即所谓<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>.</p>
+<p>代数几何的基本概念是概形. <span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span>有两种逻辑上等价但直观截然不同的定义:</p>
+<ul>
+<li>作为局部同构于仿射概形的<span class="link local"><a href="./局部环化空间.html" title="局部环化空间 [局部环化空间]">局部环化空间</a></span>,</li>
+<li>作为环范畴到集合范畴的满足条件的函子.</li>
+</ul>
+<p>前者是多数经典教材 (如 Hartshorne) 使用的定义, 而后者是 Grothendieck 学派以及现代数学实践更常使用的观点, 也就是本文介绍的<strong>函子式代数几何</strong>.</p>
+<p><span class="link local"><a href="./tutorial-funAG-aff.html" title="教程 : 函子式代数几何 第一节 仿射概形 [tutorial-funAG-aff]">第一节 仿射概形</a></span></p>
+<p><span class="link local"><a href="./tutorial-funAG-sh.html" title="教程 : 函子式代数几何 第二节 层论 [tutorial-funAG-sh]">第二节 层论</a></span></p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

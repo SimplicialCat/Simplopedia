@@ -56,6 +56,53 @@
     });
   });
 </script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="正则基数"><header><h1><span class="taxon">Wiki. </span>正则基数 <a class="slug" href="./正则基数.html">[正则基数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>可表现对象 <a class="slug" href="./可表现对象.html">[可表现对象]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>可表现范畴 <a class="slug" href="./可表现范畴.html">[可表现范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="可表现对象"><header><h1><span class="taxon">Wiki. </span>可表现对象 <a class="slug" href="./可表现对象.html">[可表现对象]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>给定<span class="link local"><a href="./正则基数.html" title="正则基数 [正则基数]">正则基数</a></span> $\kappa$, 范畴中的对象的 $\kappa$-<strong>可表现性</strong>是 “紧性” 或 “小性” 的一种体现, 其大小体现在基数 $\kappa$ 上. 其中最强的条件是 $\omega$-可表现性 ($\omega$ 是最小的<span class="link local"><a href="./正则基数.html" title="正则基数 [正则基数]">正则基数</a></span>), 又叫 “有限可表现性”; 它是<strong>有限集</strong>, <strong>有限表现群</strong>等概念的抽象.</p>
+<p>设想我们要用纯范畴论性质来刻画<strong>有限集</strong>. 集合 $X$ 是有限集当且仅当如下条件成立:</p>
+<ul>
+<li>对 $X$ 的任意一列子集 $X_0\subset X_1\subset\cdots$, 若 $X = \bigcup_i X_i$, 则存在 $i$ 使得 $X=X_i$.</li>
+</ul>
+<p>这个性质等价于如下 (更 “纯范畴论” 的) 陈述:</p>
+<ul>
+<li>对任意一列映射 $X_0\to X_1\to\cdots$, 以及映射 $X \to \operatorname{colim}X_i$, 存在 $i_0$ 使得 $X \to \operatorname{colim}X_i$ 穿过 $X_{i_0}\to \operatorname{colim}_i X_i$.</li>
+</ul>
+<p>这又等价于</p>
+<ul>
+<li>函子 $\operatorname{Hom}(X,-)\colon \mathsf{Set}\to\mathsf{Set}$ 保持滤余极限.</li>
+</ul>
+<p>一般范畴中的<strong>有限表现对象</strong>可视为上述概念的推广.</p>
+<h2>定义</h2>
+<p>设范畴 $\mathcal C$ 具有<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>. 若对象 $X$ 满足 $\operatorname{Hom}(X,-)\colon \mathcal C\to\mathsf{Set}$ 保持滤余极限, 则称 $X$ 为<strong>有限表现</strong>对象, 又称<strong>紧对象</strong>.</p>
+<p>一般地, 对于<span class="link local"><a href="./正则基数.html" title="正则基数 [正则基数]">正则基数</a></span> $\kappa$, 若对象 $X$ 满足 $\operatorname{Hom}(X,-)\colon \mathcal C\to\mathsf{Set}$ 保持 $\kappa$-<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>, 则称 $X$ 为 $\kappa$-<strong>可表现</strong>对象.</p>
+<h2>例</h2>
+<p>对于拓扑空间 $X$ 的开集范畴 $\mathrm{Open}(X)$, $X$ 是紧对象当且仅当 $X$ 是紧拓扑空间. 注意: 拓扑空间范畴 $\mathsf{Top}$ 的紧对象不一定是紧拓扑空间.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="可表现范畴"><header><h1><span class="taxon">Wiki. </span>可表现范畴 <a class="slug" href="./可表现范畴.html">[可表现范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>可表现范畴</strong> $\mathcal C$ 是一个可能很大的范畴, 却能由较小的一族对象 $\mathcal S\hookrightarrow\mathcal C$ 控制.
+此时, $\mathcal C$ 可<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>为预层范畴 $\mathsf{Psh}(\mathcal S)$ 的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>.</p>
+<p><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中的许多结论依赖于范畴的可表现性, 例如<span class="link local"><a href="./伴随函子定理.html" title="伴随函子定理 [伴随函子定理]">伴随函子定理</a></span>, 以及刻画<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的 <span class="link local"><a href="./Giraud公理.html" title="Giraud 公理 [Giraud公理]">Giraud 公理</a></span>.</p>
+<p>另一种重要的观点: 从<span class="link local"><a href="./范畴逻辑.html" title="范畴逻辑 [范畴逻辑]">范畴逻辑学</a></span>的角度, 可表现范畴是<span class="link local"><a href="./本质代数理论.html" title="本质代数理论 [本质代数理论]">本质代数理论</a></span>的<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">模型</a></span>的范畴.</p>
+<h2>定义</h2>
+<p>对于<span class="link local"><a href="./正则基数.html" title="正则基数 [正则基数]">正则基数</a></span> $\kappa$ (通常取为 $\aleph_0$, 见<span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成范畴</a></span>), 称满足如下等价条件的范畴 $\mathcal C$ 为 $\kappa$-可表现范畴:</p>
+<ul>
+<li>$\mathcal C$ 余完备, 且有一族 <span class="link local"><a href="./可表现对象.html" title="可表现对象 [可表现对象]">$\kappa$-可表现对象</a></span>构成的集合, 在 <span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">$\kappa$-滤余极限</a></span>下生成整个范畴.</li>
+<li>$\mathcal C$ 等价于一个小范畴的 <span class="link local"><a href="./Ind范畴.html" title=" [Ind范畴]">$\kappa$-Ind 范畴</a></span>.</li>
+</ul>
+<p>称 $\mathcal C$ 为可表现范畴是指存在一个基数 $\kappa$, $\mathcal C$ 为 $\kappa$-可表现范畴.</p>
+<p>等价的定义是: 有一个小范畴到 $\mathcal C$ 的函子 $j\colon \mathcal S\hookrightarrow\mathcal C$, 使得米田扩张 $\mathsf{Psh}(\mathcal S) \to \mathcal C$ 是预层范畴 $\mathsf{Psh}(\mathcal S)$ 关于某个小态射族 $W \subset \mathsf{Fun}([1],\mathsf{Psh}(\mathcal S))$ 的局部化.</p>
+<p>可表现范畴以及保持余极限的函子构成的范畴记为 $\mathsf{Pr}^{\mathrm{L}}$, 其中 $\mathrm{L}$ 的含义是这些函子是左伴随 (<span class="link local"><a href="./伴随函子定理.html" title="伴随函子定理 [伴随函子定理]">伴随函子定理</a></span>).</p>
+<h2>性质</h2>
+<p>由<span class="link local"><a href="./景.html" title="景 [景]">景</a></span>表现的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>是可表现范畴.</p>
+<h3>张量积</h3>
+<p>可表现范畴的范畴 $\mathsf{Pr}$ 上有一个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>结构, 称为 <strong>Lurie 张量积</strong>.</p>
+<p><strong>命题-定义</strong>. 对于可表现范畴 $\mathcal C,\mathcal D$, 存在万有的可表现范畴 $\mathcal C\otimes\mathcal D$, 带有一个双线性 (即保持每个分量的余极限) 的函子
+$$
+\mathcal C\times \mathcal D \to \mathcal C\otimes\mathcal D.
+$$</p>
+<p>可表现范畴的张量积的单位是 <span class="link local"><a href="./生象.html" title="生象 [生象]">$\mathsf{Ani}$</a></span>.</p>
+<h2>高阶可表现范畴</h2>
+<p>见<span class="link local"><a href="./高阶可表现范畴.html" title="高阶可表现范畴 [高阶可表现范畴]">高阶可表现范畴</a></span></p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

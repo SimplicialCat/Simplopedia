@@ -61,6 +61,136 @@
 <p>结合代数给出<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>; 在这种意义上, 结合代数上的模可以推广为<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的模</a></span>.</p>
 <p>结合代数上的模范畴可视为结合代数的范畴的<span class="link local"><a href="./切范畴.html" title="切范畴 [切范畴]">切范畴</a></span>.</p>
 <p>另外, 对一般的<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span>也可定义模的概念; 但这个概念对于<span class="link local"><a href="./A∞-算畴.html" title="结合算畴 [A∞-算畴]">结合算畴</a></span>给出的是<strong>双模</strong>, 而非左模或右模.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>单子上的代数 <a class="slug" href="./单子上的代数.html">[单子上的代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>双边杠构造 <a class="slug" href="./双边杠构造.html">[双边杠构造]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>拟三角代数 <a class="slug" href="./拟三角代数.html">[拟三角代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="notion" style="margin-bottom: 0.4em;"><header><h1><span class="taxon"><span class="link local"><a href="./notion.html" title="观念 [notion]">notion</a></span></span>自由–遗忘伴随 <a class="slug" href="./自由-遗忘伴随.html">[自由-遗忘伴随]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>高阶模 <a class="slug" href="./高阶模.html">[高阶模]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="单子上的代数"><header><h1><span class="taxon">Wiki. </span>单子上的代数 <a class="slug" href="./单子上的代数.html">[单子上的代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>上的<strong>代数</strong>和单子上的<strong>左模</strong>是同义词. 还有另一个不同的概念, 单子上的右模.</p>
+<p>结合代数给出<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>; 在这种意义上, 单子上的代数是<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">结合代数上的模</a></span>的推广.</p>
+<h2>定义</h2>
+<p>范畴 $\mathcal C$ 是自函子范畴 $\operatorname{End}(\mathcal C)$ (作为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 即 $\mathsf{Cat}$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>) 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>, 因此对于 $\mathcal C$ 上的单子 $T$, 即 $\operatorname{End}(\mathcal C)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 可以谈论 $T$ 在 $\mathcal C$ 中的模 (代数).</p>
+<p>具体地, 范畴 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 上的代数 $X$ 包含一个态射 $TX \to X$, 以及交换图
+$$
+\begin{array}
+{ccc}
+TTX &amp; \to &amp; TX \\
+\downarrow &amp;&amp; \downarrow \\
+TX &amp; \to &amp; X.
+\end{array}
+$$
+其中两个映射 $TTX \to TX$ 分别来自 $T$ 带有的自然变换 $T^2\to T$ 以及 $X$ 带有的态射 $TX\to X$.</p>
+<p>更一般地, 对范畴 $I$, 函子范畴 $\mathsf{Fun}(I,\mathcal C)$ 也是 $\operatorname{End}(\mathcal C)$ 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>, 从而可以定义 $X\colon I\to\mathcal C$ 上的 $T$-<strong>左模</strong> (或称 $T$-代数) 结构. 它包含一个自然变换 $TX \to X$ 以及左模的条件.</p>
+<h3>右模, 双模</h3>
+<p>另一个概念是单子上的<strong>右模</strong>. 对范畴 $J$, 函子范畴 $\mathsf{Fun}(\mathcal C,J)$ 是 $\operatorname{End}(\mathcal C)$ 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">右模</a></span>, 从而可以定义 $Y\colon \mathcal C\to J$ 上的 $T$-<strong>右模</strong>结构. 它包含一个自然变换 $YT \to Y$, 以及右模的条件.</p>
+<p>进一步, 对于两个范畴 $\mathcal C,\mathcal D$, $\mathcal C$ 上的单子 $T$ 与 $\mathcal D$ 上的单子 $S$, 定义 $(T,S)$-<strong>双模</strong>为函子 $X\colon \mathcal D\to\mathcal C$, 同时具有相容的 $T$-左模和 $S$-右模结构, 即有如下交换图.
+$$
+\begin{array}
+{ccc}
+TXS &amp; \to &amp; TX \\
+\downarrow &amp; &amp; \downarrow \\
+XS &amp; \to &amp; X.
+\end{array}
+$$</p>
+<h2>性质</h2>
+<h3>自由–遗忘伴随</h3>
+<p>对于 $\mathcal C$ 上的单子 $T$, 记 $\mathcal C^T$ 为 $\mathcal C$ 中 $T$-代数的范畴, $U\colon \mathcal C^T\to\mathcal C$ 为遗忘函子, 其左伴随 (“自由 $T$-代数” 函子) 为 $F\colon \mathcal C\to\mathcal C^T$, $F(X) = TX$. 这对伴随给出 $\mathcal C^T$ 上的<span class="link local"><a href="./余单子.html" title="余单子 [余单子]">余单子</a></span> $FU$ (见<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">伴随给出单子</a></span>).</p>
+<h3>杠构造</h3>
+<p>类似于给定结合代数 $A$ 上的右模 $M$ 和左模 $N$ 可作相对张量积 $M\otimes_A N$, 给定单子 $T$ 上的右模和左模也可作 “相对张量积”, 见<span class="link local"><a href="./双边杠构造.html" title="双边杠构造 [双边杠构造]">双边杠构造</a></span>.</p>
+<h2>例</h2>
+<h3>伴随的典范模结构</h3>
+<p>对于函子 $F\colon \mathcal C\to\mathcal D$, $G\colon \mathcal D\to\mathcal C$ 之间的一对<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $F\dashv G$ <span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span> $T= GF$,</p>
+<ul>
+<li>$F$ 有典范的 $T$-<strong>右模</strong>结构 $FT=FGF \to F$,</li>
+<li>$G$ 有典范的 $T$-<strong>左模</strong>结构 $TG=GFG \to G$.</li>
+</ul>
+<p>见<span class="link local"><a href="./双边杠构造.html" title="双边杠构造 [双边杠构造]">双边杠构造</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="双边杠构造"><header><h1><span class="taxon">Wiki. </span>双边杠构造 <a class="slug" href="./双边杠构造.html">[双边杠构造]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>如果说<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>是<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>, 那么双边杠构造就是<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">结合代数上的模</a></span>的相对张量积的范畴化.</p>
+<p>双边杠构造是<span class="link local"><a href="./杠构造.html" title="杠构造 [杠构造]">杠构造</a></span> (bar construction) 的推广.</p>
+<h2>定义</h2>
+<p>设 $T$ 为范畴 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>. 对于 $T$ 上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">左模</a></span> $X\colon I\to\mathcal C$ 与<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">右模</a></span> $Y\colon \mathcal C\to J$, <strong>双边杠构造</strong>是 $\mathsf{Fun}(I,J)$ 中的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>
+$$
+B(Y,T,X) = (\cdots YTTX \to^3 YTX \rightrightarrows YX).
+$$</p>
+<h2>例</h2>
+<h3>伴随的典范双边杠构造</h3>
+<p>对于函子 $F\colon \mathcal C\to\mathcal D$, $G\colon \mathcal D\to\mathcal C$ 之间的一对<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $F\dashv G$ 给出的<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">单子</a></span> $T = GF$,</p>
+<ul>
+<li>$F$ 有典范的 $T$-<strong>右模</strong>结构 $FT=FGF \to F$,</li>
+<li>$G$ 有典范的 $T$-<strong>左模</strong>结构 $TG=GFG \to G$.</li>
+</ul>
+<p>因此伴随 $F\dashv G$ 给出典范的<strong>双边杠构造</strong>
+$$
+B(F,T,G) = (\cdots FGFGFG \to^3 FGFG \rightrightarrows FG).
+$$</p>
+<h3>分解同调</h3>
+<p>记 $D_n$ 为 <span class="link local"><a href="./En-算畴.html" title="En-算畴 [En-算畴]">$\mathbb E_n$-算畴</a></span>对应的单子. 对于 $n$ 维标架流形 $M$, 记 $D_M$ 为<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span> $\{\operatorname{Emb}(\sqcup_k\mathbb{R}^n,M)\}$ 对应的函子, 则 $D_M$ 为单子 $D_n$ 上的右模:</p>
+<ul>
+<li>$D_n X$ 的直观是 “将 $X$ 的若干元素放在 $\mathbb{R}^n$ 的不交圆盘上” 的构形的空间;</li>
+<li>$D_M X$ 的直观是 “将 $X$ 的若干元素放在 $M$ 的不交圆盘上” 的构形的空间;</li>
+<li>因此 $D_M D_n X$ 的一个元素的直观是 $M$ 的若干个不交圆盘, 每个之中又有若干个不交的小圆盘, 每个小圆盘上放了 $X$ 的一个元素;</li>
+<li>映射 $D_M D_n X \to D_M X$ 直观上是将上述构形中的小圆盘直接视为 $M$ 上的圆盘, 得到 $D_M X$ 的元素.</li>
+</ul>
+<p>$M$ 上取值于 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$-代数</a></span> $A$ 的<span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>可表示为双边杠构造的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>
+$$
+\int_M A = |B(D_M, D_n, A)|.
+$$</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="拟三角代数"><header><h1><span class="taxon">Wiki. </span>拟三角代数 <a class="slug" href="./拟三角代数.html">[拟三角代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><span class="link local"><a href="./双代数.html" title="双代数 [双代数]">双代数</a></span>上的<strong>拟三角</strong> (quasitriangular) 结构是使其<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>范畴由<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>升级为<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半范畴</a></span>所需的结构.</p>
+</details></section><section class="block" data-taxon="notion"><details ><summary id="自由-遗忘伴随"><header><h1><span class="taxon"><span class="link local"><a href="./notion.html" title="观念 [notion]">notion</a></span></span>自由–遗忘伴随 <a class="slug" href="./自由-遗忘伴随.html">[自由-遗忘伴随]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>自由–遗忘伴随形容的是如下的现象: 两种数学结构 $A,B$ 的<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法</a></span>之间有一态射 $A \to B$, 使得 $B$-结构总是可以 “遗忘” 为 $A$-结构 (称之为<strong>遗忘</strong>是因为常常 $A$-结构是比较简单的结构, 甚至是没有结构; 但理论上不一定如此); 进一步, 遗忘函子有一左伴随, 称之为<strong>自由</strong>函子, 常常可以通过<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">左 Kan 扩张</a></span>构造. 这一现象发生在许多场合:</p>
+<ul>
+<li><span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">结合代数上的模</a></span>,</li>
+<li><span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>,</li>
+<li><span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">算畴上的代数</a></span>,</li>
+<li><span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>的<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">模型</a></span>,</li>
+<li>…</li>
+</ul>
+<p>这些场合是相互关联的, 例如<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 给出单子 $-\otimes A$, 其上的模即是该单子的代数. <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>和<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>也给出单子. 若一对伴随能够表示为某个单子的自由–遗忘伴随, 则称之为<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性伴随</a></span> (monadic adjunction).</p>
+<h2>性质</h2>
+<h3>结合代数</h3>
+<p>当某种集合或范畴上的结构的遗忘函子 $U\colon \mathcal C \to \mathsf{Set}$ (或 $U\colon \mathcal C\to\mathsf{Cat}$) <span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">余可表</a></span>时,
+它的余表示对象就是由一个元素 (或一个对象) 生成的自由结构 $F(1)$:
+$$
+U=\operatorname{Hom}_{\mathsf{Set}}(1,U-)=\operatorname{Hom}_{\mathcal C}(F(1),-).
+$$
+且此时 $F(1)$ 的底层结构具有<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的结构. 这是<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>的简单应用:
+$$
+U(F(1)) = \operatorname{Hom}_{\mathcal C}(F(1),F(1)) = \operatorname{End}_{\mathsf{Fun}(\mathcal C,\mathsf{Set})}(U).
+$$</p>
+<p><strong>例</strong>.</p>
+<ul>
+<li>一个元素自由生成的幺半群 $(\mathbb{N},+)$ 是遗忘函子 $U\colon \mathsf{Mon}\to\mathsf{Set}$ 的余表示对象, $U(\mathbb{N})=\operatorname{Hom}_{\mathsf{Mon}}(\mathbb{N},\mathbb{N})=\operatorname{End}(U)\simeq (\mathbb{N},\times)$.</li>
+<li>一个元素自由生成的交换环 $\mathbb{Z}[x]$ 是遗忘函子 $U\colon \mathsf{Ring} \to \mathsf{Set}$ 的余表示对象, $U(\mathbb{Z}[x]) = \operatorname{Hom}_{\mathsf{Ring}}(\mathbb{Z}[x],\mathbb{Z}[x]) = \operatorname{End}(U)\simeq (\mathbb{Z}[x],\circ)$.</li>
+<li>更一般地, 给定交换环 $A$, 一个元素自由生成的 $A$-代数 $A[x]$ 是遗忘函子 $U\colon \mathsf{Alg}_A \to \mathsf{Set}$ 的余表示对象, $U(A[x]) = \operatorname{Hom}_{\mathsf{Alg}_A}(A[x],A[x]) = \operatorname{End}(U)$.</li>
+<li>对于对称幺半范畴 $\mathcal C$, 一个对象自由生成的 $\mathcal C$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>对称幺半范畴是<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>的范畴, 其上有一个幺半结构, 对应于自函子的复合. 详见<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>.</li>
+</ul>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="高阶模"><header><h1><span class="taxon">Wiki. </span>高阶模 <a class="slug" href="./高阶模.html">[高阶模]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>高阶模是 “环上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>” 这一概念的<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>.</p>
+<p>正如环 $A$ 上的模是其谱 $\operatorname{Spec} A$ 上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>, 环 $A$ 上的高阶模是 $\operatorname{Spec} A$ 上的<span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span>.</p>
+<h2>定义</h2>
+<p>一般地, <span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span> $A$ 上的模范畴 $\mathsf{Mod} (A)$ 仍是交换代数, 从而可以继续考虑其上的模. 环 $A$ 上的 $n$ 阶模范畴便是 “取模范畴” 操作的 $n$ 次迭代: “$\mathsf{Mod}^n (A) = \mathsf{Mod} (\mathsf{Mod}^{n-1} (A))$”.</p>
+<p>为了明确上述定义所在的范畴, 我们需要<span class="link local"><a href="./高阶可表现范畴.html" title="高阶可表现范畴 [高阶可表现范畴]">高阶可表现范畴</a></span>的概念. 记 $n\mathsf{Pr}$ 为可表现 $n$-范畴的范畴.</p>
+<h3>环上的高阶模范畴</h3>
+<p><strong>约定</strong>. 这里的 $n$-范畴是指 $(\infty ,n)$-范畴, 环是指 <span class="link local"><a href="./E∞-环.html" title="“E∞-环” [E∞-环]">E∞-环</a></span>, 环上的模范畴 $\mathsf{Mod}(A)$ 在传统情形中称为<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span> $D(A)$. 暂且忽略基数的大小问题.</p>
+<p><strong>定义</strong> ($A$-线性可表现范畴). 对于交换环 $A$, 考虑 $A$-模范畴 $\mathsf{Mod}(A) \in \mathsf{CAlg}(1\mathsf{Pr})$. 定义 “$A$-线性<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>” 构成的对称幺半可表现 $2$-范畴
+$$
+1\mathsf{Pr}_A = \mathsf{Mod}_{1\mathsf{Pr}}(\mathsf{Mod}(A)) \in \mathsf{CAlg}(2\mathsf{Pr}),
+$$
+归纳地定义 “$A$-线性可表现 $n$-范畴” 构成的对称幺半可表现 $(n+1)$-范畴
+$$
+n\mathsf{Pr}_A = \mathsf{Mod}_{n\mathsf{Pr}}((n-1)\mathsf{Pr}_A)\in \mathsf{CAlg}((n+1)\mathsf{Pr}).
+$$</p>
+<h3>可表现范畴上的高阶模范畴</h3>
+<p><strong>定义</strong> ($C$-线性可表现范畴). 更一般地, 对于 $C \in \mathsf{CAlg}(1\mathsf{Pr})$, 也可定义
+$$
+1\mathsf{Pr}_C = \mathsf{Mod}_{1\mathsf{Pr}}(C) \in \mathsf{CAlg}(2\mathsf{Pr}),
+$$
+并归纳定义
+$$
+n\mathsf{Pr}_C = \mathsf{Mod}_{n\mathsf{Pr}}((n-1)\mathsf{Pr}_C) \in \mathsf{CAlg}((n+1)\mathsf{Pr}).
+$$</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

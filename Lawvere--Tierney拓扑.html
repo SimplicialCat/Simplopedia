@@ -62,6 +62,56 @@
 <h2>动机</h2>
 <h2>与 Grothendieck 拓扑的关系</h2>
 <p><strong>命题</strong>. 小范畴 $C$ 上的 <span class="link local"><a href="./Grothendieck拓扑.html" title="Grothendieck 拓扑 [Grothendieck拓扑]">Grothendieck 拓扑</a></span>给出<span class="link local"><a href="./预层意象.html" title="预层意象 [预层意象]">预层意象</a></span> $\mathsf {Set}^{C^{\mathrm{op}}}$ 上的 Lawvere–Tierney 拓扑.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>单子 <a class="slug" href="./单子.html">[单子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="单子"><header><h1><span class="taxon">Wiki. </span>单子 <a class="slug" href="./单子.html">[单子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>单子 (monad) 是一种具有许多理解方式的对象, 很难说哪种理解最为基本:</p>
+<ul>
+<li>范畴 $\mathcal C$ 上的单子是自函子范畴 $\operatorname{End}(\mathcal C)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>; 在这种意义上它是<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>.</li>
+<li><span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $\mathcal C$ 中的一个<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 给出 $\mathcal C$ 上的一个单子 $A\otimes(-)$; 在这种意义上单子是<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的推广; 单子上的模 (或叫<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>) 是结合代数上的模的推广.</li>
+<li>单子是<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>的推广. 许多<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数结构</a></span>可理解为某个<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>; 此时这个单子给出 “自由代数”. 这件事可由<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性函子</a></span>描述.</li>
+<li>在 <span class="link local"><a href="./2-范畴.html" title="2-范畴 [2-范畴]">$2$-范畴</a></span>的理论中, 单子可视为 $1$ 到 $\mathsf{Cat}$ 的<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span>, 从而进一步推广为 $1$ 到一般的 $2$-范畴的<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span>.</li>
+</ul>
+<h2>定义</h2>
+<h3>自函子范畴中的结合代数</h3>
+<p>一个范畴 $\mathcal C$ <strong>上</strong>的单子是其自函子范畴 $\operatorname{End}(\mathcal C)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 对偶范畴 $\mathcal C^{\mathrm{op}}$ 上的单子称为 $\mathcal C$ 上的<span class="link local"><a href="./余单子.html" title="余单子 [余单子]">余单子</a></span>.</p>
+<p>更具体地, 一个 ($1$-)范畴 $\mathcal C$ 上的单子是一个函子 $T\colon \mathcal C\to\mathcal C$, 带有自然变换
+$\eta\colon \mathrm{id}\to T$, $\mu\colon T^2\to T$, 且有两个自然变换 $T^3\to T$ 之间的同构.</p>
+<p>当然, 上述定义中的 $\mathcal C$ 也可设为任何 $2$-范畴的对象.</p>
+<h3>松 2-函子</h3>
+<p>等价的定义是, 单子为 <span class="link local"><a href="./2-范畴.html" title="2-范畴 [2-范畴]">$2$-范畴</a></span>之间的<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span>
+$$
+    1\to \mathsf{Cat}.
+$$
+一般地, <span class="link local"><a href="./2-范畴.html" title="2-范畴 [2-范畴]">$2$-范畴</a></span> $\mathcal C$ <strong>内</strong>的一个单子定义为<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span> $1 \to \mathcal C$ (注意区分一个对象<strong>上</strong>的单子与一个 $2$-范畴<strong>内</strong>的单子).</p>
+<h2>性质</h2>
+<h3>Kleisli 范畴</h3>
+<p>对范畴 $\mathcal C$ 上的单子 $T$, 有一个范畴, 称为 <strong></strong><span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span> $\mathsf{Kl}$,</p>
+<ul>
+<li>其对象为 $\mathcal C$ 的对象,</li>
+<li>$\mathsf{Kl}$ 中的态射 $X\to Y$ 为 $\mathcal C$ 中的态射 $X\to TY$,</li>
+<li>$\mathsf{Kl}$ 中的态射 $X\to Y$, $Y\to Z$ 的复合为 $\mathcal C$ 中的如下复合:
+$$
+X \to TY \to TTZ \overset{\mu}{\to} TZ.
+$$</li>
+</ul>
+<h2>例</h2>
+<h3>伴随给出单子</h3>
+<p>任何一对函子 $L\colon \mathcal C\to\mathcal D$, $R\colon \mathcal D\to\mathcal C$ 之间的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $L\dashv R$ 都给出一个单子 $RL\colon \mathcal C\to\mathcal C$ 与一个<span class="link local"><a href="./余单子.html" title="余单子 [余单子]">余单子</a></span> $LR\colon \mathcal D\to\mathcal D$. 见<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">伴随给出单子</a></span>. 事实上任何单子都是某一对伴随给出的.</p>
+<h3>Set 上的单子</h3>
+<p>考虑带基点集合 $\mathsf {Set}_*$ 到 $\mathsf {Set}$ 的遗忘函子, 其对应的自由函子 (左伴随) 是对集合添加一个新的点作为基点. 这对伴随的<span class="link local"><a href="./单位.html" title="“单位” [单位]">单位</a></span> $\operatorname{id}_{\mathsf {Set}}\to RL$ 是对集合添加一个新的点. 这在计算机科学中称作<strong>可能单子</strong> (maybe monad).</p>
+<p>固定集合 $S$, 称为状态集合 (set of states), <span class="link local"><a href="./张量-同态伴随.html" title="“张量-同态伴随” [张量-同态伴随]">张量-同态伴随</a></span> $(S\times)\dashv (-)^S$ 的单位 $(S\times -)^S$ 称为状态单子 (state monad).</p>
+<h3>结合代数</h3>
+<p>设 $A$ 是<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $(\mathcal C,\otimes)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 则有单子 $A\otimes(-)\colon \mathcal C\to\mathcal C$ 以及 $(-)\otimes A\colon \mathcal C\to\mathcal C$. 这是因为
+$$
+A \mapsto (A\otimes (-)) \colon \mathcal C \to \operatorname{End}(\mathcal C)
+$$
+是幺半函子, 从而将<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 变为单子.</p>
+<p><strong>例</strong>. <span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span> $\Delta_+$ 中的对象 $[0]$ 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 与该结合代数作张量积的函子 $[0] \otimes - \colon \Delta_+ \to \Delta_+$ 等同于对全序集添加一个最小元, $-\otimes [0]  \colon \Delta_+ \to \Delta_+$ 则是添加一个最大元.</p>
+<h3>偏序集上的单子</h3>
+<p><span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span> $(P,\leq)$ 上的单子 $T\colon P\to P$ 须满足 $x\leq Tx$, $T^2 = T$. 这种映射又叫 “闭包算子”. 例如拓扑空间的开集的偏序集 $\operatorname{Open}(X)$ 上的闭包运算是一个单子.</p>
+<p>另见 <span class="link local"><a href="./Lawvere--Tierney拓扑.html" title="Lawvere–Tierney 拓扑 [Lawvere--Tierney拓扑]">Lawvere–Tierney 拓扑</a></span>.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>, <span class="link local"><a href="./杠构造.html" title="杠构造 [杠构造]">杠构造</a></span></p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

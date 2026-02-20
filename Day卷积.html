@@ -78,6 +78,64 @@ $$
 \mathsf{Alg}_{\mathcal P}(\mathsf{Day}_{\mathcal C}(\mathcal O))\simeq \mathsf{Alg}_{\mathcal P\times_{\mathsf{Fin}_*}\mathcal C^\otimes}(\mathcal O).
 $$
 换言之, $\mathsf{Day}_{\mathcal C}$ 是 $-\times_{\mathsf{Fin}_*}\mathcal C^\otimes$ 的右伴随.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>对称序列 <a class="slug" href="./对称序列.html">[对称序列]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="对称序列"><header><h1><span class="taxon">Wiki. </span>对称序列 <a class="slug" href="./对称序列.html">[对称序列]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>对称序列是一种可用于定义<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的结构.</p>
+<p>对称序列可视为<span class="link local"><a href="./解析函子.html" title="解析函子 (算畴理论) [解析函子]">多项式函子</a></span>的 “系数”, 对称序列上有一个幺半结构和一个对称幺半结构, 分别对应多项式函子的复合与乘积.</p>
+<h2>定义</h2>
+<p>考虑有限集合与双射构成的范畴 $\mathsf{Fin}^{\simeq}$, 配备无交并构成对称幺半范畴. 它是由一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>对称幺半范畴. 它也是所有有限对称群的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>的无交并:
+$$
+\mathsf{Fin}^{\simeq} \simeq \bigsqcup_{n\geq 0} \mathbf{B}S_n.
+$$</p>
+<p><span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半范畴</a></span> $\mathcal C$ 中的对称序列是函子
+$$
+\mathsf{Fin}^{\simeq} \to \mathcal C.
+$$</p>
+<p>给出一个对称序列就是对每个 $n$ 给出对称群 $S_n$ 的一个<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">表示</a></span>.</p>
+<h2>性质</h2>
+<h3>与自函子的关系</h3>
+<p>设对称幺半范畴 $\mathcal C$ 有合适的余极限. 那么对称序列 $F\colon \mathsf{Fin}^{\simeq} \to \mathcal C$ 给出 $\mathcal C$ 的自函子
+$$
+X\mapsto \bigsqcup_{n\geq 0} F(n)\otimes_{S_n}X^{\otimes n} = \int_{\mathsf{Fin}^{\simeq}}F(n)\otimes X^{\otimes n},
+$$
+且该函子为<span class="link local"><a href="./解析函子.html" title="解析函子 (算畴理论) [解析函子]">解析函子</a></span>.
+这个函子可以如下理解. 由于 $\mathsf{Fin}^{\simeq}$ 是一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>对称幺半范畴, 对象 $X$ 给出一个对称幺半函子 $\mathsf{Fin}^{\simeq}\to\mathcal C, n\mapsto X^{\otimes n}$.</p>
+<p>设 $F,G$ 是两个对称序列, 我们计算它们对应的自函子的复合:
+$$
+\begin{aligned}
+X&amp;\mapsto
+\bigsqcup_{n\ge 0} F(n) \otimes_{S_n}
+\Big(
+\bigsqcup_{m\ge 0} G(m) \otimes_{S_m}
+X^{\otimes m}
+\Big)
+^{\otimes n}\\
+&amp;\simeq\bigsqcup_{n\geq 0} F(n) \otimes_{S_n}
+\bigsqcup_{(m_i)_{i=1}^n}
+\bigotimes_{i=1}^n(G(m_i)\otimes_{S_{m_i}}X^{\otimes m_i})\\
+&amp;\simeq
+\bigsqcup_{\ell\geq 0}\bigsqcup_{n,m_1+\cdots + m_n = \ell}\big(F(n)\otimes\bigotimes_{i=1}^n G(m_i)\big)\otimes
+\end{aligned}
+$$</p>
+<h3>对称幺半结构</h3>
+<p>设对称幺半范畴 $\mathcal C$ 具有<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>, 且 $X\otimes -$ 保持余积. 那么对称序列上还有一个由 <span class="link local"><a href="./Day卷积.html" title="Day 卷积 [Day卷积]">Day 卷积</a></span>给出的对称幺半结构; 具体地,
+$$
+(X\otimes Y)_n = \bigsqcup_{p+q=n} \operatorname{Ind}_{\Sigma_p\times\Sigma_q}^{\Sigma_n} (X_p\otimes Y_q).
+$$
+其中 $\operatorname{Ind}$ 是沿 $\Sigma_p\times \Sigma_q\hookrightarrow\Sigma_n$ 的 <span class="link local"><a href="./诱导表示.html" title="诱导表示 [诱导表示]">诱导表示</a></span>, 即限制表示的左伴随.</p>
+<h3>泛性质</h3>
+<p>对称序列的范畴 $\mathsf{Seq}:=\mathsf{Fun}(\mathsf{Fin}^{\simeq},\mathcal C)$ 是由一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span> $\mathcal C$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span><span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半范畴</a></span>. 换言之, 它是遗忘函子 $U\colon \mathcal C\text{-}\mathsf{Cat}^{\text{SymMon}} \to \mathsf{Cat}$ 的表示对象. 因此由 $(\infty,2)$-范畴版本的<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>,
+$$
+\begin{aligned}
+\mathsf{Seq} &amp;\simeq \mathsf{Fun}^{\text{SymMon}}(\mathsf{Seq},\mathsf{Seq}) \\&amp;\simeq \operatorname{End}(U).
+\end{aligned}
+$$
+这给出其上的复合幺半结构. 这是<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由–遗忘伴随</a></span>的一般现象.</p>
+<p><strong>例</strong>. 固定一个域 $k$, 记 $\mathsf{Vect}$ 为 $k$-线性空间范畴的<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>. $\mathsf{Vect}$ 中的对称序列构成的范畴
+$$
+\mathsf{Vect}^\Sigma:= \mathsf{Fun}(\mathsf{Fin}^{\simeq},\mathsf{Vect}) \simeq \prod_{n\geq 1} \mathsf{Rep}(\Sigma_n)
+$$
+是一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span> <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>. 见 <span class="link local"><a href="./Gaitsgory–RozenblyumDAG.html" title="A Study in Derived Algebraic Geometry [Gaitsgory–RozenblyumDAG]">Gaitsgory–Rozenblyum 导出代数几何讲义</a></span> (关于 Lie 代数与 Koszul 对偶的一节).</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

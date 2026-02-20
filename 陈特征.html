@@ -72,6 +72,155 @@ $$</p>
 <h2>Todd 类</h2>
 <p><span class="link external"><a href="https://ncatlab.org/nlab/show/Chern+character" title="nLab [https://ncatlab.org/nlab/show/Chern+character]">nLab</a></span></p>
 <p>设 $V\to X$ 是紧拓扑空间上的复向量丛. <span class="link local"><a href="./Todd类.html" title="“Todd 类” [Todd类]">Todd 类</a></span> $\operatorname{Td}(V)\in H^{\text{ev}}(X,\mathbb Q)$</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Atiyah–Singer 指标定理 <a class="slug" href="./Atiyah--Singer指标定理.html">[Atiyah--Singer指标定理]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Fourier–向井变换” <a class="slug" href="./Fourier--向井变换.html">[Fourier--向井变换]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Grothendieck–Riemann–Roch 定理” <a class="slug" href="./Grothendieck--Riemann--Roch定理.html">[Grothendieck--Riemann--Roch定理]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Hirzebruch–Riemann–Roch 定理” <a class="slug" href="./Hirzebruch--Riemann--Roch定理.html">[Hirzebruch--Riemann--Roch定理]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>拓扑指标 <a class="slug" href="./拓扑指标.html">[拓扑指标]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Atiyah--Singer指标定理"><header><h1><span class="taxon">Wiki. </span>Atiyah–Singer 指标定理 <a class="slug" href="./Atiyah--Singer指标定理.html">[Atiyah--Singer指标定理]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Atiyah–Singer 指标定理在流形上整体地描述微分方程的拓扑.</p>
+<h2>陈述</h2>
+<p><span class="link local"><a href="./椭圆算子.html" title="椭圆算子 [椭圆算子]">椭圆算子</a></span>的<span class="link local"><a href="./拓扑指标.html" title="拓扑指标 [拓扑指标]">拓扑指标</a></span>等于<span class="link local"><a href="./解析指标.html" title="解析指标 [解析指标]">解析指标</a></span>.</p>
+<blockquote>
+<p>Nicolaescu, Notes on the Atiyah-Singer Index Theorem</p>
+</blockquote>
+<p>设 $E$ 为 Dirac 丛, $D$ 为 Dirac 算子, $F^{E/\mathbb S}\in \operatorname{End}_{\mathrm{Cl}(M)}(E)$ 为曲率 (twisting curvature), 定义<span class="link local"><a href="./陈特征.html" title="“陈特征” [陈特征]">陈特征</a></span>
+$$
+\operatorname{ch}^{E/\mathbb S}:= \operatorname{str}^{E/\mathbb S} \exp\left(\frac{i}{2\pi} F^{E/\mathbb S}\right) \in\Omega^\bullet(M),
+$$
+<span class="link local"><a href="./A-hat类.html" title="“A-hat 类” [A-hat类]">A-hat 类</a></span>
+$$
+\widehat{A}(M)=\det \left(\frac{\frac{i}{4\pi}R}{\sinh (\frac{i}{4\pi}R)}\right)^{1/2},
+$$
+那么 Atiyah–Singer 定理是说
+$$
+\operatorname{ind}D=\dim\ker D -\dim\ker D^* =\int_M \widehat{A}(M) \operatorname{ch}^{E/\mathbb S}(E).
+$$</p>
+<blockquote>
+<p>John W. Morgan, The Seiberg–Witten Equations and Applications …, 3.3 节</p>
+</blockquote>
+<p>设 $X$ 为闭可定向 Riemann 四维流形, $\widetilde P$ 是 $X$ 上的自旋结构, $\partial \hspace{-5pt}/$ 为复旋量丛 $S_{\mathbb{C}}^+(\widetilde P)$ 到 $S_{\mathbb{C}}^-(\widetilde P)$ 的 <span class="link local"><a href="./Dirac算子.html" title="Dirac 算子 [Dirac算子]">Dirac 算子</a></span>, 由其<span class="link local"><a href="./象征.html" title="象征 [象征]">象征</a></span>可计算其<span class="link local"><a href="./解析指标.html" title="解析指标 [解析指标]">解析指标</a></span>如下.</p>
+<p>回忆对于 $\pi\colon T^*X\to X$, 象征是 $T^*X$ 上的向量丛 $\pi^* S^+$ 到 $\pi^* S^-$ 的丛同态. 这个丛同态在 $T^*X\setminus X$ (减去零截面) 上的限制是丛的同构. 因此, 象征给出了 $T^*X$ 相对于 $T^*X\setminus X$ 的<span class="link local"><a href="./相对K-群.html" title=" [相对K-群]">相对 K-群 (拓扑)</a></span>的一个元素. Atiyah–Singer 指标定理即是说, 由这个相对 K-理论的元素可计算出解析指标.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Fourier--向井变换"><header><h1><span class="taxon">Wiki. </span>“Fourier–向井变换” <a class="slug" href="./Fourier--向井变换.html">[Fourier--向井变换]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>Fourier–向井变换是<span class="link local"><a href="./凝聚层的导出范畴.html" title="凝聚层的导出范畴 [凝聚层的导出范畴]">凝聚层的导出范畴</a></span>之间的函子 $D(X)\to D(Y)$, 它是通过核对象 $K\in D(X\times Y)$ 构造的 “积分变换”.</p>
+<p>许多基本的函子, 如<span class="link local"><a href="./直像.html" title="“直像” [直像]">直像</a></span>与<span class="link local"><a href="./逆像.html" title="逆像 [逆像]">逆像</a></span>, 都具有这种形式.</p>
+<p>向井茂于 1981 年最早使用这种变换研究 <span class="link local"><a href="./Abel簇.html" title="“Abel 簇” [Abel簇]">Abel 簇</a></span>与其对偶上的<span class="link local"><a href="./凝聚层的导出范畴.html" title="凝聚层的导出范畴 [凝聚层的导出范畴]">凝聚层的导出范畴</a></span>的等价性, 这类似于 Fourier 变换建立了向量空间与其对偶空间上分布的同构.</p>
+<h2>定义</h2>
+<p>设 $X,Y$ 是光滑代数簇. 对于 $P \in D^b(X\times Y)$, 有函子 $\Phi_P\colon D^b(X)\to D^b(Y)$,
+$$
+\mathcal E \mapsto  p_*(P \otimes q^*\mathcal E).
+$$
+(省略了所有导出记号.)</p>
+<p>投影映射是平坦的, 也即 $q^*$ 没有导出. 若 $P$ 局部自由, 则 $p_*$ 也没有导出.</p>
+<h2>例</h2>
+<h3>恒等</h3>
+<p>对于对角线层 $\Delta\colon X\to X\times X$, $P=\mathcal O_\Delta$ 对应 $\operatorname{id}$.</p>
+<p>$$
+\begin{aligned}
+	\Phi_{\mathcal O_\Delta}(\mathcal E) &amp; \simeq p_*(\Delta_* \mathcal O_X \otimes q^*\mathcal E)\\
+	&amp; \simeq p_* \Delta_* (\Delta^* q^*\mathcal E \otimes\mathcal O_X).
+\end{aligned}
+$$
+这里使用了<span class="link local"><a href="./投影公式.html" title="投影公式 [投影公式]">投影公式</a></span>,
+$$
+Rf_*(\mathcal F^\bullet) \otimes^L \mathcal E \simeq Rf_* (\mathcal F^\bullet \otimes^L Lf^*\mathcal E).
+$$</p>
+<h3>前推与拉回</h3>
+<p>对于 $f\colon X\to Y$ 的 “图像” $\iota \colon X\to X\times Y$, $\Gamma_f := \iota_*\mathcal O_X$, 两个方向的 Fourier–向井变换分别是<span class="link local"><a href="./前推.html" title=" [前推]">直像</a></span> $f_*$ 和<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">逆像</a></span> $f^*$.</p>
+<h3>一族连续变化的层</h3>
+<p>设 $P\in D^b(X\times Y)$ 在 $X$ 上凝聚平坦 (coherent flat). (想象 $Y$ 为参数, $P_x$ 是 $P_{x_0}$ 的形变)</p>
+<p>(待补充)</p>
+<h3>小平–Spencer 映射</h3>
+<p>(待补充)
+$$
+T_{x_0}X \to \operatorname{Ext}^1(P_{x_0},P_{x_0})
+$$
+注意 $T_{x_0}X$ 同构于 $\operatorname{Ext}^1(k(x_0),k(x_0))$.</p>
+<h2>性质</h2>
+<p><strong>定理</strong>. Fourier–向井变换有左右伴随, 且均为 Fourier–向井变换.</p>
+<p>对 $P\in D^b(X\times Y)$, 定义 $P_L = P^\vee \otimes p^* \omega_Y[\dim Y]$ ($p\colon X\times Y\to Y$ 为投影), $P_R = P^\vee \otimes q^*\omega_X [\dim X] \in D^b(Y\times X)$. 参见 <span class="link local"><a href="./Serre对偶.html" title="“Serre 对偶” [Serre对偶]">Serre 对偶</a></span>.</p>
+<p><strong>定理</strong>. 两个 Fourier–向井变换的复合也是 Fourier–向井变换.</p>
+<p>对 $P\in D^b(X\times Y)$, $Q\in D^b(Y\times Z)$, 定义 $R\in D^b(X\times Z)$ 如下.
+$$
+R = (\pi_{XZ})_* ((\pi_{XY})^*P \otimes (\pi_{YZ})^* Q).
+$$
+其中 $\pi_{XZ}$ 是 $X\times Y\times Z$ 到 $X\times Z$ 的投影, 等等.</p>
+<p>如下是 Fourier–向井变换是全忠实函子的判定.</p>
+<p><strong>定理</strong> 设 $X,Y$ 是特征 $0$ 的代数闭域 $k$ 上的光滑<span class="link local"><a href="./射影簇.html" title="“射影簇” [射影簇]">射影簇</a></span>, $P\in D^b(X\times Y)$. Fourier–向井变换 $\Phi$ 是全忠实函子当且仅当对任意闭点 $x,y\in X$,
+$$
+\operatorname{Hom}(\Phi_P(k(x)),\Phi_P(k(y))[i])=
+\begin{cases}
+k, &amp; x=y,i=0\\
+0, &amp; x\neq y\text{ or }i&lt;0 \text{ or }i&gt;\dim X.
+\end{cases}
+$$</p>
+<h2>K-理论版本</h2>
+<p>$\mathcal F^\bullet \in D^b(X)$ 对应 $X$ 的 <span class="link local"><a href="./K-群(拓扑).html" title="“K-群 (拓扑)” [K-群(拓扑)]">K-群 (拓扑)</a></span>中的元素 $[\mathcal F^\bullet]:=\sum (-1)^i[\mathcal F^i] \in K(X)$.</p>
+<p><strong>命题</strong>. $[\mathcal F^\bullet] = \sum (-1)^i [\mathcal H^i (\mathcal F^\bullet)]$.</p>
+<p>定义<span class="link local"><a href="./紧支集直像.html" title="“紧支集直像” [紧支集直像]">紧支集直像</a></span> $f_! \mathcal F := \sum (-1)^i [R^i f_*\mathcal F]$.</p>
+<p><span class="link local"><a href="./K-理论.html" title="“K-理论” [K-理论]">K-理论</a></span>版本的 Fourier–向井变换定义如下. 对 $e\in K(X\times Y)$,
+$$
+\Phi^K_e \colon f\mapsto p_!(e\otimes q^* f).
+$$</p>
+<h2>上同调版本</h2>
+<p>对于 $f\colon X\to Y$, 有 $f_*\colon H^*(X;\mathbb{Q}) \to H^{*+2\dim Y - 2\dim X}(Y;\mathbb{Q})$, 满足<span class="link local"><a href="./投影公式.html" title="投影公式 [投影公式]">投影公式</a></span>
+$$
+f_*(f^*\alpha \cdot \beta) = \alpha \cdot f_*\beta.
+$$
+定义 $\Phi^H\colon H^*(X;\mathbb{Q}) \to H^*(Y;\mathbb{Q})$,
+$$
+\Phi^H\colon \beta\mapsto p_*(\alpha \cdot q^* \beta).
+$$</p>
+<p><span class="link local"><a href="./陈特征.html" title="“陈特征” [陈特征]">陈特征</a></span>是从 <span class="link local"><a href="./K-群(拓扑).html" title="“K-群 (拓扑)” [K-群(拓扑)]">K-群 (拓扑)</a></span>到上同调的函子, 可联系 K-理论和上同调两个版本的 Fouier–向井变换. 两者的关系涉及 <span class="link local"><a href="./Todd类.html" title="“Todd 类” [Todd类]">Todd 类</a></span>: 设 $e\in K(X\times Y)$, 则
+$$
+\Phi^H_{v(e)} (\operatorname{ch}(f)\sqrt{\operatorname{td}X}) = \operatorname{ch}(\Phi^K_e(f)) \sqrt{\operatorname{td}Y}.
+$$
+其中 $v(e) = \operatorname{ch}(e)\sqrt{\operatorname{td}X} \in H^*(X;\mathbb{Q})$ 称为 Fourier–向井向量.</p>
+<p><strong>证明</strong>.
+$$
+\begin{array}
+	{ccccccc}
+	K(X) &amp; \to &amp; K(X\times Y) &amp; \to &amp; K(X\times Y) &amp; \to &amp; K(Y)\\
+	\downarrow &amp;&amp; \downarrow &amp;&amp; \downarrow &amp;&amp; \downarrow\\
+	H^*(X) &amp; \to &amp; H^*(X\times Y) &amp; \to &amp; H^*(X\times Y) &amp; \to &amp; H^*(Y)
+\end{array}
+$$
+中间方块交换是由于 <span class="link local"><a href="./Grothendieck--Riemann--Roch定理.html" title="“Grothendieck–Riemann–Roch 定理” [Grothendieck--Riemann--Roch定理]">Grothendieck–Riemann–Roch 定理</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Grothendieck--Riemann--Roch定理"><header><h1><span class="taxon">Wiki. </span>“Grothendieck–Riemann–Roch 定理” <a class="slug" href="./Grothendieck--Riemann--Roch定理.html">[Grothendieck--Riemann--Roch定理]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>Grothendieck–Riemann–Roch 定理描述了<span class="link local"><a href="./陈特征.html" title="“陈特征” [陈特征]">陈特征</a></span>沿着<span class="link local"><a href="./紧合映射.html" title="紧合映射 [紧合映射]">紧合映射</a></span> (proper map) $f\colon X\to Y$ 的前推与自然性的差距, 其 “矫正项” 与 <span class="link local"><a href="./Todd类.html" title="“Todd 类” [Todd类]">Todd 类</a></span>有关, 仅取决于 $X$ 和 $Y$ 本身.</p>
+<p>这个定理可视为 <span class="link local"><a href="./Hirzebruch--Riemann--Roch定理.html" title="“Hirzebruch–Riemann–Roch 定理” [Hirzebruch--Riemann--Roch定理]">Hirzebruch–Riemann–Roch 定理</a></span>的<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>版本.</p>
+<p>设 $f\colon X\to Y$ 是光滑代数簇的<span class="link local"><a href="./紧合映射.html" title="紧合映射 [紧合映射]">紧合映射</a></span>.</p>
+<p>令 $K(X)$ 为 $X$ 上的<span class="link local"><a href="./凝聚层.html" title="凝聚层 [凝聚层]">凝聚层</a></span>或局部自由层的 Grothendieck 环 (见 <span class="link local"><a href="./K-理论.html" title="“K-理论” [K-理论]">K-理论</a></span>), 定义同态 $f_k\colon K(X)\to K(Y)$ 为态射 $f$ 的<span class="link local"><a href="./导出前推.html" title="导出前推 [导出前推]">导出前推</a></span>的交错和
+$$
+f_k(F):=\sum (-1)^q R^q f_* F.
+$$
+<span class="link external"><a href="https://en.wikipedia.org/wiki/Grothendieck%E2%80%93Riemann%E2%80%93Roch_theorem" title="Wiki [https://en.wikipedia.org/wiki/Grothendieck%E2%80%93Riemann%E2%80%93Roch_theorem]">Wiki</a></span> 叙述的定理考虑的是 $f_!=\sum (-1)^i R^i f_*\colon K_0(X)\to K_0(Y)$, 其中 $K_0(X)$ 是凝聚层的有界复形的 Grothendieck 群.</p>
+<p>考虑<span class="link local"><a href="./周环.html" title="“周环” [周环]">周环</a></span>的推出映射 $f_*\colon A(X)\to A(Y)$.</p>
+<p><strong>定理</strong> (Grothendieck) 对任意 $\alpha\in K(X)$,
+$$
+\operatorname{ch}(f_k\alpha) \operatorname{td}(T_Y) = f_*(\operatorname{ch}(\alpha)\operatorname{td}(T_X)).
+$$</p>
+<p><span class="link local"><a href="./Euler示性数.html" title="Euler 示性数 [Euler示性数]">Euler 示性数</a></span> $\chi(X,F)$ 可用<span class="link local"><a href="./陈特征.html" title="“陈特征” [陈特征]">陈特征</a></span>表示. 当 $Y$ 是一个点时,
+$$
+\chi(X,F)= \operatorname{ch}\Big(\sum (-1)^q H^q(X,F)\Big).
+$$</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Hirzebruch--Riemann--Roch定理"><header><h1><span class="taxon">Wiki. </span>“Hirzebruch–Riemann–Roch 定理” <a class="slug" href="./Hirzebruch--Riemann--Roch定理.html">[Hirzebruch--Riemann--Roch定理]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>Hirzebruch–Riemann–Roch 定理是整体复 (代数) 几何中一个十分有用的定理. 它是 <span class="link local"><a href="./Riemann--Roch定理.html" title="“Riemann–Roch 定理” [Riemann--Roch定理]">Riemann–Roch 定理</a></span>的推广, 可视为 <span class="link local"><a href="./Grothendieck--Riemann--Roch定理.html" title="“Grothendieck–Riemann–Roch 定理” [Grothendieck--Riemann--Roch定理]">Grothendieck–Riemann–Roch 定理</a></span>中 $Y$ 为一个点且基域为 $\mathbb{C}$ 的情形.</p>
+<p>对于紧复流形 (或概形) 上的<span class="link local"><a href="./全纯向量丛.html" title="“全纯向量丛” [全纯向量丛]">全纯向量丛</a></span> (或一般的<span class="link local"><a href="./凝聚层.html" title="凝聚层 [凝聚层]">凝聚层</a></span>), 其 <span class="link local"><a href="./Euler示性数.html" title="Euler 示性数 [Euler示性数]">Euler 示性数</a></span>, 即<span class="link local"><a href="./凝聚层上同调.html" title="“凝聚层上同调” [凝聚层上同调]">凝聚层上同调</a></span>的交错和 (对于平凡丛即 <span class="link local"><a href="./Dolbeault算子.html" title=" [Dolbeault算子]">Dolbeault 上同调</a></span>的<span class="link local"><a href="./指标.html" title=" [指标]">解析指标</a></span>), 等于 <span class="link local"><a href="./Todd类.html" title="“Todd 类” [Todd类]">Todd 类</a></span>与<span class="link local"><a href="./陈特征.html" title="“陈特征” [陈特征]">陈特征</a></span>之积:
+$$
+\chi(\mathcal F) =\int_M \operatorname{ch}(\mathcal F)\wedge \operatorname{td}(TM).
+$$
+(积分表示取最高维上同调)</p>
+<h2>曲线的情形</h2>
+<p>对于曲线 $X$ 上的除子 $D$,</p>
+<ul>
+<li><span class="link local"><a href="./可逆层.html" title="“可逆层” [可逆层]">可逆层</a></span> $\mathcal O(D)$ 的<span class="link local"><a href="./陈特征.html" title="“陈特征” [陈特征]">陈特征</a></span>是 $1+c_1(\mathcal O(D))$,</li>
+<li>曲线 $X$ 的 <span class="link local"><a href="./Todd类.html" title="“Todd 类” [Todd类]">Todd 类</a></span>是 $1+c_1(TX)/2$,</li>
+<li>$h^0(\mathcal O(D))$ 就是 $l(D)$,</li>
+<li>$h^1(\mathcal O(D))$ 由 <span class="link local"><a href="./Serre对偶.html" title="“Serre 对偶” [Serre对偶]">Serre 对偶</a></span>等于 $l(K-D)$, 其中 $K$ 是<span class="link local"><a href="./典范除子.html" title=" [典范除子]">典范除子</a></span>.</li>
+</ul>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="拓扑指标"><header><h1><span class="taxon">Wiki. </span>拓扑指标 <a class="slug" href="./拓扑指标.html">[拓扑指标]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>向量丛之间的<span class="link local"><a href="./线性微分算子.html" title="线性微分算子 [线性微分算子]">微分算子</a></span>的拓扑指标是由<span class="link local"><a href="./拓扑K-理论.html" title="“拓扑 K-理论” [拓扑K-理论]">拓扑 K-理论</a></span>给出的一个整数, 其中涉及算子的<span class="link local"><a href="./象征.html" title="象征 [象征]">象征</a></span>.</p>
+<h2>定义</h2>
+<h3>示性类</h3>
+<p>拓扑指标也可定义为<span class="link local"><a href="./陈特征.html" title="“陈特征” [陈特征]">陈特征</a></span>与 <span class="link local"><a href="./Todd类.html" title="“Todd 类” [Todd类]">Todd 类</a></span>之积在整个流形上的积分.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

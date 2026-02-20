@@ -70,6 +70,30 @@ $$
     0 &amp; n&gt;1
 \end{cases}
 $$</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Möbius 函数 <a class="slug" href="./Möbius函数.html">[Möbius函数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Möbius 反演 <a class="slug" href="./Möbius反演.html">[Möbius反演]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Möbius函数"><header><h1><span class="taxon">Wiki. </span>Möbius 函数 <a class="slug" href="./Möbius函数.html">[Möbius函数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>Möbius 函数 $\mu\colon \mathbb{N}_+ \to\mathbb{C}$ 的定义为
+$$
+\mu(n) = \begin{cases}
+    0 &amp; n \text{ 有平方因子}\\
+    (-1)^r &amp; n=p_1\cdots p_r\text{ 为不同素数的乘积}.
+\end{cases}
+$$
+特别地, $\mu(1)=1$.</p>
+<h2>性质</h2>
+<p>Möbius 函数 $\mu$ 与常值函数 $1$ 的 <span class="link local"><a href="./Dirichlet卷积.html" title="Dirichlet 卷积 [Dirichlet卷积]">Dirichlet 卷积</a></span>是 $\delta$ 函数 (即 Dirichlet 卷积的单位元):
+$$
+\sum_{i|n}\mu(i)=\begin{cases}
+    1 &amp; n=1\\
+    0 &amp; n&gt;1
+\end{cases}
+$$
+这个性质导致了 <span class="link local"><a href="./Möbius反演.html" title="Möbius 反演 [Möbius反演]">Möbius 反演</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Möbius反演"><header><h1><span class="taxon">Wiki. </span>Möbius 反演 <a class="slug" href="./Möbius反演.html">[Möbius反演]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>Möbius 反演说的是对于数论函数 $f,g\colon \mathbb{N}_+ \to\mathbb{C}$,
+若 $f = g * 1$, 则 $g = f * \mu$, 其中 $\mu$ 为 <span class="link local"><a href="./Möbius函数.html" title="Möbius 函数 [Möbius函数]">Möbius 函数</a></span>, 运算 $*$ 为 <span class="link local"><a href="./Dirichlet卷积.html" title="Dirichlet 卷积 [Dirichlet卷积]">Dirichlet 卷积</a></span>.</p>
+<h2>推广: 范畴上的 Möbius 反演</h2>
+<p>见<span class="link local"><a href="./范畴代数.html" title="Möbius 反演 [范畴代数]">范畴代数</a></span>.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

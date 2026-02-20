@@ -57,6 +57,114 @@
   });
 </script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="紧生成范畴"><header><h1><span class="taxon">Wiki. </span>紧生成范畴 <a class="slug" href="./紧生成范畴.html">[紧生成范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>紧生成范畴通常是指 <span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">$\aleph_0$-可表现范畴</a></span>.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Hochschild 同调 <a class="slug" href="./Hochschild同调.html">[Hochschild同调]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>可表现范畴 <a class="slug" href="./可表现范畴.html">[可表现范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>微分分次范畴 <a class="slug" href="./微分分次范畴.html">[微分分次范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>淡中对偶 <a class="slug" href="./淡中对偶.html">[淡中对偶]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>生象化 <a class="slug" href="./生象化.html">[生象化]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Hochschild同调"><header><h1><span class="taxon">Wiki. </span>Hochschild 同调 <a class="slug" href="./Hochschild同调.html">[Hochschild同调]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的 <strong>Hochschild 同调</strong>是其 “沿着流形 $S^1$ 的张量积”, 即 $S^1$ 上的<span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>.
+Hochschild 同调又叫 “<span class="link local"><a href="./迹.html" title="迹 [迹]">迹</a></span>”, “<span class="link local"><a href="./余中心.html" title="余中心 [余中心]">余中心</a></span>”.</p>
+<p><span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>的 Hochschild 同调是其与<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span> $S^1$ 的<span class="link local"><a href="./张量积.html" title="张量积 [张量积]">张量积</a></span>.</p>
+<h2>定义</h2>
+<h3>结合代数</h3>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $A$ 为 $\mathcal C$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 定义其 <strong>Hochschild 同调</strong>为
+$$
+\operatorname{HH}_*(A) := A \otimes_{A\otimes A^{\mathrm{op}}} A.
+$$
+这个定义的缺陷是它没能反映 Hochschild 同调的 $S^1$-对称性.</p>
+<h3>交换代数</h3>
+<p>当 $A$ 为<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>时,
+有
+$$
+\mathrm{HH}_*(A) =
+A\otimes_{A\otimes A}A = \operatorname{colim}_{S^1}^{\mathsf{CAlg}(\mathcal C)} A = A^{\otimes S^1}.
+$$
+有典范的态射
+$$
+A \to\mathrm {HH}^*(A),
+$$
+它是 $A$ 到 $S^1$-作用的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>的万有态射, 是<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>的范畴中 $S^1$ 形状的常值图 $A$ 的余极限, 也是 $A\colon *\to \mathsf {CAlg}(\mathcal C)$ 沿 $*\to \mathbf{B}S^1$ 的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">左 Kan 扩张</a></span>.</p>
+<p>而这个余极限 $\operatorname{colim}_{S^1}^{\mathsf{CAlg}(\mathcal C)} A$ 由于 $S^1=*\sqcup_{*\sqcup *}*$, 可计算为
+$$
+\begin{aligned}
+\mathrm {HH}_*(A) &amp;= \operatorname{colim}_* A \otimes_{\operatorname{colim}_{*\sqcup *}A}\operatorname{colim}_* A\\
+&amp; = A\otimes_{A\otimes A}A.
+\end{aligned}
+$$</p>
+<p>记 $X = \operatorname{Spec} A$, 那么作为<span class="link local"><a href="./导出概形.html" title="导出概形 [导出概形]">导出概形</a></span>有
+$$
+\operatorname{Spec}(\operatorname{HH}_*(A)) = X\times_{X\times X} X = X^{S^1} = \mathcal LX,
+$$
+即为 $X$ 的<span class="link local"><a href="./自由环路空间.html" title="自由环路空间 [自由环路空间]">自由环路空间</a></span> $\mathcal L X$.</p>
+<h3>范畴</h3>
+<p><span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成范畴</a></span> $\mathcal C$ 的 Hochschild 同调可定义为如下单纯对象的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>:</p>
+<h2>性质</h2>
+<h3>与 K-理论的关系</h3>
+<blockquote>
+<p>THH and TC are in practice computationally useful approximations to K</p>
+</blockquote>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./Hochschild上同调.html" title="Hochschild 上同调 [Hochschild上同调]">Hochschild 上同调</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="可表现范畴"><header><h1><span class="taxon">Wiki. </span>可表现范畴 <a class="slug" href="./可表现范畴.html">[可表现范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>可表现范畴</strong> $\mathcal C$ 是一个可能很大的范畴, 却能由较小的一族对象 $\mathcal S\hookrightarrow\mathcal C$ 控制.
+此时, $\mathcal C$ 可<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>为预层范畴 $\mathsf{Psh}(\mathcal S)$ 的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>.</p>
+<p><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中的许多结论依赖于范畴的可表现性, 例如<span class="link local"><a href="./伴随函子定理.html" title="伴随函子定理 [伴随函子定理]">伴随函子定理</a></span>, 以及刻画<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的 <span class="link local"><a href="./Giraud公理.html" title="Giraud 公理 [Giraud公理]">Giraud 公理</a></span>.</p>
+<p>另一种重要的观点: 从<span class="link local"><a href="./范畴逻辑.html" title="范畴逻辑 [范畴逻辑]">范畴逻辑学</a></span>的角度, 可表现范畴是<span class="link local"><a href="./本质代数理论.html" title="本质代数理论 [本质代数理论]">本质代数理论</a></span>的<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">模型</a></span>的范畴.</p>
+<h2>定义</h2>
+<p>对于<span class="link local"><a href="./正则基数.html" title="正则基数 [正则基数]">正则基数</a></span> $\kappa$ (通常取为 $\aleph_0$, 见<span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成范畴</a></span>), 称满足如下等价条件的范畴 $\mathcal C$ 为 $\kappa$-可表现范畴:</p>
+<ul>
+<li>$\mathcal C$ 余完备, 且有一族 <span class="link local"><a href="./可表现对象.html" title="可表现对象 [可表现对象]">$\kappa$-可表现对象</a></span>构成的集合, 在 <span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">$\kappa$-滤余极限</a></span>下生成整个范畴.</li>
+<li>$\mathcal C$ 等价于一个小范畴的 <span class="link local"><a href="./Ind范畴.html" title=" [Ind范畴]">$\kappa$-Ind 范畴</a></span>.</li>
+</ul>
+<p>称 $\mathcal C$ 为可表现范畴是指存在一个基数 $\kappa$, $\mathcal C$ 为 $\kappa$-可表现范畴.</p>
+<p>等价的定义是: 有一个小范畴到 $\mathcal C$ 的函子 $j\colon \mathcal S\hookrightarrow\mathcal C$, 使得米田扩张 $\mathsf{Psh}(\mathcal S) \to \mathcal C$ 是预层范畴 $\mathsf{Psh}(\mathcal S)$ 关于某个小态射族 $W \subset \mathsf{Fun}([1],\mathsf{Psh}(\mathcal S))$ 的局部化.</p>
+<p>可表现范畴以及保持余极限的函子构成的范畴记为 $\mathsf{Pr}^{\mathrm{L}}$, 其中 $\mathrm{L}$ 的含义是这些函子是左伴随 (<span class="link local"><a href="./伴随函子定理.html" title="伴随函子定理 [伴随函子定理]">伴随函子定理</a></span>).</p>
+<h2>性质</h2>
+<p>由<span class="link local"><a href="./景.html" title="景 [景]">景</a></span>表现的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>是可表现范畴.</p>
+<h3>张量积</h3>
+<p>可表现范畴的范畴 $\mathsf{Pr}$ 上有一个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>结构, 称为 <strong>Lurie 张量积</strong>.</p>
+<p><strong>命题-定义</strong>. 对于可表现范畴 $\mathcal C,\mathcal D$, 存在万有的可表现范畴 $\mathcal C\otimes\mathcal D$, 带有一个双线性 (即保持每个分量的余极限) 的函子
+$$
+\mathcal C\times \mathcal D \to \mathcal C\otimes\mathcal D.
+$$</p>
+<p>可表现范畴的张量积的单位是 <span class="link local"><a href="./生象.html" title="生象 [生象]">$\mathsf{Ani}$</a></span>.</p>
+<h2>高阶可表现范畴</h2>
+<p>见<span class="link local"><a href="./高阶可表现范畴.html" title="高阶可表现范畴 [高阶可表现范畴]">高阶可表现范畴</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="微分分次范畴"><header><h1><span class="taxon">Wiki. </span>微分分次范畴 <a class="slug" href="./微分分次范畴.html">[微分分次范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>域 $k$ 上的微分分次范畴 (differential graded category, “dg category”) 是 “$k$-线性<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span>” 的一种模型, 也等同于充实于 <span class="link local"><a href="./Eilenberg–MacLane谱.html" title="Eilenberg–MacLane 谱 [Eilenberg–MacLane谱]">Eilenberg–MacLane 谱</a></span> $Hk$ 上的模范畴 $\mathsf{Mod}(Hk)$ 的范畴, 或 $\mathsf{Mod}(Hk)$-<span class="link local"><a href="./高阶模.html" title="高阶模 [高阶模]">模</a></span>;
+$$
+\mathsf{DGCat} = \mathsf{Mod}(\mathsf{Mod}(Hk)).
+$$</p>
+<p>微分分次范畴构成<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半 $2$-范畴</a></span> $\mathsf{DGCat}$, 其中的乘法称为 <span class="link local"><a href="./Lurie张量积.html" title="Lurie 张量积 [Lurie张量积]">Lurie 张量积</a></span>. <span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成</a></span>的微分分次范畴是 $\mathsf{DGCat}$ 中的<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶对象</a></span>.</p>
+<p>单对象的微分分次范畴等同于<span class="link local"><a href="./微分分次代数.html" title="微分分次代数 [微分分次代数]">微分分次代数</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="淡中对偶"><header><h1><span class="taxon">Wiki. </span>淡中对偶 <a class="slug" href="./淡中对偶.html">[淡中对偶]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>陈述</h2>
+<h3>对称幺半线性范畴</h3>
+<p>固定代数闭域 $k$ 作为基域, 定义<strong>淡中范畴</strong> (Tannakian category) 为<span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成</a></span>的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span> $k$-线性 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>, 满足 $\operatorname{End}(1)\simeq k$. 那么仿射群概形 (的分类叠) 对偶于淡中范畴:</p>
+<ul>
+<li>对于仿射群概形 $G$ 的<span class="link local"><a href="./分类叠.html" title="分类叠 (模叠) [分类叠]">分类叠</a></span> $X = * / G$, 其上<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>的范畴 $\mathsf{QCoh}(X) = \mathsf{Rep}(G)$ 为淡中范畴;</li>
+<li>对于淡中范畴 $(\mathcal C,\otimes)$, 叠 $A \mapsto \mathsf{Fun}^{\otimes, \mathrm{colim}} (\mathcal C,\mathsf{Mod}(A))$ 为某代数群的分类叠.</li>
+</ul>
+<h3>充实范畴</h3>
+<p>设 $\mathcal V$ 为<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $A$ 为其中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">幺半群</a></span>, 其对应一个 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span> $\mathbf{B}A$; 记 $A$-模范畴为
+$$
+\mathsf{Mod}(A) := [\mathbf{B}A, \mathcal V].
+$$
+将 $\mathcal V$-充实函子 $\mathbf{B}A\to\mathcal V$ 取值于 $\mathbf{B}A$ 的唯一对象, 给出遗忘函子 (即所谓<strong>纤维函子</strong>)
+$$
+F \colon \mathsf{Mod}(A)\to\mathcal V.
+$$</p>
+<p><strong>定理</strong>. 由函子 $F$ 可重构出代数 $A$:
+$$
+\operatorname{End}(F) \simeq A.
+$$</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="生象化"><header><h1><span class="taxon">Wiki. </span>生象化 <a class="slug" href="./生象化.html">[生象化]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>许多代数结构 (环, 模, 交换代数等) 可在<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>语境中谈论, 例如<span class="link local"><a href="./生象环.html" title="生象环 [生象环]">生象环</a></span>; 此时其构成的范畴 (例如 $\mathsf{AniRing}$) 与集合语境中的相应范畴 (例如普通环的范畴 $\mathsf{Ring}$) 有特定的联系, 这种联系就是<strong>生象化</strong>.</p>
+<p>生象化是一种 “非 Abel <span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>”.</p>
+<h2>定义</h2>
+<p>设 $\mathcal C$ 为余完备<span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成</a></span> $(1,1)$-范畴, 其<strong>生象化</strong> (animation) $\mathsf{Ani}(\mathcal C)$ 定义为 $\mathcal C^{\mathrm{cpt}}$ 在<span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛余极限</a></span>下自由生成的 $(\infty,1)$-范畴, 也即 $\mathsf{Fun}((\mathcal C^{\mathrm{cpt}})^{\mathrm{op}},\mathsf{Ani})$ 中由<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>在筛余极限下生成的子范畴.</p>
+<h2>例</h2>
+<p><span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>的范畴 $\mathsf{Ani}$ 是集合范畴 $\mathsf{Set}$ 的生象化.</p>
+<p><span class="link local"><a href="./生象环.html" title="生象环 [生象环]">生象环</a></span>的范畴 $\mathsf{AniRing}$ 是环范畴 $\mathsf{Ring}$ 的生象化.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

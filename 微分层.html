@@ -103,6 +103,149 @@ $$
 F_0 D \subset F_1 D \subset \cdots \subset D
 $$
 $F_1 D|_{\mathbb A} = \mathbb{C}[x] \oplus \mathbb{C}[x] \partial _x$,</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>D-概形 <a class="slug" href="./D-概形.html">[D-概形]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>D-模 <a class="slug" href="./D-模.html">[D-模]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Kähler 微分 <a class="slug" href="./Kähler微分.html">[Kähler微分]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>滤对象 <a class="slug" href="./滤过.html">[滤过]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="D-概形"><header><h1><span class="taxon">Wiki. </span>D-概形 <a class="slug" href="./D-概形.html">[D-概形]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设 $X$ 为<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span>, $\mathcal D_X$ 为其上的<span class="link local"><a href="./微分层.html" title="微分算子层 [微分层]">微分算子层</a></span>. $\mathcal D_X$-代数是指. 仿射 $\mathcal D_X$-概形是 $\mathcal D_X$-代数的对偶.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="D-模"><header><h1><span class="taxon">Wiki. </span>D-模 <a class="slug" href="./D-模.html">[D-模]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>D-模是<span class="link local"><a href="./微分层.html" title="微分算子层 [微分层]">微分算子环 (层)</a></span> 上的模. D-模起源于微分方程, <span class="link local"><a href="./线性偏微分方程.html" title="线性偏微分方程 [线性偏微分方程]">线性偏微分方程</a></span>是 D-模的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>.</p>
+<p>微分算子层 $D_X$ 上的模可以描述微分方程局部的解; 它可以描述一个解沿闭合路径一周的解析延拓与原来不同的现象, 称为<strong>单值</strong> (monodromy).</p>
+<p>我们研究的主要对象是<strong>局部有限表现</strong>的 $D_X$-模, 也即<span class="link local"><a href="./凝聚层.html" title="凝聚层 [凝聚层]">凝聚</a></span> $D_X$-模. 函子
+$$
+\operatorname{Hom}_{D_X}(-,\mathcal O_X)\colon \mathsf {Mod}_{\text{coh}}(D_X) \to \mathsf {Mod}(\mathbb{C}_X),
+$$
+描述了微分方程组的解; 其<span class="link local"><a href="./导出函子.html" title="导出函子 [导出函子]">导出函子</a></span> $\operatorname{Ext}^\bullet_{D_X}(-,\mathcal O_X)$ 描述了微分方程的 “高阶解”.</p>
+<h3>特征簇</h3>
+<p>设 $p=q=1$, $R$ 的<span class="link local"><a href="./特征簇.html" title="特征簇 [特征簇]">特征簇</a></span>是…</p>
+<h2>定义</h2>
+<p>设 $X$ 是 $\mathbb C$ 上的光滑代数簇. $X$ 上的 D-模是<span class="link local"><a href="./正则微分算子.html" title="“正则微分算子” [正则微分算子]">正则微分算子</a></span>层 $D_X$ 上的模. 左 $D_X$-模即带有 $D_X$ 作用的 $\mathcal{O}_X$-模, 等同于线性映射
+$$
+\nabla\colon D_X \to \operatorname{End}_{\mathbb C}(M),
+$$
+满足</p>
+<ul>
+<li>$\nabla_{fv}(m)=f\nabla_v(m)$;</li>
+<li>$\nabla_v(fm)=v(f) m + f\nabla_v m$;</li>
+<li>$\nabla_{[v,w]}m=[\nabla_v,\nabla_w]m$.</li>
+</ul>
+<p>$X$ 上的 D-模也可视为带有<span class="link local"><a href="./平坦联络.html" title=" [平坦联络]">可积联络</a></span>的拟凝聚 $\mathcal{O}_X$-模.</p>
+<h2>函子性</h2>
+<p>与凝聚层类似, 不同代数簇上的 D-模由推出和拉回联系起来.</p>
+<h2>和乐</h2>
+<p>设 $M$ 为凝聚 $D_X$-模. 若其<span class="link local"><a href="./特征簇.html" title="特征簇 [特征簇]">特征簇</a></span>满足 $\dim \operatorname{Ch}(M)=\dim X$, 即特征簇的维数取到<strong>最小</strong>可能值, 则称 $M$ 为<strong>和乐</strong> (holonomic) 的.</p>
+<p>和乐 $D_X$-模是线性常微分方程在高维复流形的自然推广.</p>
+<h2>例</h2>
+<h3>函数层作为 D-模</h3>
+<p>函数层 $\mathcal O_X$ 是 D-模, 且可表现为
+$$
+\mathcal O_X \simeq \mathcal D_X / \mathcal D_X T_X.
+$$
+对于一般的 D-模 $M$, D-模同态 $\mathcal O_X \to M$ 等同于 $M$ 的平坦截面, 即被 $T_X$ 零化的截面.</p>
+<h3>向量丛</h3>
+<p>设 $E$ 是 $X$ 上带有<span class="link local"><a href="./平坦联络.html" title=" [平坦联络]">可积联络</a></span> $\nabla$ 的向量丛, 也即局部形如 $\bigoplus_i \mathcal O_U e_i$ 的层.</p>
+<p>回忆联络 $\nabla$ 可视为丛映射 $TX\to \operatorname{End}(E)$, 满足</p>
+<ul>
+<li>$\nabla_{av}=a\nabla_v$;</li>
+<li>$\nabla_v(as)=v(a)s+a\nabla_v s$;</li>
+<li>$\nabla_{[v,w]}=[\nabla_v,\nabla_w]$ (称为可积性或平坦性; 见<span class="link local"><a href="./可积联络.html" title="“可积联络” [可积联络]">可积联络</a></span>).</li>
+</ul>
+<p>此时左 $D_X$-模结构即由 $v\cdot s = \nabla_v s$ 给出.</p>
+<h3>“δ 函数” D-模</h3>
+<p>对于 $X$ 的闭点 $x$, 有 D-模
+$$
+\delta_x:= \mathcal D_X / \mathcal D_X\mathfrak m_x\otimes_k\operatorname{det}T_xX.
+$$
+D-模同态 $\delta_x \to M$ 等同于 $M$ 上被 $\mathfrak m_x$ 零化的截面. 与直线 $\operatorname{det}T_xX$ 作张量积的目的是使得存在典范同构
+$$
+f_*\delta_x \simeq \delta_{f(x)}.
+$$</p>
+<blockquote>
+<p>$\delta_x$ 是由 $\delta$ 函数和它的各阶导数张成的向量空间.</p>
+</blockquote>
+<h3>对偶层</h3>
+<p>对偶层 $\omega = \det \Omega^1$</p>
+<p>由于 Lie 导数 $L_v = [\iota_v, d]$, 对于 $\alpha\in\omega$ 有 $L_v\alpha = d \iota_v \alpha$.</p>
+<p>对偶层可以把右 D-模变成左 D-模:
+$$
+D^{\text{op}} = \omega\otimes D \otimes \omega^{-1}
+$$</p>
+<h3>摩天大楼 D-模</h3>
+<p>$p\in X$, 定义
+$$
+M_p = D_X / D_X ()
+$$</p>
+<h2>性质</h2>
+<h3>与 de Rham 空间的关系</h3>
+<p>$X$ 上的 D-模等同于 $X$ 的 <span class="link local"><a href="./deRham空间.html" title="de Rham 空间 [deRham空间]">de Rham 空间</a></span>上的拟凝聚层.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./D-概形.html" title="D-概形 [D-概形]">D-概形</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Kähler微分"><header><h1><span class="taxon">Wiki. </span>Kähler 微分 <a class="slug" href="./Kähler微分.html">[Kähler微分]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Kähler 微分是微分几何中的微分 $1$-形式在<span class="link local"><a href="./代数几何.html" title="代数几何 [代数几何]">代数几何</a></span>中的推广.</p>
+<h2>定义</h2>
+<p>设 $k$ 为交换环, $K$ 为 $k$-代数, 那么存在 $K$ 出发的万有 $k$-<span class="link local"><a href="./导子.html" title="导子 [导子]">导子</a></span> $d_{K/k} \colon K \to \Omega_{K/k}$, 其中 $\Omega_{K/k}$ 称为 Kähler 微分环.</p>
+<p>具体地, $\Omega_{K/k}$ 可构造为
+$$
+ \Omega_{K/k} := (K\otimes_k K)\big/ \big(x\otimes yz\sim ( xy\otimes z + xz\otimes y)\big),
+$$
+(想象 $x\otimes y$ 为 $xdy$.) 此时映射 $d_{K/k}$ 将 $x\in K$ 对应到 $[1\otimes x]\in \Omega_{K/k}$.</p>
+<h2>性质</h2>
+<p>由具体的构造可立刻看出 Kähler 微分环的万有性质如下. 对任意 $K$-模 $M$ 与 $k$-导子 $\delta\colon K\to M$, 存在唯一的同态 $\phi\colon \Omega_{K,k}\to M$ 满足 $\delta = \phi\circ d_{K/k}$.</p>
+<p>特别地, $K$ 到自身的导子对应于 $\operatorname{Hom}_K(\Omega_{K/k},K)$ 的元素.</p>
+<p>$\Omega_{K/k}$ 作为 $K$-模可由 $\{dx\mid x\in K\}$ 生成. 子集 $\{dx\mid x\in K\}$ 构成一个 $k$-线性子空间, 但通常不是整个空间; 其中的元素称为恰当 (exact) 的.</p>
+<h3>函子性</h3>
+<p>对于 $k$-代数同态 $\phi \colon K\to K'$, 存在映射 $d\phi \colon \Omega_{K/k} \to \Omega_{K'/k}$ 与 $d$ 交换.</p>
+<p>这些映射满足链式法则 $d(\phi'\circ\phi)=(d\phi')\circ (d\phi)$.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./微分层.html" title="微分算子层 [微分层]">微分层</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="滤过"><header><h1><span class="taxon">Wiki. </span>滤对象 <a class="slug" href="./滤过.html">[滤过]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本页讨论一般 $(\infty,1)$-范畴中的滤对象. 另见 <span class="link local"><a href="./滤对象(1-范畴).html" title="1-范畴中的滤对象 [滤对象(1-范畴)]">$1$-范畴中的滤对象</a></span>.</p>
+<h2>定义</h2>
+<p>范畴 $\mathcal C$ 中的<strong>滤对象</strong> (filtered object) 是一个序列
+$$
+X_\bullet = (\cdots\to X_{-1}\to X_0 \to X_1\to \cdots),
+$$
+即偏序集 $(\mathbb Z,\leq)$ 到范畴 $\mathcal C$ 的函子.
+另一种形式的滤对象是
+$$
+X^\bullet = (\cdots \to X_{1} \to X_0 \to X_{-1}\to\cdots),
+$$
+即 $\mathbb Z^{\mathrm{op}}$ 到 $\mathcal C$ 的函子.
+为了区分两种形式的滤对象, 可分别称之为上升滤对象和下降滤对象.</p>
+<p>有时我们想象滤对象中的态射为单射 (含入映射), 但一般 (尤其在 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">∞-范畴</a></span>语境中) 不需要这个条件.</p>
+<p>范畴 $\mathcal C$ 中一个对象 $X$ 的<strong>滤过</strong> (filtration) 是指一个滤对象 $X_\bullet$, 满足 $X\simeq\operatorname{colim}X_\bullet$.</p>
+<h2>例</h2>
+<p>对于 CW 复形 $X$, 有滤过
+$$
+\operatorname{sk}_0X \to \operatorname{sk}_1X \to \cdots.
+$$</p>
+<p>Lie 代数 $\mathfrak g$ 的<span class="link local"><a href="./泛包络代数.html" title="泛包络代数 [泛包络代数]">泛包络代数</a></span> $U\mathfrak g$ 有自然的滤过
+$$
+(U\mathfrak g)_0 \hookrightarrow (U\mathfrak g)_1 \hookrightarrow (U\mathfrak g)_2\hookrightarrow\cdots.
+$$</p>
+<p>流形 (概形) $X$ 上的<span class="link local"><a href="./微分层.html" title="微分算子层 [微分层]">微分算子层</a></span> $\mathcal D_X$ 有自然的滤过
+$$
+(\mathcal D_X)_0 \hookrightarrow (\mathcal D_X)_1 \hookrightarrow (\mathcal D_X)_2 \hookrightarrow\cdots.
+$$</p>
+<h3>典范滤过</h3>
+<p><span class="link local"><a href="./链复形无穷范畴.html" title="链复形无穷范畴 [链复形无穷范畴]">链复形范畴</a></span>或<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>的对象, 即链复形
+$$
+X = (\cdots\to X_1\to X_0 \to X_{-1}\to\cdots)
+$$
+具有典范的上升滤过 (todo: 方向合理吗)
+$$
+\tau_{\leq i} X= (\cdots\to 0 \to \operatorname{cofib}(X_{i+1}\to X_i) \to X_{i-1}\to X_{i-2}\to \cdots).
+$$
+以及典范的下降滤过
+$$
+\tau_{\geq i} X= (\cdots\to X_{i+2}\to X_{i+1} \to \operatorname{fib}(X_{i}\to X_{i-1}) \to 0\to \cdots).
+$$</p>
+<h2>性质</h2>
+<h3>谱序列</h3>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>, 带有 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">t 结构</a></span>且其心为 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span> $\mathcal A$. 那么对 $\mathcal C$ 中的滤对象 $X$ 可构造 $\mathcal A$ 中的<span class="link local"><a href="./谱序列.html" title="谱序列 [谱序列]">谱序列</a></span>. 见<span class="link local"><a href="./滤对象的谱序列.html" title="滤对象的谱序列 [滤对象的谱序列]">滤对象的谱序列</a></span>.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./关联分次代数.html" title="关联分次对象 [关联分次代数]">关联分次对象</a></span></p>
+<p><span class="link local"><a href="./同伦纤维塔.html" title="“同伦纤维塔” [同伦纤维塔]">同伦纤维塔</a></span></p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

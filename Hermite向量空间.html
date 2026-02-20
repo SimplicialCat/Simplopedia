@@ -119,6 +119,74 @@ $$</p>
 <p>Lefschetz 算子 $L\colon \wedge^k V^* \to \wedge^{k+2}V^*$, $\alpha\mapsto \omega\wedge\alpha$ 以及其对偶算子 $\Lambda$. 令 $H = [L,\Lambda]$. 则 $L$, $\Lambda$ 与 $H$ 的作用构成了 $\mathfrak {sl}(2)$ 的表示. 参见 <span class="link local"><a href="./sl2的表示.html" title="“sl2的表示” [sl2的表示]">sl2的表示</a></span>.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Hermite向量丛.html" title="“Hermite 向量丛” [Hermite向量丛]">Hermite 向量丛</a></span></p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Hermite 向量丛” <a class="slug" href="./Hermite向量丛.html">[Hermite向量丛]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“复向量空间” <a class="slug" href="./复向量空间.html">[复向量空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Hermite向量丛"><header><h1><span class="taxon">Wiki. </span>“Hermite 向量丛” <a class="slug" href="./Hermite向量丛.html">[Hermite向量丛]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>Hermite 向量丛是带有 Hermite 结构
+$$
+h\in \Gamma(\overline{E}^*\otimes E^*)
+$$
+的<span class="link local"><a href="./复向量丛.html" title="“复向量丛” [复向量丛]">复向量丛</a></span>. 换言之, 在每个点 $p$ 处, $h$ 是一个映射 (参见<span class="link local"><a href="./Hermite向量空间.html" title="“Hermite 向量空间” [Hermite向量空间]">Hermite 向量空间</a></span>)
+$$
+\overline{E_p}\times E_p \to \mathbb{C},
+$$
+也即 $E_p$ 上的 Hermite 内积.</p>
+<p>对于 $E$ 是复流形上的<span class="link local"><a href="./全纯向量丛.html" title="“全纯向量丛” [全纯向量丛]">全纯向量丛</a></span>的情形, 设 $e_1,\cdots,e_r$ 为 $E$ 上的<strong>全纯标架</strong> (holomorphic frame), 则
+$$
+h_{\bar i j}:= h(\overline{e_i},e_j)
+$$</p>
+<p><span class="link local"><a href="./全纯切丛.html" title=" [全纯切丛]">全纯(余)切丛</a></span>上的 Hermite 结构称为 <strong>Hermite 度量</strong>.</p>
+<h3>来自 Riemann 结构的 Hermite 结构</h3>
+<p>设 $g$ 是复流形 $X$ (的实切丛) 上的 Riemann 度量. 若 $g$ 与复结构相容 (也即乘以 $i$ 是等距同构), 则 $g$ 确定了 $X$ 上的 Hermite 结构. 此时<span class="link local"><a href="./基本形式.html" title="“基本形式” [基本形式]">基本形式</a></span> $\omega$ 为 $\omega = g(I-,-)$. 反过来 $g$ 也被复结构和基本形式完全确定: $g=\omega(-,I-)$.</p>
+<p>基本形式为闭形式的 Hermite 结构称为 <span class="link local"><a href="./Kähler结构.html" title=" [Kähler结构]">Kähler 流形</a></span>.</p>
+<h2>例</h2>
+<p>$\mathbb P^1(\mathbb{C})$ 上存在 Hermite 度量: 在 $U_0$ (坐标函数为 $s$) 上 $\frac{1}{1+|s|^2}$, $U_1$ (坐标函数为 $t$) 上 $\frac{1}{1+|t|^2}$; 进一步, $\mathcal O_{\mathbb P^1}(k)$ 上存在 Hermite 度量  $\frac{1}{(1+|s|^2)^k}$.</p>
+<h3><span class="link local"><a href="./Fubini--Study度量.html" title="“Fubini–Study 度量” [Fubini--Study度量]">Fubini–Study 度量</a></span></h3>
+<p>$\mathbb P^m(\mathbb{C})$ 上有 Hermite 度量
+$$
+\frac{\partial^2}{\partial \overline{t_\lambda^i}\partial t_\lambda^j}\log(|t_\lambda^0|^2+\cdots+1+\cdots+|t_\lambda^m|)^2.
+$$</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="复向量空间"><header><h1><span class="taxon">Wiki. </span>“复向量空间” <a class="slug" href="./复向量空间.html">[复向量空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>复向量空间是指 $\mathbb{C}$-向量空间.</p>
+<h2>近复结构</h2>
+<p>实向量空间上的<strong>近复结构</strong>是指满足 $J^2=-\operatorname{id}$ 的 $\mathbb{R}$-线性自同构 $J$. 复向量空间等同于带有近复结构的实向量空间.</p>
+<p>近复结构会给出自然的定向, 且要求向量空间的实维数是偶数.</p>
+<h2>复化</h2>
+<p>由实向量空间 $V$ 可构造自然的复向量空间
+$$
+V_{\mathbb{C}} := V\otimes_{\mathbb{R}}\mathbb{C},
+$$称为 $V$ 的<strong>复化</strong> (complexification), 其上的近复结构由 $\mathbf i\in\mathbb{C}$ 给出.</p>
+<h2>分解</h2>
+<p>若实向量空间 $V$ 本身带有近复结构 $J$, 则 $J$ 可延拓至 $V$ 的复化 $V_{\mathbb{C}}$ 上, 成为满足 $J^2=-\operatorname{id}$ 的 $\mathbb{C}$-线性自同构. 此时有特征子空间分解
+$$
+V_\mathbb{C} = V^{1,0}\oplus V^{0,1},
+$$
+其中 $V^{1,0}$ 与 $V^{0,1}$ 分别对应 $J$ 的特征值 $\mathbf i$ 与 $-\mathbf i$. 上述同构由如下公式给出:
+$$
+v\mapsto \Big( \frac{1}{2}(v-\mathbf i J v), \frac{1}{2}(v+\mathbf i J v) \Big)\,(v\in V_{\mathbb{C}}).
+$$
+$V_{\mathbb{C}}$ 上有自然的<span class="link local"><a href="./共轭.html" title="共轭 [共轭]">共轭</a></span>运算, 且 $\overline{V^{1,0}}=V^{0,1}$.</p>
+<p>注意, $V_{\mathbb{C}}$ 上有两个不同的近复结构, 一个是 $J$, 一个是 $\mathbf i$. 它们在 $V^{1,0}$ 上相同, 在 $V^{0,1}$ 上相反. 复合映射 $(V,J) \to (V_{\mathbb{C}},J)\to (V^{1,0},\mathbf i)$ 是近复结构的同构.</p>
+<h2>对偶</h2>
+<p>设 $V$ 是带有近复结构 $J$ 的实向量空间, 则 $V^*=\operatorname{Hom}_{\mathbb{R}}(V,\mathbb{R})$ 上有自然的近复结构 $J(f)(v):= f(Jv)$, 且有
+$$
+(V^*)^{1,0}\simeq (V^{1,0})^*,\quad
+(V^*)^{0,1}\simeq (V^{0,1})^*.
+$$</p>
+<h2>外积</h2>
+<p>设 $V$ 是带有近复结构 $J$ 的实向量空间.</p>
+<p>定义 $V$ 上的 $(p,q)$-型多重向量
+$$
+\wedge^{p,q}V:= \wedge^p V^{1,0} \otimes_{\mathbb{C}} \wedge^q V^{0,1},
+$$
+则有
+$$
+\wedge^k V_{\mathbb{C}}\simeq \bigoplus_{p+q=k} \wedge^{p,q}V.
+$$
+这是由于对任何 (某个固定的域上的) 向量空间 $V=W_1\oplus W_2$, 总有自然同构 $\wedge^k V \simeq \bigoplus_{p+q=k}\wedge^q W_1\otimes \wedge^q W_2$.</p>
+<p>$V$ 上的近复结构自然诱导 $\wedge^k V_{\mathbb{C}}$ 上的近复结构: (待补充)</p>
+<p>$\wedge^k V_{\mathbb{C}}$ 上的复<span class="link local"><a href="./共轭.html" title="共轭 [共轭]">共轭</a></span>将 $\wedge^{p,q}V$ 与 $\wedge^{q,p}V$ 交换. 因此, 说一个元素 $x\in \wedge^k V_{\mathbb{C}}$ 是<strong>实</strong>的, 就是指 $x\in$ (待补充)</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./复向量丛.html" title="“复向量丛” [复向量丛]">复向量丛</a></span>, <span class="link local"><a href="./Hermite向量空间.html" title="“Hermite 向量空间” [Hermite向量空间]">Hermite 向量空间</a></span></p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

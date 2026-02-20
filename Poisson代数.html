@@ -86,6 +86,139 @@ $$
 $$
 \{f,g\} = \sum_i \Big(\frac{\partial f}{\partial x_i}\frac{\partial g}{\partial y_i} - \frac{\partial f}{\partial y_i}\frac{\partial g}{\partial x_i}\Big).
 $$</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Kirillov–Kostant–Souriau Poisson 结构 <a class="slug" href="./KKSPoisson结构.html">[KKSPoisson结构]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Poisson 流形 <a class="slug" href="./Poisson流形.html">[Poisson流形]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>动量映射 <a class="slug" href="./动量映射.html">[动量映射]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>形变量子化 <a class="slug" href="./形变量子化.html">[形变量子化]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>辛流形 <a class="slug" href="./辛流形.html">[辛流形]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="KKSPoisson结构"><header><h1><span class="taxon">Wiki. </span>Kirillov–Kostant–Souriau Poisson 结构 <a class="slug" href="./KKSPoisson结构.html">[KKSPoisson结构]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>对于 (有限维) <span class="link local"><a href="./Lie代数.html" title="Lie 代数 [Lie代数]">Lie 代数</a></span> $\mathfrak{g}$, 其对称代数 $\operatorname{Sym}\mathfrak{g}$ (即 $\mathfrak{g}^*$ 上的多项式函数代数) 之上有一个 <span class="link local"><a href="./Poisson代数.html" title="Poisson 代数 [Poisson代数]">Poisson 结构</a></span>
+$$
+\{f,g\}(\xi) = \langle \xi, [d_\xi f,d_\xi g]\rangle,
+$$
+其中 $d_\xi f$ 是多项式 $f$ 在 $\xi\in\mathfrak{g}^*$ 处的微分, 视为 $T_\xi^*\mathfrak{g}^* \simeq \mathfrak{g}$ 的元素.
+这个 Poisson 结构称为 <strong>Kirillov–Kostant–Souriau Poisson 结构</strong>.</p>
+<p>一种更简洁的描述方式如下. Lie 代数 $\mathfrak{g}$ 的元素 $x$ 也等同于 $\mathfrak{g}^*$ 上的线性函数, 此时有
+$$
+\{x,y\} = [x,y]\, (x,y\in\mathfrak{g}).
+$$
+由此可得任何两个多项式的 Poisson 括号.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Poisson流形"><header><h1><span class="taxon">Wiki. </span>Poisson 流形 <a class="slug" href="./Poisson流形.html">[Poisson流形]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>Poisson 流形是一个流形 $M$ 配备其光滑函数环 $C^\infty(M)$ 的 <span class="link local"><a href="./Poisson代数.html" title="Poisson 代数 [Poisson代数]">Poisson 结构</a></span>.</p>
+<p>Poisson 流形之间保持 Poisson 结构 (即满足 $\varphi^* \{f,g\} = \{\varphi^* f,\varphi^* g\}$) 的光滑映射 $\varphi$ 称为<strong>典范变换</strong> (canonical transformation).</p>
+<p>Poisson 流形 $M$ 上的每个光滑函数 $h$ 给出 $C^\infty(M)$ 上的一个<span class="link local"><a href="./导子.html" title="导子 [导子]">导子</a></span> $\{-,h\}$, 也即一个向量场 $X_h$.</p>
+<h2>经典力学系统</h2>
+<p>一个 Poisson 流形 $M$ 加上一个取定的函数 $h \in  C^\infty(M)$ 构成一个<span class="link local"><a href="./经典力学系统.html" title=" [经典力学系统]">经典力学系统</a></span>, 其中 $M$ 称为<strong>相空间</strong> (phase space), $h$ 称为 <strong>Hamilton 量</strong>. Hamilton 量的中心化子 (所有满足 $\{f,h\}=0$ 的元素 $f\in C^\infty(M)$ 构成的子代数, 也即所有在向量场 $X_h$ 下不变的函数) 称为<strong>守恒量</strong> (conserved quantities).</p>
+<p>设 Lie 群 $G$ 通过典范变换作用于 Poisson 流形 $M$, 且轨道空间 $M / G$ 仍为流形, 则 $M/G$ 具有 Poisson 结构, 这是一种 <span class="link local"><a href="./Poisson约化.html" title="Poisson 约化 [Poisson约化]">Poisson 约化</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="动量映射"><header><h1><span class="taxon">Wiki. </span>动量映射 <a class="slug" href="./动量映射.html">[动量映射]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>使用动量映射, 我们可以根据群作用的<strong>守恒量</strong> (conserved quantities) 得到<strong>可观测量</strong> (observables).</p>
+<h2>定义</h2>
+<h3>Poisson 流形上的作用</h3>
+<p>设 Lie 群 $G$ 在 <span class="link local"><a href="./Poisson流形.html" title="Poisson 流形 [Poisson流形]">Poisson 流形</a></span> $M$ 上有一 Hamilton 作用, 即存在 Lie 代数同态 $h_{-} \colon \mathfrak{g} \to C^\infty(M)$, 满足 $x\in \mathfrak{g}$ 在作用之下对应的 $M$ 上的向量场等同于 $h_x$ 在 <span class="link local"><a href="./Poisson流形.html" title="Poisson 流形 [Poisson流形]">Poisson 括号</a></span>下对应的<span class="link local"><a href="./导子.html" title="导子 [导子]">导子</a></span> $\{-,h_x\}$.</p>
+<p>此时, 映射 $h_{-}$ 也给出一个映射 $\mu \colon M\to\mathfrak g^*$, 称之为<strong>动量映射</strong> (moment map, 或 momentum map).</p>
+<h3>Poisson 代数上的作用</h3>
+<p>动量映射可以绕过流形, 直接在代数层面谈论. 设代数群 $G$ 作用于 <span class="link local"><a href="./Poisson代数.html" title="Poisson 代数 [Poisson代数]">Poisson 代数</a></span> $P$, 且存在 Lie 代数同态 $h\colon \mathfrak{g} \to P$ 满足 $x\in \mathfrak{g}$ 对应的 $P$ 上的<span class="link local"><a href="./导子.html" title="导子 [导子]">导子</a></span>恰为 $\{-,h_x\}$. 那么映射 $h$ 本身即是动量映射 (在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>另一侧的对应物).</p>
+<p>这种观点与<span class="link local"><a href="./量子动量映射.html" title="量子动量映射 [量子动量映射]">量子动量映射</a></span>直接相关.</p>
+<h2>性质</h2>
+<p>Lie 代数同态 $h_{-} \colon \mathfrak{g} \to C^\infty(M)$ 给出 <span class="link local"><a href="./Poisson代数.html" title="Poisson 代数 [Poisson代数]">Poisson 代数</a></span>同态
+$\operatorname{Sym}\mathfrak{g} \to C^\infty(M)$.</p>
+<h3>等变</h3>
+<p><strong>命题</strong>. 设 $G$ 为连通 Lie 群. 考虑 $G$ 在 $\mathfrak{g}^*$ 上的余伴随作用 $\operatorname{Ad}^*$, 则动量映射 $\mu \colon M \to \mathfrak{g}^*$ 是 $G$-等变映射.</p>
+<p>证明. 由连通性, 只需证明无穷小版本的结论. 记 $x\in\mathfrak{g}$ 对应的 $M$ 上的向量场为 $\xi_x$, 而余伴随作用 $\operatorname{Ad}^*$ 对应的 $\mathfrak{g}$ 在 $\mathfrak{g}^*$ 上的作用为 $\operatorname{ad}^*$,
+$$
+\langle\operatorname{ad}^*_x(\alpha),y\rangle = -\alpha([x,y])\,(x,y\in\mathfrak{g},\alpha\in\mathfrak{g}^*).
+$$
+我们要证明的结论是
+$$
+d_m\mu (\xi_x) = \operatorname{ad}_x^*(\mu(m))\,(m\in M).
+$$
+而这只需将两边与 $y\in\mathfrak{g}$ 配对, 使用 $h_{-}$ 的性质计算
+$$
+\begin{aligned}
+    \langle d_m \mu (\xi_x),y\rangle &amp;=
+    d_m h_y (\xi_x)\\
+    &amp;= -\{h_x,h_y\}(m)\\
+    &amp;= -h_{[x,y]}(m)\\
+    &amp;= -\mu(m)([x,y])= \langle \operatorname{ad}_x^*(\mu(m)),y \rangle.
+\end{aligned}
+$$</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./量子动量映射.html" title="量子动量映射 [量子动量映射]">量子动量映射</a></span></p>
+<p><span class="link local"><a href="./Delzant多面体.html" title="“Delzant 多面体” [Delzant多面体]">Delzant 多面体</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="形变量子化"><header><h1><span class="taxon">Wiki. </span>形变量子化 <a class="slug" href="./形变量子化.html">[形变量子化]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>设 $A$ 是 $\mathbb{C}[\![\hbar]\!]$ 上的 (非交换) 代数, 假设当我们令 $\hbar = 0$ 时
+$$
+A_0 := A \otimes_{\mathbb{C}[\![\hbar]\!]} \mathbb{C}
+$$
+是交换代数. 那么 $A_0$ 上有 <span class="link local"><a href="./Poisson代数.html" title="Poisson 代数 [Poisson代数]">Poisson 结构</a></span>
+$$
+\{[a],[b]\} := \Big[\frac{ab-ba}{\hbar}\Big].
+$$
+(其中 $[a]$ 表示 $a\in A$ 在 $A_0$ 中的像.)
+此时称 $A$ 为 <span class="link local"><a href="./Poisson代数.html" title="Poisson 代数 [Poisson代数]">Poisson 代数</a></span> $A_0$ 的<strong>形变量子化</strong> (deformation quantization).</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="辛流形"><header><h1><span class="taxon">Wiki. </span>辛流形 <a class="slug" href="./辛流形.html">[辛流形]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>辛流形是经典力学 (特别是 Hamilton 力学) 常用的几何背景.</p>
+<h2>定义</h2>
+<p>辛流形是偶数维实流形, 其上有非退化的 $2$-形式 $\omega$, 满足 $d\omega=0$, $\omega^n\neq 0$.</p>
+<h2>性质</h2>
+<p>紧辛流形 $M$ 满足 $H^2(M;\mathbb{R})\neq 0$.</p>
+<h3>乘积辛形式</h3>
+<p>辛流形 $M,N$ 的乘积上的辛形式定义为
+$$
+\omega_{M\times N} = \pi_M^*\omega_M - \pi_N^*\omega_N.
+$$</p>
+<h3>辛映射</h3>
+<p>光滑映射 $f\colon M\to N$ 为辛映射当且仅当 $\Gamma f \subset M\times N$ 为 <span class="link local"><a href="./Lagrange子流形.html" title="“Lagrange 子流形” [Lagrange子流形]">Lagrange 子流形</a></span>.</p>
+<h2>Hamilton 向量场</h2>
+<p>给定函数 $H$ (称为 Hamilton 函数), 满足
+$$
+i_X\omega = - dH
+$$
+的向量场 $X$ 称作 $H$ 对应的 Hamilton 向量场, $X_H$.</p>
+<p><strong>命题</strong>. Hamilton 向量场的流保持辛形式, 即
+$$
+\mathcal L_X\omega =0.
+$$
+这是由于 Cartan 公式 $\mathcal L_X\omega = i_X d\omega + di_X\omega$.</p>
+<p><strong>命题</strong>. Hamilton 向量场的流保持对应的 Hamilton 量, 这是因为
+$$
+dH(X)=-\omega(X,X)=0.
+$$</p>
+<p><strong>命题</strong>. 若向量场 $X$ 的流保持辛形式, 即 $\mathcal L_X\omega=0$, 则 $X$ 局部上为 Hamilton 向量场.</p>
+<h2>Poisson 括号</h2>
+<p>辛流形上的函数具有 <span class="link local"><a href="./Poisson代数.html" title="Poisson 代数 [Poisson代数]">Poisson 括号</a></span>
+$$
+\{f,g\}=X_f g = \omega (X_f, X_g).
+$$
+由定义立得</p>
+<p><strong>命题</strong>.
+$$
+[X_f,X_g]=X_{\{f,g\}}.
+$$</p>
+<h2>Hamilton G-作用</h2>
+<p>设 $G$ 为 Lie 群. $G$ 在 $\mathfrak g$ 上的伴随作用 (左作用) 诱导了其在 $\mathfrak g^*$ 上的余伴随作用 (右作用)
+$$
+\left&lt; \operatorname{Ad}^*_g \mu,\xi\right&gt; = \left&lt; \mu, \operatorname{Ad}_g\xi\right&gt;.
+$$</p>
+<p>现在设 $G$ 左作用于流形 $M$ 上, 从而有映射
+$$
+\mathfrak g \to \operatorname{Vect}(M),\quad \xi \mapsto \xi^{\#}.
+$$
+假设存在<span class="link local"><a href="./动量映射.html" title="动量映射 [动量映射]">动量映射</a></span> $\Phi\colon M\to\mathfrak g^*$, 满足
+$$
+i_{\xi^{\#}}\omega = - d \left&lt;\Phi(x),\xi\right&gt;.
+$$
+等变性:
+$$
+\Phi\circ g = \operatorname{Ad}^*_{g^{-1}}\circ\Phi.
+$$</p>
+<h3>Kirillov–Kostant 辛形式</h3>
+<p>考虑余伴随轨道 $\mathcal O$, 其上有辛形式与<span class="link local"><a href="./动量映射.html" title="动量映射 [动量映射]">动量映射</a></span>.</p>
+<p>对于 $\xi,\eta\in\mathfrak g$, $\mu\in\mathcal O$,
+$$
+\omega(\mu) (\xi (\mu), \eta(\mu)) = \left&lt;\mu,[\xi,\eta]\right&gt;
+$$</p>
+<p>$\mathfrak g^*$ 上有 <span class="link local"><a href="./Poisson代数.html" title="Poisson 代数 [Poisson代数]">Poisson 结构</a></span>:
+$$
+\{f_1,f_2\}(\mu) := \left&lt; \mu, [df_1,df_2]\right&gt;.
+$$</p>
+<h2>可积系统</h2>
+<p><span class="link local"><a href="./可积系统.html" title="可积系统 [可积系统]">可积系统</a></span>是 $2n$ 维辛流形上有 $n$ 个相互交换的 Hamilton 向量场, 即有 $n$ 维圆环的作用.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

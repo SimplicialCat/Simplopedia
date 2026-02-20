@@ -77,6 +77,42 @@ $$</p>
 <tr><td><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></td><td>$\int_M A$</td><td>奇异链复形 $C_*(M,k)$,<br>取<span class="link local"><a href="./链复形的同调.html" title="链复形的同调 [链复形的同调]">同调</a></span>给出 $H_*(M,k)$</td></tr>
 <tr><td>截面</td><td>$\Gamma(M,\mathbf{B}^n A)$</td><td>$\operatorname{Hom}(M,\mathbf{B}^n k)$,</td></tr>
 </tbody></table>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="notes" style="margin-bottom: 0.4em;"><header><h1><span class="taxon"><span class="link local"><a href="./notes.html" title="讲稿, 笔记 [notes]">notes</a></span></span>量子圆环 <a class="slug" href="./quantumtori.html">[quantumtori]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="notes"><details ><summary id="quantumtori"><header><h1><span class="taxon"><span class="link local"><a href="./notes.html" title="讲稿, 笔记 [notes]">notes</a></span></span>量子圆环 <a class="slug" href="./quantumtori.html">[quantumtori]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文是<span class="link local"><a href="./ChenZhaoQuantumTori.html" title="The Quantum Torus as an E_M-category [ChenZhaoQuantumTori]">陈–赵</a></span>文章的阅读笔记, 原文标题为 The Quantum Torus as an $\mathbb E_M$-Category.</p>
+<p>记号一览:</p>
+<ul>
+<li>$M$ 为定向 $2$ 维流形, 来自光滑 $\mathbb{C}$-代数曲线的解析化, 同时我们无歧义地用 $M$ 代表流形 $M$ 对应的<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>, 但注意有些场合不得不使用 $M$ 的流形结构, 不能完全视为生象;</li>
+<li>$G$ 为 $\mathsf{Ani}_{/M}$ 中的群, 本文取 $G$ 为圆环 $T$;</li>
+<li>$\Lambda$ 为函子 $M\to \mathsf{Mod}(\mathbb{Z})$, 其取值为有限维自由 $\mathbb{Z}$-模, $T = \mathbf{B}\Lambda$;</li>
+<li>$q \colon \mathbf{B}^2\Lambda \to \mathbf{B}^4\mathbb{C}^\times$ 为 $(\mathsf{Ani}_{/M})_*$ 中的态射.</li>
+</ul>
+<p>预备知识:</p>
+<ul>
+<li><span class="link local"><a href="./E_M-算畴.html" title="E_M-算畴 [E_M-算畴]">$\mathbb E_M$-算畴</a></span></li>
+<li><span class="link local"><a href="./nonAbPD.html" title="非交换 Poincaré 对偶 [nonAbPD]">非交换 Poincaré 对偶</a></span></li>
+</ul>
+<h3>Betti 级的定义</h3>
+<p>定义 <strong>Betti 级</strong> (levels) 的空间为
+$$
+\operatorname{Level}(G) := \operatorname{Hom}_{(\mathsf{Ani}_{/M})_*}(\mathbf{B} G,\mathbf{B}^4\mathbb{C}^\times).
+$$
+它的同伦群是 $G$ 的<span class="link local"><a href="./群上同调.html" title="群上同调 [群上同调]">群上同调</a></span>:
+$$
+\pi_n\operatorname{Level}(G) = H^{4-n}_*(\mathbf{B}G,\mathbb{C}^{\times}).
+$$</p>
+<p>以下取 $G = T$ 为 $X$-圆环 (未必整体平凡), $\Lambda = \mathbf{B}T \in \mathsf{Mod}_{\mathsf{Ani}_{/M}}(\mathbb{Z})$ 为<span class="link local"><a href="./特征.html" title="特征, 余特征 [特征]">余特征晶格</a></span>.
+那么
+$$
+\operatorname{Level}(T) \simeq \operatorname{Hom}_{(\mathsf{Ani}_{/M})_*}(\mathbf{B}^2\Lambda,\mathbf{B}^4\mathbb{C}^\times).
+$$</p>
+<h3>$\mathbf{B}^2\Lambda$ 的上同调的计算</h3>
+<p>暂时离开<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>于 $M$ 的语境, 回到一个点上. 设 $\Gamma$ 为有限自由 $\mathbb{Z}$-模. 考虑 $\Gamma$ 上的 $\mathbb{C}^\times$-值二次型的空间
+$$
+\operatorname{Quad}(\Gamma,\mathbb{C}^\times) := \operatorname{Sym}^2(\Gamma^\vee)\otimes_{\mathbb{Z}}\mathbb{C}^{\times}.
+$$</p>
+<p>$\operatorname{Hom}_{\mathsf{Ani}_{*/}}(\mathbf{B}^2\Gamma,\mathbf{B}^4\mathbb{C}^\times)$</p>
+<h3>$\mathbb E_M$-范畴 $\mathsf{Rep}_q(T^\vee)$</h3>
+<p>记 $\mathcal H_q\in (\mathsf{Ani}_{/M})_*$ 为 $q\colon \mathbf{B}^2\Lambda \to \mathbf{B}^4\mathbb{C}^\times$ 的纤维, 那么它带有 $\mathbf{B}^3\mathbb{C}^\times$ 的<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

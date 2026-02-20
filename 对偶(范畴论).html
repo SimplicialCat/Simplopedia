@@ -66,6 +66,86 @@ $$</p>
 更一般地, $(\infty,n)$-范畴的范畴 $\mathsf{Cat}_{(\infty ,n)}$ 的自同构群为 $(\mathbb{Z}/2)^n$, 对应在 $n$ 个层级上取对偶.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span></p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Kleisli 范畴 <a class="slug" href="./Kleisli范畴.html">[Kleisli范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="notion" style="margin-bottom: 0.4em;"><header><h1><span class="taxon"><span class="link local"><a href="./notion.html" title="观念 [notion]">notion</a></span></span>代数–几何对偶 <a class="slug" href="./代数-几何对偶.html">[代数-几何对偶]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>预层 <a class="slug" href="./预层.html">[预层]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Kleisli范畴"><header><h1><span class="taxon">Wiki. </span>Kleisli 范畴 <a class="slug" href="./Kleisli范畴.html">[Kleisli范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Kleisli 范畴是<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span><span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>的范畴.</p>
+<p>Kleisli 范畴是<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>上万有的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">右模</a></span>, 因而 Kleisli 范畴与单子上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>范畴 (Eilenberg–Moore 范畴, 即万有的 $T$-左模) 具有<span class="link local"><a href="./对偶(范畴论).html" title="对偶 (范畴论) [对偶(范畴论)]">对偶</a></span>的地位..</p>
+<h2>定义</h2>
+<p>对范畴 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$, 有一个范畴, 称为 <strong></strong><span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span> $\mathsf{Kl}$,</p>
+<ul>
+<li>其对象为 $\mathcal C$ 的对象,</li>
+<li>$\mathsf{Kl}$ 中的态射 $X\to Y$ 为 $\mathcal C$ 中的态射 $X\to TY$ (注意到由 $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由–遗忘伴随</a></span>, $\mathcal C$ 中的态射 $X\to TY$ 等同于自由 $T$-代数的同态 $TX\to TY$),</li>
+<li>$\mathsf{Kl}$ 中的态射 $X\to Y$, $Y\to Z$ 的复合为 $\mathcal C$ 中的如下复合:
+$$
+X \to TY \to TTZ \overset{\mu}{\to} TZ.
+$$</li>
+</ul>
+<h2>性质</h2>
+<h3>右模</h3>
+<p>固定 $\mathcal C$ 上的一个单子 $T$. 考虑函子 $F\colon \mathcal C \to \mathsf{Kl}$, 对象 $X$ 映射到 $X$, 态射 $X\to Y$ 映射到 $\mathcal C$ 中的态射 $X\to Y\to TY$. 那么 $F$ 具有 $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">右模</a></span>结构:
+自然变换 $FT \to F$ 在对象 $X$ 上即为 $\mathcal C$ 中的态射 $\mathrm{id}\colon TX\to TX$.</p>
+<p>进一步, 该右模结构是万有的 $T$-右模, 即任意 $T$-右模 $G\colon \mathcal C\to\mathcal D$ 唯一地穿过 $F\colon \mathcal C\to\mathsf{Kl}$. 换言之, 右模结构 $G\colon \mathcal C\to\mathcal D$ 等同于 $\mathsf{Kl}$ 出发的函子 $\mathsf{Kl}\to\mathcal D$.</p>
+</details></section><section class="block" data-taxon="notion"><details ><summary id="代数-几何对偶"><header><h1><span class="taxon"><span class="link local"><a href="./notion.html" title="观念 [notion]">notion</a></span></span>代数–几何对偶 <a class="slug" href="./代数-几何对偶.html">[代数-几何对偶]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>代数–几何对偶是数学上的一大类现象, 某种几何对象与某种代数对象之间有对偶的关系:</p>
+<ul>
+<li>取几何对象上的某种 “函数”, 得到代数对象;</li>
+<li>取代数对象的 “<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>”, 得到几何对象.</li>
+</ul>
+<p>这两个操作通常是一对<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>, 甚至是范畴等价.</p>
+<p>在高阶范畴语境中, 代数–几何对偶中的 “函数” 表现为 “集合值” 甚至 “范畴值” 的函数, 也就是所谓<span class="link local"><a href="./景上的层.html" title="景上的层 [景上的层]">层</a></span>.</p>
+<h2>例</h2>
+<h3>Gelfand 对偶</h3>
+<p><span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>对偶于交换 <span class="link local"><a href="./C-星代数.html" title="C*-代数 [C-星代数]">C*-代数</a></span>.</p>
+<p>注意这个等价的关键原因是 Urysohn 引理保证了紧 Hausdorff 空间上有足够多的 $\mathbb{C}$-值连续函数.</p>
+<h3>Stone 对偶</h3>
+<p><span class="link local"><a href="./pro-有限集.html" title="pro-有限集 [pro-有限集]">Pro-有限集</a></span><span class="link local"><a href="./对偶(范畴论).html" title="对偶 (范畴论) [对偶(范畴论)]">对偶</a></span>于 <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>.</p>
+<h3>仿射概形</h3>
+<p><span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span><span class="link local"><a href="./对偶(范畴论).html" title="对偶 (范畴论) [对偶(范畴论)]">对偶</a></span>于交换环. 这个事实可以作为仿射概形的定义.</p>
+<p>环上的模的<span class="link local"><a href="./张量-同态伴随.html" title="“张量-同态伴随” [张量-同态伴随]">张量-同态伴随</a></span>类比空间上的层的<span class="link local"><a href="./直像-逆像伴随.html" title="拓扑空间上的直像-逆像伴随 [直像-逆像伴随]">直像-逆像伴随</a></span>.</p>
+<h3>淡中对偶</h3>
+<p><span class="link local"><a href="./淡中对偶.html" title="淡中对偶 [淡中对偶]">淡中 (Tannaka) 对偶</a></span>是某种几何对象与其上的某种层范畴的对偶.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法–语义对偶</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="预层"><header><h1><span class="taxon">Wiki. </span>预层 <a class="slug" href="./预层.html">[预层]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>范畴 $\mathcal C$ 上的<strong>预层</strong>即是<span class="link local"><a href="./对偶(范畴论).html" title="对偶 (范畴论) [对偶(范畴论)]">对偶范畴</a></span> $\mathcal C^{\mathrm{op}}$ 到 $\mathsf{Set}$ (或 $\mathsf{Ani}$) 的函子.</p>
+<p><span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>中也有类似概念. $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>单对象范畴上的预层, 也可视为 $\mathcal V$ 中的结合代数上的模.</p>
+<h2>性质</h2>
+<h3>可表函子的余极限</h3>
+<p>每个预层 $X\colon\mathcal{C}^{\mathrm{op}}\to\mathsf{Set}$ 都是<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>的余极限:
+$$
+X = \operatorname{colim}_{\mathbf{y}(c) \to X}\mathbf{y}(c).
+$$</p>
+<h3>预层意象</h3>
+<p>任何 $\mathsf{Set}$ (或 $\mathsf{Ani}$) 取值的预层范畴都是<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>; 见<span class="link local"><a href="./预层意象.html" title="预层意象 [预层意象]">预层意象</a></span>.</p>
+<h3>态射的计算</h3>
+<p>$$
+\begin{aligned}
+    \operatorname{Hom}_{\mathsf{Psh}(\mathcal C)}(X,Y)
+    &amp;=
+    \operatorname{Hom}_{\mathsf{Psh}(\mathcal C)}(
+        \operatorname{colim}_{c\to X}\mathbf{y}(c),Y)\\
+    &amp;=
+    \operatorname{lim}_{c\to X}
+    \operatorname{Hom}_{\mathsf{Psh}(\mathcal C)}
+    (\mathbf{y}(c),Y)\\
+    &amp;=
+    \operatorname{lim}_{c\to X}
+    \operatorname{Hom}_{\mathsf{Psh}(\mathcal C)}
+    (\mathbf{y}(c),
+        \operatorname{colim}_{d\to Y}\mathbf{y}(d))\\
+    &amp;=
+    \operatorname{lim}_{c\to X}
+    \operatorname{colim}_{d\to Y}
+    \operatorname{Hom}_{\mathsf{Psh}(\mathcal C)}
+    (\mathbf{y}(c),
+    \mathbf{y}(d))\\
+    &amp;=
+    \operatorname{lim}_{c\to X}
+    \operatorname{colim}_{d\to Y}
+    \operatorname{Hom}_{\mathcal C}
+    (c,d).
+\end{aligned}
+$$</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

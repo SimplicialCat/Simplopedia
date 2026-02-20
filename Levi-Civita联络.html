@@ -61,6 +61,212 @@
 <li>$\nabla g = 0$ (度量相容性);</li>
 <li>$\nabla_X Y - \nabla_Y X - [X,Y]=0$ (无<span class="link local"><a href="./挠.html" title=" [挠]">挠率</a></span>, torsion-free).</li>
 </ul>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Bismut 超联络” <a class="slug" href="./Bismut超联络.html">[Bismut超联络]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Hesse 矩阵” <a class="slug" href="./Hesse矩阵.html">[Hesse矩阵]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Laplace 算子” <a class="slug" href="./Laplace算子.html">[Laplace算子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>联络 <a class="slug" href="./联络.html">[联络]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“超 Kähler 流形” <a class="slug" href="./超Kähler流形.html">[超Kähler流形]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>近复结构 <a class="slug" href="./近复结构.html">[近复结构]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Bismut超联络"><header><h1><span class="taxon">Wiki. </span>“Bismut 超联络” <a class="slug" href="./Bismut超联络.html">[Bismut超联络]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>设 $S$ 是紧流形, $\pi\colon W\to S$ 是纤维丛, 纤维为紧可定向流形 $Z$.</p>
+<p>记 $TZ=\ker \pi_*$ 为相对切丛, 选取水平切丛 $T^HW$ 使得 $TW= T^HW \oplus TZ$. 记 $P^{TZ}$ 为 $TW$ 到 $TZ$ 的投影.</p>
+<p>设 $g^{TS},g^{TZ}$ 分别为 $TZ$, $TS$ 上的 Riemann 度量, 定义 $TW$ 上的 Riemann 度量
+$$
+g^{TW} := \pi^* g^{TS} \oplus g^{TZ}.
+$$
+考虑 <span class="link local"><a href="./Levi-Civita联络.html" title="“Levi-Civita 联络” [Levi-Civita联络]">Levi-Civita 联络</a></span> $\nabla^{TW}$ 和 $\nabla^{TS}$.</p>
+<p>定义
+$$
+\nabla^{TZ} = P^{TZ} \nabla^{TW} P^{TZ},
+$$
+那么 $\nabla^{TZ}$ 保持 $g^{TZ}$, 且在每个纤维 $Z_b$ 上 $\nabla^{TZ}$ 为 $Z_b$ 上的 Levi-Civita 联络.
+定义
+$$
+^0\nabla^{TW}:= \pi^* \nabla^{TS} \oplus \nabla^{TZ}.
+$$
+$^0\nabla^{TW}$ 保持度量, 但不是 Levi-Civita 联络, 也即有<span class="link local"><a href="./挠.html" title=" [挠]">挠</a></span>. 记
+$$
+T(A,B)= {^0\nabla_A^{TW}} B - {^0\nabla_B^{TW}} A - [A,B].
+$$</p>
+<p>记 $\mathsf S = \nabla^{TW}-{^0\nabla^{TW}}$ 为两个联络的差.</p>
+<p>设 $(\mathcal E,h^{\mathcal E},\nabla^{\mathcal E})$ 为 Clifford 代数丛 $\mathrm{Cl}(TZ)$ 的模. 设 $\{e_i\}$ 为 $TZ$ 的标准正交标架, 定义 <span class="link local"><a href="./Dirac算子.html" title="Dirac 算子 [Dirac算子]">Dirac 算子</a></span>
+$$
+D^Z = \sum_i c(e_i) \nabla_{e_i}^{\mathcal E}
+$$
+研究 $\ker D_+$ 与 $\ker D_-$ 在 <span class="link local"><a href="./K-群(拓扑).html" title="“K-群 (拓扑)” [K-群(拓扑)]">K-群 (拓扑)</a></span>中的差.
+$$
+\operatorname{Ind}(D^Z) = \ker D_+ - \ker D_- \in K^0(S).
+$$</p>
+<p><strong>定理</strong> (族指标定理, family index theorem)
+$$
+\operatorname{ch}(\operatorname{Ind}(D^Z)) = \int_Z \widehat A (TZ) \operatorname{ch}(\mathcal E / S).
+$$</p>
+<p>Bismut 的想法: 考虑 $S$ 上的无穷维向量丛 $C^\infty (Z,\mathcal E)$ 的截面空间
+$$
+\mathscr E = C^\infty (S,C^\infty (Z,\mathcal E)).
+$$
+定义 $C^\infty (Z,\mathcal E)$ 上的 Riemann 度量: 对 $b$ 处的两个向量 $s_1,s_2\in C^\infty (Z_b,\mathcal E)$,
+$$
+\langle  s_1,s_2\rangle := \int_{Z_b} \langle  s_1(x), s_2(x)\rangle_{\mathcal E} dV_{Z}.
+$$</p>
+<p>定义 $C^\infty (Z,\mathcal E)$ 上的联络如下. 对 $h\in\mathscr E$ 以及 $S$ 上的向量场 $U$,
+$$
+\nabla^{\mathscr E}_U h = \nabla_{U^H}^{\mathcal E} h,
+$$
+其中 $U^H$ 表示 $U$ 在 $W$ 上的唯一水平提升.
+$$
+\nabla_U^{\mathscr E,U} := \nabla_U^{\mathscr E} - \frac{1}{2} \langle \mathsf S(e_i)e_i,U \rangle,
+$$
+则联络 $\nabla_U^{\mathscr E,H}$ 保持度量.</p>
+<p>令
+$$
+c(T):= \frac{1}{2} c(T (f_p^H, f_q^H)) f^p \wedge f^q \wedge,
+$$
+其中 $T$ 是 $^0\nabla^{TW}$ 的挠, $\{f_p\}$ 为 $TS$ 的正交标架, $\{f^p\}$ 是其对偶.</p>
+<p>可以证明 $T(f_p^H, f_q^H) \in TZ$. 联络 $\nabla^{\mathscr E,H}$ 可表示为 $\sum_p f^p \wedge \nabla_{f_p}^{\mathscr E,H}$.</p>
+<p>定义 <strong>Bismut 超联络</strong> $B\colon C^\infty (S,\mathscr E)\to C^\infty (S,  \wedge T^*S \otimes \mathscr E)$,
+$$
+B = D^Z + \nabla^{\mathscr E,U} -\frac{1}{4}c(T).
+$$</p>
+<h2>性质</h2>
+<p>Bismut 超联络的平方 $B^2$ 是沿着纤维的 $2$ 阶椭圆算子.</p>
+<h2>伸缩</h2>
+<p>考虑伸缩变换 (rescaling)
+$$
+\delta_t \colon \wedge T^*S \otimes \mathscr E \to\wedge T^*S\otimes \mathscr E,\quad
+\delta_t(\alpha)=t^{-k/2}\alpha\,(\alpha\in\wedge^k T^*S).
+$$
+定义
+$$
+B_t =\sqrt t \delta_t B \delta_t^{-1} =\sqrt t D^Z + \nabla^{\mathscr E,U} - \frac{1}{4\sqrt t}c(T),
+$$</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Hesse矩阵"><header><h1><span class="taxon">Wiki. </span>“Hesse 矩阵” <a class="slug" href="./Hesse矩阵.html">[Hesse矩阵]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>对于 Riemann 流形 $M$ 上的函数 $u$, Hesse 矩阵
+$$
+\operatorname{Hess}u := \nabla^2 u = \nabla(du)
+$$
+是 $T^*M\otimes T^*M$ 的截面. 由 $\nabla$ 的定义,
+$$
+\nabla^2 u (X,Y)=\nabla_X(\nabla u)(Y)=\nabla_X\nabla_Y u - \nabla_{\nabla_{X}Y}u.
+$$
+由 <span class="link local"><a href="./Levi-Civita联络.html" title="“Levi-Civita 联络” [Levi-Civita联络]">Levi-Civita 联络</a></span>的无挠性, 知 Hesse 矩阵对称:
+$$
+\nabla^2 u(X,Y)=\nabla^2 u (Y,X).
+$$
+使用局部坐标,
+$$
+\nabla^2 u = (\partial _i\partial _j u-\Gamma_{ij}^k\partial _k u) dx^i\otimes dx^j.
+$$
+Hesse 矩阵的迹是 <span class="link local"><a href="./Laplace算子.html" title="“Laplace 算子” [Laplace算子]">Laplace 算子</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Laplace算子"><header><h1><span class="taxon">Wiki. </span>“Laplace 算子” <a class="slug" href="./Laplace算子.html">[Laplace算子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>另见<span class="link local"><a href="./广义Laplace算子.html" title="“广义 Laplace 算子” [广义Laplace算子]">广义 Laplace 算子</a></span>.</p>
+<h2>Hodge Laplace 算子</h2>
+<p>Riemann 流形上的微分形式的 Hodge Laplace 算子
+$$
+\triangle = (d+\delta)^2=d\delta+\delta d.
+$$
+Laplace 方程 $\triangle f = 0$ 的解称为调和函数或调和形式. 微分形式 $\mu$ 是调和形式等价于 $d\mu=0$ 且 $\delta\mu=0$.</p>
+<p>在整个 $M$ 上调和的函数与 $H^0(M)$ 一致, 这是一个非平凡的整体的结论. 更一般的结论是调和形式的 <span class="link local"><a href="./Hodge分解定理.html" title=" [Hodge分解定理]">Hodge 理论</a></span>.</p>
+<h2>Laplace–Beltrami 算子</h2>
+<p>Riemann 流形上的函数的 Laplace–Beltrami 算子
+$$
+\triangle f =\operatorname{div}\operatorname{grad}f= \operatorname{tr}\operatorname{Hess}f
+$$
+参见 <span class="link local"><a href="./Hesse矩阵.html" title="“Hesse 矩阵” [Hesse矩阵]">Hesse 矩阵</a></span>.</p>
+<p>使用 <span class="link local"><a href="./Levi-Civita联络.html" title="“Levi-Civita 联络” [Levi-Civita联络]">Levi-Civita 联络</a></span>, Laplace–Beltrami 算子可表示为
+$$
+\triangle f = -g^{ij}\nabla_i\nabla_j f= - \nabla^i \nabla_i f.
+$$
+使用坐标, Laplace–Beltrami 算子可表示为
+$$
+\triangle = \frac{1}{\sqrt{\det g}} \frac{\partial}{\partial  x^i} \left(g^{ij} \sqrt{\det g}\frac{\partial}{\partial  x^j}\right).
+$$</p>
+<h2>Bochner Laplace 算子</h2>
+<p>对于联络给出的算子 $\nabla\colon \Omega^p(M)\to \Omega^p(M)\otimes \Omega^1(M)$, Bochner Laplace 算子定义为
+$$
+\triangle ' = \nabla^* \nabla,
+$$
+其中 $\nabla^*$ 是 $\nabla$ 的伴随.</p>
+<h2>Weitzenböck 恒等式</h2>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="联络"><header><h1><span class="taxon">Wiki. </span>联络 <a class="slug" href="./联络.html">[联络]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>联络是描述<strong>丛</strong>的纤维之间如何沿着底空间上的道路相联系的<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构</a></span>.</p>
+<h2>定义</h2>
+<h3>主丛上的联络</h3>
+<p><span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span></p>
+<p>(待补充)</p>
+<h2>性质</h2>
+<h3>局部表达式</h3>
+<p><span class="link local"><a href="./Maurer--Cartan形式.html" title="Maurer–Cartan 形式 [Maurer--Cartan形式]">Maurer–Cartan 形式</a></span></p>
+<p><strong>命题</strong>. 平凡主丛 $P$ 上的联络的空间 $\mathcal A(P)$ 是底流形 $M$ 上的 $\mathfrak g$-值微分形式空间 $\Omega^1(M,\mathfrak g)$ 的仿射空间 (<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主齐性空间</a></span>).</p>
+<p>称主丛 $P$ 的自同构群为<strong>规范群</strong> $\mathcal G(P)$, 规范群作用于 $P$ 上, 通过拉回作用于 $\mathcal A(P)$ 上, 称之为<span class="link local"><a href="./规范变换.html" title="规范变换 [规范变换]">规范变换</a></span>.</p>
+<h3>与自同构的关系</h3>
+<p>向量丛的自同构作用于联络的空间. 设 $\alpha$ 为 $\operatorname{End}(E)$ 的截面, $\nabla$ 为 $E$ 上的联络, 则 $\nabla' =\alpha\circ \nabla \circ \alpha^{-1}$ 为 $E$ 上的联络. 称 $\nabla'$ 与 $\nabla$ <strong>规范等价</strong> (gauge equivalent).</p>
+<p>可以证明
+$$
+\alpha\circ \nabla \circ \alpha^{-1} = \nabla - \nabla\alpha \circ \alpha^{-1}.
+$$</p>
+<h2>例</h2>
+<h3>Levi-Civita 联络</h3>
+<p>Riemann 流形的切丛上存在唯一的联络 $\nabla$, 满足</p>
+<ul>
+<li>$\nabla g = 0$ (度量相容性);</li>
+<li>$\nabla_X Y - \nabla_Y X - [X,Y]=0$ (无<span class="link local"><a href="./挠.html" title=" [挠]">挠率</a></span>, torsion-free).</li>
+</ul>
+<p>见 <span class="link local"><a href="./Levi-Civita联络.html" title="“Levi-Civita 联络” [Levi-Civita联络]">Levi-Civita 联络</a></span>.</p>
+<h3>Yang–Mills 联络</h3>
+<p>见<span class="link local"><a href="./杨--Mills联络.html" title="“杨–Mills 联络” [杨--Mills联络]">杨–Mills 联络</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="超Kähler流形"><header><h1><span class="taxon">Wiki. </span>“超 Kähler 流形” <a class="slug" href="./超Kähler流形.html">[超Kähler流形]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>超 Kähler 流形是 <span class="link local"><a href="./K3曲面.html" title="“K3 曲面” [K3曲面]">K3 曲面</a></span>的高维推广.</p>
+<h2>定义</h2>
+<p>设 $(M,g)$ 是 $4n$ 维 Riemann 流形. 若其<span class="link local"><a href="./和乐.html" title="“和乐” [和乐]">和乐</a></span>属于<span class="link local"><a href="./辛群.html" title=" [辛群]">辛群</a></span> $\operatorname{Sp}(n)$, 则称其为超 Kähler 流形.</p>
+<p>超 Kähler 流形的切丛上有<span class="link local"><a href="./四元数.html" title=" [四元数]">四元数</a></span>的作用 (即切空间同构于 $\mathbb H^n$), 且这种作用是平行的. 换言之, 存在 $TM$ 的三个自同态 $I,J,K$, 满足 $I^2 = J^2 = K^2 = IJK = -1$, $\nabla I = \nabla J = \nabla K = 0$ (<span class="link local"><a href="./Levi-Civita联络.html" title="“Levi-Civita 联络” [Levi-Civita联络]">Levi-Civita 联络</a></span>). 另外, $I,J,K$ 中每个都给出了 $M$ 上可积的<span class="link local"><a href="./近复结构.html" title="近复结构 [近复结构]">近复结构</a></span>.</p>
+<h2>例</h2>
+<p>$\mathbb H^n$ 很明显是超 Kähler 流形.</p>
+<p>Calabi 证明了 $T^* \mathbb{C}P^n$ 上存在一个度量使得它成为超 Kähler 流形.</p>
+<p>$4$ 维 <span class="link local"><a href="./Calabi--丘流形.html" title="“Calabi–丘流形” [Calabi--丘流形]">Calabi–丘流形</a></span>是超 Kähler 流形, 因为 $SU(2) \simeq \operatorname{Sp}(1) \simeq \operatorname{Spin}(3)$.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="近复结构"><header><h1><span class="taxon">Wiki. </span>近复结构 <a class="slug" href="./近复结构.html">[近复结构]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>关于向量空间上的近复结构, 见<span class="link local"><a href="./复向量空间.html" title="“复向量空间” [复向量空间]">复向量空间</a></span>.</p>
+<h2>定义</h2>
+<p>实流形 $M$ 上的<strong>近复结构</strong> (almost complex structure) 是切丛 $TM$ 的自同构 $J$, 满足
+$$
+J^2 = -1.
+$$
+此时称 $(M,J)$ 为<strong>近复流形</strong>.</p>
+<p>实 $2n$ 维流形 $M$ 的切丛对应映射 $M \to BGL(2n,\mathbb{R})$, 而近复结构 $J$ 等同于提升 $M\to BGL(n,\mathbb{C}) \to BGL(2n,\mathbb{R})$.</p>
+<h3>可积性</h3>
+<p>近复结构 $J$ 可积是指它来自一个复结构. 见<span class="link local"><a href="./复流形.html" title="“复流形” [复流形]">复流形</a></span>.</p>
+<p>可积条件与如下条件等价.</p>
+<ul>
+<li>$[T^{0,1}M,T^{0,1}M]\subset T^{0,1}M$;</li>
+<li>$d C^\infty (\wedge^{1,0}M) \subset C^\infty (\wedge^{2,0}M\oplus \wedge^{1,1}M)$.</li>
+</ul>
+<h3>全纯映射</h3>
+<p>近复流形的映射 $f\colon (M,J)\to (M',J')$ 称为 $(J,J')$-全纯映射是指, 对任意 $x\in M$ 有如下交换图:
+$$
+\begin{array}
+	{ccc}
+	T_xM&amp;\overset{df}{\to}&amp; T_{f(x)M'}\\
+	\hspace{-1em}J \downarrow&amp;&amp;\downarrow J\hspace{-1em}\\
+	T_xM&amp;\underset{df}{\to}&amp; T_{f(x)}M'
+\end{array}
+$$
+近复结构 $J$ 可积等价于存在 $(J,i)$-全纯的坐标卡.</p>
+<p>当 $(M,J)$ 不可积时, 通常没有 $(M,J)$ 到 $\mathbb{C}$ 的全纯映射.</p>
+<p><span class="link local"><a href="./Riemann面.html" title="“Riemann 面” [Riemann面]">Riemann 面</a></span>到近复流形的全纯映射称为 <span class="link local"><a href="./J-全纯曲线.html" title="“J-全纯曲线” [J-全纯曲线]">J-全纯曲线</a></span>.</p>
+<h2>性质</h2>
+<p>近复流形的实维数是偶数, 这是因为 $\det J^2 = (-1)^{\dim_{\mathbb{R}} M}$, 而 $\det J\in\mathbb{R}$.</p>
+<p>近复流形有<span class="link local"><a href="./结构群的约化.html" title="“结构群的约化” [结构群的约化]">结构群的约化</a></span> $GL(n,\mathbb{C})\to GL(2n,\mathbb{R})$, 其中 $2n=\dim_{\mathbb{R}} M$.</p>
+<h3>与 Riemann 流形的关系</h3>
+<p>…</p>
+<p>$$
+g(JX,JY)=g(X,Y)
+$$</p>
+<p>对于 <span class="link local"><a href="./Levi-Civita联络.html" title="“Levi-Civita 联络” [Levi-Civita联络]">Levi-Civita 联络</a></span> $\nabla$ 若有 $\nabla J = 0$ 则 $(M,g,J)$ 为 <span class="link local"><a href="./Kähler流形.html" title="Kähler 流形 [Kähler流形]">Kähler 流形</a></span>.</p>
+<h3>相容三元组</h3>
+<p>相容三元组是指 $M$ 上的 Riemann 度量 $g$, 近复结构 $J$ 与辛形式 $\omega$, 满足以下条件 (即三个结构中的任意一个可由另外两个表示):</p>
+<ul>
+<li>$g(X,Y)=\omega(X,JY)$;</li>
+<li>$\omega(X,Y)=g(JX,Y)$;</li>
+<li>$JX=g^{-1}(\omega(X,-))$.</li>
+</ul>
+<p>这与<span class="link local"><a href="./酉群的三选二性质.html" title="“酉群的三选二性质” [酉群的三选二性质]">酉群的三选二性质</a></span>有关.</p>
+<h3>实 2 维的情形</h3>
+<p>$2$ 维实流形上的任意近复结构都可积, 这是因为可积性等价于 $\bar\partial^2=0$, 而这在实 $2$ 维情形自动成立.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

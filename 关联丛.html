@@ -56,6 +56,110 @@
     });
   });
 </script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="关联丛"><header><h1><span class="taxon">Wiki. </span>“关联丛” <a class="slug" href="./关联丛.html">[关联丛]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>挠率 <a class="slug" href="./挠率.html">[挠率]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“旋量丛” <a class="slug" href="./旋量丛.html">[旋量丛]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>纤维丛 <a class="slug" href="./纤维丛.html">[纤维丛]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>逆环路空间 <a class="slug" href="./逆环路空间.html">[逆环路空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="挠率"><header><h1><span class="taxon">Wiki. </span>挠率 <a class="slug" href="./挠率.html">[挠率]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>一个<span class="link local"><a href="./联络.html" title="联络 [联络]">联络</a></span>的<strong>挠率</strong>是一个<span class="link local"><a href="./张量.html" title="张量 [张量]">张量</a></span>.</p>
+<h2>定义</h2>
+<h3></h3>
+<p>设 $V$ 为 $n$ 维线性空间, $G \to \mathrm{GL}(V)$ 为 Lie 群同态, 给出 Lie 代数同态
+$$
+\mathfrak g\to \mathfrak{gl}(V) \simeq V\otimes V^*.
+$$
+设流形 $M$ 上有 <span class="link local"><a href="./切结构.html" title="切结构 [切结构]">$G$-结构</a></span>, 即标架丛<span class="link local"><a href="./主丛的约化.html" title="主丛的约化 [主丛的约化]">约化</a></span>为 $G$-主丛 $P$. 那么 $P$ 两个<span class="link local"><a href="./联络.html" title="联络 [联络]">联络</a></span>的差是<span class="link local"><a href="./关联丛.html" title="“关联丛” [关联丛]">关联丛</a></span> $(\mathfrak g\otimes V^*)_P$ 的截面.</p>
+<p>考虑 $G$-表示的同态
+$$
+\sigma\colon \mathfrak g\otimes V^* \to V\otimes V^*\otimes V^* \overset{\wedge}{\longrightarrow} V\otimes \wedge^2 V^*,
+$$
+其中 $\wedge$ 为反对称化, 则有<span class="link local"><a href="./关联丛.html" title="“关联丛” [关联丛]">关联丛</a></span>的映射
+$$
+(\mathfrak g\otimes V^*)_P \to (V\otimes\wedge^2 V^*)_P,
+$$
+也即
+$$
+\operatorname{ad}(P)\otimes T^*M\to TM \otimes \wedge^2 T^*M.
+$$
+联络的挠率是 $TM \otimes \wedge^2 T^*M$ 的截面, 其在上述映射的余核中的像不依赖于联络的选取, 它是无挠联络存在的阻碍.</p>
+<h2>仿射群取值的曲率</h2>
+<p>对于流形 $M$ 线性联络 设想 $TM$ 的<span class="link local"><a href="./结构群.html" title="“结构群” [结构群]">结构群</a></span>为比 $GL_n(\mathbb{R})$ 更大的仿射变换群 $\operatorname{Aff}(\mathbb{R}^n)$. 曲率是取值于 $\operatorname{Aff}(\mathbb{R}^n)$ 的 Lie 代数的 $2$-形式. $\operatorname{Aff}(\mathbb{R}^n)$ 的 Lie 代数可分解为一个 (无穷小) 平移与一个 (无穷小) 线性变换, 而无挠性相当于曲率不含有平移项.</p>
+<h2>恒等算子的协变外微分</h2>
+<p>挠率张量的另一解释. 将 $TM$ 上的恒等算子 $\operatorname{id}$ 视为 $TM$-取值的 $1$-形式, 即 $TM\otimes T^*M$ 的截面. 使用协变外微分 $d^\nabla\colon \Omega^1(M,TM)\to\Omega^2(M,TM)$, 可将挠率张量表示为
+$$
+T=d^\nabla(\operatorname{id}).
+$$</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="旋量丛"><header><h1><span class="taxon">Wiki. </span>“旋量丛” <a class="slug" href="./旋量丛.html">[旋量丛]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./旋量群.html" title=" [旋量群]">旋量群</a></span>的不可约表示通过<span class="link local"><a href="./关联丛.html" title="“关联丛” [关联丛]">关联丛</a></span>的构造对应于基本的旋量丛.</p>
+<p>$4$ 维情形:
+$$
+\mathbb{R}^{3+1}\otimes \mathbb{C} \simeq \underset{A}{\mathbb{C}^2} \otimes \underset{A'}{\widetilde {\mathbb{C}}^2},
+$$
+$$
+\widetilde {SO_o(1,3)} \simeq SL(2,\mathbb{C})
+$$</p>
+<p><span class="link local"><a href="./Weyl张量.html" title="“Weyl 张量” [Weyl张量]">Weyl 张量</a></span>, <span class="link local"><a href="./零迹Ricci张量.html" title=" [零迹Ricci张量]">零迹 Ricci 张量</a></span>都对应某些表示.</p>
+<p>相关: <span class="link local"><a href="./twistor理论.html" title=" [twistor理论]">twistor 理论</a></span></p>
+<h2>自旋度量</h2>
+<p>使用下标 $a=AA'$,
+$$
+g_{ab}=g_{AA'BB'}=\epsilon_{AB}\overline{\epsilon_{A'B'}},
+$$
+$\nabla_{BB'}\Pi_A$ 在两个不可约表示上的分量分别为 $\nabla_{B'(B}\Pi_{A)}$ 与 $\nabla_{B'B}\Pi_A \epsilon^{BA} = \nabla_{B'}^{A}\Pi_A$.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="纤维丛"><header><h1><span class="taxon">Wiki. </span>纤维丛 <a class="slug" href="./纤维丛.html">[纤维丛]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>纤维丛是一种<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>的空间, 其每个纤维具有相同的同构类, 局部上形如乘积空间, 而整体上可能不平凡.</p>
+<p>任何纤维丛都<span class="link local"><a href="./关联丛.html" title="“关联丛” [关联丛]">关联</a></span>于一个唯一的<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="逆环路空间"><header><h1><span class="taxon">Wiki. </span>逆环路空间 <a class="slug" href="./逆环路空间.html">[逆环路空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>群 $G$ 的逆环路空间是 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主齐性空间</a></span>的<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>, 也即<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>的<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">分类空间</a></span>.</p>
+<p>在 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span> $\mathcal X$ 中, 逆环路空间函子给出了<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>的范畴 $\mathsf{Grp}(\mathcal X)$ 到带基点连通对象的范畴 $\mathcal X^{\geq 1}_{*/}$ 的等价.</p>
+<p>更一般地, $n$ 阶逆环路空间给出了 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$-群</a></span>的范畴到带基点 $n$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连合</a></span>对象的范畴 $\mathcal X^{\geq n}_{*/}$ 的等价.</p>
+<p>对象 $X$ 到 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$-群</a></span> $A$ 的 $n$ 阶逆环路空间 $\mathbf{B}^n A$ 的映射同伦类称为 $n$ 阶<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span> $H^n(X,A)$.</p>
+<h2>定义</h2>
+<h3>通过几何实现</h3>
+<p>在 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span>中, 群 $G$ 的逆环路空间是<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>
+$$
+\mathbf{B}^\bullet G = (\cdots G\times G\times G \to^4 G\times G \to^3 G\rightrightarrows *)
+$$
+的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span> (余极限).</p>
+<p>而在拓扑空间的 $1$-范畴中, 拓扑群 $G$ 的逆环路空间可<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">实现</a></span>为拓扑空间
+$$
+\begin{aligned}
+    |\mathbf{B}G| &amp;= \bigcup_{(g_1,\cdots,g_n)} |\Delta^n|\\
+    &amp; = \bigcup_n \underbrace{G * G * \cdots * G}_n.
+\end{aligned}
+$$</p>
+<h2>例</h2>
+<ul>
+<li>$\mathbf{B}\mathbb{Z} \simeq S^1$.</li>
+<li>$\mathbf{B}\mathbb{Z}/2 \simeq \mathbb RP^\infty$.</li>
+<li>$\mathbf{B}S^1 \simeq \mathbb{C}P^{\infty}$.</li>
+<li>$\mathbf{B}\mathrm{O}(n)\simeq\mathbf{B}\mathrm{GL}_n(\mathbb{R})=\text{Gr}_n(\mathbb{R}^{\infty})$ 是 <span class="link local"><a href="./Grassmann流形.html" title=" [Grassmann流形]">Grassmann 流形</a></span>, 其 $\mathbb{Z}_2$ 系数上同调类为 <span class="link local"><a href="./Stiefel--Whitney类.html" title="Stiefel–Whitney 类 [Stiefel--Whitney类]">Stiefel–Whitney 类</a></span>:
+$$
+      H^*(\mathbf{B}\mathrm{O}(n);\mathbb{Z}_2)=\mathbb{Z}_2[w_1,\cdots,w_n],
+  $$
+其中 $w_k\in H^k$.</li>
+<li>$\mathbf{B}\mathrm{U}(n)\simeq\mathbf{B}\mathrm{GL}_n(\mathbb{C})=\text{Gr}_n(\mathbb{C}^{\infty})$ 是复 <span class="link local"><a href="./Grassmann流形.html" title=" [Grassmann流形]">Grassmann 流形</a></span>, 其 $\mathbb{Z}$ 系数上同调为<span class="link local"><a href="./陈类.html" title="“陈类” [陈类]">陈类</a></span>:
+$$
+      H^*(\mathbf{B}\mathrm{U}(n);\mathbb{Z})=\mathbb{Z}[c_1,\cdots,c_n],
+  $$
+其中 $c_k\in H^{2k}$.</li>
+</ul>
+<h2>性质</h2>
+<h3>函子性与关联丛</h3>
+<p>对于<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>同态 $\varphi\colon H\to G$, 有 $H$ 通过 $\varphi$ 在 $G$ 上的左乘<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>.
+映射 $\mathbf{B}\varphi\colon \mathbf{B}H\to \mathbf{B}G$ 是 $\mathbf{B}H$ 上的万有 $H$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>通过该作用<span class="link local"><a href="./关联丛.html" title="“关联丛” [关联丛]">关联</a></span>的 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>的分类映射.</p>
+<h3>与 Eilenberg–Maclane 空间的关系</h3>
+<p>对于离散群 $G$, 其分类空间 $\mathbf{B}G$ 是 <span class="link local"><a href="./Eilenberg–MacLane空间.html" title="Eilenberg–MacLane 对象 [Eilenberg–MacLane空间]">Eilenberg–Maclane 空间</a></span> $K(G,1)$.</p>
+<h3>上同调</h3>
+<p>若 $G$ 紧或半单, <span class="link local"><a href="./陈--Weil理论.html" title="“陈–Weil 理论” [陈--Weil理论]">陈–Weil 理论</a></span>给出同构
+$$
+H^*(\mathbf{B}G;\mathbb{C})\simeq \mathbb{C}[\mathfrak g]^G.
+$$
+其中 $\mathbb{C}[\mathfrak g]^G$ 称为<span class="link local"><a href="./不变多项式.html" title="“不变多项式” [不变多项式]">不变多项式</a></span>代数, 从而由不变多项式可以给出<span class="link local"><a href="./示性类.html" title="“示性类” [示性类]">示性类</a></span>.</p>
+<h2>模型</h2>
+<h3>Milnor 构造</h3>
+<p>Milnor 将分类空间 $BG$ 构造为 $n$ 重连接 $G * G * \cdots * G$ 的余极限. (这个构造关于 $G$ 有函子性.)</p>
+<p>等价地, $BG$ 可构造为单对象范畴 $G$ 的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>.</p>
+<h3>有限群</h3>
+<p>对任意有限群 $G$, 取 $G$ 的酉表示, 则可得 $G$ 在 $S^\infty\subset \mathbb{C}^{\infty}$ 上的自由作用, 从而构造 $\mathbf{B}G$.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

@@ -57,6 +57,58 @@
   });
 </script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="坐标无关谱"><header><h1><span class="taxon">Wiki. </span>“坐标无关谱” <a class="slug" href="./坐标无关谱.html">[坐标无关谱]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>坐标无关谱 (coordinate-free sprctrum) 是 (序列) <span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的一种改进.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>谱 (稳定同伦论) <a class="slug" href="./谱.html">[谱]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="谱"><header><h1><span class="taxon">Wiki. </span>谱 (稳定同伦论) <a class="slug" href="./谱.html">[谱]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本页面讨论<span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span>中的谱. 另一个无关的概念是<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>中的<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>.</p>
+<h2>观念</h2>
+<p>带基点<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span> $X,Y$ 之间的<strong>稳定映射空间</strong>
+$$
+\operatorname{Hom}_s(X,Y) :=\operatorname{colim}_k \operatorname{Hom}(\Sigma^k X,\Sigma^k Y)
+$$
+具有自然的 <span class="link local"><a href="./E∞-群.html" title="E∞-群 [E∞-群]">$\mathbb E_\infty$-群</a></span>结构. 特别地, <span class="link local"><a href="./稳定同伦群.html" title=" [稳定同伦群]">稳定同伦群</a></span> $\pi_n^s(X)=\pi_0\operatorname{Hom}_s(S^n,X)$ 是 Abel 群.</p>
+<p>我们希望将<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>的范畴<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>, 使得稳定化后的映射空间是上述的余极限, 也即形式上令 $\Sigma$ 可逆. 参见<span class="link local"><a href="./形式取逆.html" title="“形式取逆” [形式取逆]">形式取逆</a></span>.</p>
+<p>对于具有有限极限和有限余极限的范畴, 存在伴随 $\Sigma \dashv \Omega$:
+$$
+\text{Map}(\Sigma X,Y)\simeq *\times_{\text{Map}(X,Y)}*\simeq \text{Map}(X,\Omega Y).
+$$</p>
+<p>谱的范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 是<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>范畴的<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>
+$$
+\mathsf{Sp} := \lim\Big(\cdots\overset{\Omega}{\longrightarrow} \mathsf{Ani}_*
+\overset{\Omega}{\longrightarrow} \mathsf{Ani}_*\Big)
+\in \mathsf{Cat}_{\infty}.
+$$
+其构造思路大致是: 从带基点<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>范畴 $\mathsf{Ani}_*$ 开始, 强行让<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span> $\Sigma$ 变得可逆, 得到一个新的范畴.</p>
+<p>谱的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>包括<span class="link local"><a href="./序列谱.html" title="序列谱 [序列谱]">序列谱</a></span>, <span class="link local"><a href="./坐标无关谱.html" title="“坐标无关谱” [坐标无关谱]">坐标无关谱</a></span>等.</p>
+<h2>定义</h2>
+<p>见<span class="link local"><a href="./序列谱.html" title="序列谱 [序列谱]">序列谱</a></span>.</p>
+<h2>例</h2>
+<h3>纬悬谱</h3>
+<p>设 $X$ 为带基点空间, $X$ 的<span class="link local"><a href="./纬悬谱.html" title="纬悬谱 [纬悬谱]">纬悬谱</a></span> $\Sigma^{\infty}X$ 可定义为<span class="link local"><a href="./序列谱.html" title="序列谱 [序列谱]">序列谱</a></span> $\{\Sigma^q X\}_{q\geq 0}$ 以及恒等映射 $\Sigma\Sigma^q X\to\Sigma^{q+1}X$.</p>
+<p>对于正整数 $n$, 定义 $\Sigma^{\infty -n}X$ 为如下<span class="link local"><a href="./序列谱.html" title="序列谱 [序列谱]">序列谱</a></span>: 第 $n$ 项以前为单点, 第 $q\geq n$ 项为 $\Sigma^{q-n}X$.</p>
+<p>特别地, 称 $X=S^0$ 的纬悬谱为<span class="link local"><a href="./球谱.html" title="“球谱” [球谱]">球谱</a></span> (sphere spectrum).</p>
+<h3>谱化</h3>
+<p>对于预谱 $T_\bullet$, 若 $T_q\to \Omega T_{q+1}$ 为嵌入, 可定义一个谱 $(LT)_\bullet$,
+$$
+(LT)_q:=\operatorname{colim}_{l}\Omega^l T_{q+l},
+$$
+称为 $T$ 的谱化 (spectrification). 谱化是谱到预谱的遗忘的左伴随.</p>
+<p>特别地, 对于 $T=\{\Sigma^q X\}_{q\geq 0}$, 有 $(LT)_0=\operatorname{colim}_l \Omega^l\Sigma^l X$, 记后者为 $QX$.</p>
+<h2>性质</h2>
+<p>谱的范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 是<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 ∞-范畴</a></span>.</p>
+<p>有<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半函子</a></span>
+$$
+(\mathsf{Set},\times) \to (\mathsf{Ani},\times) \overset{(-)_+}{\to} (\mathsf{Ani}_{*/},\wedge) \overset{\Sigma_{\infty}}{\to} (\mathsf{Sp},\wedge).
+$$</p>
+<h2>谱的同伦群与同调群</h2>
+<p>对于<span class="link local"><a href="./序列谱.html" title="序列谱 [序列谱]">序列谱</a></span> $T_\bullet$, 定义
+$$
+\pi_n(T_\bullet)=\operatorname{colim}_l \pi_{n+l}T_l,
+$$
+$$
+H_n(T_\bullet,R)=\operatorname{colim}_q\widetilde {H}_{n+q}(T_q,R).
+$$
+但这样无法定义上同调, 因为箭头的方向.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>, <span class="link local"><a href="./稳定同伦范畴.html" title="“稳定同伦范畴” [稳定同伦范畴]">稳定同伦范畴</a></span>, <span class="link local"><a href="./E∞-空间.html" title="E∞-空间 [E∞-空间]">Abel ∞-群</a></span></p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

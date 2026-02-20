@@ -57,6 +57,194 @@
   });
 </script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="射影簇"><header><h1><span class="taxon">Wiki. </span>“射影簇” <a class="slug" href="./射影簇.html">[射影簇]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>可以嵌入<span class="link local"><a href="./射影空间.html" title="射影空间 (代数几何) [射影空间]">射影空间</a></span>的<span class="link local"><a href="./代数簇.html" title="“代数簇” [代数簇]">代数簇</a></span>.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Fourier–向井变换” <a class="slug" href="./Fourier--向井变换.html">[Fourier--向井变换]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“GAGA” <a class="slug" href="./GAGA.html">[GAGA]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li><li class="meta-item">解析化</li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>ζ-函数 <a class="slug" href="./ζ-函数.html">[ζ-函数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“亏格” <a class="slug" href="./亏格.html">[亏格]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li><li class="meta-item">拓扑亏格</li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“拟射影簇” <a class="slug" href="./拟射影簇.html">[拟射影簇]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Fourier--向井变换"><header><h1><span class="taxon">Wiki. </span>“Fourier–向井变换” <a class="slug" href="./Fourier--向井变换.html">[Fourier--向井变换]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>Fourier–向井变换是<span class="link local"><a href="./凝聚层的导出范畴.html" title="凝聚层的导出范畴 [凝聚层的导出范畴]">凝聚层的导出范畴</a></span>之间的函子 $D(X)\to D(Y)$, 它是通过核对象 $K\in D(X\times Y)$ 构造的 “积分变换”.</p>
+<p>许多基本的函子, 如<span class="link local"><a href="./直像.html" title="“直像” [直像]">直像</a></span>与<span class="link local"><a href="./逆像.html" title="逆像 [逆像]">逆像</a></span>, 都具有这种形式.</p>
+<p>向井茂于 1981 年最早使用这种变换研究 <span class="link local"><a href="./Abel簇.html" title="“Abel 簇” [Abel簇]">Abel 簇</a></span>与其对偶上的<span class="link local"><a href="./凝聚层的导出范畴.html" title="凝聚层的导出范畴 [凝聚层的导出范畴]">凝聚层的导出范畴</a></span>的等价性, 这类似于 Fourier 变换建立了向量空间与其对偶空间上分布的同构.</p>
+<h2>定义</h2>
+<p>设 $X,Y$ 是光滑代数簇. 对于 $P \in D^b(X\times Y)$, 有函子 $\Phi_P\colon D^b(X)\to D^b(Y)$,
+$$
+\mathcal E \mapsto  p_*(P \otimes q^*\mathcal E).
+$$
+(省略了所有导出记号.)</p>
+<p>投影映射是平坦的, 也即 $q^*$ 没有导出. 若 $P$ 局部自由, 则 $p_*$ 也没有导出.</p>
+<h2>例</h2>
+<h3>恒等</h3>
+<p>对于对角线层 $\Delta\colon X\to X\times X$, $P=\mathcal O_\Delta$ 对应 $\operatorname{id}$.</p>
+<p>$$
+\begin{aligned}
+	\Phi_{\mathcal O_\Delta}(\mathcal E) &amp; \simeq p_*(\Delta_* \mathcal O_X \otimes q^*\mathcal E)\\
+	&amp; \simeq p_* \Delta_* (\Delta^* q^*\mathcal E \otimes\mathcal O_X).
+\end{aligned}
+$$
+这里使用了<span class="link local"><a href="./投影公式.html" title="投影公式 [投影公式]">投影公式</a></span>,
+$$
+Rf_*(\mathcal F^\bullet) \otimes^L \mathcal E \simeq Rf_* (\mathcal F^\bullet \otimes^L Lf^*\mathcal E).
+$$</p>
+<h3>前推与拉回</h3>
+<p>对于 $f\colon X\to Y$ 的 “图像” $\iota \colon X\to X\times Y$, $\Gamma_f := \iota_*\mathcal O_X$, 两个方向的 Fourier–向井变换分别是<span class="link local"><a href="./前推.html" title=" [前推]">直像</a></span> $f_*$ 和<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">逆像</a></span> $f^*$.</p>
+<h3>一族连续变化的层</h3>
+<p>设 $P\in D^b(X\times Y)$ 在 $X$ 上凝聚平坦 (coherent flat). (想象 $Y$ 为参数, $P_x$ 是 $P_{x_0}$ 的形变)</p>
+<p>(待补充)</p>
+<h3>小平–Spencer 映射</h3>
+<p>(待补充)
+$$
+T_{x_0}X \to \operatorname{Ext}^1(P_{x_0},P_{x_0})
+$$
+注意 $T_{x_0}X$ 同构于 $\operatorname{Ext}^1(k(x_0),k(x_0))$.</p>
+<h2>性质</h2>
+<p><strong>定理</strong>. Fourier–向井变换有左右伴随, 且均为 Fourier–向井变换.</p>
+<p>对 $P\in D^b(X\times Y)$, 定义 $P_L = P^\vee \otimes p^* \omega_Y[\dim Y]$ ($p\colon X\times Y\to Y$ 为投影), $P_R = P^\vee \otimes q^*\omega_X [\dim X] \in D^b(Y\times X)$. 参见 <span class="link local"><a href="./Serre对偶.html" title="“Serre 对偶” [Serre对偶]">Serre 对偶</a></span>.</p>
+<p><strong>定理</strong>. 两个 Fourier–向井变换的复合也是 Fourier–向井变换.</p>
+<p>对 $P\in D^b(X\times Y)$, $Q\in D^b(Y\times Z)$, 定义 $R\in D^b(X\times Z)$ 如下.
+$$
+R = (\pi_{XZ})_* ((\pi_{XY})^*P \otimes (\pi_{YZ})^* Q).
+$$
+其中 $\pi_{XZ}$ 是 $X\times Y\times Z$ 到 $X\times Z$ 的投影, 等等.</p>
+<p>如下是 Fourier–向井变换是全忠实函子的判定.</p>
+<p><strong>定理</strong> 设 $X,Y$ 是特征 $0$ 的代数闭域 $k$ 上的光滑<span class="link local"><a href="./射影簇.html" title="“射影簇” [射影簇]">射影簇</a></span>, $P\in D^b(X\times Y)$. Fourier–向井变换 $\Phi$ 是全忠实函子当且仅当对任意闭点 $x,y\in X$,
+$$
+\operatorname{Hom}(\Phi_P(k(x)),\Phi_P(k(y))[i])=
+\begin{cases}
+k, &amp; x=y,i=0\\
+0, &amp; x\neq y\text{ or }i&lt;0 \text{ or }i&gt;\dim X.
+\end{cases}
+$$</p>
+<h2>K-理论版本</h2>
+<p>$\mathcal F^\bullet \in D^b(X)$ 对应 $X$ 的 <span class="link local"><a href="./K-群(拓扑).html" title="“K-群 (拓扑)” [K-群(拓扑)]">K-群 (拓扑)</a></span>中的元素 $[\mathcal F^\bullet]:=\sum (-1)^i[\mathcal F^i] \in K(X)$.</p>
+<p><strong>命题</strong>. $[\mathcal F^\bullet] = \sum (-1)^i [\mathcal H^i (\mathcal F^\bullet)]$.</p>
+<p>定义<span class="link local"><a href="./紧支集直像.html" title="“紧支集直像” [紧支集直像]">紧支集直像</a></span> $f_! \mathcal F := \sum (-1)^i [R^i f_*\mathcal F]$.</p>
+<p><span class="link local"><a href="./K-理论.html" title="“K-理论” [K-理论]">K-理论</a></span>版本的 Fourier–向井变换定义如下. 对 $e\in K(X\times Y)$,
+$$
+\Phi^K_e \colon f\mapsto p_!(e\otimes q^* f).
+$$</p>
+<h2>上同调版本</h2>
+<p>对于 $f\colon X\to Y$, 有 $f_*\colon H^*(X;\mathbb{Q}) \to H^{*+2\dim Y - 2\dim X}(Y;\mathbb{Q})$, 满足<span class="link local"><a href="./投影公式.html" title="投影公式 [投影公式]">投影公式</a></span>
+$$
+f_*(f^*\alpha \cdot \beta) = \alpha \cdot f_*\beta.
+$$
+定义 $\Phi^H\colon H^*(X;\mathbb{Q}) \to H^*(Y;\mathbb{Q})$,
+$$
+\Phi^H\colon \beta\mapsto p_*(\alpha \cdot q^* \beta).
+$$</p>
+<p><span class="link local"><a href="./陈特征.html" title="“陈特征” [陈特征]">陈特征</a></span>是从 <span class="link local"><a href="./K-群(拓扑).html" title="“K-群 (拓扑)” [K-群(拓扑)]">K-群 (拓扑)</a></span>到上同调的函子, 可联系 K-理论和上同调两个版本的 Fouier–向井变换. 两者的关系涉及 <span class="link local"><a href="./Todd类.html" title="“Todd 类” [Todd类]">Todd 类</a></span>: 设 $e\in K(X\times Y)$, 则
+$$
+\Phi^H_{v(e)} (\operatorname{ch}(f)\sqrt{\operatorname{td}X}) = \operatorname{ch}(\Phi^K_e(f)) \sqrt{\operatorname{td}Y}.
+$$
+其中 $v(e) = \operatorname{ch}(e)\sqrt{\operatorname{td}X} \in H^*(X;\mathbb{Q})$ 称为 Fourier–向井向量.</p>
+<p><strong>证明</strong>.
+$$
+\begin{array}
+	{ccccccc}
+	K(X) &amp; \to &amp; K(X\times Y) &amp; \to &amp; K(X\times Y) &amp; \to &amp; K(Y)\\
+	\downarrow &amp;&amp; \downarrow &amp;&amp; \downarrow &amp;&amp; \downarrow\\
+	H^*(X) &amp; \to &amp; H^*(X\times Y) &amp; \to &amp; H^*(X\times Y) &amp; \to &amp; H^*(Y)
+\end{array}
+$$
+中间方块交换是由于 <span class="link local"><a href="./Grothendieck--Riemann--Roch定理.html" title="“Grothendieck–Riemann–Roch 定理” [Grothendieck--Riemann--Roch定理]">Grothendieck–Riemann–Roch 定理</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="GAGA"><header><h1><span class="taxon">Wiki. </span>“GAGA” <a class="slug" href="./GAGA.html">[GAGA]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li><li class="meta-item">解析化</li></ul></div></header></summary>
+
+<p>GAGA 大致是说解析的性质可用多项式完全反映出来.</p>
+<p>$\mathbb{C}$ 上的代数簇 $X$ 可赋予解析空间 $X^{\text{an}}$. 恒等映射 $\operatorname{id}\colon X^{\text{an}} \to X$ 是<span class="link local"><a href="./环化空间.html" title="环化空间 [环化空间]">环化空间</a></span>的态射.</p>
+<p><strong>定理</strong> (Serre). 设 $X$ 为<span class="link local"><a href="./射影簇.html" title="“射影簇” [射影簇]">射影簇</a></span>, 则对 $X$ 上的<span class="link local"><a href="./凝聚层.html" title="凝聚层 [凝聚层]">凝聚层</a></span> $F$, $H^i(X,F) \simeq H^i(X,F^{\text{an}})$.</p>
+<p>由于
+$$
+H^*(X,F)\simeq H^*(\mathbb P^n,i_*F),
+$$
+$$
+H^*(X^{\text{an}},F)\simeq H^*(\mathbb P^n,i_*(F^{\text{an}})),
+$$
+只需要证 $\mathbb P^n$.</p>
+<p><strong>结论</strong>. $H^*(\mathbb P^n,\mathcal O(m)) \simeq H^*(\mathbb P^{n,\text{an}},\mathcal O(m)^{\text{an}})$.</p>
+<p><strong>定理</strong> (Cartan Thm A). 若 $F\in \text{Coh}(\mathbb P^{n,\text{an}})$, 则对充分大的 $n$, $F\otimes\mathcal O(n)$ 由全局截面生成.</p>
+<p>相关概念: <span class="link local"><a href="./Stein空间.html" title=" [Stein空间]">Stein 流形</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="ζ-函数"><header><h1><span class="taxon">Wiki. </span>ζ-函数 <a class="slug" href="./ζ-函数.html">[ζ-函数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>复代数簇</h3>
+<p>对于光滑复<span class="link local"><a href="./射影簇.html" title="“射影簇” [射影簇]">射影簇</a></span> $X$ 与映射 $f\colon X\to X$, 定义关于 $t$ 的形式幂级数
+$$
+	Z(X,f,t) = \prod_i \det(1-f^*|_{H^i(X,\mathbb{C})} t) ^{(-1)^{i+1}},
+$$</p>
+<h3>有限域上的代数簇</h3>
+<p>对于有限域 $\mathbb F_q$ 上的拟射影代数簇 $X$, 定义
+$$
+Z(X,T) = \exp \left(\sum_{r=1}^{\infty}\frac{T^r}{r}\# X(\mathbb F_{q^r})\right),
+$$
+定义 $\zeta(s) = Z(X,q^{-s})$.</p>
+<h3>函数域</h3>
+<p>设 $K$ 为<span class="link local"><a href="./函数域.html" title="“函数域” [函数域]">函数域</a></span>, $\mathcal O_K$ 为其整数环, 几何上意味着将 $\mathbb A^1=\operatorname{Spec}\mathbb F_q[t]$ <span class="link local"><a href="./正规化.html" title=" [正规化]">正规化</a></span>为光滑仿射曲线 $\mathcal U=\operatorname{Spec}\mathcal O_K$.
+$$
+\zeta(s) = \prod_{\mathfrak p}\frac{1}{1-|\mathcal O_K / \mathfrak p|^{-s}},
+$$
+它是 $T=q^{-s}$ 的形式幂级数. 几何上 $\mathfrak p$ 对应曲线 $U$ 的闭点. 可以证明
+$$
+\zeta(s)=\exp\Bigg(
+	\sum_{n=1}^\infty \frac{q^{-ns}}{n}|U(\mathbb F_{q^n})|
+\Bigg).
+$$
+(取对数, 这是一个好的练习.)</p>
+<p>曲线上的无穷<span class="link local"><a href="./位.html" title="“位” [位]">位</a></span>和其余的位是相似的, 不应区分. 这就是说应该考虑 $\mathbb P^1$ 在曲线中的正规化, 作为射影曲线.</p>
+<p><span class="link local"><a href="./Weil猜想.html" title="“Weil 猜想” [Weil猜想]">Weil 猜想</a></span></p>
+<h3>数域</h3>
+<p>设 $K$ 为<span class="link local"><a href="./数域.html" title="数域 [数域]">数域</a></span>, $\mathcal O_K$ 为其整数环. 定义 <span class="link local"><a href="./Dedekindζ-函数.html" title="“Dedekind ζ-函数” [Dedekindζ-函数]">Dedekind ζ-函数</a></span>
+$$
+\zeta(s) = \sum_{\mathfrak a\subset\mathcal O_K}\frac{1}{(\# \mathcal O_K / \mathfrak a)^s} = \prod_{\mathfrak p\subset\mathcal O_K\,\text{prime}}\left(1-\frac{1}{(\#\mathcal O_K / \mathfrak p)^s}\right)^{-1}.
+$$
+特别地, 当 $\mathcal O_K=\mathbb{Z}$ 时这是 <span class="link local"><a href="./Riemannζ-函数.html" title="Riemann ζ-函数 [Riemannζ-函数]">Riemann ζ-函数</a></span>.</p>
+<h3>椭圆算子</h3>
+<p>对于椭圆算子 $H$, 其 ζ-函数是如下函数的解析延拓:
+$$
+\zeta(s) = \operatorname{tr}\Big(\frac{1}{H}\Big)^s = \text{``}\,\sum_\lambda \lambda ^{-s}\,\text{''}.
+$$
+当 $H$ 是 <span class="link local"><a href="./Riemann面.html" title="“Riemann 面” [Riemann面]">Riemann 面</a></span>上的 <span class="link local"><a href="./Laplace算子.html" title="“Laplace 算子” [Laplace算子]">Laplace 算子</a></span>时, 这称为 Selberg ζ-函数.</p>
+<h2>例</h2>
+<p>$$
+Z(\mathbb A^n,T) = \frac{1}{1-q^n T}.
+$$
+$$
+Z(\mathbb P^n,T) = \frac{1}{(1-T)(1-qT)\cdots (1-q^n T)}.
+$$</p>
+<p><span class="link local"><a href="./椭圆曲线.html" title="“椭圆曲线” [椭圆曲线]">椭圆曲线</a></span> $E_{/\mathbb F_q}$ 的 <span class="link local"><a href="./Frobenius态射.html" title="Frobenius 态射 [Frobenius态射]">Frobenius 态射</a></span>的 $n$ 次方的不动点为 $\# E(\mathbb F_{q^n})$, 也即 $\deg (\mathrm{id}-\mathrm{Frob}^n)$ (?).</p>
+<blockquote>
+<p>Frob act on Tate modules?</p>
+</blockquote>
+<blockquote>
+<p>Generalize to abelian varieties?</p>
+</blockquote>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./函数域类比.html" title="函数域类比 [函数域类比]">函数域类比</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="亏格"><header><h1><span class="taxon">Wiki. </span>“亏格” <a class="slug" href="./亏格.html">[亏格]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li><li class="meta-item">拓扑亏格</li></ul></div></header></summary>
+
+<p>亏格 (genus) 有多种含义, 它们之间联系紧密.</p>
+<h2>拓扑亏格</h2>
+<p>连通可定向曲面的亏格是其 “洞” 的数量. 球面的亏格为 $0$, 环面的亏格为 $1$.</p>
+<p>带边曲面的亏格与欧拉数的关系为
+$$
+\chi = 2-2g-b,
+$$
+其中 $b$ 为边界的连通分支数.</p>
+<p>对于<span class="link local"><a href="./复曲线.html" title=" [复曲线]">Riemann 面</a></span>, 其拓扑亏格, 算数亏格, 几何亏格三者相等.</p>
+<h2>算数亏格</h2>
+<p>定义<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span> $X$ 的<strong>算数亏格</strong> (arithmetic genus) 为
+$$
+p_a(X) = 1-\chi(X,\mathcal O_X).
+$$
+对于代数闭域上的整射影曲线, $h^0(X,\mathcal O_X)=1$, 故 $p_a(X)= h^1(X,\mathcal O_X).$ (高维的情形, 后者不是特别自然.)</p>
+<p>正则不可约射影复曲线对应的 <span class="link local"><a href="./Riemann面.html" title="“Riemann 面” [Riemann面]">Riemann 面</a></span>的亏格 $g=p_a$.</p>
+<h2>几何亏格</h2>
+<p>$k$ 上的正则不可约射影<span class="link local"><a href="./曲线.html" title="“曲线” [曲线]">曲线</a></span> $C$ 的<strong>几何亏格</strong> (geometric genus) 为 $h^0(C,\Omega_{C/k})$.</p>
+<p>推广到高维情形, 设 $X$ 是 $k$ 上的 $n$ 维光滑代数簇, 考虑<span class="link local"><a href="./典范层.html" title=" [典范层]">典范丛</a></span>
+$$
+\mathscr K_{X/k} := \det \Omega_{X/k} = \Omega_{X/k}^n,
+$$即 “体积形式” 的层 (当 $X$ 为<span class="link local"><a href="./射影簇.html" title="“射影簇” [射影簇]">射影簇</a></span>时它是 <span class="link local"><a href="./Serre对偶.html" title="“Serre 对偶” [Serre对偶]">Serre 对偶</a></span>中的 $\omega_X$). $X$ 的<strong>几何亏格</strong>定义为
+$$
+p_g(X) := h^0(X,\mathscr K_{X/k}).
+$$</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="拟射影簇"><header><h1><span class="taxon">Wiki. </span>“拟射影簇” <a class="slug" href="./拟射影簇.html">[拟射影簇]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>拟射影簇 (quasi-projective variety) 是<span class="link local"><a href="./射影簇.html" title="“射影簇” [射影簇]">射影簇</a></span>的<span class="link local"><a href="./开嵌入.html" title="开嵌入 [开嵌入]">开子簇</a></span>, 也即射影空间的<span class="link local"><a href="./局部闭嵌入.html" title="局部闭嵌入 [局部闭嵌入]">局部闭子集</a></span>, 也即射影空间中一个 Zariski 开集与一个 Zariski 闭集的交.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./代数簇.html" title="“代数簇” [代数簇]">代数簇</a></span></p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

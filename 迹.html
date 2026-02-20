@@ -81,6 +81,58 @@ $$</p>
 <p>当 $\mathcal C = \mathsf{Vect}_k$
 时,
 有限维 $k$-线性空间 $V$ 的自映射的迹即是 $\operatorname{Tr}(f)\cdot \mathrm{id}_{k}$.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>Hochschild 同调 <a class="slug" href="./Hochschild同调.html">[Hochschild同调]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>对称幺半维数 <a class="slug" href="./幺半维数.html">[幺半维数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>自函子的迹 <a class="slug" href="./自函子的迹.html">[自函子的迹]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Hochschild同调"><header><h1><span class="taxon">Wiki. </span>Hochschild 同调 <a class="slug" href="./Hochschild同调.html">[Hochschild同调]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的 <strong>Hochschild 同调</strong>是其 “沿着流形 $S^1$ 的张量积”, 即 $S^1$ 上的<span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>.
+Hochschild 同调又叫 “<span class="link local"><a href="./迹.html" title="迹 [迹]">迹</a></span>”, “<span class="link local"><a href="./余中心.html" title="余中心 [余中心]">余中心</a></span>”.</p>
+<p><span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>的 Hochschild 同调是其与<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span> $S^1$ 的<span class="link local"><a href="./张量积.html" title="张量积 [张量积]">张量积</a></span>.</p>
+<h2>定义</h2>
+<h3>结合代数</h3>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $A$ 为 $\mathcal C$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 定义其 <strong>Hochschild 同调</strong>为
+$$
+\operatorname{HH}_*(A) := A \otimes_{A\otimes A^{\mathrm{op}}} A.
+$$
+这个定义的缺陷是它没能反映 Hochschild 同调的 $S^1$-对称性.</p>
+<h3>交换代数</h3>
+<p>当 $A$ 为<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>时,
+有
+$$
+\mathrm{HH}_*(A) =
+A\otimes_{A\otimes A}A = \operatorname{colim}_{S^1}^{\mathsf{CAlg}(\mathcal C)} A = A^{\otimes S^1}.
+$$
+有典范的态射
+$$
+A \to\mathrm {HH}^*(A),
+$$
+它是 $A$ 到 $S^1$-作用的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>的万有态射, 是<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>的范畴中 $S^1$ 形状的常值图 $A$ 的余极限, 也是 $A\colon *\to \mathsf {CAlg}(\mathcal C)$ 沿 $*\to \mathbf{B}S^1$ 的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">左 Kan 扩张</a></span>.</p>
+<p>而这个余极限 $\operatorname{colim}_{S^1}^{\mathsf{CAlg}(\mathcal C)} A$ 由于 $S^1=*\sqcup_{*\sqcup *}*$, 可计算为
+$$
+\begin{aligned}
+\mathrm {HH}_*(A) &amp;= \operatorname{colim}_* A \otimes_{\operatorname{colim}_{*\sqcup *}A}\operatorname{colim}_* A\\
+&amp; = A\otimes_{A\otimes A}A.
+\end{aligned}
+$$</p>
+<p>记 $X = \operatorname{Spec} A$, 那么作为<span class="link local"><a href="./导出概形.html" title="导出概形 [导出概形]">导出概形</a></span>有
+$$
+\operatorname{Spec}(\operatorname{HH}_*(A)) = X\times_{X\times X} X = X^{S^1} = \mathcal LX,
+$$
+即为 $X$ 的<span class="link local"><a href="./自由环路空间.html" title="自由环路空间 [自由环路空间]">自由环路空间</a></span> $\mathcal L X$.</p>
+<h3>范畴</h3>
+<p><span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成范畴</a></span> $\mathcal C$ 的 Hochschild 同调可定义为如下单纯对象的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>:</p>
+<h2>性质</h2>
+<h3>与 K-理论的关系</h3>
+<blockquote>
+<p>THH and TC are in practice computationally useful approximations to K</p>
+</blockquote>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./Hochschild上同调.html" title="Hochschild 上同调 [Hochschild上同调]">Hochschild 上同调</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="幺半维数"><header><h1><span class="taxon">Wiki. </span>对称幺半维数 <a class="slug" href="./幺半维数.html">[幺半维数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>中, 一个对象的幺半维数是其恒等映射的<span class="link local"><a href="./迹.html" title="迹 [迹]">迹</a></span>.</p>
+<h2>例</h2>
+<p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>在 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>中的幺半维数是其 <span class="link local"><a href="./Hochschild同调.html" title="Hochschild 同调 [Hochschild同调]">Hochschild 同调</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="自函子的迹"><header><h1><span class="taxon">Wiki. </span>自函子的迹 <a class="slug" href="./自函子的迹.html">[自函子的迹]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>设 $\mathcal{C}$ 是<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶</a></span> <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>, 则可定义 $\mathcal C$ 的自函子 $F\colon \mathcal C\to\mathcal C$ 的<span class="link local"><a href="./迹.html" title="迹 [迹]">迹</a></span> $\operatorname{Tr}(F) \in \mathsf{Vect}$.</p>
+<h2>例</h2>
+</details></section></details></section></footer></article>
 
 </div></body></html>

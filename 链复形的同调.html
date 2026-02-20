@@ -58,6 +58,28 @@
 </script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="链复形的同调"><header><h1><span class="taxon">Wiki. </span>链复形的同调 <a class="slug" href="./链复形的同调.html">[链复形的同调]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>当<span class="link local"><a href="./链复形.html" title="链复形 [链复形]">链复形</a></span>用于<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>线性同伦型时, <span class="link local"><a href="./链复形.html" title="链复形 [链复形]">链复形</a></span>的<strong>同调</strong>是其表现的同伦型的<span class="link local"><a href="./同伦群(稳定同伦论).html" title="同伦群 (稳定同伦论) [同伦群(稳定同伦论)]">同伦群</a></span>.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>非交换 Poincaré 对偶 <a class="slug" href="./nonAbPD.html">[nonAbPD]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="nonAbPD"><header><h1><span class="taxon">Wiki. </span>非交换 Poincaré 对偶 <a class="slug" href="./nonAbPD.html">[nonAbPD]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>陈述</h2>
+<p>设 $M$ 为流形, 记 $\operatorname{Sing} M$ 为其对应的<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>.</p>
+<p>设 $X \colon \operatorname{Sing}M \to \mathsf{Ani}_{*}$ 为函子, $U\subset M$ 为开集. 定义 $X$ 在 $U$ 上的<strong>紧支集截面</strong>的空间为
+$$
+\Gamma_{\mathrm{c}}(U,X) = \operatorname{colim}_{K\subset U} \Gamma(\operatorname{Sing}M,X) \times_{\Gamma(\operatorname{Sing}(M\setminus K),X)} *,
+$$
+其中 $K\subset U$ 取遍 $U$ 的紧子集.
+那么 $\Gamma_{\mathrm{c}}(U,X)$ 关于 $U,X$ 均有 (协变) 函子性.</p>
+<p>考虑两个<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>, 一是 $\mathcal U(M)$, 其颜色为 $M$ 的开子集, 运算为不交开集的含入. 另一个是 <span class="link local"><a href="./E_M-算畴.html" title="E_M-算畴 [E_M-算畴]">$\mathbb E_M$ 算畴</a></span>.</p>
+<p><strong>非交换 Poincaré 对偶</strong>是如下命题:
+$$
+\int_M \Omega_M X \simeq \Gamma_{\mathrm{c}}(M,X).
+$$</p>
+<h3>与经典 Poincaré 对偶的关系</h3>
+<p>下表显示了经典 Poincaré 对偶如何构成非交换 Poincaré 对偶的特例. 简单起见, 设 $M$ 为紧流形.</p>
+<table><thead><tr><th>对象</th><th>非交换版本</th><th>经典版本</th></tr></thead><tbody>
+<tr><td>$\mathbb E_n$ 代数</td><td>$A=\Omega^n\mathbf{B}^nA$</td><td>交换环 $k$</td></tr>
+<tr><td><span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span></td><td>$\mathbf{B}^n A$</td><td><span class="link local"><a href="./Eilenberg–MacLane空间.html" title="Eilenberg–MacLane 对象 [Eilenberg–MacLane空间]">Eilenberg–MacLane 空间</a></span> $\mathbf{B}^n k = K(k,n)$</td></tr>
+<tr><td><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></td><td>$\int_M A$</td><td>奇异链复形 $C_*(M,k)$,<br>取<span class="link local"><a href="./链复形的同调.html" title="链复形的同调 [链复形的同调]">同调</a></span>给出 $H_*(M,k)$</td></tr>
+<tr><td>截面</td><td>$\Gamma(M,\mathbf{B}^n A)$</td><td>$\operatorname{Hom}(M,\mathbf{B}^n k)$,</td></tr>
+</tbody></table>
+</details></section></details></section></footer></article>
 
 </div></body></html>

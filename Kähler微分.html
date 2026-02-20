@@ -74,6 +74,81 @@ $$
 <p>这些映射满足链式法则 $d(\phi'\circ\phi)=(d\phi')\circ (d\phi)$.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./微分层.html" title="微分算子层 [微分层]">微分层</a></span></p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Hasse 导数” <a class="slug" href="./Hasse导数.html">[Hasse导数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>微分算子层 <a class="slug" href="./微分层.html">[微分层]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“模形式” <a class="slug" href="./模形式.html">[模形式]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Hasse导数"><header><h1><span class="taxon">Wiki. </span>“Hasse 导数” <a class="slug" href="./Hasse导数.html">[Hasse导数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>#代数</p>
+<h2>定义</h2>
+<p>设 $k$ 为环, $R$ 为 $k$-代数.</p>
+<p>对非负整数 $m,n$, 定义
+$$
+D^{(n)}(x^m)=\begin{cases}
+\dbinom{m}{n}&amp; m\geq n,\\
+0&amp;\text{其余情况},
+\end{cases}
+$$
+并线性延拓到 $k[x]$. 可以验证这些映射定义了导子 $D \colon k[x] \to k[x]$.</p>
+<p>使用如下引理, 我们可将 $D$ 延拓到 $k(x)$.</p>
+<p><strong>引理</strong>. 设 $A$ 为<span class="link local"><a href="./完备.html" title="“完备” [完备]">完备</a></span>分次代数, 且 $A_0$ 为域. 设 $R$ 为整环 $D \colon R \to A$ 为同态. 若 $D^{(0)} \colon R \to A_0$ 为嵌入, 则 $D$ 唯一地延拓到 $R$ 的分式域上.</p>
+<p><strong>证明</strong>. 由于 $A$ 完备且 $A_0$ 为域, 可知 $A$ 中零次项非零的元素均可逆.</p>
+<h2>性质</h2>
+<p>设 $K/k$ 为扩域, $x\in K$ 满足 $x$ 在 $k$ 上超越, 而 $K/k(x)$ 是有限可分扩张 (这样的 $x$ 称为分离变量, separating variable). 此时 <span class="link local"><a href="./Kähler微分.html" title="Kähler 微分 [Kähler微分]">Kähler 微分</a></span>环满足 $\dim_K\Omega_{K/k}=1$, 且 $dx\neq 0$.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="微分层"><header><h1><span class="taxon">Wiki. </span>微分算子层 <a class="slug" href="./微分层.html">[微分层]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>仿射概形</h3>
+<p>设 $k$ 为域, $A$ 为 $k$-代数, $X=\operatorname{Spec}A$.</p>
+<p>参见 <span class="link local"><a href="./Kähler微分.html" title="Kähler 微分 [Kähler微分]">Kähler 微分</a></span>.</p>
+<h2>性质</h2>
+<h3>光滑性</h3>
+<p>称 $X$ 光滑, 是指 $\Omega^1$ 是有限生成投射 $\mathcal O_X$-模 (参见<span class="link local"><a href="./投射对象.html" title="投射对象 [投射对象]">投射对象</a></span>) , 即它是局部自由有限秩的.</p>
+<h3>局部表现</h3>
+<p>定义 $D_A$ 为 $A$ 和 $\operatorname{Der}A$ 在 $\operatorname{End}A$ 中共同生成的代数.</p>
+<p><strong>命题</strong>. 对任意 $p\in X$ 存在邻域 $U$ 以及函数 $x_i\in\mathcal O_U\,(1\leq i \leq n)$ 使得
+$$
+D(U) \simeq \bigoplus_\alpha \mathcal O_U \partial_1^{\alpha_1}\cdots \partial_n^{\alpha_n}
+$$
+其中 $[\partial _i, \partial _j]=0$, $[\partial _i, x_j]=\delta_{ij}$.</p>
+<p>设 $I$ 是 $\Delta\colon X\to X\times X=\operatorname{Spec}(A\otimes A)$ 对应的 $A\otimes A$ 的理想.</p>
+<p>考虑 $\mathcal E=\operatorname{End}A$ 作为 $A$-双模, 即为 $X\times X$ 上的层.</p>
+<p>令
+$$
+F_n = \{P\in \mathcal E: I^{n+1}P = 0\}.
+$$
+<strong>例</strong>.</p>
+<p>$IP=0$ 等价于
+$$
+(1\otimes a - a \otimes 1)P= [P,a]=0\, \forall a\in A.
+$$
+即 $P(b)=bP(1)$.</p>
+<p>$F_n$ 给出了 $D$ 的<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤过</a></span>:
+$$
+D = \bigcup_0^\infty F_n.
+$$
+且有
+$$
+F_{n+1}=\{P: [P,a]\in F_n\forall a\in A\}.
+$$
+因为 $P\in F_n$ 完全由 $A/\mathfrak m^{n+1}$ 上的限制决定, $\mathfrak m$ 为 $P$ 的极大理想 (?).</p>
+<h2>例</h2>
+<p>$\mathbb P^1 = \mathbb A^1_1 \cup \mathbb A^1_2$, 两个直线分别为 $\operatorname{Spec}\mathbb{C}[x]$ 与 $\operatorname{Spec}\mathbb{C}[y]$, $x=y^{-1}$. 微分层在两个直线上的取值分别为 $\Omega^1 |_{\mathbb A^1_1} = \mathbb{C}[x] dx$, $\Omega^1|_{\mathbb A^1_2} = \mathbb{C}[y] dy$.</p>
+<p>两个截面有关系 $dx=-y^{-2}dy$, 这说明 $\Omega^1 \simeq \mathcal O(-2)$, 而 $\partial _x = -y^2 \partial _y$, 说明  $T_{\mathbb P^1} \simeq \mathcal O(2)$.</p>
+<p>记 $S^n$ 为对称积, 则局部上有 (不典范的) 同构
+$$
+D|_{\mathbb A^1} = \bigoplus_{n\geq 0} S^n T_{\mathbb A}
+$$</p>
+<p>$D$ 的滤过
+$$
+F_0 D \subset F_1 D \subset \cdots \subset D
+$$
+$F_1 D|_{\mathbb A} = \mathbb{C}[x] \oplus \mathbb{C}[x] \partial _x$,</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="模形式"><header><h1><span class="taxon">Wiki. </span>“模形式” <a class="slug" href="./模形式.html">[模形式]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>模形式是<span class="link local"><a href="./椭圆曲线的模叠.html" title="椭圆曲线的模叠 [椭圆曲线的模叠]">椭圆曲线的模叠</a></span>上的某种微分形式.</p>
+<h2>定义</h2>
+<p>记 $\mathcal M_{\text{ell}}$ 为<span class="link local"><a href="./椭圆曲线的模叠.html" title="椭圆曲线的模叠 [椭圆曲线的模叠]">椭圆曲线的模叠</a></span>, $A \to \mathcal M_{\text{ell}}$ 为万有椭圆曲线, $\Omega^1_{A/S}$ 为其上的逐纤维 <span class="link local"><a href="./Kähler微分.html" title="Kähler 微分 [Kähler微分]">Kähler 微分</a></span>, $e$ 为零截面. 考虑 $\mathcal M_{\text{ell}}$ 上的线丛
+$$
+\omega:=e^*\Omega^1_{A/S}.
+$$
+$k$ 阶模形式是 $\omega^{\otimes k}$ 的截面.</p>
+<h2>相关页面</h2>
+<p><span class="link local"><a href="./谷山–志村猜想.html" title="“谷山–志村猜想” [谷山–志村猜想]">谷山–志村猜想</a></span></p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

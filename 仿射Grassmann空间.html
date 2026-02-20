@@ -62,6 +62,49 @@
 <p><strong>记号</strong>. 对于 $k$-代数 $R$, 记<strong>形式圆盘</strong> (formal disk) $D_R$ 为 $\operatorname{Spec}k[\![t]\!]\hat\times \operatorname{Spec}R$, 形式去心圆盘 (formal punctured disk) $D_R^*$ 为 $\operatorname{Spec}k(\!(t)\!)\hat\times\operatorname{Spec}R$.</p>
 <p><strong>定义</strong>. 仿射 Grassmann 空间 $\mathrm{Gr}_G$ 是如下对象的<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>: 形式圆盘 $D$ 上的 $G$-主丛, 带有去心圆盘上的平凡化. 具体地说, $\mathrm{Gr}_G$ 的一个 $R$-点是形式圆盘 $D_R$ 上的一个 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>以及其在去心形式圆盘 $D_R^*$ 上的平凡化.</p>
 <p>在 $G=\mathrm{GL}_n$ 的情形, 上述对象等同于 $\mathrm{GL}_n(k[\![t]\!])\backslash\mathrm{GL}_n(k(\!(t)\!))$ 的点, 也即 $k(\!(t)\!)^n$ 中的格.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“佐武等价” <a class="slug" href="./佐武等价.html">[佐武等价]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>分解空间 <a class="slug" href="./分解空间.html">[分解空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="佐武等价"><header><h1><span class="taxon">Wiki. </span>“佐武等价” <a class="slug" href="./佐武等价.html">[佐武等价]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>几何佐武等价</h2>
+<p>固定有限整体维数的 Noether 交换环 $k$. 取定连通约化代数群 $G$ 与<span class="link local"><a href="./极大环面.html" title="极大环面 [极大环面]">极大环面</a></span> $T\subset G$. 考虑<span class="link local"><a href="./环路群.html" title="环路群 [环路群]">环路群</a></span> $LG$ 以及<span class="link local"><a href="./弧群.html" title=" [弧群]">弧群</a></span> $L^+G$, <span class="link local"><a href="./仿射Grassmann空间.html" title="仿射 Grassmann 空间 [仿射Grassmann空间]">仿射 Grassmann 空间</a></span> $\mathrm{Gr}_G$ 定义为 $LG/L^+G$.</p>
+<p>$\mathrm{Gr}_G$ 上的 $L^+G$-等变<span class="link local"><a href="./偏屈层.html" title="偏屈层 [偏屈层]">偏屈层</a></span>的 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span> $\mathsf{Perv}_{L^+G}(\mathrm{Gr}_G)$ 是等变导出范畴上某个偏屈 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">t-结构</a></span>的心, 且继承了导出范畴上的卷积, 构成<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>. 几何佐武等价指出这个幺半范畴等价于 <span class="link local"><a href="./Langlands对偶.html" title="“Langlands 对偶” [Langlands对偶]">Langlands 对偶</a></span>群 $G^\vee$ 的表示范畴,
+$$
+\mathsf{Perv}_{L^+G}(\mathrm{Gr}_G) \simeq \mathsf{Rep}(G^\vee).
+$$</p>
+<blockquote>
+<p>Under the Satake isomorphism the classes of irreducible representations of $^LG$ go not to functions which correspond to constant sheaves on the orbits but to the irreducible perverse sheaves. This suggests that the Satake isomorphism itself may be elevated from the level of Grothendieck groups to the level of categories. — Frenkel, Recent Advances in the Langlands Program</p>
+</blockquote>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="分解空间"><header><h1><span class="taxon">Wiki. </span>分解空间 <a class="slug" href="./分解空间.html">[分解空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>给定空间 $X$ 上的<strong>分解空间</strong>, 直观地说是由 $X$ 参数化的空间 $\mathcal Y_x\,(x\in X)$, 且带有额外的结构, 描述 $X$ 上的两个点 $x_1,x_2$ “融合” 到一起时, 其上的纤维 $\mathcal Y_{x_1}$, $\mathcal Y_{x_2}$ 的点如何 “融合”.</p>
+<p>参考 <span class="link local"><a href="./ABCCFGLRR_GLC.html" title="Proof of the geometric Langlands conjecture [ABCCFGLRR_GLC]">GLC2</a></span> 附录 B.</p>
+<p>分解空间的一个 “范畴化” 是<span class="link local"><a href="./分解范畴.html" title="分解范畴 [分解范畴]">分解范畴</a></span>.</p>
+<h2>定义</h2>
+<p>设 $X$ 为<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span>, 记 $\operatorname{Ran} := \operatorname{Ran}X$ 为 $X$ 的 <span class="link local"><a href="./Ran空间.html" title="Ran 空间 [Ran空间]">Ran 空间</a></span>, 即 $X$ 上有限点集的<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>. 定义 $X$ 上的<strong>分解空间</strong> $\mathcal Y$ 为如下资料:</p>
+<ul>
+<li>预叠 $\mathcal Y_{\operatorname{Ran}} \to \operatorname{Ran}$;</li>
+<li>同构 $\mathcal Y_{\operatorname{Ran}}\times_{\operatorname{Ran}}(\operatorname{Ran}\times\operatorname{Ran})_{\mathrm{disj}} \simeq (\mathcal Y_{\operatorname{Ran}}\times \mathcal Y_{\operatorname{Ran}})\times_{\operatorname{Ran}\times\operatorname{Ran}}(\operatorname{Ran}\times\operatorname{Ran})_{\mathrm{disj}}$, 以及更高阶的表达交换律和结合律的<span class="link local"><a href="./融贯.html" title="融贯 [融贯]">融贯</a></span>数据.</li>
+</ul>
+<p>另一个定义是</p>
+<ul>
+<li>$\mathcal Y_{\operatorname{Ran}}=\operatorname{colim}_{I \in \mathsf{Fin}^{\mathrm{surj}}}\mathcal Y_{X^I}$, 其中 $\mathcal Y_{X^I} \to X^I$ 为 $X^I$ 上的预叠;</li>
+<li>…</li>
+</ul>
+<h2>性质</h2>
+<p>设 $\mathcal Y$ 为分解空间, 对于映射 $Z \to \operatorname{Ran}$, 记 $\mathcal Y_Z$ 为基变换
+$$
+\mathcal Y_Z := Z \times_{\operatorname{Ran}} \mathcal Y_{\operatorname{Ran}}.
+$$
+特别地, 当 $Z \to \operatorname{Ran}$ 为一点 $\underline{x} \in\operatorname{Ran}$ 时, 记之为 $\mathcal Y_{\underline{x}}$.</p>
+<p>由定义, 对不交的映射 $Z\to \operatorname{Ran}$, $W\to\operatorname{Ran}$, 有等价
+$$
+\mathcal Y_{Z\sqcup W} = \mathcal Y_Z \times \mathcal Y_W,
+$$
+特别地
+$$
+\mathcal Y_{\underline{x}} = \prod_i \mathcal Y_{x_i}.
+$$</p>
+<h2>例</h2>
+<p><span class="link local"><a href="./仿射Grassmann空间.html" title="仿射 Grassmann 空间 [仿射Grassmann空间]">仿射 Grassmann 空间</a></span> $\mathrm{Gr}_G$ 可赋予分解空间的结构. 回忆, <span class="link local"><a href="./仿射Grassmann空间.html" title="仿射 Grassmann 空间 [仿射Grassmann空间]">仿射 Grassmann 空间</a></span> $\mathrm{Gr}_G$ 是如下对象的<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>: 形式圆盘 $D$ 上的 $G$-主丛, 带有去心圆盘上的平凡化.</p>
+<p>作为分解空间, $\mathrm{Gr}_G$ 在 $\underline{x}\in\operatorname{Ran}X$ (视为 $X$ 的有限点集) 上的纤维是如下对象的<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>: $X$ 上的 $G$-主丛, 带有 $X \backslash \underline{x}$ 上的平凡化.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>

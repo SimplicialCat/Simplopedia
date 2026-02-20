@@ -111,6 +111,187 @@ v \otimes z \mapsto \Big(
 \Big);
 $$
 作为复线性空间有 $V^{1,0}\simeq V$, $V^{0,1}\simeq \overline{V}$.</p>
-</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“Hermite 向量空间” <a class="slug" href="./Hermite向量空间.html">[Hermite向量空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“基本形式” <a class="slug" href="./基本形式.html">[基本形式]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>“复向量空间” <a class="slug" href="./复向量空间.html">[复向量空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section><section class="block" data-taxon="Wiki" style="margin-bottom: 0.4em;"><header><h1><span class="taxon">Wiki. </span>自旋群 <a class="slug" href="./自旋群.html">[自旋群]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></section></details></section></footer></article>
+</details></section><footer><section class="block"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Hermite向量空间"><header><h1><span class="taxon">Wiki. </span>“Hermite 向量空间” <a class="slug" href="./Hermite向量空间.html">[Hermite向量空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设 $V$ 是 $\mathbb{C}$-向量空间, 带有双线性型 $h\in \overline{V}^*\otimes_{\mathbb{C}} V^*$ (也即 $h\colon \overline{V}\otimes_{\mathbb{C}} V \to \mathbb{C}$), 满足 $h(\bar v,w)=\overline{h(\bar w,v)}\,(v,w\in V)$, 则称 $V$ 为 <strong>Hermite 向量空间</strong>.</p>
+<p>关于 $\overline{V},\bar v$ 等符号的含义, 参见<span class="link local"><a href="./共轭.html" title="共轭 [共轭]">共轭</a></span>.</p>
+<h2>与 Euclid 向量空间的关系</h2>
+<p>设 $(V,g)$ 是 Euclid 向量空间, 带有相容的近复结构 $J$, 即
+$$
+g(J v,J w)=g(v,w)\,(v,w\in V),
+$$
+或等价地,
+$$
+g(Jv,w) + g(v,J w)=0.\tag{1}
+$$
+此时 $V$ 可视为 $\mathbb{C}$-向量空间 ($\mathbf i v := Jv$) 并定义 Hermite 度量
+$$
+h(\bar v,w) :=g(v,w)+\mathbf i g(\mathbf iv,w)\, (v,w\in V).\tag{2}
+$$
+验证 $h$ 是 Hermite 度量:
+$$
+h(\bar w,v)=g(w,v)+\mathbf i g (\mathbf i w,v)=\overline{h(\bar v,w)}.
+$$
+$$
+h(\bar v,\mathbf i w)=g (v,\mathbf i w)+ \mathbf i g (\mathbf i v, \mathbf i w) = \mathbf i h(\bar v,w).
+$$</p>
+<p>反过来, 给定 Hermite 向量空间 $(V,h)$, 其作为 $\mathbb{R}$-向量空间自然是 Euclid 向量空间: 定义 Riemann 度量 $g$ 为 $h$ 的实部, $\displaystyle g = \frac{1}{2}(h+\bar h)$, 也即 $g(v,w)=\operatorname{Re} h(\bar v,w)\,(v,w\in V).$</p>
+<p>$\bar h \in \overline{V}^*$</p>
+<p>定义<span class="link local"><a href="./基本形式.html" title="“基本形式” [基本形式]">基本形式</a></span> $\omega$ 为 $h$ 的虚部, $\displaystyle\omega = \frac{\mathbf i}{2}(h-\bar h)$.</p>
+<p>写成坐标形式, 设 $V$ 的一组基为 $\{e_i\}$, 对偶基为 $\{e^i\}$, 则
+$$
+h = h_{\bar i j} \overline{e^i} \otimes e^j,
+$$
+$$
+\begin{aligned}
+	g &amp; = \frac{1}{2}(h+\bar h)\\
+	&amp; = \frac{1}{2}\Big(
+	h_{\bar i j} \overline{e^i} \otimes e^j
+	+ h_{\bar j i} \overline{e^i } \otimes e^j
+	\Big)
+\end{aligned}
+$$</p>
+<h3>Euclid 向量空间的 Hermite 扩张</h3>
+<p>对于 Euclid 向量空间 $E$, $E\otimes_{\mathbb{R}}\mathbb{C}$ 上有自然的 Hermite 结构, 称为 $E$ 的 <strong>Hermite 扩张</strong>. 对 $a,b,c,d\in E$ 定义
+$$
+h(\overline{a+\mathbf i b}, c+\mathbf id)= g(a,c)+g(b,d)+\mathbf i \big(g(a,d)-g(b,c)\big).
+$$</p>
+<h2>基本形式</h2>
+<p>对带有相容近复结构的 Euclid 向量空间 $(V,g,J)$, 其基本形式 $\omega$ 定义为
+$$
+\omega (v,w) := g(J v,w).
+$$</p>
+<p>由 $(1)$ 式, $\omega$ 是反对称的.</p>
+<p>由 $(2)$ 式, Hermite 结构, Riemann 度量与基本形式三者之间的关系为
+$$
+h(\bar v,w) = g(v,w) + \mathbf i \omega(v,w).
+$$</p>
+<blockquote>
+<p>注. 本文采用的 Hermite 结构的约定是 $\overline{V}\otimes V$ 上的线性函数, 也即所谓 “第二分量线性”.</p>
+<p>若采用另一约定, $h$ 是 $V\otimes\overline{V}$ 上的线性函数, 所谓 “第一分量线性”, 仍取 $\omega(v,w)=g(Jv,w)$, 则 $h(v,\bar w) = g(v,w) - \mathbf i \omega(v,w)$. (这是 Huybrechts 复几何书上的约定.)</p>
+</blockquote>
+<p>关于 Hermite 向量丛, 参见<span class="link local"><a href="./基本形式.html" title="“基本形式” [基本形式]">基本形式</a></span>.</p>
+<h2>sl(2) 的表示</h2>
+<p>Lefschetz 算子 $L\colon \wedge^k V^* \to \wedge^{k+2}V^*$, $\alpha\mapsto \omega\wedge\alpha$ 以及其对偶算子 $\Lambda$. 令 $H = [L,\Lambda]$. 则 $L$, $\Lambda$ 与 $H$ 的作用构成了 $\mathfrak {sl}(2)$ 的表示. 参见 <span class="link local"><a href="./sl2的表示.html" title="“sl2的表示” [sl2的表示]">sl2的表示</a></span>.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./Hermite向量丛.html" title="“Hermite 向量丛” [Hermite向量丛]">Hermite 向量丛</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="基本形式"><header><h1><span class="taxon">Wiki. </span>“基本形式” <a class="slug" href="./基本形式.html">[基本形式]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>基本形式是指(近) Hermite 流形 (参见<span class="link local"><a href="./近复结构.html" title="近复结构 [近复结构]">近复结构</a></span>, <span class="link local"><a href="./Hermite向量丛.html" title="“Hermite 向量丛” [Hermite向量丛]">Hermite 向量丛</a></span>) 上的一个非退化 $(1,1)$-形式 $\omega$, 其定义为
+$$
+\omega(X,Y) = h(JX,Y).
+$$
+在局部坐标下有
+$$
+\omega= \sqrt{-1} g_{j\bar k}dz^j \wedge d\bar z^k.
+$$</p>
+<h2>性质</h2>
+<p>我们说 $\omega$ 是 “实” 的, 即它与它的<span class="link local"><a href="./共轭.html" title="共轭 [共轭]">共轭</a></span>相等.</p>
+<p>$\omega$ 的 $n$ 次外积是一个无处消失的最高形式, 也即体积形式 (或体积形式的 $n!$ 倍, 但有时这个常数被忽略)
+$$
+\omega^n = \det (g_{i \bar j}) dz^1\wedge \overline{dz^1}\wedge \cdots\wedge dz^n \wedge \overline{dz^n}.
+$$</p>
+<p><span class="link local"><a href="./Kähler流形.html" title="Kähler 流形 [Kähler流形]">Kähler 流形</a></span>上的基本形式 $\omega$ 称为 <strong>Kähler 形式</strong>, 满足 $d\omega = 0$.</p>
+<p>为避免与联络形式混淆, 基本形式有时也用 $\gamma$ 表示.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="复向量空间"><header><h1><span class="taxon">Wiki. </span>“复向量空间” <a class="slug" href="./复向量空间.html">[复向量空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>复向量空间是指 $\mathbb{C}$-向量空间.</p>
+<h2>近复结构</h2>
+<p>实向量空间上的<strong>近复结构</strong>是指满足 $J^2=-\operatorname{id}$ 的 $\mathbb{R}$-线性自同构 $J$. 复向量空间等同于带有近复结构的实向量空间.</p>
+<p>近复结构会给出自然的定向, 且要求向量空间的实维数是偶数.</p>
+<h2>复化</h2>
+<p>由实向量空间 $V$ 可构造自然的复向量空间
+$$
+V_{\mathbb{C}} := V\otimes_{\mathbb{R}}\mathbb{C},
+$$称为 $V$ 的<strong>复化</strong> (complexification), 其上的近复结构由 $\mathbf i\in\mathbb{C}$ 给出.</p>
+<h2>分解</h2>
+<p>若实向量空间 $V$ 本身带有近复结构 $J$, 则 $J$ 可延拓至 $V$ 的复化 $V_{\mathbb{C}}$ 上, 成为满足 $J^2=-\operatorname{id}$ 的 $\mathbb{C}$-线性自同构. 此时有特征子空间分解
+$$
+V_\mathbb{C} = V^{1,0}\oplus V^{0,1},
+$$
+其中 $V^{1,0}$ 与 $V^{0,1}$ 分别对应 $J$ 的特征值 $\mathbf i$ 与 $-\mathbf i$. 上述同构由如下公式给出:
+$$
+v\mapsto \Big( \frac{1}{2}(v-\mathbf i J v), \frac{1}{2}(v+\mathbf i J v) \Big)\,(v\in V_{\mathbb{C}}).
+$$
+$V_{\mathbb{C}}$ 上有自然的<span class="link local"><a href="./共轭.html" title="共轭 [共轭]">共轭</a></span>运算, 且 $\overline{V^{1,0}}=V^{0,1}$.</p>
+<p>注意, $V_{\mathbb{C}}$ 上有两个不同的近复结构, 一个是 $J$, 一个是 $\mathbf i$. 它们在 $V^{1,0}$ 上相同, 在 $V^{0,1}$ 上相反. 复合映射 $(V,J) \to (V_{\mathbb{C}},J)\to (V^{1,0},\mathbf i)$ 是近复结构的同构.</p>
+<h2>对偶</h2>
+<p>设 $V$ 是带有近复结构 $J$ 的实向量空间, 则 $V^*=\operatorname{Hom}_{\mathbb{R}}(V,\mathbb{R})$ 上有自然的近复结构 $J(f)(v):= f(Jv)$, 且有
+$$
+(V^*)^{1,0}\simeq (V^{1,0})^*,\quad
+(V^*)^{0,1}\simeq (V^{0,1})^*.
+$$</p>
+<h2>外积</h2>
+<p>设 $V$ 是带有近复结构 $J$ 的实向量空间.</p>
+<p>定义 $V$ 上的 $(p,q)$-型多重向量
+$$
+\wedge^{p,q}V:= \wedge^p V^{1,0} \otimes_{\mathbb{C}} \wedge^q V^{0,1},
+$$
+则有
+$$
+\wedge^k V_{\mathbb{C}}\simeq \bigoplus_{p+q=k} \wedge^{p,q}V.
+$$
+这是由于对任何 (某个固定的域上的) 向量空间 $V=W_1\oplus W_2$, 总有自然同构 $\wedge^k V \simeq \bigoplus_{p+q=k}\wedge^q W_1\otimes \wedge^q W_2$.</p>
+<p>$V$ 上的近复结构自然诱导 $\wedge^k V_{\mathbb{C}}$ 上的近复结构: (待补充)</p>
+<p>$\wedge^k V_{\mathbb{C}}$ 上的复<span class="link local"><a href="./共轭.html" title="共轭 [共轭]">共轭</a></span>将 $\wedge^{p,q}V$ 与 $\wedge^{q,p}V$ 交换. 因此, 说一个元素 $x\in \wedge^k V_{\mathbb{C}}$ 是<strong>实</strong>的, 就是指 $x\in$ (待补充)</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./复向量丛.html" title="“复向量丛” [复向量丛]">复向量丛</a></span>, <span class="link local"><a href="./Hermite向量空间.html" title="“Hermite 向量空间” [Hermite向量空间]">Hermite 向量空间</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="自旋群"><header><h1><span class="taxon">Wiki. </span>自旋群 <a class="slug" href="./自旋群.html">[自旋群]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>自旋群 $\mathrm{Spin}_n$ 是 $\mathrm{SO}_n$ 的非平凡二重<span class="link local"><a href="./覆叠.html" title="覆叠 [覆叠]">覆叠</a></span>.</p>
+<p>自旋群可描述<span class="link local"><a href="./费米子.html" title="“费米子” [费米子]">费米子</a></span>的对称性.</p>
+<p>参见<span class="link local"><a href="./自旋表示.html" title="“自旋表示” [自旋表示]">自旋表示</a></span>.</p>
+<h2>性质</h2>
+<h3>巧合同构</h3>
+<p>$$
+\operatorname{Spin}(1)= O(1),
+$$
+$$
+\operatorname{Spin}(2)=U(1)=SO(2),
+$$
+$$
+\underset{B_1}{\operatorname{Spin}(3)}=\underset{C_1}{\mathrm{Sp}(1)}= \underset{A_1}{SU(2)},
+$$
+$$
+\underset{D_2}{\operatorname{Spin}(4)}=\underset{A_1}{SU(2)}\times \underset{A_1}{SU(2)},
+$$
+$$\underset{B_2}{\operatorname{Spin}(5)}=\underset{C_2}{\mathrm{Sp}(2)},$$
+$$
+\operatorname{Spin}(6)=SU(4).
+$$</p>
+<h3>四维情形</h3>
+<p>欧氏和 Minkowski 情形的 $4$ 维流形的<span class="link local"><a href="./结构群.html" title="“结构群” [结构群]">结构群</a></span>分别有二重覆盖
+$$
+\widetilde {SO(4)} = SU(2) \times SU(2) = \operatorname{Spin}(4),
+$$
+$$
+\widetilde {SO_o(1,3)}= SL(2,\mathbb{C})=\operatorname{Spin}(3,1).
+$$
+其中有 $SL(2,\mathbb{C})$ 的表示
+$$
+\mathbb{R}^{1,3}\otimes \mathbb{C} \simeq \mathbb{C}^2 \otimes \overline{\mathbb{C}^2}.
+$$</p>
+<p><span class="link local"><a href="./Minkowski时空.html" title="“Minkowski 时空” [Minkowski时空]">Minkowski 时空</a></span>中的类光方向 (null direction) 可对应于 $S^2$, 或 $\mathbb{C}P^1$. 采用 $\mathbb{C}P^1$ 上的齐次坐标 $\zeta=\xi / \eta$, $SL_2(\mathbb{C})$ 在 $\xi,\eta$ 上的作用相当于在类光方向上的作用, 从而给出了二重覆盖
+$$
+SL_2(\mathbb{C})\to SO^+(1,3).
+$$
+$$
+\begin{pmatrix}
+	\xi\\ \eta
+\end{pmatrix}
+\begin{pmatrix}
+	\overline{\xi}&amp;\overline{\eta}
+\end{pmatrix}
+$$</p>
+<p>将 $\mathbb{R}^4$ 等同于 $2$ 阶 Hermite 矩阵的空间 $H$,
+$$
+x=(x_0,x_1,x_2,x_3)\in\mathbb{R}^4 \quad\mapsto\quad X=\begin{pmatrix} x_0+x_1 &amp; x_2+ix_3 \\ x_2-ix_3 &amp; x_0-x_1 \end{pmatrix}\in H.
+$$
+注意到 $\det X= x_0^2-x_1^2-x_2^2-x_3^2$ 是 Minkowski 范数.</p>
+<p>考虑 $SL_2(\mathbb{C})$ 在 $H$ 上的作用, 对于 $A\in SL_2(\mathbb{C}), X\in H$ 定义
+$$
+A\cdot X := AXA^*,
+$$
+其中 $A^*$ 是 $A$ 的<span class="link local"><a href="./共轭.html" title="共轭 [共轭]">共轭</a></span>转置. 注意到 $\det(AXA^*)=\det(X)$, 即这个作用保持 Minkowski 范数的, 于是定义了同态 $SL_2(\mathbb{C}) \to O(1,3)$. 又因为 $SL_2(\mathbb{C})$ 连通, 故这个群同态的像包含在连通分支 $SO^+(1,3)$ 中.</p>
+</details></section></details></section></footer></article>
 
 </div></body></html>
