@@ -204,6 +204,8 @@ $$
 <h2>例</h2>
 <h3>有限群的主丛</h3>
 <p>对于离散拓扑群 $G$, 其主丛等同于 <span class="link local"><a href="./Galois覆叠.html" title="Galois 覆叠 [Galois覆叠]">Galois 覆叠</a></span>.</p>
+<h2>相关资料</h2>
+<p><span class="link local"><a href="./PB∞T.html" title="∞-意象中的主丛 [PB∞T]">$\infty$-意象中的主丛</a></span></p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="几何实现"><header><h1><span class="taxon">Wiki. </span>几何实现 (作为米田扩张) <a class="slug" href="./几何实现.html">[几何实现]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>几何实现有两种不同的含义, 本页面介绍的是其作为沿<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span>的 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>的含义. 另见<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现 (作为单纯图表的余极限)</a></span>.</p>
@@ -324,6 +326,21 @@ $$
 <p>群在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span></p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./相对位置.html" title="相对位置 [相对位置]">相对位置</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="群胚对象"><header><h1><span class="taxon">Wiki. </span>群胚对象 (∞-范畴论) <a class="slug" href="./群胚对象.html">[群胚对象]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>群胚对象可视为 $1$-范畴论中 “<span class="link local"><a href="./等价关系.html" title="等价关系 [等价关系]">等价关系</a></span>” 的概念在 $\infty$-范畴论中的推广.</p>
+<h2>定义</h2>
+<p>设范畴 $\mathcal C$ 具有<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>. 定义 $\mathcal C$ 中的<strong>群胚对象</strong>是满足如下条件的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span> $X\colon \Delta^{\mathrm{op}} \to \mathcal C$:</p>
+<ul>
+<li>对任意 $n\geq 2$, 若 $[n] = \{0&lt; 1&lt;\cdots &lt; n\} = S \cup T$, 且 $S\cap T = \{i\}$, 则 $X([n]) \to X(S)\times_{X_{\{i\}}} X(T)$ 为等价.</li>
+</ul>
+<p>例如, $\{0&lt;1&lt;2\} = \{0&lt;1\} \cup \{0&lt; 2\}$, 上述条件说 $X(\{0&lt;1&lt;2\}) \to X(\{0&lt;1\})\times_{X_{\{0\}}} X(\{0&lt;2\})$ 为等价. 直观上, 这表示从同一对象出发的任意两个态射都互相穿过.</p>
+<h3>商映射</h3>
+<p>群胚对象 $X$ 的<strong>商映射</strong>定义为映射
+$$
+X_0 \to \operatorname{colim}X.
+$$</p>
+<p>其中 $\operatorname{colim}X$ 又称为 $X$ 的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>.</p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="逆环路空间"><header><h1><span class="taxon">Wiki. </span>逆环路空间 <a class="slug" href="./逆环路空间.html">[逆环路空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>群 $G$ 的逆环路空间是 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主齐性空间</a></span>的<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>, 也即<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>的<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">分类空间</a></span>.</p>

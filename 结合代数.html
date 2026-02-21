@@ -69,7 +69,7 @@
 <li>其对象为有限集;</li>
 <li>态射 $\{x_1,\cdots,x_n\}\to \{y_1,\cdots,y_m\}$ 为形如 $y_i = f_i(x_1,\cdots,x_n)$ 的变量代换, 每个 $f_i$ 为幺半群的理论中的公式, 即 $\{x_1,\cdots,x_n\}$ 上的一个<span class="link local"><a href="./列表.html" title="列表 [列表]">列表</a></span>; 等价地, 一个态射是 $\{y_1,\cdots,y_m\}$ 到 $\{x_1,\cdots,x_n\}$ 生成的自由幺半群的一个集合映射.</li>
 </ul>
-<p>这个范畴也等价于有限生成自由幺半群的范畴的对偶.</p>
+<p>那么<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span> $\mathcal C$ 中的结合代数即是上述范畴到 $\mathcal C$ 的保持有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>的函子.</p>
 <h4>一般幺半范畴</h4>
 <p>在一般的<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>中, 结合代数可由如下<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>定义:</p>
 <ul>
@@ -687,10 +687,12 @@ $$
 $$
 其中 $\mathcal A^{\text{rev}}$ 表示将 $\mathcal A$ 的乘法 (幺半结构) 反转.</p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="PROP"><header><h1><span class="taxon">Wiki. </span>PROP <a class="slug" href="./PROP.html">[PROP]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>PROP 是指所有对象均形如 $x^{\otimes n}$ 的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>.</p>
+<p>PROP (product and permutation category, “积-置换范畴”) 是指所有对象均形如 $x^{\otimes n}$ 的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 我们保留 PROP 这个名字是因为它的厚重历史.</p>
 <p><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>是 PROP 的特殊情形: 它的运算 $\otimes$ 是范畴论<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>.</p>
 <p>PROP 又可视为单色<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>: 对于 PROP $\mathcal P$, $\operatorname{Hom}_{\mathcal P}(x^{\otimes n},x)$ 构成一个单色算畴的 $n$-元运算.</p>
 <h2>例</h2>
+<h3>平凡运算</h3>
+<p>有限集与<strong>双射</strong>构成的范畴 $\mathsf{Fin}^{\simeq}$ 配备不交并, 构成一个平凡的 PROP, 它是一个对象生成的自由<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 对任意对称幺半范畴 $\mathcal C$, 其中的对象等同于对称幺半函子 $\mathsf{Fin}^{\simeq} \to \mathcal C$.</p>
 <h3>交换运算</h3>
 <p>有限集的范畴 $\mathsf{Fin}$ 配备<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>幺半结构, 是一个 PROP, 因为每个有限集都是有限个单点集的并. 这个 PROP 记录了<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法</a></span>: 对任意对称幺半范畴 $\mathcal C$, 其中的交换代数等同于对称幺半函子 $\mathsf{Fin} \to \mathcal C$.</p>
 <h3>结合运算</h3>
@@ -1115,7 +1117,7 @@ $$</li>
 <h3>伴随给出单子</h3>
 <p>任何一对函子 $L\colon \mathcal C\to\mathcal D$, $R\colon \mathcal D\to\mathcal C$ 之间的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $L\dashv R$ 都给出一个单子 $RL\colon \mathcal C\to\mathcal C$ 与一个<span class="link local"><a href="./余单子.html" title="余单子 [余单子]">余单子</a></span> $LR\colon \mathcal D\to\mathcal D$. 见<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">伴随给出单子</a></span>. 事实上任何单子都是某一对伴随给出的.</p>
 <h3>Set 上的单子</h3>
-<p>考虑带基点集合 $\mathsf {Set}_*$ 到 $\mathsf {Set}$ 的遗忘函子, 其对应的自由函子 (左伴随) 是对集合添加一个新的点作为基点. 这对伴随的<span class="link local"><a href="./单位.html" title="“单位” [单位]">单位</a></span> $\operatorname{id}_{\mathsf {Set}}\to RL$ 是对集合添加一个新的点. 这在计算机科学中称作<strong>可能单子</strong> (maybe monad).</p>
+<p>考虑<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点</a></span>集合 $\mathsf {Set}_*$ 到 $\mathsf {Set}$ 的遗忘函子, 其对应的自由函子 (左伴随) 是对集合添加一个新的点作为基点. 这对伴随的<span class="link local"><a href="./单位.html" title="“单位” [单位]">单位</a></span> $\operatorname{id}_{\mathsf {Set}}\to RL$ 是对集合添加一个新的点. 这在计算机科学中称作<strong>可能单子</strong> (maybe monad).</p>
 <p>固定集合 $S$, 称为状态集合 (set of states), <span class="link local"><a href="./张量-同态伴随.html" title="“张量-同态伴随” [张量-同态伴随]">张量-同态伴随</a></span> $(S\times)\dashv (-)^S$ 的单位 $(S\times -)^S$ 称为状态单子 (state monad).</p>
 <h3>结合代数</h3>
 <p>设 $A$ 是<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $(\mathcal C,\otimes)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 则有单子 $A\otimes(-)\colon \mathcal C\to\mathcal C$ 以及 $(-)\otimes A\colon \mathcal C\to\mathcal C$. 这是因为
@@ -1289,7 +1291,7 @@ $$</p>
 $$
 A[S^{-1}] = \Big\{ \frac{a}{s} \Bigm| a\in A, s\in S \Big\} / \sim,
 $$
-其中等价关系 $\sim$ 为
+其中<span class="link local"><a href="./等价关系.html" title="等价关系 [等价关系]">等价关系</a></span> $\sim$ 为
 $$
 \frac{a}{s}\sim \frac{a'}{s'}\Leftrightarrow
 \exists t\in S\, t(as'-a's) = 0.

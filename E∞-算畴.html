@@ -78,6 +78,23 @@
 <p>定义 $\mathcal E(k)\times \mathcal E(j_1)\times\cdots\times\mathcal E(j_k)\to\mathcal E(j_1+\cdots+j_k)$ 为 $\Sigma_k\times\Sigma_{j_1}\times\cdots\times \Sigma_{j_k}\to\Sigma_{j_1+\cdots+j_k}$ (置换 $k$ 个块) 对应的映射.</p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="交换代数"><header><h1><span class="taxon">Wiki. </span>交换代数 <a class="slug" href="./交换代数.html">[交换代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>交换代数又称 $\mathbb E_\infty$-代数, 即<span class="link local"><a href="./E∞-算畴.html" title="E∞-算畴 [E∞-算畴]">交换算畴</a></span>上的代数.</p>
+<h2>定义</h2>
+<h3>使用语法范畴</h3>
+<h4>积幺半范畴</h4>
+<p>在<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span>中, 交换代数是交换幺半群的 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>的模型, 即其<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>为有限生成自由交换幺半群的范畴的对偶, 具体地:</p>
+<ul>
+<li>其对象为有限集;</li>
+<li>态射 $\{x_1,\cdots,x_n\}\to \{y_1,\cdots,y_m\}$ 为自然数的 $m\times n$ 矩阵; 等价地, 一个态射是 $\{y_1,\cdots,y_m\}$ 到 $\{x_1,\cdots,x_n\}$ 生成的自由交换幺半群的一个集合映射.</li>
+</ul>
+<p>那么<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span> $\mathcal C$ 中的交换代数即是上述范畴到 $\mathcal C$ 的保持有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>的函子.</p>
+<p>另一种定义只需提供较少的信息. 考虑<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点</a></span>有限集的范畴 $\mathsf{Fin}_*$ (这个范畴也等价于有限集与<span class="link local"><a href="./部分映射.html" title="部分映射 [部分映射]">部分映射</a></span>的范畴).
+对于<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span> $\mathcal C$, 其中的交换代数可等价地定义为函子 $F\colon \mathsf{Fin}_* \to \mathcal C$, 满足
+$$
+F(n) \to \prod_{i=1}^n F(1)
+$$
+为等价. <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 本质上使用的是这种定义.</p>
+<h4>一般对称幺半范畴</h4>
+<p>一般的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>中, 交换代数可用 <span class="link local"><a href="./PROP.html" title="PROP [PROP]">PROP</a></span> 定义. 具体地, 考虑有限集的范畴 $\mathsf{Fin}$ 配备<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>幺半结构. 对任意对称幺半范畴 $\mathcal C$, 其中的交换代数等同于对称幺半函子 $\mathsf{Fin} \to \mathcal C$.</p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="小n-方块算畴"><header><h1><span class="taxon">Wiki. </span>小方块算畴 <a class="slug" href="./小n-方块算畴.html">[小n-方块算畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>小方块算畴 (或小圆盘算畴) 是 <span class="link local"><a href="./En-算畴.html" title="En-算畴 [En-算畴]">$\mathbb E_n$-算畴</a></span>的一种<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>.

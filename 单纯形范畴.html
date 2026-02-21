@@ -85,6 +85,7 @@ N(\mathcal C)_n = \operatorname{Hom}_{\mathsf{Cat}_{(\infty,1)}}([n],\mathcal C)
 $$
 其中 $(-)^\simeq$ 表示取范畴的<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>. 这一过程又称为 <strong>Rezk 脉</strong>.
 函子 $N$ 的像恰为完备 Segal 生象的范畴.</p>
+<p>类似地, 完备 Segal 对象也可用于定义一般的 $\infty$-范畴内部的范畴, 见<span class="link local"><a href="./范畴对象.html" title="范畴对象 (∞-范畴论) [范畴对象]">范畴对象</a></span>.</p>
 <h2>定义</h2>
 <p>一个 Segal 生象是一个<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯生象</a></span> $X \colon \Delta^{\mathrm{op}} \to \mathsf{Ani}$, 满足对任意 $m,n\in\mathbb{N}$, 下图为拉回.
 $$
@@ -110,7 +111,7 @@ $$</p>
 <p>完备 Segal 生象也可等价地定义为关于
 $N(0\overset{\simeq}{\to} 1) \to {*}$
 的<span class="link local"><a href="./局部对象.html" title="局部对象 [局部对象]">局部对象</a></span>.</p>
-<p>完备 Segal 生象等同于 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$(\infty,1)$-范畴</a></span>.</p>
+<p>完备 Segal 生象等同于 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$(\infty,1)$-范畴</a></span>. 另见<span class="link local"><a href="./范畴对象.html" title="范畴对象 (∞-范畴论) [范畴对象]">范畴对象</a></span>.</p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="伴随给出单子"><header><h1><span class="taxon">Wiki. </span>伴随给出单子 <a class="slug" href="./伴随给出单子.html">[伴随给出单子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>陈述</h2>
 <p>设函子 $L\colon \mathcal C\to\mathcal D$, $R\colon \mathcal D\to\mathcal C$ 之间有一对<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $L\dashv R$, 则有</p>
@@ -198,7 +199,7 @@ $$</li>
 <h3>伴随给出单子</h3>
 <p>任何一对函子 $L\colon \mathcal C\to\mathcal D$, $R\colon \mathcal D\to\mathcal C$ 之间的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $L\dashv R$ 都给出一个单子 $RL\colon \mathcal C\to\mathcal C$ 与一个<span class="link local"><a href="./余单子.html" title="余单子 [余单子]">余单子</a></span> $LR\colon \mathcal D\to\mathcal D$. 见<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">伴随给出单子</a></span>. 事实上任何单子都是某一对伴随给出的.</p>
 <h3>Set 上的单子</h3>
-<p>考虑带基点集合 $\mathsf {Set}_*$ 到 $\mathsf {Set}$ 的遗忘函子, 其对应的自由函子 (左伴随) 是对集合添加一个新的点作为基点. 这对伴随的<span class="link local"><a href="./单位.html" title="“单位” [单位]">单位</a></span> $\operatorname{id}_{\mathsf {Set}}\to RL$ 是对集合添加一个新的点. 这在计算机科学中称作<strong>可能单子</strong> (maybe monad).</p>
+<p>考虑<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点</a></span>集合 $\mathsf {Set}_*$ 到 $\mathsf {Set}$ 的遗忘函子, 其对应的自由函子 (左伴随) 是对集合添加一个新的点作为基点. 这对伴随的<span class="link local"><a href="./单位.html" title="“单位” [单位]">单位</a></span> $\operatorname{id}_{\mathsf {Set}}\to RL$ 是对集合添加一个新的点. 这在计算机科学中称作<strong>可能单子</strong> (maybe monad).</p>
 <p>固定集合 $S$, 称为状态集合 (set of states), <span class="link local"><a href="./张量-同态伴随.html" title="“张量-同态伴随” [张量-同态伴随]">张量-同态伴随</a></span> $(S\times)\dashv (-)^S$ 的单位 $(S\times -)^S$ 称为状态单子 (state monad).</p>
 <h3>结合代数</h3>
 <p>设 $A$ 是<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $(\mathcal C,\otimes)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 则有单子 $A\otimes(-)\colon \mathcal C\to\mathcal C$ 以及 $(-)\otimes A\colon \mathcal C\to\mathcal C$. 这是因为
@@ -213,6 +214,8 @@ $$
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>, <span class="link local"><a href="./杠构造.html" title="杠构造 [杠构造]">杠构造</a></span></p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="单纯对象"><header><h1><span class="taxon">Wiki. </span>单纯对象 <a class="slug" href="./单纯对象.html">[单纯对象]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>当范畴 $\mathcal C$ 的对象是某种空间 (几何对象) 时, 若要用单纯形 $\Delta^n$ 来 “探测” 一个与 $\mathcal C$ 的对象类似的空间 $X$, 使得 “映射空间” $\operatorname{Map}(\Delta^n, X)$ 是 $\mathcal C$ 的对象, 则会得到 $\mathcal C$ 中的单纯对象 $X\colon \Delta^{\mathrm{op}} \to \mathcal C$.</p>
 <h2>定义</h2>
 <p>范畴 $\mathcal C$ 中的<strong>单纯对象</strong>是其<span class="link local"><a href="./内部观点.html" title="内部观点 [内部观点]">内部</a></span>的<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>, 也即<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>的对偶到 $\mathcal C$ 的函子 $\Delta^{\text{op}}\to \mathcal C$.</p>
 <p>类似地, <strong>增广单纯对象</strong>是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span>的对偶到 $\mathcal C$ 的函子 $\Delta_+^{\text{op}}\to \mathcal C$.</p>
@@ -311,7 +314,7 @@ $$
 <li>其对象为有限集;</li>
 <li>态射 $\{x_1,\cdots,x_n\}\to \{y_1,\cdots,y_m\}$ 为形如 $y_i = f_i(x_1,\cdots,x_n)$ 的变量代换, 每个 $f_i$ 为幺半群的理论中的公式, 即 $\{x_1,\cdots,x_n\}$ 上的一个<span class="link local"><a href="./列表.html" title="列表 [列表]">列表</a></span>; 等价地, 一个态射是 $\{y_1,\cdots,y_m\}$ 到 $\{x_1,\cdots,x_n\}$ 生成的自由幺半群的一个集合映射.</li>
 </ul>
-<p>这个范畴也等价于有限生成自由幺半群的范畴的对偶.</p>
+<p>那么<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span> $\mathcal C$ 中的结合代数即是上述范畴到 $\mathcal C$ 的保持有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>的函子.</p>
 <h4>一般幺半范畴</h4>
 <p>在一般的<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>中, 结合代数可由如下<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>定义:</p>
 <ul>
@@ -335,6 +338,40 @@ $$
 <h2>性质</h2>
 <h3>具体表现</h3>
 <p><span class="link local"><a href="./链复形无穷范畴.html" title="链复形无穷范畴 [链复形无穷范畴]">链复形范畴</a></span>中的结合代数有很具体的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 见 <span class="link local"><a href="./A∞-代数.html" title="A∞-代数 [A∞-代数]">$A_\infty$-代数</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="范畴对象"><header><h1><span class="taxon">Wiki. </span>范畴对象 (∞-范畴论) <a class="slug" href="./范畴对象.html">[范畴对象]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>在 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$\infty$-范畴</a></span>中, 一个范畴<span class="link local"><a href="./内部观点.html" title="内部观点 [内部观点]">内部</a></span>的范畴可由完备 <span class="link local"><a href="./Segal空间.html" title="Segal 空间 [Segal空间]">Segal 对象</a></span>描述.</p>
+<h2>定义</h2>
+<h3>Segal 对象</h3>
+<p>首先我们重复 <span class="link local"><a href="./Segal空间.html" title="Segal 空间 [Segal空间]">Segal 对象</a></span>的定义. 直观上, 它是一些可复合的态射构成的结构, 已经接近于范畴的概念, 但还有差距.</p>
+<p>设 $\mathcal C$ 为 $\infty$-范畴. 定义 $\mathcal C$ 中的一个 <strong>Segal 对象</strong>是一个<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span> $X \colon \Delta^{\mathrm{op}} \to \mathcal C$, 满足对任意 $m,n\in\mathbb{N}$, 下图为拉回 (直观: “态射可复合”).
+$$
+\begin{array}
+    {ccc}
+    X_{m+n} &amp; \to &amp; X_m \\
+    \downarrow &amp;&amp; \downarrow \\
+    X_n &amp; \to &amp; X_0
+\end{array}
+$$
+该图来自 <span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">$\Delta$</a></span> 中的如下交换图.
+$$
+\begin{array}
+    {ccc}
+    \{0 &lt; \cdots &lt; m+n\} &amp; \leftarrow &amp; \{0 &lt; \cdots &lt; m\} \\
+    \uparrow &amp;&amp; \uparrow \\
+    \{m &lt; \cdots &lt; m+n\} &amp; \leftarrow &amp; \{m\}
+\end{array}
+$$</p>
+<p>记 $\mathsf{Segal}(\mathcal C) \hookrightarrow \mathsf{Fun}(\Delta^{\mathrm{op}},\mathcal C)$ 为 Segal 对象在单纯对象中构成的全子范畴.</p>
+<h3>完备 Segal 对象</h3>
+<p><span class="link local"><a href="./群胚对象.html" title="群胚对象 (∞-范畴论) [群胚对象]">群胚对象</a></span></p>
+<h2>例</h2>
+<h3>对称幺半范畴</h3>
+<p>参考 <span class="link local"><a href="./AntieauCSO.html" title="Complete Segal objects [AntieauCSO]">Antieau</a></span>. 可证明<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>等同于 <span class="link local"><a href="./E∞-空间.html" title="E∞-空间 [E∞-空间]">$\mathbb E_\infty$-生象</a></span>范畴 $\mathsf{CAlg}(\mathsf{Ani})$ 中的范畴对象. 事实上, 两者均为
+$$
+\mathsf{Fun}(\mathsf{Fin}_*\times\Delta^{\mathrm{op}},\mathsf{Ani})
+$$
+的全子范畴. 又由于函子范畴中的极限是逐点的, 可验证两个子范畴相同.</p>
 </details></section></details></section></footer></article>
 
 </div></body></html>

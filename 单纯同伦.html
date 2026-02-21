@@ -332,6 +332,30 @@ H^2(X,\mu_n) &amp; \to &amp; H^2(X,\mathbb G_m).
 \end{array}
 $$
 而 $H^2(X,\mu_n)$ 是 $n$-挠群, 故同态 $H^1(X,\mathrm{PGL}_n) \to H^2(X,\mathbb G_m)$ 的像是 $n$-挠群.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Čech脉"><header><h1><span class="taxon">Wiki. </span>Čech 脉 <a class="slug" href="./Čech脉.html">[Čech脉]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Čech 脉是对范畴中的态射 $U\to X$ 指定的一个<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span> $\text{\v{C}}(U\to X)$.</p>
+<ul>
+<li>若 $U\to X$ 是若干 “片” 构成的覆盖 $U=\bigsqcup U_i$, 则 Čech 脉的直观是记录其每有限个 “片” 的交 $U_{i_1}\times_X\cdots\times_X U_{i_k}$ 的结构.</li>
+</ul>
+<p>对于满射 $U\to X$, 我们期望其 Čech 脉的几何实现是 $X$ 本身; 这称为 <span class="link local"><a href="./Giraud公理.html" title="Giraud 公理 [Giraud公理]">Giraud 公理</a></span>.</p>
+<p>Čech 脉还有一种<span class="link local"><a href="./内部观点.html" title="内部观点 [内部观点]">内部观点</a></span>: 在<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>于 $X$ 的语言, 即 $X$ 上的<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span>的<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>中, $X$ 是一个点, 而 $X$ 的覆盖 $U\to X$ 则是一个<span class="link local"><a href="./有物.html" title=" [有物]">有物</a></span>对象. 将这个对象的 “每两个点之间连一条线, 每三个点之间连一个三角形, …” 就会得到一个 (<span class="link local"><a href="./单纯同伦.html" title="单纯同伦 [单纯同伦]">单纯同伦</a></span>意义下) 可缩的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, 其<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>便是一个点 $X$ 自己.</p>
+<h2>定义</h2>
+<p>设有范畴 $\mathcal C$ 中的态射 $f\colon U\to X$, 将其视为函子
+$$
+    \tilde{f}\colon \{[0] \leftarrow [-1]\}^{\mathrm{op}}\to\mathcal C
+$$
+(其中 $[0]$ 映射到 $U$, $[-1]$ 映射到 $X$). 考虑其沿嵌入
+$$
+    i\colon \{[0] \leftarrow [-1]\} \hookrightarrow \Delta_+
+$$
+的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">右 Kan 扩张</a></span>
+$$
+\operatorname{RKE}_i \tilde f \colon \Delta_+^{\mathrm{op}} \to\mathcal C,
+$$
+再限制到 $\Delta\hookrightarrow\Delta_+$, 所得的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>称为 $f$ 的 <strong>Čech 脉</strong> $\text{\v{C}}(f)\colon \Delta^{\mathrm{op}} \to \mathcal C$.</p>
+<h2>性质</h2>
+<p>Čech 脉是<span class="link local"><a href="./群胚对象.html" title="群胚对象 (∞-范畴论) [群胚对象]">群胚对象</a></span>.</p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="非交换Čech上同调"><header><h1><span class="taxon">Wiki. </span>非交换 Čech 上同调 <a class="slug" href="./非交换Čech上同调.html">[非交换Čech上同调]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>非交换 Čech 上同调是用 <span class="link local"><a href="./Čech脉.html" title="Čech 脉 [Čech脉]">Čech 脉</a></span>计算<span class="link local"><a href="./非Abel上同调.html" title="非 Abel 上同调 [非Abel上同调]">非 Abel 上同调</a></span>的方法, 是 <span class="link local"><a href="./Čech上同调.html" title="Čech 上同调 [Čech上同调]">Čech 上同调</a></span>的非交换推广.</p>

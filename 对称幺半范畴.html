@@ -58,7 +58,9 @@
 </script></head><body><header class="header"><nav class="nav"><div class="logo"><span onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper"><article><section class="block" data-taxon="Wiki"><details open><summary id="对称幺半范畴"><header><h1><span class="taxon">Wiki. </span>对称幺半范畴 <a class="slug" href="./对称幺半范畴.html">[对称幺半范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>对称幺半范畴是 $(\mathsf{Cat},\times)$ 中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>.</p>
+<p><span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半 $\infty$-范畴</a></span>也可等价地定义为 <span class="link local"><a href="./E∞-空间.html" title="E∞-空间 [E∞-空间]">$\mathbb E_\infty$-生象</a></span>范畴 $\mathsf{CAlg}(\mathsf{Ani})$ 中的<span class="link local"><a href="./范畴对象.html" title="范畴对象 (∞-范畴论) [范畴对象]">范畴对象</a></span>.</p>
 <h2>性质</h2>
+<h3>严格化</h3>
 <p><span class="link local"><a href="./对称幺半范畴的严格化.html" title="对称幺半范畴的严格化 [对称幺半范畴的严格化]">严格化</a></span></p>
 <h2>例</h2>
 <h3>PROP</h3>
@@ -150,7 +152,7 @@ $$
 \int_M \mathcal A := \operatorname{colim}_{U\in (\mathsf{Disk}_n)_{/M}} \mathcal A (U).
 $$</p>
 <h3>“环路空间”</h3>
-<p>设 $X \colon \operatorname{Sing}M \to \mathsf{Ani}_{*}$ 为函子, $U\subset M$ 为开集. 定义 $X$ 在 $U$ 上的<strong>紧支集截面</strong>的空间为
+<p>设 $X \colon \operatorname{Sing}M \to$ <span class="link local"><a href="./Ani_pt.html" title="带基点生象的范畴 [Ani_pt]">$\mathsf{Ani}_{*}$</a></span> 为函子, $U\subset M$ 为开集. 定义 $X$ 在 $U$ 上的<strong>紧支集截面</strong>的空间为
 $$
 \Gamma_{\mathrm{c}}(U,X) = \operatorname{colim}_{K\subset U} \Gamma(\operatorname{Sing}M,X) \times_{\Gamma(\operatorname{Sing}(M\setminus K),X)} *,
 $$
@@ -366,10 +368,12 @@ $$
 <p><strong>定义</strong>. 对于环 $A,B$ 与右 $A$-模 $M$, 若 $(B,A)$-双模 $M$ 为 $\mathsf{RMod}(A)$ 的<span class="link local"><a href="./紧投射生成元.html" title="紧投射生成元 [紧投射生成元]">有限生成投射生成元</a></span>, 且 $B\simeq\operatorname{End}_{\mathsf{RMod}(A)}(M)$, $A\simeq\operatorname{End}_{\mathsf{LMod}(E)}(M)$, 则称 $M$ 为 $(B,A)$-<strong>pro-生成元</strong> (progenerator).</p>
 <p><strong>命题</strong> (“Morita III”). 范畴等价 $\mathsf{RMod}(A) \to \mathsf{RMod}(B)$ 的同构类一一对应于 $(B,A)$-pro-生成元的同构类. 范畴等价的复合等同于紧投射生成元的张量积.</p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="PROP"><header><h1><span class="taxon">Wiki. </span>PROP <a class="slug" href="./PROP.html">[PROP]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>PROP 是指所有对象均形如 $x^{\otimes n}$ 的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>.</p>
+<p>PROP (product and permutation category, “积-置换范畴”) 是指所有对象均形如 $x^{\otimes n}$ 的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 我们保留 PROP 这个名字是因为它的厚重历史.</p>
 <p><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>是 PROP 的特殊情形: 它的运算 $\otimes$ 是范畴论<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>.</p>
 <p>PROP 又可视为单色<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>: 对于 PROP $\mathcal P$, $\operatorname{Hom}_{\mathcal P}(x^{\otimes n},x)$ 构成一个单色算畴的 $n$-元运算.</p>
 <h2>例</h2>
+<h3>平凡运算</h3>
+<p>有限集与<strong>双射</strong>构成的范畴 $\mathsf{Fin}^{\simeq}$ 配备不交并, 构成一个平凡的 PROP, 它是一个对象生成的自由<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 对任意对称幺半范畴 $\mathcal C$, 其中的对象等同于对称幺半函子 $\mathsf{Fin}^{\simeq} \to \mathcal C$.</p>
 <h3>交换运算</h3>
 <p>有限集的范畴 $\mathsf{Fin}$ 配备<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>幺半结构, 是一个 PROP, 因为每个有限集都是有限个单点集的并. 这个 PROP 记录了<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法</a></span>: 对任意对称幺半范畴 $\mathcal C$, 其中的交换代数等同于对称幺半函子 $\mathsf{Fin} \to \mathcal C$.</p>
 <h3>结合运算</h3>
@@ -420,6 +424,25 @@ $$
 <h2>例</h2>
 <h3>分解同调</h3>
 <p><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="交换代数"><header><h1><span class="taxon">Wiki. </span>交换代数 <a class="slug" href="./交换代数.html">[交换代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>交换代数又称 $\mathbb E_\infty$-代数, 即<span class="link local"><a href="./E∞-算畴.html" title="E∞-算畴 [E∞-算畴]">交换算畴</a></span>上的代数.</p>
+<h2>定义</h2>
+<h3>使用语法范畴</h3>
+<h4>积幺半范畴</h4>
+<p>在<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span>中, 交换代数是交换幺半群的 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>的模型, 即其<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>为有限生成自由交换幺半群的范畴的对偶, 具体地:</p>
+<ul>
+<li>其对象为有限集;</li>
+<li>态射 $\{x_1,\cdots,x_n\}\to \{y_1,\cdots,y_m\}$ 为自然数的 $m\times n$ 矩阵; 等价地, 一个态射是 $\{y_1,\cdots,y_m\}$ 到 $\{x_1,\cdots,x_n\}$ 生成的自由交换幺半群的一个集合映射.</li>
+</ul>
+<p>那么<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span> $\mathcal C$ 中的交换代数即是上述范畴到 $\mathcal C$ 的保持有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>的函子.</p>
+<p>另一种定义只需提供较少的信息. 考虑<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点</a></span>有限集的范畴 $\mathsf{Fin}_*$ (这个范畴也等价于有限集与<span class="link local"><a href="./部分映射.html" title="部分映射 [部分映射]">部分映射</a></span>的范畴).
+对于<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span> $\mathcal C$, 其中的交换代数可等价地定义为函子 $F\colon \mathsf{Fin}_* \to \mathcal C$, 满足
+$$
+F(n) \to \prod_{i=1}^n F(1)
+$$
+为等价. <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 本质上使用的是这种定义.</p>
+<h4>一般对称幺半范畴</h4>
+<p>一般的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>中, 交换代数可用 <span class="link local"><a href="./PROP.html" title="PROP [PROP]">PROP</a></span> 定义. 具体地, 考虑有限集的范畴 $\mathsf{Fin}$ 配备<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>幺半结构. 对任意对称幺半范畴 $\mathcal C$, 其中的交换代数等同于对称幺半函子 $\mathsf{Fin} \to \mathcal C$.</p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="充实范畴"><header><h1><span class="taxon">Wiki. </span>充实范畴 <a class="slug" href="./充实范畴.html">[充实范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>充实范畴</strong>是范畴的推广, 其对象之间的 “态射集” 不是集合, 而是更一般的幺半范畴的对象.</p>
@@ -702,7 +725,7 @@ $$</p>
 <h2>定义</h2>
 <p>对称幺半 ∞-范畴是<span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">无穷范畴</a></span>语境中的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, 是 $(\mathsf{Cat}_{\infty},\times)$ 中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>.</p>
 <h2>相关概念</h2>
-<p><span class="link local"><a href="./E∞-空间.html" title="E∞-空间 [E∞-空间]">Abel ∞-群</a></span></p>
+<p><span class="link local"><a href="./E∞-空间.html" title="E∞-空间 [E∞-空间]">$\mathbb E_\infty$-空间</a></span></p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="射影谱上的拟凝聚层"><header><h1><span class="taxon">Wiki. </span>射影谱上的拟凝聚层 <a class="slug" href="./射影谱上的拟凝聚层.html">[射影谱上的拟凝聚层]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./代数几何.html" title="代数几何 [代数几何]">代数几何</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设 $R$ 为 $\mathbb{Z}_{\geq 0}$-<span class="link local"><a href="./分次代数.html" title="分次代数 [分次代数]">分次环</a></span>, $M$ 为 $\mathbb{Z}$-分次 $R$-模. 考虑 $\operatorname{Spec}R$ 上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span> $\widetilde {M}$, 限制在 $\operatorname{Spec}R$ 的开子空间
@@ -1007,7 +1030,7 @@ $$</p>
 <li>其对象为有限集;</li>
 <li>态射 $\{x_1,\cdots,x_n\}\to \{y_1,\cdots,y_m\}$ 为形如 $y_i = f_i(x_1,\cdots,x_n)$ 的变量代换, 每个 $f_i$ 为幺半群的理论中的公式, 即 $\{x_1,\cdots,x_n\}$ 上的一个<span class="link local"><a href="./列表.html" title="列表 [列表]">列表</a></span>; 等价地, 一个态射是 $\{y_1,\cdots,y_m\}$ 到 $\{x_1,\cdots,x_n\}$ 生成的自由幺半群的一个集合映射.</li>
 </ul>
-<p>这个范畴也等价于有限生成自由幺半群的范畴的对偶.</p>
+<p>那么<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span> $\mathcal C$ 中的结合代数即是上述范畴到 $\mathcal C$ 的保持有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>的函子.</p>
 <h4>一般幺半范畴</h4>
 <p>在一般的<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>中, 结合代数可由如下<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>定义:</p>
 <ul>
@@ -1037,6 +1060,40 @@ $$
 <p>置换范畴是<span class="link local"><a href="./严格1-范畴.html" title="严格 1-范畴 [严格1-范畴]">严格 $1$-范畴</a></span>的范畴 $1\mathsf{Cat}_{\mathrm{str}}$ 中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./严格幺半范畴.html" title="“严格幺半范畴” [严格幺半范畴]">严格幺半范畴</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="范畴对象"><header><h1><span class="taxon">Wiki. </span>范畴对象 (∞-范畴论) <a class="slug" href="./范畴对象.html">[范畴对象]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>在 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$\infty$-范畴</a></span>中, 一个范畴<span class="link local"><a href="./内部观点.html" title="内部观点 [内部观点]">内部</a></span>的范畴可由完备 <span class="link local"><a href="./Segal空间.html" title="Segal 空间 [Segal空间]">Segal 对象</a></span>描述.</p>
+<h2>定义</h2>
+<h3>Segal 对象</h3>
+<p>首先我们重复 <span class="link local"><a href="./Segal空间.html" title="Segal 空间 [Segal空间]">Segal 对象</a></span>的定义. 直观上, 它是一些可复合的态射构成的结构, 已经接近于范畴的概念, 但还有差距.</p>
+<p>设 $\mathcal C$ 为 $\infty$-范畴. 定义 $\mathcal C$ 中的一个 <strong>Segal 对象</strong>是一个<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span> $X \colon \Delta^{\mathrm{op}} \to \mathcal C$, 满足对任意 $m,n\in\mathbb{N}$, 下图为拉回 (直观: “态射可复合”).
+$$
+\begin{array}
+    {ccc}
+    X_{m+n} &amp; \to &amp; X_m \\
+    \downarrow &amp;&amp; \downarrow \\
+    X_n &amp; \to &amp; X_0
+\end{array}
+$$
+该图来自 <span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">$\Delta$</a></span> 中的如下交换图.
+$$
+\begin{array}
+    {ccc}
+    \{0 &lt; \cdots &lt; m+n\} &amp; \leftarrow &amp; \{0 &lt; \cdots &lt; m\} \\
+    \uparrow &amp;&amp; \uparrow \\
+    \{m &lt; \cdots &lt; m+n\} &amp; \leftarrow &amp; \{m\}
+\end{array}
+$$</p>
+<p>记 $\mathsf{Segal}(\mathcal C) \hookrightarrow \mathsf{Fun}(\Delta^{\mathrm{op}},\mathcal C)$ 为 Segal 对象在单纯对象中构成的全子范畴.</p>
+<h3>完备 Segal 对象</h3>
+<p><span class="link local"><a href="./群胚对象.html" title="群胚对象 (∞-范畴论) [群胚对象]">群胚对象</a></span></p>
+<h2>例</h2>
+<h3>对称幺半范畴</h3>
+<p>参考 <span class="link local"><a href="./AntieauCSO.html" title="Complete Segal objects [AntieauCSO]">Antieau</a></span>. 可证明<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>等同于 <span class="link local"><a href="./E∞-空间.html" title="E∞-空间 [E∞-空间]">$\mathbb E_\infty$-生象</a></span>范畴 $\mathsf{CAlg}(\mathsf{Ani})$ 中的范畴对象. 事实上, 两者均为
+$$
+\mathsf{Fun}(\mathsf{Fin}_*\times\Delta^{\mathrm{op}},\mathsf{Ani})
+$$
+的全子范畴. 又由于函子范畴中的极限是逐点的, 可验证两个子范畴相同.</p>
 </details></section><section class="block" data-taxon="notion"><details ><summary id="语法–语义对偶"><header><h1><span class="taxon"><span class="link local"><a href="./notion.html" title="观念 [notion]">notion</a></span></span>语法–语义对偶 <a class="slug" href="./语法–语义对偶.html">[语法–语义对偶]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>常常, 一种数学结构可以表示为一个映射
 $$

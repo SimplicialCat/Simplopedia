@@ -64,7 +64,63 @@
 <h2>性质</h2>
 <p>$\mathsf{Ani}$ 是一个点在<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>下自由生成的范畴.</p>
 <h3>带基点对象</h3>
-<p>$\mathsf{Ani}$ 的终对象 $*$ 下的<span class="link local"><a href="./仰范畴.html" title=" [仰范畴]">仰范畴</a></span>称为<strong>带基点生象</strong>的范畴 <span class="link local"><a href="./Ani_pt.html" title="带基点生象的范畴 [Ani_pt]">$\mathsf{Ani}_*$</a></span>.</p>
+<p>$\mathsf{Ani}$ 的终对象 $*$ 下的<span class="link local"><a href="./仰范畴.html" title="仰范畴 [仰范畴]">仰范畴</a></span>称为<strong>带基点生象</strong>的范畴 <span class="link local"><a href="./Ani_pt.html" title="带基点生象的范畴 [Ani_pt]">$\mathsf{Ani}_*$</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="E_M-算畴"><header><h1><span class="taxon">Wiki. </span>E_M-算畴 <a class="slug" href="./E_M-算畴.html">[E_M-算畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>$\mathbb E_M$-算畴是指<span class="link local"><a href="./流形.html" title=" [流形]">流形</a></span> $M$ 给出的一个<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>, 其颜色为 $M$ 中的开圆盘 (即 $\mathbb{R}^n$ 到 $M$ 的开嵌入), 运算为不交圆盘的含入.</p>
+<p>$\mathbb{E}_M$ 的颜色的范畴等价于 $M$ 对应的<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span> $\operatorname{Sing}M$. 但是 $\mathbb{E}_M$ 不能由 $\operatorname{Sing}M$ 决定, 而是与 $M$ 的流形结构有关. 更准确地说, 与 $M$ 的切丛 $TM$ 的分类映射 $M \to \mathsf{BTop}(n)$ 有关.
+更一般地, 对任意映射 $B \to \mathsf{BTop}(n)$ 都有 <span class="link local"><a href="./E_B-算畴.html" title="E_B-算畴 [E_B-算畴]">$\mathbb E_B$-算畴</a></span>, 详见此页面.</p>
+<h2>定义</h2>
+<p>记</p>
+<ul>
+<li>$\mathsf{Mfd}_n$ 为 $n$ 维流形以及之间的<strong>嵌入</strong>构成的 $\infty$-范畴,</li>
+<li>$\mathsf{BTop}(n)$ 为其中 $\mathbb{R}^n$ 构成的全子范畴, 它是<span class="link local"><a href="./群.html" title="群 [群]">生象群</a></span> $\mathsf{Top}(n) := \operatorname{Emb}(\mathbb{R}^n,\mathbb{R}^n)$ 的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>,</li>
+</ul>
+<p><strong>注</strong>. 对任意流形 $M\in\mathsf{Mfd}_n$,
+范畴 $\mathsf{BTop}(n)_{/M}$ 实际上是一个<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>, 且等价于 $\operatorname{Sing}M$. 遗忘函子 $\mathsf{BTop}(n)_{/M} \to \mathsf{BTop}(n)$ 等同于映射 $\operatorname{Sing} M \to \mathsf{BTop}(n)$, 它是 $M$ 的<span class="link local"><a href="./切丛.html" title="切丛 [切丛]">切丛</a></span>的分类映射.</p>
+<p>范畴 $\mathsf{BTop}(n)$ 上还有一个<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>结构, 记作 $\mathsf{BTop}(n)^\otimes$, 其 $k$ 元运算为 $k$ 个 $\mathbb{R}^n$ 的无交并到 $\mathbb{R}^n$ 的嵌入.</p>
+<p>接下来定义算畴 $\mathbb E_M$. 其底层范畴为 $\mathsf{BTop}(n)_{/M}$, 运算为 $M$ 的嵌入子流形之间的含入
+$$
+\begin{array}
+{ccc}
+\sqcup_k \mathbb{R}^n &amp;&amp;\\
+\downarrow &amp; \searrow &amp;\\
+\mathbb{R}^n &amp; \to &amp; M.
+\end{array}
+$$
+(注意图中 $\sqcup_k \mathbb{R}^n \to M$ 为嵌入, 即 $k$ 个圆盘互不相交.)
+更严格地说, 算畴 $\mathbb E_M$ 是如下的拉回:
+$$
+\begin{array}
+{ccc}
+\mathbb E_M &amp; \to &amp; \mathsf{BTop}(n)^\otimes \\
+\downarrow &amp; &amp; \downarrow \\
+(\mathsf{BTop}(n)_{/M})^{\sqcup} &amp; \to &amp; (\mathsf{BTop}(n))^{\sqcup}.
+\end{array}
+$$</p>
+<blockquote>
+<p>这里似乎无法用 “纯 $\infty$-范畴” 的语言来描述这个算畴, 无可避免地需要来自流形范畴的同伦信息.</p>
+</blockquote>
+<h2>性质</h2>
+<h3>分解同调</h3>
+<p>对于有<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal O$, 可构造其中 $\mathbb{E}_M$-代数的<span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>
+$$
+\int_M \colon \mathsf{Alg}_{\mathbb E_M}(\mathcal O) \to \mathcal O,
+$$
+$$
+\int_M \mathcal A := \operatorname{colim}_{U\in (\mathsf{Disk}_n)_{/M}} \mathcal A (U).
+$$</p>
+<h3>“环路空间”</h3>
+<p>设 $X \colon \operatorname{Sing}M \to$ <span class="link local"><a href="./Ani_pt.html" title="带基点生象的范畴 [Ani_pt]">$\mathsf{Ani}_{*}$</a></span> 为函子, $U\subset M$ 为开集. 定义 $X$ 在 $U$ 上的<strong>紧支集截面</strong>的空间为
+$$
+\Gamma_{\mathrm{c}}(U,X) = \operatorname{colim}_{K\subset U} \Gamma(\operatorname{Sing}M,X) \times_{\Gamma(\operatorname{Sing}(M\setminus K),X)} *,
+$$
+其中 $K\subset U$ 取遍 $U$ 的紧子集.
+那么 $\Gamma_{\mathrm{c}}(U,X)$ 关于 $U,X$ 均有 (协变) 函子性.</p>
+<p>对于流形 $M$ 以及函子 $X\colon\operatorname{Sing}(M) \to \mathsf{Ani}_*$, 可构造 $\mathsf{Ani}$ 中的 $\mathbb{E}_M$-代数 $\Omega_M X$, 使得其颜色 $U\subset M$ ($M$ 的嵌入圆盘) 处的分量为紧支集截面生象 $\Gamma_{\mathrm{c}}(U,X)$.</p>
+<p>例如, 若 $X$ 为取值为带基点生象 $(A,a)$ 的常值函子, $M$ 的维数为 $n$, 则 $\Omega_M X$ 在一个圆盘 $U$ 处的分量等价于 $\Omega^n(A,a)$.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="Sp"><header><h1><span class="taxon">Wiki. </span>Sp <a class="slug" href="./Sp.html">[Sp]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴 $\mathsf{Sp}$ 是最基本的<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>, 是<span class="link local"><a href="./生象.html" title="生象 [生象]">生象</a></span>的范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 的<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>
 $$
@@ -78,6 +134,18 @@ $$
 $$
 (\mathsf{Set},\times) \to (\mathsf{Ani},\times) \overset{(-)_+}{\to} (\mathsf{Ani}_{*/},\wedge) \overset{\Sigma_{\infty}}{\to} (\mathsf{Sp},\wedge).
 $$</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="带基点对象"><header><h1><span class="taxon">Wiki. </span>带基点对象 <a class="slug" href="./带基点对象.html">[带基点对象]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>范畴 $\mathcal C$ 中带基点对象的范畴是其<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>下的<span class="link local"><a href="./仰范畴.html" title="仰范畴 [仰范畴]">仰范畴</a></span> $\mathcal C_{*/}$.</p>
+<h2>性质</h2>
+<h3>极限, 余极限</h3>
+<p>作为一种<span class="link local"><a href="./仰范畴.html" title="仰范畴 [仰范畴]">仰范畴</a></span>, 带基点对象的范畴中的极限 (余极限) 可用原范畴中的极限 (余极限) 表示:</p>
+<ul>
+<li>带基点对象的<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>等同于原范畴中的极限.</li>
+<li>带基点对象的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>等同于原图表加上基点到各对象的态射后所得图表的余极限. 例如带基点对象 $X,Y$ 的<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>是原范畴中 $X \leftarrow * \to Y$ 的<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>.</li>
+</ul>
+<h2>例</h2>
+<p><span class="link local"><a href="./Ani_pt.html" title="带基点生象的范畴 [Ani_pt]">$\mathsf{Ani}_*$</a></span></p>
 </details></section></details></section></footer></article>
 
 </div></body></html>

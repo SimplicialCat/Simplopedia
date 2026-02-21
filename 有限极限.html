@@ -108,6 +108,21 @@ $$
 <p>对于范畴 $\mathcal C$, 本质代数理论 $\mathcal T$ 在 $\mathcal C$ 中 <strong>模型</strong>为保持有限极限的函子 $\mathcal T\to\mathcal C$.</p>
 <h2>例</h2>
 <p>(小) 范畴的理论是一种本质代数理论. 例如, 态射的复合只能对首尾相连的态射定义.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="群胚对象"><header><h1><span class="taxon">Wiki. </span>群胚对象 (∞-范畴论) <a class="slug" href="./群胚对象.html">[群胚对象]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>群胚对象可视为 $1$-范畴论中 “<span class="link local"><a href="./等价关系.html" title="等价关系 [等价关系]">等价关系</a></span>” 的概念在 $\infty$-范畴论中的推广.</p>
+<h2>定义</h2>
+<p>设范畴 $\mathcal C$ 具有<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>. 定义 $\mathcal C$ 中的<strong>群胚对象</strong>是满足如下条件的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span> $X\colon \Delta^{\mathrm{op}} \to \mathcal C$:</p>
+<ul>
+<li>对任意 $n\geq 2$, 若 $[n] = \{0&lt; 1&lt;\cdots &lt; n\} = S \cup T$, 且 $S\cap T = \{i\}$, 则 $X([n]) \to X(S)\times_{X_{\{i\}}} X(T)$ 为等价.</li>
+</ul>
+<p>例如, $\{0&lt;1&lt;2\} = \{0&lt;1\} \cup \{0&lt; 2\}$, 上述条件说 $X(\{0&lt;1&lt;2\}) \to X(\{0&lt;1\})\times_{X_{\{0\}}} X(\{0&lt;2\})$ 为等价. 直观上, 这表示从同一对象出发的任意两个态射都互相穿过.</p>
+<h3>商映射</h3>
+<p>群胚对象 $X$ 的<strong>商映射</strong>定义为映射
+$$
+X_0 \to \operatorname{colim}X.
+$$</p>
+<p>其中 $\operatorname{colim}X$ 又称为 $X$ 的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>.</p>
 </details></section></details></section></footer></article>
 
 </div></body></html>
