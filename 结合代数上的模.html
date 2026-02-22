@@ -528,7 +528,28 @@
 <p>结合代数给出<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>; 在这种意义上, 结合代数上的模可以推广为<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的模</a></span>.</p>
 <p>结合代数上的模范畴可视为结合代数的范畴的<span class="link local"><a href="./切范畴.html" title="切范畴 [切范畴]">切范畴</a></span>.</p>
 <p>另外, 对一般的<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span>也可定义<span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">模</a></span>的概念; 但这个概念对于<span class="link local"><a href="./A∞-算畴.html" title="结合算畴 [A∞-算畴]">结合算畴</a></span>给出的是<strong>双模</strong>, 而非左模或右模.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="OpAlgMod"><header><h1><span class="taxon">Wiki. </span>算畴上的代数上的模 <a class="slug" href="./OpAlgMod.html">[OpAlgMod]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Artin–Wedderburn定理"><header><h1><span class="taxon">Wiki. </span>Artin–Wedderburn 定理 <a class="slug" href="./Artin–Wedderburn定理.html">[Artin–Wedderburn定理]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>陈述</h2>
+<p><span class="link local"><a href="./半单环.html" title="半单环 [半单环]">半单环</a></span> $R$ 是有限个除环上的矩阵代数的积:
+$$
+R \simeq \prod_{i=1}^n M_{n_i}(D_i).
+$$</p>
+<h2>证明</h2>
+<p>将 $R$ 视为自身上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>, 分解为单模:
+$$
+R \simeq \bigoplus X_i^{n_i}.
+$$</p>
+<p>由 <span class="link local"><a href="./Schur引理.html" title="Schur 引理 [Schur引理]">Schur 引理</a></span>,
+$$
+\operatorname{End}(R)\simeq \prod_{i=1}^n M_{n_i}(\operatorname{End}(X_i)),
+$$
+其中 $\operatorname{End}(X_i)$ 为除环.</p>
+<p>最后, $R$ 作为模的自同态环同构于环 $R$:
+$$
+R\simeq \operatorname{End}(R).
+$$
+结论得证.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="OpAlgMod"><header><h1><span class="taxon">Wiki. </span>算畴上的代数上的模 <a class="slug" href="./OpAlgMod.html">[OpAlgMod]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>对于单色<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathcal O$ 上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span> $A$, 可以谈论 $A$-模. 这种模是如下的一个新的算畴 $\tilde{\mathcal O}$ 上的代数:</p>
 <p>记 $a$ 为算畴 $\mathcal O$ 唯一的颜色, 添加第二种颜色 $m$, 并且对每种运算 $a^n\to a$, 用 $m$ 代替左边的一个 $a$ 和右边的 $a$, 得到一种新的运算 $a\cdots a m a\cdots a \to m$, 即得到算畴 $\tilde{\mathcal O}$.</p>
@@ -537,6 +558,11 @@
 <h2>性质</h2>
 <h3>泛包络代数</h3>
 <p>算畴 $\mathcal O$ 上的代数 $A$ 上的模等同于一个结合代数上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>, 这个结合代数称为 $A$ 的<span class="link local"><a href="./泛包络代数(算畴).html" title="泛包络代数 (算畴上的代数) [泛包络代数(算畴)]">泛包络代数</a></span> $\mathcal UA$. <span class="link local"><a href="./泛包络代数.html" title="泛包络代数 (Lie 代数) [泛包络代数]">Lie 代数的泛包络代数</a></span>是这个概念的特例.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="半单环"><header><h1><span class="taxon">Wiki. </span>半单环 <a class="slug" href="./半单环.html">[半单环]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>半单环是<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模范畴</a></span>为<span class="link local"><a href="./半单Abel范畴.html" title="半单 Abel 范畴 [半单Abel范畴]">半单 Abel 范畴</a></span>的环.</p>
+<h2>性质</h2>
+<p><span class="link local"><a href="./Artin–Wedderburn定理.html" title="Artin–Wedderburn 定理 [Artin–Wedderburn定理]">Artin–Wedderburn 定理</a></span></p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="单子上的代数"><header><h1><span class="taxon">Wiki. </span>单子上的代数 <a class="slug" href="./单子上的代数.html">[单子上的代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>上的<strong>代数</strong>和单子上的<strong>左模</strong>是同义词. 还有另一个不同的概念, 单子上的右模.</p>
@@ -613,6 +639,18 @@ $$</p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="拟三角代数"><header><h1><span class="taxon">Wiki. </span>拟三角代数 <a class="slug" href="./拟三角代数.html">[拟三角代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link local"><a href="./双代数.html" title="双代数 [双代数]">双代数</a></span>上的<strong>拟三角</strong> (quasitriangular) 结构是使其<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>范畴由<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>升级为<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半范畴</a></span>所需的结构.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="泛包络代数(算畴)"><header><h1><span class="taxon">Wiki. </span>泛包络代数 (算畴上的代数) <a class="slug" href="./泛包络代数(算畴).html">[泛包络代数(算畴)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>(单色, 对称) <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span> $A$ 的<strong>泛包络代数</strong> $\mathcal U A$ 是一个<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 满足 $A$-<span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">模</a></span>等同于 $\mathcal UA$-<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>. (前者是算畴上的代数上的模, 后者是结合代数上的模, 两个概念不太一样.)</p>
+<h2>例</h2>
+<h3>$\mathbb E_n$-代数</h3>
+<p>$\mathbb E_n$-代数 $A$ 的泛包络代数为 “球壳” $S^{n-1}\times\mathbb{R}$ 上的<span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>
+$$
+\int_{S^{n-1}\times\mathbb{R}}A.
+$$</p>
+<p>例如 $n=1$ 时, $\mathbb E_1$-代数 $A$ 的泛包络代数为 $A\otimes A^{\mathrm{op}}$.</p>
+<h3>Lie 代数</h3>
+<p><span class="link local"><a href="./Lie代数.html" title="Lie 代数 [Lie代数]">Lie 代数</a></span>的<span class="link local"><a href="./泛包络代数.html" title="泛包络代数 (Lie 代数) [泛包络代数]">泛包络代数</a></span>是算畴上的代数的泛包络代数的特例.</p>
 </details></section><section class="block" data-taxon="notion"><details ><summary id="自由-遗忘伴随"><header><h1><span class="taxon"><span class="link local"><a href="./notion.html" title="观念 [notion]">notion</a></span></span>自由–遗忘伴随 <a class="slug" href="./自由-遗忘伴随.html">[自由-遗忘伴随]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>自由–遗忘伴随形容的是如下的现象: 两种数学结构 $A,B$ 的<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法</a></span>之间有一态射 $A \to B$, 使得 $B$-结构总是可以 “遗忘” 为 $A$-结构 (称之为<strong>遗忘</strong>是因为常常 $A$-结构是比较简单的结构, 甚至是没有结构; 但理论上不一定如此); 进一步, 遗忘函子有一左伴随, 称之为<strong>自由</strong>函子, 常常可以通过<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">左 Kan 扩张</a></span>构造. 这一现象发生在许多场合:</p>
 <ul>

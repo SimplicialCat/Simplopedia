@@ -823,6 +823,27 @@ $$
 $$</p>
 <h2>例</h2>
 <p>设 $X=\operatorname{Spec} A$, $A$ 为 $\mathbb F_p$-代数. 此时 $H^1(X,\mathbb A^1)=0$, 故 $X$ 上的所有 $\mathbb{Z}/p$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>均形如 $\operatorname{Spec} A[t]/(t^p-t-a)$, 而这个主丛平凡当且仅当 $a$ 形如 $b^p-b\,(b\in A)$.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Artin–Wedderburn定理"><header><h1><span class="taxon">Wiki. </span>Artin–Wedderburn 定理 <a class="slug" href="./Artin–Wedderburn定理.html">[Artin–Wedderburn定理]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>陈述</h2>
+<p><span class="link local"><a href="./半单环.html" title="半单环 [半单环]">半单环</a></span> $R$ 是有限个除环上的矩阵代数的积:
+$$
+R \simeq \prod_{i=1}^n M_{n_i}(D_i).
+$$</p>
+<h2>证明</h2>
+<p>将 $R$ 视为自身上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>, 分解为单模:
+$$
+R \simeq \bigoplus X_i^{n_i}.
+$$</p>
+<p>由 <span class="link local"><a href="./Schur引理.html" title="Schur 引理 [Schur引理]">Schur 引理</a></span>,
+$$
+\operatorname{End}(R)\simeq \prod_{i=1}^n M_{n_i}(\operatorname{End}(X_i)),
+$$
+其中 $\operatorname{End}(X_i)$ 为除环.</p>
+<p>最后, $R$ 作为模的自同态环同构于环 $R$:
+$$
+R\simeq \operatorname{End}(R).
+$$
+结论得证.</p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="Artin对象"><header><h1><span class="taxon">Wiki. </span>“Artin 对象” <a class="slug" href="./Artin对象.html">[Artin对象]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>在 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>中, 满足子对象的降链条件的对象称为 Artin 对象. 例如, Artin 模就是指满足子模的降链条件的模.</p>
 <p>另见 <span class="link local"><a href="./Artin环.html" title="“Artin 环” [Artin环]">Artin 环</a></span>.</p>
@@ -1112,7 +1133,7 @@ $$</p>
 <p>Azumaya 范畴是 <span class="link local"><a href="./Azumaya代数.html" title="Azumaya 代数 [Azumaya代数]">Azumaya 代数</a></span>在<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>中的推广.</p>
 <h2>定义</h2>
 <p>参考 <span class="link local"><a href="./BorceuxVitaleAzumayaCategory.html" title="Azumaya categories [BorceuxVitaleAzumayaCategory]">Borceux–Vitale</a></span>.</p>
-<p>设 $\mathcal V$ 为余完备<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 记 $\mathcal I$ 为单对象且以始对象为态射对象的 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>.</p>
+<p>设 $\mathcal V$ 为余完备<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 记 $\mathcal I$ 为仅有一个对象 $*$ 且满足 $\operatorname{Hom}(*,*)=1$ 的 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>.</p>
 <p>对于 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span> $A$, 如下条件等价:</p>
 <ol>
 <li>存在 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span> $\mathcal B$, 使得 $A\otimes\mathcal B$ <span class="link local"><a href="./Morita等价.html" title="Morita 等价 [Morita等价]">Morita 等价</a></span>于 $\mathcal I$.</li>
@@ -3925,6 +3946,13 @@ $$
 <h2>与 Grothendieck 拓扑的关系</h2>
 <p><strong>命题</strong>. 小范畴 $C$ 上的 <span class="link local"><a href="./Grothendieck拓扑.html" title="Grothendieck 拓扑 [Grothendieck拓扑]">Grothendieck 拓扑</a></span>给出<span class="link local"><a href="./预层意象.html" title="预层意象 [预层意象]">预层意象</a></span> $\mathsf {Set}^{C^{\mathrm{op}}}$ 上的 Lawvere–Tierney 拓扑.</p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="Lawvere理论"><header><h1><span class="taxon">Wiki. </span>Lawvere 理论 <a class="slug" href="./Lawvere理论.html">[Lawvere理论]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>语法范畴</h3>
+<p>Lawvere 理论的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>是满足如下条件的范畴 $\mathcal T$:</p>
+<ul>
+<li>$\mathcal T$ 具有有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>;</li>
+<li>$\mathcal T$ 有一个对象 $x$, 使得所有对象都同构于某个 $x^n$ ($n$ 为自然数).</li>
+</ul>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="Lax方程"><header><h1><span class="taxon">Wiki. </span>“Lax 方程” <a class="slug" href="./Lax方程.html">[Lax方程]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>Lax 方程是形如
 $$
@@ -3970,7 +3998,11 @@ $$
 <li>$\nabla_X Y - \nabla_Y X - [X,Y]=0$ (无<span class="link local"><a href="./挠.html" title=" [挠]">挠率</a></span>, torsion-free).</li>
 </ul>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="Lie代数"><header><h1><span class="taxon">Wiki. </span>Lie 代数 <a class="slug" href="./Lie代数.html">[Lie代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p><span class="link local"><a href="./Lie算畴.html" title="Lie 算畴 [Lie算畴]">Lie 算畴</a></span></p>
+<h2>定义</h2>
+<h3>作为 Lawvere 理论</h3>
+<p>Lie 代数的理论是一种 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>.</p>
+<h3>通过算畴</h3>
+<p>Lie 代数是 <span class="link local"><a href="./Lie算畴.html" title="Lie 算畴 [Lie算畴]">Lie 算畴</a></span>上的代数.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Cartan子代数.html" title="“Cartan 子代数” [Cartan子代数]">Cartan 子代数</a></span>, <span class="link local"><a href="./根.html" title="根 [根]">根</a></span>, <span class="link local"><a href="./微分分次Lie代数.html" title="微分分次 Lie 代数 [微分分次Lie代数]">微分分次 Lie 代数</a></span></p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="Lie代数胚"><header><h1><span class="taxon">Wiki. </span>“Lie 代数胚” <a class="slug" href="./Lie代数胚.html">[Lie代数胚]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -5506,6 +5538,13 @@ $$
 <h2>例</h2>
 <p>对于 $\lambda = (n)$, 即一行的 Young 图, $S^\lambda E = \operatorname{Sym}^n E$;</p>
 <p>对于 $\lambda = (1,\cdots,1)$, 即一列的 Young 图, $S^\lambda E = \wedge^n E$;</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Schur引理"><header><h1><span class="taxon">Wiki. </span>Schur 引理 <a class="slug" href="./Schur引理.html">[Schur引理]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>陈述</h2>
+<p>设 $X,Y$ 为 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span> $\mathcal C$ 中的<span class="link local"><a href="./单对象.html" title="单对象 [单对象]">单对象</a></span>, 则</p>
+<ul>
+<li>任一态射 $X \to Y$ 为同构或 $0$;</li>
+<li>$X$ 的自同构环 $\operatorname{End}(X)$ 为除环.</li>
+</ul>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="Schwarzschild度规"><header><h1><span class="taxon">Wiki. </span>“Schwarzschild 度规” <a class="slug" href="./Schwarzschild度规.html">[Schwarzschild度规]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h2>性质</h2>
@@ -5701,7 +5740,7 @@ $$</p>
 </ul>
 <p>分别记上述两个左 $A\otimes_{R}A^{\mathrm{op}}$-模为 $A$, $A'$.</p>
 <p><strong>注</strong>. 两个左 $A\otimes_{R}A^{\mathrm{op}}$-模 $A$, $A'$ 分别是 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>中 $A$ 的自同构 $\mathrm{id}$ 与 $\phi$. 换言之, 它们分别是 $2$-范畴 <span class="link local"><a href="./高阶模.html" title="高阶模 [高阶模]">$\mathsf{Pr}_R$</a></span> 中 $\mathsf{Mod}(A)$ 的两个自同构 $\mathrm{id}$ 与 $\phi$, 也就是将左 $A$-模结构 “扭曲”.</p>
-<p>用上划线表示 $-\otimes_R R/\mathfrak{m}$. 由于 $\bar A \otimes_{\bar R} \bar A ^{\mathrm{op}}$ 是<span class="link local"><a href="./中心单代数.html" title="中心单代数 [中心单代数]">中心单代数</a></span> (实际上是 $\bar R$ 上的矩阵代数), $\bar A$ 与 $\bar A'$ 是其上的单模, 而一个中心单代数上的单模在同构意义下唯一; 故存在同构 $\psi\colon \bar A \to \bar A'$.</p>
+<p>用上划线表示 $-\otimes_R R/\mathfrak{m}$. 由于 $\bar A \otimes_{\bar R} \bar A ^{\mathrm{op}}$ 是<span class="link local"><a href="./中心单代数.html" title="中心单代数 [中心单代数]">中心单代数</a></span> (实际上是 $\bar R$ 上的矩阵代数), $\bar A$ 与 $\bar A'$ 是其上的<span class="link local"><a href="./单对象.html" title="单对象 [单对象]">单模</a></span>, 而一个中心单代数上的单模在同构意义下唯一; 故存在同构 $\psi\colon \bar A \to \bar A'$.</p>
 <p>现在证明 $A$ 是投射 $A\otimes A^{\mathrm{op}}$-模.
 由 $A\otimes A^{\mathrm{op}} \simeq \operatorname{End}(A)$,
 只需证明 $A$ 是投射 $\operatorname{End}(A)$-模. 事实上 $A$ 是 $\operatorname{End}(A)$ 的直和项.
@@ -6291,6 +6330,7 @@ $$
 <p><span class="link local"><a href="./todo.html" title="亟需施工的页面 [todo]">亟需施工处</a></span>列表 (“TODO list”)</p>
 <p><span class="link local"><a href="./terminologies.html" title="单纯百科 - 术语翻译表 [terminologies]">术语翻译表</a></span></p>
 <h2>最近</h2>
+<p><span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">算畴上的代数上的模</a></span></p>
 <p><span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>, <span class="link local"><a href="./LCCC.html" title="局部积闭范畴 [LCCC]">LCCC</a></span>, <span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>, <span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>, <span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span></p>
 <h2>精选</h2>
 <p><span class="link local"><a href="./高阶Morita范畴.html" title="高阶 Morita 范畴 [高阶Morita范畴]">高阶 Morita 范畴</a></span></p>
@@ -7953,7 +7993,7 @@ $$
 <p><strong>推论</strong>. 中心单代数的张量积仍是中心单代数.</p>
 <p>这也是下述 Wedderburn 定理的推论, 因为 $M_n(D) \otimes_k M_{n'}(D') \simeq M_{nn'}(D\otimes_k D')$, 且中心可除代数的张量积为中心单代数.</p>
 <h3>与中心可除代数的关系</h3>
-<p><strong>定理</strong> (Wedderburn). 域 $k$ 上的有限维单代数同构于 $k$ 上的某个<strong>中心可除代数</strong> $D$ 的某个矩阵代数 $M_n(D)$.</p>
+<p><strong>定理</strong> (Wedderburn). 域 $k$ 上的有限维单代数同构于 $k$ 上的某个<strong>中心可除代数</strong> $D$ 的某个矩阵代数 $M_n(D)$. 参见 <span class="link local"><a href="./Artin–Wedderburn定理.html" title="Artin–Wedderburn 定理 [Artin–Wedderburn定理]">Artin–Wedderburn 定理</a></span>.</p>
 <p>设域 $k$ 上的中心单代数 $A$ 同构于 $M_n(D)$, $D$ 为 $k$ 上的中心可除代数. 则同构意义下, $A$ 上唯一的单左模是 $D^n$.</p>
 <p><strong>定理</strong> (Frobenius). $\mathbb{R}$ 上的有限维可除代数仅有 $\mathbb{R},\mathbb{C},\mathbb{H}$.</p>
 <p>因此, $\mathbb{R}$ 上的<strong>中心</strong>可除代数仅有 $\mathbb{R},\mathbb{H}$. 换言之, $\mathbb R$ 的 <span class="link local"><a href="./Brauer群.html" title="Brauer 群 [Brauer群]">Brauer 群</a></span>是由 $\mathbb H$ 生成的二阶群 $\mathbb{Z}/2$.</p>
@@ -8101,6 +8141,7 @@ $$</p>
 <h3>群作用</h3>
 <p><strong>命题</strong>. <span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span> $\operatorname{Spec} A$ 上的 $\mathbb G_m$-作用相当于 $A$ 上的一个 $\mathbb{Z}$-<span class="link local"><a href="./分次代数.html" title="分次代数 [分次代数]">分次</a></span>.</p>
 <p>见<span class="link local"><a href="./fil-gr.html" title="滤与分次的叠观点 [fil-gr]">滤与分次的叠观点</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="二次算畴"><header><h1><span class="taxon">Wiki. </span>二次算畴 <a class="slug" href="./二次算畴.html">[二次算畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="亏格"><header><h1><span class="taxon">Wiki. </span>“亏格” <a class="slug" href="./亏格.html">[亏格]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li><li class="meta-item">拓扑亏格</li></ul></div></header></summary>
 
 <p>亏格 (genus) 有多种含义, 它们之间联系紧密.</p>
@@ -9773,12 +9814,22 @@ $$</p>
 <p><span class="link local"><a href="./量子动量映射.html" title="量子动量映射 [量子动量映射]">量子动量映射</a></span></p>
 <p><span class="link local"><a href="./Delzant多面体.html" title="“Delzant 多面体” [Delzant多面体]">Delzant 多面体</a></span></p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="升模态"><header><h1><span class="taxon">Wiki. </span>“升模态” <a class="slug" href="./升模态.html">[升模态]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="半单Abel范畴"><header><h1><span class="taxon">Wiki. </span>半单 Abel 范畴 <a class="slug" href="./半单Abel范畴.html">[半单Abel范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>若 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span> $\mathcal C$ 的每个对象均为有限个<span class="link local"><a href="./单对象.html" title="单对象 [单对象]">单对象</a></span>的直和, 则称之为<strong>半单 Abel 范畴</strong>.</p>
+<h2>例</h2>
+<p><span class="link local"><a href="./半单环.html" title="半单环 [半单环]">半单环</a></span></p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="半单Lie代数"><header><h1><span class="taxon">Wiki. </span>“半单 Lie 代数” <a class="slug" href="./半单Lie代数.html">[半单Lie代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设 $\mathfrak g$ 为有限维 Lie 代数. 若 $\mathfrak g$ 没有非零的<span class="link local"><a href="./可解.html" title=" [可解]">可解 Lie 代数</a></span>理想, 即 $\operatorname{rad}\mathfrak g = 0$ ($\operatorname{rad}\mathfrak g$ 是 $\mathfrak g$ 的<span class="link local"><a href="./根.html" title="根 [根]">根 (Lie 代数)</a></span>), 则称之为<strong>半单 Lie 代数</strong>.</p>
 <h2>性质</h2>
 <p>半单 Lie 代数是<span class="link local"><a href="./单Lie代数.html" title="“单 Lie 代数” [单Lie代数]">单 Lie 代数</a></span>的直和.</p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="半单Lie代数的表示"><header><h1><span class="taxon">Wiki. </span>“半单 Lie 代数的表示” <a class="slug" href="./半单Lie代数的表示.html">[半单Lie代数的表示]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><p><span class="link local"><a href="./sl2的表示.html" title="“sl2的表示” [sl2的表示]">sl2的表示</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="半单环"><header><h1><span class="taxon">Wiki. </span>半单环 <a class="slug" href="./半单环.html">[半单环]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>半单环是<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模范畴</a></span>为<span class="link local"><a href="./半单Abel范畴.html" title="半单 Abel 范畴 [半单Abel范畴]">半单 Abel 范畴</a></span>的环.</p>
+<h2>性质</h2>
+<p><span class="link local"><a href="./Artin–Wedderburn定理.html" title="Artin–Wedderburn 定理 [Artin–Wedderburn定理]">Artin–Wedderburn 定理</a></span></p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="半直积"><header><h1><span class="taxon">Wiki. </span>半直积 <a class="slug" href="./半直积.html">[半直积]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $H$ <span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>于群 $N$, 即作用于带基点连通对象 $\mathbf{B}N\in\mathsf{Ani}_{*/}^{\geq 1}$, 其商 $(\mathbf{B}N) / H$ 是一个群 $G = N \rtimes H$ 的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>, 这个群称为<strong>半直积</strong> (semidirect product).</p>
@@ -9907,6 +9958,11 @@ $$</p>
 <p><span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span>的嵌入 $\mathcal D\hookrightarrow\mathcal C$ 是单子性的.</p>
 <h3>下降</h3>
 <p>许多<span class="link local"><a href="./下降.html" title="下降 [下降]">下降</a></span>现象表述为单子性.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="单对象"><header><h1><span class="taxon">Wiki. </span>单对象 <a class="slug" href="./单对象.html">[单对象]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>在 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>中, <strong>单对象</strong>是仅有两个子对象 ($0$ 与自身) 的对象.</p>
+<h2>性质</h2>
+<p><span class="link local"><a href="./Schur引理.html" title="Schur 引理 [Schur引理]">Schur 引理</a></span></p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="单射"><header><h1><span class="taxon">Wiki. </span>单射 <a class="slug" href="./单射.html">[单射]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>单射就是 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>映射.</p>
@@ -10105,8 +10161,9 @@ $$</p>
 <ul>
 <li>数学百科网站是重要数学观念的聚集地.</li>
 <li>在百科网站上, 通过链接和反向链接, 人们可以毫不费力地接触与一个概念相关的所有概念. 有时一个概念甚至可以完全通过它被哪些概念链接到来描述.</li>
+<li>许多数学思想为 “业内人士” 所共享, 存在于新潮学者们的头脑中, 但并不系统地存在于文献中. 为了数学思想的传播和传承 (甚至是为了<span class="link local"><a href="./AI-replace-math.html" title="AI 会消灭数学家吗? [AI-replace-math]">人工智能</a></span>能够尽快帮助数学的发展), 应该尽快将它们变成容易获取的, 格式统一的文字.</li>
 </ul>
-<h3>为什么需要自己的数学百科网站</h3>
+<h3>为什么需要我自己的数学百科网站</h3>
 <blockquote>
 <p><span class="link external"><a href="https://ncatlab.org/nlab/show/HomePage" title="nLab [https://ncatlab.org/nlab/show/HomePage]">nLab</a></span>, <span class="link external"><a href="https://www.bananaspace.org/wiki/%E9%A6%96%E9%A1%B5" title="香蕉空间 [https://www.bananaspace.org/wiki/%E9%A6%96%E9%A1%B5]">香蕉空间</a></span>都是伟大的数学百科网站. 那为什么要创建自己的呢?</p>
 </blockquote>
@@ -10114,6 +10171,7 @@ $$</p>
 <li>我认为学术共同体的人们有义务分享各自对于事物的见解, 即使这些见解可能不严谨或者不成熟.</li>
 <li>我经常忘记自己写过的东西, 忘记自己曾经想明白的论证. 如果所有这些都有序地记载在同一个地方, 就能随时找到.</li>
 <li>我自己学习与思考的过程对我很重要, 而这可能不适合放在一个集体的网站上.</li>
+<li>我很幸运地有机会接触到一些新潮的学者, 能够从与他们的私人通讯中学习重要的观念. 但很多人可能没有我这样幸运. 所以我想要尽可能把我通过幸运获得的思想写下来传播给更多人.</li>
 </ul>
 <h2>性质</h2>
 <ul>
@@ -14179,12 +14237,15 @@ $$
 $$
 (后一个同构是 <span class="link local"><a href="./Chevalley同构.html" title="“Chevalley 同构” [Chevalley同构]">Chevalley 同构</a></span>.)</p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="泛包络代数(算畴)"><header><h1><span class="taxon">Wiki. </span>泛包络代数 (算畴上的代数) <a class="slug" href="./泛包络代数(算畴).html">[泛包络代数(算畴)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>(单色, 对称) <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span> $A$ 的<strong>泛包络代数</strong> $\mathcal U A$ 是一个<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 满足 $A$-<span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">模</a></span>等同于 $\mathcal UA$-<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>. (前者是算畴上的代数上的模, 后者是结合代数上的模, 两个概念不太一样.)</p>
 <h2>例</h2>
 <h3>$\mathbb E_n$-代数</h3>
 <p>$\mathbb E_n$-代数 $A$ 的泛包络代数为 “球壳” $S^{n-1}\times\mathbb{R}$ 上的<span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>
 $$
 \int_{S^{n-1}\times\mathbb{R}}A.
 $$</p>
+<p>例如 $n=1$ 时, $\mathbb E_1$-代数 $A$ 的泛包络代数为 $A\otimes A^{\mathrm{op}}$.</p>
 <h3>Lie 代数</h3>
 <p><span class="link local"><a href="./Lie代数.html" title="Lie 代数 [Lie代数]">Lie 代数</a></span>的<span class="link local"><a href="./泛包络代数.html" title="泛包络代数 (Lie 代数) [泛包络代数]">泛包络代数</a></span>是算畴上的代数的泛包络代数的特例.</p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="泛闭映射"><header><h1><span class="taxon">Wiki. </span>泛闭映射 <a class="slug" href="./泛闭映射.html">[泛闭映射]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -15141,6 +15202,8 @@ X \mapsto \coprod_{n\geq 0} \mathcal O(n)\otimes_{S_n}X^{\otimes n}.
 $$
 详见<span class="link local"><a href="./算畴给出单子.html" title="算畴给出单子 [算畴给出单子]">算畴给出单子</a></span>.</p>
 <h2>例</h2>
+<h3>二次算畴</h3>
+<p><span class="link local"><a href="./二次算畴.html" title="二次算畴 [二次算畴]">二次算畴</a></span>是一类有特殊性质的算畴, 包括交换算畴, 结合算畴, Lie 算畴.</p>
 <h3>交换算畴</h3>
 <p>交换算畴 $\mathsf{Comm}$ 作为多重范畴仅有一个对象 $*$, 且 $\operatorname{Hom}(*^n,*) = 1$. 交换性意味着任何 $n$ 个元素有唯一的结合方式.</p>
 <p>交换算畴的算子范畴 $\mathsf{Comm}^\otimes \to \mathsf{Fin}_*$ 就是 $\mathsf{Fin}_*$ 到自身的恒等.</p>
@@ -16182,7 +16245,7 @@ $$
 <h3>逆元</h3>
 <p>(todo: 何时可逆)</p>
 <h3>Morita 等价</h3>
-<p><strong>命题</strong>. 若将 $k\mathcal{C}$ 视为单对象 $\mathsf{Vect}_k$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>, 则有
+<p><strong>命题</strong>. 若将 $k\mathcal{C}$ 视为仅有一个对象的 $\mathsf{Vect}_k$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>, 则有
 $$
 [\mathcal C,\mathsf{Vect}_k]\simeq [k\mathcal C,\mathsf{Vect}_k].
 $$
@@ -16383,6 +16446,12 @@ $$
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="语法范畴"><header><h1><span class="taxon">Wiki. </span>语法范畴 <a class="slug" href="./语法范畴.html">[语法范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>语法范畴是一个理论的 “<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的模型” 所在的范畴.</p>
+<p>广义地说, 任何一个范畴都可以视为某种理论的 “语法范畴”, 而该范畴出发的保持结构的函子则可视为该理论的 “模型”, 这种称呼只是视角的选择: 我们将语法范畴理解为根据<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法</a></span>生成的结构.</p>
+<h2>例</h2>
+<ul>
+<li><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>的语法范畴是一个对象生成的有限积范畴.</li>
+<li><span class="link local"><a href="./PROP.html" title="PROP [PROP]">PROP</a></span> 是一个对象生成的对称幺半范畴.</li>
+</ul>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法–语义对偶</a></span></p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="诱导表示"><header><h1><span class="taxon">Wiki. </span>诱导表示 <a class="slug" href="./诱导表示.html">[诱导表示]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
