@@ -628,13 +628,38 @@ $$
 <h2>定义</h2>
 <p>双范畴是 <span class="link local"><a href="./2-范畴.html" title="2-范畴 [2-范畴]">2-范畴</a></span> $\mathsf {Cat}$ 的<span class="link local"><a href="./内范畴.html" title="内范畴 (1-范畴论) [内范畴]">内范畴</a></span>.</p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="幺半范畴"><header><h1><span class="taxon">Wiki. </span>幺半范畴 <a class="slug" href="./幺半范畴.html">[幺半范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>幺半范畴是范畴的范畴中的结合代数.</p>
+<p>幺半范畴是范畴的范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
 <h2>定义</h2>
-<p>一个幺半范畴是一个范畴 $\mathsf C$ 配备如下结构:</p>
+<h3>一般定义</h3>
+<p>幺半范畴是范畴的范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 这里的范畴既可以指 $1$-范畴, 也可以指<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>.</p>
+<h3>$1$-范畴</h3>
+<p>一个幺半 $1$-范畴是一个范畴 $\mathcal C$ 配备如下结构:</p>
 <ul>
-<li>张量积函子 $\otimes \colon \mathsf C\times\mathsf C \to\mathsf C$;</li>
-<li>单位 $1\in\operatorname{ob}(\mathsf C)$;</li>
-<li>对应结合律和单位律的几个自然同构, 且满足三角形等式 (形如 $x\otimes 1\otimes y$ 的乘积的结合) 和五边形等式 (四个对象乘积的结合).</li>
+<li>张量积函子 $\otimes \colon \mathcal C\times\mathcal C \to\mathcal C$;</li>
+<li>单位 $1\in \mathcal C$;</li>
+<li>自然同构
+$$
+(X\otimes Y)\otimes Z\simeq X\otimes (Y\otimes Z),
+$$
+$$
+X\otimes 1\simeq X\simeq 1\otimes X,
+$$
+且满足<strong>三角形等式</strong>
+$$
+\begin{array}{ccc}
+(X\otimes 1)\otimes Y &amp; \rightarrow &amp; X\otimes Y \\
+ &amp; \searrow &amp; \downarrow \\
+ &amp;  &amp; X\otimes (1\otimes Y)
+\end{array}
+$$
+和<strong>五边形等式</strong> (省略了 $\otimes$)
+$$
+\begin{array}{ccccc}
+((XY)Z)W &amp; \rightarrow &amp; (X(YZ))W &amp; \rightarrow &amp; X((YZ)W) \\
+ &amp; \searrow &amp;  &amp;  &amp; \downarrow \\
+ &amp;  &amp; (XY)(ZW) &amp; \rightarrow &amp; X(Y(ZW)).
+\end{array}
+$$</li>
 </ul>
 <h2>例</h2>
 <ul>

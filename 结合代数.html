@@ -559,6 +559,7 @@ $$
 <h2>性质</h2>
 <h3>具体表现</h3>
 <p><span class="link local"><a href="./链复形无穷范畴.html" title="链复形无穷范畴 [链复形无穷范畴]">链复形范畴</a></span>中的结合代数有很具体的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 见 <span class="link local"><a href="./A∞-代数.html" title="A∞-代数 [A∞-代数]">$A_\infty$-代数</a></span>.</p>
+<h2>例</h2>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="Azumaya代数"><header><h1><span class="taxon">Wiki. </span>Azumaya 代数 <a class="slug" href="./Azumaya代数.html">[Azumaya代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>环或<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span>上的 <strong>Azumaya 代数</strong><sup class="footnote-reference" id="Azumaya代数_az-back"><a href="#Azumaya代数_az">1</a></sup>是域上的<span class="link local"><a href="./中心单代数.html" title="中心单代数 [中心单代数]">中心单代数</a></span>的推广, 是 <span class="link local"><a href="./Morita等价.html" title="Morita 等价 [Morita等价]">Morita 等价</a></span>下可逆的代数, 给出 <span class="link local"><a href="./Brauer群.html" title="Brauer 群 [Brauer群]">Brauer 群</a></span>的元素.</p>
@@ -1226,7 +1227,7 @@ $$
 \end{array}
 $$
 由此可见, 只要一个范畴中具有拉回, 那么 $\{a\in A\mid f(a) = b\}$ 这样的表达式就有意义, 而不需要对象 $A$ 真的是由一个一个的元素组成.</p>
-<p>任意量词 $\forall$ 和存在量词 $\exists$ 也不是只在集合范畴中有意义. 它们分别是<span class="link local"><a href="./依值积.html" title="依值积 [依值积]">依值积</a></span>, <span class="link local"><a href="./依值和.html" title="依值和 [依值和]">依值和</a></span>的特例, 而这两者分别是拉回操作 $\mathcal{C}_{/Y} \to \mathcal{C}_{/X}$ 的左右伴随.</p>
+<p>任意量词 $\forall$ 和存在量词 $\exists$ 也不是只在集合范畴中有意义. 它们分别是<span class="link local"><a href="./依值积.html" title="依值积 [依值积]">依值积</a></span>, <span class="link local"><a href="./依值和.html" title="依值和 [依值和]">依值和</a></span>的特例, 而这两者分别是拉回操作 $\mathcal{C}_{/Y} \to \mathcal{C}_{/X}$ 的左右伴随. (更一般地, 每种<span class="link local"><a href="./类型论.html" title="类型论 [类型论]">类型论</a></span>都有与之相应的范畴论结构. 见<span class="link local"><a href="./Trinitarianism.html" title="三位一体 [Trinitarianism]">三位一体</a></span>.)</p>
 <p>经过如此多的铺垫, 如果我现在告诉读者, 我们自古以来熟悉的这个集合范畴, 并不是唯一存在的, 唯一合理的 “集合的范畴”, 我们使用的数学语言描述的不一定是集合, 而可能是任何适当结构的范畴的对象, 不知读者是否还会像只熟悉实数的古人见到虚数那样感到恐慌.</p>
 <p>更关键的是, 就像在抽象代数中我们不需要关心<strong>集合</strong>中的<strong>元素</strong>的具体构造一样, 在综合数学中我们不需要关心<strong>范畴</strong>中的<strong>对象</strong>的具体构造, 这便是综合数学的核心观念; 这种观念无非是抽象代数的核心观念的一次范畴化.</p>
 <p>将集合范畴 $\mathsf{Set}$ 的性质抽象出来, 得到一种允许通常数学语言在其中获得语义的范畴的概念, 这就是<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>.</p>
@@ -1260,7 +1261,7 @@ $$
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="中心"><header><h1><span class="taxon">Wiki. </span>中心 <a class="slug" href="./中心.html">[中心]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>群</h3>
-<p>$\mathsf{Set}$ 中的群 $G$ 的中心为
+<p>$\mathsf{Set}$ 中的群 (或幺半群) $G$ 的<strong>中心</strong>为 $G$ 中与所有元素交换的元素构成的子集:
 $$
 Z(G) = \{g\in G | \forall h\in G, gh=hg\}.
 $$</p>
@@ -1269,7 +1270,16 @@ $$</p>
 $$
 Z(G) := \operatorname{Aut}_{\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)}(\mathrm{id}).
 $$
-换言之, $\mathbf{B}Z(G)$ 是 $\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)$ 在 $\mathrm{id}_{\mathbf{B}G}$ 处的连通分支. 一个生象 $A$ 的连通分支是 $A\to\tau_{\leq 0} A$ 的纤维.
+换言之,</p>
+<ul>
+<li>$Z(G) = \Omega^2(\mathsf{Ani}^\simeq,\mathbf{B}G)$ 为 $\mathsf{Ani}^\simeq$ (“<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的生象”) 在 $\mathbf{B}G$ 处的二重<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> (可见 $Z(G)$ 是个 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span>-群);</li>
+<li>$\mathbf{B}Z(G)$ 是 $\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)$ 在 $\mathrm{id}_{\mathbf{B}G}$ 处的连通分支.</li>
+</ul>
+<p>一个生象 $A$ 的连通分支是 $A\to\tau_{\leq 0} A$ 的纤维. 此外, 两个群的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>之间 (作为<strong>不带点</strong>生象) 的映射空间满足
+$$
+\operatorname{Hom}_{\mathsf{Ani}}(\mathbf{B}G,\mathbf{B}H)\simeq \operatorname{Hom}_{\mathsf{Grp}(\mathsf{Ani})}(G,H)/_{\mathrm{Ad}} H,
+$$
+即群同态的生象关于 $H$ 的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的商,
 因此该定义也可等价地陈述如下. 考虑群 $G$ 的<span class="link local"><a href="./群的外自同构.html" title="群的外自同构 [群的外自同构]">外自同构</a></span>群
 $$
 \begin{aligned}
@@ -1780,6 +1790,54 @@ $$</p>
 <p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>在 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>中的幺半维数是其 <span class="link local"><a href="./Hochschild同调.html" title="Hochschild 同调 [Hochschild同调]">Hochschild 同调</a></span>.</p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="幺半群"><header><h1><span class="taxon">Wiki. </span>幺半群 <a class="slug" href="./幺半群.html">[幺半群]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>幺半群与<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>基本上是同义词. 幺半群常常用于特指 $(\mathsf{Set},\times)$ 中的结合代数.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="幺半范畴"><header><h1><span class="taxon">Wiki. </span>幺半范畴 <a class="slug" href="./幺半范畴.html">[幺半范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>幺半范畴是范畴的范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
+<h2>定义</h2>
+<h3>一般定义</h3>
+<p>幺半范畴是范畴的范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 这里的范畴既可以指 $1$-范畴, 也可以指<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>.</p>
+<h3>$1$-范畴</h3>
+<p>一个幺半 $1$-范畴是一个范畴 $\mathcal C$ 配备如下结构:</p>
+<ul>
+<li>张量积函子 $\otimes \colon \mathcal C\times\mathcal C \to\mathcal C$;</li>
+<li>单位 $1\in \mathcal C$;</li>
+<li>自然同构
+$$
+(X\otimes Y)\otimes Z\simeq X\otimes (Y\otimes Z),
+$$
+$$
+X\otimes 1\simeq X\simeq 1\otimes X,
+$$
+且满足<strong>三角形等式</strong>
+$$
+\begin{array}{ccc}
+(X\otimes 1)\otimes Y &amp; \rightarrow &amp; X\otimes Y \\
+ &amp; \searrow &amp; \downarrow \\
+ &amp;  &amp; X\otimes (1\otimes Y)
+\end{array}
+$$
+和<strong>五边形等式</strong> (省略了 $\otimes$)
+$$
+\begin{array}{ccccc}
+((XY)Z)W &amp; \rightarrow &amp; (X(YZ))W &amp; \rightarrow &amp; X((YZ)W) \\
+ &amp; \searrow &amp;  &amp;  &amp; \downarrow \\
+ &amp;  &amp; (XY)(ZW) &amp; \rightarrow &amp; X(Y(ZW)).
+\end{array}
+$$</li>
+</ul>
+<h2>例</h2>
+<ul>
+<li>$(\mathsf {Set},\times,1)$, $(\mathsf {Set},+,0)$</li>
+<li>$(\mathsf {Grp},\times,1)$</li>
+<li>$(\mathsf {Spc},\times,\text{pt})$, 其中 $\mathsf {Spc}$ 为空间的范畴, 以及 $G$-等变版本</li>
+<li>$(\mathsf {Spc}_*,\wedge,S^0)$</li>
+<li>$(\mathsf {Spc}_*,\times,\text{pt})$</li>
+<li>$(\mathsf {Vect}_k,\otimes,k)$</li>
+</ul>
+<h2>性质</h2>
+<h3>与 2-范畴的关系</h3>
+<p>幺半范畴可视为只有一个对象的 <span class="link local"><a href="./2-范畴.html" title="2-范畴 [2-范畴]">2-范畴</a></span>.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span>, <span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, <span class="link local"><a href="./严格幺半范畴.html" title="“严格幺半范畴” [严格幺半范畴]">严格幺半范畴</a></span>, <span class="link local"><a href="./双幺半范畴.html" title="“双幺半范畴” [双幺半范畴]">双幺半范畴</a></span></p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="微分分次代数"><header><h1><span class="taxon">Wiki. </span>微分分次代数 <a class="slug" href="./微分分次代数.html">[微分分次代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>域 $k$ 上的微分分次代数 (differential graded algebra, dg algebra) 是 $k$-<span class="link local"><a href="./链复形.html" title="链复形 [链复形]">链复形</a></span>的 $1$-范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
@@ -1869,6 +1927,17 @@ $$
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="泛包络代数(算畴)"><header><h1><span class="taxon">Wiki. </span>泛包络代数 (算畴上的代数) <a class="slug" href="./泛包络代数(算畴).html">[泛包络代数(算畴)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>(单色, 对称) <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span> $A$ 的<strong>泛包络代数</strong> $\mathcal U A$ 是一个<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 满足 $A$-<span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">模</a></span>等同于 $\mathcal UA$-<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>. (前者是算畴上的代数上的模, 后者是结合代数上的模, 两个概念不太一样.)</p>
+<h3>生成元–关系</h3>
+<p>将<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathcal O$ 视为<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span> $\{\mathcal O(n)\}$, 则其上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span> $A$ 的<strong>泛包络代数</strong> $\mathcal U A$ 有如下生成元–关系<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>: 直观上, 想象一个一般的 $A$-<span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">模</a></span> $M$,</p>
+<ul>
+<li>$\mathcal UA$ 的生成元为 “算子” $f(a_1,\cdots,a_{n-1},-)\colon M\to M$, $f\in\mathcal O(n)$, $a_i\in A\,(i=1,\cdots,n-1)$;</li>
+<li>生成元之间有如下关系 (以 $a$ 表示 $A$ 的若干个元素):
+<ul>
+<li>$f(g(a),-) = h(a,-)$, 其中 $h = f \circ (g,\mathrm{id})$;</li>
+<li>$f(a,-) g(a',-) = k(a,a',-)$, 其中 $k = f\circ (\mathrm{id},g)$.</li>
+</ul>
+</li>
+</ul>
 <h2>例</h2>
 <h3>$\mathbb E_n$-代数</h3>
 <p>$\mathbb E_n$-代数 $A$ 的泛包络代数为 “球壳” $S^{n-1}\times\mathbb{R}$ 上的<span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>
@@ -2151,7 +2220,7 @@ $$</p>
 $$
 \sum_{j=1}^p R_{ij} u_j =0,\quad 1\leq i \leq q,
 $$
-其中 $R_{ij}$ 为<span class="link local"><a href="./微分算子.html" title=" [微分算子]">线性微分算子</a></span>, $u_j$ 为变量 $x_1,\cdots,x_n$ 的函数. 名称中 “线性” 的意思是, 方程的若干个解的 (常系数) 线性组合仍是一个解.</p>
+其中 $R_{ij}$ 为<span class="link local"><a href="./微分算子.html" title="微分算子 [微分算子]">线性微分算子</a></span>, $u_j$ 为变量 $x_1,\cdots,x_n$ 的函数. 名称中 “线性” 的意思是, 方程的若干个解的 (常系数) 线性组合仍是一个解.</p>
 <h3>抽象定义</h3>
 <p>设 $D$ 是某种<span class="link local"><a href="./线性微分算子.html" title="线性微分算子 [线性微分算子]">线性微分算子</a></span>构成的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 定义<strong>线性偏微分方程组</strong>为左 <span class="link local"><a href="./D-模.html" title="D-模 [D-模]">$D$-模</a></span>同态
 $$
@@ -2176,16 +2245,16 @@ $$
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="线性微分算子"><header><h1><span class="taxon">Wiki. </span>线性微分算子 <a class="slug" href="./线性微分算子.html">[线性微分算子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>线性微分算子</strong>是由<span class="link local"><a href="./导子.html" title="导子 [导子]">求导</a></span>生成的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的元素, 是仅依赖于函数的有限阶<span class="link local"><a href="./射流.html" title="射流 [射流]">射流</a></span>的算子.</p>
-<p>另见<span class="link local"><a href="./拟微分算子.html" title="“拟微分算子” [拟微分算子]">拟微分算子</a></span>.</p>
+<p>另见<span class="link local"><a href="./拟微分算子.html" title="拟微分算子 [拟微分算子]">拟微分算子</a></span>.</p>
 <h2>定义</h2>
 <h3>由局部坐标定义</h3>
-<p>对于流形上两个复向量丛 $E,F\to M$, 微分算子 $D\colon\Gamma(E)\to \Gamma(F)$ 是线性映射, 局部上由下式给出:
+<p>对于流形上两个向量丛 $E,F\to M$, <strong>线性微分算子</strong> $D\colon\Gamma(E)\to \Gamma(F)$ 是线性映射, 局部上由下式给出:
 $$
 D=\sum_\alpha A_\alpha \partial^\alpha,
 $$
-其中 $A_\alpha\colon \mathbb{R}^n\to\operatorname{Hom}(\mathbb{C}^p,\mathbb{C}^q)$.</p>
-<h3>由交换子定义</h3>
-<p>对于 $f\in C^\infty(M)$ 与微分算子 $D\colon \Gamma(E)\to \Gamma(F)$, 定义“交换子“ $[D,f]\colon  \Gamma(E)\to\Gamma(F)$, $s\mapsto D(fs)-f(Ds)$.</p>
+其中 $A_\alpha$ 是流形上的矩阵值函数.</p>
+<h3>由交换子归纳定义</h3>
+<p>对于 $f\in C^\infty(M)$ 与映射 $D\colon \Gamma(E)\to \Gamma(F)$, 定义<strong>交换子</strong> $[D,f]\colon  \Gamma(E)\to\Gamma(F)$, $s\mapsto D(fs)-f(Ds)$.</p>
 <p>定义 $0$ 阶算子 $D$ 为与任意函数 $f$ 的交换子都为 $0$ 的算子, 这等价于 $D$ 是向量丛的态射.</p>
 <p>归纳地定义 $n$ 阶算子: 若算子 $D$ 与任意函数的交换子都不超过 $(n-1)$ 阶, 则称算子 $D$ 的阶不超过 $n$. 换言之, 算子 $D$ 的阶 $n$ 是满足如下条件的最大整数: $D$ 依次与任意 $n$ 个函数作交换子, 结果都是向量丛的态射.</p>
 <h3>由生成元定义</h3>
@@ -2227,6 +2296,19 @@ $$</p>
 <li>更一般地, 给定交换环 $A$, 一个元素自由生成的 $A$-代数 $A[x]$ 是遗忘函子 $U\colon \mathsf{Alg}_A \to \mathsf{Set}$ 的余表示对象, $U(A[x]) = \operatorname{Hom}_{\mathsf{Alg}_A}(A[x],A[x]) = \operatorname{End}(U)$.</li>
 <li>对于对称幺半范畴 $\mathcal C$, 一个对象自由生成的 $\mathcal C$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>对称幺半范畴是<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>的范畴, 其上有一个幺半结构, 对应于自函子的复合. 详见<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>.</li>
 </ul>
+</details></section><section class="block" data-taxon="notion"><details ><summary id="范畴化"><header><h1><span class="taxon"><span class="link local"><a href="./notion.html" title="观念 [notion]">notion</a></span></span>范畴化 <a class="slug" href="./范畴化.html">[范畴化]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><strong>范畴化</strong> (categorification) 在数学上有多种含义, 但每种范畴化都是提升范畴层级的过程. 所谓范畴层级大致就是指 <span class="link local"><a href="./n-r-范畴.html" title="(n,r)-范畴 [n-r-范畴]">$(n,r)$-范畴</a></span>中的整数 $r$.</p>
+<h3>逆范畴化的反向过程</h3>
+<p>范畴化是一个模糊的概念, 而<strong>逆范畴化</strong> (decategorification) 有清晰的含义:</p>
+<ul>
+<li>在 $1$-范畴中, 取对象的等价类, 得到一个集合;</li>
+<li>在一般的<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>中, 去掉高阶不可逆态射, 并将高阶的等价<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>, 得到较低阶的范畴.</li>
+</ul>
+<p>当高阶范畴具有额外的代数结构 (如<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半</a></span>结构) 时, 其逆范畴化仍保留相应结构.</p>
+<p>如果能将上述操作 “反向”, 即由带结构的低阶范畴开始, 找到一个带结构的高阶范畴, 其逆范畴化是已知的结构, 则可将该过程称为<strong>范畴化</strong>.</p>
+<h3>走向 $\mathsf{Cat}$ 的内部</h3>
+<p>有另一种范畴化的思路, 可以理解为: 将 “集合” 替换为 “范畴”, 重新做一遍熟悉的事情. 更准确地说即是在 $\mathsf{Cat}$ 的<span class="link local"><a href="./内语言.html" title="内语言 [内语言]">内语言</a></span>中工作.</p>
+<p>例如<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>就是 $\mathsf{Cat}$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 那么对于普通的结合代数能够谈论的事情, 对于幺半范畴基本上也能谈论: 例如我们可以谈论幺半范畴上的<span class="link local"><a href="./高阶模.html" title="高阶模 [高阶模]">模</a></span>, 它不过是一种<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">结合代数上的模</a></span>.</p>
 </details></section><section class="block" data-taxon="notion"><details ><summary id="谱(代数)"><header><h1><span class="taxon"><span class="link local"><a href="./notion.html" title="观念 [notion]">notion</a></span></span>谱 (代数–几何对偶) <a class="slug" href="./谱(代数).html">[谱(代数)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本页面谈论<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>中的 “谱” 的广泛概念. 同伦论中的<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>与这个概念没有从属关系, 只是不幸地占有同一个名称. (更不幸的是, 谱代数几何要讨论<span class="link local"><a href="./环谱.html" title="环谱 [环谱]">环谱</a></span>的谱…)</p>
 <hr />

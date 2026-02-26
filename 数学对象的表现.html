@@ -1263,6 +1263,29 @@ $$</p>
 <p>对于范畴 $\mathcal C$, 本质代数理论 $\mathcal T$ 在 $\mathcal C$ 中 <strong>模型</strong>为保持有限极限的函子 $\mathcal T\to\mathcal C$.</p>
 <h2>例</h2>
 <p>(小) 范畴的理论是一种本质代数理论. 例如, 态射的复合只能对首尾相连的态射定义.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="泛包络代数(算畴)"><header><h1><span class="taxon">Wiki. </span>泛包络代数 (算畴上的代数) <a class="slug" href="./泛包络代数(算畴).html">[泛包络代数(算畴)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>(单色, 对称) <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span> $A$ 的<strong>泛包络代数</strong> $\mathcal U A$ 是一个<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 满足 $A$-<span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">模</a></span>等同于 $\mathcal UA$-<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>. (前者是算畴上的代数上的模, 后者是结合代数上的模, 两个概念不太一样.)</p>
+<h3>生成元–关系</h3>
+<p>将<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathcal O$ 视为<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span> $\{\mathcal O(n)\}$, 则其上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span> $A$ 的<strong>泛包络代数</strong> $\mathcal U A$ 有如下生成元–关系<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>: 直观上, 想象一个一般的 $A$-<span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">模</a></span> $M$,</p>
+<ul>
+<li>$\mathcal UA$ 的生成元为 “算子” $f(a_1,\cdots,a_{n-1},-)\colon M\to M$, $f\in\mathcal O(n)$, $a_i\in A\,(i=1,\cdots,n-1)$;</li>
+<li>生成元之间有如下关系 (以 $a$ 表示 $A$ 的若干个元素):
+<ul>
+<li>$f(g(a),-) = h(a,-)$, 其中 $h = f \circ (g,\mathrm{id})$;</li>
+<li>$f(a,-) g(a',-) = k(a,a',-)$, 其中 $k = f\circ (\mathrm{id},g)$.</li>
+</ul>
+</li>
+</ul>
+<h2>例</h2>
+<h3>$\mathbb E_n$-代数</h3>
+<p>$\mathbb E_n$-代数 $A$ 的泛包络代数为 “球壳” $S^{n-1}\times\mathbb{R}$ 上的<span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>
+$$
+\int_{S^{n-1}\times\mathbb{R}}A.
+$$</p>
+<p>例如 $n=1$ 时, $\mathbb E_1$-代数 $A$ 的泛包络代数为 $A\otimes A^{\mathrm{op}}$.</p>
+<h3>Lie 代数</h3>
+<p><span class="link local"><a href="./Lie代数.html" title="Lie 代数 [Lie代数]">Lie 代数</a></span>的<span class="link local"><a href="./泛包络代数.html" title="泛包络代数 (Lie 代数) [泛包络代数]">泛包络代数</a></span>是算畴上的代数的泛包络代数的特例.</p>
 </details></section><section class="block" data-taxon="notion"><details ><summary id="消解"><header><h1><span class="taxon"><span class="link local"><a href="./notion.html" title="观念 [notion]">notion</a></span></span>消解 <a class="slug" href="./消解.html">[消解]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><strong>消解</strong> (resolution) 是将一个数学对象<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>为某种更容易计算的形式的过程; 例如在<span class="link local"><a href="./带弱等价的范畴.html" title="带弱等价的范畴 [带弱等价的范畴]">带弱等价的范畴</a></span>中, 将一个对象替换为与之<span class="link local"><a href="./弱等价.html" title="弱等价 [弱等价]">弱等价</a></span>的具有某种更好性质的对象, 以方便某些计算.</p>
 <h2>例</h2>
@@ -1460,7 +1483,7 @@ $$
 $$
 \sum_{j=1}^p R_{ij} u_j =0,\quad 1\leq i \leq q,
 $$
-其中 $R_{ij}$ 为<span class="link local"><a href="./微分算子.html" title=" [微分算子]">线性微分算子</a></span>, $u_j$ 为变量 $x_1,\cdots,x_n$ 的函数. 名称中 “线性” 的意思是, 方程的若干个解的 (常系数) 线性组合仍是一个解.</p>
+其中 $R_{ij}$ 为<span class="link local"><a href="./微分算子.html" title="微分算子 [微分算子]">线性微分算子</a></span>, $u_j$ 为变量 $x_1,\cdots,x_n$ 的函数. 名称中 “线性” 的意思是, 方程的若干个解的 (常系数) 线性组合仍是一个解.</p>
 <h3>抽象定义</h3>
 <p>设 $D$ 是某种<span class="link local"><a href="./线性微分算子.html" title="线性微分算子 [线性微分算子]">线性微分算子</a></span>构成的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 定义<strong>线性偏微分方程组</strong>为左 <span class="link local"><a href="./D-模.html" title="D-模 [D-模]">$D$-模</a></span>同态
 $$
@@ -1519,6 +1542,7 @@ $$
 <h2>性质</h2>
 <h3>具体表现</h3>
 <p><span class="link local"><a href="./链复形无穷范畴.html" title="链复形无穷范畴 [链复形无穷范畴]">链复形范畴</a></span>中的结合代数有很具体的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 见 <span class="link local"><a href="./A∞-代数.html" title="A∞-代数 [A∞-代数]">$A_\infty$-代数</a></span>.</p>
+<h2>例</h2>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="脉"><header><h1><span class="taxon">Wiki. </span>脉 <a class="slug" href="./脉.html">[脉]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>观念</h2>
 <h3>从几何对象中提取单纯集</h3>
 <p>脉的构造常用于提取出几何对象的 “形状”, 产生一个<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>, 而后人们往往关注这个单纯集<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</p>

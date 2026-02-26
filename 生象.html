@@ -823,25 +823,29 @@ $$</p>
 </ul>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="nonAbPD"><header><h1><span class="taxon">Wiki. </span>非交换 Poincaré 对偶 <a class="slug" href="./nonAbPD.html">[nonAbPD]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>陈述</h2>
-<p>设 $M$ 为流形, 记 $\operatorname{Sing} M$ 为其对应的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</p>
-<p>设 $X \colon \operatorname{Sing}M \to \mathsf{Ani}_{*}$ 为函子, $U\subset M$ 为开集. 定义 $X$ 在 $U$ 上的<strong>紧支集截面</strong>的空间为
+<p>设 $M$ 为流形, 同时用 $M$ 表示其对应的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</p>
+<h3>紧支集截面</h3>
+<p>设 $X \colon M \to \mathsf{Ani}_{*}$ 为函子, $U\subset M$ 为开集. 定义 $X$ 在 $U$ 上的<strong>紧支集截面</strong>的空间为
 $$
-\Gamma_{\mathrm{c}}(U,X) = \operatorname{colim}_{K\subset U} \Gamma(\operatorname{Sing}M,X) \times_{\Gamma(\operatorname{Sing}(M\setminus K),X)} *,
+\Gamma_{\mathrm{c}}(U,X) = \operatorname{colim}_{K\subset U} \Gamma(M,X) \times_{\Gamma(M\setminus K,X)} *,
 $$
-其中 $K\subset U$ 取遍 $U$ 的紧子集.
-那么 $\Gamma_{\mathrm{c}}(U,X)$ 关于 $U,X$ 均有 (协变) 函子性.</p>
-<p>考虑两个<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>, 一是 $\mathcal U(M)$, 其颜色为 $M$ 的开子集, 运算为不交开集的含入. 另一个是 <span class="link local"><a href="./E_M-算畴.html" title="E_M-算畴 [E_M-算畴]">$\mathbb E_M$ 算畴</a></span>.</p>
+其中 $K\subset U$ 取遍 $U$ 的<strong>紧</strong>子集. 直观地, $\Gamma_{\mathrm{c}}(U,X)$ 的元素就是 $U$ 上取值于 $X$ 的函数, 在一个紧集之外的取值均为 $X$ 的基点.</p>
+<p>那么 $\Gamma_{\mathrm{c}}(U,X)$ 关于 $U,X$ 均有 (协变) 函子性.</p>
+<h3>环路空间</h3>
+<p>记 $\mathsf{BTop}(n)$ 为 $n$-维流形与嵌入构成的 $\infty$-范畴中由 $\mathbb{R}^n$ 一个对象构成的全子范畴. 考虑范畴 $\mathsf{BTop}(n)_{/M}$, 即由嵌入 $\mathbb{R}^n\to M$ 构成的 $\infty$-范畴.</p>
+<p>事实上, $\mathsf{BTop}(n)_{/M}$ 与<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $M$ 之间有一个等价. 下面我们固定这个等价, 将二者等同起来.</p>
+<h3>非交换 Poincaré 对偶</h3>
 <p><strong>非交换 Poincaré 对偶</strong>是如下命题:
 $$
 \int_M \Omega_M X \simeq \Gamma_{\mathrm{c}}(M,X).
 $$</p>
 <h3>与经典 Poincaré 对偶的关系</h3>
-<p>下表显示了经典 Poincaré 对偶如何构成非交换 Poincaré 对偶的特例. 简单起见, 设 $M$ 为紧流形.</p>
-<table><thead><tr><th>对象</th><th>非交换版本</th><th>经典版本</th></tr></thead><tbody>
-<tr><td>$\mathbb E_n$ 代数</td><td>$A=\Omega^n\mathbf{B}^nA$</td><td>交换环 $k$</td></tr>
-<tr><td><span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span></td><td>$\mathbf{B}^n A$</td><td><span class="link local"><a href="./Eilenberg–MacLane空间.html" title="Eilenberg–MacLane 对象 [Eilenberg–MacLane空间]">Eilenberg–MacLane 空间</a></span> $\mathbf{B}^n k = K(k,n)$</td></tr>
-<tr><td><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></td><td>$\int_M A$</td><td>奇异链复形 $C_*(M,k)$,<br>取<span class="link local"><a href="./链复形的同调.html" title="链复形的同调 [链复形的同调]">同调</a></span>给出 $H_*(M,k)$</td></tr>
-<tr><td>截面</td><td>$\Gamma(M,\mathbf{B}^n A)$</td><td>$\operatorname{Hom}(M,\mathbf{B}^n k)$,</td></tr>
+<p>下表显示了经典 Poincaré 对偶如何构成非交换 Poincaré 对偶的特例.</p>
+<table><thead><tr><th>对象</th><th>非交换版本</th><th>交换 (经典) 版本</th></tr></thead><tbody>
+<tr><td>系数</td><td>$X\colon M \to \mathsf{Ani}_*$</td><td>$A\colon M \to \mathsf{Mod}(\mathbb{Z})$<br>$\to\mathsf{CAlg}(\mathsf{Ani})$</td></tr>
+<tr><td>$\mathbb E_M$-代数</td><td>$\Omega_M X$</td><td>$A[-n]$</td></tr>
+<tr><td><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></td><td>$\displaystyle \int_M \Omega_M X$</td><td>$\displaystyle\int_M A[-n]$</td></tr>
+<tr><td>紧支集截面</td><td>$\Gamma_{\mathrm{c}}(M,X)$</td><td>$\operatorname{colim}_M A[-n]$</td></tr>
 </tbody></table>
 </details></section><section class="block" data-taxon="notes"><details ><summary id="quantumtori"><header><h1><span class="taxon"><span class="link local"><a href="./notes.html" title="讲稿, 笔记 [notes]">notes</a></span></span>量子圆环 <a class="slug" href="./quantumtori.html">[quantumtori]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是<span class="link local"><a href="./ChenZhaoQuantumTori.html" title="The Quantum Torus as an E_M-category [ChenZhaoQuantumTori]">陈–赵</a></span>文章的阅读笔记, 原文标题为 The Quantum Torus as an $\mathbb E_M$-Category.</p>
@@ -1018,7 +1022,7 @@ $$</p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="中心"><header><h1><span class="taxon">Wiki. </span>中心 <a class="slug" href="./中心.html">[中心]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>群</h3>
-<p>$\mathsf{Set}$ 中的群 $G$ 的中心为
+<p>$\mathsf{Set}$ 中的群 (或幺半群) $G$ 的<strong>中心</strong>为 $G$ 中与所有元素交换的元素构成的子集:
 $$
 Z(G) = \{g\in G | \forall h\in G, gh=hg\}.
 $$</p>
@@ -1027,7 +1031,16 @@ $$</p>
 $$
 Z(G) := \operatorname{Aut}_{\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)}(\mathrm{id}).
 $$
-换言之, $\mathbf{B}Z(G)$ 是 $\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)$ 在 $\mathrm{id}_{\mathbf{B}G}$ 处的连通分支. 一个生象 $A$ 的连通分支是 $A\to\tau_{\leq 0} A$ 的纤维.
+换言之,</p>
+<ul>
+<li>$Z(G) = \Omega^2(\mathsf{Ani}^\simeq,\mathbf{B}G)$ 为 $\mathsf{Ani}^\simeq$ (“<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的生象”) 在 $\mathbf{B}G$ 处的二重<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> (可见 $Z(G)$ 是个 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span>-群);</li>
+<li>$\mathbf{B}Z(G)$ 是 $\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)$ 在 $\mathrm{id}_{\mathbf{B}G}$ 处的连通分支.</li>
+</ul>
+<p>一个生象 $A$ 的连通分支是 $A\to\tau_{\leq 0} A$ 的纤维. 此外, 两个群的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>之间 (作为<strong>不带点</strong>生象) 的映射空间满足
+$$
+\operatorname{Hom}_{\mathsf{Ani}}(\mathbf{B}G,\mathbf{B}H)\simeq \operatorname{Hom}_{\mathsf{Grp}(\mathsf{Ani})}(G,H)/_{\mathrm{Ad}} H,
+$$
+即群同态的生象关于 $H$ 的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的商,
 因此该定义也可等价地陈述如下. 考虑群 $G$ 的<span class="link local"><a href="./群的外自同构.html" title="群的外自同构 [群的外自同构]">外自同构</a></span>群
 $$
 \begin{aligned}

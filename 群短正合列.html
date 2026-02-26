@@ -738,7 +738,7 @@ $$</p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="中心"><header><h1><span class="taxon">Wiki. </span>中心 <a class="slug" href="./中心.html">[中心]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>群</h3>
-<p>$\mathsf{Set}$ 中的群 $G$ 的中心为
+<p>$\mathsf{Set}$ 中的群 (或幺半群) $G$ 的<strong>中心</strong>为 $G$ 中与所有元素交换的元素构成的子集:
 $$
 Z(G) = \{g\in G | \forall h\in G, gh=hg\}.
 $$</p>
@@ -747,7 +747,16 @@ $$</p>
 $$
 Z(G) := \operatorname{Aut}_{\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)}(\mathrm{id}).
 $$
-换言之, $\mathbf{B}Z(G)$ 是 $\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)$ 在 $\mathrm{id}_{\mathbf{B}G}$ 处的连通分支. 一个生象 $A$ 的连通分支是 $A\to\tau_{\leq 0} A$ 的纤维.
+换言之,</p>
+<ul>
+<li>$Z(G) = \Omega^2(\mathsf{Ani}^\simeq,\mathbf{B}G)$ 为 $\mathsf{Ani}^\simeq$ (“<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的生象”) 在 $\mathbf{B}G$ 处的二重<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> (可见 $Z(G)$ 是个 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span>-群);</li>
+<li>$\mathbf{B}Z(G)$ 是 $\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)$ 在 $\mathrm{id}_{\mathbf{B}G}$ 处的连通分支.</li>
+</ul>
+<p>一个生象 $A$ 的连通分支是 $A\to\tau_{\leq 0} A$ 的纤维. 此外, 两个群的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>之间 (作为<strong>不带点</strong>生象) 的映射空间满足
+$$
+\operatorname{Hom}_{\mathsf{Ani}}(\mathbf{B}G,\mathbf{B}H)\simeq \operatorname{Hom}_{\mathsf{Grp}(\mathsf{Ani})}(G,H)/_{\mathrm{Ad}} H,
+$$
+即群同态的生象关于 $H$ 的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的商,
 因此该定义也可等价地陈述如下. 考虑群 $G$ 的<span class="link local"><a href="./群的外自同构.html" title="群的外自同构 [群的外自同构]">外自同构</a></span>群
 $$
 \begin{aligned}
@@ -840,4 +849,35 @@ $$
 $$
 其中 $G\to H$ 有群同态截面 $H\to G$, 这是因为 $H$ 在 $\mathbf{B}N$ 上的作用保持基点, 即有 $\mathsf{Ani}_{/\mathbf{B}H}$ 中的映射 $\mathbf{B}H \to (\mathbf{B}N)/H = \mathbf{B}G$.</p>
 <h2>例</h2>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="约化群"><header><h1><span class="taxon">Wiki. </span>约化群 <a class="slug" href="./约化群.html">[约化群]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>约化群的结构由<span class="link local"><a href="./根.html" title="根 [根]">根</a></span>控制.</p>
+<h2>定义</h2>
+<p>设 $G$ 是域 $F$ 上的线性代数群, 定义其<strong>幂幺根</strong> (unipotent radical) $R_u(G)$ 为其最大正规连通幂幺子群. 若 $R_u(G)$ 平凡, 则称 $G$ 为约化群.</p>
+<h2>例</h2>
+<ul>
+<li>$\mathrm{GL}_n$</li>
+<li>$\mathrm{SL}_n$</li>
+<li>$\mathrm{Sp}_{2n}$</li>
+<li>环面 $T_n$</li>
+<li>$\mathrm{PGL}_n$</li>
+</ul>
+<h3>非约化群的例子</h3>
+<p>如下代数群<strong>不是</strong>约化群:</p>
+<ul>
+<li>可逆上三角矩阵群 $B_n$, 其幂幺根为对角线全为 $1$ 的上三角矩阵的子群.</li>
+<li>抛物子群
+$$
+  P = \Big\{\begin{pmatrix}
+  A &amp; * \\ 0 &amp; B
+  \end{pmatrix}\Bigm| A\in\mathrm{GL}_r,B\in\mathrm{GL}_s\Big\}
+  $$
+其幂幺根为
+$$
+      U_P= \Big\{\begin{pmatrix}
+  I_r &amp; * \\ 0 &amp; I_s
+  \end{pmatrix}\Big\}.
+  $$
+此时有分裂<span class="link local"><a href="./群短正合列.html" title="群的短正合列 [群短正合列]">短正合列</a></span> $U_P \hookrightarrow P \to \mathrm{GL}_r\times\mathrm{GL}_s$. 这是 <span class="link local"><a href="./Levi分解.html" title="Levi 分解 [Levi分解]">Levi 分解</a></span>的例子.</li>
+</ul>
 </details></section></details></section></footer></article></div></body></html>
