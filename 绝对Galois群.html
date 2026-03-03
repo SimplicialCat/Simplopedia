@@ -592,7 +592,7 @@ $$</p>
 <p>$\mathbb F_p$ 的代数闭包的 Frobenius 同态是<span class="link local"><a href="./绝对Galois群.html" title="绝对 Galois 群 [绝对Galois群]">绝对 Galois 群</a></span> $\operatorname{Gal}(\overline{\mathbb F_p}/\mathbb F_p)$ 的拓扑生成元.</p>
 <p>设 $k$ 为 $p$ 特征域 (视为 $\mathbb F_p$-代数). 若 $k$ 的 Frobenius 态射 $x\mapsto x^p$ 为同构, 则 $k$ 为<span class="link local"><a href="./完美域.html" title="完美域 [完美域]">完美域</a></span>.</p>
 <h2>相关概念</h2>
-<p><span class="link local"><a href="./Langlands对应.html" title="“Langlands 对应” [Langlands对应]">Langlands 对应</a></span></p>
+<p><span class="link local"><a href="./Langlands对应.html" title="经典 Langlands 对应 [Langlands对应]">Langlands 对应</a></span></p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="GrothendieckGalois理论"><header><h1><span class="taxon">Wiki. </span>Grothendieck Galois 理论 <a class="slug" href="./GrothendieckGalois理论.html">[GrothendieckGalois理论]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>Grothendieck Galois 理论某种意义上提取出了一个连通<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span>的 “形状” 的一阶同伦信息.</p>
@@ -611,11 +611,21 @@ $$</p>
 <p>见<span class="link local"><a href="./扭结–素数类比.html" title="扭结–素数类比 [扭结–素数类比]">扭结–素数类比</a></span></p>
 <h3>域的谱</h3>
 <p>对于域 $K$, $\pi_1(\operatorname{Spec}K)$ 是 $K$ 的<span class="link local"><a href="./绝对Galois群.html" title="绝对 Galois 群 [绝对Galois群]">绝对 Galois 群</a></span>.</p>
-</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Langlands对应"><header><h1><span class="taxon">Wiki. </span>“Langlands 对应” <a class="slug" href="./Langlands对应.html">[Langlands对应]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>本页介绍<span class="link local"><a href="./数域.html" title="数域 [数域]">数域</a></span>上的 Langlands 对应. 另见<span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 对应</a></span>, <span class="link local"><a href="./Langlands纲领.html" title="“Langlands 纲领” [Langlands纲领]">Langlands 纲领</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Langlands对应"><header><h1><span class="taxon">Wiki. </span>经典 Langlands 对应 <a class="slug" href="./Langlands对应.html">[Langlands对应]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./Langlands纲领.html" title="Langlands 纲领 [Langlands纲领]">Langlands 纲领</a></span>源于数论. 本页介绍<span class="link local"><a href="./数域.html" title="数域 [数域]">数域</a></span>上的 Langlands 对应. 另见<span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 对应</a></span>.</p>
 <blockquote>
 <p>Frenkel, Lectures on the Langlands Program and Conformal Field Theory</p>
 </blockquote>
+<p>故事从 Euler 开始. Euler 用不严格的方法算出了自然数的 $s$ 次方的倒数和 ($s\geq 2$ 为自然数), 这个数后来叫做 <span class="link local"><a href="./Riemannζ-函数.html" title="Riemann ζ-函数 [Riemannζ-函数]">Riemann ζ-函数</a></span> $\zeta(s)$. 除此之外, Euler 还指出 $\zeta(s)$ 可写成所谓 “<strong>Euler 因子</strong>” $1/(1-p^{-s})$ 对素数 $p$ 的乘积, 由此可以推出素数分布的一些信息. Riemann 发现 $\zeta(s)$ 是全纯函数, 从而自然地寻求其解析延拓. 这件事可以用 Euler 的乘积公式以及 $\zeta(s)$ 满足的<strong>函数方程</strong>
+$$
+\Lambda(1-s)=\Lambda(s),\ \Lambda(s)=\pi^{-s/2}\Gamma(s/2)\zeta(s)
+$$
+来做到. (奇妙的是, Euler 使用他的发散级数发现了 $\zeta(s)$ 的函数方程.) 这个函数方程中的 $\Gamma$ 项直到 Tate 才获得完全的理解: 它是 $\mathbb{Q}$ 的 Archimedes <span class="link local"><a href="./位.html" title="“位” [位]">位</a></span>的 Euler 因子.</p>
+<p>后来, Riemann 建立了一个显式的公式, 将素数和 $\zeta$ 函数的零点关联起来. 由此他猜想 $\zeta$ 的零点的实部为 $1/2$, 这相当于素数分布的一个极好的性质.</p>
+<p>Dirichlet 在研究模 $q$ 余 $a$ 素数的分布时用到了所谓 Dirichlet <span class="link local"><a href="./L-函数.html" title="“L-函数” [L-函数]">L-函数</a></span>. 他的方法可理解为 $\mathbb{Z}/q$ 上的调和分析. 设 $\chi\colon (\mathbb{Z}/q)^\times \to\mathbb{C}^\times$ 为 <span class="link local"><a href="./Dirichlet特征.html" title="“Dirichlet 特征” [Dirichlet特征]">Dirichlet 特征</a></span>, 定义
+$$
+L(\chi,s)=\sum_{n}\chi(n)n^{-s} = \prod_p 1/(1-\chi(p)p^{-s}).
+$$</p>
 <h2>一维</h2>
 <p>数论中一个重要的问题是<span class="link local"><a href="./绝对Galois群.html" title="绝对 Galois 群 [绝对Galois群]">绝对 Galois 群</a></span>. 对于有理数域, 我们不能很好地描述其绝对 Galois 群 $\mathrm{Gal}(\overline{\mathbb{Q}}/\mathbb{Q})$, 但可以描述它的极大 Abel 商. 这对应于有理数域的极大 Abel 扩张 $\mathbb{Q}^{\mathrm{ab}}$, 它是 $\mathbb{Q}$ 添加所有单位根所得的扩张.
 $$

@@ -524,7 +524,8 @@
 
 <article><section class="block" data-taxon="Wiki"><details open><summary id="纤维函子"><header><h1><span class="taxon">Wiki. </span>纤维函子 <a class="slug" href="./纤维函子.html">[纤维函子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>纤维函子指的是某种空间 $X$ 上的层范畴到点上的层范畴的函子, 在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>下对应空间 $X$ 的一个<strong>点</strong>.</p>
+<p>纤维函子指的是某种空间 $X$ 上的层范畴 (作为几何对象的<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数侧对偶</a></span>) 到点上的层范畴的函子, 在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>下对应空间 $X$ 的一个<strong>点</strong>.</p>
+<p><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的<span class="link local"><a href="./茎.html" title="茎 [茎]">茎</a></span>是最常见的纤维函子.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>Backlinks</h1></header></summary><section class="block" data-taxon="Wiki"><details ><summary id="GrothendieckGalois理论"><header><h1><span class="taxon">Wiki. </span>Grothendieck Galois 理论 <a class="slug" href="./GrothendieckGalois理论.html">[GrothendieckGalois理论]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>Grothendieck Galois 理论某种意义上提取出了一个连通<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span>的 “形状” 的一阶同伦信息.</p>
@@ -599,4 +600,29 @@ H^1(X_{\mathrm{\'et}},G) \simeq \operatorname{Hom}_{\mathrm{cts}}(\pi_1(X,\bar x
 $$</p>
 <h2>例</h2>
 <p>设基环 $k$ 为特征 $0$ 代数闭域, $\mathbb G_m$ 的有限平展覆叠为 $(-)^n\colon \mathbb G_m \to\mathbb G_m$.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="淡中对偶"><header><h1><span class="taxon">Wiki. </span>淡中对偶 <a class="slug" href="./淡中对偶.html">[淡中对偶]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>当几何对象的<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数侧对偶</a></span>是一个带有代数结构的范畴时, 这个几何对象的基点体现为<span class="link local"><a href="./纤维函子.html" title="纤维函子 [纤维函子]">纤维函子</a></span>, 而纤维函子的自同构可理解为该几何对象的基本群; 这就是淡中构造.</p>
+<h2>陈述</h2>
+<h3>对称幺半线性范畴</h3>
+<p>固定代数闭域 $k$ 作为基域, 定义<strong>淡中范畴</strong> (Tannakian category) 为<span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成</a></span>的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span> $k$-线性 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>, 满足 $\operatorname{End}(1)\simeq k$. 那么仿射群概形 (的分类叠) 对偶于淡中范畴:</p>
+<ul>
+<li>对于仿射群概形 $G$ 的<span class="link local"><a href="./分类叠.html" title="分类叠 (模叠) [分类叠]">分类叠</a></span> $X = * / G$, 其上<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>的范畴 $\mathsf{QCoh}(X) = \mathsf{Rep}(G)$ 为淡中范畴;</li>
+<li>对于淡中范畴 $(\mathcal C,\otimes)$, 叠 $A \mapsto \mathsf{Fun}^{\otimes, \mathrm{colim}} (\mathcal C,\mathsf{Mod}(A))$ 为某代数群的分类叠.</li>
+</ul>
+<h3>充实范畴</h3>
+<p>设 $\mathcal V$ 为<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $A$ 为其中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">幺半群</a></span>, 其对应一个 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span> $\mathbf{B}A$; 记 $A$-模范畴为
+$$
+\mathsf{Mod}(A) := [\mathbf{B}A, \mathcal V].
+$$
+将 $\mathcal V$-充实函子 $\mathbf{B}A\to\mathcal V$ 取值于 $\mathbf{B}A$ 的唯一对象, 给出遗忘函子 (即所谓<strong>纤维函子</strong>)
+$$
+F \colon \mathsf{Mod}(A)\to\mathcal V.
+$$</p>
+<p><strong>定理</strong>. 由函子 $F$ 可重构出代数 $A$:
+$$
+\operatorname{End}(F) \simeq A.
+$$</p>
+<h2>例</h2>
+<p><span class="link local"><a href="./佐武等价.html" title="佐武等价 [佐武等价]">佐武 (Satake) 等价</a></span></p>
 </details></section></details></section></footer></article></div></body></html>

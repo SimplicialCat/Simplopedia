@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>“Langlands 对应”</title><link rel="icon" href="./assets/favicon.ico" /><template id="inline-section">
+<meta name="viewport" content="width=device-width"><title>经典 Langlands 对应</title><link rel="icon" href="./assets/favicon.ico" /><template id="inline-section">
   <section class="inline block" data-taxon="">
     <details open="">
       <summary>
@@ -522,11 +522,21 @@
 }
 </style></head><body><header class="header"><nav class="nav"><div class="logo"><span class="cursor-pointer" onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper" style="grid-template-areas: 'article toc';" data-base-url="./"><nav id="toc" class="sticky-nav mobile-sticky-nav"><div id="theme-options"></div></nav>
 
-<article><section class="block" data-taxon="Wiki"><details open><summary id="Langlands对应"><header><h1><span class="taxon">Wiki. </span>“Langlands 对应” <a class="slug" href="./Langlands对应.html">[Langlands对应]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>本页介绍<span class="link local"><a href="./数域.html" title="数域 [数域]">数域</a></span>上的 Langlands 对应. 另见<span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 对应</a></span>, <span class="link local"><a href="./Langlands纲领.html" title="“Langlands 纲领” [Langlands纲领]">Langlands 纲领</a></span>.</p>
+<article><section class="block" data-taxon="Wiki"><details open><summary id="Langlands对应"><header><h1><span class="taxon">Wiki. </span>经典 Langlands 对应 <a class="slug" href="./Langlands对应.html">[Langlands对应]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./Langlands纲领.html" title="Langlands 纲领 [Langlands纲领]">Langlands 纲领</a></span>源于数论. 本页介绍<span class="link local"><a href="./数域.html" title="数域 [数域]">数域</a></span>上的 Langlands 对应. 另见<span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 对应</a></span>.</p>
 <blockquote>
 <p>Frenkel, Lectures on the Langlands Program and Conformal Field Theory</p>
 </blockquote>
+<p>故事从 Euler 开始. Euler 用不严格的方法算出了自然数的 $s$ 次方的倒数和 ($s\geq 2$ 为自然数), 这个数后来叫做 <span class="link local"><a href="./Riemannζ-函数.html" title="Riemann ζ-函数 [Riemannζ-函数]">Riemann ζ-函数</a></span> $\zeta(s)$. 除此之外, Euler 还指出 $\zeta(s)$ 可写成所谓 “<strong>Euler 因子</strong>” $1/(1-p^{-s})$ 对素数 $p$ 的乘积, 由此可以推出素数分布的一些信息. Riemann 发现 $\zeta(s)$ 是全纯函数, 从而自然地寻求其解析延拓. 这件事可以用 Euler 的乘积公式以及 $\zeta(s)$ 满足的<strong>函数方程</strong>
+$$
+\Lambda(1-s)=\Lambda(s),\ \Lambda(s)=\pi^{-s/2}\Gamma(s/2)\zeta(s)
+$$
+来做到. (奇妙的是, Euler 使用他的发散级数发现了 $\zeta(s)$ 的函数方程.) 这个函数方程中的 $\Gamma$ 项直到 Tate 才获得完全的理解: 它是 $\mathbb{Q}$ 的 Archimedes <span class="link local"><a href="./位.html" title="“位” [位]">位</a></span>的 Euler 因子.</p>
+<p>后来, Riemann 建立了一个显式的公式, 将素数和 $\zeta$ 函数的零点关联起来. 由此他猜想 $\zeta$ 的零点的实部为 $1/2$, 这相当于素数分布的一个极好的性质.</p>
+<p>Dirichlet 在研究模 $q$ 余 $a$ 素数的分布时用到了所谓 Dirichlet <span class="link local"><a href="./L-函数.html" title="“L-函数” [L-函数]">L-函数</a></span>. 他的方法可理解为 $\mathbb{Z}/q$ 上的调和分析. 设 $\chi\colon (\mathbb{Z}/q)^\times \to\mathbb{C}^\times$ 为 <span class="link local"><a href="./Dirichlet特征.html" title="“Dirichlet 特征” [Dirichlet特征]">Dirichlet 特征</a></span>, 定义
+$$
+L(\chi,s)=\sum_{n}\chi(n)n^{-s} = \prod_p 1/(1-\chi(p)p^{-s}).
+$$</p>
 <h2>一维</h2>
 <p>数论中一个重要的问题是<span class="link local"><a href="./绝对Galois群.html" title="绝对 Galois 群 [绝对Galois群]">绝对 Galois 群</a></span>. 对于有理数域, 我们不能很好地描述其绝对 Galois 群 $\mathrm{Gal}(\overline{\mathbb{Q}}/\mathbb{Q})$, 但可以描述它的极大 Abel 商. 这对应于有理数域的极大 Abel 扩张 $\mathbb{Q}^{\mathrm{ab}}$, 它是 $\mathbb{Q}$ 添加所有单位根所得的扩张.
 $$
@@ -595,28 +605,31 @@ $$</p>
 <p>$\mathbb F_p$ 的代数闭包的 Frobenius 同态是<span class="link local"><a href="./绝对Galois群.html" title="绝对 Galois 群 [绝对Galois群]">绝对 Galois 群</a></span> $\operatorname{Gal}(\overline{\mathbb F_p}/\mathbb F_p)$ 的拓扑生成元.</p>
 <p>设 $k$ 为 $p$ 特征域 (视为 $\mathbb F_p$-代数). 若 $k$ 的 Frobenius 态射 $x\mapsto x^p$ 为同构, 则 $k$ 为<span class="link local"><a href="./完美域.html" title="完美域 [完美域]">完美域</a></span>.</p>
 <h2>相关概念</h2>
-<p><span class="link local"><a href="./Langlands对应.html" title="“Langlands 对应” [Langlands对应]">Langlands 对应</a></span></p>
-</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Langlands纲领"><header><h1><span class="taxon">Wiki. </span>“Langlands 纲领” <a class="slug" href="./Langlands纲领.html">[Langlands纲领]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li><li class="meta-item">[]</li></ul></div></header></summary>
-
+<p><span class="link local"><a href="./Langlands对应.html" title="经典 Langlands 对应 [Langlands对应]">Langlands 对应</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Langlands对偶"><header><h1><span class="taxon">Wiki. </span>Langlands 对偶群 <a class="slug" href="./Langlands对偶.html">[Langlands对偶]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>设 $G$ 为<span class="link local"><a href="./约化群.html" title="约化群 [约化群]">约化</a></span>代数群, 其 Langlands 对偶 ${^LG}$ 是置换其<span class="link local"><a href="./根.html" title="根 [根]">根</a></span>数据所得的另一个代数群.</p>
+<p><span class="link local"><a href="./Langlands对应.html" title="经典 Langlands 对应 [Langlands对应]">Langlands 对应</a></span> 将
+$G$ (准确地说是 $G(\mathbb A_F)$) 的自守表示联系到 $^LG$-值的 Galois 表示 (即同态 $\mathrm {Gal}(\overline{F}/F)\to {^LG}$).</p>
+<p>Langlands 对偶群也可由<span class="link local"><a href="./佐武等价.html" title="佐武等价 [佐武等价]">佐武等价</a></span>定义.</p>
+<h2>性质</h2>
+<h3>规范理论中的 Langlands 对偶</h3>
+<blockquote>
+<p>A gauge theory has a coupling constant $g$, which plays the role of the electric charge $e$. The conjectural non-abelian electro-magnetic duality, which has later become known as $S$-duality, has the form $(G, g) \leftrightarrow (^LG, 1/g)$.</p>
+</blockquote>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./Langlands纲领.html" title="Langlands 纲领 [Langlands纲领]">Langlands 纲领</a></span></p>
+<p><span class="link local"><a href="./局部几何Langlands对应.html" title="“局部几何 Langlands 对应” [局部几何Langlands对应]">局部几何 Langlands 对应</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="Langlands纲领"><header><h1><span class="taxon">Wiki. </span>Langlands 纲领 <a class="slug" href="./Langlands纲领.html">[Langlands纲领]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <table><thead><tr><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody>
 <tr><td><span class="link local"><a href="./椭圆曲线.html" title="“椭圆曲线” [椭圆曲线]">椭圆曲线</a></span></td><td>←</td><td>Ramanujan</td><td>→</td><td><span class="link local"><a href="./自守形式.html" title="“自守形式” [自守形式]">自守形式</a></span></td></tr>
 <tr><td>↓</td><td></td><td></td><td></td><td>↓</td></tr>
-<tr><td>$\operatorname{Gal}(\overline{F}/F) \to {^LG}$, Frobenius</td><td>←</td><td>原始 <span class="link local"><a href="./Langlands对应.html" title="“Langlands 对应” [Langlands对应]">Langlands 对应</a></span></td><td>→</td><td>$\mathbb G(\mathbb A_F)$ 的<span class="link local"><a href="./自守表示.html" title="“自守表示” [自守表示]">自守表示</a></span>, Hecke</td></tr>
+<tr><td>$\operatorname{Gal}(\overline{F}/F) \to {^LG}$, Frobenius</td><td>←</td><td>原始 <span class="link local"><a href="./Langlands对应.html" title="经典 Langlands 对应 [Langlands对应]">Langlands 对应</a></span></td><td>→</td><td>$\mathbb G(\mathbb A_F)$ 的<span class="link local"><a href="./自守表示.html" title="“自守表示” [自守表示]">自守表示</a></span>, Hecke</td></tr>
 <tr><td>↓</td><td></td><td></td><td></td><td>↓</td></tr>
 <tr><td>曲线上的平坦 ${^LG}$-丛</td><td>←</td><td><span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 对应</a></span></td><td>→</td><td><span class="link local"><a href="./主丛的模空间.html" title="“主丛的模空间” [主丛的模空间]">主丛的模空间</a></span> $\mathrm {Bun}_G$ 上的 Hecke 特征层</td></tr>
 <tr><td>↓</td><td></td><td></td><td></td><td>↓</td></tr>
 <tr><td>$\mathrm {Loc}_{^LG}$ 上的导出范畴</td><td>←</td><td>范畴 Langlands 对应</td><td>→</td><td>$\mathrm {Bun}_G$ 上的 <span class="link local"><a href="./D-模.html" title="D-模 [D-模]">D-模</a></span>导出范畴</td></tr>
 </tbody></table>
-<p>故事从 Euler 开始. Euler 用不严格的方法算出了自然数的 $s$ 次方的倒数和 ($s\geq 2$ 为自然数), 这个数后来叫做 <span class="link local"><a href="./Riemannζ-函数.html" title="Riemann ζ-函数 [Riemannζ-函数]">Riemann ζ-函数</a></span> $\zeta(s)$. 除此之外, Euler 还指出 $\zeta(s)$ 可写成所谓 “<strong>Euler 因子</strong>” $1/(1-p^{-s})$ 对素数 $p$ 的乘积, 由此可以推出素数分布的一些信息. Riemann 发现 $\zeta(s)$ 是全纯函数, 从而自然地寻求其解析延拓. 这件事可以用 Euler 的乘积公式以及 $\zeta(s)$ 满足的<strong>函数方程</strong>
-$$
-\Lambda(1-s)=\Lambda(s),\ \Lambda(s)=\pi^{-s/2}\Gamma(s/2)\zeta(s)
-$$
-来做到. (奇妙的是, Euler 使用他的发散级数发现了 $\zeta(s)$ 的函数方程.) 这个函数方程中的 $\Gamma$ 项直到 Tate 才获得完全的理解: 它是 $\mathbb{Q}$ 的 Archimedes <span class="link local"><a href="./位.html" title="“位” [位]">位</a></span>的 Euler 因子.</p>
-<p>后来, Riemann 建立了一个显式的公式, 将素数和 $\zeta$ 函数的零点关联起来. 由此他猜想 $\zeta$ 的零点的实部为 $1/2$, 这相当于素数分布的一个极好的性质.</p>
-<p>Dirichlet 在研究模 $q$ 余 $a$ 素数的分布时用到了所谓 Dirichlet <span class="link local"><a href="./L-函数.html" title="“L-函数” [L-函数]">L-函数</a></span>. 他的方法可理解为 $\mathbb{Z}/q$ 上的调和分析. 设 $\chi\colon (\mathbb{Z}/q)^\times \to\mathbb{C}^\times$ 为 <span class="link local"><a href="./Dirichlet特征.html" title="“Dirichlet 特征” [Dirichlet特征]">Dirichlet 特征</a></span>, 定义
-$$
-L(\chi,s)=\sum_{n}\chi(n)n^{-s} = \prod_p 1/(1-\chi(p)p^{-s}).
-$$</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Weil罗塞塔石碑.html" title="“Weil 罗塞塔石碑” [Weil罗塞塔石碑]">Weil 罗塞塔石碑</a></span>, <span class="link local"><a href="./函数域类比.html" title="函数域类比 [函数域类比]">函数域类比</a></span></p>
 <p><span class="link local"><a href="./局部几何Langlands对应.html" title="“局部几何 Langlands 对应” [局部几何Langlands对应]">局部几何 Langlands 对应</a></span></p>
@@ -626,7 +639,7 @@ $$</p>
 <blockquote>
 <p>General Shtukas can be thought of as a version of motives not defined in characteristic $p$ but whose coefficient field is of characteristic $p$. — 恽之伟, Introduction to Shtukas and their Moduli</p>
 </blockquote>
-<p>Shtuka 的<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>或模叠是<span class="link local"><a href="./志村簇.html" title="“志村簇” [志村簇]">志村簇</a></span>的<span class="link local"><a href="./函数域类比.html" title="函数域类比 [函数域类比]">函数域类比</a></span>, 是<span class="link local"><a href="./函数域.html" title="“函数域” [函数域]">函数域</a></span> <span class="link local"><a href="./Langlands对应.html" title="“Langlands 对应” [Langlands对应]">Langlands 纲领</a></span>中的重要角色.</p>
+<p>Shtuka 的<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>或模叠是<span class="link local"><a href="./志村簇.html" title="“志村簇” [志村簇]">志村簇</a></span>的<span class="link local"><a href="./函数域类比.html" title="函数域类比 [函数域类比]">函数域类比</a></span>, 是<span class="link local"><a href="./函数域.html" title="“函数域” [函数域]">函数域</a></span> <span class="link local"><a href="./Langlands对应.html" title="经典 Langlands 对应 [Langlands对应]">Langlands 纲领</a></span>中的重要角色.</p>
 <blockquote>
 <p>L. Lafforgue used the moduli stack of rank $n$ Shtukas and their compactifications to prove the Ramanujan–Petersson conjecture and the Langlands conjecture for $\mathrm {GL}_n$ over a global function field for any $n\in\mathbb N$.</p>
 </blockquote>
@@ -654,6 +667,24 @@ L^\sigma\otimes L^{-1}\simeq \mathcal O_{X\times S}(\Gamma_\infty - \Gamma_0).
 $$</p>
 <h2>性质</h2>
 <p>$\mathrm{Sht}$ 是 <span class="link local"><a href="./Deligne–Mumford叠.html" title=" [Deligne–Mumford叠]">Deligne–Mumford 叠</a></span>.</p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="几何Langlands对应"><header><h1><span class="taxon">Wiki. </span>几何 Langlands 对应 <a class="slug" href="./几何Langlands对应.html">[几何Langlands对应]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>陈述</h2>
+<h3>经典对应</h3>
+<p>几何 Langlands 对应是<span class="link local"><a href="./Langlands对应.html" title="经典 Langlands 对应 [Langlands对应]">经典 Langlands 对应</a></span>的<span class="link local"><a href="./函数域类比.html" title="函数域类比 [函数域类比]">函数域类比</a></span>, 以及其在复代数曲线 (<span class="link local"><a href="./Riemann面.html" title="“Riemann 面” [Riemann面]">Riemann 面</a></span>) 上的进一步类比.</p>
+<p>todo: 重写</p>
+<p><span class="link local"><a href="./Galois表示.html" title=" [Galois表示]">Galois 表示</a></span>理解为 <span class="link local"><a href="./l-进局部系统.html" title=" [l-进局部系统]">$\ell$-进层</a></span>.</p>
+<p>非分歧<span class="link local"><a href="./自守表示.html" title="“自守表示” [自守表示]">自守表示</a></span>给出 $\mathrm{GL}_n(F) \backslash \mathrm{GL}_n(\mathbb A) / \mathrm{GL}_n(\mathcal O)$ 上的函数 $f_\pi$ (差一个常数), 它是 <span class="link local"><a href="./Hecke代数.html" title="Hecke 代数 [Hecke代数]">Hecke 代数</a></span> $\mathcal H_x, x\in X$ 的特征函数. 使用 <span class="link local"><a href="./Grothendieck函数–层字典.html" title="“Grothendieck 函数–层字典” [Grothendieck函数–层字典]">Grothendieck 函数–层字典</a></span>, 该函数对应于 $X$ 上的 $G$-丛模空间上的 Hecke 特征层.</p>
+<h3>范畴层面的对应</h3>
+<p>“范畴式” (categorical) 几何 Langlands 对应的主旨是两个 <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>的比较:</p>
+<ul>
+<li>几何 (“自守”) 侧, 即 $X$ 上 $G$-丛的<span class="link local"><a href="./模叠.html" title=" [模叠]">模空间</a></span>上的 <span class="link local"><a href="./D-模.html" title="D-模 [D-模]">D-模</a></span>;</li>
+<li>谱 (“Galois”) 侧, 即 $X$ 上 $\check G$-<span class="link local"><a href="./局部系统.html" title="局部系统 [局部系统]">局部系统</a></span>的叠上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>.</li>
+</ul>
+<h3>物理视角: Kapustin–Witten</h3>
+<p>2006 年, <span class="link local"><a href="./KapustinWittenGL.html" title="Electric-Magnetic Duality And The Geometric Langlands Program [KapustinWittenGL]">Kapustin 与 Witten</a></span> 指出 4D 超对称规范场论的 S 对偶能够推出几何 Langlands 对应.</p>
+<p>对于 Langlands 对偶群 $G,G^L$, 分别考虑代数曲线 $X$ 上对应的 Higgs 丛的 <span class="link local"><a href="./Hitchin模叠.html" title="“Hitchin 模叠” [Hitchin模叠]">Hitchin 模叠</a></span>, 人们认识到几何 Langlands 纲领与该几何对象的<span class="link local"><a href="./同调镜像对称.html" title="同调镜像对称 [同调镜像对称]">同调镜像对称</a></span>有关.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./量子几何Langlands纲领.html" title="量子几何 Langlands 纲领 [量子几何Langlands纲领]">量子几何 Langlands 纲领</a></span></p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="函数域类比"><header><h1><span class="taxon">Wiki. </span>函数域类比 <a class="slug" href="./函数域类比.html">[函数域类比]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <table><thead><tr><th><span class="link local"><a href="./数域.html" title="数域 [数域]">数域</a></span> (“<span class="link local"><a href="./F1.html" title="F1 [F1]">F1</a></span> 上曲线的函数域”)</th><th>$\mathbb F_q$ 上曲线的<span class="link local"><a href="./函数域.html" title="“函数域” [函数域]">函数域</a></span></th><th>复曲线</th></tr></thead><tbody>
 <tr><td>$\mathbb{Z}$</td><td>多项式环 $\mathbb F_q[z]$</td><td>复平面上的全纯函数 $\mathcal O$</td></tr>
@@ -679,14 +710,14 @@ $$</p>
 <tr><td>Galois 群</td><td></td><td>基本群</td></tr>
 <tr><td>Galois 表示</td><td></td><td><span class="link local"><a href="./局部系统.html" title="局部系统 [局部系统]">局部系统</a></span></td></tr>
 <tr><td>$\mathrm {GL}_1(K)\backslash \mathrm {GL}_1(\mathbb A_K) / \mathrm {GL}_1(\mathcal O)$</td><td>$\mathrm {GL}_1(K)\backslash \mathrm {GL}_1(\mathbb A_K) / \mathrm {GL}_1(\mathcal O)$</td><td>线丛的模叠 $\mathrm {Bun}_{\mathrm {GL}_1}(\Sigma)$</td></tr>
-<tr><td>数域 <span class="link local"><a href="./Langlands对应.html" title="“Langlands 对应” [Langlands对应]">Langlands 对应</a></span></td><td></td><td><span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 对应</a></span></td></tr>
+<tr><td>数域 <span class="link local"><a href="./Langlands对应.html" title="经典 Langlands 对应 [Langlands对应]">Langlands 对应</a></span></td><td></td><td><span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 对应</a></span></td></tr>
 <tr><td>Dedekind <span class="link local"><a href="./ζ-函数.html" title="ζ-函数 [ζ-函数]">ζ-函数</a></span></td><td>Weil <span class="link local"><a href="./ζ-函数.html" title="ζ-函数 [ζ-函数]">ζ-函数</a></span></td><td>Riemann 面 (Laplace 算子) 的 <span class="link local"><a href="./ζ-函数.html" title="ζ-函数 [ζ-函数]">ζ-函数</a></span></td></tr>
 <tr><td></td><td></td><td></td></tr>
 </tbody></table>
 <p><span class="link local"><a href="./Weil罗塞塔石碑.html" title="“Weil 罗塞塔石碑” [Weil罗塞塔石碑]">Weil 罗塞塔石碑</a></span></p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="局部域"><header><h1><span class="taxon">Wiki. </span>局部域 <a class="slug" href="./局部域.html">[局部域]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>局部域是相对于<span class="link local"><a href="./整体域.html" title="“整体域” [整体域]">整体域</a></span>的概念, 若整体域可想象为曲线上的有理函数域, 则局部域是曲线上的形式邻域 (所谓 “形式圆盘”) 上的函数域.</p>
-<p>整体域的 <span class="link local"><a href="./Langlands对应.html" title="“Langlands 对应” [Langlands对应]">Langlands 纲领</a></span>有一个局部域版本, 称为局部 Langlands 对应.</p>
+<p>整体域的 <span class="link local"><a href="./Langlands对应.html" title="经典 Langlands 对应 [Langlands对应]">Langlands 纲领</a></span>有一个局部域版本, 称为局部 Langlands 对应.</p>
 <h2>定义</h2>
 <p>局部域是局部紧 Hausdorff 拓扑域.</p>
 <h2>性质</h2>
@@ -724,5 +755,5 @@ $$
 <blockquote>
 <p>The Taniyama conjecture says that the L-series of an elliptic curve over Q is automorphic (more specifically, arises from a modular form). Langlands conjectures that every L-series arising from algebraic geometry is automorphic (in the sense he defined).</p>
 </blockquote>
-<p><span class="link local"><a href="./Langlands对应.html" title="“Langlands 对应” [Langlands对应]">Langlands 对应</a></span></p>
+<p><span class="link local"><a href="./Langlands对应.html" title="经典 Langlands 对应 [Langlands对应]">Langlands 对应</a></span></p>
 </details></section></details></section></footer></article></div></body></html>

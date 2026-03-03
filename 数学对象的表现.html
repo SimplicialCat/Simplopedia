@@ -968,6 +968,7 @@ $$
 \Delta^{\mathrm{op}} \to \mathsf{Set}\hookrightarrow\mathsf{Ani}
 $$
 的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>. 于是对于一般的 $\infty$-范畴, 人们也称这种形状的余极限为几何实现.</p>
+<p>这实际上是<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现 (作为米田扩张)</a></span> 的特例: $\mathsf{Ani}$ 中所有的 “单形” 实际上都是一个点.</p>
 <h2>定义</h2>
 <p><span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$\infty$-范畴</a></span>中的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>的几何实现指的就是单纯图表的余极限.</p>
 <h2>例</h2>
@@ -1210,6 +1211,9 @@ $$</p>
 对于某些不保持弱等价的函子, 也可以通过谨慎地选择等价类的代表来得到 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$\infty$-范畴</a></span>之间的函子.</p>
 <h2>定义</h2>
 <p><strong>带弱等价的范畴</strong>是指一个范畴 $\mathcal C$ 带有一族指定的态射 $W$, 其中包含 $\mathcal C$ 中所有的同构, 满足某些封闭性质 (如三选二性质, $f,g,gf$ 中任意两者属于 $W$ 则第三者属于 $W$).</p>
+<h2>例</h2>
+<h3>链复形</h3>
+<p><span class="link local"><a href="./链复形.html" title="链复形 [链复形]">链复形</a></span>的<span class="link local"><a href="./拟同构.html" title="拟同构 [拟同构]">拟同构</a></span>是一种弱等价. 这表现了<span class="link local"><a href="./链复形无穷范畴.html" title="链复形无穷范畴 [链复形无穷范畴]">链复形 $\infty$-范畴</a></span>.</p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="无穷范畴"><header><h1><span class="taxon">Wiki. </span>无穷范畴 <a class="slug" href="./无穷范畴.html">[无穷范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>无穷范畴的理论是同伦论与范畴论的共同推广, 是以<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>为最基本概念的数学中自然出现的范畴概念.</p>
@@ -1716,8 +1720,13 @@ $$
 <p>链复形是线性稳定同伦类的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>.</p>
 <h2>定义</h2>
 <h3>Abel 范畴</h3>
-<p>经典的链复形是 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>中的一列映射</p>
-<p>…</p>
+<p><span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span> $\mathcal A$ 中的<strong>链复形</strong>是一列对象与映射
+$$
+\cdots \overset{d}{\to} C_i \overset{d}{\to} C_{i-1} \overset{d}{\to} \cdots,
+$$
+满足 $d\circ d = 0$.
+链复形之间的态射即是这种形状的图之间的自然变换.</p>
+<p>链复形之间诱导所有同调的同构的态射称为<span class="link local"><a href="./拟同构.html" title="拟同构 [拟同构]">拟同构</a></span>.</p>
 <h3>一般范畴</h3>
 <p>参考 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">HA</a></span> 1.2.2 节.</p>
 <p>设范畴 $\mathcal C$ 具有零对象 $0$. 考虑一个全序集 $\mathcal J$, 视为范畴; 记 $\mathcal J^{\to}$ 为其箭头范畴. 定义 $\mathcal C$ 中的 $\mathcal J$-链复形为如下资料:</p>

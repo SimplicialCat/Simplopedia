@@ -796,7 +796,7 @@ $$</p>
 <p>$n=-1$:</p>
 <p>$Z_{-1}\to X$ 是基点处的连通分支.</p>
 <p>$n=0$:</p>
-<p>$Z_0 \to Z_{-1}$ 是万有覆叠.</p>
+<p>$Z_0 \to Z_{-1}$ 是<span class="link local"><a href="./万有覆叠.html" title="万有覆叠 [万有覆叠]">万有覆叠</a></span>.</p>
 <h3>正交群</h3>
 <p>正交群 $\mathrm{O}_n$ 的 Whitehead 塔为
 $$
@@ -1321,6 +1321,7 @@ $$
 \Delta^{\mathrm{op}} \to \mathsf{Set}\hookrightarrow\mathsf{Ani}
 $$
 的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>. 于是对于一般的 $\infty$-范畴, 人们也称这种形状的余极限为几何实现.</p>
+<p>这实际上是<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现 (作为米田扩张)</a></span> 的特例: $\mathsf{Ani}$ 中所有的 “单形” 实际上都是一个点.</p>
 <h2>定义</h2>
 <p><span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$\infty$-范畴</a></span>中的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>的几何实现指的就是单纯图表的余极限.</p>
 <h2>例</h2>
@@ -1460,6 +1461,22 @@ $$</p>
 <p>其中 $\pi_n(f)$ 是 $f\in \mathcal C_{/Y}$ 的同伦群, 是 $(\mathcal C_{/Y})_{/f} = \mathcal C_{/X}$ 的对象.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./相对同伦群.html" title="相对同伦群 [相对同伦群]">相对同伦群</a></span></p>
+</details></section><section class="block" data-taxon="Wiki"><details ><summary id="同调"><header><h1><span class="taxon">Wiki. </span>同调 <a class="slug" href="./同调.html">[同调]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>同调</strong>在数学上有许多含义. 其共性是一种表现得像<span class="link local"><a href="./张量积.html" title="张量积 [张量积]">张量积</a></span>, <span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>那样的协变函子. 而与之相对的<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>则是一种表现得像 Hom, <span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>那样的反变函子.</p>
+<h2>定义</h2>
+<p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ 的<strong>同调群</strong> $H_n(X)$ 是其<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的交换群 (见 <span class="link local"><a href="./Dold–Thom定理.html" title="Dold–Thom 定理 [Dold–Thom定理]">Dold–Thom 定理</a></span>) 对应的<span class="link local"><a href="./连合谱.html" title="连合谱 [连合谱]">连合谱</a></span> $\Sigma^\infty X \wedge H\mathbb{Z}$ 的<span class="link local"><a href="./同伦群(稳定同伦论).html" title="同伦群 (稳定同伦论) [同伦群(稳定同伦论)]">同伦群</a></span>:
+$$
+H_n(X) = \pi_n(\Sigma^\infty X \wedge H\mathbb{Z}).
+$$</p>
+<h3>广义同调</h3>
+<p>$$
+E_n(X) := \pi_n (\Sigma^\infty X \wedge E).
+$$</p>
+<p>见<span class="link local"><a href="./广义同调.html" title="广义同调 [广义同调]">广义同调</a></span>.</p>
+<h2>性质</h2>
+<h3>Dold–Thom 定理</h3>
+<p><span class="link local"><a href="./Dold–Thom定理.html" title="Dold–Thom 定理 [Dold–Thom定理]">Dold–Thom 定理</a></span></p>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="基本群"><header><h1><span class="taxon">Wiki. </span>基本群 <a class="slug" href="./基本群.html">[基本群]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的<strong>基本群</strong>是其<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>的 <span class="link local"><a href="./截断性.html" title="截断性 [截断性]">$0$-截断</a></span>.</p>
@@ -1488,23 +1505,41 @@ $$
 <li>单射 ($(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>映射) 的分类子叫做<span class="link local"><a href="./子对象分类子.html" title="子对象分类子 [子对象分类子]">子对象分类子</a></span>.</li>
 </ul>
 </details></section><section class="block" data-taxon="Wiki"><details ><summary id="局部系统"><header><h1><span class="taxon">Wiki. </span>局部系统 <a class="slug" href="./局部系统.html">[局部系统]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>局部系统是空间上局部平凡的 “(<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>) 系数的系统”, 等同于底空间的基本群胚出发的函子, 即基本群的表示. 有时基本群甚至是通过这一原则反向构造出来的; 见<span class="link local"><a href="./淡中对偶.html" title="淡中对偶 [淡中对偶]">淡中对偶</a></span>.</p>
 <h2>定义</h2>
 <h3>生象上</h3>
 <p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $A$ 上的局部系统就是 $A$ (视为 $\infty$-范畴) 出发的函子. 其它一些种类的几何对象上的局部系统有时可化为其对应的生象上的局部系统.</p>
 <h3>拓扑空间上</h3>
 <p>拓扑空间 $X$ 上的<strong>局部系统</strong> (local system), 又称<strong>局部常值层</strong> $\mathcal L$ 是满足如下条件的层: 每个点 $x$ 都有一个邻域 $U$ 使得 $\mathcal L|_U$ 是<span class="link local"><a href="./常值层.html" title="常值层 [常值层]">常值层</a></span>.</p>
-<p><strong>命题</strong>. 对于道路连通空间, 局部常值的每个点上的茎都 (在同构意义下) 是 $L$. 局部系统一一对应于同态
+<p><strong>命题</strong>. 对于道路连通空间, 局部常值的每个点上的<span class="link local"><a href="./茎.html" title="茎 [茎]">茎</a></span>都同构于 $L$. 此时局部系统一一对应于同态
 $$
 \rho\colon \pi_1(X)\to \operatorname{Aut}L,
 $$
 称为<strong>单值表示</strong> (monodromy representation).</p>
 <p><strong>证明</strong>. 首先, $[0,1]$ 上的局部系统都是常值层, 所以 $X$ 上的环路给出 $L$ 的自同构, 这定义了同态 $\rho\colon \pi_1(X)\to\operatorname{Aut}L$.</p>
-<p>反之, 给定 $\rho$, 考虑万有覆盖 $\widetilde X$ 上的常值层 $\underline{L}$, 其中叠变换 (deck transform) 下与 $\rho$ 等变的截面给出 $X$ 上的局部系统 $\mathcal L(\rho)$,
+<p>反之, 给定 $\rho$, 考虑<span class="link local"><a href="./万有覆叠.html" title="万有覆叠 [万有覆叠]">万有覆叠</a></span> $\widetilde X$ 上的常值层 $\underline{L}$, 其中叠变换 (deck transform) 下与 $\rho$ 等变的截面给出 $X$ 上的局部系统 $\mathcal L(\rho)$,
 $$
 \mathcal L(\rho)(U) =\left\{s\in \underline{L}(\pi^{-1}(U)): \theta \circ s = \rho(\theta) s \forall \theta\in \operatorname{Deck}(\widetilde X / X)\right\}.
 $$
 其中 $\operatorname{Deck}(\widetilde X/X)\simeq\pi_1(X)$.</p>
 <p>由此亦可见, 局部常值等价于拉回到万有覆盖上是常值层.</p>
+<h3>意象的对象上</h3>
+<p>考虑 “生象的生象” $\mathrm{Ani}\in \mathsf{Ani}$ (忽略<span class="link local"><a href="./宇宙.html" title="宇宙 [宇宙]">宇宙</a></span>问题, 或者引入不同宇宙层级). 这在一个 $\infty$-意象 $\mathcal C$ 中给出 <span class="link local"><a href="./常值层.html" title="常值层 [常值层]">“常值层”</a></span>对象 $\mathrm{Ani}\in\mathcal C$. 此时对于对象 $X\in\mathcal C$, 定义 $X$ 上的<strong>局部系统</strong>为映射
+$$
+X \to \mathrm{Ani}.
+$$
+“带基点生象的生象” $\mathrm{Ani}_*$ 到 $\mathrm{Ani}$ 有一投影 $\mathrm{Ani}_* \to \mathrm{Ani}$, 而映射 $X\to \mathrm{Ani}$ 也即等同于 “$X$ 上的一族生象”, 即如下的拉回.
+$$
+\begin{array}{ccc}
+Y &amp; \rightarrow &amp; \mathrm{Ani}_* \\
+\downarrow &amp;  &amp; \downarrow \\
+X &amp; \rightarrow &amp; \mathrm{Ani}
+\end{array}
+$$</p>
+<p>todo: 基本群胚</p>
+<h3>群的局部系</h3>
+<p>在某些场合 (如<span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 对应</a></span>)中, 我们对固定的群 $G$ 谈论 $G$-局部系统.</p>
 <h2>例</h2>
 <p>设 $V$ 为光滑流形 $X$ 上的向量丛, 配有<span class="link local"><a href="./平坦联络.html" title=" [平坦联络]">可积联络</a></span>
 $$
