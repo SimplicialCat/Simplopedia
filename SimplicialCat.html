@@ -588,6 +588,11 @@
   }
 
   .block {
+    /*2026-3-16 21:10 新增*/
+    padding: 15px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+
     border-radius: var(--radius);
     background-color: var(--block-background-color);
     box-shadow: 0 2px 12px var(--shadow-color);
@@ -600,8 +605,8 @@
   h5,
   h6,
   p {
-    margin-left: var(--marginl-eft);
-    margin-top: 0;
+    margin-left: var(--margin-left);
+    margin: 5px;
   }
 
   tr {
@@ -727,7 +732,7 @@
   }
 
   ul {
-    margin: 0 0 0 0;
+    margin: 5px;
     list-style-type: none;
   }
 
@@ -2830,12 +2835,16 @@ $$</p>
 </details></section><section class="block" data-taxon="讲义"><details ><summary id="Geo-Sat-eq"><header><h1><span class="taxon">讲义. </span>几何 Satake 等价 <a class="slug" href="./Geo-Sat-eq.html">[Geo-Sat-eq]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>参考 Gaitsgory 等人 2010 春季的几何表示论讨论班.</p>
 <p>网址: https://people.mpim-bonn.mpg.de/gaitsgde/grad_2009/</p>
+<h2>Hecke 叠: 动机</h2>
+<p>设 $X$ 为光滑曲线.</p>
+<p>定义 <strong>Hecke 叠</strong> $\mathcal H_{X^n}$ 为如下对象的模空间:</p>
+<ul>
+<li>$X$ 上的 $G$-主丛 $T_1, T_2$, 以及 $X$ 的 $n$ 个点 $(x_i)$ (允许相同), 配备 $T_1$ 和 $T_2$ 在 $X \setminus \bigcup \{x_i\}$ 上的同构.</li>
+</ul>
+<p>Hecke 叠的作用是定义 Hecke 函子.</p>
+<p>我们将用<span class="link local"><a href="./仿射Grassmann空间.html" title="仿射 Grassmann 空间 [仿射Grassmann空间]">仿射 Grassmann 空间</a></span>定义 Hecke 函子的范畴.</p>
 <h2>分解 Grassmann 空间</h2>
-<p>对于光滑曲线 $X$, 定义 “分解 Grassmann 空间” (factorizable Grassmannian)
-$$
-\mathrm{Gr}_{G,X^n}
-$$
-为如下对象的模空间:</p>
+<p>定义<strong>分解 Grassmann 空间</strong> (factorizable Grassmannian) $\mathrm{Gr}_{G,X^n}$ 为如下对象的模空间:</p>
 <ul>
 <li>$X$ 上的 $G$-主丛 $T$, 以及 $X$ 的 $n$ 个点 $(x_i)$ (允许相同), 配备 $T$ 在 $X \setminus \bigcup \{x_i\}$ 上的平凡化.</li>
 </ul>
@@ -2853,13 +2862,13 @@ $$
 例如当 $X$ 本身是小圆盘时,
 $\mathrm{Gr}_{G,X^1} = \mathrm{Gr}_G\times X$.</p>
 <h2>卷积</h2>
-<p>定义</p>
+<p>定义 “球面 Hecke 范畴”</p>
 <ul>
 <li>$\mathsf{Sph}$ 为 $\mathrm{Gr}_{G}$ 上的 $G(\widehat {\mathcal O})$-等变 D-模范畴;</li>
 <li>$\mathsf{Sph}_n$ 为 $\mathrm{Gr}_{G,X^n}$ 上的 $G(\widehat {\mathcal O})_n$-等变 D-模范畴.</li>
 </ul>
-<p>粗略地说, $G(\widehat {\mathcal K})$, $G(\widehat {\mathcal K})_n$ 的群结构导致这些范畴具有<span class="link local"><a href="./卷积.html" title="卷积 [卷积]">卷积</a></span>.</p>
-<p>然而, 由于 $G(\widehat {\mathcal K})$ 比较野蛮, 我们不能直接卷积, 而是利用等变性, 转移到较好的空间上作卷积.</p>
+<p>名称中的 “球面” 是来源于一个粗略的类比: 两个圆盘沿着去心圆盘粘起来就是 “球面”.</p>
+<p>粗略地说, $G(\widehat {\mathcal K})$, $G(\widehat {\mathcal K})_n$ 的群结构导致这些范畴具有<span class="link local"><a href="./卷积.html" title="卷积 [卷积]">卷积</a></span>. 然而, 由于 $G(\widehat {\mathcal K})$ 比较野蛮, 我们不能直接卷积; 实际的做法是利用等变性, 转移到较好的空间上作卷积.</p>
 <p>$G(\widehat {\mathcal K})$ 的乘法映射下降为映射
 $$
 \mathrm{Conv}_G = G(\widehat {\mathcal K})\times_{G(\widehat {\mathcal O})}\mathrm{Gr}_G \overset{m}{\to} \mathrm{Gr}_G.
@@ -2888,11 +2897,7 @@ $$</p>
 <li>对 $n$ 的任意分划 $p \colon n = n_1+\cdots+ n_m$, 有 $H^m$ 在 $F|_{U_p}$ 上的作用 ($U_p$ 是分划 $p$ 给出的开子空间).</li>
 </ul>
 <h2>Hecke 特征层</h2>
-<p>定义 <strong>Hecke 叠</strong> $\mathcal H_n$ 为如下对象的模空间:</p>
-<ul>
-<li>$X$ 上的两个 $G$-丛, 在 $X$ 的 $n$ 个点之外同构.</li>
-</ul>
-<p>有两个投影映射
+<p>回忆 <strong>Hecke 叠</strong> $\mathcal H_n$ 为如下对象的模空间: $X$ 上的两个 $G$-丛, 在 $X$ 的 $n$ 个点之外同构. 有两个投影映射
 $$
 \mathrm{Bun}_G \overset{\overleftarrow{h_n}}{\longleftarrow} \mathcal H_n \overset{\overrightarrow{h_n}}{\longrightarrow} X^n\times\mathrm{Bun}_G,
 $$</p>
@@ -7723,6 +7728,28 @@ $$</p>
 <li>拓扑空间的<strong>同伦型</strong>可以表现<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</li>
 <li><span class="link local"><a href="./模型范畴.html" title="“模型范畴” [模型范畴]">模型范畴</a></span>是一类具有良好性质的<span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">无穷范畴</a></span>的表现.</li>
 </ul>
+</details></section></p>
+<p><section class="block" data-taxon="观念"><details ><summary id="代数-几何对偶"><header><h1><span class="taxon">观念. </span>代数–几何对偶 <a class="slug" href="./代数-几何对偶.html">[代数-几何对偶]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>代数–几何对偶是数学上的一大类现象, 某种几何对象与某种代数对象之间有对偶的关系:</p>
+<ul>
+<li>取几何对象上的某种 “函数”, 得到代数对象;</li>
+<li>取代数对象的 “<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>”, 得到几何对象.</li>
+</ul>
+<p>这两个操作通常是一对<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>, 甚至是范畴等价.</p>
+<p>在高阶范畴语境中, 代数–几何对偶中的 “函数” 表现为 “集合值” 甚至 “范畴值” 的函数, 也就是所谓<span class="link local"><a href="./景上的层.html" title="景上的层 [景上的层]">层</a></span>.</p>
+<h2>例</h2>
+<h3>Gelfand 对偶</h3>
+<p><span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>对偶于交换 <span class="link local"><a href="./C-星代数.html" title="C*-代数 [C-星代数]">C*-代数</a></span>.</p>
+<p>注意这个等价的关键原因是 Urysohn 引理保证了紧 Hausdorff 空间上有足够多的 $\mathbb{C}$-值连续函数.</p>
+<h3>Stone 对偶</h3>
+<p><span class="link local"><a href="./pro-有限集.html" title="pro-有限集 [pro-有限集]">Pro-有限集</a></span><span class="link local"><a href="./对偶(范畴论).html" title="对偶 (范畴论) [对偶(范畴论)]">对偶</a></span>于 <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>.</p>
+<h3>仿射概形</h3>
+<p><span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span><span class="link local"><a href="./对偶(范畴论).html" title="对偶 (范畴论) [对偶(范畴论)]">对偶</a></span>于交换环. 这个事实可以作为仿射概形的定义.</p>
+<p>环上的模的<span class="link local"><a href="./张量-同态伴随.html" title="“张量-同态伴随” [张量-同态伴随]">张量-同态伴随</a></span>类比空间上的层的<span class="link local"><a href="./直像-逆像伴随.html" title="拓扑空间上的直像-逆像伴随 [直像-逆像伴随]">直像-逆像伴随</a></span>.</p>
+<h3>淡中对偶</h3>
+<p><span class="link local"><a href="./淡中对偶.html" title="淡中对偶 [淡中对偶]">淡中 (Tannaka) 对偶</a></span>是某种几何对象与其上的某种层范畴的对偶.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法–语义对偶</a></span></p>
 </details></section></p>
 <p><section class="block" data-taxon="观念"><details ><summary id="语法–语义对偶"><header><h1><span class="taxon">观念. </span>语法–语义对偶 <a class="slug" href="./语法–语义对偶.html">[语法–语义对偶]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>语法是组织符号的方法, 而语义是符号所指向的东西.</p>
@@ -14290,6 +14317,11 @@ $$
 \operatorname{lim}(\cdots\overset{\Omega}{\to}\mathcal C\overset{\Omega}{\to}\mathcal C).
 $$</p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="形式圆盘"><header><h1><span class="taxon">百科. </span>形式圆盘 <a class="slug" href="./形式圆盘.html">[形式圆盘]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>对于域 $k$ 与 $k$-代数 $R$, 定义形式圆盘
+$$
+D_R = \operatorname{Spec} R[[t]].
+$$
+注意这是<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>而不是<span class="link local"><a href="./形式概形.html" title="形式概形 [形式概形]">形式概形</a></span> $\operatorname{Spf}R[[t]]$.</p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="形式概形"><header><h1><span class="taxon">百科. </span>形式概形 <a class="slug" href="./形式概形.html">[形式概形]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>形式概形是 “<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span>的<span class="link local"><a href="./形式邻域.html" title="形式邻域 [形式邻域]">形式邻域</a></span>”.</p>
@@ -20084,7 +20116,7 @@ $$
 <p>设 $n\in\mathbb{N}_{\geq 0}$ 为自然数, $\mathcal C$ 为对称幺半 $(\infty ,1)$-范畴 (或更一般的 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$-幺半</a></span> $(\infty ,1)$-范畴), 可构造一个 $(\infty ,n+1)$-范畴 $\mathsf{Morita}_{n}(\mathcal C)$,</p>
 <ul>
 <li>$\mathsf{Morita}_{n}(\mathcal C)$ 的对象为 $\mathcal C$ 中的 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$-代数</a></span>;</li>
-<li>$\mathsf{Morita}_{n}(\mathcal C)$ 的对象为 $\mathcal C$ 中两个对象 $A,B$ 之间的态射范畴为双模范畴 $\mathsf{BiMod}(A,B)$ 的低一阶的 Morita 范畴
+<li>$\mathsf{Morita}_{n}(\mathcal C)$ 的对象 $A,B$ 之间的态射范畴为双模范畴 $\mathsf{BiMod}(A,B)$ 的低一阶的 Morita 范畴
 $$
 \operatorname{Hom}_{\mathsf{Morita}_{n}(\mathcal C)}(A,B)=\mathsf{Morita}_{(n-1)}(\mathsf{BiMod}(A,B)).
 $$</li>

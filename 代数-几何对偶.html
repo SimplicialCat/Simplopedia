@@ -545,7 +545,7 @@
   #grid-wrapper { grid-template-columns: var(--article-max-width) var(--toc-max-width); }
   nav#toc { max-width: max-content; }
 }
-</style></head><body><header class="header"><nav class="nav"><div class="logo"><span class="cursor-pointer" onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper" style="grid-template-areas: 'article toc';" data-base-url="./"><nav id="toc" class="sticky-nav mobile-sticky-nav"><div id="theme-options"><style>
+</style></head><body><header class="header"><nav class="nav"><div class="logo"><span class="cursor-pointer" onclick="window.location.href='./notion.html'" title="观念">« 观念</span></div></nav></header><div id="grid-wrapper" style="grid-template-areas: 'article toc';" data-base-url="./"><nav id="toc" class="sticky-nav mobile-sticky-nav"><div id="theme-options"><style>
   body:has(input[value="furina"]:checked) {
     --article-max-width: 110ex; /* default: 90ex */
 
@@ -588,6 +588,11 @@
   }
 
   .block {
+    /*2026-3-16 21:10 新增*/
+    padding: 15px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+
     border-radius: var(--radius);
     background-color: var(--block-background-color);
     box-shadow: 0 2px 12px var(--shadow-color);
@@ -600,8 +605,8 @@
   h5,
   h6,
   p {
-    margin-left: var(--marginl-eft);
-    margin-top: 0;
+    margin-left: var(--margin-left);
+    margin: 5px;
   }
 
   tr {
@@ -727,7 +732,7 @@
   }
 
   ul {
-    margin: 0 0 0 0;
+    margin: 5px;
     list-style-type: none;
   }
 
