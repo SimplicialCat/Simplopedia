@@ -825,13 +825,40 @@ $$
 <p>网址: https://people.mpim-bonn.mpg.de/gaitsgde/grad_2009/</p>
 <h2>Hecke 叠: 动机</h2>
 <p>设 $X$ 为光滑曲线.</p>
-<p>定义 <strong>Hecke 叠</strong> $\mathcal H_{X^n}$ 为如下对象的模空间:</p>
+<p>定义一点 $x\in X$ 处的 <strong>Hecke 叠</strong> $\mathcal H_{X^n}$ 为如下对象的模空间:</p>
 <ul>
-<li>$X$ 上的 $G$-主丛 $T_1, T_2$, 以及 $X$ 的 $n$ 个点 $(x_i)$ (允许相同), 配备 $T_1$ 和 $T_2$ 在 $X \setminus \bigcup \{x_i\}$ 上的同构.</li>
+<li>$X$ 上的 $G$-主丛 $T_1, T_2$, 配备 $T_1$ 和 $T_2$ 在 $X \setminus \{x\}$ 上的同构 $\alpha$.</li>
 </ul>
-<p>Hecke 叠的作用是定义 Hecke 函子.</p>
-<p>我们将用<span class="link local"><a href="./仿射Grassmann空间.html" title="仿射 Grassmann 空间 [仿射Grassmann空间]">仿射 Grassmann 空间</a></span>定义 Hecke 函子的范畴.</p>
+<p>由 $(T_1,T_2,\alpha)$ 分别投影到 $T_1$, $T_2$, 得到 “卷积图”
+$$
+\mathrm{Bun}_G \overset{\overleftarrow{h_x}}{\longleftarrow} \mathcal H_x \overset{\overrightarrow{h_x}}{\longrightarrow} \mathrm{Bun}_G.
+$$</p>
+<p>回忆<span class="link local"><a href="./仿射Grassmann空间.html" title="仿射 Grassmann 空间 [仿射Grassmann空间]">仿射 Grassmann 空间</a></span> $\mathrm{Gr}_G$ 是如下对象的模空间:</p>
+<ul>
+<li><span class="link local"><a href="./形式圆盘.html" title="形式圆盘 [形式圆盘]">形式圆盘</a></span> $\mathbb D$ 上的 $G$-主丛 $T$, 配备 $T$ 在<span class="link local"><a href="./去心形式圆盘.html" title="去心形式圆盘 [去心形式圆盘]">去心形式圆盘</a></span>上的平凡化.</li>
+</ul>
+<p>记 $\widehat {\mathcal K}_x$ 为 $X$ 在 $x$ 处的<span class="link local"><a href="./完备化(域).html" title="完备化 (域) [完备化(域)]">完备局部域</a></span> (对应 $x$ 处的<span class="link local"><a href="./去心形式圆盘.html" title="去心形式圆盘 [去心形式圆盘]">去心形式圆盘</a></span>), 它是<span class="link local"><a href="./完备化(环).html" title="完备化 (环) [完备化(环)]">完备化局部环</a></span> $\widehat {\mathcal O}_x$ (对应 $x$ 处的<span class="link local"><a href="./形式圆盘.html" title="形式圆盘 [形式圆盘]">形式圆盘</a></span>) 的分式域. 我们常选取 “单值化参数” 得到同构 $\widehat {\mathcal K}_x \simeq \mathbb{C}(\!(t)\!)$, $\widehat {\mathcal O}_x\simeq\mathbb{C}[\![t]\!]$. 此时记 $\widehat {\mathcal K}_x$ 为 $\widehat {\mathcal K}$, $\widehat {\mathcal O}_x$ 为 $\widehat {\mathcal O}$.
+那么 $\mathrm{Gr}_G$ 的元素相当于<span class="link local"><a href="./去心形式圆盘.html" title="去心形式圆盘 [去心形式圆盘]">去心形式圆盘</a></span>上的 $G$-值函数, 模去整个<span class="link local"><a href="./形式圆盘.html" title="形式圆盘 [形式圆盘]">形式圆盘</a></span>上的 $G$-值函数:
+$$
+\mathrm{Gr}_G \simeq G(\widehat {K}) / G(\widehat {\mathcal O}).
+$$</p>
+<p><strong>观察</strong>. $\mathcal H_x$ 在 $\mathrm{Bun}_G$ 上一点 $T_1$ 处的纤维<strong>非典范地</strong>同构于 $\mathrm{Gr}_G$. 这是因为, 我们可<strong>非典范地</strong>选取 $T_1$ 在 $\mathbb D$ 上的一个平凡化, 那么这给出如下两种数据之间的等价:</p>
+<ul>
+<li>$X$ 上的另一个 $G$-主丛 $T_2$, 配备 $T_1$ 和 $T_2$ 在 $X \setminus \{x\}$ 上的同构;</li>
+<li>$\mathbb D$ 上的 $G$-主丛 $T_2|_{\mathbb D}$, 配备其在去心形式圆盘上的平凡化.</li>
+</ul>
+<p><strong>命题</strong>. $\mathcal H_x$ 是 $\mathrm{Bun}_G$ 上的 $\mathrm{Gr}_G$-丛, 结构群为 $G(\widehat {\mathcal O})$.</p>
+<p>因此, 对于 $\mathrm{Gr}_G$ 上的 $G(\widehat {\mathcal O})$-等变 <span class="link local"><a href="./D-模.html" title="D-模 [D-模]">D-模</a></span> $F$, 可将其 “拉回” 为 $\mathcal H_x$ 上的 D-模 $\widetilde {F}$ 并以此定义 <strong>Hecke 函子</strong>
+$$
+H_x^F\colon M\mapsto (\overrightarrow{h}_x)_! \big[ (\overleftarrow{h}_x)^* M \otimes \widetilde {F} \big].
+$$</p>
 <h2>分解 Grassmann 空间</h2>
+<p>弧群, 环路群, 仿射 Grassmann 空间, Hecke 叠等等对象不仅可以在一个点 $x\in X$ 上定义, 而且可以</p>
+<ul>
+<li>同时对所有 $x\in X$ 定义, 以及</li>
+<li>在多个点 $(x_i\in X)$ 上定义,</li>
+</ul>
+<p>这些数据构成<strong></strong><span class="link local"><a href="./分解空间.html" title="分解空间 [分解空间]">分解</a></span> (factorization) 结构.</p>
 <p>定义<strong>分解 Grassmann 空间</strong> (factorizable Grassmannian) $\mathrm{Gr}_{G,X^n}$ 为如下对象的模空间:</p>
 <ul>
 <li>$X$ 上的 $G$-主丛 $T$, 以及 $X$ 的 $n$ 个点 $(x_i)$ (允许相同), 配备 $T$ 在 $X \setminus \bigcup \{x_i\}$ 上的平凡化.</li>
@@ -846,7 +873,7 @@ $$
 <li>$X$ 的 $n$ 个点 $(x_i)$, 以及<span class="link local"><a href="./去心形式圆盘.html" title="去心形式圆盘 [去心形式圆盘]">去心形式圆盘</a></span>上的 $G$-值函数 $g\in G(\widehat {X}_{\{x_i\}}\setminus \{x_i\})$;</li>
 <li>$X$ 的 $n$ 个点 $(x_i)$, 以及<span class="link local"><a href="./形式圆盘.html" title="形式圆盘 [形式圆盘]">形式圆盘</a></span>上的 $G$-值函数 $g\in G(\widehat {X}_{\{x_i\}})$;</li>
 </ul>
-<p>$\mathrm{Gr}_{G,X^1}$ 是 $X$ 上的 $\mathrm{Gr}_G$-丛, 结构群为 $\operatorname{Aut}(\widehat {\mathcal O})$.
+<p><strong>观察</strong>. $\mathrm{Gr}_{G,X^1}$ 是 $X$ 上的 $\mathrm{Gr}_G$-丛, 结构群为 $\operatorname{Aut}(\widehat {\mathcal O})$.
 例如当 $X$ 本身是小圆盘时,
 $\mathrm{Gr}_{G,X^1} = \mathrm{Gr}_G\times X$.</p>
 <h2>卷积</h2>

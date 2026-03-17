@@ -776,7 +776,7 @@
 <article><section class="block" data-taxon="百科"><details open><summary id="完备化(环)"><header><h1><span class="taxon">百科. </span>完备化 (环) <a class="slug" href="./完备化(环).html">[完备化(环)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>环关于理想的完备化给出了<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>的<span class="link local"><a href="./闭嵌入.html" title="闭嵌入 [闭嵌入]">闭子概形</a></span>的<span class="link local"><a href="./形式邻域.html" title="形式邻域 [形式邻域]">形式邻域</a></span>.</p>
-<p>另见<span class="link local"><a href="./完备化(稳定同伦论).html" title="完备化 (稳定同伦论) [完备化(稳定同伦论)]">完备化 (稳定同伦论)</a></span></p>
+<p>另见<span class="link local"><a href="./完备化(域).html" title="完备化 (域) [完备化(域)]">完备化 (域)</a></span>, <span class="link local"><a href="./完备化(稳定同伦论).html" title="完备化 (稳定同伦论) [完备化(稳定同伦论)]">完备化 (稳定同伦论)</a></span>.</p>
 <h2>定义</h2>
 <p>环 $R$ 关于理想 $I$ 的完备化为
 $$
@@ -784,18 +784,131 @@ $$
 $$</p>
 <h2>例</h2>
 <p>整数环 $\mathbb{Z}$ 关于 $(p)$ 的完备化为 <span class="link local"><a href="./p-进整数.html" title="p-进整数 [p-进整数]">$p$-进整数环</a></span> $\mathbb{Z}_p=\operatorname{lim}_n \mathbb{Z}/p^n$.</p>
+<h3>代数曲线</h3>
+<p>光滑代数曲线 $X$ 在点 $x\in X$ 处的局部环 $\mathcal O_{X,x}$ 关于极大理想 $\mathfrak m_x$ 的完备化称为<strong>完备化局部环</strong> $\widehat {\mathcal O}_{X,x}$, 对应 $x$ 处的<span class="link local"><a href="./形式圆盘.html" title="形式圆盘 [形式圆盘]">形式圆盘</a></span>.</p>
 <h2>相关概念</h2>
-<p><span class="link local"><a href="./形式谱.html" title="形式谱 [形式谱]">形式谱</a></span>, <span class="link local"><a href="./完备化(域).html" title="“完备化 (域)” [完备化(域)]">完备化 (域)</a></span></p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>反向链接</h1></header></summary><section class="block" data-taxon="百科"><details ><summary id="p-进整数"><header><h1><span class="taxon">百科. </span>p-进整数 <a class="slug" href="./p-进整数.html">[p-进整数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./形式谱.html" title="形式谱 [形式谱]">形式谱</a></span>, <span class="link local"><a href="./完备化(域).html" title="完备化 (域) [完备化(域)]">完备化 (域)</a></span></p>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>反向链接</h1></header></summary><section class="block" data-taxon="讲义"><details ><summary id="Geo-Sat-eq"><header><h1><span class="taxon">讲义. </span>几何 Satake 等价 <a class="slug" href="./Geo-Sat-eq.html">[Geo-Sat-eq]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>参考 Gaitsgory 等人 2010 春季的几何表示论讨论班.</p>
+<p>网址: https://people.mpim-bonn.mpg.de/gaitsgde/grad_2009/</p>
+<h2>Hecke 叠: 动机</h2>
+<p>设 $X$ 为光滑曲线.</p>
+<p>定义一点 $x\in X$ 处的 <strong>Hecke 叠</strong> $\mathcal H_{X^n}$ 为如下对象的模空间:</p>
+<ul>
+<li>$X$ 上的 $G$-主丛 $T_1, T_2$, 配备 $T_1$ 和 $T_2$ 在 $X \setminus \{x\}$ 上的同构 $\alpha$.</li>
+</ul>
+<p>由 $(T_1,T_2,\alpha)$ 分别投影到 $T_1$, $T_2$, 得到 “卷积图”
+$$
+\mathrm{Bun}_G \overset{\overleftarrow{h_x}}{\longleftarrow} \mathcal H_x \overset{\overrightarrow{h_x}}{\longrightarrow} \mathrm{Bun}_G.
+$$</p>
+<p>回忆<span class="link local"><a href="./仿射Grassmann空间.html" title="仿射 Grassmann 空间 [仿射Grassmann空间]">仿射 Grassmann 空间</a></span> $\mathrm{Gr}_G$ 是如下对象的模空间:</p>
+<ul>
+<li><span class="link local"><a href="./形式圆盘.html" title="形式圆盘 [形式圆盘]">形式圆盘</a></span> $\mathbb D$ 上的 $G$-主丛 $T$, 配备 $T$ 在<span class="link local"><a href="./去心形式圆盘.html" title="去心形式圆盘 [去心形式圆盘]">去心形式圆盘</a></span>上的平凡化.</li>
+</ul>
+<p>记 $\widehat {\mathcal K}_x$ 为 $X$ 在 $x$ 处的<span class="link local"><a href="./完备化(域).html" title="完备化 (域) [完备化(域)]">完备局部域</a></span> (对应 $x$ 处的<span class="link local"><a href="./去心形式圆盘.html" title="去心形式圆盘 [去心形式圆盘]">去心形式圆盘</a></span>), 它是<span class="link local"><a href="./完备化(环).html" title="完备化 (环) [完备化(环)]">完备化局部环</a></span> $\widehat {\mathcal O}_x$ (对应 $x$ 处的<span class="link local"><a href="./形式圆盘.html" title="形式圆盘 [形式圆盘]">形式圆盘</a></span>) 的分式域. 我们常选取 “单值化参数” 得到同构 $\widehat {\mathcal K}_x \simeq \mathbb{C}(\!(t)\!)$, $\widehat {\mathcal O}_x\simeq\mathbb{C}[\![t]\!]$. 此时记 $\widehat {\mathcal K}_x$ 为 $\widehat {\mathcal K}$, $\widehat {\mathcal O}_x$ 为 $\widehat {\mathcal O}$.
+那么 $\mathrm{Gr}_G$ 的元素相当于<span class="link local"><a href="./去心形式圆盘.html" title="去心形式圆盘 [去心形式圆盘]">去心形式圆盘</a></span>上的 $G$-值函数, 模去整个<span class="link local"><a href="./形式圆盘.html" title="形式圆盘 [形式圆盘]">形式圆盘</a></span>上的 $G$-值函数:
+$$
+\mathrm{Gr}_G \simeq G(\widehat {K}) / G(\widehat {\mathcal O}).
+$$</p>
+<p><strong>观察</strong>. $\mathcal H_x$ 在 $\mathrm{Bun}_G$ 上一点 $T_1$ 处的纤维<strong>非典范地</strong>同构于 $\mathrm{Gr}_G$. 这是因为, 我们可<strong>非典范地</strong>选取 $T_1$ 在 $\mathbb D$ 上的一个平凡化, 那么这给出如下两种数据之间的等价:</p>
+<ul>
+<li>$X$ 上的另一个 $G$-主丛 $T_2$, 配备 $T_1$ 和 $T_2$ 在 $X \setminus \{x\}$ 上的同构;</li>
+<li>$\mathbb D$ 上的 $G$-主丛 $T_2|_{\mathbb D}$, 配备其在去心形式圆盘上的平凡化.</li>
+</ul>
+<p><strong>命题</strong>. $\mathcal H_x$ 是 $\mathrm{Bun}_G$ 上的 $\mathrm{Gr}_G$-丛, 结构群为 $G(\widehat {\mathcal O})$.</p>
+<p>因此, 对于 $\mathrm{Gr}_G$ 上的 $G(\widehat {\mathcal O})$-等变 <span class="link local"><a href="./D-模.html" title="D-模 [D-模]">D-模</a></span> $F$, 可将其 “拉回” 为 $\mathcal H_x$ 上的 D-模 $\widetilde {F}$ 并以此定义 <strong>Hecke 函子</strong>
+$$
+H_x^F\colon M\mapsto (\overrightarrow{h}_x)_! \big[ (\overleftarrow{h}_x)^* M \otimes \widetilde {F} \big].
+$$</p>
+<h2>分解 Grassmann 空间</h2>
+<p>弧群, 环路群, 仿射 Grassmann 空间, Hecke 叠等等对象不仅可以在一个点 $x\in X$ 上定义, 而且可以</p>
+<ul>
+<li>同时对所有 $x\in X$ 定义, 以及</li>
+<li>在多个点 $(x_i\in X)$ 上定义,</li>
+</ul>
+<p>这些数据构成<strong></strong><span class="link local"><a href="./分解空间.html" title="分解空间 [分解空间]">分解</a></span> (factorization) 结构.</p>
+<p>定义<strong>分解 Grassmann 空间</strong> (factorizable Grassmannian) $\mathrm{Gr}_{G,X^n}$ 为如下对象的模空间:</p>
+<ul>
+<li>$X$ 上的 $G$-主丛 $T$, 以及 $X$ 的 $n$ 个点 $(x_i)$ (允许相同), 配备 $T$ 在 $X \setminus \bigcup \{x_i\}$ 上的平凡化.</li>
+</ul>
+<p>对所有自然数 $n$, 空间 $\mathrm{Gr}_{G,X^n}$ 共同构成一个<span class="link local"><a href="./分解空间.html" title="分解空间 [分解空间]">分解</a></span>结构.</p>
+<p>$\mathrm{Gr}_{G,X^n}$ 还可以写成 “相对环路群” 对 “相对弧群” 的商:
+$$
+\mathrm{Gr}_{G,X^n} = G(\widehat {\mathcal K})_n / G(\widehat {\mathcal O})_n,
+$$
+其中 $G(\widehat {\mathcal K})_n$, $G(\widehat {\mathcal O})_n$ 分别是如下对象的模空间:</p>
+<ul>
+<li>$X$ 的 $n$ 个点 $(x_i)$, 以及<span class="link local"><a href="./去心形式圆盘.html" title="去心形式圆盘 [去心形式圆盘]">去心形式圆盘</a></span>上的 $G$-值函数 $g\in G(\widehat {X}_{\{x_i\}}\setminus \{x_i\})$;</li>
+<li>$X$ 的 $n$ 个点 $(x_i)$, 以及<span class="link local"><a href="./形式圆盘.html" title="形式圆盘 [形式圆盘]">形式圆盘</a></span>上的 $G$-值函数 $g\in G(\widehat {X}_{\{x_i\}})$;</li>
+</ul>
+<p><strong>观察</strong>. $\mathrm{Gr}_{G,X^1}$ 是 $X$ 上的 $\mathrm{Gr}_G$-丛, 结构群为 $\operatorname{Aut}(\widehat {\mathcal O})$.
+例如当 $X$ 本身是小圆盘时,
+$\mathrm{Gr}_{G,X^1} = \mathrm{Gr}_G\times X$.</p>
+<h2>卷积</h2>
+<p>定义 “球面 Hecke 范畴”</p>
+<ul>
+<li>$\mathsf{Sph}$ 为 $\mathrm{Gr}_{G}$ 上的 $G(\widehat {\mathcal O})$-等变 D-模范畴;</li>
+<li>$\mathsf{Sph}_n$ 为 $\mathrm{Gr}_{G,X^n}$ 上的 $G(\widehat {\mathcal O})_n$-等变 D-模范畴.</li>
+</ul>
+<p>名称中的 “球面” 是来源于一个粗略的类比: 两个圆盘沿着去心圆盘粘起来就是 “球面”.</p>
+<p>粗略地说, $G(\widehat {\mathcal K})$, $G(\widehat {\mathcal K})_n$ 的群结构导致这些范畴具有<span class="link local"><a href="./卷积.html" title="卷积 [卷积]">卷积</a></span>. 然而, 由于 $G(\widehat {\mathcal K})$ 比较野蛮, 我们不能直接卷积; 实际的做法是利用等变性, 转移到较好的空间上作卷积.</p>
+<p>$G(\widehat {\mathcal K})$ 的乘法映射下降为映射
+$$
+\mathrm{Conv}_G = G(\widehat {\mathcal K})\times_{G(\widehat {\mathcal O})}\mathrm{Gr}_G \overset{m}{\to} \mathrm{Gr}_G.
+$$</p>
+<p>考虑映射 $\mathrm{pr}\colon \mathrm{Conv}_G \to \mathrm{Gr}_G$, 先投影到第一分量 $G(\widehat {\mathcal K})$, 再投影到商 $G(\widehat {\mathcal K}) / G(\widehat {\mathcal O}) = \mathrm{Gr}_G$.</p>
+<p>对于 $F\in\mathsf{Sph}$, 定义 $\widetilde F$ 为 $\mathrm{pr}_2^*F$ 由 $G(\widehat {\mathcal K}) \times G(\widehat {\mathcal K})$ 下降到 $\mathrm{Conv}_G$ 的对象.</p>
+<p>对于 $F_1,F_2\in\mathsf{Sph}$, 定义
+$$
+F_1 \operatorname{\widetilde {\boxtimes}} F_2 = (\mathrm{pr}^* F_1) \otimes \widetilde {F_2};
+$$
+$$
+F_1 * F_2 = m_* (F_1 \operatorname{\widetilde {\boxtimes}} F_2).
+$$</p>
+<p><strong>定理</strong>. 上述卷积使得 $\mathsf{Sph}$ 构成刚性张量范畴, 且存在忠实正合的纤维函子 $\mathsf{Sph} \to \mathsf{Vect}$, 在<span class="link local"><a href="./淡中对偶.html" title="淡中对偶 [淡中对偶]">淡中对偶</a></span>下, 将 $\mathsf{Sph}$ 等同于 $\mathsf{Rep}(^LG)$.</p>
+<p>$G(\widehat {\mathcal K})_n$ 的群结构
+$$
+m\colon G(\widehat {\mathcal K})_n \times_{X^n} G(\widehat {\mathcal K})_n \to G(\widehat {\mathcal K})_n
+$$
+下降为
+$$
+m\colon G(\widehat {\mathcal K})_n \times_{G(\widehat {\mathcal O})_n} \mathrm{Gr}_{G,X^n} \to \mathrm{Gr}_{G,X^n}.
+$$</p>
+<h2>群表示的分解范畴</h2>
+<p>设 $H$ 为任意群. 定义 $H$ 在 $X^n$ 上的 D-模 $F$ 的<strong>分解作用</strong> (factorizable action) 为如下数据:</p>
+<ul>
+<li>对 $n$ 的任意分划 $p \colon n = n_1+\cdots+ n_m$, 有 $H^m$ 在 $F|_{U_p}$ 上的作用 ($U_p$ 是分划 $p$ 给出的开子空间).</li>
+</ul>
+<h2>Hecke 特征层</h2>
+<p>回忆 <strong>Hecke 叠</strong> $\mathcal H_n$ 为如下对象的模空间: $X$ 上的两个 $G$-丛, 在 $X$ 的 $n$ 个点之外同构. 有两个投影映射
+$$
+\mathrm{Bun}_G \overset{\overleftarrow{h_n}}{\longleftarrow} \mathcal H_n \overset{\overrightarrow{h_n}}{\longrightarrow} X^n\times\mathrm{Bun}_G,
+$$</p>
+<h2>Hecke 范畴的结构</h2>
+<p>记 $1 \in \mathrm{Gr}_G$ 为 $G(\widehat {\mathcal O})\subset G(\widehat {\mathcal K})$ 对应的点. 记 $\delta_1 := 1_*\mathbb{C}$. 它是 $\mathsf{Sph}$ 上卷积的单位.</p>
+<h2>纤维函子</h2>
+<p>考虑 $G \hookleftarrow B \twoheadrightarrow T$ 给出的图表
+$$
+\mathrm{Gr}_G \overset{b}{\leftarrow} \mathrm{Gr}_B \overset{t}{\rightarrow} \mathrm{Gr}_T,
+$$
+(我们将 $T$ 视为 $B$ 的商群而非子群)
+定义
+$$
+F = t_! b^*\colon \mathsf{Sph}\to \mathsf{Sph}_T \simeq\mathsf{Vect}^{X_*(T)}.
+$$</p>
+<h2>识别对偶群</h2>
+</details></section><section class="block" data-taxon="百科"><details ><summary id="p-进整数"><header><h1><span class="taxon">百科. </span>p-进整数 <a class="slug" href="./p-进整数.html">[p-进整数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>对于素数 $p$, 定义 <strong>$p$-进整数环</strong> $\mathbb{Z}_p$ 为整数环 $\mathbb{Z}$ 关于 $p$ 生成的理想 $(p)$ 的<span class="link local"><a href="./完备化(环).html" title="完备化 (环) [完备化(环)]">完备化</a></span>, 即
 $$
 \mathbb{Z}_p = \operatorname{lim}_n \mathbb{Z}/(p^n).
 $$</p>
-</details></section><section class="block" data-taxon="百科"><details ><summary id="完备化(域)"><header><h1><span class="taxon">百科. </span>“完备化 (域)” <a class="slug" href="./完备化(域).html">[完备化(域)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon="百科"><details ><summary id="完备化(域)"><header><h1><span class="taxon">百科. </span>完备化 (域) <a class="slug" href="./完备化(域).html">[完备化(域)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>域 $F$ 关于<span class="link local"><a href="./绝对值.html" title="“绝对值” [绝对值]">绝对值</a></span> $\|{-}\|\colon F\to\mathbb{R}_{\geq 0}$ 的完备化是一个域 $F'$, 带有绝对值 $\|{-}\|\colon F'\to\mathbb{R}_{\geq 0}$ 以及保持 $\|{-}\|$ 的稠密嵌入 $F\to F'$, 且 $F'$ 关于 $\|{-}\|$ 构成完备度量空间.</p>
 <h2>例</h2>
 <p>$\mathbb{Q}$ 关于 $p$-进绝对值的完备化为 $p$-进数域 $\mathbb{Q}_p$.</p>
+<h3>代数曲线</h3>
+<p>代数曲线 $X$ 的每个点 $x\in X$ 给出函数域 $k(X)$ 的一个绝对值, 其完备化称为 $X$ 在 $x$ 处的完备<span class="link local"><a href="./局部域.html" title="局部域 [局部域]">局部域</a></span>.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./位.html" title="“位” [位]">位</a></span>, <span class="link local"><a href="./完备化(环).html" title="完备化 (环) [完备化(环)]">完备化 (环)</a></span></p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="形式邻域"><header><h1><span class="taxon">百科. </span>形式邻域 <a class="slug" href="./形式邻域.html">[形式邻域]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
