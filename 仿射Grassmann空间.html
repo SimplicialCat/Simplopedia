@@ -785,7 +785,7 @@
 <p>网址: https://people.mpim-bonn.mpg.de/gaitsgde/grad_2009/</p>
 <h2>Hecke 叠: 动机</h2>
 <p>设 $X$ 为光滑曲线.</p>
-<p>定义一点 $x\in X$ 处的 <strong>Hecke 叠</strong> $\mathcal H_{X^n}$ 为如下对象的模空间:</p>
+<p>定义一点 $x\in X$ 处的 <strong>Hecke 叠</strong> $\mathcal H_{X^n}$ 为如下对象的<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>:</p>
 <ul>
 <li>$X$ 上的 $G$-主丛 $T_1, T_2$, 配备 $T_1$ 和 $T_2$ 在 $X \setminus \{x\}$ 上的同构 $\alpha$.</li>
 </ul>
@@ -823,7 +823,25 @@ $$</p>
 <ul>
 <li>$X$ 上的 $G$-主丛 $T$, 以及 $X$ 的 $n$ 个点 $(x_i)$ (允许相同), 配备 $T$ 在 $X \setminus \bigcup \{x_i\}$ 上的平凡化.</li>
 </ul>
-<p>对所有自然数 $n$, 空间 $\mathrm{Gr}_{G,X^n}$ 共同构成一个<span class="link local"><a href="./分解空间.html" title="分解空间 [分解空间]">分解</a></span>结构.</p>
+<p>对所有自然数 $n$, 空间 $\mathrm{Gr}_{G,X^n}$ 共同构成一个<span class="link local"><a href="./分解空间.html" title="分解空间 [分解空间]">分解</a></span>结构, 大致如下:</p>
+<ul>
+<li>设 $p \colon \{1,\cdots,n\} \to \{1,\cdots,m\}$ 为分划, 记 $\Delta_p \colon X^m \to X^n$ 为对应的 “对角” 映射, 则有同构
+$$
+  {\mathrm{Gr}_{n}}
+  |_{\Delta_p}
+  \simeq {\mathrm{Gr}_m}.
+  $$
+(直观: $n$ 个点有一些重复, 相当于只有 $m$ 个点)</li>
+<li>设 $p \colon \{1,\cdots,n\} \to \{1,\cdots,m\}$ 为分划, 各组大小为 $n_i$. 记 $U_p\subset X^n$ 为 “不同组的分量互不相等” 的点构成的开子空间. 那么
+$$
+  {\mathrm{Gr}_{n}}
+  |_{U_p}
+  \simeq \Big({\prod_{}{\mathrm{Gr}_{n_i}}}\Big)\Big|_{U_p}.
+  $$
+(直观: 将 $n$ 个点按互不相交的区域分为若干组)</li>
+<li>对于<span class="link local"><a href="./对称群.html" title="对称群 [对称群]">对称群</a></span> $S_n$ 在 $X^n$ 上的作用, $\mathrm{Gr}_{n}$ 有等变结构.</li>
+<li>上述结构之间还有一些相容性, 此处就不具体描述了.</li>
+</ul>
 <p>$\mathrm{Gr}_{G,X^n}$ 还可以写成 “相对环路群” 对 “相对弧群” 的商:
 $$
 \mathrm{Gr}_{G,X^n} = G(\widehat {\mathcal K})_n / G(\widehat {\mathcal O})_n,
@@ -833,6 +851,7 @@ $$
 <li>$X$ 的 $n$ 个点 $(x_i)$, 以及<span class="link local"><a href="./去心形式圆盘.html" title="去心形式圆盘 [去心形式圆盘]">去心形式圆盘</a></span>上的 $G$-值函数 $g\in G(\widehat {X}_{\{x_i\}}\setminus \{x_i\})$;</li>
 <li>$X$ 的 $n$ 个点 $(x_i)$, 以及<span class="link local"><a href="./形式圆盘.html" title="形式圆盘 [形式圆盘]">形式圆盘</a></span>上的 $G$-值函数 $g\in G(\widehat {X}_{\{x_i\}})$;</li>
 </ul>
+<p>其中 $\widehat {X}_{\{x_i\}}$ 是各个形式圆盘 $\operatorname{Spec}\widehat {\mathcal O}_{X,x_i}$ 的并.</p>
 <p><strong>观察</strong>. $\mathrm{Gr}_{G,X^1}$ 是 $X$ 上的 $\mathrm{Gr}_G$-丛, 结构群为 $\operatorname{Aut}(\widehat {\mathcal O})$.
 例如当 $X$ 本身是小圆盘时,
 $\mathrm{Gr}_{G,X^1} = \mathrm{Gr}_G\times X$.</p>

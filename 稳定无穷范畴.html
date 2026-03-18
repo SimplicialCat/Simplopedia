@@ -916,6 +916,29 @@ $$
 $$
 (\mathsf{Set},\times) \to (\mathsf{Ani},\times) \overset{(-)_+}{\to} (\mathsf{Ani}_{*/},\wedge) \overset{\Sigma_{\infty}}{\to} (\mathsf{Sp},\wedge).
 $$</p>
+</details></section><section class="block" data-taxon="讲义"><details ><summary id="homalg-1-tri-st"><header><h1><span class="taxon">讲义. </span>从三角范畴到稳定范畴 <a class="slug" href="./homalg-1-tri-st.html">[homalg-1-tri-st]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><strong>定义</strong> (特殊三角)
+范畴 $\mathcal C$ 中的<strong>特殊三角</strong> (distinguished triangle) 是指下图,
+$$
+\begin{array}{ccccc}
+X &amp; \rightarrow &amp; Y &amp; \rightarrow &amp; 0 \\
+\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
+0 &amp; \rightarrow &amp; Z &amp; \rightarrow &amp; X[1]
+\end{array}
+$$
+其中两个方块均为<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span> (从而整个长方形也是推出).</p>
+<p><strong>定理</strong> (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie</a></span> 定理 1.1.2.14).
+设 $\mathcal C$ 为<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>, 则同伦范畴 $h\mathcal C$ 为三角范畴.</p>
+<p>我们验证八面体公理.</p>
+<p>$$
+\begin{array}{ccccccccc}
+X &amp; \rightarrow &amp; Y &amp; \rightarrow &amp; Z &amp; \rightarrow &amp; 0 &amp;  &amp;  \\
+\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp;  \\
+0 &amp; \rightarrow &amp; Y/X &amp; \rightarrow &amp; Z/X &amp; \rightarrow &amp; X[1] &amp; \rightarrow &amp; 0 \\
+ &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
+ &amp;  &amp; 0 &amp; \rightarrow &amp; Z/Y &amp; \rightarrow &amp; Y[1] &amp; \rightarrow &amp; (Y/X)[1]
+\end{array}
+$$</p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="t-结构"><header><h1><span class="taxon">百科. </span>t-结构 <a class="slug" href="./t-结构.html">[t-结构]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设 $\mathcal C$ 为<span class="link local"><a href="./三角范畴.html" title="“三角范畴” [三角范畴]">三角范畴</a></span>或<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span>, 其上的一个 t-结构是一对子范畴 $(\mathcal C_{\geq 0},\mathcal C_{\leq 0})$, 记 $\mathcal C_{\geq n}=\mathcal C_{\geq 0}[n]$, $\mathcal C_{\leq n}=\mathcal C_{\leq 0}[n]$, 满足</p>

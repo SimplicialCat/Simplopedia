@@ -2837,7 +2837,7 @@ $$</p>
 <p>网址: https://people.mpim-bonn.mpg.de/gaitsgde/grad_2009/</p>
 <h2>Hecke 叠: 动机</h2>
 <p>设 $X$ 为光滑曲线.</p>
-<p>定义一点 $x\in X$ 处的 <strong>Hecke 叠</strong> $\mathcal H_{X^n}$ 为如下对象的模空间:</p>
+<p>定义一点 $x\in X$ 处的 <strong>Hecke 叠</strong> $\mathcal H_{X^n}$ 为如下对象的<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>:</p>
 <ul>
 <li>$X$ 上的 $G$-主丛 $T_1, T_2$, 配备 $T_1$ 和 $T_2$ 在 $X \setminus \{x\}$ 上的同构 $\alpha$.</li>
 </ul>
@@ -2875,7 +2875,25 @@ $$</p>
 <ul>
 <li>$X$ 上的 $G$-主丛 $T$, 以及 $X$ 的 $n$ 个点 $(x_i)$ (允许相同), 配备 $T$ 在 $X \setminus \bigcup \{x_i\}$ 上的平凡化.</li>
 </ul>
-<p>对所有自然数 $n$, 空间 $\mathrm{Gr}_{G,X^n}$ 共同构成一个<span class="link local"><a href="./分解空间.html" title="分解空间 [分解空间]">分解</a></span>结构.</p>
+<p>对所有自然数 $n$, 空间 $\mathrm{Gr}_{G,X^n}$ 共同构成一个<span class="link local"><a href="./分解空间.html" title="分解空间 [分解空间]">分解</a></span>结构, 大致如下:</p>
+<ul>
+<li>设 $p \colon \{1,\cdots,n\} \to \{1,\cdots,m\}$ 为分划, 记 $\Delta_p \colon X^m \to X^n$ 为对应的 “对角” 映射, 则有同构
+$$
+  {\mathrm{Gr}_{n}}
+  |_{\Delta_p}
+  \simeq {\mathrm{Gr}_m}.
+  $$
+(直观: $n$ 个点有一些重复, 相当于只有 $m$ 个点)</li>
+<li>设 $p \colon \{1,\cdots,n\} \to \{1,\cdots,m\}$ 为分划, 各组大小为 $n_i$. 记 $U_p\subset X^n$ 为 “不同组的分量互不相等” 的点构成的开子空间. 那么
+$$
+  {\mathrm{Gr}_{n}}
+  |_{U_p}
+  \simeq \Big({\prod_{}{\mathrm{Gr}_{n_i}}}\Big)\Big|_{U_p}.
+  $$
+(直观: 将 $n$ 个点按互不相交的区域分为若干组)</li>
+<li>对于<span class="link local"><a href="./对称群.html" title="对称群 [对称群]">对称群</a></span> $S_n$ 在 $X^n$ 上的作用, $\mathrm{Gr}_{n}$ 有等变结构.</li>
+<li>上述结构之间还有一些相容性, 此处就不具体描述了.</li>
+</ul>
 <p>$\mathrm{Gr}_{G,X^n}$ 还可以写成 “相对环路群” 对 “相对弧群” 的商:
 $$
 \mathrm{Gr}_{G,X^n} = G(\widehat {\mathcal K})_n / G(\widehat {\mathcal O})_n,
@@ -2885,6 +2903,7 @@ $$
 <li>$X$ 的 $n$ 个点 $(x_i)$, 以及<span class="link local"><a href="./去心形式圆盘.html" title="去心形式圆盘 [去心形式圆盘]">去心形式圆盘</a></span>上的 $G$-值函数 $g\in G(\widehat {X}_{\{x_i\}}\setminus \{x_i\})$;</li>
 <li>$X$ 的 $n$ 个点 $(x_i)$, 以及<span class="link local"><a href="./形式圆盘.html" title="形式圆盘 [形式圆盘]">形式圆盘</a></span>上的 $G$-值函数 $g\in G(\widehat {X}_{\{x_i\}})$;</li>
 </ul>
+<p>其中 $\widehat {X}_{\{x_i\}}$ 是各个形式圆盘 $\operatorname{Spec}\widehat {\mathcal O}_{X,x_i}$ 的并.</p>
 <p><strong>观察</strong>. $\mathrm{Gr}_{G,X^1}$ 是 $X$ 上的 $\mathrm{Gr}_G$-丛, 结构群为 $\operatorname{Aut}(\widehat {\mathcal O})$.
 例如当 $X$ 本身是小圆盘时,
 $\mathrm{Gr}_{G,X^1} = \mathrm{Gr}_G\times X$.</p>
@@ -7628,6 +7647,55 @@ $$
 <p><span class="link local"><a href="./A1-Gm.html" title="仿射直线对乘法群的商 [A1-Gm]">仿射直线对乘法群的商</a></span> $\mathbb A^1 / \mathbb G_m$</p>
 <p>…</p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="fragFOL"><header><h1><span class="taxon">百科. </span>一阶逻辑的片断 <a class="slug" href="./fragFOL.html">[fragFOL]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon="讲义"><details ><summary id="homalg"><header><h1><span class="taxon">讲义. </span>同调代数 <a class="slug" href="./homalg.html">[homalg]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文的目的是向了解传统同调代数的读者介绍其高阶范畴论观点.</p>
+<p><section class="block" data-taxon="讲义"><details ><summary id="homalg-1-tri-st"><header><h1><span class="taxon">讲义. </span>从三角范畴到稳定范畴 <a class="slug" href="./homalg-1-tri-st.html">[homalg-1-tri-st]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><strong>定义</strong> (特殊三角)
+范畴 $\mathcal C$ 中的<strong>特殊三角</strong> (distinguished triangle) 是指下图,
+$$
+\begin{array}{ccccc}
+X &amp; \rightarrow &amp; Y &amp; \rightarrow &amp; 0 \\
+\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
+0 &amp; \rightarrow &amp; Z &amp; \rightarrow &amp; X[1]
+\end{array}
+$$
+其中两个方块均为<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span> (从而整个长方形也是推出).</p>
+<p><strong>定理</strong> (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie</a></span> 定理 1.1.2.14).
+设 $\mathcal C$ 为<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>, 则同伦范畴 $h\mathcal C$ 为三角范畴.</p>
+<p>我们验证八面体公理.</p>
+<p>$$
+\begin{array}{ccccccccc}
+X &amp; \rightarrow &amp; Y &amp; \rightarrow &amp; Z &amp; \rightarrow &amp; 0 &amp;  &amp;  \\
+\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp;  \\
+0 &amp; \rightarrow &amp; Y/X &amp; \rightarrow &amp; Z/X &amp; \rightarrow &amp; X[1] &amp; \rightarrow &amp; 0 \\
+ &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
+ &amp;  &amp; 0 &amp; \rightarrow &amp; Z/Y &amp; \rightarrow &amp; Y[1] &amp; \rightarrow &amp; (Y/X)[1]
+\end{array}
+$$</p>
+</details></section></p>
+</details></section><section class="block" data-taxon="讲义"><details ><summary id="homalg-1-tri-st"><header><h1><span class="taxon">讲义. </span>从三角范畴到稳定范畴 <a class="slug" href="./homalg-1-tri-st.html">[homalg-1-tri-st]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><strong>定义</strong> (特殊三角)
+范畴 $\mathcal C$ 中的<strong>特殊三角</strong> (distinguished triangle) 是指下图,
+$$
+\begin{array}{ccccc}
+X &amp; \rightarrow &amp; Y &amp; \rightarrow &amp; 0 \\
+\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
+0 &amp; \rightarrow &amp; Z &amp; \rightarrow &amp; X[1]
+\end{array}
+$$
+其中两个方块均为<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span> (从而整个长方形也是推出).</p>
+<p><strong>定理</strong> (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie</a></span> 定理 1.1.2.14).
+设 $\mathcal C$ 为<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>, 则同伦范畴 $h\mathcal C$ 为三角范畴.</p>
+<p>我们验证八面体公理.</p>
+<p>$$
+\begin{array}{ccccccccc}
+X &amp; \rightarrow &amp; Y &amp; \rightarrow &amp; Z &amp; \rightarrow &amp; 0 &amp;  &amp;  \\
+\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp;  \\
+0 &amp; \rightarrow &amp; Y/X &amp; \rightarrow &amp; Z/X &amp; \rightarrow &amp; X[1] &amp; \rightarrow &amp; 0 \\
+ &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
+ &amp;  &amp; 0 &amp; \rightarrow &amp; Z/Y &amp; \rightarrow &amp; Y[1] &amp; \rightarrow &amp; (Y/X)[1]
+\end{array}
+$$</p>
 </details></section><section class="block" data-taxon="Meta"><details ><summary id="index"><header><h1><span class="taxon">Meta. </span>单纯百科 Simplopedia <a class="slug" href="./index.html">[index]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>这里是<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>的主目录.</p>
 <p>欢迎访问<span class="link external"><a href="https://simplicialcat.github.io/index.html?lang=zh" title="我的个人主页 [https://simplicialcat.github.io/index.html?lang=zh]">我的个人主页</a></span>.</p>
@@ -7735,6 +7803,7 @@ $$</p>
 </details></section><section class="block" data-taxon="Meta"><details ><summary id="nonmath"><header><h1><span class="taxon">Meta. </span>非数学 <a class="slug" href="./nonmath.html">[nonmath]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon="Meta"><details ><summary id="notes"><header><h1><span class="taxon">Meta. </span>讲稿, 笔记 <a class="slug" href="./notes.html">[notes]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <ul>
+<li><span class="link local"><a href="./homalg.html" title="同调代数 [homalg]">同调代数</a></span> (2026 年 3 月)</li>
 <li><span class="link local"><a href="./alg-th.html" title=" [alg-th]">代数理论</a></span> (2026 年 3 月)</li>
 <li><span class="link local"><a href="./Geo-Sat-eq.html" title="几何 Satake 等价 [Geo-Sat-eq]">几何 Satake 等价</a></span> (2026 年 3 月)</li>
 <li><span class="link local"><a href="./OP-DAHA-QCV.html" title="正交多项式, 双仿射 Hecke 代数与量子特征簇 [OP-DAHA-QCV]">正交多项式, 双仿射 Hecke 代数与量子特征簇</a></span> (2026 年 2 月)</li>
@@ -7894,10 +7963,10 @@ $$</p>
 <p>教学页面中也会有大量的链接指向单纯百科的 <code>wiki</code> 页面, 不过我的目标是不依赖那些页面, 而是在原处把重要的事情解释清楚.</p>
 <ul>
 <li><span class="link local"><a href="./tutorial-funAG.html" title="函子式代数几何 [tutorial-funAG]">教程 : 函子式代数几何</a></span></li>
-<li><span class="link local"><a href="./tutorial-type-theory.html" title="教程 : 类型论 [tutorial-type-theory]">教程 : 类型论</a></span></li>
-<li><span class="link local"><a href="./tutorial-FOL.html" title="教程 : 一阶语言与一阶逻辑 [tutorial-FOL]">教程 : 一阶逻辑</a></span></li>
-<li><span class="link local"><a href="./tutorial-topos.html" title="教程 : 意象理论 [tutorial-topos]">教程 : 意象理论</a></span></li>
-<li><span class="link local"><a href="./tutorial-highercat.html" title="教程 : 高阶范畴论 [tutorial-highercat]">教程 : 高阶范畴论</a></span></li>
+<li><span class="link local"><a href="./tutorial-type-theory.html" title="类型论 [tutorial-type-theory]">教程 : 类型论</a></span></li>
+<li><span class="link local"><a href="./tutorial-FOL.html" title="一阶语言与一阶逻辑 [tutorial-FOL]">教程 : 一阶逻辑</a></span></li>
+<li><span class="link local"><a href="./tutorial-topos.html" title="意象理论 [tutorial-topos]">教程 : 意象理论</a></span></li>
+<li><span class="link local"><a href="./tutorial-highercat.html" title="高阶范畴论 [tutorial-highercat]">教程 : 高阶范畴论</a></span></li>
 </ul>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="pro-可表函子"><header><h1><span class="taxon">百科. </span>pro-可表函子 <a class="slug" href="./pro-可表函子.html">[pro-可表函子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
@@ -8246,7 +8315,7 @@ $$
 \end{array}
 $$</p>
 </details></section><section class="block" data-taxon="Meta"><details ><summary id="todo"><header><h1><span class="taxon">Meta. </span>亟需施工的页面 <a class="slug" href="./todo.html">[todo]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-</details></section><section class="block" data-taxon="教程"><details ><summary id="tutorial-FOL"><header><h1><span class="taxon">教程. </span>教程 : 一阶语言与一阶逻辑 <a class="slug" href="./tutorial-FOL.html">[tutorial-FOL]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon="教程"><details ><summary id="tutorial-FOL"><header><h1><span class="taxon">教程. </span>一阶语言与一阶逻辑 <a class="slug" href="./tutorial-FOL.html">[tutorial-FOL]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>数学语言是由什么构成的?</p>
 <p>观察如下一句话:</p>
 <ul>
@@ -9037,9 +9106,9 @@ $\operatorname{Spec} B\times_{\operatorname{Spec} A}D(f_i) \simeq \operatorname{
 对于空间映射 $X\to Y$, 若其可分解为
 $X\to Z\to Y$, 而 $X\to Z$ 为闭嵌入, $Z\to Y$ 为开嵌入 (注意顺序: 先闭嵌入, 后开嵌入), 则称 $X\to Y$ 为<strong>局部闭嵌入</strong>.</p>
 <p><strong>例</strong>. 映射 $\operatorname{Spec} k[t,t^{-1}] \hookrightarrow\operatorname{Spec} k[x,y]$, $t\mapsto (t,0)$ 为局部闭嵌入.</p>
-</details></section><section class="block" data-taxon="教程"><details ><summary id="tutorial-highercat"><header><h1><span class="taxon">教程. </span>教程 : 高阶范畴论 <a class="slug" href="./tutorial-highercat.html">[tutorial-highercat]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-</details></section><section class="block" data-taxon="教程"><details ><summary id="tutorial-topos"><header><h1><span class="taxon">教程. </span>教程 : 意象理论 <a class="slug" href="./tutorial-topos.html">[tutorial-topos]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-</details></section><section class="block" data-taxon="教程"><details ><summary id="tutorial-type-theory"><header><h1><span class="taxon">教程. </span>教程 : 类型论 <a class="slug" href="./tutorial-type-theory.html">[tutorial-type-theory]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon="教程"><details ><summary id="tutorial-highercat"><header><h1><span class="taxon">教程. </span>高阶范畴论 <a class="slug" href="./tutorial-highercat.html">[tutorial-highercat]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon="教程"><details ><summary id="tutorial-topos"><header><h1><span class="taxon">教程. </span>意象理论 <a class="slug" href="./tutorial-topos.html">[tutorial-topos]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon="教程"><details ><summary id="tutorial-type-theory"><header><h1><span class="taxon">教程. </span>类型论 <a class="slug" href="./tutorial-type-theory.html">[tutorial-type-theory]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是杨家同于 2026 年 1 月在求真书院形式化数学冬令营上的讲座的笔记, 加入了个人的见解. 假想的读者是有一定数学成熟度但对类型论没有了解的同学.</p>
 <h2>什么是类型论</h2>
 <p>类型论是一种不同于集合论的做数学的方法, 因其在处理逻辑问题上的优越性, 而在计算机形式化数学这一领域得到广泛应用. 类型论的首要特征是<strong>给每个对象一个类型</strong>. 常量, 变量, 函数, 命题, 命题的证明, … 每个对象有唯一且可计算的类型; 甚至 (在某些类型论中) 一个类型也有它的类型. <strong>命题是类型</strong>的原则让逻辑学成为类型论的一个子集.</p>
@@ -9439,7 +9508,7 @@ $$
 D = \{x\in R \mid x^2 = 0\}.
 $$</p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="一阶语言"><header><h1><span class="taxon">百科. </span>一阶语言与一阶逻辑 <a class="slug" href="./一阶语言.html">[一阶语言]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p><span class="link local"><a href="./tutorial-FOL.html" title="教程 : 一阶语言与一阶逻辑 [tutorial-FOL]">教程 : 一阶语言与一阶逻辑</a></span></p>
+<p><span class="link local"><a href="./tutorial-FOL.html" title="一阶语言与一阶逻辑 [tutorial-FOL]">教程 : 一阶语言与一阶逻辑</a></span></p>
 <h2>定义</h2>
 <p><strong>定义</strong> (符号表). 一个 (一阶) <strong>符号表</strong> $\Sigma$ 由如下资料构成:</p>
 <ul>
@@ -12020,8 +12089,8 @@ $$</p>
 <h3>为什么需要数学百科网站</h3>
 <ul>
 <li>数学百科网站是重要数学观念的聚集地.</li>
-<li>在百科网站上, 通过链接和反向链接, 人们可以毫不费力地接触与一个概念相关的所有概念. 有时一个概念甚至可以完全通过它被哪些概念链接到来描述.</li>
-<li>许多数学思想为 “业内人士” 所共享, 存在于新潮学者们的头脑中, 但并不系统地存在于文献中. 为了数学思想的传播和传承 (甚至是为了<span class="link local"><a href="./AI-replace-math.html" title="AI 会消灭数学家吗? [AI-replace-math]">人工智能</a></span>能够尽快帮助数学的发展), 应该尽快将它们变成容易获取的, 格式统一的文字.</li>
+<li>在百科网站上, 通过链接和反向链接, 人们可以毫不费力地接触与一个概念相关的所有概念. 有时一个概念甚至可以完全通过它被哪些概念链接到来描述. 人们可以根据自己的喜好和背景, 自由地选择点开或不点开每个链接, 获得个性化的而非线性的阅读体验.</li>
+<li>许多数学思想为少数 “业内人士” 所共享, 存在于新潮学者们的头脑中, 但并不系统地存在于文献中. 为了数学思想的传播和传承 (甚至是为了<span class="link local"><a href="./AI-replace-math.html" title="AI 会消灭数学家吗? [AI-replace-math]">人工智能</a></span>能够尽快帮助数学的发展), 应该尽快将它们变成容易获取的, 格式统一的, 联系紧密的文字.</li>
 </ul>
 <h3>为什么需要我自己的数学百科网站</h3>
 <blockquote>
@@ -17338,7 +17407,7 @@ $$</p>
 <p><span class="link local"><a href="./点函子.html" title="点函子 [点函子]">点函子</a></span></p>
 </details></section><section class="block" data-taxon="学科"><details ><summary id="类型论"><header><h1><span class="taxon">学科. </span>类型论 <a class="slug" href="./类型论.html">[类型论]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>类型论是一种关于 “元素” 与 “类型” 的形式语言, 适于作为<span class="link local"><a href="./数学基础.html" title="数学基础 [数学基础]">数学基础</a></span>, 以及作为范畴的<span class="link local"><a href="./内语言.html" title="内语言 [内语言]">内语言</a></span>.</p>
-<p><span class="link local"><a href="./tutorial-type-theory.html" title="教程 : 类型论 [tutorial-type-theory]">教程 : 类型论</a></span></p>
+<p><span class="link local"><a href="./tutorial-type-theory.html" title="类型论 [tutorial-type-theory]">教程 : 类型论</a></span></p>
 <p>分支:</p>
 <ul>
 <li><span class="link local"><a href="./同伦类型论.html" title="同伦类型论 [同伦类型论]">同伦类型论</a></span></li>
@@ -20314,7 +20383,7 @@ $$
 n\mathsf{Pr}_C = \mathsf{Mod}_{n\mathsf{Pr}}((n-1)\mathsf{Pr}_C) \in \mathsf{CAlg}((n+1)\mathsf{Pr}).
 $$</p>
 </details></section><section class="block" data-taxon="观念"><details ><summary id="高阶范畴"><header><h1><span class="taxon">观念. </span>高阶范畴 <a class="slug" href="./高阶范畴.html">[高阶范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p><span class="link local"><a href="./tutorial-highercat.html" title="教程 : 高阶范畴论 [tutorial-highercat]">教程 : 高阶范畴论</a></span></p>
+<p><span class="link local"><a href="./tutorial-highercat.html" title="高阶范畴论 [tutorial-highercat]">教程 : 高阶范畴论</a></span></p>
 <p>一个高阶范畴是一类<strong>对象</strong>和对象之间的<strong>态射</strong>构成的全体; 不同于普通范畴的是, 高阶范畴两个对象 $X,Y$ 之间的态射全体 $\operatorname{Hom}(X,Y)$ 本身也构成高阶范畴, 从而可以谈论态射之间的态射 ($2$-态射), 态射之间的态射之间的态射 ($3$-态射), …, 以至于无穷.</p>
 <h2>(n,r)-范畴</h2>
 <p>根据有效信息的层级, 可将高阶范畴用两个整数 $n,r$ 分类. 见 <span class="link local"><a href="./n-r-范畴.html" title="(n,r)-范畴 [n-r-范畴]">$(n,r)$-范畴</a></span>.</p>
