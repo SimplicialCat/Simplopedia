@@ -780,8 +780,11 @@ D_R = \operatorname{Spec} R[[t]].
 $$
 注意这是<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>而不是<span class="link local"><a href="./形式概形.html" title="形式概形 [形式概形]">形式概形</a></span> $\operatorname{Spf}R[[t]]$.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>反向链接</h1></header></summary><section class="block" data-taxon="讲义"><details ><summary id="Geo-Sat-eq"><header><h1><span class="taxon">讲义. </span>几何 Satake 等价 <a class="slug" href="./Geo-Sat-eq.html">[Geo-Sat-eq]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>参考 Gaitsgory 等人 2010 春季的几何表示论讨论班.</p>
-<p>网址: https://people.mpim-bonn.mpg.de/gaitsgde/grad_2009/</p>
+<p>参考</p>
+<ul>
+<li>Gaitsgory 等人 2010 春季的<span class="link external"><a href="https://people.mpim-bonn.mpg.de/gaitsgde/grad_2009/" title="几何表示论讨论班 [https://people.mpim-bonn.mpg.de/gaitsgde/grad_2009/]">几何表示论讨论班</a></span>,</li>
+<li>朱歆文的讲义 <span class="link local"><a href="./Zhu-GrSat.html" title="An introduction to affine Grassmannians and the geometric Satake equivalence [Zhu-GrSat]">An introduction to affine Grassmannians and the geometric Satake equivalence</a></span>.</li>
+</ul>
 <h2>Hecke 叠: 动机</h2>
 <p>设 $X$ 为光滑曲线.</p>
 <p>定义一点 $x\in X$ 处的 <strong>Hecke 叠</strong> $\mathcal H_{X^n}$ 为如下对象的<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>:</p>
@@ -796,8 +799,9 @@ $$</p>
 <ul>
 <li><span class="link local"><a href="./形式圆盘.html" title="形式圆盘 [形式圆盘]">形式圆盘</a></span> $\mathbb D$ 上的 $G$-主丛 $T$, 配备 $T$ 在<span class="link local"><a href="./去心形式圆盘.html" title="去心形式圆盘 [去心形式圆盘]">去心形式圆盘</a></span>上的平凡化.</li>
 </ul>
-<p>记 $\widehat {\mathcal K}_x$ 为 $X$ 在 $x$ 处的<span class="link local"><a href="./完备化(域).html" title="完备化 (域) [完备化(域)]">完备局部域</a></span> (对应 $x$ 处的<span class="link local"><a href="./去心形式圆盘.html" title="去心形式圆盘 [去心形式圆盘]">去心形式圆盘</a></span>), 它是<span class="link local"><a href="./完备化(环).html" title="完备化 (环) [完备化(环)]">完备化局部环</a></span> $\widehat {\mathcal O}_x$ (对应 $x$ 处的<span class="link local"><a href="./形式圆盘.html" title="形式圆盘 [形式圆盘]">形式圆盘</a></span>) 的分式域. 我们常选取 “单值化参数” 得到同构 $\widehat {\mathcal K}_x \simeq \mathbb{C}(\!(t)\!)$, $\widehat {\mathcal O}_x\simeq\mathbb{C}[\![t]\!]$. 此时记 $\widehat {\mathcal K}_x$ 为 $\widehat {\mathcal K}$, $\widehat {\mathcal O}_x$ 为 $\widehat {\mathcal O}$.
-那么 $\mathrm{Gr}_G$ 的元素相当于<span class="link local"><a href="./去心形式圆盘.html" title="去心形式圆盘 [去心形式圆盘]">去心形式圆盘</a></span>上的 $G$-值函数, 模去整个<span class="link local"><a href="./形式圆盘.html" title="形式圆盘 [形式圆盘]">形式圆盘</a></span>上的 $G$-值函数:
+<p>记 $\widehat {\mathcal K}_x$ 为 $X$ 在 $x$ 处的<span class="link local"><a href="./完备化(域).html" title="完备化 (域) [完备化(域)]">完备局部域</a></span> (对应 $x$ 处的<span class="link local"><a href="./去心形式圆盘.html" title="去心形式圆盘 [去心形式圆盘]">去心形式圆盘</a></span>), 它是<span class="link local"><a href="./完备化(环).html" title="完备化 (环) [完备化(环)]">完备化局部环</a></span> $\widehat {\mathcal O}_x$ (对应 $x$ 处的<span class="link local"><a href="./形式圆盘.html" title="形式圆盘 [形式圆盘]">形式圆盘</a></span>) 的分式域. 我们常选取 “单值化参数” 得到同构 $\widehat {\mathcal K}_x \simeq \mathbb{C}(\!(t)\!)$, $\widehat {\mathcal O}_x\simeq\mathbb{C}[\![t]\!]$. 此时记 $\widehat {\mathcal K}_x$ 为 $\widehat {\mathcal K}$, $\widehat {\mathcal O}_x$ 为 $\widehat {\mathcal O}$.</p>
+<p>记 $G(\widehat {\mathcal K})$ 为 $\operatorname{Spec}\widehat {\mathcal K}$ 到 $G$ 的映射叠, $G(\widehat {\mathcal O})$ 类似. <span class="link local"><a href="./Zhu-GrSat.html" title="An introduction to affine Grassmannians and the geometric Satake equivalence [Zhu-GrSat]">朱</a></span>文作 $LG, L^+G$.</p>
+<p>那么 $\mathrm{Gr}_G$ 的元素相当于<span class="link local"><a href="./去心形式圆盘.html" title="去心形式圆盘 [去心形式圆盘]">去心形式圆盘</a></span>上的 $G$-值函数, 模去整个<span class="link local"><a href="./形式圆盘.html" title="形式圆盘 [形式圆盘]">形式圆盘</a></span>上的 $G$-值函数:
 $$
 \mathrm{Gr}_G \simeq G(\widehat {K}) / G(\widehat {\mathcal O}).
 $$</p>
@@ -818,7 +822,7 @@ $$</p>
 <li>在多个点 $(x_i\in X)$ 上定义,</li>
 </ul>
 <p>这些数据构成<strong></strong><span class="link local"><a href="./分解空间.html" title="分解空间 [分解空间]">分解</a></span> (factorization) 结构.</p>
-<p>定义<strong>分解 Grassmann 空间</strong> (factorizable Grassmannian) $\mathrm{Gr}_{G,X^n}$ 为如下对象的模空间:</p>
+<p>定义<strong>分解 Grassmann 空间</strong> (factorizable Grassmannian) $\mathrm{Gr}_n = \mathrm{Gr}_{G,X^n}$ 为如下对象的模空间:</p>
 <ul>
 <li>$X$ 上的 $G$-主丛 $T$, 以及 $X$ 的 $n$ 个点 $(x_i)$ (允许相同), 配备 $T$ 在 $X \setminus \bigcup \{x_i\}$ 上的平凡化.</li>
 </ul>
@@ -857,7 +861,7 @@ $\mathrm{Gr}_{G,X^1} = \mathrm{Gr}_G\times X$.</p>
 <h2>卷积</h2>
 <p>定义 “球面 Hecke 范畴”</p>
 <ul>
-<li>$\mathsf{Sph}$ 为 $\mathrm{Gr}_{G}$ 上的 $G(\widehat {\mathcal O})$-等变 D-模范畴;</li>
+<li>$\mathsf{Sph}$ 为 $\mathrm{Gr}_{G}$ 上的 $G(\widehat {\mathcal O})$-等变 D-模范畴 (<span class="link local"><a href="./Zhu-GrSat.html" title="An introduction to affine Grassmannians and the geometric Satake equivalence [Zhu-GrSat]">朱</a></span>文作 $\mathsf{Sat}_G$);</li>
 <li>$\mathsf{Sph}_n$ 为 $\mathrm{Gr}_{G,X^n}$ 上的 $G(\widehat {\mathcal O})_n$-等变 D-模范畴.</li>
 </ul>
 <p>名称中的 “球面” 是来源于一个粗略的类比: 两个圆盘沿着去心圆盘粘起来就是 “球面”.</p>
@@ -866,8 +870,22 @@ $\mathrm{Gr}_{G,X^1} = \mathrm{Gr}_G\times X$.</p>
 $$
 \mathrm{Conv}_G = G(\widehat {\mathcal K})\times_{G(\widehat {\mathcal O})}\mathrm{Gr}_G \overset{m}{\to} \mathrm{Gr}_G.
 $$</p>
-<p>考虑映射 $\mathrm{pr}\colon \mathrm{Conv}_G \to \mathrm{Gr}_G$, 先投影到第一分量 $G(\widehat {\mathcal K})$, 再投影到商 $G(\widehat {\mathcal K}) / G(\widehat {\mathcal O}) = \mathrm{Gr}_G$.</p>
-<p>对于 $F\in\mathsf{Sph}$, 定义 $\widetilde F$ 为 $\mathrm{pr}_2^*F$ 由 $G(\widehat {\mathcal K}) \times G(\widehat {\mathcal K})$ 下降到 $\mathrm{Conv}_G$ 的对象.</p>
+<p>考虑映射 $\mathrm{pr}\colon \mathrm{Conv}_G \to \mathrm{Gr}_G$, ~~先投影到第一分量, 再~~ (这是错误的) 投影到商 $G(\widehat {\mathcal K})\times_{G(\widehat {\mathcal O})}1=G(\widehat {\mathcal K}) / G(\widehat {\mathcal O}) = \mathrm{Gr}_G$.</p>
+<p>我将 $\mathrm{Conv}_G$ 理解为如下对象的模空间:</p>
+<ul>
+<li>形式圆盘 $\mathbb D$ 上的 $G$-主丛 $T_1,T_2$, 配备 $T_1$ 在去心形式圆盘 $\mathbb D^\circ$ 上的平凡化, 以及 $T_1,T_2$ 在去心形式圆盘 $\mathbb D^\circ$ 上的同构.</li>
+</ul>
+<p>$$
+\mathrm{Conv}_G = \sum_{T_1,T_2\in\mathrm{Bun}_G(\mathbb D)}(T_1|_{\mathbb D^\circ}=\mathrm{triv}_{\mathbb D^\circ})\times (T_1|_{\mathbb D^\circ}=T_2|_{\mathbb D^\circ}).
+$$
+$\mathrm{Conv}_G$ 到 $\mathrm{Gr}_G$ 的两个投影映射 $\mathrm{pr},m$ 可视为上述对象分别到如下对象的投影:
+$$
+\sum_{T_1\in\mathrm{Bun}_G(\mathbb D)}(T_1|_{\mathbb D^\circ}=\mathrm{triv}_{\mathbb D^\circ}),\sum_{T_2\in\mathrm{Bun}_G(\mathbb D)}(T_2|_{\mathbb D^\circ}=\mathrm{triv}_{\mathbb D^\circ}).
+$$</p>
+<p>对于 $F\in\mathsf{Sph}$, 定义 $\widetilde F$ 为 $\mathrm{pr}_2^*q^*F$ 由 $G(\widehat {\mathcal K}) \times G(\widehat {\mathcal K})$ 下降到 $\mathrm{Conv}_G$ 的对象.</p>
+<blockquote>
+<p>这里有一个一般的道理, 叫做 “扭曲外张量积” (<span class="link local"><a href="./Zhu-GrSat.html" title="An introduction to affine Grassmannians and the geometric Satake equivalence [Zhu-GrSat]">朱</a></span> A.1.2). 对于某结构群 $K$ 的主丛 $p\colon E \to X$ 以及另一个带 $K$-作用的空间 $Y$, 可定义 $X$ 上的层 $F$ 与 $Y$ 上的 $K$-<span class="link local"><a href="./等变对象.html" title="等变对象 [等变对象]">等变</a></span>层 $G$ 的扭曲外张量积 $F \operatorname{\widetilde {\boxtimes}} G$, 它是 $X$ 与 $Y$ 的扭曲乘积 $X \operatorname{\widetilde {\times}} Y := (E \times Y)/K$ 上的层.</p>
+</blockquote>
 <p>对于 $F_1,F_2\in\mathsf{Sph}$, 定义
 $$
 F_1 \operatorname{\widetilde {\boxtimes}} F_2 = (\mathrm{pr}^* F_1) \otimes \widetilde {F_2};
@@ -882,31 +900,65 @@ m\colon G(\widehat {\mathcal K})_n \times_{X^n} G(\widehat {\mathcal K})_n \to G
 $$
 下降为
 $$
-m\colon G(\widehat {\mathcal K})_n \times_{G(\widehat {\mathcal O})_n} \mathrm{Gr}_{G,X^n} \to \mathrm{Gr}_{G,X^n}.
+m\colon \mathrm{Conv}_n := G(\widehat {\mathcal K})_n \times_{G(\widehat {\mathcal O})_n} \mathrm{Gr}_{G,X^n} \to \mathrm{Gr}_{G,X^n}.
+$$
+对于 $F\in\mathsf{Sph}_n$, 类似地, $\mathrm{pr}_2^* q^*F$ 由 $G(\widehat {\mathcal K})_n \times_{X^n} G(\widehat {\mathcal K})_n$ 下降到 $\mathrm{Conv}_n$, 记之为 $\widetilde {F}$; 定义
+$$
+F_1 \operatorname{\widetilde \boxtimes} F_2 = (\mathrm{pr}_1^* F_1 \otimes \widetilde {F}_2)[-n];
+$$
+$$
+F_1 * F_2 = m_* (F_1 \operatorname{\widetilde \boxtimes} F_2).
 $$</p>
+<p>范畴 $\mathsf{Sph}_n$ 是一个分解结构的组成部分, 粗略地说,</p>
+<ul>
+<li>设 $p \colon \{1,\cdots,n\} \to \{1,\cdots,m\}$ 为分划, 记 $\Delta_p \colon X^m \to X^n$ 为对应的 “对角” 映射, 依同构 ${\mathrm{Gr}_{n}}|_{\Delta_p}\simeq {\mathrm{Gr}_m}$, 有 “直像” 函子
+$$
+  \Delta_* \colon \mathsf{Sph}_m \to \mathsf{Sph}_n,
+$$
+且有右伴随 $\Delta^!$.</li>
+<li>对于分划 $p$, 简单起见设为 $n = n_1 + n_2$, 记 $U_p\subset X^n$ 为对应的开集 (不同组的分量不相等), $\mathsf{Sph}_p$ 为 $U_p$ 上的 $G(\widehat {\mathcal O})_{n_1} \times G(\widehat {\mathcal O})_{n_2}$-等变 D-模范畴. 有两个函子
+$$
+  \mathsf{Sph}_n \to \mathsf{Sph}_p \leftarrow \mathsf{Sph}_{n_1} \times \mathsf{Sph}_{n_2},
+$$
+其中第一个函子为 $X^n$ 到 $U_p$ 的限制, 第二个函子为外张量积 $\boxtimes$ 限制到 $U_p$. 各函子均有右伴随.</li>
+<li>这些函子与 $\mathsf{Sph}_n$ 上的卷积相容.</li>
+</ul>
 <h2>群表示的分解范畴</h2>
 <p>设 $H$ 为任意群. 定义 $H$ 在 $X^n$ 上的 D-模 $F$ 的<strong>分解作用</strong> (factorizable action) 为如下数据:</p>
 <ul>
-<li>对 $n$ 的任意分划 $p \colon n = n_1+\cdots+ n_m$, 有 $H^m$ 在 $F|_{U_p}$ 上的作用 ($U_p$ 是分划 $p$ 给出的开子空间).</li>
+<li>对 $n$ 的任意分划 $p \colon n = n_1+\cdots+ n_m$, 有 $H^m$ 在 $F|_{U_p}$ 上的作用, $U_p$ 是分划 $p$ 给出的开子空间;</li>
+<li>这些作用关于 $p$ 的细化相容.</li>
 </ul>
+<p>例如, $n=3$, $U_p = X^3 \setminus (\Delta_{13} \cup \Delta_{23})$, 有 $H^2$ 在 $F|_{U_p}$ 上的作用,</p>
 <h2>Hecke 特征层</h2>
 <p>回忆 <strong>Hecke 叠</strong> $\mathcal H_n$ 为如下对象的模空间: $X$ 上的两个 $G$-丛, 在 $X$ 的 $n$ 个点之外同构. 有两个投影映射
 $$
 \mathrm{Bun}_G \overset{\overleftarrow{h_n}}{\longleftarrow} \mathcal H_n \overset{\overrightarrow{h_n}}{\longrightarrow} X^n\times\mathrm{Bun}_G,
 $$</p>
 <h2>Hecke 范畴的结构</h2>
-<p>记 $1 \in \mathrm{Gr}_G$ 为 $G(\widehat {\mathcal O})\subset G(\widehat {\mathcal K})$ 对应的点. 记 $\delta_1 := 1_*\mathbb{C}$. 它是 $\mathsf{Sph}$ 上卷积的单位.</p>
+<p>记 $1 \in \mathrm{Gr}_G$ 为 $G(\widehat {\mathcal O})\subset G(\widehat {\mathcal K})$ 对应的点. 记 $\delta_1 := 1_*\mathbb{C}$. 它是 $\mathsf{Sph}$ 上卷积的单位.
+$$</p>
+<p>$$</p>
+<p>取定 $G$ 的<span class="link local"><a href="./极大环面.html" title="极大环面 [极大环面]">极大环面</a></span> $T$, 单<span class="link local"><a href="./根.html" title="根 [根]">根</a></span> $\alpha_i$, 单余根 $\check{\alpha_i}$;</p>
+<p>$\mathrm{Gr}_G$ 的 $G(\widehat {\mathcal O})$-轨道一一对应于余根格 $X_*(T)$ 的 <span class="link local"><a href="./Weyl群.html" title="Weyl 群 [Weyl群]">$W$</a></span>-轨道, 记为 $\mathrm{Gr}_G^{\check{\lambda}}$, 其中 $\check{\lambda}$ 为轨道中的支配权.</p>
+<p>$\mathsf{Sph}$ 的不可约对象均形如
+$$
+J(\check\lambda) = j_{!*} \mathcal O,
+$$
+其中 $j$ 是 $\mathrm{Gr}_G^{\check\lambda}$ 的含入映射, $\mathcal O$ 为平凡 D-模.</p>
+<p>注. $\delta_1 = J(0)$.</p>
 <h2>纤维函子</h2>
 <p>考虑 $G \hookleftarrow B \twoheadrightarrow T$ 给出的图表
 $$
 \mathrm{Gr}_G \overset{b}{\leftarrow} \mathrm{Gr}_B \overset{t}{\rightarrow} \mathrm{Gr}_T,
 $$
-(我们将 $T$ 视为 $B$ 的商群而非子群)
+(现在我们将 $T$ 视为 $B$ 的商群而非子群)
 定义
 $$
 F = t_! b^*\colon \mathsf{Sph}\to \mathsf{Sph}_T \simeq\mathsf{Vect}^{X_*(T)}.
 $$</p>
 <h2>识别对偶群</h2>
+<p>设 $P\subset G$ 为<span class="link local"><a href="./抛物子群.html" title="抛物子群 [抛物子群]">抛物子群</a></span>, $L$ 为 <span class="link local"><a href="./Levi分解.html" title="Levi 分解 [Levi分解]">Levi 分解</a></span></p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="仿射Grassmann空间"><header><h1><span class="taxon">百科. </span>仿射 Grassmann 空间 <a class="slug" href="./仿射Grassmann空间.html">[仿射Grassmann空间]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>仿射 Grassmann 空间是 Grassmann 空间的类比, 是<span class="link local"><a href="./环路群.html" title="环路群 [环路群]">环路群</a></span> $LG$ 对<span class="link local"><a href="./弧群.html" title="弧群 [弧群]">弧群</a></span>极大抛物子群 $L^+G$ 的商.</p>

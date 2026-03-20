@@ -776,8 +776,10 @@
 <article><section class="block" data-taxon="百科"><details open><summary id="导出范畴"><header><h1><span class="taxon">百科. </span>导出范畴 <a class="slug" href="./导出范畴.html">[导出范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span> $\mathcal A$ 的<strong>导出范畴</strong>是万有的以 $\mathcal A$ 为<span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">心</a></span>的<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>.</p>
+<p>导出范畴也可视为<span class="link local"><a href="./生象化.html" title="生象化 [生象化]">生象化</a></span>的<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>.</p>
 <p>导出范畴的一个<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">模型</a></span>是将链复形之间的<span class="link local"><a href="./拟同构.html" title="拟同构 [拟同构]">拟同构</a></span>视为同构, 即对拟同构作<span class="link local"><a href="./局部化.html" title="局部化 (环) [局部化]">局部化</a></span>.
 此时 $\mathcal A$ 中的对象可视为聚集在 $0$ 位置的链复形.</p>
+<p>相关讲义: <span class="link local"><a href="./homalg-2-der-cat.html" title="导出范畴 [homalg-2-der-cat]">导出范畴</a></span></p>
 <h2>定义</h2>
 <h3>泛性质</h3>
 <p>参考 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">HA</a></span> 1.3.3 节.</p>
@@ -1174,8 +1176,9 @@ $$</p>
 <p><span class="link local"><a href="./同伦纤维塔.html" title="“同伦纤维塔” [同伦纤维塔]">同伦纤维塔</a></span></p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="生象化"><header><h1><span class="taxon">百科. </span>生象化 <a class="slug" href="./生象化.html">[生象化]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>许多代数结构 (环, 模, 交换代数等) 可在<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>语境中谈论, 例如<span class="link local"><a href="./生象环.html" title="生象环 [生象环]">生象环</a></span>; 此时其构成的范畴 (例如 $\mathsf{AniRing}$) 与集合语境中的相应范畴 (例如普通环的范畴 $\mathsf{Ring}$) 有特定的联系, 这种联系就是<strong>生象化</strong>.</p>
-<p>生象化是一种 “非 Abel <span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>”.</p>
+<p>许多代数结构 (环, 模, 交换代数等) 可在<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>语境中谈论, 例如<span class="link local"><a href="./生象环.html" title="生象环 [生象环]">生象环</a></span>; 此时其构成的范畴 (例如 $\mathsf{AniRing}$) 与集合语境中的相应范畴 (例如普通环的范畴 $\mathsf{Ring}$) 有特定的联系, 这种联系就是<strong>生象化</strong>. <span class="link local"><a href="./代数范畴.html" title="代数范畴 [代数范畴]">代数范畴</a></span>的生象化给出生象语境中的代数概念; 不过生象化不局限于代数范畴.</p>
+<p>生象化的<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>是<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>的非 Abel 类比.</p>
+<p>“生象化” 这个名字来自 Dustin Clausen (见 <span class="link local"><a href="./CesnaviciusScholzePurity.html" title="Purity for flat cohomology [CesnaviciusScholzePurity]">Cesnavicius–Scholze</a></span> 的致谢部分).</p>
 <h2>定义</h2>
 <p>设 $\mathcal C$ 为余完备<span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成</a></span> $(1,1)$-范畴, 其<strong>生象化</strong> (animation) $\mathsf{Ani}(\mathcal C)$ 定义为 $\mathcal C^{\mathrm{cpt}}$ 在<span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛余极限</a></span>下自由生成的 $(\infty,1)$-范畴, 也即 $\mathsf{Fun}((\mathcal C^{\mathrm{cpt}})^{\mathrm{op}},\mathsf{Ani})$ 中由<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>在筛余极限下生成的子范畴.</p>
 <h2>例</h2>
