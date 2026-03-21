@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>“根 (Lie 代数)”</title><link rel="icon" href="./assets/favicon.ico" /><style>
+<meta name="viewport" content="width=device-width"><title>根数据</title><link rel="icon" href="./assets/favicon.ico" /><style>
   @font-face {
     font-family: 'NewCM10';
     src: url(assets/NewCM10-Book.otf) format('opentype');
@@ -773,13 +773,34 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon="百科"><details open><summary id="根(Lie代数)"><header><h1><span class="taxon">百科. </span>“根 (Lie 代数)” <a class="slug" href="./根(Lie代数).html">[根(Lie代数)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>注意区分<span class="link local"><a href="./根.html" title="根 [根]">根</a></span> (root).</p>
-<h2>定义</h2>
-<p>设 $\mathfrak g$ 为有限维 Lie 代数, 那么存在一个<span class="link local"><a href="./可解.html" title=" [可解]">可解 Lie 代数</a></span>理想 $\mathfrak r$ 包含所有的可解理想, 称之为 $\mathfrak g$ 的根 (radical).</p>
+<article><section class="block" data-taxon="百科"><details open><summary id="根数据"><header><h1><span class="taxon">百科. </span>根数据 <a class="slug" href="./根数据.html">[根数据]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>对于连通<span class="link local"><a href="./约化群.html" title="约化群 [约化群]">约化群</a></span> $G$, 有四个关键资料
+$$
+(X^*, X_*, \Phi, \Phi^\vee),
+$$</p>
+<ul>
+<li>$X^* = \operatorname{Hom}(T,\mathbb G_m)$ 称为<strong>权格</strong>, 其中 $T$ 为抽象 Cartan 子群;</li>
+<li>$X_* = \operatorname{Hom}(\mathbb G_m,T)$ 称为<strong>余权格</strong>, 有完美配对 $X^*\times X_* \to\mathbb{Z}$;</li>
+<li>$\Phi\subset X^*$ 为<span class="link local"><a href="./根.html" title="根 [根]">根</a></span>的集合;</li>
+<li>$\Phi^\vee\subset X_*$ 为余根的集合;</li>
+</ul>
+<p>总称为 $G$ 的<strong>根数据</strong> (root data).</p>
+<p>代数闭域上的约化群完全由这些资料确定. 有趣的是, 若 $(X^*, X_*, \Phi, \Phi^\vee)$ 是约化群 $G$ 的根数据, 则 $(X_*, X^*, \Phi^\vee, \Phi)$ 是另一个约化群 $G^\vee$ (或记为 $\widehat G$) 的根数据, 称为 <span class="link local"><a href="./Langlands对偶.html" title="Langlands 对偶群 [Langlands对偶]">Langlands 对偶</a></span>.</p>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>反向链接</h1></header></summary><section class="block" data-taxon="百科"><details ><summary id="Langlands对偶"><header><h1><span class="taxon">百科. </span>Langlands 对偶群 <a class="slug" href="./Langlands对偶.html">[Langlands对偶]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>设 $G$ 为<span class="link local"><a href="./约化群.html" title="约化群 [约化群]">约化</a></span>代数群, 其 Langlands 对偶 ${^LG}$ 是置换其<span class="link local"><a href="./根数据.html" title="根数据 [根数据]">根数据</a></span>所得的另一个代数群.</p>
+<p><span class="link local"><a href="./Langlands对应.html" title="经典 Langlands 对应 [Langlands对应]">Langlands 对应</a></span> 将
+$G$ (准确地说是 $G(\mathbb A_F)$) 的自守表示联系到 $^LG$-值的 Galois 表示 (即同态 $\mathrm {Gal}(\overline{F}/F)\to {^LG}$).</p>
+<p>Langlands 对偶群也可由<span class="link local"><a href="./佐武等价.html" title="佐武等价 [佐武等价]">佐武等价</a></span>定义.</p>
+<h2>性质</h2>
+<h3>规范理论中的 Langlands 对偶</h3>
+<blockquote>
+<p>A gauge theory has a coupling constant $g$, which plays the role of the electric charge $e$. The conjectural non-abelian electro-magnetic duality, which has later become known as $S$-duality, has the form $(G, g) \leftrightarrow (^LG, 1/g)$.</p>
+</blockquote>
 <h2>相关概念</h2>
-<p><span class="link local"><a href="./半单Lie代数.html" title="“半单 Lie 代数” [半单Lie代数]">半单 Lie 代数</a></span></p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>反向链接</h1></header></summary><section class="block" data-taxon="百科"><details ><summary id="根"><header><h1><span class="taxon">百科. </span>根 <a class="slug" href="./根.html">[根]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./Langlands纲领.html" title="Langlands 纲领 [Langlands纲领]">Langlands 纲领</a></span></p>
+<p><span class="link local"><a href="./局部几何Langlands对应.html" title="“局部几何 Langlands 对应” [局部几何Langlands对应]">局部几何 Langlands 对应</a></span></p>
+</details></section><section class="block" data-taxon="百科"><details ><summary id="根"><header><h1><span class="taxon">百科. </span>根 <a class="slug" href="./根.html">[根]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>Lie 代数的根系 (root system) 最早由 W. Killing 约 1889 年为了研究<span class="link local"><a href="./单Lie代数.html" title="“单 Lie 代数” [单Lie代数]">单 Lie 代数</a></span>的分类提出.</p>
 <p>注意区分<span class="link local"><a href="./根(Lie代数).html" title="“根 (Lie 代数)” [根(Lie代数)]">根 (Lie 代数)</a></span> (radical).</p>
 <h2>定义</h2>

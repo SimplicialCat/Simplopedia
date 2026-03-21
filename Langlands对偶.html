@@ -775,7 +775,7 @@
 
 <article><section class="block" data-taxon="百科"><details open><summary id="Langlands对偶"><header><h1><span class="taxon">百科. </span>Langlands 对偶群 <a class="slug" href="./Langlands对偶.html">[Langlands对偶]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>设 $G$ 为<span class="link local"><a href="./约化群.html" title="约化群 [约化群]">约化</a></span>代数群, 其 Langlands 对偶 ${^LG}$ 是置换其<span class="link local"><a href="./根.html" title="根 [根]">根</a></span>数据所得的另一个代数群.</p>
+<p>设 $G$ 为<span class="link local"><a href="./约化群.html" title="约化群 [约化群]">约化</a></span>代数群, 其 Langlands 对偶 ${^LG}$ 是置换其<span class="link local"><a href="./根数据.html" title="根数据 [根数据]">根数据</a></span>所得的另一个代数群.</p>
 <p><span class="link local"><a href="./Langlands对应.html" title="经典 Langlands 对应 [Langlands对应]">Langlands 对应</a></span> 将
 $G$ (准确地说是 $G(\mathbb A_F)$) 的自守表示联系到 $^LG$-值的 Galois 表示 (即同态 $\mathrm {Gal}(\overline{F}/F)\to {^LG}$).</p>
 <p>Langlands 对偶群也可由<span class="link local"><a href="./佐武等价.html" title="佐武等价 [佐武等价]">佐武等价</a></span>定义.</p>
@@ -792,6 +792,7 @@ $G$ (准确地说是 $G(\mathbb A_F)$) 的自守表示联系到 $^LG$-值的 Gal
 <p><strong>佐武 (Satake) 等价</strong>是 <span class="link local"><a href="./Langlands对偶.html" title="Langlands 对偶群 [Langlands对偶]">Langlands 对偶群</a></span>的一种 “实现”: 由 $G$ 构造的某个几何对象上的某种层范畴实现了其对偶群 $^LG$ 的表示范畴. 几何佐武等价是<span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 对应</a></span>的基石.</p>
 <h2>陈述</h2>
 <h3>几何佐武等价</h3>
+<p><span class="link local"><a href="./Geo-Sat-eq.html" title="几何 Satake 等价 [Geo-Sat-eq]">几何 Satake 等价</a></span></p>
 <h4>偏屈层版本</h4>
 <p><span class="link local"><a href="./仿射Grassmann空间.html" title="仿射 Grassmann 空间 [仿射Grassmann空间]">仿射 Grassmann 空间</a></span>
 $\mathrm{Gr}_G$
@@ -800,6 +801,19 @@ $$
 \mathsf{Perv}_{L^+G}(\mathrm{Gr}_G) \simeq \mathsf{Rep}(G^\vee).
 $$</p>
 <h4>D-模版本</h4>
+</details></section><section class="block" data-taxon="百科"><details ><summary id="根数据"><header><h1><span class="taxon">百科. </span>根数据 <a class="slug" href="./根数据.html">[根数据]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>对于连通<span class="link local"><a href="./约化群.html" title="约化群 [约化群]">约化群</a></span> $G$, 有四个关键资料
+$$
+(X^*, X_*, \Phi, \Phi^\vee),
+$$</p>
+<ul>
+<li>$X^* = \operatorname{Hom}(T,\mathbb G_m)$ 称为<strong>权格</strong>, 其中 $T$ 为抽象 Cartan 子群;</li>
+<li>$X_* = \operatorname{Hom}(\mathbb G_m,T)$ 称为<strong>余权格</strong>, 有完美配对 $X^*\times X_* \to\mathbb{Z}$;</li>
+<li>$\Phi\subset X^*$ 为<span class="link local"><a href="./根.html" title="根 [根]">根</a></span>的集合;</li>
+<li>$\Phi^\vee\subset X_*$ 为余根的集合;</li>
+</ul>
+<p>总称为 $G$ 的<strong>根数据</strong> (root data).</p>
+<p>代数闭域上的约化群完全由这些资料确定. 有趣的是, 若 $(X^*, X_*, \Phi, \Phi^\vee)$ 是约化群 $G$ 的根数据, 则 $(X_*, X^*, \Phi^\vee, \Phi)$ 是另一个约化群 $G^\vee$ (或记为 $\widehat G$) 的根数据, 称为 <span class="link local"><a href="./Langlands对偶.html" title="Langlands 对偶群 [Langlands对偶]">Langlands 对偶</a></span>.</p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="镜对称"><header><h1><span class="taxon">百科. </span>“镜对称” <a class="slug" href="./镜对称.html">[镜对称]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>复代数簇 (<span class="link local"><a href="./Calabi--丘流形.html" title="“Calabi–丘流形” [Calabi--丘流形]">Calabi–丘流形</a></span>) 与<span class="link local"><a href="./辛流形.html" title="辛流形 [辛流形]">辛流形</a></span>之间的一种关系.</p>
 <blockquote>
