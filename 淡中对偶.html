@@ -950,31 +950,67 @@ $$
 其中第一个函子为 $X^n$ 到 $U_p$ 的限制, 第二个函子为外张量积 $\boxtimes$ 限制到 $U_p$. 各函子均有右伴随.</li>
 <li>这些函子与 $\mathsf{Sph}_n$ 上的卷积相容.</li>
 </ul>
-<h2>群表示的分解范畴</h2>
-<p>设 $H$ 为任意群. 定义 $H$ 在 $X^n$ 上的 D-模 $F$ 的<strong>分解作用</strong> (factorizable action) 为如下数据:</p>
-<ul>
-<li>对 $n$ 的任意分划 $p \colon n = n_1+\cdots+ n_m$, 有 $H^m$ 在 $F|_{U_p}$ 上的作用, $U_p$ 是分划 $p$ 给出的开子空间;</li>
-<li>这些作用关于 $p$ 的细化相容.</li>
-</ul>
-<p>例如, $n=3$, $U_p = X^3 \setminus (\Delta_{13} \cup \Delta_{23})$, 有 $H^2$ 在 $F|_{U_p}$ 上的作用,</p>
-<p>todo</p>
-<h2>Hecke 特征层</h2>
-<p>回忆 <strong>Hecke 叠</strong> $\mathcal H_n$ 为如下对象的模空间: $X$ 上的两个 $G$-丛, 在 $X$ 的 $n$ 个点之外同构. 有两个投影映射
+<p>对于分划 $p\colon \{1,\cdots,n\} \to \{1,\cdots,m\}$, 有卷积映射
+$$
+m_p \colon \mathrm{Gr}_{p^{-1}(1)} \operatorname{\widetilde \times} \cdots \operatorname{\widetilde \times} \mathrm{Gr}_{p^{-1}(m)} \to \mathrm{Gr}_m,
+$$
+对于 $A_i\in\mathsf{Sph}_{p^{-1}(i)}$, 定义外卷积
+$$
+A_1 \operatorname{\boxed{*}} \cdots \operatorname{\boxed{*}} A_m := (m_p)_! (A_1 \operatorname{\widetilde \boxtimes} \cdots \operatorname{\widetilde \boxtimes} A_m);
+$$
+有同构
+$$
+A_1 \operatorname{\boxed{*}} \cdots \operatorname{\boxed{*}} A_m \simeq (U_p)_{!*}(A_1\boxtimes\cdots\boxtimes A_m)|_{U_p}.
+$$
+这称为融合积 (fusion product).</p>
+<p>定义内卷积
+$$
+A_1 \circledast \cdots \circledast A_m := \Delta^! (A_1 \operatorname{\boxed{*}} \cdots \operatorname{\boxed{*}} A_m).
+$$</p>
+<p>融合积展现出对称性.
+例如 $\mathrm{Gr}_2$ 的对称性给出同构
+$$
+A_1 \circledast A_2 \simeq A_2 \circledast A_1.
+$$</p>
+<pre><code>
+## 群表示的分解范畴
+
+设 $H$ 为任意群. 定义 $H$ 在 $X^n$ 上的 D-模 $F$ 的**分解作用** (factorizable action) 为如下数据:
+
+- 对 $n$ 的任意分划 $p \colon n = n_1+\cdots+ n_m$, 有 $H^m$ 在 $F|_{U_p}$ 上的作用, $U_p$ 是分划 $p$ 给出的开子空间;
+- 这些作用关于 $p$ 的细化相容.
+
+例如, $n=3$, $U_p = X^3 \setminus (\Delta_{13} \cup \Delta_{23})$, 有 $H^2$ 在 $F|_{U_p}$ 上的作用,
+
+todo
+
+## Hecke 特征层
+
+回忆 **Hecke 叠** $\mathcal H_n$ 为如下对象的模空间: $X$ 上的两个 $G$-丛, 在 $X$ 的 $n$ 个点之外同构. 有两个投影映射
 $$
 \mathrm{Bun}_G \overset{\overleftarrow{h_n}}{\longleftarrow} \mathcal H_n \overset{\overrightarrow{h_n}}{\longrightarrow} X^n\times\mathrm{Bun}_G,
-$$</p>
-<h2>Hecke 范畴的结构</h2>
-<p>记 $1 \in \mathrm{Gr}_G$ 为 $G(\widehat {\mathcal O})\subset G(\widehat {\mathcal K})$ 对应的点. 记 $\delta_1 := 1_*\mathbb{C}$. 它是 $\mathsf{Sph}$ 上卷积的单位.
-$$</p>
-<p>$$</p>
-<p>取定 $G$ 的<span class="link local"><a href="./极大环面.html" title="极大环面 [极大环面]">极大环面</a></span> $T$, 单<span class="link local"><a href="./根.html" title="根 [根]">根</a></span> $\alpha_i$, 单余根 $\check{\alpha_i}$;</p>
-<p>$\mathrm{Gr}_G$ 的 $G(\widehat {\mathcal O})$-轨道一一对应于余根格 $X_*(T)$ 的 <span class="link local"><a href="./Weyl群.html" title="Weyl 群 [Weyl群]">$W$</a></span>-轨道, 记为 $\mathrm{Gr}_G^{\check{\lambda}}$, 其中 $\check{\lambda}$ 为轨道中的支配权.</p>
-<p>$\mathsf{Sph}$ 的不可约对象均形如
+$$
+
+
+## Hecke 范畴的结构
+
+记 $1 \in \mathrm{Gr}_G$ 为 $G(\widehat {\mathcal O})\subset G(\widehat {\mathcal K})$ 对应的点. 记 $\delta_1 := 1_*\mathbb{C}$. 它是 $\mathsf{Sph}$ 上卷积的单位.
+$$
+
+$$
+
+取定 $G$ 的[极大环面](极大环面.md) $T$, 单[根](根.md) $\alpha_i$, 单余根 $\check{\alpha_i}$;
+
+$\mathrm{Gr}_G$ 的 $G(\widehat {\mathcal O})$-轨道一一对应于余根格 $X_*(T)$ 的 [$W$](Weyl群.md)-轨道, 记为 $\mathrm{Gr}_G^{\check{\lambda}}$, 其中 $\check{\lambda}$ 为轨道中的支配权.
+
+$\mathsf{Sph}$ 的不可约对象均形如
 $$
 J(\check\lambda) = j_{!*} \mathcal O,
 $$
-其中 $j$ 是 $\mathrm{Gr}_G^{\check\lambda}$ 的含入映射, $\mathcal O$ 为平凡 D-模.</p>
-<p>注. $\delta_1 = J(0)$.</p>
+其中 $j$ 是 $\mathrm{Gr}_G^{\check\lambda}$ 的含入映射, $\mathcal O$ 为平凡 D-模.
+
+注. $\delta_1 = J(0)$.
+</code></pre>
 <h2>纤维函子</h2>
 <p>考虑 $G \hookleftarrow B \twoheadrightarrow T$ 给出的图表
 $$
@@ -996,6 +1032,7 @@ $$
 $$
 H^*_{L^+G}\colon \mathsf{Sat}_G \to \mathsf{BiMod}(R_G,R_G).
 $$</p>
+<p>上述函子复合 “增广” $R_G \to \overline{\mathbb{Q}}_\ell$ 即得 $H^* \colon \mathsf{Sat}_G \to \mathsf{Vect}$.</p>
 <p>考虑如下几何对象,</p>
 <ul>
 <li>$L^m G$, 即 “$m$ 阶无穷小圆盘” 上的 $G$-值函数空间, 直观上当 $m$ 越来越大时, $m$ 阶无穷小圆盘越来越大, 趋向于<span class="link local"><a href="./形式圆盘.html" title="形式圆盘 [形式圆盘]">形式圆盘</a></span>,</li>
@@ -1025,7 +1062,12 @@ $$</p>
 <p>接下来说明纤维函子是对称幺半函子.
 <span class="link local"><a href="./Zhu-GrSat.html" title="An introduction to affine Grassmannians and the geometric Satake equivalence [Zhu-GrSat]">朱</a></span>指出对于<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>之间的一个幺半函子, 其交换性是<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">性质而非结构</a></span>, 也即提升为对称幺半函子的方式的空间可缩; 但我不知道如何证明. (对比: 一个幺半范畴构成对称幺半范畴需要额外的结构.)</p>
 <h2>识别对偶群</h2>
-<p>我们需要说明纤维函子的自同构群是 Langlands 对偶群.</p>
+<p>我们需要说明纤维函子的自同构群
+$$
+\widetilde G := \operatorname{Aut}^\otimes H^*
+$$
+是 Langlands 对偶群.</p>
+<p>首先说明 $\widetilde G$ 是连通约化群. 这是如下几个命题的应用.</p>
 <ul>
 <li>$\mathsf{Sat}_G$ 作为张量范畴由有限个 $\mathrm{IC}_\mu$ 生成.</li>
 </ul>
@@ -1043,7 +1085,32 @@ $$</p>
 <ul>
 <li>$G$ 连通当且仅当对任意 $X\in\mathsf{Rep}(G)$, 由所有 $X^n$ 的所有子商构成的全子范畴关于张量积<strong>不</strong>封闭.</li>
 </ul>
-<p>设 $P\subset G$ 为<span class="link local"><a href="./抛物子群.html" title="抛物子群 [抛物子群]">抛物子群</a></span>, $L$ 为 <span class="link local"><a href="./Levi分解.html" title="Levi 分解 [Levi分解]">Levi 分解</a></span></p>
+<p><strong>命题</strong> (2.23). 设 $G$ 是域 $k$ 上的连通代数群. 那么 $G$ 是约化群当且仅当 $\mathsf{Rep}(G)$ 半单.</p>
+<p>下面证明 $\widetilde G$ 的<span class="link local"><a href="./根数据.html" title="根数据 [根数据]">根数据</a></span>与 $G$ 对偶.</p>
+<p>先考虑 $G = T$ 为环面的情形.</p>
+<ul>
+<li>$\mathrm{Gr}_T$ (的既约部分) 为离散点集, 等同于 $X_*(T)$.</li>
+<li>$\mathsf{Sat}_T$ 等价于 $X_*(T)$-<span class="link local"><a href="./分次对象.html" title="分次对象 [分次对象]">分次</a></span>有限维线性空间范畴;</li>
+<li>$H^*\colon \mathsf{Sat}_T\to \mathsf{Vect}$ 遗忘分次.</li>
+</ul>
+<p>对偶环面 $T^\vee$ 的一维不可约表示对应于 $T^\vee$ 的特征, 即 $T$ 的余特征. 所以 $\mathsf{Rep}(T^\vee)$ 等价于 $X_*(T)$-分次有限维线性空间范畴.</p>
+<p>为了从环面过渡到整个约化群, 由
+$$
+\mathrm{Gr}_G \leftarrow \mathrm{Gr}_B \to \mathrm{Gr}_T
+$$
+构造 “范畴化 Satake 变换”
+$$
+\mathrm{CT}\colon \mathsf{Sat}_G \to \mathsf{Sat}_T;
+$$</p>
+<ul>
+<li>记 $S_\lambda$ 为点 $\lambda\in X_*(T)$ 在上图中对应 $\mathrm{Gr}_G$ 的子空间, 同时也是 $t^\lambda$ 在 $LU\subset LG$ 作用下的轨道 ($U$ 为 $B$ 的幂幺根). 这在 Mirković–Vilonen 理论中称为 $\mathrm{Gr}_G$ 上的 “半无限轨道”.</li>
+<li>$S_\lambda$ 的闭包是 $S_{\leq \lambda} = \bigcup_{\lambda'\leq\lambda} S_{\lambda'}$.</li>
+<li>若 $t^\lambda\in\mathrm{Gr}_{\leq\mu}$, 则 $S_{\lambda}\cap\mathrm{Gr}_{\mu}$ 非空, $\dim (S_{\lambda}\cap\mathrm{Gr}_{\leq\mu}) = \langle \rho,\lambda + \mu\rangle$.</li>
+<li>对于 $A\in\mathsf{Sat}_G$, 其在 $\mathsf{Sat}_T$ 中的推拉 $t_!b^* A$ 的 $\lambda$ 分量为 $H_c^*(S_\lambda,A)$, 且聚集在 $\langle 2\rho,\lambda\rangle$ 次.</li>
+<li>$H^* \simeq\mathrm{CT} :=\bigoplus_\lambda H^*_c(S_{\lambda},-)\colon \mathsf{Sat}_G\to\mathsf{Vect}$.</li>
+<li>这给出群同态 $T^\vee\simeq\widetilde T \to \widetilde G$, 给出 $\widetilde G$ 的一个极大环面. 于是 $\widetilde G$ 的权格与余权格对偶于 $G$.</li>
+</ul>
+<p>最后看单根和单余根. 一个权 $\lambda\in X^*(T^\vee)$ 落在正根生成的半群中, 当且仅当存在最高权表示 $L_\mu$ 使得 $\mu - \lambda$ 出现在其权中, 即存在 $\mu$ 使得 $t^{\mu-\lambda}\in\mathrm{Gr}_{\leq\mu}$, 这等价于 $\lambda$ 是 $G$ 的正余根的和.</p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="Gestalt"><header><h1><span class="taxon">百科. </span>Gestalt <a class="slug" href="./Gestalt.html">[Gestalt]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>Gestalt (复数 Gestalten, 在心理学上的译名为 “格式塔”) 是 <span class="link local"><a href="./ScholzeStefanichGestalten.html" title="Geometry and Higher Category Theory [ScholzeStefanichGestalten]">Scholze–Stefanich</a></span> 提出的一种几何概念, 旨在恢复完全的<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>: 通过考虑几何对象上的 “线性 $(\infty,n)$-范畴” 取值的层, 即<span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span>, 使得任何几何对象都具有代数的对应物, 而不再需要对 “仿射” 几何对象进行粘合操作.</p>
 <h2>观念</h2>
