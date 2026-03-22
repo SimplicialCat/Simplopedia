@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>可分闭包</title><link rel="icon" href="./assets/favicon.ico" /><style>
+<meta name="viewport" content="width=device-width"><title>Sheaves in Geometry and Logic - A First Introduction to Topos Theory</title><link rel="icon" href="./assets/favicon.ico" /><style>
   @font-face {
     font-family: 'NewCM10';
     src: url(assets/NewCM10-Book.otf) format('opentype');
@@ -773,50 +773,58 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon="百科"><details open><summary id="可分闭包"><header><h1><span class="taxon">百科. </span>可分闭包 <a class="slug" href="./可分闭包.html">[可分闭包]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<h2>定义</h2>
-<p><span class="link local"><a href="./域.html" title="域 [域]">域</a></span> $F$ 的可分闭包是满足如下条件的域扩张 $F \hookrightarrow F_S$:</p>
+<article><section class="block" data-taxon="参考资料"><details open><summary id="MaclaneMoerdijkSGL"><header><h1><span class="taxon">参考资料. </span>Sheaves in Geometry and Logic - A First Introduction to Topos Theory <a class="slug" href="./MaclaneMoerdijkSGL.html">[MaclaneMoerdijkSGL]</a></h1><div class="metadata"><ul><li class="meta-item">Saunders Mac Lane, Ieke Moerdijk</li></ul></div></header></summary>
+<pre><code>@book{maclane1994sheaves,
+  title={Sheaves in Geometry and Logic: A First Introduction to Topos Theory},
+  author={MacLane, S. and Moerdijk, I.},
+  isbn={9780387977102},
+  lccn={lc91033709},
+  series={Universitext},
+  url={https://books.google.com/books?id=SGwwDerbEowC},
+  year={1994},
+  publisher={Springer New York}
+}
+
+</code></pre>
+<h2>内容</h2>
 <ul>
-<li>$F \hookrightarrow F_S$ 为<span class="link local"><a href="./可分扩张.html" title="可分扩张 [可分扩张]">可分扩张</a></span>;</li>
-<li>$F_S$ 为<span class="link local"><a href="./可分闭域.html" title="可分闭域 [可分闭域]">可分闭域</a></span>.</li>
+<li>Prologue</li>
+<li>Categorical Preliminaries</li>
+<li>Categories of Functors</li>
+<li>Sheaves of Sets</li>
+<li>Grothendieck Topologies and Sheaves</li>
+<li>First Properties of Elementary Topoi</li>
+<li>Basic Constructions of Topoi</li>
+<li>Topoi and Logic</li>
+<li>Geometric Morphisms</li>
+<li>Classifying Topoi</li>
+<li>Localic Topoi</li>
+<li>Geometric Logic and Classifying Topoi</li>
 </ul>
-<p>取定 $F$ 的<span class="link local"><a href="./代数闭包.html" title="代数闭包 [代数闭包]">代数闭包</a></span> $\overline{F}$, 那么 $F$ 的可分闭包也可定义为 $\overline{F}$ 中在 $F$ 上可分的元素构成的子域.</p>
-<p>域的可分闭包在同构意义下唯一, 但可能有非平凡的自同构.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>反向链接</h1></header></summary><section class="block" data-taxon="百科"><details ><summary id="Galois群"><header><h1><span class="taxon">百科. </span>Galois 群 <a class="slug" href="./Galois群.html">[Galois群]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<h2>定义</h2>
-<p>对于<span class="link local"><a href="./域扩张.html" title="域扩张 [域扩张]">域扩张</a></span> $K\hookrightarrow L$, 定义其 Galois 群 $\operatorname{Gal}(L/K)$ 为 $L$ 的保持 $K$ 中元素不动的自同构的群.</p>
-<h3>作为 pro-有限群</h3>
-<p>每个 Galois 群都是 <span class="link local"><a href="./pro-有限群.html" title="pro-有限群 [pro-有限群]">pro-有限群</a></span>, 它是所有有限中间扩张的 Galois 群的极限.</p>
-<h3>绝对 Galois 群</h3>
-<p>域 $K$ 的<span class="link local"><a href="./可分闭包.html" title="可分闭包 [可分闭包]">可分扩张</a></span>的 Galois 群称为 $K$ 的绝对 Galois 群.</p>
-<h2>性质</h2>
-<h3>与 Frobenius 态射的关系</h3>
-<p>有限域的有限扩张的 Galois 群 $\operatorname{Gal}(\mathbb F_{p^n}/\mathbb F_p)$ 是 <span class="link local"><a href="./Frobenius态射.html" title="Frobenius 态射 [Frobenius态射]">Frobenius 态射</a></span>生成的循环群.</p>
-</details></section><section class="block" data-taxon="百科"><details ><summary id="可分扩张"><header><h1><span class="taxon">百科. </span>可分扩张 <a class="slug" href="./可分扩张.html">[可分扩张]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<h2>定义</h2>
-<p>对于<span class="link local"><a href="./域扩张.html" title="域扩张 [域扩张]">域扩张</a></span> $F\hookrightarrow E$, 称 $\alpha\in E$ <strong>可分</strong>是指其极小多项式 $f_\alpha$ 满足
-$$\operatorname{gcd}(f_\alpha,f_\alpha ') = 1,$$
-这也等价于 $f_\alpha$ 在 $F$ 的某个<span class="link local"><a href="./代数闭包.html" title="代数闭包 [代数闭包]">代数闭包</a></span>上无重根.</p>
-<p>若 $E$ 的所有元素都可分, 则称域扩张 $F\hookrightarrow E$ 为<strong>可分扩张</strong>. (这要求其为<span class="link local"><a href="./代数扩张.html" title="代数扩张 [代数扩张]">代数扩张</a></span>.) 事实上, 只需要域扩张 $F\hookrightarrow E$ 由可分元素生成, 就可得到 $F\hookrightarrow E$ 为可分扩张; 这是因为可分元素的和, 积, 商仍为可分元素.</p>
-<p>极大的可分扩张称为<span class="link local"><a href="./可分闭包.html" title="可分闭包 [可分闭包]">可分闭包</a></span>. 在一个域扩张 $F\hookrightarrow E$ 中, 可分元素构成的子域也称为 $F$ 在 $E$ 中的可分闭包.</p>
-<h2>性质</h2>
-<h3>几何侧</h3>
-<p>有限可分扩张在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">几何侧</a></span>对应的仿射概形的态射是<span class="link local"><a href="./平展概形态射.html" title="“平展概形态射” [平展概形态射]">平展概形态射</a></span>.</p>
-<h3>迹配对非退化</h3>
-<p><strong>命题</strong>. 域扩张 $F\hookrightarrow E$ 可分当且仅当迹映射给出一个<strong>非退化</strong>双线性型
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>反向链接</h1></header></summary><section class="block" data-taxon="百科"><details ><summary id="分裂域"><header><h1><span class="taxon">百科. </span>分裂域 <a class="slug" href="./分裂域.html">[分裂域]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>若<span class="link local"><a href="./域扩张.html" title="域扩张 [域扩张]">域扩张</a></span>类比于覆叠, 那么分裂域则是覆叠的局部平凡化. 这里的局部是指通过<span class="link local"><a href="./Grothendieck拓扑.html" title="Grothendieck 拓扑 [Grothendieck拓扑]">覆盖</a></span>.</p>
+<p>对于域 $k$ 上的多项式 $f$, 域扩张 $k\subset K$ 分裂 $f$, 等价于如下条件: 拉回
 $$
-E\times E \to F, (x, y)\mapsto \operatorname{Tr}_{E/F}(xy).
-$$</p>
-<p>见 <span class="link external"><a href="https://stacks.math.columbia.edu/tag/0BIE" title="Stacks Project 0BIE [https://stacks.math.columbia.edu/tag/0BIE]">Stacks Project 0BIE</a></span>.</p>
-<h3>可分代数</h3>
-<p>设 $k\subset K$ 是可分域扩张, 则 $K$ 是 $k$ 上的<span class="link local"><a href="./可分代数.html" title="可分代数 [可分代数]">可分代数</a></span>.</p>
-<h3>复合</h3>
-<p>可分扩张的复合仍是可分扩张; 另一方面, 若两个域扩张的复合为可分扩张, 则两者均为可分扩张.</p>
-<h3>本原元</h3>
-<p>有限可分扩张是由一个元素生成的; 这称为<strong>本原元定理</strong>.</p>
-<h2>例</h2>
-<h3>可分而没有自同构的例子</h3>
-<p>扩张 $\mathbb{Q}\subset \mathbb{Q}(\sqrt[3]{2})$ 可分, 但 $\operatorname{Aut}_{\mathbb{Q}}(\mathbb{Q}(\sqrt[3]{2}))$ 为平凡群.</p>
-<h3>不可分扩张的例子</h3>
-<p>$\mathbb{F}_p(x^p) \hookrightarrow \mathbb{F}_p(x)$ 不可分, 因为 $x$ 的极小多项式 $X^p-x^p = (X-x)^p$ 有重根 (其导数为零). 这是<span class="link local"><a href="./纯不可分扩张.html" title="纯不可分扩张 [纯不可分扩张]">纯不可分扩张</a></span>的例子.</p>
+\begin{array}
+{ccc}
+&amp;&amp;\operatorname{Spec}k[x]/(f)\\
+&amp;&amp;\downarrow\\
+\operatorname{Spec}K &amp; \to &amp; \operatorname{Spec}k
+\end{array}
+$$
+是若干个 $\operatorname{Spec}K$ 的无交并.</p>
+<blockquote>
+<p>It was this observation that led Grothendieck to think that the neighborhoods $U$ in topological spaces could effectively be replaced by maps $C \to X$ which are not necessarily monic.</p>
+<p>— Saunders Mac Lane, Ieke Moerdijk <span class="link local"><a href="./MaclaneMoerdijkSGL.html" title="Sheaves in Geometry and Logic - A First Introduction to Topos Theory [MaclaneMoerdijkSGL]">SGL</a></span> III.1 节</p>
+</blockquote>
+<h2>定义</h2>
+<p>域 $k$ 上一族多项式 $S\subset k[x]$ 的<strong>分裂域</strong>是满足如下条件的<span class="link local"><a href="./域扩张.html" title="域扩张 [域扩张]">域扩张</a></span> $k\subset K$:</p>
+<ul>
+<li>$S$ 中的每个多项式在 $K$ 上分裂为一次多项式的乘积;</li>
+<li>$K$ 中包含 $k$ 以及 $S$ 中的多项式的所有根的最小的子域是 $K$ 自身.</li>
+</ul>
+<h2>性质</h2>
+<h3>自同构</h3>
+<p>一个可分多项式 $f\in k[x]$ 的分裂域 $K$ 的自同构 $\operatorname{Aut}_k(K)$ 的阶数恰为 $f$ 的次数.</p>
 </details></section></details></section></footer></article></div></body></html>

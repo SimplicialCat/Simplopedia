@@ -775,24 +775,72 @@
 
 <article><section class="block" data-taxon="百科"><details open><summary id="可分扩张"><header><h1><span class="taxon">百科. </span>可分扩张 <a class="slug" href="./可分扩张.html">[可分扩张]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>对于域扩张 $F\hookrightarrow E$, 称 $\alpha\in E$ <strong>可分</strong>是指其极小多项式 $f_\alpha$ 满足 $\operatorname{gcd}(f_\alpha,f_\alpha ') = 1$, 这也等价于 $f_\alpha$ 在 $F$ 的某个<span class="link local"><a href="./代数闭包.html" title="代数闭包 [代数闭包]">代数闭包</a></span>上无重根.</p>
-<p>若 $E$ 的所有元素都可分, 则称域扩张 $F\hookrightarrow E$ 为可分扩张.</p>
-<p>注意这个定义要求可分扩张是代数扩张.</p>
-<p>极大的可分扩张称为<span class="link local"><a href="./可分闭包.html" title="可分闭包 [可分闭包]">可分闭包</a></span>.</p>
+<p>对于<span class="link local"><a href="./域扩张.html" title="域扩张 [域扩张]">域扩张</a></span> $F\hookrightarrow E$, 称 $\alpha\in E$ <strong>可分</strong>是指其极小多项式 $f_\alpha$ 满足
+$$\operatorname{gcd}(f_\alpha,f_\alpha ') = 1,$$
+这也等价于 $f_\alpha$ 在 $F$ 的某个<span class="link local"><a href="./代数闭包.html" title="代数闭包 [代数闭包]">代数闭包</a></span>上无重根.</p>
+<p>若 $E$ 的所有元素都可分, 则称域扩张 $F\hookrightarrow E$ 为<strong>可分扩张</strong>. (这要求其为<span class="link local"><a href="./代数扩张.html" title="代数扩张 [代数扩张]">代数扩张</a></span>.) 事实上, 只需要域扩张 $F\hookrightarrow E$ 由可分元素生成, 就可得到 $F\hookrightarrow E$ 为可分扩张; 这是因为可分元素的和, 积, 商仍为可分元素.</p>
+<p>极大的可分扩张称为<span class="link local"><a href="./可分闭包.html" title="可分闭包 [可分闭包]">可分闭包</a></span>. 在一个域扩张 $F\hookrightarrow E$ 中, 可分元素构成的子域也称为 $F$ 在 $E$ 中的可分闭包.</p>
 <h2>性质</h2>
-<p>有限可分扩张对应的仿射概形的态射是<span class="link local"><a href="./平展概形态射.html" title="“平展概形态射” [平展概形态射]">平展概形态射</a></span>.</p>
+<h3>几何侧</h3>
+<p>有限可分扩张在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">几何侧</a></span>对应的仿射概形的态射是<span class="link local"><a href="./平展概形态射.html" title="“平展概形态射” [平展概形态射]">平展概形态射</a></span>.</p>
 <h3>迹配对非退化</h3>
 <p><strong>命题</strong>. 域扩张 $F\hookrightarrow E$ 可分当且仅当迹映射给出一个<strong>非退化</strong>双线性型
 $$
 E\times E \to F, (x, y)\mapsto \operatorname{Tr}_{E/F}(xy).
 $$</p>
 <p>见 <span class="link external"><a href="https://stacks.math.columbia.edu/tag/0BIE" title="Stacks Project 0BIE [https://stacks.math.columbia.edu/tag/0BIE]">Stacks Project 0BIE</a></span>.</p>
+<h3>可分代数</h3>
+<p>设 $k\subset K$ 是可分域扩张, 则 $K$ 是 $k$ 上的<span class="link local"><a href="./可分代数.html" title="可分代数 [可分代数]">可分代数</a></span>.</p>
+<h3>复合</h3>
+<p>可分扩张的复合仍是可分扩张; 另一方面, 若两个域扩张的复合为可分扩张, 则两者均为可分扩张.</p>
+<h3>本原元</h3>
+<p>有限可分扩张是由一个元素生成的; 这称为<strong>本原元定理</strong>.</p>
 <h2>例</h2>
+<h3>可分而没有自同构的例子</h3>
+<p>扩张 $\mathbb{Q}\subset \mathbb{Q}(\sqrt[3]{2})$ 可分, 但 $\operatorname{Aut}_{\mathbb{Q}}(\mathbb{Q}(\sqrt[3]{2}))$ 为平凡群.</p>
 <h3>不可分扩张的例子</h3>
-<p>$\mathbb{F}_p(x^p) \hookrightarrow \mathbb{F}_p(x)$ 不可分, 因为 $x$ 的极小多项式 $X^p-x^p = (X-x)^p$ 有重根. 这是<span class="link local"><a href="./纯不可分扩张.html" title="纯不可分扩张 [纯不可分扩张]">纯不可分扩张</a></span>的例子.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>反向链接</h1></header></summary><section class="block" data-taxon="百科"><details ><summary id="可分代数"><header><h1><span class="taxon">百科. </span>可分代数 <a class="slug" href="./可分代数.html">[可分代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>$\mathbb{F}_p(x^p) \hookrightarrow \mathbb{F}_p(x)$ 不可分, 因为 $x$ 的极小多项式 $X^p-x^p = (X-x)^p$ 有重根 (其导数为零). 这是<span class="link local"><a href="./纯不可分扩张.html" title="纯不可分扩张 [纯不可分扩张]">纯不可分扩张</a></span>的例子.</p>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>反向链接</h1></header></summary><section class="block" data-taxon="百科"><details ><summary id="Galois扩张"><header><h1><span class="taxon">百科. </span>Galois 扩张 <a class="slug" href="./Galois扩张.html">[Galois扩张]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>含幺交换环 $R$ 上的可分代数是满足如下等价条件的 $R$-代数 $A$:</p>
+<p>域的 <strong>Galois 扩张</strong>是<span class="link local"><a href="./正规扩张.html" title="正规扩张 [正规扩张]">正规</a></span>且<span class="link local"><a href="./可分扩张.html" title="可分扩张 [可分扩张]">可分</a></span>的<span class="link local"><a href="./代数扩张.html" title="代数扩张 [代数扩张]">代数扩张</a></span>.</p>
+<h3>有限 Galois 扩张</h3>
+<p>域的<strong>有限 Galois 扩张</strong>是满足如下等价条件的扩张 $F\subset E$:</p>
+<ul>
+<li>$F\subset E$ 是 Galois 扩张, 且是有限扩张.</li>
+<li>$E$ 是 $F$ 上某个可分多项式的<span class="link local"><a href="./分裂域.html" title="分裂域 [分裂域]">分裂域</a></span>;</li>
+<li>$E$ 是 $F$ 的有限扩张, 且 $E^{\operatorname{Aut}_F(E)} = F$;</li>
+<li>存在有限子群 $G\subset\operatorname{Aut}(E)$ 使得 $F=E^G$.</li>
+</ul>
+<h2>性质</h2>
+<h3>Galois 对应</h3>
+<p>对于有限 Galois 扩张 $F\subset E$, 有双射
+$$
+\{F\subset E\text{ 的中间域}\} \leftrightarrow \{\operatorname{Gal}(E/F) \text{ 的子群}\},
+$$
+将中间域 $F\subset M\subset E$ 对应到子群 $\operatorname{Aut}(E/M)\subset\operatorname{Gal}(E/F)$; 且对于<span class="link local"><a href="./正规扩张.html" title="正规扩张 [正规扩张]">正规</a></span>情形有
+$$
+\{\text{正规的中间域}\} \leftrightarrow \{\text{正规子群}\}.
+$$
+设 $F\subset M\subset E$ 是<span class="link local"><a href="./正规扩张.html" title="正规扩张 [正规扩张]">正规</a></span>的中间域, 则 $E/F$ 的任何自同构将 $M$ 映射到 $M$ 自身, 有<span class="link local"><a href="./群短正合列.html" title="群的短正合列 [群短正合列]">短正合列</a></span>
+$$
+1\to \operatorname{Aut}(E/M) \to \operatorname{Gal}(E/F) \to \operatorname{Gal}(M/F) \to 1.
+$$</p>
+<h3>复合</h3>
+<p>设 $F\subset M\subset E$ 是两个域扩张.</p>
+<ul>
+<li>若 $F\subset E$ 是 Galois 扩张, 则 $M\subset E$ 是 Galois 扩张.</li>
+<li>当 $F\subset E$ 是 Galois 扩张时, $F\subset M$ 不一定是 Galois 扩张 (考虑 $\mathbb{Q}\subset\mathbb{Q}(\sqrt[3]{2})\subset\mathbb{Q}(\sqrt[3]{2},\omega)$).</li>
+</ul>
+<h3>“函子性”</h3>
+<p>在以下两个命题中, 设 $F\subset E_1$, $F\subset E_2$ 为域扩张, 且 $E_1$, $E_2$ 同时包含于某个更大的域. 记 $E_1\cup E_2$ 生成的域为 $E_1E_2$.</p>
+<p><strong>命题</strong>. 若 $F\subset E_1$ 为 Galois 扩张, 则 $E_2\subset E_1E_2$ 为 Galois 扩张, 且有自然的嵌入
+$$
+\operatorname{Gal}(E_1E_2 / E_2) \hookrightarrow \operatorname{Gal}(E_1 / F).
+$$</p>
+<p><strong>命题</strong>. 若 $F\subset E_1$ 为 Galois 扩张且 $E_1\cap E_2 = F$, 则上述嵌入为同构.</p>
+</details></section><section class="block" data-taxon="百科"><details ><summary id="可分代数"><header><h1><span class="taxon">百科. </span>可分代数 <a class="slug" href="./可分代数.html">[可分代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>含幺交换环 $R$ 上的<strong>可分代数</strong>是满足如下等价条件的 $R$-代数 $A$:</p>
 <ul>
 <li>$A$ 作为 $A\otimes_R A^{\mathrm{op}}$-模是<span class="link local"><a href="./投射模.html" title="投射模 [投射模]">投射模</a></span> (注意此时它一定是有限生成的);</li>
 <li>乘法映射 $A\otimes_R A^{\mathrm{op}} \to A$ (作为 $A\otimes_R A^{\mathrm{op}}$-模同态) 存在截面.</li>

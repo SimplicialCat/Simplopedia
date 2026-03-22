@@ -1366,6 +1366,33 @@ $$</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./量子动量映射.html" title="量子动量映射 [量子动量映射]">量子动量映射</a></span></p>
 <p><span class="link local"><a href="./Delzant多面体.html" title="“Delzant 多面体” [Delzant多面体]">Delzant 多面体</a></span></p>
+</details></section><section class="block" data-taxon="百科"><details ><summary id="可分扩张"><header><h1><span class="taxon">百科. </span>可分扩张 <a class="slug" href="./可分扩张.html">[可分扩张]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于<span class="link local"><a href="./域扩张.html" title="域扩张 [域扩张]">域扩张</a></span> $F\hookrightarrow E$, 称 $\alpha\in E$ <strong>可分</strong>是指其极小多项式 $f_\alpha$ 满足
+$$\operatorname{gcd}(f_\alpha,f_\alpha ') = 1,$$
+这也等价于 $f_\alpha$ 在 $F$ 的某个<span class="link local"><a href="./代数闭包.html" title="代数闭包 [代数闭包]">代数闭包</a></span>上无重根.</p>
+<p>若 $E$ 的所有元素都可分, 则称域扩张 $F\hookrightarrow E$ 为<strong>可分扩张</strong>. (这要求其为<span class="link local"><a href="./代数扩张.html" title="代数扩张 [代数扩张]">代数扩张</a></span>.) 事实上, 只需要域扩张 $F\hookrightarrow E$ 由可分元素生成, 就可得到 $F\hookrightarrow E$ 为可分扩张; 这是因为可分元素的和, 积, 商仍为可分元素.</p>
+<p>极大的可分扩张称为<span class="link local"><a href="./可分闭包.html" title="可分闭包 [可分闭包]">可分闭包</a></span>. 在一个域扩张 $F\hookrightarrow E$ 中, 可分元素构成的子域也称为 $F$ 在 $E$ 中的可分闭包.</p>
+<h2>性质</h2>
+<h3>几何侧</h3>
+<p>有限可分扩张在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">几何侧</a></span>对应的仿射概形的态射是<span class="link local"><a href="./平展概形态射.html" title="“平展概形态射” [平展概形态射]">平展概形态射</a></span>.</p>
+<h3>迹配对非退化</h3>
+<p><strong>命题</strong>. 域扩张 $F\hookrightarrow E$ 可分当且仅当迹映射给出一个<strong>非退化</strong>双线性型
+$$
+E\times E \to F, (x, y)\mapsto \operatorname{Tr}_{E/F}(xy).
+$$</p>
+<p>见 <span class="link external"><a href="https://stacks.math.columbia.edu/tag/0BIE" title="Stacks Project 0BIE [https://stacks.math.columbia.edu/tag/0BIE]">Stacks Project 0BIE</a></span>.</p>
+<h3>可分代数</h3>
+<p>设 $k\subset K$ 是可分域扩张, 则 $K$ 是 $k$ 上的<span class="link local"><a href="./可分代数.html" title="可分代数 [可分代数]">可分代数</a></span>.</p>
+<h3>复合</h3>
+<p>可分扩张的复合仍是可分扩张; 另一方面, 若两个域扩张的复合为可分扩张, 则两者均为可分扩张.</p>
+<h3>本原元</h3>
+<p>有限可分扩张是由一个元素生成的; 这称为<strong>本原元定理</strong>.</p>
+<h2>例</h2>
+<h3>可分而没有自同构的例子</h3>
+<p>扩张 $\mathbb{Q}\subset \mathbb{Q}(\sqrt[3]{2})$ 可分, 但 $\operatorname{Aut}_{\mathbb{Q}}(\mathbb{Q}(\sqrt[3]{2}))$ 为平凡群.</p>
+<h3>不可分扩张的例子</h3>
+<p>$\mathbb{F}_p(x^p) \hookrightarrow \mathbb{F}_p(x)$ 不可分, 因为 $x$ 的极小多项式 $X^p-x^p = (X-x)^p$ 有重根 (其导数为零). 这是<span class="link local"><a href="./纯不可分扩张.html" title="纯不可分扩张 [纯不可分扩张]">纯不可分扩张</a></span>的例子.</p>
 </details></section><section class="block" data-taxon="观念"><details ><summary id="对偶(范畴论)"><header><h1><span class="taxon">观念. </span>对偶 (范畴论) <a class="slug" href="./对偶(范畴论).html">[对偶(范畴论)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>范畴的对偶是将其中的态射方向反转得到的范畴:
 $$

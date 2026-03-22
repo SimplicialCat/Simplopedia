@@ -2788,6 +2788,43 @@ $$</p>
 <h3>等价</h3>
 <p>范畴论有一个一般性的结论, 一对伴随诱导满子范畴的等价; Galois 对应中的等价是其特例. 具体见<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="Galois扩张"><header><h1><span class="taxon">百科. </span>Galois 扩张 <a class="slug" href="./Galois扩张.html">[Galois扩张]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>域的 <strong>Galois 扩张</strong>是<span class="link local"><a href="./正规扩张.html" title="正规扩张 [正规扩张]">正规</a></span>且<span class="link local"><a href="./可分扩张.html" title="可分扩张 [可分扩张]">可分</a></span>的<span class="link local"><a href="./代数扩张.html" title="代数扩张 [代数扩张]">代数扩张</a></span>.</p>
+<h3>有限 Galois 扩张</h3>
+<p>域的<strong>有限 Galois 扩张</strong>是满足如下等价条件的扩张 $F\subset E$:</p>
+<ul>
+<li>$F\subset E$ 是 Galois 扩张, 且是有限扩张.</li>
+<li>$E$ 是 $F$ 上某个可分多项式的<span class="link local"><a href="./分裂域.html" title="分裂域 [分裂域]">分裂域</a></span>;</li>
+<li>$E$ 是 $F$ 的有限扩张, 且 $E^{\operatorname{Aut}_F(E)} = F$;</li>
+<li>存在有限子群 $G\subset\operatorname{Aut}(E)$ 使得 $F=E^G$.</li>
+</ul>
+<h2>性质</h2>
+<h3>Galois 对应</h3>
+<p>对于有限 Galois 扩张 $F\subset E$, 有双射
+$$
+\{F\subset E\text{ 的中间域}\} \leftrightarrow \{\operatorname{Gal}(E/F) \text{ 的子群}\},
+$$
+将中间域 $F\subset M\subset E$ 对应到子群 $\operatorname{Aut}(E/M)\subset\operatorname{Gal}(E/F)$; 且对于<span class="link local"><a href="./正规扩张.html" title="正规扩张 [正规扩张]">正规</a></span>情形有
+$$
+\{\text{正规的中间域}\} \leftrightarrow \{\text{正规子群}\}.
+$$
+设 $F\subset M\subset E$ 是<span class="link local"><a href="./正规扩张.html" title="正规扩张 [正规扩张]">正规</a></span>的中间域, 则 $E/F$ 的任何自同构将 $M$ 映射到 $M$ 自身, 有<span class="link local"><a href="./群短正合列.html" title="群的短正合列 [群短正合列]">短正合列</a></span>
+$$
+1\to \operatorname{Aut}(E/M) \to \operatorname{Gal}(E/F) \to \operatorname{Gal}(M/F) \to 1.
+$$</p>
+<h3>复合</h3>
+<p>设 $F\subset M\subset E$ 是两个域扩张.</p>
+<ul>
+<li>若 $F\subset E$ 是 Galois 扩张, 则 $M\subset E$ 是 Galois 扩张.</li>
+<li>当 $F\subset E$ 是 Galois 扩张时, $F\subset M$ 不一定是 Galois 扩张 (考虑 $\mathbb{Q}\subset\mathbb{Q}(\sqrt[3]{2})\subset\mathbb{Q}(\sqrt[3]{2},\omega)$).</li>
+</ul>
+<h3>“函子性”</h3>
+<p>在以下两个命题中, 设 $F\subset E_1$, $F\subset E_2$ 为域扩张, 且 $E_1$, $E_2$ 同时包含于某个更大的域. 记 $E_1\cup E_2$ 生成的域为 $E_1E_2$.</p>
+<p><strong>命题</strong>. 若 $F\subset E_1$ 为 Galois 扩张, 则 $E_2\subset E_1E_2$ 为 Galois 扩张, 且有自然的嵌入
+$$
+\operatorname{Gal}(E_1E_2 / E_2) \hookrightarrow \operatorname{Gal}(E_1 / F).
+$$</p>
+<p><strong>命题</strong>. 若 $F\subset E_1$ 为 Galois 扩张且 $E_1\cap E_2 = F$, 则上述嵌入为同构.</p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="Galois群"><header><h1><span class="taxon">百科. </span>Galois 群 <a class="slug" href="./Galois群.html">[Galois群]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>对于<span class="link local"><a href="./域扩张.html" title="域扩张 [域扩张]">域扩张</a></span> $K\hookrightarrow L$, 定义其 Galois 群 $\operatorname{Gal}(L/K)$ 为 $L$ 的保持 $K$ 中元素不动的自同构的群.</p>
@@ -3276,9 +3313,11 @@ $$</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./佐武等价.html" title="佐武等价 [佐武等价]">佐武等价</a></span></p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="Grothendieck拓扑"><header><h1><span class="taxon">百科. </span>Grothendieck 拓扑 <a class="slug" href="./Grothendieck拓扑.html">[Grothendieck拓扑]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Grothendieck 拓扑, 又名<strong>覆盖结构</strong> (coverage), 是指定一个范畴上何时一族态射构成 “覆盖” 的方法. 如果说<span class="link local"><a href="./景.html" title="景 [景]">景</a></span>是<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的 “生成元–关系” <span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>, 那么覆盖的作用相当于其中的 “关系”.</p>
 <h2>定义</h2>
 <h3>使用范畴上的筛</h3>
-<p>小范畴 $C$ 上的 Grothendieck 拓扑是对每个对象 $c\in C$ 指定一族<span class="link local"><a href="./筛.html" title="“筛” [筛]">筛</a></span>, 称作<strong>覆盖筛</strong> (covering sieve), 满足如下条件.</p>
+<p>小范畴 $C$ 上的 <strong>Grothendieck 拓扑</strong>是对每个对象 $c\in C$ 指定一族<span class="link local"><a href="./筛.html" title="“筛” [筛]">筛</a></span>, 称作<strong>覆盖筛</strong> (covering sieve), 满足如下条件.</p>
 <ul>
 <li>最大筛 $\{f: d \to c, d\in C\}$ 是覆盖筛;</li>
 <li>(稳定性) 若 $S$ 是 $c$ 的覆盖筛, 则对任意 $h\colon d\to c$, $h^*(S)$ 是 $d$ 的覆盖筛;</li>
@@ -10420,6 +10459,13 @@ $$</p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="代数叠"><header><h1><span class="taxon">百科. </span>代数叠 <a class="slug" href="./代数叠.html">[代数叠]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>代数叠又叫 Artin 叠, 是仿射概形的范畴上具有 (平坦) 坐标卡以及适当的可表性的<span class="link local"><a href="./叠.html" title="叠 [叠]">叠</a></span>.</p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="代数扩张"><header><h1><span class="taxon">百科. </span>代数扩张 <a class="slug" href="./代数扩张.html">[代数扩张]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>对于域扩张 $k\subset K$, 以及 $a\in K$, 如下条件等价:</p>
+<ul>
+<li>存在多项式 $f\in k[x]$ 使得 $f(a)=0$;</li>
+<li>$[k(a):k] &lt; +\infty$.</li>
+</ul>
+<p>称满足上述条件的 $a$ 为 $k$ 上的<strong>代数元</strong>; 否则称 $a$ 为<strong>超越元</strong>.</p>
+<p>若 $K$ 的所有元素均为代数元, 则称 $k\subset K$ 为<strong>代数扩张</strong>.</p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="代数理论"><header><h1><span class="taxon">百科. </span>代数理论 <a class="slug" href="./代数理论.html">[代数理论]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>代数</strong>的最初意义是对运算与等式的研究. 一个<strong>代数理论</strong>就是若干种运算和这些运算之间的若干条等式. 代数理论的<strong>模型</strong>就是一个集合 (或一般范畴的对象) 上带有指定的运算, 满足指定的等式.</p>
@@ -11643,6 +11689,31 @@ $$
 <p><span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的<strong>分类空间</strong>指的是其<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> $\mathbf{B}G$, 它是一个带基点连通空间, 带有万有 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span> ${*}\to \mathbf{B}G$.</p>
 <p>另见<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span>, <span class="link local"><a href="./分类叠.html" title="分类叠 (模叠) [分类叠]">分类叠</a></span>.</p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="分裂域"><header><h1><span class="taxon">百科. </span>分裂域 <a class="slug" href="./分裂域.html">[分裂域]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>若<span class="link local"><a href="./域扩张.html" title="域扩张 [域扩张]">域扩张</a></span>类比于覆叠, 那么分裂域则是覆叠的局部平凡化. 这里的局部是指通过<span class="link local"><a href="./Grothendieck拓扑.html" title="Grothendieck 拓扑 [Grothendieck拓扑]">覆盖</a></span>.</p>
+<p>对于域 $k$ 上的多项式 $f$, 域扩张 $k\subset K$ 分裂 $f$, 等价于如下条件: 拉回
+$$
+\begin{array}
+{ccc}
+&amp;&amp;\operatorname{Spec}k[x]/(f)\\
+&amp;&amp;\downarrow\\
+\operatorname{Spec}K &amp; \to &amp; \operatorname{Spec}k
+\end{array}
+$$
+是若干个 $\operatorname{Spec}K$ 的无交并.</p>
+<blockquote>
+<p>It was this observation that led Grothendieck to think that the neighborhoods $U$ in topological spaces could effectively be replaced by maps $C \to X$ which are not necessarily monic.</p>
+<p>— Saunders Mac Lane, Ieke Moerdijk <span class="link local"><a href="./MaclaneMoerdijkSGL.html" title="Sheaves in Geometry and Logic - A First Introduction to Topos Theory [MaclaneMoerdijkSGL]">SGL</a></span> III.1 节</p>
+</blockquote>
+<h2>定义</h2>
+<p>域 $k$ 上一族多项式 $S\subset k[x]$ 的<strong>分裂域</strong>是满足如下条件的<span class="link local"><a href="./域扩张.html" title="域扩张 [域扩张]">域扩张</a></span> $k\subset K$:</p>
+<ul>
+<li>$S$ 中的每个多项式在 $K$ 上分裂为一次多项式的乘积;</li>
+<li>$K$ 中包含 $k$ 以及 $S$ 中的多项式的所有根的最小的子域是 $K$ 自身.</li>
+</ul>
+<h2>性质</h2>
+<h3>自同构</h3>
+<p>一个可分多项式 $f\in k[x]$ 的分裂域 $K$ 的自同构 $\operatorname{Aut}_k(K)$ 的阶数恰为 $f$ 的次数.</p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="分解代数"><header><h1><span class="taxon">百科. </span>分解代数 <a class="slug" href="./分解代数.html">[分解代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>分解代数是一个<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">算畴上的代数</a></span>, 这个<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>类似于<span class="link local"><a href="./小n-方块算畴.html" title="小方块算畴 [小n-方块算畴]">小方块算畴</a></span>, 但是嵌入在特定的空间中.</p>
@@ -12564,7 +12635,7 @@ $$
 <p>叠语义是<span class="link local"><a href="./层语义.html" title="层语义 [层语义]">层语义</a></span>的推广.</p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="可分代数"><header><h1><span class="taxon">百科. </span>可分代数 <a class="slug" href="./可分代数.html">[可分代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>含幺交换环 $R$ 上的可分代数是满足如下等价条件的 $R$-代数 $A$:</p>
+<p>含幺交换环 $R$ 上的<strong>可分代数</strong>是满足如下等价条件的 $R$-代数 $A$:</p>
 <ul>
 <li>$A$ 作为 $A\otimes_R A^{\mathrm{op}}$-模是<span class="link local"><a href="./投射模.html" title="投射模 [投射模]">投射模</a></span> (注意此时它一定是有限生成的);</li>
 <li>乘法映射 $A\otimes_R A^{\mathrm{op}} \to A$ (作为 $A\otimes_R A^{\mathrm{op}}$-模同态) 存在截面.</li>
@@ -12586,21 +12657,31 @@ $$
 若 $k\hookrightarrow K$ 不是可分扩张, 即存在 $a\in K$, 其在 $k$ 上的极小多项式有重根, 则 $K\otimes_k K$ 有幂零元.</p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="可分扩张"><header><h1><span class="taxon">百科. </span>可分扩张 <a class="slug" href="./可分扩张.html">[可分扩张]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>对于域扩张 $F\hookrightarrow E$, 称 $\alpha\in E$ <strong>可分</strong>是指其极小多项式 $f_\alpha$ 满足 $\operatorname{gcd}(f_\alpha,f_\alpha ') = 1$, 这也等价于 $f_\alpha$ 在 $F$ 的某个<span class="link local"><a href="./代数闭包.html" title="代数闭包 [代数闭包]">代数闭包</a></span>上无重根.</p>
-<p>若 $E$ 的所有元素都可分, 则称域扩张 $F\hookrightarrow E$ 为可分扩张.</p>
-<p>注意这个定义要求可分扩张是代数扩张.</p>
-<p>极大的可分扩张称为<span class="link local"><a href="./可分闭包.html" title="可分闭包 [可分闭包]">可分闭包</a></span>.</p>
+<p>对于<span class="link local"><a href="./域扩张.html" title="域扩张 [域扩张]">域扩张</a></span> $F\hookrightarrow E$, 称 $\alpha\in E$ <strong>可分</strong>是指其极小多项式 $f_\alpha$ 满足
+$$\operatorname{gcd}(f_\alpha,f_\alpha ') = 1,$$
+这也等价于 $f_\alpha$ 在 $F$ 的某个<span class="link local"><a href="./代数闭包.html" title="代数闭包 [代数闭包]">代数闭包</a></span>上无重根.</p>
+<p>若 $E$ 的所有元素都可分, 则称域扩张 $F\hookrightarrow E$ 为<strong>可分扩张</strong>. (这要求其为<span class="link local"><a href="./代数扩张.html" title="代数扩张 [代数扩张]">代数扩张</a></span>.) 事实上, 只需要域扩张 $F\hookrightarrow E$ 由可分元素生成, 就可得到 $F\hookrightarrow E$ 为可分扩张; 这是因为可分元素的和, 积, 商仍为可分元素.</p>
+<p>极大的可分扩张称为<span class="link local"><a href="./可分闭包.html" title="可分闭包 [可分闭包]">可分闭包</a></span>. 在一个域扩张 $F\hookrightarrow E$ 中, 可分元素构成的子域也称为 $F$ 在 $E$ 中的可分闭包.</p>
 <h2>性质</h2>
-<p>有限可分扩张对应的仿射概形的态射是<span class="link local"><a href="./平展概形态射.html" title="“平展概形态射” [平展概形态射]">平展概形态射</a></span>.</p>
+<h3>几何侧</h3>
+<p>有限可分扩张在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">几何侧</a></span>对应的仿射概形的态射是<span class="link local"><a href="./平展概形态射.html" title="“平展概形态射” [平展概形态射]">平展概形态射</a></span>.</p>
 <h3>迹配对非退化</h3>
 <p><strong>命题</strong>. 域扩张 $F\hookrightarrow E$ 可分当且仅当迹映射给出一个<strong>非退化</strong>双线性型
 $$
 E\times E \to F, (x, y)\mapsto \operatorname{Tr}_{E/F}(xy).
 $$</p>
 <p>见 <span class="link external"><a href="https://stacks.math.columbia.edu/tag/0BIE" title="Stacks Project 0BIE [https://stacks.math.columbia.edu/tag/0BIE]">Stacks Project 0BIE</a></span>.</p>
+<h3>可分代数</h3>
+<p>设 $k\subset K$ 是可分域扩张, 则 $K$ 是 $k$ 上的<span class="link local"><a href="./可分代数.html" title="可分代数 [可分代数]">可分代数</a></span>.</p>
+<h3>复合</h3>
+<p>可分扩张的复合仍是可分扩张; 另一方面, 若两个域扩张的复合为可分扩张, 则两者均为可分扩张.</p>
+<h3>本原元</h3>
+<p>有限可分扩张是由一个元素生成的; 这称为<strong>本原元定理</strong>.</p>
 <h2>例</h2>
+<h3>可分而没有自同构的例子</h3>
+<p>扩张 $\mathbb{Q}\subset \mathbb{Q}(\sqrt[3]{2})$ 可分, 但 $\operatorname{Aut}_{\mathbb{Q}}(\mathbb{Q}(\sqrt[3]{2}))$ 为平凡群.</p>
 <h3>不可分扩张的例子</h3>
-<p>$\mathbb{F}_p(x^p) \hookrightarrow \mathbb{F}_p(x)$ 不可分, 因为 $x$ 的极小多项式 $X^p-x^p = (X-x)^p$ 有重根. 这是<span class="link local"><a href="./纯不可分扩张.html" title="纯不可分扩张 [纯不可分扩张]">纯不可分扩张</a></span>的例子.</p>
+<p>$\mathbb{F}_p(x^p) \hookrightarrow \mathbb{F}_p(x)$ 不可分, 因为 $x$ 的极小多项式 $X^p-x^p = (X-x)^p$ 有重根 (其导数为零). 这是<span class="link local"><a href="./纯不可分扩张.html" title="纯不可分扩张 [纯不可分扩张]">纯不可分扩张</a></span>的例子.</p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="可分闭包"><header><h1><span class="taxon">百科. </span>可分闭包 <a class="slug" href="./可分闭包.html">[可分闭包]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p><span class="link local"><a href="./域.html" title="域 [域]">域</a></span> $F$ 的可分闭包是满足如下条件的域扩张 $F \hookrightarrow F_S$:</p>
@@ -16473,12 +16554,26 @@ $$</p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="正规子群"><header><h1><span class="taxon">百科. </span>正规子群 <a class="slug" href="./正规子群.html">[正规子群]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="正规扩张"><header><h1><span class="taxon">百科. </span>正规扩张 <a class="slug" href="./正规扩张.html">[正规扩张]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p><strong>正规扩张</strong>是满足如下条件的域扩张 $k\subset K$: $K$ 是 $k$ 上一族多项式 $S\subset k[x]$ 的<span class="link local"><a href="./分裂域.html" title="分裂域 [分裂域]">分裂域</a></span>, 即</p>
+<p><strong>正规扩张</strong>是满足如下等价条件的<span class="link local"><a href="./代数扩张.html" title="代数扩张 [代数扩张]">代数扩张</a></span> $k\subset K$:</p>
 <ul>
-<li>$S$ 中的每个多项式在 $K$ 上分裂为一次多项式的乘积;</li>
-<li>$K$ 中包含 $k$ 以及 $S$ 中的多项式的所有根的最小的子域是 $K$ 自身.</li>
+<li>$K$ 是 $k$ 上一族多项式 $S\subset k[x]$ 的<span class="link local"><a href="./分裂域.html" title="分裂域 [分裂域]">分裂域</a></span>;</li>
+<li>固定一个<span class="link local"><a href="./代数闭包.html" title="代数闭包 [代数闭包]">代数闭包</a></span> $k\hookrightarrow\bar k$, 那么任意两个保持 $k$ 的嵌入 $K\hookrightarrow \bar k$ 有相同的像;</li>
+<li>$\operatorname{Aut}_k(K)$ 在嵌入的集合 $\{K\hookrightarrow\bar k\}$ 上的作用传递;</li>
+<li>对 $k$ 上任意不可约多项式 $f$, 若 $f$ 在 $K$ 中有根, 则 $f$ 在 $K$ 上分裂为一次式之积.</li>
 </ul>
+<p>对任意<span class="link local"><a href="./代数扩张.html" title="代数扩张 [代数扩张]">代数扩张</a></span> $k\subset L$, 存在同构意义下唯一的最小代数扩张 $L\subset K$ 使得 $k\subset K$ 为正规扩张, 称为 $k\subset L$ 的<strong>正规闭包</strong>.</p>
 <h2>性质</h2>
+<h3>复合</h3>
+<p>设 $k\subset M\subset K$ 是两个接续的域扩张, 若 $k\subset K$ 正规, 则 $M\subset K$ 正规. (考虑 $K$ 到 $\bar k$ 的保持 $M$ 的嵌入.)</p>
+<h2>例</h2>
+<h3>非正规扩张的例子</h3>
+<p>扩张 $\mathbb{Q}\subset \mathbb{Q}(\sqrt[3]{2})$ 不正规, 因为</p>
+<ul>
+<li>$\mathbb{Q}(\sqrt[3]{2})$ 到 $\mathbb{Q}$ 的代数闭包 $\overline{\mathbb{Q}}$ 有另一个嵌入 $\mathbb{Q}(\sqrt[3]{2}\omega)$, 其中 $\omega = \dfrac{-1+\sqrt{3}i}{2}$;</li>
+<li>多项式 $x^3-2$ 有根却不能分裂为一次式之积.</li>
+</ul>
+<p>而扩张 $\mathbb{Q}\subset\mathbb{Q}(\sqrt[3]{2},\omega)$ 正规. 它是 $x^3 - 2$ 的分裂域.</p>
+<p>正规扩张的复合不一定是正规扩张, 如 $\mathbb{Q} \subset \mathbb{Q}(\sqrt{2})\subset\mathbb{Q}(\sqrt[4]{2})$.</p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="母题同伦论"><header><h1><span class="taxon">百科. </span>“母题同伦论” <a class="slug" href="./母题同伦论.html">[母题同伦论]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>非稳定母题同伦范畴</h2>
 <p>设 $S$ 为 <span class="link local"><a href="./Noether概形.html" title=" [Noether概形]">Noether 概形</a></span>. 记 $\text{Sm}/S$ 为 $S$ 上的 <span class="link local"><a href="./Nisnevich景.html" title="“Nisnevich 景” [Nisnevich景]">Nisnevich 景</a></span>.</p>

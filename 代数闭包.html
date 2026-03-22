@@ -782,21 +782,31 @@
 <p>代数闭包在同构意义下唯一, 但可能有非平凡自同构.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>反向链接</h1></header></summary><section class="block" data-taxon="百科"><details ><summary id="可分扩张"><header><h1><span class="taxon">百科. </span>可分扩张 <a class="slug" href="./可分扩张.html">[可分扩张]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>对于域扩张 $F\hookrightarrow E$, 称 $\alpha\in E$ <strong>可分</strong>是指其极小多项式 $f_\alpha$ 满足 $\operatorname{gcd}(f_\alpha,f_\alpha ') = 1$, 这也等价于 $f_\alpha$ 在 $F$ 的某个<span class="link local"><a href="./代数闭包.html" title="代数闭包 [代数闭包]">代数闭包</a></span>上无重根.</p>
-<p>若 $E$ 的所有元素都可分, 则称域扩张 $F\hookrightarrow E$ 为可分扩张.</p>
-<p>注意这个定义要求可分扩张是代数扩张.</p>
-<p>极大的可分扩张称为<span class="link local"><a href="./可分闭包.html" title="可分闭包 [可分闭包]">可分闭包</a></span>.</p>
+<p>对于<span class="link local"><a href="./域扩张.html" title="域扩张 [域扩张]">域扩张</a></span> $F\hookrightarrow E$, 称 $\alpha\in E$ <strong>可分</strong>是指其极小多项式 $f_\alpha$ 满足
+$$\operatorname{gcd}(f_\alpha,f_\alpha ') = 1,$$
+这也等价于 $f_\alpha$ 在 $F$ 的某个<span class="link local"><a href="./代数闭包.html" title="代数闭包 [代数闭包]">代数闭包</a></span>上无重根.</p>
+<p>若 $E$ 的所有元素都可分, 则称域扩张 $F\hookrightarrow E$ 为<strong>可分扩张</strong>. (这要求其为<span class="link local"><a href="./代数扩张.html" title="代数扩张 [代数扩张]">代数扩张</a></span>.) 事实上, 只需要域扩张 $F\hookrightarrow E$ 由可分元素生成, 就可得到 $F\hookrightarrow E$ 为可分扩张; 这是因为可分元素的和, 积, 商仍为可分元素.</p>
+<p>极大的可分扩张称为<span class="link local"><a href="./可分闭包.html" title="可分闭包 [可分闭包]">可分闭包</a></span>. 在一个域扩张 $F\hookrightarrow E$ 中, 可分元素构成的子域也称为 $F$ 在 $E$ 中的可分闭包.</p>
 <h2>性质</h2>
-<p>有限可分扩张对应的仿射概形的态射是<span class="link local"><a href="./平展概形态射.html" title="“平展概形态射” [平展概形态射]">平展概形态射</a></span>.</p>
+<h3>几何侧</h3>
+<p>有限可分扩张在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">几何侧</a></span>对应的仿射概形的态射是<span class="link local"><a href="./平展概形态射.html" title="“平展概形态射” [平展概形态射]">平展概形态射</a></span>.</p>
 <h3>迹配对非退化</h3>
 <p><strong>命题</strong>. 域扩张 $F\hookrightarrow E$ 可分当且仅当迹映射给出一个<strong>非退化</strong>双线性型
 $$
 E\times E \to F, (x, y)\mapsto \operatorname{Tr}_{E/F}(xy).
 $$</p>
 <p>见 <span class="link external"><a href="https://stacks.math.columbia.edu/tag/0BIE" title="Stacks Project 0BIE [https://stacks.math.columbia.edu/tag/0BIE]">Stacks Project 0BIE</a></span>.</p>
+<h3>可分代数</h3>
+<p>设 $k\subset K$ 是可分域扩张, 则 $K$ 是 $k$ 上的<span class="link local"><a href="./可分代数.html" title="可分代数 [可分代数]">可分代数</a></span>.</p>
+<h3>复合</h3>
+<p>可分扩张的复合仍是可分扩张; 另一方面, 若两个域扩张的复合为可分扩张, 则两者均为可分扩张.</p>
+<h3>本原元</h3>
+<p>有限可分扩张是由一个元素生成的; 这称为<strong>本原元定理</strong>.</p>
 <h2>例</h2>
+<h3>可分而没有自同构的例子</h3>
+<p>扩张 $\mathbb{Q}\subset \mathbb{Q}(\sqrt[3]{2})$ 可分, 但 $\operatorname{Aut}_{\mathbb{Q}}(\mathbb{Q}(\sqrt[3]{2}))$ 为平凡群.</p>
 <h3>不可分扩张的例子</h3>
-<p>$\mathbb{F}_p(x^p) \hookrightarrow \mathbb{F}_p(x)$ 不可分, 因为 $x$ 的极小多项式 $X^p-x^p = (X-x)^p$ 有重根. 这是<span class="link local"><a href="./纯不可分扩张.html" title="纯不可分扩张 [纯不可分扩张]">纯不可分扩张</a></span>的例子.</p>
+<p>$\mathbb{F}_p(x^p) \hookrightarrow \mathbb{F}_p(x)$ 不可分, 因为 $x$ 的极小多项式 $X^p-x^p = (X-x)^p$ 有重根 (其导数为零). 这是<span class="link local"><a href="./纯不可分扩张.html" title="纯不可分扩张 [纯不可分扩张]">纯不可分扩张</a></span>的例子.</p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="可分闭包"><header><h1><span class="taxon">百科. </span>可分闭包 <a class="slug" href="./可分闭包.html">[可分闭包]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p><span class="link local"><a href="./域.html" title="域 [域]">域</a></span> $F$ 的可分闭包是满足如下条件的域扩张 $F \hookrightarrow F_S$:</p>
@@ -806,4 +816,26 @@ $$</p>
 </ul>
 <p>取定 $F$ 的<span class="link local"><a href="./代数闭包.html" title="代数闭包 [代数闭包]">代数闭包</a></span> $\overline{F}$, 那么 $F$ 的可分闭包也可定义为 $\overline{F}$ 中在 $F$ 上可分的元素构成的子域.</p>
 <p>域的可分闭包在同构意义下唯一, 但可能有非平凡的自同构.</p>
+</details></section><section class="block" data-taxon="百科"><details ><summary id="正规扩张"><header><h1><span class="taxon">百科. </span>正规扩张 <a class="slug" href="./正规扩张.html">[正规扩张]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><strong>正规扩张</strong>是满足如下等价条件的<span class="link local"><a href="./代数扩张.html" title="代数扩张 [代数扩张]">代数扩张</a></span> $k\subset K$:</p>
+<ul>
+<li>$K$ 是 $k$ 上一族多项式 $S\subset k[x]$ 的<span class="link local"><a href="./分裂域.html" title="分裂域 [分裂域]">分裂域</a></span>;</li>
+<li>固定一个<span class="link local"><a href="./代数闭包.html" title="代数闭包 [代数闭包]">代数闭包</a></span> $k\hookrightarrow\bar k$, 那么任意两个保持 $k$ 的嵌入 $K\hookrightarrow \bar k$ 有相同的像;</li>
+<li>$\operatorname{Aut}_k(K)$ 在嵌入的集合 $\{K\hookrightarrow\bar k\}$ 上的作用传递;</li>
+<li>对 $k$ 上任意不可约多项式 $f$, 若 $f$ 在 $K$ 中有根, 则 $f$ 在 $K$ 上分裂为一次式之积.</li>
+</ul>
+<p>对任意<span class="link local"><a href="./代数扩张.html" title="代数扩张 [代数扩张]">代数扩张</a></span> $k\subset L$, 存在同构意义下唯一的最小代数扩张 $L\subset K$ 使得 $k\subset K$ 为正规扩张, 称为 $k\subset L$ 的<strong>正规闭包</strong>.</p>
+<h2>性质</h2>
+<h3>复合</h3>
+<p>设 $k\subset M\subset K$ 是两个接续的域扩张, 若 $k\subset K$ 正规, 则 $M\subset K$ 正规. (考虑 $K$ 到 $\bar k$ 的保持 $M$ 的嵌入.)</p>
+<h2>例</h2>
+<h3>非正规扩张的例子</h3>
+<p>扩张 $\mathbb{Q}\subset \mathbb{Q}(\sqrt[3]{2})$ 不正规, 因为</p>
+<ul>
+<li>$\mathbb{Q}(\sqrt[3]{2})$ 到 $\mathbb{Q}$ 的代数闭包 $\overline{\mathbb{Q}}$ 有另一个嵌入 $\mathbb{Q}(\sqrt[3]{2}\omega)$, 其中 $\omega = \dfrac{-1+\sqrt{3}i}{2}$;</li>
+<li>多项式 $x^3-2$ 有根却不能分裂为一次式之积.</li>
+</ul>
+<p>而扩张 $\mathbb{Q}\subset\mathbb{Q}(\sqrt[3]{2},\omega)$ 正规. 它是 $x^3 - 2$ 的分裂域.</p>
+<p>正规扩张的复合不一定是正规扩张, 如 $\mathbb{Q} \subset \mathbb{Q}(\sqrt{2})\subset\mathbb{Q}(\sqrt[4]{2})$.</p>
 </details></section></details></section></footer></article></div></body></html>
