@@ -825,6 +825,30 @@ $$
 <p><span class="link local"><a href="./关联丛.html" title="关联丛 [关联丛]">关联丛</a></span></p>
 <h2>相关资料</h2>
 <p><span class="link local"><a href="./PB∞T.html" title="∞-意象中的主丛 [PB∞T]">$\infty$-意象中的主丛</a></span></p>
+</details></section><section class="block" data-taxon="百科"><details ><summary id="正规扩张"><header><h1><span class="taxon">百科. </span>正规扩张 <a class="slug" href="./正规扩张.html">[正规扩张]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>对于域扩张 $k\subset K$, 视为 “覆叠” 映射 $\operatorname{Spec}K\to\operatorname{Spec}k$; <strong>正规扩张</strong>这一条件是 “覆叠变换群在纤维上作用<span class="link local"><a href="./传递作用.html" title="传递作用 [传递作用]">传递</a></span>” 的类比. 所谓纤维即是 $\operatorname{Spec}K$ 沿 $\operatorname{Spec}\bar k \to \operatorname{Spec}k$ 的拉回, 而纤维的一个点即是一个提升 $\operatorname{Spec}\bar k\to\operatorname{Spec}K$, 也即嵌入 $K\hookrightarrow\bar k$.</p>
+<h2>定义</h2>
+<p><strong>正规扩张</strong>是满足如下等价条件的<span class="link local"><a href="./代数扩张.html" title="代数扩张 [代数扩张]">代数扩张</a></span> $k\subset K$:</p>
+<ul>
+<li>$K$ 是 $k$ 上一族多项式 $S\subset k[x]$ 的<span class="link local"><a href="./分裂域.html" title="分裂域 [分裂域]">分裂域</a></span>;</li>
+<li>固定一个<span class="link local"><a href="./代数闭包.html" title="代数闭包 [代数闭包]">代数闭包</a></span> $k\hookrightarrow\bar k$, 那么任意两个保持 $k$ 的嵌入 $K\hookrightarrow \bar k$ 有相同的像;</li>
+<li>$\operatorname{Aut}_k(K)$ 在嵌入的集合 $\{K\hookrightarrow\bar k\}$ 上的作用传递;</li>
+<li>对 $k$ 上任意不可约多项式 $f$, 若 $f$ 在 $K$ 中有根, 则 $f$ 在 $K$ 上分裂为一次式之积.</li>
+</ul>
+<p>对任意<span class="link local"><a href="./代数扩张.html" title="代数扩张 [代数扩张]">代数扩张</a></span> $k\subset L$, 存在同构意义下唯一的最小代数扩张 $L\subset K$ 使得 $k\subset K$ 为正规扩张, 称为 $k\subset L$ 的<strong>正规闭包</strong>.</p>
+<h2>性质</h2>
+<h3>复合</h3>
+<p>设 $k\subset M\subset K$ 是两个接续的域扩张, 若 $k\subset K$ 正规, 则 $M\subset K$ 正规. (考虑 $K$ 到 $\bar k$ 的保持 $M$ 的嵌入.)</p>
+<h2>例</h2>
+<h3>非正规扩张的例子</h3>
+<p>扩张 $\mathbb{Q}\subset \mathbb{Q}(\sqrt[3]{2})$ 不正规, 因为</p>
+<ul>
+<li>$\mathbb{Q}(\sqrt[3]{2})$ 到 $\mathbb{Q}$ 的代数闭包 $\overline{\mathbb{Q}}$ 有另一个嵌入 $\mathbb{Q}(\sqrt[3]{2}\omega)$, 其中 $\omega = \dfrac{-1+\sqrt{3}i}{2}$;</li>
+<li>多项式 $x^3-2$ 有根却不能分裂为一次式之积.</li>
+</ul>
+<p>而扩张 $\mathbb{Q}\subset\mathbb{Q}(\sqrt[3]{2},\omega)$ 正规. 它是 $x^3 - 2$ 的分裂域.</p>
+<p>正规扩张的复合不一定是正规扩张, 如 $\mathbb{Q} \subset \mathbb{Q}(\sqrt{2})\subset\mathbb{Q}(\sqrt[4]{2})$.</p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="焊接形式"><header><h1><span class="taxon">百科. </span>焊接形式 <a class="slug" href="./焊接形式.html">[焊接形式]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设 $G$ 为 Lie 群, $M$ 为微分流形, $E\to M$ 是以 $F$ 为纤维, $G$ 为结构群的<span class="link local"><a href="./纤维丛.html" title="纤维丛 [纤维丛]">纤维丛</a></span>. 假设 $G$ <span class="link local"><a href="./传递作用.html" title="传递作用 [传递作用]">传递</a></span>地作用于 $F$ 上, 且 $F$ (作为流形) 的维数与 $M$ 相同. <strong>焊接形式</strong>由如下资料给出:</p>
