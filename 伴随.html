@@ -844,6 +844,18 @@ $$</p>
 <h2>证明</h2>
 <p>一个抽象的解释是, <span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span>中包含了游走的结合代数 (即<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span>).</p>
 <h2>例</h2>
+</details></section><section class="block" data-taxon="百科"><details ><summary id="余完备化"><header><h1><span class="taxon">百科. </span>余完备化 <a class="slug" href="./余完备化.html">[余完备化]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>余完备化是指向一个范畴<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加特定形状的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>的过程.</p>
+<p>具体地, 设 $R\subset K$ 是两族小范畴 (即 $R\hookrightarrow K \hookrightarrow\mathsf{Cat}$ 为全子范畴). 对于具有 $R$-形余极限的范畴 $\mathcal C$, 可在保持 $R$-形余极限的条件下, “自由地添加 $K$-形余极限”, 得到
+$$
+\mathcal C \hookrightarrow \mathsf{P}_{R}^K(\mathcal C).
+$$
+记 $\mathsf{Cat}_K$ 为具有 $K$-形余极限的范畴以及保持 $K$-形余极限的函子构成的 $2$-范畴, 那么 $\mathsf{P}_R^K\colon \mathsf{Cat}_R \to \mathsf{Cat}_K$ 是<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>函子 $\mathsf{Cat}_K \to \mathsf{Cat}_R$ 的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
+<h2>例</h2>
+<h3>余积完备化</h3>
+<p>考虑 $K = \mathsf{Set}$ 为离散范畴的范畴, 那么 $\mathsf{P}^{K}(\mathcal C)$ 是 $\mathcal C$ 自由地添加余积所得的范畴; 其有一种具体构造: $\mathsf{P}^{K}(\mathcal C)$ 的对象为 $\mathcal C$ 的对象族 $(X_i)_{i\in I}$, 态射 $(X_i)_{i\in I} \to (Y_j)_{j\in J}$ 为映射 $f\colon I\to J$ 以及一族态射 $(X_i \to Y_{f(i)})_{i\in I}$. 这个范畴也可定义为<span class="link local"><a href="./松拉回.html" title="松拉回 [松拉回]">松拉回</a></span></p>
+<p><figure><img src="./余完备化-1.svg" class="color-invert"/></figure></p>
 </details></section><section class="block" data-taxon="百科"><details ><summary id="充实范畴上的模"><header><h1><span class="taxon">百科. </span>充实范畴上的模 <a class="slug" href="./充实范畴上的模.html">[充实范畴上的模]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>可视为单对象<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>. <strong>充实范畴上的模</strong>是结合代数上的模和<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>的共同的推广.</p>
@@ -1199,7 +1211,7 @@ $$
 f_*\colon \mathsf {Qcoh}(X) \to \mathsf {Qcoh}(Y).
 $$</p>
 <h2>例</h2>
-<p>对于态射 $X\to \operatorname{pt}$, 直像相当于<span class="link local"><a href="./整体截面.html" title="“整体截面” [整体截面]">整体截面</a></span>函子. 例如 $f\colon \mathbb A^1\to\text{pt}$. 那么
+<p>对于态射 $X\to \operatorname{pt}$, 直像相当于<span class="link local"><a href="./整体截面.html" title="整体截面 [整体截面]">整体截面</a></span>函子. 例如 $f\colon \mathbb A^1\to\text{pt}$. 那么
 $$
 f_*\mathcal O_{\mathbb A^1}= H^0(\mathbb A^1,\mathcal O_{\mathbb A^1})=K[T].
 $$
@@ -1437,7 +1449,7 @@ $$
 $$
 当这个比较映射为等价时, 称 $X$ 为 <strong>$1$-仿射</strong>对象.</p>
 <h3>高阶仿射性与单子性的联系</h3>
-<p>高阶仿射性可以描述为<span class="link local"><a href="./整体截面.html" title="“整体截面” [整体截面]">整体截面</a></span>函子的<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>.</p>
+<p>高阶仿射性可以描述为<span class="link local"><a href="./整体截面.html" title="整体截面 [整体截面]">整体截面</a></span>函子的<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>.</p>
 <p><strong>定义</strong> (<span class="link local"><a href="./StefanichHigherQCoh.html" title="Higher Quasicoherent Sheaves [StefanichHigherQCoh]">Stefanich</a></span> 14.3.6, 14.3.7).
 设 $n\geq 2$, 对于预叠 $X$, 若整体截面 $\Gamma(X,-)\colon (n+1)\mathsf{QCoh}(X)\to n\mathsf{Pr}_{\mathrm{st}}^{L}$ <span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>, 则称 $X$ 为 $n$-仿射预叠.
 称预叠的态射 $f\colon X\to Y$ 为 $n$-仿射态射, 是指对任意仿射概形 $S$ 到 $Y$ 的映射, $X\times_Y S$ 为 $n$-仿射预叠.</p>

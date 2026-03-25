@@ -847,16 +847,22 @@ $N(0\overset{\simeq}{\to} 1) \to {*}$
 的<span class="link local"><a href="./局部对象.html" title="局部对象 [局部对象]">局部对象</a></span>.</p>
 <p>完备 Segal 生象等同于 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$(\infty,1)$-范畴</a></span>. 另见<span class="link local"><a href="./范畴对象.html" title="范畴对象 (∞-范畴论) [范畴对象]">范畴对象</a></span>.</p>
 </details></section><section class="block" data-taxon="Meta"><details ><summary id="terminologies"><header><h1><span class="taxon">Meta. </span>单纯百科 - 术语翻译表 <a class="slug" href="./terminologies.html">[terminologies]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>下表的第二列是<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>使用的译文.</p>
+<p>下表的第二列是<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>使用的译文, 第三列是其它地方也曾出现的译文.</p>
 <table><thead><tr><th>原文</th><th>译文</th><th>其它译文</th></tr></thead><tbody>
 <tr><td>anima</td><td><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span></td><td></td></tr>
+<tr><td>dependent type</td><td><span class="link local"><a href="./依值类型.html" title="依值类型 [依值类型]">依值类型</a></span></td><td>依赖类型</td></tr>
 <tr><td>groupoid</td><td><span class="link local"><a href="./群胚.html" title="群胚 [群胚]">群胚</a></span></td><td>广群</td></tr>
 <tr><td>locale</td><td><span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span></td><td></td></tr>
 <tr><td>nerve</td><td><span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span></td><td>神经</td></tr>
+<tr><td>operad</td><td><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span></td><td></td></tr>
+<tr><td>over category</td><td><span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span></td><td></td></tr>
 <tr><td>presheaf</td><td><span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span></td><td>预束</td></tr>
+<tr><td>profunctor</td><td><span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span></td><td></td></tr>
 <tr><td>sheaf</td><td><span class="link local"><a href="./层.html" title="拓扑空间上的层 [层]">层</a></span></td><td>束</td></tr>
-<tr><td>stack</td><td><span class="link local"><a href="./叠.html" title="叠 [叠]">叠</a></span></td><td>栈 (?)</td></tr>
+<tr><td>site</td><td><span class="link local"><a href="./景.html" title="景 [景]">景</a></span></td><td></td></tr>
+<tr><td>stack</td><td><span class="link local"><a href="./叠.html" title="叠 [叠]">叠</a></span></td><td>栈</td></tr>
 <tr><td>topos</td><td><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span></td><td>拓扑斯</td></tr>
+<tr><td>torsor</td><td><span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span></td><td>旋子, 扭子, 挠子</td></tr>
 </tbody></table>
 <h2>相关内容</h2>
 <p><span class="link local"><a href="./关于译名-意象.html" title="关于译名 “意象” [关于译名-意象]">关于译名 “意象”</a></span></p>
@@ -941,6 +947,12 @@ $$
 其中 $c_k\in H^{2k}$.</li>
 </ul>
 <h2>性质</h2>
+<h3>映射空间</h3>
+<p>两个群的逆环路空间之间的映射空间为
+$$
+\operatorname{Hom}(\mathbf{B}H,\mathbf{B}G) \simeq \operatorname{Hom}_{\mathsf{Grp}}(H,G)/_{\mathrm{Ad}}G,
+$$
+其中 $\mathrm{Ad}$ 是 $G$ 在 $\operatorname{Hom}_{\mathsf{Grp}}(H,G)$ 上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>.</p>
 <h3>函子性与关联丛</h3>
 <p>对于<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>同态 $\varphi\colon H\to G$, 有 $H$ 通过 $\varphi$ 在 $G$ 上的左乘<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>.
 映射 $\mathbf{B}\varphi\colon \mathbf{B}H\to \mathbf{B}G$ 是 $\mathbf{B}H$ 上的万有 $H$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>通过该作用<span class="link local"><a href="./关联丛.html" title="关联丛 [关联丛]">关联</a></span>的 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>的分类映射.</p>
