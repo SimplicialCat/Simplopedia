@@ -608,7 +608,6 @@
   h5,
   h6,
   p {
-    margin-left: var(--margin-left);
     margin: 5px;
   }
 
@@ -721,6 +720,10 @@
     margin-bottom: 0;
   }
 
+  code, pre, .mono {
+    font-family: "Liberation Mono", "Courier New", monospace;
+    font-size: 0.9em; /* 可选微调尺寸 */
+  }
 
   @media only screen and (max-width: 1000px) {
     #grid-wrapper>nav {
@@ -736,22 +739,32 @@
 
   ul {
     margin: 5px;
+    margin-left: calc(5px + 2em);
+    padding-left: 0;
     list-style-type: none;
   }
 
   ul li {
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     position: relative;
+    padding-left: 0;
     /*color: var(--text-secondary);*/
   }
 
   ul li::before {
     content: '✦';
     position: absolute;
-    left: 0;
-    top: 0.2em;
+    left : -1em;
     /*color: var(--color-Furina-vintage-gold-ultra-light);*/
     font-size: 0.9em;
+  }
+
+  .metadata {
+    color: var(--article-tag-color);
+  }
+
+  .metadata ul {
+    margin : 0;
   }
 
   .metadata li::before {

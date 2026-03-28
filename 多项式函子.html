@@ -605,7 +605,6 @@
   h5,
   h6,
   p {
-    margin-left: var(--margin-left);
     margin: 5px;
   }
 
@@ -718,6 +717,10 @@
     margin-bottom: 0;
   }
 
+  code, pre, .mono {
+    font-family: "Liberation Mono", "Courier New", monospace;
+    font-size: 0.9em; /* 可选微调尺寸 */
+  }
 
   @media only screen and (max-width: 1000px) {
     #grid-wrapper>nav {
@@ -733,22 +736,32 @@
 
   ul {
     margin: 5px;
+    margin-left: calc(5px + 2em);
+    padding-left: 0;
     list-style-type: none;
   }
 
   ul li {
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     position: relative;
+    padding-left: 0;
     /*color: var(--text-secondary);*/
   }
 
   ul li::before {
     content: '✦';
     position: absolute;
-    left: 0;
-    top: 0.2em;
+    left : -1em;
     /*color: var(--color-Furina-vintage-gold-ultra-light);*/
     font-size: 0.9em;
+  }
+
+  .metadata {
+    color: var(--article-tag-color);
+  }
+
+  .metadata ul {
+    margin : 0;
   }
 
   .metadata li::before {
@@ -827,14 +840,14 @@ $$
 <h2>分类</h2>
 <p>单纯百科的页面分为以下几类.</p>
 <ul>
-<li>“百科” (<code>wiki</code>) : 数学概念. 这类页面构成了单纯百科的主体.</li>
-<li>“<span class="link local"><a href="./notion.html" title="观念 [notion]">观念</a></span>” (<code>notion</code>) : 模糊而普遍的数学思想.</li>
-<li>“<span class="link local"><a href="./pedagogy.html" title="教学 [pedagogy]">教学</a></span>” (<code>pedagogy</code>) : 面向基础读者的科普.</li>
-<li>“<span class="link local"><a href="./notes.html" title="讲稿, 笔记 [notes]">讲稿</a></span>” (<code>notes</code>) : 一些讨论班的讲稿.</li>
-<li>“文献” (<code>reference</code>) : 其它页面中引用到的参考文献.</li>
-<li>“<span class="link local"><a href="./subject.html" title="学科 [subject]">学科</a></span>” (<code>subject</code>) : 用于收集和分类.</li>
-<li>“元” (<code>meta</code>) : 关于单纯百科本身.</li>
-<li>“<span class="link local"><a href="./nonmath.html" title="非数学 [nonmath]">非数学</a></span>” (<code>nonmath</code>) : 一些不属于上述分类, 且不属于数学的东西.</li>
+<li>百科 : 数学概念. 这类页面构成了单纯百科的主体.</li>
+<li><span class="link local"><a href="./notion.html" title="观念 [notion]">观念</a></span> : 模糊而普遍的数学思想.</li>
+<li><span class="link local"><a href="./pedagogy.html" title="教学 [pedagogy]">教学</a></span> : 面向基础读者的科普.</li>
+<li><span class="link local"><a href="./notes.html" title="讲稿, 笔记 [notes]">讲稿, 笔记</a></span> : 一些讨论班的讲稿.</li>
+<li>文献 : 其它页面中引用到的参考文献.</li>
+<li><span class="link local"><a href="./subject.html" title="学科 [subject]">学科</a></span> : 用于收集和分类.</li>
+<li>Meta : 关于单纯百科本身.</li>
+<li><span class="link local"><a href="./nonmath.html" title="非数学 [nonmath]">非数学</a></span> : 一些不属于上述分类, 且不属于数学的东西.</li>
 </ul>
 <p>点击 <span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span> 可以看到本站的所有页面.</p>
 <p>欢迎所有读者<span class="link external"><a href="mailto:wangjiny24@mails.tsinghua.edu.cn" title="通过邮箱联系我 [mailto:wangjiny24@mails.tsinghua.edu.cn]">通过邮箱联系我</a></span> <code>wangjiny24@mails.tsinghua.edu.cn</code> , 交流, 催更. (对于好友, 通过微信或 QQ 联系我当然是更加欢迎的.)</p>
