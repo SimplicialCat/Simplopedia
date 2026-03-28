@@ -573,8 +573,8 @@
 
     --hover-color-block: var(--block-background-color);
     --logo-hover-color: #88d;
-    --span-taxon-color: #88d;
-    --article-taxon-color: #88d;
+    --span-tag-color: #88d;
+    --article-tag-color: #88d;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -738,7 +738,6 @@
 
   ul li {
     margin-bottom: 8px;
-    padding-left: 16px;
     position: relative;
     /*color: var(--text-secondary);*/
   }
@@ -773,7 +772,7 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon="百科"><details open><summary id="群胚对象"><header><h1><span class="taxon">百科. </span>群胚对象 (∞-范畴论) <a class="slug" href="./群胚对象.html">[群胚对象]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>观念</h2>
+<article><section class="block" data-taxon=""><details open><summary id="群胚对象"><header><h1><span class="taxon"></span>群胚对象 (∞-范畴论) <a class="slug" href="./群胚对象.html">[群胚对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>观念</h2>
 <p>群胚对象可视为 $1$-范畴论中 “<span class="link local"><a href="./等价关系.html" title="等价关系 [等价关系]">等价关系</a></span>” 的概念在 $\infty$-范畴论中的推广. 与等价关系类似, (在<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>中) 每个群胚对象都给出一个商映射, 而每个满射都通过 <span class="link local"><a href="./Čech脉.html" title="Čech 脉 [Čech脉]">Čech 脉</a></span>给出一个群胚对象. 这是刻画<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的 <span class="link local"><a href="./Giraud公理.html" title="Giraud 公理 [Giraud公理]">Giraud 公理</a></span>的一部分.</p>
 <h2>定义</h2>
 <p>设范畴 $\mathcal C$ 具有<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>. 定义 $\mathcal C$ 中的<strong>群胚对象</strong>是满足如下条件的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span> $X\colon \Delta^{\mathrm{op}} \to \mathcal C$:</p>
@@ -787,7 +786,7 @@ $$
 X_0 \to \operatorname{colim}X.
 $$</p>
 <p>其中 $\operatorname{colim}X$ 又称为 $X$ 的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon="百科"><details ><summary id="Giraud公理"><header><h1><span class="taxon">百科. </span>Giraud 公理 <a class="slug" href="./Giraud公理.html">[Giraud公理]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Giraud公理"><header><h1><span class="taxon"></span>Giraud 公理 <a class="slug" href="./Giraud公理.html">[Giraud公理]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>据 <span class="link local"><a href="./SGA4.html" title="Théorie des topos et cohomologie étale des schémas [SGA4]">SGA 4</a></span> 记载, Grothendieck 的学生 Giraud 惊人地给出了 <span class="link local"><a href="./意象.html" title="意象 [意象]">Grothendieck 意象</a></span>的纯范畴论刻画, 后来称为 <strong>Giraud 公理</strong>. 这说明意象还具有一种独立于几何对象的观点.</p>
 <h2>陈述</h2>
@@ -798,7 +797,7 @@ $$</p>
 <li>$\mathcal C$ 中的<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>无交 (即 $X + Y$ 的子对象 $X$ 与 $Y$ 的交为<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span> $0$);</li>
 <li>$\mathcal C$ 中的<span class="link local"><a href="./群胚对象.html" title="群胚对象 (∞-范畴论) [群胚对象]">群胚对象</a></span>均有效, 即等价于商映射的 <span class="link local"><a href="./Čech脉.html" title="Čech 脉 [Čech脉]">Čech 脉</a></span>.</li>
 </ul>
-</details></section><section class="block" data-taxon="参考资料"><details ><summary id="PB∞T"><header><h1><span class="taxon">参考资料. </span>∞-意象中的主丛 <a class="slug" href="./PB∞T.html">[PB∞T]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link external"><a href="https://simplicialcat.github.io" title="我 [https://simplicialcat.github.io]">我</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="PB∞T"><header><h1><span class="taxon"></span>∞-意象中的主丛 <a class="slug" href="./PB∞T.html">[PB∞T]</a></h1><div class="metadata"><ul><li class="meta-item">参考资料</li><li class="meta-item"><span class="link external"><a href="https://simplicialcat.github.io" title="我 [https://simplicialcat.github.io]">我</a></span></li></ul></div></header></summary>
 <p>参考文献: 
 <span class="link local"><a href="./NikolausSchreiberStevensonPB.html" title="Principal ∞-bundles — General theory [NikolausSchreiberStevensonPB]">Principal ∞-bundles — General theory byThomas Nikolaus, Urs Schreiber, Danny Stevenson</a></span></p>
 <p>PDF : https://simplicialcat.github.io/Jinyi-pre-%E2%88%9Etopos.pdf</p>
@@ -818,7 +817,7 @@ $$</p>
 </ul>
 </li>
 </ul>
-</details></section><section class="block" data-taxon="百科"><details ><summary id="Čech脉"><header><h1><span class="taxon">百科. </span>Čech 脉 <a class="slug" href="./Čech脉.html">[Čech脉]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="Čech脉"><header><h1><span class="taxon"></span>Čech 脉 <a class="slug" href="./Čech脉.html">[Čech脉]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>Čech 脉是对范畴中的态射 $U\to X$ 指定的一个<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span> $\text{\v{C}}(U\to X)$.</p>
 <ul>
@@ -842,8 +841,8 @@ $$
 再限制到 $\Delta\hookrightarrow\Delta_+$, 所得的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>称为 $f$ 的 <strong>Čech 脉</strong> $\text{\v{C}}(f)\colon \Delta^{\mathrm{op}} \to \mathcal C$.</p>
 <h2>性质</h2>
 <p>Čech 脉是<span class="link local"><a href="./群胚对象.html" title="群胚对象 (∞-范畴论) [群胚对象]">群胚对象</a></span>.</p>
-</details></section><section class="block" data-taxon="百科"><details ><summary id="∞-群"><header><h1><span class="taxon">百科. </span>∞-群 <a class="slug" href="./∞-群.html">[∞-群]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><p>$\infty$-群是指 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的 <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">$\mathbb E_1$</a></span>-群, 也等同于只有一个对象的 $\infty$-群胚, 也即 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的<span class="link local"><a href="./群胚对象.html" title="群胚对象 (∞-范畴论) [群胚对象]">群胚对象</a></span> $X\colon \Delta^{\mathrm{op}}\to\mathsf{Ani}$, 满足 $X_0=1$.</p>
-</details></section><section class="block" data-taxon="百科"><details ><summary id="群胚"><header><h1><span class="taxon">百科. </span>群胚 <a class="slug" href="./群胚.html">[群胚]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="∞-群"><header><h1><span class="taxon"></span>∞-群 <a class="slug" href="./∞-群.html">[∞-群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><p>$\infty$-群是指 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的 <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">$\mathbb E_1$</a></span>-群, 也等同于只有一个对象的 $\infty$-群胚, 也即 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的<span class="link local"><a href="./群胚对象.html" title="群胚对象 (∞-范畴论) [群胚对象]">群胚对象</a></span> $X\colon \Delta^{\mathrm{op}}\to\mathsf{Ani}$, 满足 $X_0=1$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="群胚"><header><h1><span class="taxon"></span>群胚 <a class="slug" href="./群胚.html">[群胚]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>群胚是所有态射均为同构的范畴.</p>
 <p>群胚可视为 “集合” 概念的推广, 即 “元素可带有自同构” 的集合. 这种推广的极致是 $\infty$-群胚, 即<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</p>
@@ -871,7 +870,7 @@ $$
 <li>(单位的起止) $s\circ e= t\circ e = \operatorname{id}_{G_0}$;</li>
 <li>(单位的性质) $m\circ (e\circ t\times \operatorname{id}_{G_1})=m\circ (\operatorname{id}_{G_1}\times e\circ s)=\operatorname{id}_{G_1}$.</li>
 </ul>
-</details></section><section class="block" data-taxon="百科"><details ><summary id="范畴对象"><header><h1><span class="taxon">百科. </span>范畴对象 (∞-范畴论) <a class="slug" href="./范畴对象.html">[范畴对象]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>观念</h2>
+</details></section><section class="block" data-taxon=""><details ><summary id="范畴对象"><header><h1><span class="taxon"></span>范畴对象 (∞-范畴论) <a class="slug" href="./范畴对象.html">[范畴对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>观念</h2>
 <p>在 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$\infty$-范畴</a></span>中, 一个范畴<span class="link local"><a href="./内部观点.html" title="内部观点 [内部观点]">内部</a></span>的范畴可由完备 <span class="link local"><a href="./Segal空间.html" title="Segal 空间 [Segal空间]">Segal 对象</a></span>描述.</p>
 <h2>定义</h2>
 <h3>Segal 对象</h3>

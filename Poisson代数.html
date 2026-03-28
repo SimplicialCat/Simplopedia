@@ -573,8 +573,8 @@
 
     --hover-color-block: var(--block-background-color);
     --logo-hover-color: #88d;
-    --span-taxon-color: #88d;
-    --article-taxon-color: #88d;
+    --span-tag-color: #88d;
+    --article-tag-color: #88d;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -738,7 +738,6 @@
 
   ul li {
     margin-bottom: 8px;
-    padding-left: 16px;
     position: relative;
     /*color: var(--text-secondary);*/
   }
@@ -773,7 +772,7 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon="百科"><details open><summary id="Poisson代数"><header><h1><span class="taxon">百科. </span>Poisson 代数 <a class="slug" href="./Poisson代数.html">[Poisson代数]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<article><section class="block" data-taxon=""><details open><summary id="Poisson代数"><header><h1><span class="taxon"></span>Poisson 代数 <a class="slug" href="./Poisson代数.html">[Poisson代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>交换环 $k$ 上的 Poisson 代数是 $k$-代数 $A$ 带有一个 Lie 括号 $[-,-]$,
 使得 $[a,-] \colon A \to A$ 是 $k$-代数的<span class="link local"><a href="./导子.html" title="导子 [导子]">导子</a></span>; 换言之, $[-,-]$ 是 $A$ 上的双导子 (biderivation).</p>
 <p>注意 Poisson 代数 $A$ 要求是含幺结合代数, 但有时不要求交换.</p>
@@ -804,7 +803,7 @@ $$
 $$
 \{f,g\} = \sum_i \Big(\frac{\partial f}{\partial x_i}\frac{\partial g}{\partial y_i} - \frac{\partial f}{\partial y_i}\frac{\partial g}{\partial x_i}\Big).
 $$</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon="百科"><details ><summary id="KKSPoisson结构"><header><h1><span class="taxon">百科. </span>Kirillov–Kostant–Souriau Poisson 结构 <a class="slug" href="./KKSPoisson结构.html">[KKSPoisson结构]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="KKSPoisson结构"><header><h1><span class="taxon"></span>Kirillov–Kostant–Souriau Poisson 结构 <a class="slug" href="./KKSPoisson结构.html">[KKSPoisson结构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>对于 (有限维) <span class="link local"><a href="./Lie代数.html" title="Lie 代数 [Lie代数]">Lie 代数</a></span> $\mathfrak{g}$, 其对称代数 $\operatorname{Sym}\mathfrak{g}$ (即 $\mathfrak{g}^*$ 上的多项式函数代数) 之上有一个 <span class="link local"><a href="./Poisson代数.html" title="Poisson 代数 [Poisson代数]">Poisson 结构</a></span>
 $$
 \{f,g\}(\xi) = \langle \xi, [d_\xi f,d_\xi g]\rangle,
@@ -816,14 +815,14 @@ $$
 \{x,y\} = [x,y]\, (x,y\in\mathfrak{g}).
 $$
 由此可得任何两个多项式的 Poisson 括号.</p>
-</details></section><section class="block" data-taxon="百科"><details ><summary id="Poisson流形"><header><h1><span class="taxon">百科. </span>Poisson 流形 <a class="slug" href="./Poisson流形.html">[Poisson流形]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="Poisson流形"><header><h1><span class="taxon"></span>Poisson 流形 <a class="slug" href="./Poisson流形.html">[Poisson流形]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>Poisson 流形是一个流形 $M$ 配备其光滑函数环 $C^\infty(M)$ 的 <span class="link local"><a href="./Poisson代数.html" title="Poisson 代数 [Poisson代数]">Poisson 结构</a></span>.</p>
 <p>Poisson 流形之间保持 Poisson 结构 (即满足 $\varphi^* \{f,g\} = \{\varphi^* f,\varphi^* g\}$) 的光滑映射 $\varphi$ 称为<strong>典范变换</strong> (canonical transformation).</p>
 <p>Poisson 流形 $M$ 上的每个光滑函数 $h$ 给出 $C^\infty(M)$ 上的一个<span class="link local"><a href="./导子.html" title="导子 [导子]">导子</a></span> $\{-,h\}$, 也即一个向量场 $X_h$.</p>
 <h2>经典力学系统</h2>
 <p>一个 Poisson 流形 $M$ 加上一个取定的函数 $h \in  C^\infty(M)$ 构成一个<span class="link local"><a href="./经典力学系统.html" title="经典力学系统 [经典力学系统]">经典力学系统</a></span>, 其中 $M$ 称为<strong>相空间</strong> (phase space), $h$ 称为 <strong>Hamilton 量</strong>. Hamilton 量的中心化子 (所有满足 $\{f,h\}=0$ 的元素 $f\in C^\infty(M)$ 构成的子代数, 也即所有在向量场 $X_h$ 下不变的函数) 称为<strong>守恒量</strong> (conserved quantities).</p>
 <p>设 Lie 群 $G$ 通过典范变换作用于 Poisson 流形 $M$, 且轨道空间 $M / G$ 仍为流形, 则 $M/G$ 具有 Poisson 结构, 这是一种 <span class="link local"><a href="./Poisson约化.html" title="Poisson 约化 [Poisson约化]">Poisson 约化</a></span>.</p>
-</details></section><section class="block" data-taxon="百科"><details ><summary id="动量映射"><header><h1><span class="taxon">百科. </span>动量映射 <a class="slug" href="./动量映射.html">[动量映射]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="动量映射"><header><h1><span class="taxon"></span>动量映射 <a class="slug" href="./动量映射.html">[动量映射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>使用动量映射, 我们可以根据群作用的<strong>守恒量</strong> (conserved quantities) 得到<strong>可观测量</strong> (observables).</p>
 <h2>定义</h2>
 <h3>Poisson 流形上的作用</h3>
@@ -858,7 +857,7 @@ $$</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./量子动量映射.html" title="量子动量映射 [量子动量映射]">量子动量映射</a></span></p>
 <p><span class="link local"><a href="./Delzant多面体.html" title="“Delzant 多面体” [Delzant多面体]">Delzant 多面体</a></span></p>
-</details></section><section class="block" data-taxon="百科"><details ><summary id="形变量子化"><header><h1><span class="taxon">百科. </span>形变量子化 <a class="slug" href="./形变量子化.html">[形变量子化]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="形变量子化"><header><h1><span class="taxon"></span>形变量子化 <a class="slug" href="./形变量子化.html">[形变量子化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>设 $A$ 是 $\mathbb{C}[\![\hbar]\!]$ 上的 (非交换) 代数, 假设当我们令 $\hbar = 0$ 时
 $$
 A_0 := A \otimes_{\mathbb{C}[\![\hbar]\!]} \mathbb{C}
@@ -869,7 +868,7 @@ $$
 $$
 (其中 $[a]$ 表示 $a\in A$ 在 $A_0$ 中的像.)
 此时称 $A$ 为 <span class="link local"><a href="./Poisson代数.html" title="Poisson 代数 [Poisson代数]">Poisson 代数</a></span> $A_0$ 的<strong>形变量子化</strong> (deformation quantization).</p>
-</details></section><section class="block" data-taxon="百科"><details ><summary id="经典力学系统"><header><h1><span class="taxon">百科. </span>经典力学系统 <a class="slug" href="./经典力学系统.html">[经典力学系统]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="经典力学系统"><header><h1><span class="taxon"></span>经典力学系统 <a class="slug" href="./经典力学系统.html">[经典力学系统]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>使用 Poisson 代数</h3>
 <p>经典力学系统的一种定义是<span class="link local"><a href="./Poisson代数.html" title="Poisson 代数 [Poisson代数]">交换 Poisson 代数</a></span>, 它是<strong>相空间</strong>的形式对偶.</p>
@@ -879,7 +878,7 @@ $$
 <p>对于经典力学系统中的 Poisson 代数, 我们可以问它的 Lie 结构对应的 Lie 群是什么. 这是因为我们将这个 Poisson 代数的元素想象为某个整体对象的无穷小版本, 称之为量子变换群 (quantomorphism group). 这个群与<span class="link local"><a href="./量子化.html" title="量子化 [量子化]">量子化</a></span>直接相关.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./量子力学系统.html" title="量子力学系统 [量子力学系统]">量子力学系统</a></span></p>
-</details></section><section class="block" data-taxon="百科"><details ><summary id="辛流形"><header><h1><span class="taxon">百科. </span>辛流形 <a class="slug" href="./辛流形.html">[辛流形]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="辛流形"><header><h1><span class="taxon"></span>辛流形 <a class="slug" href="./辛流形.html">[辛流形]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>辛流形是经典力学 (特别是 Hamilton 力学) 常用的几何背景.</p>
 <h2>定义</h2>
 <p>辛流形是偶数维实流形, 其上有非退化的 $2$-形式 $\omega$, 满足 $d\omega=0$, $\omega^n\neq 0$.</p>

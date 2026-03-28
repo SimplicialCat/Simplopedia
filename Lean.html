@@ -573,8 +573,8 @@
 
     --hover-color-block: var(--block-background-color);
     --logo-hover-color: #88d;
-    --span-taxon-color: #88d;
-    --article-taxon-color: #88d;
+    --span-tag-color: #88d;
+    --article-tag-color: #88d;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -738,7 +738,6 @@
 
   ul li {
     margin-bottom: 8px;
-    padding-left: 16px;
     position: relative;
     /*color: var(--text-secondary);*/
   }
@@ -773,12 +772,12 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon="百科"><details open><summary id="Lean"><header><h1><span class="taxon">百科. </span>Lean <a class="slug" href="./Lean.html">[Lean]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<article><section class="block" data-taxon=""><details open><summary id="Lean"><header><h1><span class="taxon"></span>Lean <a class="slug" href="./Lean.html">[Lean]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link external"><a href="https://lean-lang.org/" title="Lean [https://lean-lang.org/]">Lean</a></span>, 此处特指 Lean 4 (包含 <span class="link external"><a href="https://lean-lang.org/use-cases/mathlib/" title="Mathlib [https://lean-lang.org/use-cases/mathlib/]">Mathlib</a></span>), 是一种基于<span class="link local"><a href="./类型论.html" title="类型论 [类型论]">类型论</a></span>的, 用于做<span class="link local"><a href="./形式化数学.html" title="形式化数学 [形式化数学]">形式化数学</a></span>的编程语言.</p>
 <h2>相关话题</h2>
 <p><span class="link local"><a href="./AI4FP.html" title="AI 与形式化数学 [AI4FP]">AI 与形式化数学</a></span></p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon="非数学"><details ><summary id="AI-replace-math"><header><h1><span class="taxon"><span class="link local"><a href="./nonmath.html" title="非数学 [nonmath]">非数学</a></span></span>AI 会消灭数学家吗? <a class="slug" href="./AI-replace-math.html">[AI-replace-math]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="AI-replace-math"><header><h1><span class="taxon"></span>AI 会消灭数学家吗? <a class="slug" href="./AI-replace-math.html">[AI-replace-math]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./nonmath.html" title="非数学 [nonmath]">非数学</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>2026-02-07</p>
 <p>近日, 一群数学家在 arXiv 发布了一篇<span class="link local"><a href="./2602-05192.html" title="First Proof [2602-05192]">文章</a></span>, 列举他们研究中遇到的问题, 宣称他们知道这些问题的答案, 并将短时间内保密, 意图测试 AI 解决研究级别数学问题的能力.</p>
 <p>这个月 arXiv 上另有一篇 5 位作者的文章 2602.03722 和一篇 21 位作者的文章 2602.03716 包含了 AI 在数学上的贡献, 包括在 <span class="link local"><a href="./Lean.html" title="Lean [Lean]">Lean/Mathlib</a></span> 中的形式化.</p>
@@ -805,7 +804,7 @@
 人类是园林的设计师, 居住在自己构建的空间中, 获得舒适和美学的享受; 而 AI 则会扮演瓦匠和木工的角色.
 最了解人类审美的永远是人类自己; 所以这是一份永远不会被其它族类取代的工作.</p>
 <p>但这幅图景可能只是我的一厢情愿. 朋友指出一个悲观的现实: 可能正是因为当前科研的评价体系, 导致人类数学家会被 AI 替代. 在当下的数学社群, 做出已有结果的更美的, 更好理解的表述, 在很多人眼中是无价值的. 他曾写了一篇用范畴论做分析学 (Banach 空间) 的<span class="link external"><a href="https://www.researchgate.net/publication/391807846_Categorical_Universal_Algebra_and_Functorial_Perspectives_in_Analysis" title="文章 [https://www.researchgate.net/publication/391807846_Categorical_Universal_Algebra_and_Functorial_Perspectives_in_Analysis]">文章</a></span>, 教授向他提的第一个问题便是你有没有得到新的定理. 这个问题也是我自己的本科毕业论文 “<span class="link local"><a href="./盲人摸象.html" title="盲人摸象 [盲人摸象]">盲人摸象</a></span>” 在答辩中遇到的第一个问题. 而这种价值观可能导致一个更优雅的理论会在发展到能做出新的定理的水平之前被丢弃遗忘.</p>
-</details></section><section class="block" data-taxon="非数学"><details ><summary id="AI4FP"><header><h1><span class="taxon"><span class="link local"><a href="./nonmath.html" title="非数学 [nonmath]">非数学</a></span></span>AI 与形式化数学 <a class="slug" href="./AI4FP.html">[AI4FP]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="AI4FP"><header><h1><span class="taxon"></span>AI 与形式化数学 <a class="slug" href="./AI4FP.html">[AI4FP]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./nonmath.html" title="非数学 [nonmath]">非数学</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>2026-01-24</p>
 <p>这一周我参加了求真书院组织的 “AI与形式化数学” 冬令营, 学写 <span class="link local"><a href="./Lean.html" title="Lean [Lean]">Lean</a></span>, 思考形式化数学的未来.</p>
 <p>虽然 LLM (大语言模型) 不一定是 AI 的最终答案, 但形式化数学工具的出现, 使得我们不得不面对这样一个未来: 随着被形式化的命题与证明构成的工具库的增长, LLM 的数学能力将会稳步上升, 成为数学家的有力合作者或竞争对手.

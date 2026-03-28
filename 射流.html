@@ -573,8 +573,8 @@
 
     --hover-color-block: var(--block-background-color);
     --logo-hover-color: #88d;
-    --span-taxon-color: #88d;
-    --article-taxon-color: #88d;
+    --span-tag-color: #88d;
+    --article-tag-color: #88d;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -738,7 +738,6 @@
 
   ul li {
     margin-bottom: 8px;
-    padding-left: 16px;
     position: relative;
     /*color: var(--text-secondary);*/
   }
@@ -773,7 +772,7 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon="百科"><details open><summary id="射流"><header><h1><span class="taxon">百科. </span>射流 <a class="slug" href="./射流.html">[射流]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<article><section class="block" data-taxon=""><details open><summary id="射流"><header><h1><span class="taxon"></span>射流 <a class="slug" href="./射流.html">[射流]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <h2>定义</h2>
 <h3>综合微分几何</h3>
@@ -798,7 +797,7 @@ $$
 \operatorname{Hom}(I_k(N),L)\simeq \operatorname{Hom}(N,J^k L).
 $$
 直观上, 在 $x\in M$ 处, 二者都是对每个 $z\in N|_x$ 与 $y\in \mathfrak{M}_k(x)$ 指定 $L|_y$ 的一个点.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon="百科"><details ><summary id="微分算子"><header><h1><span class="taxon">百科. </span>微分算子 <a class="slug" href="./微分算子.html">[微分算子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="微分算子"><header><h1><span class="taxon"></span>微分算子 <a class="slug" href="./微分算子.html">[微分算子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>微分算子一般是指一个微分流形 $X$ 上的两个丛 (通常是<span class="link local"><a href="./向量丛.html" title="向量丛 [向量丛]">向量丛</a></span>) $E_1,E_2$ 的截面空间或截面层之间的算子
 $$
@@ -813,7 +812,7 @@ $$</p>
 <p><span class="link local"><a href="./线性微分算子.html" title="线性微分算子 [线性微分算子]">线性微分算子</a></span></p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./拟微分算子.html" title="拟微分算子 [拟微分算子]">拟微分算子</a></span></p>
-</details></section><section class="block" data-taxon="百科"><details ><summary id="相邻"><header><h1><span class="taxon">百科. </span>“相邻” <a class="slug" href="./相邻.html">[相邻]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="相邻"><header><h1><span class="taxon"></span>“相邻” <a class="slug" href="./相邻.html">[相邻]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>在<span class="link local"><a href="./综合微分几何.html" title="综合微分几何 [综合微分几何]">综合微分几何</a></span>中, 对给定的流形 $M$ 与非负整数 $k$, 其上的点有 $k$-阶相邻的关系. 几何学的许多概念可用相邻关系表述, 而不需要分析学.</p>
 <h2>定义</h2>
 <p>$R^n$ 中的两点 $x$, $y$ 称为 $k$-阶相邻 (记作 $x\sim_k y$) 是指 $x-y$ 属于<span class="link local"><a href="./无穷小空间.html" title="无穷小对象 (综合微分几何) [无穷小空间]">无穷小空间</a></span> $D_k(n)$.</p>
@@ -841,7 +840,7 @@ M_{&lt;k&gt;}:=\{(x_0,\cdots,x_k)\in M^{k+1}: \forall i,j,x_i\sim x_j\}
 $$
 可视为 $M$ 上的纤维丛, 投影映射由第一个分量给出. $M_{&lt;k&gt;}$ 是微分形式的基本研究对象.</p>
 <p>$M_{&lt;1&gt;}$ 恰为 “对角线的 $1$ 阶邻域” $M_{(1)}$.</p>
-</details></section><section class="block" data-taxon="百科"><details ><summary id="线性微分算子"><header><h1><span class="taxon">百科. </span>线性微分算子 <a class="slug" href="./线性微分算子.html">[线性微分算子]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="线性微分算子"><header><h1><span class="taxon"></span>线性微分算子 <a class="slug" href="./线性微分算子.html">[线性微分算子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>线性微分算子</strong>是由<span class="link local"><a href="./导子.html" title="导子 [导子]">求导</a></span>生成的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的元素, 是仅依赖于函数的有限阶<span class="link local"><a href="./射流.html" title="射流 [射流]">射流</a></span>的算子.</p>
 <p>另见<span class="link local"><a href="./拟微分算子.html" title="拟微分算子 [拟微分算子]">拟微分算子</a></span>.</p>

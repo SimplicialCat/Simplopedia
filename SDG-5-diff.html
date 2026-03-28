@@ -573,8 +573,8 @@
 
     --hover-color-block: var(--block-background-color);
     --logo-hover-color: #88d;
-    --span-taxon-color: #88d;
-    --article-taxon-color: #88d;
+    --span-tag-color: #88d;
+    --article-tag-color: #88d;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -738,7 +738,6 @@
 
   ul li {
     margin-bottom: 8px;
-    padding-left: 16px;
     position: relative;
     /*color: var(--text-secondary);*/
   }
@@ -773,7 +772,7 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon="讲义"><details open><summary id="SDG-5-diff"><header><h1><span class="taxon">讲义. </span>综合微分几何 (5) 微分形式, 流与 Stokes 定理 <a class="slug" href="./SDG-5-diff.html">[SDG-5-diff]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><p>上文: <span class="link local"><a href="./SDG-4-tan.html" title="综合微分几何 (4) 切向量场 [SDG-4-tan]">综合微分几何 (4) 切向量场</a></span></p>
+<article><section class="block" data-taxon=""><details open><summary id="SDG-5-diff"><header><h1><span class="taxon"></span>综合微分几何 (5) 微分形式, 流与 Stokes 定理 <a class="slug" href="./SDG-5-diff.html">[SDG-5-diff]</a></h1><div class="metadata"><ul><li class="meta-item">讲义</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><p>上文: <span class="link local"><a href="./SDG-4-tan.html" title="综合微分几何 (4) 切向量场 [SDG-4-tan]">综合微分几何 (4) 切向量场</a></span></p>
 <p>传统微分几何中, $n$-形式 $\omega$ 是 $\wedge^n T^*M$ 的截面, 吃 $n$ 个切向量 (或 $\wedge^n TM$ 的元素) 吐一个数, 且满足反对称性.</p>
 <p>我们思考综合微分几何中的 $n$-形式如何定义. 注意到 $n$ 个切向量等同于 $D(n)$ 到 $M$ 的一个映射 (微线性条件), 一个合理的定义是函数 $M^{D(n)} \to R$. 但是有时考虑无穷小平行体 (infinitesimal parallelepipedum) $D^n \to M$, 也即定义微分形式为映射 $M^{D^n}\to R$ 同样合理; 后面将看到,  这样可以更方便地定义外微分 (这涉及到无穷小平行体的 “边界”), 以及 $n$-形式在 $n$ 维 “子流形” 上的积分. 我们下面将采取后一种定义. 在 Kock 2009 年的书 <em>Synthetic Geometry of Manifolds</em> 中, 两种微分形式分别称为 “胡须状” $n$-形式 (whisker $n$-form) 和 “方形” $n$-形式 (cubical $n$-form).</p>
 <p>以下的 $M$ 都是指任意的微线性对象.</p>

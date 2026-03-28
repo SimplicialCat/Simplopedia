@@ -573,8 +573,8 @@
 
     --hover-color-block: var(--block-background-color);
     --logo-hover-color: #88d;
-    --span-taxon-color: #88d;
-    --article-taxon-color: #88d;
+    --span-tag-color: #88d;
+    --article-tag-color: #88d;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -738,7 +738,6 @@
 
   ul li {
     margin-bottom: 8px;
-    padding-left: 16px;
     position: relative;
     /*color: var(--text-secondary);*/
   }
@@ -773,7 +772,7 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon="百科"><details open><summary id="Sp"><header><h1><span class="taxon">百科. </span>Sp <a class="slug" href="./Sp.html">[Sp]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<article><section class="block" data-taxon=""><details open><summary id="Sp"><header><h1><span class="taxon"></span>Sp <a class="slug" href="./Sp.html">[Sp]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴 $\mathsf{Sp}$ 是最基本的<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>, 是<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 的<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>
 $$
 \mathsf{Sp} := \lim\Big(\cdots\overset{\Omega}{\longrightarrow} \mathsf{Ani}_*
@@ -786,7 +785,7 @@ $$
 $$
 (\mathsf{Set},\times) \to (\mathsf{Ani},\times) \overset{(-)_+}{\to} (\mathsf{Ani}_{*/},\wedge) \overset{\Sigma_{\infty}}{\to} (\mathsf{Sp},\wedge).
 $$</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon="百科"><details ><summary id="Bousfield局部化"><header><h1><span class="taxon">百科. </span>Bousfield 局部化 (稳定同伦论) <a class="slug" href="./Bousfield局部化.html">[Bousfield局部化]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Bousfield局部化"><header><h1><span class="taxon"></span>Bousfield 局部化 (稳定同伦论) <a class="slug" href="./Bousfield局部化.html">[Bousfield局部化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本页面介绍<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的 Bousfield 局部化. 另见<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化 (范畴论)</a></span>, <span class="link local"><a href="./局部化.html" title="局部化 (环) [局部化]">局部化 (环)</a></span>.</p>
 <h2>观念</h2>
 <p>固定一个<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span> $E$. 关于 $E$ 的 Bousfield 局部化提取出 $E$ 表示的<span class="link local"><a href="./广义同调.html" title="广义同调 [广义同调]">同调理论</a></span>可见的同伦信息.
@@ -829,13 +828,13 @@ $$
 <p>另一种说法是, 由于 $X$ 是 $E$-模, $X$ 是 $X\wedge E$ 的收缩, 而对任何谱 $X$, $X\wedge E$ 都是 $E$-局部谱. (好像 $E$-模是 $E$-局部谱这个结论更基本一些.)</p>
 <p><strong>命题</strong>. $E$-局部谱的子范畴关于平移, 收缩, 积 (直和), 余纤维封闭.</p>
 <p>注意, $E$-局部谱的<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">张量积</a></span>不一定是 $E$-局部谱.</p>
-</details></section><section class="block" data-taxon="讲义"><details ><summary id="homalg-2-der-cat"><header><h1><span class="taxon">讲义. </span>导出范畴 <a class="slug" href="./homalg-2-der-cat.html">[homalg-2-der-cat]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="homalg-2-der-cat"><header><h1><span class="taxon"></span>导出范畴 <a class="slug" href="./homalg-2-der-cat.html">[homalg-2-der-cat]</a></h1><div class="metadata"><ul><li class="meta-item">讲义</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>设 $\mathcal A$ 为 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>.</p>
 <h2>导出范畴的泛性质</h2>
 <p><strong>命题</strong> (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 定理 1.3.3.2). 设 $\mathcal A$ 为 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>, 其中<span class="link local"><a href="./投射对象.html" title="投射对象 [投射对象]">投射对象</a></span>充足. 对任意带有左完备 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">t-结构</a></span>的<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span> $\mathcal C$, 右正合函子 $\mathcal A \to \mathcal C^{\heartsuit}$ 可唯一地延拓为右 t-正合函子 $\mathsf{D}^-(\mathcal A)\to \mathcal C$. 换言之, 导出范畴 $\mathsf{D}^-(\mathcal A)$ 是万有的以 $\mathcal A$ 为心的稳定范畴.</p>
 <p><strong>例</strong>. 对于两个如上的 Abel 范畴 $\mathcal A,\mathcal B$, 右正合函子 $f\colon \mathcal A\to\mathcal B$ 唯一地延拓为右 t-正合函子 $f\colon \mathsf{D}^-(\mathcal A) \to \mathsf{D}^-(\mathcal B)$, 这便是 $f$ 的<span class="link local"><a href="./导出函子.html" title="导出函子 [导出函子]">导出函子</a></span>.</p>
 <p><strong>例</strong>. <span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 的心是 Abel 群的范畴 $\mathsf{Ab}$; 于是有右 t-正合函子 $\mathsf{D}^-(\mathsf{Ab}) \to \mathsf{Sp}$, 将 Abel 群链复形映射为对应的谱; 这称为广义 Eilenberg–Maclane 谱.</p>
-</details></section><section class="block" data-taxon="百科"><details ><summary id="压缩积"><header><h1><span class="taxon">百科. </span>压缩积 <a class="slug" href="./压缩积.html">[压缩积]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="压缩积"><header><h1><span class="taxon"></span>压缩积 <a class="slug" href="./压缩积.html">[压缩积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>压缩积是<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 的<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半结构</a></span>.</p>
 <h2>性质</h2>
 <p>压缩积与映射谱构成 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 上的<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span>对称幺半范畴结构.</p>
@@ -844,7 +843,7 @@ $$
 (\mathsf{Ani},\times)\overset{(-)_+}{\to}(\mathsf{Ani}_*,\wedge)
 \overset{\Sigma^\infty}{\to}(\mathsf{Sp},\wedge).
 $$</p>
-</details></section><section class="block" data-taxon="百科"><details ><summary id="同伦群(稳定同伦论)"><header><h1><span class="taxon">百科. </span>同伦群 (稳定同伦论) <a class="slug" href="./同伦群(稳定同伦论).html">[同伦群(稳定同伦论)]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="同伦群(稳定同伦论)"><header><h1><span class="taxon"></span>同伦群 (稳定同伦论) <a class="slug" href="./同伦群(稳定同伦论).html">[同伦群(稳定同伦论)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>在<span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span>中, 由于每个对象都是任意阶的环路空间, 对象的 “<span class="link local"><a href="./同伦群.html" title="同伦群 [同伦群]">同伦群</a></span>” 都是 $\mathbb E_\infty$-代数 (<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换群</a></span>); 对整个<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>而言, 各阶同伦群的地位相同, 仅相差平移.</p>
 <h2>定义</h2>
@@ -860,7 +859,7 @@ $$
 $$
 \pi_n(X) = \operatorname{colim}_k \pi_{n+k} X_k.
 $$</p>
-</details></section><section class="block" data-taxon="百科"><details ><summary id="稳定无穷范畴"><header><h1><span class="taxon">百科. </span>稳定范畴 <a class="slug" href="./稳定无穷范畴.html">[稳定无穷范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="稳定无穷范畴"><header><h1><span class="taxon"></span>稳定范畴 <a class="slug" href="./稳定无穷范畴.html">[稳定无穷范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>以下的范畴均默认为 $(\infty,1)$-范畴.</p>
 <p>稳定范畴是类似于<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 的, 具有一对互逆的<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>和<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> (<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span>) 函子的范畴.</p>
@@ -896,7 +895,7 @@ $$</p>
 <p>对于 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span> $\mathcal A$, 其上的有界链复形范畴 $\operatorname{Ch}^{\text{b}}(\mathcal A)$ 构成稳定无穷范畴. 见<span class="link local"><a href="./链复形无穷范畴.html" title="链复形无穷范畴 [链复形无穷范畴]">链复形无穷范畴</a></span>.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./K-理论.html" title="“K-理论” [K-理论]">K-理论</a></span>, <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">t-结构</a></span></p>
-</details></section><section class="block" data-taxon="百科"><details ><summary id="谱"><header><h1><span class="taxon">百科. </span>谱 (稳定同伦论) <a class="slug" href="./谱.html">[谱]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="谱"><header><h1><span class="taxon"></span>谱 (稳定同伦论) <a class="slug" href="./谱.html">[谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本页面讨论<span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span>中的谱. 另一个无关的概念是<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>中的<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>.</p>
 <h2>观念</h2>
 <p>带基点<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X,Y$ 之间的<strong>稳定映射空间</strong>

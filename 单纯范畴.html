@@ -573,8 +573,8 @@
 
     --hover-color-block: var(--block-background-color);
     --logo-hover-color: #88d;
-    --span-taxon-color: #88d;
-    --article-taxon-color: #88d;
+    --span-tag-color: #88d;
+    --article-tag-color: #88d;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -738,7 +738,6 @@
 
   ul li {
     margin-bottom: 8px;
-    padding-left: 16px;
     position: relative;
     /*color: var(--text-secondary);*/
   }
@@ -773,7 +772,7 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon="百科"><details open><summary id="单纯范畴"><header><h1><span class="taxon">百科. </span>“单纯范畴” <a class="slug" href="./单纯范畴.html">[单纯范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<article><section class="block" data-taxon=""><details open><summary id="单纯范畴"><header><h1><span class="taxon"></span>“单纯范畴” <a class="slug" href="./单纯范畴.html">[单纯范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>单纯范畴中的态射集是单纯集, 其中的 $1$-胞腔可视为范畴中的 $2$-态射, $k$-胞腔可视为范畴中的 $(k+1)$-态射. 因此, 单纯范畴可作为<span class="link local"><a href="./无穷范畴的模型.html" title="无穷范畴的模型 [无穷范畴的模型]">无穷范畴的模型</a></span>.</p>
 <h2>定义</h2>
 <p>单纯范畴, 又称单纯充实范畴 (simplicially enriched category), 是<span class="link local"><a href="./充实.html" title=" [充实]">充实范畴</a></span>于<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>范畴 $\mathsf {sSet}$ 的范畴.</p>
@@ -783,7 +782,7 @@
 <p>单纯范畴可视为 $\mathsf {Cat}$ 中的单纯对象. 反过来, $\mathsf {Cat}$ 中的单纯对象可视为单纯范畴当且仅当其底层<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>为<span class="link local"><a href="./常值单纯对象.html" title="“常值单纯对象” [常值单纯对象]">常值单纯对象</a></span>; 这意味着其 “对象的单纯集” 是离散单纯集.</p>
 <h3>与拓扑范畴的关系</h3>
 <p>设 $\mathsf C$ 为单纯范畴, 定义一个<span class="link local"><a href="./拓扑范畴.html" title=" [拓扑范畴]">拓扑范畴</a></span> $|\mathsf C|$ 如下: 其对象为 $\mathsf C$ 的对象, 态射空间为<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span> $\text{Map}_{|\mathsf C|}(X,Y):= |\text{Map}_{\mathsf C}(X,Y)|$. 反之, 对于拓扑空间范畴, 也可取其态射空间的奇异单纯集得到单纯范畴.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon="百科"><details ><summary id="Dwyer–Kan单纯局部化"><header><h1><span class="taxon">百科. </span>“Dwyer–Kan 单纯局部化” <a class="slug" href="./Dwyer–Kan单纯局部化.html">[Dwyer–Kan单纯局部化]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Dwyer–Kan单纯局部化"><header><h1><span class="taxon"></span>“Dwyer–Kan 单纯局部化” <a class="slug" href="./Dwyer–Kan单纯局部化.html">[Dwyer–Kan单纯局部化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>无穷范畴的一种<span class="link local"><a href="./模型.html" title=" [模型]">无穷范畴的模型</a></span>是带有弱等价的 $1$-范畴. 设 $1$-范畴 $\mathcal C$ 带有弱等价构成的子范畴 $W$, Dwyer–Kan 单纯局部化给出一个<span class="link local"><a href="./单纯范畴.html" title="“单纯范畴” [单纯范畴]">单纯范畴</a></span> $L\mathcal C$.</p>
 <h2>定义</h2>
 <p>设 $U\colon \mathsf {Cat}\to\mathsf {Graph}$ 是遗忘函子, 其有左伴随 $F\colon \mathsf {Graph}\to\mathsf {Cat}$. 这对伴随对应 $\mathsf {Cat}$ 上的一个余单子 $(G=FU,\epsilon,\delta)$.</p>
@@ -796,7 +795,7 @@ G_\bullet \colon \mathsf {Cat} \to [\Delta^{\text{op}},\mathsf {Cat}],
 $$
 将范畴 $\mathcal C$ 对应到单纯范畴 $G_\bullet\mathcal C$, 满足 $G_n\mathcal C := G^{n+1}\mathcal C$. 注意其对象的单纯集是常值单纯集 (离散单纯集) $\text{ob}\mathcal C$.</p>
 <p>定义 $L\mathcal C$ 为 $G_\bullet\mathcal C [G_\bullet W^{-1}]$.</p>
-</details></section><section class="block" data-taxon="百科"><details ><summary id="Joyal模型结构"><header><h1><span class="taxon">百科. </span>“Joyal 模型结构” <a class="slug" href="./Joyal模型结构.html">[Joyal模型结构]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="Joyal模型结构"><header><h1><span class="taxon"></span>“Joyal 模型结构” <a class="slug" href="./Joyal模型结构.html">[Joyal模型结构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>Joyal 模型结构是<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span> (的范畴) 上的一个<span class="link local"><a href="./模型结构.html" title=" [模型结构]">模型范畴</a></span>, 满足</p>
 <ul>
 <li>弱等价是<span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">无穷范畴</a></span>的等价,</li>
@@ -836,7 +835,7 @@ $$
 \mathfrak C \colon \mathsf {sSet}^{\text{Joyal}} \leftrightarrows \mathsf {Cat}_{\Delta} \colon \mathfrak N
 $$
 (其中 $\mathfrak C$ 由如下要求确定: 函子 $\mathfrak C[\Delta^n]\to \mathcal C$ 是 $\infty$-函子 $[n]\to \mathcal C$ 的模型, 一般地 $\mathfrak C[S]\to\mathcal C$ 是 “同伦融贯交换图” 的模型, 见<span class="link local"><a href="./同伦融贯脉.html" title="“同伦融贯脉” [同伦融贯脉]">同伦融贯脉</a></span>.)</p>
-</details></section><section class="block" data-taxon="百科"><details ><summary id="单纯形范畴"><header><h1><span class="taxon">百科. </span>单纯形范畴 <a class="slug" href="./单纯形范畴.html">[单纯形范畴]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="单纯形范畴"><header><h1><span class="taxon"></span>单纯形范畴 <a class="slug" href="./单纯形范畴.html">[单纯形范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>单纯形范畴的对象是 “标准” 的, “组合” 的单纯形.</p>
 <h2>定义</h2>
@@ -857,7 +856,7 @@ $$</p>
 <p>增广单纯形范畴 $\Delta_+$ 是一个<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $[0]$ 生成的自由<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 称 $[0]$ 为<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的结合代数; 也即对任意幺半范畴 $\mathcal M$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$, 存在唯一的幺半函子 $\Delta_+ \to M$, 将 $[0]$ 对应到 $A$.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, <span class="link local"><a href="./单纯范畴.html" title="“单纯范畴” [单纯范畴]">单纯范畴</a></span></p>
-</details></section><section class="block" data-taxon="百科"><details ><summary id="同伦融贯脉"><header><h1><span class="taxon">百科. </span>“同伦融贯脉” <a class="slug" href="./同伦融贯脉.html">[同伦融贯脉]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="同伦融贯脉"><header><h1><span class="taxon"></span>“同伦融贯脉” <a class="slug" href="./同伦融贯脉.html">[同伦融贯脉]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>范畴和<span class="link local"><a href="./单纯范畴.html" title="“单纯范畴” [单纯范畴]">单纯范畴</a></span>的范畴之间有如下伴随.</p>
 <p>$$
 \mathfrak C \colon \mathsf {sSet} \leftrightarrows \mathsf {Cat}_{\Delta} \colon \mathfrak N

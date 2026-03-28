@@ -573,8 +573,8 @@
 
     --hover-color-block: var(--block-background-color);
     --logo-hover-color: #88d;
-    --span-taxon-color: #88d;
-    --article-taxon-color: #88d;
+    --span-tag-color: #88d;
+    --article-tag-color: #88d;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -738,7 +738,6 @@
 
   ul li {
     margin-bottom: 8px;
-    padding-left: 16px;
     position: relative;
     /*color: var(--text-secondary);*/
   }
@@ -773,7 +772,7 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon="讲义"><details open><summary id="SDG-3-man"><header><h1><span class="taxon">讲义. </span>综合微分几何 (3) 流形与微线性对象 <a class="slug" href="./SDG-3-man.html">[SDG-3-man]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><p>我们从切向量谈起.</p>
+<article><section class="block" data-taxon=""><details open><summary id="SDG-3-man"><header><h1><span class="taxon"></span>综合微分几何 (3) 流形与微线性对象 <a class="slug" href="./SDG-3-man.html">[SDG-3-man]</a></h1><div class="metadata"><ul><li class="meta-item">讲义</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><p>我们从切向量谈起.</p>
 <p><strong>定义</strong> (切向量, 切空间, 微分). 空间 $M$ 在 $x$ 处的切向量是一个映射 $t \colon D \to M$, 使得 $t(0) = x$. 记 $TM = M^D$ 为 $M$ 的切丛, 其中 $M^D$ 是 $D$ 到 $M$ 映射的空间; 记 $T_xM$ 为 $x$ 处切向量构成的空间. 对于映射 $f \colon M \to N$ 与 $x\in M$, 定义 $f$ 在 $x$ 处的微分 $d_x f \colon T_xM \to T_{f(x)}N$ 将切向量 $t$ 映射到 $f\circ t$.</p>
 <p>切向量的这种定义是非常符合直观的. 它与传统微分几何中考虑的曲线的等价类, 即 “$1$-射流 (jet)”, 是一回事.</p>
 <p>不同的是, $D$ 让原本抽象的 $1$-射流成为了一个实在的映射, 也就是让射流函子成为了可表函子 (representable functor), 这个事实有深刻的影响.</p>
