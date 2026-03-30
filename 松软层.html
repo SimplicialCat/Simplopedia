@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>“松软层”</title><link rel="icon" href="./assets/favicon.ico" /><style>
+<meta name="viewport" content="width=device-width"><title>松软层</title><link rel="icon" href="./assets/favicon.ico" /><style>
   @font-face {
     font-family: 'NewCM10';
     src: url(assets/NewCM10-Book.otf) format('opentype');
@@ -785,7 +785,7 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon=""><details open><summary id="松软层"><header><h1><span class="taxon"></span>“松软层” <a class="slug" href="./松软层.html">[松软层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<article><section class="block" data-taxon=""><details open><summary id="松软层"><header><h1><span class="taxon"></span>松软层 <a class="slug" href="./松软层.html">[松软层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>$X$ 上的<span class="link local"><a href="./层.html" title="拓扑空间上的层 [层]">层</a></span> $F$ 满足如下条件则称为<strong>松软层</strong> (flabby sheaf): 对任意开集 $U\subset X$, 限制映射 $F(X)\to F(U)$ 是满射; 换言之, 局部截面总可延拓为整体截面.</p>
 <h2>性质</h2>
@@ -794,4 +794,33 @@ $$
 0\to F(X)\to G(X) \to H(X) \to 0.
 $$
 <strong>证明</strong>. 由于整体截面是左正合函子, 只需证明 $H(X)$ 处的正合性. 设 $t\in H(X)$. 对任意开集 $U,U'\subset X$, 若 $t$ 可分别 (局部) 提升至 $s\in G(U),s'\in G(U')$, 我们说明 $t$ 可提升至 $G(U\cup U')$.</p>
-</details></section><footer></footer></article></div></body></html>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="超函数"><header><h1><span class="taxon"></span>超函数 <a class="slug" href="./超函数.html">[超函数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./代数分析.html" title="代数分析 [代数分析]">代数分析</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>超函数</strong> (hyperfunction) 是一种基于全纯函数定义的广义函数, 包含了所有的<span class="link local"><a href="./分布.html" title="分布 [分布]">分布</a></span>, 并且构成<span class="link local"><a href="./松软层.html" title="松软层 [松软层]">松软层</a></span>.</p>
+<p>参考 <span class="link local"><a href="./SchapiraMA.html" title="Microlocal analysis and beyond [SchapiraMA]">Schapira</a></span>.</p>
+<h2>定义</h2>
+<h3>一维</h3>
+<p>设 $M$ 为 $\mathbb{R}$ 上的开区间, 取其在 $\mathbb{C}$ 中的开邻域 $X$ 使得 $X\cap \mathbb{R} = M$. 记 $\mathcal O(U)$ 为复平面开集 $U$ 上的全纯函数的空间.</p>
+<p>定义 $M$ 上的超函数的空间为
+$$
+\mathcal B(M) = \mathcal O(X\setminus M) / \mathcal O(X).
+$$
+直观: $\mathcal O(X\setminus M)$ 中的函数由上下两部分组成, 其对应的超函数直观上是上下两部分在 “边界” (即趋向实轴的部分) 上的差.</p>
+<p>事实上, $\mathcal B(M)$ 不依赖 $X$ 的选取, 且 $I\mapsto \mathcal B(I)$ ($I$ 为开集) 构成 $M$ 上的<span class="link local"><a href="./松软层.html" title="松软层 [松软层]">松软层</a></span>.</p>
+<p>超函数的空间 $\mathcal B(M)$ 也可定义为局部上同调
+$$
+\mathcal B(M) = H_M^1(X,\mathcal O_X).
+$$</p>
+<h2>例</h2>
+<h3>δ-分布</h3>
+<p>$\delta$-分布是 $\dfrac{1}{2\pi i z}$ 的 “边值”.
+对于 $\mathbb{R}$ 上的连续函数 $f$, 有
+$$
+\langle\delta,f\rangle = f(0) = \frac{1}{2\pi i}\lim_{\epsilon\to 0+}\int_{\mathbb{R}} \Big(\frac{f(x)}{x-i\varepsilon} - \frac{f(x)}{x+i\varepsilon}\Big) dx.
+$$
+因此我们可以不严格地认为
+$$
+\delta(x) = \frac{1}{2\pi i} \Big(\frac{1}{x- 0 i} - \frac{1}{x+0i}\Big).
+$$</p>
+<p>类似地, 对任意支集在紧集 $K\subset\mathbb{R}$ 上的<span class="link local"><a href="./分布.html" title="分布 [分布]">分布</a></span> $u$, 卷积 $u * \dfrac{1}{2\pi i z}$ 是 $\mathbb{C} \setminus K$ 上的全纯函数, 其 “边值” 为分布 $u$.</p>
+</details></section></details></section></footer></article></div></body></html>
