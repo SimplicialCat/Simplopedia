@@ -797,6 +797,8 @@ $$
 $$</p>
 <h2>例</h2>
 <p>Lie 代数 $\mathfrak{g}$ 的<span class="link local"><a href="./泛包络代数.html" title="泛包络代数 (Lie 代数) [泛包络代数]">泛包络代数</a></span> $U\mathfrak{g}$ 是滤代数, 其关联分次代数同构于 $\operatorname{Sym}\mathfrak{g}$ (PBW 定理).</p>
+<h3>理想</h3>
+<p>代数 $A$ 的理想 $I$ 给出滤结构 $A \supset I \supset I^2 \supset \cdots$.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Poisson代数"><header><h1><span class="taxon"></span>Poisson 代数 <a class="slug" href="./Poisson代数.html">[Poisson代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>交换环 $k$ 上的 Poisson 代数是 $k$-代数 $A$ 带有一个 Lie 括号 $[-,-]$,
 使得 $[a,-] \colon A \to A$ 是 $k$-代数的<span class="link local"><a href="./导子.html" title="导子 [导子]">导子</a></span>; 换言之, $[-,-]$ 是 $A$ 上的双导子 (biderivation).</p>
@@ -827,6 +829,51 @@ $$
 这个多项式代数上的 Poisson 结构可表示为
 $$
 \{f,g\} = \sum_i \Big(\frac{\partial f}{\partial x_i}\frac{\partial g}{\partial y_i} - \frac{\partial f}{\partial y_i}\frac{\partial g}{\partial x_i}\Big).
+$$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="法形变"><header><h1><span class="taxon"></span>法形变 <a class="slug" href="./法形变.html">[法形变]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>法形变</strong> (normal deformation), 又称<strong>到法锥的形变</strong> (deformation to the normal cone)<sup class="footnote-reference" id="法形变_1-back"><a href="#法形变_1">1</a></sup>, 是对流形或概形等几何对象的<span class="link local"><a href="./闭嵌入.html" title="闭嵌入 [闭嵌入]">闭嵌入</a></span> $M\to X$ 定义的由 $X$ 到 $M$ 的法锥的<span class="link local"><a href="./形变.html" title="形变 [形变]">形变</a></span>. 直观上, 当形变参数趋近于 $0$ 时, $X$ 的其余部分被推到无穷远, 仅留下 $M$ 附近的部分, 也即法丛.</p>
+<p>另一种直观是, 由 $\mathbb{R}$ 上的平凡 $X$-丛开始, 将 $0$ 处的纤维替换为法丛 $T_M X$, 然后重新定义拓扑: 当 $t$ 趋向 $0$, $x\in X$ 沿着方向 $v\in T_M X$ 趋向于 $m\in M$ 时, 我们认为 $(x,t)$ 趋向于 $(m,v)$.</p>
+<div class="footnote-definition" id="法形变_1">
+  <sup class="footnote-definition-label"><a href="#法形变_1-back">1</a></sup>
+<p>有人称之为 “形变到法锥”, 但这让人误以为一个动词短语, 实际上是一个名词短语.</p>
+</div>
+<h2>定义</h2>
+<h3>仿射概形</h3>
+<p>对于交换环 $A$ 的理想 $I$, <span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span> $\operatorname{Spec}A$ 的<span class="link local"><a href="./闭嵌入.html" title="闭嵌入 [闭嵌入]">闭嵌入</a></span> $\operatorname{Spec}A/I \hookrightarrow \operatorname{Spec}A$ 的法形变对应于<strong></strong><span class="link local"><a href="./Rees代数.html" title="Rees 代数 [Rees代数]">扩展 Rees 代数</a></span>
+$$
+A[t,It^{-1}] := \bigoplus_{n\in\mathbb{Z}} I^n t^{-n} \subset A[t,t^{-1}].
+$$
+其中约定当 $n \leq 0$ 时 $I^n = A$. 注意我们使用 $t$ 作为形变参数, 从而 Rees 代数的表示式可能与其它文献不同.</p>
+<p>映射 $\operatorname{Spec} A[t, I t^{-1}] \to \mathbb A^1$ 在 $t=0$ 处的纤维为
+$$
+\begin{aligned}
+    &amp;\operatorname{Spec} A[t, It^{-1}]/(t)\\
+    &amp;=\operatorname{Spec}\bigoplus_{n\geq 0}(I^n/I^{n+1})t\\
+    &amp;=\operatorname{Spec}\operatorname{gr}_IA,
+\end{aligned}
+$$
+其中 $\operatorname{gr}_I A$ 为 $A$ 上由 $I$ 确定的<span class="link local"><a href="./滤代数.html" title="滤代数 [滤代数]">滤</a></span>的<span class="link local"><a href="./关联分次代数.html" title="关联分次对象 [关联分次代数]">关联分次代数</a></span>.</p>
+<h3>流形的局部坐标</h3>
+<p>设 $X$ 为 $n$ 维流形, $M\subset X$ 为闭子流形, 余维数为 $\ell$.
+构造其<strong>法形变</strong> (normal deformation) 流形 $\widetilde X_M$ 如下:</p>
+<ul>
+<li>考虑 $X$ 的局部 $U$. 取 $U$ 上的坐标 $x = (x',x'') \in \mathbb{R}^n$, 其中 $x'$ 为前 $\ell$ 个坐标, 满足 $U\cap M$ 恰对应 $x'=0$ 的部分.</li>
+<li>定义 $V = \{(x',x'',t)\in\mathbb{R}^\ell\times\mathbb{R}^{n-\ell}\times\mathbb{R}\mid p=(tx',x'')\in U\}$. 这给出映射 $p\colon V\to U$ 以及 $t\colon V\to\mathbb{R}$.</li>
+<li>将所有 $V$ 粘起来得到流形 $\widetilde X_M$, 同时得到映射 $\widetilde X_M \to X\times\mathbb{R}$.</li>
+</ul>
+<h2>例</h2>
+<p>直线上一个点的法形变: $X = \mathbb{R}$, $M = \mathrm{pt}$; $\widetilde{X}_M$ 同胚于 $\mathbb{R}^2$, 映射 $\widetilde{X}_M \to X\times \mathbb{R}$ 为 $(\xi,t)\mapsto (x=\xi t,t)$. 这在代数上描述为: $\mathrm{pt}\hookrightarrow\mathbb A^1$ 的<span class="link local"><a href="./Rees代数.html" title="Rees 代数 [Rees代数]">扩展 Rees 代数</a></span>为
+$$
+\mathbb{Z}[x][\xi=xt^{-1},t] \simeq \mathbb{Z}[\xi,t].
+$$</p>
+<p>圆上一个点的法形变: $X = S^1$, $M = \mathrm{pt}$; $\widetilde {X}_M$ 如下图. 图中的等高线展示了 $S^1$ 形变到一点处的法丛 (即 $X$ 的切空间) 的过程.</p>
+<img src="/assets/normal-deformation-1.svg" alt="圆上一个点的法形变" width="300" style="display:block; margin:auto;">
+<p>直线上两个点的法形变: $X = \mathbb{R}$, $M = \{\pm 1\}$; $\widetilde {X}_M$ 如下图. 图中蓝色粗线为法丛.</p>
+<img src="/assets/normal-deformation-2.svg" alt="直线上两个点的法形变" width="300" style="display:block; margin:auto;">
+<p>这在代数上描述为: $(0,1)\colon \mathrm{pt} + \mathrm{pt} \to \mathbb A^1$ 的<span class="link local"><a href="./Rees代数.html" title="Rees 代数 [Rees代数]">扩展 Rees 代数</a></span>为
+$$
+\mathbb{Z}[x][\xi=(x^2-1)t^{-1},t] \simeq \mathbb{Z}[x,\xi,t]/(x^2-t\xi-1).
 $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="滤对象(1-范畴)"><header><h1><span class="taxon"></span>1-范畴中的滤对象 <a class="slug" href="./滤对象(1-范畴).html">[滤对象(1-范畴)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>$1$-范畴中的滤对象, 除了要求<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤</a></span>结构之外, 一般还要求各个映射是单射 (嵌入).</p>
