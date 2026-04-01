@@ -789,10 +789,34 @@
 <p>滤余极限是指标范畴为<span class="link local"><a href="./滤范畴.html" title="滤范畴 [滤范畴]">滤范畴</a></span>的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>
 <h2>性质</h2>
 <h2>例</h2>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="pro-可表函子"><header><h1><span class="taxon"></span>pro-可表函子 <a class="slug" href="./pro-可表函子.html">[pro-可表函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="ind-对象"><header><h1><span class="taxon"></span>ind-对象 <a class="slug" href="./ind-对象.html">[ind-对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>范畴 $\mathcal C$ 的 ind-对象是其对象的形式<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>.</p>
+<p>对偶的概念是 <span class="link local"><a href="./pro-对象.html" title="pro-对象 [pro-对象]">pro-对象</a></span>.</p>
+<h2>定义</h2>
+<p>范畴 $\mathcal C$ 的 ind-对象的范畴
+$$
+\mathsf{Ind}(\mathcal C) \hookrightarrow \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set})
+$$
+是<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>在 $\mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set})$ 中的<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>构成的全子范畴.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="pro-可表函子"><header><h1><span class="taxon"></span>pro-可表函子 <a class="slug" href="./pro-可表函子.html">[pro-可表函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>范畴 $\mathcal C$ 到 $\mathsf{Set}$ 的 <strong>pro-可表函子</strong>是 $\mathsf{Fun}(\mathcal C,\mathsf{Set})^{\mathrm{op}}$ 中<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>的余滤极限, 对应 $\mathcal C$ 的 <span class="link local"><a href="./pro-对象.html" title="pro-对象 [pro-对象]">pro-对象</a></span>.</p>
 <p>当然, pro-可表函子 $\mathcal C\to\mathsf{Set}$ 也是 $\mathsf{Fun}(\mathcal C,\mathsf{Set})$ 中<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>的<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="余完备化"><header><h1><span class="taxon"></span>余完备化 <a class="slug" href="./余完备化.html">[余完备化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>余完备化是指向一个范畴<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加特定形状的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>的过程.</p>
+<p>具体地, 设 $R\subset K$ 是两族小范畴 (即 $R\hookrightarrow K \hookrightarrow\mathsf{Cat}$ 为全子范畴). 对于具有 $R$-形余极限的范畴 $\mathcal C$, 可在保持 $R$-形余极限的条件下, “自由地添加 $K$-形余极限”, 得到
+$$
+\mathcal C \hookrightarrow \mathsf{P}_{R}^K(\mathcal C).
+$$
+记 $\mathsf{Cat}_K$ 为具有 $K$-形余极限的范畴以及保持 $K$-形余极限的函子构成的 $2$-范畴, 那么 $\mathsf{P}_R^K\colon \mathsf{Cat}_R \to \mathsf{Cat}_K$ 是<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>函子 $\mathsf{Cat}_K \to \mathsf{Cat}_R$ 的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
+<h2>例</h2>
+<h3>余积完备化</h3>
+<p>考虑 $K = \mathsf{Set}$ 为离散范畴的范畴, 那么 $\mathsf{P}^{K}(\mathcal C)$ 是 $\mathcal C$ 自由地添加余积所得的范畴; 其有一种具体构造: $\mathsf{P}^{K}(\mathcal C)$ 的对象为 $\mathcal C$ 的对象族 $(X_i)_{i\in I}$, 态射 $(X_i)_{i\in I} \to (Y_j)_{j\in J}$ 为映射 $f\colon I\to J$ 以及一族态射 $(X_i \to Y_{f(i)})_{i\in I}$. 这个范畴也可定义为<span class="link local"><a href="./松拉回.html" title="松拉回 [松拉回]">松拉回</a></span></p>
+<p><figure><img src="./余完备化-1.svg" class="color-invert"/></figure></p>
+<h3>滤余完备化</h3>
+<p>考虑 $K$ 为<span class="link local"><a href="./滤范畴.html" title="滤范畴 [滤范畴]">滤范畴</a></span>的范畴, 那么 $\mathsf{P}^K(\mathcal C)$ 是 $\mathcal C$ 自由地添加<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>所得的范畴. 其可构造为 <span class="link local"><a href="./ind-对象.html" title="ind-对象 [ind-对象]">ind-对象</a></span>的范畴 $\mathsf{Ind}(\mathcal C)\subset \widehat {\mathcal C}$, 也可刻画为<span class="link local"><a href="./平坦函子.html" title="平坦函子 [平坦函子]">平坦函子</a></span> $\mathcal C^{\mathrm{op}}\to\mathsf{Set}$ 的范畴.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="余滤极限"><header><h1><span class="taxon"></span>余滤极限 <a class="slug" href="./余滤极限.html">[余滤极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>范畴 $\mathcal C$ 中的<strong>余滤极限</strong> (cofiltered limit) 是以<span class="link local"><a href="./余滤范畴.html" title="余滤范畴 [余滤范畴]">余滤范畴</a></span> $I$ 为形状的图表 $I\to\mathcal C$ 的极限, 相当于对偶范畴 $\mathcal C^{\mathrm{op}}$ 中的<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span> (filtered colimit).</p>
@@ -867,6 +891,88 @@ R \mapsto
 $$</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./形式谱.html" title="形式谱 [形式谱]">形式谱</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="盲人摸象"><header><h1><span class="taxon"></span>盲人摸象 <a class="slug" href="./盲人摸象.html">[盲人摸象]</a></h1><div class="metadata"><ul><li class="meta-item">参考资料</li><li class="meta-item"><span class="link external"><a href="https://simplicialcat.github.io" title="我 [https://simplicialcat.github.io]">我</a></span></li></ul></div></header></summary>
+<p>项目 (包括 tex 源代码): https://github.com/SimplicialCat/topos</p>
+<p>PDF : https://simplicialcat.github.io/topos.pdf</p>
+<p>2023 年开始的项目, 包含 $1$-<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的基本知识, <span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span>的概念, 以及范畴论和<span class="link local"><a href="./一阶语言.html" title="一阶语言与一阶逻辑 [一阶语言]">一阶逻辑</a></span>基础.</p>
+<h2>内容</h2>
+<ul>
+<li>1 意象的范畴论性质
+<ul>
+<li>1.1 范畴论基本概念</li>
+<li>1.2 <span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span></li>
+<li>1.3 更多范畴论结构</li>
+</ul>
+</li>
+<li>2 <span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span>: 无点拓扑学
+<ul>
+<li>2.1 基本概念</li>
+<li>2.2 位象的几何性质</li>
+<li>2.3 位象与逻辑</li>
+</ul>
+</li>
+<li>3 意象与空间的概念
+<ul>
+<li>3.1 拓扑空间上的层与平展空间</li>
+<li>3.2 位象上的层与平展空间</li>
+<li>3.3 范畴上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span></li>
+<li>3.4 <span class="link local"><a href="./景.html" title="景 [景]">景</a></span></li>
+<li>3.5 层化与 Grothendieck+构造</li>
+<li>3.6 Grothendieck 意象</li>
+<li>3.7 <span class="link local"><a href="./Lawvere--Tierney拓扑.html" title="Lawvere–Tierney 拓扑 [Lawvere--Tierney拓扑]">Lawvere–Tierney 拓扑</a></span>,内蕴层化与局部化</li>
+<li>3.8 意象之间的态射</li>
+<li>3.9 景之间的态射</li>
+<li>3.10 意象的几何性质</li>
+<li>3.11 <span class="link local"><a href="./Giraud公理.html" title="Giraud 公理 [Giraud公理]">Giraud 定理</a></span></li>
+<li>3.12 等变层与拓扑群胚</li>
+<li>3.13 意象的余极限</li>
+</ul>
+</li>
+<li>4 意象的内语言
+<ul>
+<li>4.1 Mitchell–Bénabou 语言</li>
+<li>4.2 Kripke–Joyal 语义</li>
+<li>4.3 不同意象的内语言的联系</li>
+</ul>
+</li>
+<li>5 语法景与分类意象
+<ul>
+<li>5.1 语法范畴:语法–语义对偶</li>
+<li>5.2 分类意象</li>
+</ul>
+</li>
+<li>6 意象理论的应用
+<ul>
+<li>(这一章没有完成)</li>
+</ul>
+</li>
+<li>A 范畴论基础
+<ul>
+<li>A.1 $2$-范畴</li>
+<li>A.2 伴随</li>
+<li>A.3 <span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span>与局部化</li>
+<li>A.4 预层范畴与<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span></li>
+<li>A.5 (余)<span class="link local"><a href="./滤范畴.html" title="滤范畴 [滤范畴]">滤范畴</a></span>和(余)<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤(余)极限</a></span></li>
+<li>A.6 <span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span></li>
+<li>A.7 Kan扩张</li>
+<li>A.8 单子论</li>
+<li>A.9 万有代数</li>
+<li>A.10 纤维范畴与索引范畴</li>
+<li>A.11 下降</li>
+</ul>
+</li>
+<li>B 形式逻辑和范畴逻辑基础
+<ul>
+<li>B.1 <span class="link local"><a href="./一阶语言.html" title="一阶语言与一阶逻辑 [一阶语言]">一阶逻辑</a></span></li>
+<li>B.2 一阶逻辑的范畴语义</li>
+<li>B.3 高阶逻辑</li>
+<li>B.4 类型论</li>
+<li>B.5 模态逻辑</li>
+</ul>
+</li>
+<li>术语和符号表</li>
+<li>参考文献</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="茎"><header><h1><span class="taxon"></span>茎 <a class="slug" href="./茎.html">[茎]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p><strong>茎</strong> (stalk) 是<span class="link local"><a href="./意象的点.html" title="意象的点 [意象的点]">意象的点</a></span>的<span class="link local"><a href="./逆像.html" title="逆像 [逆像]">逆像</a></span>函子.</p>

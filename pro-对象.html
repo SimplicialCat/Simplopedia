@@ -785,9 +785,10 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon=""><details open><summary id="pro-对象"><header><h1><span class="taxon"></span>pro-对象 <a class="slug" href="./pro-对象.html">[pro-对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<article><section class="block" data-taxon=""><details open><summary id="pro-对象"><header><h1><span class="taxon"></span>pro-对象 <a class="slug" href="./pro-对象.html">[pro-对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>范畴 $\mathcal C$ 的 pro-对象是其对象的形式<span class="link local"><a href="./余滤极限.html" title="余滤极限 [余滤极限]">余滤极限</a></span>.</p>
+<p>对偶的概念是 <span class="link local"><a href="./ind-对象.html" title="ind-对象 [ind-对象]">ind-对象</a></span>.</p>
 <h2>定义</h2>
 <p>范畴 $\mathcal C$ 的 pro-对象的范畴
 $$
@@ -836,7 +837,17 @@ $$
 $$
 其中标记为 $\simeq^*$ 的一步使用了 $i(d)$ 的余紧性. $\square$</p>
 <p>上述命题的一个重要应用是将 <span class="link local"><a href="./pro-有限集.html" title="pro-有限集 [pro-有限集]">pro-有限集</a></span>与 <span class="link local"><a href="./pro-有限群.html" title="pro-有限群 [pro-有限群]">pro-有限群</a></span>视为紧 Hausdorff 空间, 因为有限离散空间是紧 Hausdorff 空间范畴 $\mathsf{CHaus}$ 中的余紧对象.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="pro-可表函子"><header><h1><span class="taxon"></span>pro-可表函子 <a class="slug" href="./pro-可表函子.html">[pro-可表函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="ind-对象"><header><h1><span class="taxon"></span>ind-对象 <a class="slug" href="./ind-对象.html">[ind-对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>范畴 $\mathcal C$ 的 ind-对象是其对象的形式<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>.</p>
+<p>对偶的概念是 <span class="link local"><a href="./pro-对象.html" title="pro-对象 [pro-对象]">pro-对象</a></span>.</p>
+<h2>定义</h2>
+<p>范畴 $\mathcal C$ 的 ind-对象的范畴
+$$
+\mathsf{Ind}(\mathcal C) \hookrightarrow \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set})
+$$
+是<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>在 $\mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set})$ 中的<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>构成的全子范畴.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="pro-可表函子"><header><h1><span class="taxon"></span>pro-可表函子 <a class="slug" href="./pro-可表函子.html">[pro-可表函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>范畴 $\mathcal C$ 到 $\mathsf{Set}$ 的 <strong>pro-可表函子</strong>是 $\mathsf{Fun}(\mathcal C,\mathsf{Set})^{\mathrm{op}}$ 中<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>的余滤极限, 对应 $\mathcal C$ 的 <span class="link local"><a href="./pro-对象.html" title="pro-对象 [pro-对象]">pro-对象</a></span>.</p>
 <p>当然, pro-可表函子 $\mathcal C\to\mathsf{Set}$ 也是 $\mathsf{Fun}(\mathcal C,\mathsf{Set})$ 中<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>的<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>.</p>

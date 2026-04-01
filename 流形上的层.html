@@ -847,22 +847,18 @@ $$
 <li>$F'$ 与 $F$ 在 $x$ 附近同构,</li>
 <li>$R\phi_{\gamma *}F'=0$. 这里 $\phi_\gamma\colon E\to E_\gamma$ 是到 $\gamma$-拓扑的自然映射.</li>
 </ul>
-<p>设 $X$ 为流形, $F$ 为 $X$ 上的层. 其<strong>微局部支撑</strong> $\operatorname{SS}F$ 定义为 $T^*X$ 中<strong>不</strong>满足上述等价条件的点构成的子集.
+<p>设 $X$ 为流形, $F$ 为 $X$ 上的层. 其<strong></strong><span class="link local"><a href="./微局部支集.html" title="微局部支集 [微局部支集]">微局部支集</a></span> $\operatorname{SS}F$ 定义为 $T^*X$ 中<strong>不</strong>满足上述等价条件的点构成的子集.
 对于 $T^*X$ 的子集 $A$, 称 $D^b(X)$ 中的态射 $u\colon F\to F'$ 在 $A$ 上为同构, 是指存在特殊三角 $F\to F'\to F''$ 满足 $\operatorname{SS}F'' \cap A = \varnothing$.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="microPerv"><header><h1><span class="taxon"></span>微局部偏屈层 <a class="slug" href="./microPerv.html">[microPerv]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>参考 I. Waschkies, <span class="link local"><a href="./WaschkiesMPerv.html" title="The Stack of Microlocal Perverse Sheaves [WaschkiesMPerv]">The Stack of Microlocal Perverse Sheaves</a></span></p>
-<p><span class="link local"><a href="./流形上的层.html" title="流形上的层 [流形上的层]">流形上的层</a></span></p>
+<p>前置: <span class="link local"><a href="./流形上的层.html" title="流形上的层 [流形上的层]">流形上的层</a></span></p>
 <h2>2.2 层的微局部化</h2>
-<p>设 $X$ 为复流形.</p>
-<p>考虑 $X$ 的射影余切丛
+<p>设 $X$ 为复流形. 考虑 $X$ 的射影余切丛
 $$
 P^*X = (T^*X \setminus X)/\mathbb{C}^\times.
 $$</p>
 <p>固定一个域 $k$, 记 $D^b(k_X)$ 为 $X$ 上 $k$-线性空间值层的有界导出范畴.</p>
-<p>层 $F\in D^b(k_X)$ 的<span class="link local"><a href="./微局部支集.html" title="微局部支集 [微局部支集]">微局部支集</a></span> $\mathrm{SS}(F)$ 是 $F$ “不传播” 的余方向之集合. 所谓 $F$ 在余方向 $p\in T^*X$ <strong>传播</strong>, 即是说存在 $p$ 的开邻域 $U$, 满足对任意 $C^1$ 函数 $\psi$ 以及零点 $x\in X$, $\psi(x)=0$, 只要 $d_x\psi\in U$, 就有
-$$
-R\Gamma(\{x\mid\psi(x)\geq 0\}, F)_x \simeq 0.
-$$</p>
+<p>回忆层 $F\in D^b(k_X)$ 的<span class="link local"><a href="./微局部支集.html" title="微局部支集 [微局部支集]">微局部支集</a></span> $\mathrm{SS}(F)$ 是 $F$ “不传播” 的余方向之集合.</p>
 <p>对任意子集 $S \subset T^*X$, 定义全子范畴
 $$
 \mathcal N_S = \{F\in D^b(k_X) \mid \mathrm{SS}(F) \cap S = \varnothing\}.
@@ -872,4 +868,25 @@ $$
 D^b(k_X,S)=D^b(k_X)/\mathcal N_S.
 $$
 那么 $D^b(k_X,-)$ 构成 $T^*X$ 上的范畴值预层.</p>
+<p>称 $D^b(k_X)$ 中的态射 $F\to G$ 在 $S$ 上为同构, 就是说其在商范畴 $D^b(k_X,S)$ 中为同构, 这也等价于存在特殊三角 $F\to G\to H$, 使得 $\operatorname{SS}(H)\cap S = \varnothing$. 此时有 $\operatorname{SS}(F)\cap S = \operatorname{SS}(G)\cap S$.</p>
+<p>记 $D^b(k_X)_x$ 为预叠 $U\mapsto D^b(k_U)$ 在点 $x$ 处的<span class="link local"><a href="./茎.html" title="茎 [茎]">茎</a></span>. 定义
+$$
+\mathcal {LC}_x = \{F\in D^b(k_X)_x\mid \operatorname{SS}(F)\subset X\overset{0}{\hookrightarrow} T^*X\}
+$$
+为 $x$ 附近 “微局部支集在零截面” 的层的范畴, 也等同于局部系统 (局部常值层) 的范畴:
+$$
+\mathcal {LC}_x \simeq \{F \in D^b(k_X)_x \mid \exists M\in D^b(\mathsf{Vect}_k), F\simeq M_X\}.
+$$</p>
+<p><strong>引理</strong>.
+$$
+D^b(k_X)_x / \mathcal {LC}_x \simeq D^b(k_X,T_x^* X \setminus 0).
+$$
+这表明, 由去掉微局部支集在零截面内的信息, 剩下的就是纯粹的微局部信息.</p>
+<p><strong>引理</strong>. 设 $S\subset T^*X \setminus X$, $D^b(k_X)$ 中的态射 $F\to G$ 在 $S$ 上为同构, 则存在 $S$ 的 $\mathbb{R}_+$-锥形开邻域 $U$, 使得 $F\to G$ 在 $U$ 上为同构.</p>
+<p>回忆对于 $F,G\in D^b(k_X)$ 有 $\mu\operatorname{hom}(F,G)\in D^b(k_{T^*X})$, 满足
+$$
+\operatorname{Supp}(\mu\operatorname{hom}(F,G)) \subset\operatorname{SS}(F) \cap \operatorname{SS}(G).
+$$</p>
+<h2>7.2 Kashiwara ind-微局部化</h2>
+<p>回忆 <span class="link local"><a href="./ind-对象.html" title="ind-对象 [ind-对象]">$\mathsf{Ind}(\mathcal C)$</a></span> 为 $\widehat {\mathcal C}$ 中由可表函子的滤余极限构成的全子范畴.</p>
 </details></section></details></section></footer></article></div></body></html>
