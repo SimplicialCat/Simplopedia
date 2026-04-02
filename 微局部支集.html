@@ -794,13 +794,9 @@ R\Gamma(\{x\mid\psi(x)\geq 0\}, F)_x \simeq 0.
 $$</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="microPerv"><header><h1><span class="taxon"></span>微局部偏屈层 <a class="slug" href="./microPerv.html">[microPerv]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>参考 I. Waschkies, <span class="link local"><a href="./WaschkiesMPerv.html" title="The Stack of Microlocal Perverse Sheaves [WaschkiesMPerv]">The Stack of Microlocal Perverse Sheaves</a></span></p>
-<p>前置: <span class="link local"><a href="./流形上的层.html" title="流形上的层 [流形上的层]">流形上的层</a></span></p>
+<p>前置: <span class="link local"><a href="./流形上的层.html" title="流形上的层 [流形上的层]">Kashiwara–Schapira, 流形上的层</a></span></p>
 <h2>2.2 层的微局部化</h2>
-<p>设 $X$ 为复流形. 考虑 $X$ 的射影余切丛
-$$
-P^*X = (T^*X \setminus X)/\mathbb{C}^\times.
-$$</p>
-<p>固定一个域 $k$, 记 $D^b(k_X)$ 为 $X$ 上 $k$-线性空间值层的有界导出范畴.</p>
+<p>设 $X$ 为复流形. 固定一个域 $k$, 记 $D^b(k_X)$ 为 $X$ 上 $k$-线性空间值层的有界导出范畴.</p>
 <p>回忆层 $F\in D^b(k_X)$ 的<span class="link local"><a href="./微局部支集.html" title="微局部支集 [微局部支集]">微局部支集</a></span> $\mathrm{SS}(F)$ 是 $F$ “不传播” 的余方向之集合.</p>
 <p>对任意子集 $S \subset T^*X$, 定义全子范畴
 $$
@@ -826,10 +822,25 @@ D^b(k_X)_x / \mathcal {LC}_x \simeq D^b(k_X,T_x^* X \setminus 0).
 $$
 这表明, 由去掉微局部支集在零截面内的信息, 剩下的就是纯粹的微局部信息.</p>
 <p><strong>引理</strong>. 设 $S\subset T^*X \setminus X$, $D^b(k_X)$ 中的态射 $F\to G$ 在 $S$ 上为同构, 则存在 $S$ 的 $\mathbb{R}_+$-锥形开邻域 $U$, 使得 $F\to G$ 在 $U$ 上为同构.</p>
-<p>回忆对于 $F,G\in D^b(k_X)$ 有 $\mu\operatorname{hom}(F,G)\in D^b(k_{T^*X})$, 满足
+<p>回忆对于 $F,G\in D^b(k_X)$ 有 $\mu\operatorname{hom}(F,G)\in D^b(k_{T^*X})$ (见 <span class="link local"><a href="./流形上的层.html" title="流形上的层 [流形上的层]">KS</a></span> 4.4 节), 满足
 $$
 \operatorname{Supp}(\mu\operatorname{hom}(F,G)) \subset\operatorname{SS}(F) \cap \operatorname{SS}(G).
 $$</p>
+<h2>3.3 微局部 $\mathbb{C}$-可构造层</h2>
+<p><strong>定义</strong>. 对于 $F\in D^b_{\mathbb{R}\text{-可构造}}(k_X)$, 若 $\operatorname{SS}(F)$ 为 $\mathbb{C}^\times$-锥形子集, 则称 $F$ 为微局部 $\mathbb{C}$-可构造层. 记这种对象的全子范畴为 $D^b_{\mathbb{C}\text{-可构造}}(k_X)$.</p>
+<h2>6.* 微局部偏屈层</h2>
+<p>设 $S\subset T^*X \setminus X$ 为 $\mathbb{C}^\times$-锥形子集, 我们定义 $D^b_{\mathbb{R}\text{-可构造}}(k_X,S)$ 中的微局部偏屈层. 这个定义的基础是如下的微局部刻画.</p>
+<p><strong>命题</strong>. 对于 $F\in D^b_{\mathbb{C}\text{-可构造}}(k_X)$, 如下条件等价:</p>
+<ol>
+<li>$F$ 为偏屈层.</li>
+<li>对 $\operatorname{SS}(F)$ 的任一非奇异点 $p$, 若 $\operatorname{SS}(F)\to X$ 在 $p$ 附近常秩, 则存在子流形 $Y\subset X$ 与 $M\in\mathsf{Mod}(k)$, 使得 $F\simeq M_Y[\operatorname{dim}Y]\in D^b(k_X,p)$. 换言之, $F$ 在微局部支集的非奇异点附近像是子流形上的常值层的位移.</li>
+</ol>
+<p><strong>定义</strong>. 对于 $F\in D^b_{\mathbb{R}\text{-可构造}}(k_X)$, 若</p>
+<ul>
+<li>$F$ 在 $S$ 的某开邻域 $U$ 上满足上面的条件 2,</li>
+<li>$F$ 微局部 $\mathbb{C}$-可构造,</li>
+</ul>
+<p>则称 $F$ 为 $S$ 上的<strong>微局部偏屈层</strong>.</p>
 <h2>7.2 Kashiwara ind-微局部化</h2>
 <p>回忆 <span class="link local"><a href="./ind-对象.html" title="ind-对象 [ind-对象]">$\mathsf{Ind}(\mathcal C)$</a></span> 为 $\widehat {\mathcal C}$ 中由可表函子的滤余极限构成的全子范畴.</p>
 <p>记
@@ -850,12 +861,49 @@ R\operatorname{Hom} (\mu F, \mu G) \simeq \mu\operatorname{hom} (F,G).
 $$</p>
 <p>考虑 $T^*X\times T^*X$ 的对角线 $\Delta_{T^*X}$ 的<span class="link local"><a href="./法形变.html" title="法形变 [法形变]">法形变</a></span>,</p>
 <p><figure><img src="./microPerv-1.svg" class="color-invert"/></figure></p>
+<p>考虑 $TT^*X$ 的子集
+$$
+P = \{(x,\xi,v_x,v_\xi)\in TT^*X \mid \langle v_x,\xi \rangle \geq 0\},
+$$
+定义 “<span class="link local"><a href="./拉-推.html" title="拉-推 [拉-推]">积分</a></span>核”
+$$
+K_X = Rp_{!!} (k_{\overline\Omega} \otimes \beta(k_P)) \otimes \beta (\omega^{\otimes -1}_{\Delta_{T^*X} | T^*X \times T^*X}),
+$$
+其中</p>
+<ul>
+<li>$\beta \colon D^b(k_X) \to D^b(I(k_X))$ 为嵌入, 其左伴随为 $\alpha\colon D^b(I(k_X)) \to D^b(k_X)$, $\alpha(\text{``}\operatorname{colim}_i\text{''} F_i) = \operatorname{colim}_i F_i$;</li>
+<li>$\omega$ 为对偶复形;</li>
+<li>$Rp_{!!}$ 为 ind-层的导出紧合直像 (derived proper direct image).</li>
+</ul>
+<p>Kashiwara 的 ind-微局部化定义为
+$$
+\mu\colon D^b(I(k_X)) \to D^b(I(k_{T^*X})),
+$$
+$$
+F\mapsto \mu F = K_X \circ \pi^*F,
+$$
+其中 $\circ$ 表示核的复合.</p>
+<p>Kashiwara 建立了如下定理.</p>
+<p><strong>定理</strong>. 对 $F,G\in D^b(k_X)$,
+$$
+R\operatorname{Hom}(\mu F,\mu G) \simeq \mu\operatorname{hom}(F,G).
+$$
+(注意 $\mu\operatorname{hom}(F,G)$ 是之前定义的函子, 不是 $\mu$ 作用在 $\operatorname{hom}(F,G)$)</p>
+<h2>7.3 微局部偏屈层的叠</h2>
+<p>考虑 $X$ 的射影余切丛
+$$
+P^*X = (T^*X \setminus X)/\mathbb{C}^\times,
+$$
+记余切丛除零截面到射影丛的投影为 $\gamma \colon T^*X \setminus X \to P^*X$.</p>
+<p>设 $\Omega\subset P^*X$ 为开集, $F\in D^b(I(k_{\gamma^{-1}\Omega}))$,
+若对任意 $p\in\gamma^{-1}\Omega$, 存在 $\mathbb{C}^\times$-锥形邻域 $V\supset\mathbb{C}^\times p$ 及 $G\in D^b_{\mathrm{perv}}(k_X,V)$ 使得 $\mu G|_V \simeq F|_V$, 则称 $F$ 为 $\Omega$ 上微局部偏屈层.
+记微局部偏屈层的范畴为 $\mu\mathsf{Perv}(\Omega)$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="微局部分析"><header><h1><span class="taxon"></span>微局部分析 <a class="slug" href="./微局部分析.html">[微局部分析]</a></h1><div class="metadata"><ul><li class="meta-item">学科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./微局部化.html" title="微局部化 [微局部化]">微局部化</a></span></p>
 <p><span class="link local"><a href="./微局部支集.html" title="微局部支集 [微局部支集]">微局部支集</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="流形上的层"><header><h1><span class="taxon"></span>流形上的层 <a class="slug" href="./流形上的层.html">[流形上的层]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是 Kashiwara–Schapira 的 <span class="link local"><a href="./KashiwaraShapiraShMfd.html" title="Sheaves on Manifolds [KashiwaraShapiraShMfd]">Sheaves on Manifolds</a></span> 的阅读笔记.</p>
-<h2>层</h2>
+<h2>2.* 层</h2>
 <p>设 $X$ 为拓扑空间. 对于 $X$ 上的层 $F$ 以及子集 $j\colon Z\hookrightarrow X$, 记
 $$
 F|_Z = j^*F.
@@ -885,7 +933,7 @@ $$</p>
 $$
 \Gamma_Z(F)\colon U\mapsto\Gamma_{Z\cap U}(U,F).
 $$</p>
-<h2>Poincaré–Verdier 对偶</h2>
+<h2>3.* Poincaré–Verdier 对偶</h2>
 <p>设 $f\colon Y\to X$ 是局部紧空间的映射, $Rf_!\colon D^+(A_Y) \to D^+(A_X)$ 有右伴随 $f^!$.</p>
 <p>当 $Y$ 为 $n$ 维定向流形, $X$ 为一点时, $f^!\mathbb{Q}_{\mathrm{pt}} \simeq \mathbb{Q}_Y [n]$ (称作<strong>对偶复形</strong>), 从而伴随关系给出
 $$
@@ -896,7 +944,7 @@ $$
 H^{n-j}_c(Y,\mathbb{Q}_Y)^*\simeq H^j(Y,\mathbb{Q}_Y).
 $$
 此即 Poincaré 对偶.</p>
-<h2>微局部化</h2>
+<h2>4.3 微局部化</h2>
 <p>设 $X$ 为 $n$ 维流形, $M\subset X$ 为闭子流形, 余维数为 $\ell$.
 构造其<strong></strong><span class="link local"><a href="./法形变.html" title="法形变 [法形变]">法形变</a></span> (normal deformation) 流形 $\widetilde X_M$ 如下:</p>
 <ul>
@@ -904,7 +952,32 @@ $$
 <li>定义 $V = \{(x',x'',t)\in\mathbb{R}^\ell\times\mathbb{R}^{n-\ell}\times\mathbb{R}\mid p=(tx',x'')\in U\}$. 这给出映射 $p\colon V\to U$ 以及 $t\colon V\to\mathbb{R}$.</li>
 <li>将所有 $V$ 粘起来得到流形 $\widetilde X_M$.</li>
 </ul>
-<h2>微局部支撑</h2>
+<h2>4.4 μhom</h2>
+<p>考虑态射 $f\colon Y\to X$, 记 $\Delta_f\subset X\times Y$ 为其图像. 考虑下图.</p>
+<p>$$
+\begin{array}{ccccc}
+T^*_{\Delta_Y}(Y\times Y) &amp; \leftarrow &amp; T^*_{\Delta_f}(X\times Y) &amp; \rightarrow &amp; T^*_{\Delta_X}(X\times X) \\
+|\!| &amp;  &amp; |\!| &amp;  &amp; |\!| \\
+T^*Y &amp; \leftarrow &amp; Y\times_X T^*X &amp; \rightarrow &amp; T^*X
+\end{array}
+$$</p>
+<p>记 $\mathrm{pr}_1 \colon X\times Y\to X$, $\mathrm{pr}_2 \colon X\times Y\to Y$ 为投影. 对于 $G\in D^b(Y), F\in D^b(X)$, 定义
+$$
+\mu\operatorname{hom}(G \to F) = \mu_{\Delta_f} R\operatorname{Hom} (\mathrm{pr}_2^* G,\mathrm{pr}_1^! F),
+$$
+$$
+\mu\operatorname{hom}(F \to G) = (\mu_{\Delta_f} R\operatorname{Hom} (\mathrm{pr}_1^* F,\mathrm{pr}_2^! G))^a,
+$$
+其中 $(-)^a$ 表示沿 $Y\times_X T^*X$ 上的对径映射作拉回 (逆像).</p>
+<p>当 $Y=X$ 且 $f=\mathrm{id}_X$ 时, 定义
+$$
+\mu\operatorname{hom}(G,F) = \mu\operatorname{hom}(G\to F) = \mu_{\Delta_X}R\operatorname{Hom}(\mathrm{pr}_2^*G,\mathrm{pr}_1^!F).
+$$</p>
+<p>函子 $\mu\operatorname{hom}$ 可视为 Sato 的<span class="link local"><a href="./微局部化.html" title="微局部化 [微局部化]">微局部化</a></span>的推广. 对于<span class="link local"><a href="./闭嵌入.html" title="闭嵌入 [闭嵌入]">闭嵌入</a></span> $Y\to X$, 记 $j\colon T^*_YX \to T^*X$ 为余法丛的嵌入, 则对于 $F\in D^b(X)$,
+$$
+\mu\operatorname{hom}(A_Y,F) \simeq j_* \mu_Y F.
+$$</p>
+<h2>5.1 微局部支撑</h2>
 <p>设 $E$ 为线性空间, $X$ 为 $E$ 的开子集, $p = (x_0,\xi_0) \in T^*X$, $F\in D^b(X)$. 如下条件等价:</p>
 <ol>
 <li>存在 $p$ 的邻域 $U$, 对任意 $x_1\in X$ 与 $x_1$ 附近足够可微的函数 $\psi$, 若 $\psi(x_1)=0$ 且 $d_{x_1}\psi\in U$, 则 $R\Gamma_{\{\psi(x)\geq 0\}}(F)_{x_1} = 0$.</li>

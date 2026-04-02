@@ -840,7 +840,7 @@ $$
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="流形上的层"><header><h1><span class="taxon"></span>流形上的层 <a class="slug" href="./流形上的层.html">[流形上的层]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是 Kashiwara–Schapira 的 <span class="link local"><a href="./KashiwaraShapiraShMfd.html" title="Sheaves on Manifolds [KashiwaraShapiraShMfd]">Sheaves on Manifolds</a></span> 的阅读笔记.</p>
-<h2>层</h2>
+<h2>2.* 层</h2>
 <p>设 $X$ 为拓扑空间. 对于 $X$ 上的层 $F$ 以及子集 $j\colon Z\hookrightarrow X$, 记
 $$
 F|_Z = j^*F.
@@ -870,7 +870,7 @@ $$</p>
 $$
 \Gamma_Z(F)\colon U\mapsto\Gamma_{Z\cap U}(U,F).
 $$</p>
-<h2>Poincaré–Verdier 对偶</h2>
+<h2>3.* Poincaré–Verdier 对偶</h2>
 <p>设 $f\colon Y\to X$ 是局部紧空间的映射, $Rf_!\colon D^+(A_Y) \to D^+(A_X)$ 有右伴随 $f^!$.</p>
 <p>当 $Y$ 为 $n$ 维定向流形, $X$ 为一点时, $f^!\mathbb{Q}_{\mathrm{pt}} \simeq \mathbb{Q}_Y [n]$ (称作<strong>对偶复形</strong>), 从而伴随关系给出
 $$
@@ -881,7 +881,7 @@ $$
 H^{n-j}_c(Y,\mathbb{Q}_Y)^*\simeq H^j(Y,\mathbb{Q}_Y).
 $$
 此即 Poincaré 对偶.</p>
-<h2>微局部化</h2>
+<h2>4.3 微局部化</h2>
 <p>设 $X$ 为 $n$ 维流形, $M\subset X$ 为闭子流形, 余维数为 $\ell$.
 构造其<strong></strong><span class="link local"><a href="./法形变.html" title="法形变 [法形变]">法形变</a></span> (normal deformation) 流形 $\widetilde X_M$ 如下:</p>
 <ul>
@@ -889,7 +889,32 @@ $$
 <li>定义 $V = \{(x',x'',t)\in\mathbb{R}^\ell\times\mathbb{R}^{n-\ell}\times\mathbb{R}\mid p=(tx',x'')\in U\}$. 这给出映射 $p\colon V\to U$ 以及 $t\colon V\to\mathbb{R}$.</li>
 <li>将所有 $V$ 粘起来得到流形 $\widetilde X_M$.</li>
 </ul>
-<h2>微局部支撑</h2>
+<h2>4.4 μhom</h2>
+<p>考虑态射 $f\colon Y\to X$, 记 $\Delta_f\subset X\times Y$ 为其图像. 考虑下图.</p>
+<p>$$
+\begin{array}{ccccc}
+T^*_{\Delta_Y}(Y\times Y) &amp; \leftarrow &amp; T^*_{\Delta_f}(X\times Y) &amp; \rightarrow &amp; T^*_{\Delta_X}(X\times X) \\
+|\!| &amp;  &amp; |\!| &amp;  &amp; |\!| \\
+T^*Y &amp; \leftarrow &amp; Y\times_X T^*X &amp; \rightarrow &amp; T^*X
+\end{array}
+$$</p>
+<p>记 $\mathrm{pr}_1 \colon X\times Y\to X$, $\mathrm{pr}_2 \colon X\times Y\to Y$ 为投影. 对于 $G\in D^b(Y), F\in D^b(X)$, 定义
+$$
+\mu\operatorname{hom}(G \to F) = \mu_{\Delta_f} R\operatorname{Hom} (\mathrm{pr}_2^* G,\mathrm{pr}_1^! F),
+$$
+$$
+\mu\operatorname{hom}(F \to G) = (\mu_{\Delta_f} R\operatorname{Hom} (\mathrm{pr}_1^* F,\mathrm{pr}_2^! G))^a,
+$$
+其中 $(-)^a$ 表示沿 $Y\times_X T^*X$ 上的对径映射作拉回 (逆像).</p>
+<p>当 $Y=X$ 且 $f=\mathrm{id}_X$ 时, 定义
+$$
+\mu\operatorname{hom}(G,F) = \mu\operatorname{hom}(G\to F) = \mu_{\Delta_X}R\operatorname{Hom}(\mathrm{pr}_2^*G,\mathrm{pr}_1^!F).
+$$</p>
+<p>函子 $\mu\operatorname{hom}$ 可视为 Sato 的<span class="link local"><a href="./微局部化.html" title="微局部化 [微局部化]">微局部化</a></span>的推广. 对于<span class="link local"><a href="./闭嵌入.html" title="闭嵌入 [闭嵌入]">闭嵌入</a></span> $Y\to X$, 记 $j\colon T^*_YX \to T^*X$ 为余法丛的嵌入, 则对于 $F\in D^b(X)$,
+$$
+\mu\operatorname{hom}(A_Y,F) \simeq j_* \mu_Y F.
+$$</p>
+<h2>5.1 微局部支撑</h2>
 <p>设 $E$ 为线性空间, $X$ 为 $E$ 的开子集, $p = (x_0,\xi_0) \in T^*X$, $F\in D^b(X)$. 如下条件等价:</p>
 <ol>
 <li>存在 $p$ 的邻域 $U$, 对任意 $x_1\in X$ 与 $x_1$ 附近足够可微的函数 $\psi$, 若 $\psi(x_1)=0$ 且 $d_{x_1}\psi\in U$, 则 $R\Gamma_{\{\psi(x)\geq 0\}}(F)_{x_1} = 0$.</li>

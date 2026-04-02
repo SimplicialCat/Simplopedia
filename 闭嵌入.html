@@ -1046,6 +1046,95 @@ $$
 $$</p>
 <h3>对角线</h3>
 <p><span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span>的法形变有特殊的意义.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="流形上的层"><header><h1><span class="taxon"></span>流形上的层 <a class="slug" href="./流形上的层.html">[流形上的层]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文是 Kashiwara–Schapira 的 <span class="link local"><a href="./KashiwaraShapiraShMfd.html" title="Sheaves on Manifolds [KashiwaraShapiraShMfd]">Sheaves on Manifolds</a></span> 的阅读笔记.</p>
+<h2>2.* 层</h2>
+<p>设 $X$ 为拓扑空间. 对于 $X$ 上的层 $F$ 以及子集 $j\colon Z\hookrightarrow X$, 记
+$$
+F|_Z = j^*F.
+$$</p>
+<p><strong>定义</strong>. 对 $X$ 上的层 $F$ 以及局部闭子集 $Z$, 定义 $X$ 上的层 $F_Z$:</p>
+<ul>
+<li>当 $Z$ 为闭子集时, 定义
+$$
+  F_Z = j_*j^* F.
+$$</li>
+<li>当 $Z$ 为开子集时, 定义
+$$
+  F_Z = \ker (F \to F_{X\setminus Z}).
+$$</li>
+<li>当 $Z$ 为局部闭子集时, 设 $Z = U \cap A$, $U$ 为开子集, $A$ 为闭子集, 定义
+$$
+  F_Z = (F_U)_A.
+$$</li>
+</ul>
+<p><strong>命题</strong>. 对任意满足 $G|_Z\simeq F|_Z$, $G|_{X\setminus Z}\simeq 0$ 的层 $G$, 有 $G\simeq F_Z$.</p>
+<p>设 $U$ 为 $X$ 的开子集, $Z$ 为 $U$ 的闭子集, 定义
+$$
+\Gamma_Z(U,F) := \ker (F(U) \to F(U\setminus Z)).
+$$</p>
+<p>注意 $\Gamma_Z(U,F)$ 仅取决于 $Z$ 的邻域, 其元素为支撑在 $Z$ 上的截面.</p>
+<p>定义支撑在 $Z$ 上的截面层
+$$
+\Gamma_Z(F)\colon U\mapsto\Gamma_{Z\cap U}(U,F).
+$$</p>
+<h2>3.* Poincaré–Verdier 对偶</h2>
+<p>设 $f\colon Y\to X$ 是局部紧空间的映射, $Rf_!\colon D^+(A_Y) \to D^+(A_X)$ 有右伴随 $f^!$.</p>
+<p>当 $Y$ 为 $n$ 维定向流形, $X$ 为一点时, $f^!\mathbb{Q}_{\mathrm{pt}} \simeq \mathbb{Q}_Y [n]$ (称作<strong>对偶复形</strong>), 从而伴随关系给出
+$$
+\operatorname{Hom}(R\Gamma_c\mathbb{Q}_Y,\mathbb{Q}_{\mathrm{pt}}) \simeq \operatorname{Hom}(\mathbb{Q}_Y,\mathbb{Q}_Y[n]) \simeq R\Gamma(\mathbb{Q}_Y)[n],
+$$
+取上同调得
+$$
+H^{n-j}_c(Y,\mathbb{Q}_Y)^*\simeq H^j(Y,\mathbb{Q}_Y).
+$$
+此即 Poincaré 对偶.</p>
+<h2>4.3 微局部化</h2>
+<p>设 $X$ 为 $n$ 维流形, $M\subset X$ 为闭子流形, 余维数为 $\ell$.
+构造其<strong></strong><span class="link local"><a href="./法形变.html" title="法形变 [法形变]">法形变</a></span> (normal deformation) 流形 $\widetilde X_M$ 如下:</p>
+<ul>
+<li>考虑 $X$ 的局部 $U$. 取 $U$ 上的坐标 $x = (x',x'') \in \mathbb{R}^n$, 其中 $x'$ 为前 $\ell$ 个坐标, 满足 $U\cap M$ 恰对应 $x'=0$ 的部分.</li>
+<li>定义 $V = \{(x',x'',t)\in\mathbb{R}^\ell\times\mathbb{R}^{n-\ell}\times\mathbb{R}\mid p=(tx',x'')\in U\}$. 这给出映射 $p\colon V\to U$ 以及 $t\colon V\to\mathbb{R}$.</li>
+<li>将所有 $V$ 粘起来得到流形 $\widetilde X_M$.</li>
+</ul>
+<h2>4.4 μhom</h2>
+<p>考虑态射 $f\colon Y\to X$, 记 $\Delta_f\subset X\times Y$ 为其图像. 考虑下图.</p>
+<p>$$
+\begin{array}{ccccc}
+T^*_{\Delta_Y}(Y\times Y) &amp; \leftarrow &amp; T^*_{\Delta_f}(X\times Y) &amp; \rightarrow &amp; T^*_{\Delta_X}(X\times X) \\
+|\!| &amp;  &amp; |\!| &amp;  &amp; |\!| \\
+T^*Y &amp; \leftarrow &amp; Y\times_X T^*X &amp; \rightarrow &amp; T^*X
+\end{array}
+$$</p>
+<p>记 $\mathrm{pr}_1 \colon X\times Y\to X$, $\mathrm{pr}_2 \colon X\times Y\to Y$ 为投影. 对于 $G\in D^b(Y), F\in D^b(X)$, 定义
+$$
+\mu\operatorname{hom}(G \to F) = \mu_{\Delta_f} R\operatorname{Hom} (\mathrm{pr}_2^* G,\mathrm{pr}_1^! F),
+$$
+$$
+\mu\operatorname{hom}(F \to G) = (\mu_{\Delta_f} R\operatorname{Hom} (\mathrm{pr}_1^* F,\mathrm{pr}_2^! G))^a,
+$$
+其中 $(-)^a$ 表示沿 $Y\times_X T^*X$ 上的对径映射作拉回 (逆像).</p>
+<p>当 $Y=X$ 且 $f=\mathrm{id}_X$ 时, 定义
+$$
+\mu\operatorname{hom}(G,F) = \mu\operatorname{hom}(G\to F) = \mu_{\Delta_X}R\operatorname{Hom}(\mathrm{pr}_2^*G,\mathrm{pr}_1^!F).
+$$</p>
+<p>函子 $\mu\operatorname{hom}$ 可视为 Sato 的<span class="link local"><a href="./微局部化.html" title="微局部化 [微局部化]">微局部化</a></span>的推广. 对于<span class="link local"><a href="./闭嵌入.html" title="闭嵌入 [闭嵌入]">闭嵌入</a></span> $Y\to X$, 记 $j\colon T^*_YX \to T^*X$ 为余法丛的嵌入, 则对于 $F\in D^b(X)$,
+$$
+\mu\operatorname{hom}(A_Y,F) \simeq j_* \mu_Y F.
+$$</p>
+<h2>5.1 微局部支撑</h2>
+<p>设 $E$ 为线性空间, $X$ 为 $E$ 的开子集, $p = (x_0,\xi_0) \in T^*X$, $F\in D^b(X)$. 如下条件等价:</p>
+<ol>
+<li>存在 $p$ 的邻域 $U$, 对任意 $x_1\in X$ 与 $x_1$ 附近足够可微的函数 $\psi$, 若 $\psi(x_1)=0$ 且 $d_{x_1}\psi\in U$, 则 $R\Gamma_{\{\psi(x)\geq 0\}}(F)_{x_1} = 0$.</li>
+<li>存在 $E$ 中的闭凸锥 $\gamma$ 与 $F'\in D^b(E)$,</li>
+</ol>
+<ul>
+<li>$\gamma\setminus\{0\} \subset \{v\mid \langle v,\xi_0\rangle &lt;0\}$</li>
+<li>$F'$ 与 $F$ 在 $x$ 附近同构,</li>
+<li>$R\phi_{\gamma *}F'=0$. 这里 $\phi_\gamma\colon E\to E_\gamma$ 是到 $\gamma$-拓扑的自然映射.</li>
+</ul>
+<p>设 $X$ 为流形, $F$ 为 $X$ 上的层. 其<strong></strong><span class="link local"><a href="./微局部支集.html" title="微局部支集 [微局部支集]">微局部支集</a></span> $\operatorname{SS}F$ 定义为 $T^*X$ 中<strong>不</strong>满足上述等价条件的点构成的子集.
+对于 $T^*X$ 的子集 $A$, 称 $D^b(X)$ 中的态射 $u\colon F\to F'$ 在 $A$ 上为同构, 是指存在特殊三角 $F\to F'\to F''$ 满足 $\operatorname{SS}F'' \cap A = \varnothing$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="理想层"><header><h1><span class="taxon"></span>理想层 <a class="slug" href="./理想层.html">[理想层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>理想层是环<span class="link local"><a href="./层.html" title="拓扑空间上的层 [层]">层</a></span>的理想. <span class="link local"><a href="./环化空间.html" title="环化空间 [环化空间]">环化空间</a></span>的理想层对应<span class="link local"><a href="./闭嵌入.html" title="闭嵌入 [闭嵌入]">闭子空间</a></span>.</p>
 <h2>定义</h2>
