@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>纬悬</title><link rel="icon" href="./assets/favicon.ico" /><p class="test">
-test (where is this content placed?)
-</p><style>
+<meta name="viewport" content="width=device-width"><title>纬悬</title><link rel="icon" href="./assets/favicon.ico" /><style>
   @font-face {
     font-family: 'NewCM10';
     src: url(assets/NewCM10-Book.otf) format('opentype');
@@ -859,6 +857,14 @@ X^{\mathbb{R}^n} = \Sigma^n X.
 $$</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Thom谱.html" title="Thom 谱 [Thom谱]">Thom 谱</a></span>, <span class="link local"><a href="./广义上同调中的定向.html" title="“广义上同调中的定向” [广义上同调中的定向]">广义上同调中的定向</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="tutorial-stable-homotopy"><header><h1><span class="taxon"></span>稳定同伦论 <a class="slug" href="./tutorial-stable-homotopy.html">[tutorial-stable-homotopy]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文的目的是, 以尽可能少的前置知识, 解释<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span> (<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>) 这一概念的意义和必要性, 从而使读者能够接受其抽象定义. 为此我试图解释<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>的动机, 也即为什么要将<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span> $\Sigma$ 变为可逆函子.</p>
+<p>前置知识: <span class="link local"><a href="./motivation-homotopy-theory.html" title="同伦论的动机 [motivation-homotopy-theory]">同伦论的动机</a></span>.</p>
+<p>同伦论中的最基本对象是球面 $S^0, S^1, S^2, \cdots$; 其具有如下递推关系:
+$$
+S^{n+1} = \Sigma S^n.
+$$</p>
+<p>球面在同伦论中的特殊地位在于, 球面到其它空间 $X$ 的映射等价类可以<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>出 $X$ 的逐阶同伦信息. 例如 $S^0\to X$ 探测 $X$ 的连通分支, $S^1\to X$ 探测环路空间 $\Omega X$ 的连通分支, $S^2\to X$ 探测环路空间的环路空间 $\Omega^2 X$ 的连通分支, 等等.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="稳定无穷范畴"><header><h1><span class="taxon"></span>稳定范畴 <a class="slug" href="./稳定无穷范畴.html">[稳定无穷范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>以下的范畴均默认为 $(\infty,1)$-范畴.</p>

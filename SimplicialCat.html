@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>单纯猫</title><link rel="icon" href="./assets/favicon.ico" /><p class="test">
-test (where is this content placed?)
-</p><style>
+<meta name="viewport" content="width=device-width"><title>单纯猫</title><link rel="icon" href="./assets/favicon.ico" /><style>
   @font-face {
     font-family: 'NewCM10';
     src: url(assets/NewCM10-Book.otf) format('opentype');
@@ -3228,6 +3226,33 @@ $$</p>
 <li>这给出群同态 $T^\vee\simeq\widetilde T \to \widetilde G$, 给出 $\widetilde G$ 的一个极大环面. 于是 $\widetilde G$ 的权格与余权格对偶于 $G$.</li>
 </ul>
 <p>最后看单根和单余根. 一个权 $\lambda\in X^*(T^\vee)$ 落在正根生成的半群中, 当且仅当存在最高权表示 $L_\mu$ 使得 $\mu - \lambda$ 出现在其权中, 即存在 $\mu$ 使得 $t^{\mu-\lambda}\in\mathrm{Gr}_{\leq\mu}$, 这等价于 $\lambda$ 是 $G$ 的正余根的和.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="GeoLang2"><header><h1><span class="taxon"></span>几何 Langlands 纲领 <a class="slug" href="./GeoLang2.html">[GeoLang2]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文是 <span class="link local"><a href="./ScholzeBourbakiGL.html" title="Geometric Langlands, after Gaitsgory, Raskin, … [ScholzeBourbakiGL]">Peter Scholze 2026 年 3 月在 Bourbaki 研讨会上作的报告</a></span>的阅读笔记.</p>
+<h2>1. 引言</h2>
+<p>Langlands 纲领的核心是描述自守函数的空间.</p>
+<p>固定 Riemann 对称空间 $M$, 考虑局部同构于 $M$ 的 Riemann 流形 $N$. 若 $N$ 连通完备, 则其为<span class="link local"><a href="./局部对称空间.html" title="局部对称空间 [局部对称空间]">局部对称空间</a></span> $M/\Gamma$, $\Gamma = \pi_1(N)$ 为 $G$ 的离散子群. 自守函数其实就是 $M / \Gamma$ 上的函数. 一些刚性定理指出 $G$ 是个约化线性代数群, $\Gamma\subset G$ 是个算术子群 (arithmetic subgroup).</p>
+<p>暂且忽略细节, 记 $\mathcal A(-)$ 为某种好的函数的空间.</p>
+<p>Lie 群 $G$ 在 $M$ 上的作用给出 Lie 代数 $\mathfrak g$ 在 $\mathcal A(M)$ 上的作用, 其<span class="link local"><a href="./泛包络代数.html" title="泛包络代数 (Lie 代数) [泛包络代数]">泛包络代数</a></span>的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span> $Z(U\mathfrak g)$ 在 $\mathcal A(M)$ 上的作用诱导 $\mathcal A(M/\Gamma)$ 上的作用, 其中包括 Laplace 算子.</p>
+<p><strong>猜想</strong>.
+$$
+\mathcal A(M / \Gamma) \simeq \Gamma (\mathrm{LocSys}_{\check{G}},\omega_{\mathrm{LocSys}_{\check{G}}})
+$$</p>
+<p>这个猜想包含两部分,</p>
+<ol>
+<li>$\mathcal A(M/\Gamma)$ 可以提升为 $\mathrm{LocSys}_{\check{G}}$ 上的一个<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>;</li>
+<li>这个拟凝聚层是对偶复形.</li>
+</ol>
+<h2>2. 几何 Langlands 等价</h2>
+<h2>3. $\mathrm{Bun}_G$ 上的层</h2>
+<h2>4. 局部系统的叠</h2>
+<h2>5. 谱作用</h2>
+<h2>6. $G = \mathbb G_m$ 的情形</h2>
+<h2>7. Beilinson 谱投影函子</h2>
+<h2>8. Frobenius 迹</h2>
+<h2>9. Whittaker 系数</h2>
+<h2>10. Eisenstein 级数</h2>
+<h2>11. Kac–Moody 局部化</h2>
+<h2>12. 尖点形式</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="Gestalt"><header><h1><span class="taxon"></span>Gestalt <a class="slug" href="./Gestalt.html">[Gestalt]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>Gestalt (复数 Gestalten, 在心理学上的译名为 “格式塔”) 是 <span class="link local"><a href="./ScholzeStefanichGestalten.html" title="Geometry and Higher Category Theory [ScholzeStefanichGestalten]">Scholze–Stefanich</a></span> 提出的一种几何概念, 旨在恢复完全的<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>: 通过考虑几何对象上的 “线性 $(\infty,n)$-范畴” 取值的层, 即<span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span>, 使得任何几何对象都具有代数的对应物, 而不再需要对 “仿射” 几何对象进行粘合操作.</p>
 <h2>观念</h2>
@@ -8049,9 +8074,9 @@ $$
 <li>百科 : 数学概念. 这类页面构成了单纯百科的主体.</li>
 <li><span class="link local"><a href="./notion.html" title="观念 [notion]">观念</a></span> : 模糊而普遍的数学思想.</li>
 <li><span class="link local"><a href="./pedagogy.html" title="教学 [pedagogy]">教学</a></span> : 面向基础读者的科普.</li>
-<li><span class="link local"><a href="./notes.html" title="讲稿, 笔记 [notes]">讲稿, 笔记</a></span> : 一些讨论班的讲稿.</li>
+<li><span class="link local"><a href="./notes.html" title="讲稿, 笔记 [notes]">讲稿, 笔记</a></span> : 一些讨论班的讲稿, 文献的阅读笔记, 以及零散的见闻.</li>
 <li>文献 : 其它页面中引用到的参考文献.</li>
-<li><span class="link local"><a href="./subject.html" title="学科 [subject]">学科</a></span> : 用于收集和分类.</li>
+<li><span class="link local"><a href="./subject.html" title="学科 [subject]">学科</a></span> : 用于部分页面的收集和分类.</li>
 <li>Meta : 关于单纯百科本身.</li>
 <li><span class="link local"><a href="./nonmath.html" title="非数学 [nonmath]">非数学</a></span> : 一些不属于上述分类, 且不属于数学的东西.</li>
 </ul>
@@ -8312,6 +8337,22 @@ $$
 <p>设 $\Omega\subset P^*X$ 为开集, $F\in D^b(I(k_{\gamma^{-1}\Omega}))$,
 若对任意 $p\in\gamma^{-1}\Omega$, 存在 $\mathbb{C}^\times$-锥形邻域 $V\supset\mathbb{C}^\times p$ 及 $G\in D^b_{\mathrm{perv}}(k_X,V)$ 使得 $\mu G|_V \simeq F|_V$, 则称 $F$ 为 $\Omega$ 上微局部偏屈层.</p>
 <p>记微局部偏屈层的范畴为 $\mu\mathsf{Perv}(\Omega)$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="motivation-homotopy-theory"><header><h1><span class="taxon"></span>同伦论的动机 <a class="slug" href="./motivation-homotopy-theory.html">[motivation-homotopy-theory]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文的目标是以尽可能少的前置知识解释同伦论的动机.</p>
+<p>前置知识: 拓扑学基本概念</p>
+<p>所谓<strong>同</strong>伦论就是研究什么是 “<strong>同</strong>” 的学问. 在拓扑学中, 人们作了如下规定:</p>
+<ul>
+<li>考虑单位区间 $I = [0,1]$. 规定在一个拓扑空间 $X$ 中, 两个点 $p,q$ 之间的 “<strong>同</strong>” 就是它们之间的道路 $\gamma\colon I\to X$, $\gamma(0) = p$, $\gamma(1) = q$.</li>
+</ul>
+<p>对于空间 $X$ 中的两个点 $p,q$, 我们不仅能谈论它们<strong>是否</strong>相同, 而且能 (而且应该) 谈论它们<strong>如何</strong>相同, 毕竟两个点之间的道路可能有许多种. 区分<strong>是否</strong>和<strong>如何</strong>是现代数学的一项重要课题. (参见<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构与性质</a></span>.)</p>
+<p>自然地, 我们应该好奇一个点 $p$ 如何与<strong>自身</strong>相同.
+虽然这个问题有一个平凡的答案, 即等号的自反性, 或着说空间上的常值路径; 但也可能有许多<strong>不平凡</strong>的答案, 如圆圈 $S^1$ 上绕行一周的路径. 正是这些不平凡的答案构成了同伦论这门学科.</p>
+<p>在数学中, 所有的等式满足一个基本的原则: 若对于一种事物 $x$ 有与之相关的另一种事物 $f(x)$, 那么对等式 $\alpha\colon x = y$ 就必须有等式 $f(\alpha)\colon f(x) = f(y)$. 这条基本原则引申出的结果是极为丰富的.</p>
+<p>现在假设点 $p$ 到点 $q$ 有一条指定的道路 $\alpha \colon p = q$, 即一种指定的将 $p$ 等同于 $q$ 的方式. 令 $f(x) := (x = q)$, 那么由 $\alpha$ 就得到 $f(\alpha) \colon f(p) = f(q)$, 即 $(p = q) = (q = q)$. 因此, 要研究 $p$ 到 $q$ 的所有道路, 只需要研究点 $q$ 到<strong>自身</strong>的所有道路.
+了解了每一个点如何与自身相同, 就足以了解任何两个点之间如何相同.</p>
+<p>上面说的空间和点, 并不是只有足球, 甜甜圈这种看得见的空间, 和摸得着的点. <strong>任何类型的数学对象的全体都构成一个空间, 每个对象是其中的一个点.</strong> (参见<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">分类空间</a></span>.) 所以, 有数学的地方就有同伦论.</p>
+<p>特别地, 点 $p$ 到自身的道路, 称为<strong>环路</strong>, 也是一种数学对象; 我们当然应该研究其构成的空间, 称为<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> $\Omega (X,p)$, 或在点 $p$ 明确时简记为 $\Omega X$.</p>
+<p>环路空间和许多事情一样, 没有理由仅做一次就停止, 我们自然地应该关心环路空间 $\Omega X$ 的环路空间 $\Omega^2 X$, 其环路空间 $\Omega^3 X$, … 以至于无穷.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="n-r-范畴"><header><h1><span class="taxon"></span>(n,r)-范畴 <a class="slug" href="./n-r-范畴.html">[n-r-范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>$(n,r)$-范畴是满足如下条件的<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>:</p>
@@ -8388,6 +8429,8 @@ $$</p>
 </ul>
 <p>计划中的讲稿 / 笔记:</p>
 <ul>
+<li><span class="link local"><a href="./on-P1.html" title="射影直线上的线丛 [on-P1]">射影直线上的线丛</a></span></li>
+<li><span class="link local"><a href="./GeoLang2.html" title="几何 Langlands 纲领 [GeoLang2]">几何 Langlands 纲领</a></span></li>
 <li><span class="link local"><a href="./microPerv.html" title="微局部偏屈层 [microPerv]">微局部偏屈层</a></span></li>
 <li><span class="link local"><a href="./homalg.html" title="同调代数 [homalg]">同调代数</a></span> (2026 年 3 月)</li>
 <li><span class="link local"><a href="./alg-th.html" title="代数理论 [alg-th]">代数理论</a></span> (2026 年 3 月)</li>
@@ -8530,6 +8573,8 @@ $$
 <h2>例</h2>
 <h3>分解同调</h3>
 <p><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="on-P1"><header><h1><span class="taxon"></span>射影直线上的线丛 <a class="slug" href="./on-P1.html">[on-P1]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><figure><img src="./on-P1-1.svg" class="color-invert"/></figure></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="p-进Hodge理论"><header><h1><span class="taxon"></span>“p-进 Hodge 理论” <a class="slug" href="./p-进Hodge理论.html">[p-进Hodge理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>记号. $K$ 为 $p$-进域, 有完美<span class="link local"><a href="./剩余域.html" title="“剩余域” [剩余域]">剩余域</a></span> $k$</p>
 <p>比较 $p$-进上同调理论</p>
@@ -8570,6 +8615,8 @@ $$</p>
 <li><span class="link local"><a href="./tutorial-type-theory.html" title="类型论 [tutorial-type-theory]">教程 : 类型论</a></span></li>
 <li><span class="link local"><a href="./tutorial-FOL.html" title="一阶语言与一阶逻辑 [tutorial-FOL]">教程 : 一阶逻辑</a></span></li>
 <li><span class="link local"><a href="./tutorial-topos.html" title="意象理论 [tutorial-topos]">教程 : 意象理论</a></span></li>
+<li><span class="link local"><a href="./motivation-homotopy-theory.html" title="同伦论的动机 [motivation-homotopy-theory]">同伦论的动机</a></span></li>
+<li><span class="link local"><a href="./tutorial-stable-homotopy.html" title="稳定同伦论 [tutorial-stable-homotopy]">教程 : 稳定同伦论</a></span></li>
 <li><span class="link local"><a href="./tutorial-highercat.html" title="高阶范畴论 [tutorial-highercat]">教程 : 高阶范畴论</a></span></li>
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="pro-可表函子"><header><h1><span class="taxon"></span>pro-可表函子 <a class="slug" href="./pro-可表函子.html">[pro-可表函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -8752,7 +8799,11 @@ $$</p>
 </li>
 <li><span class="link local"><a href="./代数几何.html" title="代数几何 [代数几何]">代数几何</a></span></li>
 <li><span class="link local"><a href="./Riemann几何.html" title="Riemann 几何 [Riemann几何]">Riemann 几何</a></span></li>
+<li><span class="link local"><a href="./同伦论.html" title="同伦论 [同伦论]">同伦论</a></span>
+<ul>
 <li><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li>
+</ul>
+</li>
 <li><span class="link local"><a href="./凝聚态数学.html" title="凝聚态数学 [凝聚态数学]">凝聚态数学</a></span></li>
 <li><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li>
 </ul>
@@ -8934,30 +8985,6 @@ $$
 </tbody></table>
 <h2>相关内容</h2>
 <p><span class="link local"><a href="./关于译名-意象.html" title="关于译名 “意象” [关于译名-意象]">关于译名 “意象”</a></span></p>
-</details></section><section class="block" data-taxon=""><details ><summary id="test"><header><h1><span class="taxon"></span>测试页面 <a class="slug" href="./test.html">[test]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>2026-02-20</p>
-<p>测试过长的行间公式的行为 (应该是不会超出边框, 过长的公式会有滚动条):</p>
-<p>$$
-\begin{array}{ccccccccccccccccc}
-1 &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  \\
-\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
- &amp; \rightarrow &amp; 2 &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  \\
-\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
- &amp; \rightarrow &amp;  &amp; \rightarrow &amp; 3 &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  \\
-\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
- &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp; 4 &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  \\
-\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
- &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp; 5 &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  \\
-\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
- &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp; 6 &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  \\
-\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
- &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp; 7 &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  \\
-\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
- &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp; 8 &amp; \rightarrow &amp;  \\
-\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
- &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp;  &amp; \rightarrow &amp; 9
-\end{array}
-$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="todo"><header><h1><span class="taxon"></span>亟需施工处 <a class="slug" href="./todo.html">[todo]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <ul>
 <li>嵌入页面的 h2, h3 等字号有问题</li>
@@ -9754,6 +9781,14 @@ $\operatorname{Spec} B\times_{\operatorname{Spec} A}D(f_i) \simeq \operatorname{
 $X\to Z\to Y$, 而 $X\to Z$ 为闭嵌入, $Z\to Y$ 为开嵌入 (注意顺序: 先闭嵌入, 后开嵌入), 则称 $X\to Y$ 为<strong>局部闭嵌入</strong>.</p>
 <p><strong>例</strong>. 映射 $\operatorname{Spec} k[t,t^{-1}] \hookrightarrow\operatorname{Spec} k[x,y]$, $t\mapsto (t,0)$ 为局部闭嵌入.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="tutorial-highercat"><header><h1><span class="taxon"></span>高阶范畴论 <a class="slug" href="./tutorial-highercat.html">[tutorial-highercat]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="tutorial-stable-homotopy"><header><h1><span class="taxon"></span>稳定同伦论 <a class="slug" href="./tutorial-stable-homotopy.html">[tutorial-stable-homotopy]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文的目的是, 以尽可能少的前置知识, 解释<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span> (<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>) 这一概念的意义和必要性, 从而使读者能够接受其抽象定义. 为此我试图解释<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>的动机, 也即为什么要将<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span> $\Sigma$ 变为可逆函子.</p>
+<p>前置知识: <span class="link local"><a href="./motivation-homotopy-theory.html" title="同伦论的动机 [motivation-homotopy-theory]">同伦论的动机</a></span>.</p>
+<p>同伦论中的最基本对象是球面 $S^0, S^1, S^2, \cdots$; 其具有如下递推关系:
+$$
+S^{n+1} = \Sigma S^n.
+$$</p>
+<p>球面在同伦论中的特殊地位在于, 球面到其它空间 $X$ 的映射等价类可以<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>出 $X$ 的逐阶同伦信息. 例如 $S^0\to X$ 探测 $X$ 的连通分支, $S^1\to X$ 探测环路空间 $\Omega X$ 的连通分支, $S^2\to X$ 探测环路空间的环路空间 $\Omega^2 X$ 的连通分支, 等等.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="tutorial-topos"><header><h1><span class="taxon"></span>意象理论 <a class="slug" href="./tutorial-topos.html">[tutorial-topos]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon=""><details ><summary id="tutorial-type-theory"><header><h1><span class="taxon"></span>类型论 <a class="slug" href="./tutorial-type-theory.html">[tutorial-type-theory]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是杨家同于 2026 年 1 月在求真书院形式化数学冬令营上的讲座的笔记, 加入了个人的见解. 假想的读者是有一定数学成熟度但对类型论没有了解的同学.</p>
@@ -10145,7 +10180,7 @@ $$
 \end{aligned}
 $$</p>
 <h2>相关概念</h2>
-<p><span class="link local"><a href="./平展同伦论.html" title="“平展同伦论” [平展同伦论]">平展同伦论</a></span></p>
+<p><span class="link local"><a href="./平展同伦论.html" title="平展同伦论 [平展同伦论]">平展同伦论</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="∞-群"><header><h1><span class="taxon"></span>∞-群 <a class="slug" href="./∞-群.html">[∞-群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><p>$\infty$-群是指 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的 <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">$\mathbb E_1$</a></span>-群, 也等同于只有一个对象的 $\infty$-群胚, 也即 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的<span class="link local"><a href="./群胚对象.html" title="群胚对象 (∞-范畴论) [群胚对象]">群胚对象</a></span> $X\colon \Delta^{\mathrm{op}}\to\mathsf{Ani}$, 满足 $X_0=1$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="∞-群胚"><header><h1><span class="taxon"></span>∞-群胚 <a class="slug" href="./∞-群胚.html">[∞-群胚]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><p>$\infty$-群胚即 $(\infty,0)$-范畴, 又称<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.
 另见 <span class="link local"><a href="./n-r-范畴.html" title="(n,r)-范畴 [n-r-范畴]">$(n,r)$-范畴</a></span>.</p>
@@ -11139,7 +11174,11 @@ $$</p>
 <p><span class="link local"><a href="./盲人摸象.html" title="盲人摸象 [盲人摸象]">盲人摸象</a></span>第 2 章</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="佐武等价"><header><h1><span class="taxon"></span>佐武等价 <a class="slug" href="./佐武等价.html">[佐武等价]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p><strong>佐武 (Satake) 等价</strong>是 <span class="link local"><a href="./Langlands对偶.html" title="Langlands 对偶群 [Langlands对偶]">Langlands 对偶群</a></span>的一种 “实现”: 由 $G$ 构造的某个几何对象上的某种层范畴实现了其对偶群 $^LG$ 的表示范畴. 几何佐武等价是<span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 对应</a></span>的基石.</p>
+<p><strong>佐武 (Satake) 等价</strong>是 <span class="link local"><a href="./Langlands对偶.html" title="Langlands 对偶群 [Langlands对偶]">Langlands 对偶群</a></span>的一种 “实现”: 由 $G$ 构造的某个几何对象上的某种层范畴实现了其对偶群 $^LG$ 的表示范畴; 再由<span class="link local"><a href="./淡中对偶.html" title="淡中对偶 [淡中对偶]">淡中对偶</a></span>可提取出对偶群. 几何佐武等价是<span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 对应</a></span>的基石.</p>
+<blockquote>
+<p>Arguably, this is in fact the correct definition of the Langlands dual group — it is the Tannakian group that arises in the geometric Satake equivalence.</p>
+<p>— Peter Scholze <span class="link local"><a href="./ScholzeBourbakiGL.html" title="Geometric Langlands, after Gaitsgory, Raskin, … [ScholzeBourbakiGL]">2026 年 3 月 Bourbaki 演讲</a></span></p>
+</blockquote>
 <h2>陈述</h2>
 <h3>几何佐武等价</h3>
 <p><span class="link local"><a href="./Geo-Sat-eq.html" title="几何 Satake 等价 [Geo-Sat-eq]">几何 Satake 等价</a></span></p>
@@ -12484,7 +12523,14 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="半单群"><header><h1><span class="taxon"></span>半单群 <a class="slug" href="./半单群.html">[半单群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon=""><details ><summary id="半直积"><header><h1><span class="taxon"></span>半直积 <a class="slug" href="./半直积.html">[半直积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>设<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $H$ <span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>于群 $N$, 即作用于带基点连通对象 $\mathbf{B}N\in\mathsf{Ani}_{*/}^{\geq 1}$, 其商 $(\mathbf{B}N) / H$ 是一个群 $G = N \rtimes H$ 的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>, 这个群称为<strong>半直积</strong> (semidirect product).</p>
+<h3>传统定义</h3>
+<p>设 $\mathsf{Set}$ 中的<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $H$ <span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>于群 $N$, 考虑 $N\times H$ 带有如下群结构,
+$$
+(n,h) (n',h') = (n (h\cdot n'),hh'),
+$$
+所得的群记作 $N\rtimes H$, 称为 $N$ 与 $H$ 的<strong>半直积</strong> (semidirect product).</p>
+<h3>一般定义</h3>
+<p>设<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $H$ <span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>于群 $N$, 即作用于带基点连通对象 $\mathbf{B}N\in\mathsf{Ani}_{*/}^{\geq 1}$, 其商 $(\mathbf{B}N) / H$ 是一个群 $G = N \rtimes H$ 的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>, 这个群称为 $N$ 与 $H$ 的<strong>半直积</strong>.</p>
 <h2>性质</h2>
 <h3>分裂短正合列</h3>
 <p>半直积 $G = N\rtimes H$ 给出右分裂的<span class="link local"><a href="./群短正合列.html" title="群的短正合列 [群短正合列]">短正合列</a></span>
@@ -12493,6 +12539,16 @@ $$
 $$
 其中 $G\to H$ 有群同态截面 $H\to G$, 这是因为 $H$ 在 $\mathbf{B}N$ 上的作用保持基点, 即有 $\mathsf{Ani}_{/\mathbf{B}H}$ 中的映射 $\mathbf{B}H \to (\mathbf{B}N)/H = \mathbf{B}G$.</p>
 <h2>例</h2>
+<h3>Galois 群</h3>
+<p>$x^5 - 2$ 在 $\mathbb{Q}$ 上的<span class="link local"><a href="./分裂域.html" title="分裂域 [分裂域]">分裂域</a></span>为 $\mathbb{Q}[\zeta,\alpha]$, 其中 $\zeta=\exp(2\pi/5),\alpha=\sqrt[5]{2}$. 考虑</p>
+<ul>
+<li>$\mathbb{Q}[\zeta]$ 的固定子群 $N$, 由于 $\mathbb{Q}[\zeta]/\mathbb{Q}$ <span class="link local"><a href="./正规扩张.html" title="正规扩张 [正规扩张]">正规</a></span> (是 $x^5-1$ 的分裂域), 故 $N\hookrightarrow G$ 为正规子群;</li>
+<li>$\mathbb{Q}[\alpha]$ 的固定子群 $H$,</li>
+</ul>
+<p>那么
+$$
+\operatorname{Gal}(\mathbb{Q}[\zeta,\alpha],\mathbb{Q}) \simeq H \rtimes N.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单Lie代数"><header><h1><span class="taxon"></span>“单 Lie 代数” <a class="slug" href="./单Lie代数.html">[单Lie代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设 $\mathfrak g$ 为有限维 Lie 代数. 若 $\mathfrak g$ 非 Abel, 且没有非平凡的理想, 则称之为<strong>单 Lie 代数</strong>.</p>
@@ -13403,6 +13459,29 @@ $$</p>
 $$</p>
 <p>对于单纯范畴 $\mathcal C$, 函子 $\mathfrak C[S]\to\mathcal C$ 是 $S$ 形的 “同伦融贯交换图” 的模型, 而 $\mathfrak C[\mathfrak N(\mathcal D)]\to\mathcal C$ 是无穷范畴之间的函子 $\mathcal D\to\mathcal C$ 的模型.</p>
 <p>注意单纯范畴之间的函子 $\mathcal D\to \mathcal C$ 不是 $\infty$-范畴之间的函子的正确模型.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="同伦论"><header><h1><span class="taxon"></span>同伦论 <a class="slug" href="./同伦论.html">[同伦论]</a></h1><div class="metadata"><ul><li class="meta-item">学科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<ul>
+<li><span class="link local"><a href="./平展同伦论.html" title="平展同伦论 [平展同伦论]">平展同伦论</a></span></li>
+<li><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li>
+<li><span class="link local"><a href="./色同伦论.html" title="色同伦论 [色同伦论]">色同伦论</a></span></li>
+</ul>
+<p><section class="block" data-taxon=""><details ><summary id="motivation-homotopy-theory"><header><h1><span class="taxon"></span>同伦论的动机 <a class="slug" href="./motivation-homotopy-theory.html">[motivation-homotopy-theory]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文的目标是以尽可能少的前置知识解释同伦论的动机.</p>
+<p>前置知识: 拓扑学基本概念</p>
+<p>所谓<strong>同</strong>伦论就是研究什么是 “<strong>同</strong>” 的学问. 在拓扑学中, 人们作了如下规定:</p>
+<ul>
+<li>考虑单位区间 $I = [0,1]$. 规定在一个拓扑空间 $X$ 中, 两个点 $p,q$ 之间的 “<strong>同</strong>” 就是它们之间的道路 $\gamma\colon I\to X$, $\gamma(0) = p$, $\gamma(1) = q$.</li>
+</ul>
+<p>对于空间 $X$ 中的两个点 $p,q$, 我们不仅能谈论它们<strong>是否</strong>相同, 而且能 (而且应该) 谈论它们<strong>如何</strong>相同, 毕竟两个点之间的道路可能有许多种. 区分<strong>是否</strong>和<strong>如何</strong>是现代数学的一项重要课题. (参见<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构与性质</a></span>.)</p>
+<p>自然地, 我们应该好奇一个点 $p$ 如何与<strong>自身</strong>相同.
+虽然这个问题有一个平凡的答案, 即等号的自反性, 或着说空间上的常值路径; 但也可能有许多<strong>不平凡</strong>的答案, 如圆圈 $S^1$ 上绕行一周的路径. 正是这些不平凡的答案构成了同伦论这门学科.</p>
+<p>在数学中, 所有的等式满足一个基本的原则: 若对于一种事物 $x$ 有与之相关的另一种事物 $f(x)$, 那么对等式 $\alpha\colon x = y$ 就必须有等式 $f(\alpha)\colon f(x) = f(y)$. 这条基本原则引申出的结果是极为丰富的.</p>
+<p>现在假设点 $p$ 到点 $q$ 有一条指定的道路 $\alpha \colon p = q$, 即一种指定的将 $p$ 等同于 $q$ 的方式. 令 $f(x) := (x = q)$, 那么由 $\alpha$ 就得到 $f(\alpha) \colon f(p) = f(q)$, 即 $(p = q) = (q = q)$. 因此, 要研究 $p$ 到 $q$ 的所有道路, 只需要研究点 $q$ 到<strong>自身</strong>的所有道路.
+了解了每一个点如何与自身相同, 就足以了解任何两个点之间如何相同.</p>
+<p>上面说的空间和点, 并不是只有足球, 甜甜圈这种看得见的空间, 和摸得着的点. <strong>任何类型的数学对象的全体都构成一个空间, 每个对象是其中的一个点.</strong> (参见<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">分类空间</a></span>.) 所以, 有数学的地方就有同伦论.</p>
+<p>特别地, 点 $p$ 到自身的道路, 称为<strong>环路</strong>, 也是一种数学对象; 我们当然应该研究其构成的空间, 称为<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> $\Omega (X,p)$, 或在点 $p$ 明确时简记为 $\Omega X$.</p>
+<p>环路空间和许多事情一样, 没有理由仅做一次就停止, 我们自然地应该关心环路空间 $\Omega X$ 的环路空间 $\Omega^2 X$, 其环路空间 $\Omega^3 X$, … 以至于无穷.</p>
+</details></section></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="同调"><header><h1><span class="taxon"></span>同调 <a class="slug" href="./同调.html">[同调]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>同调</strong>在数学上有许多含义. 其共性是一种表现得像<span class="link local"><a href="./张量积.html" title="张量积 [张量积]">张量积</a></span>, <span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>那样的协变函子. 而与之相对的<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>则是一种表现得像 Hom, <span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>那样的反变函子.</p>
@@ -13817,6 +13896,10 @@ $$
 $$
 u^{-1} = y (1+a+a^2+\cdots).
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="完备Riemann流形"><header><h1><span class="taxon"></span>完备 Riemann 流形 <a class="slug" href="./完备Riemann流形.html">[完备Riemann流形]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./Riemann几何.html" title="Riemann 几何 [Riemann几何]">Riemann 几何</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>完备 Riemann 流形是满足所有测地线都可定义在整个实数轴上的 <span class="link local"><a href="./Riemann流形.html" title="Riemann 流形 [Riemann流形]">Riemann 流形</a></span>.</p>
+<p>对于连通 Riemann 流形, 其完备等价于作为度量空间的完备, 即每个 Cauchy 序列都收敛.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="完备化(域)"><header><h1><span class="taxon"></span>完备化 (域) <a class="slug" href="./完备化(域).html">[完备化(域)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>域 $F$ 关于<span class="link local"><a href="./绝对值.html" title="“绝对值” [绝对值]">绝对值</a></span> $\|{-}\|\colon F\to\mathbb{R}_{\geq 0}$ 的完备化是一个域 $F'$, 带有绝对值 $\|{-}\|\colon F'\to\mathbb{R}_{\geq 0}$ 以及保持 $\|{-}\|$ 的稠密嵌入 $F\to F'$, 且 $F'$ 关于 $\|{-}\|$ 构成完备度量空间.</p>
 <h2>例</h2>
@@ -14483,6 +14566,16 @@ $$
 一般记 $k=\mathcal O / \mathfrak m$ 为其<strong>剩余域</strong> (residue field). 非 Archimedes 局部域的剩余域一定是<span class="link local"><a href="./有限域.html" title="“有限域” [有限域]">有限域</a></span>.</p>
 <p>局部域的整数环的极大理想 $\mathfrak m$ 是主理想, 其生成元 $\varpi$ 称为单值子 (uniformizer). 若取定一个单值子 $\omega$, 则域的每个元素都可以唯一地写成 $\omega^n u$, $n$ 为整数, $u\in\mathcal O^\times$ 为单位.</p>
 <p>若 $F$ 是非 Archimedes 特征 $p$ 局部域, 则 $F$ 的每个单值子 $\varpi$ 给出一个同构 $F \simeq k(\!(T)\!)$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="局部对称空间"><header><h1><span class="taxon"></span>局部对称空间 <a class="slug" href="./局部对称空间.html">[局部对称空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设 $M$ 为<span class="link local"><a href="./完备Riemann流形.html" title="完备 Riemann 流形 [完备Riemann流形]">完备 Riemann 流形</a></span>. 对任一点 $x\in M$, 存在邻域 $U$ 满足</p>
+<ul>
+<li>$U$ 中任一点到 $x$ 有唯一的包含于 $U$ 的测地线;</li>
+<li>存在星形区域 $V\subset T_x M$, 关于 $0$ 对称, 使得指数映射 $\exp \colon V\to U$ 为微分同胚.</li>
+</ul>
+<p>此时, $V$ 上的映射 $v\mapsto -v$ 给出微分同胚 $s_x\colon U\to U$.</p>
+<p>若对任意 $x\in M$, $s_x$ 为局部等距同构, 则称 $M$ 为<strong>局部对称空间</strong> (locally symmetric space).</p>
+<h2>例</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="局部对象"><header><h1><span class="taxon"></span>局部对象 <a class="slug" href="./局部对象.html">[局部对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon=""><details ><summary id="局部性质"><header><h1><span class="taxon"></span>局部性质 <a class="slug" href="./局部性质.html">[局部性质]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>对于<span class="link local"><a href="./Grothendieck拓扑.html" title="Grothendieck 拓扑 [Grothendieck拓扑]">覆盖结构</a></span> $J$, 以及态射的某种性质 $P$,</p>
@@ -14809,7 +14902,8 @@ $$
 <p><span class="link local"><a href="./平坦概形态射.html" title="“平坦概形态射” [平坦概形态射]">平坦概形态射</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="平展上同调"><header><h1><span class="taxon"></span>平展上同调 <a class="slug" href="./平展上同调.html">[平展上同调]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./平展景.html" title="平展景 [平展景]">平展景</a></span>上的<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="平展同伦论"><header><h1><span class="taxon"></span>“平展同伦论” <a class="slug" href="./平展同伦论.html">[平展同伦论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="平展同伦论"><header><h1><span class="taxon"></span>平展同伦论 <a class="slug" href="./平展同伦论.html">[平展同伦论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>todo: 重新整理资料</p>
 <blockquote>
 <p>平展同伦的概念可理解为如下经典事实的推广: 考虑仿紧 (paracompact) 拓扑空间 $X$ 的好覆盖 (即任意有限个开集的交为空或可缩) $\{U_i \to X\}$ 的 <span class="link local"><a href="./Cech脉.html" title=" [Cech脉]">Cech 脉</a></span>, 逐项取其连通分支的集合, 所得的单纯集表现了 $X$ 的同伦型.</p>
 <p>更一般地, 对于局部可缩空间 $X$, 没有好覆盖的概念, 但可以考虑<span class="link local"><a href="./超覆盖.html" title="超覆盖 [超覆盖]">超覆盖</a></span>的类似构造, 对所有超覆盖给出的单纯集取极限.</p>
@@ -18083,7 +18177,7 @@ $$
 HR\text{-}\mathrm {Mod}\simeq D(R\text{-}\mathrm {Mod}).
 $$
 其中 $HR$ 是 <span class="link local"><a href="./Eilenberg–MacLane谱.html" title="Eilenberg–MacLane 谱 [Eilenberg–MacLane谱]">Eilenberg–MacLane 谱</a></span>, $D$ 表示<span class="link local"><a href="./导出无穷范畴.html" title=" [导出无穷范畴]">导出范畴</a></span>.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="稳定∞-范畴的素谱"><header><h1><span class="taxon"></span>“稳定 ∞-范畴的素谱” <a class="slug" href="./稳定∞-范畴的素谱.html">[稳定∞-范畴的素谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="稳定∞-范畴的素谱"><header><h1><span class="taxon"></span>稳定 ∞-范畴的素谱 <a class="slug" href="./稳定∞-范畴的素谱.html">[稳定∞-范畴的素谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="稳定丛"><header><h1><span class="taxon"></span>“稳定丛” <a class="slug" href="./稳定丛.html">[稳定丛]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>向量丛 (或<span class="link local"><a href="./凝聚层.html" title="凝聚层 [凝聚层]">凝聚层</a></span>) 的斜率 (slope) 是指度数除以阶数:
@@ -18129,6 +18223,7 @@ $$</p>
 <p><span class="link local"><a href="./稳定∞-范畴.html" title=" [稳定∞-范畴]">稳定无穷范畴</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="稳定同伦论"><header><h1><span class="taxon"></span>稳定同伦论 <a class="slug" href="./稳定同伦论.html">[稳定同伦论]</a></h1><div class="metadata"><ul><li class="meta-item">学科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>稳定同伦论的研究对象是<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span> (的对象).</p>
+<p><span class="link local"><a href="./tutorial-stable-homotopy.html" title="稳定同伦论 [tutorial-stable-homotopy]">教程 : 稳定同伦论</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="稳定向量丛"><header><h1><span class="taxon"></span>稳定向量丛 <a class="slug" href="./稳定向量丛.html">[稳定向量丛]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon=""><details ><summary id="稳定无穷范畴"><header><h1><span class="taxon"></span>稳定范畴 <a class="slug" href="./稳定无穷范畴.html">[稳定无穷范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
@@ -19337,11 +19432,12 @@ $$</p>
 $$
 \mathcal L\mathbf{B}G = G /_{\mathrm{ad}} G.
 $$</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="色同伦论"><header><h1><span class="taxon"></span>“色同伦论” <a class="slug" href="./色同伦论.html">[色同伦论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="色同伦论"><header><h1><span class="taxon"></span>色同伦论 <a class="slug" href="./色同伦论.html">[色同伦论]</a></h1><div class="metadata"><ul><li class="meta-item">学科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>色同伦论可认为是对 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 的<span class="link local"><a href="./稳定∞-范畴的素谱.html" title="稳定 ∞-范畴的素谱 [稳定∞-范畴的素谱]">素谱</a></span>的研究.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./MoravaK-理论.html" title="“Morava K-理论” [MoravaK-理论]">Morava K-理论</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="色展同伦论"><header><h1><span class="taxon"></span>“色展同伦论” <a class="slug" href="./色展同伦论.html">[色展同伦论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>色展同伦论研究<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>范畴的<span class="link local"><a href="./素谱.html" title=" [素谱]">稳定 ∞-范畴的素谱</a></span>.</p>
+<p>此页面已弃用</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="范畴O"><header><h1><span class="taxon"></span>“范畴 O” <a class="slug" href="./范畴O.html">[范畴O]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>#几何表示论</p>
 <p>BGG 范畴 O 由 Bernstein–Gelfand–Gelfand 定义. 固定 Lie 代数 $\mathfrak g$ 的 <span class="link local"><a href="./Cartan子代数.html" title="“Cartan 子代数” [Cartan子代数]">Cartan 子代数</a></span> $\mathfrak h$ 以及 <span class="link local"><a href="./Borel子代数.html" title="“Borel 子代数” [Borel子代数]">Borel 子代数</a></span> $\mathfrak b$, 定义 $\mathcal O$ 是由如下 $\mathfrak g$-模 $M$ 组成的范畴:</p>

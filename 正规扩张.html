@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>正规扩张</title><link rel="icon" href="./assets/favicon.ico" /><p class="test">
-test (where is this content placed?)
-</p><style>
+<meta name="viewport" content="width=device-width"><title>正规扩张</title><link rel="icon" href="./assets/favicon.ico" /><style>
   @font-face {
     font-family: 'NewCM10';
     src: url(assets/NewCM10-Book.otf) format('opentype');
@@ -857,6 +855,34 @@ $$
 \operatorname{Gal}(E_1E_2 / E_2) \hookrightarrow \operatorname{Gal}(E_1 / F).
 $$</p>
 <p><strong>命题</strong>. 若 $F\subset E_1$ 为 Galois 扩张且 $E_1\cap E_2 = F$, 则上述嵌入为同构.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="半直积"><header><h1><span class="taxon"></span>半直积 <a class="slug" href="./半直积.html">[半直积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>传统定义</h3>
+<p>设 $\mathsf{Set}$ 中的<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $H$ <span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>于群 $N$, 考虑 $N\times H$ 带有如下群结构,
+$$
+(n,h) (n',h') = (n (h\cdot n'),hh'),
+$$
+所得的群记作 $N\rtimes H$, 称为 $N$ 与 $H$ 的<strong>半直积</strong> (semidirect product).</p>
+<h3>一般定义</h3>
+<p>设<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $H$ <span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>于群 $N$, 即作用于带基点连通对象 $\mathbf{B}N\in\mathsf{Ani}_{*/}^{\geq 1}$, 其商 $(\mathbf{B}N) / H$ 是一个群 $G = N \rtimes H$ 的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>, 这个群称为 $N$ 与 $H$ 的<strong>半直积</strong>.</p>
+<h2>性质</h2>
+<h3>分裂短正合列</h3>
+<p>半直积 $G = N\rtimes H$ 给出右分裂的<span class="link local"><a href="./群短正合列.html" title="群的短正合列 [群短正合列]">短正合列</a></span>
+$$
+1\to N \to G \to H \to 1,
+$$
+其中 $G\to H$ 有群同态截面 $H\to G$, 这是因为 $H$ 在 $\mathbf{B}N$ 上的作用保持基点, 即有 $\mathsf{Ani}_{/\mathbf{B}H}$ 中的映射 $\mathbf{B}H \to (\mathbf{B}N)/H = \mathbf{B}G$.</p>
+<h2>例</h2>
+<h3>Galois 群</h3>
+<p>$x^5 - 2$ 在 $\mathbb{Q}$ 上的<span class="link local"><a href="./分裂域.html" title="分裂域 [分裂域]">分裂域</a></span>为 $\mathbb{Q}[\zeta,\alpha]$, 其中 $\zeta=\exp(2\pi/5),\alpha=\sqrt[5]{2}$. 考虑</p>
+<ul>
+<li>$\mathbb{Q}[\zeta]$ 的固定子群 $N$, 由于 $\mathbb{Q}[\zeta]/\mathbb{Q}$ <span class="link local"><a href="./正规扩张.html" title="正规扩张 [正规扩张]">正规</a></span> (是 $x^5-1$ 的分裂域), 故 $N\hookrightarrow G$ 为正规子群;</li>
+<li>$\mathbb{Q}[\alpha]$ 的固定子群 $H$,</li>
+</ul>
+<p>那么
+$$
+\operatorname{Gal}(\mathbb{Q}[\zeta,\alpha],\mathbb{Q}) \simeq H \rtimes N.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="域扩张"><header><h1><span class="taxon"></span>域扩张 <a class="slug" href="./域扩张.html">[域扩张]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <h2>定义</h2>
