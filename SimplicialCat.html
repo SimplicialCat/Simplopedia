@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>单纯猫</title><link rel="icon" href="./assets/favicon.ico" /><style>
+<meta name="viewport" content="width=device-width"><title>单纯猫</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="assets/favicon.ico" type="image/x-icon"><style>
   @font-face {
     font-family: 'NewCM10';
     src: url(assets/NewCM10-Book.otf) format('opentype');
@@ -3255,6 +3255,10 @@ $$</p>
 <h2>12. 尖点形式</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="Gestalt"><header><h1><span class="taxon"></span>Gestalt <a class="slug" href="./Gestalt.html">[Gestalt]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>Gestalt (复数 Gestalten, 在心理学上的译名为 “格式塔”) 是 <span class="link local"><a href="./ScholzeStefanichGestalten.html" title="Geometry and Higher Category Theory [ScholzeStefanichGestalten]">Scholze–Stefanich</a></span> 提出的一种几何概念, 旨在恢复完全的<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>: 通过考虑几何对象上的 “线性 $(\infty,n)$-范畴” 取值的层, 即<span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span>, 使得任何几何对象都具有代数的对应物, 而不再需要对 “仿射” 几何对象进行粘合操作.</p>
+<blockquote>
+<p>The language of Gestalten translates difficult algebra of higher categories into more intuitively manageable geometry, in the same way that the language of schemes translates difficult commutative algebra into more intuitively manageable geometry.</p>
+<p>— Peter Scholze, <span class="link local"><a href="./ScholzeBourbakiGL.html" title="Geometric Langlands, after Gaitsgory, Raskin, … [ScholzeBourbakiGL]">2026 年 3 月 Bourbaki 演讲</a></span></p>
+</blockquote>
 <h2>观念</h2>
 <ol>
 <li>代数几何中的几乎所有几何对象都来自于仿射概形之类的基本对象的 “粘合”. 做这件事的一般框架是<span class="link local"><a href="./景.html" title="景 [景]">景</a></span>和<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的理论. 给仿射概形的范畴配备适当的覆盖结构, 然后取其上的层, 这就相当于取仿射概形的 (形式上的) 余极限, 得到一个包含许多几何对象的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>.
@@ -3291,13 +3295,19 @@ A_n = \operatorname{End}_{A_{n+1}}(*) = \operatorname{End}_{\operatorname{End}_{
 $$</p>
 <p><strong>定义</strong>. Gestalt 为 Stefanich 环的对偶: $\mathsf{Gest} = \mathsf{StRing}^{\mathrm{op}}$.</p>
 <h2>性质</h2>
-<p><strong>定理</strong> (<span class="link local"><a href="./ScholzeStefanichGestalten.html" title="Geometry and Higher Category Theory [ScholzeStefanichGestalten]">Scholze–Stefanich</a></span>). $\mathsf{Gest}$ 是一个 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span>.</p>
+<p><strong>定理</strong> (<span class="link local"><a href="./ScholzeStefanichGestalten.html" title="Geometry and Higher Category Theory [ScholzeStefanichGestalten]">Scholze–Stefanich</a></span>). (在实用的意义上,) $\mathsf{Gest}$ 是一个 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span>.</p>
 <h2>例</h2>
 <p>普通的交换环 $A$ 给出一个 Stefanich 环
 $$
 (A,\mathsf{Mod}(A),1\mathsf{Pr}_A,2\mathsf{Pr}_A,\cdots).
 $$</p>
 <p>对于仿射概形范畴上适当的 Grothendieck 拓扑, 该构造即延拓至适当的叠.</p>
+<h3>映射空间</h3>
+<p>“Betti 局部系统的叠” $\mathrm{LocSys}_G$ 可表示为 Gestalt 的映射空间
+$$
+\mathrm{LocSys}^{\text{Betti}}_G \simeq \operatorname{Map}(*/\pi_1, */G) = \operatorname{Hom}(\pi_1,G)/G.
+$$
+其中 $*/G$ 为<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>, $G$-作用为<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Giraud公理"><header><h1><span class="taxon"></span>Giraud 公理 <a class="slug" href="./Giraud公理.html">[Giraud公理]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>据 <span class="link local"><a href="./SGA4.html" title="Théorie des topos et cohomologie étale des schémas [SGA4]">SGA 4</a></span> 记载, Grothendieck 的学生 Giraud 惊人地给出了 <span class="link local"><a href="./意象.html" title="意象 [意象]">Grothendieck 意象</a></span>的纯范畴论刻画, 后来称为 <strong>Giraud 公理</strong>. 这说明意象还具有一种独立于几何对象的观点.</p>
@@ -8956,6 +8966,9 @@ $$
 </ul>
 <p><span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>范畴的心与 $\mathsf {Ab}$ 的同构由 <span class="link local"><a href="./Eilenberg–MacLane谱.html" title="Eilenberg–MacLane 谱 [Eilenberg–MacLane谱]">Eilenberg–MacLane 谱</a></span>给出. 此时同调是谱的同伦群.</p>
 <p><span class="link local"><a href="./偏屈t-结构.html" title="偏屈 t-结构 [偏屈t-结构]">偏屈 t-结构</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="term-suave"><header><h1><span class="taxon"></span>温滑 <a class="slug" href="./term-suave.html">[term-suave]</a></h1><div class="metadata"><ul><li class="meta-item">翻译</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>“温滑” 是 suave 的暂定翻译.</p>
+<p>Suave 出自 <span class="link local"><a href="./ScholzeStefanichGestalten.html" title="Geometry and Higher Category Theory [ScholzeStefanichGestalten]">Gestalten 讲义</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="terminologies"><header><h1><span class="taxon"></span>单纯百科 - 术语翻译表 <a class="slug" href="./terminologies.html">[terminologies]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>下表的第二列是<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>使用的译文.</p>
 <p>表格第三列是其它地方也曾出现的译文, 它们有的是历史淘汰的选择, 有的是机翻造成的错误. 这个表格的作用是为 LLM 提供正确的术语.</p>
@@ -8983,6 +8996,9 @@ $$
 <tr><td>torsor</td><td><span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span></td><td>旋子, 扭子, 挠子</td></tr>
 <tr><td>walking</td><td><span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span></td><td></td></tr>
 </tbody></table>
+<h2>未确定的术语</h2>
+<p>|原文|译文|
+|suave|<span class="link local"><a href="./term-suave.html" title="温滑 [term-suave]">温滑</a></span>|</p>
 <h2>相关内容</h2>
 <p><span class="link local"><a href="./关于译名-意象.html" title="关于译名 “意象” [关于译名-意象]">关于译名 “意象”</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="todo"><header><h1><span class="taxon"></span>亟需施工处 <a class="slug" href="./todo.html">[todo]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
