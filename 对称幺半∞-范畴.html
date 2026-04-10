@@ -556,7 +556,7 @@
     --color-Furina-misty-blue: #C4D7ED;
     --color-Furina-vivid-sapphire: #5670E9;
     --color-Furina-luminous-hydro: #70DBFF;
-    --color-Furina-bright-periwinkle: #8DA4F1;
+    --color-Furina-bright-periwinkle: #8D84F1;
     --color-Furina-vintage-gold: #BD9368;
     --color-Furina-vintage-gold-light: #DDB368;
     --color-Furina-vintage-gold-ultra-light: #FDF388;
@@ -626,7 +626,7 @@
     display: inline;
     margin-left: 0;
     color: var(--color-Furina-bright-periwinkle);
-    font-size: small;
+    font-size: 0.8rem;
   }
 
   article > section > details > summary > header > h1 {
@@ -832,11 +832,12 @@ $$
 $$
 换言之, $\mathsf{Day}_{\mathcal C}$ 是 $-\times_{\mathsf{Fin}_*}\mathcal C^\otimes$ 的右伴随.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Gestalt"><header><h1><span class="taxon"></span>Gestalt <a class="slug" href="./Gestalt.html">[Gestalt]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>Gestalt (复数 Gestalten, 在心理学上的译名为 “格式塔”) 是 <span class="link local"><a href="./ScholzeStefanichGestalten.html" title="Geometry and Higher Category Theory [ScholzeStefanichGestalten]">Scholze–Stefanich</a></span> 提出的一种几何概念, 旨在恢复完全的<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>: 通过考虑几何对象上的 “线性 $(\infty,n)$-范畴” 取值的层, 即<span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span>, 使得任何几何对象都具有代数的对应物, 而不再需要对 “仿射” 几何对象进行粘合操作.</p>
+<p><span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span> (Gestalt, 复数 Gestalten) 是 <span class="link local"><a href="./ScholzeStefanichGestalten.html" title="Geometry and Higher Category Theory [ScholzeStefanichGestalten]">Scholze–Stefanich</a></span> 提出的一种几何概念, 旨在恢复完全的<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>: 通过考虑几何对象上的 “线性 $(\infty,n)$-范畴” 取值的层, 即<span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span>, 使得任何几何对象都具有代数的对应物, 而不再需要对 “仿射” 几何对象进行粘合操作.</p>
 <blockquote>
 <p>The language of Gestalten translates difficult algebra of higher categories into more intuitively manageable geometry, in the same way that the language of schemes translates difficult commutative algebra into more intuitively manageable geometry.</p>
 <p>— Peter Scholze, <span class="link local"><a href="./ScholzeBourbakiGL.html" title="Geometric Langlands, after Gaitsgory, Raskin, … [ScholzeBourbakiGL]">2026 年 3 月 Bourbaki 演讲</a></span></p>
 </blockquote>
+<p><span class="link local"><a href="./notes-Gestalten.html" title="Gestalten [notes-Gestalten]">Gestalten</a></span></p>
 <h2>观念</h2>
 <ol>
 <li>代数几何中的几乎所有几何对象都来自于仿射概形之类的基本对象的 “粘合”. 做这件事的一般框架是<span class="link local"><a href="./景.html" title="景 [景]">景</a></span>和<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的理论. 给仿射概形的范畴配备适当的覆盖结构, 然后取其上的层, 这就相当于取仿射概形的 (形式上的) 余极限, 得到一个包含许多几何对象的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>.
@@ -850,7 +851,7 @@ $$
 <li>为了记录所有几何对象, 我们需要不断地走向范畴层级更高的代数对象, 即<span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span>. 这就是 Gestalt 的起源.</li>
 </ol>
 <h2>定义</h2>
-<p>Gestalt 的定义是基于一个称为 <strong>Stefanich 环</strong>的代数对象.</p>
+<p><span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span>的定义是基于一个称为 <strong>Stefanich 环</strong>的代数对象.</p>
 <p>一个 Stefanich 环 $A$ 是如下资料:</p>
 <ul>
 <li>一个越来越高阶的<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>的塔
@@ -871,7 +872,7 @@ $$
 $$
 A_n = \operatorname{End}_{A_{n+1}}(*) = \operatorname{End}_{\operatorname{End}_{A_{n+2}}(*)}(*) = \cdots.
 $$</p>
-<p><strong>定义</strong>. Gestalt 为 Stefanich 环的对偶: $\mathsf{Gest} = \mathsf{StRing}^{\mathrm{op}}$.</p>
+<p><strong>定义</strong>. <span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span>为 Stefanich 环的对偶: $\mathsf{Gest} = \mathsf{StRing}^{\mathrm{op}}$.</p>
 <h2>性质</h2>
 <p><strong>定理</strong> (<span class="link local"><a href="./ScholzeStefanichGestalten.html" title="Geometry and Higher Category Theory [ScholzeStefanichGestalten]">Scholze–Stefanich</a></span>). (在实用的意义上,) $\mathsf{Gest}$ 是一个 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span>.</p>
 <h2>例</h2>
@@ -881,7 +882,7 @@ $$
 $$</p>
 <p>对于仿射概形范畴上适当的 Grothendieck 拓扑, 该构造即延拓至适当的叠.</p>
 <h3>映射空间</h3>
-<p>“Betti 局部系统的叠” $\mathrm{LocSys}_G$ 可表示为 Gestalt 的映射空间
+<p>“Betti 局部系统的叠” $\mathrm{LocSys}_G$ 可表示为<span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span>的映射空间
 $$
 \mathrm{LocSys}^{\text{Betti}}_G \simeq \operatorname{Map}(*/\pi_1, */G) = \operatorname{Hom}(\pi_1,G)/G.
 $$

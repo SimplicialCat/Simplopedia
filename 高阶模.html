@@ -556,7 +556,7 @@
     --color-Furina-misty-blue: #C4D7ED;
     --color-Furina-vivid-sapphire: #5670E9;
     --color-Furina-luminous-hydro: #70DBFF;
-    --color-Furina-bright-periwinkle: #8DA4F1;
+    --color-Furina-bright-periwinkle: #8D84F1;
     --color-Furina-vintage-gold: #BD9368;
     --color-Furina-vintage-gold-light: #DDB368;
     --color-Furina-vintage-gold-ultra-light: #FDF388;
@@ -626,7 +626,7 @@
     display: inline;
     margin-left: 0;
     color: var(--color-Furina-bright-periwinkle);
-    font-size: small;
+    font-size: 0.8rem;
   }
 
   article > section > details > summary > header > h1 {
@@ -1203,6 +1203,57 @@ $$
 <p>因此 $\phi(a) \psi(1) = \psi(1) a$.</p>
 <p>故存在 $a_0$ 使得 $\psi(a_0)=1$; 由上式知 $\psi(1)$ 可逆, 且 $\phi(a)=\psi(1)a\psi(1)^{-1}$, 即 $\phi$ 为内自同构.</p>
 <h3>概形</h3>
+</details></section><section class="block" data-taxon=""><details ><summary id="notes-Gestalten-StRing"><header><h1><span class="taxon"></span>Gestalten - Stafanich 环 <a class="slug" href="./notes-Gestalten-StRing.html">[notes-Gestalten-StRing]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>对于交换环 $A$, 其模范畴 $\mathsf{Mod}(A)$ 为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 许多对于环可以讨论的事情可以在范畴层面讨论. 换言之, 可表现对称幺半范畴是环的推广.</p>
+<p>推广不会仅做一次就停止. 对于可表现对称幺半范畴 $\mathcal A$, 其在 $\mathsf{Pr}$ 中的<span class="link local"><a href="./高阶模.html" title="高阶模 [高阶模]">模范畴</a></span>为可表现对称幺半 $2$-范畴, 这种对象又可视为可表现对称幺半范畴的推广. 以此类推至于无穷, 就得到 <strong>Stefanich 环</strong>的概念.</p>
+<p><strong>定义</strong>. Stafanich 环的范畴 $\mathsf{StRing}$ 是如下 $\aleph_1$-<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>:
+$$
+\begin{aligned}
+\mathsf{StRing} &amp;= \operatorname{colim}^{1\mathsf{Pr}}(\mathsf{CAlg}(\mathsf{Ani})\hookrightarrow\mathsf{CAlg}(1\mathsf{Pr})\hookrightarrow\cdots)\\
+&amp;= \operatorname{lim}^{\mathsf{Cat}}(\mathsf{CAlg}(\mathsf{Ani})\leftarrow\mathsf{CAlg}(1\mathsf{Pr})\leftarrow\cdots).
+\end{aligned}
+$$</p>
+<p>由于上述第二行定义, $\mathsf{StRing}$ 的一个对象可写为 $A = (A_0,A_1,A_2,\cdots)$, $A_n\in\mathsf{CAlg}(n\mathsf{Pr})$, 带有等价 $A_n = \operatorname{End}_{A_{n+1}}(1)$. 事实上, 这一串等价
+$$
+A_n = \operatorname{End}_{A_{n+1}}(1) = \operatorname{End}_{\operatorname{End}_{A_{n+2}}(1)}(1) = \cdots
+$$
+自动给出 $A_n$ 的交换代数结构.</p>
+<p>$\mathsf{StRing}$ 的始对象是 $(*,\mathsf{Ani},1\mathsf{Pr},\cdots)$; 即任何 Stefanich 环 $A$ 都带有一列函子 $(n-1)\mathsf{Pr} \to A_n$.
+这可以如下理解: $A_n$ 是 $n\mathsf{Pr}$ 中的交换代数, 而 $n\mathsf{Pr}$ 是 $1\mathsf{Pr}$ 中 $(n-1)\mathsf{Pr}$-模的范畴. 模范畴中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>相当于原范畴中的交换代数带有代数同态; 故 $A_n$ 带有代数同态 $(n-1)\mathsf{Pr} \to A_n$.</p>
+<p>Stefanich 环的态射 $f\colon A\to B$ 是一族相容的交换代数同态 $A_n \to B_n$. 我们采用一个看似 “错位” 的记号 $f^*_{n-1}\colon A_n\to B_n$ 来表示这个同态.<sup class="footnote-reference" id="notes-Gestalten-StRing_1-back"><a href="#notes-Gestalten-StRing_1">1</a></sup></p>
+<div class="footnote-definition" id="notes-Gestalten-StRing_1">
+  <sup class="footnote-definition-label"><a href="#notes-Gestalten-StRing_1-back">1</a></sup>
+<p>这是因为 $A_n$ 可想象为几何对象 $X$ 上的 $(n-1)$-范畴层, 而 $f^*_{n-1}$ 可想象为 $(n-1)$-范畴层的拉回. 换言之, $f^*$ 的下标表示的是其操作的<strong>对象</strong>的范畴层级.</p>
+</div>
+<p>由定义, $f^*_{n-1}\colon A_n\to B_n$ 是<span class="link local"><a href="./高阶可表现范畴.html" title="高阶可表现范畴 [高阶可表现范畴]">可表现范畴</a></span>之间保持余极限的函子, 从而有右伴随 $f_{n-1,*}\colon B_n\to A_n$.
+它自动构成松对称幺半函子, 从而给出<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>范畴之间的函子 $f_{n-1,*} \colon \mathsf{CAlg}(B_n) \to \mathsf{CAlg}(A_n)$.
+此时 $1_{B_n}\in\mathsf{CAlg}(B_n)$ 给出 $A_n$ 中的交换代数, 记作
+$$
+(B/A)_{n-1} := f_{n-1,*}(1_{B_n}) \in \mathsf{CAlg}(A_n).
+$$</p>
+<p>这可视为 $B$ 在 $A$ 上的一种<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>观点, 正如在代数几何中我们常常固定一个基环 $A$ 考虑 $A$-代数一样. 而 “绝对” 的基环是 $A = (*,\mathsf{Ani},\mathsf{Pr},\cdots)$, 此时,
+$(B/A)_{n-1} = B_{n-1} \in \mathsf{CAlg}((n-1)\mathsf{Pr})$.</p>
+<p>在 Stefanich 环的世界中, 任何一个层级的 “$A$-代数” 都可视为 Stefanich 环的同态 $A\to B$. 更准确地说有如下命题.</p>
+<p><strong>命题</strong>. 对 $n\geq 1$, 有全忠实函子
+$$
+\mathsf{CAlg}(A_n) \to \mathsf{StRing}_{A/},
+$$
+该函子为 $B\mapsto (B/A)_{n-1}$ 的左伴随. 进一步, 有等价
+$$
+\begin{aligned}
+\mathsf{StRing}_{A/} &amp;\simeq
+\operatorname{colim}^{\mathsf{Pr}}(\mathsf{CAlg}(A_1)\hookrightarrow\mathsf{CAlg}(A_2)\hookrightarrow\cdots)\\
+&amp; =\operatorname{lim}^{\mathsf{Cat}}(\mathsf{CAlg}(A_1)\leftarrow\mathsf{CAlg}(A_2)\leftarrow\cdots),
+\end{aligned}
+$$
+其中 $B\in\mathsf{StRing}_{A/}$ 对应于 $((B/A)_0,(B/A)_1,\cdots)$.</p>
+<p><em>证明</em> (大致思路).</p>
+<p>$$
+\begin{aligned}
+\mathsf{StRing}_{A/} &amp;\simeq
+\operatorname{lim}^{\mathsf{Cat}}()
+\end{aligned}
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="微分分次范畴"><header><h1><span class="taxon"></span>微分分次范畴 <a class="slug" href="./微分分次范畴.html">[微分分次范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>交换环 $k$ 上的微分分次范畴 (differential graded category, “dg category”) 是 “$k$-线性<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span>” 的一种模型, 也等同于充实于 <span class="link local"><a href="./Eilenberg–MacLane谱.html" title="Eilenberg–MacLane 谱 [Eilenberg–MacLane谱]">Eilenberg–MacLane 谱</a></span> $Hk$ 上的模范畴 $\mathsf{Mod}(Hk)$ 的范畴, 或 $\mathsf{Mod}(Hk)$-<span class="link local"><a href="./高阶模.html" title="高阶模 [高阶模]">模</a></span>;
