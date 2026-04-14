@@ -806,8 +806,11 @@
 <p>称 $\mathcal C$ 为可表现范畴是指存在一个基数 $\kappa$, $\mathcal C$ 为 $\kappa$-可表现范畴.</p>
 <p>等价的定义是: 有一个小范畴到 $\mathcal C$ 的函子 $j\colon \mathcal S\hookrightarrow\mathcal C$, 使得米田扩张 $\mathsf{Psh}(\mathcal S) \to \mathcal C$ 是预层范畴 $\mathsf{Psh}(\mathcal S)$ 关于某个小态射族 $W \subset \mathsf{Fun}([1],\mathsf{Psh}(\mathcal S))$ 的局部化.</p>
 <p>可表现范畴以及保持余极限的函子构成的范畴记为 $\mathsf{Pr}^{\mathrm{L}}$, 其中 $\mathrm{L}$ 的含义是这些函子是左伴随 (<span class="link local"><a href="./伴随函子定理.html" title="伴随函子定理 [伴随函子定理]">伴随函子定理</a></span>).</p>
+<p>可表现范畴以及保持极限的函子构成的范畴记为 $\mathsf{Pr}^{\mathrm{R}}$. 有
+$$
+\mathsf{Pr}^{\mathrm{R}} \simeq (\mathsf{Pr}^{\mathrm{L}})^{\mathrm{op}}.
+$$</p>
 <h2>性质</h2>
-<p>由<span class="link local"><a href="./景.html" title="景 [景]">景</a></span>表现的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>是可表现范畴.</p>
 <h3>张量积</h3>
 <p>可表现范畴的范畴 $\mathsf{Pr}$ 上有一个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>结构, 称为 <strong>Lurie 张量积</strong>.</p>
 <p><strong>命题-定义</strong>. 对于可表现范畴 $\mathcal C,\mathcal D$, 存在万有的可表现范畴 $\mathcal C\otimes\mathcal D$, 带有一个双线性 (即保持每个分量的余极限) 的函子
@@ -815,8 +818,30 @@ $$
 \mathcal C\times \mathcal D \to \mathcal C\otimes\mathcal D.
 $$</p>
 <p>可表现范畴的张量积的单位是 <span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">$\mathsf{Ani}$</a></span>.</p>
-<h2>高阶可表现范畴</h2>
-<p>见<span class="link local"><a href="./高阶可表现范畴.html" title="高阶可表现范畴 [高阶可表现范畴]">高阶可表现范畴</a></span></p>
+<h3>极限</h3>
+<p>可表现范畴的极限即是其作为范畴的极限. 换言之, 遗忘函子 $\mathsf{Pr}^{\mathrm{L}} \to \mathsf{Cat}$ 保持极限.</p>
+<h3>余极限</h3>
+<p>可表现范畴的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>, <strong>不是</strong>其作为范畴的余极限; 但可以如下计算: 图表
+$X\colon I \to \mathsf{Pr}^{\mathrm{L}}$
+给出 $X^{\mathrm{op}}\colon I^{\mathrm{op}} \to \mathsf{Pr}^{\mathrm{R}}$, 而其余极限可计算为
+$$
+\operatorname{colim}^{\mathsf{Pr}^{\mathrm{L}}}X = \operatorname{lim}^{\mathsf{Pr}^{\mathrm{R}}}X^{\mathrm{op}}= \operatorname{lim}^{\mathsf{Cat}} X^{\mathrm{op}}.
+$$
+换言之, <span class="link local"><a href="./自由-遗忘伴随.md.html" title=" [自由-遗忘伴随.md]">遗忘</a></span>函子 $\mathsf{Pr}^{\mathrm{R}} \to\mathsf{Cat}$ 保持极限.</p>
+<p>例如, 对任意集合 $I$, 可表现范畴的 $I$-<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>实际上等同于可表现范畴的积, 也等同于其作为范畴的积:
+$$
+\coprod_{i\in I}^{\mathsf{Pr}^{\mathrm{L}}} \mathcal C_i \overset{\simeq}{\to} \prod_{i\in I}^{\mathsf{Cat}} \mathcal C_i \simeq \prod_{i\in I}^{\mathsf{Pr}^{\mathrm{L}}} \mathcal C_i.
+$$
+这是一个重要的性质, 称为<strong>半加性</strong> (semiadditivity).</p>
+<h2>例</h2>
+<h3>意象</h3>
+<p>(由<span class="link local"><a href="./景.html" title="景 [景]">景</a></span>表现的) <span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>是可表现范畴.</p>
+<p>其中, 由小范畴 $\mathcal C$ 上的平凡 <span class="link local"><a href="./Grothendieck拓扑.html" title="Grothendieck 拓扑 [Grothendieck拓扑]">Grothendieck 拓扑</a></span>表现的意象, 也即<span class="link local"><a href="./预层意象.md.html" title=" [预层意象.md]">预层意象</a></span> $\mathsf{Fun}(\mathcal C ^{\mathrm{op}},\mathsf{Ani})$, 是 $\mathcal C$ 生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>可表现范畴.</p>
+<h2>相关概念</h2>
+<h3>带有代数结构的范畴</h3>
+<p>若 $\mathcal C$ 为可表现<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $A$ 为其中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>, 则<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>范畴 $\mathsf{Mod}(A)$ 为可表现<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>.</p>
+<h3>高阶可表现范畴</h3>
+<p>见<span class="link local"><a href="./高阶可表现范畴.html" title="高阶可表现范畴 [高阶可表现范畴]">高阶可表现范畴</a></span>.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Gestalt"><header><h1><span class="taxon"></span>Gestalt <a class="slug" href="./Gestalt.html">[Gestalt]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span> (Gestalt, 复数 Gestalten) 是 <span class="link local"><a href="./ScholzeStefanichGestalten.html" title="Geometry and Higher Category Theory [ScholzeStefanichGestalten]">Scholze–Stefanich</a></span> 提出的一种几何概念, 旨在恢复完全的<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>: 通过考虑几何对象上的 “线性 $(\infty,n)$-范畴” 取值的层, 即<span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span>, 使得任何几何对象都具有代数的对应物, 而不再需要对 “仿射” 几何对象进行粘合操作.</p>
 <blockquote>
@@ -968,6 +993,32 @@ $$
 \mathsf{CAlg}(\mathsf{Mod}_{1\mathsf{Pr}}(A_{n+1})).
 $$</p>
 <p>https://q.uiver.app/#q=WzAsMTAsWzAsMCwiXFxtYXRoc2Z7Q0FsZ30oblxcbWF0aHNme1ByfSlfe0FfbiAvfSJdLFswLDEsIlxcbWF0aHNme0NBbGd9KFxcbWF0aHNme01vZH1fezFcXG1hdGhzZntQcn19KChuLTEpXFxtYXRoc2Z7UHJ9KSlfe0FfbiAvfSJdLFswLDIsIlxcbWF0aHNme0NBbGd9KDFcXG1hdGhzZntQcn0pX3sobi0xKVxcbWF0aHNme1ByfS99e31fe0FfbiAvfSJdLFswLDMsIlxcbWF0aHNme0NBbGd9KDFcXG1hdGhzZntQcn0pX3tBX24gL30iXSxbMCw0LCJcXG1hdGhzZntDQWxnfShcXG1hdGhzZntNb2R9X3sxXFxtYXRoc2Z7UHJ9fShBX24pKSJdLFsxLDAsIlxcbWF0aHNme0NBbGd9KChuKzEpXFxtYXRoc2Z7UHJ9KV97QV97bisxfSAvfSJdLFsxLDEsIlxcbWF0aHNme0NBbGd9KFxcbWF0aHNme01vZH1fezFcXG1hdGhzZntQcn19KG5cXG1hdGhzZntQcn0pKV97QV97bisxfSAvfSJdLFsxLDIsIlxcbWF0aHNme0NBbGd9KDFcXG1hdGhzZntQcn0pX3tuXFxtYXRoc2Z7UHJ9L317fV97QV97bisxfSAvfSJdLFsxLDMsIlxcbWF0aHNme0NBbGd9KDFcXG1hdGhzZntQcn0pX3tBX3tuKzF9IC99Il0sWzEsNCwiXFxtYXRoc2Z7Q0FsZ30oXFxtYXRoc2Z7TW9kfV97MVxcbWF0aHNme1ByfX0oQV97bisxfSkpIl0sWzAsMV0sWzEsMl0sWzIsM10sWzMsNF0sWzUsNl0sWzUsMCwiXFxvcGVyYXRvcm5hbWV7RW5kfV97LX0oMSkiLDJdLFs2LDddLFs2LDFdLFs3LDIsIlxcb3BlcmF0b3JuYW1le0VuZH1fey19KDEpIiwyXSxbOCwzXSxbNyw4XSxbOSw0XSxbOCw5XV0=</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="交换代数"><header><h1><span class="taxon"></span>交换代数 <a class="slug" href="./交换代数.html">[交换代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>交换代数又称 $\mathbb E_\infty$-代数, 即<span class="link local"><a href="./E∞-算畴.html" title="E∞-算畴 [E∞-算畴]">交换算畴</a></span>上的代数.</p>
+<p>另见<span class="link local"><a href="./交换代数(学科).html" title="交换代数 [交换代数(学科)]">交换代数 (学科)</a></span></p>
+<h2>定义</h2>
+<h3>使用语法范畴</h3>
+<h4>积幺半范畴</h4>
+<p>在<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span>中, 交换代数是交换幺半群的 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>的模型, 即其<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>为有限生成自由交换幺半群的范畴的对偶, 具体地:</p>
+<ul>
+<li>其对象为有限集;</li>
+<li>态射 $\{x_1,\cdots,x_n\}\to \{y_1,\cdots,y_m\}$ 为自然数的 $m\times n$ 矩阵; 等价地, 一个态射是 $\{y_1,\cdots,y_m\}$ 到 $\{x_1,\cdots,x_n\}$ 生成的自由交换幺半群的一个集合映射.</li>
+</ul>
+<p>那么<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span> $\mathcal C$ 中的交换代数即是上述范畴到 $\mathcal C$ 的保持有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>的函子.</p>
+<p>另一种定义只需提供较少的信息. 考虑<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点</a></span>有限集的范畴 $\mathsf{Fin}_*$ (这个范畴也等价于有限集与<span class="link local"><a href="./部分映射.html" title="部分映射 [部分映射]">部分映射</a></span>的范畴).
+对于<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span> $\mathcal C$, 其中的交换代数可等价地定义为函子 $F\colon \mathsf{Fin}_* \to \mathcal C$, 满足
+$$
+F(n) \to \prod_{i=1}^n F(1)
+$$
+为等价. <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 本质上使用的是这种定义.</p>
+<h4>一般对称幺半范畴</h4>
+<p>一般的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>中, 交换代数可用 <span class="link local"><a href="./PROP.html" title="PROP [PROP]">PROP</a></span> 定义. 具体地, 考虑有限集的范畴 $\mathsf{Fin}$ 配备<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>幺半结构. 对任意对称幺半范畴 $\mathcal C$, 其中的交换代数等同于对称幺半函子 $\mathsf{Fin} \to \mathcal C$.</p>
+<h2>性质</h2>
+<h3>模范畴</h3>
+<p>在<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span>的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>中, 交换代数 $A$ 的模范畴 $\mathsf{Mod}(A)$ 仍为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span>的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, 且其中的交换代数等同于 $A$ 出发的交换代数同态:
+$$
+\mathsf{CAlg}(\mathsf{Mod}_{\mathcal C}(A)) \simeq \mathsf{CAlg}(\mathcal C)_{A/}.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="充实范畴"><header><h1><span class="taxon"></span>充实范畴 <a class="slug" href="./充实范畴.html">[充实范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>充实范畴</strong>是范畴的推广, 其对象之间的 “态射集” 不是集合, 而是更一般的幺半范畴的对象.</p>
@@ -1292,13 +1343,15 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="高阶可表现范畴"><header><h1><span class="taxon"></span>高阶可表现范畴 <a class="slug" href="./高阶可表现范畴.html">[高阶可表现范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>高阶可表现范畴又称可表现 $(\infty ,n)$-范畴, 是<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>的<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>.</p>
+<p>参考 <span class="link local"><a href="./StefanichHigherQCoh.html" title="Higher Quasicoherent Sheaves [StefanichHigherQCoh]">Stefanich</a></span>.</p>
+<h2>定义</h2>
 <p>粗略地说 (忽略所有基数大小问题), 高阶可表现范畴的定义是 “取模范畴” 操作的迭代.
 对于可表现<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $\mathcal M$, 可定义其 (在余完备范畴的范畴 $\mathsf{Cat}_{\mathrm{cocomp}}$ 中的) “模范畴” $\mathsf{Mod}(\mathcal M)$. “可表现 $n$-范畴的范畴” $n\mathsf{Pr}$ 由下式归纳定义:</p>
 <ul>
 <li>$1\mathsf{Pr} = \mathsf{Mod}(\mathsf{Ani}) = \mathsf{Pr}$,</li>
 <li>$n\mathsf{Pr} = \mathsf{Mod}((n-1)\mathsf{Pr})$.</li>
 </ul>
-<p>按上述方法定义的范畴 $n\mathsf{Pr}$ 是 $(\infty ,1)$-范畴, 但可以升级为 $(\infty ,n+1)$-范畴, 参考 <span class="link local"><a href="./StefanichHigherQCoh.html" title="Higher Quasicoherent Sheaves [StefanichHigherQCoh]">Stefanich</a></span>.</p>
+<p>按上述方法定义的范畴 $n\mathsf{Pr}$ 是 $(\infty ,1)$-范畴, 但可以升级为 $(\infty ,n+1)$-范畴.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="高阶模"><header><h1><span class="taxon"></span>高阶模 <a class="slug" href="./高阶模.html">[高阶模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>高阶模是 “环上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>” 这一概念的<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>.</p>

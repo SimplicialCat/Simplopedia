@@ -793,6 +793,7 @@
 
 <article><section class="block" data-taxon=""><details open><summary id="交换代数"><header><h1><span class="taxon"></span>交换代数 <a class="slug" href="./交换代数.html">[交换代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>交换代数又称 $\mathbb E_\infty$-代数, 即<span class="link local"><a href="./E∞-算畴.html" title="E∞-算畴 [E∞-算畴]">交换算畴</a></span>上的代数.</p>
+<p>另见<span class="link local"><a href="./交换代数(学科).html" title="交换代数 [交换代数(学科)]">交换代数 (学科)</a></span></p>
 <h2>定义</h2>
 <h3>使用语法范畴</h3>
 <h4>积幺半范畴</h4>
@@ -810,6 +811,12 @@ $$
 为等价. <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 本质上使用的是这种定义.</p>
 <h4>一般对称幺半范畴</h4>
 <p>一般的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>中, 交换代数可用 <span class="link local"><a href="./PROP.html" title="PROP [PROP]">PROP</a></span> 定义. 具体地, 考虑有限集的范畴 $\mathsf{Fin}$ 配备<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>幺半结构. 对任意对称幺半范畴 $\mathcal C$, 其中的交换代数等同于对称幺半函子 $\mathsf{Fin} \to \mathcal C$.</p>
+<h2>性质</h2>
+<h3>模范畴</h3>
+<p>在<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span>的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>中, 交换代数 $A$ 的模范畴 $\mathsf{Mod}(A)$ 仍为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span>的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, 且其中的交换代数等同于 $A$ 出发的交换代数同态:
+$$
+\mathsf{CAlg}(\mathsf{Mod}_{\mathcal C}(A)) \simeq \mathsf{CAlg}(\mathcal C)_{A/}.
+$$</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Day卷积"><header><h1><span class="taxon"></span>Day 卷积 <a class="slug" href="./Day卷积.html">[Day卷积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>设 $\mathcal C,\mathcal D$ 为<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $\mathcal D$ 余完备且 $\otimes_{\mathcal D}$ 保持每个分量的余极限, 则函子范畴 $\mathsf{Fun}(\mathcal C,\mathcal D)$ 上有一个对称幺半范畴结构, 称为 <strong>Day 卷积</strong>.</p>
 <h2>定义</h2>
@@ -1103,6 +1110,57 @@ $$
 将 $m$ 次齐次元素 $a$ 映射到 $a \otimes m$. 其构成代数同态的条件恰好表明齐次元素的乘积的次数是各自次数的和.</p>
 <p><span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">对偶</a></span>地, $\operatorname{Spec}k[M]$ 是<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>范畴中的交换幺半群, $A$ 上的 $M$-分次也等同于 $k$-概形 $\operatorname{Spec}A$ 上的 $\operatorname{Spec}k[M]$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>.</p>
 <h2>性质</h2>
+</details></section><section class="block" data-taxon=""><details ><summary id="可表现范畴"><header><h1><span class="taxon"></span>可表现范畴 <a class="slug" href="./可表现范畴.html">[可表现范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>可表现范畴</strong> $\mathcal C$ 是一个可能很大的范畴, 却能由较小的一族对象 $\mathcal S\hookrightarrow\mathcal C$ 控制.
+此时, $\mathcal C$ 可<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>为预层范畴 $\mathsf{Psh}(\mathcal S)$ 的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>.</p>
+<p><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中的许多结论依赖于范畴的可表现性, 例如<span class="link local"><a href="./伴随函子定理.html" title="伴随函子定理 [伴随函子定理]">伴随函子定理</a></span>, 以及刻画<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的 <span class="link local"><a href="./Giraud公理.html" title="Giraud 公理 [Giraud公理]">Giraud 公理</a></span>.</p>
+<p>另一种重要的观点: 从<span class="link local"><a href="./范畴逻辑.html" title="范畴逻辑 [范畴逻辑]">范畴逻辑学</a></span>的角度, 可表现范畴是<span class="link local"><a href="./本质代数理论.html" title="本质代数理论 [本质代数理论]">本质代数理论</a></span>的<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">模型</a></span>的范畴.</p>
+<h2>定义</h2>
+<p>对于<span class="link local"><a href="./正则基数.html" title="正则基数 [正则基数]">正则基数</a></span> $\kappa$ (通常取为 $\aleph_0$, 见<span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成范畴</a></span>), 称满足如下等价条件的范畴 $\mathcal C$ 为 $\kappa$-可表现范畴:</p>
+<ul>
+<li>$\mathcal C$ 余完备, 且有一族 <span class="link local"><a href="./可表现对象.html" title="可表现对象 [可表现对象]">$\kappa$-可表现对象</a></span>构成的集合, 在 <span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">$\kappa$-滤余极限</a></span>下生成整个范畴.</li>
+<li>$\mathcal C$ 等价于一个小范畴的 <span class="link local"><a href="./Ind范畴.html" title=" [Ind范畴]">$\kappa$-Ind 范畴</a></span>.</li>
+</ul>
+<p>称 $\mathcal C$ 为可表现范畴是指存在一个基数 $\kappa$, $\mathcal C$ 为 $\kappa$-可表现范畴.</p>
+<p>等价的定义是: 有一个小范畴到 $\mathcal C$ 的函子 $j\colon \mathcal S\hookrightarrow\mathcal C$, 使得米田扩张 $\mathsf{Psh}(\mathcal S) \to \mathcal C$ 是预层范畴 $\mathsf{Psh}(\mathcal S)$ 关于某个小态射族 $W \subset \mathsf{Fun}([1],\mathsf{Psh}(\mathcal S))$ 的局部化.</p>
+<p>可表现范畴以及保持余极限的函子构成的范畴记为 $\mathsf{Pr}^{\mathrm{L}}$, 其中 $\mathrm{L}$ 的含义是这些函子是左伴随 (<span class="link local"><a href="./伴随函子定理.html" title="伴随函子定理 [伴随函子定理]">伴随函子定理</a></span>).</p>
+<p>可表现范畴以及保持极限的函子构成的范畴记为 $\mathsf{Pr}^{\mathrm{R}}$. 有
+$$
+\mathsf{Pr}^{\mathrm{R}} \simeq (\mathsf{Pr}^{\mathrm{L}})^{\mathrm{op}}.
+$$</p>
+<h2>性质</h2>
+<h3>张量积</h3>
+<p>可表现范畴的范畴 $\mathsf{Pr}$ 上有一个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>结构, 称为 <strong>Lurie 张量积</strong>.</p>
+<p><strong>命题-定义</strong>. 对于可表现范畴 $\mathcal C,\mathcal D$, 存在万有的可表现范畴 $\mathcal C\otimes\mathcal D$, 带有一个双线性 (即保持每个分量的余极限) 的函子
+$$
+\mathcal C\times \mathcal D \to \mathcal C\otimes\mathcal D.
+$$</p>
+<p>可表现范畴的张量积的单位是 <span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">$\mathsf{Ani}$</a></span>.</p>
+<h3>极限</h3>
+<p>可表现范畴的极限即是其作为范畴的极限. 换言之, 遗忘函子 $\mathsf{Pr}^{\mathrm{L}} \to \mathsf{Cat}$ 保持极限.</p>
+<h3>余极限</h3>
+<p>可表现范畴的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>, <strong>不是</strong>其作为范畴的余极限; 但可以如下计算: 图表
+$X\colon I \to \mathsf{Pr}^{\mathrm{L}}$
+给出 $X^{\mathrm{op}}\colon I^{\mathrm{op}} \to \mathsf{Pr}^{\mathrm{R}}$, 而其余极限可计算为
+$$
+\operatorname{colim}^{\mathsf{Pr}^{\mathrm{L}}}X = \operatorname{lim}^{\mathsf{Pr}^{\mathrm{R}}}X^{\mathrm{op}}= \operatorname{lim}^{\mathsf{Cat}} X^{\mathrm{op}}.
+$$
+换言之, <span class="link local"><a href="./自由-遗忘伴随.md.html" title=" [自由-遗忘伴随.md]">遗忘</a></span>函子 $\mathsf{Pr}^{\mathrm{R}} \to\mathsf{Cat}$ 保持极限.</p>
+<p>例如, 对任意集合 $I$, 可表现范畴的 $I$-<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>实际上等同于可表现范畴的积, 也等同于其作为范畴的积:
+$$
+\coprod_{i\in I}^{\mathsf{Pr}^{\mathrm{L}}} \mathcal C_i \overset{\simeq}{\to} \prod_{i\in I}^{\mathsf{Cat}} \mathcal C_i \simeq \prod_{i\in I}^{\mathsf{Pr}^{\mathrm{L}}} \mathcal C_i.
+$$
+这是一个重要的性质, 称为<strong>半加性</strong> (semiadditivity).</p>
+<h2>例</h2>
+<h3>意象</h3>
+<p>(由<span class="link local"><a href="./景.html" title="景 [景]">景</a></span>表现的) <span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>是可表现范畴.</p>
+<p>其中, 由小范畴 $\mathcal C$ 上的平凡 <span class="link local"><a href="./Grothendieck拓扑.html" title="Grothendieck 拓扑 [Grothendieck拓扑]">Grothendieck 拓扑</a></span>表现的意象, 也即<span class="link local"><a href="./预层意象.md.html" title=" [预层意象.md]">预层意象</a></span> $\mathsf{Fun}(\mathcal C ^{\mathrm{op}},\mathsf{Ani})$, 是 $\mathcal C$ 生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>可表现范畴.</p>
+<h2>相关概念</h2>
+<h3>带有代数结构的范畴</h3>
+<p>若 $\mathcal C$ 为可表现<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $A$ 为其中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>, 则<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>范畴 $\mathsf{Mod}(A)$ 为可表现<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>.</p>
+<h3>高阶可表现范畴</h3>
+<p>见<span class="link local"><a href="./高阶可表现范畴.html" title="高阶可表现范畴 [高阶可表现范畴]">高阶可表现范畴</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="同伦群(稳定同伦论)"><header><h1><span class="taxon"></span>同伦群 (稳定同伦论) <a class="slug" href="./同伦群(稳定同伦论).html">[同伦群(稳定同伦论)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>在<span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span>中, 由于每个对象都是任意阶的环路空间, 对象的 “<span class="link local"><a href="./同伦群.html" title="同伦群 [同伦群]">同伦群</a></span>” 都是 $\mathbb E_\infty$-代数 (<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换群</a></span>); 对整个<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>而言, 各阶同伦群的地位相同, 仅相差平移.</p>
@@ -1198,6 +1256,15 @@ $$
 <h3>具体表现</h3>
 <p><span class="link local"><a href="./链复形无穷范畴.html" title="链复形无穷范畴 [链复形无穷范畴]">链复形范畴</a></span>中的结合代数有很具体的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 见 <span class="link local"><a href="./A∞-代数.html" title="A∞-代数 [A∞-代数]">$A_\infty$-代数</a></span>.</p>
 <h2>例</h2>
+</details></section><section class="block" data-taxon=""><details ><summary id="结合代数上的模"><header><h1><span class="taxon"></span>结合代数上的模 <a class="slug" href="./结合代数上的模.html">[结合代数上的模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>可视为单对象<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>; 在这种意义上, 结合代数上的模可以推广为<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">充实范畴上的模</a></span>或者<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>.</p>
+<p>结合代数给出<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>; 在这种意义上, 结合代数上的模可以推广为<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的模</a></span>.</p>
+<p>结合代数上的模范畴可视为结合代数的范畴的<span class="link local"><a href="./切范畴.html" title="切范畴 [切范畴]">切范畴</a></span>.</p>
+<p>另外, 对一般的<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span>也可定义<span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">模</a></span>的概念; 但这个概念对于<span class="link local"><a href="./A∞-算畴.html" title="结合算畴 [A∞-算畴]">结合算畴</a></span>给出的是<strong>双模</strong>, 而非左模或右模.</p>
+<h2>例</h2>
+<h3>交换代数上的模</h3>
+<p><span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>上的模, 即是其作为结合代数的左模或右模.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="置换范畴"><header><h1><span class="taxon"></span>置换范畴 <a class="slug" href="./置换范畴.html">[置换范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>置换范畴, 又称<span class="link local"><a href="./严格1-范畴.html" title="严格 1-范畴 [严格1-范畴]">严格</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, 其中严格是指结合律与幺元律严格成立.</p>
