@@ -566,7 +566,7 @@
     --slug-color: var(--color-Furina-aqua-cyan);
     --logo-color: var(--color-Furina-deep-navy);
 
-    --block-background-color: #FFFFFF;
+    --block-background-color: var(--background-color);
     --shadow-color: rgba(27, 63, 143, 0.06);
     --radius: 5px;
     --margin-left: 14px;
@@ -581,9 +581,10 @@
     body:has(input[value="furina"]:checked) {
       --color-Furina-deep-navy: #B5C0F5;
       --color-Furina-royal-blue: #D6EBFF;
+      --color-Furina-vivid-sapphire: #96A0FF;
 
       --background-color: #2f2f2f;
-      --block-background-color: #3a3a3a;
+      --block-background-color: #2f2f2f;
     }
   }
 
@@ -592,6 +593,10 @@
     padding: 15px;
     margin-top: 6px;
     margin-bottom: 6px;
+
+    /*2026-4-17 新增*/
+    /*margin-left: auto;
+    margin-right: auto; -- 好像没有用, 网站设计上不欢迎 block 居中*/
 
     border-radius: var(--radius);
     background-color: var(--block-background-color);
@@ -606,6 +611,14 @@
   h6,
   p {
     margin: 5px;
+  }
+
+  hr {
+    border: none;
+    height: 0;
+    border-bottom: 1px solid var(--color-Furina-luminous-hydro);
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   tr {
@@ -629,8 +642,11 @@
     font-size: 0.8rem;
   }
 
+  h1 {
+    font-weight: 600 !important;
+  }
+
   article > section > details > summary > header > h1 {
-    font-weight: 600;
     font-size: 1.75rem !important;
   }
 
@@ -680,7 +696,7 @@
 
 
   h3 {
-    font-weight: 700;
+    font-weight: 500;
     color: var(--color-Furina-royal-blue);
     margin-bottom: 5px;
   }
@@ -1024,6 +1040,7 @@ $$
 \operatorname{Hom}_{\mathcal A}(v\otimes a,a')\simeq\operatorname{Hom}_{\mathcal V}(v,\operatorname{Hom}(a,a')).
 $$</p>
 <p>另一方面, $\mathcal V$-充实范畴也可自由地生成 $\mathcal V$-模: 对于 $\mathcal V$-充实范畴 $\mathcal A$, 其上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>的范畴, 也即 $\mathcal A$-<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">右模</a></span>的范畴 $\mathsf{Fun}(\mathcal A^{\mathrm{op}},\mathcal V)$ 是其自由生成的 $\mathcal V$-模.</p>
+<p>充实范畴与模的关系用在了<span class="link local"><a href="./高阶可表现范畴.html" title="高阶可表现范畴 [高阶可表现范畴]">高阶可表现范畴</a></span>的基本定义中.</p>
 <h2>相关概念</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="充实范畴上的模"><header><h1><span class="taxon"></span>充实范畴上的模 <a class="slug" href="./充实范畴上的模.html">[充实范畴上的模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
@@ -1405,10 +1422,12 @@ $$</p>
 <p>参考 <span class="link local"><a href="./StefanichHigherQCoh.html" title="Higher Quasicoherent Sheaves [StefanichHigherQCoh]">Stefanich</a></span>.</p>
 <h2>定义</h2>
 <p>粗略地说 (忽略所有基数大小问题), 高阶可表现范畴的定义是 “取模范畴” 操作的迭代.
-对于可表现<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $\mathcal M$, 可定义其 (在余完备范畴的范畴 $\mathsf{Cat}_{\mathrm{cocomp}}$ 中的) “模范畴” $\mathsf{Mod}(\mathcal M)$. “可表现 $n$-范畴的范畴” $n\mathsf{Pr}$ 由下式归纳定义:</p>
+对于可表现<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $\mathcal M$, 视为余完备范畴的范畴 $\mathsf{Cat}_{\mathrm{cocomp}}$ 或 $\mathsf{Pr}$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 可定义其模范畴 $\mathsf{Mod}(\mathcal M)$. “可表现 $n$-范畴的范畴” $n\mathsf{Pr}$ 由下式归纳定义:</p>
 <ul>
 <li>$1\mathsf{Pr} = \mathsf{Mod}(\mathsf{Ani}) = \mathsf{Pr}$,</li>
-<li>$n\mathsf{Pr} = \mathsf{Mod}((n-1)\mathsf{Pr})$.</li>
+<li>$n\mathsf{Pr} = \mathsf{Mod}((n-1)\mathsf{Pr})$. 这里一个重要观念是 $\mathcal C$-模等同于 $\mathcal C$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>, 故直观上可表现 $n$-范畴是 “充实于可表现 $(n-1)$-范畴的可表现范畴”.</li>
 </ul>
-<p>按上述方法定义的范畴 $n\mathsf{Pr}$ 是 $(\infty ,1)$-范畴, 但可以升级为 $(\infty ,n+1)$-范畴.</p>
+<p>按上述方法定义的范畴 $n\mathsf{Pr}$ 是 $(\infty ,1)$-范畴, 但可以升级为 $(\infty ,n+1)$-范畴. (在许多场合, 我们只需要 $n\mathsf{Pr}$ 的 $(\infty ,1)$-范畴结构, 即不需要函子之间的不可逆自然变换.)</p>
+<h2>相关内容</h2>
+<p>相关讲义: <span class="link local"><a href="./notes-Gestalten-Cat.html" title="Gestalten - 在范畴上做代数 [notes-Gestalten-Cat]">Gestalten - 在范畴上做代数</a></span></p>
 </details></section></details></section></footer></article></div></body></html>

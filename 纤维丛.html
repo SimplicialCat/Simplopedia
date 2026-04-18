@@ -566,7 +566,7 @@
     --slug-color: var(--color-Furina-aqua-cyan);
     --logo-color: var(--color-Furina-deep-navy);
 
-    --block-background-color: #FFFFFF;
+    --block-background-color: var(--background-color);
     --shadow-color: rgba(27, 63, 143, 0.06);
     --radius: 5px;
     --margin-left: 14px;
@@ -581,9 +581,10 @@
     body:has(input[value="furina"]:checked) {
       --color-Furina-deep-navy: #B5C0F5;
       --color-Furina-royal-blue: #D6EBFF;
+      --color-Furina-vivid-sapphire: #96A0FF;
 
       --background-color: #2f2f2f;
-      --block-background-color: #3a3a3a;
+      --block-background-color: #2f2f2f;
     }
   }
 
@@ -592,6 +593,10 @@
     padding: 15px;
     margin-top: 6px;
     margin-bottom: 6px;
+
+    /*2026-4-17 新增*/
+    /*margin-left: auto;
+    margin-right: auto; -- 好像没有用, 网站设计上不欢迎 block 居中*/
 
     border-radius: var(--radius);
     background-color: var(--block-background-color);
@@ -606,6 +611,14 @@
   h6,
   p {
     margin: 5px;
+  }
+
+  hr {
+    border: none;
+    height: 0;
+    border-bottom: 1px solid var(--color-Furina-luminous-hydro);
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   tr {
@@ -629,8 +642,11 @@
     font-size: 0.8rem;
   }
 
+  h1 {
+    font-weight: 600 !important;
+  }
+
   article > section > details > summary > header > h1 {
-    font-weight: 600;
     font-size: 1.75rem !important;
   }
 
@@ -680,7 +696,7 @@
 
 
   h3 {
-    font-weight: 700;
+    font-weight: 500;
     color: var(--color-Furina-royal-blue);
     margin-bottom: 5px;
   }
@@ -795,7 +811,30 @@
 <h2>观念</h2>
 <p>纤维丛是一种<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>的空间, 其每个纤维具有相同的同构类, 局部上形如乘积空间, 而整体上可能不平凡.</p>
 <p>任何纤维丛都<span class="link local"><a href="./关联丛.html" title="关联丛 [关联丛]">关联</a></span>于一个唯一的<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="tutorial-type-theory"><header><h1><span class="taxon"></span>类型论 <a class="slug" href="./tutorial-type-theory.html">[tutorial-type-theory]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Milnor纤维化"><header><h1><span class="taxon"></span>Milnor 纤维化 <a class="slug" href="./Milnor纤维化.html">[Milnor纤维化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Milnor 纤维化是刻画代数簇奇点局部的拓扑信息的工具.</p>
+<p>复代数簇的奇点就是局部上不是流形的点.</p>
+<p>考虑复代数簇
+$$
+V=\{(x,y)\in\mathbb{C}^2\mid y^2 = x^3\},
+$$
+容易看到, 它在奇点 $p=(0,0)$ 附近长得像三叶结 $K$ 的锥 $\operatorname{Cone}(K)$. <sup class="footnote-reference" id="Milnor纤维化_1-back"><a href="#Milnor纤维化_1">1</a></sup></p>
+<div class="footnote-definition" id="Milnor纤维化_1">
+  <sup class="footnote-definition-label"><a href="#Milnor纤维化_1-back">1</a></sup>
+<p>准确地说, 记 $D_\varepsilon = \{|(x,y)|\leq\varepsilon\}$, 当 $\varepsilon$ 充分小时, 三元组
+$(D_\varepsilon,D_\varepsilon \cap V,p)$ 同构于 $(\operatorname{Cone}(S^3),\operatorname{Cone}(K),*)$.</p>
+</div>
+<p>一般而言, 孤立奇点的附近长得像某个低一维子流形的锥, 称为 <strong>Milnor 扭结</strong>.
+有些奇异球面可构造为 Milnor 扭结.</p>
+<h2>定义</h2>
+<p>设 $V$ 是由多项式 $f\colon \mathbb{C}^n\to\mathbb{C}$ 定义的复超曲面, 且 $0\in V$ 为孤立奇点. 对于充分小的正数 $\varepsilon$, 记 $S_\varepsilon$ 为球面 $\{|z|=\varepsilon\}$, $K = V \cap S_\varepsilon$, 定义 <strong>Milnor 纤维化</strong>为
+$$
+\phi\colon S_\varepsilon \setminus K \to S^1,\,z\mapsto \frac{f(z)}{|f(z)|}.
+$$</p>
+<h2>性质</h2>
+<p>Milnor 纤维化是 $S^1$ 上的光滑<span class="link local"><a href="./纤维丛.html" title="纤维丛 [纤维丛]">纤维丛</a></span>, 每个纤维是 $2n-2$ 维光滑流形, 同伦型为 $\mu$ 个 $S^{n-1}$ 的一点并, 其中 $\mu$ 称为 Milnor 数.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="tutorial-type-theory"><header><h1><span class="taxon"></span>类型论 <a class="slug" href="./tutorial-type-theory.html">[tutorial-type-theory]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是杨家同于 2026 年 1 月在求真书院形式化数学冬令营上的讲座的笔记, 加入了个人的见解. 假想的读者是有一定数学成熟度但对类型论没有了解的同学.</p>
 <h2>什么是类型论</h2>
 <p>类型论是一种不同于集合论的做数学的方法, 因其在处理逻辑问题上的优越性, 而在计算机形式化数学这一领域得到广泛应用. 类型论的首要特征是<strong>给每个对象一个类型</strong>. 常量, 变量, 函数, 命题, 命题的证明, … 每个对象有唯一且可计算的类型; 甚至 (在某些类型论中) 一个类型也有它的类型. <strong>命题是类型</strong>的原则让逻辑学成为类型论的一个子集.</p>

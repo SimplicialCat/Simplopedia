@@ -566,7 +566,7 @@
     --slug-color: var(--color-Furina-aqua-cyan);
     --logo-color: var(--color-Furina-deep-navy);
 
-    --block-background-color: #FFFFFF;
+    --block-background-color: var(--background-color);
     --shadow-color: rgba(27, 63, 143, 0.06);
     --radius: 5px;
     --margin-left: 14px;
@@ -581,9 +581,10 @@
     body:has(input[value="furina"]:checked) {
       --color-Furina-deep-navy: #B5C0F5;
       --color-Furina-royal-blue: #D6EBFF;
+      --color-Furina-vivid-sapphire: #96A0FF;
 
       --background-color: #2f2f2f;
-      --block-background-color: #3a3a3a;
+      --block-background-color: #2f2f2f;
     }
   }
 
@@ -592,6 +593,10 @@
     padding: 15px;
     margin-top: 6px;
     margin-bottom: 6px;
+
+    /*2026-4-17 新增*/
+    /*margin-left: auto;
+    margin-right: auto; -- 好像没有用, 网站设计上不欢迎 block 居中*/
 
     border-radius: var(--radius);
     background-color: var(--block-background-color);
@@ -606,6 +611,14 @@
   h6,
   p {
     margin: 5px;
+  }
+
+  hr {
+    border: none;
+    height: 0;
+    border-bottom: 1px solid var(--color-Furina-luminous-hydro);
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   tr {
@@ -629,8 +642,11 @@
     font-size: 0.8rem;
   }
 
+  h1 {
+    font-weight: 600 !important;
+  }
+
   article > section > details > summary > header > h1 {
-    font-weight: 600;
     font-size: 1.75rem !important;
   }
 
@@ -680,7 +696,7 @@
 
 
   h3 {
-    font-weight: 700;
+    font-weight: 500;
     color: var(--color-Furina-royal-blue);
     margin-bottom: 5px;
   }
@@ -911,7 +927,7 @@ $$</p>
 <p><span class="link local"><a href="./函数域类比.html" title="函数域类比 [函数域类比]">函数域类比</a></span></p>
 <p><span class="link local"><a href="./Frobenius态射.html" title="Frobenius 态射 [Frobenius态射]">Frobenius 态射</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="局部域"><header><h1><span class="taxon"></span>局部域 <a class="slug" href="./局部域.html">[局部域]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>局部域是相对于<span class="link local"><a href="./整体域.html" title="“整体域” [整体域]">整体域</a></span>的概念, 若整体域可想象为曲线上的有理函数域, 则局部域是曲线上的形式邻域 (所谓 “形式圆盘”) 上的函数域.</p>
+<p>局部域是相对于<span class="link local"><a href="./整体域.html" title="“整体域” [整体域]">整体域</a></span>的概念, 若整体域可想象为曲线上的有理函数域, 则局部域是曲线上的形式邻域 (所谓 “<span class="link local"><a href="./形式圆盘.html" title="形式圆盘 [形式圆盘]">形式圆盘</a></span>”) 上的函数域.</p>
 <p>整体域的 <span class="link local"><a href="./Langlands对应.html" title="经典 Langlands 对应 [Langlands对应]">Langlands 纲领</a></span>有一个局部域版本, 称为局部 Langlands 对应.</p>
 <h2>定义</h2>
 <p>局部域是局部紧 Hausdorff 拓扑域.</p>

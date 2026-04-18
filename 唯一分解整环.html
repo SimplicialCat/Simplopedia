@@ -566,7 +566,7 @@
     --slug-color: var(--color-Furina-aqua-cyan);
     --logo-color: var(--color-Furina-deep-navy);
 
-    --block-background-color: #FFFFFF;
+    --block-background-color: var(--background-color);
     --shadow-color: rgba(27, 63, 143, 0.06);
     --radius: 5px;
     --margin-left: 14px;
@@ -581,9 +581,10 @@
     body:has(input[value="furina"]:checked) {
       --color-Furina-deep-navy: #B5C0F5;
       --color-Furina-royal-blue: #D6EBFF;
+      --color-Furina-vivid-sapphire: #96A0FF;
 
       --background-color: #2f2f2f;
-      --block-background-color: #3a3a3a;
+      --block-background-color: #2f2f2f;
     }
   }
 
@@ -592,6 +593,10 @@
     padding: 15px;
     margin-top: 6px;
     margin-bottom: 6px;
+
+    /*2026-4-17 新增*/
+    /*margin-left: auto;
+    margin-right: auto; -- 好像没有用, 网站设计上不欢迎 block 居中*/
 
     border-radius: var(--radius);
     background-color: var(--block-background-color);
@@ -606,6 +611,14 @@
   h6,
   p {
     margin: 5px;
+  }
+
+  hr {
+    border: none;
+    height: 0;
+    border-bottom: 1px solid var(--color-Furina-luminous-hydro);
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   tr {
@@ -629,8 +642,11 @@
     font-size: 0.8rem;
   }
 
+  h1 {
+    font-weight: 600 !important;
+  }
+
   article > section > details > summary > header > h1 {
-    font-weight: 600;
     font-size: 1.75rem !important;
   }
 
@@ -680,7 +696,7 @@
 
 
   h3 {
-    font-weight: 700;
+    font-weight: 500;
     color: var(--color-Furina-royal-blue);
     margin-bottom: 5px;
   }
@@ -795,13 +811,17 @@
 <h2>例</h2>
 <p>$\mathbb{Z}[\sqrt{-5}]$ 不是唯一分解整环: $6=2\times 3 = (1+\sqrt{-5})(1-\sqrt{-5})$.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="离散赋值环"><header><h1><span class="taxon"></span>离散赋值环 <a class="slug" href="./离散赋值环.html">[离散赋值环]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>一个离散赋值环是一个环 $A$ 带有一个映射 $v\colon A\to\mathbb{Z}\cup\{\infty \}$, 满足 $v(ab)=v(a)+v(b)$, $v(a+b)\geq\operatorname{min}(v(a),v(b))$.</p>
-<p>等价的定义:</p>
-<ul>
-<li>仅有一个极大理想的<span class="link local"><a href="./主理想整环.html" title=" [主理想整环]">主理想整环</a></span>;</li>
-<li>具有唯一不可约元的<span class="link local"><a href="./唯一分解整环.html" title="“唯一分解整环” [唯一分解整环]">唯一分解整环</a></span>;</li>
-<li>…</li>
-</ul>
+<h2>观念</h2>
+<p>离散赋值环在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">几何侧</a></span>对应一个点带有周围的小邻域, 使得其上的函数能够承载在该点处 “消失阶数” 的概念.</p>
+<h2>定义</h2>
+<p>离散赋值环是<span class="link local"><a href="./赋值环.html" title="赋值环 [赋值环]">赋值环</a></span>,</p>
+<h3>等价定义</h3>
+<p>一个离散赋值环是一个 (含幺交换) 环 $A$ 带有一个映射 $v\colon A\to\mathbb{Z}\cup\{\infty \}$, 满足 $v(ab)=v(a)+v(b)$, $v(a+b)\geq\operatorname{min}(v(a),v(b))$.</p>
+<p>离散赋值环是仅有一个极大理想的<span class="link local"><a href="./主理想整环.html" title=" [主理想整环]">主理想整环</a></span>. 其极大理想由赋值 $\geq 1$ 的元素构成.</p>
+<p>离散赋值环是具有唯一不可约元的<span class="link local"><a href="./唯一分解整环.html" title="“唯一分解整环” [唯一分解整环]">唯一分解整环</a></span>.</p>
 <h2>性质</h2>
 <p>离散赋值环是<span class="link local"><a href="./局部环.html" title="“局部环” [局部环]">局部环</a></span>.</p>
+<h2>例</h2>
+<p><span class="link local"><a href="./p-进整数.html" title="p-进整数 [p-进整数]">$p$-进整数</a></span>环 $\mathbb{Z}_p = \operatorname{lim}_n \mathbb{Z}/(p^n)$ 是离散赋值环, 赋值是被 $p$ 整除的次数.</p>
+<p>$\mathbb{C}[x]$</p>
 </details></section></details></section></footer></article></div></body></html>

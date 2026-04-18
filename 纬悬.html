@@ -566,7 +566,7 @@
     --slug-color: var(--color-Furina-aqua-cyan);
     --logo-color: var(--color-Furina-deep-navy);
 
-    --block-background-color: #FFFFFF;
+    --block-background-color: var(--background-color);
     --shadow-color: rgba(27, 63, 143, 0.06);
     --radius: 5px;
     --margin-left: 14px;
@@ -581,9 +581,10 @@
     body:has(input[value="furina"]:checked) {
       --color-Furina-deep-navy: #B5C0F5;
       --color-Furina-royal-blue: #D6EBFF;
+      --color-Furina-vivid-sapphire: #96A0FF;
 
       --background-color: #2f2f2f;
-      --block-background-color: #3a3a3a;
+      --block-background-color: #2f2f2f;
     }
   }
 
@@ -592,6 +593,10 @@
     padding: 15px;
     margin-top: 6px;
     margin-bottom: 6px;
+
+    /*2026-4-17 新增*/
+    /*margin-left: auto;
+    margin-right: auto; -- 好像没有用, 网站设计上不欢迎 block 居中*/
 
     border-radius: var(--radius);
     background-color: var(--block-background-color);
@@ -606,6 +611,14 @@
   h6,
   p {
     margin: 5px;
+  }
+
+  hr {
+    border: none;
+    height: 0;
+    border-bottom: 1px solid var(--color-Furina-luminous-hydro);
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   tr {
@@ -629,8 +642,11 @@
     font-size: 0.8rem;
   }
 
+  h1 {
+    font-weight: 600 !important;
+  }
+
   article > section > details > summary > header > h1 {
-    font-weight: 600;
     font-size: 1.75rem !important;
   }
 
@@ -680,7 +696,7 @@
 
 
   h3 {
-    font-weight: 700;
+    font-weight: 500;
     color: var(--color-Furina-royal-blue);
     margin-bottom: 5px;
   }
@@ -861,7 +877,7 @@ $$</p>
 <p>本文的目的是, 以尽可能少的前置知识, 解释<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span> (<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>) 这一概念的意义和必要性, 从而使读者能够接受其抽象定义. 为此我试图解释<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>的动机, 也即为什么要将<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span> $\Sigma$ 变为可逆函子.</p>
 <p>前置知识: 拓扑学基本概念, 以及<span class="link local"><a href="./motivation-homotopy-theory.html" title="同伦论的动机 [motivation-homotopy-theory]">同伦论的动机</a></span> (推荐读者先阅读这篇文章). 或许需要一点无穷范畴的直观.</p>
 <hr />
-<h3>负数维球面</h3>
+<h2>负数维球面</h2>
 <p>同伦论中的最基本对象是球面 $S^0, S^1, S^2, \cdots$; 其具有如下递推关系:
 $$
 S^{n+1} = \Sigma S^n.
@@ -888,6 +904,7 @@ $$
 \mathsf{Sp} = \operatorname{colim} (\mathsf{Ani}_0\to\mathsf{Ani}_{-1}\to\mathsf{Ani}_{-2}\to\cdots).
 $$</p>
 <p>简单地说, <strong>谱</strong>就是这样一种对象: 如果我们希望任何空间都是某空间的<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span> (更准确地说是 $\Sigma$ 是<strong>范畴等价</strong>), 那么谱就会自然地出现, 正如我们由自然数定义整数一样.</p>
+<hr />
 <p>整数有另一种看法. 虽然自然数上没有 “减一” 运算, 但有一种接近于 “减一” 的运算, 称为<strong>前驱</strong> (precursor), 记作 $\operatorname{prec}$. 它的定义是
 $$
 \begin{aligned}
@@ -929,7 +946,7 @@ $$</p>
 $$
 \mathsf{Sp} = \operatorname{lim} (\mathsf{Ani}\overset{\Omega}{\leftarrow}\mathsf{Ani}\overset{\Omega}{\leftarrow}\mathsf{Ani}\overset{\Omega}{\leftarrow}\cdots).
 $$</p>
-<h3>纬悬的用处</h3>
+<h2>纬悬</h2>
 <p>那么为什么我们希望任何空间都是某空间的<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span>?</p>
 <p>回忆, 带基点空间 $X$ 的基本群 $\pi_1(X)$, 即保基点映射 $S^1\to X$ 的同伦类集合 $[S^1,X]$, 是一个群. 这个群结构本质上不来自 $X$ 的结构, 而来自 $S^1$ 的结构 — $S^1$ 是一个<strong>余群</strong><sup class="footnote-reference" id="tutorial-stable-homotopy_1-back"><a href="#tutorial-stable-homotopy_1">1</a></sup>, 也即有一个结合的余乘法
 $$
@@ -967,7 +984,8 @@ $$
 $$
 [\Sigma X,Y]\simeq [X,\Omega Y]=\pi_0\operatorname{Aut}_{X/,/Y}(*).
 $$</p>
-<p>(未完待续)</p>
+<p>总之, 如果任何空间都是某空间的<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span>, 那么任何两个空间之间的映射空间 (或映射同伦类的集合) 构成群.</p>
+<p>当然, 纬悬的效果不仅如此. 如果任何空间都是某空间的<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span>, 那么自然也是某空间的两次纬悬; 而 $\Sigma^2 X = X \wedge S^1\wedge S^1$ 上的两种相容的余群结构合在一起, 构成了一种 $\mathbb E_2$-余群结构, 使得映射同伦类的集合 $[\Sigma^2 X, Y]$ 构成 <strong>Abel 群</strong>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="稳定无穷范畴"><header><h1><span class="taxon"></span>稳定范畴 <a class="slug" href="./稳定无穷范畴.html">[稳定无穷范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>以下的范畴均默认为 $(\infty,1)$-范畴.</p>
