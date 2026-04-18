@@ -809,9 +809,128 @@
 
 <article><section class="block" data-taxon=""><details open><summary id="松拉回"><header><h1><span class="taxon"></span>松拉回 <a class="slug" href="./松拉回.html">[松拉回]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>松拉回是<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>在<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>中的推广.</p>
+<p>松拉回是一种<span class="link local"><a href="./松极限.html" title="松极限 [松极限]">松极限</a></span>, 是<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>在<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>中的推广.</p>
 <h2>定义</h2>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="余完备化"><header><h1><span class="taxon"></span>余完备化 <a class="slug" href="./余完备化.html">[余完备化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="nearby"><header><h1><span class="taxon"></span>Nearby Cycles <a class="slug" href="./nearby.html">[nearby]</a></h1><div class="metadata"><ul><li class="meta-item">Note</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>This note mainly follows <span class="link local"><a href="./ZhengNearby.html" title="Nearby Cycles over General Bases [ZhengNearby]">Prof. Zheng’s MCM talk</a></span>.</p>
+<h2>The Milnor fibration</h2>
+<p>Let $f\colon (\mathbb{C}^{n+1},0) \to (\mathbb{C},0)$ be a germ of holomorphic function having an isolated critical point at $0$.</p>
+<p><strong>Theorem</strong> (Milnor 1967). For $0&lt;\eta \ll \varepsilon \ll 1$,
+$$
+f\colon B_\varepsilon\cap f^{-1}(D_\eta) \to D_\eta
+$$
+induces a fibration over $D_\eta \setminus \{0\}$, where $B_\varepsilon$ and $D_\eta$ are respectively the ball and the disk centered at $0$.</p>
+<p>This is called the <span class="link local"><a href="./Milnor纤维化.html" title="Milnor 纤维化 [Milnor纤维化]">milnor fibration</a></span> (see there for more motivation).</p>
+<p>The fiber $M_t = f^{-1}(t) \cap B_\varepsilon$ is homotopy equivalent to a bouquet of $\mu$ $S^n$’s, where $\mu$ is the Milnor number
+$$
+\mu = \dim_\mathbb{C} \mathbb{C}\{z_0,\cdots,z_n\}/(\partial_1 f,\cdots,\partial_n f).
+$$</p>
+<p>Let $\Phi^i$ denote the reduced cohomology of the fiber $M_t$, acted on by a monodromy operator $T\in\operatorname{Aut}(\Phi^i)$ as $t$ turns around $0$.</p>
+<p><strong>Conjecture</strong> (Milnor). The eigenvalues of $T$ are roots of unity.</p>
+<h2>Nearby cycles over one-dimensional bases</h2>
+<p>Let $S$ be the spectrum of a (strictly local) Henselian <span class="link local"><a href="./离散赋值环.html" title="离散赋值环 [离散赋值环]">DVR</a></span>. It will be the analog of a disk.
+More precisely, there is a dictionary between complex analytic and étale settings:</p>
+<table><thead><tr><th>Complex analytic</th><th>Etale</th></tr></thead><tbody>
+<tr><td>disk $D_\eta$</td><td>base $S$</td></tr>
+<tr><td>center $0\in D_\eta$</td><td>closed point $s\in S$</td></tr>
+<tr><td>punctured disk $D_\eta\setminus\{0\}$</td><td>generic point $\eta\in S$</td></tr>
+<tr><td>parameter $t\in D\setminus\{0\}$</td><td>separable closure $\bar\eta$</td></tr>
+<tr><td>fundamental group $\pi_1(D\setminus\{0\},t)$</td><td>inertia group $\operatorname{Gal}(\bar\eta / \eta)$</td></tr>
+<tr><td>local systems on $D_\eta\setminus\{0\}$</td><td>sheaves on $\eta_{\text{\'et}}$</td></tr>
+</tbody></table>
+<h3>The complex analytic setting</h3>
+<p>In the complex analytic setting, following <span class="link local"><a href="./DimcaShvTop.html" title="Sheaves in Topology [DimcaShvTop]">Dimca</a></span>, we have a analytic function $f\colon X\to\mathbb{C}$. Denote $X_t = f^{-1}(t)$. Consider the pullback diagram</p>
+<p><figure><img src="./nearby-1.svg" class="color-invert"/></figure></p>
+<p>where $T = f^{-1}(D_\varepsilon)$ is a tube near $X_0$, and $f$ now denotes the Milnor fibration. The sheaf of <strong>nearby cycles</strong> of $F\in D^b(X)$ is defined by
+$$
+\psi_f F := i^* \, R(j\hat\pi)_* \, (j\hat\pi)^* F \in D^b(X_0).
+$$</p>
+<p>We remark that $E$ can be regarded as the universal/canonical fiber of the Milnor fibration, and the map $j\hat\pi$ is a canonical model (i.e. independent of the choice of a specific fiber) for the inclusion of a fiber $X_t$ into the tube $T$.</p>
+<p>There is a monodromy “deck transformation” $h\colon E\to E$ coming from the action of the generator of $\mathbb{Z} = \pi_1(D_\varepsilon^*)$.</p>
+<p>The following proposition explains the name of nearby cycles.</p>
+<p><strong>Proposition</strong>. For $x\in X_0$, the cohomology of the sheaf of nearby cycles
+$$
+\mathcal H^k(\psi_f F)_x \simeq H^k(F_x,F)
+$$
+recovers the cohomology of the local Milnor fiber $F_x = B_\epsilon (x) \cap X_t$ ($0&lt;|t|\ll \varepsilon$), the monodromy morphisms matching as well.</p>
+<p><strong>Example</strong>. Let $F=\mathbb{C}_X$; then $\dim H^n(F_x,F)=\mu$ is the Milnor number.</p>
+<p>Consider the unit of the adjunction
+$$
+F \to R(j\hat\pi)_* \, (j\hat\pi)^* F
+$$
+giving the comparison morphism
+$$
+i^* F \to \psi_f F.
+$$
+Define the sheaf of <strong>vanishing cycles</strong> $\varphi_f F \in D^b(X_0)$ to be the third term in the fiber / cofiber sequence
+$$
+i^*F \to \psi_f F \to \varphi_f F
+$$
+with an induced monodromy operator.</p>
+<h3>The étale setting</h3>
+<p>In the étale setting, we consider a morphism of schemes $X\to S$ and the base-change diagram</p>
+<p><figure><img src="./nearby-2.svg" class="color-invert"/></figure></p>
+<p>Let $\Lambda = \mathbb{Z}/m\mathbb{Z}$ for $m$ invertible on $S$. We work with sheaves of $\Lambda$-modules on étale topoi.</p>
+<p>Following <span class="link local"><a href="./ZhengNearby.html" title="Nearby Cycles over General Bases [ZhengNearby]">Zheng</a></span>, for $K\in D(X_\eta)$ define
+$$
+R\Psi K = i^* \, Rj_* (K|_{X_{\bar\eta}}) \in D(X_s).
+$$</p>
+<p>For $K\in D(X)$, define $\Phi K\in D(X_s)$ by the fiber / cofiber sequence
+$$
+K|_{X_s} \to R\Psi (K|_{X_\eta}) \to \Phi K.
+$$</p>
+<p>For a geometric point $x\to X_s$ we have a fiber / cofiber sequence
+$$
+K_x \to (R\Psi K)_x \to (\Phi K)_x.
+$$</p>
+<h2>Nearby cycles over general bases</h2>
+<h3>Oriented products of topoi</h3>
+<p>This part follows <span class="link local"><a href="./ZhengNearby.html" title="Nearby Cycles over General Bases [ZhengNearby]">Zheng</a></span> which cites <span class="link local"><a href="./ILOTravauxGabber.html" title="Travaux de Gabber sur l’uniformisation locale et la cohomologie etale des schemas quasi-excellents. Seminaire a l’Ecole polytechnique 2006–2008 [ILOTravauxGabber]">ILO</a></span>, Exposé XI by Illusie.</p>
+<p>Given morphisms of <span class="link local"><a href="./意象.html" title="意象 [意象]">topoi</a></span>
+$f\colon X\to S$ and $g\colon Y\to S$, the <strong>oriented product</strong> (also called the <strong></strong><span class="link local"><a href="./松拉回.html" title="松拉回 [松拉回]">lax pullback</a></span>) is a topos $X\operatorname{\overset{\leftarrow}{\times}}_SY$ together with a diagram</p>
+<p><figure><img src="./oriented-product.svg" class="color-invert"/></figure></p>
+<p>universal for these data.</p>
+<p><strong>Definition</strong>. The <strong>vanishing topos</strong> of an $S$-scheme $X\to S$ is the oriented product $X \operatorname{\overset{\leftarrow}{\times}}_S S$, where we regard schemes as topoi by the construction of étale topoi.</p>
+<p>A <span class="link local"><a href="./景.html" title="景 [景]">site</a></span> presentation of the oriented product $X\operatorname{\overset{\leftarrow}{\times}}_SY$ is as follows.</p>
+<ul>
+<li>The objects are commutative diagrams</li>
+</ul>
+<p><figure><img src="./nearby-site-pre-ori-prod.svg" class="color-invert"/></figure></p>
+<ul>
+<li>The following are declared covering families:
+<ul>
+<li>coverings of $U$,</li>
+<li>coverings of $V$,</li>
+<li>and the following kind of morphisms.</li>
+</ul>
+</li>
+</ul>
+<p><figure><img src="./nearby-covering.svg" class="color-invert"/></figure></p>
+<p>An important way to think of this topos is by considering its points.</p>
+<p><strong>Theorem</strong> (<span class="link local"><a href="./SGA4.html" title="Théorie des topos et cohomologie étale des schémas [SGA4]">SGA4</a></span> VIII.7.9). The category $\operatorname{Hom}_{\mathsf{Topos}}(\mathrm{pt},X_{\text{\'et}})$ of points of the étale topos of a scheme $X$ is equivalent to the category of geometric points of $X$ and specializations.</p>
+<p>From the above theorem, the points of $X \operatorname{\overset{\leftarrow}{\times}}_S S$ can be regarded as triples $(x,t,\mathrm{sp})$, where</p>
+<ul>
+<li>$x\to X$ is a geometric point of $X$,</li>
+<li>$t\to S$ is a geometric point of $S$,</li>
+<li>and $\mathrm{sp}\colon t \to S_{(f(x))}$ is a specialization.</li>
+</ul>
+<p><strong>Example</strong> (<span class="link local"><a href="./ILOTravauxGabber.html" title="Travaux de Gabber sur l’uniformisation locale et la cohomologie etale des schemas quasi-excellents. Seminaire a l’Ecole polytechnique 2006–2008 [ILOTravauxGabber]">ILO</a></span> XI.1.12). When $f\colon X\to Y$ is a closed subscheme, $X \operatorname{\overset{\leftarrow}{\times}}_Y Y$ plays the role of a <strong>tubular neighborhood</strong> of $X$ in $Y$.</p>
+<p>The <strong>Milnor fiber</strong> at this point is defined as
+$$
+X_{(x)} \times_{S_{(f(x))}} t,
+$$
+and the <strong>Milnor tube</strong> is
+$$
+X_{(x)} \times_{S_{f(x)}} S_{(t)}.
+$$</p>
+<p><strong>Definition</strong>. Given an $S$-scheme $f\colon X\to S$, the geometric morphism $\Psi_f \colon X\to X\operatorname{\overset{\leftarrow}{\times}}_S S$ is determined by the diagram</p>
+<p><figure><img src="./nearby-vanishing-ori-univ.svg" class="color-invert"/></figure></p>
+<p>and the universal property of oriented products.</p>
+<p>We then define $\Phi_f K$ by the following fiber / cofiber sequence in $D(X \operatorname{\overset{\leftarrow}{\times}}_S S)$:
+$$
+p^*K \to R\Psi_f K \to \Phi_f K.
+$$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="余完备化"><header><h1><span class="taxon"></span>余完备化 <a class="slug" href="./余完备化.html">[余完备化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>余完备化是指向一个范畴<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加特定形状的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>的过程.</p>
 <p>具体地, 设 $R\subset K$ 是两族小范畴 (即 $R\hookrightarrow K \hookrightarrow\mathsf{Cat}$ 为全子范畴). 对于具有 $R$-形余极限的范畴 $\mathcal C$, 可在保持 $R$-形余极限的条件下, “自由地添加 $K$-形余极限”, 得到
