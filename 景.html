@@ -1087,13 +1087,14 @@ $f\colon X\to S$ and $g\colon Y\to S$, the <strong>oriented product</strong> (al
 </li>
 </ul>
 <p><figure><img src="./nearby-covering.svg" class="color-invert"/></figure></p>
-<p>An important way to think of this topos is by considering its points.</p>
+<p>An important way to think of this topos is by considering its points. Before doing this, let me recall the geometric picture.
+The <strong>Henselization</strong> of a scheme at a (geometric) point $s\to S$, denoted $S_{(s)}$, is the limit of all étale neighborhoods of $s$, a small neighborhood whose étale topos is a <span class="link local"><a href="./局部意象.html" title="局部意象 [局部意象]">local topos</a></span>, meaning that the global section is isomorphic to just a stalk.</p>
 <p><strong>Theorem</strong> (<span class="link local"><a href="./SGA4.html" title="Théorie des topos et cohomologie étale des schémas [SGA4]">SGA4</a></span> VIII.7.9). The category $\operatorname{Hom}_{\mathsf{Topos}}(\mathrm{pt},X_{\text{\'et}})$ of points of the étale topos of a scheme $X$ is equivalent to the category of geometric points of $X$ and specializations.</p>
 <p>From the above theorem, the points of $X \operatorname{\overset{\leftarrow}{\times}}_S S$ can be regarded as triples $(x,t,\mathrm{sp})$, where</p>
 <ul>
 <li>$x\to X$ is a geometric point of $X$,</li>
 <li>$t\to S$ is a geometric point of $S$,</li>
-<li>and $\mathrm{sp}\colon t \to S_{(f(x))}$ is a specialization.</li>
+<li>and $\mathrm{sp}\colon t \to S_{(f(x))}$ is a specialization, which is equivalent to an $S$-morphism $S_{(t)}\to S_{(f(x))}$ (<span class="link local"><a href="./SGA4.html" title="Théorie des topos et cohomologie étale des schémas [SGA4]">SGA4</a></span> VIII.7.4).</li>
 </ul>
 <p><strong>Example</strong> (<span class="link local"><a href="./ILOTravauxGabber.html" title="Travaux de Gabber sur l’uniformisation locale et la cohomologie etale des schemas quasi-excellents. Seminaire a l’Ecole polytechnique 2006–2008 [ILOTravauxGabber]">ILO</a></span> XI.1.12). When $f\colon X\to Y$ is a closed subscheme, $X \operatorname{\overset{\leftarrow}{\times}}_Y Y$ plays the role of a <strong>tubular neighborhood</strong> of $X$ in $Y$.</p>
 <p>The <strong>Milnor fiber</strong> at this point is defined as

@@ -809,13 +809,19 @@
 
 <article><section class="block" data-taxon=""><details open><summary id="局部意象"><header><h1><span class="taxon"></span>局部意象 <a class="slug" href="./局部意象.html">[局部意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>局部意象是仅含有一个点及其局部的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>; 其表现为意象的<span class="link local"><a href="./整体截面.html" title="整体截面 [整体截面]">整体截面</a></span>就等同于这一点处的<span class="link local"><a href="./茎.html" title="茎 [茎]">茎</a></span>.</p>
+<p>局部意象是仅含有一个点 $x$ 及其 “局部” 的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>; 其表现为意象的<span class="link local"><a href="./整体截面.html" title="整体截面 [整体截面]">整体截面</a></span> $\Gamma$ 等同于这一点处的<span class="link local"><a href="./茎.html" title="茎 [茎]">茎</a></span> $(-)_x$.</p>
 <h2>定义</h2>
-<p>对于<span class="link local"><a href="./带点意象.html" title="带点意象 [带点意象]">带点意象</a></span>有自然变换
+<p>对于<span class="link local"><a href="./带点意象.html" title="带点意象 [带点意象]">带点意象</a></span> $(\mathcal X,x)$ 有自然变换
 $$
-\Gamma(X,-)\to (-)_x.
+\Gamma(X,-)\to (-)_x := x^*.
 $$</p>
 <p>当上述自然变换为同构时, 称 $(\mathcal X,x)$ 为<strong>局部意象</strong>.</p>
+<h2>性质</h2>
+<p>对于局部意象 $(\mathcal X,x)$, 记 $p\colon \mathcal X\to\mathrm{pt}$ 为到点的<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span>, 有三元伴随
+$$
+p^* \dashv (p_* = x^*) \dashv x_*.
+$$
+此时 $p\colon \mathcal X\to\mathrm{pt}$ 是 $x\colon \mathrm{pt}\to\mathcal X$ 在意象的 $2$-范畴中的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="index"><header><h1><span class="taxon"></span>单纯百科 Simplopedia <a class="slug" href="./index.html">[index]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>这里是<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>的主目录.</p>
 <p>欢迎访问<span class="link external"><a href="https://simplicialcat.github.io/index.html?lang=zh" title="我的个人主页 [https://simplicialcat.github.io/index.html?lang=zh]">我的个人主页</a></span>.</p>
@@ -855,6 +861,126 @@ $$</p>
 <p><span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span></p>
 <p><span class="link local"><a href="./非交换Čech上同调.html" title="非交换 Čech 上同调 [非交换Čech上同调]">非交换 Čech 上同调</a></span></p>
 <p><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="nearby"><header><h1><span class="taxon"></span>Nearby Cycles <a class="slug" href="./nearby.html">[nearby]</a></h1><div class="metadata"><ul><li class="meta-item">Note</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>This note mainly follows <span class="link local"><a href="./ZhengNearby.html" title="Nearby Cycles over General Bases [ZhengNearby]">Prof. Zheng’s MCM talk</a></span>.</p>
+<h2>The Milnor fibration</h2>
+<p>Let $f\colon (\mathbb{C}^{n+1},0) \to (\mathbb{C},0)$ be a germ of holomorphic function having an isolated critical point at $0$.</p>
+<p><strong>Theorem</strong> (Milnor 1967). For $0&lt;\eta \ll \varepsilon \ll 1$,
+$$
+f\colon B_\varepsilon\cap f^{-1}(D_\eta) \to D_\eta
+$$
+induces a fibration over $D_\eta \setminus \{0\}$, where $B_\varepsilon$ and $D_\eta$ are respectively the ball and the disk centered at $0$.</p>
+<p>This is called the <span class="link local"><a href="./Milnor纤维化.html" title="Milnor 纤维化 [Milnor纤维化]">milnor fibration</a></span> (see there for more motivation).</p>
+<p>The fiber $M_t = f^{-1}(t) \cap B_\varepsilon$ is homotopy equivalent to a bouquet of $\mu$ $S^n$’s, where $\mu$ is the Milnor number
+$$
+\mu = \dim_\mathbb{C} \mathbb{C}\{z_0,\cdots,z_n\}/(\partial_1 f,\cdots,\partial_n f).
+$$</p>
+<p>Let $\Phi^i$ denote the reduced cohomology of the fiber $M_t$, acted on by a monodromy operator $T\in\operatorname{Aut}(\Phi^i)$ as $t$ turns around $0$.</p>
+<p><strong>Conjecture</strong> (Milnor). The eigenvalues of $T$ are roots of unity.</p>
+<h2>Nearby cycles over one-dimensional bases</h2>
+<p>Let $S$ be the spectrum of a (strictly local) Henselian <span class="link local"><a href="./离散赋值环.html" title="离散赋值环 [离散赋值环]">DVR</a></span>. It will be the analog of a disk.
+More precisely, there is a dictionary between complex analytic and étale settings:</p>
+<table><thead><tr><th>Complex analytic</th><th>Etale</th></tr></thead><tbody>
+<tr><td>disk $D_\eta$</td><td>base $S$</td></tr>
+<tr><td>center $0\in D_\eta$</td><td>closed point $s\in S$</td></tr>
+<tr><td>punctured disk $D_\eta\setminus\{0\}$</td><td>generic point $\eta\in S$</td></tr>
+<tr><td>parameter $t\in D\setminus\{0\}$</td><td>separable closure $\bar\eta$</td></tr>
+<tr><td>fundamental group $\pi_1(D\setminus\{0\},t)$</td><td>inertia group $\operatorname{Gal}(\bar\eta / \eta)$</td></tr>
+<tr><td>local systems on $D_\eta\setminus\{0\}$</td><td>sheaves on $\eta_{\text{\'et}}$</td></tr>
+</tbody></table>
+<h3>The complex analytic setting</h3>
+<p>In the complex analytic setting, following <span class="link local"><a href="./DimcaShvTop.html" title="Sheaves in Topology [DimcaShvTop]">Dimca</a></span>, we have a analytic function $f\colon X\to\mathbb{C}$. Denote $X_t = f^{-1}(t)$. Consider the pullback diagram</p>
+<p><figure><img src="./nearby-1.svg" class="color-invert"/></figure></p>
+<p>where $T = f^{-1}(D_\varepsilon)$ is a tube near $X_0$, and $f$ now denotes the Milnor fibration. The sheaf of <strong>nearby cycles</strong> of $F\in D^b(X)$ is defined by
+$$
+\psi_f F := i^* \, R(j\hat\pi)_* \, (j\hat\pi)^* F \in D^b(X_0).
+$$</p>
+<p>We remark that $E$ can be regarded as the universal/canonical fiber of the Milnor fibration, and the map $j\hat\pi$ is a canonical model (i.e. independent of the choice of a specific fiber) for the inclusion of a fiber $X_t$ into the tube $T$.</p>
+<p>There is a monodromy “deck transformation” $h\colon E\to E$ coming from the action of the generator of $\mathbb{Z} = \pi_1(D_\varepsilon^*)$.</p>
+<p>The following proposition explains the name of nearby cycles.</p>
+<p><strong>Proposition</strong>. For $x\in X_0$, the cohomology of the sheaf of nearby cycles
+$$
+\mathcal H^k(\psi_f F)_x \simeq H^k(F_x,F)
+$$
+recovers the cohomology of the local Milnor fiber $F_x = B_\epsilon (x) \cap X_t$ ($0&lt;|t|\ll \varepsilon$), the monodromy morphisms matching as well.</p>
+<p><strong>Example</strong>. Let $F=\mathbb{C}_X$; then $\dim H^n(F_x,F)=\mu$ is the Milnor number.</p>
+<p>Consider the unit of the adjunction
+$$
+F \to R(j\hat\pi)_* \, (j\hat\pi)^* F
+$$
+giving the comparison morphism
+$$
+i^* F \to \psi_f F.
+$$
+Define the sheaf of <strong>vanishing cycles</strong> $\varphi_f F \in D^b(X_0)$ to be the third term in the fiber / cofiber sequence
+$$
+i^*F \to \psi_f F \to \varphi_f F
+$$
+with an induced monodromy operator.</p>
+<h3>The étale setting</h3>
+<p>In the étale setting, we consider a morphism of schemes $X\to S$ and the base-change diagram</p>
+<p><figure><img src="./nearby-2.svg" class="color-invert"/></figure></p>
+<p>Let $\Lambda = \mathbb{Z}/m\mathbb{Z}$ for $m$ invertible on $S$. We work with sheaves of $\Lambda$-modules on étale topoi.</p>
+<p>Following <span class="link local"><a href="./ZhengNearby.html" title="Nearby Cycles over General Bases [ZhengNearby]">Zheng</a></span>, for $K\in D(X_\eta)$ define
+$$
+R\Psi K = i^* \, Rj_* (K|_{X_{\bar\eta}}) \in D(X_s).
+$$</p>
+<p>For $K\in D(X)$, define $\Phi K\in D(X_s)$ by the fiber / cofiber sequence
+$$
+K|_{X_s} \to R\Psi (K|_{X_\eta}) \to \Phi K.
+$$</p>
+<p>For a geometric point $x\to X_s$ we have a fiber / cofiber sequence
+$$
+K_x \to (R\Psi K)_x \to (\Phi K)_x.
+$$</p>
+<h2>Nearby cycles over general bases</h2>
+<h3>Oriented products of topoi</h3>
+<p>This part follows <span class="link local"><a href="./ZhengNearby.html" title="Nearby Cycles over General Bases [ZhengNearby]">Zheng</a></span> which cites <span class="link local"><a href="./ILOTravauxGabber.html" title="Travaux de Gabber sur l’uniformisation locale et la cohomologie etale des schemas quasi-excellents. Seminaire a l’Ecole polytechnique 2006–2008 [ILOTravauxGabber]">ILO</a></span>, Exposé XI by Illusie.</p>
+<p>Given morphisms of <span class="link local"><a href="./意象.html" title="意象 [意象]">topoi</a></span>
+$f\colon X\to S$ and $g\colon Y\to S$, the <strong>oriented product</strong> (also called the <strong></strong><span class="link local"><a href="./松拉回.html" title="松拉回 [松拉回]">lax pullback</a></span>) is a topos $X\operatorname{\overset{\leftarrow}{\times}}_SY$ together with a diagram</p>
+<p><figure><img src="./oriented-product.svg" class="color-invert"/></figure></p>
+<p>universal for these data.</p>
+<p><strong>Definition</strong>. The <strong>vanishing topos</strong> of an $S$-scheme $X\to S$ is the oriented product $X \operatorname{\overset{\leftarrow}{\times}}_S S$, where we regard schemes as topoi by the construction of étale topoi.</p>
+<p>A <span class="link local"><a href="./景.html" title="景 [景]">site</a></span> presentation of the oriented product $X\operatorname{\overset{\leftarrow}{\times}}_SY$ is as follows.</p>
+<ul>
+<li>The objects are commutative diagrams</li>
+</ul>
+<p><figure><img src="./nearby-site-pre-ori-prod.svg" class="color-invert"/></figure></p>
+<ul>
+<li>The following are declared covering families:
+<ul>
+<li>coverings of $U$,</li>
+<li>coverings of $V$,</li>
+<li>and the following kind of morphisms.</li>
+</ul>
+</li>
+</ul>
+<p><figure><img src="./nearby-covering.svg" class="color-invert"/></figure></p>
+<p>An important way to think of this topos is by considering its points. Before doing this, let me recall the geometric picture.
+The <strong>Henselization</strong> of a scheme at a (geometric) point $s\to S$, denoted $S_{(s)}$, is the limit of all étale neighborhoods of $s$, a small neighborhood whose étale topos is a <span class="link local"><a href="./局部意象.html" title="局部意象 [局部意象]">local topos</a></span>, meaning that the global section is isomorphic to just a stalk.</p>
+<p><strong>Theorem</strong> (<span class="link local"><a href="./SGA4.html" title="Théorie des topos et cohomologie étale des schémas [SGA4]">SGA4</a></span> VIII.7.9). The category $\operatorname{Hom}_{\mathsf{Topos}}(\mathrm{pt},X_{\text{\'et}})$ of points of the étale topos of a scheme $X$ is equivalent to the category of geometric points of $X$ and specializations.</p>
+<p>From the above theorem, the points of $X \operatorname{\overset{\leftarrow}{\times}}_S S$ can be regarded as triples $(x,t,\mathrm{sp})$, where</p>
+<ul>
+<li>$x\to X$ is a geometric point of $X$,</li>
+<li>$t\to S$ is a geometric point of $S$,</li>
+<li>and $\mathrm{sp}\colon t \to S_{(f(x))}$ is a specialization, which is equivalent to an $S$-morphism $S_{(t)}\to S_{(f(x))}$ (<span class="link local"><a href="./SGA4.html" title="Théorie des topos et cohomologie étale des schémas [SGA4]">SGA4</a></span> VIII.7.4).</li>
+</ul>
+<p><strong>Example</strong> (<span class="link local"><a href="./ILOTravauxGabber.html" title="Travaux de Gabber sur l’uniformisation locale et la cohomologie etale des schemas quasi-excellents. Seminaire a l’Ecole polytechnique 2006–2008 [ILOTravauxGabber]">ILO</a></span> XI.1.12). When $f\colon X\to Y$ is a closed subscheme, $X \operatorname{\overset{\leftarrow}{\times}}_Y Y$ plays the role of a <strong>tubular neighborhood</strong> of $X$ in $Y$.</p>
+<p>The <strong>Milnor fiber</strong> at this point is defined as
+$$
+X_{(x)} \times_{S_{(f(x))}} t,
+$$
+and the <strong>Milnor tube</strong> is
+$$
+X_{(x)} \times_{S_{f(x)}} S_{(t)}.
+$$</p>
+<p><strong>Definition</strong>. Given an $S$-scheme $f\colon X\to S$, the geometric morphism $\Psi_f \colon X\to X\operatorname{\overset{\leftarrow}{\times}}_S S$ is determined by the diagram</p>
+<p><figure><img src="./nearby-vanishing-ori-univ.svg" class="color-invert"/></figure></p>
+<p>and the universal property of oriented products.</p>
+<p>We then define $\Phi_f K$ by the following fiber / cofiber sequence in $D(X \operatorname{\overset{\leftarrow}{\times}}_S S)$:
+$$
+p^*K \to R\Psi_f K \to \Phi_f K.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="带点意象"><header><h1><span class="taxon"></span>带点意象 <a class="slug" href="./带点意象.html">[带点意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>带点意象就是意象带有点到它的一个<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span>.</p>
