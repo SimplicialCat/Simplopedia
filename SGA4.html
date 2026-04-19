@@ -834,10 +834,14 @@ induces a fibration over $D_\eta \setminus \{0\}$, where $B_\varepsilon$ and $D_
 $$
 \mu = \dim_\mathbb{C} \mathbb{C}\{z_0,\cdots,z_n\}/(\partial_1 f,\cdots,\partial_n f).
 $$</p>
+<p><strong>Examples</strong>.</p>
+<ul>
+<li>$f(x,y) = x^3 - y^2$. The Milnor fiber $M_t$ is a punctured torus (its boundary being a trefoil knot), homotopy equivalent to $S^1 \vee S^1$. The Milnor number is $\dim_\mathbb{C} \{x,y\}/(3x^2,2y) = 2$.</li>
+</ul>
 <p>Let $\Phi^i$ denote the reduced cohomology of the fiber $M_t$, acted on by a monodromy operator $T\in\operatorname{Aut}(\Phi^i)$ as $t$ turns around $0$.</p>
 <p><strong>Conjecture</strong> (Milnor). The eigenvalues of $T$ are roots of unity.</p>
 <h2>Nearby cycles over one-dimensional bases</h2>
-<p>Let $S$ be the spectrum of a (strictly local) Henselian <span class="link local"><a href="./离散赋值环.html" title="离散赋值环 [离散赋值环]">DVR</a></span>. It will be the analog of a disk.
+<p>Let $S$ be the spectrum of a (strictly local) <span class="link local"><a href="./Hensel环.html" title="Hensel 环 [Hensel环]">Henselian</a></span> <span class="link local"><a href="./离散赋值环.html" title="离散赋值环 [离散赋值环]">DVR</a></span>. It will be the analog of a disk.
 More precisely, there is a dictionary between complex analytic and étale settings:</p>
 <table><thead><tr><th>Complex analytic</th><th>Etale</th></tr></thead><tbody>
 <tr><td>disk $D_\eta$</td><td>base $S$</td></tr>
@@ -916,7 +920,7 @@ $f\colon X\to S$ and $g\colon Y\to S$, the <strong>oriented product</strong> (al
 </ul>
 <p><figure><img src="./nearby-covering.svg" class="color-invert"/></figure></p>
 <p>An important way to think of this topos is by considering its points. Before doing this, let me recall the geometric picture.
-The <strong>Henselization</strong> of a scheme at a (geometric) point $s\to S$, denoted $S_{(s)}$, is the limit of all étale neighborhoods of $s$, a small neighborhood whose étale topos is a <span class="link local"><a href="./局部意象.html" title="局部意象 [局部意象]">local topos</a></span>, meaning that the global section is isomorphic to just a stalk.</p>
+The <strong></strong><span class="link local"><a href="./Hensel化.html" title="Hensel 化 [Hensel化]">Henselization</a></span> of a scheme at a (geometric) point $s\to S$, denoted $S_{(s)}$, is the limit of all étale neighborhoods of $s$, a small neighborhood whose étale topos is a <span class="link local"><a href="./局部意象.html" title="局部意象 [局部意象]">local topos</a></span>, meaning that the global section is isomorphic to just a stalk.</p>
 <p><strong>Theorem</strong> (<span class="link local"><a href="./SGA4.html" title="Théorie des topos et cohomologie étale des schémas [SGA4]">SGA4</a></span> VIII.7.9). The category $\operatorname{Hom}_{\mathsf{Topos}}(\mathrm{pt},X_{\text{\'et}})$ of points of the étale topos of a scheme $X$ is equivalent to the category of geometric points of $X$ and specializations.</p>
 <p>From the above theorem, the points of $X \operatorname{\overset{\leftarrow}{\times}}_S S$ can be regarded as triples $(x,t,\mathrm{sp})$, where</p>
 <ul>
@@ -940,6 +944,19 @@ $$</p>
 $$
 p^*K \to R\Psi_f K \to \Phi_f K.
 $$</p>
+<p><strong>Example</strong>. For $S$ the spectrum of a strictly local DVR,
+$$
+X \operatorname{\overset{\leftarrow}{\times}}_S S = X_\eta \cup (X_s \times\eta) \cup X_s.
+$$
+Then the restriction of $R\Psi_f K$ on the three shreds are respectively
+$$
+K|_{X_\eta}, \,R\Psi(K|_{X_\eta}),\,K|_{X_s}.
+$$</p>
+<p><strong>Proposition</strong>. The functor $R\Psi$ recovers cohomologies of the Milnor tube:
+$$
+(R\Psi F)_{(x,t)} \simeq R\Gamma(X_{(x)}\times_{S_{f(x)}}S_{(t)},F).
+$$
+Moreover, $R\Psi F$ is equipped with a Galois action.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="意象"><header><h1><span class="taxon"></span>意象 <a class="slug" href="./意象.html">[意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <h3>作为集合范畴的推广</h3>

@@ -3598,6 +3598,26 @@ $$
 <h2>性质</h2>
 <h3>卷积</h3>
 <p><span class="link local"><a href="./卷积.html" title="卷积 [卷积]">卷积</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="Hensel化"><header><h1><span class="taxon"></span>Hensel 化 <a class="slug" href="./Hensel化.html">[Hensel化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<h2>定义</h2>
+<h3>局部环</h3>
+<p><span class="link local"><a href="./局部环.html" title="“局部环” [局部环]">局部环</a></span>的 <strong>Hensel 化</strong>是 <span class="link local"><a href="./Hensel环.html" title="Hensel 环 [Hensel环]">Hensel 环</a></span>的范畴到局部环的范畴的含入的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
+<h2>例</h2>
+<p>设 $R$ 为<span class="link local"><a href="./离散赋值环.html" title="离散赋值环 [离散赋值环]">离散赋值环</a></span>, 其分式域为 $K$, 极大理想为 $\mathfrak m$. 记
+$$
+\widehat R = \operatorname{lim}_n R/\mathfrak m^n
+$$
+为 $R$ 的 $\mathfrak m$-进<span class="link local"><a href="./完备化(环).html" title="完备化 (环) [完备化(环)]">完备化</a></span>,</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="Hensel环"><header><h1><span class="taxon"></span>Hensel 环 <a class="slug" href="./Hensel环.html">[Hensel环]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Hensel 环是 Nisnevich 拓扑意义下的局部环, 而严格 Hensel 环是<span class="link local"><a href="./平展景.html" title="平展景 [平展景]">平展拓扑</a></span>意义下的局部环.</p>
+<h2>定义</h2>
+<p><strong>Hensel 环</strong>是使得如下 <strong>Hensel 引理</strong>成立的<span class="link local"><a href="./局部环.html" title="“局部环” [局部环]">局部环</a></span> $(R,\mathfrak m)$, $k=R/\mathfrak m$:</p>
+<ul>
+<li>对任意首一多项式 $f\in R[x]$, 以及 $\bar f\in k[x]$ 的分解 $\bar f = g_0 h_0$ ($g_0,h_0$ 为互素的首一多项式), 有 $f$ 的分解 $f=gh$, 使得 $\bar g = g_0, \bar h = h_0$, 且 $g,h$ 互素.</li>
+</ul>
+<p>若剩余域 $k$ 为<span class="link local"><a href="./可分闭域.html" title="可分闭域 [可分闭域]">可分闭域</a></span>, 则称 $R$ 为<strong>严格 Hensel 环</strong>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Hermite向量丛"><header><h1><span class="taxon"></span>“Hermite 向量丛” <a class="slug" href="./Hermite向量丛.html">[Hermite向量丛]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>Hermite 向量丛是带有 Hermite 结构
@@ -8474,10 +8494,14 @@ induces a fibration over $D_\eta \setminus \{0\}$, where $B_\varepsilon$ and $D_
 $$
 \mu = \dim_\mathbb{C} \mathbb{C}\{z_0,\cdots,z_n\}/(\partial_1 f,\cdots,\partial_n f).
 $$</p>
+<p><strong>Examples</strong>.</p>
+<ul>
+<li>$f(x,y) = x^3 - y^2$. The Milnor fiber $M_t$ is a punctured torus (its boundary being a trefoil knot), homotopy equivalent to $S^1 \vee S^1$. The Milnor number is $\dim_\mathbb{C} \{x,y\}/(3x^2,2y) = 2$.</li>
+</ul>
 <p>Let $\Phi^i$ denote the reduced cohomology of the fiber $M_t$, acted on by a monodromy operator $T\in\operatorname{Aut}(\Phi^i)$ as $t$ turns around $0$.</p>
 <p><strong>Conjecture</strong> (Milnor). The eigenvalues of $T$ are roots of unity.</p>
 <h2>Nearby cycles over one-dimensional bases</h2>
-<p>Let $S$ be the spectrum of a (strictly local) Henselian <span class="link local"><a href="./离散赋值环.html" title="离散赋值环 [离散赋值环]">DVR</a></span>. It will be the analog of a disk.
+<p>Let $S$ be the spectrum of a (strictly local) <span class="link local"><a href="./Hensel环.html" title="Hensel 环 [Hensel环]">Henselian</a></span> <span class="link local"><a href="./离散赋值环.html" title="离散赋值环 [离散赋值环]">DVR</a></span>. It will be the analog of a disk.
 More precisely, there is a dictionary between complex analytic and étale settings:</p>
 <table><thead><tr><th>Complex analytic</th><th>Etale</th></tr></thead><tbody>
 <tr><td>disk $D_\eta$</td><td>base $S$</td></tr>
@@ -8556,7 +8580,7 @@ $f\colon X\to S$ and $g\colon Y\to S$, the <strong>oriented product</strong> (al
 </ul>
 <p><figure><img src="./nearby-covering.svg" class="color-invert"/></figure></p>
 <p>An important way to think of this topos is by considering its points. Before doing this, let me recall the geometric picture.
-The <strong>Henselization</strong> of a scheme at a (geometric) point $s\to S$, denoted $S_{(s)}$, is the limit of all étale neighborhoods of $s$, a small neighborhood whose étale topos is a <span class="link local"><a href="./局部意象.html" title="局部意象 [局部意象]">local topos</a></span>, meaning that the global section is isomorphic to just a stalk.</p>
+The <strong></strong><span class="link local"><a href="./Hensel化.html" title="Hensel 化 [Hensel化]">Henselization</a></span> of a scheme at a (geometric) point $s\to S$, denoted $S_{(s)}$, is the limit of all étale neighborhoods of $s$, a small neighborhood whose étale topos is a <span class="link local"><a href="./局部意象.html" title="局部意象 [局部意象]">local topos</a></span>, meaning that the global section is isomorphic to just a stalk.</p>
 <p><strong>Theorem</strong> (<span class="link local"><a href="./SGA4.html" title="Théorie des topos et cohomologie étale des schémas [SGA4]">SGA4</a></span> VIII.7.9). The category $\operatorname{Hom}_{\mathsf{Topos}}(\mathrm{pt},X_{\text{\'et}})$ of points of the étale topos of a scheme $X$ is equivalent to the category of geometric points of $X$ and specializations.</p>
 <p>From the above theorem, the points of $X \operatorname{\overset{\leftarrow}{\times}}_S S$ can be regarded as triples $(x,t,\mathrm{sp})$, where</p>
 <ul>
@@ -8580,6 +8604,19 @@ $$</p>
 $$
 p^*K \to R\Psi_f K \to \Phi_f K.
 $$</p>
+<p><strong>Example</strong>. For $S$ the spectrum of a strictly local DVR,
+$$
+X \operatorname{\overset{\leftarrow}{\times}}_S S = X_\eta \cup (X_s \times\eta) \cup X_s.
+$$
+Then the restriction of $R\Psi_f K$ on the three shreds are respectively
+$$
+K|_{X_\eta}, \,R\Psi(K|_{X_\eta}),\,K|_{X_s}.
+$$</p>
+<p><strong>Proposition</strong>. The functor $R\Psi$ recovers cohomologies of the Milnor tube:
+$$
+(R\Psi F)_{(x,t)} \simeq R\Gamma(X_{(x)}\times_{S_{f(x)}}S_{(t)},F).
+$$
+Moreover, $R\Psi F$ is equipped with a Galois action.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="nonAbPD"><header><h1><span class="taxon"></span>非交换 Poincaré 对偶 <a class="slug" href="./nonAbPD.html">[nonAbPD]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>陈述</h2>
 <p>设 $M$ 为流形, 同时用 $M$ 表示其对应的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</p>
