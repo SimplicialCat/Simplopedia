@@ -821,7 +821,51 @@ $$
 <p><figure><img src="./余完备化-1.svg" class="color-invert"/></figure></p>
 <h3>滤余完备化</h3>
 <p>考虑 $K$ 为<span class="link local"><a href="./滤范畴.html" title="滤范畴 [滤范畴]">滤范畴</a></span>的范畴, 那么 $\mathsf{P}^K(\mathcal C)$ 是 $\mathcal C$ 自由地添加<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>所得的范畴. 其可构造为 <span class="link local"><a href="./ind-对象.html" title="ind-对象 [ind-对象]">ind-对象</a></span>的范畴 $\mathsf{Ind}(\mathcal C)\subset \widehat {\mathcal C}$, 也可刻画为<span class="link local"><a href="./平坦函子.html" title="平坦函子 [平坦函子]">平坦函子</a></span> $\mathcal C^{\mathrm{op}}\to\mathsf{Set}$ 的范畴.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="index"><header><h1><span class="taxon"></span>单纯百科 Simplopedia <a class="slug" href="./index.html">[index]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Kan扩张"><header><h1><span class="taxon"></span>Kan 扩张 <a class="slug" href="./Kan扩张.html">[Kan扩张]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于函子 $f\colon \mathcal C \to \mathcal D$ 以及范畴 $\mathcal E$, 有拉回函子
+$$
+f^*\colon \mathsf {Fun}(\mathcal D,\mathcal E)\to \mathsf {Fun}(\mathcal C,\mathcal E).
+$$
+左右 Kan 扩张
+$$
+\operatorname{LKE}_f,\operatorname{RKE}_f
+\colon \mathsf {Fun}(\mathcal C,\mathcal E)\to \mathsf {Fun}(\mathcal D,\mathcal E)
+$$
+即是 $f^*$ 的左右伴随.</p>
+<h2>性质</h2>
+<h3>计算式</h3>
+<p>左右 Kan 扩张具有用余极限和极限的具体计算式:
+$$
+\operatorname{LKE}_f (F)(d) = \operatorname{colim}_{f(c) \to d} F(c),
+$$
+$$
+\operatorname{RKE}_f (F)(d) = \operatorname{lim}_{d\to f(c)} F(c).
+$$</p>
+<h2>例</h2>
+<h3>极限</h3>
+<p>对于指标范畴 $\mathcal I$, 沿 $\mathcal I\to 1$ 的左右 Kan 扩张 $\mathsf {Fun}(\mathcal I,\mathcal C)\to\mathcal C$ 分别为余极限和极限:
+$$
+\operatorname{LKE} (X) = \operatorname{colim}_{i} X(i),
+$$
+$$
+\operatorname{RKE} (X) = \operatorname{lim}_{i} X(i).
+$$</p>
+<h3>几何实现 (米田扩张)</h3>
+<p><span class="link local"><a href="./预层意象.html" title="预层意象 [预层意象]">预层范畴</a></span>是自由<span class="link local"><a href="./余完备化.html" title="余完备化 [余完备化]">余完备化</a></span>, 换言之, 任意到余完备范畴 $\mathcal D$ 的函子 $F\colon \mathcal C\to\mathcal D$ 都可扩张到预层范畴 $\widehat {\mathcal C}$, 这正是沿<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span>的左 Kan 扩张.
+该左 Kan 扩张有时记为张量积
+$$
+F \otimes - \colon \widehat {\mathcal C} \to \mathsf{Set}.
+$$
+这也可理解为<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span> $1 \to \mathcal C$ 与 $\mathcal C\to 1$ 的复合.</p>
+<p>例如, $|{-}|\colon \Delta\to\mathsf {Top}$ 沿<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span> $\mathbf{y}\colon \Delta\to\mathsf {sSet}$ 的左 Kan 扩张 $\mathsf {sSet}\to\mathsf {Top}$ 为单纯集的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>:
+$$
+|X| := \operatorname{colim}_{\Delta^n \to X} |\Delta^n|,
+$$
+其中 $\Delta^n = \mathbf{y}([n])$.</p>
+<h3>预层范畴之间的伴随</h3>
+<p><span class="link local"><a href="./预层范畴之间的伴随.html" title="预层范畴之间的伴随 [预层范畴之间的伴随]">预层范畴之间的伴随</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="index"><header><h1><span class="taxon"></span>单纯百科 Simplopedia <a class="slug" href="./index.html">[index]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>这里是<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>的主目录.</p>
 <p>欢迎访问<span class="link external"><a href="https://simplicialcat.github.io/index.html?lang=zh" title="我的个人主页 [https://simplicialcat.github.io/index.html?lang=zh]">我的个人主页</a></span>.</p>
 <p>You may also want to visit <span class="link external"><a href="https://simplicialcat.github.io/index.html?lang=en" title="my personal main page [https://simplicialcat.github.io/index.html?lang=en]">my personal main page</a></span> (in English).</p>
@@ -843,6 +887,7 @@ $$
 <p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">亟需施工处</a></span>列表 (“TODO list”)</p>
 <p><span class="link local"><a href="./terminologies.html" title="单纯百科 - 术语翻译表 [terminologies]">术语翻译表</a></span></p>
 <h2>最近</h2>
+<p><span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span></p>
 <p><span class="link local"><a href="./局部意象.html" title="局部意象 [局部意象]">局部意象</a></span></p>
 <p><span class="link local"><a href="./法形变.html" title="法形变 [法形变]">法形变</a></span>, <span class="link local"><a href="./微局部化.html" title="微局部化 [微局部化]">微局部化</a></span>, <span class="link local"><a href="./流形上的层.html" title="流形上的层 [流形上的层]">流形上的层</a></span>, <span class="link local"><a href="./microPerv.html" title="微局部偏屈层 [microPerv]">微局部偏屈层</a></span></p>
 <p><span class="link local"><a href="./love-and-math.html" title="爱与数学 [love-and-math]">爱与数学</a></span></p>

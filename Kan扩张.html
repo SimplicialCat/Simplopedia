@@ -829,11 +829,6 @@ $$
 \operatorname{RKE}_f (F)(d) = \operatorname{lim}_{d\to f(c)} F(c).
 $$</p>
 <h2>例</h2>
-<table><thead><tr><th>左</th><th>右</th></tr></thead><tbody>
-<tr><td>张量积 $\otimes$</td><td>Hom</td></tr>
-<tr><td>余极限</td><td>极限</td></tr>
-<tr><td>几何实现 (realization)</td><td>全体 (totalization)</td></tr>
-</tbody></table>
 <h3>极限</h3>
 <p>对于指标范畴 $\mathcal I$, 沿 $\mathcal I\to 1$ 的左右 Kan 扩张 $\mathsf {Fun}(\mathcal I,\mathcal C)\to\mathcal C$ 分别为余极限和极限:
 $$
@@ -842,8 +837,14 @@ $$
 $$
 \operatorname{RKE} (X) = \operatorname{lim}_{i} X(i).
 $$</p>
-<h3>几何实现</h3>
-<p>$|{-}|\colon \Delta\to\mathsf {Top}$ 沿<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span> $\mathbf{y}\colon \Delta\to\mathsf {sSet}$ 的左 Kan 扩张 $\mathsf {sSet}\to\mathsf {Top}$ 为单纯集的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>:
+<h3>几何实现 (米田扩张)</h3>
+<p><span class="link local"><a href="./预层意象.html" title="预层意象 [预层意象]">预层范畴</a></span>是自由<span class="link local"><a href="./余完备化.html" title="余完备化 [余完备化]">余完备化</a></span>, 换言之, 任意到余完备范畴 $\mathcal D$ 的函子 $F\colon \mathcal C\to\mathcal D$ 都可扩张到预层范畴 $\widehat {\mathcal C}$, 这正是沿<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span>的左 Kan 扩张.
+该左 Kan 扩张有时记为张量积
+$$
+F \otimes - \colon \widehat {\mathcal C} \to \mathsf{Set}.
+$$
+这也可理解为<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span> $1 \to \mathcal C$ 与 $\mathcal C\to 1$ 的复合.</p>
+<p>例如, $|{-}|\colon \Delta\to\mathsf {Top}$ 沿<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span> $\mathbf{y}\colon \Delta\to\mathsf {sSet}$ 的左 Kan 扩张 $\mathsf {sSet}\to\mathsf {Top}$ 为单纯集的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>:
 $$
 |X| := \operatorname{colim}_{\Delta^n \to X} |\Delta^n|,
 $$
@@ -1168,6 +1169,18 @@ $$
 \int_{S^1}A\simeq A\otimes_{A^{\mathrm{op}}\otimes A}A.
 $$
 这便是 <span class="link local"><a href="./Hochschild同调.html" title="Hochschild 同调 [Hochschild同调]">Hochschild 同调</a></span>的一种定义.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="平坦函子"><header><h1><span class="taxon"></span>平坦函子 <a class="slug" href="./平坦函子.html">[平坦函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>平坦函子可视为<span class="link local"><a href="./平坦模.html" title="平坦模 [平坦模]">平坦模</a></span>的推广.</p>
+<h2>定义</h2>
+<p>对于函子 $F\colon \mathcal C\to\mathsf{Set}$, 考虑其<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">米田扩张</a></span> $F\otimes (-)\colon \widehat {\mathcal C}\to\mathsf{Set}$; 若后者为左正合函子, 即保持有限极限, 则称 $F$ 为<strong>平坦函子</strong>.</p>
+<h2>性质</h2>
+<p>对于函子 $F\colon \mathcal C\to\mathsf{Set}$, 如下条件等价.</p>
+<ul>
+<li>$F$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span></li>
+</ul>
+<h2>相关资料</h2>
+<p>见<span class="link local"><a href="./盲人摸象.html" title="盲人摸象 [盲人摸象]">盲人摸象</a></span> A.5 节.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="拟凝聚层"><header><h1><span class="taxon"></span>拟凝聚层 <a class="slug" href="./拟凝聚层.html">[拟凝聚层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span>上的拟凝聚层是环上的模的推广.</p>

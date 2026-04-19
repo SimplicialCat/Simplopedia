@@ -810,7 +810,51 @@
 <article><section class="block" data-taxon=""><details open><summary id="预层意象"><header><h1><span class="taxon"></span>预层意象 <a class="slug" href="./预层意象.html">[预层意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>预层意象指的是某范畴上 $\mathsf{Set}$ (或 $\mathsf{Ani}$) 取值的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>构成的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>.</p>
 <h2>性质</h2>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Lawvere--Tierney拓扑"><header><h1><span class="taxon"></span>Lawvere–Tierney 拓扑 <a class="slug" href="./Lawvere--Tierney拓扑.html">[Lawvere--Tierney拓扑]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Kan扩张"><header><h1><span class="taxon"></span>Kan 扩张 <a class="slug" href="./Kan扩张.html">[Kan扩张]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于函子 $f\colon \mathcal C \to \mathcal D$ 以及范畴 $\mathcal E$, 有拉回函子
+$$
+f^*\colon \mathsf {Fun}(\mathcal D,\mathcal E)\to \mathsf {Fun}(\mathcal C,\mathcal E).
+$$
+左右 Kan 扩张
+$$
+\operatorname{LKE}_f,\operatorname{RKE}_f
+\colon \mathsf {Fun}(\mathcal C,\mathcal E)\to \mathsf {Fun}(\mathcal D,\mathcal E)
+$$
+即是 $f^*$ 的左右伴随.</p>
+<h2>性质</h2>
+<h3>计算式</h3>
+<p>左右 Kan 扩张具有用余极限和极限的具体计算式:
+$$
+\operatorname{LKE}_f (F)(d) = \operatorname{colim}_{f(c) \to d} F(c),
+$$
+$$
+\operatorname{RKE}_f (F)(d) = \operatorname{lim}_{d\to f(c)} F(c).
+$$</p>
+<h2>例</h2>
+<h3>极限</h3>
+<p>对于指标范畴 $\mathcal I$, 沿 $\mathcal I\to 1$ 的左右 Kan 扩张 $\mathsf {Fun}(\mathcal I,\mathcal C)\to\mathcal C$ 分别为余极限和极限:
+$$
+\operatorname{LKE} (X) = \operatorname{colim}_{i} X(i),
+$$
+$$
+\operatorname{RKE} (X) = \operatorname{lim}_{i} X(i).
+$$</p>
+<h3>几何实现 (米田扩张)</h3>
+<p><span class="link local"><a href="./预层意象.html" title="预层意象 [预层意象]">预层范畴</a></span>是自由<span class="link local"><a href="./余完备化.html" title="余完备化 [余完备化]">余完备化</a></span>, 换言之, 任意到余完备范畴 $\mathcal D$ 的函子 $F\colon \mathcal C\to\mathcal D$ 都可扩张到预层范畴 $\widehat {\mathcal C}$, 这正是沿<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span>的左 Kan 扩张.
+该左 Kan 扩张有时记为张量积
+$$
+F \otimes - \colon \widehat {\mathcal C} \to \mathsf{Set}.
+$$
+这也可理解为<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span> $1 \to \mathcal C$ 与 $\mathcal C\to 1$ 的复合.</p>
+<p>例如, $|{-}|\colon \Delta\to\mathsf {Top}$ 沿<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span> $\mathbf{y}\colon \Delta\to\mathsf {sSet}$ 的左 Kan 扩张 $\mathsf {sSet}\to\mathsf {Top}$ 为单纯集的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>:
+$$
+|X| := \operatorname{colim}_{\Delta^n \to X} |\Delta^n|,
+$$
+其中 $\Delta^n = \mathbf{y}([n])$.</p>
+<h3>预层范畴之间的伴随</h3>
+<p><span class="link local"><a href="./预层范畴之间的伴随.html" title="预层范畴之间的伴随 [预层范畴之间的伴随]">预层范畴之间的伴随</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="Lawvere--Tierney拓扑"><header><h1><span class="taxon"></span>Lawvere–Tierney 拓扑 <a class="slug" href="./Lawvere--Tierney拓扑.html">[Lawvere--Tierney拓扑]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>…
 见 <span class="link local"><a href="./Grothendieck拓扑.html" title="Grothendieck 拓扑 [Grothendieck拓扑]">Grothendieck 拓扑</a></span>.</p>
@@ -924,7 +968,7 @@ $$</p>
 <h2>观念</h2>
 <h3>作为集合范畴的推广</h3>
 <p>意象 (topos) 是一种具有类似集合范畴 $\mathsf{Set}$ 的性质的范畴; 这些性质使得意象的<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>能够支持集合的许多操作, 如构造两个集合 $X,Y$ 的无交并 $X + Y$, 乘积 $X\times Y$, 映射的集合 $Y^X$ 等等.</p>
-<p>不过需要注意的是, 意象的<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>所支持的逻辑是<span class="link local"><a href="./直觉主义逻辑.html" title="直觉主义逻辑 [直觉主义逻辑]">直觉主义逻辑</a></span>, 而不一定是经典逻辑 (见 <span class="link local"><a href="./Boole意象.html" title="“Boole 意象” [Boole意象]">Boole 意象</a></span>), 其中排中律和选择公理可能不成立. 例如拓扑空间上的层意象一般不是 Boole 意象, 原因来自于开集的补集不一定是开集.</p>
+<p>不过需要注意的是, 意象的<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>所支持的逻辑是<span class="link local"><a href="./直觉主义逻辑.html" title="直觉主义逻辑 [直觉主义逻辑]">直觉主义逻辑</a></span>, 而不一定是经典逻辑 (见 <span class="link local"><a href="./Boole意象.html" title="Boole 意象 [Boole意象]">Boole 意象</a></span>), 其中排中律和选择公理可能不成立. 例如拓扑空间上的层意象一般不是 Boole 意象, 原因来自于开集的补集不一定是开集.</p>
 <blockquote>
 <p>没有人能将我们驱逐出 Contor 为我们创造的 (集合论的) 天堂. —— David Hilbert (1926)</p>
 </blockquote>

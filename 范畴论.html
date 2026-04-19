@@ -1021,6 +1021,15 @@ $$
 <h3>滤余完备化</h3>
 <p>考虑 $K$ 为<span class="link local"><a href="./滤范畴.html" title="滤范畴 [滤范畴]">滤范畴</a></span>的范畴, 那么 $\mathsf{P}^K(\mathcal C)$ 是 $\mathcal C$ 自由地添加<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>所得的范畴. 其可构造为 <span class="link local"><a href="./ind-对象.html" title="ind-对象 [ind-对象]">ind-对象</a></span>的范畴 $\mathsf{Ind}(\mathcal C)\subset \widehat {\mathcal C}$, 也可刻画为<span class="link local"><a href="./平坦函子.html" title="平坦函子 [平坦函子]">平坦函子</a></span> $\mathcal C^{\mathrm{op}}\to\mathsf{Set}$ 的范畴.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="余等化子"><header><h1><span class="taxon"></span>余等化子 <a class="slug" href="./余等化子.html">[余等化子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="元素范畴"><header><h1><span class="taxon"></span>元素范畴 <a class="slug" href="./元素范畴.html">[元素范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>函子 $F\colon \mathcal C\to\mathsf{Set}$ 的<strong>元素范畴</strong> (category of elements) $\mathsf{El}(F)$ 是如下范畴,</p>
+<ul>
+<li>其对象为 $(c,x)$, 其中 $c\in\mathcal C$, $x\in F(c)$;</li>
+<li>态射 $(c,x) \to (d,y)$ 为 $f\colon c\to d$, $F(f)(x) = y$.</li>
+</ul>
+<p>换言之, $\mathsf{El}(F)$ 是如下的<span class="link local"><a href="./松拉回.html" title="松拉回 [松拉回]">松拉回</a></span>.</p>
+<p><figure><img src="./元素范畴-1.svg" class="color-invert"/></figure></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="可扩展性"><header><h1><span class="taxon"></span>可扩展性 <a class="slug" href="./可扩展性.html">[可扩展性]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设范畴 $\mathcal C$ 具有有限<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span> (包括<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>).</p>
@@ -1132,8 +1141,14 @@ $$
 其中 $\{\cdot\to\cdot\}$ 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的箭头.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="平坦函子"><header><h1><span class="taxon"></span>平坦函子 <a class="slug" href="./平坦函子.html">[平坦函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
+<p>平坦函子可视为<span class="link local"><a href="./平坦模.html" title="平坦模 [平坦模]">平坦模</a></span>的推广.</p>
 <h2>定义</h2>
+<p>对于函子 $F\colon \mathcal C\to\mathsf{Set}$, 考虑其<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">米田扩张</a></span> $F\otimes (-)\colon \widehat {\mathcal C}\to\mathsf{Set}$; 若后者为左正合函子, 即保持有限极限, 则称 $F$ 为<strong>平坦函子</strong>.</p>
 <h2>性质</h2>
+<p>对于函子 $F\colon \mathcal C\to\mathsf{Set}$, 如下条件等价.</p>
+<ul>
+<li>$F$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span></li>
+</ul>
 <h2>相关资料</h2>
 <p>见<span class="link local"><a href="./盲人摸象.html" title="盲人摸象 [盲人摸象]">盲人摸象</a></span> A.5 节.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="数学基础"><header><h1><span class="taxon"></span>数学基础 <a class="slug" href="./数学基础.html">[数学基础]</a></h1><div class="metadata"><ul><li class="meta-item">学科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
