@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>正交多项式, 双仿射 Hecke 代数与量子特征簇</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon"><style>
+<meta name="viewport" content="width=device-width"><title>六函子</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon"><style>
   @font-face {
     font-family: 'NewCM10';
     src: url(assets/NewCM10-Book.otf) format('opentype');
@@ -807,9 +807,38 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon=""><details open><summary id="OP-DAHA-QCV"><header><h1><span class="taxon"></span>正交多项式, 双仿射 Hecke 代数与量子特征簇 <a class="slug" href="./OP-DAHA-QCV.html">[OP-DAHA-QCV]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<h2>单变量正交多项式</h2>
-<p><span class="link local"><a href="./Jacobi多项式.html" title="Jacobi 多项式 [Jacobi多项式]">Jacobi 多项式</a></span></p>
+<article><section class="block" data-taxon=""><details open><summary id="six-functors"><header><h1><span class="taxon"></span>六函子 <a class="slug" href="./six-functors.html">[six-functors]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li></ul></div></header></summary>
+<p>本文是 <span class="link local"><a href="./ScholzeSixFunctors.html" title="Six-functor Formalisms [ScholzeSixFunctors]">Scholze 的六函子讲义</a></span>的阅读笔记.</p>
+<h2>引言</h2>
+<p>六函子是一种出现于许多场合的体系:</p>
+<ul>
+<li><span class="link local"><a href="./平展上同调.html" title="平展上同调 [平展上同调]">平展上同调</a></span></li>
+<li>拓扑空间的<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span></li>
+<li>代数簇上的<span class="link local"><a href="./D-模.html" title="D-模 [D-模]">D-模</a></span></li>
+</ul>
+<p>我们以良好拓扑空间上的六函子逐步引入正题.
+记 $D(X,\mathbb{Z})$ 为空间 $X$ 上 Abel 层的导出范畴. 对于映射 $f\colon X\to Y$, 层的拉回</p>
+<ul>
+<li>$f^*\colon D(Y,\mathbb{Z}) \to D(X,\mathbb{Z})$</li>
+</ul>
+<p>有右伴随</p>
+<ul>
+<li>$f_* \colon D(X,\mathbb{Z})\to D(Y,\mathbb{Z})$,</li>
+</ul>
+<p>这是<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>的<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>版本.</p>
+<p>为了得到 Künneth 公式, 我们需要张量积</p>
+<ul>
+<li>$(-)\otimes (-)\colon D(X,\mathbb{Z})\times D(X,\mathbb{Z})\to D(X,\mathbb{Z})$,</li>
+</ul>
+<p>其有偏右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span></p>
+<ul>
+<li>$\operatorname{Hom}(-,-)\colon D(X,\mathbb{Z})^\mathrm{op}\times D(X,\mathbb{Z}) \to D(X,\mathbb{Z})$.</li>
+</ul>
+<p>张量积与拉回相容, 即 $f^*$ 构成<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span>函子. 此外有<span class="link local"><a href="./投影公式.html" title="投影公式 [投影公式]">投影公式</a></span>
+$$
+f_*A \otimes B \simeq f_*(A\otimes f^*B).
+$$
+这意味着, 由对称幺半函子 $f^*$ 视 $D(X,\mathbb{Z})$ 为 $D(Y,\mathbb{Z})$-<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>, 则 $f_*$ 是 $D(Y,\mathbb{Z})$-线性函子.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="notes"><header><h1><span class="taxon"></span>讲稿, 笔记 <a class="slug" href="./notes.html">[notes]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>较完整的讲稿 / 笔记:</p>
 <ul>

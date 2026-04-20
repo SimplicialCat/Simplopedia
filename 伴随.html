@@ -908,6 +908,38 @@ $$
 <li>$0\mathsf{Pr}_A := \mathsf{Mod}(A)$,</li>
 <li>$(n+1)\mathsf{Pr}_A := \mathsf{Mod}_{\mathsf{Pr}} (n\mathsf{Pr}_A)$;</li>
 </ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="six-functors"><header><h1><span class="taxon"></span>六函子 <a class="slug" href="./six-functors.html">[six-functors]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li></ul></div></header></summary>
+<p>本文是 <span class="link local"><a href="./ScholzeSixFunctors.html" title="Six-functor Formalisms [ScholzeSixFunctors]">Scholze 的六函子讲义</a></span>的阅读笔记.</p>
+<h2>引言</h2>
+<p>六函子是一种出现于许多场合的体系:</p>
+<ul>
+<li><span class="link local"><a href="./平展上同调.html" title="平展上同调 [平展上同调]">平展上同调</a></span></li>
+<li>拓扑空间的<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span></li>
+<li>代数簇上的<span class="link local"><a href="./D-模.html" title="D-模 [D-模]">D-模</a></span></li>
+</ul>
+<p>我们以良好拓扑空间上的六函子逐步引入正题.
+记 $D(X,\mathbb{Z})$ 为空间 $X$ 上 Abel 层的导出范畴. 对于映射 $f\colon X\to Y$, 层的拉回</p>
+<ul>
+<li>$f^*\colon D(Y,\mathbb{Z}) \to D(X,\mathbb{Z})$</li>
+</ul>
+<p>有右伴随</p>
+<ul>
+<li>$f_* \colon D(X,\mathbb{Z})\to D(Y,\mathbb{Z})$,</li>
+</ul>
+<p>这是<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>的<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>版本.</p>
+<p>为了得到 Künneth 公式, 我们需要张量积</p>
+<ul>
+<li>$(-)\otimes (-)\colon D(X,\mathbb{Z})\times D(X,\mathbb{Z})\to D(X,\mathbb{Z})$,</li>
+</ul>
+<p>其有偏右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span></p>
+<ul>
+<li>$\operatorname{Hom}(-,-)\colon D(X,\mathbb{Z})^\mathrm{op}\times D(X,\mathbb{Z}) \to D(X,\mathbb{Z})$.</li>
+</ul>
+<p>张量积与拉回相容, 即 $f^*$ 构成<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span>函子. 此外有<span class="link local"><a href="./投影公式.html" title="投影公式 [投影公式]">投影公式</a></span>
+$$
+f_*A \otimes B \simeq f_*(A\otimes f^*B).
+$$
+这意味着, 由对称幺半函子 $f^*$ 视 $D(X,\mathbb{Z})$ 为 $D(Y,\mathbb{Z})$-<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>, 则 $f_*$ 是 $D(Y,\mathbb{Z})$-线性函子.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="tutorial-stable-homotopy"><header><h1><span class="taxon"></span>稳定同伦论 <a class="slug" href="./tutorial-stable-homotopy.html">[tutorial-stable-homotopy]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文的目的是, 以尽可能少的前置知识, 解释<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span> (<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>) 这一概念的意义和必要性, 从而使读者能够接受其抽象定义. 为此我试图解释<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>的动机, 也即为什么要将<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span> $\Sigma$ 变为可逆函子.</p>
 <p>前置知识: 拓扑学基本概念, 以及<span class="link local"><a href="./motivation-homotopy-theory.html" title="同伦论的动机 [motivation-homotopy-theory]">同伦论的动机</a></span> (推荐读者先阅读这篇文章). 或许需要一点无穷范畴的直观.</p>

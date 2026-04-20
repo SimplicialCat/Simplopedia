@@ -1356,6 +1356,38 @@ $$</p>
 <p>$$
 \mathsf {QCoh}(X_{\text{dR}})\simeq D\mathsf {-Mod}(X).
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="six-functors"><header><h1><span class="taxon"></span>六函子 <a class="slug" href="./six-functors.html">[six-functors]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li></ul></div></header></summary>
+<p>本文是 <span class="link local"><a href="./ScholzeSixFunctors.html" title="Six-functor Formalisms [ScholzeSixFunctors]">Scholze 的六函子讲义</a></span>的阅读笔记.</p>
+<h2>引言</h2>
+<p>六函子是一种出现于许多场合的体系:</p>
+<ul>
+<li><span class="link local"><a href="./平展上同调.html" title="平展上同调 [平展上同调]">平展上同调</a></span></li>
+<li>拓扑空间的<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span></li>
+<li>代数簇上的<span class="link local"><a href="./D-模.html" title="D-模 [D-模]">D-模</a></span></li>
+</ul>
+<p>我们以良好拓扑空间上的六函子逐步引入正题.
+记 $D(X,\mathbb{Z})$ 为空间 $X$ 上 Abel 层的导出范畴. 对于映射 $f\colon X\to Y$, 层的拉回</p>
+<ul>
+<li>$f^*\colon D(Y,\mathbb{Z}) \to D(X,\mathbb{Z})$</li>
+</ul>
+<p>有右伴随</p>
+<ul>
+<li>$f_* \colon D(X,\mathbb{Z})\to D(Y,\mathbb{Z})$,</li>
+</ul>
+<p>这是<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>的<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>版本.</p>
+<p>为了得到 Künneth 公式, 我们需要张量积</p>
+<ul>
+<li>$(-)\otimes (-)\colon D(X,\mathbb{Z})\times D(X,\mathbb{Z})\to D(X,\mathbb{Z})$,</li>
+</ul>
+<p>其有偏右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span></p>
+<ul>
+<li>$\operatorname{Hom}(-,-)\colon D(X,\mathbb{Z})^\mathrm{op}\times D(X,\mathbb{Z}) \to D(X,\mathbb{Z})$.</li>
+</ul>
+<p>张量积与拉回相容, 即 $f^*$ 构成<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span>函子. 此外有<span class="link local"><a href="./投影公式.html" title="投影公式 [投影公式]">投影公式</a></span>
+$$
+f_*A \otimes B \simeq f_*(A\otimes f^*B).
+$$
+这意味着, 由对称幺半函子 $f^*$ 视 $D(X,\mathbb{Z})$ 为 $D(Y,\mathbb{Z})$-<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>, 则 $f_*$ 是 $D(Y,\mathbb{Z})$-线性函子.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="几何Langlands对应"><header><h1><span class="taxon"></span>几何 Langlands 对应 <a class="slug" href="./几何Langlands对应.html">[几何Langlands对应]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>陈述</h2>
 <h3>经典对应</h3>
