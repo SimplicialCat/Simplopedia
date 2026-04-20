@@ -881,7 +881,7 @@ $$</p>
 <h2>K-理论版本</h2>
 <p>$\mathcal F^\bullet \in D^b(X)$ 对应 $X$ 的 <span class="link local"><a href="./K-群(拓扑).html" title="“K-群 (拓扑)” [K-群(拓扑)]">K-群 (拓扑)</a></span>中的元素 $[\mathcal F^\bullet]:=\sum (-1)^i[\mathcal F^i] \in K(X)$.</p>
 <p><strong>命题</strong>. $[\mathcal F^\bullet] = \sum (-1)^i [\mathcal H^i (\mathcal F^\bullet)]$.</p>
-<p>定义<span class="link local"><a href="./紧支集直像.html" title="“紧支集直像” [紧支集直像]">紧支集直像</a></span> $f_! \mathcal F := \sum (-1)^i [R^i f_*\mathcal F]$.</p>
+<p>定义<span class="link local"><a href="./紧支集直像.html" title="紧支集直像 [紧支集直像]">紧支集直像</a></span> $f_! \mathcal F := \sum (-1)^i [R^i f_*\mathcal F]$.</p>
 <p><span class="link local"><a href="./K-理论.html" title="“K-理论” [K-理论]">K-理论</a></span>版本的 Fourier–向井变换定义如下. 对 $e\in K(X\times Y)$,
 $$
 \Phi^K_e \colon f\mapsto p_!(e\otimes q^* f).
@@ -916,7 +916,7 @@ $$
 <p>Grothendieck 六函子是以下三对伴随:</p>
 <ul>
 <li>对于态射 $f\colon X\to Y$ 有<span class="link local"><a href="./逆像.html" title="逆像 [逆像]">逆像</a></span> (inverse image) - <span class="link local"><a href="./直像.html" title="“直像” [直像]">直像</a></span> (direct image) 伴随 $f^* \dashv f_*$;</li>
-<li>对于分离态射 $f\colon X\to Y$ 有<span class="link local"><a href="./紧支集直像.html" title="“紧支集直像” [紧支集直像]">紧支集直像</a></span> (又叫紧支集前推, pushforward with compact support) - 紧支集逆像 (Verdier 对偶) 伴随 $f_! \vdash f^!$;</li>
+<li>对于分离态射 $f\colon X\to Y$ 有<span class="link local"><a href="./紧支集直像.html" title="紧支集直像 [紧支集直像]">紧支集直像</a></span> (又叫紧支集前推, pushforward with compact support) - 紧支集逆像 (Verdier 对偶) 伴随 $f_! \vdash f^!$;</li>
 <li>张量积与内蕴 Hom 伴随 $-\otimes X \vdash [X,-]$.</li>
 </ul>
 <p>这些概念通常使用<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>来描述, 从而最后一对函子实际上是 Tor 和 Ext.</p>
@@ -1012,7 +1012,14 @@ $$
 而逆像的定义可用<span class="link local"><a href="./平展空间.html" title="“平展空间” [平展空间]">平展空间</a></span>表达: 设 $p\colon E\to Y$ 为平展空间, 则 $f^*E\to X$ 是其沿 $f$ 的拉回. 由此可知 $f^*$ 保持有限极限, 即 $f^*$ 左正合.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./张量-同态伴随.html" title="“张量-同态伴随” [张量-同态伴随]">张量-同态伴随</a></span></p>
-</details></section><section class="block" data-taxon=""><details ><summary id="紧支集直像"><header><h1><span class="taxon"></span>“紧支集直像” <a class="slug" href="./紧支集直像.html">[紧支集直像]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="紧支集直像"><header><h1><span class="taxon"></span>紧支集直像 <a class="slug" href="./紧支集直像.html">[紧支集直像]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
 <p>紧支集直像 (direct image with compact support, 又叫紧支集前推) 是<span class="link local"><a href="./六函子.html" title="“六函子” [六函子]">六函子</a></span>之一.</p>
-<p>对于局部紧 Hausdorff 空间 $X,Y$ 之间的映射 $f\colon  X\to Y$, 紧支集直像函子 $f_!$ 是<span class="link local"><a href="./直像.html" title="“直像” [直像]">直像</a></span>函子 $f_*\colon \operatorname{Sh}(X)\to\operatorname{Sh}(Y)$ 的子函子. 对 $X$ 上的 <span class="link local"><a href="./Abel层.html" title="“Abel 层” [Abel层]">Abel 层</a></span> $\mathcal F$, $f_!\mathcal F$ 的截面是那些满足</p>
+<h2>定义</h2>
+<h3>局部紧 Hausdorff 空间</h3>
+<p>对于局部紧 Hausdorff 空间 $X,Y$ 之间的映射 $f\colon  X\to Y$, 紧支集直像函子 $f_!$ 是<span class="link local"><a href="./直像.html" title="“直像” [直像]">直像</a></span>函子 $f_*\colon \operatorname{Sh}(X)\to\operatorname{Sh}(Y)$ 的<span class="link local"><a href="./子对象.html" title="子对象 [子对象]">子</a></span>函子. 对 $X$ 上的 <span class="link local"><a href="./Abel层.html" title="Abel 层 [Abel层]">Abel 层</a></span> $\mathcal F$ 与,
+$$
+f_!\mathcal F (U)= \{s\in f_*\mathcal F(U) \colon f|_{\operatorname{supp}(s)}\text{紧合}\}.
+$$
+其中 $\operatorname{supp}(s)$ 是 $f^{-1}(U)$ 的子集.</p>
 </details></section></details></section></footer></article></div></body></html>
