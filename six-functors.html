@@ -895,7 +895,8 @@ $$</li>
 <li>对 $E$ 中的态射 $f\colon X\to Y$, 有<span class="link local"><a href="./投影公式.html" title="投影公式 [投影公式]">投影公式</a></span>
 $$
   f_! A \otimes B \simeq f_!(A\otimes f^*B).
-$$</li>
+$$
+换言之, $f_!\colon D(X)\to D(Y)$ 是 $D(Y)$-线性函子.</li>
 </ul>
 <p>用<span class="link local"><a href="./关系2-范畴.html" title="关系 2-范畴 [关系2-范畴]">关系范畴</a></span>可以给出一种严格的叙述.</p>
 <p>定义 $\mathsf{Corr}(\mathcal C,E)$ 为如下对称幺半范畴:</p>
@@ -913,13 +914,26 @@ $$</li>
 $$
 D \colon \mathsf{Corr}(\mathcal C,E) \to \mathsf{Cat}.
 $$</p>
+<p>这个简洁的定义囊括了上述所有要素.</p>
 <ul>
 <li>对 $X\in\mathcal C$, 该函子给出范畴 $D(X)$.</li>
 <li>对 $\mathcal C$ 中任意态射 $f\colon X\to Y$, 对应 $(Y \overset{f}{\leftarrow} X = X)$ 给出拉回函子 $f^*$.</li>
-<li>由于 $X$ 是交换余代数 (余乘法为<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span>) 而 $D$ 给出松对称幺半函子 $\mathcal C^{\mathrm{op}}\to\mathsf{Cat}$, 故 $D(X)$ 为 $\mathsf{Cat}$ 中的交换代数, 即<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>.</li>
-<li>对 $E$ 中的态射 $f\colon X\to Y$, 对应 $(X = X \overset{f}{\to} Y)$ 给出函子 $f_!\colon D(X)\to D(Y)$.</li>
+<li>由于 $X$ 是交换余代数 (即 $\mathcal C^{\mathrm{op}}$ 中的交换代数, 余乘法为<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span>) 而 $D$ 给出松对称幺半函子 $\mathcal C^{\mathrm{op}}\to\mathsf{Cat}$, 故 $D(X)$ 为 $\mathsf{Cat}$ 中的交换代数, 即<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>.</li>
+<li>对 $E$ 中的态射 $f\colon X\to Y$, 对应 $(X = X \overset{f}{\to} Y)$ 给出函子 $f_!\colon D(X)\to D(Y)$, 并且由于态射 $f$ 给出了 $\mathcal C^{\mathrm{op}}$ 中 $X$ 的 $Y$-模结构且 $f\colon X\to Y$ 是 $Y$-模同态, 故 $f_!\colon D(X)\to D(Y)$ 是 $D(Y)$-模同态.</li>
 <li>一般地, 对应 $(X\overset{f}{\leftarrow} W \overset{g}{\to} Y)$ 给出 “<span class="link local"><a href="./拉-推.html" title="拉-推 [拉-推]">拉-推</a></span>” 函子 $g_! f^*\colon D(X)\to D(Y)$.</li>
 </ul>
+<h2>对称幺半范畴</h2>
+<p><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>是 $\mathsf{Cat}$ 中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>, 由定义即保持乘积的函子</p>
+<p><strong>定理</strong>. 对于<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal C$, <span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span> $\mathcal D$, 松对称幺半函子 $\mathcal C\to\mathcal D$ 等同于函子 $F\colon \mathcal C^\otimes \to \mathcal D$, 满足 $F((X_i)_{i\in I})\simeq\prod_i F(X_i)$.</p>
+<p>令
+$$
+\mathsf{Corr}(\mathcal C,E)^\otimes = \mathsf{Corr}(\mathcal C^\times, E^\times).
+$$</p>
+<h2>六函子体系的构造</h2>
+<p>固定几何语境 $(\mathcal C,E)$, 我们想知道具体如何构造六函子体系
+$$
+\mathsf{Corr}(\mathcal C,E) \to \mathsf{Cat}.
+$$</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="notes"><header><h1><span class="taxon"></span>讲稿, 笔记 <a class="slug" href="./notes.html">[notes]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>较完整的讲稿 / 笔记:</p>
 <ul>

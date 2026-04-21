@@ -4823,6 +4823,7 @@ $$
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="Levi分解"><header><h1><span class="taxon"></span>Levi 分解 <a class="slug" href="./Levi分解.html">[Levi分解]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon=""><details ><summary id="Lie代数"><header><h1><span class="taxon"></span>Lie 代数 <a class="slug" href="./Lie代数.html">[Lie代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
 <h2>定义</h2>
 <h3>作为 Lawvere 理论</h3>
 <p>Lie 代数的理论是一种 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>.</p>
@@ -7494,6 +7495,10 @@ $$</p>
 <blockquote>
 <p>迷神: 在<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>中 $\Sigma_+^\infty (M)$ 和 $\operatorname{Th}(-TM)$ 互为对偶.</p>
 </blockquote>
+</details></section><section class="block" data-taxon=""><details ><summary id="Spanier–Whitehead对偶"><header><h1><span class="taxon"></span>Spanier–Whitehead 对偶 <a class="slug" href="./Spanier–Whitehead对偶.html">[Spanier–Whitehead对偶]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>通过 $\mathsf{Ani}$ 的泛性质</h3>
+<p><strong>定义</strong> (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">HA</a></span> 6.3.3.2). 由于范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}^{\mathrm{op}}$</a></span> 余完备, 存在唯一的函子 $F\colon \mathsf{Ani} \to \mathsf{Sp}^{\mathrm{op}}$ 满足 $F(*) = \mathbb S$ (<span class="link local"><a href="./球谱.html" title="“球谱” [球谱]">球谱</a></span>). 此时称 $F(X)$ 为 $X$ 的 <strong>Spanier–Whitehead 对偶</strong>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Springer纤维"><header><h1><span class="taxon"></span>Springer 纤维 <a class="slug" href="./Springer纤维.html">[Springer纤维]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>Springer 纤维与 Schubert 簇有关; 两者都是<span class="link local"><a href="./旗流形.html" title="旗流形 [旗流形]">旗流形</a></span> $\mathcal B$ 的子簇.</p>
 <h2>定义</h2>
@@ -12327,10 +12332,29 @@ $$
 </ul>
 <p>一个伟大的概念应该配上一个伟大的译名. 读者们, 未来的中国数学学者们, 这个名字的决定权在你们手上. 就这样吧!</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="关系2-范畴"><header><h1><span class="taxon"></span>关系 2-范畴 <a class="slug" href="./关系2-范畴.html">[关系2-范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>设 $\mathcal C$ 是有拉回的范畴, 则可定义一个 $2$-范畴 $\mathsf{Corr}(\mathcal C)$, 称为<strong>关系 $2$-范畴</strong> ($2$-category of correspondences), 其对象为 $\mathcal C$ 的对象,
+<h2>定义</h2>
+<p>设 $\mathcal C$ 是有<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>的范畴, 则可定义一个 $2$-范畴 $\mathsf{Corr}(\mathcal C)$, 称为<strong>关系 $2$-范畴</strong> ($2$-category of correspondences), 其对象为 $\mathcal C$ 的对象,
 $$
 \operatorname{Hom}_{\mathsf{Corr}(\mathcal C)}(X,Y) = \{X \leftarrow Z \to Y\}.
 $$</p>
+<h3>带一类特殊态射的关系范畴</h3>
+<p>设 $\mathcal C$ 是一类几何对象的范畴, $E$ 是其中的一类态射, 满足如下条件:</p>
+<ul>
+<li>$\mathcal C$ 有<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>;</li>
+<li>$E$ 包含所有同构, 且在<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>, 复合与<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角</a></span>操作下稳定.</li>
+</ul>
+<p>定义 $\mathsf{Corr}(\mathcal C,E)$ 为如下对称幺半范畴:</p>
+<ul>
+<li>对象为 $\mathcal C$ 的对象,</li>
+<li>对称幺半结构为 $\mathcal C$ 中的积;</li>
+<li>态射为如下的<strong>关系</strong> (correspondence),
+<figure><img src="./six-functors-correspondence.svg" class="color-invert"/></figure>
+其中 $g\in E$;</li>
+<li>态射的复合如下,
+<figure><img src="./six-functors-correspondence-composition.svg" class="color-invert"/></figure>
+其中方块为拉回.</li>
+</ul>
+<p><strong>例</strong>. $\mathsf{Corr}(\mathcal C,\mathrm{Isom}) \simeq \mathcal C^{\mathrm{op}}$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="关联丛"><header><h1><span class="taxon"></span>关联丛 <a class="slug" href="./关联丛.html">[关联丛]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>对于<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span> $P\to X$ 以及 $G$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span> $Y$, 可定义 $X$ 上以 $G$ 为结构群的 $Y$-丛, 称为<strong>关联丛</strong>, 有时记作 $P\times_G Y$.</p>
 <p>关联丛 $P\times_G Y$ 可理解为 $X$ 与 $Y$ 的 “扭曲乘积”. 例如当 $P\to X$ 为平凡 $G$-丛时, $P\times_G Y$ 即为 $X\times Y$.</p>
