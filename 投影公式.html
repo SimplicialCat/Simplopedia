@@ -901,7 +901,7 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="six-functors"><header><h1><span class="taxon"></span>六函子 <a class="slug" href="./six-functors.html">[six-functors]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li></ul></div></header></summary>
 <p>本文是 <span class="link local"><a href="./ScholzeSixFunctors.html" title="Six-functor Formalisms [ScholzeSixFunctors]">Scholze 的六函子讲义</a></span>的阅读笔记.</p>
 <h2>引言</h2>
-<p>六函子是一种出现于许多场合的体系:</p>
+<p><span class="link local"><a href="./六函子.html" title="六函子 [六函子]">六函子</a></span>是一种出现于许多场合的体系:</p>
 <ul>
 <li><span class="link local"><a href="./平展上同调.html" title="平展上同调 [平展上同调]">平展上同调</a></span></li>
 <li>拓扑空间的<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span></li>
@@ -916,20 +916,101 @@ $$
 <ul>
 <li>$f_* \colon D(X,\mathbb{Z})\to D(Y,\mathbb{Z})$,</li>
 </ul>
-<p>这是<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>的<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>版本.</p>
+<p>这是<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>的<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>版本. 当 $Y=*$ 时, 记 $f_*$ 为 $R\Gamma(X,-)$.</p>
+<hr />
 <p>为了得到 Künneth 公式, 我们需要张量积</p>
 <ul>
 <li>$(-)\otimes (-)\colon D(X,\mathbb{Z})\times D(X,\mathbb{Z})\to D(X,\mathbb{Z})$,</li>
 </ul>
-<p>其有偏右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span></p>
+<p>其有第二分量的右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span></p>
 <ul>
-<li>$\operatorname{Hom}(-,-)\colon D(X,\mathbb{Z})^\mathrm{op}\times D(X,\mathbb{Z}) \to D(X,\mathbb{Z})$.</li>
+<li>$\underline{\operatorname{Hom}}(-,-)\colon D(X,\mathbb{Z})^\mathrm{op}\times D(X,\mathbb{Z}) \to D(X,\mathbb{Z})$.</li>
 </ul>
 <p>张量积与拉回相容, 即 $f^*$ 构成<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span>函子. 此外有<span class="link local"><a href="./投影公式.html" title="投影公式 [投影公式]">投影公式</a></span>
 $$
 f_*A \otimes B \simeq f_*(A\otimes f^*B).
 $$
 这意味着, 由对称幺半函子 $f^*$ 视 $D(X,\mathbb{Z})$ 为 $D(Y,\mathbb{Z})$-<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>, 则 $f_*$ 是 $D(Y,\mathbb{Z})$-线性函子.</p>
+<p>投影公式中的函子来自如下函子的伴随.
+$$
+f^*(f_* A \otimes B)\simeq f^*f_*A \otimes f^*B \to A\otimes f^* B.
+$$
+使用该公式可证明 Künneth 公式.</p>
+<hr />
+<p>定向流形的上同调满足 <span class="link local"><a href="./Poincaré--Verdier对偶.html" title="Poincaré–Verdier 对偶 [Poincaré--Verdier对偶]">Poincaré 对偶</a></span>:</p>
+<p><strong>定理</strong> (Poincaré 对偶). 对于紧定向 $d$ 维流形 $X$,
+$$
+R\Gamma(X,\mathbb{Z})[d] \simeq R\Gamma(X,\mathbb{Z})^\vee.
+$$
+其中 $(-)^\vee := \underline{\operatorname{Hom}}(-,\mathbb{Z})$.</p>
+<p>Poincaré 对偶来自如下更广泛的现象: $f_*\colon D(X,\mathbb{Z})\to D(*,\mathbb{Z})$ 有右伴随 $f^*(-) [d]$, 即
+$$
+\operatorname{Hom}_{D(X,\mathbb{Z})}(A,f^*B[d]) \simeq \operatorname{Hom}_{D(*,\mathbb{Z})}(R\Gamma(X,A),B).
+$$
+取 $A = \underline{\mathbb{Z}}\in D(X,\mathbb{Z})$, $B = \mathbb{Z}\in D(*,\mathbb{Z})$ 即得 Poincaré 对偶.</p>
+<p>这件事的<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>版本是 <span class="link local"><a href="./Poincaré--Verdier对偶.html" title="Poincaré–Verdier 对偶 [Poincaré--Verdier对偶]">Verdier 对偶</a></span>:</p>
+<p><strong>定理</strong> (Verdier 对偶). 设 $f\colon X\to Y$ 为<span class="link local"><a href="./紧合映射.html" title="紧合映射 [紧合映射]">紧合映射</a></span>, 且在 $X,Y$ 的局部上为 $d$ 维圆盘的丛, 称之为<strong>流形丛</strong>. 那么 $f_*\colon D(X,\mathbb{Z}) \to D(Y,\mathbb{Z})$ 有右伴随
+$$
+f^* \otimes \omega_{X/Y},
+$$
+其中 $\omega_{X/Y}\in D(X,\mathbb{Z})$ 是某个层, 局部同构于 $\mathbb{Z}[d]$.</p>
+<p>前面的 $X$ 的定向条件确保 $\omega_{X/*} \simeq \mathbb{Z}[d]$ 在整体上成立.</p>
+<p>我们还可以对一般的映射 $f$ 叙述 Verdier 对偶, 仅要求局部条件 (局部上为圆盘丛) 而非整体条件. 这需要<span class="link local"><a href="./紧支集直像.html" title="紧支集直像 [紧支集直像]">紧支前推</a></span></p>
+<ul>
+<li>$f_!\colon D(X,\mathbb{Z})\to D(Y,\mathbb{Z})$</li>
+</ul>
+<p>及其右伴随</p>
+<ul>
+<li>$f^!\colon D(Y,\mathbb{Z}) \to D(X,\mathbb{Z})$.</li>
+</ul>
+<p><strong>定理</strong> (Verdier 对偶). 设 $f\colon X\to Y$ 为流形丛, 相对维数为 $d$, 则 $f^! \simeq f^* \otimes\omega_{X/Y}$, 其中 $\omega_{X/Y} = f^!\mathbb{Z}$.</p>
+<p>对于紧合映射 $f$, 有 $f_! = f_*$.</p>
+<h2>六函子体系</h2>
+<p>设 $\mathcal C$ 是一类几何对象的范畴, $E$ 是其中的一类态射, 满足如下条件:</p>
+<ul>
+<li>$\mathcal C$ 有<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>;</li>
+<li>$E$ 包含所有同构, 且在<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>, 复合与<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角</a></span>操作下稳定.</li>
+</ul>
+<p>六函子大致是指如下数据:</p>
+<ul>
+<li>对每个 $X\in\mathcal C$ 指定一个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $D(X)$;</li>
+<li>对每个态射 $f\colon X\to Y$, 有对称幺半的拉回函子 $f^*\colon D(Y)\to D(X)$;</li>
+<li>对 $E$ 中的每个态射 $f\colon X\to Y$, 有 “<span class="link local"><a href="./紧支集直像.html" title="紧支集直像 [紧支集直像]">紧支前推</a></span>” $f_!\colon D(X)\to D(Y)$;</li>
+<li>三个函子 $A\otimes (-)$, $f^*$, $f_!$ 分别有右伴随 $\operatorname{Hom}(A,-)$, $f_*$, $f^!$;</li>
+<li>对 $E$ 中的态射 $f$ 的<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>
+<figure><img src="./base-change.svg" class="color-invert"/></figure>
+(当然 $f'$ 也在 $E$ 中), 有同构
+$$
+  g^*f_! \simeq f'_! {g'}^*.
+$$</li>
+<li>对 $E$ 中的态射 $f\colon X\to Y$, 有<span class="link local"><a href="./投影公式.html" title="投影公式 [投影公式]">投影公式</a></span>
+$$
+  f_! A \otimes B \simeq f_!(A\otimes f^*B).
+$$</li>
+</ul>
+<p>用<span class="link local"><a href="./关系2-范畴.html" title="关系 2-范畴 [关系2-范畴]">关系范畴</a></span>可以给出一种严格的叙述.</p>
+<p>定义 $\mathsf{Corr}(\mathcal C,E)$ 为如下对称幺半范畴:</p>
+<ul>
+<li>对象为 $\mathcal C$ 的对象,</li>
+<li>对称幺半结构为 $\mathcal C$ 中的积;</li>
+<li>态射为如下的<strong>关系</strong> (correspondence),
+<figure><img src="./six-functors-correspondence.svg" class="color-invert"/></figure>
+其中 $g\in E$;</li>
+<li>态射的复合如下,
+<figure><img src="./six-functors-correspondence-composition.svg" class="color-invert"/></figure>
+其中方块为拉回.</li>
+</ul>
+<p><strong>定义</strong>. 三函子体系是松对称幺半函子
+$$
+D \colon \mathsf{Corr}(\mathcal C,E) \to \mathsf{Cat}.
+$$</p>
+<ul>
+<li>对 $X\in\mathcal C$, 该函子给出范畴 $D(X)$.</li>
+<li>对 $\mathcal C$ 中任意态射 $f\colon X\to Y$, 对应 $(Y \overset{f}{\leftarrow} X = X)$ 给出拉回函子 $f^*$.</li>
+<li>由于 $X$ 是交换余代数 (余乘法为<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span>) 而 $D$ 给出松对称幺半函子 $\mathcal C^{\mathrm{op}}\to\mathsf{Cat}$, 故 $D(X)$ 为 $\mathsf{Cat}$ 中的交换代数, 即<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>.</li>
+<li>对 $E$ 中的态射 $f\colon X\to Y$, 对应 $(X = X \overset{f}{\to} Y)$ 给出函子 $f_!\colon D(X)\to D(Y)$.</li>
+<li>一般地, 对应 $(X\overset{f}{\leftarrow} W \overset{g}{\to} Y)$ 给出 “<span class="link local"><a href="./拉-推.html" title="拉-推 [拉-推]">拉-推</a></span>” 函子 $g_! f^*\colon D(X)\to D(Y)$.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="导出张量积"><header><h1><span class="taxon"></span>“导出张量积” <a class="slug" href="./导出张量积.html">[导出张量积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link external"><a href="https://handwiki.org/wiki/Derived_tensor_product" title="Wiki [https://handwiki.org/wiki/Derived_tensor_product]">Wiki</a></span></p>
 <p>张量积的<span class="link local"><a href="./导出函子.html" title="导出函子 [导出函子]">导出函子</a></span>, 又叫 $\operatorname{Tor}$ 函子.</p>
