@@ -848,14 +848,18 @@ $$
 <p>准确地说, 记 $D_\varepsilon = \{|(x,y)|\leq\varepsilon\}$, 当 $\varepsilon$ 充分小时, 三元组
 $(D_\varepsilon,D_\varepsilon \cap V,p)$ 同构于 $(\operatorname{Cone}(S^3),\operatorname{Cone}(K),*)$.</p>
 </div>
-<p>下图是 $V$ 在单位球中的部分 (投影到 $\mathbb{R}^3$, 颜色表示模长).</p>
+<p>下图是 $V$ 在单位球中的部分 (先投影到 $S^3$ 再球极投影到 $\mathbb{R}^3$, 颜色表示在 $\mathbb{C}^2$ 中的模长).</p>
 <img src="/assets/singularity-x3y2.svg" alt="Milnor 纤维化" width="240" style="display:block; margin:auto;">
 <p>下图是 $t=0.15$ 时的 Milnor 纤维, 它是带边界的光滑曲面.</p>
 <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
   <img src="/assets/milnor-fiber-1.svg" alt="Milnor 纤维 (俯视图)" style="max-width: 240px; height: auto; object-fit: contain;">
   <img src="/assets/milnor-fiber-2.svg" alt="Milnor 纤维 (侧视图)" style="max-width: 200px; height: auto; object-fit: contain;">
 </div>
-</details></section><section class="block" data-taxon=""><details ><summary id="tutorial-type-theory"><header><h1><span class="taxon"></span>类型论 <a class="slug" href="./tutorial-type-theory.html">[tutorial-type-theory]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>下图是球面版本的 Milnor 纤维 (球极投影到 $\mathbb{R}^3$).</p>
+<div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+  <img src="/assets/milnor-fiber-3.gif" alt="球面版本 Milnor 纤维 (俯视图)" style="max-width: 200px; height: auto; object-fit: contain;">
+  <img src="/assets/milnor-fiber-4.gif" alt="球面版本 Milnor 纤维 (侧视图)" style="max-width: 200px; height: auto; object-fit: contain;">
+</div></details></section><section class="block" data-taxon=""><details ><summary id="tutorial-type-theory"><header><h1><span class="taxon"></span>类型论 <a class="slug" href="./tutorial-type-theory.html">[tutorial-type-theory]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是杨家同于 2026 年 1 月在求真书院形式化数学冬令营上的讲座的笔记, 加入了个人的见解. 假想的读者是有一定数学成熟度但对类型论没有了解的同学.</p>
 <h2>什么是类型论</h2>
 <p>类型论是一种不同于集合论的做数学的方法, 因其在处理逻辑问题上的优越性, 而在计算机形式化数学这一领域得到广泛应用. 类型论的首要特征是<strong>给每个对象一个类型</strong>. 常量, 变量, 函数, 命题, 命题的证明, … 每个对象有唯一且可计算的类型; 甚至 (在某些类型论中) 一个类型也有它的类型. <strong>命题是类型</strong>的原则让逻辑学成为类型论的一个子集.</p>
