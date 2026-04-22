@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>纤维丛</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon"><style>
+<meta name="viewport" content="width=device-width"><title>向量场的流</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon"><style>
   @font-face {
     font-family: 'NewCM10';
     src: url(assets/NewCM10-Book.otf) format('opentype');
@@ -807,11 +807,9 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon=""><details open><summary id="纤维丛"><header><h1><span class="taxon"></span>纤维丛 <a class="slug" href="./纤维丛.html">[纤维丛]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<article><section class="block" data-taxon=""><details open><summary id="向量场的流"><header><h1><span class="taxon"></span>向量场的流 <a class="slug" href="./向量场的流.html">[向量场的流]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>纤维丛是一种<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>的空间, 其每个纤维具有相同的同构类, 局部上形如乘积空间, 而整体上可能不平凡.</p>
-<p>即使是在平凡的纤维丛上, 不同的纤维之间也没有典范的同构. 要给出纤维之间的同构, 通常需要<span class="link local"><a href="./联络.html" title="联络 [联络]">联络</a></span>.</p>
-<p>任何纤维丛都<span class="link local"><a href="./关联丛.html" title="关联丛 [关联丛]">关联</a></span>于一个唯一的<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>.</p>
+<p>若将向量场视为自同胚群的 <span class="link local"><a href="./Lie代数.html" title="Lie 代数 [Lie代数]">Lie 代数</a></span>的元素, 则向量场的流是这个 Lie 代数到 “Lie 群” 的<span class="link local"><a href="./指数映射(Lie群).html" title="指数映射 (Lie 群) [指数映射(Lie群)]">指数映射</a></span>.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Milnor纤维化"><header><h1><span class="taxon"></span>Milnor 纤维化 <a class="slug" href="./Milnor纤维化.html">[Milnor纤维化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>Milnor 纤维化是刻画代数簇奇点 (局部上不是流形的点) 局部的拓扑信息的工具.</p>
@@ -855,191 +853,72 @@ $(D_\varepsilon,D_\varepsilon \cap V,p)$ 同构于 $(\operatorname{Cone}(S^3),\o
   <img src="/assets/milnor-fiber-1.svg" alt="Milnor 纤维 (俯视图)" style="max-width: 240px; height: auto; object-fit: contain;">
   <img src="/assets/milnor-fiber-2.svg" alt="Milnor 纤维 (侧视图)" style="max-width: 200px; height: auto; object-fit: contain;">
 </div>
-</details></section><section class="block" data-taxon=""><details ><summary id="tutorial-type-theory"><header><h1><span class="taxon"></span>类型论 <a class="slug" href="./tutorial-type-theory.html">[tutorial-type-theory]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>本文是杨家同于 2026 年 1 月在求真书院形式化数学冬令营上的讲座的笔记, 加入了个人的见解. 假想的读者是有一定数学成熟度但对类型论没有了解的同学.</p>
-<h2>什么是类型论</h2>
-<p>类型论是一种不同于集合论的做数学的方法, 因其在处理逻辑问题上的优越性, 而在计算机形式化数学这一领域得到广泛应用. 类型论的首要特征是<strong>给每个对象一个类型</strong>. 常量, 变量, 函数, 命题, 命题的证明, … 每个对象有唯一且可计算的类型; 甚至 (在某些类型论中) 一个类型也有它的类型. <strong>命题是类型</strong>的原则让逻辑学成为类型论的一个子集.</p>
-<p>与之相比, 集合论中每个对象的类型都是 “集合”, 这种理论上的简洁造成了实操上的混乱. 例如用集合论定义自然数, $1 = \{\varnothing\}$, 而 $2 = \{\varnothing,\{\varnothing\}\}$, 我们便可写出 $1\in 2$ 这样正确但毫无意义的话. 这句话在类型论中是不允许的, 因为 $1,2$ 只是类型 $\mathbb{N}$ 的元素, 它们之间无法谈论 “$\in$” 这个关系. 懂得道理的人类可以自觉避免说出无意义的话, 那么如何让死板的机器也能永远做正确的事呢? 最好的办法就是明确地记录每个对象的身份, 用一套成体系的算法计算出每个构造的新对象的类型; 这样, 机器就能确保它说的一句话是有<strong>数学意义</strong>的.</p>
-<p>其实, 类型论的思想已经隐约地存在于每一位数学家的心中. 我们做的事情只是把它明确地表达出来.</p>
-<h2>类型的三要素</h2>
-<p>设想有两个类型 $A, B$, 我们希望定义一个类型 $A\times B$, 称为<strong>积类型</strong> (product type). 这个类型的一个元素相当于 $A$ 的一个元素和 $B$ 的一个元素, 也即一个二元组 $(a,b)$. 类型论期待我们用如下的方式刻画这个类型:</p>
-<ol>
-<li>如何<strong>创建</strong>这个类型, 称为<strong>形成法则</strong> (formation rule); 这里, 由两个已知类型 $A,B$ 可以形成这个类型 $A\times B$.</li>
-<li>如何<strong>引入</strong>这个类型的元素, 称为<strong>引入法则</strong> (introduction rule); 这里, 由类型 $A$ 的元素 $a$, 类型 $B$ 的元素 $b$, 可以得到类型 $A\times B$ 的元素 $(a,b)$.</li>
-<li>如何<strong>使用</strong>这个类型的元素, 称为<strong>消去法则</strong> (elimination rule); 这里, 由类型 $A\times B$ 的元素 $p$, 可以拆出来类型 $A$ 的元素 $\mathrm{pr}_1(p)$ 和类型 $B$ 的元素 $\mathrm{pr}_2(p)$.</li>
-<li>作为对消去法则的补充, 还需要我们规定<strong>消去法则如何作用于引入法则</strong>, 又称<strong>计算法则</strong>; 这里, $\mathrm{pr}_1((a,b)) = a$, $\mathrm{pr}_2((a,b)) = b$.</li>
-</ol>
-<p>类型论中的所有类型都是用这样三个要素刻画的.</p>
-<p>下一个例子是 “<strong>和类型</strong>” (sum type) $A+B$.</p>
-<ol>
-<li>形成法则: 由两个类型 $A,B$ 可构造和类型 $A+B$.</li>
-<li>引入法则: 由 $a : A$ 可得 $L(a) : A+B$, 由 $b : B$ 可得 $R(b) : A+B$.</li>
-<li>消去法则: 由 $f : A\to C$, $g : B\to C$ 可得 $(f,g) : A+B \to C$.</li>
-<li>计算法则: $(f,g)(L(a)) = f(a)$, $(f,g)(R(b)) = g(b)$.</li>
-</ol>
-<p>和类型的消去法则体现了范畴论中的<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>的泛性质.</p>
-<p><strong>函数类型</strong> (function type) $A\to B$.</p>
-<ol>
-<li>形成法则: 由两个类型 $A,B$ 可构造函数类型 $A\to B$.</li>
-<li>引入法则: 由含一个变量 $x : A$ 的表达式 $\Phi(x) : B$, 可得 $(x\mapsto \Phi(x)) : A \to B$.</li>
-<li>消去法则: 由 $a : A$, $f : A\to B$, 可得 $f(a) : B$.</li>
-<li>计算法则: 对于 $a : A$, $f = (x\mapsto \Phi(x)) : A\to B$, 有 $f(a) = \Phi(a)$. 此外, $(x\mapsto f(x))$ 和 $f$ 是一个意思.</li>
-</ol>
-<p><strong></strong><span class="link local"><a href="./空类型(同伦类型论).html" title="空类型 (同伦类型论) [空类型(同伦类型论)]">空类型</a></span> (empty type).</p>
-<ol>
-<li>形成法则: 我们规定有一个类型 $\mathbf{0}$, 称为空类型.</li>
-<li>引入法则: 没有任何方法可以手动引入 $\mathbf{0}$ 的元素.</li>
-<li>消去法则: 由 $x : \mathbf{0}$, 可得<strong>任何</strong>类型 $C$ 的元素 $\mathsf{elim}_{\mathbf{0}}(x) : C$. 这就像是空集到任何集合都有一个映射.</li>
-</ol>
-<p><strong></strong><span class="link local"><a href="./单点(同伦类型论).html" title="单点 (同伦类型论) [单点(同伦类型论)]">单元类型</a></span> (unit type).</p>
-<ol>
-<li>形成法则: 我们规定有一个类型 $\mathbf{1}$, 称为单元类型.</li>
-<li>引入法则: 有一个元素 $\star : \mathbf{1}$.</li>
-<li>消去法则: 对 $a : A$, 有一个函数 $f : \mathbf{1} \to A$, $f(\star) = a$.</li>
-</ol>
-<p>类似地, 可定义有两个元素的类型 $\mathbf{2}$.</p>
-<p>一种重要的定义类型的模式称为<strong>归纳类型</strong> (inductive type), 以自然数类型为例. (其实空类型, 单元类型这些也是归纳类型, 不过对初学者可能有点烧脑, 还是从熟悉的自然数开始介绍.)</p>
-<ol>
-<li>形成法则. 我们规定有一个类型 $\mathbb{N}$.</li>
-<li>引入法则. 有一个元素 $0 : \mathbb{N}$; 对任意 $n : \mathbb{N}$ 有一个元素 $n' : \mathbb{N}$, 称为 $n$ 的<strong>后继</strong>.</li>
-<li>消去法则 (又称<strong>归纳</strong>). 对任意类型 $C$, 要给出一个函数 $f : \mathbb{N}\to C$, 只要给出 $f(0) : C$, 以及 $f(n') : C$ 的表达式, 其中 $f(n') : C$ 的表达式<strong>可以使用前一项</strong> $f(n)$.</li>
-</ol>
-<p>例如, 要定义 $\mathrm{Even} : \mathbb{N} \to \mathbf{2}$, 只需给出 $\mathrm{Even}(0) = 1$, $\mathrm{Even}(1) = 0$, $\mathrm{Even}(n'') = \mathrm{Even}(n)$.</p>
-<p><strong>归纳</strong>的一种理解方式是, 在消去法则中, 当我们要使用一个元素时, <strong>不妨设</strong>它具有某种形式 (来自某个引入法则). 例如要使用一个自然数 $n$, 不妨设它具有两种形式之一: 或者是 $0$, 或者是某个自然数 $n$ 的后继. 后面我们将更严格地讲解归纳类型.</p>
-<h2>类型的类型: 宇宙</h2>
-<p>一个类型也有它的类型. 粗略地说, 所有类型都是某个类型 $\mathcal U$ 的元素, 称之为<strong></strong><span class="link local"><a href="./宇宙.html" title="宇宙 [宇宙]">宇宙</a></span> (universe). 但假若 $\mathcal U$ 也是 $\mathcal U$ 的元素会导致矛盾; 实践上人们的做法是规定一串宇宙 $\mathcal U_1,\mathcal U_2,\cdots$, “普通” 的类型是宇宙 $\mathcal U_1$ 的元素, 而 $\mathcal U_1$ 是 $\mathcal U_2$ 的元素, 以至于无穷.</p>
-<p>但在多数情况下, 我们不需要明确所处的宇宙层级, 而是以笼统的 $\mathcal U$ 代替.</p>
-<p>比通常宇宙低一个层级的宇宙是<strong>命题</strong>的类型 $\mathsf{Prop}=\mathcal U_0$. 所谓<strong>命题</strong>是满足如下条件的类型 $P$: 对任意 $x,y : P$ 有 $x=y$. 在 Curry–Howard 对应之下, 这意味着一个命题的任意两个证明都视为相等.</p>
-<h2>依值类型: 到宇宙的函数</h2>
-<p>宇宙 $\mathcal U$ 也是 (某个更大的宇宙的) 类型, 从而我们可以谈论类型 $A$ 到 $\mathcal U$ 的函数 $B\colon A \to \mathcal U$, 称为<strong></strong><span class="link local"><a href="./依值类型.html" title="依值类型 [依值类型]">依值类型</a></span> (dependent type). 它对每个 $a : A$ 都指定了一个类型 $B(a)$.</p>
-<p>例如, 固定 $A : \mathcal U$, 对每个自然数 $n : \mathbb{N}$ 有一个类型 $A^n$, 那么这些类型合起来构成了一个依值类型 $V_A \colon \mathbb{N} \to \mathcal U$.
-这个依值类型是通过归纳定义的:
-$V_A(0) = \mathbf{1}$, $V_A(n') = V_A(n) \times A$.</p>
-<p>写给有相关背景的读者: 依值类型是代数拓扑中的<strong></strong><span class="link local"><a href="./纤维化.html" title="纤维化 [纤维化]">纤维化</a></span> (fibration) (<span class="link local"><a href="./纤维丛.html" title="纤维丛 [纤维丛]">纤维丛</a></span>) 或代数几何中<strong>相对概形</strong> (relative scheme) 的类比. 准确地说, 它们都是<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">纤维范畴</a></span>的例子, 而纤维范畴可以作为依值类型的<span class="link local"><a href="./范畴语义.html" title="范畴语义 [范畴语义]">范畴语义</a></span>.</p>
-<p>对一个依值类型 $B \colon A \to\mathcal U$ 我们可以做两件事: 把每个类型 “加起来”, 叫做<strong></strong><span class="link local"><a href="./依值和.html" title="依值和 [依值和]">依值和</a></span> (dependent sum)
-$$
-\sum_{a : A} B(a),
-$$
-以及把每个类型 “乘起来”, 叫做<strong></strong><span class="link local"><a href="./依值积.html" title="依值积 [依值积]">依值积</a></span> (dependent product)
-$$
-\prod_{a : A} B(a).
-$$
-两者分别是乘积类型和函数类型的推广, 因为当 $B(a)$ 不依赖于 $a$ 时, $\sum_{a : A} B(a)$, $\prod_{a : A} B(a)$ 分别退化为 $A\times B$, $A\to B$. 因此, 有些文献或形式化系统中也将 $\sum_{a : A} B(a)$ 记为 $(a : A)\times B(a)$, 将 $\prod_{a : A} B(a)$ 记为 $(a : A) \to B(a)$.</p>
-<p>依值积类型的元素又称为<strong>依值函数</strong>. 归纳类型 (如 $\mathbb{N}$) 的消去法则可以升级为依值函数的构造法则, 以 $\mathbb{N}$ 为例:
-要给出一个依值函数 $f\colon (n : \mathbb{N}) \to C(n)$, 只要给出 $f(0) : C(0)$, 以及 $f(n') : C(n')$ 的表达式, 依赖于 $f(n) : C(n)$, 这相当于给出函数 $C(n) \to C(n')$.</p>
-<p>如果依值类型类比于纤维丛, 那么依值和类比于纤维丛的<strong>全空间</strong>, 而依值积类比于纤维丛的<strong></strong><span class="link local"><a href="./整体截面.html" title="整体截面 [整体截面]">截面空间</a></span>.</p>
-<p>写给有范畴论背景的读者: 依值和类型与依值积类型的范畴语义分别是拉回的<strong>左伴随</strong>和<strong>右伴随</strong>.</p>
-<p>类型 $A$ 到命题宇宙的函数 $P \colon A \to \mathcal U_0$ 是类型 $A$ 上的<strong>谓词</strong> (predicate), 也可以理解为 $A$ 的 “子集”. 换言之, 子集是一种特殊的依值类型, 其中每个类型都是命题. 对于谓词 $P \colon A \to \mathcal U_0$, 其对应的<strong>子类型</strong>是依值和 $\sum_{a : A} P(a)$, 带有到 $A$ 的 “投影” (或称 “含入”) 映射.</p>
-<h2>命题即类型: Curry–Howard 对应</h2>
-<p>类型论不仅能让机器保证它说出的话<strong>有意义</strong>, 而且能让它保证作出的证明是<strong>对</strong>的 (而这当然是我们做形式化数学最关心的事情). 这是因为 “有意义” 和 “对” 根本是一回事: 由于<strong>命题即类型</strong> (Propositions as Types) 的原则, 在类型论中检查一个元素的类型是否正确, 和检查一个证明是否正确, 做的是同一件事.</p>
-<p>比如, 检查 $(a,b)$ 是类型 $A\times B$ 的元素, 就是分别检查 $a$ 是 $A$ 的元素, 以及 $b$ 是 $B$ 的元素. 与之对应地, 检查 $(p,q)$ 构成命题 $P \land Q$ 的证明, 就是检查 $p$ 构成 $P$ 的证明, 以及 $q$ 构成 $Q$ 的证明.</p>
-<table><thead><tr><th>类型论</th><th>逻辑</th></tr></thead><tbody>
-<tr><td>$a : A$</td><td>$a$ 是 $A$ 的证明</td></tr>
-<tr><td>$A\times B$</td><td>$A$ 且 $B$</td></tr>
-<tr><td>$A + B$</td><td>$A$ 或 $B$</td></tr>
-<tr><td>$A\to B$</td><td>$A$ 蕴涵 $B$</td></tr>
-<tr><td>$\mathbf 0$</td><td>假</td></tr>
-<tr><td>$\mathbf 1$</td><td>真</td></tr>
-<tr><td>$\sum_{a : A}B(a)$</td><td>存在 $a$ 使得 $B(a)$</td></tr>
-<tr><td>$\prod_{a : A} B(a)$</td><td>对任意 $a$ 有 $B(a)$</td></tr>
-</tbody></table>
-<h3>直觉主义逻辑</h3>
-<p>不是每个经典逻辑的永真命题都能通过 Curry–Howard 对应得到证明. 一个重要的例子是<strong></strong><span class="link local"><a href="./排中律.html" title="排中律 [排中律]">排中律</a></span> (law of excluded middle)
-$$
-A + \neg A = A + (A \to \mathbf{0}).
-$$
-要证明这个命题 (构造这个类型的元素), 我们只能要么构造 $A$ 的元素, 要么构造映射 $A\to \mathbf{0}$. 但是当我们不知道 $A$ 的更多信息时, 无论哪一边都没有办法构造, 进退两难.
-类似地, <strong>双重否定律</strong> (law of double negation)
-$$
-\neg\neg A \to A
-$$
-也不能证明.
-在需要经典逻辑的类型论中, 这些定律是作为公理提供的. 所谓公理就是人为规定某个特定类型的一个元素.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="向量丛"><header><h1><span class="taxon"></span>向量丛 <a class="slug" href="./向量丛.html">[向量丛]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<h2>观念</h2>
-<p><strong>向量丛</strong>是以线性空间为纤维的<span class="link local"><a href="./纤维丛.html" title="纤维丛 [纤维丛]">纤维丛</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="辛流形"><header><h1><span class="taxon"></span>辛流形 <a class="slug" href="./辛流形.html">[辛流形]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>辛流形是经典力学 (特别是 Hamilton 力学) 常用的几何背景.</p>
 <h2>定义</h2>
-<h3>概形</h3>
-</details></section><section class="block" data-taxon=""><details ><summary id="微丛"><header><h1><span class="taxon"></span>微丛 <a class="slug" href="./微丛.html">[微丛]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<h2>观念</h2>
-<p><strong>微丛</strong> (microbundle) 是以带基点的拓扑空间 $\mathbb{R}^n$ 为纤维的<span class="link local"><a href="./纤维丛.html" title="纤维丛 [纤维丛]">纤维丛</a></span>, 是<span class="link local"><a href="./向量丛.html" title="向量丛 [向量丛]">向量丛</a></span>的模拟, 但其上没有加法.</p>
-<h2>定义</h2>
-<p>一个<strong>微丛</strong>是拓扑空间之间的一个连续映射 $p\colon E \to B$, 带有截面 $i\colon B\to E$ (称为<strong>零截面</strong>), 且满足如下局部平凡性:
-对任意 $b\in B$, 存在 $b$ 的邻域 $U$ 与 $i(b)$ 的邻域 $V$, 以及 $U$ 上的同构
-$$
-\begin{array}
-    {ccc}
-    \!\!\!\!\!\!\!\!\!\!\! V \cap p^{-1}(U) \!\!\! &amp; \overset{\simeq}{\to} &amp;\!\!\! U\times\mathbb{R}^n\!\!\!\\
-    \downarrow &amp; \swarrow &amp;\\
-    U.\!\!&amp;&amp;
-\end{array}
-$$
-但实际上微丛 $E\to B$ 有用的信息只是零截面 $i(B)$ 的一个 “微小” 邻域. 因为微丛的态射是这样定义的:
-同一个空间 $B$ 上的微丛之间的态射 $E\to E'$ 是零截面邻域上的函数<span class="link local"><a href="./茎.html" title="茎 [茎]">芽</a></span>. 因此, 两个微丛的同构也只需要各自的零截面的一个邻域之间的同构.</p>
-<h2>例</h2>
-<h3>切微丛</h3>
-<p>拓扑流形 $M$ 的<span class="link local"><a href="./切微丛.html" title="切微丛 [切微丛]">切微丛</a></span>定义为 $\mathrm{pr}_1\colon M\times M\to M$, 零截面为<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span> $\Delta\colon M\to M$. 如前所述, 这个微丛实际上有用的信息是 $M$ 的每个点的一个微小的邻域.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="焊接形式"><header><h1><span class="taxon"></span>焊接形式 <a class="slug" href="./焊接形式.html">[焊接形式]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<h2>定义</h2>
-<p>设 $G$ 为 Lie 群, $M$ 为微分流形, $E\to M$ 是以 $F$ 为纤维, $G$ 为结构群的<span class="link local"><a href="./纤维丛.html" title="纤维丛 [纤维丛]">纤维丛</a></span>. 假设 $G$ <span class="link local"><a href="./传递作用.html" title="传递作用 [传递作用]">传递</a></span>地作用于 $F$ 上, 且 $F$ (作为流形) 的维数与 $M$ 相同. <strong>焊接形式</strong>由如下资料给出:</p>
-<ul>
-<li>特殊截面 $o\colon M\to E$;</li>
-<li>线性同构 $\theta \colon TM \to o^* VE$, 其中 $VE$ 表示 $E$ 的垂直丛, 即由 $E$ 上的垂直向量 (即纤维方向的切向量) 构成的丛, $o^*VE$ 是沿着特殊截面 $o$ 的垂直向量构成的向量丛.</li>
-</ul>
-<p>这样, $\theta$ 将 $E$ 的垂直切空间等同于切空间.</p>
-<h3>主丛</h3>
-<p>设 $P$ 是 $G$-主丛, $V$ 为 $G$-表示. <strong>焊接形式</strong>是一个 $V$-取值的水平 $G$-等变 $1$-形式.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="相对"><header><h1><span class="taxon"></span>相对观点 <a class="slug" href="./相对.html">[相对]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>两个复杂的对象, 可能其中一个<strong>相对于</strong>另一个就不那么复杂. 因此采用相对的观点, 有时可以降低我们每次需要关注的问题的复杂性: 将复杂的问题拆解成一个基底的问题和这个基底之上的<strong>相对观点</strong>的问题.</p>
-<p>两个不同的基底上的相对的对象可以通过<strong></strong><span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>相联系; 基变换常构成<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">纤维范畴</a></span>.</p>
-<p>空间之间的映射 (如<span class="link local"><a href="./纤维丛.html" title="纤维丛 [纤维丛]">纤维丛</a></span>)
-$$
-X \to Y
-$$
-可视为<strong>相对于</strong>空间 $Y$ 的一个空间. 例如<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>可视为相对于基底的主齐性空间.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="联络"><header><h1><span class="taxon"></span>联络 <a class="slug" href="./联络.html">[联络]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<h2>观念</h2>
-<p>联络是描述<span class="link local"><a href="./纤维丛.html" title="纤维丛 [纤维丛]">纤维丛</a></span>的纤维之间如何沿着底空间上的道路相联系的<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构</a></span>.</p>
-<h2>定义</h2>
-<h3>主丛上的联络</h3>
-<p><span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span></p>
-<p>(待补充)</p>
+<p>辛流形是偶数维实流形, 其上有非退化的 $2$-形式 $\omega$, 满足 $d\omega=0$, $\omega^n\neq 0$.</p>
 <h2>性质</h2>
-<h3>局部表达式</h3>
-<p><span class="link local"><a href="./Maurer--Cartan形式.html" title="Maurer–Cartan 形式 [Maurer--Cartan形式]">Maurer–Cartan 形式</a></span></p>
-<p><strong>命题</strong>. 平凡主丛 $P$ 上的联络的空间 $\mathcal A(P)$ 是底流形 $M$ 上的 $\mathfrak g$-值微分形式空间 $\Omega^1(M,\mathfrak g)$ 的仿射空间 (<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主齐性空间</a></span>).</p>
-<p>称主丛 $P$ 的自同构群为<strong>规范群</strong> $\mathcal G(P)$, 规范群作用于 $P$ 上, 通过拉回作用于 $\mathcal A(P)$ 上, 称之为<span class="link local"><a href="./规范变换.html" title="规范变换 [规范变换]">规范变换</a></span>.</p>
-<h3>与自同构的关系</h3>
-<p>向量丛的自同构作用于联络的空间. 设 $\alpha$ 为 $\operatorname{End}(E)$ 的截面, $\nabla$ 为 $E$ 上的联络, 则 $\nabla' =\alpha\circ \nabla \circ \alpha^{-1}$ 为 $E$ 上的联络. 称 $\nabla'$ 与 $\nabla$ <strong>规范等价</strong> (gauge equivalent).</p>
-<p>可以证明
+<p>紧辛流形 $M$ 满足 $H^2(M;\mathbb{R})\neq 0$.</p>
+<h3>乘积辛形式</h3>
+<p>辛流形 $M,N$ 的乘积上的辛形式定义为
 $$
-\alpha\circ \nabla \circ \alpha^{-1} = \nabla - \nabla\alpha \circ \alpha^{-1}.
+\omega_{M\times N} = \pi_M^*\omega_M - \pi_N^*\omega_N.
 $$</p>
-<h2>例</h2>
-<h3>Levi-Civita 联络</h3>
-<p>Riemann 流形的切丛上存在唯一的联络 $\nabla$, 满足</p>
-<ul>
-<li>$\nabla g = 0$ (度量相容性);</li>
-<li>$\nabla_X Y - \nabla_Y X - [X,Y]=0$ (无<span class="link local"><a href="./挠.html" title=" [挠]">挠率</a></span>, torsion-free).</li>
-</ul>
-<p>见 <span class="link local"><a href="./Levi-Civita联络.html" title="“Levi-Civita 联络” [Levi-Civita联络]">Levi-Civita 联络</a></span>.</p>
-<h3>Yang–Mills 联络</h3>
-<p>见<span class="link local"><a href="./杨--Mills联络.html" title="“杨–Mills 联络” [杨--Mills联络]">杨–Mills 联络</a></span>.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="茎"><header><h1><span class="taxon"></span>茎 <a class="slug" href="./茎.html">[茎]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<h2>定义</h2>
-<p><strong>茎</strong> (stalk) 是<span class="link local"><a href="./意象的点.html" title="意象的点 [意象的点]">意象的点</a></span>的<span class="link local"><a href="./逆像.html" title="逆像 [逆像]">逆像</a></span>函子.</p>
-<p>茎的元素称为<strong>芽</strong> (germ).</p>
-<h2>例</h2>
-<h3>丛的截面</h3>
-<p>对于<span class="link local"><a href="./纤维丛.html" title="纤维丛 [纤维丛]">纤维丛</a></span> $p\colon E\to B$, 点 $b\in B$ 处的一个<strong>截面芽</strong> (germ of sections) 是 $(U,s)$ 的等价类, 其中 $U$ 是 $b$ 的邻域, $s$ 是 $p$ 在 $U$ 上的截面. <span class="link local"><a href="./等价关系.html" title="等价关系 [等价关系]">等价关系</a></span>是对于更小的邻域 $V\subset U$, $(U,s)\sim (V,s|_V)$. 这就是说截面芽的集合为<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>
+<h3>辛映射</h3>
+<p>光滑映射 $f\colon M\to N$ 为辛映射当且仅当 $\Gamma f \subset M\times N$ 为 <span class="link local"><a href="./Lagrange子流形.html" title="“Lagrange 子流形” [Lagrange子流形]">Lagrange 子流形</a></span>.</p>
+<h2>Hamilton 向量场</h2>
+<p>给定函数 $H$ (称为 Hamilton 函数), 满足
 $$
-\operatorname{colim}_U \Gamma(U,p).
+i_X\omega = - dH
 $$
-注意这是一个<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="覆叠"><header><h1><span class="taxon"></span>覆叠 <a class="slug" href="./覆叠.html">[覆叠]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<h2>定义</h2>
-<p>覆叠是离散纤维的<span class="link local"><a href="./纤维丛.html" title="纤维丛 [纤维丛]">纤维丛</a></span>.</p>
-<h2>相关概念</h2>
-<p><span class="link local"><a href="./Galois覆叠.html" title="Galois 覆叠 [Galois覆叠]">Galois 覆叠</a></span></p>
-<p><span class="link local"><a href="./万有覆叠.html" title="万有覆叠 [万有覆叠]">万有覆叠</a></span></p>
+的向量场 $X$ 称作 $H$ 对应的 Hamilton 向量场, $X_H$.</p>
+<p><strong>命题</strong>. Hamilton 向量场的<span class="link local"><a href="./向量场的流.html" title="向量场的流 [向量场的流]">流</a></span>保持辛形式, 即
+$$
+\mathcal L_X\omega =0.
+$$
+这是由于 Cartan 公式 $\mathcal L_X\omega = i_X d\omega + di_X\omega$.</p>
+<p><strong>命题</strong>. Hamilton 向量场的流保持对应的 Hamilton 量, 这是因为
+$$
+dH(X)=-\omega(X,X)=0.
+$$</p>
+<p><strong>命题</strong>. 若向量场 $X$ 的流保持辛形式, 即 $\mathcal L_X\omega=0$, 则 $X$ 局部上为 Hamilton 向量场.</p>
+<h2>Poisson 括号</h2>
+<p>辛流形上的函数具有 <span class="link local"><a href="./Poisson代数.html" title="Poisson 代数 [Poisson代数]">Poisson 括号</a></span>
+$$
+\{f,g\}=X_f g = \omega (X_f, X_g).
+$$
+由定义立得</p>
+<p><strong>命题</strong>.
+$$
+[X_f,X_g]=X_{\{f,g\}}.
+$$</p>
+<h2>Hamilton G-作用</h2>
+<p>设 $G$ 为 Lie 群. $G$ 在 $\mathfrak g$ 上的伴随作用 (左作用) 诱导了其在 $\mathfrak g^*$ 上的余伴随作用 (右作用)
+$$
+\left&lt; \operatorname{Ad}^*_g \mu,\xi\right&gt; = \left&lt; \mu, \operatorname{Ad}_g\xi\right&gt;.
+$$</p>
+<p>现在设 $G$ 左作用于流形 $M$ 上, 从而有映射
+$$
+\mathfrak g \to \operatorname{Vect}(M),\quad \xi \mapsto \xi^{\#}.
+$$
+假设存在<span class="link local"><a href="./动量映射.html" title="动量映射 [动量映射]">动量映射</a></span> $\Phi\colon M\to\mathfrak g^*$, 满足
+$$
+i_{\xi^{\#}}\omega = - d \left&lt;\Phi(x),\xi\right&gt;.
+$$
+等变性:
+$$
+\Phi\circ g = \operatorname{Ad}^*_{g^{-1}}\circ\Phi.
+$$</p>
+<h3>Kirillov–Kostant 辛形式</h3>
+<p>考虑余伴随轨道 $\mathcal O$, 其上有辛形式与<span class="link local"><a href="./动量映射.html" title="动量映射 [动量映射]">动量映射</a></span>.</p>
+<p>对于 $\xi,\eta\in\mathfrak g$, $\mu\in\mathcal O$,
+$$
+\omega(\mu) (\xi (\mu), \eta(\mu)) = \left&lt;\mu,[\xi,\eta]\right&gt;
+$$</p>
+<p>$\mathfrak g^*$ 上有 <span class="link local"><a href="./Poisson代数.html" title="Poisson 代数 [Poisson代数]">Poisson 结构</a></span>:
+$$
+\{f_1,f_2\}(\mu) := \left&lt; \mu, [df_1,df_2]\right&gt;.
+$$</p>
+<h2>可积系统</h2>
+<p><span class="link local"><a href="./可积系统.html" title="可积系统 [可积系统]">可积系统</a></span>是 $2n$ 维辛流形上有 $n$ 个相互交换的 Hamilton 向量场, 即有 $n$ 维圆环的作用.</p>
 </details></section></details></section></footer></article></div></body></html>

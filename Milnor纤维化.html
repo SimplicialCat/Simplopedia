@@ -813,12 +813,25 @@
 <p>孤立奇点的附近长得像某个低一维子流形的锥, 称为 <strong>Milnor 扭结</strong>.</p>
 <p>有些奇异球面可构造为 Milnor 扭结.</p>
 <h2>定义</h2>
-<p>设 $V$ 是由多项式 $f\colon \mathbb{C}^n\to\mathbb{C}$ 定义的复超曲面, 且 $0\in V$ 为孤立奇点. 对于充分小的正数 $\varepsilon$, 记 $S_\varepsilon$ 为球面 $\{|z|=\varepsilon\}$, $K = V \cap S_\varepsilon$, 定义 <strong>Milnor 纤维化</strong>为
+<h3>球面版本</h3>
+<p>设 $V$ 是由多项式 $f\colon \mathbb{C}^n\to\mathbb{C}$ 定义的复超曲面, 且 $0\in V$ 为孤立奇点. 对于充分小的正数 $\varepsilon$, 记 $S_\varepsilon$ 为球面 $\{z\in\mathbb{C}^n : |z|=\varepsilon\}$, $K = V \cap S_\varepsilon$, 定义 <strong>Milnor 纤维化</strong>为
 $$
 \phi\colon S_\varepsilon \setminus K \to S^1,\,z\mapsto \frac{f(z)}{|f(z)|}.
 $$</p>
+<h3>开球版本</h3>
+<p>设 $f,V$ 如前, $B_\varepsilon$ 为开球 $\{z\in\mathbb{C}^n : |z|&lt;\varepsilon\}$, $D_\eta^*$ 为去心圆盘 $\{z\in\mathbb{C} : 0&lt;|z|&lt;\eta\}$. 映射
+$$
+f\colon B_\varepsilon \cap f^{-1}(D_\eta^*) \to D_\eta^*
+$$
+有时也称作 <strong>Milnor 纤维化</strong>.</p>
 <h2>性质</h2>
-<p>Milnor 纤维化是 $S^1$ 上的光滑<span class="link local"><a href="./纤维丛.html" title="纤维丛 [纤维丛]">纤维丛</a></span>, 每个纤维是 $2n-2$ 维光滑流形, 同伦型为 $\mu$ 个 $S^{n-1}$ 的一点并, 其中 $\mu$ 称为 Milnor 数.</p>
+<p>球面版本的 Milnor 纤维化是 $S^1$ 上的光滑<span class="link local"><a href="./纤维丛.html" title="纤维丛 [纤维丛]">纤维丛</a></span>, 每个纤维是 $2n-2$ 维光滑流形, 同伦型为 $\mu$ 个 $S^{n-1}$ 的一点并, 其中 $\mu$ 称为 Milnor 数.</p>
+<p>开球版本的 Milnor 纤维化是 $D_\eta^*$ 上的光滑纤维丛, 其纤维也是 $2n-2$ 维光滑流形.</p>
+<p>如下命题说明两个版本的 Milnor 纤维至少是同伦等价的 (几乎是同胚的, 只相差边界的开闭).</p>
+<p><strong>命题</strong>. $\phi \colon  \overline{S_\varepsilon \setminus f^{-1}(D_\eta)} \to S^1$
+与
+$f\colon B_\varepsilon\cap f^{-1}(S_\eta) \to S_\eta$ 是同构的纤维丛.</p>
+<p><em>证明概要</em>. 构造一个向量场的<span class="link local"><a href="./向量场的流.html" title="向量场的流 [向量场的流]">流</a></span>. 这个向量场切于 $\operatorname{Arg}f$ 的水平面 (从而其流保持 $f$ 的辐角不变), 使得 $|z|$ 与 $|f(z)|$ 同时增加.</p>
 <h2>例</h2>
 <p>考虑带一个奇点的复曲线
 $$

@@ -4931,12 +4931,25 @@ $$</p>
 <p>孤立奇点的附近长得像某个低一维子流形的锥, 称为 <strong>Milnor 扭结</strong>.</p>
 <p>有些奇异球面可构造为 Milnor 扭结.</p>
 <h2>定义</h2>
-<p>设 $V$ 是由多项式 $f\colon \mathbb{C}^n\to\mathbb{C}$ 定义的复超曲面, 且 $0\in V$ 为孤立奇点. 对于充分小的正数 $\varepsilon$, 记 $S_\varepsilon$ 为球面 $\{|z|=\varepsilon\}$, $K = V \cap S_\varepsilon$, 定义 <strong>Milnor 纤维化</strong>为
+<h3>球面版本</h3>
+<p>设 $V$ 是由多项式 $f\colon \mathbb{C}^n\to\mathbb{C}$ 定义的复超曲面, 且 $0\in V$ 为孤立奇点. 对于充分小的正数 $\varepsilon$, 记 $S_\varepsilon$ 为球面 $\{z\in\mathbb{C}^n : |z|=\varepsilon\}$, $K = V \cap S_\varepsilon$, 定义 <strong>Milnor 纤维化</strong>为
 $$
 \phi\colon S_\varepsilon \setminus K \to S^1,\,z\mapsto \frac{f(z)}{|f(z)|}.
 $$</p>
+<h3>开球版本</h3>
+<p>设 $f,V$ 如前, $B_\varepsilon$ 为开球 $\{z\in\mathbb{C}^n : |z|&lt;\varepsilon\}$, $D_\eta^*$ 为去心圆盘 $\{z\in\mathbb{C} : 0&lt;|z|&lt;\eta\}$. 映射
+$$
+f\colon B_\varepsilon \cap f^{-1}(D_\eta^*) \to D_\eta^*
+$$
+有时也称作 <strong>Milnor 纤维化</strong>.</p>
 <h2>性质</h2>
-<p>Milnor 纤维化是 $S^1$ 上的光滑<span class="link local"><a href="./纤维丛.html" title="纤维丛 [纤维丛]">纤维丛</a></span>, 每个纤维是 $2n-2$ 维光滑流形, 同伦型为 $\mu$ 个 $S^{n-1}$ 的一点并, 其中 $\mu$ 称为 Milnor 数.</p>
+<p>球面版本的 Milnor 纤维化是 $S^1$ 上的光滑<span class="link local"><a href="./纤维丛.html" title="纤维丛 [纤维丛]">纤维丛</a></span>, 每个纤维是 $2n-2$ 维光滑流形, 同伦型为 $\mu$ 个 $S^{n-1}$ 的一点并, 其中 $\mu$ 称为 Milnor 数.</p>
+<p>开球版本的 Milnor 纤维化是 $D_\eta^*$ 上的光滑纤维丛, 其纤维也是 $2n-2$ 维光滑流形.</p>
+<p>如下命题说明两个版本的 Milnor 纤维至少是同伦等价的 (几乎是同胚的, 只相差边界的开闭).</p>
+<p><strong>命题</strong>. $\phi \colon  \overline{S_\varepsilon \setminus f^{-1}(D_\eta)} \to S^1$
+与
+$f\colon B_\varepsilon\cap f^{-1}(S_\eta) \to S_\eta$ 是同构的纤维丛.</p>
+<p><em>证明概要</em>. 构造一个向量场的<span class="link local"><a href="./向量场的流.html" title="向量场的流 [向量场的流]">流</a></span>. 这个向量场切于 $\operatorname{Arg}f$ 的水平面 (从而其流保持 $f$ 的辐角不变), 使得 $|z|$ 与 $|f(z)|$ 同时增加.</p>
 <h2>例</h2>
 <p>考虑带一个奇点的复曲线
 $$
@@ -14278,6 +14291,9 @@ $$
 <h2>定义</h2>
 <h3>概形</h3>
 </details></section><section class="block" data-taxon=""><details ><summary id="向量丛-投射模类比"><header><h1><span class="taxon"></span>向量丛-投射模类比 <a class="slug" href="./向量丛-投射模类比.html">[向量丛-投射模类比]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="向量场的流"><header><h1><span class="taxon"></span>向量场的流 <a class="slug" href="./向量场的流.html">[向量场的流]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>若将向量场视为自同胚群的 <span class="link local"><a href="./Lie代数.html" title="Lie 代数 [Lie代数]">Lie 代数</a></span>的元素, 则向量场的流是这个 Lie 代数到 “Lie 群” 的<span class="link local"><a href="./指数映射(Lie群).html" title="指数映射 (Lie 群) [指数映射(Lie群)]">指数映射</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="否定"><header><h1><span class="taxon"></span>“否定” <a class="slug" href="./否定.html">[否定]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>在 <span class="link local"><a href="./Heyting代数.html" title="Heyting 代数 [Heyting代数]">Heyting 代数</a></span>中, 定义否定算子为
 $$
@@ -16856,12 +16872,13 @@ $$
 $$</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./陈类.html" title="“陈类” [陈类]">陈类</a></span>, <span class="link local"><a href="./Picard群.html" title="Picard 群 [Picard群]">Picard 群</a></span></p>
-</details></section><section class="block" data-taxon=""><details ><summary id="指数映射(Lie群)"><header><h1><span class="taxon"></span>“指数映射 (Lie 群)” <a class="slug" href="./指数映射(Lie群).html">[指数映射(Lie群)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="指数映射(Lie群)"><header><h1><span class="taxon"></span>指数映射 (Lie 群) <a class="slug" href="./指数映射(Lie群).html">[指数映射(Lie群)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
 <p>Lie 群上的指数映射是一个光滑映射 $\exp\colon \mathfrak g\to G$, 定义如下. 对 $a\in\mathfrak g$ 令 $\gamma\colon (-\varepsilon,\varepsilon) \to G$ 为满足方程 $\gamma(0)=e$, $\gamma'(t)=L_{\gamma(t)}a$ ($L_{g}$ 为左平移) 的曲线, 定义
 $$
 \exp(a) = \gamma(1).
 $$</p>
-<h2>主丛上的指数映射</h2>
+<h3>主丛上的指数映射</h3>
 <p>设 $G$ 是紧 Lie 群, $M$ 是 Riemann 流形, $\pi\colon P\to M$ 是 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>. 设 $\omega$ 为 $P$ 上的<span class="link local"><a href="./联络.html" title="联络 [联络]">联络</a></span>.</p>
 <p>设 $\mathfrak g$ 上有 $\operatorname{Ad}$-不变的内积, 从而 $G$ 上有 Riemann 度量, 给出了 $G$ 上的 <span class="link local"><a href="./Haar测度.html" title="“Haar 测度” [Haar测度]">Haar 测度</a></span>.</p>
 <p>对于 $p\in P$, 切空间 $T_pP$ 是水平空间 $H_pP$ (等同于 $T_xM$) 与垂直空间 (等同于 $\mathfrak g$) 的直和. 这进一步给出了 $P$ 上的 Riemann 度量, 使得二者垂直. (注意这个度量依赖于联络 $\omega$.)</p>
@@ -19469,6 +19486,7 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="纤维丛"><header><h1><span class="taxon"></span>纤维丛 <a class="slug" href="./纤维丛.html">[纤维丛]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>纤维丛是一种<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>的空间, 其每个纤维具有相同的同构类, 局部上形如乘积空间, 而整体上可能不平凡.</p>
+<p>即使是在平凡的纤维丛上, 不同的纤维之间也没有典范的同构. 要给出纤维之间的同构, 通常需要<span class="link local"><a href="./联络.html" title="联络 [联络]">联络</a></span>.</p>
 <p>任何纤维丛都<span class="link local"><a href="./关联丛.html" title="关联丛 [关联丛]">关联</a></span>于一个唯一的<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="纤维函子"><header><h1><span class="taxon"></span>纤维函子 <a class="slug" href="./纤维函子.html">[纤维函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
@@ -20083,7 +20101,7 @@ $$
 $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="联络"><header><h1><span class="taxon"></span>联络 <a class="slug" href="./联络.html">[联络]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>联络是描述<strong>丛</strong>的纤维之间如何沿着底空间上的道路相联系的<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构</a></span>.</p>
+<p>联络是描述<span class="link local"><a href="./纤维丛.html" title="纤维丛 [纤维丛]">纤维丛</a></span>的纤维之间如何沿着底空间上的道路相联系的<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构</a></span>.</p>
 <h2>定义</h2>
 <h3>主丛上的联络</h3>
 <p><span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span></p>
@@ -21040,7 +21058,7 @@ $$
 i_X\omega = - dH
 $$
 的向量场 $X$ 称作 $H$ 对应的 Hamilton 向量场, $X_H$.</p>
-<p><strong>命题</strong>. Hamilton 向量场的流保持辛形式, 即
+<p><strong>命题</strong>. Hamilton 向量场的<span class="link local"><a href="./向量场的流.html" title="向量场的流 [向量场的流]">流</a></span>保持辛形式, 即
 $$
 \mathcal L_X\omega =0.
 $$
