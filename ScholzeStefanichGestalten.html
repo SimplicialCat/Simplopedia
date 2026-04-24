@@ -871,8 +871,6 @@ $$</p>
 <p>空集对应的<span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span>为 $\operatorname{Gest}(*,*,*,\cdots)$.</p>
 <h3>单点</h3>
 <p>单点对应的<span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span>为 $\operatorname{Gest}(*,\mathsf{Ani},1\mathsf{Pr},\cdots)$. 与任何几何对象的语境中一致, 单点是 $\mathsf{Gest}$ 的终对象.</p>
-<h3>有限集</h3>
-<p>有限集 $I$ 对应的<span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span>为 $()$</p>
 <h3>映射空间</h3>
 <p>“Betti 局部系统的叠” $\mathrm{LocSys}_G$ 可表示为<span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span>的映射空间
 $$
@@ -891,7 +889,7 @@ $$
 \mathsf{Mod}_{\mathcal C}(-)\colon \mathsf{CAlg}(\mathcal C) \to \mathsf{CAlg}(\mathsf{Mod}_{\mathsf{Pr}}(\mathcal C)),
 $$
 且其有右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $\mathcal D\mapsto \operatorname{End}_{\mathcal D}(1)$.</p>
-<hr />
+<p>我们先解释一下 $\operatorname{End}(1)$.</p>
 <p>回忆, 对于 $\mathcal D\in\mathsf{Mod}_{\mathsf{Pr}}(\mathcal C)$, 有函子 $\operatorname{Hom}_{\mathcal D}(-,-)\colon \mathcal D^{\mathrm{op}}\times\mathcal D \to\mathcal C$, 满足
 $$
 \operatorname{Hom}_{\mathcal C}(X,\operatorname{Hom}_{\mathcal D}(Y,Z))\simeq\operatorname{Hom}_{\mathcal D}(X\otimes Y,Z);
@@ -903,6 +901,14 @@ $$
 $$
 其中 $F^R$ 为 $F$ 的右伴随; 因而 $\operatorname{End}_{\mathcal D}(1)$ 继承 $1$ 的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>结构.
 这给出了上述定理中的函子 $\mathcal D\mapsto \operatorname{End}_{\mathcal D}(1)$.</p>
+<p>现在展开来讲上述定理中的伴随: 对任意 $A\in\mathsf{CAlg}(\mathcal C)$ 与 $B\in \mathsf{CAlg}(\mathsf{Mod}_{1\mathsf{Pr}}(\mathcal C)) = \mathsf{CAlg}(1\mathsf{Pr})_{\mathcal C/}$, 如下两资料等价:</p>
+<ul>
+<li>$\mathsf{CAlg}(1\mathsf{Pr})$ 中的态射 $\mathsf{Mod}_{\mathcal C}(A) \to B$;</li>
+<li>$\mathsf{CAlg}(\mathcal C)$ 中的态射 $A \to \operatorname{End}_B(1)$.</li>
+</ul>
+<blockquote>
+<p>我感觉这对伴随类似于同伦论中 $\mathbf{B}$ 与 $\Omega$ 的互逆. 取模范畴有点像是取逆环路空间, 取 $\operatorname{End}(1)$ 有点像是取环路空间.</p>
+</blockquote>
 <hr />
 <p>由于 $\mathsf{Mod}_{\mathcal C}(-)$ 有右伴随, 其保持所有<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>; 特别地, 保持交换代数的相对张量积:
 $$
@@ -954,6 +960,7 @@ $$
 自动给出 $A_n$ 的交换代数结构.</p>
 <p>$\mathsf{StRing}$ 的始对象是 $(*,\mathsf{Ani},1\mathsf{Pr},\cdots)$; 即任何 Stefanich 环 $A$ 都带有一列函子 $(n-1)\mathsf{Pr} \to A_n$.
 这可以如下理解: $A_n$ 是 $n\mathsf{Pr}$ 中的交换代数, 而 $n\mathsf{Pr}$ 是 $1\mathsf{Pr}$ 中 $(n-1)\mathsf{Pr}$-模的范畴. 模范畴中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>相当于原范畴中的交换代数带有代数同态; 故 $A_n$ 带有代数同态 $(n-1)\mathsf{Pr} \to A_n$.</p>
+<h2>态射与相对情形</h2>
 <p>Stefanich 环的态射 $f\colon A\to B$ 是一族相容的交换代数同态 $A_n \to B_n$. 我们采用一个看似 “错位” 的记号 $f^*_{n-1}\colon A_n\to B_n$ 来表示这个同态.<sup class="footnote-reference" id="notes-Gestalten-StRing_1-back"><a href="#notes-Gestalten-StRing_1">1</a></sup></p>
 <div class="footnote-definition" id="notes-Gestalten-StRing_1">
   <sup class="footnote-definition-label"><a href="#notes-Gestalten-StRing_1-back">1</a></sup>
@@ -1016,11 +1023,12 @@ $$
 \cdots
 ),
 $$</p>
-<p>且 Stefanich 环的同态 $A\to B$ 对应序列
+<p>左边的对象即 Stefanich 环的同态 $A\to B$, 对应右边的序列
 $$
 ((B/A)_0, (B/A)_1,\cdots).
 $$</p>
-<p>对于 $R\in\mathsf{CAlg}(A_n)$, 有 $\mathsf{Mod}_{A_n}(R)\in \mathsf{CAlg}(\mathsf{Mod}_{1\mathsf{Pr}}(A_n))$,</p>
+<p>下面说明 $\mathsf{CAlg}(A_n) \to \mathsf{CAlg}(A_{n+1})$ 为全忠实函子.
+对于 $B\in\mathsf{CAlg}(A_n)$, 有 $\mathsf{Mod}_{A_n}(B)\in \mathsf{CAlg}(\mathsf{Mod}_{1\mathsf{Pr}}(A_n))$,</p>
 </details></section>
 <section class="block" data-taxon=""><details ><summary id="notes-Gestalten-Gest"><header><h1><span class="taxon"></span>Gestalten - 几何对象 <a class="slug" href="./notes-Gestalten-Gest.html">[notes-Gestalten-Gest]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section>

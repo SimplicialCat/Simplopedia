@@ -1236,6 +1236,7 @@ $$
 自动给出 $A_n$ 的交换代数结构.</p>
 <p>$\mathsf{StRing}$ 的始对象是 $(*,\mathsf{Ani},1\mathsf{Pr},\cdots)$; 即任何 Stefanich 环 $A$ 都带有一列函子 $(n-1)\mathsf{Pr} \to A_n$.
 这可以如下理解: $A_n$ 是 $n\mathsf{Pr}$ 中的交换代数, 而 $n\mathsf{Pr}$ 是 $1\mathsf{Pr}$ 中 $(n-1)\mathsf{Pr}$-模的范畴. 模范畴中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>相当于原范畴中的交换代数带有代数同态; 故 $A_n$ 带有代数同态 $(n-1)\mathsf{Pr} \to A_n$.</p>
+<h2>态射与相对情形</h2>
 <p>Stefanich 环的态射 $f\colon A\to B$ 是一族相容的交换代数同态 $A_n \to B_n$. 我们采用一个看似 “错位” 的记号 $f^*_{n-1}\colon A_n\to B_n$ 来表示这个同态.<sup class="footnote-reference" id="notes-Gestalten-StRing_1-back"><a href="#notes-Gestalten-StRing_1">1</a></sup></p>
 <div class="footnote-definition" id="notes-Gestalten-StRing_1">
   <sup class="footnote-definition-label"><a href="#notes-Gestalten-StRing_1-back">1</a></sup>
@@ -1298,11 +1299,12 @@ $$
 \cdots
 ),
 $$</p>
-<p>且 Stefanich 环的同态 $A\to B$ 对应序列
+<p>左边的对象即 Stefanich 环的同态 $A\to B$, 对应右边的序列
 $$
 ((B/A)_0, (B/A)_1,\cdots).
 $$</p>
-<p>对于 $R\in\mathsf{CAlg}(A_n)$, 有 $\mathsf{Mod}_{A_n}(R)\in \mathsf{CAlg}(\mathsf{Mod}_{1\mathsf{Pr}}(A_n))$,</p>
+<p>下面说明 $\mathsf{CAlg}(A_n) \to \mathsf{CAlg}(A_{n+1})$ 为全忠实函子.
+对于 $B\in\mathsf{CAlg}(A_n)$, 有 $\mathsf{Mod}_{A_n}(B)\in \mathsf{CAlg}(\mathsf{Mod}_{1\mathsf{Pr}}(A_n))$,</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="微分分次范畴"><header><h1><span class="taxon"></span>微分分次范畴 <a class="slug" href="./微分分次范畴.html">[微分分次范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>交换环 $k$ 上的微分分次范畴 (differential graded category, “dg category”) 是 “$k$-线性<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span>” 的一种模型, 也等同于充实于 <span class="link local"><a href="./Eilenberg–MacLane谱.html" title="Eilenberg–MacLane 谱 [Eilenberg–MacLane谱]">Eilenberg–MacLane 谱</a></span> $Hk$ 上的模范畴 $\mathsf{Mod}(Hk)$ 的范畴, 或 $\mathsf{Mod}(Hk)$-<span class="link local"><a href="./高阶模.html" title="高阶模 [高阶模]">模</a></span>;
