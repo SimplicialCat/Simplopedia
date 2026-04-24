@@ -809,7 +809,7 @@
 
 <article><section class="block" data-taxon=""><details open><summary id="松拉回"><header><h1><span class="taxon"></span>松拉回 <a class="slug" href="./松拉回.html">[松拉回]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>松拉回是一种<span class="link local"><a href="./松极限.html" title="松极限 [松极限]">松极限</a></span>, 是<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>在<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>中的推广.</p>
+<p>松拉回, 又叫<strong>有向纤维积</strong> (oriented fiber product), 是一种<span class="link local"><a href="./松极限.html" title="松极限 [松极限]">松极限</a></span>, 是<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span> (纤维积) 在<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>中的推广.</p>
 <h2>定义</h2>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="nearby"><header><h1><span class="taxon"></span>Nearby Cycles <a class="slug" href="./nearby.html">[nearby]</a></h1><div class="metadata"><ul><li class="meta-item">Note</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>This note mainly follows <span class="link local"><a href="./ZhengNearby.html" title="Nearby Cycles over General Bases [ZhengNearby]">Prof. Zheng’s MCM talk</a></span>.</p>
@@ -948,6 +948,31 @@ $$
 (R\Psi F)_{(x,t)} \simeq R\Gamma(X_{(x)}\times_{S_{f(x)}}S_{(t)},F).
 $$
 Moreover, $R\Psi F$ is equipped with a Galois action.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="临近圈"><header><h1><span class="taxon"></span>临近圈, 消失圈 <a class="slug" href="./临近圈.html">[临近圈]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>相关笔记: <span class="link local"><a href="./nearby.html" title="Nearby Cycles [nearby]">Nearby Cycles</a></span></p>
+<h2>定义</h2>
+<h3>一维复解析及平展情形</h3>
+<p><figure><img src="./临近圈-1.svg" class="color-invert"/></figure></p>
+<table><thead><tr><th>对象</th><th>复解析版本</th><th><span class="link local"><a href="./平展景.html" title="平展景 [平展景]">平展</a></span>版本</th></tr></thead><tbody>
+<tr><td>$X$</td><td>复解析流形</td><td>概形</td></tr>
+<tr><td>$S$</td><td>圆盘或复解析 $\mathbb A^1$</td><td>严格局部 <span class="link local"><a href="./Hensel环.html" title="Hensel 环 [Hensel环]">Hensel</a></span> <span class="link local"><a href="./离散赋值环.html" title="离散赋值环 [离散赋值环]">DVR</a></span> 的<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span></td></tr>
+<tr><td>$0$</td><td>原点</td><td>闭点</td></tr>
+<tr><td>$S^*$</td><td>去心圆盘</td><td>一般点</td></tr>
+<tr><td>$\pi\colon \widetilde{S^*}\to S^*$</td><td><span class="link local"><a href="./万有覆叠.html" title="万有覆叠 [万有覆叠]">万有覆叠</a></span></td><td><span class="link local"><a href="./可分闭包.html" title="可分闭包 [可分闭包]">可分闭包</a></span></td></tr>
+<tr><td></td><td>基本群 / 覆叠变换群 $\pi_1$</td><td>Galois 群</td></tr>
+</tbody></table>
+<p>定义 $X$ 上的层 $F$ 的<strong>临近圈</strong> (nearby cycles) 为
+$$
+R\Psi_f F = i^* R\tilde j_* \tilde j^* F,
+$$
+<strong>消失圈</strong> (vanishing cycles) 为
+$$
+R\Phi_f F = \operatorname{cofib}(i^*F \to R\Psi_f F),
+$$
+其中的映射来自伴随 $\tilde j^* \dashv R\tilde j_*$ 的单位.</p>
+<h3>一般基底上的情形</h3>
+<p>意象的<span class="link local"><a href="./松拉回.html" title="松拉回 [松拉回]">有向积</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="余完备化"><header><h1><span class="taxon"></span>余完备化 <a class="slug" href="./余完备化.html">[余完备化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>余完备化是指向一个范畴<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加特定形状的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>的过程.</p>

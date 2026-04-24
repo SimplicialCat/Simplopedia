@@ -808,4 +808,33 @@
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
 <article><section class="block" data-taxon=""><details open><summary id="Whitμstalk"><header><h1><span class="taxon"></span>The Whittaker Functional Is a Shifted Microstalk <a class="slug" href="./Whitμstalk.html">[Whitμstalk]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h3>2.1 微局部层论</h3>
+<p>设 $Y$ 为实解析流形, $F\colon Y\to \mathbb{R}$ 为光滑函数. 定义<span class="link local"><a href="./临近圈.html" title="临近圈, 消失圈 [临近圈]">消失圈</a></span>函子
+$$
+\phi_F  = (\Gamma_{F\geq 0}(-))_{F=0} \colon \mathsf{Sh}(Y) \to \mathsf{Sh}(F=0),
+$$
+其中 $\Gamma_{F\geq 0}$ 表示 $!$-限制, $(-)_{F=0}$ 为 $*$-限制.
+进一步, 用 $\phi_{F,y_0}$ 表示再 $*$-限制到一点 $y_0$.</p>
+<p>设 $Y$ 为复解析流形, $f\colon Y\to\mathbb{C}$ 为全纯函数, $\Lambda\subset T^*Y$ 为次解析子流形, 则在 $\mathsf{Sh}_\Lambda (Y)$ 上, 复的 (经典的) 消失圈与上面定义的作为实流形的消失圈同构.</p>
+<h3>2.2 限制到吸引区, 再取消失圈</h3>
+<p>设 $Y$ 为复解析流形, $\Lambda \subset T^*Y$ 为次解析闭锥形 Lagrange 奇异支集条件.</p>
+<p>一般而言, 沿闭嵌入拉回再取<span class="link local"><a href="./临近圈.html" title="临近圈, 消失圈 [临近圈]">消失圈</a></span>, 不能解读为一步取消失圈.</p>
+<p><strong>例</strong>. 考虑 $\mathbb A^2$ 上的抛物线 $y=x^2$, 常值层推前为 $k_{y=x^2}$. 记 $i$ 为 $y=0$ 的嵌入映射. 那么
+$$
+i^! k_{y=x^2}
+$$
+是 $0$ 处的<span class="link local"><a href="./摩天大楼层.html" title="摩天大楼层 [摩天大楼层]">摩天大楼层</a></span>, 从而有非零的消失圈
+$$
+\phi_{x,0} i^! k_{y=x^2} \not\simeq 0.
+$$
+另一方面, $\phi_{x,0}k_{y=x^2} \simeq 0$.</p>
+<p>选取实值光滑函数 $F\colon Y\to\mathbb{R}$ 满足</p>
+<ul>
+<li>$F$ 在 $\{Y &gt;0\}$ 上等于 $\operatorname{Re}f$,</li>
+<li>$F$ 在 $\{Y\leq 0\} \setminus y_0$ 上小于 $0$.</li>
+</ul>
+<p><strong>定理 2.2.2</strong>. 设 $\mathcal F\in\mathsf{Sh}_{\Lambda}(Y)$ 满足 $\mathbb{C}^\times$-单值条件, 其奇异支集在次解析闭锥形 Lagrange 子流形 $\Lambda$ 中, 则
+$$
+\phi_{f,y_0} i^! \mathcal F \simeq \phi_{F,y_0} \mathcal F.
+$$</p>
 </details></section><footer></footer></article></div></body></html>
