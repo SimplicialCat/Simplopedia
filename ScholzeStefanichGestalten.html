@@ -934,14 +934,61 @@ $$
 \mathsf{Mod}_{2\mathsf{Pr}}(-) \colon \mathsf{CAlg}(2\mathsf{Pr}) \to \mathsf{CAlg}(\mathsf{Mod}_{\mathsf{Pr}}(2\mathsf{Pr})).
 $$
 定义 $\mathsf{Mod}_{\mathsf{Pr}}(2\mathsf{Pr})$ 为 $3\mathsf{Pr}$, 这个过程可以重复下去, 定义 “可表现 $n$-范畴的范畴” $n\mathsf{Pr} \in \mathsf{Pr}$. 可表现 $n$-范畴是 “充实于 $(n-1)\mathsf{Pr}$ 的可表现范畴”.</p>
-<hr />
-<p>我们看数学实践中常用的一个代数语境, 即 $\mathbb E_\infty$-环谱, 是如何置入上述范畴代数当中的.
-记 $\mathcal C$ 为 $\mathbb E_\infty$-环谱 (又称 $\mathbb E_\infty$-$\mathbb S$-代数) 的范畴的对偶. 记 $\mathcal C$ 的对象为 $\operatorname{Spec}A$, 想象为 “<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>”.</p>
-<p>对于 $\mathbb E_\infty$-环谱 $A$, 归纳定义</p>
+</details></section>
+<section class="block" data-taxon=""><details ><summary id="notes-Gestalten-QCoh"><header><h1><span class="taxon"></span>Gestalten - 高阶拟凝聚层 <a class="slug" href="./notes-Gestalten-QCoh.html">[notes-Gestalten-QCoh]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>以 $\mathcal C$ 表示某种 “环” 的范畴的对偶; 如 $\mathbb E_\infty$-环谱 (又称 $\mathbb E_\infty$-$\mathbb S$-代数) 的范畴的对偶. 我们将不会具体指明这种环的名称, 而是以 “环” 代之. 记 $\mathcal C$ 的对象为 $\operatorname{Spec}A$, 想象为环 $A$ 对应的 “<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>”.</p>
+<p>注意 $\mathcal C^{\mathrm{op}}$ 是环范畴本身.</p>
+<p>记 $\widetilde {\mathcal C} := \mathsf{Sh}(\mathcal C,\mathrm{fpqc})$ 为层范畴. 称其对象为<strong>叠</strong> (stacks).</p>
+<h2>高阶线性范畴</h2>
+<p>对于环 $A$, 归纳定义</p>
 <ul>
 <li>$0\mathsf{Pr}_A := \mathsf{Mod}(A)$,</li>
 <li>$(n+1)\mathsf{Pr}_A := \mathsf{Mod}_{\mathsf{Pr}} (n\mathsf{Pr}_A)$;</li>
 </ul>
+<p>从而对任意 $n\geq 0$, 有函子
+$$
+n\mathsf{Pr}_{-} \colon \mathcal C^{\mathrm{op}} \to\mathsf{Pr}.
+$$
+对于环同态 $f\colon A\to B$, 记 $n\mathsf{Pr}_f$ 为
+$$
+f^*_n\colon n\mathsf{Pr}_A \to n\mathsf{Pr}_B.
+$$
+由伴随函子定理得右伴随
+$$
+f_{n,*}\colon n\mathsf{Pr}_B \to n\mathsf{Pr}_A.
+$$</p>
+<p><strong>命题</strong>. $f_{n,*}$ 与基变换相容.</p>
+<p>从而我们有一个<span class="link local"><a href="./六函子.html" title="六函子 [六函子]">六函子体系</a></span>
+$$
+n\mathsf{Pr}_{-}\colon \mathsf{Corr}(\mathcal C,E)\to\mathsf{Pr},
+$$
+其中 $E$ 是所有态射的族.</p>
+<h2>双手性</h2>
+<p>由于一些抽象的范畴论性质, 我们有如下额外的左伴随.</p>
+<p><strong>命题</strong>. 对于环同态 $f\colon A\to B$, $n\geq 1$, 函子
+$$
+f^*_n \colon n\mathsf{Pr}_A \to n\mathsf{Pr}_B
+$$
+有 $n\mathsf{Pr}_A$-线性的左伴随
+$$
+f_{n,\sharp} \colon n\mathsf{Pr}_B \to n\mathsf{Pr}_A,
+$$
+且与基变换相容, 且 $f_{n,\sharp} \simeq f_{n,*}$.</p>
+<h2>下降</h2>
+<p><strong>定理</strong>. 对任意 $n\geq 0$, 函子
+$$
+n\mathsf{Pr}_{-} \colon \mathcal C^{\mathrm{op}} \to \mathsf{CAlg}((n+1)\mathsf{Pr})
+$$
+为 fpqc-超层.</p>
+<h2>叠</h2>
+<p>由下降性, 层 $n\mathsf{Pr}_{-}$ 可延拓为层
+$$
+n\mathsf{Pr}_{-} \colon \widetilde {\mathcal C}^{\mathrm{op}} \to \mathsf{CAlg}((n+1)\mathsf{Pr}).
+$$</p>
+<p>对于叠的映射 $f\colon Y\to X$, 有拉回函子
+$$
+f^*_n \colon n\mathsf{Pr}_X \to n\mathsf{Pr}_Y.
+$$</p>
 </details></section>
 <section class="block" data-taxon=""><details ><summary id="notes-Gestalten-StRing"><header><h1><span class="taxon"></span>Gestalten - Stefanich 环 <a class="slug" href="./notes-Gestalten-StRing.html">[notes-Gestalten-StRing]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>对于交换环 $A$, 其模范畴 $\mathsf{Mod}(A)$ 为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 许多对于环可以讨论的事情可以在范畴层面讨论. 换言之, 可表现对称幺半范畴是环的推广.</p>
@@ -960,7 +1007,7 @@ $$
 自动给出 $A_n$ 的交换代数结构.</p>
 <p>$\mathsf{StRing}$ 的始对象是 $(*,\mathsf{Ani},1\mathsf{Pr},\cdots)$; 即任何 Stefanich 环 $A$ 都带有一列函子 $(n-1)\mathsf{Pr} \to A_n$.
 这可以如下理解: $A_n$ 是 $n\mathsf{Pr}$ 中的交换代数, 而 $n\mathsf{Pr}$ 是 $1\mathsf{Pr}$ 中 $(n-1)\mathsf{Pr}$-模的范畴. 模范畴中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>相当于原范畴中的交换代数带有代数同态; 故 $A_n$ 带有代数同态 $(n-1)\mathsf{Pr} \to A_n$.</p>
-<h2>态射与相对情形</h2>
+<h2>相对情形</h2>
 <p>Stefanich 环的态射 $f\colon A\to B$ 是一族相容的交换代数同态 $A_n \to B_n$. 我们采用一个看似 “错位” 的记号 $f^*_{n-1}\colon A_n\to B_n$ 来表示这个同态.<sup class="footnote-reference" id="notes-Gestalten-StRing_1-back"><a href="#notes-Gestalten-StRing_1">1</a></sup></p>
 <div class="footnote-definition" id="notes-Gestalten-StRing_1">
   <sup class="footnote-definition-label"><a href="#notes-Gestalten-StRing_1-back">1</a></sup>
@@ -1029,12 +1076,82 @@ $$
 $$</p>
 <p>下面说明 $\mathsf{CAlg}(A_n) \to \mathsf{CAlg}(A_{n+1})$ 为全忠实函子.
 对于 $B\in\mathsf{CAlg}(A_n)$, 有 $\mathsf{Mod}_{A_n}(B)\in \mathsf{CAlg}(\mathsf{Mod}_{1\mathsf{Pr}}(A_n))$,</p>
+<p>TODO</p>
+<h2>仿射性</h2>
+<p><strong>定义</strong>. 设 $A\in\mathsf{StRing}$, $n\geq 0$. 定义 $n$-<strong>仿射</strong>的 $A$-代数就是落在 $\mathsf{CAlg}(A_{n+1}) \to \mathsf{StRing}_{A/}$ 的本质像中的 $A$-代数.</p>
+<p>换言之, 能被 $n$-范畴层完全决定的几何对象就是 $n$-仿射几何对象. $0$-仿射大致就是通常说的仿射, “被函数环完全决定”.</p>
+<p>具体地, 对于 $n$-仿射 $A$-代数 $B$, 从 $(B/A)_{n}\in\mathsf{CAlg}(A_{n+1})$ 开始, 不断取 $\mathsf{Mod}(-)$, 即可得到更高阶的元素 $(B/A)_{n+1}, (B/A)_{n+2},\cdots$: 对任意 $m\geq n$,
+$$
+\mathsf{Mod}_{A_{m+1}}((B/A)_m) \simeq (B/A)_{m+1}.
+$$</p>
+<p><strong>命题</strong>. 如下操作均保持 $n$-仿射性:</p>
+<ul>
+<li>Stefanich 环的余极限 (<span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span>的极限),</li>
+<li>基变换,</li>
+<li>复合.</li>
+</ul>
+<h2>“紧” 性</h2>
+<p>对于 Stefanich 环的同态 $f\colon A\to B$, 在 $A_{n+1}$ 中有态射
+$$
+f^*_{m-1} \colon 1 \to (B/A)_m.
+$$</p>
+<p><strong>定义</strong>. 若对任意 $m\geq n+1$, $f^*_{m-1}$ 在 $A_{m+1}$ 中有右伴随 $f_{m-1,*}\colon (B/A)_m \to 1$, 则称 $f$ 为 $n$-<strong><span class="link local"><a href="./term-prim.html" title="紧 [term-prim]">紧</a></span></strong> (prim) 态射.</p>
 </details></section>
 <section class="block" data-taxon=""><details ><summary id="notes-Gestalten-Gest"><header><h1><span class="taxon"></span>Gestalten - 几何对象 <a class="slug" href="./notes-Gestalten-Gest.html">[notes-Gestalten-Gest]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>例</h2>
+<h3>仿射直线</h3>
+<p>任取基底 $X = \operatorname{Gest}(A)$. 考虑将<span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span> $Y=\operatorname{Gest}_X(B)$ 映射为 $B_0\in A_1$ 的函子. 其表示对象为
+$$
+\mathbb A^1 := \operatorname{Gest}_X(A_0\{x\}),
+$$
+$A_0\{x\}$ 表示对 $A_0$ 自由添加一个元素得到的 $\mathbb E_\infty$-代数. 例如</p>
+<p>$$
+*\{x\} = \bigsqcup_{n\geq 0} */\Sigma_n,
+$$
+$$
+\mathbb{Z}\{x\} = \bigoplus_{n\geq 0} \mathbb{Z}[*/\Sigma_n].
+$$</p>
+<p>还可以定义另一个对象
+$$
+\mathbb G_a := \operatorname{Gest}_X (A_0[x]),
+$$
+$A_0[x]$ 是多项式代数 $\bigsqcup_{n\geq 0} A_0\cdot x^n$. 例如
+$$
+*[x] = \mathbb{N}.
+$$</p>
+<p>在 $\mathbb{Q}$ 上, $\mathbb{A}^1\simeq\mathbb G_a$.</p>
+<h3>乘法群</h3>
+<p>任取基底 $X = \operatorname{Gest}(A)$. 考虑将<span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span> $Y=\operatorname{Gest}_X(B)$ 映射为 $B_0^\times \in A_1$ 的函子. 其表示对象为
+$$
+\mathrm{GL}_1 := \operatorname{Gest}_X(A_0\{x^{\pm 1}\}),
+$$
+$A_0\{x\}$ 表示对 $A_0$ 自由添加一个<strong>可逆</strong>元素得到的 $\mathbb E_\infty$-代数.</p>
+<p>还可以定义另一个对象
+$$
+\mathbb G_m := \mathrm{GL}_1\times_{\mathbb A^1}\mathbb G_a = \operatorname{Gest}_X (A_0[x^{\pm 1}]),
+$$
+$A_0[x^{\pm 1}]$ 是代数 $\bigsqcup_{n\in\mathbb{Z}} A_0\cdot x^n$. 例如
+$$
+*[x^{\pm 1}] = \mathbb{Z}.
+$$
+$\mathbb G_m$ 表示的函子将 $Y=\operatorname{Gest}(B)$ 映射到 $\operatorname{Hom}_{\mathsf{CAlg}(\mathsf{Ani})}(\mathbb{Z}, B_0)$.</p>
+<p>在 $D(\mathbb{Q})$ 上, $\mathrm{GL}_1\simeq\mathbb G_m$.</p>
+<h3>射影直线</h3>
+<p>设 $X = D(\mathbb{Q})$. 考虑两个映射 $\mathrm{GL}_1 \to\mathbb A^1$, 分别是 $x\mapsto x$ 与 $x\mapsto x^{-1}$. 在<span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span>中可作推出
+$$
+\mathbb A^1 \sqcup_{\mathrm{GL}_1} \mathbb A^1.
+$$
+(<span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span>的余极限是 Stafanich 环的极限, 也就是逐项取极限.)</p>
+<h3>$\mathbb G_m$ 的分类叠</h3>
+<p><span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>是几何对象的范畴上的层.</p>
+<h3>de Rham 空间</h3>
 </details></section>
 <section class="block" data-taxon=""><details ><summary id="notes-Gestalten-SixFunctors"><header><h1><span class="taxon"></span>Gestalten - 六函子 <a class="slug" href="./notes-Gestalten-SixFunctors.html">[notes-Gestalten-SixFunctors]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section></p>
-</details></section><section class="block" data-taxon=""><details ><summary id="term-suave"><header><h1><span class="taxon"></span>温滑 <a class="slug" href="./term-suave.html">[term-suave]</a></h1><div class="metadata"><ul><li class="meta-item">翻译</li></ul></div></header></summary>
-<p>“温滑” 是 suave 的暂定翻译.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="term-prim"><header><h1><span class="taxon"></span>紧 <a class="slug" href="./term-prim.html">[term-prim]</a></h1><div class="metadata"><ul><li class="meta-item">翻译</li></ul></div></header></summary>
+<p>“紧” 是 prim 的暂定翻译.</p>
+<p>Prim 出自 <span class="link local"><a href="./ScholzeStefanichGestalten.html" title="Geometry and Higher Category Theory [ScholzeStefanichGestalten]">Gestalten 讲义</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="term-suave"><header><h1><span class="taxon"></span>滑 <a class="slug" href="./term-suave.html">[term-suave]</a></h1><div class="metadata"><ul><li class="meta-item">翻译</li></ul></div></header></summary>
+<p>“滑” 是 suave 的暂定翻译.</p>
 <p>Suave 出自 <span class="link local"><a href="./ScholzeStefanichGestalten.html" title="Geometry and Higher Category Theory [ScholzeStefanichGestalten]">Gestalten 讲义</a></span></p>
 </details></section></details></section></footer></article></div></body></html>

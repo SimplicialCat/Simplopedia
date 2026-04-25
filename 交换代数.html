@@ -1081,14 +1081,6 @@ $$
 \mathsf{Mod}_{2\mathsf{Pr}}(-) \colon \mathsf{CAlg}(2\mathsf{Pr}) \to \mathsf{CAlg}(\mathsf{Mod}_{\mathsf{Pr}}(2\mathsf{Pr})).
 $$
 定义 $\mathsf{Mod}_{\mathsf{Pr}}(2\mathsf{Pr})$ 为 $3\mathsf{Pr}$, 这个过程可以重复下去, 定义 “可表现 $n$-范畴的范畴” $n\mathsf{Pr} \in \mathsf{Pr}$. 可表现 $n$-范畴是 “充实于 $(n-1)\mathsf{Pr}$ 的可表现范畴”.</p>
-<hr />
-<p>我们看数学实践中常用的一个代数语境, 即 $\mathbb E_\infty$-环谱, 是如何置入上述范畴代数当中的.
-记 $\mathcal C$ 为 $\mathbb E_\infty$-环谱 (又称 $\mathbb E_\infty$-$\mathbb S$-代数) 的范畴的对偶. 记 $\mathcal C$ 的对象为 $\operatorname{Spec}A$, 想象为 “<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>”.</p>
-<p>对于 $\mathbb E_\infty$-环谱 $A$, 归纳定义</p>
-<ul>
-<li>$0\mathsf{Pr}_A := \mathsf{Mod}(A)$,</li>
-<li>$(n+1)\mathsf{Pr}_A := \mathsf{Mod}_{\mathsf{Pr}} (n\mathsf{Pr}_A)$;</li>
-</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="notes-Gestalten-StRing"><header><h1><span class="taxon"></span>Gestalten - Stefanich 环 <a class="slug" href="./notes-Gestalten-StRing.html">[notes-Gestalten-StRing]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>对于交换环 $A$, 其模范畴 $\mathsf{Mod}(A)$ 为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 许多对于环可以讨论的事情可以在范畴层面讨论. 换言之, 可表现对称幺半范畴是环的推广.</p>
 <p>推广不会仅做一次就停止. 对于可表现对称幺半范畴 $\mathcal A$, 其在 $\mathsf{Pr}$ 中的<span class="link local"><a href="./高阶模.html" title="高阶模 [高阶模]">模范畴</a></span>为可表现对称幺半 $2$-范畴, 这种对象又可视为可表现对称幺半范畴的推广. 以此类推至于无穷, 就得到 <strong>Stefanich 环</strong>的概念.</p>
@@ -1106,7 +1098,7 @@ $$
 自动给出 $A_n$ 的交换代数结构.</p>
 <p>$\mathsf{StRing}$ 的始对象是 $(*,\mathsf{Ani},1\mathsf{Pr},\cdots)$; 即任何 Stefanich 环 $A$ 都带有一列函子 $(n-1)\mathsf{Pr} \to A_n$.
 这可以如下理解: $A_n$ 是 $n\mathsf{Pr}$ 中的交换代数, 而 $n\mathsf{Pr}$ 是 $1\mathsf{Pr}$ 中 $(n-1)\mathsf{Pr}$-模的范畴. 模范畴中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>相当于原范畴中的交换代数带有代数同态; 故 $A_n$ 带有代数同态 $(n-1)\mathsf{Pr} \to A_n$.</p>
-<h2>态射与相对情形</h2>
+<h2>相对情形</h2>
 <p>Stefanich 环的态射 $f\colon A\to B$ 是一族相容的交换代数同态 $A_n \to B_n$. 我们采用一个看似 “错位” 的记号 $f^*_{n-1}\colon A_n\to B_n$ 来表示这个同态.<sup class="footnote-reference" id="notes-Gestalten-StRing_1-back"><a href="#notes-Gestalten-StRing_1">1</a></sup></p>
 <div class="footnote-definition" id="notes-Gestalten-StRing_1">
   <sup class="footnote-definition-label"><a href="#notes-Gestalten-StRing_1-back">1</a></sup>
@@ -1175,6 +1167,26 @@ $$
 $$</p>
 <p>下面说明 $\mathsf{CAlg}(A_n) \to \mathsf{CAlg}(A_{n+1})$ 为全忠实函子.
 对于 $B\in\mathsf{CAlg}(A_n)$, 有 $\mathsf{Mod}_{A_n}(B)\in \mathsf{CAlg}(\mathsf{Mod}_{1\mathsf{Pr}}(A_n))$,</p>
+<p>TODO</p>
+<h2>仿射性</h2>
+<p><strong>定义</strong>. 设 $A\in\mathsf{StRing}$, $n\geq 0$. 定义 $n$-<strong>仿射</strong>的 $A$-代数就是落在 $\mathsf{CAlg}(A_{n+1}) \to \mathsf{StRing}_{A/}$ 的本质像中的 $A$-代数.</p>
+<p>换言之, 能被 $n$-范畴层完全决定的几何对象就是 $n$-仿射几何对象. $0$-仿射大致就是通常说的仿射, “被函数环完全决定”.</p>
+<p>具体地, 对于 $n$-仿射 $A$-代数 $B$, 从 $(B/A)_{n}\in\mathsf{CAlg}(A_{n+1})$ 开始, 不断取 $\mathsf{Mod}(-)$, 即可得到更高阶的元素 $(B/A)_{n+1}, (B/A)_{n+2},\cdots$: 对任意 $m\geq n$,
+$$
+\mathsf{Mod}_{A_{m+1}}((B/A)_m) \simeq (B/A)_{m+1}.
+$$</p>
+<p><strong>命题</strong>. 如下操作均保持 $n$-仿射性:</p>
+<ul>
+<li>Stefanich 环的余极限 (<span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span>的极限),</li>
+<li>基变换,</li>
+<li>复合.</li>
+</ul>
+<h2>“紧” 性</h2>
+<p>对于 Stefanich 环的同态 $f\colon A\to B$, 在 $A_{n+1}$ 中有态射
+$$
+f^*_{m-1} \colon 1 \to (B/A)_m.
+$$</p>
+<p><strong>定义</strong>. 若对任意 $m\geq n+1$, $f^*_{m-1}$ 在 $A_{m+1}$ 中有右伴随 $f_{m-1,*}\colon (B/A)_m \to 1$, 则称 $f$ 为 $n$-<strong><span class="link local"><a href="./term-prim.html" title="紧 [term-prim]">紧</a></span></strong> (prim) 态射.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="six-functors"><header><h1><span class="taxon"></span>六函子 <a class="slug" href="./six-functors.html">[six-functors]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li></ul></div></header></summary>
 <p>本文是 <span class="link local"><a href="./ScholzeSixFunctors.html" title="Six-functor Formalisms [ScholzeSixFunctors]">Scholze 的六函子讲义</a></span>的阅读笔记.</p>
 <h2>引言</h2>

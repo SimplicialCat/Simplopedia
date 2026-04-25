@@ -938,69 +938,60 @@ $$
 <h3>滤</h3>
 <p><span class="link local"><a href="./A1-Gm.html" title="仿射直线对乘法群的商 [A1-Gm]">仿射直线对乘法群的商</a></span> $\mathbb A^1 / \mathbb G_m$</p>
 <p>…</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="notes-Gestalten-Cat"><header><h1><span class="taxon"></span>Gestalten - 在范畴上做代数 <a class="slug" href="./notes-Gestalten-Cat.html">[notes-Gestalten-Cat]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>“在范畴上做代数” 指的是一种<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>, 将<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>等概念应用于<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>的范畴 $\mathsf{Pr}^{\mathrm{L}}$ (简记为 $\mathsf{Pr}$).</p>
-<p>本文中所有的 $n$-范畴指的是 $(\infty ,n)$-范畴.</p>
-<hr />
-<p>下面的定理说明, 在一个 $1$-范畴 $\mathcal C$ 中做的 “普通的代数”, 可以通过取模范畴这一操作, 嵌入到 “在范畴上做的代数”.</p>
-<p><strong>定理</strong>. 对于<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span>的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal C\in\mathsf{CAlg}(\mathsf{Pr})$, 有全忠实函子
-$$
-\mathsf{Mod}_{\mathcal C}(-)\colon \mathsf{CAlg}(\mathcal C) \to \mathsf{CAlg}(\mathsf{Mod}_{\mathsf{Pr}}(\mathcal C)),
-$$
-且其有右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $\mathcal D\mapsto \operatorname{End}_{\mathcal D}(1)$.</p>
-<p>我们先解释一下 $\operatorname{End}(1)$.</p>
-<p>回忆, 对于 $\mathcal D\in\mathsf{Mod}_{\mathsf{Pr}}(\mathcal C)$, 有函子 $\operatorname{Hom}_{\mathcal D}(-,-)\colon \mathcal D^{\mathrm{op}}\times\mathcal D \to\mathcal C$, 满足
-$$
-\operatorname{Hom}_{\mathcal C}(X,\operatorname{Hom}_{\mathcal D}(Y,Z))\simeq\operatorname{Hom}_{\mathcal D}(X\otimes Y,Z);
-$$
-也即 $\operatorname{Hom}(Y,-)\colon \mathcal D\to\mathcal C$ 是 $(-)\otimes Y\colon \mathcal C\to\mathcal D$ 的右伴随 (注意 $(-)\otimes Y\colon \mathcal C\to\mathcal D$ 保持余极限). 这就是说, $\mathsf{Pr}$ 中的 $\mathcal C$-模可视为 $\mathcal C$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>.</p>
-<p>对于 $\mathcal D\in\mathsf{CAlg}(\mathsf{Mod}_{\mathsf{Pr}}(\mathcal C))$, 记 $1\in\mathcal D$ 为其单位, $F\colon \mathcal C\to\mathcal D$ 为函子 $(-)\otimes 1$; 则
-$$
-\operatorname{End}_{\mathcal D}(1) := \operatorname{Hom}_{\mathcal D}(1,1) = F^R (1),
-$$
-其中 $F^R$ 为 $F$ 的右伴随; 因而 $\operatorname{End}_{\mathcal D}(1)$ 继承 $1$ 的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>结构.
-这给出了上述定理中的函子 $\mathcal D\mapsto \operatorname{End}_{\mathcal D}(1)$.</p>
-<p>现在展开来讲上述定理中的伴随: 对任意 $A\in\mathsf{CAlg}(\mathcal C)$ 与 $B\in \mathsf{CAlg}(\mathsf{Mod}_{1\mathsf{Pr}}(\mathcal C)) = \mathsf{CAlg}(1\mathsf{Pr})_{\mathcal C/}$, 如下两资料等价:</p>
-<ul>
-<li>$\mathsf{CAlg}(1\mathsf{Pr})$ 中的态射 $\mathsf{Mod}_{\mathcal C}(A) \to B$;</li>
-<li>$\mathsf{CAlg}(\mathcal C)$ 中的态射 $A \to \operatorname{End}_B(1)$.</li>
-</ul>
-<blockquote>
-<p>我感觉这对伴随类似于同伦论中 $\mathbf{B}$ 与 $\Omega$ 的互逆. 取模范畴有点像是取逆环路空间, 取 $\operatorname{End}(1)$ 有点像是取环路空间.</p>
-</blockquote>
-<hr />
-<p>由于 $\mathsf{Mod}_{\mathcal C}(-)$ 有右伴随, 其保持所有<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>; 特别地, 保持交换代数的相对张量积:
-$$
-\mathsf{Mod}(A)\otimes_{\mathsf{Mod}(C)}\mathsf{Mod}(B) \simeq\mathsf{Mod}(A\otimes_C B).
-$$
-换言之, 在范畴层面可以忠实地复刻代数的张量积这一关键操作.</p>
-<hr />
-<p>在上述定理中取 $\mathcal C = \mathsf{Pr}$ <sup class="footnote-reference" id="notes-Gestalten-Cat_1-back"><a href="#notes-Gestalten-Cat_1">1</a></sup>, 我们得到一个函子
-$$
-\mathsf{Mod}_{\mathsf{Pr}}(-) \colon \mathsf{CAlg}(\mathsf{Pr}) \to \mathsf{CAlg}(\mathsf{Mod}_{\mathsf{Pr}}(\mathsf{Pr})).
-$$
-我们称 $\mathsf{Mod}_{\mathsf{Pr}}(\mathsf{Pr})$ 为 $2\mathsf{Pr}$, 即 “可表现 $2$-范畴” 的范畴. <sup class="footnote-reference" id="notes-Gestalten-Cat_2-back"><a href="#notes-Gestalten-Cat_2">2</a></sup> 可表现 $2$-范畴是 “充实于 $\mathsf{Pr}$ 的可表现范畴”.</p>
-<div class="footnote-definition" id="notes-Gestalten-Cat_1">
-  <sup class="footnote-definition-label"><a href="#notes-Gestalten-Cat_1-back">1</a></sup>
-<p>是的, 这是一个 “包含自己” 的范畴, 需要我们在数学基础上做一些手脚, 但我们暂不关心.</p>
-</div>
-<div class="footnote-definition" id="notes-Gestalten-Cat_2">
-  <sup class="footnote-definition-label"><a href="#notes-Gestalten-Cat_2-back">2</a></sup>
-<p>但目前它本身是一个 $(\infty ,1)$-范畴, 我们不关心其不可逆的高阶态射. 一般而言, 若某种对象构成一个 $(\infty,n)$-范畴, 忽略其不可逆高阶态射, 将其视为 $(\infty,1)$-范畴是正当的, 不会改变所研究对象的本质, 只是可能少研究了一些东西.</p>
-</div>
-<p>再取 $\mathcal C = 2\mathsf{Pr}$, 得到函子
-$$
-\mathsf{Mod}_{2\mathsf{Pr}}(-) \colon \mathsf{CAlg}(2\mathsf{Pr}) \to \mathsf{CAlg}(\mathsf{Mod}_{\mathsf{Pr}}(2\mathsf{Pr})).
-$$
-定义 $\mathsf{Mod}_{\mathsf{Pr}}(2\mathsf{Pr})$ 为 $3\mathsf{Pr}$, 这个过程可以重复下去, 定义 “可表现 $n$-范畴的范畴” $n\mathsf{Pr} \in \mathsf{Pr}$. 可表现 $n$-范畴是 “充实于 $(n-1)\mathsf{Pr}$ 的可表现范畴”.</p>
-<hr />
-<p>我们看数学实践中常用的一个代数语境, 即 $\mathbb E_\infty$-环谱, 是如何置入上述范畴代数当中的.
-记 $\mathcal C$ 为 $\mathbb E_\infty$-环谱 (又称 $\mathbb E_\infty$-$\mathbb S$-代数) 的范畴的对偶. 记 $\mathcal C$ 的对象为 $\operatorname{Spec}A$, 想象为 “<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>”.</p>
-<p>对于 $\mathbb E_\infty$-环谱 $A$, 归纳定义</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="notes-Gestalten-QCoh"><header><h1><span class="taxon"></span>Gestalten - 高阶拟凝聚层 <a class="slug" href="./notes-Gestalten-QCoh.html">[notes-Gestalten-QCoh]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>以 $\mathcal C$ 表示某种 “环” 的范畴的对偶; 如 $\mathbb E_\infty$-环谱 (又称 $\mathbb E_\infty$-$\mathbb S$-代数) 的范畴的对偶. 我们将不会具体指明这种环的名称, 而是以 “环” 代之. 记 $\mathcal C$ 的对象为 $\operatorname{Spec}A$, 想象为环 $A$ 对应的 “<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>”.</p>
+<p>注意 $\mathcal C^{\mathrm{op}}$ 是环范畴本身.</p>
+<p>记 $\widetilde {\mathcal C} := \mathsf{Sh}(\mathcal C,\mathrm{fpqc})$ 为层范畴. 称其对象为<strong>叠</strong> (stacks).</p>
+<h2>高阶线性范畴</h2>
+<p>对于环 $A$, 归纳定义</p>
 <ul>
 <li>$0\mathsf{Pr}_A := \mathsf{Mod}(A)$,</li>
 <li>$(n+1)\mathsf{Pr}_A := \mathsf{Mod}_{\mathsf{Pr}} (n\mathsf{Pr}_A)$;</li>
 </ul>
+<p>从而对任意 $n\geq 0$, 有函子
+$$
+n\mathsf{Pr}_{-} \colon \mathcal C^{\mathrm{op}} \to\mathsf{Pr}.
+$$
+对于环同态 $f\colon A\to B$, 记 $n\mathsf{Pr}_f$ 为
+$$
+f^*_n\colon n\mathsf{Pr}_A \to n\mathsf{Pr}_B.
+$$
+由伴随函子定理得右伴随
+$$
+f_{n,*}\colon n\mathsf{Pr}_B \to n\mathsf{Pr}_A.
+$$</p>
+<p><strong>命题</strong>. $f_{n,*}$ 与基变换相容.</p>
+<p>从而我们有一个<span class="link local"><a href="./六函子.html" title="六函子 [六函子]">六函子体系</a></span>
+$$
+n\mathsf{Pr}_{-}\colon \mathsf{Corr}(\mathcal C,E)\to\mathsf{Pr},
+$$
+其中 $E$ 是所有态射的族.</p>
+<h2>双手性</h2>
+<p>由于一些抽象的范畴论性质, 我们有如下额外的左伴随.</p>
+<p><strong>命题</strong>. 对于环同态 $f\colon A\to B$, $n\geq 1$, 函子
+$$
+f^*_n \colon n\mathsf{Pr}_A \to n\mathsf{Pr}_B
+$$
+有 $n\mathsf{Pr}_A$-线性的左伴随
+$$
+f_{n,\sharp} \colon n\mathsf{Pr}_B \to n\mathsf{Pr}_A,
+$$
+且与基变换相容, 且 $f_{n,\sharp} \simeq f_{n,*}$.</p>
+<h2>下降</h2>
+<p><strong>定理</strong>. 对任意 $n\geq 0$, 函子
+$$
+n\mathsf{Pr}_{-} \colon \mathcal C^{\mathrm{op}} \to \mathsf{CAlg}((n+1)\mathsf{Pr})
+$$
+为 fpqc-超层.</p>
+<h2>叠</h2>
+<p>由下降性, 层 $n\mathsf{Pr}_{-}$ 可延拓为层
+$$
+n\mathsf{Pr}_{-} \colon \widetilde {\mathcal C}^{\mathrm{op}} \to \mathsf{CAlg}((n+1)\mathsf{Pr}).
+$$</p>
+<p>对于叠的映射 $f\colon Y\to X$, 有拉回函子
+$$
+f^*_n \colon n\mathsf{Pr}_X \to n\mathsf{Pr}_Y.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="tutorial-funAG"><header><h1><span class="taxon"></span>函子式代数几何 <a class="slug" href="./tutorial-funAG.html">[tutorial-funAG]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./代数几何.html" title="代数几何 [代数几何]">代数几何</a></span>起源于这样一个见解:
 代数对象 (如环) 与几何对象 (如拓扑空间) 之间存在某种<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">对偶</a></span>关系.

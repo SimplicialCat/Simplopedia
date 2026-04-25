@@ -907,6 +907,160 @@ $$
 \mathrm{LocSys}^{\text{Betti}}_G \simeq \operatorname{Map}(*/\pi_1, */G) = \operatorname{Hom}(\pi_1,G)/G.
 $$
 其中 $*/G$ 为<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>, $G$-作用为<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="notes-Gestalten-Gest"><header><h1><span class="taxon"></span>Gestalten - 几何对象 <a class="slug" href="./notes-Gestalten-Gest.html">[notes-Gestalten-Gest]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>例</h2>
+<h3>仿射直线</h3>
+<p>任取基底 $X = \operatorname{Gest}(A)$. 考虑将<span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span> $Y=\operatorname{Gest}_X(B)$ 映射为 $B_0\in A_1$ 的函子. 其表示对象为
+$$
+\mathbb A^1 := \operatorname{Gest}_X(A_0\{x\}),
+$$
+$A_0\{x\}$ 表示对 $A_0$ 自由添加一个元素得到的 $\mathbb E_\infty$-代数. 例如</p>
+<p>$$
+*\{x\} = \bigsqcup_{n\geq 0} */\Sigma_n,
+$$
+$$
+\mathbb{Z}\{x\} = \bigoplus_{n\geq 0} \mathbb{Z}[*/\Sigma_n].
+$$</p>
+<p>还可以定义另一个对象
+$$
+\mathbb G_a := \operatorname{Gest}_X (A_0[x]),
+$$
+$A_0[x]$ 是多项式代数 $\bigsqcup_{n\geq 0} A_0\cdot x^n$. 例如
+$$
+*[x] = \mathbb{N}.
+$$</p>
+<p>在 $\mathbb{Q}$ 上, $\mathbb{A}^1\simeq\mathbb G_a$.</p>
+<h3>乘法群</h3>
+<p>任取基底 $X = \operatorname{Gest}(A)$. 考虑将<span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span> $Y=\operatorname{Gest}_X(B)$ 映射为 $B_0^\times \in A_1$ 的函子. 其表示对象为
+$$
+\mathrm{GL}_1 := \operatorname{Gest}_X(A_0\{x^{\pm 1}\}),
+$$
+$A_0\{x\}$ 表示对 $A_0$ 自由添加一个<strong>可逆</strong>元素得到的 $\mathbb E_\infty$-代数.</p>
+<p>还可以定义另一个对象
+$$
+\mathbb G_m := \mathrm{GL}_1\times_{\mathbb A^1}\mathbb G_a = \operatorname{Gest}_X (A_0[x^{\pm 1}]),
+$$
+$A_0[x^{\pm 1}]$ 是代数 $\bigsqcup_{n\in\mathbb{Z}} A_0\cdot x^n$. 例如
+$$
+*[x^{\pm 1}] = \mathbb{Z}.
+$$
+$\mathbb G_m$ 表示的函子将 $Y=\operatorname{Gest}(B)$ 映射到 $\operatorname{Hom}_{\mathsf{CAlg}(\mathsf{Ani})}(\mathbb{Z}, B_0)$.</p>
+<p>在 $D(\mathbb{Q})$ 上, $\mathrm{GL}_1\simeq\mathbb G_m$.</p>
+<h3>射影直线</h3>
+<p>设 $X = D(\mathbb{Q})$. 考虑两个映射 $\mathrm{GL}_1 \to\mathbb A^1$, 分别是 $x\mapsto x$ 与 $x\mapsto x^{-1}$. 在<span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span>中可作推出
+$$
+\mathbb A^1 \sqcup_{\mathrm{GL}_1} \mathbb A^1.
+$$
+(<span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span>的余极限是 Stafanich 环的极限, 也就是逐项取极限.)</p>
+<h3>$\mathbb G_m$ 的分类叠</h3>
+<p><span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>是几何对象的范畴上的层.</p>
+<h3>de Rham 空间</h3>
+</details></section><section class="block" data-taxon=""><details ><summary id="notes-Gestalten-StRing"><header><h1><span class="taxon"></span>Gestalten - Stefanich 环 <a class="slug" href="./notes-Gestalten-StRing.html">[notes-Gestalten-StRing]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>对于交换环 $A$, 其模范畴 $\mathsf{Mod}(A)$ 为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 许多对于环可以讨论的事情可以在范畴层面讨论. 换言之, 可表现对称幺半范畴是环的推广.</p>
+<p>推广不会仅做一次就停止. 对于可表现对称幺半范畴 $\mathcal A$, 其在 $\mathsf{Pr}$ 中的<span class="link local"><a href="./高阶模.html" title="高阶模 [高阶模]">模范畴</a></span>为可表现对称幺半 $2$-范畴, 这种对象又可视为可表现对称幺半范畴的推广. 以此类推至于无穷, 就得到 <strong>Stefanich 环</strong>的概念.</p>
+<p><strong>定义</strong>. Stafanich 环的范畴 $\mathsf{StRing}$ 是如下 $\aleph_1$-<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>:
+$$
+\begin{aligned}
+\mathsf{StRing} &amp;= \operatorname{colim}^{1\mathsf{Pr}}(\mathsf{CAlg}(\mathsf{Ani})\hookrightarrow\mathsf{CAlg}(1\mathsf{Pr})\hookrightarrow\cdots)\\
+&amp;= \operatorname{lim}^{\mathsf{Cat}}(\mathsf{CAlg}(\mathsf{Ani})\leftarrow\mathsf{CAlg}(1\mathsf{Pr})\leftarrow\cdots).
+\end{aligned}
+$$</p>
+<p>由于上述第二行定义, $\mathsf{StRing}$ 的一个对象可写为 $A = (A_0,A_1,A_2,\cdots)$, $A_n\in\mathsf{CAlg}(n\mathsf{Pr})$, 带有等价 $A_n = \operatorname{End}_{A_{n+1}}(1)$. 事实上, 这一串等价
+$$
+A_n = \operatorname{End}_{A_{n+1}}(1) = \operatorname{End}_{\operatorname{End}_{A_{n+2}}(1)}(1) = \cdots
+$$
+自动给出 $A_n$ 的交换代数结构.</p>
+<p>$\mathsf{StRing}$ 的始对象是 $(*,\mathsf{Ani},1\mathsf{Pr},\cdots)$; 即任何 Stefanich 环 $A$ 都带有一列函子 $(n-1)\mathsf{Pr} \to A_n$.
+这可以如下理解: $A_n$ 是 $n\mathsf{Pr}$ 中的交换代数, 而 $n\mathsf{Pr}$ 是 $1\mathsf{Pr}$ 中 $(n-1)\mathsf{Pr}$-模的范畴. 模范畴中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>相当于原范畴中的交换代数带有代数同态; 故 $A_n$ 带有代数同态 $(n-1)\mathsf{Pr} \to A_n$.</p>
+<h2>相对情形</h2>
+<p>Stefanich 环的态射 $f\colon A\to B$ 是一族相容的交换代数同态 $A_n \to B_n$. 我们采用一个看似 “错位” 的记号 $f^*_{n-1}\colon A_n\to B_n$ 来表示这个同态.<sup class="footnote-reference" id="notes-Gestalten-StRing_1-back"><a href="#notes-Gestalten-StRing_1">1</a></sup></p>
+<div class="footnote-definition" id="notes-Gestalten-StRing_1">
+  <sup class="footnote-definition-label"><a href="#notes-Gestalten-StRing_1-back">1</a></sup>
+<p>这是因为 $A_n$ 可想象为几何对象 $X$ 上的 $(n-1)$-范畴层, 而 $f^*_{n-1}$ 可想象为 $(n-1)$-范畴层的拉回. 换言之, $f^*$ 的下标表示的是其操作的<strong>对象</strong>的范畴层级.</p>
+</div>
+<p>由定义, $f^*_{n-1}\colon A_n\to B_n$ 是<span class="link local"><a href="./高阶可表现范畴.html" title="高阶可表现范畴 [高阶可表现范畴]">可表现范畴</a></span>之间保持余极限的函子, 从而有右伴随 $f_{n-1,*}\colon B_n\to A_n$.
+它自动构成松对称幺半函子, 从而给出<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>范畴之间的函子 $f_{n-1,*} \colon \mathsf{CAlg}(B_n) \to \mathsf{CAlg}(A_n)$.
+此时 $1_{B_n}\in\mathsf{CAlg}(B_n)$ 给出 $A_n$ 中的交换代数, 记作
+$$
+(B/A)_{n-1} := f_{n-1,*}(1_{B_n}) \in \mathsf{CAlg}(A_n).
+$$</p>
+<p>这可视为 $B$ 在 $A$ 上的一种<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>观点, 正如在代数几何中我们常常固定一个基环 $A$ 考虑 $A$-代数一样. 而 “绝对” 的基环是 $A = (*,\mathsf{Ani},\mathsf{Pr},\cdots)$, 此时,
+$(B/A)_{n-1} = B_{n-1} \in \mathsf{CAlg}((n-1)\mathsf{Pr})$.</p>
+<p>函子 $f_{n-1,*}$ 可想象为几何对象之间 $(n-1)$-范畴层的推前, 即<span class="link local"><a href="./整体截面.html" title="整体截面 [整体截面]">整体截面</a></span>操作的相对版本. 当几何对象被其上 $(n-1)$-范畴层的整体截面完全确定时, 称其 $(n-1)$-<span class="link local"><a href="./高阶仿射性.html" title="高阶仿射性 [高阶仿射性]">仿射</a></span>. 在<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>情形中, 也有仿射态射的概念.</p>
+<p>在 Stefanich 环的世界中, 任何一个层级的 “$A$-代数” 都可视为 Stefanich 环的 (仿射) 同态 $A\to B$. 更准确地说有如下命题.</p>
+<p><strong>命题</strong>. 对 $n\geq 1$, 有全忠实函子
+$$
+\mathsf{CAlg}(A_n) \to \mathsf{StRing}_{A/},
+$$
+该函子为 $B\mapsto (B/A)_{n-1}$ 的左伴随. 进一步, 有等价
+$$
+\begin{aligned}
+\mathsf{StRing}_{A/} &amp;\simeq
+\operatorname{colim}^{\mathsf{Pr}}(\mathsf{CAlg}(A_1)\hookrightarrow\mathsf{CAlg}(A_2)\hookrightarrow\cdots)\\
+&amp; =\operatorname{lim}^{\mathsf{Cat}}(\mathsf{CAlg}(A_1)\leftarrow\mathsf{CAlg}(A_2)\leftarrow\cdots),
+\end{aligned}
+$$
+其中 $B\in\mathsf{StRing}_{A/}$ 对应于 $((B/A)_0,(B/A)_1,\cdots)$.</p>
+<p><em>证明概要</em>. 依定义,
+$$
+\mathsf{StRing}_{A/} \simeq
+\operatorname{lim}^{\mathsf{Cat}}(
+\mathsf{CAlg}(1\mathsf{Pr})_{A_1/}
+\leftarrow
+\mathsf{CAlg}(2\mathsf{Pr})_{A_2/}
+\leftarrow
+\cdots
+).
+$$
+我们仔细观察其中的转移映射
+$$
+\operatorname{End}_{-}(1)\colon 
+\mathsf{CAlg}(n\mathsf{Pr})_{/ A_n}
+\leftarrow
+\mathsf{CAlg}((n+1)\mathsf{Pr})_{/ A_{n+1}}.
+$$
+设 $B_{n+1}\in \mathsf{CAlg}((n+1)\mathsf{Pr})_{/ A_{n+1}}$. 拆开定义, 我们发现 $B_{n+1}$ 的信息相当于对称幺半可表现 $1$-范畴的如下图表.</p>
+<p><figure><img src="./notes-Gestalten-StRing-2.svg" class="color-invert"/></figure></p>
+<p>而这样一个图表的信息仅相当于其下方的一个态射 $g$.</p>
+<p>此时 $\operatorname{End}_{B_{n+1}}(1_B)$ 是单位 $1_B\in B_{n+1}$ 在两个函子的右伴随的复合下的像, $\operatorname{End}_{B_{n+1}}(1_B) = f^R g^R (1_B)$. 复合中间经过的对象是 $g^R (1_B) \in \mathsf{CAlg}(A_{n+1})$, 如下图.</p>
+<p><figure><img src="./notes-Gestalten-StRing-1.svg" class="color-invert"/></figure></p>
+<p>由此我们看出, 转移映射中间可穿过 $\mathsf{CAlg}(A_{n+1})$, 于是前述极限可改写为</p>
+<p>$$
+\mathsf{StRing}_{A/} \simeq
+\operatorname{lim}^{\mathsf{Cat}}(
+\mathsf{CAlg}(A_1)
+\leftarrow
+\mathsf{CAlg}(A_2)
+\leftarrow
+\cdots
+),
+$$</p>
+<p>左边的对象即 Stefanich 环的同态 $A\to B$, 对应右边的序列
+$$
+((B/A)_0, (B/A)_1,\cdots).
+$$</p>
+<p>下面说明 $\mathsf{CAlg}(A_n) \to \mathsf{CAlg}(A_{n+1})$ 为全忠实函子.
+对于 $B\in\mathsf{CAlg}(A_n)$, 有 $\mathsf{Mod}_{A_n}(B)\in \mathsf{CAlg}(\mathsf{Mod}_{1\mathsf{Pr}}(A_n))$,</p>
+<p>TODO</p>
+<h2>仿射性</h2>
+<p><strong>定义</strong>. 设 $A\in\mathsf{StRing}$, $n\geq 0$. 定义 $n$-<strong>仿射</strong>的 $A$-代数就是落在 $\mathsf{CAlg}(A_{n+1}) \to \mathsf{StRing}_{A/}$ 的本质像中的 $A$-代数.</p>
+<p>换言之, 能被 $n$-范畴层完全决定的几何对象就是 $n$-仿射几何对象. $0$-仿射大致就是通常说的仿射, “被函数环完全决定”.</p>
+<p>具体地, 对于 $n$-仿射 $A$-代数 $B$, 从 $(B/A)_{n}\in\mathsf{CAlg}(A_{n+1})$ 开始, 不断取 $\mathsf{Mod}(-)$, 即可得到更高阶的元素 $(B/A)_{n+1}, (B/A)_{n+2},\cdots$: 对任意 $m\geq n$,
+$$
+\mathsf{Mod}_{A_{m+1}}((B/A)_m) \simeq (B/A)_{m+1}.
+$$</p>
+<p><strong>命题</strong>. 如下操作均保持 $n$-仿射性:</p>
+<ul>
+<li>Stefanich 环的余极限 (<span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span>的极限),</li>
+<li>基变换,</li>
+<li>复合.</li>
+</ul>
+<h2>“紧” 性</h2>
+<p>对于 Stefanich 环的同态 $f\colon A\to B$, 在 $A_{n+1}$ 中有态射
+$$
+f^*_{m-1} \colon 1 \to (B/A)_m.
+$$</p>
+<p><strong>定义</strong>. 若对任意 $m\geq n+1$, $f^*_{m-1}$ 在 $A_{m+1}$ 中有右伴随 $f_{m-1,*}\colon (B/A)_m \to 1$, 则称 $f$ 为 $n$-<strong><span class="link local"><a href="./term-prim.html" title="紧 [term-prim]">紧</a></span></strong> (prim) 态射.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="terminologies"><header><h1><span class="taxon"></span>单纯百科 - 术语翻译表 <a class="slug" href="./terminologies.html">[terminologies]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>下表的第二列是<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>使用的译文.</p>
 <p>表格第三列是其它地方也曾出现的译文, 它们有的是历史淘汰的选择, 有的是机翻造成的错误. 这个表格的作用是为 LLM 提供正确的术语.</p>
@@ -937,7 +1091,7 @@ $$
 <h2>未确定的术语</h2>
 <table><thead><tr><th>原文</th><th>译文</th></tr></thead><tbody>
 <tr><td>Gestalt</td><td><span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span></td></tr>
-<tr><td>suave</td><td><span class="link local"><a href="./term-suave.html" title="温滑 [term-suave]">温滑</a></span></td></tr>
+<tr><td>suave</td><td><span class="link local"><a href="./term-suave.html" title="滑 [term-suave]">滑</a></span></td></tr>
 </tbody></table>
 <h2>相关内容</h2>
 <p><span class="link local"><a href="./关于译名-意象.html" title="关于译名 “意象” [关于译名-意象]">关于译名 “意象”</a></span></p>
