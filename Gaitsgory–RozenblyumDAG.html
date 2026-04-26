@@ -812,7 +812,7 @@
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="对称序列"><header><h1><span class="taxon"></span>对称序列 <a class="slug" href="./对称序列.html">[对称序列]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>对称序列是一种可用于定义<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的结构.</p>
-<p>对称序列可视为<span class="link local"><a href="./解析函子.html" title="解析函子 (算畴理论) [解析函子]">多项式函子</a></span>的 “系数”, 对称序列上有一个幺半结构和一个对称幺半结构, 分别对应多项式函子的复合与乘积.</p>
+<p>对称序列可视为<span class="link local"><a href="./解析函子.html" title="解析函子 (算畴理论) [解析函子]">多项式函子</a></span>的 “系数”, 对称序列上有一个幺半结构和一个对称幺半结构, 分别对应多项式函子的复合与乘积. <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的一种定义是对称序列范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 这给出多项式函子范畴中的结合代数; 特别地, 给出<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</p>
 <h2>定义</h2>
 <p>考虑有限集合与双射构成的范畴 $\mathsf{Fin}^{\simeq}$, 配备无交并构成对称幺半范畴. 它是由一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>对称幺半范畴. 它也是所有有限<span class="link local"><a href="./对称群.html" title="对称群 [对称群]">对称群</a></span>的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>的无交并:
 $$
@@ -822,7 +822,10 @@ $$</p>
 $$
 \mathsf{Fin}^{\simeq} \to \mathcal C.
 $$</p>
-<p>给出一个对称序列就是对每个 $n$ 给出对称群 $S_n$ 的一个<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">表示</a></span>.</p>
+<p>给出一个对称序列就是对每个 $n$ 给出对称群 $S_n$ 的一个<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">表示</a></span>:
+$$
+\mathsf{SSeq}(\mathcal C) = \prod_{n\geq 0}\mathsf{Fun}(\mathbf{B}S_n,\mathcal C).
+$$</p>
 <h2>性质</h2>
 <h3>与自函子的关系</h3>
 <p>设对称幺半范畴 $\mathcal C$ 有合适的余极限. 那么对称序列 $F\colon \mathsf{Fin}^{\simeq} \to \mathcal C$ 给出 $\mathcal C$ 的自函子
@@ -835,18 +838,24 @@ $$
 $$
 \begin{aligned}
 X&amp;\mapsto
-\bigsqcup_{n\ge 0} F(n) \otimes_{S_n}
+\int_{n} F(n) \otimes
 \Big(
-\bigsqcup_{m\ge 0} G(m) \otimes_{S_m}
+\int_{m} G(m) \otimes
 X^{\otimes m}
 \Big)
 ^{\otimes n}\\
-&amp;\simeq\bigsqcup_{n\geq 0} F(n) \otimes_{S_n}
-\bigsqcup_{(m_i)_{i=1}^n}
-\bigotimes_{i=1}^n(G(m_i)\otimes_{S_{m_i}}X^{\otimes m_i})\\
+&amp;\simeq\int_{n} F(n) \otimes
+\int_{m_1}\cdots\int_{m_n}
+\bigotimes_{i=1}^n(G(m_i)\otimes X^{\otimes m_i})\\
 &amp;\simeq
-\bigsqcup_{\ell\geq 0}\bigsqcup_{n,m_1+\cdots + m_n = \ell}\big(F(n)\otimes\bigotimes_{i=1}^n G(m_i)\big)\otimes
+\int_{\ell}\Big[
+    \int_{n}\int_{m_1+\cdots + m_n = \ell}\Big(F(n)\otimes\bigotimes_{i=1}^n G(m_i)\Big)\Big]\otimes X^{\otimes\ell}.
 \end{aligned}
+$$
+可以看到这仍是一个对称序列给出的自函子.</p>
+<p>对称幺半范畴 $\mathcal C$ 本身的对象可视为 “集中在一次项” 的对称序列, 即有幺半函子
+$$
+\mathcal C \to\mathsf{SSeq}(\mathcal C),\, X\mapsto (0,X,0,0,\cdots).
 $$</p>
 <h3>对称幺半结构</h3>
 <p>设对称幺半范畴 $\mathcal C$ 具有<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>, 且 $X\otimes -$ 保持余积. 那么对称序列上还有一个由 <span class="link local"><a href="./Day卷积.html" title="Day 卷积 [Day卷积]">Day 卷积</a></span>给出的对称幺半结构; 具体地,

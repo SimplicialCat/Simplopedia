@@ -997,14 +997,27 @@ $$
 满足分配律.</p>
 <p>等价地, $(\mathcal C,\mathcal G)$-空间是 $\mathcal C$-空间范畴中的 $\mathcal G$-代数.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="算畴上的代数"><header><h1><span class="taxon"></span>算畴上的代数 <a class="slug" href="./算畴上的代数.html">[算畴上的代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>对于单色<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathcal O$, 可定义 $\mathcal O$-幺半范畴以及其中的 $\mathcal O$-代数.</p>
 <h2>定义</h2>
-<h3>通过多重范畴定义</h3>
-<p>设 $\mathcal O$ 为 (对称) <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>, 视为多重范畴; 设 $\mathcal C$ 为<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, 那么 $\mathcal C$ 本身也可视为对称算畴及多重范畴; 定义 $\mathcal O$ 在 $\mathcal C$ 中的<strong>代数</strong>为多重范畴之间的函子
+<h3>通过多重范畴</h3>
+<p>设 $\mathcal O$ 为多重范畴, $\mathcal C$ 为<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, 那么 $\mathcal C$ 本身也可视为多重范畴; 定义 $\mathcal O$ 在 $\mathcal C$ 中的<strong>代数</strong>为多重范畴之间的函子
 $$
 \mathcal O \to \mathcal C.
 $$</p>
-<h3>通过对称序列定义</h3>
-<p>给定<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal V$ 上的对称算畴 $F$, 视为 $\mathcal V$-<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $F\colon \mathsf{Fin}^{\simeq}\to\mathcal V$; 一个 $F$-代数是指一个 (带 $\mathcal{V}$-模结构的范畴中的) 对象 $A$, 以及 <span class="link local"><a href="./对称群.html" title="对称群 [对称群]">$S_n$</a></span>-等变的态射 $F(n)\otimes A^{\otimes n}\to A$, 满足适当的结合律, 幺元律.</p>
+<h3>通过对称序列</h3>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $\mathcal O$ 为 $\mathcal C$ 上的对称算畴, 视为 $\mathcal C$-<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.
+定义 $\mathcal C$ 中的一个 $\mathcal O$-代数是指一个对象 $A$, 以及 $A$ (视为常数项对称序列) 上的 $\mathcal O$-<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>结构. 换言之,
+$$
+\mathsf{Alg}_{\mathcal O}(\mathcal C) := \{\mathcal A\in\mathsf{LMod}_{\mathsf{SSeq}(\mathcal C)}(\mathcal O)\mid \mathcal A=(A,0,0,\cdots)\}.
+$$</p>
+<p>具体地, $\mathcal O$-代数结构即一族态射
+$$
+\mathcal O(n)\otimes_{S_n} A^{\otimes n}\to A,
+$$
+满足适当的结合律, 幺元律.</p>
+<h3>$\mathcal O$-幺半范畴</h3>
+<p>所谓 $\mathcal O$-幺半范畴即 $\mathsf{Cat}$ (作为<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span>) 中的 $\mathcal O$-代数.</p>
 <h2>例</h2>
 <ul>
 <li><span class="link local"><a href="./E∞-算畴.html" title="E∞-算畴 [E∞-算畴]">交换算畴</a></span>上的代数称为<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>.</li>
