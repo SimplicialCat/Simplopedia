@@ -805,7 +805,7 @@
   }
 </style>
 
-<theme-option name="furina" style="display: none;">furina</theme-option></div><div class="block"><details open=""><summary><h1>目录</h1></summary><ul class="block"><li class="item-summary"><a class="bullet" href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">■</a><span class="link local" onclick="window.location.href='#数学对象的表现'"><span class="taxon"></span>数学对象的表现</span></li><li class="item-summary"><a class="bullet" href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">■</a><span class="link local" onclick="window.location.href='#代数-几何对偶'"><span class="taxon"></span>代数–几何对偶</span></li><li class="item-summary"><a class="bullet" href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">■</a><span class="link local" onclick="window.location.href='#语法–语义对偶'"><span class="taxon"></span>语法–语义对偶</span></li><li class="item-summary"><a class="bullet" href="./形变.html" title="形变 [形变]">■</a><span class="link local" onclick="window.location.href='#形变'"><span class="taxon"></span>形变</span></li></ul></details></div></nav>
+<theme-option name="furina" style="display: none;">furina</theme-option></div><div class="block"><details open=""><summary><h1>目录</h1></summary><ul class="block"><li class="item-summary"><a class="bullet" href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">■</a><span class="link local" onclick="window.location.href='#数学对象的表现'"><span class="taxon"></span>数学对象的表现</span></li><li class="item-summary"><a class="bullet" href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">■</a><span class="link local" onclick="window.location.href='#代数-几何对偶'"><span class="taxon"></span>代数–几何对偶</span></li><li class="item-summary"><a class="bullet" href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">■</a><span class="link local" onclick="window.location.href='#语法–语义对偶'"><span class="taxon"></span>语法–语义对偶</span></li><li class="item-summary"><a class="bullet" href="./探测.html" title="探测 [探测]">■</a><span class="link local" onclick="window.location.href='#探测'"><span class="taxon"></span>探测</span></li><li class="item-summary"><a class="bullet" href="./形变.html" title="形变 [形变]">■</a><span class="link local" onclick="window.location.href='#形变'"><span class="taxon"></span>形变</span></li></ul></details></div></nav>
 
 <article><section class="block" data-taxon=""><details open><summary id="notion"><header><h1><span class="taxon"></span>观念 <a class="slug" href="./notion.html">[notion]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>数学不只是公式和推理法则的游戏, 原因在于数学概念之上附加了人的<strong>观念</strong>. 它不属于逻辑, 但深刻地影响着人们做数学的方式.</p>
@@ -903,6 +903,18 @@ $$
 其中映射 $\{1,2\} \to \{1\}$ 对应的映射 $A^2\to A$ 正是 $A$ 上的运算; 映射 $\varnothing\to\{1\}$ 对应的映射 $\{*\}\to A$ 正是其单位元.</p>
 <p>在本例中, $\mathsf{Set}^\times$ 可以替换为任何对称幺半范畴 $\mathcal D$, 称对称幺半函子 $\mathsf{Fin}^\sqcup \to \mathcal D$ 为 $\mathcal D$ 中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>. 例如交换环 $R$ 上的模关于张量积构成的范畴 $\mathsf{Mod}_R^\otimes$ 中的交换代数就是通常说的交换 $R$-代数.
 因此我们借用范畴逻辑学的术语, 称 $\mathsf{Fin}^\sqcup$ 记录了交换代数的<strong>语法</strong> (syntax), 而种种具体的交换代数都是这个范畴到其它对称幺半范畴的函子, 称之为<strong>语义</strong> (semantics).</p>
+</details></section></p>
+<p><section class="block hide-metadata" data-taxon=""><details ><summary id="探测"><header><h1><span class="taxon"></span>探测 <a class="slug" href="./探测.html">[探测]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><p>一个数学分支研究的对象, 常常不是构成唯一确定的范畴, 而是构成许多个互相关联嵌套的范畴. 如</p>
+<ul>
+<li>分析学中, 同一个微分方程, 既可以求光滑函数空间中的解, 又可以求 $L^2$ 函数空间中的解, 等等.</li>
+<li>代数几何中, 几何对象的种类包括代数簇, 概形, 导出概形等等.</li>
+</ul>
+<p>但是, 总有些对象是最基本的, 是无论所考虑的范畴大小都必须囊括的. 例如</p>
+<ul>
+<li>分析学中考虑的所有函数空间都包含一类最基本的函数 — 紧支集光滑函数.</li>
+<li>代数几何中所有的几何对象的范畴都包含一类基本的几何对象 — 由基本代数对象所给出的 “仿射” 对象.</li>
+</ul>
+<p>在许多数学分支存在这样一个反复出现的现象: 用一些基本对象来 “<strong>探测</strong>”, 就足够描述更大的范畴中的对象; 甚至这样的探测过程常常就作为更大的范畴的<strong>定义</strong>.</p>
 </details></section></p>
 <p><section class="block hide-metadata" data-taxon=""><details ><summary id="形变"><header><h1><span class="taxon"></span>形变 <a class="slug" href="./形变.html">[形变]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>对于一族参数化的结构 (常为<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>结构), <strong>形变</strong> (deformation) 是其参数的延拓. 常常人们只关心参数的无穷小延拓, 即<strong>无穷小形变</strong>.</p>

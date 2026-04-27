@@ -1111,6 +1111,8 @@ $$
 为等价. <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 本质上使用的是这种定义.</p>
 <h4>一般对称幺半范畴</h4>
 <p>一般的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>中, 交换代数可用 <span class="link local"><a href="./PROP.html" title="PROP [PROP]">PROP</a></span> 定义. 具体地, 考虑有限集的范畴 $\mathsf{Fin}$ 配备<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>幺半结构. 对任意对称幺半范畴 $\mathcal C$, 其中的交换代数等同于对称幺半函子 $\mathsf{Fin} \to \mathcal C$.</p>
+<h3>通过松函子</h3>
+<p><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal C$ 中的交换代数也可定义为 $1$ 到 $\mathcal C$ 的<span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">松</a></span>对称幺半函子.</p>
 <h2>性质</h2>
 <h3>模范畴</h3>
 <p>在<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span>的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>中, 交换代数 $A$ 的模范畴 $\mathsf{Mod}(A)$ 仍为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span>的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, 且其中的交换代数等同于 $A$ 出发的交换代数同态:
@@ -1216,8 +1218,9 @@ $$</p>
 $$
 X\mapsto \bigsqcup_{n\geq 0} F(n)\otimes_{S_n}X^{\otimes n} = \int_{\mathsf{Fin}^{\simeq}}F(n)\otimes X^{\otimes n},
 $$
+(其中等号是由于 $\mathsf{Fin}^\simeq = \bigsqcup_{n\geq 0}\mathbf{B}S_n$)
 且该函子为<span class="link local"><a href="./解析函子.html" title="解析函子 (算畴理论) [解析函子]">解析函子</a></span>.
-这个函子可以如下理解. 由于 $\mathsf{Fin}^{\simeq}$ 是一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>对称幺半范畴, 对象 $X$ 给出一个对称幺半函子 $\mathsf{Fin}^{\simeq}\to\mathcal C, n\mapsto X^{\otimes n}$.</p>
+这个函子可以如下理解. 由于 $\mathsf{Fin}^{\simeq}$ 是一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>对称幺半范畴, 对象 $X$ 给出一个对称幺半函子 $\mathsf{Fin}^{\simeq}\to\mathcal C, n\mapsto X^{\otimes n}$; 其与 $F$ 的<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>.</p>
 <p>设 $F,G$ 是两个对称序列, 我们计算它们对应的自函子的复合:
 $$
 \begin{aligned}

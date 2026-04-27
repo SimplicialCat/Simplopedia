@@ -818,8 +818,19 @@
 <h3>链复形 $A_\infty$-代数</h3>
 </details></section><section class="block" data-taxon=""><details ><summary id="OpAlgMod"><header><h1><span class="taxon"></span>算畴上的代数上的模 <a class="slug" href="./OpAlgMod.html">[OpAlgMod]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>对于单色<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathcal O$ 上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span> $A$, 可以谈论 $A$-模. 这种模是如下的一个新的算畴 $\tilde{\mathcal O}$ 上的代数:</p>
-<p>记 $a$ 为算畴 $\mathcal O$ 唯一的颜色, 添加第二种颜色 $m$, 并且对每种运算 $a^n\to a$, 用 $m$ 代替左边的一个 $a$ 和右边的 $a$, 得到一种新的运算 $a\cdots a m a\cdots a \to m$, 即得到算畴 $\tilde{\mathcal O}$.</p>
+<p>对于单色<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathcal O$ 上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span> $A$, 可以谈论 $A$-模. 这种模是如下的一个新的算畴 $\widetilde{\mathcal O}$ 上的代数:</p>
+<p>记 $a$ 为算畴 $\mathcal O$ 唯一的颜色, 添加第二种颜色 $m$, 并且对每种运算 $a^n\to a$, 用 $m$ 代替左边的一个 $a$ 和右边的 $a$, 得到一种新的运算 $a\cdots a m a\cdots a \to m$, 即得到算畴 $\widetilde{\mathcal O}$.</p>
+<h2>定义</h2>
+<h3>通过算子范畴</h3>
+<p><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathcal O$ 的一种定义是 $\mathsf{Fin}_*$ 上的纤维化 $p\colon \mathcal O^\otimes\to\mathsf{Fin}_*$, 称为算子范畴. 我们定义一个新的算畴 $\widetilde{\mathcal O}$ 的算子范畴 $\widetilde {\mathcal O}^\times$ 为如下拉回:
+$$
+\begin{array}{ccc}
+\widetilde {\mathcal O}^\otimes &amp; \rightarrow &amp; \widetilde {\mathsf{Fin}}_* \\
+\downarrow &amp;  &amp; \downarrow \\
+\mathcal O^\otimes &amp; \rightarrow &amp; \mathsf{Fin}_*
+\end{array}
+$$
+其中 $\widetilde {\mathsf{Fin}}_*$ 是</p>
 <h2>例</h2>
 <p>对于 <span class="link local"><a href="./A∞-算畴.html" title="结合算畴 [A∞-算畴]">$\mathbb E_1$</a></span>-代数 (即<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>) $A$, 其上的模即为<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">双模</a></span>.</p>
 <h2>性质</h2>
@@ -879,7 +890,7 @@ $$
 \mathsf{Vect}^\Sigma \simeq \mathsf{Fun}^{\text{SymMon}}(\mathsf{Vect}^\Sigma,\mathsf{Vect}^\Sigma) \simeq \operatorname{End}(U).
 $$</p>
 <h3>作为算子范畴</h3>
-<p>算畴 $\mathcal C$ 也可定义为其<strong>算子范畴</strong> (category of operators) $\mathcal C^\otimes$. 它的对象为颜色的序列, 态射为 “算子”, 该算畴中的一个 $k$ 元运算给出 $k$ 个颜色的序列到一个颜色的态射. 这个范畴类似于 (一阶理论的) <span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法范畴</a></span>, 具有万有 $\mathcal C$-代数.</p>
+<p>算畴 $\mathcal C$ 也可定义为其<strong>算子范畴</strong> (category of operators) $\mathcal C^\otimes$. 它的对象为颜色的序列, 态射为 “算子”, 该算畴中的一个 $k$ 元运算给出 $k$ 个颜色的序列到一个颜色的态射. 这个范畴类似于 (一阶理论的) <span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法范畴</a></span>, 具有<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的 $\mathcal C$-代数.</p>
 <p>记 $\mathsf{Fin}_{*}$
 为有限带基点集合
 $\langle n \rangle := \{*,1,\cdots,n\}$

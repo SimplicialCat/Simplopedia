@@ -1440,8 +1440,19 @@ $$
 其中 $\mathcal A^{\text{rev}}$ 表示将 $\mathcal A$ 的乘法 (幺半结构) 反转.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="OpAlgMod"><header><h1><span class="taxon"></span>算畴上的代数上的模 <a class="slug" href="./OpAlgMod.html">[OpAlgMod]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>对于单色<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathcal O$ 上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span> $A$, 可以谈论 $A$-模. 这种模是如下的一个新的算畴 $\tilde{\mathcal O}$ 上的代数:</p>
-<p>记 $a$ 为算畴 $\mathcal O$ 唯一的颜色, 添加第二种颜色 $m$, 并且对每种运算 $a^n\to a$, 用 $m$ 代替左边的一个 $a$ 和右边的 $a$, 得到一种新的运算 $a\cdots a m a\cdots a \to m$, 即得到算畴 $\tilde{\mathcal O}$.</p>
+<p>对于单色<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathcal O$ 上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span> $A$, 可以谈论 $A$-模. 这种模是如下的一个新的算畴 $\widetilde{\mathcal O}$ 上的代数:</p>
+<p>记 $a$ 为算畴 $\mathcal O$ 唯一的颜色, 添加第二种颜色 $m$, 并且对每种运算 $a^n\to a$, 用 $m$ 代替左边的一个 $a$ 和右边的 $a$, 得到一种新的运算 $a\cdots a m a\cdots a \to m$, 即得到算畴 $\widetilde{\mathcal O}$.</p>
+<h2>定义</h2>
+<h3>通过算子范畴</h3>
+<p><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathcal O$ 的一种定义是 $\mathsf{Fin}_*$ 上的纤维化 $p\colon \mathcal O^\otimes\to\mathsf{Fin}_*$, 称为算子范畴. 我们定义一个新的算畴 $\widetilde{\mathcal O}$ 的算子范畴 $\widetilde {\mathcal O}^\times$ 为如下拉回:
+$$
+\begin{array}{ccc}
+\widetilde {\mathcal O}^\otimes &amp; \rightarrow &amp; \widetilde {\mathsf{Fin}}_* \\
+\downarrow &amp;  &amp; \downarrow \\
+\mathcal O^\otimes &amp; \rightarrow &amp; \mathsf{Fin}_*
+\end{array}
+$$
+其中 $\widetilde {\mathsf{Fin}}_*$ 是</p>
 <h2>例</h2>
 <p>对于 <span class="link local"><a href="./A∞-算畴.html" title="结合算畴 [A∞-算畴]">$\mathbb E_1$</a></span>-代数 (即<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>) $A$, 其上的模即为<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">双模</a></span>.</p>
 <h2>性质</h2>
@@ -2093,8 +2104,9 @@ $$</p>
 $$
 X\mapsto \bigsqcup_{n\geq 0} F(n)\otimes_{S_n}X^{\otimes n} = \int_{\mathsf{Fin}^{\simeq}}F(n)\otimes X^{\otimes n},
 $$
+(其中等号是由于 $\mathsf{Fin}^\simeq = \bigsqcup_{n\geq 0}\mathbf{B}S_n$)
 且该函子为<span class="link local"><a href="./解析函子.html" title="解析函子 (算畴理论) [解析函子]">解析函子</a></span>.
-这个函子可以如下理解. 由于 $\mathsf{Fin}^{\simeq}$ 是一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>对称幺半范畴, 对象 $X$ 给出一个对称幺半函子 $\mathsf{Fin}^{\simeq}\to\mathcal C, n\mapsto X^{\otimes n}$.</p>
+这个函子可以如下理解. 由于 $\mathsf{Fin}^{\simeq}$ 是一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>对称幺半范畴, 对象 $X$ 给出一个对称幺半函子 $\mathsf{Fin}^{\simeq}\to\mathcal C, n\mapsto X^{\otimes n}$; 其与 $F$ 的<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>.</p>
 <p>设 $F,G$ 是两个对称序列, 我们计算它们对应的自函子的复合:
 $$
 \begin{aligned}
@@ -2282,12 +2294,15 @@ $$
 A\otimes_B A \rightrightarrows A
 $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="松幺半函子"><header><h1><span class="taxon"></span>松幺半函子 <a class="slug" href="./松幺半函子.html">[松幺半函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>松幺半函子是<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>之间的一种态射 $F \colon \mathcal C \to\mathcal D$, 它不一定是函子, 因为它不要求保持幺半结构, 而是要求具有某些单方向的态射, 例如
+<p>松幺半函子是<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>之间的一种函子 $F \colon \mathcal C \to\mathcal D$, 它不要求保持幺半结构, 而是要求具有某些单方向的态射, 例如
 $$
  F(X) \otimes F(Y) \to F(X \otimes Y) .
 $$
 这些态射不一定可逆.</p>
 <p>若将幺半范畴视为单对象 $2$-范畴 $\mathbf{B}\mathcal C$, 则松幺半函子是<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span>的特例.</p>
+<p>对一般的算畴 $\mathcal O$, 也可定义松 $\mathcal O$-幺半函子.</p>
+<h2>定义</h2>
+<h3>通过算子范畴</h3>
 <h2>例</h2>
 <h3>结合代数</h3>
 <p>对于幺半范畴 $\mathcal C$, 松幺半函子 $1\to \mathcal C$ 等同于 $\mathcal C$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
@@ -2489,7 +2504,7 @@ $$
 \mathsf{Vect}^\Sigma \simeq \mathsf{Fun}^{\text{SymMon}}(\mathsf{Vect}^\Sigma,\mathsf{Vect}^\Sigma) \simeq \operatorname{End}(U).
 $$</p>
 <h3>作为算子范畴</h3>
-<p>算畴 $\mathcal C$ 也可定义为其<strong>算子范畴</strong> (category of operators) $\mathcal C^\otimes$. 它的对象为颜色的序列, 态射为 “算子”, 该算畴中的一个 $k$ 元运算给出 $k$ 个颜色的序列到一个颜色的态射. 这个范畴类似于 (一阶理论的) <span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法范畴</a></span>, 具有万有 $\mathcal C$-代数.</p>
+<p>算畴 $\mathcal C$ 也可定义为其<strong>算子范畴</strong> (category of operators) $\mathcal C^\otimes$. 它的对象为颜色的序列, 态射为 “算子”, 该算畴中的一个 $k$ 元运算给出 $k$ 个颜色的序列到一个颜色的态射. 这个范畴类似于 (一阶理论的) <span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法范畴</a></span>, 具有<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的 $\mathcal C$-代数.</p>
 <p>记 $\mathsf{Fin}_{*}$
 为有限带基点集合
 $\langle n \rangle := \{*,1,\cdots,n\}$

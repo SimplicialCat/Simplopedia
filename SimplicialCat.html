@@ -5181,8 +5181,19 @@ $$
 <p><span class="link local"><a href="./Jacobi多项式.html" title="Jacobi 多项式 [Jacobi多项式]">Jacobi 多项式</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="OpAlgMod"><header><h1><span class="taxon"></span>算畴上的代数上的模 <a class="slug" href="./OpAlgMod.html">[OpAlgMod]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>对于单色<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathcal O$ 上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span> $A$, 可以谈论 $A$-模. 这种模是如下的一个新的算畴 $\tilde{\mathcal O}$ 上的代数:</p>
-<p>记 $a$ 为算畴 $\mathcal O$ 唯一的颜色, 添加第二种颜色 $m$, 并且对每种运算 $a^n\to a$, 用 $m$ 代替左边的一个 $a$ 和右边的 $a$, 得到一种新的运算 $a\cdots a m a\cdots a \to m$, 即得到算畴 $\tilde{\mathcal O}$.</p>
+<p>对于单色<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathcal O$ 上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span> $A$, 可以谈论 $A$-模. 这种模是如下的一个新的算畴 $\widetilde{\mathcal O}$ 上的代数:</p>
+<p>记 $a$ 为算畴 $\mathcal O$ 唯一的颜色, 添加第二种颜色 $m$, 并且对每种运算 $a^n\to a$, 用 $m$ 代替左边的一个 $a$ 和右边的 $a$, 得到一种新的运算 $a\cdots a m a\cdots a \to m$, 即得到算畴 $\widetilde{\mathcal O}$.</p>
+<h2>定义</h2>
+<h3>通过算子范畴</h3>
+<p><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathcal O$ 的一种定义是 $\mathsf{Fin}_*$ 上的纤维化 $p\colon \mathcal O^\otimes\to\mathsf{Fin}_*$, 称为算子范畴. 我们定义一个新的算畴 $\widetilde{\mathcal O}$ 的算子范畴 $\widetilde {\mathcal O}^\times$ 为如下拉回:
+$$
+\begin{array}{ccc}
+\widetilde {\mathcal O}^\otimes &amp; \rightarrow &amp; \widetilde {\mathsf{Fin}}_* \\
+\downarrow &amp;  &amp; \downarrow \\
+\mathcal O^\otimes &amp; \rightarrow &amp; \mathsf{Fin}_*
+\end{array}
+$$
+其中 $\widetilde {\mathsf{Fin}}_*$ 是</p>
 <h2>例</h2>
 <p>对于 <span class="link local"><a href="./A∞-算畴.html" title="结合算畴 [A∞-算畴]">$\mathbb E_1$</a></span>-代数 (即<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>) $A$, 其上的模即为<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">双模</a></span>.</p>
 <h2>性质</h2>
@@ -8130,6 +8141,8 @@ $$
 <h3>滤</h3>
 <p><span class="link local"><a href="./A1-Gm.html" title="仿射直线对乘法群的商 [A1-Gm]">仿射直线对乘法群的商</a></span> $\mathbb A^1 / \mathbb G_m$</p>
 <p>…</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./吸引子.html" title="吸引子, 排斥子 [吸引子]">吸引子, 排斥子</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="fragFOL"><header><h1><span class="taxon"></span>一阶逻辑的片断 <a class="slug" href="./fragFOL.html">[fragFOL]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon=""><details ><summary id="homalg"><header><h1><span class="taxon"></span>同调代数 <a class="slug" href="./homalg.html">[homalg]</a></h1><div class="metadata"><ul><li class="meta-item">讲义</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文的目的是向了解传统同调代数的读者介绍其高阶范畴论观点.</p>
@@ -9406,6 +9419,18 @@ $$
 其中映射 $\{1,2\} \to \{1\}$ 对应的映射 $A^2\to A$ 正是 $A$ 上的运算; 映射 $\varnothing\to\{1\}$ 对应的映射 $\{*\}\to A$ 正是其单位元.</p>
 <p>在本例中, $\mathsf{Set}^\times$ 可以替换为任何对称幺半范畴 $\mathcal D$, 称对称幺半函子 $\mathsf{Fin}^\sqcup \to \mathcal D$ 为 $\mathcal D$ 中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>. 例如交换环 $R$ 上的模关于张量积构成的范畴 $\mathsf{Mod}_R^\otimes$ 中的交换代数就是通常说的交换 $R$-代数.
 因此我们借用范畴逻辑学的术语, 称 $\mathsf{Fin}^\sqcup$ 记录了交换代数的<strong>语法</strong> (syntax), 而种种具体的交换代数都是这个范畴到其它对称幺半范畴的函子, 称之为<strong>语义</strong> (semantics).</p>
+</details></section></p>
+<p><section class="block" data-taxon=""><details ><summary id="探测"><header><h1><span class="taxon"></span>探测 <a class="slug" href="./探测.html">[探测]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><p>一个数学分支研究的对象, 常常不是构成唯一确定的范畴, 而是构成许多个互相关联嵌套的范畴. 如</p>
+<ul>
+<li>分析学中, 同一个微分方程, 既可以求光滑函数空间中的解, 又可以求 $L^2$ 函数空间中的解, 等等.</li>
+<li>代数几何中, 几何对象的种类包括代数簇, 概形, 导出概形等等.</li>
+</ul>
+<p>但是, 总有些对象是最基本的, 是无论所考虑的范畴大小都必须囊括的. 例如</p>
+<ul>
+<li>分析学中考虑的所有函数空间都包含一类最基本的函数 — 紧支集光滑函数.</li>
+<li>代数几何中所有的几何对象的范畴都包含一类基本的几何对象 — 由基本代数对象所给出的 “仿射” 对象.</li>
+</ul>
+<p>在许多数学分支存在这样一个反复出现的现象: 用一些基本对象来 “<strong>探测</strong>”, 就足够描述更大的范畴中的对象; 甚至这样的探测过程常常就作为更大的范畴的<strong>定义</strong>.</p>
 </details></section></p>
 <p><section class="block" data-taxon=""><details ><summary id="形变"><header><h1><span class="taxon"></span>形变 <a class="slug" href="./形变.html">[形变]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>对于一族参数化的结构 (常为<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>结构), <strong>形变</strong> (deformation) 是其参数的延拓. 常常人们只关心参数的无穷小延拓, 即<strong>无穷小形变</strong>.</p>
@@ -11861,6 +11886,8 @@ $$
 为等价. <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 本质上使用的是这种定义.</p>
 <h4>一般对称幺半范畴</h4>
 <p>一般的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>中, 交换代数可用 <span class="link local"><a href="./PROP.html" title="PROP [PROP]">PROP</a></span> 定义. 具体地, 考虑有限集的范畴 $\mathsf{Fin}$ 配备<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>幺半结构. 对任意对称幺半范畴 $\mathcal C$, 其中的交换代数等同于对称幺半函子 $\mathsf{Fin} \to \mathcal C$.</p>
+<h3>通过松函子</h3>
+<p><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal C$ 中的交换代数也可定义为 $1$ 到 $\mathcal C$ 的<span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">松</a></span>对称幺半函子.</p>
 <h2>性质</h2>
 <h3>模范畴</h3>
 <p>在<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span>的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>中, 交换代数 $A$ 的模范畴 $\mathsf{Mod}(A)$ 仍为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span>的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, 且其中的交换代数等同于 $A$ 出发的交换代数同态:
@@ -12272,6 +12299,9 @@ $$
 $$
 \int_{c\in \mathcal C} F(c) \times \operatorname{Hom}_{\mathcal C}(-,X) \simeq F(X).
 $$</p>
+<h2>定义</h2>
+<p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">todo</a></span></p>
+<h3>作为余极限</h3>
 <h2>例</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="余等化子"><header><h1><span class="taxon"></span>余等化子 <a class="slug" href="./余等化子.html">[余等化子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon=""><details ><summary id="余纤维列"><header><h1><span class="taxon"></span>“余纤维列” <a class="slug" href="./余纤维列.html">[余纤维列]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -14677,6 +14707,8 @@ $$
 <li>$\neg\neg(x\wedge y) = \neg\neg x \wedge \neg\neg y$.</li>
 </ul>
 <p><strong>命题</strong>. 若 $x$ 有补元素 (即满足 $x\vee a = 1$, $x\wedge a = 0$ 的元素 $a$), 则补元素必为 $\neg x$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="吸引子"><header><h1><span class="taxon"></span>吸引子, 排斥子 <a class="slug" href="./吸引子.html">[吸引子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="周炜良定理"><header><h1><span class="taxon"></span>“周炜良定理” <a class="slug" href="./周炜良定理.html">[周炜良定理]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>$\mathbb P^n$ 的紧复子流形是若干齐次多项式的公共零点集.</p>
 <p>见<span class="link local"><a href="./复流形.html" title="“复流形” [复流形]">复流形</a></span>, <span class="link local"><a href="./代数簇.html" title="“代数簇” [代数簇]">代数簇</a></span>.</p>
@@ -15124,8 +15156,9 @@ $$</p>
 $$
 X\mapsto \bigsqcup_{n\geq 0} F(n)\otimes_{S_n}X^{\otimes n} = \int_{\mathsf{Fin}^{\simeq}}F(n)\otimes X^{\otimes n},
 $$
+(其中等号是由于 $\mathsf{Fin}^\simeq = \bigsqcup_{n\geq 0}\mathbf{B}S_n$)
 且该函子为<span class="link local"><a href="./解析函子.html" title="解析函子 (算畴理论) [解析函子]">解析函子</a></span>.
-这个函子可以如下理解. 由于 $\mathsf{Fin}^{\simeq}$ 是一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>对称幺半范畴, 对象 $X$ 给出一个对称幺半函子 $\mathsf{Fin}^{\simeq}\to\mathcal C, n\mapsto X^{\otimes n}$.</p>
+这个函子可以如下理解. 由于 $\mathsf{Fin}^{\simeq}$ 是一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>对称幺半范畴, 对象 $X$ 给出一个对称幺半函子 $\mathsf{Fin}^{\simeq}\to\mathcal C, n\mapsto X^{\otimes n}$; 其与 $F$ 的<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>.</p>
 <p>设 $F,G$ 是两个对称序列, 我们计算它们对应的自函子的复合:
 $$
 \begin{aligned}
@@ -17361,7 +17394,17 @@ $$
 T=d^\nabla(\operatorname{id}).
 $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="排中律"><header><h1><span class="taxon"></span>排中律 <a class="slug" href="./排中律.html">[排中律]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./逻辑.html" title="逻辑 [逻辑]">逻辑</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-</details></section><section class="block" data-taxon=""><details ><summary id="探测"><header><h1><span class="taxon"></span>探测 <a class="slug" href="./探测.html">[探测]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><p>探测</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="探测"><header><h1><span class="taxon"></span>探测 <a class="slug" href="./探测.html">[探测]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><p>一个数学分支研究的对象, 常常不是构成唯一确定的范畴, 而是构成许多个互相关联嵌套的范畴. 如</p>
+<ul>
+<li>分析学中, 同一个微分方程, 既可以求光滑函数空间中的解, 又可以求 $L^2$ 函数空间中的解, 等等.</li>
+<li>代数几何中, 几何对象的种类包括代数簇, 概形, 导出概形等等.</li>
+</ul>
+<p>但是, 总有些对象是最基本的, 是无论所考虑的范畴大小都必须囊括的. 例如</p>
+<ul>
+<li>分析学中考虑的所有函数空间都包含一类最基本的函数 — 紧支集光滑函数.</li>
+<li>代数几何中所有的几何对象的范畴都包含一类基本的几何对象 — 由基本代数对象所给出的 “仿射” 对象.</li>
+</ul>
+<p>在许多数学分支存在这样一个反复出现的现象: 用一些基本对象来 “<strong>探测</strong>”, 就足够描述更大的范畴中的对象; 甚至这样的探测过程常常就作为更大的范畴的<strong>定义</strong>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="推出"><header><h1><span class="taxon"></span>推出 (一种余极限) <a class="slug" href="./推出.html">[推出]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon=""><details ><summary id="推前"><header><h1><span class="taxon"></span>推前, 拉回 (纤维范畴) <a class="slug" href="./推前.html">[推前]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>对于基范畴 $\mathcal B$ 上的范畴 $p\colon \mathcal E \to \mathcal B$, <strong>推前</strong> (pushforward) 和<strong>拉回</strong> (pullback) 指的是 $\mathcal B$ 中态射的有某种万有性质的<strong>提升</strong>. 具有一切推前或拉回的范畴称为<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">纤维范畴</a></span>.</p>
@@ -17948,12 +17991,15 @@ $$
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">松幺半函子</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="松幺半函子"><header><h1><span class="taxon"></span>松幺半函子 <a class="slug" href="./松幺半函子.html">[松幺半函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>松幺半函子是<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>之间的一种态射 $F \colon \mathcal C \to\mathcal D$, 它不一定是函子, 因为它不要求保持幺半结构, 而是要求具有某些单方向的态射, 例如
+<p>松幺半函子是<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>之间的一种函子 $F \colon \mathcal C \to\mathcal D$, 它不要求保持幺半结构, 而是要求具有某些单方向的态射, 例如
 $$
  F(X) \otimes F(Y) \to F(X \otimes Y) .
 $$
 这些态射不一定可逆.</p>
 <p>若将幺半范畴视为单对象 $2$-范畴 $\mathbf{B}\mathcal C$, 则松幺半函子是<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span>的特例.</p>
+<p>对一般的算畴 $\mathcal O$, 也可定义松 $\mathcal O$-幺半函子.</p>
+<h2>定义</h2>
+<h3>通过算子范畴</h3>
 <h2>例</h2>
 <h3>结合代数</h3>
 <p>对于幺半范畴 $\mathcal C$, 松幺半函子 $1\to \mathcal C$ 等同于 $\mathcal C$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
@@ -19644,7 +19690,7 @@ $$
 \mathsf{Vect}^\Sigma \simeq \mathsf{Fun}^{\text{SymMon}}(\mathsf{Vect}^\Sigma,\mathsf{Vect}^\Sigma) \simeq \operatorname{End}(U).
 $$</p>
 <h3>作为算子范畴</h3>
-<p>算畴 $\mathcal C$ 也可定义为其<strong>算子范畴</strong> (category of operators) $\mathcal C^\otimes$. 它的对象为颜色的序列, 态射为 “算子”, 该算畴中的一个 $k$ 元运算给出 $k$ 个颜色的序列到一个颜色的态射. 这个范畴类似于 (一阶理论的) <span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法范畴</a></span>, 具有万有 $\mathcal C$-代数.</p>
+<p>算畴 $\mathcal C$ 也可定义为其<strong>算子范畴</strong> (category of operators) $\mathcal C^\otimes$. 它的对象为颜色的序列, 态射为 “算子”, 该算畴中的一个 $k$ 元运算给出 $k$ 个颜色的序列到一个颜色的态射. 这个范畴类似于 (一阶理论的) <span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法范畴</a></span>, 具有<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的 $\mathcal C$-代数.</p>
 <p>记 $\mathsf{Fin}_{*}$
 为有限带基点集合
 $\langle n \rangle := \{*,1,\cdots,n\}$
