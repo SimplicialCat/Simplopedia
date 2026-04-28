@@ -809,6 +809,46 @@
 
 <article><section class="block" data-taxon=""><details open><summary id="吸引子"><header><h1><span class="taxon"></span>吸引子, 排斥子 <a class="slug" href="./吸引子.html">[吸引子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
+<p>对于带 <span class="link local"><a href="./乘法群概形.html" title="乘法群概形 [乘法群概形]">$\mathbb G_m$</a></span>-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>的概形 (或类似几何对象) $X$, 定义其<strong>吸引子</strong> (attractor) $X^+$ 为 $\mathbb G_m$-<span class="link local"><a href="./等变映射.html" title="等变映射 [等变映射]">等变映射</a></span>的空间
+$$
+X^+ = \operatorname{Map}^{\mathbb G_m}(\mathbb A^1,X) = \operatorname{Map}_{\mathbf{B}\mathbb G_m}(\mathbb A^1 / \mathbb G_m, X/\mathbb G_m).
+$$
+另见 <span class="link local"><a href="./A1-Gm.html" title="仿射直线对乘法群的商 [A1-Gm]">$\mathbb A^1 / \mathbb G_m$</a></span>.</p>
+<p>考虑另一个仿射直线 $\mathbb A^1_- := \mathbb P^1\setminus \{0\} = \operatorname{Spec}\mathbb{Z}[x^{-1}]$, 定义 $X$ 的<strong>排斥子</strong> (repeller) 为
+$$
+X^- = \operatorname{Map}^{\mathbb G_m}(\mathbb A^1_-,X).
+$$
+排斥子等同于 $\mathbb G_m$ 逆作用的吸引子.</p>
+<h2>性质</h2>
+<p>吸引子 $X^+$ 带有幺半群 $\mathbb A^1$ 的作用, 以及到原空间 $X$ 的映射 $X^+\to X$.</p>
+<p><figure><img src="./吸引子-1.svg" class="color-invert"/></figure></p>
+<p><figure><img src="./吸引子-2.svg" class="color-invert"/></figure></p>
+<ul>
+<li>$i^+$ 为闭嵌入.</li>
+</ul>
+<h2>例</h2>
+<h3>仿射情形</h3>
+<p>设 $X = \operatorname{Spec} A$, $A$ 为 $\mathbb{Z}$-分次环 (见<span class="link local"><a href="./fil-gr.html" title="滤与分次的叠观点 [fil-gr]">滤与分次的叠观点</a></span>). 那么
+$$
+X^+ = \operatorname{Spec}A^+
+$$
+$A^+$ 是 $A$ 的极大 $\mathbb{Z}_{\geq 0}$-分次商, 也即 $A$ 关于所有负次数元素的商. <sup class="footnote-reference" id="吸引子_1-back"><a href="#吸引子_1">1</a></sup></p>
+<div class="footnote-definition" id="吸引子_1">
+  <sup class="footnote-definition-label"><a href="#吸引子_1-back">1</a></sup>
+<p>注意 $A^+$ 是 $A$ 的<strong>商</strong>, 这不同于 $A$ 的 $\geq 0$ 次元素构成的<strong>子</strong>代数. 例如 $\mathbb{Z}[x^{\pm 1}]$ 的极大 $\mathbb{Z}_{\geq 0}$-分次商是 $0$, 因为 $x^{-1}$ 生成单位理想.</p>
+</div>
+<p><em>证明</em>.
+对任意环 $B$, $\operatorname{Spec}B$ 到 $X^+$ 的映射等同于 $\mathbb G_m$-等变映射 $\operatorname{Spec}B \times\mathbb A^1\to X$, 也即分次环的态射 $A\to B[x]$. 这个态射唯一地穿过 $A^+$. $\square$</p>
+<p><strong>例</strong>. $\mathbb G_m$ 作用于 $\mathbb A^n$, 吸引子为整个 $\mathbb A^n$.</p>
+<p><strong>例</strong>. 考虑 $X=\mathbb A^2_{\tau_1,\tau_2}\to \mathbb A^1_t$, $(\tau_1,\tau_2)\mapsto \tau_1\tau_2$. 那么当 $t\neq 0$ 时 $X_t$ 是双曲线 $\tau_1\tau_2 = t$. 当 $t=0$ 时, $X_0$ 是两条直线. 考虑 $\mathbb G_m$ 在 $X$ 上的作用, $\lambda (\tau_1,\tau_2) = (\lambda\tau_1,\lambda^{-1}\tau_2)$. 该作用与 $X\to \mathbb A^1$ 相容; 从而 $\mathbb G_m$ 作用在每个纤维 $X_t$ 上. 此时 $X_0$ 分解为 $X_0^+ \cup X_0^-$, 其中吸引子 $X_0^+ = \{\tau_2 = 0\}$, 排斥子 $X_0^- = \{\tau_1 = 0\}$.</p>
+<img src="/assets/attractor-repeller.svg" alt="" width="500" style="display:block; margin:auto;">
+<h3>射影直线</h3>
+<p>设 $X = \mathbb P^1$, 带有 $\mathbb G_m$ 的通常作用. 那么
+$$
+X^+ = \mathbb A^1 \sqcup \{\infty\}.
+$$</p>
+<h3>抛物子群</h3>
+<p>设 $G$ 为<span class="link local"><a href="./约化群.html" title="约化群 [约化群]">约化群</a></span>, $\lambda\colon \mathbb G_m \to G$ 为<span class="link local"><a href="./特征.html" title="特征, 余特征 [特征]">余特征</a></span>, 那么</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="fil-gr"><header><h1><span class="taxon"></span>滤与分次的叠观点 <a class="slug" href="./fil-gr.html">[fil-gr]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./代数几何.html" title="代数几何 [代数几何]">代数几何</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>陈述</h2>
 <h3>分次与半群作用</h3>
@@ -824,4 +864,45 @@ $$
 <p>…</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./吸引子.html" title="吸引子, 排斥子 [吸引子]">吸引子, 排斥子</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="index"><header><h1><span class="taxon"></span>单纯百科 Simplopedia <a class="slug" href="./index.html">[index]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>这里是<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>的主目录.</p>
+<p>欢迎访问<span class="link external"><a href="https://simplicialcat.github.io/index.html?lang=zh" title="我的个人主页 [https://simplicialcat.github.io/index.html?lang=zh]">我的个人主页</a></span>.</p>
+<p>You may also want to visit <span class="link external"><a href="https://simplicialcat.github.io/index.html?lang=en" title="my personal main page [https://simplicialcat.github.io/index.html?lang=en]">my personal main page</a></span> (in English).</p>
+<p>可以试试<span class="link local"><a href="./search.html" title="搜索 [search]">搜索单纯百科的页面</a></span>.</p>
+<h2>分类</h2>
+<p>单纯百科的页面分为以下几类.</p>
+<ul>
+<li>百科 : 数学概念. 这类页面构成了单纯百科的主体.</li>
+<li><span class="link local"><a href="./notion.html" title="观念 [notion]">观念</a></span> : 模糊而普遍的数学思想.</li>
+<li><span class="link local"><a href="./pedagogy.html" title="教学 [pedagogy]">教学</a></span> : 面向基础读者的科普.</li>
+<li><span class="link local"><a href="./notes.html" title="讲稿, 笔记 [notes]">讲稿, 笔记</a></span> : 一些讨论班的讲稿, 文献的阅读笔记, 以及零散的见闻.</li>
+<li>文献 : 其它页面中引用到的参考文献.</li>
+<li><span class="link local"><a href="./subject.html" title="学科 [subject]">学科</a></span> : 用于部分页面的收集和分类.</li>
+<li>Meta : 关于单纯百科本身.</li>
+<li><span class="link local"><a href="./nonmath.html" title="非数学 [nonmath]">非数学</a></span> : 一些不属于上述分类, 且不属于数学的东西.</li>
+</ul>
+<p>点击 <span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span> 可以看到本站的所有页面.</p>
+<p>欢迎所有读者<span class="link external"><a href="mailto:wangjiny24@mails.tsinghua.edu.cn" title="通过邮箱联系我 [mailto:wangjiny24@mails.tsinghua.edu.cn]">通过邮箱联系我</a></span> <code>wangjiny24@mails.tsinghua.edu.cn</code> , 交流, 催更. (对于好友, 通过微信或 QQ 联系我当然是更加欢迎的.)</p>
+<p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">亟需施工处</a></span>列表 (“TODO list”)</p>
+<p><span class="link local"><a href="./terminologies.html" title="单纯百科 - 术语翻译表 [terminologies]">术语翻译表</a></span></p>
+<h2>最近</h2>
+<p><span class="link local"><a href="./吸引子.html" title="吸引子, 排斥子 [吸引子]">吸引子, 排斥子</a></span></p>
+<p><span class="link local"><a href="./Milnor纤维化.html" title="Milnor 纤维化 [Milnor纤维化]">Milnor 纤维化</a></span></p>
+<p><span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span></p>
+<p><span class="link local"><a href="./局部意象.html" title="局部意象 [局部意象]">局部意象</a></span></p>
+<p><span class="link local"><a href="./法形变.html" title="法形变 [法形变]">法形变</a></span>, <span class="link local"><a href="./微局部化.html" title="微局部化 [微局部化]">微局部化</a></span>, <span class="link local"><a href="./流形上的层.html" title="流形上的层 [流形上的层]">流形上的层</a></span>, <span class="link local"><a href="./microPerv.html" title="微局部偏屈层 [microPerv]">微局部偏屈层</a></span></p>
+<p><span class="link local"><a href="./love-and-math.html" title="爱与数学 [love-and-math]">爱与数学</a></span></p>
+<p><span class="link local"><a href="./余完备化.html" title="余完备化 [余完备化]">余完备化</a></span></p>
+<p><span class="link local"><a href="./Galois扩张.html" title="Galois 扩张 [Galois扩张]">Galois 扩张</a></span></p>
+<p><span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">算畴上的代数上的模</a></span></p>
+<p><span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>, <span class="link local"><a href="./LCCC.html" title="局部积闭范畴 [LCCC]">LCCC</a></span>, <span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>, <span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>, <span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span></p>
+<p><span class="link local"><a href="./高阶Morita范畴.html" title="高阶 Morita 范畴 [高阶Morita范畴]">高阶 Morita 范畴</a></span></p>
+<p><span class="link local"><a href="./Morita等价.html" title="Morita 等价 [Morita等价]">Morita 等价</a></span></p>
+<p><span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">充实范畴上的模</a></span></p>
+<p><span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断性</a></span></p>
+<p><span class="link local"><a href="./交叉模.html" title="交叉模 [交叉模]">交叉模</a></span></p>
+<p><span class="link local"><a href="./Gestalt.html" title="Gestalt [Gestalt]">Gestalt</a></span></p>
+<p><span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span></p>
+<p><span class="link local"><a href="./非交换Čech上同调.html" title="非交换 Čech 上同调 [非交换Čech上同调]">非交换 Čech 上同调</a></span></p>
+<p><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></p>
 </details></section></details></section></footer></article></div></body></html>

@@ -894,6 +894,48 @@ $$
 $$</p>
 <h3>稳定丛</h3>
 <p>所谓稳定丛是某种意义上 “一般” 的丛, 其自同构平凡; 稳定丛的模空间是 $\mathrm{Bun}_G$ 中的开集 $\mathrm{Bun}_G^\circ$, 且该开集为光滑代数簇. <span class="link local"><a href="./Hitchin模空间.html" title=" [Hitchin模空间]">Hitchin 模叠</a></span>是 $T^*\mathrm{Bun}_G^\circ$ 的某种紧化.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="吸引子"><header><h1><span class="taxon"></span>吸引子, 排斥子 <a class="slug" href="./吸引子.html">[吸引子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于带 <span class="link local"><a href="./乘法群概形.html" title="乘法群概形 [乘法群概形]">$\mathbb G_m$</a></span>-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>的概形 (或类似几何对象) $X$, 定义其<strong>吸引子</strong> (attractor) $X^+$ 为 $\mathbb G_m$-<span class="link local"><a href="./等变映射.html" title="等变映射 [等变映射]">等变映射</a></span>的空间
+$$
+X^+ = \operatorname{Map}^{\mathbb G_m}(\mathbb A^1,X) = \operatorname{Map}_{\mathbf{B}\mathbb G_m}(\mathbb A^1 / \mathbb G_m, X/\mathbb G_m).
+$$
+另见 <span class="link local"><a href="./A1-Gm.html" title="仿射直线对乘法群的商 [A1-Gm]">$\mathbb A^1 / \mathbb G_m$</a></span>.</p>
+<p>考虑另一个仿射直线 $\mathbb A^1_- := \mathbb P^1\setminus \{0\} = \operatorname{Spec}\mathbb{Z}[x^{-1}]$, 定义 $X$ 的<strong>排斥子</strong> (repeller) 为
+$$
+X^- = \operatorname{Map}^{\mathbb G_m}(\mathbb A^1_-,X).
+$$
+排斥子等同于 $\mathbb G_m$ 逆作用的吸引子.</p>
+<h2>性质</h2>
+<p>吸引子 $X^+$ 带有幺半群 $\mathbb A^1$ 的作用, 以及到原空间 $X$ 的映射 $X^+\to X$.</p>
+<p><figure><img src="./吸引子-1.svg" class="color-invert"/></figure></p>
+<p><figure><img src="./吸引子-2.svg" class="color-invert"/></figure></p>
+<ul>
+<li>$i^+$ 为闭嵌入.</li>
+</ul>
+<h2>例</h2>
+<h3>仿射情形</h3>
+<p>设 $X = \operatorname{Spec} A$, $A$ 为 $\mathbb{Z}$-分次环 (见<span class="link local"><a href="./fil-gr.html" title="滤与分次的叠观点 [fil-gr]">滤与分次的叠观点</a></span>). 那么
+$$
+X^+ = \operatorname{Spec}A^+
+$$
+$A^+$ 是 $A$ 的极大 $\mathbb{Z}_{\geq 0}$-分次商, 也即 $A$ 关于所有负次数元素的商. <sup class="footnote-reference" id="吸引子_1-back"><a href="#吸引子_1">1</a></sup></p>
+<div class="footnote-definition" id="吸引子_1">
+  <sup class="footnote-definition-label"><a href="#吸引子_1-back">1</a></sup>
+<p>注意 $A^+$ 是 $A$ 的<strong>商</strong>, 这不同于 $A$ 的 $\geq 0$ 次元素构成的<strong>子</strong>代数. 例如 $\mathbb{Z}[x^{\pm 1}]$ 的极大 $\mathbb{Z}_{\geq 0}$-分次商是 $0$, 因为 $x^{-1}$ 生成单位理想.</p>
+</div>
+<p><em>证明</em>.
+对任意环 $B$, $\operatorname{Spec}B$ 到 $X^+$ 的映射等同于 $\mathbb G_m$-等变映射 $\operatorname{Spec}B \times\mathbb A^1\to X$, 也即分次环的态射 $A\to B[x]$. 这个态射唯一地穿过 $A^+$. $\square$</p>
+<p><strong>例</strong>. $\mathbb G_m$ 作用于 $\mathbb A^n$, 吸引子为整个 $\mathbb A^n$.</p>
+<p><strong>例</strong>. 考虑 $X=\mathbb A^2_{\tau_1,\tau_2}\to \mathbb A^1_t$, $(\tau_1,\tau_2)\mapsto \tau_1\tau_2$. 那么当 $t\neq 0$ 时 $X_t$ 是双曲线 $\tau_1\tau_2 = t$. 当 $t=0$ 时, $X_0$ 是两条直线. 考虑 $\mathbb G_m$ 在 $X$ 上的作用, $\lambda (\tau_1,\tau_2) = (\lambda\tau_1,\lambda^{-1}\tau_2)$. 该作用与 $X\to \mathbb A^1$ 相容; 从而 $\mathbb G_m$ 作用在每个纤维 $X_t$ 上. 此时 $X_0$ 分解为 $X_0^+ \cup X_0^-$, 其中吸引子 $X_0^+ = \{\tau_2 = 0\}$, 排斥子 $X_0^- = \{\tau_1 = 0\}$.</p>
+<img src="/assets/attractor-repeller.svg" alt="" width="500" style="display:block; margin:auto;">
+<h3>射影直线</h3>
+<p>设 $X = \mathbb P^1$, 带有 $\mathbb G_m$ 的通常作用. 那么
+$$
+X^+ = \mathbb A^1 \sqcup \{\infty\}.
+$$</p>
+<h3>抛物子群</h3>
+<p>设 $G$ 为<span class="link local"><a href="./约化群.html" title="约化群 [约化群]">约化群</a></span>, $\lambda\colon \mathbb G_m \to G$ 为<span class="link local"><a href="./特征.html" title="特征, 余特征 [特征]">余特征</a></span>, 那么</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="根数据"><header><h1><span class="taxon"></span>根数据 <a class="slug" href="./根数据.html">[根数据]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>对于连通<span class="link local"><a href="./约化群.html" title="约化群 [约化群]">约化群</a></span> $G$, 有四个关键资料
 $$
