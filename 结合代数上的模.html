@@ -813,6 +813,17 @@
 <p>结合代数给出<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>; 在这种意义上, 结合代数上的模可以推广为<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的模</a></span>.</p>
 <p>结合代数上的模范畴可视为结合代数的范畴的<span class="link local"><a href="./切范畴.html" title="切范畴 [切范畴]">切范畴</a></span>.</p>
 <p>另外, 对一般的<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span>也可定义<span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">模</a></span>的概念; 但这个概念对于<span class="link local"><a href="./A∞-算畴.html" title="结合算畴 [A∞-算畴]">结合算畴</a></span>给出的是<strong>双模</strong>, 而非左模或右模.</p>
+<h2>性质</h2>
+<h3>张量积</h3>
+<p>在具有<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">单纯余极限</a></span>的范畴 $\mathcal C$ 中, 对于结合代数 $A$ 上的右模 $M$ 与左模 $N$, 可作相对张量积
+$$
+M\otimes_A N := \operatorname{colim}_{\Delta} M\otimes A^{\otimes\bullet}\otimes N.
+$$
+$M\otimes_A N$ 一般没有 $A$-左模或右模结构.</p>
+<p>张量积也可以理解为 $\mathcal C$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>之间的<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span> $\mathbf{B}A\to\mathcal C$ 的复合
+$$
+\operatorname{colim}_{\mathbf{B}A} M\otimes N.
+$$</p>
 <h2>例</h2>
 <h3>交换代数上的模</h3>
 <p><span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>上的模, 即是其作为结合代数的左模或右模.</p>
@@ -1004,6 +1015,34 @@ $$</p>
 $$
 \mathsf{Corr}(\mathcal C,E) \to \mathsf{Cat}.
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="代函子"><header><h1><span class="taxon"></span>代函子 <a class="slug" href="./代函子.html">[代函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>代函子</strong> (profunctor) 是函子的推广, 类似于关系是函数的推广.</p>
+<p><span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>之间的代函子又称为<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">充实范畴上的双模</a></span>.</p>
+<p>单对象的<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>之间的代函子 (<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">双模</a></span>) 是代数同态的推广. 对于交换环 $R$, 全体单对象 $\mathsf{Mod}(R)$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span> (即 $R$-<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">代数</a></span>) 以及代函子 (即双模) 构成的 $2$-范畴正是 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>.</p>
+<h2>定义</h2>
+<p>范畴 $\mathcal C$ 到 $\mathcal D$ 的<strong>代函子</strong> (profunctor) 是指函子 $\mathcal C \times \mathcal D^{\mathrm{op}} \to \mathsf{Set}$, 也即 $\mathcal C$ 到<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>范畴 $\mathsf{Psh}(\mathcal D)$ 的函子 $\mathcal C\to \mathsf{Psh}(\mathcal D)$. 代函子有时也记作 $\mathcal C$ ⇸ $\mathcal D$.</p>
+<p>当然, <span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>也有类似的概念.</p>
+<h3>复合</h3>
+<p>代函子 $f\colon \mathcal C\times\mathcal D^{\mathrm{op}}\to\mathsf{Set}$ 与 $g\colon \mathcal D\times\mathcal E^{\mathrm{op}} \to\mathsf{Set}$ 的<strong>复合</strong>是代函子 $gf\colon \mathcal C\times\mathcal E^{\mathrm{op}}\to\mathsf{Set}$,
+$$
+gf(c,e) := \operatorname{colim}_{d\in \mathcal D} f(c,d)\times g(d,e).
+$$</p>
+<p>全体范畴以及代函子构成一个 $2$-范畴.</p>
+<p><span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>之间的代函子又叫<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">双模</a></span>, 代函子的复合即是双模的张量积. 对于单对象充实范畴, 参见<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">结合代数上的模</a></span>.</p>
+<h3>同态集</h3>
+<p>代函子 $f\colon \mathcal C\times\mathcal D^{\mathrm{op}} \to \mathsf{Set}$ 到 $g\colon \mathcal E\times\mathcal D^{\mathrm{op}}\to\mathsf{Set}$ 的<strong>同态集</strong>是代函子 $[f,g]\colon \mathcal E\times\mathcal C^{\mathrm{op}}\to\mathsf{Set}$,
+$$
+[f,g](e,c) := \operatorname{lim}_d \operatorname{Hom}(f(c,d),g(e,d)).
+$$</p>
+<p><span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>之间的代函子的同态集即是<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">双模</a></span>的同态集.</p>
+<h2>性质</h2>
+<h3>与普通函子的关系</h3>
+<p>普通的函子 $f\colon \mathcal C\to\mathcal D$ 给出两个代函子:</p>
+<ul>
+<li>$\operatorname{Hom}_{\mathcal D}(f(-),-) \colon \mathcal D \otimes\mathcal C^{\mathrm{op}} \to \mathsf{Set}$;</li>
+<li>$\operatorname{Hom}_{\mathcal D}(-,f(-)) \colon \mathcal C \otimes\mathcal D^{\mathrm{op}} \to \mathsf{Set}$.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="半单环"><header><h1><span class="taxon"></span>半单环 <a class="slug" href="./半单环.html">[半单环]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>半单环是<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模范畴</a></span>为<span class="link local"><a href="./半单Abel范畴.html" title="半单 Abel 范畴 [半单Abel范畴]">半单 Abel 范畴</a></span>的环.</p>

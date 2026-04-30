@@ -849,8 +849,9 @@ $$
 <p>更一般地, 对 Abel 群 $M$ 与子半群 $N\subset M$, 有 $\operatorname{Spec}\mathbb{Z}[M]$ 在 $\operatorname{Spec}\mathbb{Z}[N]$ 上的作用; 对于带 $\operatorname{Spec}\mathbb{Z}[M]$-作用的几何对象 $X$ (参见<span class="link local"><a href="./分次代数.html" title="分次代数 [分次代数]">分次代数</a></span>), 其 $N$-<strong>吸引子</strong>可定义为
 $$
 X^N = \operatorname{Map}^{\operatorname{Spec}\mathbb{Z}[M]}(\operatorname{Spec}\mathbb{Z}[N],X).
-$$
-当 $M = \mathbb{Z}$, $N = \mathbb{Z}_{\geq 0}$ 时, $X^N$ 是前面定义的吸引子 $X^+$.</p>
+$$</p>
+<p><strong>例</strong>. 当 $M = \mathbb{Z}$, $N = \mathbb{Z}_{\geq 0}$ 时, $X^N$ 是前面定义的吸引子 $X^+$; $M = \mathbb{Z}$, $N = \mathbb{Z}_{\leq 0}$ 时, $X^N$ 是前面定义的排斥子 $X^-$.</p>
+<p><strong>例</strong>. 当 $N = 0$ 时, $X^N = X^0$ 是 $X$ 上 $\operatorname{Spec}\mathbb{Z}[M]$-作用的<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>.</p>
 <h2>性质</h2>
 <p>吸引子 $X^+$ 带有幺半群 $\mathbb A^1$ 的作用, 以及到原空间 $X$ 的映射 $X^+\to X$.</p>
 <p><figure><img src="./吸引子-1.svg" class="color-invert"/></figure></p>
@@ -858,6 +859,22 @@ $$
 <ul>
 <li>$i^+$ 为闭嵌入.</li>
 </ul>
+<h3>不同子半群的关系</h3>
+<p>设 $N, L$ 同为 Abel 群 $M$ 的子半群, 则对于带 $\operatorname{Spec}\mathbb{Z}[M]$-作用的<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span> $X$,
+$$
+X^{N\cap L} = X^N \cap X^L.
+$$
+例如 $X^0 = X^+ \cap X^-$.
+注意这对一般几何对象<strong>不</strong>成立. 例如
+$$
+X^+\times_X X^- = \operatorname{Map}^{\mathbb G_m}(\mathbb P^1,X),
+$$
+而 $\mathbb G_m$-<span class="link local"><a href="./等变映射.html" title="等变映射 [等变映射]">等变映射</a></span> $\mathbb P^1 \to X$ 未必为常值. 但是一般而言有如下命题 (参见 <span class="link local"><a href="./DrinfeldActionGm.html" title="On algebraic spaces with an action of Gm [DrinfeldActionGm]">Drinfeld</a></span> 1.6.2).</p>
+<p><strong>命题</strong>. 自然映射
+$$
+X^{0} \to X^+ \times_X X^-
+$$
+为既开又闭的嵌入.</p>
 <h2>例</h2>
 <h3>仿射情形</h3>
 <p>设 $X = \operatorname{Spec} A$, $A$ 为 $\mathbb{Z}$-分次环 (见<span class="link local"><a href="./fil-gr.html" title="滤与分次的叠观点 [fil-gr]">滤与分次的叠观点</a></span>). 那么

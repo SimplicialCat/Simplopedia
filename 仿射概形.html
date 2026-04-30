@@ -1483,6 +1483,71 @@ $$
 将 $m$ 次齐次元素 $a$ 映射到 $a \otimes m$. 其构成代数同态的条件恰好表明齐次元素的乘积的次数是各自次数的和.</p>
 <p><span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">对偶</a></span>地, $\operatorname{Spec}k[M]$ 是<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>范畴中的交换幺半群, $A$ 上的 $M$-分次也等同于 $k$-概形 $\operatorname{Spec}A$ 上的 $\operatorname{Spec}k[M]$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>.</p>
 <h2>性质</h2>
+</details></section><section class="block" data-taxon=""><details ><summary id="吸引子"><header><h1><span class="taxon"></span>吸引子, 排斥子 <a class="slug" href="./吸引子.html">[吸引子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于带 <span class="link local"><a href="./乘法群概形.html" title="乘法群概形 [乘法群概形]">$\mathbb G_m$</a></span>-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>的概形 (或类似几何对象) $X$, 定义其<strong>吸引子</strong> (attractor) $X^+$ 为 $\mathbb G_m$-<span class="link local"><a href="./等变映射.html" title="等变映射 [等变映射]">等变映射</a></span>的空间
+$$
+X^+ = \operatorname{Map}^{\mathbb G_m}(\mathbb A^1,X) = \operatorname{Map}_{\mathbf{B}\mathbb G_m}(\mathbb A^1 / \mathbb G_m, X/\mathbb G_m).
+$$
+另见 <span class="link local"><a href="./A1-Gm.html" title="仿射直线对乘法群的商 [A1-Gm]">$\mathbb A^1 / \mathbb G_m$</a></span>.</p>
+<p>考虑另一个仿射直线 $\mathbb A^1_- := \mathbb P^1\setminus \{0\} = \operatorname{Spec}\mathbb{Z}[x^{-1}]$, 定义 $X$ 的<strong>排斥子</strong> (repeller) 为
+$$
+X^- = \operatorname{Map}^{\mathbb G_m}(\mathbb A^1_-,X).
+$$
+排斥子等同于 $\mathbb G_m$ 逆作用的吸引子.</p>
+<h3>推广: 交换半群</h3>
+<p>更一般地, 对 Abel 群 $M$ 与子半群 $N\subset M$, 有 $\operatorname{Spec}\mathbb{Z}[M]$ 在 $\operatorname{Spec}\mathbb{Z}[N]$ 上的作用; 对于带 $\operatorname{Spec}\mathbb{Z}[M]$-作用的几何对象 $X$ (参见<span class="link local"><a href="./分次代数.html" title="分次代数 [分次代数]">分次代数</a></span>), 其 $N$-<strong>吸引子</strong>可定义为
+$$
+X^N = \operatorname{Map}^{\operatorname{Spec}\mathbb{Z}[M]}(\operatorname{Spec}\mathbb{Z}[N],X).
+$$</p>
+<p><strong>例</strong>. 当 $M = \mathbb{Z}$, $N = \mathbb{Z}_{\geq 0}$ 时, $X^N$ 是前面定义的吸引子 $X^+$; $M = \mathbb{Z}$, $N = \mathbb{Z}_{\leq 0}$ 时, $X^N$ 是前面定义的排斥子 $X^-$.</p>
+<p><strong>例</strong>. 当 $N = 0$ 时, $X^N = X^0$ 是 $X$ 上 $\operatorname{Spec}\mathbb{Z}[M]$-作用的<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>.</p>
+<h2>性质</h2>
+<p>吸引子 $X^+$ 带有幺半群 $\mathbb A^1$ 的作用, 以及到原空间 $X$ 的映射 $X^+\to X$.</p>
+<p><figure><img src="./吸引子-1.svg" class="color-invert"/></figure></p>
+<p><figure><img src="./吸引子-2.svg" class="color-invert"/></figure></p>
+<ul>
+<li>$i^+$ 为闭嵌入.</li>
+</ul>
+<h3>不同子半群的关系</h3>
+<p>设 $N, L$ 同为 Abel 群 $M$ 的子半群, 则对于带 $\operatorname{Spec}\mathbb{Z}[M]$-作用的<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span> $X$,
+$$
+X^{N\cap L} = X^N \cap X^L.
+$$
+例如 $X^0 = X^+ \cap X^-$.
+注意这对一般几何对象<strong>不</strong>成立. 例如
+$$
+X^+\times_X X^- = \operatorname{Map}^{\mathbb G_m}(\mathbb P^1,X),
+$$
+而 $\mathbb G_m$-<span class="link local"><a href="./等变映射.html" title="等变映射 [等变映射]">等变映射</a></span> $\mathbb P^1 \to X$ 未必为常值. 但是一般而言有如下命题 (参见 <span class="link local"><a href="./DrinfeldActionGm.html" title="On algebraic spaces with an action of Gm [DrinfeldActionGm]">Drinfeld</a></span> 1.6.2).</p>
+<p><strong>命题</strong>. 自然映射
+$$
+X^{0} \to X^+ \times_X X^-
+$$
+为既开又闭的嵌入.</p>
+<h2>例</h2>
+<h3>仿射情形</h3>
+<p>设 $X = \operatorname{Spec} A$, $A$ 为 $\mathbb{Z}$-分次环 (见<span class="link local"><a href="./fil-gr.html" title="滤与分次的叠观点 [fil-gr]">滤与分次的叠观点</a></span>). 那么
+$$
+X^+ = \operatorname{Spec}A^+
+$$
+$A^+$ 是 $A$ 的极大 $\mathbb{Z}_{\geq 0}$-分次商, 也即 $A$ 关于所有负次数元素的商. <sup class="footnote-reference" id="吸引子_1-back"><a href="#吸引子_1">1</a></sup></p>
+<div class="footnote-definition" id="吸引子_1">
+  <sup class="footnote-definition-label"><a href="#吸引子_1-back">1</a></sup>
+<p>注意 $A^+$ 是 $A$ 的<strong>商</strong>, 这不同于 $A$ 的 $\geq 0$ 次元素构成的<strong>子</strong>代数. 例如 $\mathbb{Z}[x^{\pm 1}]$ 的极大 $\mathbb{Z}_{\geq 0}$-分次商是 $0$, 因为 $x^{-1}$ 生成单位理想.</p>
+</div>
+<p><em>证明</em>.
+对任意环 $B$, $\operatorname{Spec}B$ 到 $X^+$ 的映射等同于 $\mathbb G_m$-等变映射 $\operatorname{Spec}B \times\mathbb A^1\to X$, 也即分次环的态射 $A\to B[x]$. 这个态射唯一地穿过 $A^+$. $\square$</p>
+<p><strong>例</strong>. $\mathbb G_m$ 作用于 $\mathbb A^n$, 吸引子为整个 $\mathbb A^n$.</p>
+<p><strong>例</strong>. 考虑 $X=\mathbb A^2_{\tau_1,\tau_2}\to \mathbb A^1_t$, $(\tau_1,\tau_2)\mapsto \tau_1\tau_2$. 那么当 $t\neq 0$ 时 $X_t$ 是双曲线 $\tau_1\tau_2 = t$. 当 $t=0$ 时, $X_0$ 是两条直线. 考虑 $\mathbb G_m$ 在 $X$ 上的作用, $\lambda (\tau_1,\tau_2) = (\lambda\tau_1,\lambda^{-1}\tau_2)$. 该作用与 $X\to \mathbb A^1$ 相容; 从而 $\mathbb G_m$ 作用在每个纤维 $X_t$ 上. 此时 $X_0$ 分解为 $X_0^+ \cup X_0^-$, 其中吸引子 $X_0^+ = \{\tau_2 = 0\}$, 排斥子 $X_0^- = \{\tau_1 = 0\}$.</p>
+<img src="/assets/attractor-repeller.svg" alt="" width="500" style="display:block; margin:auto;">
+<h3>射影直线</h3>
+<p>设 $X = \mathbb P^1$, 带有 $\mathbb G_m$ 的通常作用. 那么
+$$
+X^+ = \mathbb A^1 \sqcup \{\infty\}.
+$$</p>
+<h3>抛物子群</h3>
+<p>设 $G$ 为<span class="link local"><a href="./约化群.html" title="约化群 [约化群]">约化群</a></span>, $\lambda\colon \mathbb G_m \to G$ 为<span class="link local"><a href="./特征.html" title="特征, 余特征 [特征]">余特征</a></span>, 那么 $\mathbb G_m$ 在 $G$ 上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的吸引子恰为 $\lambda$ 对应的<span class="link local"><a href="./抛物子群.html" title="抛物子群 [抛物子群]">抛物子群</a></span> $P\subset G$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="完备化(环)"><header><h1><span class="taxon"></span>完备化 (环) <a class="slug" href="./完备化(环).html">[完备化(环)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>环关于理想的完备化给出了<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>的<span class="link local"><a href="./闭嵌入.html" title="闭嵌入 [闭嵌入]">闭子概形</a></span>的<span class="link local"><a href="./形式邻域.html" title="形式邻域 [形式邻域]">形式邻域</a></span>.</p>
