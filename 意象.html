@@ -719,21 +719,21 @@
   }
 
   h4 {
-    text-indent: var(--marginleft);
+    text-indent: var(--margin-left);
     font-weight: 700;
     color: #696cd9;
     margin-bottom: 0;
   }
 
   h5 {
-    text-indent: var(--marginleft);
+    text-indent: var(--margin-left);
     font-weight: 700;
     color: #8a8ff4;
     margin-bottom: 0;
   }
 
   h6 {
-    text-indent: var(--marginleft);
+    text-indent: var(--margin-left);
     font-weight: 700;
     color: #aaaff4;
     margin-bottom: 0;
@@ -904,12 +904,24 @@ $$
 $$</p>
 <p>对象 $X$ 的幂对象 $PX = \Omega^X$ 是幂集的类比, 满足 $\operatorname{Sub}(X\times Y)\simeq \operatorname{Hom}(Y,PX)$, 换言之, $PX$ 是 $\operatorname{Sub}(X\times -)$ 的表示对象.</p>
 <h2>例</h2>
-<p>$\mathsf {Set}^{\mathbb N}$, “随时间变化的集合”;</p>
-<p>(??) 任何一个 Bool 代数, 其中的乘积是 “且” $X\wedge Y$, 指数 $Y^X$ 是 “蕴含” $X\Rightarrow Y$, 赋值映射是 “推理” $(X\Rightarrow Y)\wedge X \leq Y$;</p>
-<p>$\mathsf {FinOrd}$, 有限基数的范畴, 其中指数是通常的指数;</p>
+<h3>层意象</h3>
 <p><span class="link local"><a href="./层意象.html" title="层意象 [层意象]">层意象</a></span> $\operatorname{Sh}(X)$, “由 $X$ 连续参数化的一族集合”;</p>
+<h3>预层意象</h3>
 <p><span class="link local"><a href="./预层意象.html" title="预层意象 [预层意象]">预层意象</a></span> $\mathsf {Set}^{C^{\mathrm{op}}}$, “由小范畴 $C$ 参数化的集合”.</p>
+<p>预层意象又有如下重要例子:</p>
+<ul>
+<li><span class="link local"><a href="./箭图.html" title="箭图 [箭图]">箭图</a></span>的范畴;</li>
+<li><span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>的范畴;</li>
+<li>$\mathsf {Set}^{\mathbb N}$, “随时间变化的集合”;</li>
+<li>…</li>
+</ul>
+<h3>位象</h3>
 <p><span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span>, 又称 $0$-意象.</p>
+<h3>初等意象</h3>
+<ul>
+<li>有限集范畴 $\mathsf{Fin}$</li>
+<li>$\mathsf {FinOrd}$, 有限基数的范畴, 其中指数是通常的指数;</li>
+</ul>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./局部意象.html" title="局部意象 [局部意象]">局部意象</a></span></p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Boole意象"><header><h1><span class="taxon"></span>Boole 意象 <a class="slug" href="./Boole意象.html">[Boole意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -1953,6 +1965,29 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="空意象"><header><h1><span class="taxon"></span>空意象 <a class="slug" href="./空意象.html">[空意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./意象理论.html" title="意象理论 [意象理论]">意象理论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>空意象是终范畴 $1$, 也即空空间对应的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="箭图"><header><h1><span class="taxon"></span>箭图 <a class="slug" href="./箭图.html">[箭图]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><strong>箭图</strong> (quiver) $Q$ 是允许有多箭头或圈的有向图.</p>
+<p>箭图也可理解为如下范畴上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>:</p>
+<ul>
+<li>对象: $e,v$;</li>
+<li>态射: $s,t\colon e\to v$.</li>
+</ul>
+<p>因此箭图的范畴是一个 $1$-<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>.</p>
+<h2>性质</h2>
+<h3>路代数</h3>
+<p>箭图 $Q$ 上的一条<strong>路</strong>是一列箭头 $a_n\cdots a_1$, 使得当 $1\leq i &lt;n$ 时, $a_i$ 的终点等于 $a_{i+1}$ 的起点. 另外, 我们规定每个顶点 $x$ 处有一个平凡道路 $e_x$.</p>
+<p>固定域 $k$. 箭图 $Q$ 的路代数 (path algebra) $kQ$ 作为向量空间由所有的路生成; 其乘法由路的连接给出. 当 $Q$ 的顶点数有限时, 每个顶点处平凡道路的和对应 $kQ$ 的乘法单位元; 否则 $kQ$ 没有乘法单位元.</p>
+<h3>表示</h3>
+<p>箭图 $Q$ 的一个表示是如下信息: 对每个顶点 $x$ 指定一个 $k$-线性空间 $V_x$, 对每条边 $x\to y$ 指定一个线性映射 $V_x\to V_y$.</p>
+<p>箭图 $Q$ 的表示等同于路代数 $kQ$ 上的模:</p>
+<ul>
+<li>给定 $Q$ 的表示, 令 $V=\bigoplus_x V_x$ 得到 $kQ$-模.</li>
+<li>给定 $kQ$-模 $V$, 令 $V_x=e_x V$ 得到 $Q$ 的表示.</li>
+</ul>
+<h2>例</h2>
+<h3>Ext-箭图</h3>
+<p>设 $k$ 为代数闭域, $\Lambda$ 为有限维 $k$-代数. 定义其 Ext-箭图 $Q(\Lambda)$ 是以 $\Lambda$-单模的同构类为顶点, 每两点 $S_i,S_j$ 之间 $\dim_k\operatorname{Ext}_{\Lambda}^1 (S_i,S_j)$ 条边构成的箭图.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="紧合几何态射"><header><h1><span class="taxon"></span>“紧合几何态射” <a class="slug" href="./紧合几何态射.html">[紧合几何态射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>称意象 $\mathcal C$ 为紧意象是指<span class="link local"><a href="./整体截面.html" title="整体截面 [整体截面]">整体截面</a></span>的直像部分保持<span class="link local"><a href="./子终对象.html" title="子终对象 [子终对象]">子终对象</a></span>的定向并.</p>
 <p>称<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>态射 $f\colon \mathcal F\to\mathcal E$ 为紧合的, 是指其为 $\mathcal E$ 上的紧意象. 这个条件可用<span class="link local"><a href="./叠语义.html" title="“叠语义” [叠语义]">叠语义</a></span>表述.</p>

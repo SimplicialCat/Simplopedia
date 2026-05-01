@@ -719,21 +719,21 @@
   }
 
   h4 {
-    text-indent: var(--marginleft);
+    text-indent: var(--margin-left);
     font-weight: 700;
     color: #696cd9;
     margin-bottom: 0;
   }
 
   h5 {
-    text-indent: var(--marginleft);
+    text-indent: var(--margin-left);
     font-weight: 700;
     color: #8a8ff4;
     margin-bottom: 0;
   }
 
   h6 {
-    text-indent: var(--marginleft);
+    text-indent: var(--margin-left);
     font-weight: 700;
     color: #aaaff4;
     margin-bottom: 0;
@@ -1328,6 +1328,29 @@ $$</li>
 <li>术语和符号表</li>
 <li>参考文献</li>
 </ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="箭图"><header><h1><span class="taxon"></span>箭图 <a class="slug" href="./箭图.html">[箭图]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><strong>箭图</strong> (quiver) $Q$ 是允许有多箭头或圈的有向图.</p>
+<p>箭图也可理解为如下范畴上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>:</p>
+<ul>
+<li>对象: $e,v$;</li>
+<li>态射: $s,t\colon e\to v$.</li>
+</ul>
+<p>因此箭图的范畴是一个 $1$-<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>.</p>
+<h2>性质</h2>
+<h3>路代数</h3>
+<p>箭图 $Q$ 上的一条<strong>路</strong>是一列箭头 $a_n\cdots a_1$, 使得当 $1\leq i &lt;n$ 时, $a_i$ 的终点等于 $a_{i+1}$ 的起点. 另外, 我们规定每个顶点 $x$ 处有一个平凡道路 $e_x$.</p>
+<p>固定域 $k$. 箭图 $Q$ 的路代数 (path algebra) $kQ$ 作为向量空间由所有的路生成; 其乘法由路的连接给出. 当 $Q$ 的顶点数有限时, 每个顶点处平凡道路的和对应 $kQ$ 的乘法单位元; 否则 $kQ$ 没有乘法单位元.</p>
+<h3>表示</h3>
+<p>箭图 $Q$ 的一个表示是如下信息: 对每个顶点 $x$ 指定一个 $k$-线性空间 $V_x$, 对每条边 $x\to y$ 指定一个线性映射 $V_x\to V_y$.</p>
+<p>箭图 $Q$ 的表示等同于路代数 $kQ$ 上的模:</p>
+<ul>
+<li>给定 $Q$ 的表示, 令 $V=\bigoplus_x V_x$ 得到 $kQ$-模.</li>
+<li>给定 $kQ$-模 $V$, 令 $V_x=e_x V$ 得到 $Q$ 的表示.</li>
+</ul>
+<h2>例</h2>
+<h3>Ext-箭图</h3>
+<p>设 $k$ 为代数闭域, $\Lambda$ 为有限维 $k$-代数. 定义其 Ext-箭图 $Q(\Lambda)$ 是以 $\Lambda$-单模的同构类为顶点, 每两点 $S_i,S_j$ 之间 $\dim_k\operatorname{Ext}_{\Lambda}^1 (S_i,S_j)$ 条边构成的箭图.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="米田嵌入"><header><h1><span class="taxon"></span>米田嵌入 <a class="slug" href="./米田嵌入.html">[米田嵌入]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>米田嵌入是将范畴 $\mathcal C$ 中的对象视为 $\mathcal C$ 上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>的过程.</p>

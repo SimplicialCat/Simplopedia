@@ -719,21 +719,21 @@
   }
 
   h4 {
-    text-indent: var(--marginleft);
+    text-indent: var(--margin-left);
     font-weight: 700;
     color: #696cd9;
     margin-bottom: 0;
   }
 
   h5 {
-    text-indent: var(--marginleft);
+    text-indent: var(--margin-left);
     font-weight: 700;
     color: #8a8ff4;
     margin-bottom: 0;
   }
 
   h6 {
-    text-indent: var(--marginleft);
+    text-indent: var(--margin-left);
     font-weight: 700;
     color: #aaaff4;
     margin-bottom: 0;
@@ -955,6 +955,7 @@ $$</p>
 <p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">亟需施工处</a></span>列表 (“TODO list”)</p>
 <p><span class="link local"><a href="./terminologies.html" title="单纯百科 - 术语翻译表 [terminologies]">术语翻译表</a></span></p>
 <h2>最近</h2>
+<p><span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span></p>
 <p><span class="link local"><a href="./吸引子.html" title="吸引子, 排斥子 [吸引子]">吸引子, 排斥子</a></span></p>
 <p><span class="link local"><a href="./Milnor纤维化.html" title="Milnor 纤维化 [Milnor纤维化]">Milnor 纤维化</a></span></p>
 <p><span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span></p>
@@ -974,6 +975,24 @@ $$</p>
 <p><span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span></p>
 <p><span class="link local"><a href="./非交换Čech上同调.html" title="非交换 Čech 上同调 [非交换Čech上同调]">非交换 Čech 上同调</a></span></p>
 <p><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="tutorial-highercat"><header><h1><span class="taxon"></span>高阶范畴论 <a class="slug" href="./tutorial-highercat.html">[tutorial-highercat]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文为初学者学习高阶范畴论提供一点参考.</p>
+<h2>范畴的语言</h2>
+<p>高阶范畴的语言在许多场合与 $1$-范畴的语言是相同的. 在熟悉 $1$-范畴的基础上, 往往只需补充少量的观念, 就能够顺利理解高阶范畴的语言. 一个难点在于识别哪些构造是模型无关的.</p>
+<h3>空间的语言; 同伦类型论</h3>
+<p>第一个需要理解的概念是<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>. 它是 “集合” 这一概念在高阶范畴论中的正确类比. 对它的直观常来自<span class="link local"><a href="./同伦论.html" title="同伦论 [同伦论]">同伦论</a></span>. 谈论生象的一种语言是<span class="link local"><a href="./同伦类型论.html" title="同伦类型论 [同伦类型论]">同伦类型论</a></span>, 掌握这种语言对理解高阶范畴很有帮助.</p>
+<p>例如, 有人 (<span class="link local"><a href="./CnossenAxiomInfCat.html" title="Axiomatization of ∞-categories [CnossenAxiomInfCat]">Cnossen</a></span>) 正在尝试以类似 HoTT 的语言建立 $\infty$-范畴的公理化数学基础.</p>
+<h3>关于模型</h3>
+<p>这里所谓<strong>模型</strong>, 指的是在集合论 ($1$-范畴论) 的基础上搭建的能够模拟高阶范畴的结构. 模型对于理解高阶范畴的语言是<strong>不需要</strong>的. 它的作用是</p>
+<ul>
+<li>在少数场合, 构造具体的高阶范畴 (如 Fukaya 范畴).</li>
+<li>让人们相信高阶范畴的数学基础是牢固的 (尤其是说服那些奉集合论为圭臬的人). (这是 Lurie 的 <span class="link local"><a href="./LurieHTT.html" title="Higher Topos Theory [LurieHTT]">HTT</a></span> 的一大贡献.)</li>
+</ul>
+<p>“模型” 的另一种含义是<span class="link local"><a href="./模型范畴.html" title="“模型范畴” [模型范畴]">模型范畴</a></span>; 这是一类具有良好性质的高阶范畴的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 但同样地, 理解高阶范畴的语言也不需要模型范畴的概念.</p>
+<h2>高阶代数</h2>
+<p>在高阶范畴中做代数是一门极为深奥的学问. 一个难点在于分辨 $1$-范畴中的哪些代数现象在高阶范畴仍然存在, 哪些现象是由于 $1$-范畴 (集合) 的<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断性</a></span>带来的额外便利 (例如高阶代数中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>等结构在截断的 $1$-范畴中退化为<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">性质</a></span>). 现状往往是后者.</p>
+<p>目前, 人们表达代数结构的主要工具是<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>. 这样的现状大致归功于 Lurie 的 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Higher Algebra</a></span>; 但容易找到更简短而友好的材料如 <span class="link local"><a href="./HaugsengOp.html" title="An allegedly somewhat friendly introduction to ∞-operads [HaugsengOp]">Haugseng</a></span>.</p>
+<p>表达代数结构也有其它工具, 如 <span class="link local"><a href="./PROP.html" title="PROP [PROP]">PROP</a></span>; 算畴本身也有许多版本. 不过这些结构都大同小异.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="严格2-群胚"><header><h1><span class="taxon"></span>严格 2-群胚 <a class="slug" href="./严格2-群胚.html">[严格2-群胚]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>严格 $2$-群胚是所有态射和 $2$-态射均可逆的<span class="link local"><a href="./严格2-范畴.html" title="严格 2-范畴 [严格2-范畴]">严格 $2$-范畴</a></span>.</p>
@@ -1185,6 +1204,9 @@ $$
 <li>一个 $A$-模构成 $B$-模是性质;</li>
 <li>遗忘函子 $\mathsf{Mod}(B) \to \mathsf{Mod}(A)$ <span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实</a></span>.</li>
 </ul>
+<h3>可逆性</h3>
+<p>在任何范畴中, 一个态射可逆是<strong>性质而非结构</strong>. 换言之, 若一个态射有逆, 那么其逆是唯一的.</p>
+<p>类似地, 在幺半群 ($\mathsf{Ani}$ 中的结合代数) 中, 一个元素有逆是性质而非结构. 对于整个幺半群而言, 其构成群 (即所有元素都有逆) 也是性质而非结构.</p>
 <h3>交换性</h3>
 <p>在高阶范畴中, <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> ($\mathbb E_1$-代数) 的 “<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换</a></span>性” 是<strong>结构而非性质</strong>; 具体地, 对一般的对称幺半范畴 $\mathcal C\in\mathsf{CAlg}(\mathsf{Cat})$, 由<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>的范畴到<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的范畴的遗忘函子
 $$

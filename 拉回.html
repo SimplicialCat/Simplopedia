@@ -719,21 +719,21 @@
   }
 
   h4 {
-    text-indent: var(--marginleft);
+    text-indent: var(--margin-left);
     font-weight: 700;
     color: #696cd9;
     margin-bottom: 0;
   }
 
   h5 {
-    text-indent: var(--marginleft);
+    text-indent: var(--margin-left);
     font-weight: 700;
     color: #8a8ff4;
     margin-bottom: 0;
   }
 
   h6 {
-    text-indent: var(--marginleft);
+    text-indent: var(--margin-left);
     font-weight: 700;
     color: #aaaff4;
     margin-bottom: 0;
@@ -817,7 +817,7 @@ $$
 \bullet &amp; \to &amp;\bullet
 \end{array}
 $$
-“多个对象指向一个对象” 的指标范畴的极限也可称为拉回.</p>
+“多个对象指向一个对象” 的指标范畴的极限也可称为拉回. 对偶的操作称为<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>.</p>
 <p>另见<span class="link local"><a href="./推前.html" title="推前, 拉回 (纤维范畴) [推前]">拉回 (纤维范畴)</a></span>.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Fourier--向井变换"><header><h1><span class="taxon"></span>Fourier–Mukai 变换 <a class="slug" href="./Fourier--向井变换.html">[Fourier--向井变换]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>Fourier–Mukai (向井) 变换是某些层范畴 (如<span class="link local"><a href="./凝聚层的导出范畴.html" title="凝聚层的导出范畴 [凝聚层的导出范畴]">凝聚层的导出范畴</a></span>) 之间的函子 $D(X)\to D(Y)$, 它是通过核对象 $K\in D(X\times Y)$ 构造的 “积分变换” (<span class="link local"><a href="./拉-推.html" title="拉-推 [拉-推]">拉-推</a></span>).</p>
@@ -1481,14 +1481,33 @@ $$
 $$</p>
 <p>对象 $X$ 的幂对象 $PX = \Omega^X$ 是幂集的类比, 满足 $\operatorname{Sub}(X\times Y)\simeq \operatorname{Hom}(Y,PX)$, 换言之, $PX$ 是 $\operatorname{Sub}(X\times -)$ 的表示对象.</p>
 <h2>例</h2>
-<p>$\mathsf {Set}^{\mathbb N}$, “随时间变化的集合”;</p>
-<p>(??) 任何一个 Bool 代数, 其中的乘积是 “且” $X\wedge Y$, 指数 $Y^X$ 是 “蕴含” $X\Rightarrow Y$, 赋值映射是 “推理” $(X\Rightarrow Y)\wedge X \leq Y$;</p>
-<p>$\mathsf {FinOrd}$, 有限基数的范畴, 其中指数是通常的指数;</p>
+<h3>层意象</h3>
 <p><span class="link local"><a href="./层意象.html" title="层意象 [层意象]">层意象</a></span> $\operatorname{Sh}(X)$, “由 $X$ 连续参数化的一族集合”;</p>
+<h3>预层意象</h3>
 <p><span class="link local"><a href="./预层意象.html" title="预层意象 [预层意象]">预层意象</a></span> $\mathsf {Set}^{C^{\mathrm{op}}}$, “由小范畴 $C$ 参数化的集合”.</p>
+<p>预层意象又有如下重要例子:</p>
+<ul>
+<li><span class="link local"><a href="./箭图.html" title="箭图 [箭图]">箭图</a></span>的范畴;</li>
+<li><span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>的范畴;</li>
+<li>$\mathsf {Set}^{\mathbb N}$, “随时间变化的集合”;</li>
+<li>…</li>
+</ul>
+<h3>位象</h3>
 <p><span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span>, 又称 $0$-意象.</p>
+<h3>初等意象</h3>
+<ul>
+<li>有限集范畴 $\mathsf{Fin}$</li>
+<li>$\mathsf {FinOrd}$, 有限基数的范畴, 其中指数是通常的指数;</li>
+</ul>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./局部意象.html" title="局部意象 [局部意象]">局部意象</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="推出"><header><h1><span class="taxon"></span>推出 (一种余极限) <a class="slug" href="./推出.html">[推出]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>推出是以
+$$
+\bullet \leftarrow \bullet \rightarrow \bullet
+$$
+为指标范畴的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>, 是<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>的对偶.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="推前"><header><h1><span class="taxon"></span>推前, 拉回 (纤维范畴) <a class="slug" href="./推前.html">[推前]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>对于基范畴 $\mathcal B$ 上的范畴 $p\colon \mathcal E \to \mathcal B$, <strong>推前</strong> (pushforward) 和<strong>拉回</strong> (pullback) 指的是 $\mathcal B$ 中态射的有某种万有性质的<strong>提升</strong>. 具有一切推前或拉回的范畴称为<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">纤维范畴</a></span>.</p>
 <p><span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">范畴论拉回</a></span>是上述概念的特例.</p>

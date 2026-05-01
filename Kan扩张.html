@@ -719,21 +719,21 @@
   }
 
   h4 {
-    text-indent: var(--marginleft);
+    text-indent: var(--margin-left);
     font-weight: 700;
     color: #696cd9;
     margin-bottom: 0;
   }
 
   h5 {
-    text-indent: var(--marginleft);
+    text-indent: var(--margin-left);
     font-weight: 700;
     color: #8a8ff4;
     margin-bottom: 0;
   }
 
   h6 {
-    text-indent: var(--marginleft);
+    text-indent: var(--margin-left);
     font-weight: 700;
     color: #aaaff4;
     margin-bottom: 0;
@@ -1011,6 +1011,47 @@ $$
 再限制到 $\Delta\hookrightarrow\Delta_+$, 所得的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>称为 $f$ 的 <strong>Čech 脉</strong> $\text{\v{C}}(f)\colon \Delta^{\mathrm{op}} \to \mathcal C$.</p>
 <h2>性质</h2>
 <p>Čech 脉是<span class="link local"><a href="./群胚对象.html" title="群胚对象 (∞-范畴论) [群胚对象]">群胚对象</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="伴随"><header><h1><span class="taxon"></span>伴随 <a class="slug" href="./伴随.html">[伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>伴随是 <span class="link local"><a href="./2-范畴.html" title="2-范畴 [2-范畴]">$2$-范畴</a></span>的两个对象之间一对态射的一种关系, 是 $1$-范畴中态射的互逆关系的推广.</p>
+<p>$2$-范畴 $\mathcal C$ 中的伴随等同于<span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span> $\mathsf{Adj}$ 到 $\mathcal C$ 的函子
+$$
+\mathsf{Adj} \to \mathcal C.
+$$</p>
+<h2>定义</h2>
+<h2>性质</h2>
+<h3>伴随保持极限</h3>
+<p><strong>命题</strong>. 左伴随函子保持<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>; 右伴随函子保持<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>.</p>
+<p><em>证明</em>. 我们证明一个更广泛的结论, 即<strong>左伴随保持左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>, 右伴随保持右 Kan 扩张</strong>.</p>
+<p>设 $F\colon \mathcal C\to\mathcal D$, $G\colon \mathcal D\to\mathcal C$,
+有伴随 $F\dashv G$.</p>
+<p>设 $p\colon \mathcal A\to\mathcal B$ 为任意函子.
+记
+$$
+p_!\colon \mathsf{Fun}(\mathcal A,\mathcal C)\to\mathsf{Fun}(\mathcal B,\mathcal C)
+$$
+为沿 $p$ 的左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>;
+我们断言对于 $X\in\mathsf{Fun}(\mathcal A,\mathcal C)$, 有
+$$
+p_! (F\circ X) \simeq F\circ p_! X.
+$$</p>
+<p>注意到, $(F\circ -)\colon \mathsf{Fun}(\mathcal A,\mathcal C) \to \mathsf{Fun}(\mathcal A,\mathcal D)$ 是 $(G\circ -)\colon \mathsf{Fun}(\mathcal A,\mathcal D) \to \mathsf{Fun}(\mathcal A,\mathcal C)$ 的左伴随. 另一方面, $p_!$ 是 $p^* = (-\circ p)$ 的左伴随. 由于 $(G\circ -)$ 与 $(-\circ p)$ 两个操作天然是交换的, 两者的左伴随也交换. 这便证明了命题. $\square$</p>
+<h2>例</h2>
+<h3>自由-遗忘伴随</h3>
+<p><span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由-遗忘伴随</a></span></p>
+<h3>自反局部化</h3>
+<p><span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span></p>
+<h3>偏序集之间的伴随</h3>
+<p>见 <span class="link local"><a href="./Galois对应.html" title="Galois 对应 [Galois对应]">Galois 对应</a></span>.</p>
+<h3>层与平展空间</h3>
+<p>对拓扑空间 $X$, 预层的<span class="link local"><a href="./平展空间.html" title="“平展空间” [平展空间]">平展空间</a></span>与丛的截面层给出了一对伴随
+$$
+\operatorname{Presh}(X) \rightleftarrows\mathsf {Top}/X.
+$$
+这对伴随限制为满子范畴的等价
+$$
+\operatorname{Sh}(X) \rightleftarrows\mathsf {Et}(X).
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="充实范畴上的模"><header><h1><span class="taxon"></span>充实范畴上的模 <a class="slug" href="./充实范畴上的模.html">[充实范畴上的模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>可视为单对象<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>. <strong>充实范畴上的模</strong>是结合代数上的模和<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>的共同的推广.</p>

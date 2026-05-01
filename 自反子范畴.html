@@ -719,21 +719,21 @@
   }
 
   h4 {
-    text-indent: var(--marginleft);
+    text-indent: var(--margin-left);
     font-weight: 700;
     color: #696cd9;
     margin-bottom: 0;
   }
 
   h5 {
-    text-indent: var(--marginleft);
+    text-indent: var(--margin-left);
     font-weight: 700;
     color: #8a8ff4;
     margin-bottom: 0;
   }
 
   h6 {
-    text-indent: var(--marginleft);
+    text-indent: var(--margin-left);
     font-weight: 700;
     color: #aaaff4;
     margin-bottom: 0;
@@ -857,6 +857,22 @@ $$
 $$</p>
 <h2>定义</h2>
 <h2>性质</h2>
+<h3>伴随保持极限</h3>
+<p><strong>命题</strong>. 左伴随函子保持<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>; 右伴随函子保持<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>.</p>
+<p><em>证明</em>. 我们证明一个更广泛的结论, 即<strong>左伴随保持左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>, 右伴随保持右 Kan 扩张</strong>.</p>
+<p>设 $F\colon \mathcal C\to\mathcal D$, $G\colon \mathcal D\to\mathcal C$,
+有伴随 $F\dashv G$.</p>
+<p>设 $p\colon \mathcal A\to\mathcal B$ 为任意函子.
+记
+$$
+p_!\colon \mathsf{Fun}(\mathcal A,\mathcal C)\to\mathsf{Fun}(\mathcal B,\mathcal C)
+$$
+为沿 $p$ 的左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>;
+我们断言对于 $X\in\mathsf{Fun}(\mathcal A,\mathcal C)$, 有
+$$
+p_! (F\circ X) \simeq F\circ p_! X.
+$$</p>
+<p>注意到, $(F\circ -)\colon \mathsf{Fun}(\mathcal A,\mathcal C) \to \mathsf{Fun}(\mathcal A,\mathcal D)$ 是 $(G\circ -)\colon \mathsf{Fun}(\mathcal A,\mathcal D) \to \mathsf{Fun}(\mathcal A,\mathcal C)$ 的左伴随. 另一方面, $p_!$ 是 $p^* = (-\circ p)$ 的左伴随. 由于 $(G\circ -)$ 与 $(-\circ p)$ 两个操作天然是交换的, 两者的左伴随也交换. 这便证明了命题. $\square$</p>
 <h2>例</h2>
 <h3>自由-遗忘伴随</h3>
 <p><span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由-遗忘伴随</a></span></p>

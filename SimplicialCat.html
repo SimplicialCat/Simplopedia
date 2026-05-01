@@ -719,21 +719,21 @@
   }
 
   h4 {
-    text-indent: var(--marginleft);
+    text-indent: var(--margin-left);
     font-weight: 700;
     color: #696cd9;
     margin-bottom: 0;
   }
 
   h5 {
-    text-indent: var(--marginleft);
+    text-indent: var(--margin-left);
     font-weight: 700;
     color: #8a8ff4;
     margin-bottom: 0;
   }
 
   h6 {
-    text-indent: var(--marginleft);
+    text-indent: var(--margin-left);
     font-weight: 700;
     color: #aaaff4;
     margin-bottom: 0;
@@ -1631,6 +1631,8 @@ $$
 <p>Bohr 意象是使用<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">意象的内语言</a></span>研究量子物理的手段.</p>
 <p><span class="link local"><a href="./vonNeumann代数.html" title="“von Neumann 代数” [vonNeumann代数]">von Neumann 代数</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Boole代数"><header><h1><span class="taxon"></span>Boole 代数 <a class="slug" href="./Boole代数.html">[Boole代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Boole 代数是经典逻辑的<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语义</a></span>. 如 Boole 代数中的积 (交) 是逻辑与 $X\wedge Y$, 指数 $Y^X$ 是逻辑蕴含 $X\Rightarrow Y$, 赋值映射是推理法则 $(X\Rightarrow Y)\wedge X \leq Y$ 等等.</p>
 <h2>定义</h2>
 <p>Boole 代数是具有补运算的<span class="link local"><a href="./分配格.html" title="“分配格” [分配格]">分配格</a></span>.</p>
 <p>Boole 代数与 <span class="link local"><a href="./Boole环.html" title="“Boole 环” [Boole环]">Boole 环</a></span>可以相互转化.</p>
@@ -8254,6 +8256,7 @@ $$
 <p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">亟需施工处</a></span>列表 (“TODO list”)</p>
 <p><span class="link local"><a href="./terminologies.html" title="单纯百科 - 术语翻译表 [terminologies]">术语翻译表</a></span></p>
 <h2>最近</h2>
+<p><span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span></p>
 <p><span class="link local"><a href="./吸引子.html" title="吸引子, 排斥子 [吸引子]">吸引子, 排斥子</a></span></p>
 <p><span class="link local"><a href="./Milnor纤维化.html" title="Milnor 纤维化 [Milnor纤维化]">Milnor 纤维化</a></span></p>
 <p><span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span></p>
@@ -10721,6 +10724,23 @@ $\operatorname{Spec} B\times_{\operatorname{Spec} A}D(f_i) \simeq \operatorname{
 $X\to Z\to Y$, 而 $X\to Z$ 为闭嵌入, $Z\to Y$ 为开嵌入 (注意顺序: 先闭嵌入, 后开嵌入), 则称 $X\to Y$ 为<strong>局部闭嵌入</strong>.</p>
 <p><strong>例</strong>. 映射 $\operatorname{Spec} k[t,t^{-1}] \hookrightarrow\operatorname{Spec} k[x,y]$, $t\mapsto (t,0)$ 为局部闭嵌入.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="tutorial-highercat"><header><h1><span class="taxon"></span>高阶范畴论 <a class="slug" href="./tutorial-highercat.html">[tutorial-highercat]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文为初学者学习高阶范畴论提供一点参考.</p>
+<h2>范畴的语言</h2>
+<p>高阶范畴的语言在许多场合与 $1$-范畴的语言是相同的. 在熟悉 $1$-范畴的基础上, 往往只需补充少量的观念, 就能够顺利理解高阶范畴的语言. 一个难点在于识别哪些构造是模型无关的.</p>
+<h3>空间的语言; 同伦类型论</h3>
+<p>第一个需要理解的概念是<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>. 它是 “集合” 这一概念在高阶范畴论中的正确类比. 对它的直观常来自<span class="link local"><a href="./同伦论.html" title="同伦论 [同伦论]">同伦论</a></span>. 谈论生象的一种语言是<span class="link local"><a href="./同伦类型论.html" title="同伦类型论 [同伦类型论]">同伦类型论</a></span>, 掌握这种语言对理解高阶范畴很有帮助.</p>
+<p>例如, 有人 (<span class="link local"><a href="./CnossenAxiomInfCat.html" title="Axiomatization of ∞-categories [CnossenAxiomInfCat]">Cnossen</a></span>) 正在尝试以类似 HoTT 的语言建立 $\infty$-范畴的公理化数学基础.</p>
+<h3>关于模型</h3>
+<p>这里所谓<strong>模型</strong>, 指的是在集合论 ($1$-范畴论) 的基础上搭建的能够模拟高阶范畴的结构. 模型对于理解高阶范畴的语言是<strong>不需要</strong>的. 它的作用是</p>
+<ul>
+<li>在少数场合, 构造具体的高阶范畴 (如 Fukaya 范畴).</li>
+<li>让人们相信高阶范畴的数学基础是牢固的 (尤其是说服那些奉集合论为圭臬的人). (这是 Lurie 的 <span class="link local"><a href="./LurieHTT.html" title="Higher Topos Theory [LurieHTT]">HTT</a></span> 的一大贡献.)</li>
+</ul>
+<p>“模型” 的另一种含义是<span class="link local"><a href="./模型范畴.html" title="“模型范畴” [模型范畴]">模型范畴</a></span>; 这是一类具有良好性质的高阶范畴的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 但同样地, 理解高阶范畴的语言也不需要模型范畴的概念.</p>
+<h2>高阶代数</h2>
+<p>在高阶范畴中做代数是一门极为深奥的学问. 一个难点在于分辨 $1$-范畴中的哪些代数现象在高阶范畴仍然存在, 哪些现象是由于 $1$-范畴 (集合) 的<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断性</a></span>带来的额外便利 (例如高阶代数中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>等结构在截断的 $1$-范畴中退化为<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">性质</a></span>). 现状往往是后者.</p>
+<p>目前, 人们表达代数结构的主要工具是<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>. 这样的现状大致归功于 Lurie 的 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Higher Algebra</a></span>; 但容易找到更简短而友好的材料如 <span class="link local"><a href="./HaugsengOp.html" title="An allegedly somewhat friendly introduction to ∞-operads [HaugsengOp]">Haugseng</a></span>.</p>
+<p>表达代数结构也有其它工具, 如 <span class="link local"><a href="./PROP.html" title="PROP [PROP]">PROP</a></span>; 算畴本身也有许多版本. 不过这些结构都大同小异.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="tutorial-stable-homotopy"><header><h1><span class="taxon"></span>稳定同伦论 <a class="slug" href="./tutorial-stable-homotopy.html">[tutorial-stable-homotopy]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文的目的是, 以尽可能少的前置知识, 解释<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span> (<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>) 这一概念的意义和必要性, 从而使读者能够接受其抽象定义. 为此我试图解释<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>的动机, 也即为什么要将<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span> $\Sigma$ 变为可逆函子.</p>
 <p>前置知识: 拓扑学基本概念, 以及<span class="link local"><a href="./motivation-homotopy-theory.html" title="同伦论的动机 [motivation-homotopy-theory]">同伦论的动机</a></span> (推荐读者先阅读这篇文章). 或许需要一点无穷范畴的直观.</p>
@@ -12190,6 +12210,22 @@ $$
 $$</p>
 <h2>定义</h2>
 <h2>性质</h2>
+<h3>伴随保持极限</h3>
+<p><strong>命题</strong>. 左伴随函子保持<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>; 右伴随函子保持<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>.</p>
+<p><em>证明</em>. 我们证明一个更广泛的结论, 即<strong>左伴随保持左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>, 右伴随保持右 Kan 扩张</strong>.</p>
+<p>设 $F\colon \mathcal C\to\mathcal D$, $G\colon \mathcal D\to\mathcal C$,
+有伴随 $F\dashv G$.</p>
+<p>设 $p\colon \mathcal A\to\mathcal B$ 为任意函子.
+记
+$$
+p_!\colon \mathsf{Fun}(\mathcal A,\mathcal C)\to\mathsf{Fun}(\mathcal B,\mathcal C)
+$$
+为沿 $p$ 的左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>;
+我们断言对于 $X\in\mathsf{Fun}(\mathcal A,\mathcal C)$, 有
+$$
+p_! (F\circ X) \simeq F\circ p_! X.
+$$</p>
+<p>注意到, $(F\circ -)\colon \mathsf{Fun}(\mathcal A,\mathcal C) \to \mathsf{Fun}(\mathcal A,\mathcal D)$ 是 $(G\circ -)\colon \mathsf{Fun}(\mathcal A,\mathcal D) \to \mathsf{Fun}(\mathcal A,\mathcal C)$ 的左伴随. 另一方面, $p_!$ 是 $p^* = (-\circ p)$ 的左伴随. 由于 $(G\circ -)$ 与 $(-\circ p)$ 两个操作天然是交换的, 两者的左伴随也交换. 这便证明了命题. $\square$</p>
 <h2>例</h2>
 <h3>自由-遗忘伴随</h3>
 <p><span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由-遗忘伴随</a></span></p>
@@ -17037,12 +17073,24 @@ $$
 $$</p>
 <p>对象 $X$ 的幂对象 $PX = \Omega^X$ 是幂集的类比, 满足 $\operatorname{Sub}(X\times Y)\simeq \operatorname{Hom}(Y,PX)$, 换言之, $PX$ 是 $\operatorname{Sub}(X\times -)$ 的表示对象.</p>
 <h2>例</h2>
-<p>$\mathsf {Set}^{\mathbb N}$, “随时间变化的集合”;</p>
-<p>(??) 任何一个 Bool 代数, 其中的乘积是 “且” $X\wedge Y$, 指数 $Y^X$ 是 “蕴含” $X\Rightarrow Y$, 赋值映射是 “推理” $(X\Rightarrow Y)\wedge X \leq Y$;</p>
-<p>$\mathsf {FinOrd}$, 有限基数的范畴, 其中指数是通常的指数;</p>
+<h3>层意象</h3>
 <p><span class="link local"><a href="./层意象.html" title="层意象 [层意象]">层意象</a></span> $\operatorname{Sh}(X)$, “由 $X$ 连续参数化的一族集合”;</p>
+<h3>预层意象</h3>
 <p><span class="link local"><a href="./预层意象.html" title="预层意象 [预层意象]">预层意象</a></span> $\mathsf {Set}^{C^{\mathrm{op}}}$, “由小范畴 $C$ 参数化的集合”.</p>
+<p>预层意象又有如下重要例子:</p>
+<ul>
+<li><span class="link local"><a href="./箭图.html" title="箭图 [箭图]">箭图</a></span>的范畴;</li>
+<li><span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>的范畴;</li>
+<li>$\mathsf {Set}^{\mathbb N}$, “随时间变化的集合”;</li>
+<li>…</li>
+</ul>
+<h3>位象</h3>
 <p><span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span>, 又称 $0$-意象.</p>
+<h3>初等意象</h3>
+<ul>
+<li>有限集范畴 $\mathsf{Fin}$</li>
+<li>$\mathsf {FinOrd}$, 有限基数的范畴, 其中指数是通常的指数;</li>
+</ul>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./局部意象.html" title="局部意象 [局部意象]">局部意象</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="意象中的满射"><header><h1><span class="taxon"></span>意象中的满射 <a class="slug" href="./意象中的满射.html">[意象中的满射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./意象理论.html" title="意象理论 [意象理论]">意象理论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -17296,7 +17344,7 @@ $$
 \bullet &amp; \to &amp;\bullet
 \end{array}
 $$
-“多个对象指向一个对象” 的指标范畴的极限也可称为拉回.</p>
+“多个对象指向一个对象” 的指标范畴的极限也可称为拉回. 对偶的操作称为<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>.</p>
 <p>另见<span class="link local"><a href="./推前.html" title="推前, 拉回 (纤维范畴) [推前]">拉回 (纤维范畴)</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="拉直"><header><h1><span class="taxon"></span>“拉直” <a class="slug" href="./拉直.html">[拉直]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>Lurie</p>
@@ -17504,6 +17552,12 @@ $$</p>
 </ul>
 <p>在许多数学分支存在这样一个反复出现的现象: 用一些基本对象来 “<strong>探测</strong>”, 就足够描述更大的范畴中的对象; 甚至这样的探测过程常常就作为更大的范畴的<strong>定义</strong>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="推出"><header><h1><span class="taxon"></span>推出 (一种余极限) <a class="slug" href="./推出.html">[推出]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>推出是以
+$$
+\bullet \leftarrow \bullet \rightarrow \bullet
+$$
+为指标范畴的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>, 是<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>的对偶.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="推前"><header><h1><span class="taxon"></span>推前, 拉回 (纤维范畴) <a class="slug" href="./推前.html">[推前]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>对于基范畴 $\mathcal B$ 上的范畴 $p\colon \mathcal E \to \mathcal B$, <strong>推前</strong> (pushforward) 和<strong>拉回</strong> (pullback) 指的是 $\mathcal B$ 中态射的有某种万有性质的<strong>提升</strong>. 具有一切推前或拉回的范畴称为<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">纤维范畴</a></span>.</p>
 <p><span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">范畴论拉回</a></span>是上述概念的特例.</p>
@@ -17888,6 +17942,16 @@ $$</p>
 <h2>定义</h2>
 <p>有限极限是以<span class="link local"><a href="./有限范畴.html" title="有限范畴 [有限范畴]">有限范畴</a></span>为指标范畴的<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="有限范畴"><header><h1><span class="taxon"></span>有限范畴 <a class="slug" href="./有限范畴.html">[有限范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>归纳定义</h3>
+<p>如下条件归纳定义了有限范畴.</p>
+<ul>
+<li>空范畴 $\varnothing$, 终范畴 $1$, 以及一个箭头 $\bullet \to \bullet$ 都是有限范畴;</li>
+<li>有限范畴的<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>为有限范畴;</li>
+<li>有限范畴的有限<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>为有限范畴.</li>
+</ul>
+<h2>例</h2>
+<p>注意, 有限群的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>如 $\mathbf {B}\mathbb{Z}/2$, 在 $1$-范畴语境中是有限范畴, 而在 $\infty$-范畴语境中不是有限范畴.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="本原单位根"><header><h1><span class="taxon"></span>本原单位根 <a class="slug" href="./本原单位根.html">[本原单位根]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>对正整数 $n$, 含幺交换环 $R$ 中的<strong>本原单位根</strong>是满足如下条件的元素 $\zeta \in R$:</p>
@@ -19956,13 +20020,20 @@ $$
 <p>对于算畴上的代数可以谈论<span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">模</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="算畴给出单子"><header><h1><span class="taxon"></span>算畴给出单子 <a class="slug" href="./算畴给出单子.html">[算畴给出单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>给出一种特殊的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>, 称为<strong></strong><span class="link local"><a href="./解析单子.html" title="解析单子 [解析单子]">解析单子</a></span> (analytic monad).</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="箭图"><header><h1><span class="taxon"></span>“箭图” <a class="slug" href="./箭图.html">[箭图]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="箭图"><header><h1><span class="taxon"></span>箭图 <a class="slug" href="./箭图.html">[箭图]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>箭图 (quiver) $Q$ 就是 (允许有多箭头或圈的) 有向图.</p>
-<h2>路代数</h2>
-<p>箭图 $Q$ 的路是一列箭头 $a_n\cdots a_1$, 使得当 $1\leq i &lt;n$ 时, $a_i$ 的终点等于 $a_{i+1}$ 的起点. 另外, 我们规定每个顶点 $x$ 处有一个平凡道路 $e_x$.</p>
+<p><strong>箭图</strong> (quiver) $Q$ 是允许有多箭头或圈的有向图.</p>
+<p>箭图也可理解为如下范畴上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>:</p>
+<ul>
+<li>对象: $e,v$;</li>
+<li>态射: $s,t\colon e\to v$.</li>
+</ul>
+<p>因此箭图的范畴是一个 $1$-<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>.</p>
+<h2>性质</h2>
+<h3>路代数</h3>
+<p>箭图 $Q$ 上的一条<strong>路</strong>是一列箭头 $a_n\cdots a_1$, 使得当 $1\leq i &lt;n$ 时, $a_i$ 的终点等于 $a_{i+1}$ 的起点. 另外, 我们规定每个顶点 $x$ 处有一个平凡道路 $e_x$.</p>
 <p>固定域 $k$. 箭图 $Q$ 的路代数 (path algebra) $kQ$ 作为向量空间由所有的路生成; 其乘法由路的连接给出. 当 $Q$ 的顶点数有限时, 每个顶点处平凡道路的和对应 $kQ$ 的乘法单位元; 否则 $kQ$ 没有乘法单位元.</p>
-<h2>表示</h2>
+<h3>表示</h3>
 <p>箭图 $Q$ 的一个表示是如下信息: 对每个顶点 $x$ 指定一个 $k$-线性空间 $V_x$, 对每条边 $x\to y$ 指定一个线性映射 $V_x\to V_y$.</p>
 <p>箭图 $Q$ 的表示等同于路代数 $kQ$ 上的模:</p>
 <ul>
@@ -20438,6 +20509,9 @@ $$</p>
 <li>一个 $A$-模构成 $B$-模是性质;</li>
 <li>遗忘函子 $\mathsf{Mod}(B) \to \mathsf{Mod}(A)$ <span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实</a></span>.</li>
 </ul>
+<h3>可逆性</h3>
+<p>在任何范畴中, 一个态射可逆是<strong>性质而非结构</strong>. 换言之, 若一个态射有逆, 那么其逆是唯一的.</p>
+<p>类似地, 在幺半群 ($\mathsf{Ani}$ 中的结合代数) 中, 一个元素有逆是性质而非结构. 对于整个幺半群而言, 其构成群 (即所有元素都有逆) 也是性质而非结构.</p>
 <h3>交换性</h3>
 <p>在高阶范畴中, <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> ($\mathbb E_1$-代数) 的 “<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换</a></span>性” 是<strong>结构而非性质</strong>; 具体地, 对一般的对称幺半范畴 $\mathcal C\in\mathsf{CAlg}(\mathsf{Cat})$, 由<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>的范畴到<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的范畴的遗忘函子
 $$
@@ -21791,6 +21865,9 @@ $$</p>
 <p>这与<span class="link local"><a href="./酉群的三选二性质.html" title="“酉群的三选二性质” [酉群的三选二性质]">酉群的三选二性质</a></span>有关.</p>
 <h3>实 2 维的情形</h3>
 <p>$2$ 维实流形上的任意近复结构都可积, 这是因为可积性等价于 $\bar\partial^2=0$, 而这在实 $2$ 维情形自动成立.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="远足代数"><header><h1><span class="taxon"></span>远足代数 <a class="slug" href="./远足代数.html">[远足代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>参考 <span class="link local"><a href="./GaitsgoryLinReevesExcALg.html" title="On the excursion algebra [GaitsgoryLinReevesExcALg]">Gaitsgory–Lin–Reeves</a></span>.</p>
+<h2>观念</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="连合谱"><header><h1><span class="taxon"></span>连合谱 <a class="slug" href="./连合谱.html">[连合谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>连合谱是指负数阶同伦群平凡的<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>.</p>
 <p>连合谱等同于 <span class="link local"><a href="./Abel∞-群.html" title="E∞-群 [Abel∞-群]">Abel ∞-群</a></span>, 或<span class="link local"><a href="./无穷环路空间.html" title="“无穷环路空间” [无穷环路空间]">无穷环路空间</a></span>.</p>
