@@ -814,14 +814,29 @@
 <p>设 $G \colon \mathcal D \to \mathcal C$ 为函子, 若有 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $A$, 使得 $G$ 等价于遗忘函子 $\mathsf{Alg}_A(\mathcal C) \to \mathcal C$, 则称之为<strong>单子性函子</strong>.</p>
 <h2>性质</h2>
 <p>单子性函子 $G$ 有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $F$, 即单子 $A$ 的 “自由代数” 函子 $X\mapsto AX$.</p>
-<p><strong>定理</strong>. $G\colon \mathcal D\to\mathcal C$ 为单子性函子当且仅当 $G$ 保守, 且创生 $G$-分裂<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>.</p>
+<h3>判定</h3>
+<p>判定单子性函子的常用方法是 <span class="link local"><a href="./Barr–Beck–Lurie定理.html" title="Barr–Beck–Lurie 定理 [Barr–Beck–Lurie定理]">Barr–Beck–Lurie 定理</a></span>.</p>
+<p><strong>定理</strong>. $G\colon \mathcal D\to\mathcal C$ 为单子性函子当且仅当 $G$ <span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守</a></span>, 且<span class="link local"><a href="./创生(范畴论).html" title="创生 (范畴论) [创生(范畴论)]">创生</a></span> $G$-<span class="link local"><a href="./单纯对象的分裂.html" title="分裂单纯对象 [单纯对象的分裂]">分裂</a></span><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>.</p>
+<p>详见 <span class="link local"><a href="./Barr–Beck–Lurie定理.html" title="Barr–Beck–Lurie 定理 [Barr–Beck–Lurie定理]">Barr–Beck–Lurie 定理</a></span>.</p>
+<p>另有一些较粗糙的判定定理, 给出单子性的充分而不必要条件.</p>
+<p>如下定理是对 $1$-范畴陈述的.</p>
+<p><strong>定理</strong>. 对于函子 $G\colon \mathcal D\to\mathcal C$, 若 $G$ 有左伴随, $G$ <span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映同构</a></span>, $\mathcal D$ 具有<span class="link local"><a href="./余等化子.html" title="余等化子 [余等化子]">余等化子</a></span>, 且 $G$ 保持余等化子,
+则 $G$ 为单子性函子.</p>
 <h2>例</h2>
 <p>一个出人意料的例子: 紧 Hausdorff 空间的范畴 $\mathsf{CHaus}$ 在集合范畴 $\mathsf{Set}$ 上是单子性的.</p>
 <h3>自反子范畴</h3>
 <p><span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span>的嵌入 $\mathcal D\hookrightarrow\mathcal C$ 是单子性的.</p>
 <h3>下降</h3>
 <p>许多<span class="link local"><a href="./下降.html" title="下降 [下降]">下降</a></span>现象表述为单子性.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="代数理论"><header><h1><span class="taxon"></span>代数理论 <a class="slug" href="./代数理论.html">[代数理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Barr–Beck–Lurie定理"><header><h1><span class="taxon"></span>Barr–Beck–Lurie 定理 <a class="slug" href="./Barr–Beck–Lurie定理.html">[Barr–Beck–Lurie定理]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>陈述</h2>
+<h3>经典</h3>
+<p>经典范畴论中的 Barr–Beck 定理如下.</p>
+<p><strong>定理</strong>. 对于函子 $G\colon \mathcal D\to\mathcal C$, 设有左伴随 $F$, 则 $G$ 为<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性函子</a></span>当且仅当 $G$ 反映同构, 且 $G$ <span class="link local"><a href="./创生(范畴论).html" title="创生 (范畴论) [创生(范畴论)]">创生</a></span> $G$-<span class="link local"><a href="./分裂余等化子.html" title="分裂余等化子 [分裂余等化子]">分裂余等化子</a></span>.</p>
+<p>具体地, 后一个条件是说每当有图表</p>
+<p><figure><img src="./Barr–Beck-G-split-coequalizer.svg" class="color-invert"/></figure></p>
+<p>其中 $h\circ G(f) = h\circ G(g)$,</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="代数理论"><header><h1><span class="taxon"></span>代数理论 <a class="slug" href="./代数理论.html">[代数理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>代数</strong>的最初意义是对运算与等式的研究. 一个<strong>代数理论</strong>就是若干种运算和这些运算之间的若干条等式. 代数理论的<strong>模型</strong>就是一个集合 (或一般范畴的对象) 上带有指定的运算, 满足指定的等式.</p>
 <p>一种更抽象的视角是, 运算和等式不过是一个具有有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">乘积</a></span> (<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>) 的范畴的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 故代数理论可 “无坐标” 式地定义为这样的一个范畴, 这个范畴就是它的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>. 而该理论的模型则是语法范畴到 $\mathsf{Set}$ (或一般范畴) 的保持结构的函子.</p>

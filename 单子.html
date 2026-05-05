@@ -899,6 +899,7 @@ $$</li>
 <p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">亟需施工处</a></span>列表 (“TODO list”)</p>
 <p><span class="link local"><a href="./terminologies.html" title="单纯百科 - 术语翻译表 [terminologies]">术语翻译表</a></span></p>
 <h2>最近</h2>
+<p><span class="link local"><a href="./Barr–Beck–Lurie定理.html" title="Barr–Beck–Lurie 定理 [Barr–Beck–Lurie定理]">Barr–Beck–Lurie 定理</a></span></p>
 <p><span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span></p>
 <p><span class="link local"><a href="./吸引子.html" title="吸引子, 排斥子 [吸引子]">吸引子, 排斥子</a></span></p>
 <p><span class="link local"><a href="./Milnor纤维化.html" title="Milnor 纤维化 [Milnor纤维化]">Milnor 纤维化</a></span></p>
@@ -985,6 +986,28 @@ $$
 <h2>性质</h2>
 <h3>余单子与单纯对象</h3>
 <p>由于<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$ 是 “一个对象生成的自由<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>”, 任意幺半范畴 $M$ 中的幺半对象都对应着函子 $\Delta \to M$, 也即 $M^{\text{op}}$ 中的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯集</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="保守函子"><header><h1><span class="taxon"></span>保守函子 <a class="slug" href="./保守函子.html">[保守函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><strong>保守函子</strong> (conservative functor) 是<span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映同构</a></span>的函子.</p>
+<h2>例</h2>
+<p><span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>为保守函子.</p>
+<p><span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘函子</a></span> $\mathsf{Grp}\to\mathsf{Set}$ 为保守函子. 对任何<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>乃至<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>都是如此.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="创生(范畴论)"><header><h1><span class="taxon"></span>创生 (范畴论) <a class="slug" href="./创生(范畴论).html">[创生(范畴论)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于指标范畴 $I$, 称函子 $F\colon \mathcal C\to \mathcal D$ <strong>创生</strong> $I$-极限是指:</p>
+<ul>
+<li>若 $\mathcal C$ 中的图 $X\colon I\to\mathcal C$ 在 $\mathcal D$ 中有极限 $\operatorname{lim}FX$, 则 $X$ 有极限 $\operatorname{lim}X$ 且 $F(\operatorname{lim}X) = \operatorname{lim}FX$.</li>
+</ul>
+<p>对余极限可同理定义.</p>
+<h2>例</h2>
+<h3>遗忘函子</h3>
+<p>“创生” 极限主要是对遗忘函子谈论的. 一种直观为: 较复杂结构的极限可由较简单结构的极限创生或计算.</p>
+<ul>
+<li>遗忘函子 $\mathsf{Grp} \to\mathsf{Set}$ 创生所有的极限. 这就是说, 群的极限可以用集合的极限来计算. 这件事对任何<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>甚至任何<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>都是成立的.</li>
+<li>遗忘函子 $\mathsf{Fun}(\mathcal C,\mathcal D) \to\mathsf{Fun}(\operatorname{Ob}\mathcal C,\mathcal D)$ 创生所有的极限. 这就是说, 函子范畴中的极限可以逐对象计算, 如果它存在的话.</li>
+</ul>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单子上的代数"><header><h1><span class="taxon"></span>单子上的代数 <a class="slug" href="./单子上的代数.html">[单子上的代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>上的<strong>代数</strong>和单子上的<strong>左模</strong>是同义词. 还有另一个不同的概念, 单子上的右模.</p>
@@ -1033,7 +1056,14 @@ $$</p>
 <p>设 $G \colon \mathcal D \to \mathcal C$ 为函子, 若有 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $A$, 使得 $G$ 等价于遗忘函子 $\mathsf{Alg}_A(\mathcal C) \to \mathcal C$, 则称之为<strong>单子性函子</strong>.</p>
 <h2>性质</h2>
 <p>单子性函子 $G$ 有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $F$, 即单子 $A$ 的 “自由代数” 函子 $X\mapsto AX$.</p>
-<p><strong>定理</strong>. $G\colon \mathcal D\to\mathcal C$ 为单子性函子当且仅当 $G$ 保守, 且创生 $G$-分裂<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>.</p>
+<h3>判定</h3>
+<p>判定单子性函子的常用方法是 <span class="link local"><a href="./Barr–Beck–Lurie定理.html" title="Barr–Beck–Lurie 定理 [Barr–Beck–Lurie定理]">Barr–Beck–Lurie 定理</a></span>.</p>
+<p><strong>定理</strong>. $G\colon \mathcal D\to\mathcal C$ 为单子性函子当且仅当 $G$ <span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守</a></span>, 且<span class="link local"><a href="./创生(范畴论).html" title="创生 (范畴论) [创生(范畴论)]">创生</a></span> $G$-<span class="link local"><a href="./单纯对象的分裂.html" title="分裂单纯对象 [单纯对象的分裂]">分裂</a></span><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>.</p>
+<p>详见 <span class="link local"><a href="./Barr–Beck–Lurie定理.html" title="Barr–Beck–Lurie 定理 [Barr–Beck–Lurie定理]">Barr–Beck–Lurie 定理</a></span>.</p>
+<p>另有一些较粗糙的判定定理, 给出单子性的充分而不必要条件.</p>
+<p>如下定理是对 $1$-范畴陈述的.</p>
+<p><strong>定理</strong>. 对于函子 $G\colon \mathcal D\to\mathcal C$, 若 $G$ 有左伴随, $G$ <span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映同构</a></span>, $\mathcal D$ 具有<span class="link local"><a href="./余等化子.html" title="余等化子 [余等化子]">余等化子</a></span>, 且 $G$ 保持余等化子,
+则 $G$ 为单子性函子.</p>
 <h2>例</h2>
 <p>一个出人意料的例子: 紧 Hausdorff 空间的范畴 $\mathsf{CHaus}$ 在集合范畴 $\mathsf{Set}$ 上是单子性的.</p>
 <h3>自反子范畴</h3>

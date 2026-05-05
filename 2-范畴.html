@@ -862,6 +862,21 @@ $$
 p_! (F\circ X) \simeq F\circ p_! X.
 $$</p>
 <p>注意到, $(F\circ -)\colon \mathsf{Fun}(\mathcal A,\mathcal C) \to \mathsf{Fun}(\mathcal A,\mathcal D)$ 是 $(G\circ -)\colon \mathsf{Fun}(\mathcal A,\mathcal D) \to \mathsf{Fun}(\mathcal A,\mathcal C)$ 的左伴随. 另一方面, $p_!$ 是 $p^* = (-\circ p)$ 的左伴随. 由于 $(G\circ -)$ 与 $(-\circ p)$ 两个操作天然是交换的, 两者的左伴随也交换. 这便证明了命题. $\square$</p>
+<h3>全子范畴的伴随</h3>
+<p><strong>命题</strong>. 设 $F\colon \mathcal C\to\mathcal D$, $G\colon \mathcal D\to\mathcal C$,
+有伴随 $F\dashv G$. 如下两条件等价:</p>
+<ul>
+<li>$G$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>;</li>
+<li>余单位 $FG \to\mathrm{id}_{\mathcal D}$ 为同构.</li>
+</ul>
+<p>此时称 $G\colon \mathcal D\to\mathcal C$ 为<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span>, 或自反<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>.</p>
+<p>对偶地, 如下两条件等价:</p>
+<ul>
+<li>$F$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>;</li>
+<li>单位 $\mathrm{id}_{\mathcal C}\to GF$ 为同构.</li>
+</ul>
+<p><em>证明</em>.</p>
+<p>由对偶性, 只需证明第一个命题. $G$ 为全忠实函子, 当且仅当 $\operatorname{Hom}_{\mathcal D}(-,-)\to \operatorname{Hom}_{\mathcal C}(G-,G-)$ 为同构; 由伴随, 这等价于 $\operatorname{Hom}_{\mathcal D}(-,-)\to \operatorname{Hom}_{\mathcal D}(FG-,-)$ 为同构. 由<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>, 这等价于余单位 $FG \to\mathrm{id}_{\mathcal D}$ 为同构.</p>
 <h2>例</h2>
 <h3>自由-遗忘伴随</h3>
 <p><span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由-遗忘伴随</a></span></p>

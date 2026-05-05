@@ -1043,6 +1043,19 @@ $$</p>
 <li>$\operatorname{Hom}_{\mathcal D}(f(-),-) \colon \mathcal D \otimes\mathcal C^{\mathrm{op}} \to \mathsf{Set}$;</li>
 <li>$\operatorname{Hom}_{\mathcal D}(-,f(-)) \colon \mathcal C \otimes\mathcal D^{\mathrm{op}} \to \mathsf{Set}$.</li>
 </ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="分次模"><header><h1><span class="taxon"></span>分次模 <a class="slug" href="./分次模.html">[分次模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>分次模有如下两种含义, 前一种是后一种的特例, 但前一种更为基本.</p>
+<h3>不带分次的环</h3>
+<p>固定交换环 $A$. 定义分次 $A$-模为 $A$-模范畴中的<span class="link local"><a href="./分次对象.html" title="分次对象 [分次对象]">分次对象</a></span>.</p>
+<h3>分次环</h3>
+<p>固定交换环 $k$, <span class="link local"><a href="./分次代数.html" title="分次代数 [分次代数]">分次 $k$-代数</a></span> $A$ 是分次 $k$-模范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>; 于是可定义分次 $A$-模为分次 $k$-模范畴中 $A$ 上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>.</p>
+<p>具体地, 分次环 $A = \bigoplus_{n} A_n$ 上的分次模等同于 $A$-模 $M \simeq\bigoplus_n M_n$, 满足乘法映射
+$A\otimes M\to M$
+将 $A_n\otimes M_{n'}$ 映射到 $M_{n+n'}$.</p>
+<h3>作为拟凝聚层</h3>
+<p><span class="link local"><a href="./分次代数.html" title="分次代数 [分次代数]">分次环</a></span> $A$ 上的分次模 $M$ 等同于 <span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">$\operatorname{Spec}A$</a></span> 上的 $\mathbb G_m$-<span class="link local"><a href="./等变对象.html" title="等变对象 [等变对象]">等变</a></span>拟凝聚层, 也即商叠 $\operatorname{Spec}A / \mathbb G_m$ 上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>.</p>
+<p>不带分次的环 $A$ 相当于仅有 $0$ 次部分的分次环, 对应 $\mathbb G_m$ 在 $\operatorname{Spec}A$ 上的平凡作用. 分次 $A$-模等同于 $\operatorname{Spec}A/\mathbb G_m = \operatorname{Spec}A\times\mathbf{B}\mathbb G_m$ 上的拟凝聚层.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="半单环"><header><h1><span class="taxon"></span>半单环 <a class="slug" href="./半单环.html">[半单环]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>半单环是<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模范畴</a></span>为<span class="link local"><a href="./半单Abel范畴.html" title="半单 Abel 范畴 [半单Abel范畴]">半单 Abel 范畴</a></span>的环.</p>
@@ -1089,6 +1102,33 @@ $$</p>
 <li>$G$ 有典范的 $T$-<strong>左模</strong>结构 $TG=GFG \to G$.</li>
 </ul>
 <p>见<span class="link local"><a href="./双边杠构造.html" title="双边杠构造 [双边杠构造]">双边杠构造</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="单纯对象的分裂"><header><h1><span class="taxon"></span>分裂单纯对象 <a class="slug" href="./单纯对象的分裂.html">[单纯对象的分裂]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>记 $\mathrm{surj}(j,k)$ 为单纯集 $\Delta^j$ 到 $\Delta^k$ 的满射的集合.</p>
+<p>设 $K$ 为<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, 其 $n$ 阶<strong>分裂</strong>是一系列子对象 $N_k \subset K_k\,(k\leq n)$, 称为非退化部分, 满足对 $0\leq j\leq n$, 有典范的同构 $\coprod_{\mathrm{surj}(j,k)}N_k \to K_j$. 直观上, 这个条件是说 $K$ 的每个可能退化的单形都唯一地对应一个非退化单形.</p>
+<h3>作为可缩单纯对象</h3>
+<p>记 $\Delta_{\bot}$ 为有限非空全序集与保持最小值的映射构成的范畴. 事实上,
+$$
+\Delta_{\bot} = \mathsf{LMod}_{\Delta_+}([0])
+$$
+是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的结合代数 $[0]$ 上的左<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>范畴.
+因此其到<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span> $\Delta_+$ 的函子 (注意并非<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>) $i\colon \Delta_{\bot}\hookrightarrow \Delta_+$ 有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $C_+\colon \Delta_+ \to \Delta_{\bot}$, $[n]\mapsto [0] * [n]$ (“对全序集<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加一个最小值”, 可类比于锥操作).
+从而有<span class="link local"><a href="./预层范畴之间的伴随.html" title="预层范畴之间的伴随 [预层范畴之间的伴随]">预层范畴之间的四元伴随</a></span>
+$$
+ i_!\dashv [(C_+)_!=i^*] \dashv [(C_+)^* =i_*] \dashv (C_+)_*
+$$</p>
+<p>设 $X\colon \Delta_+^{\mathrm{op}}\to\mathcal C$ 为<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">增广单纯对象</a></span>, 定义其<strong>分裂</strong>为下图.</p>
+<p><figure><img src="./split-simplicial-object.svg" class="color-invert"/></figure></p>
+<p>换言之, $X = (C_+)^* \overline{X} = i_*\overline{X}$. 注意, 伴随关系
+$$
+\operatorname{Hom}_{\Delta_\bot}(C_+-,-)\simeq\operatorname{Hom}_{\Delta_+}(-,i-)
+$$
+直接给出 $(C_+)^*$ 在<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>上的作用 $(C_+)^*\mathbf{y}([n]) = \mathbf{y}(i[n])$. 而 $(C_+)^*$ 作为左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>保持余极限, 故有如下直观: $\Delta_\bot$ 的对象为固定顶点的锥, $\overline{X}$ 是一族固定顶点的锥的粘合, 从而是可缩到顶点的单纯对象.</p>
+<h2>性质</h2>
+<p>集合范畴中的单纯对象 (<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>) 有唯一的分裂.</p>
+<p>单纯对象若存在分裂, 则分裂唯一.</p>
+<h2>参考资料</h2>
+<p>Artin, Mazur, Etale Homotopy Theory</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="双边杠构造"><header><h1><span class="taxon"></span>双边杠构造 <a class="slug" href="./双边杠构造.html">[双边杠构造]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>如果说<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>是<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>, 那么双边杠构造就是<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">结合代数上的模</a></span>的相对张量积的范畴化.</p>

@@ -877,6 +877,62 @@ $$
 <p>另一种说法是, 由于 $X$ 是 $E$-模, $X$ 是 $X\wedge E$ 的收缩, 而对任何谱 $X$, $X\wedge E$ 都是 $E$-局部谱. (好像 $E$-模是 $E$-局部谱这个结论更基本一些.)</p>
 <p><strong>命题</strong>. $E$-局部谱的子范畴关于平移, 收缩, 积 (直和), 余纤维封闭.</p>
 <p>注意, $E$-局部谱的<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">张量积</a></span>不一定是 $E$-局部谱.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="伴随"><header><h1><span class="taxon"></span>伴随 <a class="slug" href="./伴随.html">[伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>伴随是 <span class="link local"><a href="./2-范畴.html" title="2-范畴 [2-范畴]">$2$-范畴</a></span>的两个对象之间一对态射的一种关系, 是 $1$-范畴中态射的互逆关系的推广.</p>
+<p>$2$-范畴 $\mathcal C$ 中的伴随等同于<span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span> $\mathsf{Adj}$ 到 $\mathcal C$ 的函子
+$$
+\mathsf{Adj} \to \mathcal C.
+$$</p>
+<h2>定义</h2>
+<h2>性质</h2>
+<h3>伴随保持极限</h3>
+<p><strong>命题</strong>. 左伴随函子保持<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>; 右伴随函子保持<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>.</p>
+<p><em>证明</em>. 我们证明一个更广泛的结论, 即<strong>左伴随保持左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>, 右伴随保持右 Kan 扩张</strong>.</p>
+<p>设 $F\colon \mathcal C\to\mathcal D$, $G\colon \mathcal D\to\mathcal C$,
+有伴随 $F\dashv G$.</p>
+<p>设 $p\colon \mathcal A\to\mathcal B$ 为任意函子.
+记
+$$
+p_!\colon \mathsf{Fun}(\mathcal A,\mathcal C)\to\mathsf{Fun}(\mathcal B,\mathcal C)
+$$
+为沿 $p$ 的左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>;
+我们断言对于 $X\in\mathsf{Fun}(\mathcal A,\mathcal C)$, 有
+$$
+p_! (F\circ X) \simeq F\circ p_! X.
+$$</p>
+<p>注意到, $(F\circ -)\colon \mathsf{Fun}(\mathcal A,\mathcal C) \to \mathsf{Fun}(\mathcal A,\mathcal D)$ 是 $(G\circ -)\colon \mathsf{Fun}(\mathcal A,\mathcal D) \to \mathsf{Fun}(\mathcal A,\mathcal C)$ 的左伴随. 另一方面, $p_!$ 是 $p^* = (-\circ p)$ 的左伴随. 由于 $(G\circ -)$ 与 $(-\circ p)$ 两个操作天然是交换的, 两者的左伴随也交换. 这便证明了命题. $\square$</p>
+<h3>全子范畴的伴随</h3>
+<p><strong>命题</strong>. 设 $F\colon \mathcal C\to\mathcal D$, $G\colon \mathcal D\to\mathcal C$,
+有伴随 $F\dashv G$. 如下两条件等价:</p>
+<ul>
+<li>$G$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>;</li>
+<li>余单位 $FG \to\mathrm{id}_{\mathcal D}$ 为同构.</li>
+</ul>
+<p>此时称 $G\colon \mathcal D\to\mathcal C$ 为<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span>, 或自反<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>.</p>
+<p>对偶地, 如下两条件等价:</p>
+<ul>
+<li>$F$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>;</li>
+<li>单位 $\mathrm{id}_{\mathcal C}\to GF$ 为同构.</li>
+</ul>
+<p><em>证明</em>.</p>
+<p>由对偶性, 只需证明第一个命题. $G$ 为全忠实函子, 当且仅当 $\operatorname{Hom}_{\mathcal D}(-,-)\to \operatorname{Hom}_{\mathcal C}(G-,G-)$ 为同构; 由伴随, 这等价于 $\operatorname{Hom}_{\mathcal D}(-,-)\to \operatorname{Hom}_{\mathcal D}(FG-,-)$ 为同构. 由<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>, 这等价于余单位 $FG \to\mathrm{id}_{\mathcal D}$ 为同构.</p>
+<h2>例</h2>
+<h3>自由-遗忘伴随</h3>
+<p><span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由-遗忘伴随</a></span></p>
+<h3>自反局部化</h3>
+<p><span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span></p>
+<h3>偏序集之间的伴随</h3>
+<p>见 <span class="link local"><a href="./Galois对应.html" title="Galois 对应 [Galois对应]">Galois 对应</a></span>.</p>
+<h3>层与平展空间</h3>
+<p>对拓扑空间 $X$, 预层的<span class="link local"><a href="./平展空间.html" title="“平展空间” [平展空间]">平展空间</a></span>与丛的截面层给出了一对伴随
+$$
+\operatorname{Presh}(X) \rightleftarrows\mathsf {Top}/X.
+$$
+这对伴随限制为满子范畴的等价
+$$
+\operatorname{Sh}(X) \rightleftarrows\mathsf {Et}(X).
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="可表现范畴"><header><h1><span class="taxon"></span>可表现范畴 <a class="slug" href="./可表现范畴.html">[可表现范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>可表现范畴</strong> $\mathcal C$ 是一个可能很大的范畴, 却能由较小的一族对象 $\mathcal S\hookrightarrow\mathcal C$ 控制.
@@ -975,6 +1031,20 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="自反子范畴"><header><h1><span class="taxon"></span>自反子范畴 <a class="slug" href="./自反子范畴.html">[自反子范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>自反子范畴, 又称自反<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span> (reflective localization), 是有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>的<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>.</p>
+<h2>性质</h2>
+<p><strong>命题</strong>. 设 $F\colon \mathcal C\to\mathcal D$, $G\colon \mathcal D\to\mathcal C$,
+有伴随 $F\dashv G$. 如下两条件等价:</p>
+<ul>
+<li>$G$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>;</li>
+<li>余单位 $FG \to\mathrm{id}_{\mathcal D}$ 为同构.</li>
+</ul>
+<p>对偶地, 如下两条件等价:</p>
+<ul>
+<li>$F$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>;</li>
+<li>单位 $\mathrm{id}_{\mathcal C}\to GF$ 为同构.</li>
+</ul>
+<p><em>证明</em>.</p>
+<p>由对偶性, 只需证明第一个命题. $G$ 为全忠实函子, 当且仅当 $\operatorname{Hom}_{\mathcal D}(-,-)\to \operatorname{Hom}_{\mathcal C}(G-,G-)$ 为同构; 由伴随, 这等价于 $\operatorname{Hom}_{\mathcal D}(-,-)\to \operatorname{Hom}_{\mathcal D}(FG-,-)$ 为同构. 由<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>, 这等价于余单位 $FG \to\mathrm{id}_{\mathcal D}$ 为同构.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="链复形无穷范畴"><header><h1><span class="taxon"></span>链复形无穷范畴 <a class="slug" href="./链复形无穷范畴.html">[链复形无穷范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设 $\mathcal A$ 为<span class="link local"><a href="./加性范畴.html" title="加性范畴 [加性范畴]">加性范畴</a></span>, 记 $\mathsf {Ch}(\mathcal A)$ 为其中<span class="link local"><a href="./链复形.html" title="链复形 [链复形]">链复形</a></span>的范畴 ($1$-范畴).</p>

@@ -1822,16 +1822,14 @@ $$</li>
 <p>可分充实范畴是<span class="link local"><a href="./可分代数.html" title="可分代数 [可分代数]">可分代数</a></span>的推广.</p>
 <p>设 $\mathcal A$ 为 $\mathcal V$-充实范畴, 若 $\mathcal A$ 作为 $\mathcal A\otimes\mathcal A^{\mathrm{op}}$-模 $\mathcal A\otimes\mathcal A^{\mathrm{op}} \to \mathcal V$ 为小投射模, 则称 $\mathcal A$ <strong>可分</strong> (separable).</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="分次代数"><header><h1><span class="taxon"></span>分次代数 <a class="slug" href="./分次代数.html">[分次代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>分次代数是分成不同次数的 “齐次” 部分之和的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 齐次元素的乘积的次数是次数的和.</p>
-<p>次数也可取值于一般的幺半群.</p>
 <h2>定义</h2>
-<p>固定基环 $k$, 设 $M$ 为<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>, 通常 $M = \mathbb{Z}$.</p>
-<p>定义 $k$ 上的 $M$-分次代数为 $k$-代数 $A$ 带有底层 $k$-模的分解
+<p>分次代数是<span class="link local"><a href="./分次模.html" title="分次模 [分次模]">分次模</a></span>中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
+<p>具体地, 分次代数可分成不同次数的 “齐次” 部分之和
 $$
-A = \bigoplus_{m\in M} A_m,
+A \simeq \bigoplus_{n\in N} A_n,
 $$
-其中 $A_m$ 的元素称为 $m$ 次的<strong>齐次元素</strong>,
-满足齐次元素的乘积仍为齐次元素, 即乘法映射将 $A_m \times A_{m'}$ 映射到 $A_{mm'}$.</p>
+其中 $N$ 为交换幺半群;
+满足乘法映射 $A\otimes A\to A$ 将 $A_n\otimes A_{n'}$ 映射到 $A_{n+n'}$, 即齐次元素的乘积的次数是次数的和.</p>
 <h3>余模结构</h3>
 <p>设 $M$ 为交换幺半群.</p>
 <p>回忆幺半群代数 $k[M]$ 的双代数结构. 注意到自由 $k$-模函子
@@ -1846,6 +1844,19 @@ $$
 将 $m$ 次齐次元素 $a$ 映射到 $a \otimes m$. 其构成代数同态的条件恰好表明齐次元素的乘积的次数是各自次数的和.</p>
 <p><span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">对偶</a></span>地, $\operatorname{Spec}k[M]$ 是<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>范畴中的交换幺半群, $A$ 上的 $M$-分次也等同于 $k$-概形 $\operatorname{Spec}A$ 上的 $\operatorname{Spec}k[M]$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>.</p>
 <h2>性质</h2>
+</details></section><section class="block" data-taxon=""><details ><summary id="分次模"><header><h1><span class="taxon"></span>分次模 <a class="slug" href="./分次模.html">[分次模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>分次模有如下两种含义, 前一种是后一种的特例, 但前一种更为基本.</p>
+<h3>不带分次的环</h3>
+<p>固定交换环 $A$. 定义分次 $A$-模为 $A$-模范畴中的<span class="link local"><a href="./分次对象.html" title="分次对象 [分次对象]">分次对象</a></span>.</p>
+<h3>分次环</h3>
+<p>固定交换环 $k$, <span class="link local"><a href="./分次代数.html" title="分次代数 [分次代数]">分次 $k$-代数</a></span> $A$ 是分次 $k$-模范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>; 于是可定义分次 $A$-模为分次 $k$-模范畴中 $A$ 上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>.</p>
+<p>具体地, 分次环 $A = \bigoplus_{n} A_n$ 上的分次模等同于 $A$-模 $M \simeq\bigoplus_n M_n$, 满足乘法映射
+$A\otimes M\to M$
+将 $A_n\otimes M_{n'}$ 映射到 $M_{n+n'}$.</p>
+<h3>作为拟凝聚层</h3>
+<p><span class="link local"><a href="./分次代数.html" title="分次代数 [分次代数]">分次环</a></span> $A$ 上的分次模 $M$ 等同于 <span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">$\operatorname{Spec}A$</a></span> 上的 $\mathbb G_m$-<span class="link local"><a href="./等变对象.html" title="等变对象 [等变对象]">等变</a></span>拟凝聚层, 也即商叠 $\operatorname{Spec}A / \mathbb G_m$ 上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>.</p>
+<p>不带分次的环 $A$ 相当于仅有 $0$ 次部分的分次环, 对应 $\mathbb G_m$ 在 $\operatorname{Spec}A$ 上的平凡作用. 分次 $A$-模等同于 $\operatorname{Spec}A/\mathbb G_m = \operatorname{Spec}A\times\mathbf{B}\mathbb G_m$ 上的拟凝聚层.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="分解同调"><header><h1><span class="taxon"></span>分解同调 <a class="slug" href="./分解同调.html">[分解同调]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>分解同调</strong> (factorization homology), 又叫<strong>手性同调</strong> (chiral homology), 是将 $\mathbb E_n$-代数 “沿 $n$ 维流形作张量积”, 或更一般地将 <span class="link local"><a href="./E_M-算畴.html" title="E_M-算畴 [E_M-算畴]">$\mathbb E_M$-算畴</a></span>的代数在流形 $M$ 上作 “张量积”.</p>
@@ -2405,6 +2416,7 @@ $$</p>
 <li>游走的箭头 $\{0\to 1\}$ 即为两个对象 $0,1$ 与一个态射 $0\to 1$ 生成的范畴.</li>
 <li><span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span></li>
 <li>$\mathbf{B}\mathbb N$, “游走的自同态”</li>
+<li><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">$\Delta_+$</a></span> 中的 $[0]$ 是游走的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</li>
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="游走的伴随"><header><h1><span class="taxon"></span>游走的伴随 <a class="slug" href="./游走的伴随.html">[游走的伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>

@@ -832,6 +832,21 @@ $$
 p_! (F\circ X) \simeq F\circ p_! X.
 $$</p>
 <p>注意到, $(F\circ -)\colon \mathsf{Fun}(\mathcal A,\mathcal C) \to \mathsf{Fun}(\mathcal A,\mathcal D)$ 是 $(G\circ -)\colon \mathsf{Fun}(\mathcal A,\mathcal D) \to \mathsf{Fun}(\mathcal A,\mathcal C)$ 的左伴随. 另一方面, $p_!$ 是 $p^* = (-\circ p)$ 的左伴随. 由于 $(G\circ -)$ 与 $(-\circ p)$ 两个操作天然是交换的, 两者的左伴随也交换. 这便证明了命题. $\square$</p>
+<h3>全子范畴的伴随</h3>
+<p><strong>命题</strong>. 设 $F\colon \mathcal C\to\mathcal D$, $G\colon \mathcal D\to\mathcal C$,
+有伴随 $F\dashv G$. 如下两条件等价:</p>
+<ul>
+<li>$G$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>;</li>
+<li>余单位 $FG \to\mathrm{id}_{\mathcal D}$ 为同构.</li>
+</ul>
+<p>此时称 $G\colon \mathcal D\to\mathcal C$ 为<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span>, 或自反<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>.</p>
+<p>对偶地, 如下两条件等价:</p>
+<ul>
+<li>$F$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>;</li>
+<li>单位 $\mathrm{id}_{\mathcal C}\to GF$ 为同构.</li>
+</ul>
+<p><em>证明</em>.</p>
+<p>由对偶性, 只需证明第一个命题. $G$ 为全忠实函子, 当且仅当 $\operatorname{Hom}_{\mathcal D}(-,-)\to \operatorname{Hom}_{\mathcal C}(G-,G-)$ 为同构; 由伴随, 这等价于 $\operatorname{Hom}_{\mathcal D}(-,-)\to \operatorname{Hom}_{\mathcal D}(FG-,-)$ 为同构. 由<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>, 这等价于余单位 $FG \to\mathrm{id}_{\mathcal D}$ 为同构.</p>
 <h2>例</h2>
 <h3>自由-遗忘伴随</h3>
 <p><span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由-遗忘伴随</a></span></p>
@@ -1413,13 +1428,47 @@ $$</p>
 <p>设 $G \colon \mathcal D \to \mathcal C$ 为函子, 若有 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $A$, 使得 $G$ 等价于遗忘函子 $\mathsf{Alg}_A(\mathcal C) \to \mathcal C$, 则称之为<strong>单子性函子</strong>.</p>
 <h2>性质</h2>
 <p>单子性函子 $G$ 有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $F$, 即单子 $A$ 的 “自由代数” 函子 $X\mapsto AX$.</p>
-<p><strong>定理</strong>. $G\colon \mathcal D\to\mathcal C$ 为单子性函子当且仅当 $G$ 保守, 且创生 $G$-分裂<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>.</p>
+<h3>判定</h3>
+<p>判定单子性函子的常用方法是 <span class="link local"><a href="./Barr–Beck–Lurie定理.html" title="Barr–Beck–Lurie 定理 [Barr–Beck–Lurie定理]">Barr–Beck–Lurie 定理</a></span>.</p>
+<p><strong>定理</strong>. $G\colon \mathcal D\to\mathcal C$ 为单子性函子当且仅当 $G$ <span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守</a></span>, 且<span class="link local"><a href="./创生(范畴论).html" title="创生 (范畴论) [创生(范畴论)]">创生</a></span> $G$-<span class="link local"><a href="./单纯对象的分裂.html" title="分裂单纯对象 [单纯对象的分裂]">分裂</a></span><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>.</p>
+<p>详见 <span class="link local"><a href="./Barr–Beck–Lurie定理.html" title="Barr–Beck–Lurie 定理 [Barr–Beck–Lurie定理]">Barr–Beck–Lurie 定理</a></span>.</p>
+<p>另有一些较粗糙的判定定理, 给出单子性的充分而不必要条件.</p>
+<p>如下定理是对 $1$-范畴陈述的.</p>
+<p><strong>定理</strong>. 对于函子 $G\colon \mathcal D\to\mathcal C$, 若 $G$ 有左伴随, $G$ <span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映同构</a></span>, $\mathcal D$ 具有<span class="link local"><a href="./余等化子.html" title="余等化子 [余等化子]">余等化子</a></span>, 且 $G$ 保持余等化子,
+则 $G$ 为单子性函子.</p>
 <h2>例</h2>
 <p>一个出人意料的例子: 紧 Hausdorff 空间的范畴 $\mathsf{CHaus}$ 在集合范畴 $\mathsf{Set}$ 上是单子性的.</p>
 <h3>自反子范畴</h3>
 <p><span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span>的嵌入 $\mathcal D\hookrightarrow\mathcal C$ 是单子性的.</p>
 <h3>下降</h3>
 <p>许多<span class="link local"><a href="./下降.html" title="下降 [下降]">下降</a></span>现象表述为单子性.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="单纯对象的分裂"><header><h1><span class="taxon"></span>分裂单纯对象 <a class="slug" href="./单纯对象的分裂.html">[单纯对象的分裂]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>记 $\mathrm{surj}(j,k)$ 为单纯集 $\Delta^j$ 到 $\Delta^k$ 的满射的集合.</p>
+<p>设 $K$ 为<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, 其 $n$ 阶<strong>分裂</strong>是一系列子对象 $N_k \subset K_k\,(k\leq n)$, 称为非退化部分, 满足对 $0\leq j\leq n$, 有典范的同构 $\coprod_{\mathrm{surj}(j,k)}N_k \to K_j$. 直观上, 这个条件是说 $K$ 的每个可能退化的单形都唯一地对应一个非退化单形.</p>
+<h3>作为可缩单纯对象</h3>
+<p>记 $\Delta_{\bot}$ 为有限非空全序集与保持最小值的映射构成的范畴. 事实上,
+$$
+\Delta_{\bot} = \mathsf{LMod}_{\Delta_+}([0])
+$$
+是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的结合代数 $[0]$ 上的左<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>范畴.
+因此其到<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span> $\Delta_+$ 的函子 (注意并非<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>) $i\colon \Delta_{\bot}\hookrightarrow \Delta_+$ 有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $C_+\colon \Delta_+ \to \Delta_{\bot}$, $[n]\mapsto [0] * [n]$ (“对全序集<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加一个最小值”, 可类比于锥操作).
+从而有<span class="link local"><a href="./预层范畴之间的伴随.html" title="预层范畴之间的伴随 [预层范畴之间的伴随]">预层范畴之间的四元伴随</a></span>
+$$
+ i_!\dashv [(C_+)_!=i^*] \dashv [(C_+)^* =i_*] \dashv (C_+)_*
+$$</p>
+<p>设 $X\colon \Delta_+^{\mathrm{op}}\to\mathcal C$ 为<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">增广单纯对象</a></span>, 定义其<strong>分裂</strong>为下图.</p>
+<p><figure><img src="./split-simplicial-object.svg" class="color-invert"/></figure></p>
+<p>换言之, $X = (C_+)^* \overline{X} = i_*\overline{X}$. 注意, 伴随关系
+$$
+\operatorname{Hom}_{\Delta_\bot}(C_+-,-)\simeq\operatorname{Hom}_{\Delta_+}(-,i-)
+$$
+直接给出 $(C_+)^*$ 在<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>上的作用 $(C_+)^*\mathbf{y}([n]) = \mathbf{y}(i[n])$. 而 $(C_+)^*$ 作为左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>保持余极限, 故有如下直观: $\Delta_\bot$ 的对象为固定顶点的锥, $\overline{X}$ 是一族固定顶点的锥的粘合, 从而是可缩到顶点的单纯对象.</p>
+<h2>性质</h2>
+<p>集合范畴中的单纯对象 (<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>) 有唯一的分裂.</p>
+<p>单纯对象若存在分裂, 则分裂唯一.</p>
+<h2>参考资料</h2>
+<p>Artin, Mazur, Etale Homotopy Theory</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="双边杠构造"><header><h1><span class="taxon"></span>双边杠构造 <a class="slug" href="./双边杠构造.html">[双边杠构造]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>如果说<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>是<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>, 那么双边杠构造就是<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">结合代数上的模</a></span>的相对张量积的范畴化.</p>
@@ -1665,6 +1714,20 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="自反子范畴"><header><h1><span class="taxon"></span>自反子范畴 <a class="slug" href="./自反子范畴.html">[自反子范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>自反子范畴, 又称自反<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span> (reflective localization), 是有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>的<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>.</p>
+<h2>性质</h2>
+<p><strong>命题</strong>. 设 $F\colon \mathcal C\to\mathcal D$, $G\colon \mathcal D\to\mathcal C$,
+有伴随 $F\dashv G$. 如下两条件等价:</p>
+<ul>
+<li>$G$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>;</li>
+<li>余单位 $FG \to\mathrm{id}_{\mathcal D}$ 为同构.</li>
+</ul>
+<p>对偶地, 如下两条件等价:</p>
+<ul>
+<li>$F$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>;</li>
+<li>单位 $\mathrm{id}_{\mathcal C}\to GF$ 为同构.</li>
+</ul>
+<p><em>证明</em>.</p>
+<p>由对偶性, 只需证明第一个命题. $G$ 为全忠实函子, 当且仅当 $\operatorname{Hom}_{\mathcal D}(-,-)\to \operatorname{Hom}_{\mathcal C}(G-,G-)$ 为同构; 由伴随, 这等价于 $\operatorname{Hom}_{\mathcal D}(-,-)\to \operatorname{Hom}_{\mathcal D}(FG-,-)$ 为同构. 由<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>, 这等价于余单位 $FG \to\mathrm{id}_{\mathcal D}$ 为同构.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="闭范畴"><header><h1><span class="taxon"></span>闭范畴 <a class="slug" href="./闭范畴.html">[闭范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>闭范畴是具有 “态射对象” 结构的范畴: 两个对象 $X,Y$ 之间的态射的全体可视为范畴本身的一个对象 $[X,Y]$. 换言之, 闭范畴是 “<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于自身” 的范畴.</p>

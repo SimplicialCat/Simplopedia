@@ -808,6 +808,23 @@
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
 <article><section class="block" data-taxon=""><details open><summary id="分次对象"><header><h1><span class="taxon"></span>分次对象 <a class="slug" href="./分次对象.html">[分次对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设 $\mathcal C$ 为余完备<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, 且 $\otimes$ 保持每个分量的余极限. 设 $M$ 为交换幺半群. 定义 $\mathcal C$ 中的 $M$-<strong>分次对象</strong>的范畴为函子范畴
+$$
+\mathsf{Gr}_M(\mathcal C) = \mathsf{Fun}(M,\mathcal C),
+$$
+其中 $M$ 视为离散对称幺半范畴.</p>
+<p>由定义, $M$-分次对象的范畴上带有 <span class="link local"><a href="./Day卷积.html" title="Day 卷积 [Day卷积]">Day 卷积</a></span>给出的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span>结构. 具体地,
+$$
+(X\otimes Y)_m = \bigoplus_{p+q=m} X_p\otimes Y_q.
+$$</p>
+<h2>例</h2>
+<h3>线性范畴</h3>
+<p>实践中多数遇到的分次对象是 $k$-模范畴 $\mathsf{Mod(k)}$ 或更一般的 $k$-线性范畴中的分次对象, $k$ 是固定的交换环. 在这种情形, $M$-分次对象还有另一种定义, 即 $k[M]$-余模.</p>
+<p><strong>命题</strong>.
+$$
+\mathsf{Fun}(M,\mathsf{Mod(k)})\simeq\mathsf{Comod}(k[M]).
+$$</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Geo-Sat-eq"><header><h1><span class="taxon"></span>几何 Satake 等价 <a class="slug" href="./Geo-Sat-eq.html">[Geo-Sat-eq]</a></h1><div class="metadata"><ul><li class="meta-item">讲义</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>参考</p>
 <ul>
@@ -1126,4 +1143,17 @@ $$</p>
 $$
 \operatorname{gr}_i(X_\bullet) := \operatorname{cofib}(X_{i-1} \to X_i).
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="分次模"><header><h1><span class="taxon"></span>分次模 <a class="slug" href="./分次模.html">[分次模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>分次模有如下两种含义, 前一种是后一种的特例, 但前一种更为基本.</p>
+<h3>不带分次的环</h3>
+<p>固定交换环 $A$. 定义分次 $A$-模为 $A$-模范畴中的<span class="link local"><a href="./分次对象.html" title="分次对象 [分次对象]">分次对象</a></span>.</p>
+<h3>分次环</h3>
+<p>固定交换环 $k$, <span class="link local"><a href="./分次代数.html" title="分次代数 [分次代数]">分次 $k$-代数</a></span> $A$ 是分次 $k$-模范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>; 于是可定义分次 $A$-模为分次 $k$-模范畴中 $A$ 上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>.</p>
+<p>具体地, 分次环 $A = \bigoplus_{n} A_n$ 上的分次模等同于 $A$-模 $M \simeq\bigoplus_n M_n$, 满足乘法映射
+$A\otimes M\to M$
+将 $A_n\otimes M_{n'}$ 映射到 $M_{n+n'}$.</p>
+<h3>作为拟凝聚层</h3>
+<p><span class="link local"><a href="./分次代数.html" title="分次代数 [分次代数]">分次环</a></span> $A$ 上的分次模 $M$ 等同于 <span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">$\operatorname{Spec}A$</a></span> 上的 $\mathbb G_m$-<span class="link local"><a href="./等变对象.html" title="等变对象 [等变对象]">等变</a></span>拟凝聚层, 也即商叠 $\operatorname{Spec}A / \mathbb G_m$ 上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>.</p>
+<p>不带分次的环 $A$ 相当于仅有 $0$ 次部分的分次环, 对应 $\mathbb G_m$ 在 $\operatorname{Spec}A$ 上的平凡作用. 分次 $A$-模等同于 $\operatorname{Spec}A/\mathbb G_m = \operatorname{Spec}A\times\mathbf{B}\mathbb G_m$ 上的拟凝聚层.</p>
 </details></section></details></section></footer></article></div></body></html>

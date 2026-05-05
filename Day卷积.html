@@ -830,7 +830,25 @@ $$
 \mathsf{Alg}_{\mathcal P}(\mathsf{Day}_{\mathcal C}(\mathcal O))\simeq \mathsf{Alg}_{\mathcal P\times_{\mathsf{Fin}_*}\mathcal C^\otimes}(\mathcal O).
 $$
 换言之, $\mathsf{Day}_{\mathcal C}$ 是 $-\times_{\mathsf{Fin}_*}\mathcal C^\otimes$ 的右伴随.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="对称序列"><header><h1><span class="taxon"></span>对称序列 <a class="slug" href="./对称序列.html">[对称序列]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="分次对象"><header><h1><span class="taxon"></span>分次对象 <a class="slug" href="./分次对象.html">[分次对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设 $\mathcal C$ 为余完备<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, 且 $\otimes$ 保持每个分量的余极限. 设 $M$ 为交换幺半群. 定义 $\mathcal C$ 中的 $M$-<strong>分次对象</strong>的范畴为函子范畴
+$$
+\mathsf{Gr}_M(\mathcal C) = \mathsf{Fun}(M,\mathcal C),
+$$
+其中 $M$ 视为离散对称幺半范畴.</p>
+<p>由定义, $M$-分次对象的范畴上带有 <span class="link local"><a href="./Day卷积.html" title="Day 卷积 [Day卷积]">Day 卷积</a></span>给出的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span>结构. 具体地,
+$$
+(X\otimes Y)_m = \bigoplus_{p+q=m} X_p\otimes Y_q.
+$$</p>
+<h2>例</h2>
+<h3>线性范畴</h3>
+<p>实践中多数遇到的分次对象是 $k$-模范畴 $\mathsf{Mod(k)}$ 或更一般的 $k$-线性范畴中的分次对象, $k$ 是固定的交换环. 在这种情形, $M$-分次对象还有另一种定义, 即 $k[M]$-余模.</p>
+<p><strong>命题</strong>.
+$$
+\mathsf{Fun}(M,\mathsf{Mod(k)})\simeq\mathsf{Comod}(k[M]).
+$$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="对称序列"><header><h1><span class="taxon"></span>对称序列 <a class="slug" href="./对称序列.html">[对称序列]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>对称序列是一种可用于定义<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的结构.</p>
 <p>对称序列可视为<span class="link local"><a href="./解析函子.html" title="解析函子 (算畴理论) [解析函子]">多项式函子</a></span>的 “系数”, 对称序列上有一个幺半结构和一个对称幺半结构, 分别对应多项式函子的复合与乘积. <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的一种定义是对称序列范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 这给出多项式函子范畴中的结合代数; 特别地, 给出<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</p>
