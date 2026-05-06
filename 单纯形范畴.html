@@ -820,12 +820,26 @@ $$
 $$
 \Delta_+ = \{[-1],[0],[1],[2],\cdots\}.
 $$</p>
-<p>$\Delta_+$ 是一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 单位为 $[-1]$, $[n] \otimes [m] = [n+m+1]$. 注意, 这个幺半范畴<strong>不是</strong><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>.</p>
+<p>$\Delta_+$ 是一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 单位为 $[-1]$, $[n] \otimes [m] = [n+m+1]$. 注意, 这个幺半范畴<strong>不是</strong><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, 因为<strong>不存在</strong>函子性的同构 $[n]\otimes [m]\simeq [m]\otimes[n]$.</p>
+<p>另外还有两个重要的由单纯形构成的范畴. 记 $\Delta_\bot$ 为非空有限全序集之间保持最小元的态射构成的范畴; $\Delta_\top$ 为保持最大元的态射构成的范畴. 事实上, 它们可视为幺半范畴 $\Delta_+$ 中结合代数上的左<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>和右模范畴:
+$$
+\Delta_\bot = \mathsf{LMod}_{\Delta_+}([0]),\ \Delta_\top = \mathsf{RMod}_{\Delta_+}([0]).
+$$</p>
 <h2>性质</h2>
 <h3>几何单纯形</h3>
 <p>标准 $n$ 维几何单纯形是 $\mathbb{R}^{n+1}$ 的基向量 $e_0,e_1,\cdots,e_n$ 的凸包. 这定义了一个函子 $\Delta \to \mathsf {Top}$.</p>
 <h3>游走的结合代数</h3>
 <p>增广单纯形范畴 $\Delta_+$ 是一个<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $[0]$ 生成的自由<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 称 $[0]$ 为<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的结合代数; 也即对任意幺半范畴 $\mathcal M$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$, 存在唯一的幺半函子 $\Delta_+ \to M$, 将 $[0]$ 对应到 $A$.</p>
+<h3>伴随</h3>
+<p>由于 $\Delta$ 的对象可视为偏序集, 即 $(0,1)$-范畴, $\Delta$ 自身可视为<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于偏序集的范畴, 即 $(1,2)$-范畴. 我们可谈论 $\Delta$ 中的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
+<p><strong>命题</strong>. $[n-1]$ 与 $[n]$ 之间有如下伴随:
+$$
+d_n \dashv s_{n-1}\dashv d_{n-1}\dashv\cdots\dashv s_0\dashv d_0.
+$$
+其中 $d_i\colon [n-1]\to [n]$ 是唯一的像不含 $i$ 的单射, $s_j\colon [n] \to [n-1]$ 是唯一的将两个元素映到 $j$ 的满射.
+$$
+d_n x\leq y\, \Leftrightarrow x\leq s_{n-1}y
+$$</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, <span class="link local"><a href="./单纯范畴.html" title="“单纯范畴” [单纯范畴]">单纯范畴</a></span></p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Segal空间"><header><h1><span class="taxon"></span>Segal 空间 <a class="slug" href="./Segal空间.html">[Segal空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>观念</h2>
@@ -983,7 +997,7 @@ $$
 $$
 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的结合代数 $[0]$ 上的左<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>范畴.
 因此其到<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span> $\Delta_+$ 的函子 (注意并非<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>) $i\colon \Delta_{\bot}\hookrightarrow \Delta_+$ 有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $C_+\colon \Delta_+ \to \Delta_{\bot}$, $[n]\mapsto [0] * [n]$ (“对全序集<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加一个最小值”, 可类比于锥操作).
-从而有<span class="link local"><a href="./预层范畴之间的伴随.html" title="预层范畴之间的伴随 [预层范畴之间的伴随]">预层范畴之间的四元伴随</a></span>
+从而 (当 $\mathcal C$ 完备且余完备时) 有<span class="link local"><a href="./预层范畴之间的伴随.html" title="预层范畴之间的伴随 [预层范畴之间的伴随]">预层范畴之间的四元伴随</a></span>
 $$
  i_!\dashv [(C_+)_!=i^*] \dashv [(C_+)^* =i_*] \dashv (C_+)_*
 $$</p>
@@ -1056,11 +1070,12 @@ $$
 \mathsf{Adj} \to \mathcal C.
 $$
 因此这是一种<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span> (“自由”) 的结构.</p>
-<p>具体地, $\mathsf{Adj}$ 有如下对象与态射:</p>
+<h2>定义</h2>
+<p>$2$-范畴 $\mathsf{Adj}$ 有如下对象与态射:</p>
 <ul>
-<li>两个对象 $c,d$;</li>
-<li>两个态射 $l\colon c\to d$, $r\colon d\to c$;</li>
-<li>两个 $2$-态射 $\eta\colon \mathrm{id}_c \to rl$; $\epsilon\colon lr\to\mathrm{id}_d$, 满足<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>的条件 (注意 $\mathsf{Adj}$ 仅为 $2$-范畴, 故这些条件是<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">性质而非结构</a></span>), 即
+<li>两个对象 $+,-$;</li>
+<li>两个态射 $l\colon +\to -$, $r\colon -\to +$;</li>
+<li>两个 $2$-态射 $\eta\colon \mathrm{id}_+ \to rl$; $\epsilon\colon lr\to\mathrm{id}_-$, 满足<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>的条件 (注意 $\mathsf{Adj}$ 仅为 $2$-范畴, 故这些条件是<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">性质而非结构</a></span>), 即
 $$
 l \overset{\eta}{\to} lrl \overset{\epsilon}{\to} l = \mathrm{id}_l,\,
 r \overset{\eta}{\to} rlr \overset{\epsilon}{\to} r = \mathrm{id}_r;
@@ -1069,10 +1084,10 @@ $$</li>
 </ul>
 <p>上述资料生成的结果为</p>
 <ul>
-<li>$\operatorname{Hom}(c,c) = \{\mathrm{id}_c,rl,rlrl,\cdots\} = \Delta_+$ 为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span>;</li>
-<li>$\operatorname{Hom}(c,d) = \{l,lrl,lrlrl,\cdots\}$;</li>
-<li>$\operatorname{Hom}(d,c) = \{r,rlr,rlrlr,\cdots\}$;</li>
-<li>$\operatorname{Hom}(d,d) = \{\mathrm{id}_d,lr,lrlr,\cdots\} = \Delta_+^{\mathrm{op}}$.</li>
+<li>$\operatorname{Hom}(+,+) = \{\mathrm{id}_c,rl,rlrl,\cdots\} = \Delta_+$ 为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span>;</li>
+<li>$\operatorname{Hom}(+,-) = \{l,lrl,lrlrl,\cdots\}=\Delta_\bot$ (保持最小值的映射构成的范畴, 详见<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>);</li>
+<li>$\operatorname{Hom}(-,+) = \{r,rlr,rlrlr,\cdots\} = \Delta_\top$;</li>
+<li>$\operatorname{Hom}(-,-) = \{\mathrm{id}_d,lr,lrlr,\cdots\} = \Delta_+^{\mathrm{op}}$.</li>
 </ul>
 <h2>性质</h2>
 <p>注意到上述资料中 $\operatorname{Hom}(c,c) = \{\mathrm{id}_c,rl,rlrl,\cdots\} = \Delta_+$ 为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span>, 其中 $rl$ 为<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 故任意伴随中 $rl$ 给出一个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>. 见<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">伴随给出单子</a></span>.</p>

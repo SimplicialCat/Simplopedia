@@ -1113,7 +1113,7 @@ $$
 $$
 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的结合代数 $[0]$ 上的左<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>范畴.
 因此其到<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span> $\Delta_+$ 的函子 (注意并非<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>) $i\colon \Delta_{\bot}\hookrightarrow \Delta_+$ 有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $C_+\colon \Delta_+ \to \Delta_{\bot}$, $[n]\mapsto [0] * [n]$ (“对全序集<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加一个最小值”, 可类比于锥操作).
-从而有<span class="link local"><a href="./预层范畴之间的伴随.html" title="预层范畴之间的伴随 [预层范畴之间的伴随]">预层范畴之间的四元伴随</a></span>
+从而 (当 $\mathcal C$ 完备且余完备时) 有<span class="link local"><a href="./预层范畴之间的伴随.html" title="预层范畴之间的伴随 [预层范畴之间的伴随]">预层范畴之间的四元伴随</a></span>
 $$
  i_!\dashv [(C_+)_!=i^*] \dashv [(C_+)^* =i_*] \dashv (C_+)_*
 $$</p>
@@ -1129,6 +1129,41 @@ $$
 <p>单纯对象若存在分裂, 则分裂唯一.</p>
 <h2>参考资料</h2>
 <p>Artin, Mazur, Etale Homotopy Theory</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="单纯形范畴"><header><h1><span class="taxon"></span>单纯形范畴 <a class="slug" href="./单纯形范畴.html">[单纯形范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>单纯形范畴的对象是 “标准” 的, “组合” 的单纯形.</p>
+<h2>定义</h2>
+<p><strong>单纯形范畴</strong> (simplex category) $\Delta$ 是有限<strong>非空</strong><span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序集</a></span>的范畴
+$$
+\Delta = \{[0],[1],[2],\cdots\},
+$$
+其中 $[n] = \{0&lt;1&lt;\cdots &lt; n \}$.</p>
+<p><strong>增广单纯形范畴</strong> (augmented simplex category) $\Delta_+$ 是有限<span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序集</a></span>的范畴
+$$
+\Delta_+ = \{[-1],[0],[1],[2],\cdots\}.
+$$</p>
+<p>$\Delta_+$ 是一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 单位为 $[-1]$, $[n] \otimes [m] = [n+m+1]$. 注意, 这个幺半范畴<strong>不是</strong><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, 因为<strong>不存在</strong>函子性的同构 $[n]\otimes [m]\simeq [m]\otimes[n]$.</p>
+<p>另外还有两个重要的由单纯形构成的范畴. 记 $\Delta_\bot$ 为非空有限全序集之间保持最小元的态射构成的范畴; $\Delta_\top$ 为保持最大元的态射构成的范畴. 事实上, 它们可视为幺半范畴 $\Delta_+$ 中结合代数上的左<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>和右模范畴:
+$$
+\Delta_\bot = \mathsf{LMod}_{\Delta_+}([0]),\ \Delta_\top = \mathsf{RMod}_{\Delta_+}([0]).
+$$</p>
+<h2>性质</h2>
+<h3>几何单纯形</h3>
+<p>标准 $n$ 维几何单纯形是 $\mathbb{R}^{n+1}$ 的基向量 $e_0,e_1,\cdots,e_n$ 的凸包. 这定义了一个函子 $\Delta \to \mathsf {Top}$.</p>
+<h3>游走的结合代数</h3>
+<p>增广单纯形范畴 $\Delta_+$ 是一个<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $[0]$ 生成的自由<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 称 $[0]$ 为<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的结合代数; 也即对任意幺半范畴 $\mathcal M$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$, 存在唯一的幺半函子 $\Delta_+ \to M$, 将 $[0]$ 对应到 $A$.</p>
+<h3>伴随</h3>
+<p>由于 $\Delta$ 的对象可视为偏序集, 即 $(0,1)$-范畴, $\Delta$ 自身可视为<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于偏序集的范畴, 即 $(1,2)$-范畴. 我们可谈论 $\Delta$ 中的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
+<p><strong>命题</strong>. $[n-1]$ 与 $[n]$ 之间有如下伴随:
+$$
+d_n \dashv s_{n-1}\dashv d_{n-1}\dashv\cdots\dashv s_0\dashv d_0.
+$$
+其中 $d_i\colon [n-1]\to [n]$ 是唯一的像不含 $i$ 的单射, $s_j\colon [n] \to [n-1]$ 是唯一的将两个元素映到 $j$ 的满射.
+$$
+d_n x\leq y\, \Leftrightarrow x\leq s_{n-1}y
+$$</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, <span class="link local"><a href="./单纯范畴.html" title="“单纯范畴” [单纯范畴]">单纯范畴</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="双边杠构造"><header><h1><span class="taxon"></span>双边杠构造 <a class="slug" href="./双边杠构造.html">[双边杠构造]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>如果说<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>是<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>, 那么双边杠构造就是<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">结合代数上的模</a></span>的相对张量积的范畴化.</p>
