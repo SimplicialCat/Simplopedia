@@ -1483,8 +1483,14 @@ $$
 $$
 \Delta_+ = \{[-1],[0],[1],[2],\cdots\}.
 $$</p>
-<p>$\Delta_+$ 是一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 单位为 $[-1]$, $[n] \otimes [m] = [n+m+1]$. 注意, 这个幺半范畴<strong>不是</strong><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, 因为<strong>不存在</strong>函子性的同构 $[n]\otimes [m]\simeq [m]\otimes[n]$.</p>
-<p>另外还有两个重要的由单纯形构成的范畴. 记 $\Delta_\bot$ 为非空有限全序集之间保持最小元的态射构成的范畴; $\Delta_\top$ 为保持最大元的态射构成的范畴. 事实上, 它们可视为幺半范畴 $\Delta_+$ 中结合代数上的左<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>和右模范畴:
+<p>$\Delta_+$ 是一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>,</p>
+<ul>
+<li>单位为 $[-1]$;</li>
+<li>$[n] \otimes [m] = [n+m+1]$;</li>
+<li>其中有<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $[0]$;</li>
+<li>注意, 这个幺半范畴<strong>不是</strong><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, 因为<strong>不存在</strong>函子性的同构 $[n]\otimes [m]\simeq [m]\otimes[n]$.</li>
+</ul>
+<p>另外还有两个重要的由单纯形构成的范畴. 记 $\Delta_\bot$ 为非空有限全序集之间保持最小元的态射构成的范畴; $\Delta_\top$ 为保持最大元的态射构成的范畴. 事实上, 它们可视为幺半范畴 $\Delta_+$ 中结合代数 $[0]$ 上的左<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>和右模范畴:
 $$
 \Delta_\bot = \mathsf{LMod}_{\Delta_+}([0]),\ \Delta_\top = \mathsf{RMod}_{\Delta_+}([0]).
 $$</p>
@@ -1493,7 +1499,7 @@ $$</p>
 <p>标准 $n$ 维几何单纯形是 $\mathbb{R}^{n+1}$ 的基向量 $e_0,e_1,\cdots,e_n$ 的凸包. 这定义了一个函子 $\Delta \to \mathsf {Top}$.</p>
 <h3>游走的结合代数</h3>
 <p>增广单纯形范畴 $\Delta_+$ 是一个<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $[0]$ 生成的自由<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 称 $[0]$ 为<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的结合代数; 也即对任意幺半范畴 $\mathcal M$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$, 存在唯一的幺半函子 $\Delta_+ \to M$, 将 $[0]$ 对应到 $A$.</p>
-<h3>伴随</h3>
+<h3>单形之间的伴随</h3>
 <p>由于 $\Delta$ 的对象可视为偏序集, 即 $(0,1)$-范畴, $\Delta$ 自身可视为<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于偏序集的范畴, 即 $(1,2)$-范畴. 我们可谈论 $\Delta$ 中的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
 <p><strong>命题</strong>. $[n-1]$ 与 $[n]$ 之间有如下伴随:
 $$
@@ -1502,6 +1508,37 @@ $$
 其中 $d_i\colon [n-1]\to [n]$ 是唯一的像不含 $i$ 的单射, $s_j\colon [n] \to [n-1]$ 是唯一的将两个元素映到 $j$ 的满射.
 $$
 d_n x\leq y\, \Leftrightarrow x\leq s_{n-1}y
+$$</p>
+<h3>保持极值的单形范畴</h3>
+<p>范畴 $\Delta_\bot$, $\Delta_\top$ 是 $\Delta_+$ 的 (非全) 子范畴, 我们关注其 $[n-1]$ 和 $[n]$ 之间往来的态射, 因为这些态射生成所有态射:</p>
+<ul>
+<li>$\operatorname{Hom}_{\Delta_\bot}([n-1],[n]) = \{d_n,\cdots,d_1\}$,</li>
+<li>$\operatorname{Hom}_{\Delta_\top}([n],[n-1]) = \operatorname{Hom}_{\Delta_\bot}([n],[n-1]) = \{s_{n-1},\cdots,s_0\}$,</li>
+<li>$\operatorname{Hom}_{\Delta_\top}([n-1],[n]) = \{d_{n-1},\cdots,d_0\}$.</li>
+</ul>
+<p>结合前面陈述的伴随关系, 我们注意到 $\Delta_\bot$ 与 $\Delta_\top$ 之间存在一个反变等价
+$$
+\Delta_\bot^{\mathrm{op}} \overset{\simeq}{\rightleftarrows} \Delta_\top,
+$$</p>
+<ul>
+<li>将态射 $d_i\in\operatorname{Hom}_{\Delta_\bot}([n-1],[n])$ 对应到其右伴随 $s_{i-1}$,</li>
+<li>将态射 $s_j\in\operatorname{Hom}_{\Delta_\bot}([n],[n])$ 对应到其右伴随 $s_{i-1}$,</li>
+</ul>
+<h3>区间表示</h3>
+<p>对于 $\Delta_+$ 中的态射 $f\colon [n] \to [m]$, 考虑 $f'\colon [m+1] \to [n+1]$,
+$$
+f'(x) = \min\{y\colon f(y)\geq x\}.
+$$
+(约定 $f(n+1) = m+1$.)
+这给出一个函子
+$$
+\mathrm{ir}\colon\Delta_+^{\mathrm{op}} \to \Delta_+,
+$$
+其在对象层面将 $[n]$ 对应到 $[n+1]$.
+<span class="link local"><a href="./RiehlVerityAdjunctionMonad.html" title="Homotopy coherent adjunctions and the formal theory of monads [RiehlVerityAdjunctionMonad]">Riehl–Verity</a></span> 文中该函子称为<strong>区间表示</strong> (interval representation), 因为有一种直观是将 $[m+1]$ “分成 $m+1$ 个区间”, 每个区间对应 $[m]$ 的一个点.</p>
+<p>注意 $f'(0) = 0$, $f'(m+1)=n+1$, 也即 $f'$ 保持最小值与最大值. 事实上, 函子 $\mathrm{ir}$ 分解为
+$$
+\Delta_+^\mathrm{op}\simeq\mathsf{BiMod}_{\Delta_+}([0])\to\Delta_+.
 $$</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, <span class="link local"><a href="./单纯范畴.html" title="“单纯范畴” [单纯范畴]">单纯范畴</a></span></p>
@@ -1655,10 +1692,11 @@ $$</li>
 <p>上述资料生成的结果为</p>
 <ul>
 <li>$\operatorname{Hom}(+,+) = \{\mathrm{id}_c,rl,rlrl,\cdots\} = \Delta_+$ 为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span>;</li>
-<li>$\operatorname{Hom}(+,-) = \{l,lrl,lrlrl,\cdots\}=\Delta_\bot$ (保持最小值的映射构成的范畴, 详见<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>);</li>
-<li>$\operatorname{Hom}(-,+) = \{r,rlr,rlrlr,\cdots\} = \Delta_\top$;</li>
-<li>$\operatorname{Hom}(-,-) = \{\mathrm{id}_d,lr,lrlr,\cdots\} = \Delta_+^{\mathrm{op}}$.</li>
+<li>$\operatorname{Hom}(+,-) = \{l,lrl,lrlrl,\cdots\}=\Delta_\bot\simeq\mathsf{LMod}([0])$ (保持最小值的映射构成的范畴, 详见<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>);</li>
+<li>$\operatorname{Hom}(-,+) = \{r,rlr,rlrlr,\cdots\} = \Delta_\top\simeq\mathsf{RMod}([0])$;</li>
+<li>$\operatorname{Hom}(-,-) = \{\mathrm{id}_d,lr,lrlr,\cdots\} = \Delta_+^{\mathrm{op}}\simeq\mathsf{BiMod}([0])$.</li>
 </ul>
+<p>故 $\mathsf{Adj}$ 为 $\Delta_+$ 的 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>在 $[-1],[0]$ 两个对象上的全子范畴.</p>
 <h2>性质</h2>
 <p>注意到上述资料中 $\operatorname{Hom}(c,c) = \{\mathrm{id}_c,rl,rlrl,\cdots\} = \Delta_+$ 为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span>, 其中 $rl$ 为<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 故任意伴随中 $rl$ 给出一个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>. 见<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">伴随给出单子</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="直像"><header><h1><span class="taxon"></span>“直像” <a class="slug" href="./直像.html">[直像]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li><li class="meta-item">前推</li></ul></div></header></summary>
