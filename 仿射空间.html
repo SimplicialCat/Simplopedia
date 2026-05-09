@@ -808,6 +808,7 @@
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
 <article><section class="block" data-taxon=""><details open><summary id="仿射空间"><header><h1><span class="taxon"></span>仿射空间 <a class="slug" href="./仿射空间.html">[仿射空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本页面介绍的是线性空间上的仿射空间. 注意区分仿射空间与<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>.</p>
 <h2>定义</h2>
 <p>仿射空间是线性空间的<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主齐性空间</a></span>.</p>
 <p>对于线性空间 $V,V'$, 考虑 $V$-仿射空间 $A$ 到 $V'$-仿射空间 $A'$ 的映射 $F\colon A\to A'$, 若存在线性映射 $f\colon V\to V'$ 使得
@@ -815,13 +816,40 @@ $$
 F(x+v) = F(x) + f(v)\,(x\in A,v\in V),
 $$
 则称 $F$ 为仿射映射.</p>
+<h3>作为 1 的水平面</h3>
+<p>仿射空间有一种等价的定义: 域 $k$ 上的仿射空间是一个 $k$-线性空间 $W$ 上的线性函数 $\lambda\colon W\to k$ 的取值为 $1$ 的水平面,
+$$
+A = \lambda^{-1}(1),
+$$
+而与之相应的 $k$-线性空间 $V$ 是取值为 $0$ 的水平面,
+$$
+V = \lambda^{-1}(0).
+$$</p>
 <h2>性质</h2>
 <h3>对偶</h3>
 <p>设 $V$ 为 $k$-线性空间, $A$ 为 $V$-仿射空间. 定义 $A$ 的对偶为
 $$
-A^* := 
+A^* := \operatorname{Hom}_{\mathsf{Aff}} (A,k),
+$$
+带有逐点加法和数乘给出的 $k$-线性空间结构.
+有非典范分裂的短正合列
+$$
+0\to k \to A^* \to V^* \to 0.
 $$</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="仿射根系"><header><h1><span class="taxon"></span>仿射根系 <a class="slug" href="./仿射根系.html">[仿射根系]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>设 $V$ 为有限维 $\mathbb{R}$-线性空间, $A$ 为 $V$-<span class="link local"><a href="./仿射空间.html" title="仿射空间 [仿射空间]">仿射空间</a></span> (即 $V$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主齐性空间</a></span>).</p>
+<p>设 $V$ 为有限维 $\mathbb{R}$-线性空间, $A$ 为 $V$-<span class="link local"><a href="./仿射空间.html" title="仿射空间 [仿射空间]">仿射空间</a></span> (即 $V$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主齐性空间</a></span>). 对于 $\psi\in A^*$, 记 $\dot\psi\in V^*$ 为 $\psi$ 的导数.</p>
+<p>定义<strong>仿射根系</strong>是如下资料:</p>
+<ul>
+<li>$\Psi\subset A^*$;</li>
+<li>$\Psi$ 生成 $A^{\ast}$, 由非常值函数构成, 且 $\Psi$ 中元素的导数的集合 $\Phi\subset V^*$ 有限;</li>
+<li>对每个 $\psi\in\Psi$, 存在 ${\dot\psi}^\vee\in V$, 满足 $\dot\psi ({\dot\psi}^\vee) = 2$, 且 $A^*$ 上的反射
+$$
+  r_{\psi,{\dot\psi}^\vee}\colon x\mapsto \dot x({\dot\psi}^\vee)\psi
+$$
+保持 $\Psi$;</li>
+<li>对任意 $\psi,\eta\in\Psi$, 有 $\dot\psi({\dot\eta}^\vee)\in\mathbb{Z}$;</li>
+<li>对任意 $a\in\Phi$, $\{\psi\in\Psi\mid\dot\psi = a\}$ 无聚点.</li>
+</ul>
+<p>由反射 $r_{\psi,{\dot\psi}^\vee}$ 生成的群称作<span class="link local"><a href="./仿射Weyl群.html" title="仿射 Weyl 群 [仿射Weyl群]">仿射 Weyl 群</a></span>.</p>
 </details></section></details></section></footer></article></div></body></html>

@@ -821,8 +821,8 @@
 <p>若剩余域 $k$ 为<span class="link local"><a href="./可分闭域.html" title="可分闭域 [可分闭域]">可分闭域</a></span>, 则称 $R$ 为<strong>严格 Hensel 环</strong>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="notes-stable-center"><header><h1><span class="taxon"></span>稳定中心猜想 <a class="slug" href="./notes-stable-center.html">[notes-stable-center]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是为准备 2026 年春季学期徐斌老师 “朗兰兹纲领选讲” 课程报告而记的笔记. 主要参考 <span class="link local"><a href="./BKV-SCC.html" title="A categorical approach to the stable center conjecture [BKV-SCC]">BKV</a></span>.</p>
-<h2>可容许 ind-叠上的可构造层</h2>
-<h3>可容许态射</h3>
+<h2>1. 可容许 ind-叠上的可构造层</h2>
+<h3>1.1 可容许态射</h3>
 <p>记 $\mathsf{Sch}_k$ 为 qcqs $k$-概形的范畴.</p>
 <p><strong>引理</strong>. $\mathsf{Sch}_k$ 中以<span class="link local"><a href="./余滤范畴.html" title="余滤范畴 [余滤范畴]">余滤</a></span>偏序集为指标, 以<span class="link local"><a href="./仿射态射.html" title="仿射态射 [仿射态射]">仿射态射</a></span>为转移态射的图表具有极限.</p>
 <p>记 $\mathsf{Var}_k$ 为有限型<span class="link local"><a href="./分离态射.html" title="分离态射 [分离态射]">分离</a></span> $k$-概形的范畴. 固定素数 $\ell$ 不同于 $k$ 的特征. 记 $D(X) := D_c^b(X,\overline{\mathbb{Q}_\ell})$ 为可构造 $\overline{\mathbb{Q}}_\ell$-层的有界导出范畴. $\mathsf{Var}_k$ 中的每个态射 $f\colon X\to Y$ 都给出四个函子 $f^*\dashv f_*$, $f_!\dashv f^!$.</p>
@@ -837,7 +837,7 @@
 <p>若 $X\to Y$ 有可容许表现 $\{X_i\}_{i\in I}$, 其中存在 $i$ 使得 $X_i\to Y$ 幂幺, 则称 $X\to Y$ 为 <span class="link local"><a href="./pro-对象.html" title="pro-对象 [pro-对象]">pro-</a></span>幂幺态射.</p>
 <p>当 $X\to \operatorname{Spec}k$ 可容许时, 称 $X$ 可容许. 记可容许 $k$-概形的范畴为 $\mathsf{ASch}_k$.</p>
 <p>可容许态射关于复合封闭.</p>
-<h3>可构造层</h3>
+<h3>1.2 可构造层</h3>
 <p>对于 $X\in\mathsf{Sch}_k$, 记 $(X/\cdot)$ 为<span class="link local"><a href="./仰范畴.html" title="仰范畴 [仰范畴]">仰范畴</a></span> $(\mathsf{Var}_k)_{X/}$. 由于 $\mathsf{Var}_k$ 具有<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">纤维积</a></span>, $(X/\cdot)$ 为<span class="link local"><a href="./余滤范畴.html" title="余滤范畴 [余滤范畴]">余滤范畴</a></span>.</p>
 <p>记 $(X/\cdot)^{\mathrm{sm}}$, $(X/\cdot)^{\mathrm{un}}$ 为 $(X/\cdot)$ 中由形式光滑态射, pro-幂幺态射 $X\to V$ 构成的子范畴.</p>
 <p>定义</p>
@@ -848,16 +848,31 @@
 <li>$\widehat {D}(X) := \operatorname{lim}^*_{(X/\cdot)}D(V)$, 即 $*$-推前构成的图的极限.</li>
 </ul>
 <p>$D(X),M(X),\widehat {M}(X)$ 分别类比于局部常值函数的空间,  局部常值测度的空间, 全体测度的空间.</p>
-<h3>ind-概形的情形</h3>
-<h3>ind-叠</h3>
+<h3>1.3 ind-概形的情形</h3>
+<p>回忆, <span class="link local"><a href="./ind-对象.html" title="ind-对象 [ind-对象]">ind-</a></span>概形是概形 (在 $\mathsf{Fun}(\mathsf{Sch}^{\mathrm{op}},\mathsf{Set})$ 中) 的<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>, 我们要求余极限图表的每个态射均为有限表现的闭嵌入.</p>
+<p>对于概形 $X$ 与 ind-概形 $Y$, 若映射 $X\to Y$ 为有限表现闭嵌入, 则称之为 <strong>fp-闭子概形</strong>.</p>
+<p>对于 ind-概形的态射 $f\colon X\to Y$, 若对任意 fp-闭子概形 $Z\subset X$, 都有 $f|_Z$ 为可容许态射, 则称 $f$ 可容许.</p>
+<h3>1.4 ind-叠</h3>
 <p>记 $\mathsf{St}_k$ 为 $\operatorname{Spec}k$ 上的叠的 $2$-范畴, $\mathsf{Art}_k^{\mathrm{ft}}$ 为有限型 Artin 叠的子范畴.</p>
-<h3>几何对象的 $2$-范畴</h3>
-<h2>Hecke 代数的范畴化</h2>
+<h3>1.5 几何对象的 $2$-范畴</h3>
+<p>对于 $X,Y\in\mathsf{AISt}_k$, 可定义 “$X$ 方向的测度, $Y$ 方向的函数” 的范畴 $M_X(X\times Y)$.</p>
+<ul>
+<li>对于 $\mathsf{Art}_k^{\text{ft}}$ 中的态射 $f\colon U_1\to U_2$, $g\colon V_1\to V_2$, 记 $f^!\times g^*\colon D(U_2\times V_2) \to D(U_1\times V_1)$ 为 $f^!$, $g^*$ 的复合 (与顺序无关).</li>
+<li>对于 $X,Y\in\mathsf{ASt}_k$, 定义
+$$
+  M_X(X\times Y) = \operatorname{colim}^{!,*}_{U\in (X/\cdot)^{\mathrm{op}},V\in (Y/\cdot)^{\mathrm{op}}} D(U\times V),
+  $$
+转移态射为前面提到的 $f^!\times g^*$.</li>
+</ul>
+<h2>2. Hecke 代数的范畴化</h2>
 <p>记号.</p>
 <ul>
-<li>$\mathsf{Par}$ 为 $LG$ 的<span class="link local"><a href="./parahoric.html" title="抛物-Iwahori 子群 [parahoric]">抛物-Iwahori 子群</a></span>的偏序集,</li>
+<li>$B\subset G$ 是固定的 Borel 子群,</li>
+<li>$I$ 是 $B$ 对应的 <span class="link local"><a href="./Iwahori子群.html" title=" [Iwahori子群]">Iwahori 子群</a></span>, 即 $B$ 在投影 $L^+G\to G$ 下的原像.</li>
+<li>$\mathsf{Par}$ 为 $LG$ 的<span class="link local"><a href="./parahoric.html" title="抛物-Iwahori 子群 [parahoric]">抛物-Iwahori 子群</a></span> (也即包含 $I$ 的 fp-闭子群) 的偏序集.</li>
+<li>对于 $P\in\mathsf{Par}$, 记 $P^+$ 为 pro-幂幺根, …</li>
 </ul>
-<h3>环路空间</h3>
+<h3>2.1 环路空间</h3>
 <p>记 $K = k(\!(t)\!)$, $\mathcal O = k[\![t]\!]$. 固定 $n\in\mathbb{Z}_{\geq 0}$.</p>
 <h2>稳定中心猜想</h2>
 <h2>Bernstein 投影算子的稳定性</h2>

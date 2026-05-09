@@ -815,7 +815,45 @@ $$
 $$</p>
 <h2>性质</h2>
 <p>$\mathbb{Z}_p$ 是<span class="link local"><a href="./离散赋值环.html" title="离散赋值环 [离散赋值环]">离散赋值环</a></span>.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="函数域类比"><header><h1><span class="taxon"></span>函数域类比 <a class="slug" href="./函数域类比.html">[函数域类比]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>$\mathbb{Z}_p$ 的分式域为 <span class="link local"><a href="./p-进数.html" title="p-进数 [p-进数]">$\mathbb{Q}_p$</a></span>.</p>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="p-进数"><header><h1><span class="taxon"></span>p-进数 <a class="slug" href="./p-进数.html">[p-进数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>作为分式域</h3>
+<p>$p$-进数域 $\mathbb{Q}_p$ 是 <span class="link local"><a href="./p-进整数.html" title="p-进整数 [p-进整数]">$p$-进整数环</a></span> $\mathbb{Z}_p$ 的分式域.</p>
+<h3>作为完备化</h3>
+<p>$p$-进数域 $\mathbb{Q}_p$ 是 $\mathbb{Q}$ 关于 $p$-进绝对值的<span class="link local"><a href="./完备化(域).html" title="完备化 (域) [完备化(域)]">完备化</a></span>.</p>
+<h2>性质</h2>
+<p>$p$-进数可表示为
+$$
+x = \sum_{n = N}^{\infty} a_n p^n,
+$$
+其中 $N\in\mathbb{Z}$, $a_n\in\{0,1,\cdots,p-1\}$, $a_N\neq 0$.</p>
+<p>与实数的小数表示一样, 一个 $p$-进数是有理数, 当且仅当它的表示是循环的.</p>
+<h2>例</h2>
+<p>一些有理数的 $3$-进表示:</p>
+<p>$$
+-1 = \sum_{n=0}^{\infty}2\cdot 3^n = \text{``...222''}.
+$$</p>
+<p>$$
+\frac{1}{2} = 2 + \sum_{n=1}^{\infty} 3^n = \text{``...1112''}.
+$$</p>
+<p>$$
+\frac{1}{7} = \text{``}...\dot 02120 \dot 1 1\text{''}.
+$$
+注意循环节的长度为 $6=7-1$. 这是因为 $3^6\equiv 1(\mathrm{mod}\, 7)$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="余滤极限"><header><h1><span class="taxon"></span>余滤极限 <a class="slug" href="./余滤极限.html">[余滤极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>范畴 $\mathcal C$ 中的<strong>余滤极限</strong> (cofiltered limit) 是以<span class="link local"><a href="./余滤范畴.html" title="余滤范畴 [余滤范畴]">余滤范畴</a></span> $I$ 为形状的图表 $I\to\mathcal C$ 的极限, 相当于对偶范畴 $\mathcal C^{\mathrm{op}}$ 中的<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span> (filtered colimit).</p>
+<h2>例</h2>
+<p><span class="link local"><a href="./p-进整数.html" title="p-进整数 [p-进整数]">$p$-进整数环</a></span> $\mathbb{Z}_p$ 是余滤极限
+$$
+\mathbb{Z}_p = \operatorname{lim}_n \mathbb{Z}/(p^n).
+$$</p>
+<p><span class="link local"><a href="./平展基本群.html" title="平展基本群 [平展基本群]">平展基本群</a></span>是有限平展覆叠的自同构群的余滤极限. 例如在 $\mathbb{C}$ 上有
+$$
+\pi_1^{\text{\'et}}(\mathbb G_m) = \operatorname{lim}_n \mathbb{Z}/(n) = \widehat {\mathbb{Z}}.
+$$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="函数域类比"><header><h1><span class="taxon"></span>函数域类比 <a class="slug" href="./函数域类比.html">[函数域类比]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <table><thead><tr><th><span class="link local"><a href="./数域.html" title="数域 [数域]">数域</a></span> (“<span class="link local"><a href="./F1.html" title="F1 [F1]">F1</a></span> 上曲线的函数域”)</th><th>$\mathbb F_q$ 上曲线的<span class="link local"><a href="./函数域.html" title="函数域 [函数域]">函数域</a></span></th><th>复曲线</th></tr></thead><tbody>
 <tr><td>$\mathbb{Z}$</td><td>多项式环 $\mathbb F_q[z]$</td><td>复平面上的全纯函数 $\mathcal O$</td></tr>
 <tr><td>$\mathbb{Q}$</td><td>分式域 $\mathbb F_q(z)$</td><td>复平面上的亚纯函数</td></tr>

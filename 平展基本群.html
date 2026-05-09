@@ -811,7 +811,8 @@
 <h2>观念</h2>
 <p><span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span>的平展基本群是其<span class="link local"><a href="./平展意象.html" title="平展意象 [平展意象]">平展意象</a></span>的<span class="link local"><a href="./∞-意象的形.html" title="意象的形 [∞-意象的形]">形</a></span>的<span class="link local"><a href="./基本群.html" title="基本群 [基本群]">基本群</a></span>.</p>
 <h2>定义</h2>
-<h3>传统</h3>
+<h3>作为纤维函子的自同构群</h3>
+<p>类似于 <span class="link local"><a href="./淡中对偶.html" title="淡中对偶 [淡中对偶]">Tannaka 重构</a></span>,</p>
 <p>参考 <span class="link local"><a href="./MilneLEC.html" title="Lectures on Etale Cohomology [MilneLEC]">Milne 平展上同调讲义</a></span>.
 对于概形 $X$, 记 $\mathsf{FEt}_{/X}$ 为指向 $X$ 的有限平展映射的范畴. 对于<span class="link local"><a href="./几何点.html" title="几何点 [几何点]">几何点</a></span> $\bar x \to X$,
 定义<span class="link local"><a href="./纤维函子.html" title="纤维函子 [纤维函子]">纤维函子</a></span> $F \colon \mathsf{FEt}_{/X}\to\mathsf{Set}$,
@@ -823,6 +824,8 @@ $$
 \pi_1(X,\bar x) := \operatorname{Aut}_{\mathsf{ProFEt}_{/X}}(\widetilde {X}) = \operatorname{lim}\operatorname{Aut}_{\mathsf{FEt}_{/X}}(X_i)
 $$
 后一个等式来自 <span class="link local"><a href="./pro-对象.html" title="pro-对象 [pro-对象]">pro-对象</a></span>的态射的计算. (<span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">todo</a></span>)</p>
+<h3>作为形的基本群</h3>
+<p>平展基本群是<span class="link local"><a href="./平展意象.html" title="平展意象 [平展意象]">平展意象</a></span>的<span class="link local"><a href="./∞-意象的形.html" title="意象的形 [∞-意象的形]">形</a></span>的<span class="link local"><a href="./基本群.html" title="基本群 [基本群]">基本群</a></span>.</p>
 <h2>性质</h2>
 <h3>与主丛的关系</h3>
 <p>设 $X$ 为连通概形, $G$ 为有限群, 则 $X$ 的 $G$-系数 $1$ 阶<span class="link local"><a href="./非Abel上同调.html" title="非 Abel 上同调 [非Abel上同调]">非 Abel</a></span> <span class="link local"><a href="./平展上同调.html" title="平展上同调 [平展上同调]">平展上同调</a></span>等同于 $X$ 的平展基本群到 $G$ 的同态:
@@ -830,7 +833,10 @@ $$
 H^1(X_{\mathrm{\'et}},G) \simeq \operatorname{Hom}_{\mathrm{cts}}(\pi_1(X,\bar x),G).
 $$</p>
 <h2>例</h2>
-<p>设基环 $k$ 为特征 $0$ 代数闭域, $\mathbb G_m$ 的有限平展覆叠为 $(-)^n\colon \mathbb G_m \to\mathbb G_m$.</p>
+<p>设基环 $k$ 为特征 $0$ 代数闭域, $\mathbb G_m$ 的有限平展覆叠为 $(-)^n\colon \mathbb G_m \to\mathbb G_m$. 因此
+$$
+\pi_1^{\text{\'et}}(\mathbb G_m) = \operatorname{lim}_n \mathbb{Z}/(n) = \widehat {\mathbb{Z}}.
+$$</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="EC-H1-H2"><header><h1><span class="taxon"></span>平展上同调讨论班 : 非 Abel 上同调, 主齐性空间与 Brauer 群 <a class="slug" href="./EC-H1-H2.html">[EC-H1-H2]</a></h1><div class="metadata"><ul><li class="meta-item">讲义</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>这是 2025 年秋季平展上同调讨论班的一篇讲稿. 参考 <span class="link local"><a href="./MilneEC.html" title="Etale Cohomology [MilneEC]">Milne</a></span>.</p>
 <ul>
@@ -977,6 +983,18 @@ H^2(X,\mu_n) &amp; \to &amp; H^2(X,\mathbb G_m).
 \end{array}
 $$
 而 $H^2(X,\mu_n)$ 是 $n$-挠群, 故同态 $H^1(X,\mathrm{PGL}_n) \to H^2(X,\mathbb G_m)$ 的像是 $n$-挠群.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="余滤极限"><header><h1><span class="taxon"></span>余滤极限 <a class="slug" href="./余滤极限.html">[余滤极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>范畴 $\mathcal C$ 中的<strong>余滤极限</strong> (cofiltered limit) 是以<span class="link local"><a href="./余滤范畴.html" title="余滤范畴 [余滤范畴]">余滤范畴</a></span> $I$ 为形状的图表 $I\to\mathcal C$ 的极限, 相当于对偶范畴 $\mathcal C^{\mathrm{op}}$ 中的<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span> (filtered colimit).</p>
+<h2>例</h2>
+<p><span class="link local"><a href="./p-进整数.html" title="p-进整数 [p-进整数]">$p$-进整数环</a></span> $\mathbb{Z}_p$ 是余滤极限
+$$
+\mathbb{Z}_p = \operatorname{lim}_n \mathbb{Z}/(p^n).
+$$</p>
+<p><span class="link local"><a href="./平展基本群.html" title="平展基本群 [平展基本群]">平展基本群</a></span>是有限平展覆叠的自同构群的余滤极限. 例如在 $\mathbb{C}$ 上有
+$$
+\pi_1^{\text{\'et}}(\mathbb G_m) = \operatorname{lim}_n \mathbb{Z}/(n) = \widehat {\mathbb{Z}}.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="绝对Galois群"><header><h1><span class="taxon"></span>绝对 Galois 群 <a class="slug" href="./绝对Galois群.html">[绝对Galois群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>域 $k$ 的绝对 Galois 群是 $\operatorname{Spec}k$ 的<span class="link local"><a href="./平展基本群.html" title="平展基本群 [平展基本群]">平展基本群</a></span>.</p>

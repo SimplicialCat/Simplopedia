@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>On teaching mathematics</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon"><style>
+<meta name="viewport" content="width=device-width"><title>p-进数</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon"><style>
   @font-face {
     font-family: 'NewCM10';
     src: url(assets/NewCM10-Book.otf) format('opentype');
@@ -807,7 +807,38 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon=""><details open><summary id="ArnoldOnTeachingMath"><header><h1><span class="taxon"></span>On teaching mathematics <a class="slug" href="./ArnoldOnTeachingMath.html">[ArnoldOnTeachingMath]</a></h1><div class="metadata"><ul><li class="meta-item">参考资料</li><li class="meta-item">V.I. Arnold</li></ul></div></header></summary>
-<p>英文版:</p>
-<p>https://www.maths.tcd.ie/pub/Maths/Courseware/ProblemSolving/Arnold/TeachingMathematics.pdf</p>
-</details></section><footer></footer></article></div></body></html>
+<article><section class="block" data-taxon=""><details open><summary id="p-进数"><header><h1><span class="taxon"></span>p-进数 <a class="slug" href="./p-进数.html">[p-进数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>作为分式域</h3>
+<p>$p$-进数域 $\mathbb{Q}_p$ 是 <span class="link local"><a href="./p-进整数.html" title="p-进整数 [p-进整数]">$p$-进整数环</a></span> $\mathbb{Z}_p$ 的分式域.</p>
+<h3>作为完备化</h3>
+<p>$p$-进数域 $\mathbb{Q}_p$ 是 $\mathbb{Q}$ 关于 $p$-进绝对值的<span class="link local"><a href="./完备化(域).html" title="完备化 (域) [完备化(域)]">完备化</a></span>.</p>
+<h2>性质</h2>
+<p>$p$-进数可表示为
+$$
+x = \sum_{n = N}^{\infty} a_n p^n,
+$$
+其中 $N\in\mathbb{Z}$, $a_n\in\{0,1,\cdots,p-1\}$, $a_N\neq 0$.</p>
+<p>与实数的小数表示一样, 一个 $p$-进数是有理数, 当且仅当它的表示是循环的.</p>
+<h2>例</h2>
+<p>一些有理数的 $3$-进表示:</p>
+<p>$$
+-1 = \sum_{n=0}^{\infty}2\cdot 3^n = \text{``...222''}.
+$$</p>
+<p>$$
+\frac{1}{2} = 2 + \sum_{n=1}^{\infty} 3^n = \text{``...1112''}.
+$$</p>
+<p>$$
+\frac{1}{7} = \text{``}...\dot 02120 \dot 1 1\text{''}.
+$$
+注意循环节的长度为 $6=7-1$. 这是因为 $3^6\equiv 1(\mathrm{mod}\, 7)$.</p>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="p-进整数"><header><h1><span class="taxon"></span>p-进整数 <a class="slug" href="./p-进整数.html">[p-进整数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于素数 $p$, 定义 <strong>$p$-进整数环</strong> $\mathbb{Z}_p$ 为整数环 $\mathbb{Z}$ 关于 $p$ 生成的理想 $(p)$ 的<span class="link local"><a href="./完备化(环).html" title="完备化 (环) [完备化(环)]">完备化</a></span>, 即
+$$
+\mathbb{Z}_p = \operatorname{lim}_n \mathbb{Z}/(p^n).
+$$</p>
+<h2>性质</h2>
+<p>$\mathbb{Z}_p$ 是<span class="link local"><a href="./离散赋值环.html" title="离散赋值环 [离散赋值环]">离散赋值环</a></span>.</p>
+<p>$\mathbb{Z}_p$ 的分式域为 <span class="link local"><a href="./p-进数.html" title="p-进数 [p-进数]">$\mathbb{Q}_p$</a></span>.</p>
+</details></section></details></section></footer></article></div></body></html>
