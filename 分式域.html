@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>全序集</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon"><style>
+<meta name="viewport" content="width=device-width"><title>分式域</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon"><style>
   @font-face {
     font-family: 'NewCM10';
     src: url(assets/NewCM10-Book.otf) format('opentype');
@@ -807,142 +807,60 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon=""><details open><summary id="全序集"><header><h1><span class="taxon"></span>全序集 <a class="slug" href="./全序集.html">[全序集]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<article><section class="block" data-taxon=""><details open><summary id="分式域"><header><h1><span class="taxon"></span>分式域 <a class="slug" href="./分式域.html">[分式域]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="p-进数"><header><h1><span class="taxon"></span>p-进数 <a class="slug" href="./p-进数.html">[p-进数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>全序集是每两个元素之间都有序关系的<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span>.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="PROP"><header><h1><span class="taxon"></span>PROP <a class="slug" href="./PROP.html">[PROP]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>PROP (product and permutation category, “积-置换范畴”) 是指所有对象均形如 $x^{\otimes n}$ 的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 我们保留 PROP 这个名字是因为它的厚重历史.</p>
-<p><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>是 PROP 的特殊情形: 它的运算 $\otimes$ 是范畴论<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>.</p>
-<p>PROP 又可视为单色<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>: 对于 PROP $\mathcal P$, $\operatorname{Hom}_{\mathcal P}(x^{\otimes n},x)$ 构成一个单色算畴的 $n$-元运算.</p>
-<h2>例</h2>
-<h3>平凡运算</h3>
-<p>有限集与<strong>双射</strong>构成的范畴 $\mathsf{Fin}^{\simeq}$ 配备不交并, 构成一个平凡的 PROP, 它是一个对象生成的自由<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 对任意对称幺半范畴 $\mathcal C$, 其中的对象等同于对称幺半函子 $\mathsf{Fin}^{\simeq} \to \mathcal C$.</p>
-<h3>交换运算</h3>
-<p>有限集的范畴 $\mathsf{Fin}$ 配备<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>幺半结构, 是一个 PROP, 因为每个有限集都是有限个单点集的并. 这个 PROP 记录了<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法</a></span>: 对任意对称幺半范畴 $\mathcal C$, 其中的交换代数等同于对称幺半函子 $\mathsf{Fin} \to \mathcal C$.</p>
-<h3>结合运算</h3>
-<p>考虑如下范畴 $\mathcal S$:</p>
-<ul>
-<li>其对象为有限集;</li>
-<li>态射 $X\to Y$ 是一个集合映射 $f\colon X\to Y$ 配备每个点的原像 $f^{-1}(y)$ 的一个<span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序</a></span>.</li>
-</ul>
-<p>这个范畴记录了对称幺半范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的语法. 任意对称幺半范畴 $\mathcal C$ 中的结合代数等同于对称幺半函子 $\mathcal S \to \mathcal C$.</p>
-<h3>小方块</h3>
-<p>如下 PROP 可视为 $\mathsf{Top}$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>或 $(\infty,1)$-范畴, 对应<span class="link local"><a href="./小n-方块算畴.html" title="小方块算畴 [小n-方块算畴]">小方块算畴</a></span>:</p>
-<ul>
-<li>其对象为若干方块 $[0,1]^n$ 的无交并;</li>
-<li>态射 $f \colon \sqcup_k [0,1]^n \to \sqcup_m [0,1]^m$ 为横平竖直的嵌入, 即 $f$ 在每个 $[0,1]^n$ 上的限制均为缩放与平移的复合.</li>
-</ul>
-</details></section><section class="block" data-taxon=""><details ><summary id="单纯形范畴"><header><h1><span class="taxon"></span>单纯形范畴 <a class="slug" href="./单纯形范畴.html">[单纯形范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<h2>观念</h2>
-<p>单纯形范畴的对象是 “标准” 的, “组合” 的单纯形, 也即有限全序集.</p>
-<p>单纯形与<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>密切相关. 增广单纯形范畴中有<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的结合代数.</p>
-<h2>定义</h2>
-<p><strong>单纯形范畴</strong> (simplex category) $\Delta$ 是有限<strong>非空</strong><span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序集</a></span>的范畴
-$$
-\Delta = \{[0],[1],[2],\cdots\},
-$$
-其中 $[n] = \{0&lt;1&lt;\cdots &lt; n \}$. 态射是偏序集的态射, 即满足对任意 $x,y$, 若 $x\leq y$, 则 $f(x)\leq f(y)$.</p>
-<p><strong>增广单纯形范畴</strong> (augmented simplex category) $\Delta_+$ 是有限<span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序集</a></span>的范畴
-$$
-\Delta_+ = \{[-1],[0],[1],[2],\cdots\}.
-$$</p>
-<p>$\Delta_+$ 是一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>,</p>
-<ul>
-<li>单位为 $[-1]$;</li>
-<li>$[n] \otimes [m] = [n+m+1]$;</li>
-<li>其中有<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $[0]$;</li>
-<li>注意, 这个幺半范畴<strong>不是</strong><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, 因为<strong>不存在</strong>函子性的同构 $[n]\otimes [m]\simeq [m]\otimes[n]$.</li>
-</ul>
-<p>另外还有两个重要的由单纯形构成的范畴. 记 $\Delta_\bot$ 为非空有限全序集之间保持最小元的态射构成的范畴; $\Delta_\top$ 为保持最大元的态射构成的范畴. 事实上, 它们可视为幺半范畴 $\Delta_+$ 中结合代数 $[0]$ 上的左<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>和右模范畴:
-$$
-\Delta_\bot = \mathsf{LMod}_{\Delta_+}([0]),\ \Delta_\top = \mathsf{RMod}_{\Delta_+}([0]).
-$$</p>
+<h3>作为分式域</h3>
+<p>$p$-进数域 $\mathbb{Q}_p$ 是 <span class="link local"><a href="./p-进整数.html" title="p-进整数 [p-进整数]">$p$-进整数环</a></span> $\mathbb{Z}_p$ 的<span class="link local"><a href="./分式域.html" title="分式域 [分式域]">分式域</a></span>.</p>
+<h3>作为完备化</h3>
+<p>$p$-进数域 $\mathbb{Q}_p$ 是 $\mathbb{Q}$ 关于 $p$-进绝对值的<span class="link local"><a href="./完备化(域).html" title="完备化 (域) [完备化(域)]">完备化</a></span>.</p>
 <h2>性质</h2>
-<h3>几何单纯形</h3>
-<p>标准 $n$ 维几何单纯形是 $\mathbb{R}^{n+1}$ 的基向量 $e_0,e_1,\cdots,e_n$ 的凸包. 这定义了一个函子 $\Delta \to \mathsf {Top}$.</p>
-<h3>游走的结合代数</h3>
-<p>增广单纯形范畴 $\Delta_+$ 是一个<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $[0]$ 生成的自由<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 称 $[0]$ 为<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的结合代数; 也即对任意幺半范畴 $\mathcal M$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$, 存在唯一的幺半函子 $\Delta_+ \to M$, 将 $[0]$ 对应到 $A$.</p>
-<h3>单形之间的伴随</h3>
-<p>由于 $\Delta$ 的对象可视为偏序集, 即 $(0,1)$-范畴, $\Delta$ 自身可视为<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于偏序集的范畴, 即 $(1,2)$-范畴. 我们可谈论 $\Delta$ 中的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
-<p><strong>命题</strong>. $[n-1]$ 与 $[n]$ 之间有如下伴随:
+<p>$p$-进数可表示为
 $$
-d_n \dashv s_{n-1}\dashv d_{n-1}\dashv\cdots\dashv s_0\dashv d_0.
+x = \sum_{n = N}^{\infty} a_n p^n,
 $$
-其中 $d_i\colon [n-1]\to [n]$ 是唯一的像不含 $i$ 的单射, $s_j\colon [n] \to [n-1]$ 是唯一的将两个元素映到 $j$ 的满射.
-$$
-d_n x\leq y\, \Leftrightarrow x\leq s_{n-1}y
-$$</p>
-<h3>保持极值的单形范畴</h3>
-<p>范畴 $\Delta_\bot$, $\Delta_\top$ 是 $\Delta_+$ 的 (非全) 子范畴, 我们关注其 $[n-1]$ 和 $[n]$ 之间往来的态射, 因为这些态射生成所有态射:</p>
-<ul>
-<li>$\operatorname{Hom}_{\Delta_\bot}([n-1],[n]) = \{d_n,\cdots,d_1\}$,</li>
-<li>$\operatorname{Hom}_{\Delta_\top}([n],[n-1]) = \operatorname{Hom}_{\Delta_\bot}([n],[n-1]) = \{s_{n-1},\cdots,s_0\}$,</li>
-<li>$\operatorname{Hom}_{\Delta_\top}([n-1],[n]) = \{d_{n-1},\cdots,d_0\}$.</li>
-</ul>
-<p>结合前面陈述的伴随关系, 我们注意到 $\Delta_\bot$ 与 $\Delta_\top$ 之间存在一个反变等价
-$$
-\Delta_\bot^{\mathrm{op}} \overset{\simeq}{\rightleftarrows} \Delta_\top,
-$$</p>
-<ul>
-<li>将态射 $d_i\in\operatorname{Hom}_{\Delta_\bot}([n-1],[n])$ 对应到其右伴随 $s_{i-1}$,</li>
-<li>将态射 $s_j\in\operatorname{Hom}_{\Delta_\bot}([n],[n])$ 对应到其右伴随 $s_{i-1}$,</li>
-</ul>
-<h3>区间表示</h3>
-<p>对于 $\Delta_+$ 中的态射 $f\colon [n] \to [m]$, 考虑 $f'\colon [m+1] \to [n+1]$,
-$$
-f'(x) = \min\{y\colon f(y)\geq x\}.
-$$
-(约定 $f(n+1) = m+1$.)
-这给出一个函子
-$$
-\mathrm{ir}\colon\Delta_+^{\mathrm{op}} \to \Delta_+,
-$$
-其在对象层面将 $[n]$ 对应到 $[n+1]$.
-<span class="link local"><a href="./RiehlVerityAdjunctionMonad.html" title="Homotopy coherent adjunctions and the formal theory of monads [RiehlVerityAdjunctionMonad]">Riehl–Verity</a></span> 文中该函子称为<strong>区间表示</strong> (interval representation), 因为有一种直观是将 $[m+1]$ “分成 $m+1$ 个区间”, 每个区间对应 $[m]$ 的一个点.</p>
-<p>注意 $f'(0) = 0$, $f'(m+1)=n+1$, 也即 $f'$ 保持最小值与最大值. 事实上, 函子 $\mathrm{ir}$ 分解为
-$$
-\Delta_+^\mathrm{op}\simeq\mathsf{BiMod}_{\Delta_+}([0])\to\Delta_+.
-$$</p>
-<h2>相关概念</h2>
-<p><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, <span class="link local"><a href="./单纯范畴.html" title="“单纯范畴” [单纯范畴]">单纯范畴</a></span></p>
-</details></section><section class="block" data-taxon=""><details ><summary id="结合代数"><header><h1><span class="taxon"></span>结合代数 <a class="slug" href="./结合代数.html">[结合代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>观念</h2>
-<p>结合代数, 又叫 $\mathbb E_1$-代数, <span class="link local"><a href="./A∞-代数.html" title="A∞-代数 [A∞-代数]">$A_\infty$-代数</a></span>, 是若干元素可以<strong>有序</strong>地结合起来的结构. 给定 $n$ 个元素的<strong>有序</strong>组 $(x_1,\cdots,x_n)$, 仅有<strong>唯一</strong>的方式将它们结合起来 $x_1\cdots x_n$, 即结合的最终结果 “与加括号的方式无关”.</p>
-<p>在结合代数的结构之上, 可以考虑 “结合代数中的结合代数” (<span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$-代数</a></span>), “结合代数中的结合代数中的结合代数” ($\mathbb E_3$-代数), …, 以至于无穷. 在无穷处, $\mathbb E_\infty$-代数就是<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>.</p>
-<h2>定义</h2>
-<h3>使用算畴</h3>
-<p>结合代数可定义为<span class="link local"><a href="./A∞-算畴.html" title="结合算畴 [A∞-算畴]">结合算畴</a></span>上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span>. 参见<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>.</p>
-<h3>使用语法范畴</h3>
-<h4>积幺半范畴</h4>
-<p>在<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span>的特殊情形, 结合代数是幺半群的 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>的模型, 即其<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>为有限生成自由幺半群的范畴的对偶, 具体地:</p>
-<ul>
-<li>其对象为有限集;</li>
-<li>态射 $\{x_1,\cdots,x_n\}\to \{y_1,\cdots,y_m\}$ 为形如 $y_i = f_i(x_1,\cdots,x_n)$ 的变量代换, 每个 $f_i$ 为幺半群的理论中的公式, 即 $\{x_1,\cdots,x_n\}$ 上的一个<span class="link local"><a href="./列表.html" title="列表 [列表]">列表</a></span>; 等价地, 一个态射是 $\{y_1,\cdots,y_m\}$ 到 $\{x_1,\cdots,x_n\}$ 生成的自由幺半群的一个集合映射.</li>
-</ul>
-<p>那么<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span> $\mathcal C$ 中的结合代数即是上述范畴到 $\mathcal C$ 的保持有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>的函子.</p>
-<h4>一般幺半范畴</h4>
-<p>在一般的<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>中, 结合代数可由如下<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>定义:</p>
-<ul>
-<li>其对象为有限全序集 (包括空集);</li>
-<li>其态射为<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span>映射;</li>
-<li>幺半结构为
-$$
-\{a_1 &lt; \cdots &lt; a_n\} \otimes \{b_1 &lt; \cdots &lt; b_m\} = \{a_1 &lt; \cdots &lt; a_n &lt; b_1 &lt; \cdots &lt; b_m\}.
-$$
-注意这个幺半结构<strong>不是</strong>对称幺半结构, <strong>不存在</strong>自然同构 $A\otimes B\simeq B\otimes A$.</li>
-</ul>
-<p>该幺半范畴的底层范畴就是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span> $\Delta_+$, 其中的单点集是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的结合代数.</p>
-<h4>对称幺半范畴</h4>
-<p>在一般的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>中, 结合代数可由如下<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>定义:</p>
-<ul>
-<li>其对象为有限集;</li>
-<li>态射 $X\to Y$ 是一个集合映射 $f\colon X\to Y$ 配备每个点的原像 $f^{-1}(y)$ 的一个<span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序</a></span>;</li>
-<li>对称幺半结构为无交并.</li>
-</ul>
-<p>这个范畴是一个 <span class="link local"><a href="./PROP.html" title="PROP [PROP]">PROP</a></span>.</p>
-<h2>性质</h2>
-<h3>具体表现</h3>
-<p><span class="link local"><a href="./链复形无穷范畴.html" title="链复形无穷范畴 [链复形无穷范畴]">链复形范畴</a></span>中的结合代数有很具体的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 见 <span class="link local"><a href="./A∞-代数.html" title="A∞-代数 [A∞-代数]">$A_\infty$-代数</a></span>.</p>
+其中 $N\in\mathbb{Z}$, $a_n\in\{0,1,\cdots,p-1\}$, $a_N\neq 0$.</p>
+<p>与实数的小数表示一样, 一个 $p$-进数是有理数, 当且仅当它的表示是循环的.</p>
 <h2>例</h2>
+<p>一些有理数的 $3$-进表示:</p>
+<p>$$
+-1 = \sum_{n=0}^{\infty}2\cdot 3^n = \text{``...222''}.
+$$</p>
+<p>$$
+\frac{1}{2} = 2 + \sum_{n=1}^{\infty} 3^n = \text{``...1112''}.
+$$</p>
+<p>$$
+\frac{1}{7} = \text{``}...\dot 02120 \dot 1 1\text{''}.
+$$
+注意循环节的长度为 $6=7-1$. 这是因为 $3^6\equiv 1(\mathrm{mod}\, 7)$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="剩余域"><header><h1><span class="taxon"></span>剩余域 <a class="slug" href="./剩余域.html">[剩余域]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>剩余域有两种不同但有关联的含义.</p>
+<h3>局部环, 概形</h3>
+<p><span class="link local"><a href="./局部环.html" title="“局部环” [局部环]">局部环</a></span>的剩余域是它唯一的极大理想的商.</p>
+<h3>非 Archimedes 赋值域</h3>
+<p>设 $(K,\|{-}\|)$ 为<span class="link local"><a href="./非Archimedes赋值域.html" title="非 Archimedes 赋值域 [非Archimedes赋值域]">非 Archimedes 赋值域</a></span>, $\mathcal O_K=\{x\in K\mid \|x\|\leq 1\}$ 为其<span class="link local"><a href="./赋值环.html" title="赋值环 [赋值环]">赋值环</a></span>, 其唯一的极大理想为 $\mathfrak m=\{x\in K\mid\|x\|&lt;1\}$. 此时称 $\mathcal O_K/\mathfrak m$ 为 $K$ 的剩余域.</p>
+<h2>例</h2>
+<p><strong>例</strong>. <span class="link local"><a href="./整概形.html" title="“整概形” [整概形]">整概形</a></span> $X$ 的<span class="link local"><a href="./一般点.html" title="“一般点” [一般点]">一般点</a></span> $\eta$ 处的剩余域同构于茎 $\mathcal O_{X,\eta}$ 的分式域. 特别地, 设 $A$ 为整环, $\operatorname{Spec}A$ 的一般点的剩余域为 $A$ 的<span class="link local"><a href="./分式域.html" title="分式域 [分式域]">分式域</a></span>.</p>
+<p><strong>例</strong> (仿射直线). 设 $f\in \mathbb F_p[t]$ 为 $d$ 次不可约多项式, 那么 $\mathbb A^1_{\mathbb F_p}$ 的闭点 $(f)$ 处的剩余域为 $\mathbb F_{q}$, $q=p^d$.</p>
+<p><strong>例</strong> (椭圆曲线). 考虑 $\mathbb F_3$ 上的曲线 $y^2=x^3+x$. 其有一个 $\mathbb F_9$-点 $(1,\sqrt{2})$ (因为 $2$ 不是 $\mathbb F_3$ 中的平方数). 其对应的闭点 (Galois 轨道 $\{(1,\pm\sqrt{2})\}$) 的剩余域为 $\mathbb F_9$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="赋值判别法"><header><h1><span class="taxon"></span>赋值判别法 <a class="slug" href="./赋值判别法.html">[赋值判别法]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>陈述</h2>
+<p>设 $f\colon X\to Y$ 为<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span>映射.
+对所有<span class="link local"><a href="./赋值环.html" title="赋值环 [赋值环]">赋值环</a></span> $A$ 及其<span class="link local"><a href="./分式域.html" title="分式域 [分式域]">分式域</a></span> $K$, 考虑提升问题
+$$
+\begin{array}
+    {ccc}
+    \operatorname{Spec}K &amp; \to &amp; X\\
+    \downarrow &amp; &amp; \downarrow \\
+    \operatorname{Spec}A &amp; \to &amp; Y,
+\end{array}
+$$
+则</p>
+<ul>
+<li>$f$ 为<span class="link local"><a href="./泛闭映射.html" title="泛闭映射 [泛闭映射]">泛闭映射</a></span>当且仅当该提升问题总有解;</li>
+<li>在 $f$ 拟分离的假设下, $f$ <span class="link local"><a href="./分离态射.html" title="分离态射 [分离态射]">分离</a></span>当且仅当该提升问题至多有一个解.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="赋值环"><header><h1><span class="taxon"></span>赋值环 <a class="slug" href="./赋值环.html">[赋值环]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>赋值环是可以在某个单一的维度比较元素大小的环. 若通过<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>将环的元素理解为某几何对象上的函数, 则赋值的概念可理解为某种 “增长速率” 或 “消失速率”.</p>

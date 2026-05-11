@@ -808,7 +808,13 @@
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
 <article><section class="block" data-taxon=""><details open><summary id="对象的生象"><header><h1><span class="taxon"></span>对象的生象 <a class="slug" href="./对象的生象.html">[对象的生象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
 <p>将一个范畴中的不可逆态射去除, 仅保留可逆态射, 得到一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>, 称为其对象的生象, 又叫<strong>核</strong> (core), <strong>极大子群胚</strong> (maximal subgroupoid).</p>
+<p>这一操作为嵌入
+$$
+\mathsf{Ani} \to \mathsf{Cat}
+$$
+的右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Abel∞-群"><header><h1><span class="taxon"></span>E∞-群 <a class="slug" href="./Abel∞-群.html">[Abel∞-群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>$\mathbb E_{\infty}$-群又称 Abel $\infty$-群, 是<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> <span class="link local"><a href="./E∞-算畴.html" title="E∞-算畴 [E∞-算畴]">$\mathbb E_\infty$</a></span>上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span>.</p>
@@ -893,6 +899,23 @@ $$</p>
 $N(0\overset{\simeq}{\to} 1) \to {*}$
 的<span class="link local"><a href="./局部对象.html" title="局部对象 [局部对象]">局部对象</a></span>.</p>
 <p>完备 Segal 生象等同于 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$(\infty,1)$-范畴</a></span>. 另见<span class="link local"><a href="./范畴对象.html" title="范畴对象 (∞-范畴论) [范畴对象]">范畴对象</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="弱可缩范畴"><header><h1><span class="taxon"></span>弱可缩范畴 <a class="slug" href="./弱可缩范畴.html">[弱可缩范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>作为 $\infty$-群胚可视为 $(\infty,1)$-范畴, 给出嵌入
+$$
+\mathsf{Ani} \to \mathsf{Cat}.
+$$
+该嵌入有左伴随
+$$
+|{-}|\colon \mathsf{Cat} \to \mathsf{Ani},
+$$
+“将所有态射变为可逆”.
+(注意该嵌入的右伴随为取<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>)</p>
+<p>对于范畴 $\mathcal C$, 若 $|\mathcal C|=1$, 则称 $\mathcal C$ <strong>弱可缩</strong> (weakly contractible).</p>
+<h2>性质</h2>
+<p><strong>命题</strong>. 函子 $\mathcal C_{/c} \to \mathcal C$ 保持且<span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映</a></span>弱可缩极限.</p>
+<h2>例</h2>
+<p>范畴的<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">锥</a></span>是弱可缩的.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="高阶范畴"><header><h1><span class="taxon"></span>高阶范畴 <a class="slug" href="./高阶范畴.html">[高阶范畴]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./tutorial-highercat.html" title="高阶范畴论 [tutorial-highercat]">教程 : 高阶范畴论</a></span></p>
 <p>一个高阶范畴是一类<strong>对象</strong>和对象之间的<strong>态射</strong>构成的全体; 不同于普通范畴的是, 高阶范畴两个对象 $X,Y$ 之间的态射全体 $\operatorname{Hom}(X,Y)$ 本身也构成高阶范畴, 从而可以谈论态射之间的态射 ($2$-态射), 态射之间的态射之间的态射 ($3$-态射), …, 以至于无穷.</p>

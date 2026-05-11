@@ -859,6 +859,7 @@
 <p>对于 ind-概形的态射 $f\colon X\to Y$, 若对任意 fp-闭子概形 $Z\subset X$, 都有 $f|_Z$ 为可容许态射, 则称 $f$ 可容许.</p>
 <h3>1.4 ind-叠</h3>
 <p>记 $\mathsf{St}_k$ 为 $\operatorname{Spec}k$ 上的叠的 $2$-范畴, $\mathsf{Art}_k^{\mathrm{ft}}$ 为有限型 Artin 叠的子范畴.</p>
+<p>对于 $X\in\mathsf{Art}_k^{\text{ft}}$, 记 $D(X)$ 为可构造 $\overline{\mathbb{Q}}_\ell$-层的有界导出范畴, $D^-(X)$ 为上有界导出范畴.</p>
 <h3>1.5 几何对象的 $2$-范畴</h3>
 <p>对于 $X,Y\in\mathsf{AISt}_k$, 可定义 “$X$ 方向的测度, $Y$ 方向的函数” 的范畴 $M_X(X\times Y)$.</p>
 <ul>
@@ -868,18 +869,91 @@ $$
   M_X(X\times Y) = \operatorname{colim}^{!,*}_{U\in (X/\cdot)^{\mathrm{op}},V\in (Y/\cdot)^{\mathrm{op}}} D(U\times V),
   $$
 转移态射为前面提到的 $f^!\times g^*$.</li>
+<li>对于 $X,Y\in\mathsf{AISt}_k$, 定义
+$$
+  M_X(X\times Y) = \operatorname{colim}_{i,j} M_{X_i}(X_i\times Y_j).
+  $$
+类似地, 将 $D$ 改为 $D^-$, 可定义 $M_X^-(X\times Y)$.</li>
 </ul>
+<p>范畴 $M_X(X\times Y)$ 的每个对象 $B$ 给出函子 $M(X)\to M(Y)$,
+$$
+F\mapsto (p_Y)_!(p_X^*F\otimes B).
+$$</p>
+<p>进一步, 有复合函子
+$$
+M_Y(X\times Y)\times M_Z(Y\times Z)\to M_Z(X\times Z),
+$$
+$$
+(A,B)\mapsto (p_{XZ})_! (p_{XY}^*A\otimes p_{YZ}^*B).
+$$</p>
+<p>上述构造可延拓到 <span class="link local"><a href="./pro-对象.html" title="pro-对象 [pro-对象]">pro-</a></span>范畴.</p>
+<p>定义全子范畴
+$$
+\operatorname{Hom}_{\text{geom}}(X,Y) \subset \mathsf{Pro} M_Y(X\times Y)
+$$
+其对象 $B$ 满足对任意 $F\in M(X)$, 有 $B(F)\in M(Y)$.
+这些资料构成 $2$-范畴 $M_{\text{grom}}$, 称为几何 $2$-范畴.</p>
+<p>定义 $X$ 到 $Y$ 的一个<strong>可容许关系</strong> (admissible correspondence) 为
+$$
+X \overset{g}{\leftarrow} Z \overset{f}{\to} Y,
+$$
+满足 $g$ 可表为叠且形式光滑, $f$ 可容许且强可表 (strongly representable).
+该关系给出函子
+$$
+f_! g^!\colon M(X)\to M(Y).
+$$
+进而有可容许<span class="link local"><a href="./关系2-范畴.html" title="关系 2-范畴 [关系2-范畴]">关系范畴</a></span>到几何 $2$-范畴的 $2$-函子
+$$
+\mathsf{Corr} \to M_{\text{grom}}.
+$$</p>
 <h2>2. Hecke 代数的范畴化</h2>
 <p>记号.</p>
 <ul>
 <li>$B\subset G$ 是固定的 Borel 子群,</li>
 <li>$I$ 是 $B$ 对应的 <span class="link local"><a href="./Iwahori子群.html" title=" [Iwahori子群]">Iwahori 子群</a></span>, 即 $B$ 在投影 $L^+G\to G$ 下的原像.</li>
+<li>$\mathrm{Fl} := LG / I$ 为仿射旗簇, $\widetilde W$ 为<span class="link local"><a href="./仿射Weyl群.html" title="仿射 Weyl 群 [仿射Weyl群]">仿射 Weyl 群</a></span>.</li>
 <li>$\mathsf{Par}$ 为 $LG$ 的<span class="link local"><a href="./parahoric.html" title="抛物-Iwahori 子群 [parahoric]">抛物-Iwahori 子群</a></span> (也即包含 $I$ 的 fp-闭子群) 的偏序集.</li>
 <li>对于 $P\in\mathsf{Par}$, 记 $P^+$ 为 pro-幂幺根, …</li>
 </ul>
 <h3>2.1 环路空间</h3>
 <p>记 $K = k(\!(t)\!)$, $\mathcal O = k[\![t]\!]$. 固定 $n\in\mathbb{Z}_{\geq 0}$.</p>
-<h2>稳定中心猜想</h2>
+<h3>2.2 Hecke 代数</h3>
+<p>$M(LG)$ 关于卷积
+$$
+A*B = m_! (A\boxtimes B)
+$$
+构成幺半范畴.</p>
+<h3>2.3 平均函子</h3>
+<h2>3. 稳定中心猜想</h2>
+<h3>3.1 经典理论</h3>
+<p>设 $F$ 为<span class="link local"><a href="./非Archimedes赋值域.html" title="非 Archimedes 赋值域 [非Archimedes赋值域]">非 Archimedes</a></span> <span class="link local"><a href="./局部域.html" title="局部域 [局部域]">局部域</a></span>, $W_F$ 为 <span class="link local"><a href="./Weil群.html" title="Weil 群 [Weil群]">Weil 群</a></span>, $W_F$ 为 Weil–Deligne 群.</p>
+<p>设 $G$ 为 $F$ 上的连通约化群, 设其分裂. 记 $\check{G}$ 为 <span class="link local"><a href="./Langlands对偶.html" title="Langlands 对偶群 [Langlands对偶]">Langlands 对偶</a></span>.</p>
+<p>记 $R(G)$ 为 $G(F)$ 的光滑表示的范畴, $\operatorname{Irr}(G)$ 为其中不可约对象的等价类集合.</p>
+<p>记 $Z_G = Z(R(G))$ 为 Bernstein 中心, 即 $\mathrm{id}_{R(G)}$ 的自同态代数.
+$$
+Z_G := \operatorname{End}(\mathrm{id}_{R(G)})
+$$</p>
+<p>$Z_G$ 的每个元素 $z$ 给出 <span class="link local"><a href="./Hecke代数.html" title="Hecke 代数 [Hecke代数]">Hecke 代数</a></span> $\mathcal H(G(F))$ 的一个自同态 $z_{\mathcal H}$.</p>
+<h3>3.2 Bernstein 中心的范畴化</h3>
+<p>朴素的想法是定义 $\mathcal Z(LG)$ 为
+$$
+\operatorname{End}_{\mathcal M(LG^2)}(\mathcal M(LG)),
+$$
+但在我们现在的 $\ell$-进语境中, 该定义似乎不对. 我们应该考虑的不是抽象的范畴自同态, 而是 “来自几何” 的自同态. 更正式地说, 我们应该使用的不是全体稳定范畴的 $2$-范畴, 而是几何对象的 $2$-范畴.</p>
+<p>一般而言, 对于 $2$-范畴 $\mathfrak C$ 的对象 $X$, 有幺半范畴 $\operatorname{End}_{\mathfrak C}(X)$. 设 $\mathfrak C$ 自身是幺半范畴, $S\in\mathfrak C$ 为结合代数, $X$ 为 $S$-模, 那么可定义一个幺半范畴 $\operatorname{End}_{\mathfrak C}^S(X)$, 它是如下单纯图表的极限:
+$$
+\operatorname{Hom}(X,X)\to^2\operatorname{Hom}(S\otimes X,X)\to^3\operatorname{Hom}(S\otimes S\otimes X,X)\to^4\cdots
+$$
+定义 $S$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>为
+$$
+Z(S) :=\operatorname{End}_{\mathfrak C}^{S\otimes S^{\mathrm{op}}}(S).
+$$</p>
+<p>考虑 $LG$ 作为几何 $2$-范畴的对象的中心
+$$
+Z_{M_{\text{grom}}}(LG).
+$$
+它是 Bernstein 中心的范畴化.</p>
+<p>对每个 $P\in\mathsf{Par}$,</p>
 <h2>Bernstein 投影算子的稳定性</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="伴随"><header><h1><span class="taxon"></span>伴随 <a class="slug" href="./伴随.html">[伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>

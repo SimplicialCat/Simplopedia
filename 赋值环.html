@@ -812,8 +812,8 @@
 <p>赋值环是可以在某个单一的维度比较元素大小的环. 若通过<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>将环的元素理解为某几何对象上的函数, 则赋值的概念可理解为某种 “增长速率” 或 “消失速率”.</p>
 <h2>定义</h2>
 <p>设 $K$ 为域. 若整环 $\mathscr O \subset K$ 满足 $\mathscr O\neq K$, 且对任意 $x\in K$ 都有 $x\in \mathscr O$ 或 $x^{-1}\in \mathscr O$, 则称 $\mathscr O$ 是 $K$ 中的赋值环 (valuation ring).</p>
-<p>特别地, $K$ 是 $\mathscr O$ 的<span class="link local"><a href="./分式域.html" title=" [分式域]">分式域</a></span>.</p>
-<p>一个整环若是其分式域中的赋值环, 则称其为<strong>赋值环</strong>.</p>
+<p>特别地, $K$ 是 $\mathscr O$ 的<span class="link local"><a href="./分式域.html" title="分式域 [分式域]">分式域</a></span>.</p>
+<p>一个整环若是其<span class="link local"><a href="./分式域.html" title="分式域 [分式域]">分式域</a></span>中的赋值环, 则称其为<strong>赋值环</strong>.</p>
 <h3>赋值</h3>
 <p>设 $\mathscr O$ 是 $K$ 中的赋值环. 那么对任意 $x,y\in K^\times$, 以下三种情形有且仅有一种成立:</p>
 <ul>
@@ -842,11 +842,17 @@ $$</p>
 特别地, 任何两个元素之间有整除关系.</p>
 <h2>例</h2>
 <p>对于<span class="link local"><a href="./非Archimedes赋值域.html" title="非 Archimedes 赋值域 [非Archimedes赋值域]">非 Archimedes 赋值域</a></span> $(K,|{-}|)$, 其整数环 $\mathcal O_K = \{x\in K \mid |x| \leq 1\}$ 为赋值环.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="剩余域"><header><h1><span class="taxon"></span>“剩余域” <a class="slug" href="./剩余域.html">[剩余域]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="剩余域"><header><h1><span class="taxon"></span>剩余域 <a class="slug" href="./剩余域.html">[剩余域]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>剩余域有两种不同但有关联的含义.</p>
+<h3>局部环, 概形</h3>
 <p><span class="link local"><a href="./局部环.html" title="“局部环” [局部环]">局部环</a></span>的剩余域是它唯一的极大理想的商.</p>
+<h3>非 Archimedes 赋值域</h3>
 <p>设 $(K,\|{-}\|)$ 为<span class="link local"><a href="./非Archimedes赋值域.html" title="非 Archimedes 赋值域 [非Archimedes赋值域]">非 Archimedes 赋值域</a></span>, $\mathcal O_K=\{x\in K\mid \|x\|\leq 1\}$ 为其<span class="link local"><a href="./赋值环.html" title="赋值环 [赋值环]">赋值环</a></span>, 其唯一的极大理想为 $\mathfrak m=\{x\in K\mid\|x\|&lt;1\}$. 此时称 $\mathcal O_K/\mathfrak m$ 为 $K$ 的剩余域.</p>
 <h2>例</h2>
-<p><span class="link local"><a href="./整概形.html" title="“整概形” [整概形]">整概形</a></span> $X$ 的<span class="link local"><a href="./一般点.html" title="“一般点” [一般点]">一般点</a></span> $\eta$ 处的剩余域同构于茎 $\mathcal O_{X,\eta}$ 的分式域.</p>
+<p><strong>例</strong>. <span class="link local"><a href="./整概形.html" title="“整概形” [整概形]">整概形</a></span> $X$ 的<span class="link local"><a href="./一般点.html" title="“一般点” [一般点]">一般点</a></span> $\eta$ 处的剩余域同构于茎 $\mathcal O_{X,\eta}$ 的分式域. 特别地, 设 $A$ 为整环, $\operatorname{Spec}A$ 的一般点的剩余域为 $A$ 的<span class="link local"><a href="./分式域.html" title="分式域 [分式域]">分式域</a></span>.</p>
+<p><strong>例</strong> (仿射直线). 设 $f\in \mathbb F_p[t]$ 为 $d$ 次不可约多项式, 那么 $\mathbb A^1_{\mathbb F_p}$ 的闭点 $(f)$ 处的剩余域为 $\mathbb F_{q}$, $q=p^d$.</p>
+<p><strong>例</strong> (椭圆曲线). 考虑 $\mathbb F_3$ 上的曲线 $y^2=x^3+x$. 其有一个 $\mathbb F_9$-点 $(1,\sqrt{2})$ (因为 $2$ 不是 $\mathbb F_3$ 中的平方数). 其对应的闭点 (Galois 轨道 $\{(1,\pm\sqrt{2})\}$) 的剩余域为 $\mathbb F_9$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="泛闭映射"><header><h1><span class="taxon"></span>泛闭映射 <a class="slug" href="./泛闭映射.html">[泛闭映射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>称<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span>的映射 $f\colon X\to Y$ <strong>泛闭</strong> (universally closed) 是指对任意<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span> $Y'\to Y$, $f'\colon X\times_Y Y' \to Y'$ 为<span class="link local"><a href="./闭映射.html" title="闭映射 [闭映射]">闭映射</a></span>.</p>
@@ -885,7 +891,7 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="赋值判别法"><header><h1><span class="taxon"></span>赋值判别法 <a class="slug" href="./赋值判别法.html">[赋值判别法]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>陈述</h2>
 <p>设 $f\colon X\to Y$ 为<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span>映射.
-对所有<span class="link local"><a href="./赋值环.html" title="赋值环 [赋值环]">赋值环</a></span> $A$ 及其分式域 $K$, 考虑提升问题
+对所有<span class="link local"><a href="./赋值环.html" title="赋值环 [赋值环]">赋值环</a></span> $A$ 及其<span class="link local"><a href="./分式域.html" title="分式域 [分式域]">分式域</a></span> $K$, 考虑提升问题
 $$
 \begin{array}
     {ccc}
