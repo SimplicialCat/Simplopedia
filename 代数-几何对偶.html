@@ -1039,7 +1039,7 @@ $$
 称商映射 $A\to A/I$ 对应的仿射概形的态射 $f\colon \operatorname{Spec} (A/I)\to \operatorname{Spec} A$ 为<strong>闭嵌入</strong>.</p>
 <p>仿射概形的闭嵌入的概念不依赖于拓扑空间的概念. 不过在使用拓扑空间的观点时, 它确实构成概形的底层拓扑空间的闭子空间.
 后面介绍的 “开嵌入” 同样不依赖于拓扑空间的概念; 但开嵌入的定义稍复杂一些, 并且仿射概形的开嵌入不一定是仿射概形.</p>
-<p><strong>例</strong> (局部化). 环 $A$ 对一个元素 $f\in A$ 的<span class="link local"><a href="./局部化.html" title="局部化 (环) [局部化]">局部化</a></span>是 $A[f^{-1}] = A[x]/(xf-1)$. 定义 “标准开集” $D(f)$ 为仿射概形
+<p><strong>例</strong> (局部化). 环 $A$ 对一个元素 $f\in A$ 的<span class="link local"><a href="./局部化.html" title="局部化 (环, 模) [局部化]">局部化</a></span>是 $A[f^{-1}] = A[x]/(xf-1)$. 定义 “标准开集” $D(f)$ 为仿射概形
 $$
 	D(f) := \operatorname{Spec} (A[f^{-1}]).
 $$
@@ -1463,10 +1463,10 @@ $$</p>
 更一般地, $(\infty,n)$-范畴的范畴 $\mathsf{Cat}_{(\infty ,n)}$ 的自同构群为 $(\mathbb{Z}/2)^n$, 对应在 $n$ 个层级上取对偶.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span></p>
-</details></section><section class="block" data-taxon=""><details ><summary id="局部化"><header><h1><span class="taxon"></span>局部化 (环) <a class="slug" href="./局部化.html">[局部化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="局部化"><header><h1><span class="taxon"></span>局部化 (环, 模) <a class="slug" href="./局部化.html">[局部化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>环 (<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>) 的<strong>局部化</strong>是使其中某些元素成为可逆元的万有的方法.</p>
-<p>在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">几何侧</a></span>, 局部化将环的<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>变成原来的一个子空间.</p>
+<p>在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">几何侧</a></span>, 局部化将环的<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>变成原来的一个子空间, 直观上是使得特定的函数非零的子空间. 相应地, <span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>的局部化是将<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>限制到该子空间.</p>
 <p>另见<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化 (范畴论)</a></span>, <span class="link local"><a href="./Bousfield局部化.html" title="Bousfield 局部化 (稳定同伦论) [Bousfield局部化]">Bousfield 局部化 (稳定同伦论)</a></span>.</p>
 <h2>定义</h2>
 <p>设 $A$ 为环, $S\subset A$ 为子集. 定义 $A$ 关于 $S$ 的<strong>局部化</strong> $A\to A[S^{-1}]$ (也记作 $S^{-1}A$) 为满足如下条件的环同态:</p>
@@ -1669,7 +1669,7 @@ $$
 \operatorname{Hom}_s(X,Y) :=\operatorname{colim}_k \operatorname{Hom}(\Sigma^k X,\Sigma^k Y)
 $$
 具有自然的 <span class="link local"><a href="./E∞-群.html" title="E∞-群 [E∞-群]">$\mathbb E_\infty$-群</a></span>结构. 特别地, <span class="link local"><a href="./稳定同伦群.html" title=" [稳定同伦群]">稳定同伦群</a></span> $\pi_n^s(X)=\pi_0\operatorname{Hom}_s(S^n,X)$ 是 Abel 群.</p>
-<p>我们希望将<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的范畴<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>, 使得稳定化后的映射空间是上述的余极限, 也即形式上令 $\Sigma$ 可逆. 参见<span class="link local"><a href="./形式取逆.html" title="“形式取逆” [形式取逆]">形式取逆</a></span>.</p>
+<p>我们希望将<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的范畴<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>, 使得稳定化后的映射空间是上述的余极限, 也即形式上令 $\Sigma$ 可逆. 参见<span class="link local"><a href="./形式取逆.html" title="形式取逆 [形式取逆]">形式取逆</a></span>.</p>
 <p>对于具有有限极限和有限余极限的范畴, 存在伴随 $\Sigma \dashv \Omega$:
 $$
 \text{Map}(\Sigma X,Y)\simeq *\times_{\text{Map}(X,Y)}*\simeq \text{Map}(X,\Omega Y).

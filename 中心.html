@@ -1442,6 +1442,17 @@ A*B = m_! (A\boxtimes B)
 $$
 构成幺半范畴.</p>
 <h3>2.3 平均函子</h3>
+<h2>e. 例子</h2>
+<p>这一节是我自己加的, 收集一些辅助我理解的例子.</p>
+<p>考虑 $G = \mathrm{SL}_2$.</p>
+<ul>
+<li><span class="link local"><a href="./仿射Weyl群.html" title="仿射 Weyl 群 [仿射Weyl群]">仿射 Weyl 群</a></span> $\widetilde {W} = \mathbb{Z}\rtimes\mathbb{Z}/2$, 生成元为平移 $t = \begin{pmatrix}t&amp;0\\0&amp;t^{-1}\end{pmatrix}$ 与反射 $s = \begin{pmatrix}0&amp;1\\-1&amp;0\end{pmatrix}$, 满足 $s^2=1$, $sts=t^{-1}$. Bruhat 序为 $t^n\leq t^{n+1}$, $st^n\leq st^{n+1}$, $t^n &lt; st^n$.</li>
+<li>Iwahori 子群 $I = \Big\{\begin{pmatrix}*&amp;*\\t *&amp;*\end{pmatrix}\Big\}\subset\mathrm{SL}_2(k[\![t]\!])$.</li>
+<li>$I_n^+ = \Big\{\begin{pmatrix}1&amp;t^n *\\t^{n+1} *&amp;1\end{pmatrix}\Big\}\subset\mathrm{SL}_2(k[\![t]\!])$. 那么 $I/I_n^+$ 是有限型群概形, 且 $I = \operatorname{lim}I/I_n^+$.</li>
+<li>$LG = \mathrm{SL}_2(k(\!(t)\!))$.</li>
+<li>仿射旗簇 $\mathrm{Fl} = LG/I = \bigsqcup_{n\geq 0}Y_{t^n} \sqcup\bigsqcup_{n\geq 0}Y_{st^n}$, 其中 $Y_{t^n}\simeq\mathbb A^{2n}$, $Y_{st^n}\simeq\mathbb A^{2n+1}$.</li>
+<li>$LG^{\leq w} \subset LG$ 是 $\mathrm{Fl}^{\leq w}$ 的原像. $LG = \operatorname{colim}_{w\in \widetilde W}LG^{\leq w}$ 将 $LG$ 表现为可容许 ind-概形.</li>
+</ul>
 <h2>3. 稳定中心猜想</h2>
 <h3>3.1 经典理论</h3>
 <p>设 $F$ 为<span class="link local"><a href="./非Archimedes赋值域.html" title="非 Archimedes 赋值域 [非Archimedes赋值域]">非 Archimedes</a></span> <span class="link local"><a href="./局部域.html" title="局部域 [局部域]">局部域</a></span>, $W_F$ 为 <span class="link local"><a href="./Weil群.html" title="Weil 群 [Weil群]">Weil 群</a></span>, $W_F$ 为 Weil–Deligne 群.</p>
@@ -1584,6 +1595,33 @@ $$</li>
 <h3>可分充实范畴</h3>
 <p>可分充实范畴是<span class="link local"><a href="./可分代数.html" title="可分代数 [可分代数]">可分代数</a></span>的推广.</p>
 <p>设 $\mathcal A$ 为 $\mathcal V$-充实范畴, 若 $\mathcal A$ 作为 $\mathcal A\otimes\mathcal A^{\mathrm{op}}$-模 $\mathcal A\otimes\mathcal A^{\mathrm{op}} \to \mathcal V$ 为小投射模, 则称 $\mathcal A$ <strong>可分</strong> (separable).</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="谱分解"><header><h1><span class="taxon"></span>谱分解 <a class="slug" href="./谱分解.html">[谱分解]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./notion.html" title="观念 [notion]">观念</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>当交换代数作用于线性空间 (<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>) 时, 往往可将空间分解为 “特征子空间” 的和, 每个特征子空间对应于一个 “特征值”, 也即<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>的点.</p>
+<h2>例</h2>
+<h3>线性算子的特征子空间分解</h3>
+<p>设 $k$ 是代数闭域, $T$ 是有限维 $k$-线性空间 $V$ 上的线性算子, 相当于 $V$ 上的 $k[x]$-模结构. 此时有特征子空间的分解
+$$
+V = \bigoplus_{\lambda} V_\lambda,
+$$
+其中 $\lambda\in k$ 对应 $\operatorname{Spec}k[x]$ 的点, 即素理想 $(x-\lambda)$; 特征子空间 $V_\lambda$ 可由下式定义:
+$$
+\begin{aligned}
+V_\lambda &amp;= V\otimes_{k[x]} k[x]_{(x-\lambda)} \\&amp;= \{v\in V\mid\exists n, (x-\lambda)^n v = 0\}.
+\end{aligned}
+$$</p>
+<p>当然, 类似的精神出现在泛函分析中 (无限维线性空间上) 算子的谱分解.</p>
+<h3>Lie 群 (Lie 代数) 表示的不可约分解</h3>
+<p>群 $G$ 在 $\mathbb{C}$-线性空间 $V$ 上的表示相当于 $V$ 的 $\mathbb{C}[G]$-模结构. 虽然 $\mathbb{C}[G]$ 不是交换环, 我们仍然可以取它的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span> $Z(\mathbb{C}[G])$ 并考虑 $V$ 上的 $Z(\mathbb{C}[G])$-模结构, 得到 $V$ 的谱分解.
+代数同态 $Z(\mathbb{C}[G]) \to\mathbb{C}$ 等同于所谓 “类函数”, 即 $G$ 的共轭类集合上的函数.</p>
+<p>类似地, Lie 代数 $\mathfrak g$ 的表示依<strong>中心特征</strong> $Z(U\mathfrak g)\to\mathbb{C}$ 分解.</p>
+<h3>Fourier 变换作为谱分解</h3>
+<p><span class="link local"><a href="./Fourier变换.html" title="Fourier 变换 [Fourier变换]">Fourier 变换</a></span>可视为 $\mathbb{R}^n$ (或更一般的局部紧 Abel 群 $A$) 上的函数关于平移算子生成的交换 <span class="link local"><a href="./C-星代数.html" title="C*-代数 [C-星代数]">$C^*$-代数</a></span> $C^*(A)$ 的谱分解; $C^*(A)$ 的谱正是 $A$ 的 <span class="link local"><a href="./Pontryagin对偶.html" title="Pontryagin 对偶 [Pontryagin对偶]">Pontryagin 对偶</a></span> $\widehat {A}$: 精神上,
+$$
+\operatorname{Hom}_{\mathsf{CAlg}}(C^*(A),\mathbb{C})\simeq\operatorname{Hom}_{\mathsf{Ab}}(A,\mathbb{C}).
+$$</p>
+<h3>自守函数的 Hecke 作用的谱分解</h3>
+<p><span class="link local"><a href="./VLafforgueExc.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueExc]">Vincent Lafforgue</a></span> 使用某些 Hecke 函子定义了<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span>, 以给出 <span class="link local"><a href="./Langlands纲领.html" title="Langlands 纲领 [Langlands纲领]">Langlands</a></span> 预言的自守函数空间的谱分解.</p>
+<p>这一思路在<span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 纲领</a></span>中得到延续. 人们发现<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span>等同于某种局部系统模叠上的函数代数. 而提升一个范畴层级后 (见<span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span>—但这里实际上只需要提升一阶), 该种局部系统模叠上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>范畴在<span class="link local"><a href="./自守层.html" title="自守层 [自守层]">自守层</a></span>范畴上的作用可给出自守层沿局部系统模叠的谱分解, 见 <span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="非Abel上同调"><header><h1><span class="taxon"></span>非 Abel 上同调 <a class="slug" href="./非Abel上同调.html">[非Abel上同调]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>非 Abel 上同调是一种广义的<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>概念, 强调其系数对象并非 Abel 群.</p>

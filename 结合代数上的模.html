@@ -1063,6 +1063,7 @@ $$</p>
 <p>分次模有如下两种含义, 前一种是后一种的特例, 但前一种更为基本.</p>
 <h3>不带分次的环</h3>
 <p>固定交换环 $A$. 定义分次 $A$-模为 $A$-模范畴中的<span class="link local"><a href="./分次对象.html" title="分次对象 [分次对象]">分次对象</a></span>.</p>
+<p>对于固定的幺半群 $N$, $N$-分次 $A$-模的范畴 $\mathsf{Mod}(A)^N$ 可视为 $N$ (作为幺半范畴) 的线性化 (线性包, linear envelope/hull).</p>
 <h3>分次环</h3>
 <p>固定交换环 $k$, <span class="link local"><a href="./分次代数.html" title="分次代数 [分次代数]">分次 $k$-代数</a></span> $A$ 是分次 $k$-模范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>; 于是可定义分次 $A$-模为分次 $k$-模范畴中 $A$ 上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>.</p>
 <p>具体地, 分次环 $A = \bigoplus_{n} A_n$ 上的分次模等同于 $A$-模 $M \simeq\bigoplus_n M_n$, 满足乘法映射
@@ -1302,6 +1303,64 @@ $$
 <p>相关讲义: <span class="link local"><a href="./notes-Gestalten-Cat.html" title="Gestalten - 在范畴上做代数 [notes-Gestalten-Cat]">Gestalten - 在范畴上做代数</a></span></p>
 <h3>高阶可表现范畴</h3>
 <p>见<span class="link local"><a href="./高阶可表现范畴.html" title="高阶可表现范畴 [高阶可表现范畴]">高阶可表现范畴</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="完备化(环)"><header><h1><span class="taxon"></span>完备化 (环, 模) <a class="slug" href="./完备化(环).html">[完备化(环)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>环关于理想的完备化给出了<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>的<span class="link local"><a href="./闭嵌入.html" title="闭嵌入 [闭嵌入]">闭子概形</a></span>的<span class="link local"><a href="./形式邻域.html" title="形式邻域 [形式邻域]">形式邻域</a></span>. 相应地, <span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>的完备化则是<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>在该形式邻域上的限制.</p>
+<p>另见<span class="link local"><a href="./完备化(域).html" title="完备化 (域) [完备化(域)]">完备化 (域)</a></span>, <span class="link local"><a href="./完备化(稳定同伦论).html" title="完备化 (稳定同伦论) [完备化(稳定同伦论)]">完备化 (稳定同伦论)</a></span>.</p>
+<h2>定义</h2>
+<p>环 $R$ 关于理想 $I$ 的完备化为
+$$
+R^{\wedge}_{I} :=\operatorname{lim}_nR/I^n.
+$$</p>
+<p>类似地, $R$-模 $M$ 关于 $R$ 的理想 $I$ 的完备化为
+$$
+M^{\wedge}_{I} := \operatorname{lim}_n M/I^nM.
+$$</p>
+<h2>例</h2>
+<p>整数环 $\mathbb{Z}$ 关于 $(p)$ 的完备化为 <span class="link local"><a href="./p-进整数.html" title="p-进整数 [p-进整数]">$p$-进整数环</a></span> $\mathbb{Z}_p=\operatorname{lim}_n \mathbb{Z}/p^n$.</p>
+<h3>代数曲线</h3>
+<p>光滑代数曲线 $X$ 在点 $x\in X$ 处的局部环 $\mathcal O_{X,x}$ 关于极大理想 $\mathfrak m_x$ 的完备化称为<strong>完备化局部环</strong> $\widehat {\mathcal O}_{X,x}$, 对应 $x$ 处的<span class="link local"><a href="./形式圆盘.html" title="形式圆盘 [形式圆盘]">形式圆盘</a></span>.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./形式谱.html" title="形式谱 [形式谱]">形式谱</a></span>, <span class="link local"><a href="./完备化(域).html" title="完备化 (域) [完备化(域)]">完备化 (域)</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="局部化"><header><h1><span class="taxon"></span>局部化 (环, 模) <a class="slug" href="./局部化.html">[局部化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>环 (<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>) 的<strong>局部化</strong>是使其中某些元素成为可逆元的万有的方法.</p>
+<p>在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">几何侧</a></span>, 局部化将环的<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>变成原来的一个子空间, 直观上是使得特定的函数非零的子空间. 相应地, <span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>的局部化是将<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>限制到该子空间.</p>
+<p>另见<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化 (范畴论)</a></span>, <span class="link local"><a href="./Bousfield局部化.html" title="Bousfield 局部化 (稳定同伦论) [Bousfield局部化]">Bousfield 局部化 (稳定同伦论)</a></span>.</p>
+<h2>定义</h2>
+<p>设 $A$ 为环, $S\subset A$ 为子集. 定义 $A$ 关于 $S$ 的<strong>局部化</strong> $A\to A[S^{-1}]$ (也记作 $S^{-1}A$) 为满足如下条件的环同态:</p>
+<ul>
+<li>对任意环同态 $\varphi\colon A \to B$, 若 $\varphi(S)\subset B^\times$, 即 $\varphi$ 将 $S$ 的元素映射到 $B$ 的可逆元, 则 $\varphi$ 唯一地穿过 $A\to A[S^{-1}]$.</li>
+</ul>
+<h3>素理想</h3>
+<p>设 $\mathfrak p\subset A$ 为素理想. 定义 $A$ 在 $\mathfrak p$ <strong>处</strong>的局部化为 $A$ 关于 $\mathfrak p$ <strong>之外</strong>的元素的局部化:
+$$
+A_{\mathfrak p} := A [(A\setminus\mathfrak p)^{-1}].
+$$</p>
+<p>注意此处的记号稍有混淆.</p>
+<h2>性质</h2>
+<h3>分式计算</h3>
+<p>当子集 $S$ 是<strong>乘性</strong> (multiplicative) 子集, 即关于 $A$ 中的乘法封闭时, $A[S^{-1}]$ 的元素有如下具体表达式:
+$$
+A[S^{-1}] = \Big\{ \frac{a}{s} \Bigm| a\in A, s\in S \Big\} / \sim,
+$$
+其中<span class="link local"><a href="./等价关系.html" title="等价关系 [等价关系]">等价关系</a></span> $\sim$ 为
+$$
+\frac{a}{s}\sim \frac{a'}{s'}\Leftrightarrow
+\exists t\in S\, t(as'-a's) = 0.
+$$</p>
+<h3>素理想</h3>
+<p>$A[S^{-1}]$ 的素理想等同于 $A$ 中与 $S$ 不相交的素理想.</p>
+<p>例如, $A_{\mathfrak p}$ 的素理想等同于 $A$ 中<strong>包含于</strong> $\mathfrak p$ 的素理想. (而 $A/\mathfrak p$ 的素理想等同于 $A$ 中<strong>包含</strong> $\mathfrak p$ 的素理想.)</p>
+<h3>正合性</h3>
+<p><strong>命题</strong>. 对于交换环 $A$ 的乘性子集 $S$, 局部化函子 $S^{-1}(-) = S^{-1}A\otimes (-)\colon \mathsf{Mod}(A)\to \mathsf{Mod}(A)$ 正合, 即 $S^{-1}A$ 为<span class="link local"><a href="./平坦模.html" title="平坦模 [平坦模]">平坦</a></span> $A$-模.</p>
+<p>这是因为
+$$
+S^{-1}A=\operatorname{colim}_{s\in S}\frac{1}{s}A,
+$$
+而平坦模的<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>是平坦模.</p>
+<h3>单射</h3>
+<p><strong>命题</strong>. 同态 $A \to A[S^{-1}]$ 为单射当且仅当 $S$ 不含零因子.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="平坦模"><header><h1><span class="taxon"></span>平坦模 <a class="slug" href="./平坦模.html">[平坦模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>平坦模可视为<span class="link local"><a href="./平坦函子.html" title="平坦函子 [平坦函子]">平坦函子</a></span>的特例.</p>
@@ -1361,7 +1420,7 @@ $$
 (M\otimes_A B) \otimes_B (-) \simeq M\otimes_A (-).
 $$</p>
 <h2>例</h2>
-<p><strong>命题</strong>. 对于交换环 $A$ 的乘性子集 $S$, <span class="link local"><a href="./局部化.html" title="局部化 (环) [局部化]">局部化</a></span> $S^{-1}A$ 为平坦 $A$-模, 即局部化函子 $S^{-1}\colon \mathsf{Mod}(A)\to\mathsf{Mod}(A)$ 正合.</p>
+<p><strong>命题</strong>. 对于交换环 $A$ 的乘性子集 $S$, <span class="link local"><a href="./局部化.html" title="局部化 (环, 模) [局部化]">局部化</a></span> $S^{-1}A$ 为平坦 $A$-模, 即局部化函子 $S^{-1}\colon \mathsf{Mod}(A)\to\mathsf{Mod}(A)$ 正合.</p>
 <p>这是因为
 $$
 S^{-1} A = \operatorname{colim}_{s\in S} \frac{1}{s}A
@@ -1464,6 +1523,33 @@ $$</p>
 <h3>走向 $\mathsf{Cat}$ 的内部</h3>
 <p>有另一种范畴化的思路, 可以理解为: 将 “集合” 替换为 “范畴”, 重新做一遍熟悉的事情. 更准确地说即是在 $\mathsf{Cat}$ 的<span class="link local"><a href="./内语言.html" title="内语言 [内语言]">内语言</a></span>中工作.</p>
 <p>例如<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>就是 $\mathsf{Cat}$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 那么对于普通的结合代数能够谈论的事情, 对于幺半范畴基本上也能谈论: 例如我们可以谈论幺半范畴上的<span class="link local"><a href="./高阶模.html" title="高阶模 [高阶模]">模</a></span>, 它不过是一种<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">结合代数上的模</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="谱分解"><header><h1><span class="taxon"></span>谱分解 <a class="slug" href="./谱分解.html">[谱分解]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./notion.html" title="观念 [notion]">观念</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>当交换代数作用于线性空间 (<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>) 时, 往往可将空间分解为 “特征子空间” 的和, 每个特征子空间对应于一个 “特征值”, 也即<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>的点.</p>
+<h2>例</h2>
+<h3>线性算子的特征子空间分解</h3>
+<p>设 $k$ 是代数闭域, $T$ 是有限维 $k$-线性空间 $V$ 上的线性算子, 相当于 $V$ 上的 $k[x]$-模结构. 此时有特征子空间的分解
+$$
+V = \bigoplus_{\lambda} V_\lambda,
+$$
+其中 $\lambda\in k$ 对应 $\operatorname{Spec}k[x]$ 的点, 即素理想 $(x-\lambda)$; 特征子空间 $V_\lambda$ 可由下式定义:
+$$
+\begin{aligned}
+V_\lambda &amp;= V\otimes_{k[x]} k[x]_{(x-\lambda)} \\&amp;= \{v\in V\mid\exists n, (x-\lambda)^n v = 0\}.
+\end{aligned}
+$$</p>
+<p>当然, 类似的精神出现在泛函分析中 (无限维线性空间上) 算子的谱分解.</p>
+<h3>Lie 群 (Lie 代数) 表示的不可约分解</h3>
+<p>群 $G$ 在 $\mathbb{C}$-线性空间 $V$ 上的表示相当于 $V$ 的 $\mathbb{C}[G]$-模结构. 虽然 $\mathbb{C}[G]$ 不是交换环, 我们仍然可以取它的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span> $Z(\mathbb{C}[G])$ 并考虑 $V$ 上的 $Z(\mathbb{C}[G])$-模结构, 得到 $V$ 的谱分解.
+代数同态 $Z(\mathbb{C}[G]) \to\mathbb{C}$ 等同于所谓 “类函数”, 即 $G$ 的共轭类集合上的函数.</p>
+<p>类似地, Lie 代数 $\mathfrak g$ 的表示依<strong>中心特征</strong> $Z(U\mathfrak g)\to\mathbb{C}$ 分解.</p>
+<h3>Fourier 变换作为谱分解</h3>
+<p><span class="link local"><a href="./Fourier变换.html" title="Fourier 变换 [Fourier变换]">Fourier 变换</a></span>可视为 $\mathbb{R}^n$ (或更一般的局部紧 Abel 群 $A$) 上的函数关于平移算子生成的交换 <span class="link local"><a href="./C-星代数.html" title="C*-代数 [C-星代数]">$C^*$-代数</a></span> $C^*(A)$ 的谱分解; $C^*(A)$ 的谱正是 $A$ 的 <span class="link local"><a href="./Pontryagin对偶.html" title="Pontryagin 对偶 [Pontryagin对偶]">Pontryagin 对偶</a></span> $\widehat {A}$: 精神上,
+$$
+\operatorname{Hom}_{\mathsf{CAlg}}(C^*(A),\mathbb{C})\simeq\operatorname{Hom}_{\mathsf{Ab}}(A,\mathbb{C}).
+$$</p>
+<h3>自守函数的 Hecke 作用的谱分解</h3>
+<p><span class="link local"><a href="./VLafforgueExc.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueExc]">Vincent Lafforgue</a></span> 使用某些 Hecke 函子定义了<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span>, 以给出 <span class="link local"><a href="./Langlands纲领.html" title="Langlands 纲领 [Langlands纲领]">Langlands</a></span> 预言的自守函数空间的谱分解.</p>
+<p>这一思路在<span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 纲领</a></span>中得到延续. 人们发现<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span>等同于某种局部系统模叠上的函数代数. 而提升一个范畴层级后 (见<span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span>—但这里实际上只需要提升一阶), 该种局部系统模叠上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>范畴在<span class="link local"><a href="./自守层.html" title="自守层 [自守层]">自守层</a></span>范畴上的作用可给出自守层沿局部系统模叠的谱分解, 见 <span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="高阶模"><header><h1><span class="taxon"></span>高阶模 <a class="slug" href="./高阶模.html">[高阶模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>高阶模是 “环上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>” 这一概念的<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>.</p>

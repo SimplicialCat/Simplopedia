@@ -1862,6 +1862,7 @@ $$
 <p>分次模有如下两种含义, 前一种是后一种的特例, 但前一种更为基本.</p>
 <h3>不带分次的环</h3>
 <p>固定交换环 $A$. 定义分次 $A$-模为 $A$-模范畴中的<span class="link local"><a href="./分次对象.html" title="分次对象 [分次对象]">分次对象</a></span>.</p>
+<p>对于固定的幺半群 $N$, $N$-分次 $A$-模的范畴 $\mathsf{Mod}(A)^N$ 可视为 $N$ (作为幺半范畴) 的线性化 (线性包, linear envelope/hull).</p>
 <h3>分次环</h3>
 <p>固定交换环 $k$, <span class="link local"><a href="./分次代数.html" title="分次代数 [分次代数]">分次 $k$-代数</a></span> $A$ 是分次 $k$-模范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>; 于是可定义分次 $A$-模为分次 $k$-模范畴中 $A$ 上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>.</p>
 <p>具体地, 分次环 $A = \bigoplus_{n} A_n$ 上的分次模等同于 $A$-模 $M \simeq\bigoplus_n M_n$, 满足乘法映射
@@ -2240,10 +2241,10 @@ $$
 $$
 \operatorname{Der}_k(A,M)\simeq\operatorname{Hom}_{\mathsf{Alg}_k}(A,A+M).
 $$</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="局部化"><header><h1><span class="taxon"></span>局部化 (环) <a class="slug" href="./局部化.html">[局部化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="局部化"><header><h1><span class="taxon"></span>局部化 (环, 模) <a class="slug" href="./局部化.html">[局部化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>环 (<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>) 的<strong>局部化</strong>是使其中某些元素成为可逆元的万有的方法.</p>
-<p>在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">几何侧</a></span>, 局部化将环的<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>变成原来的一个子空间.</p>
+<p>在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">几何侧</a></span>, 局部化将环的<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>变成原来的一个子空间, 直观上是使得特定的函数非零的子空间. 相应地, <span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>的局部化是将<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>限制到该子空间.</p>
 <p>另见<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化 (范畴论)</a></span>, <span class="link local"><a href="./Bousfield局部化.html" title="Bousfield 局部化 (稳定同伦论) [Bousfield局部化]">Bousfield 局部化 (稳定同伦论)</a></span>.</p>
 <h2>定义</h2>
 <p>设 $A$ 为环, $S\subset A$ 为子集. 定义 $A$ 关于 $S$ 的<strong>局部化</strong> $A\to A[S^{-1}]$ (也记作 $S^{-1}A$) 为满足如下条件的环同态:</p>

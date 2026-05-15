@@ -879,6 +879,7 @@ $$
 <p>分次模有如下两种含义, 前一种是后一种的特例, 但前一种更为基本.</p>
 <h3>不带分次的环</h3>
 <p>固定交换环 $A$. 定义分次 $A$-模为 $A$-模范畴中的<span class="link local"><a href="./分次对象.html" title="分次对象 [分次对象]">分次对象</a></span>.</p>
+<p>对于固定的幺半群 $N$, $N$-分次 $A$-模的范畴 $\mathsf{Mod}(A)^N$ 可视为 $N$ (作为幺半范畴) 的线性化 (线性包, linear envelope/hull).</p>
 <h3>分次环</h3>
 <p>固定交换环 $k$, <span class="link local"><a href="./分次代数.html" title="分次代数 [分次代数]">分次 $k$-代数</a></span> $A$ 是分次 $k$-模范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>; 于是可定义分次 $A$-模为分次 $k$-模范畴中 $A$ 上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>.</p>
 <p>具体地, 分次环 $A = \bigoplus_{n} A_n$ 上的分次模等同于 $A$-模 $M \simeq\bigoplus_n M_n$, 满足乘法映射
@@ -887,10 +888,10 @@ $A\otimes M\to M$
 <h3>作为拟凝聚层</h3>
 <p><span class="link local"><a href="./分次代数.html" title="分次代数 [分次代数]">分次环</a></span> $A$ 上的分次模 $M$ 等同于 <span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">$\operatorname{Spec}A$</a></span> 上的 $\mathbb G_m$-<span class="link local"><a href="./等变对象.html" title="等变对象 [等变对象]">等变</a></span>拟凝聚层, 也即商叠 $\operatorname{Spec}A / \mathbb G_m$ 上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>.</p>
 <p>不带分次的环 $A$ 相当于仅有 $0$ 次部分的分次环, 对应 $\mathbb G_m$ 在 $\operatorname{Spec}A$ 上的平凡作用. 分次 $A$-模等同于 $\operatorname{Spec}A/\mathbb G_m = \operatorname{Spec}A\times\mathbf{B}\mathbb G_m$ 上的拟凝聚层.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="局部化"><header><h1><span class="taxon"></span>局部化 (环) <a class="slug" href="./局部化.html">[局部化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="局部化"><header><h1><span class="taxon"></span>局部化 (环, 模) <a class="slug" href="./局部化.html">[局部化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>环 (<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>) 的<strong>局部化</strong>是使其中某些元素成为可逆元的万有的方法.</p>
-<p>在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">几何侧</a></span>, 局部化将环的<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>变成原来的一个子空间.</p>
+<p>在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">几何侧</a></span>, 局部化将环的<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>变成原来的一个子空间, 直观上是使得特定的函数非零的子空间. 相应地, <span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>的局部化是将<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>限制到该子空间.</p>
 <p>另见<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化 (范畴论)</a></span>, <span class="link local"><a href="./Bousfield局部化.html" title="Bousfield 局部化 (稳定同伦论) [Bousfield局部化]">Bousfield 局部化 (稳定同伦论)</a></span>.</p>
 <h2>定义</h2>
 <p>设 $A$ 为环, $S\subset A$ 为子集. 定义 $A$ 关于 $S$ 的<strong>局部化</strong> $A\to A[S^{-1}]$ (也记作 $S^{-1}A$) 为满足如下条件的环同态:</p>
@@ -934,7 +935,7 @@ $$
 \operatorname{Hom}_s(X,Y) :=\operatorname{colim}_k \operatorname{Hom}(\Sigma^k X,\Sigma^k Y)
 $$
 具有自然的 <span class="link local"><a href="./E∞-群.html" title="E∞-群 [E∞-群]">$\mathbb E_\infty$-群</a></span>结构. 特别地, <span class="link local"><a href="./稳定同伦群.html" title=" [稳定同伦群]">稳定同伦群</a></span> $\pi_n^s(X)=\pi_0\operatorname{Hom}_s(S^n,X)$ 是 Abel 群.</p>
-<p>我们希望将<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的范畴<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>, 使得稳定化后的映射空间是上述的余极限, 也即形式上令 $\Sigma$ 可逆. 参见<span class="link local"><a href="./形式取逆.html" title="“形式取逆” [形式取逆]">形式取逆</a></span>.</p>
+<p>我们希望将<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的范畴<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>, 使得稳定化后的映射空间是上述的余极限, 也即形式上令 $\Sigma$ 可逆. 参见<span class="link local"><a href="./形式取逆.html" title="形式取逆 [形式取逆]">形式取逆</a></span>.</p>
 <p>对于具有有限极限和有限余极限的范畴, 存在伴随 $\Sigma \dashv \Omega$:
 $$
 \text{Map}(\Sigma X,Y)\simeq *\times_{\text{Map}(X,Y)}*\simeq \text{Map}(X,\Omega Y).
@@ -978,4 +979,37 @@ $$
 但这样无法定义上同调, 因为箭头的方向.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>, <span class="link local"><a href="./稳定同伦范畴.html" title="“稳定同伦范畴” [稳定同伦范畴]">稳定同伦范畴</a></span>, <span class="link local"><a href="./E∞-空间.html" title="E∞-空间 [E∞-空间]">Abel ∞-群</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="谱分解"><header><h1><span class="taxon"></span>谱分解 <a class="slug" href="./谱分解.html">[谱分解]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./notion.html" title="观念 [notion]">观念</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>当交换代数作用于线性空间 (<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>) 时, 往往可将空间分解为 “特征子空间” 的和, 每个特征子空间对应于一个 “特征值”, 也即<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>的点.</p>
+<h2>例</h2>
+<h3>线性算子的特征子空间分解</h3>
+<p>设 $k$ 是代数闭域, $T$ 是有限维 $k$-线性空间 $V$ 上的线性算子, 相当于 $V$ 上的 $k[x]$-模结构. 此时有特征子空间的分解
+$$
+V = \bigoplus_{\lambda} V_\lambda,
+$$
+其中 $\lambda\in k$ 对应 $\operatorname{Spec}k[x]$ 的点, 即素理想 $(x-\lambda)$; 特征子空间 $V_\lambda$ 可由下式定义:
+$$
+\begin{aligned}
+V_\lambda &amp;= V\otimes_{k[x]} k[x]_{(x-\lambda)} \\&amp;= \{v\in V\mid\exists n, (x-\lambda)^n v = 0\}.
+\end{aligned}
+$$</p>
+<p>当然, 类似的精神出现在泛函分析中 (无限维线性空间上) 算子的谱分解.</p>
+<h3>Lie 群 (Lie 代数) 表示的不可约分解</h3>
+<p>群 $G$ 在 $\mathbb{C}$-线性空间 $V$ 上的表示相当于 $V$ 的 $\mathbb{C}[G]$-模结构. 虽然 $\mathbb{C}[G]$ 不是交换环, 我们仍然可以取它的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span> $Z(\mathbb{C}[G])$ 并考虑 $V$ 上的 $Z(\mathbb{C}[G])$-模结构, 得到 $V$ 的谱分解.
+代数同态 $Z(\mathbb{C}[G]) \to\mathbb{C}$ 等同于所谓 “类函数”, 即 $G$ 的共轭类集合上的函数.</p>
+<p>类似地, Lie 代数 $\mathfrak g$ 的表示依<strong>中心特征</strong> $Z(U\mathfrak g)\to\mathbb{C}$ 分解.</p>
+<h3>Fourier 变换作为谱分解</h3>
+<p><span class="link local"><a href="./Fourier变换.html" title="Fourier 变换 [Fourier变换]">Fourier 变换</a></span>可视为 $\mathbb{R}^n$ (或更一般的局部紧 Abel 群 $A$) 上的函数关于平移算子生成的交换 <span class="link local"><a href="./C-星代数.html" title="C*-代数 [C-星代数]">$C^*$-代数</a></span> $C^*(A)$ 的谱分解; $C^*(A)$ 的谱正是 $A$ 的 <span class="link local"><a href="./Pontryagin对偶.html" title="Pontryagin 对偶 [Pontryagin对偶]">Pontryagin 对偶</a></span> $\widehat {A}$: 精神上,
+$$
+\operatorname{Hom}_{\mathsf{CAlg}}(C^*(A),\mathbb{C})\simeq\operatorname{Hom}_{\mathsf{Ab}}(A,\mathbb{C}).
+$$</p>
+<h3>自守函数的 Hecke 作用的谱分解</h3>
+<p><span class="link local"><a href="./VLafforgueExc.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueExc]">Vincent Lafforgue</a></span> 使用某些 Hecke 函子定义了<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span>, 以给出 <span class="link local"><a href="./Langlands纲领.html" title="Langlands 纲领 [Langlands纲领]">Langlands</a></span> 预言的自守函数空间的谱分解.</p>
+<p>这一思路在<span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 纲领</a></span>中得到延续. 人们发现<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span>等同于某种局部系统模叠上的函数代数. 而提升一个范畴层级后 (见<span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span>—但这里实际上只需要提升一阶), 该种局部系统模叠上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>范畴在<span class="link local"><a href="./自守层.html" title="自守层 [自守层]">自守层</a></span>范畴上的作用可给出自守层沿局部系统模叠的谱分解, 见 <span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="远足代数"><header><h1><span class="taxon"></span>远足代数 <a class="slug" href="./远足代数.html">[远足代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>远足代数是 <span class="link local"><a href="./VLafforgueExc.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueExc]">Vincent Lafforgue</a></span> 定义的一个<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>, 作用在尖点自守形式空间上, 而其<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>实现了 Langlands 参数的空间, 从而通过<span class="link local"><a href="./谱分解.html" title="谱分解 [谱分解]">谱分解</a></span>将自守形式的空间分解为 Langlands 参数标记的分量, 给出 “自守到 Galois” 的对应.</p>
+<p>参考 <span class="link local"><a href="./GaitsgoryLinReevesExcALg.html" title="On the excursion algebra [GaitsgoryLinReevesExcALg]">Gaitsgory–Lin–Reeves</a></span>.</p>
+<p>相关笔记: <span class="link local"><a href="./Excursion.html" title="远足代数 Excursion Algebra [Excursion]">远足代数 Excursion Algebra</a></span></p>
+<h2>观念</h2>
+<h2>定义</h2>
 </details></section></details></section></footer></article></div></body></html>

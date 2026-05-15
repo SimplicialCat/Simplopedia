@@ -922,6 +922,17 @@ A*B = m_! (A\boxtimes B)
 $$
 构成幺半范畴.</p>
 <h3>2.3 平均函子</h3>
+<h2>e. 例子</h2>
+<p>这一节是我自己加的, 收集一些辅助我理解的例子.</p>
+<p>考虑 $G = \mathrm{SL}_2$.</p>
+<ul>
+<li><span class="link local"><a href="./仿射Weyl群.html" title="仿射 Weyl 群 [仿射Weyl群]">仿射 Weyl 群</a></span> $\widetilde {W} = \mathbb{Z}\rtimes\mathbb{Z}/2$, 生成元为平移 $t = \begin{pmatrix}t&amp;0\\0&amp;t^{-1}\end{pmatrix}$ 与反射 $s = \begin{pmatrix}0&amp;1\\-1&amp;0\end{pmatrix}$, 满足 $s^2=1$, $sts=t^{-1}$. Bruhat 序为 $t^n\leq t^{n+1}$, $st^n\leq st^{n+1}$, $t^n &lt; st^n$.</li>
+<li>Iwahori 子群 $I = \Big\{\begin{pmatrix}*&amp;*\\t *&amp;*\end{pmatrix}\Big\}\subset\mathrm{SL}_2(k[\![t]\!])$.</li>
+<li>$I_n^+ = \Big\{\begin{pmatrix}1&amp;t^n *\\t^{n+1} *&amp;1\end{pmatrix}\Big\}\subset\mathrm{SL}_2(k[\![t]\!])$. 那么 $I/I_n^+$ 是有限型群概形, 且 $I = \operatorname{lim}I/I_n^+$.</li>
+<li>$LG = \mathrm{SL}_2(k(\!(t)\!))$.</li>
+<li>仿射旗簇 $\mathrm{Fl} = LG/I = \bigsqcup_{n\geq 0}Y_{t^n} \sqcup\bigsqcup_{n\geq 0}Y_{st^n}$, 其中 $Y_{t^n}\simeq\mathbb A^{2n}$, $Y_{st^n}\simeq\mathbb A^{2n+1}$.</li>
+<li>$LG^{\leq w} \subset LG$ 是 $\mathrm{Fl}^{\leq w}$ 的原像. $LG = \operatorname{colim}_{w\in \widetilde W}LG^{\leq w}$ 将 $LG$ 表现为可容许 ind-概形.</li>
+</ul>
 <h2>3. 稳定中心猜想</h2>
 <h3>3.1 经典理论</h3>
 <p>设 $F$ 为<span class="link local"><a href="./非Archimedes赋值域.html" title="非 Archimedes 赋值域 [非Archimedes赋值域]">非 Archimedes</a></span> <span class="link local"><a href="./局部域.html" title="局部域 [局部域]">局部域</a></span>, $W_F$ 为 <span class="link local"><a href="./Weil群.html" title="Weil 群 [Weil群]">Weil 群</a></span>, $W_F$ 为 Weil–Deligne 群.</p>
