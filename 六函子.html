@@ -901,8 +901,8 @@ $$
 n\mathsf{Pr}_{-}\colon \mathsf{Corr}(\mathcal C,E)\to\mathsf{Pr},
 $$
 其中 $E$ 是所有态射的族.</p>
-<h2>双手性</h2>
-<p>由于一些抽象的范畴论性质, 我们有如下额外的左伴随.</p>
+<h3>双手性</h3>
+<p>由于一些抽象的范畴论性质 (见<span class="link local"><a href="./双手性.html" title="双手性 [双手性]">双手性</a></span>), 我们有如下额外的左伴随, 且左伴随与右伴随相等.</p>
 <p><strong>命题</strong>. 对于环同态 $f\colon A\to B$, $n\geq 1$, 函子
 $$
 f^*_n \colon n\mathsf{Pr}_A \to n\mathsf{Pr}_B
@@ -912,7 +912,7 @@ $$
 f_{n,\sharp} \colon n\mathsf{Pr}_B \to n\mathsf{Pr}_A,
 $$
 且与基变换相容, 且 $f_{n,\sharp} \simeq f_{n,*}$.</p>
-<h2>下降</h2>
+<h3>下降</h3>
 <p><strong>定理</strong>. 对任意 $n\geq 0$, 函子
 $$
 n\mathsf{Pr}_{-} \colon \mathcal C^{\mathrm{op}} \to \mathsf{CAlg}((n+1)\mathsf{Pr})
@@ -927,6 +927,14 @@ $$</p>
 $$
 f^*_n \colon n\mathsf{Pr}_X \to n\mathsf{Pr}_Y.
 $$</p>
+<h3>六函子体系</h3>
+<p>我们希望将 $X\mapsto n\mathsf{Pr}_X$ 延拓为叠上的六函子体系. 事实上, 很大一类态射都是可作 “叹号” 的.</p>
+<p><strong>定义</strong>. 设 $f\colon Y\to X$ 是叠的态射, 若对任意 $\operatorname{Spec}A\to X$, 拉回 $Y\times_X\operatorname{Spec}A$ 都是<strong>可数</strong>表现的 $A$-代数对应的仿射概形的<strong>可数</strong>余极限, 则称 $f$ 为<strong>双可数表现</strong>态射.</p>
+<p>记 $E$ 为双可数表现态射的族. 这是一个很大的族, 且关于复合, 拉回, 取对角线等操作封闭.</p>
+<p><strong>定理</strong>. 对于 $E$ 中的态射 $f\colon Y\to X$,</p>
+<ul>
+<li>$f^*_n\colon n\mathsf{Pr}_X \to n\mathsf{Pr}_Y$ 在 $(n+1)\mathsf{Pr}_X$ 中有左伴随 $f_{n\sharp}$;</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="six-functors"><header><h1><span class="taxon"></span>六函子 <a class="slug" href="./six-functors.html">[six-functors]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li></ul></div></header></summary>
 <p>本文是 <span class="link local"><a href="./ScholzeSixFunctors.html" title="Six-functor Formalisms [ScholzeSixFunctors]">Scholze 的六函子讲义</a></span>的阅读笔记.</p>
 <h2>引言</h2>
@@ -1054,6 +1062,16 @@ $$</p>
 $$
 \mathsf{Corr}(\mathcal C,E) \to \mathsf{Cat}.
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="term-prim"><header><h1><span class="taxon"></span>紧 <a class="slug" href="./term-prim.html">[term-prim]</a></h1><div class="metadata"><ul><li class="meta-item">翻译</li></ul></div></header></summary>
+<p>“紧” 是 prim 的暂定翻译.</p>
+<p>Prim 出自 <span class="link local"><a href="./ScholzeStefanichGestalten.html" title="Geometry and Higher Category Theory [ScholzeStefanichGestalten]">Gestalten 讲义</a></span></p>
+<blockquote>
+<p>The name is taken from a recently introduced similar name in the theory of <span class="link local"><a href="./六函子.html" title="六函子 [六函子]">six functors</a></span>, cf. e.g. [HM24] or [Sch25b], used there to describe maps for which pullback has an internal right adjoint.</p>
+</blockquote>
+<blockquote>
+<p>[HM24] :  C. Heyer and L. Mann, 6-Functor Formalisms and Smooth Representations, https://arxiv.org/abs/2410.13038, 2024.</p>
+<p>[Sch25b] : Six-Functor Formalisms, people.mpim-bonn.mpg.de/scholze/SixFunctors.pdf, 2025</p>
+</blockquote>
 </details></section><section class="block" data-taxon=""><details ><summary id="拉-推"><header><h1><span class="taxon"></span>拉-推 <a class="slug" href="./拉-推.html">[拉-推]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><strong>拉-推</strong> (pull-push), 又叫<strong>积分变换</strong>, 是一类通过<span class="link local"><a href="./关系2-范畴.html" title="关系 2-范畴 [关系2-范畴]">关系</a></span>
 $$

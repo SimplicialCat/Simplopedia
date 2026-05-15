@@ -973,12 +973,34 @@ $$
 <h2>Bernstein 投影算子的稳定性</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="伴随"><header><h1><span class="taxon"></span>伴随 <a class="slug" href="./伴随.html">[伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>伴随是 <span class="link local"><a href="./2-范畴.html" title="2-范畴 [2-范畴]">$2$-范畴</a></span>的两个对象之间一对态射的一种关系, 是 $1$-范畴中态射的互逆关系的推广.</p>
+<p>伴随是 <span class="link local"><a href="./2-范畴.html" title="2-范畴 [2-范畴]">$2$-范畴</a></span>的两个对象之间一对态射的一种关系, 可理解为某种<span class="link local"><a href="./对偶对象.html" title="对偶对象 [对偶对象]">对偶</a></span>; 它是 $1$-范畴中态射的互逆关系的推广.</p>
 <p>$2$-范畴 $\mathcal C$ 中的伴随等同于<span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span> $\mathsf{Adj}$ 到 $\mathcal C$ 的函子
 $$
 \mathsf{Adj} \to \mathcal C.
 $$</p>
 <h2>定义</h2>
+<h3>伴随函子</h3>
+<p>一对伴随函子 $F\dashv G$ 是满足如下条件的函子:
+$$
+\operatorname{Hom}(F-,-)\simeq\operatorname{Hom}(-,G-).
+$$</p>
+<h3>$2$-范畴中的伴随</h3>
+<p>$2$-范畴 $\mathcal C$ 中的伴随等同于<span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span> $\mathsf{Adj}$ 到 $\mathcal C$ 的函子
+$$
+\mathsf{Adj} \to \mathcal C.
+$$</p>
+<p>具体地, 一对伴随可由如下资料表现:</p>
+<ul>
+<li>态射 $F\colon C\to D$, $G\colon D\to C$;</li>
+<li>$2$-态射 $\eta\colon \mathrm{id}_C \to GF$, $\varepsilon\colon FG\to\mathrm{id}_D$;</li>
+<li>三角形等式
+$$
+F \overset{\eta}{\to} FGF \overset{\varepsilon}{\to}F = \mathrm{id}_F,
+$$
+$$
+G \overset{\eta}{\to} GFG \overset{\varepsilon}{\to}G = \mathrm{id}_G.
+$$</li>
+</ul>
 <h2>性质</h2>
 <h3>伴随保持极限</h3>
 <p><strong>命题</strong>. 左伴随函子保持<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>; 右伴随函子保持<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>.</p>

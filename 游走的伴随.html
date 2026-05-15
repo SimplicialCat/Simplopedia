@@ -829,7 +829,7 @@ $$</li>
 <p>上述资料生成的结果为</p>
 <ul>
 <li>$\operatorname{Hom}(+,+) = \{\mathrm{id}_c,rl,rlrl,\cdots\} = \Delta_+$ 为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span>;</li>
-<li>$\operatorname{Hom}(+,-) = \{l,lrl,lrlrl,\cdots\}=\Delta_\bot\simeq\mathsf{LMod}([0])$ (保持最小值的映射构成的范畴, 详见<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>);</li>
+<li>$\operatorname{Hom}(+,-) = \{l,lrl,lrlrl,\cdots\}=\Delta_\bot\simeq\mathsf{LMod}([0])$ (保持最小值的映射构成的范畴, 等同于 $[0]$ 的左模范畴, 详见<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>);</li>
 <li>$\operatorname{Hom}(-,+) = \{r,rlr,rlrlr,\cdots\} = \Delta_\top\simeq\mathsf{RMod}([0])$;</li>
 <li>$\operatorname{Hom}(-,-) = \{\mathrm{id}_d,lr,lrlr,\cdots\} = \Delta_+^{\mathrm{op}}\simeq\mathsf{BiMod}([0])$.</li>
 </ul>
@@ -838,12 +838,34 @@ $$</li>
 <p>注意到上述资料中 $\operatorname{Hom}(c,c) = \{\mathrm{id}_c,rl,rlrl,\cdots\} = \Delta_+$ 为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span>, 其中 $rl$ 为<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 故任意伴随中 $rl$ 给出一个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>. 见<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">伴随给出单子</a></span>.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="伴随"><header><h1><span class="taxon"></span>伴随 <a class="slug" href="./伴随.html">[伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>伴随是 <span class="link local"><a href="./2-范畴.html" title="2-范畴 [2-范畴]">$2$-范畴</a></span>的两个对象之间一对态射的一种关系, 是 $1$-范畴中态射的互逆关系的推广.</p>
+<p>伴随是 <span class="link local"><a href="./2-范畴.html" title="2-范畴 [2-范畴]">$2$-范畴</a></span>的两个对象之间一对态射的一种关系, 可理解为某种<span class="link local"><a href="./对偶对象.html" title="对偶对象 [对偶对象]">对偶</a></span>; 它是 $1$-范畴中态射的互逆关系的推广.</p>
 <p>$2$-范畴 $\mathcal C$ 中的伴随等同于<span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span> $\mathsf{Adj}$ 到 $\mathcal C$ 的函子
 $$
 \mathsf{Adj} \to \mathcal C.
 $$</p>
 <h2>定义</h2>
+<h3>伴随函子</h3>
+<p>一对伴随函子 $F\dashv G$ 是满足如下条件的函子:
+$$
+\operatorname{Hom}(F-,-)\simeq\operatorname{Hom}(-,G-).
+$$</p>
+<h3>$2$-范畴中的伴随</h3>
+<p>$2$-范畴 $\mathcal C$ 中的伴随等同于<span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span> $\mathsf{Adj}$ 到 $\mathcal C$ 的函子
+$$
+\mathsf{Adj} \to \mathcal C.
+$$</p>
+<p>具体地, 一对伴随可由如下资料表现:</p>
+<ul>
+<li>态射 $F\colon C\to D$, $G\colon D\to C$;</li>
+<li>$2$-态射 $\eta\colon \mathrm{id}_C \to GF$, $\varepsilon\colon FG\to\mathrm{id}_D$;</li>
+<li>三角形等式
+$$
+F \overset{\eta}{\to} FGF \overset{\varepsilon}{\to}F = \mathrm{id}_F,
+$$
+$$
+G \overset{\eta}{\to} GFG \overset{\varepsilon}{\to}G = \mathrm{id}_G.
+$$</li>
+</ul>
 <h2>性质</h2>
 <h3>伴随保持极限</h3>
 <p><strong>命题</strong>. 左伴随函子保持<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>; 右伴随函子保持<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>.</p>

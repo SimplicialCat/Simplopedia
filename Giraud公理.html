@@ -838,6 +838,59 @@
 </ul>
 </li>
 </ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="notes-Gestalten-Gest"><header><h1><span class="taxon"></span>Gestalten - 几何对象 <a class="slug" href="./notes-Gestalten-Gest.html">[notes-Gestalten-Gest]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>Gestalten 的意象</h2>
+<p>Gestalten 的范畴在实用意义上是个<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>, 满足了我们对一个几何对象的范畴的所有期待.</p>
+<h3>拉回保持余极限</h3>
+<p>拉回保持余极限是意象的一个重要性质, 也是 <span class="link local"><a href="./Giraud公理.html" title="Giraud 公理 [Giraud公理]">Giraud 公理</a></span>的第一条. 我们看看 Gestalten 为何满足这一性质, 这其实令人惊叹.</p>
+<p>Gestalten 的余极限是 Stefanich 环的极限, 那么这个性质就是说 Stefanich 环的极限在基变换下保持.</p>
+<h2>例</h2>
+<h3>仿射直线</h3>
+<p>任取基底 $X = \operatorname{Gest}(A)$. 考虑将<span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span> $Y=\operatorname{Gest}_X(B)$ 映射为 $B_0\in A_1$ 的函子. 其表示对象为
+$$
+\mathbb A^1 := \operatorname{Gest}_X(A_0\{x\}),
+$$
+$A_0\{x\}$ 表示对 $A_0$ 自由添加一个元素得到的 $\mathbb E_\infty$-代数. 例如</p>
+<p>$$
+*\{x\} = \bigsqcup_{n\geq 0} */\Sigma_n,
+$$
+$$
+\mathbb{Z}\{x\} = \bigoplus_{n\geq 0} \mathbb{Z}[*/\Sigma_n].
+$$</p>
+<p>还可以定义另一个对象
+$$
+\mathbb G_a := \operatorname{Gest}_X (A_0[x]),
+$$
+$A_0[x]$ 是多项式代数 $\bigsqcup_{n\geq 0} A_0\cdot x^n$. 例如
+$$
+*[x] = \mathbb{N}.
+$$</p>
+<p>在 $\mathbb{Q}$ 上, $\mathbb{A}^1\simeq\mathbb G_a$.</p>
+<h3>乘法群</h3>
+<p>任取基底 $X = \operatorname{Gest}(A)$. 考虑将<span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span> $Y=\operatorname{Gest}_X(B)$ 映射为 $B_0^\times \in A_1$ 的函子. 其表示对象为
+$$
+\mathrm{GL}_1 := \operatorname{Gest}_X(A_0\{x^{\pm 1}\}),
+$$
+$A_0\{x\}$ 表示对 $A_0$ 自由添加一个<strong>可逆</strong>元素得到的 $\mathbb E_\infty$-代数.</p>
+<p>还可以定义另一个对象
+$$
+\mathbb G_m := \mathrm{GL}_1\times_{\mathbb A^1}\mathbb G_a = \operatorname{Gest}_X (A_0[x^{\pm 1}]),
+$$
+$A_0[x^{\pm 1}]$ 是代数 $\bigsqcup_{n\in\mathbb{Z}} A_0\cdot x^n$. 例如
+$$
+*[x^{\pm 1}] = \mathbb{Z}.
+$$
+$\mathbb G_m$ 表示的函子将 $Y=\operatorname{Gest}(B)$ 映射到 $\operatorname{Hom}_{\mathsf{CAlg}(\mathsf{Ani})}(\mathbb{Z}, B_0)$.</p>
+<p>在 $D(\mathbb{Q})$ 上, $\mathrm{GL}_1\simeq\mathbb G_m$.</p>
+<h3>射影直线</h3>
+<p>设 $X = D(\mathbb{Q})$. 考虑两个映射 $\mathrm{GL}_1 \to\mathbb A^1$, 分别是 $x\mapsto x$ 与 $x\mapsto x^{-1}$. 在<span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span>中可作推出
+$$
+\mathbb A^1 \sqcup_{\mathrm{GL}_1} \mathbb A^1.
+$$
+(<span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span>的余极限是 Stafanich 环的极限, 也就是逐项取极限.)</p>
+<h3>$\mathbb G_m$ 的分类叠</h3>
+<p><span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>是几何对象的范畴上的层.</p>
+<h3>de Rham 空间</h3>
 </details></section><section class="block" data-taxon=""><details ><summary id="Čech脉"><header><h1><span class="taxon"></span>Čech 脉 <a class="slug" href="./Čech脉.html">[Čech脉]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>Čech 脉是对范畴中的态射 $U\to X$ 指定的一个<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span> $\text{\v{C}}(U\to X)$.</p>

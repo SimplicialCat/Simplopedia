@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>远足代数</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon"><style>
+<meta name="viewport" content="width=device-width"><title>双手性</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon"><style>
   @font-face {
     font-family: 'NewCM10';
     src: url(assets/NewCM10-Book.otf) format('opentype');
@@ -807,119 +807,76 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon=""><details open><summary id="远足代数"><header><h1><span class="taxon"></span>远足代数 <a class="slug" href="./远足代数.html">[远足代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>远足代数是 <span class="link local"><a href="./VLafforgueExc.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueExc]">Vincent Lafforgue</a></span> 定义的一个<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>, 作用在尖点自守形式空间上, 而其<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>实现了 Langlands 参数的空间, 从而通过<span class="link local"><a href="./谱分解.html" title="谱分解 [谱分解]">谱分解</a></span>将自守形式的空间分解为 Langlands 参数标记的分量, 给出 “自守到 Galois” 的对应.</p>
-<p>参考 <span class="link local"><a href="./GaitsgoryLinReevesExcALg.html" title="On the excursion algebra [GaitsgoryLinReevesExcALg]">Gaitsgory–Lin–Reeves</a></span>.</p>
-<p>相关笔记: <span class="link local"><a href="./Excursion.html" title="远足代数 Excursion Algebra [Excursion]">远足代数 Excursion Algebra</a></span></p>
-<h2>观念</h2>
-<h2>定义</h2>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Shtuka"><header><h1><span class="taxon"></span>Shtuka (Chtouca) <a class="slug" href="./Shtuka.html">[Shtuka]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>Shtuka = Hecke 调整 + <span class="link local"><a href="./Frobenius态射.html" title="Frobenius 态射 [Frobenius态射]">Frobenius 态射</a></span></p>
-<blockquote>
-<p>General Shtukas can be thought of as a version of motives not defined in characteristic $p$ but whose coefficient field is of characteristic $p$. — 恽之伟, Introduction to Shtukas and their Moduli</p>
-</blockquote>
-<p>Shtuka 的<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>或模叠是<span class="link local"><a href="./志村簇.html" title="“志村簇” [志村簇]">志村簇</a></span>的<span class="link local"><a href="./函数域类比.html" title="函数域类比 [函数域类比]">函数域类比</a></span>, 是<span class="link local"><a href="./函数域.html" title="函数域 [函数域]">函数域</a></span> <span class="link local"><a href="./Langlands对应.html" title="经典 Langlands 对应 [Langlands对应]">Langlands 纲领</a></span>中的重要角色.</p>
-<blockquote>
-<p>L. Lafforgue used the moduli stack of rank $n$ Shtukas and their compactifications to prove the Ramanujan–Petersson conjecture and the Langlands conjecture for $\mathrm {GL}_n$ over a global function field for any $n\in\mathbb N$.</p>
-</blockquote>
-<p>Vincent Lafforgue 利用 Shtuka 的模空间定义了<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span></p>
-<h2>定义</h2>
-<p>Shtuka 的<span class="link local"><a href="./模叠.html" title=" [模叠]">模空间</a></span>定义为如下的拉回, 其中 $\mathrm {Hecke}^r$ 是 <span class="link local"><a href="./Hecke叠.html" title="Hecke 叠 [Hecke叠]">Hecke 叠</a></span>.
-$$
-\begin{array}
-	{ccc}
-	\mathrm {Sht}^r &amp; \to &amp; \mathrm {Bun}^r \\
-	\downarrow &amp;&amp; \downarrow \\
-	\mathrm {Hecke}^r &amp; \to &amp; \mathrm {Bun}^r\times\mathrm {Bun}^r
-\end{array}
-$$
-其中右边映射是 $\mathcal E\mapsto (\mathcal E,\mathcal E^\sigma)$, $\mathcal E^\sigma:=(\operatorname{id}_X\times\operatorname{Frob}_S)^*\mathcal E$ 是沿 $S$ 的 <span class="link local"><a href="./Frobenius态射.html" title="Frobenius 态射 [Frobenius态射]">Frobenius 态射</a></span>的拉回.</p>
-<p>换言之, $\mathrm {Sht}^r(S)$ 的对象是如下资料,</p>
-<ul>
-<li>$X\times S$ 上的 $r$ 阶向量丛 $\mathcal E$,</li>
-<li>两个映射 $0,\infty \colon S \to X$,</li>
-<li>一个调整 $\mathcal E\hookrightarrow \mathcal E'\hookleftarrow\mathcal E''$, 满足 $\mathcal E'/\mathcal E$ 支在 $\Gamma_\infty$ (即映射 $\infty$ 的图像) 上, $\mathcal E'/\mathcal E''$ 支在 $\Gamma_0$ 上, 且这两个层在支集上为<span class="link local"><a href="./可逆层.html" title="“可逆层” [可逆层]">可逆层</a></span>,</li>
-<li>一个同构 $\mathcal E^\sigma\simeq\mathcal E''$.</li>
-</ul>
-<p>$r=1$ 时, 概形 $S$ 上的 $1$ 阶 Shtuka 相当于 $X\times S$ 上的线丛 $L$ 以及一个同构
-$$
-L^\sigma\otimes L^{-1}\simeq \mathcal O_{X\times S}(\Gamma_\infty - \Gamma_0).
-$$</p>
+<article><section class="block" data-taxon=""><details open><summary id="双手性"><header><h1><span class="taxon"></span>双手性 <a class="slug" href="./双手性.html">[双手性]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>性质</h2>
-<p>$\mathrm{Sht}$ 是 <span class="link local"><a href="./Deligne–Mumford叠.html" title=" [Deligne–Mumford叠]">Deligne–Mumford 叠</a></span>.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="index"><header><h1><span class="taxon"></span>单纯百科 Simplopedia <a class="slug" href="./index.html">[index]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<img src="/assets/simplopedia.svg" alt="Simplopedia" style="float: right; width: min(200px,30vw); margin-right: 20px; margin-top:-50px; filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));">
-<p>这里是<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>的主目录.</p>
-<p>欢迎访问<span class="link external"><a href="https://simplicialcat.github.io/index.html?lang=zh" title="我的个人主页 [https://simplicialcat.github.io/index.html?lang=zh]">我的个人主页</a></span>.</p>
-<p>You may also want to visit <span class="link external"><a href="https://simplicialcat.github.io/index.html?lang=en" title="my personal main page [https://simplicialcat.github.io/index.html?lang=en]">my personal main page</a></span> (in English).</p>
-<p>可以试试<span class="link local"><a href="./search.html" title="搜索 [search]">搜索单纯百科的页面</a></span>.</p>
-<h2>分类</h2>
-<p>单纯百科的页面分为以下几类.</p>
+<p><strong>命题</strong>. 设 $\mathcal{C}$ 为 $(\infty,3)$-范畴, $F\colon X\to Y$ 为其中的态射.
+如下条件等价:</p>
+<ol>
+<li>$F$ 有右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $F^R\colon Y\to X$, 且单位 $\eta\colon \mathrm{id}_X \to F^RF$ 与余单位 $\varepsilon\colon F F^R \to\mathrm{id}_Y$ 都有右伴随;</li>
+<li>$F$ 有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $F^L\colon Y\to X$, 且单位 $\eta\colon \mathrm{id}_Y \to FF^L$ 与余单位 $\varepsilon\colon F^L F \to\mathrm{id}_X$ 都有左伴随.</li>
+</ol>
+<p>当上述条件成立时, 有 $F^L\simeq F^R$.</p>
+<p><em>证明</em>. 假设第一个条件成立, 那么 $\eta$ 和 $\varepsilon$ 的右伴随 $\eta^R\colon F^R F\to \mathrm{id}_X$, $\varepsilon^R\colon \mathrm{id}_Y\to FF^R$ 分别给出了 $F^R\dashv F$ 的余单位和单位, 说明 $F^R$ 是 $F$ 的左伴随. $\square$</p>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="notes-Gestalten-QCoh"><header><h1><span class="taxon"></span>Gestalten - 高阶拟凝聚层 <a class="slug" href="./notes-Gestalten-QCoh.html">[notes-Gestalten-QCoh]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>以 $\mathcal C$ 表示某种 “环” 的范畴的对偶; 如 $\mathbb E_\infty$-环谱 (又称 $\mathbb E_\infty$-$\mathbb S$-代数) 的范畴的对偶. 我们将不会具体指明这种环的名称, 而是以 “环” 代之. 记 $\mathcal C$ 的对象为 $\operatorname{Spec}A$, 想象为环 $A$ 对应的 “<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>”.</p>
+<p>注意 $\mathcal C^{\mathrm{op}}$ 是环范畴本身.</p>
+<p>记 $\widetilde {\mathcal C} := \mathsf{Sh}(\mathcal C,\mathrm{fpqc})$ 为层范畴. 称其对象为<strong>叠</strong> (stacks).</p>
+<h2>高阶线性范畴</h2>
+<p>对于环 $A$, 归纳定义</p>
 <ul>
-<li>百科 : 数学概念. 这类页面构成了单纯百科的主体.</li>
-<li><span class="link local"><a href="./notion.html" title="观念 [notion]">观念</a></span> : 模糊而普遍的数学思想.</li>
-<li><span class="link local"><a href="./pedagogy.html" title="教学 [pedagogy]">教学</a></span> : 面向基础读者的科普.</li>
-<li><span class="link local"><a href="./notes.html" title="讲稿, 笔记 [notes]">讲稿, 笔记</a></span> : 一些讨论班的讲稿, 文献的阅读笔记, 以及零散的见闻.</li>
-<li>文献 : 其它页面中引用到的参考文献.</li>
-<li><span class="link local"><a href="./subject.html" title="学科 [subject]">学科</a></span> : 用于部分页面的收集和分类.</li>
-<li>Meta : 关于单纯百科本身.</li>
-<li><span class="link local"><a href="./nonmath.html" title="非数学 [nonmath]">非数学</a></span> : 一些不属于上述分类, 且不属于数学的东西.</li>
+<li>$0\mathsf{Pr}_A := \mathsf{Mod}(A)$,</li>
+<li>$(n+1)\mathsf{Pr}_A := \mathsf{Mod}_{\mathsf{Pr}} (n\mathsf{Pr}_A)$;</li>
 </ul>
-<p>点击 <span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span> 可以看到本站的所有页面.</p>
-<p>欢迎所有读者<span class="link external"><a href="mailto:wangjiny24@mails.tsinghua.edu.cn" title="通过邮箱联系我 [mailto:wangjiny24@mails.tsinghua.edu.cn]">通过邮箱联系我</a></span> <code>wangjiny24@mails.tsinghua.edu.cn</code> , 交流, 催更. (对于好友, 通过微信或 QQ 联系我当然是更加欢迎的.)</p>
-<p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">亟需施工处</a></span>列表 (“TODO list”)</p>
-<p><span class="link local"><a href="./terminologies.html" title="单纯百科 - 术语翻译表 [terminologies]">术语翻译表</a></span></p>
-<h2>最近</h2>
-<p><span class="link local"><a href="./Barr–Beck–Lurie定理.html" title="Barr–Beck–Lurie 定理 [Barr–Beck–Lurie定理]">Barr–Beck–Lurie 定理</a></span></p>
-<p><span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span></p>
-<p><span class="link local"><a href="./吸引子.html" title="吸引子, 排斥子 [吸引子]">吸引子, 排斥子</a></span></p>
-<p><span class="link local"><a href="./Milnor纤维化.html" title="Milnor 纤维化 [Milnor纤维化]">Milnor 纤维化</a></span></p>
-<p><span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span></p>
-<p><span class="link local"><a href="./局部意象.html" title="局部意象 [局部意象]">局部意象</a></span></p>
-<p><span class="link local"><a href="./法形变.html" title="法形变 [法形变]">法形变</a></span>, <span class="link local"><a href="./微局部化.html" title="微局部化 [微局部化]">微局部化</a></span>, <span class="link local"><a href="./流形上的层.html" title="流形上的层 [流形上的层]">流形上的层</a></span>, <span class="link local"><a href="./microPerv.html" title="微局部偏屈层 [microPerv]">微局部偏屈层</a></span></p>
-<p><span class="link local"><a href="./love-and-math.html" title="爱与数学 [love-and-math]">爱与数学</a></span></p>
-<p><span class="link local"><a href="./余完备化.html" title="余完备化 [余完备化]">余完备化</a></span></p>
-<p><span class="link local"><a href="./Galois扩张.html" title="Galois 扩张 [Galois扩张]">Galois 扩张</a></span></p>
-<p><span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">算畴上的代数上的模</a></span></p>
-<p><span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>, <span class="link local"><a href="./LCCC.html" title="局部积闭范畴 [LCCC]">LCCC</a></span>, <span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>, <span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>, <span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span></p>
-<p><span class="link local"><a href="./高阶Morita范畴.html" title="高阶 Morita 范畴 [高阶Morita范畴]">高阶 Morita 范畴</a></span></p>
-<p><span class="link local"><a href="./Morita等价.html" title="Morita 等价 [Morita等价]">Morita 等价</a></span></p>
-<p><span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">充实范畴上的模</a></span></p>
-<p><span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断性</a></span></p>
-<p><span class="link local"><a href="./交叉模.html" title="交叉模 [交叉模]">交叉模</a></span></p>
-<p><span class="link local"><a href="./Gestalt.html" title="Gestalt [Gestalt]">Gestalt</a></span></p>
-<p><span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span></p>
-<p><span class="link local"><a href="./非交换Čech上同调.html" title="非交换 Čech 上同调 [非交换Čech上同调]">非交换 Čech 上同调</a></span></p>
-<p><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></p>
-</details></section><section class="block" data-taxon=""><details ><summary id="谱分解"><header><h1><span class="taxon"></span>谱分解 <a class="slug" href="./谱分解.html">[谱分解]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./notion.html" title="观念 [notion]">观念</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>当交换代数作用于线性空间 (<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>) 时, 往往可将空间分解为 “特征子空间” 的和, 每个特征子空间对应于一个 “特征值”, 也即<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>的点.</p>
-<h2>例</h2>
-<h3>线性算子的特征子空间分解</h3>
-<p>设 $k$ 是代数闭域, $T$ 是有限维 $k$-线性空间 $V$ 上的线性算子, 相当于 $V$ 上的 $k[x]$-模结构. 此时有特征子空间的分解
+<p>从而对任意 $n\geq 0$, 有函子
 $$
-V = \bigoplus_{\lambda} V_\lambda,
+n\mathsf{Pr}_{-} \colon \mathcal C^{\mathrm{op}} \to\mathsf{Pr}.
 $$
-其中 $\lambda\in k$ 对应 $\operatorname{Spec}k[x]$ 的点, 即素理想 $(x-\lambda)$; 特征子空间 $V_\lambda$ 可由下式定义:
+对于环同态 $f\colon A\to B$, 记 $n\mathsf{Pr}_f$ 为
 $$
-\begin{aligned}
-V_\lambda &amp;= V\otimes_{k[x]} k[x]_{(x-\lambda)} \\&amp;= \{v\in V\mid\exists n, (x-\lambda)^n v = 0\}.
-\end{aligned}
+f^*_n\colon n\mathsf{Pr}_A \to n\mathsf{Pr}_B.
+$$
+由伴随函子定理得右伴随
+$$
+f_{n,*}\colon n\mathsf{Pr}_B \to n\mathsf{Pr}_A.
 $$</p>
-<p>当然, 类似的精神出现在泛函分析中 (无限维线性空间上) 算子的谱分解.</p>
-<h3>Lie 群 (Lie 代数) 表示的不可约分解</h3>
-<p>群 $G$ 在 $\mathbb{C}$-线性空间 $V$ 上的表示相当于 $V$ 的 $\mathbb{C}[G]$-模结构. 虽然 $\mathbb{C}[G]$ 不是交换环, 我们仍然可以取它的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span> $Z(\mathbb{C}[G])$ 并考虑 $V$ 上的 $Z(\mathbb{C}[G])$-模结构, 得到 $V$ 的谱分解.
-代数同态 $Z(\mathbb{C}[G]) \to\mathbb{C}$ 等同于所谓 “类函数”, 即 $G$ 的共轭类集合上的函数.</p>
-<p>有限群 $G$ 的表示 $V$ 分解为不可约表示的直和:
+<p><strong>命题</strong>. $f_{n,*}$ 与基变换相容.</p>
+<p>从而我们有一个<span class="link local"><a href="./六函子.html" title="六函子 [六函子]">六函子体系</a></span>
 $$
-V = \bigoplus_{\rho} V_\rho
-$$</p>
-<p>类似地, Lie 代数 $\mathfrak g$ 的表示依<strong>中心特征</strong> $Z(U\mathfrak g)\to\mathbb{C}$ 分解, 也即沿 $\operatorname{Spec}Z(U\mathfrak g)$ 分解. 在<span class="link local"><a href="./范畴O.html" title="“范畴 O” [范畴O]">范畴 $\mathcal O$</a></span> 中, 支撑于闭点 $\chi\in\operatorname{Spec}Z(U\mathfrak g)$ 上的对象构成的子范畴称为<strong>块</strong> (block).</p>
-<h3>Fourier 变换作为谱分解</h3>
-<p><span class="link local"><a href="./Fourier变换.html" title="Fourier 变换 [Fourier变换]">Fourier 变换</a></span>可视为 $\mathbb{R}^n$ (或更一般的局部紧 Abel 群 $A$) 上的函数关于平移算子生成的交换 <span class="link local"><a href="./C-星代数.html" title="C*-代数 [C-星代数]">$C^*$-代数</a></span> $C^*(A)$ 的谱分解; $C^*(A)$ 的谱正是 $A$ 的 <span class="link local"><a href="./Pontryagin对偶.html" title="Pontryagin 对偶 [Pontryagin对偶]">Pontryagin 对偶</a></span> $\widehat {A}$: 精神上,
+n\mathsf{Pr}_{-}\colon \mathsf{Corr}(\mathcal C,E)\to\mathsf{Pr},
 $$
-\operatorname{Hom}_{\mathsf{CAlg}}(C^*(A),\mathbb{C})\simeq\operatorname{Hom}_{\mathsf{Ab}}(A,\mathbb{C}).
+其中 $E$ 是所有态射的族.</p>
+<h3>双手性</h3>
+<p>由于一些抽象的范畴论性质 (见<span class="link local"><a href="./双手性.html" title="双手性 [双手性]">双手性</a></span>), 我们有如下额外的左伴随, 且左伴随与右伴随相等.</p>
+<p><strong>命题</strong>. 对于环同态 $f\colon A\to B$, $n\geq 1$, 函子
+$$
+f^*_n \colon n\mathsf{Pr}_A \to n\mathsf{Pr}_B
+$$
+有 $n\mathsf{Pr}_A$-线性的左伴随
+$$
+f_{n,\sharp} \colon n\mathsf{Pr}_B \to n\mathsf{Pr}_A,
+$$
+且与基变换相容, 且 $f_{n,\sharp} \simeq f_{n,*}$.</p>
+<h3>下降</h3>
+<p><strong>定理</strong>. 对任意 $n\geq 0$, 函子
+$$
+n\mathsf{Pr}_{-} \colon \mathcal C^{\mathrm{op}} \to \mathsf{CAlg}((n+1)\mathsf{Pr})
+$$
+为 fpqc-超层.</p>
+<h2>叠</h2>
+<p>由下降性, 层 $n\mathsf{Pr}_{-}$ 可延拓为层
+$$
+n\mathsf{Pr}_{-} \colon \widetilde {\mathcal C}^{\mathrm{op}} \to \mathsf{CAlg}((n+1)\mathsf{Pr}).
 $$</p>
-<h3>自守函数的 Hecke 作用的谱分解</h3>
-<p><span class="link local"><a href="./VLafforgueExc.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueExc]">Vincent Lafforgue</a></span> 使用某些 Hecke 函子定义了<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span>, 以给出 <span class="link local"><a href="./Langlands纲领.html" title="Langlands 纲领 [Langlands纲领]">Langlands</a></span> 预言的自守函数空间的谱分解.</p>
-<p>这一思路在<span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 纲领</a></span>中得到延续. 人们发现<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span>等同于某种局部系统模叠上的函数代数. 而提升一个范畴层级后 (见<span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span>—但这里实际上只需要提升一阶), 该种局部系统模叠上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>范畴在<span class="link local"><a href="./自守层.html" title="自守层 [自守层]">自守层</a></span>范畴上的作用可给出自守层沿局部系统模叠的谱分解, 见 <span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span>.</p>
+<p>对于叠的映射 $f\colon Y\to X$, 有拉回函子
+$$
+f^*_n \colon n\mathsf{Pr}_X \to n\mathsf{Pr}_Y.
+$$</p>
+<h3>六函子体系</h3>
+<p>我们希望将 $X\mapsto n\mathsf{Pr}_X$ 延拓为叠上的六函子体系. 事实上, 很大一类态射都是可作 “叹号” 的.</p>
+<p><strong>定义</strong>. 设 $f\colon Y\to X$ 是叠的态射, 若对任意 $\operatorname{Spec}A\to X$, 拉回 $Y\times_X\operatorname{Spec}A$ 都是<strong>可数</strong>表现的 $A$-代数对应的仿射概形的<strong>可数</strong>余极限, 则称 $f$ 为<strong>双可数表现</strong>态射.</p>
+<p>记 $E$ 为双可数表现态射的族. 这是一个很大的族, 且关于复合, 拉回, 取对角线等操作封闭.</p>
+<p><strong>定理</strong>. 对于 $E$ 中的态射 $f\colon Y\to X$,</p>
+<ul>
+<li>$f^*_n\colon n\mathsf{Pr}_X \to n\mathsf{Pr}_Y$ 在 $(n+1)\mathsf{Pr}_X$ 中有左伴随 $f_{n\sharp}$;</li>
+</ul>
 </details></section></details></section></footer></article></div></body></html>
