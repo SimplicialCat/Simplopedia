@@ -2355,7 +2355,41 @@ $$
 <p>自由 $\Rightarrow$ 投射 $\Rightarrow$ 平坦 $\Rightarrow$ 无挠</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./向量丛-投射模类比.html" title="向量丛-投射模类比 [向量丛-投射模类比]">向量丛-投射模类比</a></span></p>
-</details></section><section class="block" data-taxon=""><details ><summary id="杠消解"><header><h1><span class="taxon"></span>杠消解 <a class="slug" href="./杠消解.html">[杠消解]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="拓扑场论"><header><h1><span class="taxon"></span>拓扑场论 <a class="slug" href="./拓扑场论.html">[拓扑场论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>一个<strong>拓扑场论</strong> (topological field theory) 是由某种<span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span>出发, 取值于某个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal C$ 的幺半函子.</p>
+<p>通常 $\mathcal C$ 是<span class="link local"><a href="./高阶模.html" title="高阶模 [高阶模]">高阶线性范畴</a></span>, 即线性空间范畴 $\mathsf{Vect}_k$ 的高阶类比.</p>
+<h2>例</h2>
+<h3>配边假设</h3>
+<p>定义在 $\mathsf{Bord}_n$ 上的拓扑场论由一个点处的值完全决定. 见<span class="link local"><a href="./配边假设.html" title="配边假设 [配边假设]">配边假设</a></span>.</p>
+<h3>交换 Frobenius 代数</h3>
+<p>固定一个域 $k$. 线性空间范畴 $\mathsf{Vect}_k$ 中的 <strong>Frobenius 代数</strong>是有限维 $k$-<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 带有一个非退化双线性映射 $\mathrm{tr}\colon A\to k$, 称为迹映射, 满足 $\mathrm{tr}(ab) = \mathrm{tr}(ba)$. 若 $A$ 的乘法交换, 则称之为<strong>交换 Frobenius 代数</strong>. 交换 Frobenius 代数等同于对称幺半函子
+$$
+\mathsf{Bord}_{1,2} \to \mathsf{Vect},
+$$</p>
+<ul>
+<li>$S^1 \mapsto A$, $\overline{S^1}\mapsto A^*$; 注意此时有同构 $\overline{S^1}\simeq S^1$, 对应 $A\simeq A^*$.</li>
+<li>$\varnothing\mapsto k$.</li>
+<li>“裤子” $S^1 \sqcup S^1\to S^1$ 对应乘法映射 $A\otimes A\to A$. 由几何上的观察容易看到乘法映射是结合的.</li>
+</ul>
+<img src="/assets/Bord-3.svg" alt="裤子" width="150" style="display:block; margin:auto; transform:scaleY(-1)">
+<ul>
+<li>乘法 $A\otimes A\to A$ 的交换性体现于下图, 注意两边的同胚保持边界不动. (特别地, 上面的两个 $S^1$ 没有交换位置!)</li>
+</ul>
+<img src="/assets/Bord-7.svg" alt="乘法交换" width="360" style="display:block; margin:auto;">
+<ul>
+<li>圆盘 $S^1\to \varnothing$ 对应迹映射 $\mathrm{tr}\colon A\to k$.</li>
+<li>“U 型管” $S^1\sqcup S^1 \to \varnothing$ 对应 $A$ 上的配对 $A\otimes A \to k$.</li>
+<li>由于 “裤子” 加盖就成了 “U 型管”, 故有恒等式 $\langle a,b\rangle = \mathrm{tr}(ab)$.</li>
+</ul>
+<img src="/assets/Bord-5.svg" alt="裤子加盖等于 U 型管" width="320" style="display:block; margin:auto;">
+<ul>
+<li>反向的裤子 $S^1\to S^1\sqcup S^1$ 对应乘法映射的对偶, 称为余乘法 $\Delta\colon A\to A\otimes A$. 这是因为
+$$
+  \langle \Delta(a), b\otimes c\rangle = \langle a,bc\rangle.
+$$</li>
+</ul>
+<img src="/assets/Bord-6.svg" alt="余乘法是乘法的对偶" width="480" style="display:block; margin:auto;"></details></section><section class="block" data-taxon=""><details ><summary id="杠消解"><header><h1><span class="taxon"></span>杠消解 <a class="slug" href="./杠消解.html">[杠消解]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p><strong>杠消解</strong> (bar resolution) 指的是<span class="link local"><a href="./杠构造.html" title="杠构造 [杠构造]">杠构造</a></span>所得的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>或链复形 (<span class="link local"><a href="./Dold–Kan对应.html" title="Dold–Kan 对应 [Dold–Kan对应]">Dold–Kan 对应</a></span>).</p>
 <h2>例</h2>
@@ -2507,7 +2541,7 @@ $$</li>
 </ul>
 <p>上述资料生成的结果为</p>
 <ul>
-<li>$\operatorname{Hom}(+,+) = \{\mathrm{id}_c,rl,rlrl,\cdots\} = \Delta_+$ 为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span>;</li>
+<li>$\operatorname{Hom}(+,+) = \{\mathrm{id}_+,rl,rlrl,\cdots\} = \Delta_+$ 为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span>, 其中 $\mathrm{id}_+$ 对应 $[-1]\in\Delta_+$, $rl$ 对应 $[0]\in\Delta_+$, 唯一的态射 $\mathrm{id}_+\to rl$ 对应 $[-1]\to [0]$, 也即伴随的<strong>单位</strong>;</li>
 <li>$\operatorname{Hom}(+,-) = \{l,lrl,lrlrl,\cdots\}=\Delta_\bot\simeq\mathsf{LMod}([0])$ (保持最小值的映射构成的范畴, 等同于 $[0]$ 的左模范畴, 详见<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>);</li>
 <li>$\operatorname{Hom}(-,+) = \{r,rlr,rlrlr,\cdots\} = \Delta_\top\simeq\mathsf{RMod}([0])$;</li>
 <li>$\operatorname{Hom}(-,-) = \{\mathrm{id}_d,lr,lrlr,\cdots\} = \Delta_+^{\mathrm{op}}\simeq\mathsf{BiMod}([0])$.</li>

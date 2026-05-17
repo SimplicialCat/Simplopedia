@@ -891,6 +891,31 @@ $$
 <h2>与 Tor, Ext 的关系</h2>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Hochschild同调.html" title="Hochschild 同调 [Hochschild同调]">Hochschild 同调</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="完全可对偶对象"><header><h1><span class="taxon"></span>完全可对偶对象 <a class="slug" href="./完全可对偶对象.html">[完全可对偶对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>幺半 $(\infty,n)$-范畴中的<strong>完全可对偶对象</strong>直观上是满足如下一系列条件的对象 $X$:</p>
+<ul>
+<li>$X$ 具有<span class="link local"><a href="./对偶对象.html" title="对偶对象 [对偶对象]">对偶</a></span> $X^\vee$ (左对偶与右对偶相同);</li>
+<li>$X^\vee \dashv X$ 的单位 $\eta\colon 1\to X\otimes X^\vee$ 与 $X\dashv X^\vee$ 的余单位 $\varepsilon'\colon X\otimes X^\vee\to 1$ 互为<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>, 而 $X^\vee \dashv X$ 的余单位 $\varepsilon\colon X^\vee \otimes X \to 1$ 与 $X\dashv X^\vee$ 的单位 $\eta'\colon 1\to X^\vee \otimes X$ 互为<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>;</li>
+<li>这些伴随 $\eta\dashv\varepsilon'$, $\varepsilon\dashv\eta'$ 的单位和余单位又有伴随…</li>
+</ul>
+<p>注意该条件随着 $n$ 的增长而变得越来越强.</p>
+<h2>定义</h2>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半 $(\infty,n)$-范畴</a></span>, 定义其<strong>完全可对偶部分</strong> $\mathcal C^{\mathrm{fd}}$ 为满足如下条件的最大子范畴:</p>
+<ul>
+<li>其对象具有<span class="link local"><a href="./对偶对象.html" title="对偶对象 [对偶对象]">对偶</a></span>,</li>
+<li>其任意阶态射具有左右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</li>
+</ul>
+<p>直观上, $\mathcal C^{\mathrm{fd}}$ 是 $\mathcal C$ 去掉没有对偶的对象, 以及没有伴随的各阶态射所得的范畴.</p>
+<h2>例</h2>
+<h3>线性空间</h3>
+<p>线性空间范畴 $\mathsf{Vect}$ 是 $(1,1)$-范畴. $\mathsf{Vect}$ 中的完全可对偶对象就是<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶对象</a></span>, 也即有限维线性空间.</p>
+<h3>配边范畴</h3>
+<p><span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span> $\mathsf{Bord}_n$ 中的所有对象均完全可对偶.</p>
+<ul>
+<li>范畴 $\mathsf{Bord}_n$ 的对象 $+$ (一个点) 的对偶为反定向的点 $-$.</li>
+<li>对于 $k\geq 1$, 范畴 $\mathsf{Bord}_n$ 中任意 $k$-态射 $X\to Y$ 可视为定向 $k$ 维流形 $M$, 其边界为 $\overline{X}\sqcup_{\partial X = \partial Y} Y$; $M$ 的反转 $\overline{M}$ 作为态射 $Y\to X$ 同时是 $M$ 的左右伴随.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="微分分次范畴"><header><h1><span class="taxon"></span>微分分次范畴 <a class="slug" href="./微分分次范畴.html">[微分分次范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>交换环 $k$ 上的微分分次范畴 (differential graded category, “dg category”) 是 “$k$-线性<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span>” 的一种模型, 也等同于充实于 <span class="link local"><a href="./Eilenberg–MacLane谱.html" title="Eilenberg–MacLane 谱 [Eilenberg–MacLane谱]">Eilenberg–MacLane 谱</a></span> $Hk$ 上的模范畴 $\mathsf{Mod}(Hk)$ 的范畴, 或 $\mathsf{Mod}(Hk)$-<span class="link local"><a href="./高阶模.html" title="高阶模 [高阶模]">模</a></span>;

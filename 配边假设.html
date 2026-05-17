@@ -808,23 +808,119 @@
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
 <article><section class="block" data-taxon=""><details open><summary id="配边假设"><header><h1><span class="taxon"></span>配边假设 <a class="slug" href="./配边假设.html">[配边假设]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="配边范畴"><header><h1><span class="taxon"></span>配边范畴 <a class="slug" href="./配边范畴.html">[配边范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>陈述</h2>
+<p>配边假设是说, <span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span>是由一个<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半 $(\infty,n)$-范畴</a></span>.</p>
+<p><strong>命题</strong> (配边假设, 标架版本). 设 $\mathcal C$ 为<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半</a></span> $(\infty,n)$-范畴. 那么函子
+$$
+\mathsf{Bord}_n^{\mathrm{fr}} \to \mathcal C
+$$
+等同于 $\mathcal C$ 中的<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>. 准确地说,
+$$
+\operatorname{Hom}(\mathsf{Bord}_n^{\mathrm{fr}},\mathcal C) \simeq (\mathcal C^{\mathrm{fd}})^\sim,
+$$
+其中 $(-)^{\sim}$ 表示取<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>.</p>
+<p>函子 $\mathsf{Bord}_n^{\mathrm{fr}} \to \mathcal C$ 又称<span class="link local"><a href="./拓扑场论.html" title="拓扑场论 [拓扑场论]">拓扑场论</a></span> (TFT) 或拓扑量子场论 (TQFT). 配边假设表明拓扑场论由其在一个点上的取值完全确定.</p>
+<h2>例</h2>
+<h3>有限维线性空间</h3>
+<p>固定一个域 $k$. 有限维 $k$-线性空间 $V$ 是 $k$-线性空间范畴 $(\mathsf{Vect},\otimes)$ 中的可对偶对象, 给出一个函子
+$$
+\mathsf{Bord}_1^{\mathrm{fr}} \to \mathsf{Vect},
+$$</p>
+<ul>
+<li>$+ \mapsto V$,</li>
+<li>$- \mapsto V^*$ ($V$ 的对偶空间),</li>
+<li>$\varnothing\mapsto k$,</li>
+<li>下图是 $\{+,-\}$ 到 $\varnothing$ 的配边, 对应取值映射 $\mathrm{ev}\colon V^*\otimes V\to k$.</li>
+</ul>
+<img src="/assets/Bord-4.svg" alt="两个点到空集的配边" width="70" style="display:block; margin:auto;">
+<ul>
+<li>反过来的配边对应余取值映射 $\mathrm{coev}\colon k\to V\otimes V^*$; 若有 $V$ 的一组基 $\{e_i\}$ 和 $V^*$ 相应的对偶基 $\{f_i\}$, 则有
+$$
+  \operatorname{coev}(1)=\sum_i e_i\otimes f_i.
+$$</li>
+<li>闭流形 $S^1$ 对应取值和余取值映射的复合 $\operatorname{ev}\circ\operatorname{coev}\colon k\to k$, 对应一个数, 即 $\operatorname{dim}V$.</li>
+</ul>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="拓扑场论"><header><h1><span class="taxon"></span>拓扑场论 <a class="slug" href="./拓扑场论.html">[拓扑场论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>暂且给出一种直观而不严格的描述.</p>
+<p>一个<strong>拓扑场论</strong> (topological field theory) 是由某种<span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span>出发, 取值于某个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal C$ 的幺半函子.</p>
+<p>通常 $\mathcal C$ 是<span class="link local"><a href="./高阶模.html" title="高阶模 [高阶模]">高阶线性范畴</a></span>, 即线性空间范畴 $\mathsf{Vect}_k$ 的高阶类比.</p>
+<h2>例</h2>
+<h3>配边假设</h3>
+<p>定义在 $\mathsf{Bord}_n$ 上的拓扑场论由一个点处的值完全决定. 见<span class="link local"><a href="./配边假设.html" title="配边假设 [配边假设]">配边假设</a></span>.</p>
+<h3>交换 Frobenius 代数</h3>
+<p>固定一个域 $k$. 线性空间范畴 $\mathsf{Vect}_k$ 中的 <strong>Frobenius 代数</strong>是有限维 $k$-<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 带有一个非退化双线性映射 $\mathrm{tr}\colon A\to k$, 称为迹映射, 满足 $\mathrm{tr}(ab) = \mathrm{tr}(ba)$. 若 $A$ 的乘法交换, 则称之为<strong>交换 Frobenius 代数</strong>. 交换 Frobenius 代数等同于对称幺半函子
+$$
+\mathsf{Bord}_{1,2} \to \mathsf{Vect},
+$$</p>
+<ul>
+<li>$S^1 \mapsto A$, $\overline{S^1}\mapsto A^*$; 注意此时有同构 $\overline{S^1}\simeq S^1$, 对应 $A\simeq A^*$.</li>
+<li>$\varnothing\mapsto k$.</li>
+<li>“裤子” $S^1 \sqcup S^1\to S^1$ 对应乘法映射 $A\otimes A\to A$. 由几何上的观察容易看到乘法映射是结合的.</li>
+</ul>
+<img src="/assets/Bord-3.svg" alt="裤子" width="150" style="display:block; margin:auto; transform:scaleY(-1)">
+<ul>
+<li>乘法 $A\otimes A\to A$ 的交换性体现于下图, 注意两边的同胚保持边界不动. (特别地, 上面的两个 $S^1$ 没有交换位置!)</li>
+</ul>
+<img src="/assets/Bord-7.svg" alt="乘法交换" width="360" style="display:block; margin:auto;">
+<ul>
+<li>圆盘 $S^1\to \varnothing$ 对应迹映射 $\mathrm{tr}\colon A\to k$.</li>
+<li>“U 型管” $S^1\sqcup S^1 \to \varnothing$ 对应 $A$ 上的配对 $A\otimes A \to k$.</li>
+<li>由于 “裤子” 加盖就成了 “U 型管”, 故有恒等式 $\langle a,b\rangle = \mathrm{tr}(ab)$.</li>
+</ul>
+<img src="/assets/Bord-5.svg" alt="裤子加盖等于 U 型管" width="320" style="display:block; margin:auto;">
+<ul>
+<li>反向的裤子 $S^1\to S^1\sqcup S^1$ 对应乘法映射的对偶, 称为余乘法 $\Delta\colon A\to A\otimes A$. 这是因为
+$$
+  \langle \Delta(a), b\otimes c\rangle = \langle a,bc\rangle.
+$$</li>
+</ul>
+<img src="/assets/Bord-6.svg" alt="余乘法是乘法的对偶" width="480" style="display:block; margin:auto;"></details></section><section class="block" data-taxon=""><details ><summary id="配边范畴"><header><h1><span class="taxon"></span>配边范畴 <a class="slug" href="./配边范畴.html">[配边范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>切结构</h3>
 <p>首先回忆流形上的<span class="link local"><a href="./切结构.html" title="切结构 [切结构]">切结构</a></span>的概念.</p>
 <ul>
 <li>对于整数 $0\leq m \leq n$, 定义 $m$ 维流形 $M$ 的 $n$-<strong>标架</strong> (framing) 是 $TM \oplus \mathbb{R}^{n-m}$ 的平凡化.</li>
 <li>更一般地, 对于子群 $G\subset\mathrm{GL}_n$ 或群同态 $G \to \mathrm{GL}_n$, 记 $\zeta$ 为 $\mathbf{B}G\to\mathbf{B}\mathrm{GL}_n$ 对应的 $\mathbf{B}G$ 上的 $n$ 阶向量丛; 定义 $m$-维流形 $M$ 的 <span class="link local"><a href="./切结构.html" title="切结构 [切结构]">$G$-结构</a></span>为映射 $\chi\colon M\to\mathbf{B}G$ 以及同构 $TM\oplus \mathbb{R}^{n-m}\simeq \chi^*\zeta$.</li>
 <li>注意到带边 (带角) 流形上的标架自然地诱导其边界上的标架.</li>
 </ul>
-<p><strong>定义</strong> (粗略版本). 标架配边范畴 $\mathsf{Bord}_n^{G}$ 是如下 $(\infty,n)$-范畴:</p>
+<h3>配边范畴</h3>
+<p><strong>定义</strong> 带 $G$-结构的配边范畴 $\mathsf{Bord}_n^{G}$ 是如下 $(\infty,n)$-范畴:</p>
 <ul>
 <li>其对象为带 $n$-标架的 $0$ 维流形;</li>
-<li>对于 $0&lt; k\leq n$, 其 $k$-态射 $f\colon X\to Y$ 为 $k$ 维 (带角) 流形, 满足 $\partial f = X\sqcup_{\partial X=\partial Y}Y$ (且 $f$ 的边界上的标架与 $X,Y$ 相容), 态射 $X\to Y,Y\to Z$ 的复合为沿 $Y$ 粘合;</li>
+<li>对于 $0&lt; k\leq n$, 其 $k$-态射 $f\colon X\to Y$ 为 $k$ 维 (带角) 流形, 满足 $\partial f = X\sqcup_{\partial X=\partial Y}Y$ 且 $f$ 的边界上的 $G$-结构与 $X,Y$ 相容;</li>
+<li>态射 $X\to Y,Y\to Z$ 的复合为沿 $Y$ 粘合;</li>
 <li>$n$-态射之间的映射空间为 $n$-维配边之间的同胚以及同胚之间的<strong>同痕</strong> (isotopy) 构成的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</li>
 </ul>
+<p>通常 $\mathsf{Bord}_n$ 指的是 $\mathsf{Bord}_n^{\mathrm{SO}}$, 即带定向的配边范畴.</p>
+<h3>变体</h3>
+<p>配边范畴还有一些变体, 不从 $0$ 维开始, 而是从某个正维数开始.
+例如 $\mathsf{Bord}_{1,2}$ 的对象为闭 $1$ 维流形 (即若干个 $S^1$). 它是 $\mathsf{Bord}_2$ 的一个态射范畴:
+$$
+\mathsf{Bord}_{1,2} = \operatorname{Hom}_{\mathsf{Bord}_2}(\varnothing,\varnothing).
+$$</p>
+<h2>例</h2>
+<h3>一维</h3>
+<p>$\mathsf{Bord}_1^{\mathrm{fr}}$ 是如下 $(\infty,1)$-范畴:</p>
+<ul>
+<li>其对象为带 $1$-标架的 $0$ 维流形, 也即带正负号的离散点集,</li>
+<li>$1$-态射 $X\to Y$ 如下.</li>
+</ul>
+<img src="/assets/Bord-1.svg" alt="1 维标架配边范畴中的 1-态射" width="180" style="display:block; margin:auto;">
+<h3>二维</h3>
+<p>$\mathsf{Bord}_2$ 中的一个 $2$-态射如下图所示 (忽略定向).</p>
+<img src="/assets/Bord-2.svg" alt="2 维配边范畴中的 2-态射" width="180" style="display:block; margin:auto;">
+<p>$\mathsf{Bord}_2$ 中的另一个 $2$-态射 $S^1\to S^1\sqcup S^1$ 如下图所示.</p>
+<img src="/assets/Bord-3.svg" alt="2 维配边范畴中的 2-态射 (2)" width="180" style="display:block; margin:auto;">
+<p>它也是 $\mathsf{Bord}_{1,2}$ 中的 $1$-态射.</p>
 <h2>性质</h2>
-<p><span class="link local"><a href="./配边假设.html" title="配边假设 [配边假设]">配边假设</a></span></p>
+<h3>自由性质</h3>
+<p>见<span class="link local"><a href="./配边假设.html" title="配边假设 [配边假设]">配边假设</a></span>.</p>
+<h3>可对偶性</h3>
+<p>$\mathsf{Bord}_n$ 中的所有对象均<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶</a></span>.</p>
+<ul>
+<li>对象 $+$ (一个点) 的<span class="link local"><a href="./对偶对象.html" title="对偶对象 [对偶对象]">对偶</a></span>为反定向的点 $-$.</li>
+<li>对于 $k\geq 1$, 任意 $k$-态射 (定向 $k$ 维流形) $M$ 的反转 $\overline{M}$ 同时是 $M$ 的左右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</li>
+</ul>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./拓扑场论.html" title="拓扑场论 [拓扑场论]">拓扑场论</a></span></p>
 </details></section></details></section></footer></article></div></body></html>

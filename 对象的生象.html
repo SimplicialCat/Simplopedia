@@ -916,6 +916,39 @@ $$
 <p><strong>命题</strong>. 函子 $\mathcal C_{/c} \to \mathcal C$ 保持且<span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映</a></span>弱可缩极限.</p>
 <h2>例</h2>
 <p>范畴的<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">锥</a></span>是弱可缩的.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="配边假设"><header><h1><span class="taxon"></span>配边假设 <a class="slug" href="./配边假设.html">[配边假设]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>陈述</h2>
+<p>配边假设是说, <span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span>是由一个<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半 $(\infty,n)$-范畴</a></span>.</p>
+<p><strong>命题</strong> (配边假设, 标架版本). 设 $\mathcal C$ 为<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半</a></span> $(\infty,n)$-范畴. 那么函子
+$$
+\mathsf{Bord}_n^{\mathrm{fr}} \to \mathcal C
+$$
+等同于 $\mathcal C$ 中的<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>. 准确地说,
+$$
+\operatorname{Hom}(\mathsf{Bord}_n^{\mathrm{fr}},\mathcal C) \simeq (\mathcal C^{\mathrm{fd}})^\sim,
+$$
+其中 $(-)^{\sim}$ 表示取<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>.</p>
+<p>函子 $\mathsf{Bord}_n^{\mathrm{fr}} \to \mathcal C$ 又称<span class="link local"><a href="./拓扑场论.html" title="拓扑场论 [拓扑场论]">拓扑场论</a></span> (TFT) 或拓扑量子场论 (TQFT). 配边假设表明拓扑场论由其在一个点上的取值完全确定.</p>
+<h2>例</h2>
+<h3>有限维线性空间</h3>
+<p>固定一个域 $k$. 有限维 $k$-线性空间 $V$ 是 $k$-线性空间范畴 $(\mathsf{Vect},\otimes)$ 中的可对偶对象, 给出一个函子
+$$
+\mathsf{Bord}_1^{\mathrm{fr}} \to \mathsf{Vect},
+$$</p>
+<ul>
+<li>$+ \mapsto V$,</li>
+<li>$- \mapsto V^*$ ($V$ 的对偶空间),</li>
+<li>$\varnothing\mapsto k$,</li>
+<li>下图是 $\{+,-\}$ 到 $\varnothing$ 的配边, 对应取值映射 $\mathrm{ev}\colon V^*\otimes V\to k$.</li>
+</ul>
+<img src="/assets/Bord-4.svg" alt="两个点到空集的配边" width="70" style="display:block; margin:auto;">
+<ul>
+<li>反过来的配边对应余取值映射 $\mathrm{coev}\colon k\to V\otimes V^*$; 若有 $V$ 的一组基 $\{e_i\}$ 和 $V^*$ 相应的对偶基 $\{f_i\}$, 则有
+$$
+  \operatorname{coev}(1)=\sum_i e_i\otimes f_i.
+$$</li>
+<li>闭流形 $S^1$ 对应取值和余取值映射的复合 $\operatorname{ev}\circ\operatorname{coev}\colon k\to k$, 对应一个数, 即 $\operatorname{dim}V$.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="高阶范畴"><header><h1><span class="taxon"></span>高阶范畴 <a class="slug" href="./高阶范畴.html">[高阶范畴]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./tutorial-highercat.html" title="高阶范畴论 [tutorial-highercat]">教程 : 高阶范畴论</a></span></p>
 <p>一个高阶范畴是一类<strong>对象</strong>和对象之间的<strong>态射</strong>构成的全体; 不同于普通范畴的是, 高阶范畴两个对象 $X,Y$ 之间的态射全体 $\operatorname{Hom}(X,Y)$ 本身也构成高阶范畴, 从而可以谈论态射之间的态射 ($2$-态射), 态射之间的态射之间的态射 ($3$-态射), …, 以至于无穷.</p>

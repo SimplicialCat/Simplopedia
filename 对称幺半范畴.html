@@ -1355,7 +1355,6 @@ $$
 <p>另见<span class="link local"><a href="./量子群.html" title="量子群 [量子群]">量子群</a></span>.</p>
 <p>另见<span class="link local"><a href="./交换Hopf代数.html" title="交换 Hopf 代数 [交换Hopf代数]">交换 Hopf 代数</a></span>.</p>
 <h2>定义</h2>
-<h3>传统定义</h3>
 <p><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半 $1$-范畴</a></span>中的 Hopf 代数是<span class="link local"><a href="./双代数.html" title="双代数 [双代数]">双代数</a></span> $(A,m,\eta,\epsilon,\Delta)$ 带有对径映射 $S\colon A\to A$, 满足
 $$
 m (\mathrm{id} \otimes S) \Delta = m (S \otimes \mathrm{id}) \Delta = \eta\epsilon,
@@ -2313,9 +2312,39 @@ $$</li>
 <p><span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span>, <span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, <span class="link local"><a href="./严格幺半范畴.html" title="“严格幺半范畴” [严格幺半范畴]">严格幺半范畴</a></span>, <span class="link local"><a href="./双幺半范畴.html" title="“双幺半范畴” [双幺半范畴]">双幺半范畴</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="拓扑场论"><header><h1><span class="taxon"></span>拓扑场论 <a class="slug" href="./拓扑场论.html">[拓扑场论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>一个<strong>拓扑场论</strong> (topological field theory) 是由<span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span>出发, 取值于某个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal C$ 的一个幺半函子.</p>
+<p>一个<strong>拓扑场论</strong> (topological field theory) 是由某种<span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span>出发, 取值于某个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal C$ 的幺半函子.</p>
 <p>通常 $\mathcal C$ 是<span class="link local"><a href="./高阶模.html" title="高阶模 [高阶模]">高阶线性范畴</a></span>, 即线性空间范畴 $\mathsf{Vect}_k$ 的高阶类比.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="拟凝聚层"><header><h1><span class="taxon"></span>拟凝聚层 <a class="slug" href="./拟凝聚层.html">[拟凝聚层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>例</h2>
+<h3>配边假设</h3>
+<p>定义在 $\mathsf{Bord}_n$ 上的拓扑场论由一个点处的值完全决定. 见<span class="link local"><a href="./配边假设.html" title="配边假设 [配边假设]">配边假设</a></span>.</p>
+<h3>交换 Frobenius 代数</h3>
+<p>固定一个域 $k$. 线性空间范畴 $\mathsf{Vect}_k$ 中的 <strong>Frobenius 代数</strong>是有限维 $k$-<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 带有一个非退化双线性映射 $\mathrm{tr}\colon A\to k$, 称为迹映射, 满足 $\mathrm{tr}(ab) = \mathrm{tr}(ba)$. 若 $A$ 的乘法交换, 则称之为<strong>交换 Frobenius 代数</strong>. 交换 Frobenius 代数等同于对称幺半函子
+$$
+\mathsf{Bord}_{1,2} \to \mathsf{Vect},
+$$</p>
+<ul>
+<li>$S^1 \mapsto A$, $\overline{S^1}\mapsto A^*$; 注意此时有同构 $\overline{S^1}\simeq S^1$, 对应 $A\simeq A^*$.</li>
+<li>$\varnothing\mapsto k$.</li>
+<li>“裤子” $S^1 \sqcup S^1\to S^1$ 对应乘法映射 $A\otimes A\to A$. 由几何上的观察容易看到乘法映射是结合的.</li>
+</ul>
+<img src="/assets/Bord-3.svg" alt="裤子" width="150" style="display:block; margin:auto; transform:scaleY(-1)">
+<ul>
+<li>乘法 $A\otimes A\to A$ 的交换性体现于下图, 注意两边的同胚保持边界不动. (特别地, 上面的两个 $S^1$ 没有交换位置!)</li>
+</ul>
+<img src="/assets/Bord-7.svg" alt="乘法交换" width="360" style="display:block; margin:auto;">
+<ul>
+<li>圆盘 $S^1\to \varnothing$ 对应迹映射 $\mathrm{tr}\colon A\to k$.</li>
+<li>“U 型管” $S^1\sqcup S^1 \to \varnothing$ 对应 $A$ 上的配对 $A\otimes A \to k$.</li>
+<li>由于 “裤子” 加盖就成了 “U 型管”, 故有恒等式 $\langle a,b\rangle = \mathrm{tr}(ab)$.</li>
+</ul>
+<img src="/assets/Bord-5.svg" alt="裤子加盖等于 U 型管" width="320" style="display:block; margin:auto;">
+<ul>
+<li>反向的裤子 $S^1\to S^1\sqcup S^1$ 对应乘法映射的对偶, 称为余乘法 $\Delta\colon A\to A\otimes A$. 这是因为
+$$
+  \langle \Delta(a), b\otimes c\rangle = \langle a,bc\rangle.
+$$</li>
+</ul>
+<img src="/assets/Bord-6.svg" alt="余乘法是乘法的对偶" width="480" style="display:block; margin:auto;"></details></section><section class="block" data-taxon=""><details ><summary id="拟凝聚层"><header><h1><span class="taxon"></span>拟凝聚层 <a class="slug" href="./拟凝聚层.html">[拟凝聚层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span>上的拟凝聚层是环上的模的推广.</p>
 <p>拟凝聚层的范畴 $\mathsf{QCoh}(X)$ 是代数几何中的一种代数对象 (见<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>). 取拟凝聚层 $X \mapsto \mathsf{QCoh}(X)$ 构成一个由 (qcqs) 概形到<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>的嵌入.</p>

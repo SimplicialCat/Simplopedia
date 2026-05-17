@@ -4078,7 +4078,6 @@ $$</p>
 <p>另见<span class="link local"><a href="./量子群.html" title="量子群 [量子群]">量子群</a></span>.</p>
 <p>另见<span class="link local"><a href="./交换Hopf代数.html" title="交换 Hopf 代数 [交换Hopf代数]">交换 Hopf 代数</a></span>.</p>
 <h2>定义</h2>
-<h3>传统定义</h3>
 <p><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半 $1$-范畴</a></span>中的 Hopf 代数是<span class="link local"><a href="./双代数.html" title="双代数 [双代数]">双代数</a></span> $(A,m,\eta,\epsilon,\Delta)$ 带有对径映射 $S\colon A\to A$, 满足
 $$
 m (\mathrm{id} \otimes S) \Delta = m (S \otimes \mathrm{id}) \Delta = \eta\epsilon,
@@ -8280,6 +8279,9 @@ $$
 <p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">亟需施工处</a></span>列表 (“TODO list”)</p>
 <p><span class="link local"><a href="./terminologies.html" title="单纯百科 - 术语翻译表 [terminologies]">术语翻译表</a></span></p>
 <h2>最近</h2>
+<p><span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span></p>
+<p><span class="link local"><a href="./谱分解.html" title="谱分解 [谱分解]">谱分解</a></span></p>
+<p><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span></p>
 <p><span class="link local"><a href="./Barr–Beck–Lurie定理.html" title="Barr–Beck–Lurie 定理 [Barr–Beck–Lurie定理]">Barr–Beck–Lurie 定理</a></span></p>
 <p><span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span></p>
 <p><span class="link local"><a href="./吸引子.html" title="吸引子, 排斥子 [吸引子]">吸引子, 排斥子</a></span></p>
@@ -14127,7 +14129,7 @@ $$
 <h3>Galois 群</h3>
 <p>$x^5 - 2$ 在 $\mathbb{Q}$ 上的<span class="link local"><a href="./分裂域.html" title="分裂域 [分裂域]">分裂域</a></span>为 $\mathbb{Q}[\zeta,\alpha]$, 其中 $\zeta=\exp(2\pi/5),\alpha=\sqrt[5]{2}$. 考虑</p>
 <ul>
-<li>$\mathbb{Q}[\zeta]$ 的固定子群 $N$, 由于 $\mathbb{Q}[\zeta]/\mathbb{Q}$ <span class="link local"><a href="./正规扩张.html" title="正规扩张 [正规扩张]">正规</a></span> (是 $x^5-1$ 的分裂域), 故 $N\hookrightarrow G$ 为正规子群;</li>
+<li>$\mathbb{Q}[\zeta]$ 的固定子群 $N$, 由于 $\mathbb{Q}[\zeta]/\mathbb{Q}$ <span class="link local"><a href="./正规扩张.html" title="正规扩张 [正规扩张]">正规</a></span> (是 $x^5-1$ 的分裂域), 故 $N\hookrightarrow G$ 为<span class="link local"><a href="./正规子群.html" title="正规子群 [正规子群]">正规子群</a></span>;</li>
 <li>$\mathbb{Q}[\alpha]$ 的固定子群 $H$,</li>
 </ul>
 <p>那么
@@ -15664,6 +15666,31 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="宇宙"><header><h1><span class="taxon"></span>宇宙 <a class="slug" href="./宇宙.html">[宇宙]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./类型论.html" title="类型论 [类型论]">类型论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>在<span class="link local"><a href="./类型论.html" title="类型论 [类型论]">类型论</a></span>中, 每个类型都是某个类型 $\mathcal U$ 的元素, 称这种类型 $\mathcal U$ 为<strong>宇宙</strong>.</p>
 <p>一个宇宙<strong>不是</strong>自身的元素, 而是更上一层的宇宙的元素.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="完全可对偶对象"><header><h1><span class="taxon"></span>完全可对偶对象 <a class="slug" href="./完全可对偶对象.html">[完全可对偶对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>幺半 $(\infty,n)$-范畴中的<strong>完全可对偶对象</strong>直观上是满足如下一系列条件的对象 $X$:</p>
+<ul>
+<li>$X$ 具有<span class="link local"><a href="./对偶对象.html" title="对偶对象 [对偶对象]">对偶</a></span> $X^\vee$ (左对偶与右对偶相同);</li>
+<li>$X^\vee \dashv X$ 的单位 $\eta\colon 1\to X\otimes X^\vee$ 与 $X\dashv X^\vee$ 的余单位 $\varepsilon'\colon X\otimes X^\vee\to 1$ 互为<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>, 而 $X^\vee \dashv X$ 的余单位 $\varepsilon\colon X^\vee \otimes X \to 1$ 与 $X\dashv X^\vee$ 的单位 $\eta'\colon 1\to X^\vee \otimes X$ 互为<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>;</li>
+<li>这些伴随 $\eta\dashv\varepsilon'$, $\varepsilon\dashv\eta'$ 的单位和余单位又有伴随…</li>
+</ul>
+<p>注意该条件随着 $n$ 的增长而变得越来越强.</p>
+<h2>定义</h2>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半 $(\infty,n)$-范畴</a></span>, 定义其<strong>完全可对偶部分</strong> $\mathcal C^{\mathrm{fd}}$ 为满足如下条件的最大子范畴:</p>
+<ul>
+<li>其对象具有<span class="link local"><a href="./对偶对象.html" title="对偶对象 [对偶对象]">对偶</a></span>,</li>
+<li>其任意阶态射具有左右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</li>
+</ul>
+<p>直观上, $\mathcal C^{\mathrm{fd}}$ 是 $\mathcal C$ 去掉没有对偶的对象, 以及没有伴随的各阶态射所得的范畴.</p>
+<h2>例</h2>
+<h3>线性空间</h3>
+<p>线性空间范畴 $\mathsf{Vect}$ 是 $(1,1)$-范畴. $\mathsf{Vect}$ 中的完全可对偶对象就是<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶对象</a></span>, 也即有限维线性空间.</p>
+<h3>配边范畴</h3>
+<p><span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span> $\mathsf{Bord}_n$ 中的所有对象均完全可对偶.</p>
+<ul>
+<li>范畴 $\mathsf{Bord}_n$ 的对象 $+$ (一个点) 的对偶为反定向的点 $-$.</li>
+<li>对于 $k\geq 1$, 范畴 $\mathsf{Bord}_n$ 中任意 $k$-态射 $X\to Y$ 可视为定向 $k$ 维流形 $M$, 其边界为 $\overline{X}\sqcup_{\partial X = \partial Y} Y$; $M$ 的反转 $\overline{M}$ 作为态射 $Y\to X$ 同时是 $M$ 的左右伴随.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="完备"><header><h1><span class="taxon"></span>“完备” <a class="slug" href="./完备.html">[完备]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>#代数</p>
 <p>本文介绍的是环关于理想的完备性.</p>
@@ -17929,9 +17956,39 @@ $$
 <p><span class="link local"><a href="./K-群(拓扑).html" title="“K-群 (拓扑)” [K-群(拓扑)]">K-群 (拓扑)</a></span>, <span class="link local"><a href="./约化K-群(拓扑).html" title="“约化 K-群 (拓扑)” [约化K-群(拓扑)]">约化 K-群 (拓扑)</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="拓扑场论"><header><h1><span class="taxon"></span>拓扑场论 <a class="slug" href="./拓扑场论.html">[拓扑场论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>一个<strong>拓扑场论</strong> (topological field theory) 是由<span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span>出发, 取值于某个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal C$ 的一个幺半函子.</p>
+<p>一个<strong>拓扑场论</strong> (topological field theory) 是由某种<span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span>出发, 取值于某个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal C$ 的幺半函子.</p>
 <p>通常 $\mathcal C$ 是<span class="link local"><a href="./高阶模.html" title="高阶模 [高阶模]">高阶线性范畴</a></span>, 即线性空间范畴 $\mathsf{Vect}_k$ 的高阶类比.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="拓扑序"><header><h1><span class="taxon"></span>“拓扑序” <a class="slug" href="./拓扑序.html">[拓扑序]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>例</h2>
+<h3>配边假设</h3>
+<p>定义在 $\mathsf{Bord}_n$ 上的拓扑场论由一个点处的值完全决定. 见<span class="link local"><a href="./配边假设.html" title="配边假设 [配边假设]">配边假设</a></span>.</p>
+<h3>交换 Frobenius 代数</h3>
+<p>固定一个域 $k$. 线性空间范畴 $\mathsf{Vect}_k$ 中的 <strong>Frobenius 代数</strong>是有限维 $k$-<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 带有一个非退化双线性映射 $\mathrm{tr}\colon A\to k$, 称为迹映射, 满足 $\mathrm{tr}(ab) = \mathrm{tr}(ba)$. 若 $A$ 的乘法交换, 则称之为<strong>交换 Frobenius 代数</strong>. 交换 Frobenius 代数等同于对称幺半函子
+$$
+\mathsf{Bord}_{1,2} \to \mathsf{Vect},
+$$</p>
+<ul>
+<li>$S^1 \mapsto A$, $\overline{S^1}\mapsto A^*$; 注意此时有同构 $\overline{S^1}\simeq S^1$, 对应 $A\simeq A^*$.</li>
+<li>$\varnothing\mapsto k$.</li>
+<li>“裤子” $S^1 \sqcup S^1\to S^1$ 对应乘法映射 $A\otimes A\to A$. 由几何上的观察容易看到乘法映射是结合的.</li>
+</ul>
+<img src="/assets/Bord-3.svg" alt="裤子" width="150" style="display:block; margin:auto; transform:scaleY(-1)">
+<ul>
+<li>乘法 $A\otimes A\to A$ 的交换性体现于下图, 注意两边的同胚保持边界不动. (特别地, 上面的两个 $S^1$ 没有交换位置!)</li>
+</ul>
+<img src="/assets/Bord-7.svg" alt="乘法交换" width="360" style="display:block; margin:auto;">
+<ul>
+<li>圆盘 $S^1\to \varnothing$ 对应迹映射 $\mathrm{tr}\colon A\to k$.</li>
+<li>“U 型管” $S^1\sqcup S^1 \to \varnothing$ 对应 $A$ 上的配对 $A\otimes A \to k$.</li>
+<li>由于 “裤子” 加盖就成了 “U 型管”, 故有恒等式 $\langle a,b\rangle = \mathrm{tr}(ab)$.</li>
+</ul>
+<img src="/assets/Bord-5.svg" alt="裤子加盖等于 U 型管" width="320" style="display:block; margin:auto;">
+<ul>
+<li>反向的裤子 $S^1\to S^1\sqcup S^1$ 对应乘法映射的对偶, 称为余乘法 $\Delta\colon A\to A\otimes A$. 这是因为
+$$
+  \langle \Delta(a), b\otimes c\rangle = \langle a,bc\rangle.
+$$</li>
+</ul>
+<img src="/assets/Bord-6.svg" alt="余乘法是乘法的对偶" width="480" style="display:block; margin:auto;"></details></section><section class="block" data-taxon=""><details ><summary id="拓扑序"><header><h1><span class="taxon"></span>“拓扑序” <a class="slug" href="./拓扑序.html">[拓扑序]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>#数学物理</p>
 <p>拓扑序 (topological order) 是指有长程纠缠的量子物态. 所谓长程纠缠, 是指不能被局部线性等距变换消除的纠缠.</p>
 <table><thead><tr><th></th><th>非对称</th><th>对称</th></tr></thead><tbody>
@@ -19244,6 +19301,9 @@ $$</p>
 <h2>相关概念</h2>
 <p>商群 $N_G(H) / H$ 又叫 $H$ 对应的 <span class="link local"><a href="./Weyl群.html" title="Weyl 群 (极大环面) [Weyl群]">Weyl 群</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="正规子群"><header><h1><span class="taxon"></span>正规子群 <a class="slug" href="./正规子群.html">[正规子群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>正规子群是可作为群同态的核的子群.</p>
+<h2>定义</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="正规扩张"><header><h1><span class="taxon"></span>正规扩张 <a class="slug" href="./正规扩张.html">[正规扩张]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>对于域扩张 $k\subset K$, 视为 “覆叠” 映射 $\operatorname{Spec}K\to\operatorname{Spec}k$; <strong>正规扩张</strong>这一条件是 “覆叠变换群在纤维上作用<span class="link local"><a href="./传递作用.html" title="传递作用 [传递作用]">传递</a></span>” 的类比. 所谓纤维即是 $\operatorname{Spec}K$ 沿 $\operatorname{Spec}\bar k \to \operatorname{Spec}k$ 的拉回, 而纤维的一个点即是一个提升 $\operatorname{Spec}\bar k\to\operatorname{Spec}K$, 也即嵌入 $K\hookrightarrow\bar k$.</p>
@@ -19566,7 +19626,7 @@ $$</li>
 </ul>
 <p>上述资料生成的结果为</p>
 <ul>
-<li>$\operatorname{Hom}(+,+) = \{\mathrm{id}_c,rl,rlrl,\cdots\} = \Delta_+$ 为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span>;</li>
+<li>$\operatorname{Hom}(+,+) = \{\mathrm{id}_+,rl,rlrl,\cdots\} = \Delta_+$ 为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span>, 其中 $\mathrm{id}_+$ 对应 $[-1]\in\Delta_+$, $rl$ 对应 $[0]\in\Delta_+$, 唯一的态射 $\mathrm{id}_+\to rl$ 对应 $[-1]\to [0]$, 也即伴随的<strong>单位</strong>;</li>
 <li>$\operatorname{Hom}(+,-) = \{l,lrl,lrlrl,\cdots\}=\Delta_\bot\simeq\mathsf{LMod}([0])$ (保持最小值的映射构成的范畴, 等同于 $[0]$ 的左模范畴, 详见<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>);</li>
 <li>$\operatorname{Hom}(-,+) = \{r,rlr,rlrlr,\cdots\} = \Delta_\top\simeq\mathsf{RMod}([0])$;</li>
 <li>$\operatorname{Hom}(-,-) = \{\mathrm{id}_d,lr,lrlr,\cdots\} = \Delta_+^{\mathrm{op}}\simeq\mathsf{BiMod}([0])$.</li>
@@ -22763,23 +22823,85 @@ $$</p>
 <h3>配边谱</h3>
 <p>配边是一种<span class="link local"><a href="./广义上同调.html" title="广义上同调 [广义上同调]">广义上同调</a></span>, 配边群是一个<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的<span class="link local"><a href="./稳定同伦群.html" title=" [稳定同伦群]">稳定同伦群</a></span>, 称为 <span class="link local"><a href="./Thom谱.html" title="Thom 谱 [Thom谱]">Thom 谱</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="配边假设"><header><h1><span class="taxon"></span>配边假设 <a class="slug" href="./配边假设.html">[配边假设]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>陈述</h2>
+<p>配边假设是说, <span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span>是由一个<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半 $(\infty,n)$-范畴</a></span>.</p>
+<p><strong>命题</strong> (配边假设, 标架版本). 设 $\mathcal C$ 为<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半</a></span> $(\infty,n)$-范畴. 那么函子
+$$
+\mathsf{Bord}_n^{\mathrm{fr}} \to \mathcal C
+$$
+等同于 $\mathcal C$ 中的<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>. 准确地说,
+$$
+\operatorname{Hom}(\mathsf{Bord}_n^{\mathrm{fr}},\mathcal C) \simeq (\mathcal C^{\mathrm{fd}})^\sim,
+$$
+其中 $(-)^{\sim}$ 表示取<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>.</p>
+<p>函子 $\mathsf{Bord}_n^{\mathrm{fr}} \to \mathcal C$ 又称<span class="link local"><a href="./拓扑场论.html" title="拓扑场论 [拓扑场论]">拓扑场论</a></span> (TFT) 或拓扑量子场论 (TQFT). 配边假设表明拓扑场论由其在一个点上的取值完全确定.</p>
+<h2>例</h2>
+<h3>有限维线性空间</h3>
+<p>固定一个域 $k$. 有限维 $k$-线性空间 $V$ 是 $k$-线性空间范畴 $(\mathsf{Vect},\otimes)$ 中的可对偶对象, 给出一个函子
+$$
+\mathsf{Bord}_1^{\mathrm{fr}} \to \mathsf{Vect},
+$$</p>
+<ul>
+<li>$+ \mapsto V$,</li>
+<li>$- \mapsto V^*$ ($V$ 的对偶空间),</li>
+<li>$\varnothing\mapsto k$,</li>
+<li>下图是 $\{+,-\}$ 到 $\varnothing$ 的配边, 对应取值映射 $\mathrm{ev}\colon V^*\otimes V\to k$.</li>
+</ul>
+<img src="/assets/Bord-4.svg" alt="两个点到空集的配边" width="70" style="display:block; margin:auto;">
+<ul>
+<li>反过来的配边对应余取值映射 $\mathrm{coev}\colon k\to V\otimes V^*$; 若有 $V$ 的一组基 $\{e_i\}$ 和 $V^*$ 相应的对偶基 $\{f_i\}$, 则有
+$$
+  \operatorname{coev}(1)=\sum_i e_i\otimes f_i.
+$$</li>
+<li>闭流形 $S^1$ 对应取值和余取值映射的复合 $\operatorname{ev}\circ\operatorname{coev}\colon k\to k$, 对应一个数, 即 $\operatorname{dim}V$.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="配边范畴"><header><h1><span class="taxon"></span>配边范畴 <a class="slug" href="./配边范畴.html">[配边范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>暂且给出一种直观而不严格的描述.</p>
+<h3>切结构</h3>
 <p>首先回忆流形上的<span class="link local"><a href="./切结构.html" title="切结构 [切结构]">切结构</a></span>的概念.</p>
 <ul>
 <li>对于整数 $0\leq m \leq n$, 定义 $m$ 维流形 $M$ 的 $n$-<strong>标架</strong> (framing) 是 $TM \oplus \mathbb{R}^{n-m}$ 的平凡化.</li>
 <li>更一般地, 对于子群 $G\subset\mathrm{GL}_n$ 或群同态 $G \to \mathrm{GL}_n$, 记 $\zeta$ 为 $\mathbf{B}G\to\mathbf{B}\mathrm{GL}_n$ 对应的 $\mathbf{B}G$ 上的 $n$ 阶向量丛; 定义 $m$-维流形 $M$ 的 <span class="link local"><a href="./切结构.html" title="切结构 [切结构]">$G$-结构</a></span>为映射 $\chi\colon M\to\mathbf{B}G$ 以及同构 $TM\oplus \mathbb{R}^{n-m}\simeq \chi^*\zeta$.</li>
 <li>注意到带边 (带角) 流形上的标架自然地诱导其边界上的标架.</li>
 </ul>
-<p><strong>定义</strong> (粗略版本). 标架配边范畴 $\mathsf{Bord}_n^{G}$ 是如下 $(\infty,n)$-范畴:</p>
+<h3>配边范畴</h3>
+<p><strong>定义</strong> 带 $G$-结构的配边范畴 $\mathsf{Bord}_n^{G}$ 是如下 $(\infty,n)$-范畴:</p>
 <ul>
 <li>其对象为带 $n$-标架的 $0$ 维流形;</li>
-<li>对于 $0&lt; k\leq n$, 其 $k$-态射 $f\colon X\to Y$ 为 $k$ 维 (带角) 流形, 满足 $\partial f = X\sqcup_{\partial X=\partial Y}Y$ (且 $f$ 的边界上的标架与 $X,Y$ 相容), 态射 $X\to Y,Y\to Z$ 的复合为沿 $Y$ 粘合;</li>
+<li>对于 $0&lt; k\leq n$, 其 $k$-态射 $f\colon X\to Y$ 为 $k$ 维 (带角) 流形, 满足 $\partial f = X\sqcup_{\partial X=\partial Y}Y$ 且 $f$ 的边界上的 $G$-结构与 $X,Y$ 相容;</li>
+<li>态射 $X\to Y,Y\to Z$ 的复合为沿 $Y$ 粘合;</li>
 <li>$n$-态射之间的映射空间为 $n$-维配边之间的同胚以及同胚之间的<strong>同痕</strong> (isotopy) 构成的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</li>
 </ul>
+<p>通常 $\mathsf{Bord}_n$ 指的是 $\mathsf{Bord}_n^{\mathrm{SO}}$, 即带定向的配边范畴.</p>
+<h3>变体</h3>
+<p>配边范畴还有一些变体, 不从 $0$ 维开始, 而是从某个正维数开始.
+例如 $\mathsf{Bord}_{1,2}$ 的对象为闭 $1$ 维流形 (即若干个 $S^1$). 它是 $\mathsf{Bord}_2$ 的一个态射范畴:
+$$
+\mathsf{Bord}_{1,2} = \operatorname{Hom}_{\mathsf{Bord}_2}(\varnothing,\varnothing).
+$$</p>
+<h2>例</h2>
+<h3>一维</h3>
+<p>$\mathsf{Bord}_1^{\mathrm{fr}}$ 是如下 $(\infty,1)$-范畴:</p>
+<ul>
+<li>其对象为带 $1$-标架的 $0$ 维流形, 也即带正负号的离散点集,</li>
+<li>$1$-态射 $X\to Y$ 如下.</li>
+</ul>
+<img src="/assets/Bord-1.svg" alt="1 维标架配边范畴中的 1-态射" width="180" style="display:block; margin:auto;">
+<h3>二维</h3>
+<p>$\mathsf{Bord}_2$ 中的一个 $2$-态射如下图所示 (忽略定向).</p>
+<img src="/assets/Bord-2.svg" alt="2 维配边范畴中的 2-态射" width="180" style="display:block; margin:auto;">
+<p>$\mathsf{Bord}_2$ 中的另一个 $2$-态射 $S^1\to S^1\sqcup S^1$ 如下图所示.</p>
+<img src="/assets/Bord-3.svg" alt="2 维配边范畴中的 2-态射 (2)" width="180" style="display:block; margin:auto;">
+<p>它也是 $\mathsf{Bord}_{1,2}$ 中的 $1$-态射.</p>
 <h2>性质</h2>
-<p><span class="link local"><a href="./配边假设.html" title="配边假设 [配边假设]">配边假设</a></span></p>
+<h3>自由性质</h3>
+<p>见<span class="link local"><a href="./配边假设.html" title="配边假设 [配边假设]">配边假设</a></span>.</p>
+<h3>可对偶性</h3>
+<p>$\mathsf{Bord}_n$ 中的所有对象均<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶</a></span>.</p>
+<ul>
+<li>对象 $+$ (一个点) 的<span class="link local"><a href="./对偶对象.html" title="对偶对象 [对偶对象]">对偶</a></span>为反定向的点 $-$.</li>
+<li>对于 $k\geq 1$, 任意 $k$-态射 (定向 $k$ 维流形) $M$ 的反转 $\overline{M}$ 同时是 $M$ 的左右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</li>
+</ul>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./拓扑场论.html" title="拓扑场论 [拓扑场论]">拓扑场论</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="重整化"><header><h1><span class="taxon"></span>“重整化” <a class="slug" href="./重整化.html">[重整化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
