@@ -4,153 +4,21 @@
 <meta name="viewport" content="width=device-width"><title>层范畴</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
 
 
-
-<!-- 固定底部折叠评论区 – 放置于 <body> 内任意位置即可 -->
-<style>
-  /* 固定底部容器 – 不影响页面滚动及其他元素 */
-  .fixed-comment-wrapper {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-    pointer-events: none;   /* 让容器不干扰页面点击，内部按钮需恢复 */
-  }
-  .comment-toggle {
-    pointer-events: auto;
-    background: rgba(255,255,255,0.8);
-    backdrop-filter: blur(8px);
-    text-align: center;
-    padding: 10px 16px;
-    margin: 0 16px 12px 16px;
-    border-radius: 40px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
-    transition: 0.2s;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  .comment-toggle:hover { background: rgba(255,255,255,0.9); transform: translateY(-2px); }
-  .comment-panel {
-    pointer-events: auto;
-    background: white;
-    border-radius: 20px 20px 0 0;
-    display: none;
-    flex-direction: column;
-    max-height: 70vh;
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
-  }
-  .comment-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 16px;
-    border-bottom: 1px solid #eee;
-    font-weight: bold;
-    background: white;
-    border-radius: 20px 20px 0 0;
-  }
-  .close-comment {
-    background: #f0f0f0;
-    border: none;
-    padding: 4px 12px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 13px;
-  }
-  #tcomment {
-    padding: 16px;
-    overflow-y: auto;
-    flex: 1;
-    background: #fafafa;
-  }
-  /* 暗色模式简单适配 */
-  @media (prefers-color-scheme: dark) {
-    .comment-panel, .comment-header { background: #1e1e2f; border-color: #333; color: #eee; }
-    .close-comment { background: #2c2c3a; color: #fff; }
-    #tcomment { background: #161622; }
-  }
-</style>
-
-<div class="fixed-comment-wrapper">
-  <div class="comment-toggle" id="commentToggleBtn">展开评论区</div>
-  <div class="comment-panel" id="commentPanel">
-    <div class="comment-header">
-      <span>评论区</span>
-      <button class="close-comment" id="closeCommentBtn">收起</button>
-    </div>
-    <div id="tcomment"></div>
-  </div>
-</div>
-
+<div id="tcomment"></div>
+<script src="https://cdn.jsdelivr.net/npm/twikoo@1.7.9/dist/twikoo.min.js"></script>
 <script>
-  (function() {
-    let initialized = false;
-    let loadingPromise = null;
-    const toggle = document.getElementById('commentToggleBtn');
-    const panel = document.getElementById('commentPanel');
-    const closeBtn = document.getElementById('closeCommentBtn');
-    const container = document.getElementById('tcomment');
-
-    // 确保 Twikoo 库已加载，未加载则动态引入
-    function loadTwikoo() {
-      return new Promise((resolve, reject) => {
-        if (typeof twikoo !== 'undefined') return resolve();
-        const script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/npm/twikoo@1.7.9/dist/twikoo.min.js';
-        script.onload = () => resolve();
-        script.onerror = () => reject(new Error('Twikoo 库加载失败'));
-        document.head.appendChild(script);
-      });
+  document.addEventListener('DOMContentLoaded', function() {
+    const footer = document.querySelector('footer');
+    const commentEl = document.getElementById('tcomment');
+    if (footer && commentEl) {
+      footer.parentNode.insertBefore(commentEl, footer.nextSibling);
     }
-
-    async function initTwikoo() {
-      if (initialized) return;
-      if (loadingPromise) return loadingPromise;
-      loadingPromise = (async () => {
-        try {
-          await loadTwikoo();
-          await twikoo.init({
-            envId: 'https://simplopedia.netlify.app/.netlify/functions/twikoo', // 您的 envId
-            el: '#tcomment',
-            path: window.location.pathname,
-            lang: 'zh-CN',
-          });
-          initialized = true;
-        } catch (err) {
-          console.error(err);
-          container.innerHTML = '<div style="padding:20px;text-align:center;color:red;">评论加载失败，请刷新重试</div>';
-          throw err;
-        } finally {
-          loadingPromise = null;
-        }
-      })();
-      return loadingPromise;
-    }
-
-    // 展开面板并初始化评论（仅首次）
-    async function openPanel() {
-      panel.style.display = 'flex';
-      toggle.style.display = 'none';
-      if (!initialized) {
-        container.innerHTML = '<div style="padding:20px;text-align:center;color:#888;">⏳ 加载评论中...</div>';
-        try {
-          await initTwikoo();
-        } catch(e) { /* 错误已在 initTwikoo 中显示 */ }
-      }
-    }
-
-    function closePanel() {
-      panel.style.display = 'none';
-      toggle.style.display = 'flex';
-    }
-
-    toggle.addEventListener('click', openPanel);
-    closeBtn.addEventListener('click', closePanel);
-    // 默认折叠
-    panel.style.display = 'none';
-    toggle.style.display = 'flex';
-  })();
+    twikoo.init({
+      envId: 'https://simplopedia.netlify.app/.netlify/functions/twikoo',
+      el: '#tcomment',
+      path: location.pathname,
+    });
+  });
 </script><style>
   @font-face {
     font-family: 'NewCM10';
