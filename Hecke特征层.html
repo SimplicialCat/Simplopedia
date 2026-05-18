@@ -826,7 +826,7 @@
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
 <article><section class="block" data-taxon=""><details open><summary id="Hecke特征层"><header><h1><span class="taxon"></span>Hecke 特征层 <a class="slug" href="./Hecke特征层.html">[Hecke特征层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>Hecke 特征层 (Eigensheaf) 是指 $\operatorname{Rep}(\check{G})$ 在 <span class="link local"><a href="./主丛的模空间.html" title="“主丛的模空间” [主丛的模空间]">$\operatorname{Sh}(\mathrm{Bun}_G)$</a></span> 上的 <span class="link local"><a href="./Hecke作用.html" title=" [Hecke作用]">Hecke 作用</a></span>的<span class="link local"><a href="./特征向量.html" title="特征向量 [特征向量]">特征向量</a></span>.</p>
+<p>Hecke 特征层 (Eigensheaf) 是指 $\operatorname{Rep}(\check{G})$ 在<span class="link local"><a href="./自守层.html" title="自守层 [自守层]">自守层</a></span>的范畴 $\operatorname{Sh}(\mathrm{Bun}_G)$ 上的 <span class="link local"><a href="./Hecke作用.html" title="Hecke 作用 [Hecke作用]">Hecke 作用</a></span>的<span class="link local"><a href="./特征向量.html" title="特征向量 [特征向量]">特征向量</a></span>.</p>
 <p><span class="link local"><a href="./Grothendieck函数–层字典.html" title="“Grothendieck 函数–层字典” [Grothendieck函数–层字典]">Grothendieck 函数–层字典</a></span></p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Weil罗塞塔石碑"><header><h1><span class="taxon"></span>“Weil 罗塞塔石碑” <a class="slug" href="./Weil罗塞塔石碑.html">[Weil罗塞塔石碑]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./函数域类比.html" title="函数域类比 [函数域类比]">函数域类比</a></span></p>
@@ -836,10 +836,11 @@
 <tr><td>Galois 表示</td><td></td><td>$X$ 上的平坦 $\mathrm{GL}_n$-丛</td><td></td></tr>
 <tr><td>自守表示</td><td></td><td>$X$ 上 $\mathrm{GL}_n$-丛模叠上的 <span class="link local"><a href="./D-模.html" title="D-模 [D-模]">D-模</a></span></td><td></td></tr>
 <tr><td></td><td></td><td>带联络的全纯 $^LG$-丛</td><td></td></tr>
-<tr><td></td><td></td><td><span class="link local"><a href="./主丛的模空间.html" title="“主丛的模空间” [主丛的模空间]">主丛的模空间</a></span> $\mathrm{Bun}_G$ 上的 <span class="link local"><a href="./Hecke特征层.html" title="Hecke 特征层 [Hecke特征层]">Hecke 特征层</a></span></td><td></td></tr>
+<tr><td></td><td></td><td><span class="link local"><a href="./主丛的模空间.html" title="主丛的模空间 [主丛的模空间]">主丛的模空间</a></span> $\mathrm{Bun}_G$ 上的 <span class="link local"><a href="./Hecke特征层.html" title="Hecke 特征层 [Hecke特征层]">Hecke 特征层</a></span></td><td></td></tr>
 </tbody></table>
 </details></section><section class="block" data-taxon=""><details ><summary id="特征向量"><header><h1><span class="taxon"></span>特征向量 <a class="slug" href="./特征向量.html">[特征向量]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>设<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 作用于另一对象 $V$. 定义一个<strong>特征值</strong>为一个代数同态 $\sigma\colon A \to 1$. 定义对应于特征值 $\sigma$ 的<strong>特征向量</strong>为元素 $v \colon 1\to V$, 满足
+<h2>定义</h2>
+<p>设 $(\mathcal C,\otimes,1)$ 为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, $A$ 为其中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 设 $A$ 作用于另一对象 $V$. 定义一个<strong>特征值</strong>为一个代数同态 $\sigma\colon A \to 1$. 定义对应于特征值 $\sigma$ 的<strong>特征向量</strong>为元素 $v \colon 1\to V$, 满足
 $$
 a(v) = \sigma(a)v\,(a\in A),
 $$
@@ -860,6 +861,8 @@ $$
 \end{array}
 $$
 或者用更简洁的表述, 对于 $\sigma$ 给出的 $A$ 在 $1$ 上的作用而言, $v \colon 1 \to V$ 是 $A$-线性映射.</p>
+<p><strong>评注</strong>.
+在 $A$ 为<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>的情形中, 特征值可理解为<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span> $\operatorname{Spec}A$ 的点. 见<span class="link local"><a href="./谱分解.html" title="谱分解 [谱分解]">谱分解</a></span>.</p>
 <h2>例</h2>
 <h3>线性变换</h3>
 <p>对于 $k$-线性空间 $V$ 上的线性变换 $T$,

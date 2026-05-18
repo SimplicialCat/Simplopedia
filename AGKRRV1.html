@@ -839,12 +839,8 @@
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Excursion"><header><h1><span class="taxon"></span>远足代数 Excursion Algebra <a class="slug" href="./Excursion.html">[Excursion]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./GaitsgoryLinReevesExcALg.html" title="On the excursion algebra [GaitsgoryLinReevesExcALg]">Gaitsgory–Lin–Reeves</a></span> 的阅读笔记.</p>
 <h2>AGKRRV</h2>
-<p>本文依赖于 <span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span>. 所以这里先简述这篇文章.</p>
-<h3>局部系统的叠</h3>
-<p><span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span> 定义了 “限制变差” 局部系统的叠
-$\mathrm{LS}_G^{\text{restr}}$.</p>
-<h3>谱分解</h3>
-<p><span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span> 研究了 $\operatorname{QCoh}(\mathrm{LS}_G^{\text{restr}})$ 的作用, 以及沿 $\mathrm{LS}_G^{\text{restr}}$ 的<span class="link local"><a href="./谱分解.html" title="谱分解 [谱分解]">谱分解</a></span>.</p>
+<p>本文依赖于 <span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span>.</p>
+<p>相关笔记: <span class="link local"><a href="./notes-AGKRRV.html" title="AGKRRV [notes-AGKRRV]">AGKRRV</a></span></p>
 <h2>引言</h2>
 <h2>1. 带 $\mathbb A^1$-作用的范畴</h2>
 <p>对于代数群 $H$, 有
@@ -853,6 +849,21 @@ $$
 $$</p>
 <h2>远足代数的性质</h2>
 <p>本节将本文定义的远足代数与 V. Lafforgue 定义的代数作比较.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="notes-AGKRRV"><header><h1><span class="taxon"></span>AGKRRV <a class="slug" href="./notes-AGKRRV.html">[notes-AGKRRV]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文是 <span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span> 的阅读笔记.</p>
+<h2>观念</h2>
+<p>AGKRRV 的两个主要想法:</p>
+<ol>
+<li>定义 “限制变差” 局部系统的叠 $\mathrm{LS}_G^{\text{restr}}$. 研究对称幺半范畴 $\operatorname{QCoh}(\mathrm{LS}_G^{\text{restr}})$ 的作用, 以及其导致的沿 $\mathrm{LS}_G^{\text{restr}}$ 的<span class="link local"><a href="./谱分解.html" title="谱分解 [谱分解]">谱分解</a></span>.</li>
+<li>通过<span class="link local"><a href="./迹猜想.html" title="迹猜想 [迹猜想]">迹猜想</a></span> (Frobenius 的迹) 联系几何与算术 Langlands 纲领, 即联系<span class="link local"><a href="./自守层.html" title="自守层 [自守层]">自守层</a></span>的范畴与<span class="link local"><a href="./自守函数.html" title="自守函数 [自守函数]">自守函数</a></span>的空间. 从而前述谱分解给出自守函数空间的谱分解.</li>
+</ol>
+</details></section><section class="block" data-taxon=""><details ><summary id="自函子的迹"><header><h1><span class="taxon"></span>自函子的迹 <a class="slug" href="./自函子的迹.html">[自函子的迹]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>设 $\mathcal{C}$ 是<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶</a></span> <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>, 则可定义 $\mathcal C$ 的自函子 $F\colon \mathcal C\to\mathcal C$ 的<span class="link local"><a href="./迹.html" title="迹 [迹]">迹</a></span> $\operatorname{Tr}(F) \in \mathsf{Vect}$. 迹来自如下的复合:
+$$
+\mathsf{Vect} \overset{\mathrm{unit}}{\to} \mathcal C^\vee \otimes \mathcal C \overset{\mathrm{id}\otimes F}{\to} \mathcal C^\vee\otimes\mathcal C \overset{\mathrm{counit}}{\to} \mathsf{Vect}.
+$$</p>
+<p>该构造有一推广版本 (<span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span>): 对于函子 $F\colon \mathcal C\to \mathcal C\otimes\mathcal D$, 可定义 $\operatorname{Tr}(F)\in\mathcal D$.</p>
+<h2>例</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="谱分解"><header><h1><span class="taxon"></span>谱分解 <a class="slug" href="./谱分解.html">[谱分解]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./notion.html" title="观念 [notion]">观念</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>当交换代数作用于线性空间 (<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>) 时, 往往可将空间分解为 “特征子空间” 的和, 每个特征子空间对应于一个 “特征值”, 也即<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>的点.</p>
 <h2>例</h2>
@@ -883,5 +894,5 @@ $$
 $$</p>
 <h3>自守函数的 Hecke 作用的谱分解</h3>
 <p><span class="link local"><a href="./VLafforgueExc.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueExc]">Vincent Lafforgue</a></span> 使用某些 Hecke 函子定义了<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span>, 以给出 <span class="link local"><a href="./Langlands纲领.html" title="Langlands 纲领 [Langlands纲领]">Langlands</a></span> 预言的自守函数空间的谱分解.</p>
-<p>这一思路在<span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 纲领</a></span>中得到延续. 人们发现<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span>等同于某种局部系统模叠上的函数代数. 而提升一个范畴层级后 (见<span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span>—但这里实际上只需要提升一阶), 该种局部系统模叠上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>范畴在<span class="link local"><a href="./自守层.html" title="自守层 [自守层]">自守层</a></span>范畴上的作用可给出自守层沿局部系统模叠的谱分解, 见 <span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span>.</p>
+<p>这一思路在<span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 纲领</a></span>中得到延续. 人们发现<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span>等同于某种局部系统模叠上的函数代数. 而提升一个范畴层级后 (见<span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span>—但这里实际上只需要提升一阶), 该种局部系统模叠上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>范畴在<span class="link local"><a href="./自守层.html" title="自守层 [自守层]">自守层</a></span>范畴上的 <span class="link local"><a href="./Hecke作用.html" title="Hecke 作用 [Hecke作用]">Hecke 作用</a></span>可给出自守层沿局部系统模叠的谱分解, 见 <span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span>.</p>
 </details></section></details></section></footer></article></div></body></html>

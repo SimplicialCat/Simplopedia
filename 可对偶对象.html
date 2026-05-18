@@ -932,7 +932,8 @@ $$
 <p><span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span> $\mathsf{Bord}_n$ 中的所有对象均完全可对偶.</p>
 <ul>
 <li>范畴 $\mathsf{Bord}_n$ 的对象 $+$ (一个点) 的对偶为反定向的点 $-$.</li>
-<li>对于 $k\geq 1$, 范畴 $\mathsf{Bord}_n$ 中任意 $k$-态射 $X\to Y$ 可视为定向 $k$ 维流形 $M$, 其边界为 $\overline{X}\sqcup_{\partial X = \partial Y} Y$; $M$ 的反转 $\overline{M}$ 作为态射 $Y\to X$ 同时是 $M$ 的左右伴随.</li>
+<li>对于 $k\geq 1$, 范畴 $\mathsf{Bord}_n$ 中任意 $k$-态射 $X\to Y$ 可视为定向 $k$ 维流形 $M$, 其边界为 $\overline{X}\sqcup_{\partial X = \partial Y} Y$.</li>
+<li>对于 $1\leq k\leq n-1$, 范畴 $\mathsf{Bord}_n$ 中的 $k$-态射 $M$ 的反转 $\overline{M}$ 作为态射 $Y\to X$ 同时是 $M$ 的左右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</li>
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="微分分次范畴"><header><h1><span class="taxon"></span>微分分次范畴 <a class="slug" href="./微分分次范畴.html">[微分分次范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
@@ -946,7 +947,11 @@ $$</p>
 <h3>作为充实 $1$-范畴</h3>
 <p>定义交换环 $k$ 上的微分分次范畴为 $k$-<span class="link local"><a href="./链复形.html" title="链复形 [链复形]">链复形</a></span>的 $1$-范畴 $\mathsf{Ch}(k)$ 上的<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="自函子的迹"><header><h1><span class="taxon"></span>自函子的迹 <a class="slug" href="./自函子的迹.html">[自函子的迹]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>设 $\mathcal{C}$ 是<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶</a></span> <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>, 则可定义 $\mathcal C$ 的自函子 $F\colon \mathcal C\to\mathcal C$ 的<span class="link local"><a href="./迹.html" title="迹 [迹]">迹</a></span> $\operatorname{Tr}(F) \in \mathsf{Vect}$.</p>
+<p>设 $\mathcal{C}$ 是<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶</a></span> <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>, 则可定义 $\mathcal C$ 的自函子 $F\colon \mathcal C\to\mathcal C$ 的<span class="link local"><a href="./迹.html" title="迹 [迹]">迹</a></span> $\operatorname{Tr}(F) \in \mathsf{Vect}$. 迹来自如下的复合:
+$$
+\mathsf{Vect} \overset{\mathrm{unit}}{\to} \mathcal C^\vee \otimes \mathcal C \overset{\mathrm{id}\otimes F}{\to} \mathcal C^\vee\otimes\mathcal C \overset{\mathrm{counit}}{\to} \mathsf{Vect}.
+$$</p>
+<p>该构造有一推广版本 (<span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span>): 对于函子 $F\colon \mathcal C\to \mathcal C\otimes\mathcal D$, 可定义 $\operatorname{Tr}(F)\in\mathcal D$.</p>
 <h2>例</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="迹"><header><h1><span class="taxon"></span>迹 <a class="slug" href="./迹.html">[迹]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>

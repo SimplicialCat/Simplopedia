@@ -1474,6 +1474,39 @@ $$</p>
 <p>导出代数几何是使用<span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">高阶范畴</a></span>语言建立的<span class="link local"><a href="./代数几何.html" title="代数几何 [代数几何]">代数几何</a></span>.</p>
 <p>传统代数几何的基本代数对象是<strong>集合</strong>范畴中的交换环, 而导出代数几何将其替换为无穷范畴语境中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>, 其一种模型是所谓连合 (connective) 交换 <span class="link local"><a href="./微分分次代数.html" title="微分分次代数 [微分分次代数]">DG 代数</a></span>. 由此, 与传统的<span class="link local"><a href="./函子式代数几何.html" title="函子式代数几何 [函子式代数几何]">函子式代数几何</a></span>类似的思路可以定义仿射概形, 叠等几何对象.</p>
 <p>在<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>中, 由于我们常常默认无穷范畴语境, 故有关代数几何的概念常常默认属于导出代数几何.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="特征向量"><header><h1><span class="taxon"></span>特征向量 <a class="slug" href="./特征向量.html">[特征向量]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设 $(\mathcal C,\otimes,1)$ 为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, $A$ 为其中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 设 $A$ 作用于另一对象 $V$. 定义一个<strong>特征值</strong>为一个代数同态 $\sigma\colon A \to 1$. 定义对应于特征值 $\sigma$ 的<strong>特征向量</strong>为元素 $v \colon 1\to V$, 满足
+$$
+a(v) = \sigma(a)v\,(a\in A),
+$$
+也即下图交换 (记 $\rho\colon A\otimes V\to V$ 为 $A$ 在 $V$ 上的作用):
+$$
+\begin{array}{ccc}
+    A &amp; \overset{\sigma}{\to} &amp; 1\\
+    \!\!\!\!v\downarrow&amp;&amp;\downarrow v\!\!\!\!\\
+    A\otimes V&amp;\underset{\rho}{\to} &amp; V
+\end{array}
+$$</p>
+<p>在高阶范畴的语境中也有类似概念, 只不过是将上述条件推广为单纯对象的同态
+$$
+\begin{array}{cccccc}
+    \cdots &amp; A\otimes A \otimes 1 &amp; \rightrightarrows &amp; A\otimes 1 &amp; \overset{\sigma}{\to} &amp; 1\\
+    &amp;\downarrow &amp;&amp;\!\!\!\!v\downarrow&amp;&amp;\downarrow v\!\!\!\!\\
+    \cdots &amp; A\otimes A\otimes V &amp; \rightrightarrows&amp;A\otimes V&amp;\underset{\rho}{\to} &amp; V.
+\end{array}
+$$
+或者用更简洁的表述, 对于 $\sigma$ 给出的 $A$ 在 $1$ 上的作用而言, $v \colon 1 \to V$ 是 $A$-线性映射.</p>
+<p><strong>评注</strong>.
+在 $A$ 为<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>的情形中, 特征值可理解为<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span> $\operatorname{Spec}A$ 的点. 见<span class="link local"><a href="./谱分解.html" title="谱分解 [谱分解]">谱分解</a></span>.</p>
+<h2>例</h2>
+<h3>线性变换</h3>
+<p>对于 $k$-线性空间 $V$ 上的线性变换 $T$,
+有 $A = k[x]$ 在 $V$ 上的作用, 其中 $x$ 的作用为 $T$.
+此时 $A$ 在 $V$ 上的作用的特征向量就是传统上说的线性变换 $T$ 的特征向量.</p>
+<h3>Hecke 作用</h3>
+<p>在<span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 对应</a></span>中,
+$A = \operatorname{Rep}(\check{G})$ 作用在 $V= D(D\text{-}\mathsf{Mod}(\mathrm{Bun}_G))$ 上, 特征向量称为 <span class="link local"><a href="./Hecke特征层.html" title="Hecke 特征层 [Hecke特征层]">Hecke 特征层</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="环谱"><header><h1><span class="taxon"></span>环谱 <a class="slug" href="./环谱.html">[环谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>环谱是 <span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">$(\mathsf{Sp},\wedge)$</a></span> 中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>或<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
