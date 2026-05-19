@@ -828,7 +828,7 @@
 <article><section class="block" data-taxon=""><details open><summary id="整体域"><header><h1><span class="taxon"></span>“整体域” <a class="slug" href="./整体域.html">[整体域]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>整体域是指<span class="link local"><a href="./数域.html" title="数域 [数域]">数域</a></span>和<span class="link local"><a href="./函数域.html" title="函数域 [函数域]">函数域</a></span>.</p>
 <h2>相关概念</h2>
-<p><span class="link local"><a href="./位.html" title="“位” [位]">位</a></span></p>
+<p><span class="link local"><a href="./位.html" title="位 [位]">位</a></span></p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Adèle"><header><h1><span class="taxon"></span>Adèle <a class="slug" href="./Adèle.html">[Adèle]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <blockquote>
 <p>L’objet de la théorie du corps de classes est de montrer comment les <strong>extensions abéliennes</strong> d’un corps de nombres algébriques $K$ peuvent être déterminées par des éléments tirés de la connaissance de $K$ lui-même; ou, si l’on veut présenter les choses en termes dialectiques, comment un corps possède en soi les éléments de son propre dépassement. (类域论的目标是说明一个数域 $K$ 的 Abel 扩张如何由 $K$ 本身的信息决定.)</p>
@@ -841,11 +841,13 @@
 <h2>定义</h2>
 <p><span class="link local"><a href="./整体域.html" title="“整体域” [整体域]">整体域</a></span> $K$ 的 Adèle 环 $\mathbb A_K$ 是其所有<span class="link local"><a href="./完备化(域).html" title="完备化 (域) [完备化(域)]">完备化</a></span>的<strong>限制积</strong> (restricted product), 即 $\prod_\nu K_\nu$ 中由除有限个位置之外落在整数环 $\mathcal O_\nu$ 中的元素构成的子环.</p>
 <h2>性质</h2>
-<p>由于整体域 $K$ 的一个元素在有限个<span class="link local"><a href="./位.html" title="“位” [位]">位</a></span>上赋值非零, 故 $K$ 本身嵌入到 $\mathbb A_K$ 中.</p>
+<p>由于整体域 $K$ 的一个元素在有限个<span class="link local"><a href="./位.html" title="位 [位]">位</a></span>上赋值非零, 故 $K$ 本身嵌入到 $\mathbb A_K$ 中.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Weil群"><header><h1><span class="taxon"></span>Weil 群 <a class="slug" href="./Weil群.html">[Weil群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>Weil 群是<span class="link local"><a href="./局部域.html" title="局部域 [局部域]">局部域</a></span>或<span class="link local"><a href="./整体域.html" title="“整体域” [整体域]">整体域</a></span>的<span class="link local"><a href="./绝对Galois群.html" title="绝对 Galois 群 [绝对Galois群]">绝对 Galois 群</a></span>的一个变体.</p>
+<h2>观念</h2>
+<p>参考 <span class="link local"><a href="./ClausenWeilAnima.html" title="Weil–Moore anima [ClausenWeilAnima]">Clausen</a></span>.</p>
+<p>Weil 群是<span class="link local"><a href="./局部域.html" title="局部域 [局部域]">局部域</a></span>或<span class="link local"><a href="./整体域.html" title="“整体域” [整体域]">整体域</a></span>的<span class="link local"><a href="./绝对Galois群.html" title="绝对 Galois 群 [绝对Galois群]">绝对 Galois 群</a></span>的一个变体, 是对其<span class="link local"><a href="./平展同伦论.html" title="平展同伦论 [平展同伦论]">平展同伦型</a></span>的一个修正, 可理解为基本群.</p>
 <blockquote>
-<p>如下陈述引自 Dustin Clausen 关于推广 Weil 群的演讲.</p>
+<p>Clausen 认为 Weil 群仍然不足以描述数域的同伦型, 因为 “数域不应该是 $K(\pi,1)$”, 除 “基本群” 以外还有高阶同伦信息.</p>
 </blockquote>
 <p>回忆<span class="link local"><a href="./数域.html" title="数域 [数域]">数域</a></span> $F$ 的<span class="link local"><a href="./绝对Galois群.html" title="绝对 Galois 群 [绝对Galois群]">绝对 Galois 群</a></span>可以写成
 $$
@@ -906,18 +908,14 @@ $$
 1\to \mathbb{C}^\times\to W_{\mathbb{R}} \to\operatorname{Gal}(\mathbb{C}/\mathbb{R}) \to 1.
 $$</li>
 </ul>
-</details></section><section class="block" data-taxon=""><details ><summary id="位"><header><h1><span class="taxon"></span>“位” <a class="slug" href="./位.html">[位]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>#代数数论</p>
-<p>数域 (或<span class="link local"><a href="./整体域.html" title="“整体域” [整体域]">整体域</a></span>) $F$ 的一个位 $v$ 是乘性范数 $\|{-}\|\colon F \to \mathbb R_{\geq 0}$ (又称<span class="link local"><a href="./绝对值.html" title="“绝对值” [绝对值]">绝对值</a></span>) 的等价类, 等价关系是 $\|{-}\| \sim \|{-}\|^s\,(s&gt;0)$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="位"><header><h1><span class="taxon"></span>位 <a class="slug" href="./位.html">[位]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>数域 (或<span class="link local"><a href="./整体域.html" title="“整体域” [整体域]">整体域</a></span>) $F$ 的一个<strong>位</strong> $v$ 是乘性范数 $\|{-}\|\colon F \to \mathbb R_{\geq 0}$ (又称<span class="link local"><a href="./绝对值.html" title="“绝对值” [绝对值]">绝对值</a></span>) 的等价类, 等价关系是 $\|{-}\| \sim \|{-}\|^s\,(s&gt;0)$.</p>
 <p>整体域 $F$ 关于位 $v$ 的 (范数) <span class="link local"><a href="./完备化(域).html" title="完备化 (域) [完备化(域)]">完备化</a></span> $F_v$ 是<span class="link local"><a href="./局部域.html" title="局部域 [局部域]">局部域</a></span>.</p>
-<blockquote>
-<p>每个位都是一种将整体域完备化为局部域的方法.</p>
-</blockquote>
 <h2>例</h2>
 <h3>$\mathbb{Q}$ 的位</h3>
 <ul>
-<li>通常的绝对值给出一个位 $|{-}|\colon \mathbb{Q}\to\mathbb{R}_{\geq 0}$, 称为无穷位或 Archimedes 位. 这个位的完备化为实数域 $\mathbb{R}$.</li>
-<li>对于素数 $p$, 有一个位 $|{-}|_p\colon \mathbb{Q}\to \mathbb{R}_{\geq 0}$, 称为有限位, $|r|_p=p^{-n_p(r)}$. 这个位的完备化为 $p$-进数域 $\mathbb{Q}_p$.</li>
+<li>通常的绝对值给出一个位 $|{-}|\colon \mathbb{Q}\to\mathbb{R}_{\geq 0}$, 称为无穷位或 <strong>Archimedes 位</strong>. 这个位的完备化为实数域 $\mathbb{R}$.</li>
+<li>对于素数 $p$, 有一个位 $|{-}|_p\colon \mathbb{Q}\to \mathbb{R}_{\geq 0}$, 称为<strong>有限位</strong>, $|r|_p=p^{-n_p(r)}$. 这个位的完备化为 $p$-进数域 $\mathbb{Q}_p$.</li>
 </ul>
 <h3>$\mathbb F_q(t)$ 的位</h3>
 <ul>
@@ -940,7 +938,7 @@ $$</p>
 <p>最简单的函数域是 $\mathbb{A^1}$ 上的有理函数域 $\mathbb{F}_q(t)$. 每个函数域都是 $\mathbb{F}_q(t)$ 的有限扩张.</p>
 <p>每个函数域对应于唯一的光滑, 射影, 几何不可约 (geometrically irreducible) 曲线. 例如, $\mathbb{F}_q(t)$ 对应 $\mathbb{P}^1$.</p>
 <h2>相关概念</h2>
-<p><span class="link local"><a href="./位.html" title="“位” [位]">位</a></span></p>
+<p><span class="link local"><a href="./位.html" title="位 [位]">位</a></span></p>
 <p><span class="link local"><a href="./整体域.html" title="“整体域” [整体域]">整体域</a></span></p>
 <p><span class="link local"><a href="./函数域类比.html" title="函数域类比 [函数域类比]">函数域类比</a></span></p>
 <p><span class="link local"><a href="./Frobenius态射.html" title="Frobenius 态射 [Frobenius态射]">Frobenius 态射</a></span></p>
@@ -972,4 +970,17 @@ $$
 一般记 $k=\mathcal O / \mathfrak m$ 为其<strong></strong><span class="link local"><a href="./剩余域.html" title="剩余域 [剩余域]">剩余域</a></span> (residue field). 非 Archimedes 局部域的剩余域一定是<span class="link local"><a href="./有限域.html" title="“有限域” [有限域]">有限域</a></span>.</p>
 <p>局部域的整数环的极大理想 $\mathfrak m$ 是主理想, 其生成元 $\varpi$ 称为单值子 (uniformizer). 若取定一个单值子 $\omega$, 则域的每个元素都可以唯一地写成 $\omega^n u$, $n$ 为整数, $u\in\mathcal O^\times$ 为单位.</p>
 <p>若 $F$ 是非 Archimedes 特征 $p$ 局部域, 则 $F$ 的每个单值子 $\varpi$ 给出一个同构 $F \simeq k(\!(T)\!)$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="自守形式"><header><h1><span class="taxon"></span>自守形式 <a class="slug" href="./自守形式.html">[自守形式]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>“自守” (automorphic) 这个词的本义即是在某些变换下不变. 所以自守形式 (自守函数) 即是某些<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">群作用</a></span>的商空间上的形式 (函数). 不过在数论和 <span class="link local"><a href="./Langlands纲领.html" title="Langlands 纲领 [Langlands纲领]">Langlands 纲领</a></span>中, 自守形式有一个特指的含义.</p>
+<h2>定义</h2>
+<p>参考 <span class="link local"><a href="./VLafforgueShtICM.html" title="Shtukas for reductive groups and Langlands correspondence for function fields [VLafforgueShtICM]">Vincent Lafforgue 的 ICM 报告</a></span>.</p>
+<h3>$\mathrm{GL}_r$</h3>
+<p>当<span class="link local"><a href="./整体域.html" title="“整体域” [整体域]">整体域</a></span>为 $\mathbb{Q}$ 时, 自守形式<sup class="footnote-reference" id="自守形式_1-back"><a href="#自守形式_1">1</a></sup>是 $\mathrm{GL}_r(\mathbb{Z})\backslash\mathrm{GL}_r(\mathbb{R})$ 上的函数. 这个商空间分类的对象是 $r$ 阶自由 $\mathbb{Z}$-模 $M$ 带有同构 $M\otimes_{\mathbb{Z}}\mathbb{R}^r$ (换言之, 是 $\operatorname{Spec}\mathbb{Z}$ 上的 $r$ 阶向量丛带有 $\operatorname{Spec}\mathbb{R}$ 上的平凡化.)</p>
+<div class="footnote-definition" id="自守形式_1">
+  <sup class="footnote-definition-label"><a href="#自守形式_1-back">1</a></sup>
+<p>此处的自守形式在有限<span class="link local"><a href="./位.html" title="位 [位]">位</a></span>没有级 (level).</p>
+</div>
+<p>对于<span class="link local"><a href="./函数域.html" title="函数域 [函数域]">函数域</a></span> $F$, 取曲线 $X$ 上的<span class="link local"><a href="./位.html" title="位 [位]">位</a></span> $v$, 暂且设度数为 $1$. 这里 $v$ 类比于 $\mathbb{Q}$ 的 <span class="link local"><a href="./位.html" title="位 [位]">Archimedes 位</a></span>. 与 $\mathbb{Q}$ 的情形类比, 考虑 $X$ 上的 $r$ 阶向量丛, 带有 $v$ 的<span class="link local"><a href="./形式邻域.html" title="形式邻域 [形式邻域]">形式邻域</a></span>上的平凡化.
+注意 $X$ 上 $r$ 阶向量丛的同构类集合为 $\mathrm{Bun}_{\mathrm{GL}_r}(\mathbb F_q)$ (<span class="link local"><a href="./主丛的模空间.html" title="主丛的模空间 [主丛的模空间]">主丛的模空间</a></span>的 $\mathbb F_q$-点).</p>
 </details></section></details></section></footer></article></div></body></html>

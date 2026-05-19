@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>紧 Hausdorff 空间</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width"><title>Weil–Moore anima</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
 
 
 <div id="tcomment"></div>
@@ -825,28 +825,85 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon=""><details open><summary id="紧Hausdorff空间"><header><h1><span class="taxon"></span>紧 Hausdorff 空间 <a class="slug" href="./紧Hausdorff空间.html">[紧Hausdorff空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="代数-几何对偶"><header><h1><span class="taxon"></span>代数–几何对偶 <a class="slug" href="./代数-几何对偶.html">[代数-几何对偶]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>代数–几何对偶是数学上的一大类现象, 某种几何对象与某种代数对象之间有对偶的关系:</p>
+<article><section class="block" data-taxon=""><details open><summary id="ClausenWeilAnima"><header><h1><span class="taxon"></span>Weil–Moore anima <a class="slug" href="./ClausenWeilAnima.html">[ClausenWeilAnima]</a></h1><div class="metadata"><ul><li class="meta-item">参考资料</li><li class="meta-item">Dustin Clausen</li></ul></div></header></summary>
+<pre><code>
+@misc{clausen2026weilmooreanima,
+      title={Weil-Moore anima}, 
+      author={Dustin Clausen},
+      year={2026},
+      eprint={2605.11950},
+      archivePrefix={arXiv},
+      primaryClass={math.NT},
+      url={https://arxiv.org/abs/2605.11950}, 
+}
+
+</code></pre>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Weil群"><header><h1><span class="taxon"></span>Weil 群 <a class="slug" href="./Weil群.html">[Weil群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>参考 <span class="link local"><a href="./ClausenWeilAnima.html" title="Weil–Moore anima [ClausenWeilAnima]">Clausen</a></span>.</p>
+<p>Weil 群是<span class="link local"><a href="./局部域.html" title="局部域 [局部域]">局部域</a></span>或<span class="link local"><a href="./整体域.html" title="“整体域” [整体域]">整体域</a></span>的<span class="link local"><a href="./绝对Galois群.html" title="绝对 Galois 群 [绝对Galois群]">绝对 Galois 群</a></span>的一个变体, 是对其<span class="link local"><a href="./平展同伦论.html" title="平展同伦论 [平展同伦论]">平展同伦型</a></span>的一个修正, 可理解为基本群.</p>
+<blockquote>
+<p>Clausen 认为 Weil 群仍然不足以描述数域的同伦型, 因为 “数域不应该是 $K(\pi,1)$”, 除 “基本群” 以外还有高阶同伦信息.</p>
+</blockquote>
+<p>回忆<span class="link local"><a href="./数域.html" title="数域 [数域]">数域</a></span> $F$ 的<span class="link local"><a href="./绝对Galois群.html" title="绝对 Galois 群 [绝对Galois群]">绝对 Galois 群</a></span>可以写成
+$$
+G_F = \lim_{\text{有限 Galois 扩张 }E/F}\operatorname{Gal}(E^{\mathrm{ab}}/F),
+$$
+其中 $E^{\mathrm{ab}}$ 是 $E$ 的极大 Abel 扩张, $\operatorname{Gal}(E^{\mathrm{ab}}/F)$ 可置于如下短正合列中:
+$$
+1 \to G_E^{\mathrm{ab}} \to \operatorname{Gal}(E^{\mathrm{ab}}/F) \to \operatorname{Gal}(E/F) \to 1.
+$$
+类似地, Weil 群也可以写成
+$$
+W_F = \lim_{\text{有限 Galois 扩张 }E/F}W(E/F),
+$$
+其中 $W(E/F)$ 可置于如下短正合列中:
+$$
+1 \to C_E \to W(E/F) \to \operatorname{Gal}(E/F) \to 1.
+$$
+上述的表现使得我们有一个同态 $W_F \to G_F$.</p>
+<h2>定义</h2>
+<blockquote>
+<p>Tate, <em>Number Theoretic Background</em></p>
+</blockquote>
+<p>设 $F$ 为<span class="link local"><a href="./局部域.html" title="局部域 [局部域]">局部域</a></span>或<span class="link local"><a href="./整体域.html" title="“整体域” [整体域]">整体域</a></span>, $\overline{F}$ 为其可分闭包.</p>
+<p>对 $F$ 在 $\overline{F}$ 中的有限扩张 $E$, 记 $G_E = \mathrm{Gal}(\overline{F}/E)$.
+记 $C_E$ 为如下群:</p>
 <ul>
-<li>取几何对象上的某种 “函数”, 得到代数对象;</li>
-<li>取代数对象的 “<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>”, 得到几何对象.</li>
+<li>局部域的情形, $C_E = E^\times$;</li>
+<li>整体域的情形, $C_E$ 为理元类群 (idele class group) $\mathbb A_E^\times / E^\times$.</li>
 </ul>
-<p>这两个操作通常是一对<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>, 甚至是范畴等价.</p>
-<p>在高阶范畴语境中, 代数–几何对偶中的 “函数” 表现为 “集合值” 甚至 “范畴值” 的函数, 也就是所谓<span class="link local"><a href="./景上的层.html" title="景上的层 [景上的层]">层</a></span>.</p>
+<p>定义 Weil 群为三元组 $(W_F, \varphi, \{r_E\})$, 其中</p>
+<ul>
+<li>$W_F$ 为拓扑群, $\varphi \colon W_F \to G_F$ 为连续同态, 其像稠密 ($\varphi$ 连续意味着 $W_E := \varphi^{-1}(G_E)$ 是 $W_F$ 的开子集, 而其像稠密意味着 $\varphi$ 给出的映射 $W_F/ W_E \simeq G_F / G_E = \operatorname{Hom}_F(E,\overline{F})$ 是双射);</li>
+<li>对每个 $E$ 有同构 $r_E \colon C_E \to W_E^{\mathrm{ab}}$, 满足如下条件.
+<ul>
+<li>复合 $C_E \to W_E^{\mathrm{ab}} \overset{\varphi}{\to} G_E^{\mathrm{ab}}$ 是类域论中的互反律同态;</li>
+<li>对于 $w\in W_F$, 记 $\sigma = \varphi(w) \in G_F$, 则 $\sigma \colon C_E \to C_{E^\sigma}$ 与 $w$ 的共轭 $W_E^{\mathrm{ab}} \to W_{E^\sigma}^{\mathrm{ab}}$ 相容;</li>
+<li>对于 $E' \subset E$, 含入映射 $C_{E'} \subset C_{E}$ 与 “转移” 映射 $W_{E'}^{\mathrm{ab}} \to W_{E}^{\mathrm{ab}}$ 相容;</li>
+<li>$W_F \simeq \operatorname{lim}_E W_{E/F}$, 其中 $W_{E/F} := W_F / W_E^c$ 称为<strong>相对 Weil 群</strong>.</li>
+</ul>
+</li>
+</ul>
+<h3>$p$-进域的情形</h3>
+<p>$p$-进<span class="link local"><a href="./局部域.html" title="局部域 [局部域]">局部域</a></span> (即 $\mathbb{Q}_p$ 的有限扩张) $F$ 的 Weil 群 $W_F$ 是如下拉回:
+$$
+\begin{array}
+{ccc}
+W_F &amp; \to &amp; \mathbb{Z} \\
+\downarrow &amp;&amp; \downarrow \\
+\operatorname{Gal}(\overline{F}/F) &amp; \to &amp; \operatorname{Gal}(\overline{k}/k)=\widehat {\mathbb{Z}}.
+\end{array}
+$$</p>
+<p><strong>关于典范性的评注</strong>. 与<span class="link local"><a href="./绝对Galois群.html" title="绝对 Galois 群 [绝对Galois群]">绝对 Galois 群</a></span>类似, Weil 群对于给定的域 $F$ 并不是典范的, 而是相差一个共轭, 因为它依赖于可分闭包的选取. 但是, 与绝对 Galois 群类似, 群 $W_F$ 的<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">分类空间</a></span> $\mathbf{B}W_F$ 是典范的.</p>
 <h2>例</h2>
-<h3>Gelfand 对偶</h3>
-<p><span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>对偶于交换 <span class="link local"><a href="./C-星代数.html" title="C*-代数 [C-星代数]">C*-代数</a></span>.</p>
-<p>注意这个等价的关键原因是 Urysohn 引理保证了紧 Hausdorff 空间上有足够多的 $\mathbb{C}$-值连续函数.</p>
-<h3>Stone 对偶</h3>
-<p><span class="link local"><a href="./pro-有限集.html" title="pro-有限集 [pro-有限集]">Pro-有限集</a></span><span class="link local"><a href="./对偶(范畴论).html" title="对偶 (范畴论) [对偶(范畴论)]">对偶</a></span>于 <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>.</p>
-<h3>仿射概形</h3>
-<p><span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span><span class="link local"><a href="./对偶(范畴论).html" title="对偶 (范畴论) [对偶(范畴论)]">对偶</a></span>于交换环. 这个事实可以作为仿射概形的定义.</p>
-<p>环上的模的<span class="link local"><a href="./张量-同态伴随.html" title="“张量-同态伴随” [张量-同态伴随]">张量-同态伴随</a></span>类比空间上的层的<span class="link local"><a href="./直像-逆像伴随.html" title="拓扑空间上的直像-逆像伴随 [直像-逆像伴随]">直像-逆像伴随</a></span>.</p>
-<h3>淡中对偶</h3>
-<p><span class="link local"><a href="./淡中对偶.html" title="淡中对偶 [淡中对偶]">淡中 (Tannaka) 对偶</a></span>是某种几何对象与其上的某种层范畴的对偶.</p>
-<h2>相关概念</h2>
-<p><span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法–语义对偶</a></span></p>
+<ul>
+<li>$\mathbb{C}$ 的 Weil 群是 $\mathbb{C}^\times$.</li>
+<li>$\mathbb{R}$ 的 Weil 群是 $W_\mathbb{R} = \mathbb{C}^\times \sqcup j\mathbb{C}^\times$, 其中 $j^2=-1$, $jcj^{-1}=\bar{c}$ ($c\in \mathbb{C}^\times$). 这个群处于如下正合列中:
+$$
+1\to \mathbb{C}^\times\to W_{\mathbb{R}} \to\operatorname{Gal}(\mathbb{C}/\mathbb{R}) \to 1.
+$$</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="凝聚态集合"><header><h1><span class="taxon"></span>凝聚态集合 <a class="slug" href="./凝聚态集合.html">[凝聚态集合]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./凝聚态数学.html" title="凝聚态数学 [凝聚态数学]">凝聚态数学</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>凝聚态集合是由 <span class="link local"><a href="./pro-有限集.html" title="pro-有限集 [pro-有限集]">pro-有限集</a></span>通过<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>组建起来的. 它有点像带有拓扑的集合, 但凝聚态集合范畴比拓扑空间范畴性质更好: 它构成一个<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>.</p>
@@ -876,25 +933,33 @@ $$</p>
 <p>T1 拓扑空间可视为凝聚态集合. 其中, 可度量化拓扑空间范畴到凝聚态集合范畴有全忠实的嵌入.</p>
 <h3>与 Abel 范畴的关系</h3>
 <p>凝聚态集合范畴中的 Abel 群 (即<span class="link local"><a href="./凝聚态Abel群.html" title="凝聚态 Abel 群 [凝聚态Abel群]">凝聚态 Abel 群</a></span>) 构成 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="谱(代数)"><header><h1><span class="taxon"></span>谱 (代数–几何对偶) <a class="slug" href="./谱(代数).html">[谱(代数)]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>本页面谈论<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>中的 “谱” 的广泛概念. 同伦论中的<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>与这个概念没有从属关系, 只是不幸地占有同一个名称. (更不幸的是, 谱代数几何要讨论<span class="link local"><a href="./环谱.html" title="环谱 [环谱]">环谱</a></span>的谱…)</p>
-<hr />
-<p>谱是一种与代数<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">对偶</a></span>的对象. 这里的 “代数” 是非常广泛的概念, 不限于<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 通常, 某种代数的谱 $\operatorname{Spec}A$ 满足这样的性质:</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="生象"><header><h1><span class="taxon"></span>生象, ∞-群胚 <a class="slug" href="./生象.html">[生象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>从现代数学的观点, “<strong>生象</strong>” 的概念代替了传统的 “集合” 的概念: 对生象的最好描述就是<strong>一类数学对象的全体构成一个生象</strong>.</p>
+<p>对 “生象” 这一名称的两种解释 (均来自提出者本人, 参见 <span class="link local"><a href="./ClausenWeilAnima.html" title="Weil–Moore anima [ClausenWeilAnima]">Clausen</a></span>, <span class="link local"><a href="./CesnaviciusScholzePurity.html" title="Purity for flat cohomology [CesnaviciusScholzePurity]">Cesnavicius–Scholze</a></span> 等):</p>
 <ul>
-<li>代数同态 $A \to B$ 对应于谱的映射 $\operatorname{Spec}B\to \operatorname{Spec} A$. (这一事实有时可直接作为函子 $\operatorname{Spec}$ 的定义.)</li>
-<li>特别地, 若 $\operatorname{Spec}B$ 是一个类似于 “点” 的几何对象, 也就是其中没有 “更小” 的部分 (意味着 $B$ 是一个不能 “更小” 的代数), 那么代数同态 $A\to B$ 给出了 $\operatorname{Spec}A$ 的一个 “点”. 这个事实有时是 $\operatorname{Spec}A$ 的定义.</li>
+<li>相比于 “死板” 的集合概念, 生象中的点更为 “生动” (animated), 可以在 “连通分支” 中移动.</li>
+<li>Anima 有 “灵魂” 之意, 而生象的一个来源是从拓扑空间或其它几何对象中 “除去了实体” 而提取的同伦信息.</li>
 </ul>
-<h2>例</h2>
-<h3>交换代数</h3>
+<p>在<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span> (尤其是<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴论</a></span>) 上, 生象等同于 <span class="link local"><a href="./∞-群胚.html" title="∞-群胚 [∞-群胚]">$\infty$-群胚</a></span>. 但是它值得一个特别的名字, 因为它比范畴的概念更为基本.</p>
+<h3>从集合到生象</h3>
+<p>当我们把一类事物放到一起作为一个整体来谈论的时候, “<strong>集合</strong>” 的概念便产生了. 随着数学 (尤其是同伦论, 高阶代数) 的发展, 人们发现数学语言中的 “集合” 有时不能表达实践中的 “一类事物的集体” 这一概念, 其关键的缺陷在于对<strong>何为相等</strong>这一问题的过于草率的回答.</p>
+<p>诚然, 对于基础算术而言, 何为相等不是一个问题: $1+1$ 等于 $2$ 而不等于 $3$; 任何两个数<strong>要么</strong>相等, <strong>要么</strong>不相等, 绝无第三种情形. 但当数学研究的对象从简单的数变成了代数, 拓扑空间, 层, 叠等等越来越复杂的结构时, 这些对象之间的相等不再是一个是或否的命题, 而是一个同样越来越复杂的问题. 甚至一个对象和自身的相等也可能不是一个平凡的命题, 而是存在多个不平凡的途径.</p>
+<p>最终人们走向这样一个观念:</p>
+<p><strong>一类事物的 “集合” 之中, 任何两个事物之间的等式须构成一类新的事物</strong>, 从而这个新的 “集合” 中又可以谈论相等构成的 “集合”, 以至于无穷. 这种革新的 “集合” 概念就是<strong>生象</strong>.</p>
+<p>生象有别于集合的特点在于, 生象 $A$ 中两个元素 $x,y$ 之间的<strong>相等</strong>不一定是一个是或否的<strong>命题</strong>, 而是一个新的<strong>生象</strong> (换言之, 相等是<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构而非性质</a></span>), 记作 $x =_A y$. 一个直观是空间中两个点之间的道路空间.</p>
+<p>当然, 集合是特殊的生象, 集合的定义是任何两个元素之间的相等都是<span class="link local"><a href="./命题(同伦类型论).html" title="命题 (同伦类型论) [命题(同伦类型论)]">命题</a></span>的生象.</p>
+<p>一种适合用于谈论生象的语言是<span class="link local"><a href="./同伦类型论.html" title="同伦类型论 [同伦类型论]">同伦类型论</a></span>.</p>
+<h2>性质</h2>
+<h3>生象的范畴</h3>
+<p>生象的范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 是最基本的 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">∞-范畴</a></span>, 也是最简单的 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span>.</p>
+<h3>生象的表现</h3>
+<p>如下类型的对象可以<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>生象, 其表现的生象有时称为<strong>同伦型</strong>:</p>
 <ul>
-<li>交换环的谱是<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>.</li>
-<li>交换 <span class="link local"><a href="./C-星代数.html" title="C*-代数 [C-星代数]">C*-代数</a></span>的谱是<span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>.</li>
+<li><span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span></li>
+<li>拓扑空间</li>
+<li><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> (见<span class="link local"><a href="./∞-意象的形.html" title="意象的形 [∞-意象的形]">意象的形</a></span>)</li>
 </ul>
-<h3>逻辑学中的代数</h3>
-<ul>
-<li><span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>的谱是其 <span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span>.</li>
-<li><span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span> …</li>
-</ul>
-<h3>综合代数几何</h3>
-<p>…</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./生象化.html" title="生象化 [生象化]">生象化</a></span></p>
 </details></section></details></section></footer></article></div></body></html>
