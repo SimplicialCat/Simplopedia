@@ -1058,6 +1058,13 @@ $$
 </ul>
 <p>换言之, $\mathsf{El}(F)$ 是如下的<span class="link local"><a href="./松拉回.html" title="松拉回 [松拉回]">松拉回</a></span>.</p>
 <p><figure><img src="./元素范畴-1.svg" class="color-invert"/></figure></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="共尾函子"><header><h1><span class="taxon"></span>共尾函子 <a class="slug" href="./共尾函子.html">[共尾函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>共尾函子是不改变余极限的指标代换, 即对于共尾函子 $f\colon I\to J$ 以及图表 $X\colon J\to \mathcal C$,
+$$
+\operatorname{colim}_{i\in I}X_{f(i)}\to \operatorname{colim}_{j\in J}X_j
+$$
+为等价.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单纯形范畴"><header><h1><span class="taxon"></span>单纯形范畴 <a class="slug" href="./单纯形范畴.html">[单纯形范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>单纯形范畴的对象是 “标准” 的, “组合” 的单纯形, 也即有限全序集.</p>
@@ -1255,6 +1262,26 @@ $$
 </ul>
 <h2>相关资料</h2>
 <p>见<span class="link local"><a href="./盲人摸象.html" title="盲人摸象 [盲人摸象]">盲人摸象</a></span> A.5 节.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="扭箭头范畴"><header><h1><span class="taxon"></span>扭箭头范畴 <a class="slug" href="./扭箭头范畴.html">[扭箭头范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>范畴 $\mathcal C$ 的<strong>扭箭头范畴</strong> (twisted arrow category) $\mathsf{TwArr}(\mathcal C)$ 是其 Hom 函子 $\operatorname{Hom}_{\mathcal C}(-,-)\colon \mathcal C^{\mathrm{op}}\times\mathcal C\to\mathsf{Ani}$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span>.</p>
+<p>具体地, $\mathsf{TwArr}(\mathcal C)$ 的对象为箭头 $f\colon X\to Y$, 态射为如下交换图.
+$$
+\begin{array}{ccc}
+X_1 &amp; \overset{f}{\rightarrow} &amp; Y_1 \\
+\uparrow &amp;  &amp; \downarrow \\
+X_2 &amp; \underset{g}{\rightarrow} &amp; Y_2
+\end{array}
+$$</p>
+<p>注意文献中这个概念有时会相差一个反范畴.</p>
+<h2>性质</h2>
+<p>对于两个函子 $F_1,F_2,\mathcal C\to\mathcal D$,
+$$
+\begin{aligned}
+&amp;\operatorname{Hom}_{\mathsf{Fun}(\mathcal C,\mathcal D)}(F_1,F_2)\\
+\simeq\operatorname{lim}_{(X\to Y)\in\mathsf{TwArr}(\mathcal C)}&amp;\operatorname{Hom}_{\mathcal D}(F_1(X),F_2(Y)).
+\end{aligned}
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="数学基础"><header><h1><span class="taxon"></span>数学基础 <a class="slug" href="./数学基础.html">[数学基础]</a></h1><div class="metadata"><ul><li class="meta-item">学科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>分支</h2>
 <h3>范畴论</h3>

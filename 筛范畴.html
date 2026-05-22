@@ -834,14 +834,47 @@ $$
 \operatorname{colim}_{i\in I}\prod_{s\in S}F(i,s)\to\prod_{s\in S}\operatorname{colim}_{i\in I}F(i,s)
 $$
 为同构;</li>
-<li>对角线 $I\to I\times I$ 为共尾函子 (final functor, 又叫 cofinal functor, 意为沿该函子的限制不改变余极限);</li>
+<li>对角线 $I\to I\times I$ 为<span class="link local"><a href="./共尾函子.html" title="共尾函子 [共尾函子]">共尾函子</a></span> (final functor, 又叫 cofinal functor, 意为沿该函子的限制不改变余极限);</li>
 <li>对任意有限集 (有限离散范畴) $S$, 对角线 $I\to I^S$ 为共尾函子;</li>
 <li>对任意两个对象 $i_1,i_2\in I$, 范畴 $\operatorname{cospan}(i_1,i_2)$ (其对象为 $i\in I$ 以及态射 $i_1\to i$, $i_2\to i$) 连通.</li>
 </ul>
 <p>以筛范畴为指标范畴的余极限称为<strong>筛余极限</strong> (sifted colimit).</p>
 <h2>例</h2>
 <p><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>的对偶 $\Delta^{\mathrm{op}}$ 为筛范畴. 以此为指标的余极限叫单纯对象的几何实现, 也叫<span class="link local"><a href="./杠构造.html" title="杠构造 [杠构造]">杠构造</a></span>.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="生象化"><header><h1><span class="taxon"></span>生象化 <a class="slug" href="./生象化.html">[生象化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="notes-GKRV"><header><h1><span class="taxon"></span>GKRV <a class="slug" href="./notes-GKRV.html">[notes-GKRV]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文是 <span class="link local"><a href="./GKRV.html" title="A toy model for the Drinfeld–Lafforgue shtuka construction [GKRV]">GKRV</a></span> 的阅读笔记. 这篇文章是 <span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span> 在拓扑语境中的玩具模型.</p>
+<h2>1. 对称幺半范畴沿空间积分</h2>
+<p>本节的范畴都是指 <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>.</p>
+<p>设 $\mathcal A$ 为对称幺半范畴, $Y$ 为空间 (即<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>). 考虑范畴 $\mathcal A^{\otimes Y} = \operatorname{colim}^{\mathsf{SymMonCat}}_Y\mathcal A$. 我们可以在三种不同语境下描述这个范畴:</p>
+<ul>
+<li>对称幺半范畴,</li>
+<li>幺半范畴,</li>
+<li>范畴.</li>
+</ul>
+<p>总之, 设 $\mathcal C$ 是上述某种范畴的全体.</p>
+<p><strong>命题</strong>. 范畴 $\mathcal A^{\otimes Y}$ (遗忘到 $\mathcal C$ 中) 等同于如下的余极限:
+$$
+\mathcal A^{\otimes Y} = \operatorname{colim}^{\mathcal C}_{(I\to J)\in\mathsf{TwArr}(\mathsf{Fin})} \operatorname{colim}_{\operatorname{Hom}(J,Y)}^{\mathcal C}\mathcal A^{\otimes I}.
+$$
+其中 $\mathsf{TwArr}(-)$ 表示<span class="link local"><a href="./扭箭头范畴.html" title="扭箭头范畴 [扭箭头范畴]">扭箭头范畴</a></span>.</p>
+<p>注意, 三种语境中一般的余极限不相容 (余极限的底层范畴不同); 但<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>是相容的.</p>
+<p><strong>引理</strong>. 函子 $\mathsf{Ani}\to\mathcal C$, $Y\mapsto \mathcal A^{\otimes Y}$ 是其沿 $\mathsf{Fin}\to\mathsf{Set}$ 的限制的左 Kan 扩张.</p>
+<p><em>证明</em>. 这是因为对任意 $Y\in\mathsf{Ani}$, 左 Kan 扩张的计算式中的指标范畴 $\mathsf{Fin}_{/Y}$ 是<span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span>, 而遗忘函子 $\mathsf{SymMonCat}\to\mathsf{MonCat}\to\mathsf{Cat}$ 均保持<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span> (这一事实对更一般的算畴的代数成立).</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="滤范畴"><header><h1><span class="taxon"></span>滤范畴 <a class="slug" href="./滤范畴.html">[滤范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>滤范畴是满足如下等价条件的范畴 $\mathcal C$:</p>
+<ul>
+<li>$\mathcal C$ 中所有<span class="link local"><a href="./有限范畴.html" title="有限范畴 [有限范畴]">有限</a></span>图都有<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">锥</a></span>;</li>
+<li>在 $\mathsf{Set}$ 中, 以 $\mathcal C$ 为指标范畴的余极限与所有<span class="link local"><a href="./有限范畴.html" title="有限范畴 [有限范畴]">有限</a></span>极限交换.</li>
+<li>对任意<span class="link local"><a href="./有限范畴.html" title="有限范畴 [有限范畴]">有限范畴</a></span> $K$, 对角线 $\Delta\colon \mathcal C\to\mathcal C^K$ 为<span class="link local"><a href="./共尾函子.html" title="共尾函子 [共尾函子]">共尾函子</a></span>.</li>
+</ul>
+<p>依惯例, <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$\infty$-范畴</a></span>语境下 $\mathsf{Set}$ 改用 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span>.</p>
+<h2>例</h2>
+<h3>有限子集</h3>
+<p>集合 $S$ 的有限子集在包含关系下构成滤范畴. 这一规律同样适用于任何<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>的模型的全体有限生成 (有限表现) 子模型.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="生象化"><header><h1><span class="taxon"></span>生象化 <a class="slug" href="./生象化.html">[生象化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>许多代数结构 (环, 模, 交换代数等) 可在<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>语境中谈论, 例如<span class="link local"><a href="./生象环.html" title="生象环 [生象环]">生象环</a></span>; 此时其构成的范畴 (例如 $\mathsf{AniRing}$) 与集合语境中的相应范畴 (例如普通环的范畴 $\mathsf{Ring}$) 有特定的联系, 这种联系就是<strong>生象化</strong>. <span class="link local"><a href="./代数范畴.html" title="代数范畴 [代数范畴]">代数范畴</a></span>的生象化给出生象语境中的代数概念; 不过生象化不局限于代数范畴.</p>
 <p>生象化的<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>是<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>的非 Abel 类比.</p>
@@ -851,4 +884,9 @@ $$
 <h2>例</h2>
 <p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的范畴 $\mathsf{Ani}$ 是集合范畴 $\mathsf{Set}$ 的生象化.</p>
 <p><span class="link local"><a href="./生象环.html" title="生象环 [生象环]">生象环</a></span>的范畴 $\mathsf{AniRing}$ 是环范畴 $\mathsf{Ring}$ 的生象化.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="筛余极限"><header><h1><span class="taxon"></span>筛余极限 <a class="slug" href="./筛余极限.html">[筛余极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>筛余极限 (sifted colimit) 是以<span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span>为指标范畴的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>
+<h2>例</h2>
+<p><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯</a></span>图表的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>是筛余极限.</p>
 </details></section></details></section></footer></article></div></body></html>

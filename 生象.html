@@ -1140,6 +1140,25 @@ $$</p>
 <tr><td><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></td><td>$\displaystyle \int_M \Omega_M X$</td><td>$\displaystyle\int_M A[-n]$</td></tr>
 <tr><td>紧支集截面</td><td>$\Gamma_{\mathrm{c}}(M,X)$</td><td>$\operatorname{colim}_M A[-n]$</td></tr>
 </tbody></table>
+</details></section><section class="block" data-taxon=""><details ><summary id="notes-GKRV"><header><h1><span class="taxon"></span>GKRV <a class="slug" href="./notes-GKRV.html">[notes-GKRV]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文是 <span class="link local"><a href="./GKRV.html" title="A toy model for the Drinfeld–Lafforgue shtuka construction [GKRV]">GKRV</a></span> 的阅读笔记. 这篇文章是 <span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span> 在拓扑语境中的玩具模型.</p>
+<h2>1. 对称幺半范畴沿空间积分</h2>
+<p>本节的范畴都是指 <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>.</p>
+<p>设 $\mathcal A$ 为对称幺半范畴, $Y$ 为空间 (即<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>). 考虑范畴 $\mathcal A^{\otimes Y} = \operatorname{colim}^{\mathsf{SymMonCat}}_Y\mathcal A$. 我们可以在三种不同语境下描述这个范畴:</p>
+<ul>
+<li>对称幺半范畴,</li>
+<li>幺半范畴,</li>
+<li>范畴.</li>
+</ul>
+<p>总之, 设 $\mathcal C$ 是上述某种范畴的全体.</p>
+<p><strong>命题</strong>. 范畴 $\mathcal A^{\otimes Y}$ (遗忘到 $\mathcal C$ 中) 等同于如下的余极限:
+$$
+\mathcal A^{\otimes Y} = \operatorname{colim}^{\mathcal C}_{(I\to J)\in\mathsf{TwArr}(\mathsf{Fin})} \operatorname{colim}_{\operatorname{Hom}(J,Y)}^{\mathcal C}\mathcal A^{\otimes I}.
+$$
+其中 $\mathsf{TwArr}(-)$ 表示<span class="link local"><a href="./扭箭头范畴.html" title="扭箭头范畴 [扭箭头范畴]">扭箭头范畴</a></span>.</p>
+<p>注意, 三种语境中一般的余极限不相容 (余极限的底层范畴不同); 但<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>是相容的.</p>
+<p><strong>引理</strong>. 函子 $\mathsf{Ani}\to\mathcal C$, $Y\mapsto \mathcal A^{\otimes Y}$ 是其沿 $\mathsf{Fin}\to\mathsf{Set}$ 的限制的左 Kan 扩张.</p>
+<p><em>证明</em>. 这是因为对任意 $Y\in\mathsf{Ani}$, 左 Kan 扩张的计算式中的指标范畴 $\mathsf{Fin}_{/Y}$ 是<span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span>, 而遗忘函子 $\mathsf{SymMonCat}\to\mathsf{MonCat}\to\mathsf{Cat}$ 均保持<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span> (这一事实对更一般的算畴的代数成立).</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="quantumtori"><header><h1><span class="taxon"></span>量子圆环 <a class="slug" href="./quantumtori.html">[quantumtori]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是陈–赵的一篇短文 <span class="link local"><a href="./ChenZhaoQuantumTori.html" title="The Quantum Torus as an E_M-category [ChenZhaoQuantumTori]">The Quantum Torus as an $\mathbb E_M$-Category</a></span> 的阅读笔记.</p>
 <p>记号一览:</p>
@@ -2381,7 +2400,7 @@ $$
 \operatorname{colim}_{i\in I}\prod_{s\in S}F(i,s)\to\prod_{s\in S}\operatorname{colim}_{i\in I}F(i,s)
 $$
 为同构;</li>
-<li>对角线 $I\to I\times I$ 为共尾函子 (final functor, 又叫 cofinal functor, 意为沿该函子的限制不改变余极限);</li>
+<li>对角线 $I\to I\times I$ 为<span class="link local"><a href="./共尾函子.html" title="共尾函子 [共尾函子]">共尾函子</a></span> (final functor, 又叫 cofinal functor, 意为沿该函子的限制不改变余极限);</li>
 <li>对任意有限集 (有限离散范畴) $S$, 对角线 $I\to I^S$ 为共尾函子;</li>
 <li>对任意两个对象 $i_1,i_2\in I$, 范畴 $\operatorname{cospan}(i_1,i_2)$ (其对象为 $i\in I$ 以及态射 $i_1\to i$, $i_2\to i$) 连通.</li>
 </ul>

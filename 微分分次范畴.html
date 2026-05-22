@@ -880,6 +880,25 @@ $$
 (\mathcal A^{\text{rev}}\otimes\mathcal B)\text{-}\mathrm{Mod}(\mathsf{DGCat}),
 $$
 其中 $\mathcal A^{\text{rev}}$ 表示将 $\mathcal A$ 的乘法 (幺半结构) 反转.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="notes-GKRV"><header><h1><span class="taxon"></span>GKRV <a class="slug" href="./notes-GKRV.html">[notes-GKRV]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文是 <span class="link local"><a href="./GKRV.html" title="A toy model for the Drinfeld–Lafforgue shtuka construction [GKRV]">GKRV</a></span> 的阅读笔记. 这篇文章是 <span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span> 在拓扑语境中的玩具模型.</p>
+<h2>1. 对称幺半范畴沿空间积分</h2>
+<p>本节的范畴都是指 <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>.</p>
+<p>设 $\mathcal A$ 为对称幺半范畴, $Y$ 为空间 (即<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>). 考虑范畴 $\mathcal A^{\otimes Y} = \operatorname{colim}^{\mathsf{SymMonCat}}_Y\mathcal A$. 我们可以在三种不同语境下描述这个范畴:</p>
+<ul>
+<li>对称幺半范畴,</li>
+<li>幺半范畴,</li>
+<li>范畴.</li>
+</ul>
+<p>总之, 设 $\mathcal C$ 是上述某种范畴的全体.</p>
+<p><strong>命题</strong>. 范畴 $\mathcal A^{\otimes Y}$ (遗忘到 $\mathcal C$ 中) 等同于如下的余极限:
+$$
+\mathcal A^{\otimes Y} = \operatorname{colim}^{\mathcal C}_{(I\to J)\in\mathsf{TwArr}(\mathsf{Fin})} \operatorname{colim}_{\operatorname{Hom}(J,Y)}^{\mathcal C}\mathcal A^{\otimes I}.
+$$
+其中 $\mathsf{TwArr}(-)$ 表示<span class="link local"><a href="./扭箭头范畴.html" title="扭箭头范畴 [扭箭头范畴]">扭箭头范畴</a></span>.</p>
+<p>注意, 三种语境中一般的余极限不相容 (余极限的底层范畴不同); 但<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>是相容的.</p>
+<p><strong>引理</strong>. 函子 $\mathsf{Ani}\to\mathcal C$, $Y\mapsto \mathcal A^{\otimes Y}$ 是其沿 $\mathsf{Fin}\to\mathsf{Set}$ 的限制的左 Kan 扩张.</p>
+<p><em>证明</em>. 这是因为对任意 $Y\in\mathsf{Ani}$, 左 Kan 扩张的计算式中的指标范畴 $\mathsf{Fin}_{/Y}$ 是<span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span>, 而遗忘函子 $\mathsf{SymMonCat}\to\mathsf{MonCat}\to\mathsf{Cat}$ 均保持<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span> (这一事实对更一般的算畴的代数成立).</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="充实范畴"><header><h1><span class="taxon"></span>充实范畴 <a class="slug" href="./充实范畴.html">[充实范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>充实范畴</strong>是范畴的推广, 其对象之间的 “态射集” 不是集合, 而是更一般的幺半范畴的对象.</p>
@@ -928,7 +947,7 @@ $$</p>
 <p>几何 Langlands 对应是<span class="link local"><a href="./Langlands对应.html" title="经典 Langlands 对应 [Langlands对应]">经典 Langlands 对应</a></span>的<span class="link local"><a href="./函数域类比.html" title="函数域类比 [函数域类比]">函数域类比</a></span>, 以及其在复代数曲线 (<span class="link local"><a href="./Riemann面.html" title="“Riemann 面” [Riemann面]">Riemann 面</a></span>) 上的进一步类比.</p>
 <p>todo: 重写</p>
 <p><span class="link local"><a href="./Galois表示.html" title=" [Galois表示]">Galois 表示</a></span>理解为 <span class="link local"><a href="./l-进局部系统.html" title=" [l-进局部系统]">$\ell$-进层</a></span>.</p>
-<p>非分歧<span class="link local"><a href="./自守表示.html" title="“自守表示” [自守表示]">自守表示</a></span>给出 $\mathrm{GL}_n(F) \backslash \mathrm{GL}_n(\mathbb A) / \mathrm{GL}_n(\mathcal O)$ 上的函数 $f_\pi$ (差一个常数), 它是 <span class="link local"><a href="./Hecke代数.html" title="Hecke 代数 [Hecke代数]">Hecke 代数</a></span> $\mathcal H_x, x\in X$ 的特征函数. 使用 <span class="link local"><a href="./Grothendieck函数–层字典.html" title="“Grothendieck 函数–层字典” [Grothendieck函数–层字典]">Grothendieck 函数–层字典</a></span>, 该函数对应于 $X$ 上的 $G$-丛模空间上的 Hecke 特征层.</p>
+<p>非分歧<span class="link local"><a href="./自守表示.html" title="“自守表示” [自守表示]">自守表示</a></span>给出 $\mathrm{GL}_n(F) \backslash \mathrm{GL}_n(\mathbb A) / \mathrm{GL}_n(\mathcal O)$ 上的函数 $f_\pi$ (差一个常数), 它是 <span class="link local"><a href="./Hecke代数.html" title="Hecke 代数 [Hecke代数]">Hecke 代数</a></span> $\mathcal H_x, x\in X$ 的特征函数. 使用 <span class="link local"><a href="./Grothendieck函数–层字典.html" title="Grothendieck 函数–层字典 [Grothendieck函数–层字典]">Grothendieck 函数–层字典</a></span>, 该函数对应于 $X$ 上的 $G$-丛模空间上的 Hecke 特征层.</p>
 <h3>范畴层面的对应</h3>
 <p>“范畴式” (categorical) 几何 Langlands 对应的主旨是两个 <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>的比较:</p>
 <ul>

@@ -850,6 +850,11 @@ $$
 <p><span class="link local"><a href="./卷积.html" title="卷积 [卷积]">卷积</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="notes-stable-center"><header><h1><span class="taxon"></span>稳定中心猜想 <a class="slug" href="./notes-stable-center.html">[notes-stable-center]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是为准备 2026 年春季学期徐斌老师 “朗兰兹纲领选讲” 课程报告而记的笔记. 主要参考 <span class="link local"><a href="./BKV-SCC.html" title="A categorical approach to the stable center conjecture [BKV-SCC]">BKV</a></span>.</p>
+<h2>引言</h2>
+<p>局部 Langlands 猜想说的是 $G(F)$ 的光滑不可约表示的同构类集合分解为所谓 L-包的并.</p>
+<p>记 $G(F)$ 的 Bernstein 中心 (即表示范畴 $R(G)$ 的中心) 为 $Z_G$.</p>
+<p>稳定中心猜想是关于 $Z_G$ 的一个子代数 $Z_G^{\mathrm{st}}$ 的猜想. 根据该猜想, $\operatorname{Irr}(G)$ 可根据 $Z_G^{\mathrm{st}}$ 的特征来分解, 提供局部 Langlands 猜想的线索.</p>
+<p>本文的技术手段是构造 Bernstein 中心的范畴化类比, 其 Frobenius 不变对象通过 <span class="link local"><a href="./Grothendieck函数–层字典.html" title="Grothendieck 函数–层字典 [Grothendieck函数–层字典]">Grothendieck 函数–层字典</a></span>给出 $Z_G$ 的元素.</p>
 <h2>1. 可容许 ind-叠上的可构造层</h2>
 <h3>1.1 可容许态射</h3>
 <p>记 $\mathsf{Sch}_k$ 为 qcqs $k$-概形的范畴.</p>
@@ -994,6 +999,8 @@ $$
 $$
 (注意, 我们需要先得到 pro-范畴再取极限, 因为 “不变分布不可能紧支集”)
 它是不变分布空间 $\operatorname{Dist}^{G(F)}G(F)$ 的范畴化.</p>
+<h3>3.4 应用到经典情形</h3>
+<p>通过 <span class="link local"><a href="./Grothendieck函数–层字典.html" title="Grothendieck 函数–层字典 [Grothendieck函数–层字典]">Grothendieck 函数–层字典</a></span></p>
 <h2>Bernstein 投影算子的稳定性</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="几何Langlands对应"><header><h1><span class="taxon"></span>几何 Langlands 对应 <a class="slug" href="./几何Langlands对应.html">[几何Langlands对应]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>陈述</h2>
@@ -1001,7 +1008,7 @@ $$
 <p>几何 Langlands 对应是<span class="link local"><a href="./Langlands对应.html" title="经典 Langlands 对应 [Langlands对应]">经典 Langlands 对应</a></span>的<span class="link local"><a href="./函数域类比.html" title="函数域类比 [函数域类比]">函数域类比</a></span>, 以及其在复代数曲线 (<span class="link local"><a href="./Riemann面.html" title="“Riemann 面” [Riemann面]">Riemann 面</a></span>) 上的进一步类比.</p>
 <p>todo: 重写</p>
 <p><span class="link local"><a href="./Galois表示.html" title=" [Galois表示]">Galois 表示</a></span>理解为 <span class="link local"><a href="./l-进局部系统.html" title=" [l-进局部系统]">$\ell$-进层</a></span>.</p>
-<p>非分歧<span class="link local"><a href="./自守表示.html" title="“自守表示” [自守表示]">自守表示</a></span>给出 $\mathrm{GL}_n(F) \backslash \mathrm{GL}_n(\mathbb A) / \mathrm{GL}_n(\mathcal O)$ 上的函数 $f_\pi$ (差一个常数), 它是 <span class="link local"><a href="./Hecke代数.html" title="Hecke 代数 [Hecke代数]">Hecke 代数</a></span> $\mathcal H_x, x\in X$ 的特征函数. 使用 <span class="link local"><a href="./Grothendieck函数–层字典.html" title="“Grothendieck 函数–层字典” [Grothendieck函数–层字典]">Grothendieck 函数–层字典</a></span>, 该函数对应于 $X$ 上的 $G$-丛模空间上的 Hecke 特征层.</p>
+<p>非分歧<span class="link local"><a href="./自守表示.html" title="“自守表示” [自守表示]">自守表示</a></span>给出 $\mathrm{GL}_n(F) \backslash \mathrm{GL}_n(\mathbb A) / \mathrm{GL}_n(\mathcal O)$ 上的函数 $f_\pi$ (差一个常数), 它是 <span class="link local"><a href="./Hecke代数.html" title="Hecke 代数 [Hecke代数]">Hecke 代数</a></span> $\mathcal H_x, x\in X$ 的特征函数. 使用 <span class="link local"><a href="./Grothendieck函数–层字典.html" title="Grothendieck 函数–层字典 [Grothendieck函数–层字典]">Grothendieck 函数–层字典</a></span>, 该函数对应于 $X$ 上的 $G$-丛模空间上的 Hecke 特征层.</p>
 <h3>范畴层面的对应</h3>
 <p>“范畴式” (categorical) 几何 Langlands 对应的主旨是两个 <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>的比较:</p>
 <ul>

@@ -836,7 +836,35 @@
 <li>代数几何中所有的几何对象的范畴都包含一类基本的几何对象 — 由基本代数对象所给出的 “仿射” 对象.</li>
 </ul>
 <p>在许多数学分支存在这样一个反复出现的现象: 用一些基本对象来 “<strong>探测</strong>”, 就足够描述更大的范畴中的对象; 甚至这样的探测过程常常就作为更大的范畴的<strong>定义</strong>.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="tutorial-stable-homotopy"><header><h1><span class="taxon"></span>稳定同伦论 <a class="slug" href="./tutorial-stable-homotopy.html">[tutorial-stable-homotopy]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="notes-AGKRRV"><header><h1><span class="taxon"></span>AGKRRV <a class="slug" href="./notes-AGKRRV.html">[notes-AGKRRV]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文是 <span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span> 的阅读笔记.</p>
+<h2>观念</h2>
+<p>AGKRRV 的两个主要想法:</p>
+<ol>
+<li>定义 “限制变差” 局部系统的叠 $\mathrm{LS}_G^{\text{restr}}$. 研究对称幺半范畴 $\operatorname{QCoh}(\mathrm{LS}_G^{\text{restr}})$ 的作用, 以及其导致的沿 $\mathrm{LS}_G^{\text{restr}}$ 的<span class="link local"><a href="./谱分解.html" title="谱分解 [谱分解]">谱分解</a></span>.</li>
+<li>通过<span class="link local"><a href="./迹猜想.html" title="迹猜想 [迹猜想]">迹猜想</a></span> (Frobenius 的迹) 联系几何与算术 Langlands 纲领, 即联系<span class="link local"><a href="./自守层.html" title="自守层 [自守层]">自守层</a></span>的范畴与<span class="link local"><a href="./自守函数.html" title="自守函数 [自守函数]">自守函数</a></span>的空间. 从而前述谱分解给出自守函数空间的谱分解.</li>
+</ol>
+<h2>1. 限制变差局部系统的叠</h2>
+<p>我们考虑的层语境 $\mathsf{Shv}(X)^{\mathrm{constr}}$ 是以下三者之一:</p>
+<ul>
+<li><strong>Betti 语境</strong>, $\mathsf{e}$-线性空间层的可构造层范畴;</li>
+<li><strong>de Rham 语境</strong>, <span class="link local"><a href="./和乐D-模.html" title="和乐 D-模 [和乐D-模]">和乐 D-模</a></span>范畴;</li>
+<li><strong>平展语境</strong>, 可构造 $\overline{\mathbb{Q}}_\ell$-平展层范畴.</li>
+</ul>
+<p>定义 $\mathsf{Shv}(X) = \mathsf{Ind}(\mathsf{Shv}(X)^{\mathrm{constr}})$.</p>
+<p>定义 $\mathsf{Lisse}(X)^{\heartsuit}\subset\mathsf{Shv}(X)^{\mathrm{constr}}$ 为通常幺半结构下<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶</a></span>且在通常 t-结构的心中的对象的全子范畴.</p>
+<p>记 $\mathsf{QLisse}(X)^{\heartsuit}\subset\mathsf{Shv}(X)$ 为通常 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">t-结构</a></span>的心中 $\mathsf{Lisse}(X)^{\heartsuit}$ 的对象的滤余极限构成的全子范畴.</p>
+<p>设 $G$ 为连通约化群. 定义预叠
+$\mathrm{LocSys}_G^{\text{restr}}(X)$
+如下: 对于<span class="link local"><a href="./探测.html" title="探测 [探测]">测试</a></span>概形 $S$, 定义其 $S$-点为右 t-正合对称幺半函子
+$$
+\mathsf{Rep}(G) \to \mathsf{QCoh}(S) \otimes \mathsf{QLisse}(X).
+$$</p>
+<blockquote>
+<p>直观: 局部系统模叠的一个 $S$-点是一个映射 $S\times X\to \mathbf{B}G$.</p>
+</blockquote>
+<p><strong>例</strong>. 对于 $X = \mathrm{pt}$, 有 $\mathsf{QLisse}(X) = \mathsf{Vect}$, 从而上述 $S$-点等同于映射 $S\to \mathbf{B}G$, 即 $\mathrm{LocSys}_G^{\text{restr}}(\mathrm{pt}) = \mathbf{B}G$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="tutorial-stable-homotopy"><header><h1><span class="taxon"></span>稳定同伦论 <a class="slug" href="./tutorial-stable-homotopy.html">[tutorial-stable-homotopy]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文的目的是, 以尽可能少的前置知识, 解释<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span> (<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>) 这一概念的意义和必要性, 从而使读者能够接受其抽象定义. 为此我试图解释<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>的动机, 也即为什么要将<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span> $\Sigma$ 变为可逆函子.</p>
 <p>前置知识: 拓扑学基本概念, 以及<span class="link local"><a href="./motivation-homotopy-theory.html" title="同伦论的动机 [motivation-homotopy-theory]">同伦论的动机</a></span> (推荐读者先阅读这篇文章). 或许需要一点无穷范畴的直观.</p>
 <hr />
@@ -954,6 +982,7 @@ $$</p>
 <h3>点函子</h3>
 <p>对于<span class="link local"><a href="./探测.html" title="探测 [探测]">测试</a></span>概形 $S$, $\mathrm{Bun}_G$ 的 $S$-点的群胚是 $X\times S$ 上的 $G$-丛的群胚.</p>
 <h2>性质</h2>
+<h3>代数叠</h3>
 <h3>双陪集刻画</h3>
 <p>固定基域 $k$, 设 $X$ 为光滑不可约射影曲线, $G$ 为分裂连通<span class="link local"><a href="./约化群.html" title="约化群 [约化群]">约化群</a></span>, 记 $R_x=\mathcal O(X\setminus x)$ 为仿射曲线 $X\setminus x$ 上的正则函数环, 记 $\mathcal O_x\simeq k[t](t.md)$ 为 $x$ 处形式圆盘的函数环, $K_x\simeq k((t))$ 为去心形式圆盘的函数环.</p>
 <p>由于 $G$-主丛由去心形式圆盘上的一个转移函数 $g\in G(K_x)$ 决定, 且左乘 $G(R_x)$ 与右乘 $G(\mathcal O_x)$ 均不改变其本质, 故 $\mathrm{Bun}_G$ 的 $k$-点为
