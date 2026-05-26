@@ -1021,6 +1021,7 @@ $$</p>
 $$
 \mathsf{Pr}^{\mathrm{R}} \simeq (\mathsf{Pr}^{\mathrm{L}})^{\mathrm{op}}.
 $$</p>
+<p>有这样一种观点: “范畴” 与 “可表现范畴” 可以是处于平等地位的两个概念, 每个都可以视为另一个的特殊情况, 但是嵌套会使得<span class="link local"><a href="./宇宙.html" title="宇宙 [宇宙]">宇宙</a></span>变大.</p>
 <h2>性质</h2>
 <h3>张量积</h3>
 <p>可表现范畴的范畴 $\mathsf{Pr}$ 上有一个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>结构, 称为 <strong>Lurie 张量积</strong>.</p>
@@ -1039,7 +1040,15 @@ $$
 \operatorname{colim}^{\mathsf{Pr}^{\mathrm{L}}}X = \operatorname{lim}^{\mathsf{Pr}^{\mathrm{R}}}X^{\mathrm{op}}= \operatorname{lim}^{\mathsf{Cat}} X^{\mathrm{op}}.
 $$
 换言之, <span class="link local"><a href="./自由-遗忘伴随.md.html" title=" [自由-遗忘伴随.md]">遗忘</a></span>函子 $\mathsf{Pr}^{\mathrm{R}} \to\mathsf{Cat}$ 保持极限.</p>
-<p>例如, 对任意集合 $I$, 可表现范畴的 $I$-<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>实际上等同于可表现范畴的积, 也等同于其作为范畴的积:
+<p>对于指标范畴的代换 $I\to J$, 有如下伴随.
+$$
+\begin{array}{ccc}
+\operatorname{colim}_{i\in I}X_i &amp; = &amp; \operatorname{lim}_{i\in I^{\mathrm{op}}}X_i \\
+\downarrow &amp; \dashv &amp; \uparrow \\
+\operatorname{colim}_{j\in J}X_j &amp; = &amp; \operatorname{lim}_{j\in J^{\mathrm{op}}}X_j
+\end{array}
+$$</p>
+<p><strong>例</strong>. 对任意集合 $I$, 可表现范畴的 $I$-<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>实际上等同于可表现范畴的积, 也等同于其作为范畴的积:
 $$
 \coprod_{i\in I}^{\mathsf{Pr}^{\mathrm{L}}} \mathcal C_i \overset{\simeq}{\to} \prod_{i\in I}^{\mathsf{Cat}} \mathcal C_i \simeq \prod_{i\in I}^{\mathsf{Pr}^{\mathrm{L}}} \mathcal C_i.
 $$

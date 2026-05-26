@@ -892,10 +892,13 @@ $$
 <p><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>, <span class="link local"><a href="./杠构造.html" title="杠构造 [杠构造]">杠构造</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单子上的代数"><header><h1><span class="taxon"></span>单子上的代数 <a class="slug" href="./单子上的代数.html">[单子上的代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p><span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>上的<strong>代数</strong>和单子上的<strong>左模</strong>是同义词. 还有另一个不同的概念, 单子上的右模.</p>
+<p>范畴 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 上的<strong>代数</strong>是一个对象 $1\to\mathcal C$, 带有单子 $T$ 上的<strong>左模</strong>结构.</p>
+<p>一个单子 $T$ 上的代数的范畴又称为其 <strong>Eilenberg–Moore 范畴</strong>, 即万有的 $T$-左模.</p>
+<p>还有另一个不同的概念, 单子上的右模; 见 <span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>.</p>
 <p>结合代数给出<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>; 在这种意义上, 单子上的代数是<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">结合代数上的模</a></span>的推广.</p>
 <h2>定义</h2>
-<p>范畴 $\mathcal C$ 是自函子范畴 $\operatorname{End}(\mathcal C)$ (作为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 即 $\mathsf{Cat}$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>) 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>, 因此对于 $\mathcal C$ 上的单子 $T$, 即 $\operatorname{End}(\mathcal C)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 可以谈论 $T$ 在 $\mathcal C$ 中的模 (代数).</p>
+<h3>左模</h3>
+<p>范畴 $\mathcal C$ 是自函子范畴 $\operatorname{End}(\mathcal C)$ (作为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 即 $\mathsf{Cat}$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>) 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>, 因此对于 $\mathcal C$ 上的单子 $T$, 即 $\operatorname{End}(\mathcal C)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 可以谈论 $T$ 在 $\mathcal C$ 中的左<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span> (代数).</p>
 <p>具体地, 范畴 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 上的代数 $X$ 包含一个态射 $TX \to X$, 以及交换图
 $$
 \begin{array}
@@ -907,6 +910,29 @@ TX &amp; \to &amp; X.
 $$
 其中两个映射 $TTX \to TX$ 分别来自 $T$ 带有的自然变换 $T^2\to T$ 以及 $X$ 带有的态射 $TX\to X$.</p>
 <p>更一般地, 对范畴 $I$, 函子范畴 $\mathsf{Fun}(I,\mathcal C)$ 也是 $\operatorname{End}(\mathcal C)$ 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>, 从而可以定义 $X\colon I\to\mathcal C$ 上的 $T$-<strong>左模</strong> (或称 $T$-代数) 结构. 它包含一个自然变换 $TX \to X$ 以及左模的条件.</p>
+<h3>作为松极限</h3>
+<p>单子上的代数还有另一种看法. 范畴 $\mathcal C^{T}$ 可定义为如下<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">余单纯对象</a></span>的<span class="link local"><a href="./松极限.html" title="松极限 [松极限]">松极限</a></span>:
+$$
+\mathcal C \rightrightarrows \mathcal C \to^3 \mathcal C\to^4\cdots,
+$$
+其中前两个函子 $\mathcal C\rightrightarrows\mathcal C$ 为 $T$ 与 $\mathrm{id}_{\mathcal C}$.</p>
+<p>甚至 $\mathcal C^{T}$ 可以更加简练地写成<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 对应的<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span> $1\to\mathsf{Cat}$ 的<span class="link local"><a href="./松极限.html" title="松极限 [松极限]">松极限</a></span>. 换言之, 考虑所有范畴上所有单子构成的 $2$-范畴
+$$
+\mathsf{Mnd}(\mathsf{Cat}) = \mathsf{Fun}^{\mathrm{lax}}(1,\mathsf{Cat}),
+$$
+有嵌入
+$$
+\mathsf{Cat} \to \mathsf{Mnd}(\mathsf{Cat}),\,\mathcal C\mapsto (\mathcal C,\mathrm{id}_{\mathcal C});
+$$
+而取单子上的代数范畴
+$$
+\mathsf{Mnd}(\mathsf{Cat}) \to \mathsf{Cat},\,(\mathcal C,T)\mapsto\mathcal C^T
+$$
+正是该嵌入的右伴随. 又换言之, $\mathcal C^T$ 带有一个万有的单子同态 (即前述伴随的余单位)
+$$
+(\mathcal C^T,\mathrm{id}) \to (\mathcal C,T).
+$$</p>
+<p>这种观点的一个应用如下. 设 $\mathfrak C$ 为 $2$-范畴, 那么可表函子 $h^X:=\operatorname{Hom}(X,-)\colon \mathfrak C\to\mathsf{Cat}$ 保持松极限; 于是对于 $Y\in\mathcal C$ 上的单子 $T$, 有 $h^X(Y^T)=h^X(Y)^{h^X(T)}$.</p>
 <h3>右模, 双模</h3>
 <p>另一个概念是单子上的<strong>右模</strong>. 对范畴 $J$, 函子范畴 $\mathsf{Fun}(\mathcal C,J)$ 是 $\operatorname{End}(\mathcal C)$ 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">右模</a></span>, 从而可以定义 $Y\colon \mathcal C\to J$ 上的 $T$-<strong>右模</strong>结构. 它包含一个自然变换 $YT \to Y$, 以及右模的条件.</p>
 <p>进一步, 对于两个范畴 $\mathcal C,\mathcal D$, $\mathcal C$ 上的单子 $T$ 与 $\mathcal D$ 上的单子 $S$, 定义 $(T,S)$-<strong>双模</strong>为函子 $X\colon \mathcal D\to\mathcal C$, 同时具有相容的 $T$-左模和 $S$-右模结构, 即有如下交换图.
@@ -991,5 +1017,6 @@ $$</li>
 </ul>
 <p>故 $\mathsf{Adj}$ 为 $\Delta_+$ 的 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>在 $[-1],[0]$ 两个对象上的全子范畴.</p>
 <h2>性质</h2>
-<p>注意到上述资料中 $\operatorname{Hom}(c,c) = \{\mathrm{id}_c,rl,rlrl,\cdots\} = \Delta_+$ 为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span>, 其中 $rl$ 为<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 故任意伴随中 $rl$ 给出一个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>. 见<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">伴随给出单子</a></span>.</p>
+<h3>与游走的单子的关系</h3>
+<p>注意到上述资料中 $\operatorname{Hom}(+,+) = \{\mathrm{id}_+,rl,rlrl,\cdots\} = \Delta_+$ 为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span>, 其中 $rl$ 为<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 换言之, 对象 $+$ 处的全子范畴正是<span class="link local"><a href="./游走的单子.html" title="游走的单子 [游走的单子]">游走的单子</a></span>. 故任意伴随中 $rl$ 给出一个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>. 见<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">伴随给出单子</a></span>.</p>
 </details></section></details></section></footer></article></div></body></html>

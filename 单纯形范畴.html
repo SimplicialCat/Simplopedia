@@ -1030,6 +1030,8 @@ $$</p>
 <p><strong>命题</strong>. 单纯集 $X$ 的几何实现 $|X|$ 是 CW 复形.</p>
 <h3>几何实现保持纤维化</h3>
 <p><strong>定理</strong>. <span class="link local"><a href="./Kan纤维化.html" title=" [Kan纤维化]">Kan 纤维化</a></span>的几何实现是 <span class="link local"><a href="./Serre纤维化.html" title=" [Serre纤维化]">Serre 纤维化</a></span>.</p>
+<h2>例</h2>
+<p>考虑终范畴 $1$, 其上的预层范畴即为生象的范畴 $\mathsf{Ani}$. 沿米田嵌入 $1\to\mathsf{Ani}$ 的左 Kan 扩张给出的是</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, <span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单子"><header><h1><span class="taxon"></span>单子 <a class="slug" href="./单子.html">[单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -1162,10 +1164,11 @@ $$</p>
 <p>游走结构也可理解为 “余<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">分类空间</a></span>”.</p>
 <h2>例</h2>
 <ul>
-<li>游走的箭头 $\{0\to 1\}$ 即为两个对象 $0,1$ 与一个态射 $0\to 1$ 生成的范畴.</li>
-<li><span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span></li>
-<li>$\mathbf{B}\mathbb N$, “游走的自同态”</li>
-<li><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">$\Delta_+$</a></span> 中的 $[0]$ 是游走的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</li>
+<li>游走的箭头 $\{0\to 1\}$ 即为两个对象 $0,1$ 与一个态射 $0\to 1$ 生成的范畴. 任何范畴 $\mathcal C$ 中的箭头都对应函子 $\{0\to 1\} \to \mathcal C$.</li>
+<li><span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span> $\mathsf{Adj}$ 是一个 $2$-范畴, 任何 $2$-范畴 $\mathcal C$ 中的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>都对应函子 $\mathsf{Adj}\to\mathcal C$.</li>
+<li>游走的自同态是自然数的幺半群的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> $\mathbf{B}\mathbb N$.</li>
+<li>游走的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> 是 <span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">$\Delta_+$</a></span> 中的 $[0]$.</li>
+<li>游走的幂等映射 $\mathsf{Idem}$ 是一个 $1$-范畴, 有一个对象和一个自同态 $e$ 满足 $e^2=e$. 任何范畴 $\mathcal C$ 中的幂等自同态都对应函子 $\mathsf{Idem} \to \mathcal C$.</li>
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="游走的伴随"><header><h1><span class="taxon"></span>游走的伴随 <a class="slug" href="./游走的伴随.html">[游走的伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
@@ -1195,7 +1198,8 @@ $$</li>
 </ul>
 <p>故 $\mathsf{Adj}$ 为 $\Delta_+$ 的 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>在 $[-1],[0]$ 两个对象上的全子范畴.</p>
 <h2>性质</h2>
-<p>注意到上述资料中 $\operatorname{Hom}(c,c) = \{\mathrm{id}_c,rl,rlrl,\cdots\} = \Delta_+$ 为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span>, 其中 $rl$ 为<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 故任意伴随中 $rl$ 给出一个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>. 见<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">伴随给出单子</a></span>.</p>
+<h3>与游走的单子的关系</h3>
+<p>注意到上述资料中 $\operatorname{Hom}(+,+) = \{\mathrm{id}_+,rl,rlrl,\cdots\} = \Delta_+$ 为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span>, 其中 $rl$ 为<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 换言之, 对象 $+$ 处的全子范畴正是<span class="link local"><a href="./游走的单子.html" title="游走的单子 [游走的单子]">游走的单子</a></span>. 故任意伴随中 $rl$ 给出一个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>. 见<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">伴随给出单子</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="筛范畴"><header><h1><span class="taxon"></span>筛范畴 <a class="slug" href="./筛范畴.html">[筛范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p><strong>筛范畴</strong> (sifted category) 是满足如下等价条件的小范畴 $I$:</p>
@@ -1212,6 +1216,8 @@ $$
 <p>以筛范畴为指标范畴的余极限称为<strong>筛余极限</strong> (sifted colimit).</p>
 <h2>例</h2>
 <p><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>的对偶 $\Delta^{\mathrm{op}}$ 为筛范畴. 以此为指标的余极限叫单纯对象的几何实现, 也叫<span class="link local"><a href="./杠构造.html" title="杠构造 [杠构造]">杠构造</a></span>.</p>
+<p>具有有限<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>的范畴都是筛范畴.</p>
+<p>一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> ($\infty$-群胚) $A$ 是筛范畴当且仅当 $A\simeq 1$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="结合代数"><header><h1><span class="taxon"></span>结合代数 <a class="slug" href="./结合代数.html">[结合代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>观念</h2>
 <p>结合代数, 又叫 $\mathbb E_1$-代数, <span class="link local"><a href="./A∞-代数.html" title="A∞-代数 [A∞-代数]">$A_\infty$-代数</a></span>, 是若干元素可以<strong>有序</strong>地结合起来的结构. 给定 $n$ 个元素的<strong>有序</strong>组 $(x_1,\cdots,x_n)$, 仅有<strong>唯一</strong>的方式将它们结合起来 $x_1\cdots x_n$, 即结合的最终结果 “与加括号的方式无关”.</p>
 <p>在结合代数的结构之上, 可以考虑 “结合代数中的结合代数” (<span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$-代数</a></span>, 也即有两种相容结合运算的代数), “结合代数中的结合代数中的结合代数” ($\mathbb E_3$-代数), …, 以至于无穷. 在无穷处, $\mathbb E_\infty$-代数就是<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>.</p>
@@ -1260,9 +1266,17 @@ $$
 <h2>性质</h2>
 <h3>具体表现</h3>
 <p><span class="link local"><a href="./链复形无穷范畴.html" title="链复形无穷范畴 [链复形无穷范畴]">链复形范畴</a></span>中的结合代数有很具体的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 见 <span class="link local"><a href="./A∞-代数.html" title="A∞-代数 [A∞-代数]">$A_\infty$-代数</a></span>.</p>
+<h3>相反结合代数</h3>
+<p>每个结合代数 $A$ 都有一个相反结合代数 $A^{\mathrm{op}}$. (在对称幺半范畴中) 它也是 $A$ 在 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>中的<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">对偶</a></span>.</p>
 <h2>例</h2>
 <h3>自同态</h3>
 <p>$\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>中, 对象 $X$ 的自同态集 $\operatorname{End}(X)$ 是 $\mathcal V$ 中的结合代数. 它对应函子 $A\colon \Delta_+ \to \mathcal V$, $A([n])$ 是 $[n]$ 到 $\mathcal V$ 的将每个对象都映射到 $X$ 的 $\mathcal V$-充实函子的全体.</p>
+<h3>自由结合代数</h3>
+<p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $A$ 生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>结合代数为<span class="link local"><a href="./列表.html" title="列表 [列表]">列表</a></span>的生象
+$$
+\operatorname{List}A := \bigsqcup_{n\geq 0} A^n.
+$$</p>
+<p>注意另一个概念, $A$ 生成的自由 $\mathbb E_1$-群是 $\Omega\Sigma_+A$, 是 $\operatorname{List} A$ 的群化.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="范畴对象"><header><h1><span class="taxon"></span>范畴对象 (∞-范畴论) <a class="slug" href="./范畴对象.html">[范畴对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>观念</h2>
 <p>在 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$\infty$-范畴</a></span>中, 一个范畴<span class="link local"><a href="./内部观点.html" title="内部观点 [内部观点]">内部</a></span>的范畴可由完备 <span class="link local"><a href="./Segal空间.html" title="Segal 空间 [Segal空间]">Segal 对象</a></span>描述.</p>
 <h2>定义</h2>

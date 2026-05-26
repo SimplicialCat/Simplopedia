@@ -1006,6 +1006,8 @@ $$</p>
 <p><strong>命题</strong>. 单纯集 $X$ 的几何实现 $|X|$ 是 CW 复形.</p>
 <h3>几何实现保持纤维化</h3>
 <p><strong>定理</strong>. <span class="link local"><a href="./Kan纤维化.html" title=" [Kan纤维化]">Kan 纤维化</a></span>的几何实现是 <span class="link local"><a href="./Serre纤维化.html" title=" [Serre纤维化]">Serre 纤维化</a></span>.</p>
+<h2>例</h2>
+<p>考虑终范畴 $1$, 其上的预层范畴即为生象的范畴 $\mathsf{Ani}$. 沿米田嵌入 $1\to\mathsf{Ani}$ 的左 Kan 扩张给出的是</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, <span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="双边杠构造"><header><h1><span class="taxon"></span>双边杠构造 <a class="slug" href="./双边杠构造.html">[双边杠构造]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -1060,14 +1062,35 @@ $$</p>
 <p>筛余极限 (sifted colimit) 是以<span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span>为指标范畴的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>
 <h2>例</h2>
 <p><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯</a></span>图表的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>是筛余极限.</p>
+<p>任何<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $A$ 都是有限集合的筛余极限:
+$$
+A = \operatorname{colim}_{(S\to A)\in\mathsf{Fin}_{/A}} S.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="结合代数上的模"><header><h1><span class="taxon"></span>结合代数上的模 <a class="slug" href="./结合代数上的模.html">[结合代数上的模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>可视为单对象<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>; 在这种意义上, 结合代数上的模可以推广为<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">充实范畴上的模</a></span>或者<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>.</p>
 <p>结合代数给出<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>; 在这种意义上, 结合代数上的模可以推广为<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的模</a></span>.</p>
 <p>结合代数上的模范畴可视为结合代数的范畴的<span class="link local"><a href="./切范畴.html" title="切范畴 [切范畴]">切范畴</a></span>.</p>
 <p>另外, 对一般的<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span>也可定义<span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">模</a></span>的概念; 但这个概念对于<span class="link local"><a href="./A∞-算畴.html" title="结合算畴 [A∞-算畴]">结合算畴</a></span>给出的是<strong>双模</strong>, 而非左模或右模.</p>
+<h2>定义</h2>
+<h3>通过算畴</h3>
+<p>考虑<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathsf{LM}$, 作为多重范畴有两个对象 $a,m$, 且有</p>
+<ul>
+<li>$\operatorname{Hom}_{\mathsf{LM}}(a\cdots a,a) = 1$,</li>
+<li>$\operatorname{Hom}_{\mathsf{LM}}(a\cdots am,m) = 1$,</li>
+<li>其它 $\operatorname{Hom}$ 为空.</li>
+</ul>
+<p>设 $\mathcal C$ 是<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, $A$ 是 $\mathcal C$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. <strong>左模范畴</strong> $\mathsf{LMod}_{\mathcal C}(A)$ 是如下纤维:
+$$
+\mathsf{LMod}_{\mathcal C}(A) := \{A\} \times_{\mathsf{Alg}_{\mathbb E_1}(\mathcal C)}\mathsf{Alg}_{\mathsf{LM}}(\mathcal C).
+$$</p>
+<h3>通过单子</h3>
+<p>假设我们定义了<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>, 那么可以如下定义结合代数上的模: 对于结合代数 $A$ 有<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T_A := A\otimes -$; 定义
+$$
+\mathsf{LMod}(A) := \mathsf{Alg}(T_A).
+$$</p>
 <h2>性质</h2>
-<h3>张量积</h3>
+<h3>相对张量积</h3>
 <p>在具有<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">单纯余极限</a></span>的范畴 $\mathcal C$ 中, 对于结合代数 $A$ 上的右模 $M$ 与左模 $N$, 可作相对张量积
 $$
 M\otimes_A N := \operatorname{colim}_{\Delta} M\otimes A^{\otimes\bullet}\otimes N.
@@ -1077,6 +1100,9 @@ $M\otimes_A N$ 一般没有 $A$-左模或右模结构.</p>
 $$
 \operatorname{colim}_{\mathbf{B}A} M\otimes N.
 $$</p>
+<h3>通过取模范畴嵌入高阶模范畴</h3>
+<p><strong>命题</strong>. 设 $\mathcal C\in\mathsf{Alg}(\mathsf{Pr})$ 为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span>幺半范畴. 函子 $\mathsf{Alg}(\mathcal C) \to \mathsf{LMod}_{\mathsf{Pr}}(\mathcal C)$, $A\mapsto\mathsf{LMod}(A)$ 为全忠实函子, 且保持余极限.</p>
+<p>这说明取模范畴这一操作将结合代数提升到更高范畴层级. 参见 <span class="link local"><a href="./notes-Gestalten-Cat.html" title="Gestalten - 在范畴上做代数 [notes-Gestalten-Cat]">Gestalten - 在范畴上做代数</a></span>.</p>
 <h2>例</h2>
 <h3>交换代数上的模</h3>
 <p><span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>上的模, 即是其作为结合代数的左模或右模.</p>
@@ -1160,14 +1186,18 @@ $$</p>
 <p>在 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span> $\mathcal X$ 中, 逆环路空间函子给出了<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>的范畴 $\mathsf{Grp}(\mathcal X)$ 到带基点连通对象的范畴 $\mathcal X^{\geq 1}_{*/}$ 的等价.</p>
 <p>更一般地, $n$ 阶逆环路空间给出了 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$-群</a></span>的范畴到带基点 $n$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连合</a></span>对象的范畴 $\mathcal X^{\geq n}_{*/}$ 的等价.</p>
 <p>对象 $X$ 到 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$-群</a></span> $A$ 的 $n$ 阶逆环路空间 $\mathbf{B}^n A$ 的映射同伦类称为 $n$ 阶<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span> $H^n(X,A)$.</p>
+<p>比群更一般的<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span> $M$ 也可以谈论逆环路空间 $\mathbf{B}M$. 注意有两个不同对象记作 $\mathbf{B}M$, 一是逆环路空间, 二是 $M$ 对应的单对象范畴 (满足 $\operatorname{End}(*)=M$).</p>
 <h2>定义</h2>
 <h3>通过几何实现</h3>
-<p>在 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span>中, 群 $G$ 的逆环路空间是<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>
+<p>在 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span>中, <span class="link local"><a href="./群.html" title="群 [群]">群</a></span> (或<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>) $G$ 的逆环路空间是<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>
 $$
 \mathbf{B}^\bullet G = (\cdots G\times G\times G \to^4 G\times G \to^3 G\rightrightarrows *)
 $$
-的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span> (余极限).</p>
-<p>而在拓扑空间的 $1$-范畴中, 拓扑群 $G$ 的逆环路空间可<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">实现</a></span>为拓扑空间
+的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span> (余极限), 也即<span class="link local"><a href="./双边杠构造.html" title="双边杠构造 [双边杠构造]">杠构造</a></span>
+$$
+\mathbf{B}^\bullet G := *\times_G * := B(*,G,*).
+$$</p>
+<p>在拓扑空间的 $1$-范畴中, 拓扑群 $G$ 的逆环路空间可<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">实现</a></span>为拓扑空间
 $$
 \begin{aligned}
     |\mathbf{B}G| &amp;= \bigcup_{(g_1,\cdots,g_n)} |\Delta^n|\\

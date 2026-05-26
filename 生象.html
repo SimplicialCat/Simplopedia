@@ -935,6 +935,14 @@ $$
 \operatorname{HH}_*(A) := A \otimes_{A\otimes A^{\mathrm{op}}} A.
 $$
 这个定义的缺陷是它没能反映 Hochschild 同调的 $S^1$-对称性.</p>
+<p>另一个定义. 将结合代数 $A$ 视为 $\mathcal C$ 的<span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>中的对象, 其<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">对偶</a></span>为 $A^{\mathrm{op}}$, 从而给出一个取值于 Morita 范畴的 $1$ 维<span class="link local"><a href="./拓扑场论.html" title="拓扑场论 [拓扑场论]">拓扑场论</a></span>
+$$
+Z_A\colon \mathsf{Bord}_1^{\mathrm{fr}}\to\mathsf{Morita}(\mathcal C),
+$$
+Hochschild 同调是其在 $S^1$ 上的值:
+$$
+\operatorname{HH}(A) := Z_A(S^1).
+$$</p>
 <h3>交换代数</h3>
 <p>当 $A$ 为<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>时,
 有
@@ -1143,22 +1151,115 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="notes-GKRV"><header><h1><span class="taxon"></span>GKRV <a class="slug" href="./notes-GKRV.html">[notes-GKRV]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是 <span class="link local"><a href="./GKRV.html" title="A toy model for the Drinfeld–Lafforgue shtuka construction [GKRV]">GKRV</a></span> 的阅读笔记. 这篇文章是 <span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span> 在拓扑语境中的玩具模型.</p>
 <h2>1. 对称幺半范畴沿空间积分</h2>
-<p>本节的范畴都是指 <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>.</p>
-<p>设 $\mathcal A$ 为对称幺半范畴, $Y$ 为空间 (即<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>). 考虑范畴 $\mathcal A^{\otimes Y} = \operatorname{colim}^{\mathsf{SymMonCat}}_Y\mathcal A$. 我们可以在三种不同语境下描述这个范畴:</p>
-<ul>
-<li>对称幺半范畴,</li>
-<li>幺半范畴,</li>
-<li>范畴.</li>
-</ul>
-<p>总之, 设 $\mathcal C$ 是上述某种范畴的全体.</p>
-<p><strong>命题</strong>. 范畴 $\mathcal A^{\otimes Y}$ (遗忘到 $\mathcal C$ 中) 等同于如下的余极限:
+<p>本文中 <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>指的是<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>中 $\mathsf{Vect}$ 上的模, 即
 $$
-\mathcal A^{\otimes Y} = \operatorname{colim}^{\mathcal C}_{(I\to J)\in\mathsf{TwArr}(\mathsf{Fin})} \operatorname{colim}_{\operatorname{Hom}(J,Y)}^{\mathcal C}\mathcal A^{\otimes I}.
+\mathsf{DGCat} := \mathsf{Mod}_{\mathsf{Pr}}(\mathsf{Vect}).
+$$
+其中的态射为保持余极限的函子.</p>
+<p>设 $\mathcal A$ 为<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span> <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>, $Y$ 为空间 (即<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>). 考虑范畴 $\mathcal A^{\otimes Y} = \operatorname{colim}^{\mathsf{SymMonCat}}_Y\mathcal A$. 我们可以在三种不同语境下描述这个范畴:</p>
+<ul>
+<li>对称幺半 DG 范畴,</li>
+<li>幺半 DG 范畴,</li>
+<li>DG 范畴.</li>
+</ul>
+<p>总之, 设 $\mathfrak C$ 是上述某种范畴的全体. 注意, 三种语境中一般的余极限不相容 (余极限的底层范畴不同); 但<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>是相容的. 这个事实马上就要用到.</p>
+<h3>1.2 将 $\mathcal A^{\otimes Y}$ 表现为余极限</h3>
+<p><strong>命题</strong>. 范畴 $\mathcal A^{\otimes Y}$ (遗忘到 $\mathfrak C$ 中) 等同于如下的余极限:
+$$
+\mathcal A^{\otimes Y} = \operatorname{colim}^{\mathfrak C}_{(I\to J)\in\mathsf{TwArr}(\mathsf{Fin})} \operatorname{colim}_{\operatorname{Hom}(J,Y)}^{\mathfrak C}\mathcal A^{\otimes I}.\, (\star)
 $$
 其中 $\mathsf{TwArr}(-)$ 表示<span class="link local"><a href="./扭箭头范畴.html" title="扭箭头范畴 [扭箭头范畴]">扭箭头范畴</a></span>.</p>
-<p>注意, 三种语境中一般的余极限不相容 (余极限的底层范畴不同); 但<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>是相容的.</p>
-<p><strong>引理</strong>. 函子 $\mathsf{Ani}\to\mathcal C$, $Y\mapsto \mathcal A^{\otimes Y}$ 是其沿 $\mathsf{Fin}\to\mathsf{Set}$ 的限制的左 Kan 扩张.</p>
-<p><em>证明</em>. 这是因为对任意 $Y\in\mathsf{Ani}$, 左 Kan 扩张的计算式中的指标范畴 $\mathsf{Fin}_{/Y}$ 是<span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span>, 而遗忘函子 $\mathsf{SymMonCat}\to\mathsf{MonCat}\to\mathsf{Cat}$ 均保持<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span> (这一事实对更一般的算畴的代数成立).</p>
+<p>证明的思路是: 命题对 $Y\in\mathsf{Fin}$ 较为平凡, 然后将两边沿 $\mathsf{Fin}\to\mathsf{Ani}$ 作左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>.</p>
+<p><strong>引理 1</strong>. 函子 $\mathsf{Ani}\to\mathfrak C$, $Y\mapsto \mathcal A^{\otimes Y}$ 是其沿 $\mathsf{Fin}\to\mathsf{Ani}$ 的限制的左 Kan 扩张.</p>
+<p><em>证明</em>. 这是因为对任意 $Y\in\mathsf{Ani}$, 左 Kan 扩张的计算式中的指标范畴 $\mathsf{Fin}_{/Y}$ 是<span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span>, 而遗忘函子
+$$
+\mathsf{CAlg}(\mathsf{DGCat}) \to \mathsf{Alg}(\mathsf{DGCat}) \to \mathsf{Cat}
+$$
+均保持<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span> (这一事实对更一般的算畴的代数成立).</p>
+<p><strong>引理 2</strong>. 等式 $(\star)$ 的右端给出的函子 $\mathsf{Ani}\to\mathfrak C$ 是其沿 $\mathsf{Fin}\to\mathsf{Ani}$ 的限制的左 Kan 扩张.</p>
+<p><em>证明</em>. 对任意有限集 $I,J$, 函子 $Y\mapsto \operatorname{Hom}(J,-)$, $Z\mapsto \operatorname{colim}^{\mathfrak C}_{Z}\mathcal A^{\otimes I}$ 均保持<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>, 从而复合函子 $Y\mapsto \operatorname{colim}^{\mathfrak C}_{\operatorname{Hom}(J,Y)}\mathcal A^{\otimes I}$ 保持筛余极限.</p>
+<p>上面讨论了一些余极限. 下面讨论一些极限, 陈述某些极限和余极限相等.</p>
+<p>与余极限的情况不同的是, 遗忘函子
+$$
+\mathsf{CAlg}(\mathsf{DGCat}) \to \mathsf{Alg}(\mathsf{DGCat}) \to \mathsf{Cat}
+$$
+保持所有极限.</p>
+<p>定义生象 $Y$ 上<span class="link local"><a href="./局部系统.html" title="局部系统 [局部系统]">局部系统</a></span>的范畴为
+$$
+\mathsf{LS}(Y) = \operatorname{lim}_Y \mathsf{Vect},
+$$
+它是对称幺半 DG 范畴. 若 $\mathscr Y$ 为较好的拓扑空间 (仿紧, 同伦等价于 CW 复形, 同伦维数有限), $Y$ 为 $\mathscr Y$ 对应的生象, 则 $\mathsf{LS}(Y)$ 等价于 $\mathsf{Shv}_{\text{lisse}}(Y)$, 即线性空间层的导出范畴 $\mathsf{Shv}(\mathscr{Y})$ 中上同调为局部常值层的对象构成的全子范畴.</p>
+<p>由<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>的余极限的性质,</p>
+<ul>
+<li>对任意生象 $Y$, 范畴 $\mathsf{LS}(Y)$ 等价于 $\operatorname{colim}_Y^{\mathsf{DGCat}}\mathsf{Vect}$;</li>
+<li>对生象的映射 $f\colon Y\to Z$, 自然的函子 $f^\dagger\colon \mathsf{LS}(Z)\to\mathsf{LS}(Y)$ 等同于 $\operatorname{colim}_Y^{\mathsf{DGCat}}\mathsf{Vect} \to \operatorname{colim}_Z^{\mathsf{DGCat}}\mathsf{Vect}$ 的右伴随; 同时, 两个态射也通过 $\mathsf{DGCat}$ 中的<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">对偶</a></span>函子 $(-)^{\vee}\colon \mathsf{DGCat}^{\mathrm{op}}\to\mathsf{DGCat}$ 相联系.</li>
+</ul>
+<p><strong>命题</strong>. 设 $\mathfrak C$ 为 $\mathsf{CAlg}(\mathsf{DGCat}),\mathsf{Alg}(\mathsf{DGCat}),\mathsf{DGCat}$ 之一. 对于 $\mathcal C\in\mathfrak C$, 典范态射
+$$
+\mathcal C\otimes\mathsf{LS}(Y) \to \operatorname{lim}_Y\mathcal C
+$$
+为等价.</p>
+<p><em>证明</em>. 因为遗忘函子和 $-\otimes\mathsf{LS}(Y)$ 交换, 故只需证明 $\mathfrak C = \mathsf{DGCat}$ 的情形. 注意到两边均将 $\mathsf{Ani}$ 中的余极限对应到 $\mathfrak C$ 中的极限: 左边由可对偶性等价于 $\mathsf{Fun}(\operatorname{colim}^{\mathsf{DGCat}}_Y\mathsf{Vect},\mathcal C)$.</p>
+<h3>1.5 局部系统的叠</h3>
+<p>局部系统的叠 $\mathsf{LS}_G(Y)$ 上的 $\mathsf{QCoh}$ 是对称幺半范畴 $\mathsf{Rep}(G)$ 沿空间积分的重要例子, 也是本文的主要研究对象. 由生象的映射
+$$
+\begin{aligned}
+Y&amp;\simeq\operatorname{Hom}_{\mathsf{Ani}}(*,Y)\\
+&amp;\to\operatorname{Hom}_{\mathsf{PreStk}}(\mathsf{LS}_G(Y),\mathsf{LS}_G(*))\\
+&amp;\to\operatorname{Hom}_{\mathsf{CAlg}(\mathsf{DGCat})}(\mathsf{QCoh}(\mathsf{LS}_G(*)),\mathsf{QCoh}(\mathsf{LS}_G(Y)))\\
+&amp;\simeq\operatorname{Hom}_{\mathsf{CAlg}(\mathsf{DGCat})}(\mathsf{Rep}(G),\mathsf{QCoh}(\mathsf{LS}_G(Y))),
+\end{aligned}
+$$
+我们得到函子
+$$
+\operatorname{colim}_Y^{\mathsf{CAlg}(\mathsf{DGCat})}\mathsf{Rep}(G) \to \mathsf{QCoh}(\mathsf{LS}_G(Y)).
+$$</p>
+<p><strong>定理</strong>. 若 $Y$ 仅有有限个连通分支, 则上述函子为等价.</p>
+<h3>1.7 由 $\mathcal A^{\otimes Y}$ 出发的函子</h3>
+<p>由于 $\mathcal A^{\otimes Y}$ 可表现为余极限,</p>
+<h2>2. 远足</h2>
+<p>记 $\mathsf{FFM}$ 为有限生成自由<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>的范畴.</p>
+<p><strong>命题</strong>. 对任意<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span> $H_0$, 范畴 $\mathsf{FFM}_{/H_0}$ 为<span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span>, 且典范的映射
+$$
+\operatorname{colim}_{H\in\mathsf{FFM}_{/H_0}}H\to H_0
+$$
+为等价.</p>
+<p><strong>推论</strong>. 设 $Y$ 为带基点连通生象. 那么 $\mathsf{FFM}_{/\Omega Y}$ 为<span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span>, 且典范的映射
+$$
+\operatorname{colim}^{\mathsf{Ani}_*}_{H\in\mathsf{FFM}_{/\Omega Y}}\mathbf{B}H \to Y
+$$
+为等价.</p>
+<h3>2.4 将 $\mathcal A^{\otimes Y}$ 的单位对象的自同态表现为余极限</h3>
+<p>我们先计算一类幺半范畴的余极限中的态射.</p>
+<p>考虑幺半范畴的图 $I\to\mathsf{Alg}(\mathsf{DGCat})$, $i\mapsto\mathcal C_i$. 设指标范畴 $I$ 有始对象 $i_0$. 任取 $\mathcal C_{i_0}$ 的对象 $c_{i_0},c'_{i_0}$. 记 $c_i,c'_i$ 为两者在 $\mathcal C_i$ 中的像; 记 $c,c'$ 为两者在余极限 $\mathcal C=\operatorname{colim}_i\mathcal C_i$ 中的像.
+则有自然态射
+$$
+ \operatorname{colim}_i\operatorname{Hom}_{\mathcal C_i}(c_i,c'_i) \to \operatorname{Hom}_{\mathcal C}(c,c').\,(\spadesuit)
+$$</p>
+<p><strong>命题 2.4.6</strong>. 若 $I$ 为筛范畴且 $\mathcal C_{i_0} \to \mathcal C_{i}$ 为<span class="link local"><a href="./仿射态射.html" title="仿射态射 [仿射态射]">仿射函子</a></span> (即每个 $\mathcal C_i$ 都是 $\mathcal C_{i_0}$ 上某<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">结合代数上的模</a></span>范畴; 准确地说, 函子 $I\to\mathsf{Alg}(\mathsf{DGCat})$ 穿过 $\mathsf{Alg}(\mathcal C_{i_0})$), 则 $(\spadesuit)$ 为等价.</p>
+<p><strong>推论 2.4.4</strong>. 设 $\mathcal A$ 具有仿射对角线, 且 $1_{\mathcal A}$ 紧. 那么对于带基点连通生象 $(Y,y)$,
+$$
+\operatorname{End}(1_{\mathcal A^{\otimes Y}}) \simeq\operatorname{colim}_{H\in\mathsf{FFM}_{/\Omega Y}}\operatorname{End}(1_{\mathcal A^{\otimes\mathbf{B}H}}).
+$$</p>
+<h3>2.7</h3>
+<p>对于有限集 $I$, 记 $I_+$ 为带基点集合 $I\sqcup \{*\}$. 注意 $\mathbf{B}(\operatorname{Free}_{\mathbb E_1}(I)) \simeq \Sigma(I_+)$, 因为它们到任何带基点生象 $(Y,y)$ 的映射都等同于映射 $I\to\Omega Y$.</p>
+<p>由推论 2.4.4,
+$$
+\operatorname{End}(1_{\mathcal A^{\otimes Y}}) = \operatorname{colim}_{}\operatorname{End}(1_{\mathcal A^{\otimes\Sigma (I_+)}})
+$$</p>
+<p>设 $J$ 为有限集. 记 $\mathrm{mult}_J\colon \mathcal A^{\otimes J} \to \mathcal A$ 为乘积函子.
+由于 $Y\mapsto\mathcal A^{\otimes Y}$ 保持余极限, 故有 $\mathsf{CAlg}(\mathsf{DGCat})$ 中的推出
+$$
+\mathcal A^{\otimes \Sigma (J)} \simeq \mathcal A\otimes_{\mathcal A^{\otimes J}} \mathcal A.
+$$
+记 $\iota_s,\iota_t\colon \mathcal A\to\mathcal A^{\Sigma (J)}$ 为两个含入 $*\to\Sigma (J)$ 对应的函子.
+<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>给出自然变换
+$$
+\mathrm{BC}_J\colon \mathrm{mult}_J\circ\mathrm{mult}_J^R \to \iota_s^R\circ\iota_t.
+$$</p>
+<p><strong>引理</strong>. 若 $\mathcal A$ 为刚性, 则 $\mathrm{BC}_J$ 为等价.</p>
+<h3>2.8 以远足构造模上的作用</h3>
+<p>设有 DG 范畴的函子 $S^Y\colon \mathcal A^{\otimes Y} \to \mathcal C$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="quantumtori"><header><h1><span class="taxon"></span>量子圆环 <a class="slug" href="./quantumtori.html">[quantumtori]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是陈–赵的一篇短文 <span class="link local"><a href="./ChenZhaoQuantumTori.html" title="The Quantum Torus as an E_M-category [ChenZhaoQuantumTori]">The Quantum Torus as an $\mathbb E_M$-Category</a></span> 的阅读笔记.</p>
 <p>记号一览:</p>
@@ -1888,6 +1989,7 @@ $$
 $$
 \mathsf{Pr}^{\mathrm{R}} \simeq (\mathsf{Pr}^{\mathrm{L}})^{\mathrm{op}}.
 $$</p>
+<p>有这样一种观点: “范畴” 与 “可表现范畴” 可以是处于平等地位的两个概念, 每个都可以视为另一个的特殊情况, 但是嵌套会使得<span class="link local"><a href="./宇宙.html" title="宇宙 [宇宙]">宇宙</a></span>变大.</p>
 <h2>性质</h2>
 <h3>张量积</h3>
 <p>可表现范畴的范畴 $\mathsf{Pr}$ 上有一个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>结构, 称为 <strong>Lurie 张量积</strong>.</p>
@@ -1906,7 +2008,15 @@ $$
 \operatorname{colim}^{\mathsf{Pr}^{\mathrm{L}}}X = \operatorname{lim}^{\mathsf{Pr}^{\mathrm{R}}}X^{\mathrm{op}}= \operatorname{lim}^{\mathsf{Cat}} X^{\mathrm{op}}.
 $$
 换言之, <span class="link local"><a href="./自由-遗忘伴随.md.html" title=" [自由-遗忘伴随.md]">遗忘</a></span>函子 $\mathsf{Pr}^{\mathrm{R}} \to\mathsf{Cat}$ 保持极限.</p>
-<p>例如, 对任意集合 $I$, 可表现范畴的 $I$-<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>实际上等同于可表现范畴的积, 也等同于其作为范畴的积:
+<p>对于指标范畴的代换 $I\to J$, 有如下伴随.
+$$
+\begin{array}{ccc}
+\operatorname{colim}_{i\in I}X_i &amp; = &amp; \operatorname{lim}_{i\in I^{\mathrm{op}}}X_i \\
+\downarrow &amp; \dashv &amp; \uparrow \\
+\operatorname{colim}_{j\in J}X_j &amp; = &amp; \operatorname{lim}_{j\in J^{\mathrm{op}}}X_j
+\end{array}
+$$</p>
+<p><strong>例</strong>. 对任意集合 $I$, 可表现范畴的 $I$-<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>实际上等同于可表现范畴的积, 也等同于其作为范畴的积:
 $$
 \coprod_{i\in I}^{\mathsf{Pr}^{\mathrm{L}}} \mathcal C_i \overset{\simeq}{\to} \prod_{i\in I}^{\mathsf{Cat}} \mathcal C_i \simeq \prod_{i\in I}^{\mathsf{Pr}^{\mathrm{L}}} \mathcal C_i.
 $$
@@ -2391,6 +2501,15 @@ $$
 <h2>例</h2>
 <p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的范畴 $\mathsf{Ani}$ 是集合范畴 $\mathsf{Set}$ 的生象化.</p>
 <p><span class="link local"><a href="./生象环.html" title="生象环 [生象环]">生象环</a></span>的范畴 $\mathsf{AniRing}$ 是环范畴 $\mathsf{Ring}$ 的生象化.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="筛余极限"><header><h1><span class="taxon"></span>筛余极限 <a class="slug" href="./筛余极限.html">[筛余极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>筛余极限 (sifted colimit) 是以<span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span>为指标范畴的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>
+<h2>例</h2>
+<p><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯</a></span>图表的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>是筛余极限.</p>
+<p>任何<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $A$ 都是有限集合的筛余极限:
+$$
+A = \operatorname{colim}_{(S\to A)\in\mathsf{Fin}_{/A}} S.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="筛范畴"><header><h1><span class="taxon"></span>筛范畴 <a class="slug" href="./筛范畴.html">[筛范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p><strong>筛范畴</strong> (sifted category) 是满足如下等价条件的小范畴 $I$:</p>
@@ -2407,6 +2526,8 @@ $$
 <p>以筛范畴为指标范畴的余极限称为<strong>筛余极限</strong> (sifted colimit).</p>
 <h2>例</h2>
 <p><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>的对偶 $\Delta^{\mathrm{op}}$ 为筛范畴. 以此为指标的余极限叫单纯对象的几何实现, 也叫<span class="link local"><a href="./杠构造.html" title="杠构造 [杠构造]">杠构造</a></span>.</p>
+<p>具有有限<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>的范畴都是筛范畴.</p>
+<p>一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> ($\infty$-群胚) $A$ 是筛范畴当且仅当 $A\simeq 1$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="算畴"><header><h1><span class="taxon"></span>算畴 <a class="slug" href="./算畴.html">[算畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>一个算畴表达了<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>的对象上可能具有的一族多元运算, 以及运算之间的关系. 算畴又叫<strong>多重范畴</strong> (multicategory), 是范畴的推广, 由<strong>颜色</strong> (多重范畴的对象) 与<strong>运算</strong> (多个对象到一个对象的态射) 构成.</p>
@@ -2417,7 +2538,7 @@ $$
 $$
 \operatorname{Hom}(X_1,X_2,\cdots,X_n ; Y).
 $$</p>
-<p>算畴种的 “颜色” 即是多重范畴中的对象. 当多重范畴仅有一个对象时, 称之为<strong>单色算畴</strong>. 不同文献中对算畴是否默认为单色有不同的约定.</p>
+<p>算畴中的 “颜色” 即是多重范畴中的对象. 当多重范畴仅有一个对象时, 称之为<strong>单色算畴</strong>. 不同文献中对算畴是否默认为单色有不同的约定.</p>
 <p><strong>对称算畴</strong> (symmetric operad) 是指多重范畴中的 $\operatorname{Hom}$ 带有对称群的作用, 即对 $\sigma\in S_n$ 有相容的同构 $\operatorname{Hom}(X_1,\cdots,X_n ; Y) \simeq \operatorname{Hom}(X_{\sigma(1),\cdots,\sigma(n)};Y)$.</p>
 <p>上面定义的是 <span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">$\mathsf{Ani}$</a></span> 上的算畴. 对于一般<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半范畴</a></span> $\mathcal C$, 也可定义相应的 “<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>多重范畴” 作为 $\mathcal C$ 上的算畴的概念.</p>
 <h3>作为对称序列</h3>
@@ -2521,7 +2642,7 @@ $$
 <p>任何一个对象 $X$ 上都有一个自同态算畴 $\mathcal {E}_X$, 且 $X$ 是 $\mathcal {E}_X$-代数.</p>
 <p>对于算畴 $\mathcal P$, 一个对象 $X$ 上的 $\mathcal P$-代数结构等同于算畴的态射 $\mathcal P\to\mathcal {E}_X$.</p>
 <h3>模算畴</h3>
-<p>模算畴是表达 (交换, 结合等) 代数上的模的算畴.</p>
+<p>模算畴是表达 (交换, 结合等) 代数上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>的算畴.</p>
 <p>“交换代数上的模” 算畴 $\mathsf{CM}$ 作为多重范畴有两个对象 $a,m$, 且有</p>
 <ul>
 <li>$\operatorname{Hom}_{\mathsf{CM}}(a^n,a) = 1$,</li>
@@ -2567,6 +2688,65 @@ $$
 <p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ 的纬悬谱是其自由生成的 $\mathbb S$-模.</p>
 <h2>定义</h2>
 <p>定义见<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="结合代数"><header><h1><span class="taxon"></span>结合代数 <a class="slug" href="./结合代数.html">[结合代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>观念</h2>
+<p>结合代数, 又叫 $\mathbb E_1$-代数, <span class="link local"><a href="./A∞-代数.html" title="A∞-代数 [A∞-代数]">$A_\infty$-代数</a></span>, 是若干元素可以<strong>有序</strong>地结合起来的结构. 给定 $n$ 个元素的<strong>有序</strong>组 $(x_1,\cdots,x_n)$, 仅有<strong>唯一</strong>的方式将它们结合起来 $x_1\cdots x_n$, 即结合的最终结果 “与加括号的方式无关”.</p>
+<p>在结合代数的结构之上, 可以考虑 “结合代数中的结合代数” (<span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$-代数</a></span>, 也即有两种相容结合运算的代数), “结合代数中的结合代数中的结合代数” ($\mathbb E_3$-代数), …, 以至于无穷. 在无穷处, $\mathbb E_\infty$-代数就是<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>.</p>
+<h2>定义</h2>
+<h3>使用算畴</h3>
+<p>结合代数可定义为<span class="link local"><a href="./A∞-算畴.html" title="结合算畴 [A∞-算畴]">结合算畴</a></span>上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span>. 参见<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>.</p>
+<h3>使用语法范畴</h3>
+<p>不同种类的范畴中的结合代数可用各自的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>定义.</p>
+<h4>积幺半范畴</h4>
+<p>在<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span>的特殊情形, 结合代数是幺半群的 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>的模型, 即其<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>为有限生成自由幺半群的范畴的对偶, 具体地:</p>
+<ul>
+<li>其对象为有限集;</li>
+<li>态射 $\{x_1,\cdots,x_n\}\to \{y_1,\cdots,y_m\}$ 为形如 $y_i = f_i(x_1,\cdots,x_n)$ 的变量代换, 每个 $f_i$ 为幺半群的理论中的公式, 即 $\{x_1,\cdots,x_n\}$ 上的一个<span class="link local"><a href="./列表.html" title="列表 [列表]">列表</a></span>; 等价地, 一个态射是 $\{y_1,\cdots,y_m\}$ 到 $\{x_1,\cdots,x_n\}$ 生成的自由幺半群的一个集合映射.</li>
+</ul>
+<p>那么<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span> $\mathcal C$ 中的结合代数即是上述范畴到 $\mathcal C$ 的保持有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>的函子.</p>
+<p>在文献中 (例如 <span class="link local"><a href="./Gaitsgory–RozenblyumDAG.html" title="A Study in Derived Algebraic Geometry [Gaitsgory–RozenblyumDAG]">Gaitsgory–Rozenblyum</a></span>), 对于积幺半范畴中的结合代数, 还有另一种 “语法范畴” (虽然它本身不是积幺半范畴), 即 $\Delta^{\mathrm{op}}$. 积幺半范畴 $\mathcal C$ 中的结合代数也可定义为函子
+$$
+A\colon \Delta^{\mathrm{op}} \to \mathcal C,
+$$
+满足 $A([n])\simeq A([1])^{\otimes n}$ ($n\geq 0$).
+这里 $[n]\in\Delta^{\mathrm{op}}$ 的直观为连续的 $n$ 条线段 (详见<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>), 而乘法 $A\times A\to A$ 来自 $\Delta$ 中的态射 $[1] \to [2]$, $0\mapsto 0$, $1\mapsto 2$.</p>
+<h4>一般幺半范畴</h4>
+<p>在一般的<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>中, 结合代数可由如下<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>定义:</p>
+<ul>
+<li>其对象为有限全序集 (包括空集);</li>
+<li>其态射为<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span>映射;</li>
+<li>幺半结构为全序集的 “拼接”:
+$$
+\{a_1 &lt; \cdots &lt; a_n\} \otimes \{b_1 &lt; \cdots &lt; b_m\} = \{a_1 &lt; \cdots &lt; a_n &lt; b_1 &lt; \cdots &lt; b_m\}.
+$$
+注意这个幺半结构<strong>不是</strong>对称幺半结构, <strong>不存在</strong>自然同构 $A\otimes B\simeq B\otimes A$.</li>
+</ul>
+<p>该幺半范畴的底层范畴就是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span> $\Delta_+$, 其中的单点集是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的结合代数. 换言之, 幺半范畴 $\mathcal C$ 中的结合代数 $A$ 等同于幺半函子
+$$
+\Delta_+ \to\mathcal C,
+$$
+将 $[0]\in\Delta_+$ 映射到 $A$.</p>
+<h4>对称幺半范畴</h4>
+<p>在一般的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>中, 结合代数可由如下<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>定义:</p>
+<ul>
+<li>其对象为有限集;</li>
+<li>态射 $X\to Y$ 是一个集合映射 $f\colon X\to Y$ 配备每个点的原像 $f^{-1}(y)$ 的一个<span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序</a></span>;</li>
+<li>对称幺半结构为无交并.</li>
+</ul>
+<p>这个范畴是一个 <span class="link local"><a href="./PROP.html" title="PROP [PROP]">PROP</a></span>.</p>
+<h2>性质</h2>
+<h3>具体表现</h3>
+<p><span class="link local"><a href="./链复形无穷范畴.html" title="链复形无穷范畴 [链复形无穷范畴]">链复形范畴</a></span>中的结合代数有很具体的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 见 <span class="link local"><a href="./A∞-代数.html" title="A∞-代数 [A∞-代数]">$A_\infty$-代数</a></span>.</p>
+<h3>相反结合代数</h3>
+<p>每个结合代数 $A$ 都有一个相反结合代数 $A^{\mathrm{op}}$. (在对称幺半范畴中) 它也是 $A$ 在 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>中的<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">对偶</a></span>.</p>
+<h2>例</h2>
+<h3>自同态</h3>
+<p>$\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>中, 对象 $X$ 的自同态集 $\operatorname{End}(X)$ 是 $\mathcal V$ 中的结合代数. 它对应函子 $A\colon \Delta_+ \to \mathcal V$, $A([n])$ 是 $[n]$ 到 $\mathcal V$ 的将每个对象都映射到 $X$ 的 $\mathcal V$-充实函子的全体.</p>
+<h3>自由结合代数</h3>
+<p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $A$ 生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>结合代数为<span class="link local"><a href="./列表.html" title="列表 [列表]">列表</a></span>的生象
+$$
+\operatorname{List}A := \bigsqcup_{n\geq 0} A^n.
+$$</p>
+<p>注意另一个概念, $A$ 生成的自由 $\mathbb E_1$-群是 $\Omega\Sigma_+A$, 是 $\operatorname{List} A$ 的群化.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="群作用"><header><h1><span class="taxon"></span>群作用 <a class="slug" href="./群作用.html">[群作用]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>定义</h2>
 <h3>生象群</h3>
 <p>对于<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span><span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 与范畴 $\mathcal C$ 的对象 $X$, 定义 $G$ 在 $X$ 上的<strong>作用</strong>为函子
@@ -2834,14 +3014,18 @@ $$
 <p>在 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span> $\mathcal X$ 中, 逆环路空间函子给出了<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>的范畴 $\mathsf{Grp}(\mathcal X)$ 到带基点连通对象的范畴 $\mathcal X^{\geq 1}_{*/}$ 的等价.</p>
 <p>更一般地, $n$ 阶逆环路空间给出了 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$-群</a></span>的范畴到带基点 $n$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连合</a></span>对象的范畴 $\mathcal X^{\geq n}_{*/}$ 的等价.</p>
 <p>对象 $X$ 到 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$-群</a></span> $A$ 的 $n$ 阶逆环路空间 $\mathbf{B}^n A$ 的映射同伦类称为 $n$ 阶<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span> $H^n(X,A)$.</p>
+<p>比群更一般的<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span> $M$ 也可以谈论逆环路空间 $\mathbf{B}M$. 注意有两个不同对象记作 $\mathbf{B}M$, 一是逆环路空间, 二是 $M$ 对应的单对象范畴 (满足 $\operatorname{End}(*)=M$).</p>
 <h2>定义</h2>
 <h3>通过几何实现</h3>
-<p>在 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span>中, 群 $G$ 的逆环路空间是<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>
+<p>在 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span>中, <span class="link local"><a href="./群.html" title="群 [群]">群</a></span> (或<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>) $G$ 的逆环路空间是<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>
 $$
 \mathbf{B}^\bullet G = (\cdots G\times G\times G \to^4 G\times G \to^3 G\rightrightarrows *)
 $$
-的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span> (余极限).</p>
-<p>而在拓扑空间的 $1$-范畴中, 拓扑群 $G$ 的逆环路空间可<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">实现</a></span>为拓扑空间
+的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span> (余极限), 也即<span class="link local"><a href="./双边杠构造.html" title="双边杠构造 [双边杠构造]">杠构造</a></span>
+$$
+\mathbf{B}^\bullet G := *\times_G * := B(*,G,*).
+$$</p>
+<p>在拓扑空间的 $1$-范畴中, 拓扑群 $G$ 的逆环路空间可<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">实现</a></span>为拓扑空间
 $$
 \begin{aligned}
     |\mathbf{B}G| &amp;= \bigcup_{(g_1,\cdots,g_n)} |\Delta^n|\\

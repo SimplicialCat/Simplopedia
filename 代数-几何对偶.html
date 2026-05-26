@@ -826,7 +826,7 @@
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
 <article><section class="block" data-taxon=""><details open><summary id="代数-几何对偶"><header><h1><span class="taxon"></span>代数–几何对偶 <a class="slug" href="./代数-几何对偶.html">[代数-几何对偶]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>代数–几何对偶是数学上的一大类现象, 某种几何对象与某种代数对象之间有对偶的关系:</p>
+<p>代数–几何对偶是数学上的一大类现象, 某种几何对象与某种代数对象之间有对偶的关系 (即两个范畴互为<span class="link local"><a href="./反范畴.html" title="反范畴 [反范畴]">反范畴</a></span>):</p>
 <ul>
 <li>取几何对象上的某种 “函数”, 得到代数对象;</li>
 <li>取代数对象的 “<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>”, 得到几何对象.</li>
@@ -838,9 +838,9 @@
 <p><span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>对偶于交换 <span class="link local"><a href="./C-星代数.html" title="C*-代数 [C-星代数]">C*-代数</a></span>.</p>
 <p>注意这个等价的关键原因是 Urysohn 引理保证了紧 Hausdorff 空间上有足够多的 $\mathbb{C}$-值连续函数.</p>
 <h3>Stone 对偶</h3>
-<p><span class="link local"><a href="./pro-有限集.html" title="pro-有限集 [pro-有限集]">Pro-有限集</a></span><span class="link local"><a href="./对偶(范畴论).html" title="对偶 (范畴论) [对偶(范畴论)]">对偶</a></span>于 <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>.</p>
+<p><span class="link local"><a href="./pro-有限集.html" title="pro-有限集 [pro-有限集]">Pro-有限集</a></span>对偶于 <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>.</p>
 <h3>仿射概形</h3>
-<p><span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span><span class="link local"><a href="./对偶(范畴论).html" title="对偶 (范畴论) [对偶(范畴论)]">对偶</a></span>于交换环. 这个事实可以作为仿射概形的定义.</p>
+<p><span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>对偶于交换环. 这个事实可以作为仿射概形的定义.</p>
 <p>环上的模的<span class="link local"><a href="./张量-同态伴随.html" title="“张量-同态伴随” [张量-同态伴随]">张量-同态伴随</a></span>类比空间上的层的<span class="link local"><a href="./直像-逆像伴随.html" title="拓扑空间上的直像-逆像伴随 [直像-逆像伴随]">直像-逆像伴随</a></span>.</p>
 <h3>淡中对偶</h3>
 <p><span class="link local"><a href="./淡中对偶.html" title="淡中对偶 [淡中对偶]">淡中 (Tannaka) 对偶</a></span>是某种几何对象与其上的某种层范畴的对偶.</p>
@@ -1436,6 +1436,17 @@ $$</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./量子动量映射.html" title="量子动量映射 [量子动量映射]">量子动量映射</a></span></p>
 <p><span class="link local"><a href="./Delzant多面体.html" title="“Delzant 多面体” [Delzant多面体]">Delzant 多面体</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="反范畴"><header><h1><span class="taxon"></span>反范畴 <a class="slug" href="./反范畴.html">[反范畴]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>范畴的<strong>反范畴</strong> (opposite category) 是将其中的态射方向反转得到的范畴:
+$$
+\mathcal C^{\mathrm{op}}(X,Y) := \mathcal C(Y,X).
+$$</p>
+<h2>性质</h2>
+<p>取反范畴 $(-)^{\mathrm{op}}\colon \mathsf{Cat} \to \mathsf{Cat}$ 是范畴的范畴 $\mathsf{Cat}$ 的自同构.</p>
+<p><strong>命题</strong>. 范畴的范畴 $\mathsf{Cat}$ 的自同构群为 $\mathbb{Z}/2$, 仅有的非平凡自同构为取反范畴.
+更一般地, $(\infty,n)$-范畴的范畴 $\mathsf{Cat}_{(\infty ,n)}$ 的自同构群为 $(\mathbb{Z}/2)^n$, 对应在 $n$ 个层级上取反范畴.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="可分扩张"><header><h1><span class="taxon"></span>可分扩张 <a class="slug" href="./可分扩张.html">[可分扩张]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link local"><a href="./域扩张.html" title="域扩张 [域扩张]">域扩张</a></span> $k \subset K$ 是可分扩张的条件大致相当于映射 $\operatorname{Spec}K\to \operatorname{Spec}k$ 的<span class="link local"><a href="./平展概形态射.html" title="“平展概形态射” [平展概形态射]">平展</a></span>性, 也即 “纤维的点各自分散, 没有粘在一起”.</p>
@@ -1470,17 +1481,6 @@ $$</p>
 <p>扩张 $\mathbb{Q}\subset \mathbb{Q}(\sqrt[3]{2})$ 可分, 但 $\operatorname{Aut}_{\mathbb{Q}}(\mathbb{Q}(\sqrt[3]{2}))$ 为平凡群.</p>
 <h3>不可分扩张的例子</h3>
 <p>$\mathbb{F}_p(x^p) \hookrightarrow \mathbb{F}_p(x)$ 不可分, 因为 $x$ 的极小多项式 $X^p-x^p = (X-x)^p$ 有重根 (其导数为零). 这是<span class="link local"><a href="./纯不可分扩张.html" title="纯不可分扩张 [纯不可分扩张]">纯不可分扩张</a></span>的例子.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="对偶(范畴论)"><header><h1><span class="taxon"></span>对偶 (范畴论) <a class="slug" href="./对偶(范畴论).html">[对偶(范畴论)]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>范畴的对偶是将其中的态射方向反转得到的范畴:
-$$
-\mathcal C^{\mathrm{op}}(X,Y) := \mathcal C(Y,X).
-$$</p>
-<h2>性质</h2>
-<p>取对偶 $(-)^{\mathrm{op}}\colon \mathsf{Cat} \to \mathsf{Cat}$ 是范畴的范畴 $\mathsf{Cat}$ 的自同构.</p>
-<p><strong>命题</strong>. 范畴的范畴 $\mathsf{Cat}$ 的自同构群为 $\mathbb{Z}/2$, 仅有的非平凡自同构为取对偶.
-更一般地, $(\infty,n)$-范畴的范畴 $\mathsf{Cat}_{(\infty ,n)}$ 的自同构群为 $(\mathbb{Z}/2)^n$, 对应在 $n$ 个层级上取对偶.</p>
-<h2>相关概念</h2>
-<p><span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="局部化"><header><h1><span class="taxon"></span>局部化 (环, 模) <a class="slug" href="./局部化.html">[局部化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>环 (<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>) 的<strong>局部化</strong>是使其中某些元素成为可逆元的万有的方法.</p>

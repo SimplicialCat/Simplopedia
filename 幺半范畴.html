@@ -992,6 +992,18 @@ $$
 <p>这样定义的中心又称 <span class="link local"><a href="./Hochschild上同调.html" title="Hochschild 上同调 [Hochschild上同调]">Hochschild 上同调</a></span>.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./余中心.html" title="余中心 [余中心]">余中心</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="仿射态射"><header><h1><span class="taxon"></span>仿射态射 <a class="slug" href="./仿射态射.html">[仿射态射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./代数几何.html" title="代数几何 [代数几何]">代数几何</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>仿射态射是<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>版本的<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>.</p>
+<h2>定义</h2>
+<p>对于<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span>的态射 $f\colon X\to Y$, 若对任意仿射开集 $U\subset Y$, 其原像 $X\times_Y U$ 为<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>, 则称 $f$ 为<strong>仿射态射</strong>.</p>
+<h3>仿射函子</h3>
+<p>与仿射性相关的性质可在<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>范畴的层面读出, 这是<span class="link local"><a href="./高阶仿射性.html" title="高阶仿射性 [高阶仿射性]">高阶仿射性</a></span>的基础案例.
+设 $F\colon \mathcal C_0 \to \mathcal C$ 为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span><span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>之间的函子, 假设其右伴随 $F^R\colon \mathcal C\to\mathcal C_0$ 保持余极限. (想象 $F = f^*\colon \mathsf{QCoh}(Y)\to\mathsf{QCoh}(X)$, $F^R = f_*$.) 由于 $F^R$ 是<span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">松幺半函子</a></span>, $F^R(1_{\mathcal C})$ 为<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 且 $F^R$ 可提升为函子 $\mathcal C\to\mathsf{LMod}_{\mathcal C_0}(F^R(1_{\mathcal C}))$. 若该函子为同构, 则称 $F$ 为<strong>仿射函子</strong>.</p>
+<h2>性质</h2>
+<p>仿射态射是<span class="link local"><a href="./局部性质.html" title="局部性质 [局部性质]">目标上的局部性质</a></span>, 在<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>下稳定.</p>
+<p><strong>定理</strong>. 对于仿射态射 $p\colon Y\to X$, 有 $p_*\mathcal O_Y$为<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚</a></span> $\mathcal O_X$-代数, 且 $Y$ 到<span class="link local"><a href="./相对谱.html" title="相对谱 [相对谱]">相对谱</a></span>的典范的映射 $Y\to\operatorname{Spec}_X(p_*\mathcal O_Y)$ 为同构.</p>
+<p><strong>推论</strong>. <span class="link local"><a href="./闭嵌入.html" title="闭嵌入 [闭嵌入]">闭嵌入</a></span>都是仿射态射.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="佐武等价"><header><h1><span class="taxon"></span>佐武等价 <a class="slug" href="./佐武等价.html">[佐武等价]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>佐武 (Satake) 等价</strong>是 <span class="link local"><a href="./Langlands对偶.html" title="Langlands 对偶群 [Langlands对偶]">Langlands 对偶群</a></span>的一种 “实现”: 由 $G$ 构造的某个几何对象上的某种层范畴实现了其对偶群 $^LG$ 的表示范畴; 再由<span class="link local"><a href="./淡中对偶.html" title="淡中对偶 [淡中对偶]">淡中对偶</a></span>可提取出对偶群. 几何佐武等价是<span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 对应</a></span>的基石.</p>
@@ -1181,10 +1193,13 @@ $$
 <p><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>, <span class="link local"><a href="./杠构造.html" title="杠构造 [杠构造]">杠构造</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单子上的代数"><header><h1><span class="taxon"></span>单子上的代数 <a class="slug" href="./单子上的代数.html">[单子上的代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p><span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>上的<strong>代数</strong>和单子上的<strong>左模</strong>是同义词. 还有另一个不同的概念, 单子上的右模.</p>
+<p>范畴 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 上的<strong>代数</strong>是一个对象 $1\to\mathcal C$, 带有单子 $T$ 上的<strong>左模</strong>结构.</p>
+<p>一个单子 $T$ 上的代数的范畴又称为其 <strong>Eilenberg–Moore 范畴</strong>, 即万有的 $T$-左模.</p>
+<p>还有另一个不同的概念, 单子上的右模; 见 <span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>.</p>
 <p>结合代数给出<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>; 在这种意义上, 单子上的代数是<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">结合代数上的模</a></span>的推广.</p>
 <h2>定义</h2>
-<p>范畴 $\mathcal C$ 是自函子范畴 $\operatorname{End}(\mathcal C)$ (作为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 即 $\mathsf{Cat}$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>) 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>, 因此对于 $\mathcal C$ 上的单子 $T$, 即 $\operatorname{End}(\mathcal C)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 可以谈论 $T$ 在 $\mathcal C$ 中的模 (代数).</p>
+<h3>左模</h3>
+<p>范畴 $\mathcal C$ 是自函子范畴 $\operatorname{End}(\mathcal C)$ (作为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 即 $\mathsf{Cat}$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>) 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>, 因此对于 $\mathcal C$ 上的单子 $T$, 即 $\operatorname{End}(\mathcal C)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 可以谈论 $T$ 在 $\mathcal C$ 中的左<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span> (代数).</p>
 <p>具体地, 范畴 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 上的代数 $X$ 包含一个态射 $TX \to X$, 以及交换图
 $$
 \begin{array}
@@ -1196,6 +1211,29 @@ TX &amp; \to &amp; X.
 $$
 其中两个映射 $TTX \to TX$ 分别来自 $T$ 带有的自然变换 $T^2\to T$ 以及 $X$ 带有的态射 $TX\to X$.</p>
 <p>更一般地, 对范畴 $I$, 函子范畴 $\mathsf{Fun}(I,\mathcal C)$ 也是 $\operatorname{End}(\mathcal C)$ 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>, 从而可以定义 $X\colon I\to\mathcal C$ 上的 $T$-<strong>左模</strong> (或称 $T$-代数) 结构. 它包含一个自然变换 $TX \to X$ 以及左模的条件.</p>
+<h3>作为松极限</h3>
+<p>单子上的代数还有另一种看法. 范畴 $\mathcal C^{T}$ 可定义为如下<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">余单纯对象</a></span>的<span class="link local"><a href="./松极限.html" title="松极限 [松极限]">松极限</a></span>:
+$$
+\mathcal C \rightrightarrows \mathcal C \to^3 \mathcal C\to^4\cdots,
+$$
+其中前两个函子 $\mathcal C\rightrightarrows\mathcal C$ 为 $T$ 与 $\mathrm{id}_{\mathcal C}$.</p>
+<p>甚至 $\mathcal C^{T}$ 可以更加简练地写成<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 对应的<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span> $1\to\mathsf{Cat}$ 的<span class="link local"><a href="./松极限.html" title="松极限 [松极限]">松极限</a></span>. 换言之, 考虑所有范畴上所有单子构成的 $2$-范畴
+$$
+\mathsf{Mnd}(\mathsf{Cat}) = \mathsf{Fun}^{\mathrm{lax}}(1,\mathsf{Cat}),
+$$
+有嵌入
+$$
+\mathsf{Cat} \to \mathsf{Mnd}(\mathsf{Cat}),\,\mathcal C\mapsto (\mathcal C,\mathrm{id}_{\mathcal C});
+$$
+而取单子上的代数范畴
+$$
+\mathsf{Mnd}(\mathsf{Cat}) \to \mathsf{Cat},\,(\mathcal C,T)\mapsto\mathcal C^T
+$$
+正是该嵌入的右伴随. 又换言之, $\mathcal C^T$ 带有一个万有的单子同态 (即前述伴随的余单位)
+$$
+(\mathcal C^T,\mathrm{id}) \to (\mathcal C,T).
+$$</p>
+<p>这种观点的一个应用如下. 设 $\mathfrak C$ 为 $2$-范畴, 那么可表函子 $h^X:=\operatorname{Hom}(X,-)\colon \mathfrak C\to\mathsf{Cat}$ 保持松极限; 于是对于 $Y\in\mathcal C$ 上的单子 $T$, 有 $h^X(Y^T)=h^X(Y)^{h^X(T)}$.</p>
 <h3>右模, 双模</h3>
 <p>另一个概念是单子上的<strong>右模</strong>. 对范畴 $J$, 函子范畴 $\mathsf{Fun}(\mathcal C,J)$ 是 $\operatorname{End}(\mathcal C)$ 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">右模</a></span>, 从而可以定义 $Y\colon \mathcal C\to J$ 上的 $T$-<strong>右模</strong>结构. 它包含一个自然变换 $YT \to Y$, 以及右模的条件.</p>
 <p>进一步, 对于两个范畴 $\mathcal C,\mathcal D$, $\mathcal C$ 上的单子 $T$ 与 $\mathcal D$ 上的单子 $S$, 定义 $(T,S)$-<strong>双模</strong>为函子 $X\colon \mathcal D\to\mathcal C$, 同时具有相容的 $T$-左模和 $S$-右模结构, 即有如下交换图.
@@ -1342,6 +1380,10 @@ $$
 以及右分配律.</p>
 <p>类似于<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 可在双幺半范畴上附加严格, 对称等等条件.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="可对偶对象"><header><h1><span class="taxon"></span>对偶 <a class="slug" href="./可对偶对象.html">[可对偶对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>若将幺半范畴等同于一个对象的 $2$-范畴 (类似于<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>等同于一个对象的范畴), 则对象的左右对偶可视为态射的左右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
+<p>另见<span class="link local"><a href="./对偶对象.html" title="对偶对象 [对偶对象]">对偶对象</a></span> (dualizing object), <span class="link local"><a href="./.html" title=" []">对偶</a></span>.</p>
+<h2>定义</h2>
 <p>设 $\mathcal C$ 为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 定义其对象 $x$ 的<strong>右对偶</strong>为如下数据:</p>
 <ul>
 <li>一个对象 $x'$;</li>
@@ -1356,7 +1398,6 @@ $$
 	x' \overset{\operatorname{coev}}{\to} x'\otimes x\otimes x' \overset{\operatorname{ev}}{\to} x'
 $$
 均为恒等.</p>
-<p>若将幺半范畴等同于一个对象的 $2$-范畴 (类似于<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>等同于一个对象的范畴), 则对象的左右对偶可视为态射的左右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
 <h2>例</h2>
 <ul>
 <li>线性空间范畴的可对偶对象为有限维线性空间.</li>
@@ -1370,6 +1411,8 @@ $$
 $$
 	* \leftarrow X \overset{\Delta}{\rightarrow} X\times X.
 $$</p>
+<h3>Morita 范畴</h3>
+<p>对称幺半范畴 $\mathcal C$ 的 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>中, 对象为 $\mathcal C$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$, 其对偶为相反的结合代数 $A^{\mathrm{op}}$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="拟三角代数"><header><h1><span class="taxon"></span>拟三角代数 <a class="slug" href="./拟三角代数.html">[拟三角代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link local"><a href="./双代数.html" title="双代数 [双代数]">双代数</a></span>上的<strong>拟三角</strong> (quasitriangular) 结构是使其<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>范畴由<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>升级为<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半范畴</a></span>所需的结构.</p>
@@ -1411,10 +1454,11 @@ $$</p>
 <p>游走结构也可理解为 “余<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">分类空间</a></span>”.</p>
 <h2>例</h2>
 <ul>
-<li>游走的箭头 $\{0\to 1\}$ 即为两个对象 $0,1$ 与一个态射 $0\to 1$ 生成的范畴.</li>
-<li><span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span></li>
-<li>$\mathbf{B}\mathbb N$, “游走的自同态”</li>
-<li><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">$\Delta_+$</a></span> 中的 $[0]$ 是游走的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</li>
+<li>游走的箭头 $\{0\to 1\}$ 即为两个对象 $0,1$ 与一个态射 $0\to 1$ 生成的范畴. 任何范畴 $\mathcal C$ 中的箭头都对应函子 $\{0\to 1\} \to \mathcal C$.</li>
+<li><span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span> $\mathsf{Adj}$ 是一个 $2$-范畴, 任何 $2$-范畴 $\mathcal C$ 中的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>都对应函子 $\mathsf{Adj}\to\mathcal C$.</li>
+<li>游走的自同态是自然数的幺半群的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> $\mathbf{B}\mathbb N$.</li>
+<li>游走的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> 是 <span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">$\Delta_+$</a></span> 中的 $[0]$.</li>
+<li>游走的幂等映射 $\mathsf{Idem}$ 是一个 $1$-范畴, 有一个对象和一个自同态 $e$ 满足 $e^2=e$. 任何范畴 $\mathcal C$ 中的幂等自同态都对应函子 $\mathsf{Idem} \to \mathcal C$.</li>
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="特征向量"><header><h1><span class="taxon"></span>特征向量 <a class="slug" href="./特征向量.html">[特征向量]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
@@ -1503,9 +1547,57 @@ $$
 <h2>性质</h2>
 <h3>具体表现</h3>
 <p><span class="link local"><a href="./链复形无穷范畴.html" title="链复形无穷范畴 [链复形无穷范畴]">链复形范畴</a></span>中的结合代数有很具体的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 见 <span class="link local"><a href="./A∞-代数.html" title="A∞-代数 [A∞-代数]">$A_\infty$-代数</a></span>.</p>
+<h3>相反结合代数</h3>
+<p>每个结合代数 $A$ 都有一个相反结合代数 $A^{\mathrm{op}}$. (在对称幺半范畴中) 它也是 $A$ 在 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>中的<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">对偶</a></span>.</p>
 <h2>例</h2>
 <h3>自同态</h3>
 <p>$\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>中, 对象 $X$ 的自同态集 $\operatorname{End}(X)$ 是 $\mathcal V$ 中的结合代数. 它对应函子 $A\colon \Delta_+ \to \mathcal V$, $A([n])$ 是 $[n]$ 到 $\mathcal V$ 的将每个对象都映射到 $X$ 的 $\mathcal V$-充实函子的全体.</p>
+<h3>自由结合代数</h3>
+<p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $A$ 生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>结合代数为<span class="link local"><a href="./列表.html" title="列表 [列表]">列表</a></span>的生象
+$$
+\operatorname{List}A := \bigsqcup_{n\geq 0} A^n.
+$$</p>
+<p>注意另一个概念, $A$ 生成的自由 $\mathbb E_1$-群是 $\Omega\Sigma_+A$, 是 $\operatorname{List} A$ 的群化.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="结合代数上的模"><header><h1><span class="taxon"></span>结合代数上的模 <a class="slug" href="./结合代数上的模.html">[结合代数上的模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>可视为单对象<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>; 在这种意义上, 结合代数上的模可以推广为<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">充实范畴上的模</a></span>或者<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>.</p>
+<p>结合代数给出<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>; 在这种意义上, 结合代数上的模可以推广为<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的模</a></span>.</p>
+<p>结合代数上的模范畴可视为结合代数的范畴的<span class="link local"><a href="./切范畴.html" title="切范畴 [切范畴]">切范畴</a></span>.</p>
+<p>另外, 对一般的<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span>也可定义<span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">模</a></span>的概念; 但这个概念对于<span class="link local"><a href="./A∞-算畴.html" title="结合算畴 [A∞-算畴]">结合算畴</a></span>给出的是<strong>双模</strong>, 而非左模或右模.</p>
+<h2>定义</h2>
+<h3>通过算畴</h3>
+<p>考虑<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathsf{LM}$, 作为多重范畴有两个对象 $a,m$, 且有</p>
+<ul>
+<li>$\operatorname{Hom}_{\mathsf{LM}}(a\cdots a,a) = 1$,</li>
+<li>$\operatorname{Hom}_{\mathsf{LM}}(a\cdots am,m) = 1$,</li>
+<li>其它 $\operatorname{Hom}$ 为空.</li>
+</ul>
+<p>设 $\mathcal C$ 是<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, $A$ 是 $\mathcal C$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. <strong>左模范畴</strong> $\mathsf{LMod}_{\mathcal C}(A)$ 是如下纤维:
+$$
+\mathsf{LMod}_{\mathcal C}(A) := \{A\} \times_{\mathsf{Alg}_{\mathbb E_1}(\mathcal C)}\mathsf{Alg}_{\mathsf{LM}}(\mathcal C).
+$$</p>
+<h3>通过单子</h3>
+<p>假设我们定义了<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>, 那么可以如下定义结合代数上的模: 对于结合代数 $A$ 有<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T_A := A\otimes -$; 定义
+$$
+\mathsf{LMod}(A) := \mathsf{Alg}(T_A).
+$$</p>
+<h2>性质</h2>
+<h3>相对张量积</h3>
+<p>在具有<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">单纯余极限</a></span>的范畴 $\mathcal C$ 中, 对于结合代数 $A$ 上的右模 $M$ 与左模 $N$, 可作相对张量积
+$$
+M\otimes_A N := \operatorname{colim}_{\Delta} M\otimes A^{\otimes\bullet}\otimes N.
+$$
+$M\otimes_A N$ 一般没有 $A$-左模或右模结构.</p>
+<p>张量积也可以理解为 $\mathcal C$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>之间的<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span> $\mathbf{B}A\to\mathcal C$ 的复合
+$$
+\operatorname{colim}_{\mathbf{B}A} M\otimes N.
+$$</p>
+<h3>通过取模范畴嵌入高阶模范畴</h3>
+<p><strong>命题</strong>. 设 $\mathcal C\in\mathsf{Alg}(\mathsf{Pr})$ 为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span>幺半范畴. 函子 $\mathsf{Alg}(\mathcal C) \to \mathsf{LMod}_{\mathsf{Pr}}(\mathcal C)$, $A\mapsto\mathsf{LMod}(A)$ 为全忠实函子, 且保持余极限.</p>
+<p>这说明取模范畴这一操作将结合代数提升到更高范畴层级. 参见 <span class="link local"><a href="./notes-Gestalten-Cat.html" title="Gestalten - 在范畴上做代数 [notes-Gestalten-Cat]">Gestalten - 在范畴上做代数</a></span>.</p>
+<h2>例</h2>
+<h3>交换代数上的模</h3>
+<p><span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>上的模, 即是其作为结合代数的左模或右模.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="结合余代数"><header><h1><span class="taxon"></span>结合余代数 <a class="slug" href="./结合余代数.html">[结合余代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $(\mathcal C,\otimes)$ 中的<strong>结合余代数</strong>是对偶范畴 $(\mathcal C^{\mathrm{op}},\otimes)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
 <h2>例</h2>

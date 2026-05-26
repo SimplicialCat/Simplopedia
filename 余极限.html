@@ -1191,6 +1191,7 @@ $$
 $$
 \mathsf{Pr}^{\mathrm{R}} \simeq (\mathsf{Pr}^{\mathrm{L}})^{\mathrm{op}}.
 $$</p>
+<p>有这样一种观点: “范畴” 与 “可表现范畴” 可以是处于平等地位的两个概念, 每个都可以视为另一个的特殊情况, 但是嵌套会使得<span class="link local"><a href="./宇宙.html" title="宇宙 [宇宙]">宇宙</a></span>变大.</p>
 <h2>性质</h2>
 <h3>张量积</h3>
 <p>可表现范畴的范畴 $\mathsf{Pr}$ 上有一个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>结构, 称为 <strong>Lurie 张量积</strong>.</p>
@@ -1209,7 +1210,15 @@ $$
 \operatorname{colim}^{\mathsf{Pr}^{\mathrm{L}}}X = \operatorname{lim}^{\mathsf{Pr}^{\mathrm{R}}}X^{\mathrm{op}}= \operatorname{lim}^{\mathsf{Cat}} X^{\mathrm{op}}.
 $$
 换言之, <span class="link local"><a href="./自由-遗忘伴随.md.html" title=" [自由-遗忘伴随.md]">遗忘</a></span>函子 $\mathsf{Pr}^{\mathrm{R}} \to\mathsf{Cat}$ 保持极限.</p>
-<p>例如, 对任意集合 $I$, 可表现范畴的 $I$-<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>实际上等同于可表现范畴的积, 也等同于其作为范畴的积:
+<p>对于指标范畴的代换 $I\to J$, 有如下伴随.
+$$
+\begin{array}{ccc}
+\operatorname{colim}_{i\in I}X_i &amp; = &amp; \operatorname{lim}_{i\in I^{\mathrm{op}}}X_i \\
+\downarrow &amp; \dashv &amp; \uparrow \\
+\operatorname{colim}_{j\in J}X_j &amp; = &amp; \operatorname{lim}_{j\in J^{\mathrm{op}}}X_j
+\end{array}
+$$</p>
+<p><strong>例</strong>. 对任意集合 $I$, 可表现范畴的 $I$-<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>实际上等同于可表现范畴的积, 也等同于其作为范畴的积:
 $$
 \coprod_{i\in I}^{\mathsf{Pr}^{\mathrm{L}}} \mathcal C_i \overset{\simeq}{\to} \prod_{i\in I}^{\mathsf{Cat}} \mathcal C_i \simeq \prod_{i\in I}^{\mathsf{Pr}^{\mathrm{L}}} \mathcal C_i.
 $$
@@ -1466,6 +1475,10 @@ $$</p>
 <p>筛余极限 (sifted colimit) 是以<span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span>为指标范畴的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>
 <h2>例</h2>
 <p><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯</a></span>图表的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>是筛余极限.</p>
+<p>任何<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $A$ 都是有限集合的筛余极限:
+$$
+A = \operatorname{colim}_{(S\to A)\in\mathsf{Fin}_{/A}} S.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="茎"><header><h1><span class="taxon"></span>茎 <a class="slug" href="./茎.html">[茎]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p><strong>茎</strong> (stalk) 是<span class="link local"><a href="./意象的点.html" title="意象的点 [意象的点]">意象的点</a></span>的<span class="link local"><a href="./逆像.html" title="逆像 [逆像]">逆像</a></span>函子.</p>

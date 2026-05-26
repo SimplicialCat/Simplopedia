@@ -889,6 +889,18 @@ $$
 $$
 \mathsf{CAlg}(\mathsf{Mod}_{\mathcal C}(A)) \simeq \mathsf{CAlg}(\mathcal C)_{A/}.
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="仿射态射"><header><h1><span class="taxon"></span>仿射态射 <a class="slug" href="./仿射态射.html">[仿射态射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./代数几何.html" title="代数几何 [代数几何]">代数几何</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>仿射态射是<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>版本的<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>.</p>
+<h2>定义</h2>
+<p>对于<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span>的态射 $f\colon X\to Y$, 若对任意仿射开集 $U\subset Y$, 其原像 $X\times_Y U$ 为<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>, 则称 $f$ 为<strong>仿射态射</strong>.</p>
+<h3>仿射函子</h3>
+<p>与仿射性相关的性质可在<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>范畴的层面读出, 这是<span class="link local"><a href="./高阶仿射性.html" title="高阶仿射性 [高阶仿射性]">高阶仿射性</a></span>的基础案例.
+设 $F\colon \mathcal C_0 \to \mathcal C$ 为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span><span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>之间的函子, 假设其右伴随 $F^R\colon \mathcal C\to\mathcal C_0$ 保持余极限. (想象 $F = f^*\colon \mathsf{QCoh}(Y)\to\mathsf{QCoh}(X)$, $F^R = f_*$.) 由于 $F^R$ 是<span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">松幺半函子</a></span>, $F^R(1_{\mathcal C})$ 为<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 且 $F^R$ 可提升为函子 $\mathcal C\to\mathsf{LMod}_{\mathcal C_0}(F^R(1_{\mathcal C}))$. 若该函子为同构, 则称 $F$ 为<strong>仿射函子</strong>.</p>
+<h2>性质</h2>
+<p>仿射态射是<span class="link local"><a href="./局部性质.html" title="局部性质 [局部性质]">目标上的局部性质</a></span>, 在<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>下稳定.</p>
+<p><strong>定理</strong>. 对于仿射态射 $p\colon Y\to X$, 有 $p_*\mathcal O_Y$为<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚</a></span> $\mathcal O_X$-代数, 且 $Y$ 到<span class="link local"><a href="./相对谱.html" title="相对谱 [相对谱]">相对谱</a></span>的典范的映射 $Y\to\operatorname{Spec}_X(p_*\mathcal O_Y)$ 为同构.</p>
+<p><strong>推论</strong>. <span class="link local"><a href="./闭嵌入.html" title="闭嵌入 [闭嵌入]">闭嵌入</a></span>都是仿射态射.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="充实范畴"><header><h1><span class="taxon"></span>充实范畴 <a class="slug" href="./充实范畴.html">[充实范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>充实范畴</strong>是范畴的推广, 其对象之间的 “态射集” 不是集合, 而是更一般的幺半范畴的对象.</p>
@@ -982,7 +994,7 @@ $$
 $$
 \operatorname{Hom}(X_1,X_2,\cdots,X_n ; Y).
 $$</p>
-<p>算畴种的 “颜色” 即是多重范畴中的对象. 当多重范畴仅有一个对象时, 称之为<strong>单色算畴</strong>. 不同文献中对算畴是否默认为单色有不同的约定.</p>
+<p>算畴中的 “颜色” 即是多重范畴中的对象. 当多重范畴仅有一个对象时, 称之为<strong>单色算畴</strong>. 不同文献中对算畴是否默认为单色有不同的约定.</p>
 <p><strong>对称算畴</strong> (symmetric operad) 是指多重范畴中的 $\operatorname{Hom}$ 带有对称群的作用, 即对 $\sigma\in S_n$ 有相容的同构 $\operatorname{Hom}(X_1,\cdots,X_n ; Y) \simeq \operatorname{Hom}(X_{\sigma(1),\cdots,\sigma(n)};Y)$.</p>
 <p>上面定义的是 <span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">$\mathsf{Ani}$</a></span> 上的算畴. 对于一般<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半范畴</a></span> $\mathcal C$, 也可定义相应的 “<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>多重范畴” 作为 $\mathcal C$ 上的算畴的概念.</p>
 <h3>作为对称序列</h3>
@@ -1086,7 +1098,7 @@ $$
 <p>任何一个对象 $X$ 上都有一个自同态算畴 $\mathcal {E}_X$, 且 $X$ 是 $\mathcal {E}_X$-代数.</p>
 <p>对于算畴 $\mathcal P$, 一个对象 $X$ 上的 $\mathcal P$-代数结构等同于算畴的态射 $\mathcal P\to\mathcal {E}_X$.</p>
 <h3>模算畴</h3>
-<p>模算畴是表达 (交换, 结合等) 代数上的模的算畴.</p>
+<p>模算畴是表达 (交换, 结合等) 代数上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>的算畴.</p>
 <p>“交换代数上的模” 算畴 $\mathsf{CM}$ 作为多重范畴有两个对象 $a,m$, 且有</p>
 <ul>
 <li>$\operatorname{Hom}_{\mathsf{CM}}(a^n,a) = 1$,</li>

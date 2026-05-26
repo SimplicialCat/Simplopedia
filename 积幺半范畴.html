@@ -1113,6 +1113,13 @@ $$
 <p>PROP 又可视为单色<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>: 对于 PROP $\mathcal P$, $\operatorname{Hom}_{\mathcal P}(x^{\otimes n},x)$ 构成一个单色算畴的 $n$-元运算.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span>, <span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半 ∞-范畴</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="幺半群"><header><h1><span class="taxon"></span>幺半群 <a class="slug" href="./幺半群.html">[幺半群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>幺半群与<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>基本上是同义词. 幺半群常常用于特指<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span> $(\mathsf{Set},\times)$ 或 $(\mathsf{Ani},\times)$ 中的结合代数.</p>
+<p>幺半群等同于仅有一个对象的范畴. <sup class="footnote-reference" id="幺半群_1-back"><a href="#幺半群_1">1</a></sup></p>
+<div class="footnote-definition" id="幺半群_1">
+  <sup class="footnote-definition-label"><a href="#幺半群_1-back">1</a></sup>
+<p>这里有两个细节. 其一, 这里幺半群构成的是 $2$-范畴, $2$-态射是共轭; 其二, 这个仅有的对象须为指定的, 即另一边是单对象带基点范畴的 $2$-范畴, $2$-态射是自然变换, 且给出基点的恒等自同态.</p>
+</div>
 </details></section><section class="block" data-taxon=""><details ><summary id="幺半范畴"><header><h1><span class="taxon"></span>幺半范畴 <a class="slug" href="./幺半范畴.html">[幺半范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>幺半范畴是范畴的范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
 <h2>定义</h2>
@@ -1239,9 +1246,17 @@ $$
 <h2>性质</h2>
 <h3>具体表现</h3>
 <p><span class="link local"><a href="./链复形无穷范畴.html" title="链复形无穷范畴 [链复形无穷范畴]">链复形范畴</a></span>中的结合代数有很具体的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 见 <span class="link local"><a href="./A∞-代数.html" title="A∞-代数 [A∞-代数]">$A_\infty$-代数</a></span>.</p>
+<h3>相反结合代数</h3>
+<p>每个结合代数 $A$ 都有一个相反结合代数 $A^{\mathrm{op}}$. (在对称幺半范畴中) 它也是 $A$ 在 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>中的<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">对偶</a></span>.</p>
 <h2>例</h2>
 <h3>自同态</h3>
 <p>$\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>中, 对象 $X$ 的自同态集 $\operatorname{End}(X)$ 是 $\mathcal V$ 中的结合代数. 它对应函子 $A\colon \Delta_+ \to \mathcal V$, $A([n])$ 是 $[n]$ 到 $\mathcal V$ 的将每个对象都映射到 $X$ 的 $\mathcal V$-充实函子的全体.</p>
+<h3>自由结合代数</h3>
+<p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $A$ 生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>结合代数为<span class="link local"><a href="./列表.html" title="列表 [列表]">列表</a></span>的生象
+$$
+\operatorname{List}A := \bigsqcup_{n\geq 0} A^n.
+$$</p>
+<p>注意另一个概念, $A$ 生成的自由 $\mathbb E_1$-群是 $\Omega\Sigma_+A$, 是 $\operatorname{List} A$ 的群化.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="结合余代数"><header><h1><span class="taxon"></span>结合余代数 <a class="slug" href="./结合余代数.html">[结合余代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $(\mathcal C,\otimes)$ 中的<strong>结合余代数</strong>是对偶范畴 $(\mathcal C^{\mathrm{op}},\otimes)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
 <h2>例</h2>

@@ -1180,6 +1180,7 @@ $\mathcal C_{/(X+Y)} \to \mathcal C_{/X} \times\mathcal C_{/Y}$.</p>
 $$
 \mathsf{Pr}^{\mathrm{R}} \simeq (\mathsf{Pr}^{\mathrm{L}})^{\mathrm{op}}.
 $$</p>
+<p>有这样一种观点: “范畴” 与 “可表现范畴” 可以是处于平等地位的两个概念, 每个都可以视为另一个的特殊情况, 但是嵌套会使得<span class="link local"><a href="./宇宙.html" title="宇宙 [宇宙]">宇宙</a></span>变大.</p>
 <h2>性质</h2>
 <h3>张量积</h3>
 <p>可表现范畴的范畴 $\mathsf{Pr}$ 上有一个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>结构, 称为 <strong>Lurie 张量积</strong>.</p>
@@ -1198,7 +1199,15 @@ $$
 \operatorname{colim}^{\mathsf{Pr}^{\mathrm{L}}}X = \operatorname{lim}^{\mathsf{Pr}^{\mathrm{R}}}X^{\mathrm{op}}= \operatorname{lim}^{\mathsf{Cat}} X^{\mathrm{op}}.
 $$
 换言之, <span class="link local"><a href="./自由-遗忘伴随.md.html" title=" [自由-遗忘伴随.md]">遗忘</a></span>函子 $\mathsf{Pr}^{\mathrm{R}} \to\mathsf{Cat}$ 保持极限.</p>
-<p>例如, 对任意集合 $I$, 可表现范畴的 $I$-<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>实际上等同于可表现范畴的积, 也等同于其作为范畴的积:
+<p>对于指标范畴的代换 $I\to J$, 有如下伴随.
+$$
+\begin{array}{ccc}
+\operatorname{colim}_{i\in I}X_i &amp; = &amp; \operatorname{lim}_{i\in I^{\mathrm{op}}}X_i \\
+\downarrow &amp; \dashv &amp; \uparrow \\
+\operatorname{colim}_{j\in J}X_j &amp; = &amp; \operatorname{lim}_{j\in J^{\mathrm{op}}}X_j
+\end{array}
+$$</p>
+<p><strong>例</strong>. 对任意集合 $I$, 可表现范畴的 $I$-<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>实际上等同于可表现范畴的积, 也等同于其作为范畴的积:
 $$
 \coprod_{i\in I}^{\mathsf{Pr}^{\mathrm{L}}} \mathcal C_i \overset{\simeq}{\to} \prod_{i\in I}^{\mathsf{Cat}} \mathcal C_i \simeq \prod_{i\in I}^{\mathsf{Pr}^{\mathrm{L}}} \mathcal C_i.
 $$
@@ -1443,4 +1452,22 @@ $$</p>
 <p><strong>积</strong> (product), 是以集合 (离散范畴) 为指标的<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和 (范畴论)</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="筛范畴"><header><h1><span class="taxon"></span>筛范畴 <a class="slug" href="./筛范畴.html">[筛范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><strong>筛范畴</strong> (sifted category) 是满足如下等价条件的小范畴 $I$:</p>
+<ul>
+<li><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">$\mathsf{Ani}$</a></span> 中 $I$-余极限与有限乘积交换, 具体地说, 对任意有限集 $S$ 以及函子 $F\colon I\times S\to\mathsf{Ani}$,
+$$
+\operatorname{colim}_{i\in I}\prod_{s\in S}F(i,s)\to\prod_{s\in S}\operatorname{colim}_{i\in I}F(i,s)
+$$
+为同构;</li>
+<li>对角线 $I\to I\times I$ 为<span class="link local"><a href="./共尾函子.html" title="共尾函子 [共尾函子]">共尾函子</a></span> (final functor, 又叫 cofinal functor, 意为沿该函子的限制不改变余极限);</li>
+<li>对任意有限集 (有限离散范畴) $S$, 对角线 $I\to I^S$ 为共尾函子;</li>
+<li>对任意两个对象 $i_1,i_2\in I$, 范畴 $\operatorname{cospan}(i_1,i_2)$ (其对象为 $i\in I$ 以及态射 $i_1\to i$, $i_2\to i$) 连通.</li>
+</ul>
+<p>以筛范畴为指标范畴的余极限称为<strong>筛余极限</strong> (sifted colimit).</p>
+<h2>例</h2>
+<p><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>的对偶 $\Delta^{\mathrm{op}}$ 为筛范畴. 以此为指标的余极限叫单纯对象的几何实现, 也叫<span class="link local"><a href="./杠构造.html" title="杠构造 [杠构造]">杠构造</a></span>.</p>
+<p>具有有限<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>的范畴都是筛范畴.</p>
+<p>一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> ($\infty$-群胚) $A$ 是筛范畴当且仅当 $A\simeq 1$.</p>
 </details></section></details></section></footer></article></div></body></html>

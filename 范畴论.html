@@ -1058,6 +1058,7 @@ $$
 </ul>
 <p>换言之, $\mathsf{El}(F)$ 是如下的<span class="link local"><a href="./松拉回.html" title="松拉回 [松拉回]">松拉回</a></span>.</p>
 <p><figure><img src="./元素范畴-1.svg" class="color-invert"/></figure></p>
+<p>在 $\infty$-范畴语境中 $\mathsf{Set}$ 往往换成 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="共尾函子"><header><h1><span class="taxon"></span>共尾函子 <a class="slug" href="./共尾函子.html">[共尾函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>共尾函子是不改变余极限的指标代换, 即对于共尾函子 $f\colon I\to J$ 以及图表 $X\colon J\to \mathcal C$,
@@ -1190,6 +1191,7 @@ $\mathcal C_{/(X+Y)} \to \mathcal C_{/X} \times\mathcal C_{/Y}$.</p>
 $$
 \mathsf{Pr}^{\mathrm{R}} \simeq (\mathsf{Pr}^{\mathrm{L}})^{\mathrm{op}}.
 $$</p>
+<p>有这样一种观点: “范畴” 与 “可表现范畴” 可以是处于平等地位的两个概念, 每个都可以视为另一个的特殊情况, 但是嵌套会使得<span class="link local"><a href="./宇宙.html" title="宇宙 [宇宙]">宇宙</a></span>变大.</p>
 <h2>性质</h2>
 <h3>张量积</h3>
 <p>可表现范畴的范畴 $\mathsf{Pr}$ 上有一个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>结构, 称为 <strong>Lurie 张量积</strong>.</p>
@@ -1208,7 +1210,15 @@ $$
 \operatorname{colim}^{\mathsf{Pr}^{\mathrm{L}}}X = \operatorname{lim}^{\mathsf{Pr}^{\mathrm{R}}}X^{\mathrm{op}}= \operatorname{lim}^{\mathsf{Cat}} X^{\mathrm{op}}.
 $$
 换言之, <span class="link local"><a href="./自由-遗忘伴随.md.html" title=" [自由-遗忘伴随.md]">遗忘</a></span>函子 $\mathsf{Pr}^{\mathrm{R}} \to\mathsf{Cat}$ 保持极限.</p>
-<p>例如, 对任意集合 $I$, 可表现范畴的 $I$-<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>实际上等同于可表现范畴的积, 也等同于其作为范畴的积:
+<p>对于指标范畴的代换 $I\to J$, 有如下伴随.
+$$
+\begin{array}{ccc}
+\operatorname{colim}_{i\in I}X_i &amp; = &amp; \operatorname{lim}_{i\in I^{\mathrm{op}}}X_i \\
+\downarrow &amp; \dashv &amp; \uparrow \\
+\operatorname{colim}_{j\in J}X_j &amp; = &amp; \operatorname{lim}_{j\in J^{\mathrm{op}}}X_j
+\end{array}
+$$</p>
+<p><strong>例</strong>. 对任意集合 $I$, 可表现范畴的 $I$-<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>实际上等同于可表现范畴的积, 也等同于其作为范畴的积:
 $$
 \coprod_{i\in I}^{\mathsf{Pr}^{\mathrm{L}}} \mathcal C_i \overset{\simeq}{\to} \prod_{i\in I}^{\mathsf{Cat}} \mathcal C_i \simeq \prod_{i\in I}^{\mathsf{Pr}^{\mathrm{L}}} \mathcal C_i.
 $$
@@ -1308,6 +1318,16 @@ $$</p>
 <p>松拉回, 又叫<strong>有向纤维积</strong> (oriented fiber product), 是一种<span class="link local"><a href="./松极限.html" title="松极限 [松极限]">松极限</a></span>, 是<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span> (纤维积) 在<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>中的推广.</p>
 <h2>定义</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="松极限"><header><h1><span class="taxon"></span>松极限 <a class="slug" href="./松极限.html">[松极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>松极限是<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>在高阶范畴中的推广; 这里高阶范畴是指 <span class="link local"><a href="./n-r-范畴.html" title="(n,r)-范畴 [n-r-范畴]">$(\infty,r)$-范畴</a></span> ($r\geq 2$).</p>
+<h2>定义</h2>
+<p>设 $\mathcal C$ 为 $(\infty,2)$-范畴, $X\colon I\to\mathcal C$ 为<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span>. 定义 $X$ 的<strong>松极限</strong> 为对象 $\operatorname{laxlim}X$, 以及如下等价:
+$$
+\operatorname{Hom}_{\mathcal C}(c,\operatorname{laxlim}X)\simeq\operatorname{Hom}_{\mathsf{Fun}^{\mathrm{lax}}(I,\mathcal C)}(\Delta c,X).
+$$</p>
+<h2>例</h2>
+<h3>Eilenberg–Moore 对象</h3>
+<p>回忆, $2$-范畴 $\mathcal C$ 的对象 $c$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $t$ 等同于松函子 $*\to \mathcal C$, 将对象 $*$ 对应到 $c$, 自同态 $\mathrm{id}_c$ 对应到单子 $t\colon c\to c$. 这个图 $*\to \mathcal C$ 的松极限即为单子 $t$ 的 <span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">Eilenberg–Moore 对象</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="正则基数"><header><h1><span class="taxon"></span>正则基数 <a class="slug" href="./正则基数.html">[正则基数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon=""><details ><summary id="滤余极限"><header><h1><span class="taxon"></span>滤余极限 <a class="slug" href="./滤余极限.html">[滤余极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>滤余极限是指标范畴为<span class="link local"><a href="./滤范畴.html" title="滤范畴 [滤范畴]">滤范畴</a></span>的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>

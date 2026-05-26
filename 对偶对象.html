@@ -827,7 +827,7 @@
 
 <article><section class="block" data-taxon=""><details open><summary id="对偶对象"><header><h1><span class="taxon"></span>对偶对象 <a class="slug" href="./对偶对象.html">[对偶对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>在<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭范畴</a></span> $\mathcal C$ 中, 若存在对象 $D$, 满足<span class="link local"><a href="./内蕴态射对象.html" title="“内蕴态射对象” [内蕴态射对象]">内蕴态射对象</a></span> $[-,D]\colon \mathcal C\to\mathcal C^{\text{op}}$ 为等价, 则称之为对偶对象.</p>
+<p>在<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭范畴</a></span> $\mathcal C$ 中, 若存在对象 $D$, 满足<span class="link local"><a href="./内蕴态射对象.html" title="“内蕴态射对象” [内蕴态射对象]">内蕴态射对象</a></span> $[-,D]\colon \mathcal C\to\mathcal C^{\text{op}}$ 为等价, 则称之为对偶对象 (dualizing object).</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Poincaré--Verdier对偶.html" title="Poincaré–Verdier 对偶 [Poincaré--Verdier对偶]">Poincaré–Verdier 对偶</a></span>, <span class="link local"><a href="./Cartier对偶.html" title="“Cartier 对偶” [Cartier对偶]">Cartier 对偶</a></span></p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="伴随"><header><h1><span class="taxon"></span>伴随 <a class="slug" href="./伴随.html">[伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -908,6 +908,40 @@ $$
 $$
 \operatorname{Sh}(X) \rightleftarrows\mathsf {Et}(X).
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="可对偶对象"><header><h1><span class="taxon"></span>对偶 <a class="slug" href="./可对偶对象.html">[可对偶对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>若将幺半范畴等同于一个对象的 $2$-范畴 (类似于<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>等同于一个对象的范畴), 则对象的左右对偶可视为态射的左右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
+<p>另见<span class="link local"><a href="./对偶对象.html" title="对偶对象 [对偶对象]">对偶对象</a></span> (dualizing object), <span class="link local"><a href="./.html" title=" []">对偶</a></span>.</p>
+<h2>定义</h2>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 定义其对象 $x$ 的<strong>右对偶</strong>为如下数据:</p>
+<ul>
+<li>一个对象 $x'$;</li>
+<li><strong>取值</strong>映射 $\operatorname{ev}\colon x'\otimes x\to 1$;</li>
+<li><strong>余取值</strong>映射 $\operatorname{coev}\colon 1\to x\otimes x'$;</li>
+</ul>
+<p>满足
+$$
+	x \overset{\operatorname{coev}}{\to} x\otimes x'\otimes x \overset{\operatorname{ev}}{\to} x,
+$$
+$$
+	x' \overset{\operatorname{coev}}{\to} x'\otimes x\otimes x' \overset{\operatorname{ev}}{\to} x'
+$$
+均为恒等.</p>
+<h2>例</h2>
+<ul>
+<li>线性空间范畴的可对偶对象为有限维线性空间.</li>
+<li>一个环上的模范畴的可对偶对象是有限生成投射模.</li>
+</ul>
+<h3>关系范畴</h3>
+<p>设范畴 $\mathcal C$ 具有终对象 $*$ 以及拉回, 则<span class="link local"><a href="./关系2-范畴.html" title="关系 2-范畴 [关系2-范畴]">关系范畴</a></span> $\mathsf{Corr}(\mathcal C)$ 的每个对象 $X$ 均可对偶, 且对偶为自身; 取值映射和余取值映射分别为
+$$
+	X\times X\overset{\Delta}{\leftarrow} X \rightarrow *,
+$$
+$$
+	* \leftarrow X \overset{\Delta}{\rightarrow} X\times X.
+$$</p>
+<h3>Morita 范畴</h3>
+<p>对称幺半范畴 $\mathcal C$ 的 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>中, 对象为 $\mathcal C$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$, 其对偶为相反的结合代数 $A^{\mathrm{op}}$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="完全可对偶对象"><header><h1><span class="taxon"></span>完全可对偶对象 <a class="slug" href="./完全可对偶对象.html">[完全可对偶对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>幺半 $(\infty,n)$-范畴中的<strong>完全可对偶对象</strong>直观上是满足如下一系列条件的对象 $X$:</p>
