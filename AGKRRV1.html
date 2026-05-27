@@ -893,12 +893,11 @@ $$
 </ul>
 <p>总之, 设 $\mathfrak C$ 是上述某种范畴的全体. 注意, 三种语境中一般的余极限不相容 (余极限的底层范畴不同); 但<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>是相容的. 这个事实马上就要用到.</p>
 <h3>1.2 将 $\mathcal A^{\otimes Y}$ 表现为余极限</h3>
-<p><strong>命题</strong>. 范畴 $\mathcal A^{\otimes Y}$ (遗忘到 $\mathfrak C$ 中) 等同于如下的余极限:
+<p><strong>命题</strong>. 范畴 $\mathcal A^{\otimes Y}$ (遗忘到 $\mathfrak C$ 中) 等同于如下的<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>:
 $$
-\mathcal A^{\otimes Y} = \operatorname{colim}^{\mathfrak C}_{(I\to J)\in\mathsf{TwArr}(\mathsf{Fin})} \operatorname{colim}_{\operatorname{Hom}(J,Y)}^{\mathfrak C}\mathcal A^{\otimes I}.\, (\star)
-$$
-其中 $\mathsf{TwArr}(-)$ 表示<span class="link local"><a href="./扭箭头范畴.html" title="扭箭头范畴 [扭箭头范畴]">扭箭头范畴</a></span>.</p>
-<p>证明的思路是: 命题对 $Y\in\mathsf{Fin}$ 较为平凡, 然后将两边沿 $\mathsf{Fin}\to\mathsf{Ani}$ 作左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>.</p>
+\mathcal A^{\otimes Y} = \int_{I\in\mathsf{Fin}} Y^I\otimes\mathcal A^{\otimes I}.\, (\star)
+$$</p>
+<p>证明的思路是: 命题对 $Y\in\mathsf{Fin}$ 较为平凡, 然后将两边视为关于 $Y$ 的函子, 沿 $\mathsf{Fin}\to\mathsf{Ani}$ 作左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>.</p>
 <p><strong>引理 1</strong>. 函子 $\mathsf{Ani}\to\mathfrak C$, $Y\mapsto \mathcal A^{\otimes Y}$ 是其沿 $\mathsf{Fin}\to\mathsf{Ani}$ 的限制的左 Kan 扩张.</p>
 <p><em>证明</em>. 这是因为对任意 $Y\in\mathsf{Ani}$, 左 Kan 扩张的计算式中的指标范畴 $\mathsf{Fin}_{/Y}$ 是<span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span>, 而遗忘函子
 $$
@@ -906,7 +905,7 @@ $$
 $$
 均保持<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span> (这一事实对更一般的算畴的代数成立).</p>
 <p><strong>引理 2</strong>. 等式 $(\star)$ 的右端给出的函子 $\mathsf{Ani}\to\mathfrak C$ 是其沿 $\mathsf{Fin}\to\mathsf{Ani}$ 的限制的左 Kan 扩张.</p>
-<p><em>证明</em>. 对任意有限集 $I,J$, 函子 $Y\mapsto \operatorname{Hom}(J,-)$, $Z\mapsto \operatorname{colim}^{\mathfrak C}_{Z}\mathcal A^{\otimes I}$ 均保持<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>, 从而复合函子 $Y\mapsto \operatorname{colim}^{\mathfrak C}_{\operatorname{Hom}(J,Y)}\mathcal A^{\otimes I}$ 保持筛余极限.</p>
+<p><em>证明</em>. 对任意有限集 $I,J$, 函子 $Y\mapsto Y^J$, $Z\mapsto Z\otimes \mathcal A^{\otimes I}$ 均保持<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>, 从而复合函子 $Y\mapsto Y^J\otimes \mathcal A^{\otimes I}$ 保持筛余极限.</p>
 <p>上面讨论了一些余极限. 下面讨论一些极限, 陈述某些极限和余极限相等.</p>
 <p>与余极限的情况不同的是, 遗忘函子
 $$
@@ -930,7 +929,8 @@ $$
 为等价.</p>
 <p><em>证明</em>. 因为遗忘函子和 $-\otimes\mathsf{LS}(Y)$ 交换, 故只需证明 $\mathfrak C = \mathsf{DGCat}$ 的情形. 注意到两边均将 $\mathsf{Ani}$ 中的余极限对应到 $\mathfrak C$ 中的极限: 左边由可对偶性等价于 $\mathsf{Fun}(\operatorname{colim}^{\mathsf{DGCat}}_Y\mathsf{Vect},\mathcal C)$.</p>
 <h3>1.5 局部系统的叠</h3>
-<p>局部系统的叠 $\mathsf{LS}_G(Y)$ 上的 $\mathsf{QCoh}$ 是对称幺半范畴 $\mathsf{Rep}(G)$ 沿空间积分的重要例子, 也是本文的主要研究对象. 由生象的映射
+<p>局部系统的叠 $\mathsf{LS}_G(Y)$ 上的 $\mathsf{QCoh}$ 是对称幺半范畴 $\mathsf{Rep}(G)$ 沿空间积分的重要例子, 也是本文的主要研究对象 (本文将研究其上的 $\mathsf{QCoh}$, 以及 $1\in\mathsf{QCoh}$ 的自同态, 也即函数环).</p>
+<p>由生象的映射
 $$
 \begin{aligned}
 Y&amp;\simeq\operatorname{Hom}_{\mathsf{Ani}}(*,Y)\\
@@ -945,7 +945,18 @@ $$
 $$</p>
 <p><strong>定理</strong>. 若 $Y$ 仅有有限个连通分支, 则上述函子为等价.</p>
 <h3>1.7 由 $\mathcal A^{\otimes Y}$ 出发的函子</h3>
-<p>由于 $\mathcal A^{\otimes Y}$ 可表现为余极限,</p>
+<p>由于 $\mathcal A^{\otimes Y}$ 可表现为<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>, 相应地 $\operatorname{Hom}(\mathcal A^{\otimes Y},\mathcal C)$ 可表现为<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>
+$$
+\begin{aligned}
+\operatorname{Hom}(\mathcal A^{\otimes Y},\mathcal C)&amp;\simeq \int_{I\in\mathsf{Fin}}\operatorname{Hom}(Y^J\otimes\mathcal A^{\otimes I},\mathcal C)\\
+&amp;\simeq \int_{I\in\mathsf{Fin}}\operatorname{Hom}(\mathcal A^{\otimes I},\mathcal C\otimes\mathsf{LS}(Y^I))\\
+&amp;\simeq\mathsf{Nat}_{\mathsf{Fun}(\mathsf{Fin},\mathfrak C)}(\mathcal A^{\otimes (-)},\mathcal C\otimes\mathsf{LS}(Y^{(-)})).
+\end{aligned}
+$$</p>
+<p>从而 $\mathcal A^{\otimes Y}$ 在 DG 范畴 $\mathcal M$ 上的作用 $\mathcal A^{\otimes Y} \to \operatorname{End}(\mathcal M)$ 等同于一族函子
+$$
+\mathcal A^{\otimes I} \to \operatorname{End}(\mathcal M)\otimes\mathsf{LS}(Y^I).
+$$</p>
 <h2>2. 远足</h2>
 <p>记 $\mathsf{FFM}$ 为有限生成自由<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>的范畴.</p>
 <p><strong>命题</strong>. 对任意<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span> $H_0$, 范畴 $\mathsf{FFM}_{/H_0}$ 为<span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span>, 且典范的映射
@@ -985,8 +996,25 @@ $$
 <span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>给出自然变换
 $$
 \mathrm{BC}_J\colon \mathrm{mult}_J\circ\mathrm{mult}_J^R \to \iota_s^R\circ\iota_t.
+$$
+注意该变换保持松幺半函子结构.</p>
+<p><strong>引理 2.7.4</strong>. 若 $\mathcal A$ 为刚性, 则 $\mathrm{BC}_J$ 为等价.</p>
+<p>又因为 $\iota_s,\iota_t$ 均将 $1_{\mathcal A}$ 对应到 $1_{\mathcal A^{\otimes\Sigma (J)}}$</p>
+<p><strong>推论 2.7.6</strong>.
+$$
+\operatorname{Hom}(1_{\mathcal A},\mathrm{mult}_J\circ\mathrm{mult}_J^R (1_{\mathcal A})) \simeq \operatorname{End}(1_{\mathcal A^{\Sigma (J)}}).
 $$</p>
-<p><strong>引理</strong>. 若 $\mathcal A$ 为刚性, 则 $\mathrm{BC}_J$ 为等价.</p>
+<p>从而 $\operatorname{Hom}(1_{\mathcal A},\mathrm{mult}_J\circ\mathrm{mult}_J^R (1_{\mathcal A}))$ 带有交换代数结构. 这个代数结构还可以具体写出: 对于 $\xi_1,\xi_2\colon 1_{\mathcal A}\to\mathrm{mult}_J\circ\mathrm{mult}_J^R (1_{\mathcal A})$, 其乘积 $\xi_1 * \xi_2$ 是如下复合:
+$$
+\begin{aligned}
+1_{\mathcal A} &amp; = 1_{\mathcal A} \otimes 1_{\mathcal A}\\
+&amp; \to \mathrm{mult}_J(\mathrm{mult}_J^R (1_{\mathcal A})) \otimes \mathrm{mult}_J(\mathrm{mult}_J^R (1_{\mathcal A}))\\
+&amp; \simeq \mathrm{mult}_J(\mathrm{mult}_J^R (1_{\mathcal A}) \otimes \mathrm{mult}_J^R (1_{\mathcal A})) \\
+&amp; \to \mathrm{mult}_J(\mathrm{mult}_J^R (1_{\mathcal A} \otimes 1_{\mathcal A})) \\
+&amp; \simeq \mathrm{mult}_J(\mathrm{mult}_J^R (1_{\mathcal A})).
+\end{aligned}
+$$</p>
+<p>记 $\xi$ 对应的 $1_{\mathcal A^{\Sigma (J)}}$ 的自同态为 $E_\xi$.</p>
 <h3>2.8 以远足构造模上的作用</h3>
 <p>设有 DG 范畴的函子 $S^Y\colon \mathcal A^{\otimes Y} \to \mathcal C$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="自函子的迹"><header><h1><span class="taxon"></span>自函子的迹 <a class="slug" href="./自函子的迹.html">[自函子的迹]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>

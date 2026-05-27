@@ -1117,6 +1117,34 @@ $$
 <p><figure><img src="./余完备化-1.svg" class="color-invert"/></figure></p>
 <h3>滤余完备化</h3>
 <p>考虑 $K$ 为<span class="link local"><a href="./滤范畴.html" title="滤范畴 [滤范畴]">滤范畴</a></span>的范畴, 那么 $\mathsf{P}^K(\mathcal C)$ 是 $\mathcal C$ 自由地添加<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>所得的范畴. 其可构造为 <span class="link local"><a href="./ind-对象.html" title="ind-对象 [ind-对象]">ind-对象</a></span>的范畴 $\mathsf{Ind}(\mathcal C)\subset \widehat {\mathcal C}$, 也可刻画为<span class="link local"><a href="./平坦函子.html" title="平坦函子 [平坦函子]">平坦函子</a></span> $\mathcal C^{\mathrm{op}}\to\mathsf{Set}$ 的范畴.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="余端"><header><h1><span class="taxon"></span>余端 <a class="slug" href="./余端.html">[余端]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>余端是<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>的对偶概念.</p>
+<h3>与测度积分的类比</h3>
+<p>对于函子 $F\colon \mathcal C\to \mathsf{Set}$, $G\colon \mathcal C^{\mathrm{op}}\to\mathsf{Set}$, 余端
+$$
+\int_{c\in\mathcal C} F(c) \times G(c)
+$$
+可视为可测空间上的函数对测度积分的类比或<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>, 其中 $F$ 是 “被积函数”, $G$ 是 “测度”.
+这个余端也可理解为<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span> $F\colon 1\to \mathcal C$ 与 $G\colon \mathcal C\to 1$ 的复合, 也即<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">模</a></span>的张量积. (当然, 这里的范畴也可以改成 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>, $\mathsf{Set}$ 改成 $\mathcal V$.)</p>
+<p><span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span> $G = \operatorname{Hom}_{\mathcal C}(-,X)$ 是 “delta 分布” 的类比,
+$$
+\int_{c\in \mathcal C} F(c) \times \operatorname{Hom}_{\mathcal C}(-,X) \simeq F(X).
+$$</p>
+<h2>定义</h2>
+<h3>作为余等化子</h3>
+<p>函子 $F\colon \mathcal C^{\mathrm{op}}\times\mathcal C\to\mathsf{Set}$ 的余端是如下的<span class="link local"><a href="./余等化子.html" title="余等化子 [余等化子]">余等化子</a></span>:
+$$
+\int_{\mathcal{C}}F = \operatorname{coeq}\Big(
+    \coprod_{X\to Y} F(X,Y) \rightrightarrows \coprod_{X}F(X,X)
+\Big).
+$$</p>
+<h3>作为余极限</h3>
+<p>函子 $F\colon \mathcal C^{\mathrm{op}}\times\mathcal C\to\mathsf{Set}$ 的余端是以<span class="link local"><a href="./扭箭头范畴.html" title="扭箭头范畴 [扭箭头范畴]">扭箭头范畴</a></span>为指标的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>:
+$$
+\int_{\mathcal C} F = \operatorname{colim}_{(X\to Y)\in\mathsf{TwArr}(\mathcal C)} F(X,Y).
+$$</p>
+<h2>例</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="俯范畴"><header><h1><span class="taxon"></span>俯范畴 <a class="slug" href="./俯范畴.html">[俯范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>俯范畴是表达<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对观念</a></span>的一种方式.</p>

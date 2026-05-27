@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>扭箭头范畴</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width"><title>极限与余极限交换</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
 
 
 <div id="tcomment"></div>
@@ -825,52 +825,50 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon=""><details open><summary id="扭箭头范畴"><header><h1><span class="taxon"></span>扭箭头范畴 <a class="slug" href="./扭箭头范畴.html">[扭箭头范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<article><section class="block" data-taxon=""><details open><summary id="lim-colim"><header><h1><span class="taxon"></span>极限与余极限交换 <a class="slug" href="./lim-colim.html">[lim-colim]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>陈述</h2>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="极限"><header><h1><span class="taxon"></span>极限 <a class="slug" href="./极限.html">[极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>范畴 $\mathcal C$ 的<strong>扭箭头范畴</strong> (twisted arrow category) $\mathsf{TwArr}(\mathcal C)$ 是其 Hom 函子 $\operatorname{Hom}_{\mathcal C}(-,-)\colon \mathcal C^{\mathrm{op}}\times\mathcal C\to\mathsf{Ani}$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span>.</p>
-<p>具体地, $\mathsf{TwArr}(\mathcal C)$ 的对象为箭头 $f\colon X\to Y$, 态射为如下交换图.
+<h3>万有锥</h3>
+<p>设 $X \colon I \to \mathcal C$ 为函子, 记 $X(i)=X_i$. 定义 $X$ 上的<strong></strong><span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">锥</a></span>为 $\mathcal C$ 的对象 $c$ (称为锥的<strong>顶点</strong>) 配备其到每个 $X_i$ 的态射 $c\to X_i$, 满足对 $I$ 中任意态射 $i\to j$, 有如下交换图.
 $$
-\begin{array}{ccc}
-X_1 &amp; \overset{f}{\rightarrow} &amp; Y_1 \\
-\uparrow &amp;  &amp; \downarrow \\
-X_2 &amp; \underset{g}{\rightarrow} &amp; Y_2
+\begin{array}
+{ccc}
+c &amp; \to &amp; X_i \\
+&amp; \searrow &amp; \downarrow \\
+&amp;&amp; X_j
 \end{array}
 $$</p>
-<p>注意文献中这个概念有时会相差一个反范畴.</p>
+<p>换言之, 考虑常值函子 $\operatorname{const}c\colon I\to\mathcal C$, 那么 $X$ 上的<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">锥</a></span>是自然变换
+$$
+\operatorname{const} c \to X.
+$$</p>
+<p>$X$ 的<strong>极限</strong>是万有的锥, 也即 $\mathcal C$ 的对象 $\operatorname{lim} X$, 带有一个锥
+$$
+\operatorname{const}\operatorname{lim} X \to X,
+$$
+使得 $X$ 上以任何对象 $c$ 为顶点的锥等同于 $c$ 到 $\operatorname{lim}X$ 的态射, 即有自然同构
+$$
+\operatorname{Hom}_{\mathcal C}(c,\operatorname{lim}X)\simeq \operatorname{Hom}_{\mathsf{Fun}(I,\mathcal{C})}(\operatorname{const}c,X).
+$$</p>
+<h3>加权</h3>
+<p>图 $X$ 上以 $c$ 为顶点的锥也等同于函子 $\operatorname{Hom}(c,X(-))\colon I\to\mathsf{Set}$ 的一个<span class="link local"><a href="./整体截面.html" title="整体截面 [整体截面]">整体元素</a></span>, 也即常值函子 $1\colon I\to\mathsf{Set}$ 到该函子的自然变换:
+$$
+\operatorname{Hom}_{\mathsf{Fun}(I,\mathcal{C})}(\operatorname{const}c,X)
+\simeq
+\operatorname{Hom}_{
+    \mathsf{Fun}(I,\mathsf{Set})}
+\big[
+    {1,\operatorname{Hom}_{\mathcal C}(c,X(-))}
+\big]
+$$</p>
+<p>我们可以将 $1\colon I\to\mathsf{Set}$ 替换为一般的函子 $w\colon I\to\mathsf{Set}$, 视为指标范畴 $I$ 上的 “权”, 以此定义<strong>加权极限</strong>.</p>
 <h2>性质</h2>
-<p>对于两个函子 $F_1,F_2,\mathcal C\to\mathcal D$,
+<h3>特殊的极限与余极限交换</h3>
+<p>极限与余极限一般<strong>不</strong>交换. 具体地, 对指标范畴 $I,J$, 自然的态射
 $$
-\begin{aligned}
-&amp;\operatorname{Hom}_{\mathsf{Fun}(\mathcal C,\mathcal D)}(F_1,F_2)\\
-\simeq\operatorname{lim}_{(X\to Y)\in\mathsf{TwArr}(\mathcal C)}&amp;\operatorname{Hom}_{\mathcal D}(F_1(X),F_2(Y)).
-\end{aligned}
-$$</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="余端"><header><h1><span class="taxon"></span>余端 <a class="slug" href="./余端.html">[余端]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<h2>观念</h2>
-<p>余端是<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>的对偶概念.</p>
-<h3>与测度积分的类比</h3>
-<p>对于函子 $F\colon \mathcal C\to \mathsf{Set}$, $G\colon \mathcal C^{\mathrm{op}}\to\mathsf{Set}$, 余端
+\operatorname{colim}_{i\in I}\operatorname{lim}_{j\in J}X_{i,j} \to \operatorname{lim}_{j\in J}\operatorname{colim}_{i\in I} X_{i,j}
 $$
-\int_{c\in\mathcal C} F(c) \times G(c)
-$$
-可视为可测空间上的函数对测度积分的类比或<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>, 其中 $F$ 是 “被积函数”, $G$ 是 “测度”.
-这个余端也可理解为<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span> $F\colon 1\to \mathcal C$ 与 $G\colon \mathcal C\to 1$ 的复合, 也即<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">模</a></span>的张量积. (当然, 这里的范畴也可以改成 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>, $\mathsf{Set}$ 改成 $\mathcal V$.)</p>
-<p><span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span> $G = \operatorname{Hom}_{\mathcal C}(-,X)$ 是 “delta 分布” 的类比,
-$$
-\int_{c\in \mathcal C} F(c) \times \operatorname{Hom}_{\mathcal C}(-,X) \simeq F(X).
-$$</p>
-<h2>定义</h2>
-<h3>作为余等化子</h3>
-<p>函子 $F\colon \mathcal C^{\mathrm{op}}\times\mathcal C\to\mathsf{Set}$ 的余端是如下的<span class="link local"><a href="./余等化子.html" title="余等化子 [余等化子]">余等化子</a></span>:
-$$
-\int_{\mathcal{C}}F = \operatorname{coeq}\Big(
-    \coprod_{X\to Y} F(X,Y) \rightrightarrows \coprod_{X}F(X,X)
-\Big).
-$$</p>
-<h3>作为余极限</h3>
-<p>函子 $F\colon \mathcal C^{\mathrm{op}}\times\mathcal C\to\mathsf{Set}$ 的余端是以<span class="link local"><a href="./扭箭头范畴.html" title="扭箭头范畴 [扭箭头范畴]">扭箭头范畴</a></span>为指标的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>:
-$$
-\int_{\mathcal C} F = \operatorname{colim}_{(X\to Y)\in\mathsf{TwArr}(\mathcal C)} F(X,Y).
-$$</p>
-<h2>例</h2>
+一般不是等价. 但在许多特殊情形它是等价.</p>
+<p>见<span class="link local"><a href="./lim-colim.html" title="极限与余极限交换 [lim-colim]">极限与余极限交换</a></span>.</p>
 </details></section></details></section></footer></article></div></body></html>
