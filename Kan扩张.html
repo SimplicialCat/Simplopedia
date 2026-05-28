@@ -960,7 +960,11 @@ $$
 \mathsf{DGCat} := \mathsf{Mod}_{\mathsf{Pr}}(\mathsf{Vect}).
 $$
 其中的态射为保持余极限的函子.</p>
-<p>设 $\mathcal A$ 为<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span> <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>, $Y$ 为空间 (即<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>). 考虑范畴 $\mathcal A^{\otimes Y} = \operatorname{colim}^{\mathsf{SymMonCat}}_Y\mathcal A$. 我们可以在三种不同语境下描述这个范畴:</p>
+<p>设 $\mathcal A$ 为<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span> <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>, $Y$ 为空间 (即<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>). 考虑对称幺半 DG 范畴
+$$
+\mathcal A^{\otimes Y} := \operatorname{colim}^{\mathsf{SymMonCat}}_Y\mathcal A.
+$$
+我们可以在三种不同语境下描述这个范畴:</p>
 <ul>
 <li>对称幺半 DG 范畴,</li>
 <li>幺半 DG 范畴,</li>
@@ -983,6 +987,7 @@ $$
 <p>证明的思路是: 命题对 $Y\in\mathsf{Fin}$ 较为平凡, 然后将两边视为关于 $Y$ 的函子, 沿 $\mathsf{Fin}\to\mathsf{Ani}$ 作左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>.</p>
 <blockquote>
 <p>注. 我目前对这个命题的理解是: $\mathsf{Fin}$ 在 $\mathsf{Ani}$ 中关于筛余极限稠密; 对称幺半范畴 $\mathfrak C$ 中的交换代数等同于对称幺半函子 $\mathsf{Fin} \to \mathfrak C$, 命题中等式右端正是将其按筛余极限延拓为 $\mathsf{Ani} \to \mathfrak C$ 的方法, 同时也是沿 $\mathsf{Fin}\to\mathsf{Ani}$ 左 Kan 扩张的计算式.</p>
+<p>注意, 函子 $\mathsf{Ani} \to \mathfrak C$, $Y\mapsto\mathcal A^{\otimes Y}$ 不保持余极限. 换言之, 它不是 $1\to\mathfrak C$ 沿 $1\to\mathsf{Ani}$ 的左 Kan 扩张.</p>
 </blockquote>
 <p><strong>引理 1</strong>. 函子 $\mathsf{Ani}\to\mathfrak C$, $Y\mapsto \mathcal A^{\otimes Y}$ 是其沿 $\mathsf{Fin}\to\mathsf{Ani}$ 的限制的左 Kan 扩张.</p>
 <p><em>证明</em>. 这是因为对任意 $Y\in\mathsf{Ani}$, 左 Kan 扩张的计算式中的指标范畴 $\mathsf{Fin}_{/Y}$ 是<span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span>, 而遗忘函子
@@ -1111,16 +1116,22 @@ $$
 $$
 \gamma^{I_+} \colon \operatorname{End}(1_{\mathcal A^{\Sigma (I_+)}}) \to \operatorname{End}(1_{\mathcal A^{\otimes Y}}).
 $$
-我们关注 $E_\xi$ 在这个映射下的像. 它们是远足代数的生成元.</p>
+我们关注 $E_\xi$ 在这个映射下的像, 称为<strong>远足算子</strong>; 它们是远足代数的生成元.</p>
 <p>设有 DG 范畴的函子 $S^Y\colon \mathcal A^{\otimes Y} \to \mathcal C$. 它等同于一族函子
 $$
 S_I \colon \mathcal A^{\otimes I} \to\mathcal C\otimes\mathsf{LS}(Y^I).
 $$</p>
-<p>对于点 $y\in Y$, 记 $\mathrm{ev}_y$ 为 $y$ 处的取值函子 $\mathsf{LS}(Y)\to\mathsf{Vect}$. 对于两个点 $y_1,y_2$ 之间的道路 $\gamma$, 有自然变换 $\mathrm{mon}_\gamma\colon \mathrm{ev}_{y_1} \to \mathrm{ev}_{y_2}$.</p>
-<p>设 $y_1,y_2\in Y$ 是两个点, $\gamma^J$ 是 $J$ 条 $y_1$ 到 $y_2$ 的道路, $\xi\in\operatorname{Hom}(1_{\mathcal A},\mathrm{mult}_J\circ\mathrm{mult}_J^R (1_{\mathcal A}))$.
-定义<strong>远足算子</strong>为如下映射的复合.</p>
+<p>对于点 $y\in Y$, 记 $\mathrm{ev}_y$ 为 $y$ 处的取值函子 $\mathsf{LS}(Y)\to\mathsf{Vect}$. 对于两个点 $y_1,y_2$ 之间的道路 $\gamma$, 有自然变换 $\mathrm{mon}_\gamma\colon \mathrm{ev}_{y_1} \to \mathrm{ev}_{y_2}$, 称为 “平行移动”.</p>
+<p>设 $y_1,y_2\in Y$ 是两个点, $\gamma^J$ 是 $J$ 条 $y_1$ 到 $y_2$ 的道路, $\xi\in\operatorname{Hom}(1_{\mathcal A},\mathrm{mult}_J\circ\mathrm{mult}_J^R (1_{\mathcal A}))$.</p>
+<p><strong>断言</strong>. 远足算子为如下映射的复合.</p>
 <ul>
 <li>由于 $1_{\mathcal A}$ 沿 $\mathcal A \to \mathcal A^{\otimes Y}$ 的像是 $1_{\mathcal A^{\otimes Y}}$, 可将 $S_Y(1_{\mathcal A^{\otimes Y}})$ 等价于 $\mathrm{ev}_{y_1}(S_{1}(1_{\mathcal A}))$;</li>
+<li>通过函数 $\xi$ 由 $\mathrm{ev}_{y_1}(S_{1}(1_{\mathcal A}))$ 映射到 $\mathrm{ev}_{y_1}(S_{1}(\mathrm{mult}_J\mathrm{mult}_J^R 1_{\mathcal A}))$;</li>
+<li>由于 $S_I$ 的相容性, 上述对象等价于 $\mathrm{ev}_{y_1^J}(S_{J}(\mathrm{mult}_J^R 1_{\mathcal A}))$;</li>
+<li>用 “平行移动” 算子 $\mathrm{mon}_{\gamma^J}$ 映射到 $\mathrm{ev}_{y_2^J}(S_{J}(\mathrm{mult}_J^R 1_{\mathcal A}))$;</li>
+<li>由于 $S_I$ 的相容性, 上述对象等价于 $\mathrm{ev}_{y_2}(S_{1}(\mathrm{mult}_J\mathrm{mult}_J^R 1_{\mathcal A}))$;</li>
+<li>通过伴随的余单位映射到 $\mathrm{ev}_{y_2}(S_{1}(1_{\mathcal A}))$;</li>
+<li>上述对象等价于 $S_Y(1_{\mathcal A^{\otimes Y}})$.</li>
 </ul>
 <h2>3. 迹</h2>
 <p><strong>定理 3.8.5</strong>. 设 $\mathcal C$ 为刚性对称幺半 DG 范畴, $F$ 为对称幺半的自函子. 那么 $F$ 的迹等于 <span class="link local"><a href="./Hochschild同调.html" title="Hochschild 同调 [Hochschild同调]">Hochschild 同调</a></span>的单位的自同态:
