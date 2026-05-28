@@ -926,6 +926,17 @@ $$
 \mathsf{DGCat} := \mathsf{Mod}_{\mathsf{Pr}}(\mathsf{Vect}).
 $$
 其中的态射为保持余极限的函子.</p>
+<blockquote>
+<p>脑中图像:</p>
+<ul>
+<li>$\mathcal A = \mathsf{QCoh}(X)$ (实际 $X=\mathbf{B}G$)</li>
+<li>$1_{\mathcal A} = \mathcal O_X$</li>
+<li>$\mathcal A^{\otimes Y} = \mathsf{QCoh}(\operatorname{Maps}(Y,X))$</li>
+<li>$1_{\mathcal A^{\otimes Y}} = \mathcal O_{\operatorname{Maps}(Y,X)}$</li>
+<li>$\mathcal A^{\otimes\Sigma(J)}=\mathsf{QCoh}(\operatorname{Maps}(\Sigma(J),X))=\mathsf{QCoh}(X\times_{X^J}X)$</li>
+<li>$\Sigma (J) \to Y$ 给出映射 $\operatorname{Maps}(Y,X) \to \operatorname{Maps}(\Sigma (J),X)$</li>
+</ul>
+</blockquote>
 <p>设 $\mathcal A$ 为<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span> <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>, $Y$ 为空间 (即<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>). 考虑对称幺半 DG 范畴
 $$
 \mathcal A^{\otimes Y} := \operatorname{colim}^{\mathsf{SymMonCat}}_Y\mathcal A.
@@ -1098,6 +1109,15 @@ $$</p>
 <li>由于 $S_I$ 的相容性, 上述对象等价于 $\mathrm{ev}_{y_2}(S_{1}(\mathrm{mult}_J\mathrm{mult}_J^R 1_{\mathcal A}))$;</li>
 <li>通过伴随的余单位映射到 $\mathrm{ev}_{y_2}(S_{1}(1_{\mathcal A}))$;</li>
 <li>上述对象等价于 $S_Y(1_{\mathcal A^{\otimes Y}})$.</li>
+</ul>
+<p><strong>例</strong>. 考虑如下情形.</p>
+<ul>
+<li>$\mathcal A = \mathsf{QCoh}(X)$, $\mathcal A^{\otimes Y}=\mathsf{QCoh}(X^Y)$ (其中 $X^Y$ 表示 $\operatorname{Maps}(Y,X)$), 特别地 $\mathcal A^{\otimes\Sigma (J)}=\mathsf{QCoh}(X^{\Sigma (J)})=\mathsf{QCoh}(X\times_{X^J}X)$;</li>
+<li>$\mathcal C =\mathsf{QCoh}(S)$, $S_Y\colon \mathcal A^{\otimes Y}\to\mathcal C$ 对应映射 $f\colon S\to X^Y$ (其中 $S$ 是任何测试空间, 或为万有情形即 $X^Y$ 本身);</li>
+<li>$1_{\mathcal A} = \mathcal O_X$, $1_{\mathcal A^{\otimes Y}} = \mathcal O_{X^Y}$, $S_Y(1_{\mathcal A^{\otimes Y}})=\mathcal O_S$;</li>
+<li>$\xi\in \operatorname{End}(1_{\mathcal A^{\otimes\Sigma (J)}})=\Gamma(\mathcal O_{X^{\Sigma (J)}})$;</li>
+<li>$S_{I}\colon \mathcal A^{\otimes I}\to\mathcal C\otimes\mathsf{LS}(Y^I)$ 对应映射 $s_I\colon S\times Y^I \to X^I$, 特别地, $S_1$ 对应 $s_1\colon S\times Y\to X$;</li>
+<li>$\mathrm{ev}_{y_1^I}$ 对应映射 $y_1^I\colon S\to S\times Y^I$;</li>
 </ul>
 <h2>3. 迹</h2>
 <p><strong>定理 3.8.5</strong>. 设 $\mathcal C$ 为刚性对称幺半 DG 范畴, $F$ 为对称幺半的自函子. 那么 $F$ 的迹等于 <span class="link local"><a href="./Hochschild同调.html" title="Hochschild 同调 [Hochschild同调]">Hochschild 同调</a></span>的单位的自同态:
