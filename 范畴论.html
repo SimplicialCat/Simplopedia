@@ -951,6 +951,12 @@ $$
 <p><span class="link local"><a href="./ind-层.html" title="ind-层 [ind-层]">ind-层</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="lim-colim"><header><h1><span class="taxon"></span>极限与余极限交换 <a class="slug" href="./lim-colim.html">[lim-colim]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>陈述</h2>
+<p>在 $\mathsf{Set}$ 或 $\mathsf{Ani}$ 中,</p>
+<ul>
+<li><span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>与<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>交换,</li>
+<li><span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">有限积</a></span>与<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>交换.</li>
+</ul>
+<p>(注意, 对于 $\mathsf{Set}$ 与 $\mathsf{Ani}$, “有限” 的概念不相同, 从而滤, 筛等概念也不尽相同.)</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="pro-对象"><header><h1><span class="taxon"></span>pro-对象 <a class="slug" href="./pro-对象.html">[pro-对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>范畴 $\mathcal C$ 的 pro-对象是其对象的形式<span class="link local"><a href="./余滤极限.html" title="余滤极限 [余滤极限]">余滤极限</a></span>.</p>
@@ -1077,8 +1083,23 @@ $$</p>
 $$
 \int_{\mathcal C} F = \operatorname{colim}_{(X\to Y)\in\mathsf{TwArr}(\mathcal C)} F(X,Y).
 $$</p>
+<h2>性质</h2>
+<h3>与 Hom 的交互</h3>
+<p>由余端出发的 Hom 可转换为 Hom 的<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>:
+$$
+\operatorname{Hom}(\int_{\mathcal C}F(-,-),-) \simeq \int_{\mathcal C}\operatorname{Hom}(F(-,-),-).
+$$</p>
 <h2>例</h2>
+<ul>
+<li><span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>的复合</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="余等化子"><header><h1><span class="taxon"></span>余等化子 <a class="slug" href="./余等化子.html">[余等化子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>性质</h2>
+<p>态射 $f,g\colon X\to Y$ 的余等化子 $\operatorname{coeq}(f,g)$ 等同于如下推出:
+$$
+Y\sqcup_{X\sqcup X}Y,
+$$
+其中两个映射分别为 $\mathrm{id}\sqcup\mathrm{id}$ 与 $f\sqcup g$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="元素范畴"><header><h1><span class="taxon"></span>元素范畴 <a class="slug" href="./元素范畴.html">[元素范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>函子 $F\colon \mathcal C\to\mathsf{Set}$ 的<strong>元素范畴</strong> (category of elements) $\mathsf{El}(F)$ 是如下范畴,</p>
@@ -1091,11 +1112,13 @@ $$</p>
 <p>在 $\infty$-范畴语境中 $\mathsf{Set}$ 往往换成 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="共尾函子"><header><h1><span class="taxon"></span>共尾函子 <a class="slug" href="./共尾函子.html">[共尾函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>共尾函子是不改变余极限的指标代换, 即对于共尾函子 $f\colon I\to J$ 以及图表 $X\colon J\to \mathcal C$,
+<p>共尾函子是不改变<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>的指标代换, 即对于共尾函子 $f\colon I\to J$ 以及图表 $X\colon J\to \mathcal C$,
 $$
 \operatorname{colim}_{i\in I}X_{f(i)}\to \operatorname{colim}_{j\in J}X_j
 $$
 为等价.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="共首函子"><header><h1><span class="taxon"></span>共首函子 <a class="slug" href="./共首函子.html">[共首函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>共首函子 (initial functor) 是不改变<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>的指标代换, 是<span class="link local"><a href="./共尾函子.html" title="共尾函子 [共尾函子]">共尾函子</a></span>的对偶概念.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单纯形范畴"><header><h1><span class="taxon"></span>单纯形范畴 <a class="slug" href="./单纯形范畴.html">[单纯形范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>单纯形范畴的对象是 “标准” 的, “组合” 的单纯形, 也即有限全序集.</p>
@@ -1315,7 +1338,8 @@ X_2 &amp; \underset{g}{\rightarrow} &amp; Y_2
 $$</p>
 <p>注意文献中这个概念有时会相差一个反范畴.</p>
 <h2>性质</h2>
-<p>对于两个函子 $F_1,F_2,\mathcal C\to\mathcal D$,
+<h3>自然变换</h3>
+<p>对于两个函子 $F_1,F_2,\mathcal C\to\mathcal D$, 自然变换的集合可表现为沿扭箭头范畴的极限:
 $$
 \begin{aligned}
 &amp;\operatorname{Hom}_{\mathsf{Fun}(\mathcal C,\mathcal D)}(F_1,F_2)\\

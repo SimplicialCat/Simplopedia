@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>A toy model for the Drinfeld–Lafforgue shtuka construction</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width"><title>共首函子</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
 
 
 <div id="tcomment"></div>
@@ -825,190 +825,72 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon=""><details open><summary id="GKRV"><header><h1><span class="taxon"></span>A toy model for the Drinfeld–Lafforgue shtuka construction <a class="slug" href="./GKRV.html">[GKRV]</a></h1><div class="metadata"><ul><li class="meta-item">参考资料</li><li class="meta-item">D. Gaitsgory, D. Kazhdan, N. Rozenblyum, Y. Varshavsky</li></ul></div></header></summary>
-<pre><code>@misc{gaitsgory2022toymodeldrinfeldlafforgueshtuka,
-      title={A toy model for the Drinfeld-Lafforgue shtuka construction}, 
-      author={D. Gaitsgory and D. Kazhdan and N. Rozenblyum and Y. Varshavsky},
-      year={2022},
-      eprint={1908.05420},
-      archivePrefix={arXiv},
-      primaryClass={math.AG},
-      url={https://arxiv.org/abs/1908.05420}, 
-}
-</code></pre>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="notes-GKRV"><header><h1><span class="taxon"></span>GKRV <a class="slug" href="./notes-GKRV.html">[notes-GKRV]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>本文是 <span class="link local"><a href="./GKRV.html" title="A toy model for the Drinfeld–Lafforgue shtuka construction [GKRV]">GKRV</a></span> 的阅读笔记. 这篇文章是 <span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span> 在拓扑语境中的玩具模型.</p>
-<h2>1. 对称幺半范畴沿空间积分</h2>
-<p>本文中 <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>指的是<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>中 $\mathsf{Vect}$ 上的模, 即
+<article><section class="block" data-taxon=""><details open><summary id="共首函子"><header><h1><span class="taxon"></span>共首函子 <a class="slug" href="./共首函子.html">[共首函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>共首函子 (initial functor) 是不改变<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>的指标代换, 是<span class="link local"><a href="./共尾函子.html" title="共尾函子 [共尾函子]">共尾函子</a></span>的对偶概念.</p>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="群作用"><header><h1><span class="taxon"></span>群作用 <a class="slug" href="./群作用.html">[群作用]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>定义</h2>
+<h3>生象群</h3>
+<p>对于<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span><span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 与范畴 $\mathcal C$ 的对象 $X$, 定义 $G$ 在 $X$ 上的<strong>作用</strong>为函子
 $$
-\mathsf{DGCat} := \mathsf{Mod}_{\mathsf{Pr}}(\mathsf{Vect}).
+F\colon \mathbf{B}G\to\mathcal C,
 $$
-其中的态射为保持余极限的函子.</p>
-<p>设 $\mathcal A$ 为<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span> <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>, $Y$ 为空间 (即<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>). 考虑范畴 $\mathcal A^{\otimes Y} = \operatorname{colim}^{\mathsf{SymMonCat}}_Y\mathcal A$. 我们可以在三种不同语境下描述这个范畴:</p>
+将 $\mathbf{B}G$ 中的对象 $*$ 映射到 $X$.</p>
+<p>换言之, $\mathbf{B}G$ 中的对象 $*$ 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的 $G$-作用.</p>
+<p>定义 $G$-作用 $F\colon \mathbf{B}G\to\mathcal C$ 的<strong></strong><span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>为极限
+$$
+X^G := \operatorname{lim} F ;
+$$
+定义该作用的<strong>余不动点</strong>, 又称<strong>商</strong>, 为
+$$
+X_G :=  X/G := \operatorname{colim} F.
+$$</p>
+<p>当然, <span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>中的对象也有类似概念.</p>
+<h3>意象中的群</h3>
+<p>在 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span> $\mathcal C$ 中, 由意象的下降性质有
+$$
+\mathcal C_{/\mathbf{B}G}\simeq\operatorname{lim}_{\mathbf{B}G}\mathcal C\simeq\mathsf{Fun}(\mathbf{B}G,\mathcal C),
+$$
+群 $G$ 的作用等同于指向 $\mathbf{B}G$ 的映射, 即<span class="link local"><a href="./俯意象.html" title="俯意象 [俯意象]">俯意象</a></span> $\mathcal C_{/ \mathbf{B}G}$ 的对象; 而 $\mathbf{B}G$ 又可表现为<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">单纯对象的实现</a></span>,
+$$
+\mathcal C_{/\mathbf{B}G} \simeq \operatorname{lim}\Big(
+\mathcal C \rightrightarrows \mathcal C_{/G} \to^3 \mathcal C_{/G\times G}\cdots
+\Big),
+$$
+于是 $\mathcal C_{/\mathbf{B}G}$ 的对象等同于单纯对象
+$$
+X /\!\!/ G := (\cdots X\times G\times G \to^3 X\times G \rightrightarrows X )
+$$
+带有指向 $*/\!\!/ G$ 的映射
+$$
+X /\!\!/ G \to */\!\!/ G.
+$$
+追溯定义, 可知这是 $G$ 在 $X$ 上的作用, 且商为
+$$
+X/G=\operatorname{colim}_{\mathbf{B}G}X =  \operatorname{colim} X /\!\!/ G.
+$$</p>
+<h3>一般范畴中的群</h3>
+<p>对于一般范畴 $\mathcal C$ 中的<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$, 模仿意象中的情形, 也可定义 $G$-作用为<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>
+$$
+X /\!\!/ G = (\cdots X\times G\times G \to^3 X\times G \rightrightarrows X )
+$$
+以及态射
+$$
+X /\!\!/ G \to * /\!\!/ G.
+$$</p>
+<h2>性质</h2>
+<p>对于生象<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 在<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ 上的作用, 其<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>可表示为<span class="link local"><a href="./俯意象.html" title="俯意象 [俯意象]">俯意象</a></span>中的映射空间
+$$
+X^G = \operatorname{Hom}_{\mathsf{Ani}_{/\mathbf{B}G}}(\mathbf{B}G,X/G).
+$$</p>
+<h2>例</h2>
 <ul>
-<li>对称幺半 DG 范畴,</li>
-<li>幺半 DG 范畴,</li>
-<li>DG 范畴.</li>
+<li>群在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span></li>
 </ul>
-<p>总之, 设 $\mathfrak C$ 是上述某种范畴的全体, 即 $\mathfrak C = \mathsf{Alg}_{\mathbb E_n}(\mathsf{DGCat})$, $n\in\{0,1,\infty\}$. 注意, 三种语境中一般的余极限与遗忘函子不相容; 但<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>是相容的. 这个事实马上就要用到.</p>
-<blockquote>
-<p>注. $\mathcal A$ 也可以视为 $\mathsf{CAlg}(\mathfrak C)$ 的对象, 也即对称幺半函子 $\mathsf{Fin} \to \mathfrak C$, $I\mapsto \mathcal A^{\otimes I}$. (我觉得这个视角才是本质的.)</p>
-</blockquote>
-<h3>1.2 将 $\mathcal A^{\otimes Y}$ 表现为余极限</h3>
-<p><strong>命题</strong>. 对称幺半 DG 范畴 $\mathcal A^{\otimes Y}$ 遗忘到 $\mathfrak C$ 中, 等同于如下的<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>:
-$$
-\mathcal A^{\otimes Y} = \int_{I\in\mathsf{Fin}}^{\mathfrak C} Y^I\otimes\mathcal A^{\otimes I}.\, (\star)
-$$
-其中</p>
+<h3>$\mathbb{Z}$ 的作用</h3>
+<p>$\mathbb{Z}$ 在对象 $X$ 上的作用相当于 $X$ 的一个自同构 $\phi\colon X\to X$. 此时,</p>
 <ul>
-<li>$\mathcal A^{\otimes I}$ 是 $\mathcal A$ 作为对称幺半 DG 范畴的 $I$ 次张量积,</li>
-<li>$Y^I\otimes (-)$ 是指取常值图的余极限 $\operatorname{colim}_{Y^I}^{\mathfrak C}(-)$.</li>
+<li>不动点可表现为<span class="link local"><a href="./等化子.html" title="等化子 [等化子]">等化子</a></span> $\operatorname{eq}(\mathrm{id},\phi)$ (因为 $\{\bullet\rightrightarrows\bullet\}\to\mathbf{B}\mathbb{Z}$ 是<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首函子</a></span>),</li>
+<li>余不动点, 即商 $X / \mathbb{Z}$, 可表现为<span class="link local"><a href="./余等化子.html" title="余等化子 [余等化子]">余等化子</a></span> $\operatorname{coeq}(\mathrm{id},\phi)$.</li>
 </ul>
-<p>证明的思路是: 命题对 $Y\in\mathsf{Fin}$ 较为平凡, 然后将两边视为关于 $Y$ 的函子, 沿 $\mathsf{Fin}\to\mathsf{Ani}$ 作左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>.</p>
-<blockquote>
-<p>注. 我目前对这个命题的理解是: $\mathsf{Fin}$ 在 $\mathsf{Ani}$ 中关于筛余极限稠密; 对称幺半范畴 $\mathfrak C$ 中的交换代数等同于对称幺半函子 $\mathsf{Fin} \to \mathfrak C$, 命题中等式右端正是将其按筛余极限延拓为 $\mathsf{Ani} \to \mathfrak C$ 的方法.</p>
-</blockquote>
-<p><strong>引理 1</strong>. 函子 $\mathsf{Ani}\to\mathfrak C$, $Y\mapsto \mathcal A^{\otimes Y}$ 是其沿 $\mathsf{Fin}\to\mathsf{Ani}$ 的限制的左 Kan 扩张.</p>
-<p><em>证明</em>. 这是因为对任意 $Y\in\mathsf{Ani}$, 左 Kan 扩张的计算式中的指标范畴 $\mathsf{Fin}_{/Y}$ 是<span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span>, 而遗忘函子
-$$
-\mathsf{CAlg}(\mathsf{DGCat}) \to \mathsf{Alg}(\mathsf{DGCat}) \to \mathsf{Cat}
-$$
-均保持<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span> (这一事实对更一般的算畴的代数成立).</p>
-<p><strong>引理 2</strong>. 等式 $(\star)$ 的右端给出的函子 $\mathsf{Ani}\to\mathfrak C$ 是其沿 $\mathsf{Fin}\to\mathsf{Ani}$ 的限制的左 Kan 扩张.</p>
-<p><em>证明</em>. 对任意有限集 $I,J$, 函子 $Y\mapsto Y^J$, $Z\mapsto Z\otimes \mathcal A^{\otimes I}$ 均保持<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>, 从而复合函子 $Y\mapsto Y^J\otimes \mathcal A^{\otimes I}$ 保持筛余极限.</p>
-<p>上面讨论了一些余极限. 下面讨论一些极限, 陈述某些极限和余极限相等.</p>
-<p>与余极限的情况不同的是, 遗忘函子
-$$
-\mathsf{CAlg}(\mathsf{DGCat}) \to \mathsf{Alg}(\mathsf{DGCat}) \to \mathsf{Cat}
-$$
-保持所有极限.</p>
-<p>定义生象 $Y$ 上<span class="link local"><a href="./局部系统.html" title="局部系统 [局部系统]">局部系统</a></span>的范畴为
-$$
-\mathsf{LS}(Y) = \operatorname{lim}_Y \mathsf{Vect},
-$$
-它是对称幺半 DG 范畴. 若 $\mathscr Y$ 为较好的拓扑空间 (仿紧, 同伦等价于 CW 复形, 同伦维数有限), $Y$ 为 $\mathscr Y$ 对应的生象, 则 $\mathsf{LS}(Y)$ 等价于 $\mathsf{Shv}_{\text{lisse}}(Y)$, 即线性空间层的导出范畴 $\mathsf{Shv}(\mathscr{Y})$ 中上同调为局部常值层的对象构成的全子范畴.</p>
-<p>由<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>的余极限的性质,</p>
-<ul>
-<li>对任意生象 $Y$, 范畴 $\mathsf{LS}(Y)$ 等价于 $\operatorname{colim}_Y^{\mathsf{DGCat}}\mathsf{Vect}$;</li>
-<li>对生象的映射 $f\colon Y\to Z$, 自然的函子 $f^\dagger\colon \mathsf{LS}(Z)\to\mathsf{LS}(Y)$ 等同于 $\operatorname{colim}_Y^{\mathsf{DGCat}}\mathsf{Vect} \to \operatorname{colim}_Z^{\mathsf{DGCat}}\mathsf{Vect}$ 的右伴随; 同时, 两个态射也通过 $\mathsf{DGCat}$ 中的<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">对偶</a></span>函子 $(-)^{\vee}\colon \mathsf{DGCat}^{\mathrm{op}}\to\mathsf{DGCat}$ 相联系.</li>
-</ul>
-<p><strong>命题</strong>. 设 $\mathfrak C$ 为 $\mathsf{CAlg}(\mathsf{DGCat}),\mathsf{Alg}(\mathsf{DGCat}),\mathsf{DGCat}$ 之一. 对于 $\mathcal C\in\mathfrak C$, 典范态射
-$$
-\mathcal C\otimes\mathsf{LS}(Y) \to \operatorname{lim}_Y\mathcal C
-$$
-为等价.</p>
-<p><em>证明</em>. 因为遗忘函子和 $-\otimes\mathsf{LS}(Y)$ 交换, 故只需证明 $\mathfrak C = \mathsf{DGCat}$ 的情形. 注意到两边均将 $\mathsf{Ani}$ 中的余极限对应到 $\mathfrak C$ 中的极限: 左边由可对偶性等价于 $\mathsf{Fun}(\operatorname{colim}^{\mathsf{DGCat}}_Y\mathsf{Vect},\mathcal C)$.</p>
-<h3>1.5 局部系统的叠</h3>
-<p>局部系统的叠 $\mathsf{LS}_G(Y)$ 上的 $\mathsf{QCoh}$ 是对称幺半范畴 $\mathsf{Rep}(G)$ 沿空间积分的重要例子, 也是本文的主要研究对象 (本文将研究其上的 $\mathsf{QCoh}$, 以及 $1\in\mathsf{QCoh}$ 的自同态, 也即函数环).</p>
-<p>由生象的映射
-$$
-\begin{aligned}
-Y&amp;\simeq\operatorname{Hom}_{\mathsf{Ani}}(*,Y)\\
-&amp;\to\operatorname{Hom}_{\mathsf{PreStk}}(\mathsf{LS}_G(Y),\mathsf{LS}_G(*))\\
-&amp;\to\operatorname{Hom}_{\mathsf{CAlg}(\mathsf{DGCat})}(\mathsf{QCoh}(\mathsf{LS}_G(*)),\mathsf{QCoh}(\mathsf{LS}_G(Y)))\\
-&amp;\simeq\operatorname{Hom}_{\mathsf{CAlg}(\mathsf{DGCat})}(\mathsf{Rep}(G),\mathsf{QCoh}(\mathsf{LS}_G(Y))),
-\end{aligned}
-$$
-我们得到函子
-$$
-\operatorname{colim}_Y^{\mathsf{CAlg}(\mathsf{DGCat})}\mathsf{Rep}(G) \to \mathsf{QCoh}(\mathsf{LS}_G(Y)).
-$$</p>
-<p><strong>定理</strong>. 若 $Y$ 仅有有限个连通分支, 则上述函子为等价.</p>
-<h3>1.7 由 $\mathcal A^{\otimes Y}$ 出发的函子</h3>
-<p>仍设 $\mathfrak C$ 为 $\mathsf{CAlg}(\mathsf{DGCat}),\mathsf{Alg}(\mathsf{DGCat}),\mathsf{DGCat}$ 之一, $\mathcal C$ 为 $\mathfrak C$ 的对象.</p>
-<p>由于 $\mathcal A^{\otimes Y}$ 可表现为<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>, 相应地 $\operatorname{Hom}(\mathcal A^{\otimes Y},\mathcal C)$ 可表现为<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>
-$$
-\begin{aligned}
-\operatorname{Hom}(\mathcal A^{\otimes Y},\mathcal C)&amp;\simeq \int_{I\in\mathsf{Fin}}\operatorname{Hom}(Y^I\otimes\mathcal A^{\otimes I},\mathcal C)\\
-&amp;\simeq \int_{I\in\mathsf{Fin}}\operatorname{Hom}(\mathcal A^{\otimes I},\mathcal C\otimes\mathsf{LS}(Y^I))\\
-&amp;\simeq\mathsf{Nat}_{\mathsf{Fun}(\mathsf{Fin},\mathfrak C)}(\mathcal A^{\otimes (-)},\mathcal C\otimes\mathsf{LS}(Y^{(-)})).
-\end{aligned}
-$$</p>
-<p>从而 $\mathcal A^{\otimes Y}$ 在 DG 范畴 $\mathcal M$ 上的作用, 即幺半函子 $\mathcal A^{\otimes Y} \to \operatorname{End}(\mathcal M)$, 等同于一族幺半函子
-$$
-\mathcal A^{\otimes I} \to \operatorname{End}(\mathcal M)\otimes\mathsf{LS}(Y^I).
-$$</p>
-<h2>2. 远足</h2>
-<p>记 $\mathsf{FFM}$ 为有限生成自由<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>的范畴.</p>
-<p><strong>命题</strong>. 对任意<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span> $H_0$, 范畴 $\mathsf{FFM}_{/H_0}$ 为<span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span>, 且典范的映射
-$$
-\operatorname{colim}_{H\in\mathsf{FFM}_{/H_0}}H\to H_0
-$$
-为等价.</p>
-<p><strong>推论</strong>. 设 $Y$ 为带基点连通生象. 那么 $\mathsf{FFM}_{/\Omega Y}$ 为<span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span>, 且典范的映射
-$$
-\operatorname{colim}^{\mathsf{Ani}_*}_{H\in\mathsf{FFM}_{/\Omega Y}}\mathbf{B}H \to Y
-$$
-为等价.</p>
-<h3>2.4 将 $\mathcal A^{\otimes Y}$ 的单位对象的自同态表现为余极限</h3>
-<p>我们先计算一类幺半范畴的余极限中的态射.</p>
-<p>考虑幺半范畴的图 $I\to\mathsf{Alg}(\mathsf{DGCat})$, $i\mapsto\mathcal C_i$. 设指标范畴 $I$ 有始对象 $i_0$. 任取 $\mathcal C_{i_0}$ 的对象 $c_{i_0},c'_{i_0}$. 记 $c_i,c'_i$ 为两者在 $\mathcal C_i$ 中的像; 记 $c,c'$ 为两者在余极限 $\mathcal C=\operatorname{colim}_i\mathcal C_i$ 中的像.
-则有自然态射
-$$
- \operatorname{colim}_i\operatorname{Hom}_{\mathcal C_i}(c_i,c'_i) \to \operatorname{Hom}_{\mathcal C}(c,c').\,(\spadesuit)
-$$</p>
-<p><strong>命题 2.4.6</strong>. 若 $I$ 为筛范畴且 $\mathcal C_{i_0} \to \mathcal C_{i}$ 为<span class="link local"><a href="./仿射态射.html" title="仿射态射 [仿射态射]">仿射函子</a></span> (即每个 $\mathcal C_i$ 都是 $\mathcal C_{i_0}$ 上某<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">结合代数上的模</a></span>范畴; 准确地说, 函子 $I\to\mathsf{Alg}(\mathsf{DGCat})$ 穿过 $\mathsf{Alg}(\mathcal C_{i_0})$), 则 $(\spadesuit)$ 为等价.</p>
-<p><strong>推论 2.4.4</strong>. 设 $\mathcal A$ 具有仿射对角线, 且 $1_{\mathcal A}$ 紧. 那么对于带基点连通生象 $(Y,y)$,
-$$
-\operatorname{End}(1_{\mathcal A^{\otimes Y}}) \simeq\operatorname{colim}_{H\in\mathsf{FFM}_{/\Omega Y}}\operatorname{End}(1_{\mathcal A^{\otimes\mathbf{B}H}}).
-$$</p>
-<h3>2.7</h3>
-<p>对于有限集 $I$, 记 $I_+$ 为带基点集合 $I\sqcup \{*\}$. 注意 $\mathbf{B}(\operatorname{Free}_{\mathbb E_1}(I)) \simeq \Sigma(I_+)$, 因为它们到任何带基点生象 $(Y,y)$ 的映射都等同于映射 $I\to\Omega Y$.</p>
-<p>由推论 2.4.4,
-$$
-\operatorname{End}(1_{\mathcal A^{\otimes Y}}) = \operatorname{colim}_{I\to\Omega Y}\operatorname{End}(1_{\mathcal A^{\otimes\Sigma (I_+)}}).
-$$</p>
-<p>设 $J$ 为有限集. 记 $\mathrm{mult}_J\colon \mathcal A^{\otimes J} \to \mathcal A$ 为乘积函子.
-由于 $Y\mapsto\mathcal A^{\otimes Y}$ 保持余极限, 故有 $\mathsf{CAlg}(\mathsf{DGCat})$ 中的推出
-$$
-\mathcal A^{\otimes \Sigma (J)} \simeq \mathcal A\otimes_{\mathcal A^{\otimes J}} \mathcal A.
-$$
-记 $\iota_s,\iota_t\colon \mathcal A\to\mathcal A^{\Sigma (J)}$ 为两个含入 $*\to\Sigma (J)$ 对应的函子.
-<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>给出自然变换
-$$
-\mathrm{BC}_J\colon \mathrm{mult}_J\circ\mathrm{mult}_J^R \to \iota_s^R\circ\iota_t.
-$$
-注意该变换保持松幺半函子结构.</p>
-<p><strong>引理 2.7.4</strong>. 若 $\mathcal A$ 为刚性, 则 $\mathrm{BC}_J$ 为等价.</p>
-<p>又因为 $\iota_s,\iota_t$ 均将 $1_{\mathcal A}$ 对应到 $1_{\mathcal A^{\otimes\Sigma (J)}}$</p>
-<p><strong>推论 2.7.6</strong>.
-$$
-\operatorname{Hom}(1_{\mathcal A},\mathrm{mult}_J\circ\mathrm{mult}_J^R (1_{\mathcal A})) \simeq \operatorname{End}(1_{\mathcal A^{\Sigma (J)}}).
-$$</p>
-<p>从而 $\operatorname{Hom}(1_{\mathcal A},\mathrm{mult}_J\circ\mathrm{mult}_J^R (1_{\mathcal A}))$ 带有交换代数结构. 这个代数结构还可以具体写出: 对于 $\xi_1,\xi_2\colon 1_{\mathcal A}\to\mathrm{mult}_J\circ\mathrm{mult}_J^R (1_{\mathcal A})$, 其乘积 $\xi_1 * \xi_2$ 是如下复合:
-$$
-\begin{aligned}
-1_{\mathcal A} &amp; = 1_{\mathcal A} \otimes 1_{\mathcal A}\\
-&amp; \to \mathrm{mult}_J(\mathrm{mult}_J^R (1_{\mathcal A})) \otimes \mathrm{mult}_J(\mathrm{mult}_J^R (1_{\mathcal A}))\\
-&amp; \simeq \mathrm{mult}_J(\mathrm{mult}_J^R (1_{\mathcal A}) \otimes \mathrm{mult}_J^R (1_{\mathcal A})) \\
-&amp; \to \mathrm{mult}_J(\mathrm{mult}_J^R (1_{\mathcal A} \otimes 1_{\mathcal A})) \\
-&amp; \simeq \mathrm{mult}_J(\mathrm{mult}_J^R (1_{\mathcal A})).
-\end{aligned}
-$$</p>
-<p>记 $\xi$ 对应的 $1_{\mathcal A^{\Sigma (J)}}$ 的自同态为 $E_\xi$.</p>
-<h3>2.8 以远足构造模上的作用</h3>
-<p>对于带基点生象 $Y$ 的 $I$ 条环路
-$$
-\gamma^I\colon I\to\Omega Y,
-$$
-有映射
-$$
-\gamma^{I_+} \colon \operatorname{End}(1_{\mathcal A^{\Sigma (I_+)}}) \to \operatorname{End}(1_{\mathcal A^{\otimes Y}}).
-$$
-我们关注 $E_\xi$ 在这个映射下的像. 它们是远足代数的生成元.</p>
-<p>设有 DG 范畴的函子 $S^Y\colon \mathcal A^{\otimes Y} \to \mathcal C$. 它等同于一族函子
-$$
-S_I \colon \mathcal A^{\otimes I} \to\mathcal C\otimes\mathsf{LS}(Y^I).
-$$</p>
-<p>对于点 $y\in Y$, 记 $\mathrm{ev}_y$ 为 $y$ 处的取值函子 $\mathsf{LS}(Y)\to\mathsf{Vect}$. 对于两个点 $y_1,y_2$ 之间的道路 $\gamma$, 有自然变换 $\mathrm{mon}_\gamma\colon \mathrm{ev}_{y_1} \to \mathrm{ev}_{y_2}$.</p>
-<p>设 $y_1,y_2\in Y$ 是两个点, $\gamma^J$ 是 $J$ 条 $y_1$ 到 $y_2$ 的道路, $\xi\in\operatorname{Hom}(1_{\mathcal A},\mathrm{mult}_J\circ\mathrm{mult}_J^R (1_{\mathcal A}))$.
-定义<strong>远足算子</strong>为如下映射的复合.</p>
-<ul>
-<li>由于 $1_{\mathcal A}$ 沿 $\mathcal A \to \mathcal A^{\otimes Y}$ 的像是 $1_{\mathcal A^{\otimes Y}}$, 可将 $S_Y(1_{\mathcal A^{\otimes Y}})$ 等价于 $\mathrm{ev}_{y_1}(S_{1}(1_{\mathcal A}))$;</li>
-</ul>
-<h2>3. 迹</h2>
-<p><strong>定理 3.8.5</strong>. 设 $\mathcal C$ 为刚性对称幺半 DG 范畴, $F$ 为对称幺半的自函子. 那么 $F$ 的迹等于 <span class="link local"><a href="./Hochschild同调.html" title="Hochschild 同调 [Hochschild同调]">Hochschild 同调</a></span>的单位的自同态:
-$$
-\operatorname{Tr}(F) \simeq \operatorname{End}(1_{\operatorname{HH}_* (\mathcal C,F)}).
-$$</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./相对位置.html" title="相对位置 [相对位置]">相对位置</a></span></p>
 </details></section></details></section></footer></article></div></body></html>

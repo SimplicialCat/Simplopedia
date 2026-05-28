@@ -834,12 +834,13 @@ Hochschild 同调又叫 “<span class="link local"><a href="./迹.html" title="
 <p><span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>的 Hochschild 同调是其与<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $S^1$ 的<span class="link local"><a href="./张量积.html" title="张量积 [张量积]">张量积</a></span>.</p>
 <h2>定义</h2>
 <h3>结合代数</h3>
-<p>设 $\mathcal C$ 为<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $A$ 为 $\mathcal C$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 定义其 <strong>Hochschild 同调</strong>为
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $A$ 为 $\mathcal C$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 定义其 <strong>Hochschild 同调</strong>为
 $$
 \operatorname{HH}_*(A) := A \otimes_{A\otimes A^{\mathrm{op}}} A.
 $$
+也即 $\operatorname{HH}_*(A)$ 是 $A$ 作为 $(A,A)$-双模的<span class="link local"><a href="./迹.html" title="迹 [迹]">迹</a></span>.
 这个定义的缺陷是它没能反映 Hochschild 同调的 $S^1$-对称性.</p>
-<p>另一个定义. 将结合代数 $A$ 视为 $\mathcal C$ 的<span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>中的对象, 其<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">对偶</a></span>为 $A^{\mathrm{op}}$, 从而给出一个取值于 Morita 范畴的 $1$ 维<span class="link local"><a href="./拓扑场论.html" title="拓扑场论 [拓扑场论]">拓扑场论</a></span>
+<p>另一个定义. 将结合代数 $A$ 视为 $\mathcal C$ 的 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>中的对象, 其<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">对偶</a></span>为 $A^{\mathrm{op}}$, 从而给出一个取值于 Morita 范畴的 $1$ 维<span class="link local"><a href="./拓扑场论.html" title="拓扑场论 [拓扑场论]">拓扑场论</a></span>
 $$
 Z_A\colon \mathsf{Bord}_1^{\mathrm{fr}}\to\mathsf{Morita}(\mathcal C),
 $$
@@ -847,6 +848,12 @@ Hochschild 同调是其在 $S^1$ 上的值:
 $$
 \operatorname{HH}(A) := Z_A(S^1).
 $$</p>
+<h3>结合代数与双模</h3>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $A$ 为 $\mathcal C$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, $M$ 为 $(A,A)$-双模. 定义其 <strong>Hochschild 同调</strong>为
+$$
+\operatorname{HH}_*(A,M) := A \otimes_{A\otimes A^{\mathrm{op}}} M.
+$$
+也即 $\operatorname{HH}_*(A,M)$ 是 $M$ 作为 $(A,A)$-双模的<span class="link local"><a href="./迹.html" title="迹 [迹]">迹</a></span>.</p>
 <h3>交换代数</h3>
 <p>当 $A$ 为<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>时,
 有

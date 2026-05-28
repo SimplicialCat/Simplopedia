@@ -839,13 +839,24 @@ $$
 <li>幺半 DG 范畴,</li>
 <li>DG 范畴.</li>
 </ul>
-<p>总之, 设 $\mathfrak C$ 是上述某种范畴的全体. 注意, 三种语境中一般的余极限不相容 (余极限的底层范畴不同); 但<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>是相容的. 这个事实马上就要用到.</p>
+<p>总之, 设 $\mathfrak C$ 是上述某种范畴的全体, 即 $\mathfrak C = \mathsf{Alg}_{\mathbb E_n}(\mathsf{DGCat})$, $n\in\{0,1,\infty\}$. 注意, 三种语境中一般的余极限与遗忘函子不相容; 但<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>是相容的. 这个事实马上就要用到.</p>
+<blockquote>
+<p>注. $\mathcal A$ 也可以视为 $\mathsf{CAlg}(\mathfrak C)$ 的对象, 也即对称幺半函子 $\mathsf{Fin} \to \mathfrak C$, $I\mapsto \mathcal A^{\otimes I}$. (我觉得这个视角才是本质的.)</p>
+</blockquote>
 <h3>1.2 将 $\mathcal A^{\otimes Y}$ 表现为余极限</h3>
-<p><strong>命题</strong>. 范畴 $\mathcal A^{\otimes Y}$ (遗忘到 $\mathfrak C$ 中) 等同于如下的<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>:
+<p><strong>命题</strong>. 对称幺半 DG 范畴 $\mathcal A^{\otimes Y}$ 遗忘到 $\mathfrak C$ 中, 等同于如下的<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>:
 $$
-\mathcal A^{\otimes Y} = \int_{I\in\mathsf{Fin}} Y^I\otimes\mathcal A^{\otimes I}.\, (\star)
-$$</p>
+\mathcal A^{\otimes Y} = \int_{I\in\mathsf{Fin}}^{\mathfrak C} Y^I\otimes\mathcal A^{\otimes I}.\, (\star)
+$$
+其中</p>
+<ul>
+<li>$\mathcal A^{\otimes I}$ 是 $\mathcal A$ 作为对称幺半 DG 范畴的 $I$ 次张量积,</li>
+<li>$Y^I\otimes (-)$ 是指取常值图的余极限 $\operatorname{colim}_{Y^I}^{\mathfrak C}(-)$.</li>
+</ul>
 <p>证明的思路是: 命题对 $Y\in\mathsf{Fin}$ 较为平凡, 然后将两边视为关于 $Y$ 的函子, 沿 $\mathsf{Fin}\to\mathsf{Ani}$ 作左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>.</p>
+<blockquote>
+<p>注. 我目前对这个命题的理解是: $\mathsf{Fin}$ 在 $\mathsf{Ani}$ 中关于筛余极限稠密; 对称幺半范畴 $\mathfrak C$ 中的交换代数等同于对称幺半函子 $\mathsf{Fin} \to \mathfrak C$, 命题中等式右端正是将其按筛余极限延拓为 $\mathsf{Ani} \to \mathfrak C$ 的方法.</p>
+</blockquote>
 <p><strong>引理 1</strong>. 函子 $\mathsf{Ani}\to\mathfrak C$, $Y\mapsto \mathcal A^{\otimes Y}$ 是其沿 $\mathsf{Fin}\to\mathsf{Ani}$ 的限制的左 Kan 扩张.</p>
 <p><em>证明</em>. 这是因为对任意 $Y\in\mathsf{Ani}$, 左 Kan 扩张的计算式中的指标范畴 $\mathsf{Fin}_{/Y}$ 是<span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span>, 而遗忘函子
 $$
@@ -893,15 +904,16 @@ $$
 $$</p>
 <p><strong>定理</strong>. 若 $Y$ 仅有有限个连通分支, 则上述函子为等价.</p>
 <h3>1.7 由 $\mathcal A^{\otimes Y}$ 出发的函子</h3>
+<p>仍设 $\mathfrak C$ 为 $\mathsf{CAlg}(\mathsf{DGCat}),\mathsf{Alg}(\mathsf{DGCat}),\mathsf{DGCat}$ 之一, $\mathcal C$ 为 $\mathfrak C$ 的对象.</p>
 <p>由于 $\mathcal A^{\otimes Y}$ 可表现为<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>, 相应地 $\operatorname{Hom}(\mathcal A^{\otimes Y},\mathcal C)$ 可表现为<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>
 $$
 \begin{aligned}
-\operatorname{Hom}(\mathcal A^{\otimes Y},\mathcal C)&amp;\simeq \int_{I\in\mathsf{Fin}}\operatorname{Hom}(Y^J\otimes\mathcal A^{\otimes I},\mathcal C)\\
+\operatorname{Hom}(\mathcal A^{\otimes Y},\mathcal C)&amp;\simeq \int_{I\in\mathsf{Fin}}\operatorname{Hom}(Y^I\otimes\mathcal A^{\otimes I},\mathcal C)\\
 &amp;\simeq \int_{I\in\mathsf{Fin}}\operatorname{Hom}(\mathcal A^{\otimes I},\mathcal C\otimes\mathsf{LS}(Y^I))\\
 &amp;\simeq\mathsf{Nat}_{\mathsf{Fun}(\mathsf{Fin},\mathfrak C)}(\mathcal A^{\otimes (-)},\mathcal C\otimes\mathsf{LS}(Y^{(-)})).
 \end{aligned}
 $$</p>
-<p>从而 $\mathcal A^{\otimes Y}$ 在 DG 范畴 $\mathcal M$ 上的作用 $\mathcal A^{\otimes Y} \to \operatorname{End}(\mathcal M)$ 等同于一族函子
+<p>从而 $\mathcal A^{\otimes Y}$ 在 DG 范畴 $\mathcal M$ 上的作用, 即幺半函子 $\mathcal A^{\otimes Y} \to \operatorname{End}(\mathcal M)$, 等同于一族幺半函子
 $$
 \mathcal A^{\otimes I} \to \operatorname{End}(\mathcal M)\otimes\mathsf{LS}(Y^I).
 $$</p>
@@ -933,7 +945,7 @@ $$</p>
 <p>对于有限集 $I$, 记 $I_+$ 为带基点集合 $I\sqcup \{*\}$. 注意 $\mathbf{B}(\operatorname{Free}_{\mathbb E_1}(I)) \simeq \Sigma(I_+)$, 因为它们到任何带基点生象 $(Y,y)$ 的映射都等同于映射 $I\to\Omega Y$.</p>
 <p>由推论 2.4.4,
 $$
-\operatorname{End}(1_{\mathcal A^{\otimes Y}}) = \operatorname{colim}_{}\operatorname{End}(1_{\mathcal A^{\otimes\Sigma (I_+)}})
+\operatorname{End}(1_{\mathcal A^{\otimes Y}}) = \operatorname{colim}_{I\to\Omega Y}\operatorname{End}(1_{\mathcal A^{\otimes\Sigma (I_+)}}).
 $$</p>
 <p>设 $J$ 为有限集. 记 $\mathrm{mult}_J\colon \mathcal A^{\otimes J} \to \mathcal A$ 为乘积函子.
 由于 $Y\mapsto\mathcal A^{\otimes Y}$ 保持余极限, 故有 $\mathsf{CAlg}(\mathsf{DGCat})$ 中的推出
@@ -964,5 +976,28 @@ $$
 $$</p>
 <p>记 $\xi$ 对应的 $1_{\mathcal A^{\Sigma (J)}}$ 的自同态为 $E_\xi$.</p>
 <h3>2.8 以远足构造模上的作用</h3>
-<p>设有 DG 范畴的函子 $S^Y\colon \mathcal A^{\otimes Y} \to \mathcal C$.</p>
+<p>对于带基点生象 $Y$ 的 $I$ 条环路
+$$
+\gamma^I\colon I\to\Omega Y,
+$$
+有映射
+$$
+\gamma^{I_+} \colon \operatorname{End}(1_{\mathcal A^{\Sigma (I_+)}}) \to \operatorname{End}(1_{\mathcal A^{\otimes Y}}).
+$$
+我们关注 $E_\xi$ 在这个映射下的像. 它们是远足代数的生成元.</p>
+<p>设有 DG 范畴的函子 $S^Y\colon \mathcal A^{\otimes Y} \to \mathcal C$. 它等同于一族函子
+$$
+S_I \colon \mathcal A^{\otimes I} \to\mathcal C\otimes\mathsf{LS}(Y^I).
+$$</p>
+<p>对于点 $y\in Y$, 记 $\mathrm{ev}_y$ 为 $y$ 处的取值函子 $\mathsf{LS}(Y)\to\mathsf{Vect}$. 对于两个点 $y_1,y_2$ 之间的道路 $\gamma$, 有自然变换 $\mathrm{mon}_\gamma\colon \mathrm{ev}_{y_1} \to \mathrm{ev}_{y_2}$.</p>
+<p>设 $y_1,y_2\in Y$ 是两个点, $\gamma^J$ 是 $J$ 条 $y_1$ 到 $y_2$ 的道路, $\xi\in\operatorname{Hom}(1_{\mathcal A},\mathrm{mult}_J\circ\mathrm{mult}_J^R (1_{\mathcal A}))$.
+定义<strong>远足算子</strong>为如下映射的复合.</p>
+<ul>
+<li>由于 $1_{\mathcal A}$ 沿 $\mathcal A \to \mathcal A^{\otimes Y}$ 的像是 $1_{\mathcal A^{\otimes Y}}$, 可将 $S_Y(1_{\mathcal A^{\otimes Y}})$ 等价于 $\mathrm{ev}_{y_1}(S_{1}(1_{\mathcal A}))$;</li>
+</ul>
+<h2>3. 迹</h2>
+<p><strong>定理 3.8.5</strong>. 设 $\mathcal C$ 为刚性对称幺半 DG 范畴, $F$ 为对称幺半的自函子. 那么 $F$ 的迹等于 <span class="link local"><a href="./Hochschild同调.html" title="Hochschild 同调 [Hochschild同调]">Hochschild 同调</a></span>的单位的自同态:
+$$
+\operatorname{Tr}(F) \simeq \operatorname{End}(1_{\operatorname{HH}_* (\mathcal C,F)}).
+$$</p>
 </details></section><footer></footer></article></div></body></html>

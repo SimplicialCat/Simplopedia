@@ -852,7 +852,16 @@ $$</p>
 $$
 \int_{\mathcal C} F = \operatorname{colim}_{(X\to Y)\in\mathsf{TwArr}(\mathcal C)} F(X,Y).
 $$</p>
+<h2>性质</h2>
+<h3>与 Hom 的交互</h3>
+<p>由余端出发的 Hom 可转换为 Hom 的<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>:
+$$
+\operatorname{Hom}(\int_{\mathcal C}F(-,-),-) \simeq \int_{\mathcal C}\operatorname{Hom}(F(-,-),-).
+$$</p>
 <h2>例</h2>
+<ul>
+<li><span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>的复合</li>
+</ul>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="index"><header><h1><span class="taxon"></span>单纯百科 Simplopedia <a class="slug" href="./index.html">[index]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <img src="/assets/simplopedia.svg" alt="Simplopedia" style="float: right; width: min(200px,30vw); margin-right: 20px; margin-top:-50px; filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));">
 <p>这里是<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>的主目录.</p>
@@ -915,13 +924,24 @@ $$
 <li>幺半 DG 范畴,</li>
 <li>DG 范畴.</li>
 </ul>
-<p>总之, 设 $\mathfrak C$ 是上述某种范畴的全体. 注意, 三种语境中一般的余极限不相容 (余极限的底层范畴不同); 但<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>是相容的. 这个事实马上就要用到.</p>
+<p>总之, 设 $\mathfrak C$ 是上述某种范畴的全体, 即 $\mathfrak C = \mathsf{Alg}_{\mathbb E_n}(\mathsf{DGCat})$, $n\in\{0,1,\infty\}$. 注意, 三种语境中一般的余极限与遗忘函子不相容; 但<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>是相容的. 这个事实马上就要用到.</p>
+<blockquote>
+<p>注. $\mathcal A$ 也可以视为 $\mathsf{CAlg}(\mathfrak C)$ 的对象, 也即对称幺半函子 $\mathsf{Fin} \to \mathfrak C$, $I\mapsto \mathcal A^{\otimes I}$. (我觉得这个视角才是本质的.)</p>
+</blockquote>
 <h3>1.2 将 $\mathcal A^{\otimes Y}$ 表现为余极限</h3>
-<p><strong>命题</strong>. 范畴 $\mathcal A^{\otimes Y}$ (遗忘到 $\mathfrak C$ 中) 等同于如下的<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>:
+<p><strong>命题</strong>. 对称幺半 DG 范畴 $\mathcal A^{\otimes Y}$ 遗忘到 $\mathfrak C$ 中, 等同于如下的<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>:
 $$
-\mathcal A^{\otimes Y} = \int_{I\in\mathsf{Fin}} Y^I\otimes\mathcal A^{\otimes I}.\, (\star)
-$$</p>
+\mathcal A^{\otimes Y} = \int_{I\in\mathsf{Fin}}^{\mathfrak C} Y^I\otimes\mathcal A^{\otimes I}.\, (\star)
+$$
+其中</p>
+<ul>
+<li>$\mathcal A^{\otimes I}$ 是 $\mathcal A$ 作为对称幺半 DG 范畴的 $I$ 次张量积,</li>
+<li>$Y^I\otimes (-)$ 是指取常值图的余极限 $\operatorname{colim}_{Y^I}^{\mathfrak C}(-)$.</li>
+</ul>
 <p>证明的思路是: 命题对 $Y\in\mathsf{Fin}$ 较为平凡, 然后将两边视为关于 $Y$ 的函子, 沿 $\mathsf{Fin}\to\mathsf{Ani}$ 作左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>.</p>
+<blockquote>
+<p>注. 我目前对这个命题的理解是: $\mathsf{Fin}$ 在 $\mathsf{Ani}$ 中关于筛余极限稠密; 对称幺半范畴 $\mathfrak C$ 中的交换代数等同于对称幺半函子 $\mathsf{Fin} \to \mathfrak C$, 命题中等式右端正是将其按筛余极限延拓为 $\mathsf{Ani} \to \mathfrak C$ 的方法.</p>
+</blockquote>
 <p><strong>引理 1</strong>. 函子 $\mathsf{Ani}\to\mathfrak C$, $Y\mapsto \mathcal A^{\otimes Y}$ 是其沿 $\mathsf{Fin}\to\mathsf{Ani}$ 的限制的左 Kan 扩张.</p>
 <p><em>证明</em>. 这是因为对任意 $Y\in\mathsf{Ani}$, 左 Kan 扩张的计算式中的指标范畴 $\mathsf{Fin}_{/Y}$ 是<span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span>, 而遗忘函子
 $$
@@ -969,15 +989,16 @@ $$
 $$</p>
 <p><strong>定理</strong>. 若 $Y$ 仅有有限个连通分支, 则上述函子为等价.</p>
 <h3>1.7 由 $\mathcal A^{\otimes Y}$ 出发的函子</h3>
+<p>仍设 $\mathfrak C$ 为 $\mathsf{CAlg}(\mathsf{DGCat}),\mathsf{Alg}(\mathsf{DGCat}),\mathsf{DGCat}$ 之一, $\mathcal C$ 为 $\mathfrak C$ 的对象.</p>
 <p>由于 $\mathcal A^{\otimes Y}$ 可表现为<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>, 相应地 $\operatorname{Hom}(\mathcal A^{\otimes Y},\mathcal C)$ 可表现为<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>
 $$
 \begin{aligned}
-\operatorname{Hom}(\mathcal A^{\otimes Y},\mathcal C)&amp;\simeq \int_{I\in\mathsf{Fin}}\operatorname{Hom}(Y^J\otimes\mathcal A^{\otimes I},\mathcal C)\\
+\operatorname{Hom}(\mathcal A^{\otimes Y},\mathcal C)&amp;\simeq \int_{I\in\mathsf{Fin}}\operatorname{Hom}(Y^I\otimes\mathcal A^{\otimes I},\mathcal C)\\
 &amp;\simeq \int_{I\in\mathsf{Fin}}\operatorname{Hom}(\mathcal A^{\otimes I},\mathcal C\otimes\mathsf{LS}(Y^I))\\
 &amp;\simeq\mathsf{Nat}_{\mathsf{Fun}(\mathsf{Fin},\mathfrak C)}(\mathcal A^{\otimes (-)},\mathcal C\otimes\mathsf{LS}(Y^{(-)})).
 \end{aligned}
 $$</p>
-<p>从而 $\mathcal A^{\otimes Y}$ 在 DG 范畴 $\mathcal M$ 上的作用 $\mathcal A^{\otimes Y} \to \operatorname{End}(\mathcal M)$ 等同于一族函子
+<p>从而 $\mathcal A^{\otimes Y}$ 在 DG 范畴 $\mathcal M$ 上的作用, 即幺半函子 $\mathcal A^{\otimes Y} \to \operatorname{End}(\mathcal M)$, 等同于一族幺半函子
 $$
 \mathcal A^{\otimes I} \to \operatorname{End}(\mathcal M)\otimes\mathsf{LS}(Y^I).
 $$</p>
@@ -1009,7 +1030,7 @@ $$</p>
 <p>对于有限集 $I$, 记 $I_+$ 为带基点集合 $I\sqcup \{*\}$. 注意 $\mathbf{B}(\operatorname{Free}_{\mathbb E_1}(I)) \simeq \Sigma(I_+)$, 因为它们到任何带基点生象 $(Y,y)$ 的映射都等同于映射 $I\to\Omega Y$.</p>
 <p>由推论 2.4.4,
 $$
-\operatorname{End}(1_{\mathcal A^{\otimes Y}}) = \operatorname{colim}_{}\operatorname{End}(1_{\mathcal A^{\otimes\Sigma (I_+)}})
+\operatorname{End}(1_{\mathcal A^{\otimes Y}}) = \operatorname{colim}_{I\to\Omega Y}\operatorname{End}(1_{\mathcal A^{\otimes\Sigma (I_+)}}).
 $$</p>
 <p>设 $J$ 为有限集. 记 $\mathrm{mult}_J\colon \mathcal A^{\otimes J} \to \mathcal A$ 为乘积函子.
 由于 $Y\mapsto\mathcal A^{\otimes Y}$ 保持余极限, 故有 $\mathsf{CAlg}(\mathsf{DGCat})$ 中的推出
@@ -1040,7 +1061,58 @@ $$
 $$</p>
 <p>记 $\xi$ 对应的 $1_{\mathcal A^{\Sigma (J)}}$ 的自同态为 $E_\xi$.</p>
 <h3>2.8 以远足构造模上的作用</h3>
-<p>设有 DG 范畴的函子 $S^Y\colon \mathcal A^{\otimes Y} \to \mathcal C$.</p>
+<p>对于带基点生象 $Y$ 的 $I$ 条环路
+$$
+\gamma^I\colon I\to\Omega Y,
+$$
+有映射
+$$
+\gamma^{I_+} \colon \operatorname{End}(1_{\mathcal A^{\Sigma (I_+)}}) \to \operatorname{End}(1_{\mathcal A^{\otimes Y}}).
+$$
+我们关注 $E_\xi$ 在这个映射下的像. 它们是远足代数的生成元.</p>
+<p>设有 DG 范畴的函子 $S^Y\colon \mathcal A^{\otimes Y} \to \mathcal C$. 它等同于一族函子
+$$
+S_I \colon \mathcal A^{\otimes I} \to\mathcal C\otimes\mathsf{LS}(Y^I).
+$$</p>
+<p>对于点 $y\in Y$, 记 $\mathrm{ev}_y$ 为 $y$ 处的取值函子 $\mathsf{LS}(Y)\to\mathsf{Vect}$. 对于两个点 $y_1,y_2$ 之间的道路 $\gamma$, 有自然变换 $\mathrm{mon}_\gamma\colon \mathrm{ev}_{y_1} \to \mathrm{ev}_{y_2}$.</p>
+<p>设 $y_1,y_2\in Y$ 是两个点, $\gamma^J$ 是 $J$ 条 $y_1$ 到 $y_2$ 的道路, $\xi\in\operatorname{Hom}(1_{\mathcal A},\mathrm{mult}_J\circ\mathrm{mult}_J^R (1_{\mathcal A}))$.
+定义<strong>远足算子</strong>为如下映射的复合.</p>
+<ul>
+<li>由于 $1_{\mathcal A}$ 沿 $\mathcal A \to \mathcal A^{\otimes Y}$ 的像是 $1_{\mathcal A^{\otimes Y}}$, 可将 $S_Y(1_{\mathcal A^{\otimes Y}})$ 等价于 $\mathrm{ev}_{y_1}(S_{1}(1_{\mathcal A}))$;</li>
+</ul>
+<h2>3. 迹</h2>
+<p><strong>定理 3.8.5</strong>. 设 $\mathcal C$ 为刚性对称幺半 DG 范畴, $F$ 为对称幺半的自函子. 那么 $F$ 的迹等于 <span class="link local"><a href="./Hochschild同调.html" title="Hochschild 同调 [Hochschild同调]">Hochschild 同调</a></span>的单位的自同态:
+$$
+\operatorname{Tr}(F) \simeq \operatorname{End}(1_{\operatorname{HH}_* (\mathcal C,F)}).
+$$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="代函子"><header><h1><span class="taxon"></span>代函子 <a class="slug" href="./代函子.html">[代函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>代函子</strong> (profunctor) 是函子的推广, 类似于关系是函数的推广.</p>
+<p><span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>之间的代函子又称为<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">充实范畴上的双模</a></span>.</p>
+<p>单对象的<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>之间的代函子 (<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">双模</a></span>) 是代数同态的推广. 对于交换环 $R$, 全体单对象 $\mathsf{Mod}(R)$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span> (即 $R$-<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">代数</a></span>) 以及代函子 (即双模) 构成的 $2$-范畴正是 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>.</p>
+<h2>定义</h2>
+<p>范畴 $\mathcal C$ 到 $\mathcal D$ 的<strong>代函子</strong> (profunctor) 是指函子 $\mathcal C \times \mathcal D^{\mathrm{op}} \to \mathsf{Set}$, 也即 $\mathcal C$ 到<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>范畴 $\mathsf{Psh}(\mathcal D)$ 的函子 $\mathcal C\to \mathsf{Psh}(\mathcal D)$. 代函子有时也记作 $\mathcal C$ ⇸ $\mathcal D$.</p>
+<p>当然, <span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>也有类似的概念.</p>
+<h3>复合</h3>
+<p>代函子 $f\colon \mathcal C\times\mathcal D^{\mathrm{op}}\to\mathsf{Set}$ 与 $g\colon \mathcal D\times\mathcal E^{\mathrm{op}} \to\mathsf{Set}$ 的<strong>复合</strong>是代函子 $gf\colon \mathcal C\times\mathcal E^{\mathrm{op}}\to\mathsf{Set}$, 可用如下<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>表示:
+$$
+gf(c,e) := \int_{d\in \mathcal D} f(c,d)\times g(d,e).
+$$</p>
+<p>全体范畴以及代函子构成一个 $2$-范畴.</p>
+<p><span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>之间的代函子又叫<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">双模</a></span>, 代函子的复合即是双模的张量积. 对于单对象充实范畴, 参见<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">结合代数上的模</a></span>.</p>
+<h3>同态集</h3>
+<p>代函子 $f\colon \mathcal C\times\mathcal D^{\mathrm{op}} \to \mathsf{Set}$ 到 $g\colon \mathcal E\times\mathcal D^{\mathrm{op}}\to\mathsf{Set}$ 的<strong>同态集</strong>是代函子 $[f,g]\colon \mathcal E\times\mathcal C^{\mathrm{op}}\to\mathsf{Set}$,
+$$
+[f,g](e,c) := \operatorname{lim}_d \operatorname{Hom}(f(c,d),g(e,d)).
+$$</p>
+<p><span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>之间的代函子的同态集即是<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">双模</a></span>的同态集.</p>
+<h2>性质</h2>
+<h3>与普通函子的关系</h3>
+<p>普通的函子 $f\colon \mathcal C\to\mathcal D$ 给出两个代函子:</p>
+<ul>
+<li>$\operatorname{Hom}_{\mathcal D}(f(-),-) \colon \mathcal D \otimes\mathcal C^{\mathrm{op}} \to \mathsf{Set}$;</li>
+<li>$\operatorname{Hom}_{\mathcal D}(-,f(-)) \colon \mathcal C \otimes\mathcal D^{\mathrm{op}} \to \mathsf{Set}$.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="对称序列"><header><h1><span class="taxon"></span>对称序列 <a class="slug" href="./对称序列.html">[对称序列]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>对称序列是一种可用于定义<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的结构.</p>
