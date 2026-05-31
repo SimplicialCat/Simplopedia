@@ -1437,6 +1437,25 @@ $$
 </ul>
 </li>
 </ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="Picard群"><header><h1><span class="taxon"></span>Picard 群 <a class="slug" href="./Picard群.html">[Picard群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>空间的 <strong>Picard 叠</strong>是其上<span class="link local"><a href="./线丛.html" title="线丛 [线丛]">线丛</a></span> (即 <span class="link local"><a href="./乘法群概形.html" title="乘法群概形 [乘法群概形]">$\mathbb{G}_m$</a></span>-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>) 的<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>,
+$$
+\mathrm{Pic}(X) = \operatorname{Maps}(X,\mathbf{B}\mathbb{G}_m);
+$$
+<strong>Picard 群</strong>是 Picard 叠的 $0$-<span class="link local"><a href="./截断性(同伦类型论).html" title="截断性 (同伦类型论) [截断性(同伦类型论)]">截断</a></span>, 即线丛的同构类关于张量积构成的群.</p>
+<h2>定义</h2>
+<h3>复流形</h3>
+<p>紧复流形 $M$ 的 Picard 群 $\text{Pic}(M)$ 是<span class="link local"><a href="./全纯线丛.html" title="“全纯线丛” [全纯线丛]">全纯线丛</a></span>的同构类关于张量积构成的群. $\text{Pic}(M)$ 的单位元是平凡丛, 也即全纯函数层 $\mathcal O_M$.</p>
+<p>定义 $\text{Pic}^0(M)$ 为 $\text{Pic}(M)$ 中由第一<span class="link local"><a href="./陈类.html" title="“陈类” [陈类]">陈类</a></span>等于零的线丛构成的子群.</p>
+<h3>概形</h3>
+<p><span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span> (或<span class="link local"><a href="./环化空间.html" title="环化空间 [环化空间]">环化空间</a></span>) $X$ 的 Picard 群 $\operatorname{Pic}(X)$ 是 $X$ 上秩为 $1$ 的局部自由 $\mathcal O_X$-模的同构类在张量积下构成的群. 它也同构于<span class="link local"><a href="./平展上同调.html" title="平展上同调 [平展上同调]">平展上同调</a></span> $H^1(X_{\mathrm{\'et}},\mathbb G_m)$.</p>
+<h3>对称幺半范畴</h3>
+<p><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>的 Picard 群是其中可逆对象的同构类构成的 Abel 群.</p>
+<h2>性质</h2>
+<p>$\text{Pic}(M) \simeq H^1(M,\mathcal O_M^*)$.</p>
+<p>$\text{Pic}^0(M) \simeq H^1(M,\mathcal O_M) / H^1(M,\mathbb{Z})$. (参见<span class="link local"><a href="./指数序列.html" title="“指数序列” [指数序列]">指数序列</a></span>)</p>
+<p><span class="link local"><a href="./Dedekind整环.html" title="“Dedekind 整环” [Dedekind整环]">Dedekind 整环</a></span>的谱的 Picard 群是这个环的<span class="link local"><a href="./理想类群.html" title="“理想类群” [理想类群]">理想类群</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="terminologies"><header><h1><span class="taxon"></span>单纯百科 - 术语翻译表 <a class="slug" href="./terminologies.html">[terminologies]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>下表的第二列是<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>使用的译文.</p>
 <p>表格第三列是其它地方也曾出现的译文, 它们有的是历史淘汰的选择, 有的是机翻造成的错误. 这个表格的作用是为 LLM 提供正确的术语.</p>
@@ -1642,6 +1661,23 @@ $$</p>
 <p><strong>命题</strong>. 任意 (足够好的) 连通空间 $X$ 上存在 $\infty$-万有丛.</p>
 <p><strong>证明</strong>. 选定基点 $x_0\in X$, 定义 $PX$ 为 $X$ 上所有始于 $x_0$ 的道路的空间, 道路的终点给出映射 $p\colon PX\to X$. 定义环路空间 $\Omega X=p^{-1}(x_0)$. 那么 $PX$ 是可缩的 $\Omega X$-丛.</p>
 <p><strong>定理</strong> (Milnor). $X$ 上任何 $G$-主丛都诱导自拓扑群同态 $\Omega X \to G$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="主丛的模空间"><header><h1><span class="taxon"></span>主丛的模空间 <a class="slug" href="./主丛的模空间.html">[主丛的模空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>见<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>, <span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>.</p>
+<h2>定义</h2>
+<h3>点函子</h3>
+<p>固定概形 $X$ 与群 $G$. 对于<span class="link local"><a href="./探测.html" title="探测 [探测]">测试</a></span>概形 $S$, $\mathrm{Bun}_G$ 的 $S$-点的群胚是 $X\times S$ 上的 $G$-丛的群胚.</p>
+<h2>性质</h2>
+<h3>代数叠</h3>
+<p>$\mathrm{Bun}_G$ 是<span class="link local"><a href="./代数叠.html" title="代数叠 [代数叠]">代数叠</a></span>.</p>
+<h3>双陪集刻画</h3>
+<p>固定基域 $k$, 设 $X$ 为光滑不可约射影曲线, $G$ 为分裂连通<span class="link local"><a href="./约化群.html" title="约化群 [约化群]">约化群</a></span>, 记 $R_x=\mathcal O(X\setminus x)$ 为仿射曲线 $X\setminus x$ 上的正则函数环, 记 $\mathcal O_x\simeq k[t](t.md)$ 为 $x$ 处形式圆盘的函数环, $K_x\simeq k((t))$ 为去心形式圆盘的函数环.</p>
+<p>由于 $G$-主丛由去心形式圆盘上的一个转移函数 $g\in G(K_x)$ 决定, 且左乘 $G(R_x)$ 与右乘 $G(\mathcal O_x)$ 均不改变其本质, 故 $\mathrm{Bun}_G$ 的 $k$-点为
+$$
+\mathrm{Bun}_G(k)\simeq G(R_x)\backslash G(K_x) / G(O_x).
+$$</p>
+<h3>稳定丛</h3>
+<p>所谓稳定丛是某种意义上 “一般” 的丛, 其自同构平凡; 稳定丛的模空间是 $\mathrm{Bun}_G$ 中的开集 $\mathrm{Bun}_G^\circ$, 且该开集为光滑代数簇. <span class="link local"><a href="./Hitchin模空间.html" title=" [Hitchin模空间]">Hitchin 模叠</a></span>是 $T^*\mathrm{Bun}_G^\circ$ 的某种紧化.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="仿射Grassmann空间"><header><h1><span class="taxon"></span>仿射 Grassmann 空间 <a class="slug" href="./仿射Grassmann空间.html">[仿射Grassmann空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>仿射 Grassmann 空间是 Grassmann 空间的类比, 是<span class="link local"><a href="./环路群.html" title="环路群 [环路群]">环路群</a></span> $LG$ 对<span class="link local"><a href="./弧群.html" title="弧群 [弧群]">弧群</a></span>极大抛物子群 $L^+G$ 的商.</p>

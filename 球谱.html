@@ -834,6 +834,39 @@
 <h2>定义</h2>
 <h3>通过 $\mathsf{Ani}$ 的泛性质</h3>
 <p><strong>定义</strong> (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">HA</a></span> 6.3.3.2). 由于范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}^{\mathrm{op}}$</a></span> 余完备, 存在唯一的函子 $F\colon \mathsf{Ani} \to \mathsf{Sp}^{\mathrm{op}}$ 满足 $F(*) = \mathbb S$ (<span class="link local"><a href="./球谱.html" title="“球谱” [球谱]">球谱</a></span>). 此时称 $F(X)$ 为 $X$ 的 <strong>Spanier–Whitehead 对偶</strong>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="压缩积"><header><h1><span class="taxon"></span>压缩积 <a class="slug" href="./压缩积.html">[压缩积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>带基点空间 (<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>) 的压缩积是带基点空间范畴 $\mathsf{Ani}_*$ 的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半结构</a></span>, 单位为 $*$.</p>
+<p><span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的压缩积是<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半结构</a></span>, 单位为<span class="link local"><a href="./球谱.html" title="“球谱” [球谱]">球谱</a></span> $\mathbb{S}$.</p>
+<h2>定义</h2>
+<p>带基点空间 (<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>) $X,Y$ 的<strong>压缩积</strong> (smash product) $X\wedge Y$ 是如下带基点空间:
+$$
+X\wedge Y = \operatorname{cofib}(X\vee Y \to X\times Y).
+$$</p>
+<h2>性质</h2>
+<p>压缩积 (生象或谱) 保持各个分量的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>. 事实上, 由于 $\mathsf{Ani}_*$ 由 $S^0$ 生成, 故 $\mathsf{Ani}_*$ 上的压缩积由该性质及其单位完全刻画.</p>
+<p><strong>命题</strong>. $\mathsf{Ani}_*$ 上有唯一的对称幺半结构 $(\mathsf{Ani}_*,\wedge,S^0)$, 满足</p>
+<ul>
+<li>其单位为 $S^0$,</li>
+<li>且 $\wedge$ 保持各个分量的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</li>
+</ul>
+<p><strong>命题</strong>. $\mathsf{Sp}$ 上有唯一的对称幺半结构 $(\mathsf{Sp},\wedge,\mathbb S)$, 满足</p>
+<ul>
+<li>其单位为 $\mathbb S$,</li>
+<li>函子 $\Sigma^\infty\colon\mathsf{Ani}_*\to\mathsf{Sp}$ 为对称幺半函子,</li>
+<li>且 $\wedge$ 保持各个分量的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</li>
+</ul>
+<p>注意如下函子均为对称幺半函子:
+$$
+(\mathsf{Ani},\times)\overset{(-)_+}{\to}(\mathsf{Ani}_*,\wedge)
+\overset{\Sigma^\infty}{\to}(\mathsf{Sp},\wedge),
+$$
+从而复合
+$\Sigma^\infty_+\colon\mathsf{Ani} \to \mathsf{Sp}$ 为对称幺半函子, 也即
+$$
+\Sigma^\infty_+(X\times Y)\simeq \Sigma^\infty_+X \wedge \Sigma^\infty_+Y.
+$$</p>
+<h3>与映射谱的关系</h3>
+<p>压缩积与<span class="link local"><a href="./映射谱.html" title="映射谱 [映射谱]">映射谱</a></span>构成 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 上的<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span>对称幺半范畴结构.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="谱"><header><h1><span class="taxon"></span>谱 (稳定同伦论) <a class="slug" href="./谱.html">[谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本页面讨论<span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span>中的谱. 另一个无关的概念是<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>中的<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>.</p>
 <h2>观念</h2>

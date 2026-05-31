@@ -1106,11 +1106,17 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="余完备化"><header><h1><span class="taxon"></span>余完备化 <a class="slug" href="./余完备化.html">[余完备化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>余完备化是指向一个范畴<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加特定形状的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>的过程.</p>
-<p>具体地, 设 $R\subset K$ 是两族小范畴 (即 $R\hookrightarrow K \hookrightarrow\mathsf{Cat}$ 为全子范畴). 对于具有 $R$-形余极限的范畴 $\mathcal C$, 可在保持 $R$-形余极限的条件下, “自由地添加 $K$-形余极限”, 得到
+<p>具体地, 设 $R\subset K$ 是两族小范畴 (即 $R\hookrightarrow K \hookrightarrow\mathsf{Cat}$ 为全子范畴). 对于具有 $R$-形余极限的范畴 $\mathcal C$, 可在保持 $R$-形余极限的条件下, “<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加 $K$-形余极限”, 得到
 $$
 \mathcal C \hookrightarrow \mathsf{P}_{R}^K(\mathcal C).
+$$</p>
+<h2>性质</h2>
+<h3>泛性质 (自由性)</h3>
+<p>记 $\mathsf{Cat}_K$ 为具有 $K$-形余极限的范畴以及保持 $K$-形余极限的函子构成的 $2$-范畴, 那么 $\mathsf{P}_R^K\colon \mathsf{Cat}_R \to \mathsf{Cat}_K$ 是<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>函子 $\mathsf{Cat}_K \to \mathsf{Cat}_R$ 的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>. 具体地, 对于具有 $R$-余极限的范畴 $\mathcal C$ 与具有 $K$-余极限的范畴 $\mathcal D$,
 $$
-记 $\mathsf{Cat}_K$ 为具有 $K$-形余极限的范畴以及保持 $K$-形余极限的函子构成的 $2$-范畴, 那么 $\mathsf{P}_R^K\colon \mathsf{Cat}_R \to \mathsf{Cat}_K$ 是<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>函子 $\mathsf{Cat}_K \to \mathsf{Cat}_R$ 的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
+\mathsf{Fun}^{K\text{-}\mathrm{colim}}(\mathsf{P}_R^K(\mathcal C),\mathcal D)\simeq
+\mathsf{Fun}^{R\text{-}\mathrm{colim}}(\mathcal C,\mathcal D).
+$$</p>
 <h2>例</h2>
 <h3>余积完备化</h3>
 <p>考虑 $K = \mathsf{Set}$ 为离散范畴的范畴, 那么 $\mathsf{P}^{K}(\mathcal C)$ 是 $\mathcal C$ 自由地添加余积所得的范畴; 其有一种具体构造: $\mathsf{P}^{K}(\mathcal C)$ 的对象为 $\mathcal C$ 的对象族 $(X_i)_{i\in I}$, 态射 $(X_i)_{i\in I} \to (Y_j)_{j\in J}$ 为映射 $f\colon I\to J$ 以及一族态射 $(X_i \to Y_{f(i)})_{i\in I}$. 这个范畴也可定义为<span class="link local"><a href="./松拉回.html" title="松拉回 [松拉回]">松拉回</a></span></p>
@@ -1217,6 +1223,39 @@ $$
 <h2>例</h2>
 <p>单纯集 $X\colon \Delta^{\text{op}}\to\mathsf {Set}$ 在 $\mathsf{Set}$ (作为 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$\infty$-范畴</a></span>) 中的余极限是 $\pi_0(X)$.</p>
 <h2>性质</h2>
+</details></section><section class="block" data-taxon=""><details ><summary id="压缩积"><header><h1><span class="taxon"></span>压缩积 <a class="slug" href="./压缩积.html">[压缩积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>带基点空间 (<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>) 的压缩积是带基点空间范畴 $\mathsf{Ani}_*$ 的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半结构</a></span>, 单位为 $*$.</p>
+<p><span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的压缩积是<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半结构</a></span>, 单位为<span class="link local"><a href="./球谱.html" title="“球谱” [球谱]">球谱</a></span> $\mathbb{S}$.</p>
+<h2>定义</h2>
+<p>带基点空间 (<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>) $X,Y$ 的<strong>压缩积</strong> (smash product) $X\wedge Y$ 是如下带基点空间:
+$$
+X\wedge Y = \operatorname{cofib}(X\vee Y \to X\times Y).
+$$</p>
+<h2>性质</h2>
+<p>压缩积 (生象或谱) 保持各个分量的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>. 事实上, 由于 $\mathsf{Ani}_*$ 由 $S^0$ 生成, 故 $\mathsf{Ani}_*$ 上的压缩积由该性质及其单位完全刻画.</p>
+<p><strong>命题</strong>. $\mathsf{Ani}_*$ 上有唯一的对称幺半结构 $(\mathsf{Ani}_*,\wedge,S^0)$, 满足</p>
+<ul>
+<li>其单位为 $S^0$,</li>
+<li>且 $\wedge$ 保持各个分量的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</li>
+</ul>
+<p><strong>命题</strong>. $\mathsf{Sp}$ 上有唯一的对称幺半结构 $(\mathsf{Sp},\wedge,\mathbb S)$, 满足</p>
+<ul>
+<li>其单位为 $\mathbb S$,</li>
+<li>函子 $\Sigma^\infty\colon\mathsf{Ani}_*\to\mathsf{Sp}$ 为对称幺半函子,</li>
+<li>且 $\wedge$ 保持各个分量的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</li>
+</ul>
+<p>注意如下函子均为对称幺半函子:
+$$
+(\mathsf{Ani},\times)\overset{(-)_+}{\to}(\mathsf{Ani}_*,\wedge)
+\overset{\Sigma^\infty}{\to}(\mathsf{Sp},\wedge),
+$$
+从而复合
+$\Sigma^\infty_+\colon\mathsf{Ani} \to \mathsf{Sp}$ 为对称幺半函子, 也即
+$$
+\Sigma^\infty_+(X\times Y)\simeq \Sigma^\infty_+X \wedge \Sigma^\infty_+Y.
+$$</p>
+<h3>与映射谱的关系</h3>
+<p>压缩积与<span class="link local"><a href="./映射谱.html" title="映射谱 [映射谱]">映射谱</a></span>构成 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 上的<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span>对称幺半范畴结构.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="可表现范畴"><header><h1><span class="taxon"></span>可表现范畴 <a class="slug" href="./可表现范畴.html">[可表现范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>可表现范畴</strong> $\mathcal C$ 是一个可能很大的范畴, 却能由较小的一族对象 $\mathcal S\hookrightarrow\mathcal C$ 控制.
@@ -1491,10 +1530,10 @@ $$
 <li>无穷维射影空间 $\mathbb{C}P^\infty$ 是有限维射影空间的序列余极限.</li>
 <li><span class="link local"><a href="./形式圆盘.html" title="形式圆盘 [形式圆盘]">形式圆盘</a></span> $\operatorname{Spec}R[[t]]$ ($\operatorname{Spf}R[[t]]$) 是 $\operatorname{Spec}R[t]/(t^n)$ 在仿射概形范畴 (概形范畴) 中的滤余极限.</li>
 </ul>
-</details></section><section class="block" data-taxon=""><details ><summary id="稳定化"><header><h1><span class="taxon"></span>稳定化 <a class="slug" href="./稳定化.html">[稳定化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="稳定化"><header><h1><span class="taxon"></span>稳定化 <a class="slug" href="./稳定化.html">[稳定化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>以下的范畴默认为 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$(\infty,1)$-范畴</a></span>.</p>
-<p>每个具有有限极限的范畴都存在稳定化, 即自由地变成<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>. 稳定化可以构造为<span class="link local"><a href="./谱对象.html" title="谱对象 [谱对象]">谱对象</a></span>的范畴.</p>
+<p>每个具有有限极限的范畴都存在稳定化, 即自由地变成<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>. 稳定化可以构造为<span class="link local"><a href="./谱对象.html" title="谱对象 [谱对象]">谱对象</a></span>的范畴. 人们一般考虑<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>的稳定化.</p>
 <h2>定义</h2>
 <p><span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span>带基点范畴 $\mathcal C$ 的稳定化是 <span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">$\mathrm {Pr}^{\mathrm L}$</a></span> 中的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>
 $$
@@ -1515,6 +1554,12 @@ $$
 $$
 X\simeq\operatorname{colim}\Sigma^{\infty -n}\Omega^{\infty-n}X.
 $$</p>
+<h3>与对称幺半结构的关系</h3>
+<p>可表现对称幺半范畴的稳定化仍有对称幺半结构; 稳定化提升为函子
+$$
+\operatorname{Stab}\colon \mathsf{CAlg}(\mathsf{Pr}) \to \mathsf{CAlg}(\mathsf{Pr}_{\mathrm{st}}).
+$$</p>
+<p>最基本的例子即是 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 上的对称幺半结构.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="筛余极限"><header><h1><span class="taxon"></span>筛余极限 <a class="slug" href="./筛余极限.html">[筛余极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>筛余极限 (sifted colimit) 是以<span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span>为指标范畴的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>

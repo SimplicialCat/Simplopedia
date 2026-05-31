@@ -832,9 +832,9 @@
 <p>在代数几何中, 基底空间 $S$ 上的一族几何对象通常用<span class="link local"><a href="./平坦态射.html" title="“平坦态射” [平坦态射]">平坦态射</a></span> $X\to S$ 描述, 其纤维为我们关心的某一类空间.</p>
 <p>在代数几何中, 一个<strong>模问题</strong> (moduli problem) 一般是一个函子
 $$
-\mathcal M\colon  \mathsf {Sch}^{\text{op}}\to \mathsf {Set},
+\mathcal M\colon  \mathsf {Sch}^{\text{op}}\to \mathsf {Set},\mathsf{Ani},\mathsf{Cat},\cdots
 $$
-其中 $\mathcal M(S)$ 是 “以 $S$ 参数化的一族对象” 的集合. 从<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>的观点, $S$ 参数化的一族对象相当于 $S$ 到 $\mathcal M$ 的一个态射. 函子 $\mathcal M$ 不总是可表的. 当它可表时, 其表示对象称为<strong>细模空间</strong>.</p>
+其中 $\mathsf{Sch}$ 是概形 (或相关的几何对象) 的范畴, $\mathcal M(S)$ 是 “以 $S$ 参数化的一族对象” 的集合. 从<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>的观点, $S$ 参数化的一族对象相当于 $S$ 到 $\mathcal M$ 的一个态射. 函子 $\mathcal M$ 不总是可表的. 当它可表时, 其表示对象称为<strong>细模空间</strong>.</p>
 <p><strong>细模空间</strong>是带有<strong>万有族</strong>的空间 (概形) $M$, 使得任意概形 $S$ 上的一族某种对象都是由唯一的一个映射 $S\to M$ 将 $M$ 上的万有族拉回得到. 于是我们有双射
 $$
 \{S\text{ 上的对象族}\} \leftrightarrow \{S\to M\}
@@ -857,7 +857,57 @@ $$</p>
 <p>在 $G=\mathrm {GL}_n$ 的情形, $G$-主丛等同于 $n$ 阶向量丛, $\mathrm {Bun}_G$ 等价于 $X$ 上 $n$ 阶向量丛的模空间 $\mathrm {Bun}_n$.</p>
 <h3>旗流形</h3>
 <p><span class="link local"><a href="./旗流形.html" title="旗流形 [旗流形]">旗流形</a></span>是 Borel 子群的模空间.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Geo-Sat-eq"><header><h1><span class="taxon"></span>几何 Satake 等价 <a class="slug" href="./Geo-Sat-eq.html">[Geo-Sat-eq]</a></h1><div class="metadata"><ul><li class="meta-item">讲义</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Chtoucas"><header><h1><span class="taxon"></span>Chtouca 与整体 Langlands 参数 <a class="slug" href="./Chtoucas.html">[Chtoucas]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文是 <span class="link local"><a href="./VLafforgueCht.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueCht]">V. Lafforgue 文章</a></span>的阅读笔记.</p>
+<h2>1. Hecke 叠</h2>
+<p>设 $X$ 为 $\mathbb F_q$ 上的不可约光滑射影曲线, $G$ 为约化群.</p>
+<p>设 $N\subset X$ 为有限点集, 定义 $\mathrm{Bun}_{G,N}$ 为 $X$ 上具有 “$N$ 级结构” 的 $G$-丛的<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>. 所谓 “$N$ 级结构” (structure de niveau $N$) $(\mathcal G,\psi)$ 是指在 $N$ 上的平凡化 $\psi\colon \mathcal G|_N \simeq G|_N$.</p>
+<p>设 $I$ 为有限集, $(I_1,\cdots,I_k)$ 为 $I$ 的分划. 定义 Hecke 叠
+$$
+\mathrm{Hecke}_{N,I}^{(I_1,\cdots,I_k)}
+$$
+为如下资料的分类叠:</p>
+<ul>
+<li>$x_i\in X\setminus N$ ($i\in I$);</li>
+<li>$(\mathcal G_0,\psi_0),\cdots,(\mathcal G_k,\psi_k) \in \mathrm{Bun}_{G,N}$;</li>
+<li>对 $j\in\{1,\cdots,k\}$, 同构 $\phi_j\colon \mathcal G_{j-1}|_{X\setminus \{x_i\colon i\in I_j\}} \simeq \mathcal G_{j}|_{X\setminus \{x_i\colon i\in I_j\}}$, 保持级结构.</li>
+</ul>
+<p>简言之, $\mathrm{Hecke}_{N,I}^{(I_1,\cdots,I_k)}$ 的一个点对应着一个具有 $N$ 级结构的 $G$-丛经过一列调整, 每次调整 $I_j$ 个点处的平凡化.</p>
+<h2>2. $G$-Chtouca 的叠</h2>
+<p>设 $I$ 为有限集, $(I_1,\cdots,I_k)$ 是 $I$ 的分拆. 设 $N\subset X$ 为有限点集, 定义 $(X\setminus N)^I$ 上的叠
+$$
+\mathrm{Cht}_{N,I}^{(I_1,\cdots,I_k)}
+$$</p>
+<h2>4. 上同调的层</h2>
+<h3>4.2</h3>
+<p>定义
+$$
+\begin{aligned}
+\mathcal H^{\leq\mu,E}_{N,I,\underline\omega} &amp;= R(\mathfrak p_{N,I}^{(I_1,\cdots,I_k),\leq \mu})_!
+(\mathcal F^{(I_1,\cdots,I_k)}_{N,I,\underline\omega,\Xi,E}|_{\mathrm{Cht}_{N,I,\underline\omega}^{(I_1,\cdots,I_k),\leq \mu}})\\
+&amp;\in D_c^b((X\setminus N)^I,E).
+\end{aligned}
+$$</p>
+<h2>5. 创生与湮灭</h2>
+<h3>特化同态 (spécialisation)</h3>
+<p>$$
+\mathfrak {sp}\colon 
+$$</p>
+<p>有同构
+$$
+\begin{aligned}
+\mathfrak {sp}^*\colon&amp; (\operatorname{colim}_\mu \mathcal H_{N,I,W}^{0,\leq\mu,E}|_{\Delta(\bar\eta)})^{\text{Hf}}
+\\
+\simeq\,&amp;(\operatorname{colim}_\mu \mathcal H_{N,I,W}^{0,\leq\mu,E}|_{\overline{\eta^I}})^{\text{Hf}}.
+\end{aligned}
+$$</p>
+<p>定义远足算子 $S_{I,W,x,\xi,(\gamma_i)_{i\in I}}$ 为如下复合:
+$$
+S_{I,W,x,\xi,(\gamma_i)_{i\in I}} := C_\xi^\flat 
+(\mathfrak{sp}^*)^{-1}(\gamma_i)_{i\in I}\mathfrak {sp}^*
+C_\xi^\sharp.
+$$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="Geo-Sat-eq"><header><h1><span class="taxon"></span>几何 Satake 等价 <a class="slug" href="./Geo-Sat-eq.html">[Geo-Sat-eq]</a></h1><div class="metadata"><ul><li class="meta-item">讲义</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>参考</p>
 <ul>
 <li>Gaitsgory 等人 2010 春季的<span class="link external"><a href="https://people.mpim-bonn.mpg.de/gaitsgde/grad_2009/" title="几何表示论讨论班 [https://people.mpim-bonn.mpg.de/gaitsgde/grad_2009/]">几何表示论讨论班</a></span>,</li>
@@ -1270,6 +1320,25 @@ $$</p>
 <p>考虑所有线丛 (不限次数) 构成的模空间, 即 $\mathbb{G}_m$-丛的<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模叠</a></span> $\mathrm{Bun}_{\mathbb{G}_m}$, 它自然分解为三部分的乘积: Jacobi 簇 (记录次数为零的部分), 整数 $\mathbb{Z}$ (记录次数或 “极点总数”), 以及 $\mathbf{B}\mathbb{G}_m$ (反映线丛的自同构对称性).</p>
 <h2>性质</h2>
 <p>曲线 $X$ 到其 Jacobi 簇存在一个自然映射, 称为 <strong>Abel–Jacobi 映射</strong>, 诱导基本群的交换化的同构.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="Picard群"><header><h1><span class="taxon"></span>Picard 群 <a class="slug" href="./Picard群.html">[Picard群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>空间的 <strong>Picard 叠</strong>是其上<span class="link local"><a href="./线丛.html" title="线丛 [线丛]">线丛</a></span> (即 <span class="link local"><a href="./乘法群概形.html" title="乘法群概形 [乘法群概形]">$\mathbb{G}_m$</a></span>-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>) 的<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>,
+$$
+\mathrm{Pic}(X) = \operatorname{Maps}(X,\mathbf{B}\mathbb{G}_m);
+$$
+<strong>Picard 群</strong>是 Picard 叠的 $0$-<span class="link local"><a href="./截断性(同伦类型论).html" title="截断性 (同伦类型论) [截断性(同伦类型论)]">截断</a></span>, 即线丛的同构类关于张量积构成的群.</p>
+<h2>定义</h2>
+<h3>复流形</h3>
+<p>紧复流形 $M$ 的 Picard 群 $\text{Pic}(M)$ 是<span class="link local"><a href="./全纯线丛.html" title="“全纯线丛” [全纯线丛]">全纯线丛</a></span>的同构类关于张量积构成的群. $\text{Pic}(M)$ 的单位元是平凡丛, 也即全纯函数层 $\mathcal O_M$.</p>
+<p>定义 $\text{Pic}^0(M)$ 为 $\text{Pic}(M)$ 中由第一<span class="link local"><a href="./陈类.html" title="“陈类” [陈类]">陈类</a></span>等于零的线丛构成的子群.</p>
+<h3>概形</h3>
+<p><span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span> (或<span class="link local"><a href="./环化空间.html" title="环化空间 [环化空间]">环化空间</a></span>) $X$ 的 Picard 群 $\operatorname{Pic}(X)$ 是 $X$ 上秩为 $1$ 的局部自由 $\mathcal O_X$-模的同构类在张量积下构成的群. 它也同构于<span class="link local"><a href="./平展上同调.html" title="平展上同调 [平展上同调]">平展上同调</a></span> $H^1(X_{\mathrm{\'et}},\mathbb G_m)$.</p>
+<h3>对称幺半范畴</h3>
+<p><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>的 Picard 群是其中可逆对象的同构类构成的 Abel 群.</p>
+<h2>性质</h2>
+<p>$\text{Pic}(M) \simeq H^1(M,\mathcal O_M^*)$.</p>
+<p>$\text{Pic}^0(M) \simeq H^1(M,\mathcal O_M) / H^1(M,\mathbb{Z})$. (参见<span class="link local"><a href="./指数序列.html" title="“指数序列” [指数序列]">指数序列</a></span>)</p>
+<p><span class="link local"><a href="./Dedekind整环.html" title="“Dedekind 整环” [Dedekind整环]">Dedekind 整环</a></span>的谱的 Picard 群是这个环的<span class="link local"><a href="./理想类群.html" title="“理想类群” [理想类群]">理想类群</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Shtuka"><header><h1><span class="taxon"></span>Shtuka (Chtouca) <a class="slug" href="./Shtuka.html">[Shtuka]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>Shtuka = Hecke 调整 + <span class="link local"><a href="./Frobenius态射.html" title="Frobenius 态射 [Frobenius态射]">Frobenius 态射</a></span></p>
 <blockquote>
@@ -1357,6 +1426,23 @@ $$
 <h3>$\mathbb G_m$ 的分类叠</h3>
 <p><span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>是几何对象的范畴上的层.</p>
 <h3>de Rham 空间</h3>
+</details></section><section class="block" data-taxon=""><details ><summary id="主丛的模空间"><header><h1><span class="taxon"></span>主丛的模空间 <a class="slug" href="./主丛的模空间.html">[主丛的模空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>见<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>, <span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>.</p>
+<h2>定义</h2>
+<h3>点函子</h3>
+<p>固定概形 $X$ 与群 $G$. 对于<span class="link local"><a href="./探测.html" title="探测 [探测]">测试</a></span>概形 $S$, $\mathrm{Bun}_G$ 的 $S$-点的群胚是 $X\times S$ 上的 $G$-丛的群胚.</p>
+<h2>性质</h2>
+<h3>代数叠</h3>
+<p>$\mathrm{Bun}_G$ 是<span class="link local"><a href="./代数叠.html" title="代数叠 [代数叠]">代数叠</a></span>.</p>
+<h3>双陪集刻画</h3>
+<p>固定基域 $k$, 设 $X$ 为光滑不可约射影曲线, $G$ 为分裂连通<span class="link local"><a href="./约化群.html" title="约化群 [约化群]">约化群</a></span>, 记 $R_x=\mathcal O(X\setminus x)$ 为仿射曲线 $X\setminus x$ 上的正则函数环, 记 $\mathcal O_x\simeq k[t](t.md)$ 为 $x$ 处形式圆盘的函数环, $K_x\simeq k((t))$ 为去心形式圆盘的函数环.</p>
+<p>由于 $G$-主丛由去心形式圆盘上的一个转移函数 $g\in G(K_x)$ 决定, 且左乘 $G(R_x)$ 与右乘 $G(\mathcal O_x)$ 均不改变其本质, 故 $\mathrm{Bun}_G$ 的 $k$-点为
+$$
+\mathrm{Bun}_G(k)\simeq G(R_x)\backslash G(K_x) / G(O_x).
+$$</p>
+<h3>稳定丛</h3>
+<p>所谓稳定丛是某种意义上 “一般” 的丛, 其自同构平凡; 稳定丛的模空间是 $\mathrm{Bun}_G$ 中的开集 $\mathrm{Bun}_G^\circ$, 且该开集为光滑代数簇. <span class="link local"><a href="./Hitchin模空间.html" title=" [Hitchin模空间]">Hitchin 模叠</a></span>是 $T^*\mathrm{Bun}_G^\circ$ 的某种紧化.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="仿射Grassmann空间"><header><h1><span class="taxon"></span>仿射 Grassmann 空间 <a class="slug" href="./仿射Grassmann空间.html">[仿射Grassmann空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>仿射 Grassmann 空间是 Grassmann 空间的类比, 是<span class="link local"><a href="./环路群.html" title="环路群 [环路群]">环路群</a></span> $LG$ 对<span class="link local"><a href="./弧群.html" title="弧群 [弧群]">弧群</a></span>极大抛物子群 $L^+G$ 的商.</p>
@@ -1490,4 +1576,12 @@ $$</p>
 <h2>性质</h2>
 <h3>层范畴</h3>
 <p>特征簇上的一些层范畴可用 $X$ 上的<span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>计算. 例如<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>范畴 $\mathsf{QCoh}()$ 是表示范畴 $\mathsf{Rep}(G)$ 的分解同调.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="理元类群"><header><h1><span class="taxon"></span>理元类群 <a class="slug" href="./理元类群.html">[理元类群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>数域 $K$ 的理元类群 $C_K$ 是其对应的<span class="link local"><a href="./算术曲线.html" title="算术曲线 [算术曲线]">算术曲线</a></span>上的 <span class="link local"><a href="./Picard群.html" title="Picard 群 [Picard群]">Picard 群</a></span> (线丛的<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>的 $0$-<span class="link local"><a href="./截断性(同伦类型论).html" title="截断性 (同伦类型论) [截断性(同伦类型论)]">截断</a></span>).</p>
+<h2>定义</h2>
+<p><span class="link local"><a href="./数域.html" title="数域 [数域]">数域</a></span> $K$ 的<strong>理元类群</strong> (idèle class group) $C_K$ 是<span class="link local"><a href="./Idèle.html" title="Idèle [Idèle]">理元群</a></span>对乘法群 $K^\times$ 的商:
+$$
+C_K := \mathbb{I}_K / K^\times.
+$$</p>
 </details></section></details></section></footer></article></div></body></html>

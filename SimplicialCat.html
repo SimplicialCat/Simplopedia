@@ -1915,6 +1915,19 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Chtoucas"><header><h1><span class="taxon"></span>Chtouca 与整体 Langlands 参数 <a class="slug" href="./Chtoucas.html">[Chtoucas]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是 <span class="link local"><a href="./VLafforgueCht.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueCht]">V. Lafforgue 文章</a></span>的阅读笔记.</p>
 <h2>1. Hecke 叠</h2>
+<p>设 $X$ 为 $\mathbb F_q$ 上的不可约光滑射影曲线, $G$ 为约化群.</p>
+<p>设 $N\subset X$ 为有限点集, 定义 $\mathrm{Bun}_{G,N}$ 为 $X$ 上具有 “$N$ 级结构” 的 $G$-丛的<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>. 所谓 “$N$ 级结构” (structure de niveau $N$) $(\mathcal G,\psi)$ 是指在 $N$ 上的平凡化 $\psi\colon \mathcal G|_N \simeq G|_N$.</p>
+<p>设 $I$ 为有限集, $(I_1,\cdots,I_k)$ 为 $I$ 的分划. 定义 Hecke 叠
+$$
+\mathrm{Hecke}_{N,I}^{(I_1,\cdots,I_k)}
+$$
+为如下资料的分类叠:</p>
+<ul>
+<li>$x_i\in X\setminus N$ ($i\in I$);</li>
+<li>$(\mathcal G_0,\psi_0),\cdots,(\mathcal G_k,\psi_k) \in \mathrm{Bun}_{G,N}$;</li>
+<li>对 $j\in\{1,\cdots,k\}$, 同构 $\phi_j\colon \mathcal G_{j-1}|_{X\setminus \{x_i\colon i\in I_j\}} \simeq \mathcal G_{j}|_{X\setminus \{x_i\colon i\in I_j\}}$, 保持级结构.</li>
+</ul>
+<p>简言之, $\mathrm{Hecke}_{N,I}^{(I_1,\cdots,I_k)}$ 的一个点对应着一个具有 $N$ 级结构的 $G$-丛经过一列调整, 每次调整 $I_j$ 个点处的平凡化.</p>
 <h2>2. $G$-Chtouca 的叠</h2>
 <p>设 $I$ 为有限集, $(I_1,\cdots,I_k)$ 是 $I$ 的分拆. 设 $N\subset X$ 为有限点集, 定义 $(X\setminus N)^I$ 上的叠
 $$
@@ -4181,6 +4194,8 @@ $$</p>
 <blockquote>
 <p>“Idèle” 这个名字由法国数学家 Claude Chevalley 创造, 意为 “理想的元素” (ideal element), 缩写为 id.el. 而 “<span class="link local"><a href="./Adèle.html" title="Adèle [Adèle]">Adèle</a></span>” 意为 “加性 idèle” (additive ideal element).</p>
 </blockquote>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./理元类群.html" title="理元类群 [理元类群]">理元类群</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="J-全纯曲线"><header><h1><span class="taxon"></span>“J-全纯曲线” <a class="slug" href="./J-全纯曲线.html">[J-全纯曲线]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>J-全纯曲线可用于研究<span class="link local"><a href="./辛流形.html" title="辛流形 [辛流形]">辛流形</a></span>的整体结构, <span class="link local"><a href="./Kähler流形.html" title="Kähler 流形 [Kähler流形]">Kähler 流形</a></span>的形变. 其中 J 指<span class="link local"><a href="./近复结构.html" title="近复结构 [近复结构]">近复结构</a></span>.</p>
 <h2>定义</h2>
@@ -5389,7 +5404,11 @@ $$</p>
 <p>对反对称矩阵 $A$, $\operatorname{Pf}(A)^2 = \det (A)$. 对任意矩阵 $P$, $\operatorname{Pf}(P^T AP) = \det (P) \operatorname{Pf}(A)$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Picard群"><header><h1><span class="taxon"></span>Picard 群 <a class="slug" href="./Picard群.html">[Picard群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>空间的 Picard 群是其上<span class="link local"><a href="./线丛.html" title="线丛 [线丛]">线丛</a></span>的同构类关于张量积构成的群.</p>
+<p>空间的 <strong>Picard 叠</strong>是其上<span class="link local"><a href="./线丛.html" title="线丛 [线丛]">线丛</a></span> (即 <span class="link local"><a href="./乘法群概形.html" title="乘法群概形 [乘法群概形]">$\mathbb{G}_m$</a></span>-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>) 的<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>,
+$$
+\mathrm{Pic}(X) = \operatorname{Maps}(X,\mathbf{B}\mathbb{G}_m);
+$$
+<strong>Picard 群</strong>是 Picard 叠的 $0$-<span class="link local"><a href="./截断性(同伦类型论).html" title="截断性 (同伦类型论) [截断性(同伦类型论)]">截断</a></span>, 即线丛的同构类关于张量积构成的群.</p>
 <h2>定义</h2>
 <h3>复流形</h3>
 <p>紧复流形 $M$ 的 Picard 群 $\text{Pic}(M)$ 是<span class="link local"><a href="./全纯线丛.html" title="“全纯线丛” [全纯线丛]">全纯线丛</a></span>的同构类关于张量积构成的群. $\text{Pic}(M)$ 的单位元是平凡丛, 也即全纯函数层 $\mathcal O_M$.</p>
@@ -7620,7 +7639,7 @@ $$
 $$
 其构造思路大致是: 从带基点<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>范畴 <span class="link local"><a href="./Ani_pt.html" title="带基点生象的范畴 [Ani_pt]">$\mathsf{Ani}_*$</a></span> 开始, 强行让<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span> $\Sigma$ 变得可逆, 得到一个新的范畴.</p>
 <h2>性质</h2>
-<p>$\mathsf{Sp}$ 上有<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span> $\wedge$ 与映射谱 $[-,-]$ 给出的<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span><span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半</a></span>结构. 有<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半函子</a></span>
+<p>$\mathsf{Sp}$ 上有<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span> $\wedge$ 与<span class="link local"><a href="./映射谱.html" title="映射谱 [映射谱]">映射谱</a></span> $[-,-]$ 给出的<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span><span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半</a></span>结构. 有<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半函子</a></span>
 $$
 (\mathsf{Set},\times) \to (\mathsf{Ani},\times) \overset{(-)_+}{\to} (\mathsf{Ani}_{*/},\wedge) \overset{\Sigma_{\infty}}{\to} (\mathsf{Sp},\wedge).
 $$</p>
@@ -8390,12 +8409,48 @@ $$
 <p><span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 对应</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="lim-colim"><header><h1><span class="taxon"></span>极限与余极限交换 <a class="slug" href="./lim-colim.html">[lim-colim]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>陈述</h2>
-<p>在 $\mathsf{Set}$ 或 $\mathsf{Ani}$ 中,</p>
+<p>在 $\mathsf{Set}$ 或 $\mathsf{Ani}$ 中, 对指标范畴 $I,J$ 以及一族对象 $X_{i,j}$, 有自然的映射
+$$
+\operatorname{colim}_{i\in I}\operatorname{lim}_{j\in J}X_{i,j} \to \operatorname{lim}_{j\in J}\operatorname{colim}_{i\in I} X_{i,j};
+$$
+当它是等价时, 称 $I$-极限与 $J$-余极限交换.</p>
+<p>两个常见的例子: $\mathsf{Set}$ 或 $\mathsf{Ani}$ 中,</p>
 <ul>
 <li><span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>与<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>交换,</li>
 <li><span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">有限积</a></span>与<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>交换.</li>
 </ul>
-<p>(注意, 对于 $\mathsf{Set}$ 与 $\mathsf{Ani}$, “有限” 的概念不相同, 从而滤, 筛等概念也不尽相同.)</p>
+<p>这两个事实分别可用于描述<span class="link local"><a href="./本质代数理论.html" title="本质代数理论 [本质代数理论]">本质代数理论</a></span>以及<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>.</p>
+<p>注意, 对于 $\mathsf{Set}$ 与 $\mathsf{Ani}$, “<span class="link local"><a href="./有限范畴.html" title="有限范畴 [有限范畴]">有限</a></span>” 的概念不相同, 从而滤, 筛等概念也不尽相同.</p>
+<p>以下对 $\mathsf{Set}$ 陈述的命题对 $\mathsf{Ani}$ 也有相应版本.</p>
+<h3>极限图类的 Galois 对应</h3>
+<p>“$\mathsf{Set}$ 中的 $I$-极限与 $J$-余极限交换” 的关系给出极限图的类与余极限图的类之间的 <span class="link local"><a href="./Galois对应.html" title="Galois 对应 [Galois对应]">Galois 对应</a></span>.</p>
+<p>对于小范畴的类 $\mathfrak I$, $\mathfrak J$, 记</p>
+<ul>
+<li>${\mathfrak I}^{r} = \{$ $J$ : 对任意 $I\in \mathfrak I$, $\mathsf{Set}$ 中 $J$-余极限与 $I$-极限交换 $\}$;</li>
+<li>${\mathfrak J}^{l} = \{$ $I$ : 对任意 $J\in \mathfrak J$, $\mathsf{Set}$ 中 $J$-余极限与 $I$-极限交换 $\}$.</li>
+</ul>
+<p>由定义, $\{\text{有限范畴}\}^{r} = \{\text{滤范畴}\}$.</p>
+<p>注意, $\{\text{滤范畴}\}^{l} \supset \{\text{有限范畴}\}$, 但 $\{\text{滤范畴}\}^{l}$ 不仅包含有限范畴, 还包含所有存在<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首</a></span>有限子范畴的范畴, 如 $(\mathbb{N},\leq)$. 不过, 以这种范畴为指标的极限等价于有限极限.</p>
+<h3>与锥的存在性的关系</h3>
+<p><span class="link local"><a href="./滤范畴.html" title="滤范畴 [滤范畴]">滤范畴</a></span>的有限图上有<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">余锥</a></span>. 如下是这一结论的推广.</p>
+<p><strong>命题</strong>. 对于小范畴 $I$, $J$, 若 $\mathsf{Set}$ 中 $I$-极限与 $J$-余极限交换, 则 $J$ 中的任何 $I^{\mathrm{op}}$-图 $X\colon I^{\mathrm{op}}\to J$ 上有<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">余锥</a></span>.</p>
+<p><em>证明</em>. 考虑函子 $F\colon I\times J\to\mathsf{Set}$,
+$$
+F(i,j) = \operatorname{Hom}_J(X(i),j).
+$$
+那么
+$$
+\operatorname{colim}_{j\in J} F(i,j) = 1,
+$$
+从而
+$$
+\operatorname{lim}_{i\in I}\operatorname{colim}_{j\in J}F(i,j) = 1.
+$$
+假设 $\mathsf{Set}$ 中 $I$-极限与 $J$-余极限交换, 则
+$$
+\operatorname{colim}_{j\in J}\operatorname{lim}_{i\in I}F(i,j) = 1.
+$$
+这说明存在 $j\in J$ 使得 $\operatorname{lim}_{i\in I}F(i,j)$ 至少存在一个元素. 而 $\operatorname{lim}_{i\in I}F(i,j)$ 的元素等同于 $X$ 上的余锥, 故结论成立.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="longtermism"><header><h1><span class="taxon"></span>数学中的长期主义 <a class="slug" href="./longtermism.html">[longtermism]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./nonmath.html" title="非数学 [nonmath]">非数学</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>2026-05-08</p>
 <p>声明: 单纯百科的所有非数学内容, 记录的仅仅是个人的价值观, 不构成人生建议. 另外, 我认为不同价值观的共存是好的.</p>
@@ -8996,7 +9051,12 @@ $$
 </ul>
 <p>证明的思路是: 命题对 $Y\in\mathsf{Fin}$ 较为平凡, 然后将两边视为关于 $Y$ 的函子, 沿 $\mathsf{Fin}\to\mathsf{Ani}$ 作左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>.</p>
 <blockquote>
-<p>注. 我目前对这个命题的理解是: $\mathsf{Fin}$ 在 $\mathsf{Ani}$ 中关于筛余极限稠密; 对称幺半范畴 $\mathfrak C$ 中的交换代数等同于对称幺半函子 $\mathsf{Fin} \to \mathfrak C$, 命题中等式右端正是将其按筛余极限延拓为 $\mathsf{Ani} \to \mathfrak C$ 的方法, 同时也是沿 $\mathsf{Fin}\to\mathsf{Ani}$ 左 Kan 扩张的计算式.</p>
+<p>注. 我目前对这个命题的理解是:</p>
+<ul>
+<li>$\mathsf{Fin}$ 在 $\mathsf{Ani}$ 中关于<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>稠密;</li>
+<li>对称幺半范畴 $\mathfrak C$ 中的交换代数等同于对称幺半函子 $\mathsf{Fin} \to \mathfrak C$;</li>
+<li>命题中等式右端正是将其按筛余极限延拓为 $\mathsf{Ani} \to \mathfrak C$ 的方法, 同时也是沿 $\mathsf{Fin}\to\mathsf{Ani}$ 左 Kan 扩张的计算式.</li>
+</ul>
 <p>注意, 函子 $\mathsf{Ani} \to \mathfrak C$, $Y\mapsto\mathcal A^{\otimes Y}$ 不保持余极限. 换言之, 它不是 $1\to\mathfrak C$ 沿 $1\to\mathsf{Ani}$ 的左 Kan 扩张.</p>
 </blockquote>
 <p><strong>引理 1</strong>. 函子 $\mathsf{Ani}\to\mathfrak C$, $Y\mapsto \mathcal A^{\otimes Y}$ 是其沿 $\mathsf{Fin}\to\mathsf{Ani}$ 的限制的左 Kan 扩张.</p>
@@ -9015,7 +9075,10 @@ $$
 保持所有极限.</p>
 <p>定义生象 $Y$ 上<span class="link local"><a href="./局部系统.html" title="局部系统 [局部系统]">局部系统</a></span>的范畴为
 $$
-\mathsf{LS}(Y) = \operatorname{lim}_Y \mathsf{Vect},
+\begin{aligned}
+\mathsf{LS}(Y) &amp;= \operatorname{lim}_Y^{\mathsf{DGCat}} \mathsf{Vect}\\
+&amp;=\operatorname{lim}_Y^{\mathsf{CAlg}(\mathsf{DGCat})} \mathsf{Vect},
+\end{aligned}
 $$
 它是对称幺半 DG 范畴. 若 $\mathscr Y$ 为较好的拓扑空间 (仿紧, 同伦等价于 CW 复形, 同伦维数有限), $Y$ 为 $\mathscr Y$ 对应的生象, 则 $\mathsf{LS}(Y)$ 等价于 $\mathsf{Shv}_{\text{lisse}}(Y)$, 即线性空间层的导出范畴 $\mathsf{Shv}(\mathscr{Y})$ 中上同调为局部常值层的对象构成的全子范畴.</p>
 <p>由<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>的余极限的性质,</p>
@@ -9047,15 +9110,15 @@ $$</p>
 <p><strong>定理</strong>. 若 $Y$ 仅有有限个连通分支, 则上述函子为等价.</p>
 <h3>1.7 由 $\mathcal A^{\otimes Y}$ 出发的函子</h3>
 <p>仍设 $\mathfrak C$ 为 $\mathsf{CAlg}(\mathsf{DGCat}),\mathsf{Alg}(\mathsf{DGCat}),\mathsf{DGCat}$ 之一, $\mathcal C$ 为 $\mathfrak C$ 的对象.</p>
-<p>由于 $\mathcal A^{\otimes Y}$ 可表现为<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>, 相应地 $\operatorname{Hom}(\mathcal A^{\otimes Y},\mathcal C)$ 可表现为<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>
+<p>由于 $\mathcal A^{\otimes Y}$ 可表现为 $\mathfrak C$ 中的<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>, 相应地 $\operatorname{Hom}_{\mathfrak C}(\mathcal A^{\otimes Y},\mathcal C)$ 可表现为<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>
 $$
 \begin{aligned}
-\operatorname{Hom}(\mathcal A^{\otimes Y},\mathcal C)&amp;\simeq \int_{I\in\mathsf{Fin}}\operatorname{Hom}(Y^I\otimes\mathcal A^{\otimes I},\mathcal C)\\
+\operatorname{Hom}_{\mathfrak C}(\mathcal A^{\otimes Y},\mathcal C)&amp;\simeq \int_{I\in\mathsf{Fin}}\operatorname{Hom}_{\mathfrak C}(Y^I\otimes\mathcal A^{\otimes I},\mathcal C)\\
 &amp;\simeq \int_{I\in\mathsf{Fin}}\operatorname{Hom}(\mathcal A^{\otimes I},\mathcal C\otimes\mathsf{LS}(Y^I))\\
 &amp;\simeq\mathsf{Nat}_{\mathsf{Fun}(\mathsf{Fin},\mathfrak C)}(\mathcal A^{\otimes (-)},\mathcal C\otimes\mathsf{LS}(Y^{(-)})).
 \end{aligned}
 $$</p>
-<p>从而 $\mathcal A^{\otimes Y}$ 在 DG 范畴 $\mathcal M$ 上的作用, 即幺半函子 $\mathcal A^{\otimes Y} \to \operatorname{End}(\mathcal M)$, 等同于一族幺半函子
+<p><strong>例</strong>. $\mathfrak C = \mathsf{Alg}(\mathsf{DGCat})$, $\mathcal A^{\otimes Y}$ 在 DG 范畴 $\mathcal M$ 上的作用, 即幺半函子 $\mathcal A^{\otimes Y} \to \operatorname{End}(\mathcal M)$, 等同于一族幺半函子
 $$
 \mathcal A^{\otimes I} \to \operatorname{End}(\mathcal M)\otimes\mathsf{LS}(Y^I).
 $$</p>
@@ -9143,7 +9206,7 @@ $$</p>
 <li>通过伴随的余单位映射到 $\mathrm{ev}_{y_2}(S_{1}(1_{\mathcal A}))$;</li>
 <li>上述对象等价于 $S_Y(1_{\mathcal A^{\otimes Y}})$.</li>
 </ul>
-<p><strong>例</strong>. 考虑如下情形.</p>
+<p>脑中图像:</p>
 <ul>
 <li>$\mathcal A = \mathsf{QCoh}(X)$, $\mathcal A^{\otimes Y}=\mathsf{QCoh}(X^Y)$ (其中 $X^Y$ 表示 $\operatorname{Maps}(Y,X)$), 特别地 $\mathcal A^{\otimes\Sigma (J)}=\mathsf{QCoh}(X^{\Sigma (J)})=\mathsf{QCoh}(X\times_{X^J}X)$;</li>
 <li>$\mathcal C =\mathsf{QCoh}(S)$, $S_Y\colon \mathcal A^{\otimes Y}\to\mathcal C$ 对应映射 $f\colon S\to X^Y$ (其中 $S$ 是任何测试空间, 或为万有情形即 $X^Y$ 本身);</li>
@@ -10052,7 +10115,7 @@ $$
 \operatorname{Hom}_{\mathsf{CAlg}}(C^*(A),\mathbb{C})\simeq\operatorname{Hom}_{\mathsf{Ab}}(A,\mathbb{C}).
 $$</p>
 <h3>自守函数的 Hecke 作用的谱分解</h3>
-<p><span class="link local"><a href="./VLafforgueExc.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueExc]">Vincent Lafforgue</a></span> 使用某些 Hecke 函子定义了<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span>, 以给出 <span class="link local"><a href="./Langlands纲领.html" title="Langlands 纲领 [Langlands纲领]">Langlands</a></span> 预言的自守函数空间的谱分解.</p>
+<p><span class="link local"><a href="./VLafforgueCht.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueCht]">Vincent Lafforgue</a></span> 使用某些 Hecke 函子定义了<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span>, 以给出 <span class="link local"><a href="./Langlands纲领.html" title="Langlands 纲领 [Langlands纲领]">Langlands</a></span> 预言的自守函数空间的谱分解.</p>
 <p>这一思路在<span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 纲领</a></span>中得到延续. 人们发现<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span>等同于某种局部系统模叠上的函数代数. 而提升一个范畴层级后 (见<span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span>—但这里实际上只需要提升一阶), 该种局部系统模叠上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>范畴在<span class="link local"><a href="./自守层.html" title="自守层 [自守层]">自守层</a></span>范畴上的 <span class="link local"><a href="./Hecke作用.html" title="Hecke 作用 [Hecke作用]">Hecke 作用</a></span>可给出自守层沿局部系统模叠的谱分解, 见 <span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span>.</p>
 </details></section></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="oLKE"><header><h1><span class="taxon"></span>算畴左 Kan 扩张 <a class="slug" href="./oLKE.html">[oLKE]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -10326,6 +10389,7 @@ $$</p>
 </ul>
 </li>
 <li><span class="link local"><a href="./交换代数(学科).html" title="交换代数 [交换代数(学科)]">交换代数</a></span></li>
+<li><span class="link local"><a href="./表示论.html" title="表示论 [表示论]">表示论</a></span></li>
 <li><span class="link local"><a href="./代数几何.html" title="代数几何 [代数几何]">代数几何</a></span></li>
 <li><span class="link local"><a href="./Riemann几何.html" title="Riemann 几何 [Riemann几何]">Riemann 几何</a></span></li>
 <li><span class="link local"><a href="./同伦论.html" title="同伦论 [同伦论]">同伦论</a></span>
@@ -12336,11 +12400,14 @@ $$
 <h2>相关资料</h2>
 <p><span class="link local"><a href="./PB∞T.html" title="∞-意象中的主丛 [PB∞T]">$\infty$-意象中的主丛</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="主丛的模空间"><header><h1><span class="taxon"></span>主丛的模空间 <a class="slug" href="./主丛的模空间.html">[主丛的模空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>见<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>, <span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>.</p>
 <h2>定义</h2>
 <h3>点函子</h3>
-<p>对于<span class="link local"><a href="./探测.html" title="探测 [探测]">测试</a></span>概形 $S$, $\mathrm{Bun}_G$ 的 $S$-点的群胚是 $X\times S$ 上的 $G$-丛的群胚.</p>
+<p>固定概形 $X$ 与群 $G$. 对于<span class="link local"><a href="./探测.html" title="探测 [探测]">测试</a></span>概形 $S$, $\mathrm{Bun}_G$ 的 $S$-点的群胚是 $X\times S$ 上的 $G$-丛的群胚.</p>
 <h2>性质</h2>
 <h3>代数叠</h3>
+<p>$\mathrm{Bun}_G$ 是<span class="link local"><a href="./代数叠.html" title="代数叠 [代数叠]">代数叠</a></span>.</p>
 <h3>双陪集刻画</h3>
 <p>固定基域 $k$, 设 $X$ 为光滑不可约射影曲线, $G$ 为分裂连通<span class="link local"><a href="./约化群.html" title="约化群 [约化群]">约化群</a></span>, 记 $R_x=\mathcal O(X\setminus x)$ 为仿射曲线 $X\setminus x$ 上的正则函数环, 记 $\mathcal O_x\simeq k[t](t.md)$ 为 $x$ 处形式圆盘的函数环, $K_x\simeq k((t))$ 为去心形式圆盘的函数环.</p>
 <p>由于 $G$-主丛由去心形式圆盘上的一个转移函数 $g\in G(K_x)$ 决定, 且左乘 $G(R_x)$ 与右乘 $G(\mathcal O_x)$ 均不改变其本质, 故 $\mathrm{Bun}_G$ 的 $k$-点为
@@ -12611,7 +12678,8 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="代数分析"><header><h1><span class="taxon"></span>代数分析 <a class="slug" href="./代数分析.html">[代数分析]</a></h1><div class="metadata"><ul><li class="meta-item">学科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./微局部分析.html" title="微局部分析 [微局部分析]">微局部分析</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="代数叠"><header><h1><span class="taxon"></span>代数叠 <a class="slug" href="./代数叠.html">[代数叠]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>代数叠又叫 Artin 叠, 是仿射概形的范畴上具有 (平坦) 坐标卡以及适当的可表性的<span class="link local"><a href="./叠.html" title="叠 [叠]">叠</a></span>.</p>
+<h2>观念</h2>
+<p><strong>代数叠</strong>又叫 <strong>Artin 叠</strong>, 是仿射概形的范畴上一类特殊的<span class="link local"><a href="./叠.html" title="叠 [叠]">叠</a></span>, 具有平坦 (光滑) 坐标卡以及适当的可表性.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="代数扩张"><header><h1><span class="taxon"></span>代数扩张 <a class="slug" href="./代数扩张.html">[代数扩张]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>对于域扩张 $k\subset K$, 以及 $a\in K$, 如下条件等价:</p>
 <ul>
@@ -13025,11 +13093,17 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="余完备化"><header><h1><span class="taxon"></span>余完备化 <a class="slug" href="./余完备化.html">[余完备化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>余完备化是指向一个范畴<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加特定形状的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>的过程.</p>
-<p>具体地, 设 $R\subset K$ 是两族小范畴 (即 $R\hookrightarrow K \hookrightarrow\mathsf{Cat}$ 为全子范畴). 对于具有 $R$-形余极限的范畴 $\mathcal C$, 可在保持 $R$-形余极限的条件下, “自由地添加 $K$-形余极限”, 得到
+<p>具体地, 设 $R\subset K$ 是两族小范畴 (即 $R\hookrightarrow K \hookrightarrow\mathsf{Cat}$ 为全子范畴). 对于具有 $R$-形余极限的范畴 $\mathcal C$, 可在保持 $R$-形余极限的条件下, “<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加 $K$-形余极限”, 得到
 $$
 \mathcal C \hookrightarrow \mathsf{P}_{R}^K(\mathcal C).
+$$</p>
+<h2>性质</h2>
+<h3>泛性质 (自由性)</h3>
+<p>记 $\mathsf{Cat}_K$ 为具有 $K$-形余极限的范畴以及保持 $K$-形余极限的函子构成的 $2$-范畴, 那么 $\mathsf{P}_R^K\colon \mathsf{Cat}_R \to \mathsf{Cat}_K$ 是<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>函子 $\mathsf{Cat}_K \to \mathsf{Cat}_R$ 的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>. 具体地, 对于具有 $R$-余极限的范畴 $\mathcal C$ 与具有 $K$-余极限的范畴 $\mathcal D$,
 $$
-记 $\mathsf{Cat}_K$ 为具有 $K$-形余极限的范畴以及保持 $K$-形余极限的函子构成的 $2$-范畴, 那么 $\mathsf{P}_R^K\colon \mathsf{Cat}_R \to \mathsf{Cat}_K$ 是<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>函子 $\mathsf{Cat}_K \to \mathsf{Cat}_R$ 的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
+\mathsf{Fun}^{K\text{-}\mathrm{colim}}(\mathsf{P}_R^K(\mathcal C),\mathcal D)\simeq
+\mathsf{Fun}^{R\text{-}\mathrm{colim}}(\mathcal C,\mathcal D).
+$$</p>
 <h2>例</h2>
 <h3>余积完备化</h3>
 <p>考虑 $K = \mathsf{Set}$ 为离散范畴的范畴, 那么 $\mathsf{P}^{K}(\mathcal C)$ 是 $\mathcal C$ 自由地添加余积所得的范畴; 其有一种具体构造: $\mathsf{P}^{K}(\mathcal C)$ 的对象为 $\mathcal C$ 的对象族 $(X_i)_{i\in I}$, 态射 $(X_i)_{i\in I} \to (Y_j)_{j\in J}$ 为映射 $f\colon I\to J$ 以及一族态射 $(X_i \to Y_{f(i)})_{i\in I}$. 这个范畴也可定义为<span class="link local"><a href="./松拉回.html" title="松拉回 [松拉回]">松拉回</a></span></p>
@@ -15050,14 +15124,38 @@ f * g := m_! (f \boxtimes g).
 $$
 其中 $m_!$ 的直观为沿纤维求和 (<span class="link local"><a href="./依值和.html" title="依值和 [依值和]">依值和</a></span>).</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="压缩积"><header><h1><span class="taxon"></span>压缩积 <a class="slug" href="./压缩积.html">[压缩积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>压缩积是<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 的<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半结构</a></span>.</p>
+<p>带基点空间 (<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>) 的压缩积是带基点空间范畴 $\mathsf{Ani}_*$ 的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半结构</a></span>, 单位为 $*$.</p>
+<p><span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的压缩积是<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半结构</a></span>, 单位为<span class="link local"><a href="./球谱.html" title="“球谱” [球谱]">球谱</a></span> $\mathbb{S}$.</p>
+<h2>定义</h2>
+<p>带基点空间 (<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>) $X,Y$ 的<strong>压缩积</strong> (smash product) $X\wedge Y$ 是如下带基点空间:
+$$
+X\wedge Y = \operatorname{cofib}(X\vee Y \to X\times Y).
+$$</p>
 <h2>性质</h2>
-<p>压缩积与映射谱构成 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 上的<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span>对称幺半范畴结构.</p>
-<p>如下函子均为对称幺半函子:
+<p>压缩积 (生象或谱) 保持各个分量的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>. 事实上, 由于 $\mathsf{Ani}_*$ 由 $S^0$ 生成, 故 $\mathsf{Ani}_*$ 上的压缩积由该性质及其单位完全刻画.</p>
+<p><strong>命题</strong>. $\mathsf{Ani}_*$ 上有唯一的对称幺半结构 $(\mathsf{Ani}_*,\wedge,S^0)$, 满足</p>
+<ul>
+<li>其单位为 $S^0$,</li>
+<li>且 $\wedge$ 保持各个分量的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</li>
+</ul>
+<p><strong>命题</strong>. $\mathsf{Sp}$ 上有唯一的对称幺半结构 $(\mathsf{Sp},\wedge,\mathbb S)$, 满足</p>
+<ul>
+<li>其单位为 $\mathbb S$,</li>
+<li>函子 $\Sigma^\infty\colon\mathsf{Ani}_*\to\mathsf{Sp}$ 为对称幺半函子,</li>
+<li>且 $\wedge$ 保持各个分量的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</li>
+</ul>
+<p>注意如下函子均为对称幺半函子:
 $$
 (\mathsf{Ani},\times)\overset{(-)_+}{\to}(\mathsf{Ani}_*,\wedge)
-\overset{\Sigma^\infty}{\to}(\mathsf{Sp},\wedge).
+\overset{\Sigma^\infty}{\to}(\mathsf{Sp},\wedge),
+$$
+从而复合
+$\Sigma^\infty_+\colon\mathsf{Ani} \to \mathsf{Sp}$ 为对称幺半函子, 也即
+$$
+\Sigma^\infty_+(X\times Y)\simeq \Sigma^\infty_+X \wedge \Sigma^\infty_+Y.
 $$</p>
+<h3>与映射谱的关系</h3>
+<p>压缩积与<span class="link local"><a href="./映射谱.html" title="映射谱 [映射谱]">映射谱</a></span>构成 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 上的<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span>对称幺半范畴结构.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="去心形式圆盘"><header><h1><span class="taxon"></span>去心形式圆盘 <a class="slug" href="./去心形式圆盘.html">[去心形式圆盘]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>去心形式圆盘是<span class="link local"><a href="./形式圆盘.html" title="形式圆盘 [形式圆盘]">形式圆盘</a></span>去掉它的圆心.</p>
@@ -17277,7 +17375,7 @@ $$
 我们证明该映射为单射. 注意, 遗忘函子 $\mathsf{Mod}(A)\to\mathsf{Set}$ 保持滤余极限, 故 $\operatorname{colim}_{S\in F} A[S]$ 的每个元素均来自某一个 $A[S]$. 设 $S\in F$ 为 $M$ 的任一有限子集, 取 $A[S]$ 的任意元素 $\sum a_i x_i$ ($a_i\in A, x_i\in S$). 由前面的论证, 这说明存在另一组 (有限个) 元素 $y_j\in M$, 使得 $x_i$ 可表示为其线性组合 $x_i = \sum_j b_{ij} y_j$, 且 $\sum_i a_i b_{ij} = 0$. 这说明 $\sum a_i x_i$ 在余极限 $\operatorname{colim}_{S\in F} A[S]$ 中实际上为 $0$. $\square$</p>
 <h2>性质</h2>
 <h3>滤余极限</h3>
-<p>平坦模的滤余极限是平坦模. 这是因为 $\mathsf{Ab}$ 中<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>与<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>交换.</p>
+<p>平坦模的滤余极限是平坦模. 这是因为 $\mathsf{Ab}$ 中<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>与<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>交换 (见<span class="link local"><a href="./lim-colim.html" title="极限与余极限交换 [lim-colim]">极限与余极限交换</a></span>).</p>
 <h3>基变换</h3>
 <p>若 $M$ 为平坦 $A$-模, $B$ 为 $A$-代数 (即有环同态 $A\to B$), 则 $M\otimes_A B$ 为平坦 $B$-模. 这是因为
 $$
@@ -18904,6 +19002,11 @@ $$
 <li>$(a^*)^* = a$,</li>
 <li>$1^*=1$.</li>
 </ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="映射谱"><header><h1><span class="taxon"></span>映射谱 <a class="slug" href="./映射谱.html">[映射谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>映射谱是 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 上的<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span>对称幺半范畴结构的一部分.</p>
+<h2>定义</h2>
+<h3>作为右伴随</h3>
+<p>对<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span> $X\in\mathsf{Sp}$, 由 $X$ 出发的映射谱函子 $[X,-]\colon\mathsf{Sp}\to\mathsf{Sp}$ 是<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span> (张量积) 函子 $X\wedge -\colon \mathsf{Sp} \to \mathsf{Sp}$ 的右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="景"><header><h1><span class="taxon"></span>景 <a class="slug" href="./景.html">[景]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>景</strong>是<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的一种<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>.</p>
@@ -19055,18 +19158,28 @@ $$</p>
 <p><strong>本质代数理论</strong>作为一种<span class="link local"><a href="./一阶语言.html" title="一阶语言与一阶逻辑 [一阶语言]">一阶理论</a></span>是<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>的推广, 其函数允许部分定义, 即定义在由等式给出的子集上.</p>
 <h3>通过语法范畴</h3>
 <p>一个<strong>本质代数理论</strong> (或者更准确地说是该理论的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>), 就是一个具有<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>的范畴 $\mathcal T$. 因此本质代数理论又叫<strong>有限极限理论</strong> (finite limit theory).</p>
-<p>对于范畴 $\mathcal C$, 本质代数理论 $\mathcal T$ 在 $\mathcal C$ 中 <strong>模型</strong>为保持有限极限的函子 $\mathcal T\to\mathcal C$.</p>
+<p>对于范畴 $\mathcal C$, 本质代数理论 $\mathcal T$ 在 $\mathcal C$ 中的<strong>模型</strong>为保持有限极限的函子 $\mathcal T\to\mathcal C$. 记 $\mathcal T$ 在 $\mathcal C$ 中模型的范畴为 $\mathsf{Mod}_{\mathcal C}(\mathcal T)$.</p>
+<p>对于具有有限极限的范畴 $\mathcal T$, 没有典范的方法选取<span class="link local"><a href="./一阶语言.html" title="一阶语言与一阶逻辑 [一阶语言]">一阶理论</a></span>中类型, 函数符号等资料, 因为这些资料只是理论的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 当一族对象通过有限极限生成整个范畴 (即最小的包含这些对象且关于有限极限封闭的全子范畴是 $\mathcal T$) 时, 这族对象就可以作为某个表现的类型.</p>
+<h2>性质</h2>
+<h3>极限与余极限</h3>
+<p><strong>命题</strong>. 设 $\mathcal T$ 是本质代数理论, 其类型的集合为 $\mathrm{Sort}(T)$ (需额外选取). 则遗忘函子 $\mathsf{Mod}_{\mathsf{Set}}(\mathcal T) \to \mathsf{Set}^{\mathrm{Sort}(T)}$ 保持且<span class="link local"><a href="./创生(范畴论).html" title="创生 (范畴论) [创生(范畴论)]">创生</a></span> $\mathcal T$-模型的<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>.</p>
 <h2>例</h2>
 <p>(小) 范畴的理论是一种本质代数理论. 例如, 态射的复合只能对首尾相连的态射定义.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="权"><header><h1><span class="taxon"></span>权 <a class="slug" href="./权.html">[权]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="权"><header><h1><span class="taxon"></span>权 <a class="slug" href="./权.html">[权]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./表示论.html" title="表示论 [表示论]">表示论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>设 $V$ 是 Lie 代数 $\mathfrak g$ 的表示, $\lambda$ 是 <span class="link local"><a href="./Cartan子代数.html" title="“Cartan 子代数” [Cartan子代数]">Cartan 子代数</a></span> $\mathfrak h$ 上的线性泛函.</p>
-<p>$V$ 关于<strong>权</strong> (weight) $\lambda$ 的权空间定义为
+<h3>Lie 群或代数群</h3>
+<p>Lie 群或代数群的<strong>权</strong> (weight) 就是其<span class="link local"><a href="./极大环面.html" title="极大环面 [极大环面]">极大环面</a></span>的<span class="link local"><a href="./特征.html" title="特征, 余特征 [特征]">特征</a></span>. 权构成的 Abel 群称为<strong>权格</strong> (weight lattice), 记为
+$$
+X^*(T) := \operatorname{Hom}(T,\mathbb G_m).
+$$</p>
+<p>对于固定的<span class="link local"><a href="./根.html" title="根, 根系 [根]">正根系</a></span> $\Delta_+$, <strong>支配权</strong> (dominant weight) 是和每个 $\alpha\in\Delta_+$ 配对都非负的权.</p>
+<h3>Lie 代数</h3>
+<p>Lie 代数的权是其 <span class="link local"><a href="./Cartan子代数.html" title="“Cartan 子代数” [Cartan子代数]">Cartan 子代数</a></span>上的线性函数, 即 $\mathfrak{h}^*$ 的元素.</p>
+<p>设 $V$ 是 Lie 代数 $\mathfrak g$ 的表示, $\lambda$ 是 <span class="link local"><a href="./Cartan子代数.html" title="“Cartan 子代数” [Cartan子代数]">Cartan 子代数</a></span> $\mathfrak h$ 上的线性函数.定义 $V$ 关于权 $\lambda$ 的<strong>权空间</strong>为
 $$
 V_\lambda = \{ v\in V \colon  \forall H\in \mathfrak h, Hv=\lambda (H) v\}.
 $$</p>
-<h2>根</h2>
-<p>若 $V$ 是 $\mathfrak g$ 的伴随表示, 此时的权称为<span class="link local"><a href="./根.html" title="根, 根系 [根]">根</a></span> (root).</p>
+<p>特别地, 若 $V$ 是 $\mathfrak g$ 的伴随表示, 此时具有非平凡权空间的权称为<span class="link local"><a href="./根.html" title="根, 根系 [根]">根</a></span> (root).</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="权模"><header><h1><span class="taxon"></span>“权模” <a class="slug" href="./权模.html">[权模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>固定 Lie 代数的 <span class="link local"><a href="./Cartan子代数.html" title="“Cartan 子代数” [Cartan子代数]">Cartan 子代数</a></span> $\mathfrak h\subset \mathfrak g$.</p>
 <p>设 $M$ 是 $\mathfrak g$ 的表示. 对于 $\lambda\in \mathfrak h^*$, 定义权空间 (weight space, 参见<span class="link local"><a href="./权.html" title="权 [权]">权</a></span>)
@@ -19388,7 +19501,7 @@ $$
 <h2>性质</h2>
 <p>标量限制是<span class="link local"><a href="./标量扩张.html" title="“标量扩张” [标量扩张]">标量扩张</a></span>的右伴随 (<span class="link local"><a href="./张量-同态伴随.html" title="“张量-同态伴随” [张量-同态伴随]">张量-同态伴随</a></span>).</p>
 <p>考虑 $f\colon R\to S$ 对应的<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>的映射 $\varphi\colon \operatorname{Spec}S\to\operatorname{Spec}R$, 则标量限制对应于<span class="link local"><a href="./六函子.html" title="六函子 [六函子]">六函子</a></span>中的<span class="link local"><a href="./直像.html" title="“直像” [直像]">直像</a></span> $\varphi_*\colon \operatorname{QCoh}(\operatorname{Spec}S) \to \operatorname{QCoh}(\operatorname{Spec}R)$.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="根"><header><h1><span class="taxon"></span>根, 根系 <a class="slug" href="./根.html">[根]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="根"><header><h1><span class="taxon"></span>根, 根系 <a class="slug" href="./根.html">[根]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./表示论.html" title="表示论 [表示论]">表示论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>Lie 代数的根系 (root system) 最早由 W. Killing 约 1889 年为了研究<span class="link local"><a href="./单Lie代数.html" title="“单 Lie 代数” [单Lie代数]">单 Lie 代数</a></span>的分类提出.</p>
 <p>注意区分<span class="link local"><a href="./根(Lie代数).html" title="“根 (Lie 代数)” [根(Lie代数)]">根 (Lie 代数)</a></span> (radical).</p>
 <h2>定义</h2>
@@ -19686,9 +19799,9 @@ $k$ 阶模形式是 $\omega^{\otimes k}$ 的截面.</p>
 <p>在代数几何中, 基底空间 $S$ 上的一族几何对象通常用<span class="link local"><a href="./平坦态射.html" title="“平坦态射” [平坦态射]">平坦态射</a></span> $X\to S$ 描述, 其纤维为我们关心的某一类空间.</p>
 <p>在代数几何中, 一个<strong>模问题</strong> (moduli problem) 一般是一个函子
 $$
-\mathcal M\colon  \mathsf {Sch}^{\text{op}}\to \mathsf {Set},
+\mathcal M\colon  \mathsf {Sch}^{\text{op}}\to \mathsf {Set},\mathsf{Ani},\mathsf{Cat},\cdots
 $$
-其中 $\mathcal M(S)$ 是 “以 $S$ 参数化的一族对象” 的集合. 从<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>的观点, $S$ 参数化的一族对象相当于 $S$ 到 $\mathcal M$ 的一个态射. 函子 $\mathcal M$ 不总是可表的. 当它可表时, 其表示对象称为<strong>细模空间</strong>.</p>
+其中 $\mathsf{Sch}$ 是概形 (或相关的几何对象) 的范畴, $\mathcal M(S)$ 是 “以 $S$ 参数化的一族对象” 的集合. 从<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>的观点, $S$ 参数化的一族对象相当于 $S$ 到 $\mathcal M$ 的一个态射. 函子 $\mathcal M$ 不总是可表的. 当它可表时, 其表示对象称为<strong>细模空间</strong>.</p>
 <p><strong>细模空间</strong>是带有<strong>万有族</strong>的空间 (概形) $M$, 使得任意概形 $S$ 上的一族某种对象都是由唯一的一个映射 $S\to M$ 将 $M$ 上的万有族拉回得到. 于是我们有双射
 $$
 \{S\text{ 上的对象族}\} \leftrightarrow \{S\to M\}
@@ -20160,12 +20273,13 @@ $$</p>
 <p>设 $\mathcal C$ 为<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>, 带有 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">t 结构</a></span>且其心为 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span> $\mathcal A$. 那么对 $\mathcal C$ 中的<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤对象</a></span> $X$ 可构造 $\mathcal A$ 中的<span class="link local"><a href="./谱序列.html" title="谱序列 [谱序列]">谱序列</a></span>.</p>
 <h2>例</h2>
 <h3>Leray 谱序列</h3>
-</details></section><section class="block" data-taxon=""><details ><summary id="滤范畴"><header><h1><span class="taxon"></span>滤范畴 <a class="slug" href="./滤范畴.html">[滤范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="滤范畴"><header><h1><span class="taxon"></span>滤范畴 <a class="slug" href="./滤范畴.html">[滤范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>滤范畴是满足如下等价条件的范畴 $\mathcal C$:</p>
 <ul>
 <li>$\mathcal C$ 中所有<span class="link local"><a href="./有限范畴.html" title="有限范畴 [有限范畴]">有限</a></span>图都有<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">锥</a></span>;</li>
 <li>在 $\mathsf{Set}$ 中, 以 $\mathcal C$ 为指标范畴的余极限与所有<span class="link local"><a href="./有限范畴.html" title="有限范畴 [有限范畴]">有限</a></span>极限交换.</li>
+<li>取余极限函子 $\operatorname{colim}_{\mathcal C}\colon \mathsf{Fun}(\mathcal C,\mathsf{Set}) \to \mathsf{Set}$ 保持有限极限.</li>
 <li>对任意<span class="link local"><a href="./有限范畴.html" title="有限范畴 [有限范畴]">有限范畴</a></span> $K$, 对角线 $\Delta\colon \mathcal C\to\mathcal C^K$ 为<span class="link local"><a href="./共尾函子.html" title="共尾函子 [共尾函子]">共尾函子</a></span>.</li>
 </ul>
 <p>依惯例, <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$\infty$-范畴</a></span>语境下 $\mathsf{Set}$ 改用 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span>.</p>
@@ -20337,7 +20451,7 @@ $$</p>
 <h2>定义</h2>
 <h3>Lie 群</h3>
 <p>Lie 群 $G$ 的<strong>特征</strong> (character) 是 $G$ 到 $S^1$ (或 $\mathbb{C}^\times$) 的同态, <strong>余特征</strong> (cocharacter) 是 $S^1$ 到 $G$ 的同态.</p>
-<p>紧 Lie 群 $G$ 的特征 $G \to U(1)$ 由其在任意一个<span class="link local"><a href="./极大环面.html" title="极大环面 [极大环面]">极大环面</a></span> $T\subset G$ 上的取值完全决定. 因此也称极大环面 $T$ 的特征为 $G$ 的特征.</p>
+<p>紧 Lie 群 $G$ 的特征 $G \to U(1)$ 由其在任意一个<span class="link local"><a href="./极大环面.html" title="极大环面 [极大环面]">极大环面</a></span> $T\subset G$ 上的取值完全决定. 因此也称极大环面 $T$ 的特征为 $G$ 的特征. 极大环面的特征又称为<span class="link local"><a href="./权.html" title="权 [权]">权</a></span>.</p>
 <p><span class="link local"><a href="./Weyl群.html" title="Weyl 群 (极大环面) [Weyl群]">Weyl 群</a></span> $W$ 作用于特征晶格上, 由关于<span class="link local"><a href="./根.html" title="根, 根系 [根]">根</a></span>的反射生成.</p>
 <h3>代数群</h3>
 <p>代数群 $G$ 的<strong>特征</strong>是 $G$ 到 <span class="link local"><a href="./乘法群概形.html" title="乘法群概形 [乘法群概形]">$\mathbb G_m$</a></span> 的同态, 余特征是 $\mathbb{G}_m$ 到 $G$ 的同态..</p>
@@ -20504,6 +20618,14 @@ S^{n-1} &amp; \to &amp; * \
 $$</li>
 </ul>
 <h2>性质</h2>
+</details></section><section class="block" data-taxon=""><details ><summary id="理元类群"><header><h1><span class="taxon"></span>理元类群 <a class="slug" href="./理元类群.html">[理元类群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>数域 $K$ 的理元类群 $C_K$ 是其对应的<span class="link local"><a href="./算术曲线.html" title="算术曲线 [算术曲线]">算术曲线</a></span>上的 <span class="link local"><a href="./Picard群.html" title="Picard 群 [Picard群]">Picard 群</a></span> (线丛的<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>的 $0$-<span class="link local"><a href="./截断性(同伦类型论).html" title="截断性 (同伦类型论) [截断性(同伦类型论)]">截断</a></span>).</p>
+<h2>定义</h2>
+<p><span class="link local"><a href="./数域.html" title="数域 [数域]">数域</a></span> $K$ 的<strong>理元类群</strong> (idèle class group) $C_K$ 是<span class="link local"><a href="./Idèle.html" title="Idèle [Idèle]">理元群</a></span>对乘法群 $K^\times$ 的商:
+$$
+C_K := \mathbb{I}_K / K^\times.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="理想层"><header><h1><span class="taxon"></span>理想层 <a class="slug" href="./理想层.html">[理想层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>理想层是环<span class="link local"><a href="./层.html" title="拓扑空间上的层 [层]">层</a></span>的理想. <span class="link local"><a href="./环化空间.html" title="环化空间 [环化空间]">环化空间</a></span>的理想层对应<span class="link local"><a href="./闭嵌入.html" title="闭嵌入 [闭嵌入]">闭子空间</a></span>.</p>
 <h2>定义</h2>
@@ -20840,10 +20962,10 @@ $$</p>
 <p><span class="link external"><a href="https://ncatlab.org/nlab/show/stable+vector+bundle" title="nLab [https://ncatlab.org/nlab/show/stable+vector+bundle]">nLab</a></span></p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./向量丛-投射模类比.html" title="向量丛-投射模类比 [向量丛-投射模类比]">向量丛-投射模类比</a></span></p>
-</details></section><section class="block" data-taxon=""><details ><summary id="稳定化"><header><h1><span class="taxon"></span>稳定化 <a class="slug" href="./稳定化.html">[稳定化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="稳定化"><header><h1><span class="taxon"></span>稳定化 <a class="slug" href="./稳定化.html">[稳定化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>以下的范畴默认为 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$(\infty,1)$-范畴</a></span>.</p>
-<p>每个具有有限极限的范畴都存在稳定化, 即自由地变成<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>. 稳定化可以构造为<span class="link local"><a href="./谱对象.html" title="谱对象 [谱对象]">谱对象</a></span>的范畴.</p>
+<p>每个具有有限极限的范畴都存在稳定化, 即自由地变成<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>. 稳定化可以构造为<span class="link local"><a href="./谱对象.html" title="谱对象 [谱对象]">谱对象</a></span>的范畴. 人们一般考虑<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>的稳定化.</p>
 <h2>定义</h2>
 <p><span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span>带基点范畴 $\mathcal C$ 的稳定化是 <span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">$\mathrm {Pr}^{\mathrm L}$</a></span> 中的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>
 $$
@@ -20864,6 +20986,12 @@ $$
 $$
 X\simeq\operatorname{colim}\Sigma^{\infty -n}\Omega^{\infty-n}X.
 $$</p>
+<h3>与对称幺半结构的关系</h3>
+<p>可表现对称幺半范畴的稳定化仍有对称幺半结构; 稳定化提升为函子
+$$
+\operatorname{Stab}\colon \mathsf{CAlg}(\mathsf{Pr}) \to \mathsf{CAlg}(\mathsf{Pr}_{\mathrm{st}}).
+$$</p>
+<p>最基本的例子即是 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 上的对称幺半结构.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="稳定同伦范畴"><header><h1><span class="taxon"></span>“稳定同伦范畴” <a class="slug" href="./稳定同伦范畴.html">[稳定同伦范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>#稳定同伦论</p>
 <p>稳定同伦范畴是<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的<span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">无穷范畴</a></span>的<span class="link local"><a href="./同伦范畴.html" title="“同伦范畴” [同伦范畴]">同伦范畴</a></span>.</p>
@@ -20978,6 +21106,9 @@ $$
 <p><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>的对偶 $\Delta^{\mathrm{op}}$ 为筛范畴. 以此为指标的余极限叫单纯对象的几何实现, 也叫<span class="link local"><a href="./杠构造.html" title="杠构造 [杠构造]">杠构造</a></span>.</p>
 <p>具有有限<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>的范畴都是筛范畴.</p>
 <p>一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> ($\infty$-群胚) $A$ 是筛范畴当且仅当 $A\simeq 1$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="算术曲线"><header><h1><span class="taxon"></span>算术曲线 <a class="slug" href="./算术曲线.html">[算术曲线]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>算术曲线是对<span class="link local"><a href="./数域.html" title="数域 [数域]">数域</a></span>的整数环的<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>的 “紧化”, 加入 “无穷远” (Archimedes) 的<span class="link local"><a href="./位.html" title="位 [位]">位</a></span>. 这些位来自于数域到 $\mathbb{R}$ 或 $\mathbb{C}$ 的嵌入.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="算畴"><header><h1><span class="taxon"></span>算畴 <a class="slug" href="./算畴.html">[算畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>一个算畴表达了<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>的对象上可能具有的一族多元运算, 以及运算之间的关系. 算畴又叫<strong>多重范畴</strong> (multicategory), 是范畴的推广, 由<strong>颜色</strong> (多重范畴的对象) 与<strong>运算</strong> (多个对象到一个对象的态射) 构成.</p>
@@ -22396,6 +22527,8 @@ $$
 注意这是一个<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="融贯"><header><h1><span class="taxon"></span>融贯 <a class="slug" href="./融贯.html">[融贯]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><strong>同伦融贯数据</strong> (homotopy-coherent data) 是<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span><span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">高阶范畴</a></span>中的结构时需要提供的越来越高阶的同伦.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="表示论"><header><h1><span class="taxon"></span>表示论 <a class="slug" href="./表示论.html">[表示论]</a></h1><div class="metadata"><ul><li class="meta-item">学科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>表示论是通过代数结构在其它对象上的作用研究代数结构的学科. 其中最常见的研究对象是群的表示, 即<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 在线性空间上的<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>, 也即 <span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">$\mathbf{B}G$</a></span> 上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="覆叠"><header><h1><span class="taxon"></span>覆叠 <a class="slug" href="./覆叠.html">[覆叠]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>覆叠是离散纤维的<span class="link local"><a href="./纤维丛.html" title="纤维丛 [纤维丛]">纤维丛</a></span>.</p>
@@ -22712,7 +22845,7 @@ $$
 \operatorname{Hom}_{\mathsf{CAlg}}(C^*(A),\mathbb{C})\simeq\operatorname{Hom}_{\mathsf{Ab}}(A,\mathbb{C}).
 $$</p>
 <h3>自守函数的 Hecke 作用的谱分解</h3>
-<p><span class="link local"><a href="./VLafforgueExc.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueExc]">Vincent Lafforgue</a></span> 使用某些 Hecke 函子定义了<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span>, 以给出 <span class="link local"><a href="./Langlands纲领.html" title="Langlands 纲领 [Langlands纲领]">Langlands</a></span> 预言的自守函数空间的谱分解.</p>
+<p><span class="link local"><a href="./VLafforgueCht.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueCht]">Vincent Lafforgue</a></span> 使用某些 Hecke 函子定义了<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span>, 以给出 <span class="link local"><a href="./Langlands纲领.html" title="Langlands 纲领 [Langlands纲领]">Langlands</a></span> 预言的自守函数空间的谱分解.</p>
 <p>这一思路在<span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 纲领</a></span>中得到延续. 人们发现<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span>等同于某种局部系统模叠上的函数代数. 而提升一个范畴层级后 (见<span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span>—但这里实际上只需要提升一阶), 该种局部系统模叠上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>范畴在<span class="link local"><a href="./自守层.html" title="自守层 [自守层]">自守层</a></span>范畴上的 <span class="link local"><a href="./Hecke作用.html" title="Hecke 作用 [Hecke作用]">Hecke 作用</a></span>可给出自守层沿局部系统模叠的谱分解, 见 <span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="谱对象"><header><h1><span class="taxon"></span>谱对象 <a class="slug" href="./谱对象.html">[谱对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
@@ -23143,10 +23276,10 @@ $$</p>
 <h3>实 2 维的情形</h3>
 <p>$2$ 维实流形上的任意近复结构都可积, 这是因为可积性等价于 $\bar\partial^2=0$, 而这在实 $2$ 维情形自动成立.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="远足代数"><header><h1><span class="taxon"></span>远足代数 <a class="slug" href="./远足代数.html">[远足代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>远足代数是 <span class="link local"><a href="./VLafforgueExc.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueExc]">Vincent Lafforgue</a></span> 定义的一个<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>, 作用在尖点自守形式空间上, 而其<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>实现了 Langlands 参数的空间, 从而通过<span class="link local"><a href="./谱分解.html" title="谱分解 [谱分解]">谱分解</a></span>将自守形式的空间分解为 Langlands 参数标记的分量, 给出 “自守到 Galois” 的对应.</p>
+<p>远足代数是 <span class="link local"><a href="./VLafforgueCht.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueCht]">Vincent Lafforgue</a></span> 定义的一个<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>, 作用在尖点自守形式空间上, 而其<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>实现了 Langlands 参数的空间, 从而通过<span class="link local"><a href="./谱分解.html" title="谱分解 [谱分解]">谱分解</a></span>将自守形式的空间分解为 Langlands 参数标记的分量, 给出 “自守到 Galois” 的对应.</p>
 <p>相关笔记:</p>
 <ul>
-<li><span class="link local"><a href="./Chtoucas.html" title="Chtouca 与整体 Langlands 参数 [Chtoucas]">Chtouca 与整体 Langlands 参数</a></span> - <span class="link local"><a href="./VLafforgueExc.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueExc]">Vincent Lafforgue</a></span> 原文的笔记.</li>
+<li><span class="link local"><a href="./Chtoucas.html" title="Chtouca 与整体 Langlands 参数 [Chtoucas]">Chtouca 与整体 Langlands 参数</a></span> - <span class="link local"><a href="./VLafforgueCht.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueCht]">Vincent Lafforgue</a></span> 原文的笔记.</li>
 <li><span class="link local"><a href="./notes-GKRV.html" title="GKRV [notes-GKRV]">GKRV</a></span> - Betti 语境的玩具.</li>
 <li><span class="link local"><a href="./notes-AGKRRV.html" title="AGKRRV [notes-AGKRRV]">AGKRRV</a></span></li>
 <li><span class="link local"><a href="./Excursion.html" title="远足代数 Excursion Algebra [Excursion]">远足代数 Excursion Algebra</a></span> - <span class="link local"><a href="./GaitsgoryLinReevesExcALg.html" title="On the excursion algebra [GaitsgoryLinReevesExcALg]">Gaitsgory–Lin–Reeves</a></span> 抽象了这一代数, 将其定义为某种局部系统模空间上的函数环.</li>
@@ -23234,7 +23367,7 @@ $$
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断性</a></span></p>
 <p><span class="link local"><a href="./连通-截断分解.html" title="(n-连通, n-截断) 分解 [连通-截断分解]">($n$-连通, $n$-截断) 分解</a></span></p>
-</details></section><section class="block" data-taxon=""><details ><summary id="迹"><header><h1><span class="taxon"></span>迹 <a class="slug" href="./迹.html">[迹]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="迹"><header><h1><span class="taxon"></span>迹 <a class="slug" href="./迹.html">[迹]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>自映射的迹</h3>
 <p>对于<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal C$ 中<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶对象</a></span> $X$ 的自映射 $f\colon X\to X$, 定义<strong>迹</strong> $\operatorname{Tr}(f)\in\operatorname{End}_{\mathcal C}(1)$,
@@ -23714,14 +23847,15 @@ $$
 <span class="link local"><a href="./凝聚层的导出范畴.html" title="凝聚层的导出范畴 [凝聚层的导出范畴]">凝聚层的导出范畴</a></span>的<span class="link local"><a href="./半正交分解.html" title=" [半正交分解]">半正交分解</a></span> (?)</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="锥(范畴论)"><header><h1><span class="taxon"></span>锥 (范畴论) <a class="slug" href="./锥(范畴论).html">[锥(范畴论)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>对于范畴 $I$, 可自由地添加一个始对象或终对象, 得到<strong>左锥</strong> $I^{\triangleleft}$ 以及<strong>右锥</strong> $I^{\triangleright}$. 添加的那个始对象或终对象称为锥的<strong>顶点</strong>.</p>
-<h2>性质</h2>
-<p>对于函子 $X\colon I\to \mathcal C$ 以及对象 $c\in\mathcal C$, 以下三个资料等价:</p>
+<p>对于范畴 $I$, 可<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加一个<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>或<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>, 得到<strong>左锥</strong> $I^{\triangleleft}$ 以及<strong>右锥</strong> $I^{\triangleright}$. 添加的那个始对象或终对象称为锥的<strong>顶点</strong>.</p>
+<p>对于函子 $X\colon I\to \mathcal C$ 以及对象 $c\in\mathcal C$, 以下三个资料等价, 称之为 $X$ 上以 $c$ 为<strong>顶点</strong>的<strong>锥</strong> (cone):</p>
 <ul>
 <li>$X$ 的延拓 $I^{\triangleleft} \to \mathcal C$, 将顶点映射为 $c$;</li>
 <li>$X$ 的分解 $I\to \mathcal C_{c/}\to\mathcal C$;</li>
-<li>自然变换 $\operatorname{const}c\to X$.</li>
+<li>自然变换 $\operatorname{const}c\to X$;</li>
+<li>集合 $\operatorname{lim}_{i\in I}\operatorname{Hom}(c,X_i)$ 的元素.</li>
 </ul>
+<p>对应地, 延拓 $I^{\triangleright} \to \mathcal C$ 称为 $X$ 上的<strong>余锥</strong> (cocone).</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="镜对称"><header><h1><span class="taxon"></span>“镜对称” <a class="slug" href="./镜对称.html">[镜对称]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>复代数簇 (<span class="link local"><a href="./Calabi--丘流形.html" title="“Calabi–丘流形” [Calabi--丘流形]">Calabi–丘流形</a></span>) 与<span class="link local"><a href="./辛流形.html" title="辛流形 [辛流形]">辛流形</a></span>之间的一种关系.</p>
 <blockquote>

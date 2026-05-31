@@ -951,12 +951,48 @@ $$
 <p><span class="link local"><a href="./ind-层.html" title="ind-层 [ind-层]">ind-层</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="lim-colim"><header><h1><span class="taxon"></span>极限与余极限交换 <a class="slug" href="./lim-colim.html">[lim-colim]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>陈述</h2>
-<p>在 $\mathsf{Set}$ 或 $\mathsf{Ani}$ 中,</p>
+<p>在 $\mathsf{Set}$ 或 $\mathsf{Ani}$ 中, 对指标范畴 $I,J$ 以及一族对象 $X_{i,j}$, 有自然的映射
+$$
+\operatorname{colim}_{i\in I}\operatorname{lim}_{j\in J}X_{i,j} \to \operatorname{lim}_{j\in J}\operatorname{colim}_{i\in I} X_{i,j};
+$$
+当它是等价时, 称 $I$-极限与 $J$-余极限交换.</p>
+<p>两个常见的例子: $\mathsf{Set}$ 或 $\mathsf{Ani}$ 中,</p>
 <ul>
 <li><span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>与<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>交换,</li>
 <li><span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">有限积</a></span>与<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>交换.</li>
 </ul>
-<p>(注意, 对于 $\mathsf{Set}$ 与 $\mathsf{Ani}$, “有限” 的概念不相同, 从而滤, 筛等概念也不尽相同.)</p>
+<p>这两个事实分别可用于描述<span class="link local"><a href="./本质代数理论.html" title="本质代数理论 [本质代数理论]">本质代数理论</a></span>以及<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>.</p>
+<p>注意, 对于 $\mathsf{Set}$ 与 $\mathsf{Ani}$, “<span class="link local"><a href="./有限范畴.html" title="有限范畴 [有限范畴]">有限</a></span>” 的概念不相同, 从而滤, 筛等概念也不尽相同.</p>
+<p>以下对 $\mathsf{Set}$ 陈述的命题对 $\mathsf{Ani}$ 也有相应版本.</p>
+<h3>极限图类的 Galois 对应</h3>
+<p>“$\mathsf{Set}$ 中的 $I$-极限与 $J$-余极限交换” 的关系给出极限图的类与余极限图的类之间的 <span class="link local"><a href="./Galois对应.html" title="Galois 对应 [Galois对应]">Galois 对应</a></span>.</p>
+<p>对于小范畴的类 $\mathfrak I$, $\mathfrak J$, 记</p>
+<ul>
+<li>${\mathfrak I}^{r} = \{$ $J$ : 对任意 $I\in \mathfrak I$, $\mathsf{Set}$ 中 $J$-余极限与 $I$-极限交换 $\}$;</li>
+<li>${\mathfrak J}^{l} = \{$ $I$ : 对任意 $J\in \mathfrak J$, $\mathsf{Set}$ 中 $J$-余极限与 $I$-极限交换 $\}$.</li>
+</ul>
+<p>由定义, $\{\text{有限范畴}\}^{r} = \{\text{滤范畴}\}$.</p>
+<p>注意, $\{\text{滤范畴}\}^{l} \supset \{\text{有限范畴}\}$, 但 $\{\text{滤范畴}\}^{l}$ 不仅包含有限范畴, 还包含所有存在<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首</a></span>有限子范畴的范畴, 如 $(\mathbb{N},\leq)$. 不过, 以这种范畴为指标的极限等价于有限极限.</p>
+<h3>与锥的存在性的关系</h3>
+<p><span class="link local"><a href="./滤范畴.html" title="滤范畴 [滤范畴]">滤范畴</a></span>的有限图上有<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">余锥</a></span>. 如下是这一结论的推广.</p>
+<p><strong>命题</strong>. 对于小范畴 $I$, $J$, 若 $\mathsf{Set}$ 中 $I$-极限与 $J$-余极限交换, 则 $J$ 中的任何 $I^{\mathrm{op}}$-图 $X\colon I^{\mathrm{op}}\to J$ 上有<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">余锥</a></span>.</p>
+<p><em>证明</em>. 考虑函子 $F\colon I\times J\to\mathsf{Set}$,
+$$
+F(i,j) = \operatorname{Hom}_J(X(i),j).
+$$
+那么
+$$
+\operatorname{colim}_{j\in J} F(i,j) = 1,
+$$
+从而
+$$
+\operatorname{lim}_{i\in I}\operatorname{colim}_{j\in J}F(i,j) = 1.
+$$
+假设 $\mathsf{Set}$ 中 $I$-极限与 $J$-余极限交换, 则
+$$
+\operatorname{colim}_{j\in J}\operatorname{lim}_{i\in I}F(i,j) = 1.
+$$
+这说明存在 $j\in J$ 使得 $\operatorname{lim}_{i\in I}F(i,j)$ 至少存在一个元素. 而 $\operatorname{lim}_{i\in I}F(i,j)$ 的元素等同于 $X$ 上的余锥, 故结论成立.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="pro-对象"><header><h1><span class="taxon"></span>pro-对象 <a class="slug" href="./pro-对象.html">[pro-对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>范畴 $\mathcal C$ 的 pro-对象是其对象的形式<span class="link local"><a href="./余滤极限.html" title="余滤极限 [余滤极限]">余滤极限</a></span>.</p>
@@ -1019,6 +1055,7 @@ $$
 </ul>
 </li>
 <li><span class="link local"><a href="./交换代数(学科).html" title="交换代数 [交换代数(学科)]">交换代数</a></span></li>
+<li><span class="link local"><a href="./表示论.html" title="表示论 [表示论]">表示论</a></span></li>
 <li><span class="link local"><a href="./代数几何.html" title="代数几何 [代数几何]">代数几何</a></span></li>
 <li><span class="link local"><a href="./Riemann几何.html" title="Riemann 几何 [Riemann几何]">Riemann 几何</a></span></li>
 <li><span class="link local"><a href="./同伦论.html" title="同伦论 [同伦论]">同伦论</a></span>
@@ -1045,11 +1082,17 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="余完备化"><header><h1><span class="taxon"></span>余完备化 <a class="slug" href="./余完备化.html">[余完备化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>余完备化是指向一个范畴<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加特定形状的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>的过程.</p>
-<p>具体地, 设 $R\subset K$ 是两族小范畴 (即 $R\hookrightarrow K \hookrightarrow\mathsf{Cat}$ 为全子范畴). 对于具有 $R$-形余极限的范畴 $\mathcal C$, 可在保持 $R$-形余极限的条件下, “自由地添加 $K$-形余极限”, 得到
+<p>具体地, 设 $R\subset K$ 是两族小范畴 (即 $R\hookrightarrow K \hookrightarrow\mathsf{Cat}$ 为全子范畴). 对于具有 $R$-形余极限的范畴 $\mathcal C$, 可在保持 $R$-形余极限的条件下, “<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加 $K$-形余极限”, 得到
 $$
 \mathcal C \hookrightarrow \mathsf{P}_{R}^K(\mathcal C).
+$$</p>
+<h2>性质</h2>
+<h3>泛性质 (自由性)</h3>
+<p>记 $\mathsf{Cat}_K$ 为具有 $K$-形余极限的范畴以及保持 $K$-形余极限的函子构成的 $2$-范畴, 那么 $\mathsf{P}_R^K\colon \mathsf{Cat}_R \to \mathsf{Cat}_K$ 是<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>函子 $\mathsf{Cat}_K \to \mathsf{Cat}_R$ 的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>. 具体地, 对于具有 $R$-余极限的范畴 $\mathcal C$ 与具有 $K$-余极限的范畴 $\mathcal D$,
 $$
-记 $\mathsf{Cat}_K$ 为具有 $K$-形余极限的范畴以及保持 $K$-形余极限的函子构成的 $2$-范畴, 那么 $\mathsf{P}_R^K\colon \mathsf{Cat}_R \to \mathsf{Cat}_K$ 是<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>函子 $\mathsf{Cat}_K \to \mathsf{Cat}_R$ 的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
+\mathsf{Fun}^{K\text{-}\mathrm{colim}}(\mathsf{P}_R^K(\mathcal C),\mathcal D)\simeq
+\mathsf{Fun}^{R\text{-}\mathrm{colim}}(\mathcal C,\mathcal D).
+$$</p>
 <h2>例</h2>
 <h3>余积完备化</h3>
 <p>考虑 $K = \mathsf{Set}$ 为离散范畴的范畴, 那么 $\mathsf{P}^{K}(\mathcal C)$ 是 $\mathcal C$ 自由地添加余积所得的范畴; 其有一种具体构造: $\mathsf{P}^{K}(\mathcal C)$ 的对象为 $\mathcal C$ 的对象族 $(X_i)_{i\in I}$, 态射 $(X_i)_{i\in I} \to (Y_j)_{j\in J}$ 为映射 $f\colon I\to J$ 以及一族态射 $(X_i \to Y_{f(i)})_{i\in I}$. 这个范畴也可定义为<span class="link local"><a href="./松拉回.html" title="松拉回 [松拉回]">松拉回</a></span></p>
@@ -1396,6 +1439,21 @@ $$</p>
 <li>无穷维射影空间 $\mathbb{C}P^\infty$ 是有限维射影空间的序列余极限.</li>
 <li><span class="link local"><a href="./形式圆盘.html" title="形式圆盘 [形式圆盘]">形式圆盘</a></span> $\operatorname{Spec}R[[t]]$ ($\operatorname{Spf}R[[t]]$) 是 $\operatorname{Spec}R[t]/(t^n)$ 在仿射概形范畴 (概形范畴) 中的滤余极限.</li>
 </ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="滤范畴"><header><h1><span class="taxon"></span>滤范畴 <a class="slug" href="./滤范畴.html">[滤范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>滤范畴是满足如下等价条件的范畴 $\mathcal C$:</p>
+<ul>
+<li>$\mathcal C$ 中所有<span class="link local"><a href="./有限范畴.html" title="有限范畴 [有限范畴]">有限</a></span>图都有<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">锥</a></span>;</li>
+<li>在 $\mathsf{Set}$ 中, 以 $\mathcal C$ 为指标范畴的余极限与所有<span class="link local"><a href="./有限范畴.html" title="有限范畴 [有限范畴]">有限</a></span>极限交换.</li>
+<li>取余极限函子 $\operatorname{colim}_{\mathcal C}\colon \mathsf{Fun}(\mathcal C,\mathsf{Set}) \to \mathsf{Set}$ 保持有限极限.</li>
+<li>对任意<span class="link local"><a href="./有限范畴.html" title="有限范畴 [有限范畴]">有限范畴</a></span> $K$, 对角线 $\Delta\colon \mathcal C\to\mathcal C^K$ 为<span class="link local"><a href="./共尾函子.html" title="共尾函子 [共尾函子]">共尾函子</a></span>.</li>
+</ul>
+<p>依惯例, <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$\infty$-范畴</a></span>语境下 $\mathsf{Set}$ 改用 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span>.</p>
+<h2>例</h2>
+<h3>有限子集</h3>
+<p>集合 $S$ 的有限子集在包含关系下构成滤范畴. 这一规律同样适用于任何<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>的模型的全体有限生成 (有限表现) 子模型.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="生成元(范畴论)"><header><h1><span class="taxon"></span>生成元 (范畴论) <a class="slug" href="./生成元(范畴论).html">[生成元(范畴论)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>范畴 $\mathcal C$ 的对象 $X$ 称为<strong>生成元</strong>是指 $\operatorname{Hom}(X,-)\colon \mathcal C\to\mathsf{Set}$ 忠实; 换言之, 仅考虑 $X$ 出发的<span class="link local"><a href="./广义元素.html" title="广义元素 [广义元素]">广义元素</a></span>的去向, 就能区分处 $\mathcal C$ 中的态射.</p>
@@ -1433,6 +1491,36 @@ $$
 </ul>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./生象化.html" title="生象化 [生象化]">生象化</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="稳定化"><header><h1><span class="taxon"></span>稳定化 <a class="slug" href="./稳定化.html">[稳定化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>以下的范畴默认为 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$(\infty,1)$-范畴</a></span>.</p>
+<p>每个具有有限极限的范畴都存在稳定化, 即自由地变成<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>. 稳定化可以构造为<span class="link local"><a href="./谱对象.html" title="谱对象 [谱对象]">谱对象</a></span>的范畴. 人们一般考虑<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>的稳定化.</p>
+<h2>定义</h2>
+<p><span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span>带基点范畴 $\mathcal C$ 的稳定化是 <span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">$\mathrm {Pr}^{\mathrm L}$</a></span> 中的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>
+$$
+\operatorname{Stab}\mathcal C =\operatorname{colim}(\mathcal C\overset{\Sigma}{\to}\mathcal C\overset{\Sigma}{\to}\cdots),
+$$
+即形式上令 $\Sigma$ 可逆得到的范畴 (参见<span class="link local"><a href="./形式取逆.html" title="形式取逆 [形式取逆]">形式取逆</a></span>). 为了计算该余极限, 注意到它等价于 $\mathrm {Pr}^{\mathrm R}\simeq (\mathrm {Pr}^{\mathrm L})^{\mathrm {op}}$ 中的极限
+$$
+\operatorname{lim}(\cdots\overset{\Omega}{\to}\mathcal C_*\overset{\Omega}{\to}\mathcal C_*).
+$$
+$\mathrm{Pr}^{\mathrm{R}}$ 中的极限可在 $\mathsf{Cat}_{\infty}$ 中计算. 记上述极限到各个分量的投影为 $\Omega^{\infty -n}$, 那么 $\operatorname{Stab}\mathcal C$ 的一个对象 $X$, 有一列空间 $X_n :=\Omega^{\infty -n}X$ 以及一族等价
+$$
+X_{n}\simeq\Omega X_{n+1}.
+$$
+这是传统的<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的定义.</p>
+<h2>性质</h2>
+<p>稳定化 $\operatorname{Stab}\mathcal C$ 继承 $\mathcal C$ 中的有限极限.</p>
+<p>$\mathcal C$ 与 $\operatorname{Stab}\mathcal C$ 之间有伴随 $\Sigma^\infty \dashv \Omega^\infty$ 以及更一般的 $\Sigma^{\infty -n}\dashv\Omega^{\infty -n}$. 对于 $X\in\operatorname{Stab}\mathcal C$ 有
+$$
+X\simeq\operatorname{colim}\Sigma^{\infty -n}\Omega^{\infty-n}X.
+$$</p>
+<h3>与对称幺半结构的关系</h3>
+<p>可表现对称幺半范畴的稳定化仍有对称幺半结构; 稳定化提升为函子
+$$
+\operatorname{Stab}\colon \mathsf{CAlg}(\mathsf{Pr}) \to \mathsf{CAlg}(\mathsf{Pr}_{\mathrm{st}}).
+$$</p>
+<p>最基本的例子即是 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 上的对称幺半结构.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="端"><header><h1><span class="taxon"></span>端 <a class="slug" href="./端.html">[端]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon=""><details ><summary id="等化子"><header><h1><span class="taxon"></span>等化子 <a class="slug" href="./等化子.html">[等化子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon=""><details ><summary id="紧投射生成元"><header><h1><span class="taxon"></span>紧投射生成元 <a class="slug" href="./紧投射生成元.html">[紧投射生成元]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -1444,16 +1532,47 @@ $$
 <li>对象 $M$ 为<span class="link local"><a href="./生成元(范畴论).html" title="生成元 (范畴论) [生成元(范畴论)]">生成元</a></span>, 即 $\operatorname{Hom}(M,-)$ 忠实, 当且仅当 $A$ 为某个有限直和 $M^n$ 的直和项;</li>
 <li>对象 $M$ 为有限生成<span class="link local"><a href="./投射对象.html" title="投射对象 [投射对象]">投射对象</a></span>, 即 $\operatorname{Hom}(M,-)$ 保持滤余极限且保持满射 (<span class="link local"><a href="./余等化子.html" title="余等化子 [余等化子]">余等化子</a></span>), 当且仅当 $M$ 为某个有限生成自由模 $A^n$ 的直和项.</li>
 </ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="迹"><header><h1><span class="taxon"></span>迹 <a class="slug" href="./迹.html">[迹]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>自映射的迹</h3>
+<p>对于<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal C$ 中<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶对象</a></span> $X$ 的自映射 $f\colon X\to X$, 定义<strong>迹</strong> $\operatorname{Tr}(f)\in\operatorname{End}_{\mathcal C}(1)$,
+$$
+    \operatorname{Tr}(f):
+    1 \overset{\operatorname{coev}}{\to} X\otimes X^* \overset{f\otimes\mathrm{id}}{\to} X\otimes X^*\overset{\operatorname{ev}}{\to} 1.
+$$</p>
+<p>对象 $X$ 的恒等映射的迹又叫 $X$ 的<span class="link local"><a href="./幺半维数.html" title="对称幺半维数 [幺半维数]">幺半维数</a></span>
+$$
+\operatorname{dim}X := \operatorname{Tr}(\mathrm{id}_X).
+$$</p>
+<p>考虑范畴
+$$
+\mathsf{End}_{\mathcal C} := \mathsf{Fun}(\mathbf{B}\mathbb{N},\mathcal C)= \{(X,f)\colon X\in\mathcal C, f\in\operatorname{End}_{\mathcal C}(X)\},
+$$
+(其中 $\mathbf{B}\mathbb{N}$ 是 “<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的自同态”)
+那么迹的构造升级为一个函子
+$$
+\operatorname{Tr}\colon \mathsf{End}_\mathcal C \to \operatorname{End}_{\mathcal C}(1).
+$$</p>
+<h3>双模的迹</h3>
+<p>以下是前面定义的迹的一个常见特殊情形. 考虑<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal C$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A\in\mathsf{Alg}(\mathcal C)$. 可将 $(A,A)$-双模 $M$ 视为 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span> $\mathsf{Morita}(\mathcal C)$ 中 $A$ 的自同态, 从而取其迹:
+$$
+\operatorname{Tr}(A,M) = A\otimes_{A\otimes A^{\mathrm{op}}} M.
+$$</p>
+<h2>例</h2>
+<p>当 $\mathcal C = \mathsf{Vect}_k$
+时,
+有限维 $k$-线性空间 $V$ 的自映射的迹即是 $\operatorname{Tr}(f)\cdot \mathrm{id}_{k}$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="锥(范畴论)"><header><h1><span class="taxon"></span>锥 (范畴论) <a class="slug" href="./锥(范畴论).html">[锥(范畴论)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>对于范畴 $I$, 可自由地添加一个始对象或终对象, 得到<strong>左锥</strong> $I^{\triangleleft}$ 以及<strong>右锥</strong> $I^{\triangleright}$. 添加的那个始对象或终对象称为锥的<strong>顶点</strong>.</p>
-<h2>性质</h2>
-<p>对于函子 $X\colon I\to \mathcal C$ 以及对象 $c\in\mathcal C$, 以下三个资料等价:</p>
+<p>对于范畴 $I$, 可<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加一个<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>或<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>, 得到<strong>左锥</strong> $I^{\triangleleft}$ 以及<strong>右锥</strong> $I^{\triangleright}$. 添加的那个始对象或终对象称为锥的<strong>顶点</strong>.</p>
+<p>对于函子 $X\colon I\to \mathcal C$ 以及对象 $c\in\mathcal C$, 以下三个资料等价, 称之为 $X$ 上以 $c$ 为<strong>顶点</strong>的<strong>锥</strong> (cone):</p>
 <ul>
 <li>$X$ 的延拓 $I^{\triangleleft} \to \mathcal C$, 将顶点映射为 $c$;</li>
 <li>$X$ 的分解 $I\to \mathcal C_{c/}\to\mathcal C$;</li>
-<li>自然变换 $\operatorname{const}c\to X$.</li>
+<li>自然变换 $\operatorname{const}c\to X$;</li>
+<li>集合 $\operatorname{lim}_{i\in I}\operatorname{Hom}(c,X_i)$ 的元素.</li>
 </ul>
+<p>对应地, 延拓 $I^{\triangleright} \to \mathcal C$ 称为 $X$ 上的<strong>余锥</strong> (cocone).</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="预层范畴之间的伴随"><header><h1><span class="taxon"></span>预层范畴之间的伴随 <a class="slug" href="./预层范畴之间的伴随.html">[预层范畴之间的伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>预层范畴之间的伴随是<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中十分常见的一种现象, 指的是范畴 $\mathcal C$, $\mathcal D$ 之间的函子诱导的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层范畴</a></span> $\widehat {\mathcal C} = \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set}),\widehat {\mathcal D} = \mathsf{Fun}(\mathcal D^{\mathrm{op}},\mathsf{Set})$ 之间的伴随.</p>

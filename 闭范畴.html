@@ -861,7 +861,7 @@ $$
 $$
 其构造思路大致是: 从带基点<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>范畴 <span class="link local"><a href="./Ani_pt.html" title="带基点生象的范畴 [Ani_pt]">$\mathsf{Ani}_*$</a></span> 开始, 强行让<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span> $\Sigma$ 变得可逆, 得到一个新的范畴.</p>
 <h2>性质</h2>
-<p>$\mathsf{Sp}$ 上有<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span> $\wedge$ 与映射谱 $[-,-]$ 给出的<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span><span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半</a></span>结构. 有<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半函子</a></span>
+<p>$\mathsf{Sp}$ 上有<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span> $\wedge$ 与<span class="link local"><a href="./映射谱.html" title="映射谱 [映射谱]">映射谱</a></span> $[-,-]$ 给出的<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span><span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半</a></span>结构. 有<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半函子</a></span>
 $$
 (\mathsf{Set},\times) \to (\mathsf{Ani},\times) \overset{(-)_+}{\to} (\mathsf{Ani}_{*/},\wedge) \overset{\Sigma_{\infty}}{\to} (\mathsf{Sp},\wedge).
 $$</p>
@@ -977,19 +977,48 @@ $$</li>
 <p>可分充实范畴是<span class="link local"><a href="./可分代数.html" title="可分代数 [可分代数]">可分代数</a></span>的推广.</p>
 <p>设 $\mathcal A$ 为 $\mathcal V$-充实范畴, 若 $\mathcal A$ 作为 $\mathcal A\otimes\mathcal A^{\mathrm{op}}$-模 $\mathcal A\otimes\mathcal A^{\mathrm{op}} \to \mathcal V$ 为小投射模, 则称 $\mathcal A$ <strong>可分</strong> (separable).</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="压缩积"><header><h1><span class="taxon"></span>压缩积 <a class="slug" href="./压缩积.html">[压缩积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>压缩积是<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 的<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半结构</a></span>.</p>
+<p>带基点空间 (<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>) 的压缩积是带基点空间范畴 $\mathsf{Ani}_*$ 的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半结构</a></span>, 单位为 $*$.</p>
+<p><span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的压缩积是<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半结构</a></span>, 单位为<span class="link local"><a href="./球谱.html" title="“球谱” [球谱]">球谱</a></span> $\mathbb{S}$.</p>
+<h2>定义</h2>
+<p>带基点空间 (<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>) $X,Y$ 的<strong>压缩积</strong> (smash product) $X\wedge Y$ 是如下带基点空间:
+$$
+X\wedge Y = \operatorname{cofib}(X\vee Y \to X\times Y).
+$$</p>
 <h2>性质</h2>
-<p>压缩积与映射谱构成 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 上的<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span>对称幺半范畴结构.</p>
-<p>如下函子均为对称幺半函子:
+<p>压缩积 (生象或谱) 保持各个分量的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>. 事实上, 由于 $\mathsf{Ani}_*$ 由 $S^0$ 生成, 故 $\mathsf{Ani}_*$ 上的压缩积由该性质及其单位完全刻画.</p>
+<p><strong>命题</strong>. $\mathsf{Ani}_*$ 上有唯一的对称幺半结构 $(\mathsf{Ani}_*,\wedge,S^0)$, 满足</p>
+<ul>
+<li>其单位为 $S^0$,</li>
+<li>且 $\wedge$ 保持各个分量的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</li>
+</ul>
+<p><strong>命题</strong>. $\mathsf{Sp}$ 上有唯一的对称幺半结构 $(\mathsf{Sp},\wedge,\mathbb S)$, 满足</p>
+<ul>
+<li>其单位为 $\mathbb S$,</li>
+<li>函子 $\Sigma^\infty\colon\mathsf{Ani}_*\to\mathsf{Sp}$ 为对称幺半函子,</li>
+<li>且 $\wedge$ 保持各个分量的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</li>
+</ul>
+<p>注意如下函子均为对称幺半函子:
 $$
 (\mathsf{Ani},\times)\overset{(-)_+}{\to}(\mathsf{Ani}_*,\wedge)
-\overset{\Sigma^\infty}{\to}(\mathsf{Sp},\wedge).
+\overset{\Sigma^\infty}{\to}(\mathsf{Sp},\wedge),
+$$
+从而复合
+$\Sigma^\infty_+\colon\mathsf{Ani} \to \mathsf{Sp}$ 为对称幺半函子, 也即
+$$
+\Sigma^\infty_+(X\times Y)\simeq \Sigma^\infty_+X \wedge \Sigma^\infty_+Y.
 $$</p>
+<h3>与映射谱的关系</h3>
+<p>压缩积与<span class="link local"><a href="./映射谱.html" title="映射谱 [映射谱]">映射谱</a></span>构成 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 上的<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span>对称幺半范畴结构.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="对偶对象"><header><h1><span class="taxon"></span>对偶对象 <a class="slug" href="./对偶对象.html">[对偶对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>在<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭范畴</a></span> $\mathcal C$ 中, 若存在对象 $D$, 满足<span class="link local"><a href="./内蕴态射对象.html" title="“内蕴态射对象” [内蕴态射对象]">内蕴态射对象</a></span> $[-,D]\colon \mathcal C\to\mathcal C^{\text{op}}$ 为等价, 则称之为对偶对象 (dualizing object).</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Poincaré--Verdier对偶.html" title="Poincaré–Verdier 对偶 [Poincaré--Verdier对偶]">Poincaré–Verdier 对偶</a></span>, <span class="link local"><a href="./Cartier对偶.html" title="“Cartier 对偶” [Cartier对偶]">Cartier 对偶</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="映射谱"><header><h1><span class="taxon"></span>映射谱 <a class="slug" href="./映射谱.html">[映射谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>映射谱是 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 上的<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span>对称幺半范畴结构的一部分.</p>
+<h2>定义</h2>
+<h3>作为右伴随</h3>
+<p>对<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span> $X\in\mathsf{Sp}$, 由 $X$ 出发的映射谱函子 $[X,-]\colon\mathsf{Sp}\to\mathsf{Sp}$ 是<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span> (张量积) 函子 $X\wedge -\colon \mathsf{Sp} \to \mathsf{Sp}$ 的右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="淡中对偶"><header><h1><span class="taxon"></span>淡中对偶 <a class="slug" href="./淡中对偶.html">[淡中对偶]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>当几何对象的<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数侧对偶</a></span>是一个带有代数结构的范畴时, 这个几何对象的基点体现为<span class="link local"><a href="./纤维函子.html" title="纤维函子 [纤维函子]">纤维函子</a></span>, 而纤维函子的自同构可理解为该几何对象的基本群; 这就是淡中构造.</p>

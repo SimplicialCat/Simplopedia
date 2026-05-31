@@ -826,8 +826,7 @@
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
 <article><section class="block" data-taxon=""><details open><summary id="VLafforgueCht"><header><h1><span class="taxon"></span>Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale <a class="slug" href="./VLafforgueCht.html">[VLafforgueCht]</a></h1><div class="metadata"><ul><li class="meta-item">参考资料</li><li class="meta-item">Vincent Lafforgue</li></ul></div></header></summary>
-<pre><code>
-@misc{lafforgue2018chtoucaspourlesgroupes,
+<pre><code>@misc{lafforgue2018chtoucaspourlesgroupes,
       title={Chtoucas pour les groupes r\'eductifs et param\'etrisation de Langlands globale}, 
       author={Vincent Lafforgue},
       year={2018},
@@ -840,6 +839,19 @@
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Chtoucas"><header><h1><span class="taxon"></span>Chtouca 与整体 Langlands 参数 <a class="slug" href="./Chtoucas.html">[Chtoucas]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是 <span class="link local"><a href="./VLafforgueCht.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueCht]">V. Lafforgue 文章</a></span>的阅读笔记.</p>
 <h2>1. Hecke 叠</h2>
+<p>设 $X$ 为 $\mathbb F_q$ 上的不可约光滑射影曲线, $G$ 为约化群.</p>
+<p>设 $N\subset X$ 为有限点集, 定义 $\mathrm{Bun}_{G,N}$ 为 $X$ 上具有 “$N$ 级结构” 的 $G$-丛的<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>. 所谓 “$N$ 级结构” (structure de niveau $N$) $(\mathcal G,\psi)$ 是指在 $N$ 上的平凡化 $\psi\colon \mathcal G|_N \simeq G|_N$.</p>
+<p>设 $I$ 为有限集, $(I_1,\cdots,I_k)$ 为 $I$ 的分划. 定义 Hecke 叠
+$$
+\mathrm{Hecke}_{N,I}^{(I_1,\cdots,I_k)}
+$$
+为如下资料的分类叠:</p>
+<ul>
+<li>$x_i\in X\setminus N$ ($i\in I$);</li>
+<li>$(\mathcal G_0,\psi_0),\cdots,(\mathcal G_k,\psi_k) \in \mathrm{Bun}_{G,N}$;</li>
+<li>对 $j\in\{1,\cdots,k\}$, 同构 $\phi_j\colon \mathcal G_{j-1}|_{X\setminus \{x_i\colon i\in I_j\}} \simeq \mathcal G_{j}|_{X\setminus \{x_i\colon i\in I_j\}}$, 保持级结构.</li>
+</ul>
+<p>简言之, $\mathrm{Hecke}_{N,I}^{(I_1,\cdots,I_k)}$ 的一个点对应着一个具有 $N$ 级结构的 $G$-丛经过一列调整, 每次调整 $I_j$ 个点处的平凡化.</p>
 <h2>2. $G$-Chtouca 的叠</h2>
 <p>设 $I$ 为有限集, $(I_1,\cdots,I_k)$ 是 $I$ 的分拆. 设 $N\subset X$ 为有限点集, 定义 $(X\setminus N)^I$ 上的叠
 $$
@@ -874,4 +886,44 @@ S_{I,W,x,\xi,(\gamma_i)_{i\in I}} := C_\xi^\flat
 (\mathfrak{sp}^*)^{-1}(\gamma_i)_{i\in I}\mathfrak {sp}^*
 C_\xi^\sharp.
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="谱分解"><header><h1><span class="taxon"></span>谱分解 <a class="slug" href="./谱分解.html">[谱分解]</a></h1><div class="metadata"><ul><li class="meta-item"><span class="link local"><a href="./notion.html" title="观念 [notion]">观念</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>当交换代数作用于线性空间 (<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>) 时, 往往可将空间分解为 “特征子空间” 的和, 每个特征子空间对应于一个 “特征值”, 也即<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>的点.</p>
+<h2>例</h2>
+<h3>线性算子的特征子空间分解</h3>
+<p>设 $k$ 是代数闭域, $T$ 是有限维 $k$-线性空间 $V$ 上的线性算子, 相当于 $V$ 上的 $k[x]$-模结构. 此时有特征子空间的分解
+$$
+V = \bigoplus_{\lambda} V_\lambda,
+$$
+其中 $\lambda\in k$ 对应 $\operatorname{Spec}k[x]$ 的点, 即素理想 $(x-\lambda)$; 特征子空间 $V_\lambda$ 可由下式定义:
+$$
+\begin{aligned}
+V_\lambda &amp;= V\otimes_{k[x]} k[x]_{(x-\lambda)} \\&amp;= \{v\in V\mid\exists n, (x-\lambda)^n v = 0\}.
+\end{aligned}
+$$</p>
+<p>当然, 类似的精神出现在泛函分析中 (无限维线性空间上) 算子的谱分解.</p>
+<h3>Lie 群 (Lie 代数) 表示的不可约分解</h3>
+<p>群 $G$ 在 $\mathbb{C}$-线性空间 $V$ 上的表示相当于 $V$ 的 $\mathbb{C}[G]$-模结构. 虽然 $\mathbb{C}[G]$ 不是交换环, 我们仍然可以取它的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span> $Z(\mathbb{C}[G])$ 并考虑 $V$ 上的 $Z(\mathbb{C}[G])$-模结构, 得到 $V$ 的谱分解.
+代数同态 $Z(\mathbb{C}[G]) \to\mathbb{C}$ 等同于所谓 “类函数”, 即 $G$ 的共轭类集合上的函数.</p>
+<p>有限群 $G$ 的表示 $V$ 分解为不可约表示的直和:
+$$
+V = \bigoplus_{\rho} V_\rho
+$$</p>
+<p>类似地, Lie 代数 $\mathfrak g$ 的表示依<strong>中心特征</strong> $Z(U\mathfrak g)\to\mathbb{C}$ 分解, 也即沿 $\operatorname{Spec}Z(U\mathfrak g)$ 分解. 在<span class="link local"><a href="./范畴O.html" title="“范畴 O” [范畴O]">范畴 $\mathcal O$</a></span> 中, 支撑于闭点 $\chi\in\operatorname{Spec}Z(U\mathfrak g)$ 上的对象构成的子范畴称为<strong>块</strong> (block).</p>
+<h3>Fourier 变换作为谱分解</h3>
+<p><span class="link local"><a href="./Fourier变换.html" title="Fourier 变换 [Fourier变换]">Fourier 变换</a></span>可视为 $\mathbb{R}^n$ (或更一般的局部紧 Abel 群 $A$) 上的函数关于平移算子生成的交换 <span class="link local"><a href="./C-星代数.html" title="C*-代数 [C-星代数]">$C^*$-代数</a></span> $C^*(A)$ 的谱分解; $C^*(A)$ 的谱正是 $A$ 的 <span class="link local"><a href="./Pontryagin对偶.html" title="Pontryagin 对偶 [Pontryagin对偶]">Pontryagin 对偶</a></span> $\widehat {A}$: 精神上,
+$$
+\operatorname{Hom}_{\mathsf{CAlg}}(C^*(A),\mathbb{C})\simeq\operatorname{Hom}_{\mathsf{Ab}}(A,\mathbb{C}).
+$$</p>
+<h3>自守函数的 Hecke 作用的谱分解</h3>
+<p><span class="link local"><a href="./VLafforgueCht.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueCht]">Vincent Lafforgue</a></span> 使用某些 Hecke 函子定义了<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span>, 以给出 <span class="link local"><a href="./Langlands纲领.html" title="Langlands 纲领 [Langlands纲领]">Langlands</a></span> 预言的自守函数空间的谱分解.</p>
+<p>这一思路在<span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 纲领</a></span>中得到延续. 人们发现<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span>等同于某种局部系统模叠上的函数代数. 而提升一个范畴层级后 (见<span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span>—但这里实际上只需要提升一阶), 该种局部系统模叠上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>范畴在<span class="link local"><a href="./自守层.html" title="自守层 [自守层]">自守层</a></span>范畴上的 <span class="link local"><a href="./Hecke作用.html" title="Hecke 作用 [Hecke作用]">Hecke 作用</a></span>可给出自守层沿局部系统模叠的谱分解, 见 <span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="远足代数"><header><h1><span class="taxon"></span>远足代数 <a class="slug" href="./远足代数.html">[远足代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>远足代数是 <span class="link local"><a href="./VLafforgueCht.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueCht]">Vincent Lafforgue</a></span> 定义的一个<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>, 作用在尖点自守形式空间上, 而其<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>实现了 Langlands 参数的空间, 从而通过<span class="link local"><a href="./谱分解.html" title="谱分解 [谱分解]">谱分解</a></span>将自守形式的空间分解为 Langlands 参数标记的分量, 给出 “自守到 Galois” 的对应.</p>
+<p>相关笔记:</p>
+<ul>
+<li><span class="link local"><a href="./Chtoucas.html" title="Chtouca 与整体 Langlands 参数 [Chtoucas]">Chtouca 与整体 Langlands 参数</a></span> - <span class="link local"><a href="./VLafforgueCht.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueCht]">Vincent Lafforgue</a></span> 原文的笔记.</li>
+<li><span class="link local"><a href="./notes-GKRV.html" title="GKRV [notes-GKRV]">GKRV</a></span> - Betti 语境的玩具.</li>
+<li><span class="link local"><a href="./notes-AGKRRV.html" title="AGKRRV [notes-AGKRRV]">AGKRRV</a></span></li>
+<li><span class="link local"><a href="./Excursion.html" title="远足代数 Excursion Algebra [Excursion]">远足代数 Excursion Algebra</a></span> - <span class="link local"><a href="./GaitsgoryLinReevesExcALg.html" title="On the excursion algebra [GaitsgoryLinReevesExcALg]">Gaitsgory–Lin–Reeves</a></span> 抽象了这一代数, 将其定义为某种局部系统模空间上的函数环.</li>
+</ul>
 </details></section></details></section></footer></article></div></body></html>

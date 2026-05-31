@@ -986,7 +986,7 @@ $$
 $$
 其构造思路大致是: 从带基点<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>范畴 <span class="link local"><a href="./Ani_pt.html" title="带基点生象的范畴 [Ani_pt]">$\mathsf{Ani}_*$</a></span> 开始, 强行让<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span> $\Sigma$ 变得可逆, 得到一个新的范畴.</p>
 <h2>性质</h2>
-<p>$\mathsf{Sp}$ 上有<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span> $\wedge$ 与映射谱 $[-,-]$ 给出的<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span><span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半</a></span>结构. 有<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半函子</a></span>
+<p>$\mathsf{Sp}$ 上有<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span> $\wedge$ 与<span class="link local"><a href="./映射谱.html" title="映射谱 [映射谱]">映射谱</a></span> $[-,-]$ 给出的<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span><span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半</a></span>结构. 有<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半函子</a></span>
 $$
 (\mathsf{Set},\times) \to (\mathsf{Ani},\times) \overset{(-)_+}{\to} (\mathsf{Ani}_{*/},\wedge) \overset{\Sigma_{\infty}}{\to} (\mathsf{Sp},\wedge).
 $$</p>
@@ -1178,14 +1178,38 @@ $$</p>
 <p>总之, 如果任何空间都是某空间的<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span>, 那么任何两个空间之间的映射空间 (或映射同伦类的集合) 构成群.</p>
 <p>当然, 纬悬的效果不仅如此. 如果任何空间都是某空间的<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span>, 那么自然也是某空间的两次纬悬; 而 $\Sigma^2 X = X \wedge S^1\wedge S^1$ 上的两种相容的余群结构合在一起, 构成了一种 $\mathbb E_2$-余群结构, 使得映射同伦类的集合 $[\Sigma^2 X, Y]$ 构成 <strong>Abel 群</strong>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="压缩积"><header><h1><span class="taxon"></span>压缩积 <a class="slug" href="./压缩积.html">[压缩积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>压缩积是<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 的<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半结构</a></span>.</p>
+<p>带基点空间 (<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>) 的压缩积是带基点空间范畴 $\mathsf{Ani}_*$ 的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半结构</a></span>, 单位为 $*$.</p>
+<p><span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的压缩积是<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半结构</a></span>, 单位为<span class="link local"><a href="./球谱.html" title="“球谱” [球谱]">球谱</a></span> $\mathbb{S}$.</p>
+<h2>定义</h2>
+<p>带基点空间 (<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>) $X,Y$ 的<strong>压缩积</strong> (smash product) $X\wedge Y$ 是如下带基点空间:
+$$
+X\wedge Y = \operatorname{cofib}(X\vee Y \to X\times Y).
+$$</p>
 <h2>性质</h2>
-<p>压缩积与映射谱构成 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 上的<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span>对称幺半范畴结构.</p>
-<p>如下函子均为对称幺半函子:
+<p>压缩积 (生象或谱) 保持各个分量的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>. 事实上, 由于 $\mathsf{Ani}_*$ 由 $S^0$ 生成, 故 $\mathsf{Ani}_*$ 上的压缩积由该性质及其单位完全刻画.</p>
+<p><strong>命题</strong>. $\mathsf{Ani}_*$ 上有唯一的对称幺半结构 $(\mathsf{Ani}_*,\wedge,S^0)$, 满足</p>
+<ul>
+<li>其单位为 $S^0$,</li>
+<li>且 $\wedge$ 保持各个分量的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</li>
+</ul>
+<p><strong>命题</strong>. $\mathsf{Sp}$ 上有唯一的对称幺半结构 $(\mathsf{Sp},\wedge,\mathbb S)$, 满足</p>
+<ul>
+<li>其单位为 $\mathbb S$,</li>
+<li>函子 $\Sigma^\infty\colon\mathsf{Ani}_*\to\mathsf{Sp}$ 为对称幺半函子,</li>
+<li>且 $\wedge$ 保持各个分量的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</li>
+</ul>
+<p>注意如下函子均为对称幺半函子:
 $$
 (\mathsf{Ani},\times)\overset{(-)_+}{\to}(\mathsf{Ani}_*,\wedge)
-\overset{\Sigma^\infty}{\to}(\mathsf{Sp},\wedge).
+\overset{\Sigma^\infty}{\to}(\mathsf{Sp},\wedge),
+$$
+从而复合
+$\Sigma^\infty_+\colon\mathsf{Ani} \to \mathsf{Sp}$ 为对称幺半函子, 也即
+$$
+\Sigma^\infty_+(X\times Y)\simeq \Sigma^\infty_+X \wedge \Sigma^\infty_+Y.
 $$</p>
+<h3>与映射谱的关系</h3>
+<p>压缩积与<span class="link local"><a href="./映射谱.html" title="映射谱 [映射谱]">映射谱</a></span>构成 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 上的<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span>对称幺半范畴结构.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="同伦群(稳定同伦论)"><header><h1><span class="taxon"></span>同伦群 (稳定同伦论) <a class="slug" href="./同伦群(稳定同伦论).html">[同伦群(稳定同伦论)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>在<span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span>中, 由于每个对象都是任意阶的环路空间, 对象的 “<span class="link local"><a href="./同伦群.html" title="同伦群 [同伦群]">同伦群</a></span>” 都是 $\mathbb E_\infty$-代数 (<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换群</a></span>); 对整个<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>而言, 各阶同伦群的地位相同, 仅相差平移.</p>
@@ -1253,13 +1277,18 @@ $$
     (-)_+\wedge E \dashv \operatorname{Hom}_{\mathsf{Sp}}(E,-).
 $$</p>
 <p>函子 $(-)_+\wedge E\colon \mathsf{Ani} \to \mathsf{Sp}$ 保持余极限, 因而被它在一个点上的取值完全决定.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="映射谱"><header><h1><span class="taxon"></span>映射谱 <a class="slug" href="./映射谱.html">[映射谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>映射谱是 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 上的<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span>对称幺半范畴结构的一部分.</p>
+<h2>定义</h2>
+<h3>作为右伴随</h3>
+<p>对<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span> $X\in\mathsf{Sp}$, 由 $X$ 出发的映射谱函子 $[X,-]\colon\mathsf{Sp}\to\mathsf{Sp}$ 是<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span> (张量积) 函子 $X\wedge -\colon \mathsf{Sp} \to \mathsf{Sp}$ 的右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="环谱"><header><h1><span class="taxon"></span>环谱 <a class="slug" href="./环谱.html">[环谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>环谱是 <span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">$(\mathsf{Sp},\wedge)$</a></span> 中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>或<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="稳定化"><header><h1><span class="taxon"></span>稳定化 <a class="slug" href="./稳定化.html">[稳定化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="稳定化"><header><h1><span class="taxon"></span>稳定化 <a class="slug" href="./稳定化.html">[稳定化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>以下的范畴默认为 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$(\infty,1)$-范畴</a></span>.</p>
-<p>每个具有有限极限的范畴都存在稳定化, 即自由地变成<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>. 稳定化可以构造为<span class="link local"><a href="./谱对象.html" title="谱对象 [谱对象]">谱对象</a></span>的范畴.</p>
+<p>每个具有有限极限的范畴都存在稳定化, 即自由地变成<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>. 稳定化可以构造为<span class="link local"><a href="./谱对象.html" title="谱对象 [谱对象]">谱对象</a></span>的范畴. 人们一般考虑<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>的稳定化.</p>
 <h2>定义</h2>
 <p><span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span>带基点范畴 $\mathcal C$ 的稳定化是 <span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">$\mathrm {Pr}^{\mathrm L}$</a></span> 中的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>
 $$
@@ -1280,6 +1309,12 @@ $$
 $$
 X\simeq\operatorname{colim}\Sigma^{\infty -n}\Omega^{\infty-n}X.
 $$</p>
+<h3>与对称幺半结构的关系</h3>
+<p>可表现对称幺半范畴的稳定化仍有对称幺半结构; 稳定化提升为函子
+$$
+\operatorname{Stab}\colon \mathsf{CAlg}(\mathsf{Pr}) \to \mathsf{CAlg}(\mathsf{Pr}_{\mathrm{st}}).
+$$</p>
+<p>最基本的例子即是 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 上的对称幺半结构.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="稳定同伦范畴"><header><h1><span class="taxon"></span>“稳定同伦范畴” <a class="slug" href="./稳定同伦范畴.html">[稳定同伦范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>#稳定同伦论</p>
 <p>稳定同伦范畴是<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的<span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">无穷范畴</a></span>的<span class="link local"><a href="./同伦范畴.html" title="“同伦范畴” [同伦范畴]">同伦范畴</a></span>.</p>

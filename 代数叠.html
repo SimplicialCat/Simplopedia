@@ -826,7 +826,8 @@
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
 <article><section class="block" data-taxon=""><details open><summary id="代数叠"><header><h1><span class="taxon"></span>代数叠 <a class="slug" href="./代数叠.html">[代数叠]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>代数叠又叫 Artin 叠, 是仿射概形的范畴上具有 (平坦) 坐标卡以及适当的可表性的<span class="link local"><a href="./叠.html" title="叠 [叠]">叠</a></span>.</p>
+<h2>观念</h2>
+<p><strong>代数叠</strong>又叫 <strong>Artin 叠</strong>, 是仿射概形的范畴上一类特殊的<span class="link local"><a href="./叠.html" title="叠 [叠]">叠</a></span>, 具有平坦 (光滑) 坐标卡以及适当的可表性.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Gestalt"><header><h1><span class="taxon"></span>Gestalt <a class="slug" href="./Gestalt.html">[Gestalt]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./term-gestalt.html" title="格式塔 [term-gestalt]">格式塔</a></span> (Gestalt, 复数 Gestalten) 是 <span class="link local"><a href="./ScholzeStefanichGestalten.html" title="Geometry and Higher Category Theory [ScholzeStefanichGestalten]">Scholze–Stefanich</a></span> 提出的一种几何概念, 旨在恢复完全的<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>: 通过考虑几何对象上的 “线性 $(\infty,n)$-范畴” 取值的层, 即<span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span>, 使得任何几何对象都具有代数的对应物, 而不再需要对 “仿射” 几何对象进行粘合操作.</p>
 <blockquote>
@@ -892,4 +893,21 @@ $$
 \mathrm{LocSys}^{\text{Betti}}_G \simeq \operatorname{Map}(*/\pi_1, */G) = \operatorname{Hom}(\pi_1,G)/G.
 $$
 其中 $*/G$ 为<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>, $G$-作用为<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="主丛的模空间"><header><h1><span class="taxon"></span>主丛的模空间 <a class="slug" href="./主丛的模空间.html">[主丛的模空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>见<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>, <span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>.</p>
+<h2>定义</h2>
+<h3>点函子</h3>
+<p>固定概形 $X$ 与群 $G$. 对于<span class="link local"><a href="./探测.html" title="探测 [探测]">测试</a></span>概形 $S$, $\mathrm{Bun}_G$ 的 $S$-点的群胚是 $X\times S$ 上的 $G$-丛的群胚.</p>
+<h2>性质</h2>
+<h3>代数叠</h3>
+<p>$\mathrm{Bun}_G$ 是<span class="link local"><a href="./代数叠.html" title="代数叠 [代数叠]">代数叠</a></span>.</p>
+<h3>双陪集刻画</h3>
+<p>固定基域 $k$, 设 $X$ 为光滑不可约射影曲线, $G$ 为分裂连通<span class="link local"><a href="./约化群.html" title="约化群 [约化群]">约化群</a></span>, 记 $R_x=\mathcal O(X\setminus x)$ 为仿射曲线 $X\setminus x$ 上的正则函数环, 记 $\mathcal O_x\simeq k[t](t.md)$ 为 $x$ 处形式圆盘的函数环, $K_x\simeq k((t))$ 为去心形式圆盘的函数环.</p>
+<p>由于 $G$-主丛由去心形式圆盘上的一个转移函数 $g\in G(K_x)$ 决定, 且左乘 $G(R_x)$ 与右乘 $G(\mathcal O_x)$ 均不改变其本质, 故 $\mathrm{Bun}_G$ 的 $k$-点为
+$$
+\mathrm{Bun}_G(k)\simeq G(R_x)\backslash G(K_x) / G(O_x).
+$$</p>
+<h3>稳定丛</h3>
+<p>所谓稳定丛是某种意义上 “一般” 的丛, 其自同构平凡; 稳定丛的模空间是 $\mathrm{Bun}_G$ 中的开集 $\mathrm{Bun}_G^\circ$, 且该开集为光滑代数簇. <span class="link local"><a href="./Hitchin模空间.html" title=" [Hitchin模空间]">Hitchin 模叠</a></span>是 $T^*\mathrm{Bun}_G^\circ$ 的某种紧化.</p>
 </details></section></details></section></footer></article></div></body></html>

@@ -1508,7 +1508,11 @@ $$
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="Picard群"><header><h1><span class="taxon"></span>Picard 群 <a class="slug" href="./Picard群.html">[Picard群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>空间的 Picard 群是其上<span class="link local"><a href="./线丛.html" title="线丛 [线丛]">线丛</a></span>的同构类关于张量积构成的群.</p>
+<p>空间的 <strong>Picard 叠</strong>是其上<span class="link local"><a href="./线丛.html" title="线丛 [线丛]">线丛</a></span> (即 <span class="link local"><a href="./乘法群概形.html" title="乘法群概形 [乘法群概形]">$\mathbb{G}_m$</a></span>-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>) 的<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>,
+$$
+\mathrm{Pic}(X) = \operatorname{Maps}(X,\mathbf{B}\mathbb{G}_m);
+$$
+<strong>Picard 群</strong>是 Picard 叠的 $0$-<span class="link local"><a href="./截断性(同伦类型论).html" title="截断性 (同伦类型论) [截断性(同伦类型论)]">截断</a></span>, 即线丛的同构类关于张量积构成的群.</p>
 <h2>定义</h2>
 <h3>复流形</h3>
 <p>紧复流形 $M$ 的 Picard 群 $\text{Pic}(M)$ 是<span class="link local"><a href="./全纯线丛.html" title="“全纯线丛” [全纯线丛]">全纯线丛</a></span>的同构类关于张量积构成的群. $\text{Pic}(M)$ 的单位元是平凡丛, 也即全纯函数层 $\mathcal O_M$.</p>
@@ -1570,7 +1574,12 @@ $$
 </ul>
 <p>证明的思路是: 命题对 $Y\in\mathsf{Fin}$ 较为平凡, 然后将两边视为关于 $Y$ 的函子, 沿 $\mathsf{Fin}\to\mathsf{Ani}$ 作左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>.</p>
 <blockquote>
-<p>注. 我目前对这个命题的理解是: $\mathsf{Fin}$ 在 $\mathsf{Ani}$ 中关于筛余极限稠密; 对称幺半范畴 $\mathfrak C$ 中的交换代数等同于对称幺半函子 $\mathsf{Fin} \to \mathfrak C$, 命题中等式右端正是将其按筛余极限延拓为 $\mathsf{Ani} \to \mathfrak C$ 的方法, 同时也是沿 $\mathsf{Fin}\to\mathsf{Ani}$ 左 Kan 扩张的计算式.</p>
+<p>注. 我目前对这个命题的理解是:</p>
+<ul>
+<li>$\mathsf{Fin}$ 在 $\mathsf{Ani}$ 中关于<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>稠密;</li>
+<li>对称幺半范畴 $\mathfrak C$ 中的交换代数等同于对称幺半函子 $\mathsf{Fin} \to \mathfrak C$;</li>
+<li>命题中等式右端正是将其按筛余极限延拓为 $\mathsf{Ani} \to \mathfrak C$ 的方法, 同时也是沿 $\mathsf{Fin}\to\mathsf{Ani}$ 左 Kan 扩张的计算式.</li>
+</ul>
 <p>注意, 函子 $\mathsf{Ani} \to \mathfrak C$, $Y\mapsto\mathcal A^{\otimes Y}$ 不保持余极限. 换言之, 它不是 $1\to\mathfrak C$ 沿 $1\to\mathsf{Ani}$ 的左 Kan 扩张.</p>
 </blockquote>
 <p><strong>引理 1</strong>. 函子 $\mathsf{Ani}\to\mathfrak C$, $Y\mapsto \mathcal A^{\otimes Y}$ 是其沿 $\mathsf{Fin}\to\mathsf{Ani}$ 的限制的左 Kan 扩张.</p>
@@ -1589,7 +1598,10 @@ $$
 保持所有极限.</p>
 <p>定义生象 $Y$ 上<span class="link local"><a href="./局部系统.html" title="局部系统 [局部系统]">局部系统</a></span>的范畴为
 $$
-\mathsf{LS}(Y) = \operatorname{lim}_Y \mathsf{Vect},
+\begin{aligned}
+\mathsf{LS}(Y) &amp;= \operatorname{lim}_Y^{\mathsf{DGCat}} \mathsf{Vect}\\
+&amp;=\operatorname{lim}_Y^{\mathsf{CAlg}(\mathsf{DGCat})} \mathsf{Vect},
+\end{aligned}
 $$
 它是对称幺半 DG 范畴. 若 $\mathscr Y$ 为较好的拓扑空间 (仿紧, 同伦等价于 CW 复形, 同伦维数有限), $Y$ 为 $\mathscr Y$ 对应的生象, 则 $\mathsf{LS}(Y)$ 等价于 $\mathsf{Shv}_{\text{lisse}}(Y)$, 即线性空间层的导出范畴 $\mathsf{Shv}(\mathscr{Y})$ 中上同调为局部常值层的对象构成的全子范畴.</p>
 <p>由<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>的余极限的性质,</p>
@@ -1621,15 +1633,15 @@ $$</p>
 <p><strong>定理</strong>. 若 $Y$ 仅有有限个连通分支, 则上述函子为等价.</p>
 <h3>1.7 由 $\mathcal A^{\otimes Y}$ 出发的函子</h3>
 <p>仍设 $\mathfrak C$ 为 $\mathsf{CAlg}(\mathsf{DGCat}),\mathsf{Alg}(\mathsf{DGCat}),\mathsf{DGCat}$ 之一, $\mathcal C$ 为 $\mathfrak C$ 的对象.</p>
-<p>由于 $\mathcal A^{\otimes Y}$ 可表现为<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>, 相应地 $\operatorname{Hom}(\mathcal A^{\otimes Y},\mathcal C)$ 可表现为<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>
+<p>由于 $\mathcal A^{\otimes Y}$ 可表现为 $\mathfrak C$ 中的<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>, 相应地 $\operatorname{Hom}_{\mathfrak C}(\mathcal A^{\otimes Y},\mathcal C)$ 可表现为<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>
 $$
 \begin{aligned}
-\operatorname{Hom}(\mathcal A^{\otimes Y},\mathcal C)&amp;\simeq \int_{I\in\mathsf{Fin}}\operatorname{Hom}(Y^I\otimes\mathcal A^{\otimes I},\mathcal C)\\
+\operatorname{Hom}_{\mathfrak C}(\mathcal A^{\otimes Y},\mathcal C)&amp;\simeq \int_{I\in\mathsf{Fin}}\operatorname{Hom}_{\mathfrak C}(Y^I\otimes\mathcal A^{\otimes I},\mathcal C)\\
 &amp;\simeq \int_{I\in\mathsf{Fin}}\operatorname{Hom}(\mathcal A^{\otimes I},\mathcal C\otimes\mathsf{LS}(Y^I))\\
 &amp;\simeq\mathsf{Nat}_{\mathsf{Fun}(\mathsf{Fin},\mathfrak C)}(\mathcal A^{\otimes (-)},\mathcal C\otimes\mathsf{LS}(Y^{(-)})).
 \end{aligned}
 $$</p>
-<p>从而 $\mathcal A^{\otimes Y}$ 在 DG 范畴 $\mathcal M$ 上的作用, 即幺半函子 $\mathcal A^{\otimes Y} \to \operatorname{End}(\mathcal M)$, 等同于一族幺半函子
+<p><strong>例</strong>. $\mathfrak C = \mathsf{Alg}(\mathsf{DGCat})$, $\mathcal A^{\otimes Y}$ 在 DG 范畴 $\mathcal M$ 上的作用, 即幺半函子 $\mathcal A^{\otimes Y} \to \operatorname{End}(\mathcal M)$, 等同于一族幺半函子
 $$
 \mathcal A^{\otimes I} \to \operatorname{End}(\mathcal M)\otimes\mathsf{LS}(Y^I).
 $$</p>
@@ -1717,7 +1729,7 @@ $$</p>
 <li>通过伴随的余单位映射到 $\mathrm{ev}_{y_2}(S_{1}(1_{\mathcal A}))$;</li>
 <li>上述对象等价于 $S_Y(1_{\mathcal A^{\otimes Y}})$.</li>
 </ul>
-<p><strong>例</strong>. 考虑如下情形.</p>
+<p>脑中图像:</p>
 <ul>
 <li>$\mathcal A = \mathsf{QCoh}(X)$, $\mathcal A^{\otimes Y}=\mathsf{QCoh}(X^Y)$ (其中 $X^Y$ 表示 $\operatorname{Maps}(Y,X)$), 特别地 $\mathcal A^{\otimes\Sigma (J)}=\mathsf{QCoh}(X^{\Sigma (J)})=\mathsf{QCoh}(X\times_{X^J}X)$;</li>
 <li>$\mathcal C =\mathsf{QCoh}(S)$, $S_Y\colon \mathcal A^{\otimes Y}\to\mathcal C$ 对应映射 $f\colon S\to X^Y$ (其中 $S$ 是任何测试空间, 或为万有情形即 $X^Y$ 本身);</li>
@@ -2370,6 +2382,39 @@ $$
 $$</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, <span class="link local"><a href="./单纯范畴.html" title="“单纯范畴” [单纯范畴]">单纯范畴</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="压缩积"><header><h1><span class="taxon"></span>压缩积 <a class="slug" href="./压缩积.html">[压缩积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>带基点空间 (<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>) 的压缩积是带基点空间范畴 $\mathsf{Ani}_*$ 的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半结构</a></span>, 单位为 $*$.</p>
+<p><span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的压缩积是<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半结构</a></span>, 单位为<span class="link local"><a href="./球谱.html" title="“球谱” [球谱]">球谱</a></span> $\mathbb{S}$.</p>
+<h2>定义</h2>
+<p>带基点空间 (<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>) $X,Y$ 的<strong>压缩积</strong> (smash product) $X\wedge Y$ 是如下带基点空间:
+$$
+X\wedge Y = \operatorname{cofib}(X\vee Y \to X\times Y).
+$$</p>
+<h2>性质</h2>
+<p>压缩积 (生象或谱) 保持各个分量的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>. 事实上, 由于 $\mathsf{Ani}_*$ 由 $S^0$ 生成, 故 $\mathsf{Ani}_*$ 上的压缩积由该性质及其单位完全刻画.</p>
+<p><strong>命题</strong>. $\mathsf{Ani}_*$ 上有唯一的对称幺半结构 $(\mathsf{Ani}_*,\wedge,S^0)$, 满足</p>
+<ul>
+<li>其单位为 $S^0$,</li>
+<li>且 $\wedge$ 保持各个分量的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</li>
+</ul>
+<p><strong>命题</strong>. $\mathsf{Sp}$ 上有唯一的对称幺半结构 $(\mathsf{Sp},\wedge,\mathbb S)$, 满足</p>
+<ul>
+<li>其单位为 $\mathbb S$,</li>
+<li>函子 $\Sigma^\infty\colon\mathsf{Ani}_*\to\mathsf{Sp}$ 为对称幺半函子,</li>
+<li>且 $\wedge$ 保持各个分量的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</li>
+</ul>
+<p>注意如下函子均为对称幺半函子:
+$$
+(\mathsf{Ani},\times)\overset{(-)_+}{\to}(\mathsf{Ani}_*,\wedge)
+\overset{\Sigma^\infty}{\to}(\mathsf{Sp},\wedge),
+$$
+从而复合
+$\Sigma^\infty_+\colon\mathsf{Ani} \to \mathsf{Sp}$ 为对称幺半函子, 也即
+$$
+\Sigma^\infty_+(X\times Y)\simeq \Sigma^\infty_+X \wedge \Sigma^\infty_+Y.
+$$</p>
+<h3>与映射谱的关系</h3>
+<p>压缩积与<span class="link local"><a href="./映射谱.html" title="映射谱 [映射谱]">映射谱</a></span>构成 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 上的<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span>对称幺半范畴结构.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="双代数"><header><h1><span class="taxon"></span>双代数 <a class="slug" href="./双代数.html">[双代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p><span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $\mathcal C$ 中的双代数是其<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>范畴中的<span class="link local"><a href="./结合余代数.html" title="结合余代数 [结合余代数]">结合余代数</a></span>, 也是其<span class="link local"><a href="./结合余代数.html" title="结合余代数 [结合余代数]">结合余代数</a></span>范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
@@ -3001,7 +3046,7 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="辫幺半范畴"><header><h1><span class="taxon"></span>辫幺半范畴 <a class="slug" href="./辫幺半范畴.html">[辫幺半范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>辫幺半范畴是 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span>-幺半范畴, 是介于<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>和<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>之间的一种结构.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="迹"><header><h1><span class="taxon"></span>迹 <a class="slug" href="./迹.html">[迹]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="迹"><header><h1><span class="taxon"></span>迹 <a class="slug" href="./迹.html">[迹]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>自映射的迹</h3>
 <p>对于<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal C$ 中<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶对象</a></span> $X$ 的自映射 $f\colon X\to X$, 定义<strong>迹</strong> $\operatorname{Tr}(f)\in\operatorname{End}_{\mathcal C}(1)$,

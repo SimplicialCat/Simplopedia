@@ -828,6 +828,19 @@
 <article><section class="block" data-taxon=""><details open><summary id="Chtoucas"><header><h1><span class="taxon"></span>Chtouca 与整体 Langlands 参数 <a class="slug" href="./Chtoucas.html">[Chtoucas]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是 <span class="link local"><a href="./VLafforgueCht.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueCht]">V. Lafforgue 文章</a></span>的阅读笔记.</p>
 <h2>1. Hecke 叠</h2>
+<p>设 $X$ 为 $\mathbb F_q$ 上的不可约光滑射影曲线, $G$ 为约化群.</p>
+<p>设 $N\subset X$ 为有限点集, 定义 $\mathrm{Bun}_{G,N}$ 为 $X$ 上具有 “$N$ 级结构” 的 $G$-丛的<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>. 所谓 “$N$ 级结构” (structure de niveau $N$) $(\mathcal G,\psi)$ 是指在 $N$ 上的平凡化 $\psi\colon \mathcal G|_N \simeq G|_N$.</p>
+<p>设 $I$ 为有限集, $(I_1,\cdots,I_k)$ 为 $I$ 的分划. 定义 Hecke 叠
+$$
+\mathrm{Hecke}_{N,I}^{(I_1,\cdots,I_k)}
+$$
+为如下资料的分类叠:</p>
+<ul>
+<li>$x_i\in X\setminus N$ ($i\in I$);</li>
+<li>$(\mathcal G_0,\psi_0),\cdots,(\mathcal G_k,\psi_k) \in \mathrm{Bun}_{G,N}$;</li>
+<li>对 $j\in\{1,\cdots,k\}$, 同构 $\phi_j\colon \mathcal G_{j-1}|_{X\setminus \{x_i\colon i\in I_j\}} \simeq \mathcal G_{j}|_{X\setminus \{x_i\colon i\in I_j\}}$, 保持级结构.</li>
+</ul>
+<p>简言之, $\mathrm{Hecke}_{N,I}^{(I_1,\cdots,I_k)}$ 的一个点对应着一个具有 $N$ 级结构的 $G$-丛经过一列调整, 每次调整 $I_j$ 个点处的平凡化.</p>
 <h2>2. $G$-Chtouca 的叠</h2>
 <p>设 $I$ 为有限集, $(I_1,\cdots,I_k)$ 是 $I$ 的分拆. 设 $N\subset X$ 为有限点集, 定义 $(X\setminus N)^I$ 上的叠
 $$
@@ -889,10 +902,10 @@ $$</p>
 <li><span class="link local"><a href="./quantumtori.html" title="量子圆环 [quantumtori]">量子圆环</a></span></li>
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="远足代数"><header><h1><span class="taxon"></span>远足代数 <a class="slug" href="./远足代数.html">[远足代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>远足代数是 <span class="link local"><a href="./VLafforgueExc.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueExc]">Vincent Lafforgue</a></span> 定义的一个<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>, 作用在尖点自守形式空间上, 而其<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>实现了 Langlands 参数的空间, 从而通过<span class="link local"><a href="./谱分解.html" title="谱分解 [谱分解]">谱分解</a></span>将自守形式的空间分解为 Langlands 参数标记的分量, 给出 “自守到 Galois” 的对应.</p>
+<p>远足代数是 <span class="link local"><a href="./VLafforgueCht.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueCht]">Vincent Lafforgue</a></span> 定义的一个<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>, 作用在尖点自守形式空间上, 而其<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>实现了 Langlands 参数的空间, 从而通过<span class="link local"><a href="./谱分解.html" title="谱分解 [谱分解]">谱分解</a></span>将自守形式的空间分解为 Langlands 参数标记的分量, 给出 “自守到 Galois” 的对应.</p>
 <p>相关笔记:</p>
 <ul>
-<li><span class="link local"><a href="./Chtoucas.html" title="Chtouca 与整体 Langlands 参数 [Chtoucas]">Chtouca 与整体 Langlands 参数</a></span> - <span class="link local"><a href="./VLafforgueExc.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueExc]">Vincent Lafforgue</a></span> 原文的笔记.</li>
+<li><span class="link local"><a href="./Chtoucas.html" title="Chtouca 与整体 Langlands 参数 [Chtoucas]">Chtouca 与整体 Langlands 参数</a></span> - <span class="link local"><a href="./VLafforgueCht.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueCht]">Vincent Lafforgue</a></span> 原文的笔记.</li>
 <li><span class="link local"><a href="./notes-GKRV.html" title="GKRV [notes-GKRV]">GKRV</a></span> - Betti 语境的玩具.</li>
 <li><span class="link local"><a href="./notes-AGKRRV.html" title="AGKRRV [notes-AGKRRV]">AGKRRV</a></span></li>
 <li><span class="link local"><a href="./Excursion.html" title="远足代数 Excursion Algebra [Excursion]">远足代数 Excursion Algebra</a></span> - <span class="link local"><a href="./GaitsgoryLinReevesExcALg.html" title="On the excursion algebra [GaitsgoryLinReevesExcALg]">Gaitsgory–Lin–Reeves</a></span> 抽象了这一代数, 将其定义为某种局部系统模空间上的函数环.</li>

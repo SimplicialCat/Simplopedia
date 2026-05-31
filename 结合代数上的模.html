@@ -986,7 +986,12 @@ $$
 </ul>
 <p>证明的思路是: 命题对 $Y\in\mathsf{Fin}$ 较为平凡, 然后将两边视为关于 $Y$ 的函子, 沿 $\mathsf{Fin}\to\mathsf{Ani}$ 作左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>.</p>
 <blockquote>
-<p>注. 我目前对这个命题的理解是: $\mathsf{Fin}$ 在 $\mathsf{Ani}$ 中关于筛余极限稠密; 对称幺半范畴 $\mathfrak C$ 中的交换代数等同于对称幺半函子 $\mathsf{Fin} \to \mathfrak C$, 命题中等式右端正是将其按筛余极限延拓为 $\mathsf{Ani} \to \mathfrak C$ 的方法, 同时也是沿 $\mathsf{Fin}\to\mathsf{Ani}$ 左 Kan 扩张的计算式.</p>
+<p>注. 我目前对这个命题的理解是:</p>
+<ul>
+<li>$\mathsf{Fin}$ 在 $\mathsf{Ani}$ 中关于<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>稠密;</li>
+<li>对称幺半范畴 $\mathfrak C$ 中的交换代数等同于对称幺半函子 $\mathsf{Fin} \to \mathfrak C$;</li>
+<li>命题中等式右端正是将其按筛余极限延拓为 $\mathsf{Ani} \to \mathfrak C$ 的方法, 同时也是沿 $\mathsf{Fin}\to\mathsf{Ani}$ 左 Kan 扩张的计算式.</li>
+</ul>
 <p>注意, 函子 $\mathsf{Ani} \to \mathfrak C$, $Y\mapsto\mathcal A^{\otimes Y}$ 不保持余极限. 换言之, 它不是 $1\to\mathfrak C$ 沿 $1\to\mathsf{Ani}$ 的左 Kan 扩张.</p>
 </blockquote>
 <p><strong>引理 1</strong>. 函子 $\mathsf{Ani}\to\mathfrak C$, $Y\mapsto \mathcal A^{\otimes Y}$ 是其沿 $\mathsf{Fin}\to\mathsf{Ani}$ 的限制的左 Kan 扩张.</p>
@@ -1005,7 +1010,10 @@ $$
 保持所有极限.</p>
 <p>定义生象 $Y$ 上<span class="link local"><a href="./局部系统.html" title="局部系统 [局部系统]">局部系统</a></span>的范畴为
 $$
-\mathsf{LS}(Y) = \operatorname{lim}_Y \mathsf{Vect},
+\begin{aligned}
+\mathsf{LS}(Y) &amp;= \operatorname{lim}_Y^{\mathsf{DGCat}} \mathsf{Vect}\\
+&amp;=\operatorname{lim}_Y^{\mathsf{CAlg}(\mathsf{DGCat})} \mathsf{Vect},
+\end{aligned}
 $$
 它是对称幺半 DG 范畴. 若 $\mathscr Y$ 为较好的拓扑空间 (仿紧, 同伦等价于 CW 复形, 同伦维数有限), $Y$ 为 $\mathscr Y$ 对应的生象, 则 $\mathsf{LS}(Y)$ 等价于 $\mathsf{Shv}_{\text{lisse}}(Y)$, 即线性空间层的导出范畴 $\mathsf{Shv}(\mathscr{Y})$ 中上同调为局部常值层的对象构成的全子范畴.</p>
 <p>由<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>的余极限的性质,</p>
@@ -1037,15 +1045,15 @@ $$</p>
 <p><strong>定理</strong>. 若 $Y$ 仅有有限个连通分支, 则上述函子为等价.</p>
 <h3>1.7 由 $\mathcal A^{\otimes Y}$ 出发的函子</h3>
 <p>仍设 $\mathfrak C$ 为 $\mathsf{CAlg}(\mathsf{DGCat}),\mathsf{Alg}(\mathsf{DGCat}),\mathsf{DGCat}$ 之一, $\mathcal C$ 为 $\mathfrak C$ 的对象.</p>
-<p>由于 $\mathcal A^{\otimes Y}$ 可表现为<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>, 相应地 $\operatorname{Hom}(\mathcal A^{\otimes Y},\mathcal C)$ 可表现为<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>
+<p>由于 $\mathcal A^{\otimes Y}$ 可表现为 $\mathfrak C$ 中的<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>, 相应地 $\operatorname{Hom}_{\mathfrak C}(\mathcal A^{\otimes Y},\mathcal C)$ 可表现为<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>
 $$
 \begin{aligned}
-\operatorname{Hom}(\mathcal A^{\otimes Y},\mathcal C)&amp;\simeq \int_{I\in\mathsf{Fin}}\operatorname{Hom}(Y^I\otimes\mathcal A^{\otimes I},\mathcal C)\\
+\operatorname{Hom}_{\mathfrak C}(\mathcal A^{\otimes Y},\mathcal C)&amp;\simeq \int_{I\in\mathsf{Fin}}\operatorname{Hom}_{\mathfrak C}(Y^I\otimes\mathcal A^{\otimes I},\mathcal C)\\
 &amp;\simeq \int_{I\in\mathsf{Fin}}\operatorname{Hom}(\mathcal A^{\otimes I},\mathcal C\otimes\mathsf{LS}(Y^I))\\
 &amp;\simeq\mathsf{Nat}_{\mathsf{Fun}(\mathsf{Fin},\mathfrak C)}(\mathcal A^{\otimes (-)},\mathcal C\otimes\mathsf{LS}(Y^{(-)})).
 \end{aligned}
 $$</p>
-<p>从而 $\mathcal A^{\otimes Y}$ 在 DG 范畴 $\mathcal M$ 上的作用, 即幺半函子 $\mathcal A^{\otimes Y} \to \operatorname{End}(\mathcal M)$, 等同于一族幺半函子
+<p><strong>例</strong>. $\mathfrak C = \mathsf{Alg}(\mathsf{DGCat})$, $\mathcal A^{\otimes Y}$ 在 DG 范畴 $\mathcal M$ 上的作用, 即幺半函子 $\mathcal A^{\otimes Y} \to \operatorname{End}(\mathcal M)$, 等同于一族幺半函子
 $$
 \mathcal A^{\otimes I} \to \operatorname{End}(\mathcal M)\otimes\mathsf{LS}(Y^I).
 $$</p>
@@ -1133,7 +1141,7 @@ $$</p>
 <li>通过伴随的余单位映射到 $\mathrm{ev}_{y_2}(S_{1}(1_{\mathcal A}))$;</li>
 <li>上述对象等价于 $S_Y(1_{\mathcal A^{\otimes Y}})$.</li>
 </ul>
-<p><strong>例</strong>. 考虑如下情形.</p>
+<p>脑中图像:</p>
 <ul>
 <li>$\mathcal A = \mathsf{QCoh}(X)$, $\mathcal A^{\otimes Y}=\mathsf{QCoh}(X^Y)$ (其中 $X^Y$ 表示 $\operatorname{Maps}(Y,X)$), 特别地 $\mathcal A^{\otimes\Sigma (J)}=\mathsf{QCoh}(X^{\Sigma (J)})=\mathsf{QCoh}(X\times_{X^J}X)$;</li>
 <li>$\mathcal C =\mathsf{QCoh}(S)$, $S_Y\colon \mathcal A^{\otimes Y}\to\mathcal C$ 对应映射 $f\colon S\to X^Y$ (其中 $S$ 是任何测试空间, 或为万有情形即 $X^Y$ 本身);</li>
@@ -1692,7 +1700,7 @@ $$
 我们证明该映射为单射. 注意, 遗忘函子 $\mathsf{Mod}(A)\to\mathsf{Set}$ 保持滤余极限, 故 $\operatorname{colim}_{S\in F} A[S]$ 的每个元素均来自某一个 $A[S]$. 设 $S\in F$ 为 $M$ 的任一有限子集, 取 $A[S]$ 的任意元素 $\sum a_i x_i$ ($a_i\in A, x_i\in S$). 由前面的论证, 这说明存在另一组 (有限个) 元素 $y_j\in M$, 使得 $x_i$ 可表示为其线性组合 $x_i = \sum_j b_{ij} y_j$, 且 $\sum_i a_i b_{ij} = 0$. 这说明 $\sum a_i x_i$ 在余极限 $\operatorname{colim}_{S\in F} A[S]$ 中实际上为 $0$. $\square$</p>
 <h2>性质</h2>
 <h3>滤余极限</h3>
-<p>平坦模的滤余极限是平坦模. 这是因为 $\mathsf{Ab}$ 中<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>与<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>交换.</p>
+<p>平坦模的滤余极限是平坦模. 这是因为 $\mathsf{Ab}$ 中<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>与<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>交换 (见<span class="link local"><a href="./lim-colim.html" title="极限与余极限交换 [lim-colim]">极限与余极限交换</a></span>).</p>
 <h3>基变换</h3>
 <p>若 $M$ 为平坦 $A$-模, $B$ 为 $A$-代数 (即有环同态 $A\to B$), 则 $M\otimes_A B$ 为平坦 $B$-模. 这是因为
 $$
@@ -2022,7 +2030,7 @@ $$
 \operatorname{Hom}_{\mathsf{CAlg}}(C^*(A),\mathbb{C})\simeq\operatorname{Hom}_{\mathsf{Ab}}(A,\mathbb{C}).
 $$</p>
 <h3>自守函数的 Hecke 作用的谱分解</h3>
-<p><span class="link local"><a href="./VLafforgueExc.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueExc]">Vincent Lafforgue</a></span> 使用某些 Hecke 函子定义了<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span>, 以给出 <span class="link local"><a href="./Langlands纲领.html" title="Langlands 纲领 [Langlands纲领]">Langlands</a></span> 预言的自守函数空间的谱分解.</p>
+<p><span class="link local"><a href="./VLafforgueCht.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueCht]">Vincent Lafforgue</a></span> 使用某些 Hecke 函子定义了<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span>, 以给出 <span class="link local"><a href="./Langlands纲领.html" title="Langlands 纲领 [Langlands纲领]">Langlands</a></span> 预言的自守函数空间的谱分解.</p>
 <p>这一思路在<span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 纲领</a></span>中得到延续. 人们发现<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span>等同于某种局部系统模叠上的函数代数. 而提升一个范畴层级后 (见<span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span>—但这里实际上只需要提升一阶), 该种局部系统模叠上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>范畴在<span class="link local"><a href="./自守层.html" title="自守层 [自守层]">自守层</a></span>范畴上的 <span class="link local"><a href="./Hecke作用.html" title="Hecke 作用 [Hecke作用]">Hecke 作用</a></span>可给出自守层沿局部系统模叠的谱分解, 见 <span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="高阶模"><header><h1><span class="taxon"></span>高阶模 <a class="slug" href="./高阶模.html">[高阶模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>

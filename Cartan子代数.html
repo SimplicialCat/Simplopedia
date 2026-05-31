@@ -890,15 +890,21 @@ $$</p>
 <p>$\mathrm {SO}(2n+1)$ 的 Weyl 群为 $(\mathbb{Z}/2)^n \rtimes S_n$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="三角分解"><header><h1><span class="taxon"></span>“三角分解” <a class="slug" href="./三角分解.html">[三角分解]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>三角分解是将 Lie 代数分为三部分: <span class="link local"><a href="./Cartan子代数.html" title="“Cartan 子代数” [Cartan子代数]">Cartan 子代数</a></span> $\mathfrak h$, 以及两个幂零子代数 $\mathfrak n_+,\mathfrak n_-$, 对应正负<span class="link local"><a href="./根系.html" title=" [根系]">根</a></span>.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="权"><header><h1><span class="taxon"></span>权 <a class="slug" href="./权.html">[权]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="权"><header><h1><span class="taxon"></span>权 <a class="slug" href="./权.html">[权]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./表示论.html" title="表示论 [表示论]">表示论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>设 $V$ 是 Lie 代数 $\mathfrak g$ 的表示, $\lambda$ 是 <span class="link local"><a href="./Cartan子代数.html" title="“Cartan 子代数” [Cartan子代数]">Cartan 子代数</a></span> $\mathfrak h$ 上的线性泛函.</p>
-<p>$V$ 关于<strong>权</strong> (weight) $\lambda$ 的权空间定义为
+<h3>Lie 群或代数群</h3>
+<p>Lie 群或代数群的<strong>权</strong> (weight) 就是其<span class="link local"><a href="./极大环面.html" title="极大环面 [极大环面]">极大环面</a></span>的<span class="link local"><a href="./特征.html" title="特征, 余特征 [特征]">特征</a></span>. 权构成的 Abel 群称为<strong>权格</strong> (weight lattice), 记为
+$$
+X^*(T) := \operatorname{Hom}(T,\mathbb G_m).
+$$</p>
+<p>对于固定的<span class="link local"><a href="./根.html" title="根, 根系 [根]">正根系</a></span> $\Delta_+$, <strong>支配权</strong> (dominant weight) 是和每个 $\alpha\in\Delta_+$ 配对都非负的权.</p>
+<h3>Lie 代数</h3>
+<p>Lie 代数的权是其 <span class="link local"><a href="./Cartan子代数.html" title="“Cartan 子代数” [Cartan子代数]">Cartan 子代数</a></span>上的线性函数, 即 $\mathfrak{h}^*$ 的元素.</p>
+<p>设 $V$ 是 Lie 代数 $\mathfrak g$ 的表示, $\lambda$ 是 <span class="link local"><a href="./Cartan子代数.html" title="“Cartan 子代数” [Cartan子代数]">Cartan 子代数</a></span> $\mathfrak h$ 上的线性函数.定义 $V$ 关于权 $\lambda$ 的<strong>权空间</strong>为
 $$
 V_\lambda = \{ v\in V \colon  \forall H\in \mathfrak h, Hv=\lambda (H) v\}.
 $$</p>
-<h2>根</h2>
-<p>若 $V$ 是 $\mathfrak g$ 的伴随表示, 此时的权称为<span class="link local"><a href="./根.html" title="根, 根系 [根]">根</a></span> (root).</p>
+<p>特别地, 若 $V$ 是 $\mathfrak g$ 的伴随表示, 此时具有非平凡权空间的权称为<span class="link local"><a href="./根.html" title="根, 根系 [根]">根</a></span> (root).</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="权模"><header><h1><span class="taxon"></span>“权模” <a class="slug" href="./权模.html">[权模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>固定 Lie 代数的 <span class="link local"><a href="./Cartan子代数.html" title="“Cartan 子代数” [Cartan子代数]">Cartan 子代数</a></span> $\mathfrak h\subset \mathfrak g$.</p>
 <p>设 $M$ 是 $\mathfrak g$ 的表示. 对于 $\lambda\in \mathfrak h^*$, 定义权空间 (weight space, 参见<span class="link local"><a href="./权.html" title="权 [权]">权</a></span>)
@@ -921,7 +927,7 @@ $$
 <p>$U(n)$ 的极大环面为 $U(1)^n$, 即对角矩阵构成的子群. 类似地, $SO(2n),SO(2n+1)$ 的极大环面为 $SO(2)^n$, 即分块对角矩阵构成的子群, 每一块形如 $\begin{pmatrix}	\cos\theta &amp; -\sin\theta \\ \sin\theta &amp; \cos\theta\end{pmatrix}$.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Cartan子代数.html" title="“Cartan 子代数” [Cartan子代数]">Cartan 子代数</a></span>, <span class="link local"><a href="./Weyl群.html" title="Weyl 群 (极大环面) [Weyl群]">Weyl 群</a></span></p>
-</details></section><section class="block" data-taxon=""><details ><summary id="根"><header><h1><span class="taxon"></span>根, 根系 <a class="slug" href="./根.html">[根]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="根"><header><h1><span class="taxon"></span>根, 根系 <a class="slug" href="./根.html">[根]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./表示论.html" title="表示论 [表示论]">表示论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>Lie 代数的根系 (root system) 最早由 W. Killing 约 1889 年为了研究<span class="link local"><a href="./单Lie代数.html" title="“单 Lie 代数” [单Lie代数]">单 Lie 代数</a></span>的分类提出.</p>
 <p>注意区分<span class="link local"><a href="./根(Lie代数).html" title="“根 (Lie 代数)” [根(Lie代数)]">根 (Lie 代数)</a></span> (radical).</p>
 <h2>定义</h2>

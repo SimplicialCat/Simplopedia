@@ -827,13 +827,114 @@
 
 <article><section class="block" data-taxon=""><details open><summary id="lim-colim"><header><h1><span class="taxon"></span>极限与余极限交换 <a class="slug" href="./lim-colim.html">[lim-colim]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>陈述</h2>
-<p>在 $\mathsf{Set}$ 或 $\mathsf{Ani}$ 中,</p>
+<p>在 $\mathsf{Set}$ 或 $\mathsf{Ani}$ 中, 对指标范畴 $I,J$ 以及一族对象 $X_{i,j}$, 有自然的映射
+$$
+\operatorname{colim}_{i\in I}\operatorname{lim}_{j\in J}X_{i,j} \to \operatorname{lim}_{j\in J}\operatorname{colim}_{i\in I} X_{i,j};
+$$
+当它是等价时, 称 $I$-极限与 $J$-余极限交换.</p>
+<p>两个常见的例子: $\mathsf{Set}$ 或 $\mathsf{Ani}$ 中,</p>
 <ul>
 <li><span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>与<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>交换,</li>
 <li><span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">有限积</a></span>与<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>交换.</li>
 </ul>
-<p>(注意, 对于 $\mathsf{Set}$ 与 $\mathsf{Ani}$, “有限” 的概念不相同, 从而滤, 筛等概念也不尽相同.)</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="极限"><header><h1><span class="taxon"></span>极限 <a class="slug" href="./极限.html">[极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>这两个事实分别可用于描述<span class="link local"><a href="./本质代数理论.html" title="本质代数理论 [本质代数理论]">本质代数理论</a></span>以及<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>.</p>
+<p>注意, 对于 $\mathsf{Set}$ 与 $\mathsf{Ani}$, “<span class="link local"><a href="./有限范畴.html" title="有限范畴 [有限范畴]">有限</a></span>” 的概念不相同, 从而滤, 筛等概念也不尽相同.</p>
+<p>以下对 $\mathsf{Set}$ 陈述的命题对 $\mathsf{Ani}$ 也有相应版本.</p>
+<h3>极限图类的 Galois 对应</h3>
+<p>“$\mathsf{Set}$ 中的 $I$-极限与 $J$-余极限交换” 的关系给出极限图的类与余极限图的类之间的 <span class="link local"><a href="./Galois对应.html" title="Galois 对应 [Galois对应]">Galois 对应</a></span>.</p>
+<p>对于小范畴的类 $\mathfrak I$, $\mathfrak J$, 记</p>
+<ul>
+<li>${\mathfrak I}^{r} = \{$ $J$ : 对任意 $I\in \mathfrak I$, $\mathsf{Set}$ 中 $J$-余极限与 $I$-极限交换 $\}$;</li>
+<li>${\mathfrak J}^{l} = \{$ $I$ : 对任意 $J\in \mathfrak J$, $\mathsf{Set}$ 中 $J$-余极限与 $I$-极限交换 $\}$.</li>
+</ul>
+<p>由定义, $\{\text{有限范畴}\}^{r} = \{\text{滤范畴}\}$.</p>
+<p>注意, $\{\text{滤范畴}\}^{l} \supset \{\text{有限范畴}\}$, 但 $\{\text{滤范畴}\}^{l}$ 不仅包含有限范畴, 还包含所有存在<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首</a></span>有限子范畴的范畴, 如 $(\mathbb{N},\leq)$. 不过, 以这种范畴为指标的极限等价于有限极限.</p>
+<h3>与锥的存在性的关系</h3>
+<p><span class="link local"><a href="./滤范畴.html" title="滤范畴 [滤范畴]">滤范畴</a></span>的有限图上有<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">余锥</a></span>. 如下是这一结论的推广.</p>
+<p><strong>命题</strong>. 对于小范畴 $I$, $J$, 若 $\mathsf{Set}$ 中 $I$-极限与 $J$-余极限交换, 则 $J$ 中的任何 $I^{\mathrm{op}}$-图 $X\colon I^{\mathrm{op}}\to J$ 上有<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">余锥</a></span>.</p>
+<p><em>证明</em>. 考虑函子 $F\colon I\times J\to\mathsf{Set}$,
+$$
+F(i,j) = \operatorname{Hom}_J(X(i),j).
+$$
+那么
+$$
+\operatorname{colim}_{j\in J} F(i,j) = 1,
+$$
+从而
+$$
+\operatorname{lim}_{i\in I}\operatorname{colim}_{j\in J}F(i,j) = 1.
+$$
+假设 $\mathsf{Set}$ 中 $I$-极限与 $J$-余极限交换, 则
+$$
+\operatorname{colim}_{j\in J}\operatorname{lim}_{i\in I}F(i,j) = 1.
+$$
+这说明存在 $j\in J$ 使得 $\operatorname{lim}_{i\in I}F(i,j)$ 至少存在一个元素. 而 $\operatorname{lim}_{i\in I}F(i,j)$ 的元素等同于 $X$ 上的余锥, 故结论成立.</p>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="平坦模"><header><h1><span class="taxon"></span>平坦模 <a class="slug" href="./平坦模.html">[平坦模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>平坦模可视为<span class="link local"><a href="./平坦函子.html" title="平坦函子 [平坦函子]">平坦函子</a></span>的特例.</p>
+<h2>定义</h2>
+<p>对于交换环 $A$ 上的模 $M$, 若 $M\otimes (-)\colon \mathsf{Mod}(A)\to\mathsf{Mod}(A)$ 左正合 (保持有限极限), 则称 $M$ 为平坦 $A$-模.</p>
+<p>由 $\operatorname{Tor}$ 的定义, $M$ 平坦当且仅当 $\operatorname{Tor}_1(M,-) = 0$.</p>
+<p>更一般地, 若 $A$ 为非交换环, $M$ 为 $A$ 上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">右模</a></span>, 当 $M\otimes_A (-)\colon \mathsf{LMod}(A)\to\mathsf{Ab}$ 保持有限极限时, 也可称 $M$ 为平坦模.</p>
+<h3>使用理想的等价定义</h3>
+<p><strong>命题</strong>. $A$-模 $M$ 平坦当且仅当对任意理想 $I$,
+$$
+(I\to A)\otimes_A M = (I\otimes_A M \to M)
+$$
+为单射, 即
+$I\otimes_A M \to IM$
+为同构.</p>
+<h3>“事出有因”</h3>
+<p>平坦模有另一种等价刻画, 可以形象地总结为 “<strong>事出有因</strong>”. 其中,</p>
+<ul>
+<li>“事” 指的是 $M$ 中有一条等式 $\sum_i a_i m_i = 0$, $a_i\in A$, $m_i\in M$;</li>
+<li>“因” 指的是存在另一组元素 $n_j\in M$, 使得 $m_i$ 可表示为其线性组合 $m_i = \sum_j b_{ij} n_j$, 且 $\sum_i a_i b_{ij} = 0$.</li>
+</ul>
+<p>这就是说, $M$ 中发生的每一件事必定可以找到 $A$ 中的原因. 用范畴论语言, 对任意有限生成自由 $A$-模 $F$ 与复合为零的两个映射
+$$
+(A \overset{a}{\to} F \overset{m}{\to} M) = 0,
+$$
+存在另一个有限生成自由 $A$-模 $E$ 使得 $m\colon F\to M$ 分解为
+$$
+m = (F \overset{b}{\to} E \overset{n}{\to} M),
+$$
+且映射在 $E$ 处就已经 “中道崩殂” 了,
+$$
+(A \overset{a}{\to} F \overset{b}{\to} E) = 0.
+$$</p>
+<p><em>证明</em>. 记 $I$ 为 $m_i$ 生成的理想. 由前面的命题, $M$ 平坦当且仅当对任意 (有限生成) 理想 $I$,
+$$
+(I\to A)\otimes_A M = (I\otimes_A M \to M)
+$$
+为单射. 换言之, $\sum_i a_i m_i = 0$ 蕴涵
+$$
+\sum_i a_i \otimes m_i = 0 \in I\otimes_A M.
+$$
+由张量积的刻画 ($I\otimes_A M$ 是集合 $I\times M$ 生成的自由 $A$-模的商), 上式成立等价于存在另一组元素 $n_j\in M$, 使得 $m_i$ 可表示为其线性组合 $m_i = \sum_j b_{ij} n_j$, 且 $\sum_i a_i b_{ij} = 0$.
+$\square$</p>
+<h3>滤余极限</h3>
+<p><strong>命题</strong>. $A$-模 $M$ 平坦当且仅当 $M$ 是有限生成自由 $A$-模的<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>.</p>
+<p><em>证明</em>. 一方面, 有限生成自由模是平坦模, 平坦模的滤余极限是平坦模. 另一方面, 假设 $M$ 平坦. 考虑 $M$ 的所有有限子集的族 $F$, 在包含关系下构成<span class="link local"><a href="./滤范畴.html" title="滤范畴 [滤范畴]">滤范畴</a></span>. 那么有满射
+$$
+\operatorname{colim}_{S\in F} A[S] \to M.
+$$
+我们证明该映射为单射. 注意, 遗忘函子 $\mathsf{Mod}(A)\to\mathsf{Set}$ 保持滤余极限, 故 $\operatorname{colim}_{S\in F} A[S]$ 的每个元素均来自某一个 $A[S]$. 设 $S\in F$ 为 $M$ 的任一有限子集, 取 $A[S]$ 的任意元素 $\sum a_i x_i$ ($a_i\in A, x_i\in S$). 由前面的论证, 这说明存在另一组 (有限个) 元素 $y_j\in M$, 使得 $x_i$ 可表示为其线性组合 $x_i = \sum_j b_{ij} y_j$, 且 $\sum_i a_i b_{ij} = 0$. 这说明 $\sum a_i x_i$ 在余极限 $\operatorname{colim}_{S\in F} A[S]$ 中实际上为 $0$. $\square$</p>
+<h2>性质</h2>
+<h3>滤余极限</h3>
+<p>平坦模的滤余极限是平坦模. 这是因为 $\mathsf{Ab}$ 中<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>与<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>交换 (见<span class="link local"><a href="./lim-colim.html" title="极限与余极限交换 [lim-colim]">极限与余极限交换</a></span>).</p>
+<h3>基变换</h3>
+<p>若 $M$ 为平坦 $A$-模, $B$ 为 $A$-代数 (即有环同态 $A\to B$), 则 $M\otimes_A B$ 为平坦 $B$-模. 这是因为
+$$
+(M\otimes_A B) \otimes_B (-) \simeq M\otimes_A (-).
+$$</p>
+<h2>例</h2>
+<p><strong>命题</strong>. 对于交换环 $A$ 的乘性子集 $S$, <span class="link local"><a href="./局部化.html" title="局部化 (环, 模) [局部化]">局部化</a></span> $S^{-1}A$ 为平坦 $A$-模, 即局部化函子 $S^{-1}\colon \mathsf{Mod}(A)\to\mathsf{Mod}(A)$ 正合.</p>
+<p>这是因为
+$$
+S^{-1} A = \operatorname{colim}_{s\in S} \frac{1}{s}A
+$$
+是一族有限生成自由模的滤余极限.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="极限"><header><h1><span class="taxon"></span>极限 <a class="slug" href="./极限.html">[极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>万有锥</h3>
 <p>设 $X \colon I \to \mathcal C$ 为函子, 记 $X(i)=X_i$. 定义 $X$ 上的<strong></strong><span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">锥</a></span>为 $\mathcal C$ 的对象 $c$ (称为锥的<strong>顶点</strong>) 配备其到每个 $X_i$ 的态射 $c\to X_i$, 满足对 $I$ 中任意态射 $i\to j$, 有如下交换图.
