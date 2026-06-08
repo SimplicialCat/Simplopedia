@@ -829,7 +829,28 @@
 <p>对于<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span> $P\to X$ 以及 $G$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span> $Y$, 可定义 $X$ 上以 $G$ 为结构群的 $Y$-丛, 称为<strong>关联丛</strong>, 有时记作 $P\times_G Y$.</p>
 <p>关联丛 $P\times_G Y$ 可理解为 $X$ 与 $Y$ 的 “扭曲乘积”. 例如当 $P\to X$ 为平凡 $G$-丛时, $P\times_G Y$ 即为 $X\times Y$.</p>
 <p>主丛 $P\to X$ 对应于分类映射 $X\to \mathbf{B}G$, 而 $G$-作用 $Y$ 可视为函子 $\mathbf{B}G\to \mathcal C$, 则关联丛 $X\times_G Y \to X$ 的分类映射是两个映射的复合 $X\to\mathcal C$.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Geo-Sat-eq"><header><h1><span class="taxon"></span>几何 Satake 等价 <a class="slug" href="./Geo-Sat-eq.html">[Geo-Sat-eq]</a></h1><div class="metadata"><ul><li class="meta-item">讲义</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="A1-Gm"><header><h1><span class="taxon"></span>仿射直线对乘法群的商 <a class="slug" href="./A1-Gm.html">[A1-Gm]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./代数几何.html" title="代数几何 [代数几何]">代数几何</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>仿射直线 $\mathbb A^1 = \operatorname{Spec}\mathbb{Z}[x] = \operatorname{Spec}\mathbb{Z}[\mathbb{N}]$ 上有<span class="link local"><a href="./乘法群概形.html" title="乘法群概形 [乘法群概形]">乘法群</a></span> $\mathbb G_m = \operatorname{Spec}\mathbb{Z}[x^{\pm 1}] = \operatorname{Spec}\mathbb{Z}[\mathbb{Z}]$ 的<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>. 在 $\mathsf{Aff}$ 上的 ($\mathsf{Ani}$-值 fpqc) 层范畴中取其商, 记作 $\mathbb A^1 / \mathbb G_m$.</p>
+<h2>性质</h2>
+<h3>拟凝聚层: 单纯消解</h3>
+<p>由 $\mathbb A^1\to \mathbb A^1 / \mathbb G_m$ 的 <span class="link local"><a href="./Čech脉.html" title="Čech 脉 [Čech脉]">Čech 脉</a></span> (其<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>为 $\mathbb A^1 / \mathbb G_m$) 可以将 $\mathsf{QCoh}(\mathbb A^1 / \mathbb G_m)$ <span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>为余单纯范畴
+$$
+\mathsf{QCoh}(\mathbb A^1) \rightrightarrows \mathsf{QCoh}(\mathbb A^1 \times \mathbb G_m) \to^3 \cdots
+$$
+的极限.</p>
+<h3>作为线丛截面的分类空间</h3>
+<p>概形 (叠) $X$ 到 $\mathbb A^1 / \mathbb G_m$ 的映射等同于 $X$ 上的线丛带有一个截面 (这个结构与 Cartier <span class="link local"><a href="./除子.html" title="“除子” [除子]">除子</a></span>有关). 具体地, 映射
+$$
+X \to \mathbb A^1 / \mathbb G_m
+$$
+相当于如下资料:</p>
+<ul>
+<li>映射 $X \to \mathbf{B}\mathbb G_m$, 对应 $X$ 上的 $\mathbb G_m$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span> $P\to X$ (也给出<span class="link local"><a href="./关联丛.html" title="关联丛 [关联丛]">关联</a></span>的<span class="link local"><a href="./线丛.html" title="线丛 [线丛]">线丛</a></span> $\mathcal L = P\times_{\mathbb G_m}\mathbb A^1$),</li>
+<li>以及 $\mathbb G_m$-<span class="link local"><a href="./等变映射.html" title="等变映射 [等变映射]">等变映射</a></span> $P\to\mathbb A^1$, 这又相当于 $\mathbb G_m$-等变截面 $P\to P\times\mathbb A^1$, 也即截面 $X\to\mathcal L$.</li>
+</ul>
+<h3>与滤的关系</h3>
+<p>见<span class="link local"><a href="./fil-gr.html" title="滤与分次的叠观点 [fil-gr]">滤与分次的叠观点</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="Geo-Sat-eq"><header><h1><span class="taxon"></span>几何 Satake 等价 <a class="slug" href="./Geo-Sat-eq.html">[Geo-Sat-eq]</a></h1><div class="metadata"><ul><li class="meta-item">讲义</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>参考</p>
 <ul>
 <li>Gaitsgory 等人 2010 春季的<span class="link external"><a href="https://people.mpim-bonn.mpg.de/gaitsgde/grad_2009/" title="几何表示论讨论班 [https://people.mpim-bonn.mpg.de/gaitsgde/grad_2009/]">几何表示论讨论班</a></span>,</li>

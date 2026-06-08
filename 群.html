@@ -828,6 +828,7 @@
 <article><section class="block" data-taxon=""><details open><summary id="群"><header><h1><span class="taxon"></span>群 <a class="slug" href="./群.html">[群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>群记录了对称性, 也即范畴中的对象的自同构.</p>
+<p>相关讲义: <span class="link local"><a href="./GrpAni.html" title="生象群 [GrpAni]">生象群</a></span></p>
 <h2>定义</h2>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="E_B-算畴"><header><h1><span class="taxon"></span>E_B-算畴 <a class="slug" href="./E_B-算畴.html">[E_B-算畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>算畴 $\mathbb E_B$ 是 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> (Definition 5.4.2.10) 引入的一个记号, 对任意映射 $B \to \mathsf{BTop}(n)$ 定义一个<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathbb E_B$, 推广了 <span class="link local"><a href="./En-算畴.html" title="En-算畴 [En-算畴]">$\mathbb E_n$-算畴</a></span>.</p>
@@ -972,30 +973,9 @@ $$
 <li>$Z(G) = \Omega^2(\mathsf{Ani}^\simeq,\mathbf{B}G)$ 为 $\mathsf{Ani}^\simeq$ (“<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的生象”) 在 $\mathbf{B}G$ 处的二重<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> (可见 $Z(G)$ 是个 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span>-群);</li>
 <li>$\mathbf{B}Z(G)$ 是 $\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)$ 在 $\mathrm{id}_{\mathbf{B}G}$ 处的连通分支.</li>
 </ul>
-<p>一个生象 $A$ 的连通分支是 $A\to\tau_{\leq 0} A$ 的纤维. 此外, 两个群的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>之间 (作为<strong>不带点</strong>生象) 的映射空间满足
+<p>由定义, 中心 $Z(G)$ 到 $G$ 本身有一典范映射
 $$
-\operatorname{Hom}_{\mathsf{Ani}}(\mathbf{B}G,\mathbf{B}H)\simeq \operatorname{Hom}_{\mathsf{Grp}(\mathsf{Ani})}(G,H)/_{\mathrm{Ad}} H,
-$$
-即群同态的生象关于 $H$ 的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的商,
-因此该定义也可等价地陈述如下. 考虑群 $G$ 的<span class="link local"><a href="./群的外自同构.html" title="群的外自同构 [群的外自同构]">外自同构</a></span>群
-$$
-\begin{aligned}
-    \operatorname{Out}(G)&amp;=
-\tau_{\leq 0}
-(\operatorname{Aut}_{\mathsf{Grp}}(G) /_{\mathrm{Ad}} G)\\
-&amp; =\tau_{\leq 0}\operatorname{Aut}(\mathbf{B}G).
-\end{aligned}
-$$
-那么有<span class="link local"><a href="./群短正合列.html" title="群的短正合列 [群短正合列]">短正合列</a></span>
-$$
-\mathbf{B}Z(G) \to \mathsf{Aut}(\mathbf{B}G) \to \operatorname{Out}(G)
-$$
-以及<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
-$$
-\begin{aligned}
-    \mathbf{B}Z(G) &amp;\to \mathsf{Aut}(\mathbf{B}G) \to \operatorname{Out}(G)\\
-\to \mathbf{B}^2Z(G) &amp;\to \mathbf{B}\mathsf{Aut}(\mathbf{B}G) \to \mathbf{B}\operatorname{Out}(G).
-\end{aligned}
+Z(G)\to \operatorname{Aut}_{\mathbf{B}G}(*) = G.
 $$</p>
 <h3>环</h3>
 <p>固定交换环 $k$ 作为基环.
@@ -1022,9 +1002,17 @@ $$</p>
 $$
 Z(R) := \operatorname{End}_{\operatorname{End}_{\mathsf{Cat}}(\mathsf{Mod}(A))}(\mathrm{id}).
 $$</p>
+<h3>范畴</h3>
+<p>范畴 $\mathcal{C}$ 的中心为<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>
+$$
+Z(\mathcal{C}) := \operatorname{End}_{\operatorname{End}_{\mathsf{Cat}}(X)}(\mathrm{id}_{\mathcal{C}}).
+$$
+见后文 “$2$-范畴的对象”.</p>
+<p>由定义, 若将群 $G$ 视为单对象范畴 $\mathbf{B}G$, 则 $G$ 的中心即是范畴 $\mathbf{B}G$ 的中心. 当然, 一般的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的中心也可通过视为单对象<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>来定义.</p>
 <h3>幺半范畴</h3>
-<p>设 $\mathcal C$ 为 $k$-线性<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>,
-定义 $\mathcal C$ 的 <strong>Drinfeld 中心</strong> $Z(\mathcal C)$ 是一个<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半范畴</a></span>, 可理解为两个函子 $\mathcal C \to \operatorname{Hom}_k(\mathcal C,\mathcal C)$ 的<span class="link local"><a href="./等化子.html" title="等化子 [等化子]">等化子</a></span>, 其对象为 $\mathcal C$ 的对象 $X$ 配备自然变换
+<p><strong>注</strong>. 当我们说幺半范畴的中心时, 一般不是将其视为范畴像上一小节那样定义中心, 而是视为 $\mathsf{Cat}$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>定义中心.</p>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>,
+此时 $\mathcal C$ 的中心 (又称 <strong>Drinfeld 中心</strong>) $Z(\mathcal C)$ 是一个<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半范畴</a></span>, 可理解为两个函子 $\mathcal C \rightrightarrows \operatorname{End}(\mathcal C)$ 的<span class="link local"><a href="./等化子.html" title="等化子 [等化子]">等化子</a></span>, 其对象为 $\mathcal C$ 的对象 $X$ 配备自然变换
 $$
 X\otimes (-) \to (-)\otimes X,
 $$
@@ -1037,8 +1025,51 @@ $$
 它类似于 $\mathcal C$ 在 $X$ 处的二阶<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>.
 由 <span class="link local"><a href="./Eckmann--Hilton论证.html" title="Eckmann–Hilton 论证 [Eckmann--Hilton论证]">Eckmann–Hilton 论证</a></span>, $Z(X)$ 为 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span> 幺半群 (辫幺半群).</p>
 <p>这样定义的中心又称 <span class="link local"><a href="./Hochschild上同调.html" title="Hochschild 上同调 [Hochschild上同调]">Hochschild 上同调</a></span>.</p>
+<h2>性质</h2>
+<h3>万有中心映射</h3>
+<p>群 $G$ 的中心到 $G$ 的典范映射
+$$
+Z(G)\to G
+$$
+是万有的<span class="link local"><a href="./中心映射.html" title="中心群同态, 中心映射 [中心映射]">中心映射</a></span>.</p>
+<h3>与群作用, 模的关系</h3>
+<p>设群 $G$ 的中心为 $Z$, 考虑任意范畴中的 $G$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span> $X$, 那么 $Z$ 不仅作用于 $X$ 上, 而且该作用为 $G$-<span class="link local"><a href="./等变映射.html" title="等变映射 [等变映射]">等变</a></span>作用 (甚至为<span class="link local"><a href="./中心作用.html" title="中心作用 [中心作用]">中心作用</a></span>). 这是因为, 由定义,
+$$
+Z = \operatorname{Aut}(\mathrm{id}_{\mathbf{B}G})
+$$
+作用于 $\mathrm{id}_{\mathbf{B}G}$ 上, 故作用于任何函子 $\mathbf{B}G\to\mathcal{C}$ 上.</p>
+<p>推而广之, 对任意范畴 $\mathcal{C}$, 其中心
+$$
+Z(\mathcal{C})=\operatorname{Aut}(\mathrm{id}_{\mathcal{C}})
+$$
+<span class="link local"><a href="./中心作用.html" title="中心作用 [中心作用]">中心作用</a></span>于任何函子 $F\colon\mathcal{C} \to \mathcal{D}$ 上, 也即有群同态
+$$
+Z(\mathcal{C}) \to Z(\mathsf{Fun}(\mathcal{C},\mathcal{D})) \to Z(\operatorname{End}(F)).
+$$
+其中第二个箭头为 “取自然变换在 $F$ 上的分量”.</p>
+<h2>例</h2>
+<h3>中心不是子群的例子</h3>
+<p>生象群 $G$ 的中心不一定是 $G$ 的子群, 即典范映射 $Z(G)\to G$ 不一定是 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>映射.</p>
+<p>考虑 $G = \Omega S^2$, 映射
+$$
+Z(G) = \Omega_{\mathrm{id}}\operatorname{Aut}(S^2) \to \Omega S^2
+$$
+在基点处的纤维为 $\Omega_{\mathrm{id}}\operatorname{Aut}_*(S^2) \simeq \Omega^3 S^2$, 不是 $(-1)$-截断生象.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./余中心.html" title="余中心 [余中心]">余中心</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="中心作用"><header><h1><span class="taxon"></span>中心作用 <a class="slug" href="./中心作用.html">[中心作用]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 在某范畴的对象 $X$ 上的<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span> $G\to\operatorname{End}(X)$, 若其穿过 $\operatorname{End}(X)$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>, 则称之为<strong>中心作用</strong>.</p>
+<h2>性质</h2>
+<h3>中心的中心作用</h3>
+<p>对于某 $2$-范畴 $\mathcal{C}$ 的对象 $X$, 考虑其<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>
+$$
+Z(X) := \operatorname{End}_{\operatorname{End}_{\mathcal C}(X)}(\mathrm{id}_X),
+$$
+那么 $Z(X)$ 在 $X$ 上有一个中心作用
+$$
+Z(X) \to Z(\operatorname{End}(X)).
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="中心扩张"><header><h1><span class="taxon"></span>中心扩张 <a class="slug" href="./中心扩张.html">[中心扩张]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>抽象</h3>
@@ -1058,6 +1089,19 @@ $$
     \to\mathbf{B}^2 A.
 \end{aligned}
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="中心映射"><header><h1><span class="taxon"></span>中心群同态, 中心映射 <a class="slug" href="./中心映射.html">[中心映射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>同态 $H \to G$, 若其穿过 $G$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span> $H\to Z(G)$, 则称之为<strong>中心群同态</strong>.</p>
+<p>注意, 一般生象群之间的一个同态构成中心群同态是<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构而非性质</a></span>.</p>
+<p>中心群同态的概念也可以不依赖于中心的概念而定义; 将<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>视为带基点连通<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>, 我们定义<strong>中心映射</strong>的概念.</p>
+<p>对于带基点连通生象的保基点映射 $f\colon Y\to X$, 若存在如下交换图 (左图与右图的信息等价), 则称之为<strong>中心映射</strong>.</p>
+<p><figure><img src="./中心映射-1.svg" class="color-invert"/></figure></p>
+<p>考虑 $\operatorname{End}_{\mathsf{Ani}}(X)$ 中基点 $\mathrm{id}_X$ 所在的连通分支 $\operatorname{End}_{\mathsf{Ani}}(X)_{0}$; 由定义, 万有的中心映射即是 $\mathrm{ev}_*\colon \operatorname{End}_{\mathsf{Ani}}(X)_{0}\to X$.</p>
+<p>注意当 $X=\mathbf{B}G$ 时,
+$$
+\Omega_{\mathrm{id}}\operatorname{End}_{\mathsf{Ani}}(X)_{0} = \Omega_{\mathrm{id}}\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G) = Z(G),
+$$
+其中 $Z(G)$ 是 $G$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="主丛"><header><h1><span class="taxon"></span>主齐性空间, 主丛 <a class="slug" href="./主丛.html">[主丛]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>主齐性空间</strong> (principal homogeneous space), 又称<strong>旋子</strong> (torsor), 是一个 “忘掉了单位元在哪里的群”. 对于群 $G$, 一个 $G$-主齐性空间是一个带有 $G$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>的对象 $P$, 且满足其商 $P / G$ 是一个点 (在 $1$-范畴语境中这等同于说作用是自由且<span class="link local"><a href="./传递作用.html" title="传递作用 [传递作用]">传递</a></span>的).</p>
@@ -1153,6 +1197,17 @@ $$
 <p>对于<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span> $P\to X$ 以及 $G$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span> $Y$, 可定义 $X$ 上以 $G$ 为结构群的 $Y$-丛, 称为<strong>关联丛</strong>, 有时记作 $P\times_G Y$.</p>
 <p>关联丛 $P\times_G Y$ 可理解为 $X$ 与 $Y$ 的 “扭曲乘积”. 例如当 $P\to X$ 为平凡 $G$-丛时, $P\times_G Y$ 即为 $X\times Y$.</p>
 <p>主丛 $P\to X$ 对应于分类映射 $X\to \mathbf{B}G$, 而 $G$-作用 $Y$ 可视为函子 $\mathbf{B}G\to \mathcal C$, 则关联丛 $X\times_G Y \to X$ 的分类映射是两个映射的复合 $X\to\mathcal C$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="内自同构"><header><h1><span class="taxon"></span>群的内自同构 <a class="slug" href="./内自同构.html">[内自同构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$, 其<strong>内自同构</strong>是指由共轭
+$$
+g\mapsto hgh^{-1}
+$$
+给出的自同构.</p>
+<p>注意, 对于生象群 $G$ 上面的描述不能按字面意思理解; 内自同构的生象<strong>不是</strong> $G$ 的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span> $G\to\operatorname{Aut}(G)$ 的<span class="link local"><a href="./像.html" title="像 [像]">像</a></span>.</p>
+<p>对于生象群 $G$, 而是 $G/Z(G)$.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./群的外自同构.html" title="群的外自同构 [群的外自同构]">群的外自同构</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="分类意象"><header><h1><span class="taxon"></span>分类意象 <a class="slug" href="./分类意象.html">[分类意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <h3>“语法” 侧: 意象的表现</h3>
@@ -1252,7 +1307,7 @@ $$
 <h3>Galois 群</h3>
 <p>$x^5 - 2$ 在 $\mathbb{Q}$ 上的<span class="link local"><a href="./分裂域.html" title="分裂域 [分裂域]">分裂域</a></span>为 $\mathbb{Q}[\zeta,\alpha]$, 其中 $\zeta=\exp(2\pi/5),\alpha=\sqrt[5]{2}$. 考虑</p>
 <ul>
-<li>$\mathbb{Q}[\zeta]$ 的固定子群 $N$, 由于 $\mathbb{Q}[\zeta]/\mathbb{Q}$ <span class="link local"><a href="./正规扩张.html" title="正规扩张 [正规扩张]">正规</a></span> (是 $x^5-1$ 的分裂域), 故 $N\hookrightarrow G$ 为<span class="link local"><a href="./正规子群.html" title="正规子群 [正规子群]">正规子群</a></span>;</li>
+<li>$\mathbb{Q}[\zeta]$ 的固定子群 $N$, 由于 $\mathbb{Q}[\zeta]/\mathbb{Q}$ <span class="link local"><a href="./正规扩张.html" title="正规扩张 [正规扩张]">正规</a></span> (是 $x^5-1$ 的分裂域), 故 $N\hookrightarrow G$ 为<span class="link local"><a href="./正规子群.html" title="正规子群, 正规同态 [正规子群]">正规子群</a></span>;</li>
 <li>$\mathbb{Q}[\alpha]$ 的固定子群 $H$,</li>
 </ul>
 <p>那么
@@ -1455,7 +1510,8 @@ $$
 F\colon \mathbf{B}G\to\mathcal C,
 $$
 将 $\mathbf{B}G$ 中的对象 $*$ 映射到 $X$.</p>
-<p>换言之, $\mathbf{B}G$ 中的对象 $*$ 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的 $G$-作用.</p>
+<p><strong>注</strong>. 根据人为选取的约定, 我们将函子 $\mathbf{B}G\to\mathcal C$ 称为 $G$ 的<strong>左作用</strong> (这仅仅是因为我们习惯将作用符号写在左边). 相应地, 函子 $\mathbf{B}G^{\mathrm{op}}\to\mathcal C$ 称为 $G$ 的<strong>右作用</strong>. 但实际上 $\mathbf{B}G$ 等价于 $\mathbf{B}G^{\mathrm{op}}$ (因为它是一个群胚), 所以两个概念是等价的.</p>
+<p>用<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的观点看, 范畴 $\mathbf{B}G$ 中的对象 $*$ 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的 $G$-作用.</p>
 <p>定义 $G$-作用 $F\colon \mathbf{B}G\to\mathcal C$ 的<strong></strong><span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>为极限
 $$
 X^G := \operatorname{lim} F ;
@@ -1503,9 +1559,10 @@ $$
 X^G = \operatorname{Hom}_{\mathsf{Ani}_{/\mathbf{B}G}}(\mathbf{B}G,X/G).
 $$</p>
 <h2>例</h2>
-<ul>
-<li>群在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span></li>
-</ul>
+<h3>左乘/右乘作用</h3>
+<p>对于生象群 $G$, 映射 $* \to \mathbf{B}G$ 对应的 $G$-作用即是 $G$ 在自身上的左乘作用.</p>
+<h3>共轭作用</h3>
+<p>每个群 $G$ 都有在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>.</p>
 <h3>$\mathbb{Z}$ 的作用</h3>
 <p>$\mathbb{Z}$ 在对象 $X$ 上的作用相当于 $X$ 的一个自同构 $\phi\colon X\to X$. 此时,</p>
 <ul>
@@ -1524,15 +1581,44 @@ $$</p>
 <p><span class="link local"><a href="./PGLn.html" title="PGLn [PGLn]">$\mathrm{PGL}_n$</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="群的外自同构"><header><h1><span class="taxon"></span>群的外自同构 <a class="slug" href="./群的外自同构.html">[群的外自同构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>定义<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的<strong>外自同构群</strong> (outer automorphism group) 为其<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> $\mathbf{B}G$ 作为<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的自同构群的 $0$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>:
+<p>定义 $n$-截断<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的 $n$-截断<strong>外自同构群</strong> (outer automorphism group) 为其<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> $\mathbf{B}G$ 作为<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的自同构群的 $n$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>:
 $$
 \begin{aligned}
-    \operatorname{Out}(G)&amp;:=
+    \operatorname{Out}_{\leq n}(G)&amp;:=
+\tau_{\leq n}
+(\operatorname{Aut}_{\mathsf{Grp}}(G) /_{\mathrm{Ad}} G)\\
+&amp; =\tau_{\leq n}\operatorname{Aut}(\mathbf{B}G).
+\end{aligned}
+$$</p>
+<p><strong>注</strong>. 两个群的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>之间 (作为<strong>不带点</strong>生象) 的映射空间满足
+$$
+\operatorname{Hom}_{\mathsf{Ani}}(\mathbf{B}G,\mathbf{B}H)\simeq \operatorname{Hom}_{\mathsf{Grp}(\mathsf{Ani})}(G,H)/_{\mathrm{Ad}} H,
+$$
+即群同态的生象关于 $H$ 的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的商.</p>
+<h3>离散群</h3>
+<p>考虑 $G$ 为离散群 ($0$-截断群) 的情形.</p>
+<p>考虑群 $G$ 的<span class="link local"><a href="./群的外自同构.html" title="群的外自同构 [群的外自同构]">外自同构</a></span>群
+$$
+\begin{aligned}
+    \operatorname{Out}(G)&amp;=
 \tau_{\leq 0}
 (\operatorname{Aut}_{\mathsf{Grp}}(G) /_{\mathrm{Ad}} G)\\
 &amp; =\tau_{\leq 0}\operatorname{Aut}(\mathbf{B}G).
 \end{aligned}
+$$
+一个生象 $A$ 在某点处的连通分支是 $A\to\tau_{\leq 0} A$ 在该点的<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维</a></span>. 由<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span> $Z(G)$ 的定义, $\mathbf{B}Z(G)$ 是 $\operatorname{Aut}(\mathbf{B}G)$ 在 $\mathrm{id}$ 处的连通分支. 那么有<span class="link local"><a href="./群短正合列.html" title="群的短正合列 [群短正合列]">短正合列</a></span>
+$$
+\mathbf{B}Z(G) \to \operatorname{Aut}(\mathbf{B}G) \to \operatorname{Out}(G)
+$$
+以及<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
+$$
+\begin{aligned}
+    \mathbf{B}Z(G) &amp;\to \operatorname{Aut}(\mathbf{B}G) \to \operatorname{Out}(G)\\
+\to \mathbf{B}^2Z(G) &amp;\to \mathbf{B}\operatorname{Aut}(\mathbf{B}G) \to \mathbf{B}\operatorname{Out}(G).
+\end{aligned}
 $$</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./内自同构.html" title="群的内自同构 [内自同构]">内自同构</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="自由环路空间"><header><h1><span class="taxon"></span>自由环路空间 <a class="slug" href="./自由环路空间.html">[自由环路空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>生象</h3>

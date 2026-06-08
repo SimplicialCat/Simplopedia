@@ -844,7 +844,129 @@ $$
 $$
 \operatorname{Hom}_G(*,Y)=\operatorname{Hom}_{/\mathbf{B}G}(\mathbf{B}G,Y/G).
 $$</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="吸引子"><header><h1><span class="taxon"></span>吸引子, 排斥子 <a class="slug" href="./吸引子.html">[吸引子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="A1-Gm"><header><h1><span class="taxon"></span>仿射直线对乘法群的商 <a class="slug" href="./A1-Gm.html">[A1-Gm]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./代数几何.html" title="代数几何 [代数几何]">代数几何</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>仿射直线 $\mathbb A^1 = \operatorname{Spec}\mathbb{Z}[x] = \operatorname{Spec}\mathbb{Z}[\mathbb{N}]$ 上有<span class="link local"><a href="./乘法群概形.html" title="乘法群概形 [乘法群概形]">乘法群</a></span> $\mathbb G_m = \operatorname{Spec}\mathbb{Z}[x^{\pm 1}] = \operatorname{Spec}\mathbb{Z}[\mathbb{Z}]$ 的<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>. 在 $\mathsf{Aff}$ 上的 ($\mathsf{Ani}$-值 fpqc) 层范畴中取其商, 记作 $\mathbb A^1 / \mathbb G_m$.</p>
+<h2>性质</h2>
+<h3>拟凝聚层: 单纯消解</h3>
+<p>由 $\mathbb A^1\to \mathbb A^1 / \mathbb G_m$ 的 <span class="link local"><a href="./Čech脉.html" title="Čech 脉 [Čech脉]">Čech 脉</a></span> (其<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>为 $\mathbb A^1 / \mathbb G_m$) 可以将 $\mathsf{QCoh}(\mathbb A^1 / \mathbb G_m)$ <span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>为余单纯范畴
+$$
+\mathsf{QCoh}(\mathbb A^1) \rightrightarrows \mathsf{QCoh}(\mathbb A^1 \times \mathbb G_m) \to^3 \cdots
+$$
+的极限.</p>
+<h3>作为线丛截面的分类空间</h3>
+<p>概形 (叠) $X$ 到 $\mathbb A^1 / \mathbb G_m$ 的映射等同于 $X$ 上的线丛带有一个截面 (这个结构与 Cartier <span class="link local"><a href="./除子.html" title="“除子” [除子]">除子</a></span>有关). 具体地, 映射
+$$
+X \to \mathbb A^1 / \mathbb G_m
+$$
+相当于如下资料:</p>
+<ul>
+<li>映射 $X \to \mathbf{B}\mathbb G_m$, 对应 $X$ 上的 $\mathbb G_m$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span> $P\to X$ (也给出<span class="link local"><a href="./关联丛.html" title="关联丛 [关联丛]">关联</a></span>的<span class="link local"><a href="./线丛.html" title="线丛 [线丛]">线丛</a></span> $\mathcal L = P\times_{\mathbb G_m}\mathbb A^1$),</li>
+<li>以及 $\mathbb G_m$-<span class="link local"><a href="./等变映射.html" title="等变映射 [等变映射]">等变映射</a></span> $P\to\mathbb A^1$, 这又相当于 $\mathbb G_m$-等变截面 $P\to P\times\mathbb A^1$, 也即截面 $X\to\mathcal L$.</li>
+</ul>
+<h3>与滤的关系</h3>
+<p>见<span class="link local"><a href="./fil-gr.html" title="滤与分次的叠观点 [fil-gr]">滤与分次的叠观点</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="中心"><header><h1><span class="taxon"></span>中心 <a class="slug" href="./中心.html">[中心]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>群</h3>
+<p>$\mathsf{Set}$ 中的群 (或幺半群) $G$ 的<strong>中心</strong>为 $G$ 中与所有元素交换的元素构成的子集:
+$$
+Z(G) = \{g\in G | \forall h\in G, gh=hg\}.
+$$</p>
+<p>对更一般的<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> (如<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>群) $G$,
+定义
+$$
+Z(G) := \operatorname{Aut}_{\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)}(\mathrm{id}).
+$$
+换言之,</p>
+<ul>
+<li>$Z(G) = \Omega^2(\mathsf{Ani}^\simeq,\mathbf{B}G)$ 为 $\mathsf{Ani}^\simeq$ (“<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的生象”) 在 $\mathbf{B}G$ 处的二重<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> (可见 $Z(G)$ 是个 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span>-群);</li>
+<li>$\mathbf{B}Z(G)$ 是 $\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)$ 在 $\mathrm{id}_{\mathbf{B}G}$ 处的连通分支.</li>
+</ul>
+<p>由定义, 中心 $Z(G)$ 到 $G$ 本身有一典范映射
+$$
+Z(G)\to \operatorname{Aut}_{\mathbf{B}G}(*) = G.
+$$</p>
+<h3>环</h3>
+<p>固定交换环 $k$ 作为基环.
+设 $A$ 为 $k$ 上的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. $A$ 的<strong>中心</strong>是与所有元素交换的元素的集合
+$$
+Z(A) = \{a\in A | \forall b\in A, ab=ba\},
+$$
+也是 $A$ 作为 $(A,A)$-双模的自同态的集合
+$$
+Z(A) = \operatorname{End}_{\mathsf{BiMod}(A,A)}(A),
+$$
+也是<span class="link local"><a href="./等化子.html" title="等化子 [等化子]">等化子</a></span>
+$$
+Z(A) = \operatorname{eq}\big(
+    A\rightrightarrows \operatorname{Hom}_k(A,A)
+\big),
+$$
+其中两个映射分别为左乘与右乘.</p>
+<p>回忆 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>中, <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 的恒等态射即是 $A$ 作为 $(A,A)$-双模. 因此, $A$ 的中心又可理解为
+$$
+Z(A) = \operatorname{End}_{\operatorname{End}_{\mathsf{Morita}}(A)}(\mathrm{id}).
+$$</p>
+<p>进一步, Morita 范畴嵌入线性范畴的范畴, 从而<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 的中心也可定义为
+$$
+Z(R) := \operatorname{End}_{\operatorname{End}_{\mathsf{Cat}}(\mathsf{Mod}(A))}(\mathrm{id}).
+$$</p>
+<h3>范畴</h3>
+<p>范畴 $\mathcal{C}$ 的中心为<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>
+$$
+Z(\mathcal{C}) := \operatorname{End}_{\operatorname{End}_{\mathsf{Cat}}(X)}(\mathrm{id}_{\mathcal{C}}).
+$$
+见后文 “$2$-范畴的对象”.</p>
+<p>由定义, 若将群 $G$ 视为单对象范畴 $\mathbf{B}G$, 则 $G$ 的中心即是范畴 $\mathbf{B}G$ 的中心. 当然, 一般的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的中心也可通过视为单对象<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>来定义.</p>
+<h3>幺半范畴</h3>
+<p><strong>注</strong>. 当我们说幺半范畴的中心时, 一般不是将其视为范畴像上一小节那样定义中心, 而是视为 $\mathsf{Cat}$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>定义中心.</p>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>,
+此时 $\mathcal C$ 的中心 (又称 <strong>Drinfeld 中心</strong>) $Z(\mathcal C)$ 是一个<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半范畴</a></span>, 可理解为两个函子 $\mathcal C \rightrightarrows \operatorname{End}(\mathcal C)$ 的<span class="link local"><a href="./等化子.html" title="等化子 [等化子]">等化子</a></span>, 其对象为 $\mathcal C$ 的对象 $X$ 配备自然变换
+$$
+X\otimes (-) \to (-)\otimes X,
+$$
+满足两个自然变换 $X\otimes (Y\otimes Z)\to (Y\otimes Z)\otimes X$ 相等.</p>
+<h3>2-范畴的对象</h3>
+<p>定义 $2$-范畴 $\mathcal C$ 的对象 $X$ 的<strong>中心</strong>为<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>
+$$
+Z(X) := \operatorname{End}_{\operatorname{End}_{\mathcal C}(X)}(\mathrm{id}_X).
+$$
+它类似于 $\mathcal C$ 在 $X$ 处的二阶<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>.
+由 <span class="link local"><a href="./Eckmann--Hilton论证.html" title="Eckmann–Hilton 论证 [Eckmann--Hilton论证]">Eckmann–Hilton 论证</a></span>, $Z(X)$ 为 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span> 幺半群 (辫幺半群).</p>
+<p>这样定义的中心又称 <span class="link local"><a href="./Hochschild上同调.html" title="Hochschild 上同调 [Hochschild上同调]">Hochschild 上同调</a></span>.</p>
+<h2>性质</h2>
+<h3>万有中心映射</h3>
+<p>群 $G$ 的中心到 $G$ 的典范映射
+$$
+Z(G)\to G
+$$
+是万有的<span class="link local"><a href="./中心映射.html" title="中心群同态, 中心映射 [中心映射]">中心映射</a></span>.</p>
+<h3>与群作用, 模的关系</h3>
+<p>设群 $G$ 的中心为 $Z$, 考虑任意范畴中的 $G$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span> $X$, 那么 $Z$ 不仅作用于 $X$ 上, 而且该作用为 $G$-<span class="link local"><a href="./等变映射.html" title="等变映射 [等变映射]">等变</a></span>作用 (甚至为<span class="link local"><a href="./中心作用.html" title="中心作用 [中心作用]">中心作用</a></span>). 这是因为, 由定义,
+$$
+Z = \operatorname{Aut}(\mathrm{id}_{\mathbf{B}G})
+$$
+作用于 $\mathrm{id}_{\mathbf{B}G}$ 上, 故作用于任何函子 $\mathbf{B}G\to\mathcal{C}$ 上.</p>
+<p>推而广之, 对任意范畴 $\mathcal{C}$, 其中心
+$$
+Z(\mathcal{C})=\operatorname{Aut}(\mathrm{id}_{\mathcal{C}})
+$$
+<span class="link local"><a href="./中心作用.html" title="中心作用 [中心作用]">中心作用</a></span>于任何函子 $F\colon\mathcal{C} \to \mathcal{D}$ 上, 也即有群同态
+$$
+Z(\mathcal{C}) \to Z(\mathsf{Fun}(\mathcal{C},\mathcal{D})) \to Z(\operatorname{End}(F)).
+$$
+其中第二个箭头为 “取自然变换在 $F$ 上的分量”.</p>
+<h2>例</h2>
+<h3>中心不是子群的例子</h3>
+<p>生象群 $G$ 的中心不一定是 $G$ 的子群, 即典范映射 $Z(G)\to G$ 不一定是 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>映射.</p>
+<p>考虑 $G = \Omega S^2$, 映射
+$$
+Z(G) = \Omega_{\mathrm{id}}\operatorname{Aut}(S^2) \to \Omega S^2
+$$
+在基点处的纤维为 $\Omega_{\mathrm{id}}\operatorname{Aut}_*(S^2) \simeq \Omega^3 S^2$, 不是 $(-1)$-截断生象.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./余中心.html" title="余中心 [余中心]">余中心</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="吸引子"><header><h1><span class="taxon"></span>吸引子, 排斥子 <a class="slug" href="./吸引子.html">[吸引子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>对于带 <span class="link local"><a href="./乘法群概形.html" title="乘法群概形 [乘法群概形]">$\mathbb G_m$</a></span>-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>的概形 (或类似几何对象) $X$, 定义其<strong>吸引子</strong> (attractor) $X^+$ 为 $\mathbb G_m$-<span class="link local"><a href="./等变映射.html" title="等变映射 [等变映射]">等变映射</a></span>的空间
 $$

@@ -1601,18 +1601,26 @@ $$</p>
 <p><span class="link local"><a href="./佐武等价.html" title="佐武等价 [佐武等价]">佐武 (Satake) 等价</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="离散赋值环"><header><h1><span class="taxon"></span>离散赋值环 <a class="slug" href="./离散赋值环.html">[离散赋值环]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>离散赋值环在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">几何侧</a></span>对应一个点带有周围的小邻域, 使得其上的函数能够承载在该点处 “消失阶数” 的概念.</p>
+<p>离散赋值环是一种特殊的<span class="link local"><a href="./赋值环.html" title="赋值环 [赋值环]">赋值环</a></span>, 在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">几何侧</a></span>对应一维的曲线上的一点带有周围的小邻域, 其上的函数具有在该点处 “消失阶数” 的概念.</p>
 <h2>定义</h2>
-<p>离散赋值环是<span class="link local"><a href="./赋值环.html" title="赋值环 [赋值环]">赋值环</a></span>,</p>
+<p>离散赋值环是含幺交换环 $R$ 带有一个映射 $v\colon R \to\mathbb{Z}\cup\{\infty \}$, 满足</p>
+<ul>
+<li>$v(x)=\infty$ 当且仅当 $x=0$;</li>
+<li>$v$ 为满射;</li>
+<li>$v(xy) = v(x) + v(y)$ (约定 $n+\infty = \infty$);</li>
+<li>$v(x+y) \geq \operatorname{min}(v(x),v(y))$.</li>
+</ul>
 <h3>等价定义</h3>
-<p>一个离散赋值环是一个 (含幺交换) 环 $A$ 带有一个映射 $v\colon A\to\mathbb{Z}\cup\{\infty \}$, 满足 $v(ab)=v(a)+v(b)$, $v(a+b)\geq\operatorname{min}(v(a),v(b))$.</p>
 <p>离散赋值环是仅有一个极大理想的<span class="link local"><a href="./主理想整环.html" title=" [主理想整环]">主理想整环</a></span>. 其极大理想由赋值 $\geq 1$ 的元素构成.</p>
 <p>离散赋值环是具有唯一不可约元的<span class="link local"><a href="./唯一分解整环.html" title="“唯一分解整环” [唯一分解整环]">唯一分解整环</a></span>.</p>
 <h2>性质</h2>
-<p>离散赋值环是<span class="link local"><a href="./局部环.html" title="“局部环” [局部环]">局部环</a></span>.</p>
+<h3>局部环</h3>
+<p>离散赋值环是<span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span>, 其唯一的极大理想由赋值 $\geq 1$ 的元素构成.</p>
+<h3>赋值环</h3>
+<p>离散赋值环是<span class="link local"><a href="./赋值环.html" title="赋值环 [赋值环]">赋值环</a></span>. 设 $R$ 为离散赋值环, 对 $x\in\operatorname{Frac}R$, 有 $x\in R$ 或 $x^{-1}\in R$.</p>
 <h2>例</h2>
 <p><span class="link local"><a href="./p-进整数.html" title="p-进整数 [p-进整数]">$p$-进整数</a></span>环 $\mathbb{Z}_p = \operatorname{lim}_n \mathbb{Z}/(p^n)$ 是离散赋值环, 赋值是被 $p$ 整除的次数.</p>
-<p>$\mathbb{C}[x]$</p>
+<p>$\mathbb{C}[t]_{(t)}$ 是离散赋值环, 赋值是被 $t$ 整除的次数.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="纤维函子"><header><h1><span class="taxon"></span>纤维函子 <a class="slug" href="./纤维函子.html">[纤维函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>纤维函子指的是某种空间 $X$ 上的层范畴 (作为几何对象的<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数侧对偶</a></span>) 到点上的层范畴的函子, 在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>下对应空间 $X$ 的一个<strong>点</strong>.</p>
@@ -1778,7 +1786,7 @@ $$
 $$</p>
 <h2>性质</h2>
 <h3>局部环</h3>
-<p><strong>命题</strong>. 赋值环是<span class="link local"><a href="./局部环.html" title="“局部环” [局部环]">局部环</a></span>.</p>
+<p><strong>命题</strong>. 赋值环是<span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span>.</p>
 <p><em>证明</em>. 设 $\mathscr O$ 是赋值环. 对任意 $x\in \mathscr O$ ($x\neq 0,1$), 在分式域中 $\frac{x}{1-x}$, $\frac{1-x}{x}$ 之一属于 $\mathcal O$, 这说明 $x,1-x$ 之一可逆, 故 $\mathscr O$ 为局部环.
 (这个证明使用了<span class="link local"><a href="./排中律.html" title="排中律 [排中律]">排中律</a></span>.)</p>
 <h3>理想</h3>

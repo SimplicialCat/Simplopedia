@@ -851,7 +851,96 @@ $$
 $$</p>
 <h2>例</h2>
 <p><span class="link local"><a href="./佐武等价.html" title="佐武等价 [佐武等价]">佐武 (Satake) 等价</a></span></p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Geo-Sat-eq"><header><h1><span class="taxon"></span>几何 Satake 等价 <a class="slug" href="./Geo-Sat-eq.html">[Geo-Sat-eq]</a></h1><div class="metadata"><ul><li class="meta-item">讲义</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Chtoucas"><header><h1><span class="taxon"></span>Chtouca 与整体 Langlands 参数 <a class="slug" href="./Chtoucas.html">[Chtoucas]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文是 <span class="link local"><a href="./VLafforgueCht.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueCht]">V. Lafforgue 文章</a></span>的阅读笔记.</p>
+<h2>1. Hecke 叠</h2>
+<p>设 $X$ 为 $\mathbb F_q$ 上的不可约光滑射影曲线, $G$ 为约化群.</p>
+<p>设 $N\subset X$ 为有限点集, 定义 $\mathrm{Bun}_{G,N}$ 为 $X$ 上具有 “$N$ 级结构” 的 $G$-丛的<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>. 所谓 “$N$ 级结构” (structure de niveau $N$) $(\mathcal G,\psi)$ 是指在 $N$ 上的平凡化 $\psi\colon \mathcal G|_N \simeq G|_N$.</p>
+<p>设 $I$ 为有限集, $(I_1,\cdots,I_k)$ 为 $I$ 的分划, 计顺序. 定义 <strong>Hecke 叠</strong>
+$$
+\mathrm{Hecke}_{N,I}^{(I_1,\cdots,I_k)}
+$$
+为如下资料的分类叠:</p>
+<ul>
+<li>$x_i\in X\setminus N$ ($i\in I$);</li>
+<li>$(\mathcal G_0,\psi_0),\cdots,(\mathcal G_k,\psi_k) \in \mathrm{Bun}_{G,N}$;</li>
+<li>对 $j\in\{1,\cdots,k\}$, 同构 $\phi_j\colon \mathcal G_{j-1}|_{X\setminus \{x_i\colon i\in I_j\}} \simeq \mathcal G_{j}|_{X\setminus \{x_i\colon i\in I_j\}}$, 保持级结构.</li>
+</ul>
+<p>简言之, $\mathrm{Hecke}_{N,I}^{(I_1,\cdots,I_k)}$ 的一个点对应着一个具有 $N$ 级结构的 $G$-丛经过一列调整, 每次调整 $I_j$ 个点处.</p>
+<p>当 $N = \varnothing$ 时在记号中将其省略.</p>
+<p>将 $(I_1,\cdots,I_k)$ 的某些相连片段合并, 相应地将调整过程的中间步骤遗忘, 可得遗忘映射
+$$
+\pi^{(I_1,\cdots,I_k)}_{(I'_1,\cdots,I'_{k'})}\colon \mathrm{Hecke}_{N,I}^{(I_1,\cdots,I_k)} \to \mathrm{Hecke}_{N,I}^{(I'_1,\cdots,I'_{k'})}.
+$$
+当然, 还有投影映射
+$$
+p_0\colon \mathrm{Hecke}_{N,I}^{(I_1,\cdots,I_k)} \to \mathrm{Bun}_{G,N}.
+$$</p>
+<p>定义 <strong>Beilinson–Drinfeld Grassmann 空间</strong> $\mathrm{Gr}_I^{(I_1,\cdots,I_k)}$ 为类似 $\mathrm{Hecke}_{I}^{(I_1,\cdots,I_k)}$ 的模空间, 但增加一个 $\mathcal G_k$ 的平凡化.</p>
+<p>当 $I$ 为单点集时, 记 $\mathrm{Gr}_I^{(I)}$ 为 $\mathrm{Gr}$. 这个空间在一点 $x\in X$ 处的纤维就是通常说的<span class="link local"><a href="./仿射Grassmann空间.html" title="仿射 Grassmann 空间 [仿射Grassmann空间]">仿射 Grassmann 空间</a></span>, 即 fpqc 商 $G(F_x)/G(\mathcal O_x)$.</p>
+<p>以 $\sum\infty x_i$ 表示各点 $x_i$ 的形式邻域的并. 考虑去心邻域 $\sum\infty x_i \setminus x_i$. 我们无需给出其定义, 只要求如下性质: 去心邻域上的同构 $\phi\colon \mathcal G \to \mathcal G'$ 相当于对 $G$ 的任意有限维表示 $V$ 给出一个态射 $V_{\mathcal G} \to V_{\mathcal G'}(N\sum x_i)$, 其中 $N$ 依赖于 $V$, 这些态射满足函子性, 且与张量积, 对偶相容.</p>
+<blockquote>
+<p>注记. 这可视为 <span class="link local"><a href="./淡中对偶.html" title="淡中对偶 [淡中对偶]">Tannaka 重构</a></span>观念的应用; 形式圆盘 $\infty x_i$ 上的 $G$-丛等同于对称幺半函子 $\mathsf{Rep}(G)\to\mathsf{QCoh}(\infty x_i)$, 而 $G$-丛的同构等同于这种函子之间的自然变换; 去心形式圆盘 $\infty x_i\setminus x_i$ 上的拟凝聚层范畴 $\mathsf{QCoh}(\infty x_i\setminus x_i)$ 是 $\mathsf{QCoh}(\infty x_i)$ 的一个<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span> (将 $\mathcal O(D)$ 的截面变得可逆), 而局部化范畴中的态射可用原范畴中的态射 $V_{\mathcal G} \to V_{\mathcal G'}(N x_i)$ 计算.</p>
+</blockquote>
+<p>Beilinson–Drinfeld Grassmann 空间 $\mathrm{Gr}_I^{(I_1,\cdots,I_k)}$ 在 $(x_i)_{i\in I}$ 上的一个点是如下资料:</p>
+<ul>
+<li>$\sum\infty x_i$ 上的 $G$-丛 $\mathcal G_0,\cdots,\mathcal G_k$,</li>
+<li>$\mathcal G_{j-i}$ 和 $\mathcal G_{j}$ 在 $(\sum\infty x_i) \setminus \{x_i\colon i\in I_j\}$ 上的同构 $\phi_j$,</li>
+<li>$\mathcal G_k$ 的平凡化 $\theta$.</li>
+</ul>
+<p>直观: 由于加入了 $\mathcal G_k$ 的平凡化, 并且 $\mathcal G_k$ 和前面每个 $\mathcal G_i$ 在 $x_i$ 之外同构, 故 $\mathcal G_i$ 可以只保留 $x_i$ 的形式邻域上的部分.</p>
+<h2>2. $G$-Chtouca 的叠</h2>
+<p>设 $I$ 为有限集, $(I_1,\cdots,I_k)$ 是 $I$ 的分拆. 设 $N\subset X$ 为有限点集, 定义 $(X\setminus N)^I$ 上的叠
+$$
+\mathrm{Cht}_{N,I}^{(I_1,\cdots,I_k)}
+$$
+分类的资料为 Hecke 叠所分类的资料加上一个保持级结构的同构
+$$
+\sigma\colon {^\tau\mathcal G_0} \overset{\sim}{\to} \mathcal G_k.
+$$
+有遗忘映射
+$$
+\gamma_{N,(I)}^{(I_1,\cdots,I_k)} \colon \mathrm{Cht}_{N,I}^{(I_1,\cdots,I_k)} \to \mathrm{Hecke}_{N,I}^{(I_1,\cdots,I_k)},
+$$
+忘掉同构 $\sigma$; 有投影映射
+$$
+\mathfrak p_{N,I}^{(I_1,\cdots,I_k)}\colon \mathrm{Cht}_{N,I}^{(I_1,\cdots,I_k)} \to (X\setminus N)^I,
+$$
+称为<strong>爪</strong> (les pattes).</p>
+<p>将 $(I_1,\cdots,I_k)$ 的某些相连片段合并, 相应地将 chtoucas 的中间步骤遗忘, 可得遗忘映射
+$$
+\pi^{(I_1,\cdots,I_k)}_{(I'_1,\cdots,I'_{k'})}\colon \mathrm{Cht}_{N,I}^{(I_1,\cdots,I_k)} \to \mathrm{Cht}_{N,I}^{(I'_1,\cdots,I'_{k'})}.
+$$</p>
+<h2>4. 上同调的层</h2>
+<h3>4.2</h3>
+<p>定义
+$$
+\begin{aligned}
+\mathcal H^{\leq\mu,E}_{N,I,\underline\omega} &amp;= R(\mathfrak p_{N,I}^{(I_1,\cdots,I_k),\leq \mu})_!
+(\mathcal F^{(I_1,\cdots,I_k)}_{N,I,\underline\omega,\Xi,E}|_{\mathrm{Cht}_{N,I,\underline\omega}^{(I_1,\cdots,I_k),\leq \mu}})\\
+&amp;\in D_c^b((X\setminus N)^I,E).
+\end{aligned}
+$$</p>
+<h2>5. 创生与湮灭</h2>
+<h3>特化同态 (spécialisation)</h3>
+<p>$$
+\mathfrak {sp}\colon 
+$$</p>
+<p>有同构
+$$
+\begin{aligned}
+\mathfrak {sp}^*\colon&amp; (\operatorname{colim}_\mu \mathcal H_{N,I,W}^{0,\leq\mu,E}|_{\Delta(\bar\eta)})^{\text{Hf}}
+\\
+\simeq\,&amp;(\operatorname{colim}_\mu \mathcal H_{N,I,W}^{0,\leq\mu,E}|_{\overline{\eta^I}})^{\text{Hf}}.
+\end{aligned}
+$$</p>
+<p>定义远足算子 $S_{I,W,x,\xi,(\gamma_i)_{i\in I}}$ 为如下复合:
+$$
+S_{I,W,x,\xi,(\gamma_i)_{i\in I}} := C_\xi^\flat 
+(\mathfrak{sp}^*)^{-1}(\gamma_i)_{i\in I}\mathfrak {sp}^*
+C_\xi^\sharp.
+$$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="Geo-Sat-eq"><header><h1><span class="taxon"></span>几何 Satake 等价 <a class="slug" href="./Geo-Sat-eq.html">[Geo-Sat-eq]</a></h1><div class="metadata"><ul><li class="meta-item">讲义</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>参考</p>
 <ul>
 <li>Gaitsgory 等人 2010 春季的<span class="link external"><a href="https://people.mpim-bonn.mpg.de/gaitsgde/grad_2009/" title="几何表示论讨论班 [https://people.mpim-bonn.mpg.de/gaitsgde/grad_2009/]">几何表示论讨论班</a></span>,</li>

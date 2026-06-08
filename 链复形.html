@@ -864,7 +864,7 @@ $$
     F(j,j)=0 &amp; \to &amp; F(j,k),
 \end{array}
 $$
-也即 $F(j,k)$ 能写成<span class="link local"><a href="./余纤维列.html" title="“余纤维列” [余纤维列]">余纤维</a></span>
+也即 $F(j,k)$ 能写成<span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">余纤维</a></span>
 $$
 F(j,k) = \operatorname{cofib}(F(-\infty,j)\to F(-\infty,k)),
 $$
@@ -876,7 +876,7 @@ $$
 $$
 \mathsf{Gap}(\mathcal J,\mathcal C) \simeq \mathsf{Fun}(\mathcal J\backslash\{-\infty\},\mathcal C).
 $$</p>
-<p>特别地, 当 $\mathcal J\backslash\{-\infty\} = (\mathbb{Z},\leq)$ 时, $\mathcal J$-链复形等同于 $\mathcal C$ 中的<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤对象</a></span> $(\mathbb{Z},\leq) \to \mathcal C$, 链复形的每一项是滤对象的一个<span class="link local"><a href="./余纤维列.html" title="“余纤维列” [余纤维列]">余纤维</a></span>.</p>
+<p>特别地, 当 $\mathcal J\backslash\{-\infty\} = (\mathbb{Z},\leq)$ 时, $\mathcal J$-链复形等同于 $\mathcal C$ 中的<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤对象</a></span> $(\mathbb{Z},\leq) \to \mathcal C$, 链复形的每一项是滤对象的一个<span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">余纤维</a></span>.</p>
 <h3>稳定范畴的情形</h3>
 <p>设 $\mathcal C$ 是<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>, $F$ 是 $\mathcal J$-链复形. 由于余纤维列等同于<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>, 从而有同伦群的长正合列
 $$
@@ -914,6 +914,19 @@ $$
 $$
 这个等价与同伦范畴的 Dold–Kan 对应 $\mathsf {Ch}(h\mathcal C)_{\geq 0}\simeq \mathsf {Fun}(\Delta^{\text{op}},h\mathcal C)$ 相容.</p>
 <p>借助 Dold–Kan 对应, 可由<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>构造<span class="link local"><a href="./谱序列.html" title="谱序列 [谱序列]">谱序列</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="导出函子"><header><h1><span class="taxon"></span>导出函子 <a class="slug" href="./导出函子.html">[导出函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>对于 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>之间的左正合或右正合函子 $f\colon \mathcal A\to\mathcal B$, 其<strong>导出函子</strong>是根据<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>的泛性质诱导的<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>之间的函子 $\mathsf{D}(\mathcal A) \to \mathsf{D}(\mathcal B)$.</p>
+<p>回忆 Abel 范畴的<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>可以分两步构造: 由 Abel 范畴开始, 先取<span class="link local"><a href="./链复形.html" title="链复形 [链复形]">链复形范畴</a></span>得到<span class="link local"><a href="./带弱等价的范畴.html" title="带弱等价的范畴 [带弱等价的范畴]">带弱等价的范畴</a></span>, 然后<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>得到导出范畴:
+$$
+\mathcal{A} \leadsto (\mathsf{Ch}(\mathcal{A}),\text{拟同构}) \leadsto \mathsf{D}(\mathcal{A}).
+$$
+实际上, 导出函子的故事只发生在其中的第二步, 即由<span class="link local"><a href="./带弱等价的范畴.html" title="带弱等价的范畴 [带弱等价的范畴]">带弱等价的范畴</a></span>之间的函子诱导其<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>的 ($\infty$-)范畴之间的函子.</p>
+<p>导出函子可通过沿局部化函子作左右 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>得到.</p>
+<p>传统的导出函子是导出范畴之间的函子再复合同伦群函子 $\mathsf{D}(\mathcal B)\to\mathcal B$ 回到原来的范畴.</p>
+<h2>定义</h2>
+<h2>例</h2>
+<p><span class="link local"><a href="./整体截面.html" title="整体截面 [整体截面]">整体截面</a></span>, <span class="link local"><a href="./导出前推.html" title="导出前推 [导出前推]">导出前推</a></span>, <span class="link local"><a href="./导出张量积.html" title="“导出张量积” [导出张量积]">导出张量积</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="带弱等价的范畴"><header><h1><span class="taxon"></span>带弱等价的范畴 <a class="slug" href="./带弱等价的范畴.html">[带弱等价的范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>带弱等价的范畴是<span class="link local"><a href="./∞-范畴.html" title=" [∞-范畴]">无穷范畴</a></span>的一种<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>方式, 可通过<span class="link local"><a href="./范畴的局部化.html" title="“范畴的局部化” [范畴的局部化]">范畴的局部化</a></span>变为 ∞-范畴. 一个具体的模型是 <span class="link local"><a href="./Dwyer–Kan单纯局部化.html" title="“Dwyer–Kan 单纯局部化” [Dwyer–Kan单纯局部化]">Dwyer–Kan 单纯局部化</a></span>, 它将一个带弱等价的范畴变为单纯充实范畴, 即<span class="link local"><a href="./∞-范畴.html" title=" [∞-范畴]">无穷范畴</a></span>的一个模型.</p>

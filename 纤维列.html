@@ -879,6 +879,37 @@ $$
 <p>另一种说法是, 由于 $X$ 是 $E$-模, $X$ 是 $X\wedge E$ 的收缩, 而对任何谱 $X$, $X\wedge E$ 都是 $E$-局部谱. (好像 $E$-模是 $E$-局部谱这个结论更基本一些.)</p>
 <p><strong>命题</strong>. $E$-局部谱的子范畴关于平移, 收缩, 积 (直和), 余纤维封闭.</p>
 <p>注意, $E$-局部谱的<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">张量积</a></span>不一定是 $E$-局部谱.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="GrpAni"><header><h1><span class="taxon"></span>生象群 <a class="slug" href="./GrpAni.html">[GrpAni]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>在 $\infty$-范畴的语境中, 正如子集的概念常常替换为一般映射, <strong>子群</strong>的概念常常替换为一般同态. 对子群定义的<span class="link local"><a href="./陪集空间.html" title="陪集空间 [陪集空间]">陪集空间</a></span>也可对任何群同态定义.</p>
+<h3>核</h3>
+<p>对于生象群同态 $f\colon G\to H$, 其<strong>核</strong>由如下<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>定义:
+$$
+\mathbf{B}\ker f \to \mathbf{B}G \overset{\mathbf{B}f}{\to} \mathbf{B}H.
+$$
+也即
+$$
+\mathbf{B}\ker f = \operatorname{fib}(\mathbf{B}f) = \mathbf{B}G \times_{\mathbf{B}H}*.
+$$</p>
+<h3>余核</h3>
+<p>对于生象群同态 $f\colon G\to H$, 其<strong>余核</strong>由如下<span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">余纤维列</a></span>定义:
+$$
+\mathbf{B}G \overset{\mathbf{B}f}{\to} \mathbf{B}H \to \mathbf{B}\operatorname{coker}f.
+$$</p>
+<p><strong>注意</strong>. 余核的行为与经典群论中的概念很不同.</p>
+<ul>
+<li>即使对于正规子群, $\operatorname{coker}f$ 一般也不是 $H$ 在 $G$ 上右<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>的商 $G/H$.</li>
+<li>即使对于正规子群, $H\to\operatorname{coker}f$ 的核一般也不是 $G$.</li>
+</ul>
+<p><strong>例</strong>. $2\mathbb{Z} \to \mathbb{Z}$ 的余核是 $\Omega\mathbb{RP}^2$ 而不是 $\mathbb{Z}/2$.</p>
+<h2>相关概念</h2>
+<p>todo: 整合进来</p>
+<ul>
+<li><span class="link local"><a href="./群作用.html" title="群作用 [群作用]">群作用</a></span></li>
+<li><span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span></li>
+<li><span class="link local"><a href="./中心作用.html" title="中心作用 [中心作用]">中心作用</a></span></li>
+<li><span class="link local"><a href="./内自同构.html" title="群的内自同构 [内自同构]">群的内自同构</a></span></li>
+<li><span class="link local"><a href="./群的外自同构.html" title="群的外自同构 [群的外自同构]">群的外自同构</a></span></li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="t-结构"><header><h1><span class="taxon"></span>t-结构 <a class="slug" href="./t-结构.html">[t-结构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设 $\mathcal C$ 为<span class="link local"><a href="./三角范畴.html" title="“三角范畴” [三角范畴]">三角范畴</a></span>或<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span>, 其上的一个 t-结构是一对子范畴 $(\mathcal C_{\geq 0},\mathcal C_{\leq 0})$, 记 $\mathcal C_{\geq n}=\mathcal C_{\geq 0}[n]$, $\mathcal C_{\leq n}=\mathcal C_{\leq 0}[n]$, 满足</p>
@@ -963,90 +994,6 @@ $$
 $$
 K(\pi_2(X),2) \to X \to K(\pi_1(X),1).
 $$</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="中心"><header><h1><span class="taxon"></span>中心 <a class="slug" href="./中心.html">[中心]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<h2>定义</h2>
-<h3>群</h3>
-<p>$\mathsf{Set}$ 中的群 (或幺半群) $G$ 的<strong>中心</strong>为 $G$ 中与所有元素交换的元素构成的子集:
-$$
-Z(G) = \{g\in G | \forall h\in G, gh=hg\}.
-$$</p>
-<p>对更一般的<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> (如<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>群) $G$,
-定义
-$$
-Z(G) := \operatorname{Aut}_{\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)}(\mathrm{id}).
-$$
-换言之,</p>
-<ul>
-<li>$Z(G) = \Omega^2(\mathsf{Ani}^\simeq,\mathbf{B}G)$ 为 $\mathsf{Ani}^\simeq$ (“<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的生象”) 在 $\mathbf{B}G$ 处的二重<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> (可见 $Z(G)$ 是个 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span>-群);</li>
-<li>$\mathbf{B}Z(G)$ 是 $\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)$ 在 $\mathrm{id}_{\mathbf{B}G}$ 处的连通分支.</li>
-</ul>
-<p>一个生象 $A$ 的连通分支是 $A\to\tau_{\leq 0} A$ 的纤维. 此外, 两个群的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>之间 (作为<strong>不带点</strong>生象) 的映射空间满足
-$$
-\operatorname{Hom}_{\mathsf{Ani}}(\mathbf{B}G,\mathbf{B}H)\simeq \operatorname{Hom}_{\mathsf{Grp}(\mathsf{Ani})}(G,H)/_{\mathrm{Ad}} H,
-$$
-即群同态的生象关于 $H$ 的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的商,
-因此该定义也可等价地陈述如下. 考虑群 $G$ 的<span class="link local"><a href="./群的外自同构.html" title="群的外自同构 [群的外自同构]">外自同构</a></span>群
-$$
-\begin{aligned}
-    \operatorname{Out}(G)&amp;=
-\tau_{\leq 0}
-(\operatorname{Aut}_{\mathsf{Grp}}(G) /_{\mathrm{Ad}} G)\\
-&amp; =\tau_{\leq 0}\operatorname{Aut}(\mathbf{B}G).
-\end{aligned}
-$$
-那么有<span class="link local"><a href="./群短正合列.html" title="群的短正合列 [群短正合列]">短正合列</a></span>
-$$
-\mathbf{B}Z(G) \to \mathsf{Aut}(\mathbf{B}G) \to \operatorname{Out}(G)
-$$
-以及<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
-$$
-\begin{aligned}
-    \mathbf{B}Z(G) &amp;\to \mathsf{Aut}(\mathbf{B}G) \to \operatorname{Out}(G)\\
-\to \mathbf{B}^2Z(G) &amp;\to \mathbf{B}\mathsf{Aut}(\mathbf{B}G) \to \mathbf{B}\operatorname{Out}(G).
-\end{aligned}
-$$</p>
-<h3>环</h3>
-<p>固定交换环 $k$ 作为基环.
-设 $A$ 为 $k$ 上的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. $A$ 的<strong>中心</strong>是与所有元素交换的元素的集合
-$$
-Z(A) = \{a\in A | \forall b\in A, ab=ba\},
-$$
-也是 $A$ 作为 $(A,A)$-双模的自同态的集合
-$$
-Z(A) = \operatorname{End}_{\mathsf{BiMod}(A,A)}(A),
-$$
-也是<span class="link local"><a href="./等化子.html" title="等化子 [等化子]">等化子</a></span>
-$$
-Z(A) = \operatorname{eq}\big(
-    A\rightrightarrows \operatorname{Hom}_k(A,A)
-\big),
-$$
-其中两个映射分别为左乘与右乘.</p>
-<p>回忆 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>中, <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 的恒等态射即是 $A$ 作为 $(A,A)$-双模. 因此, $A$ 的中心又可理解为
-$$
-Z(A) = \operatorname{End}_{\operatorname{End}_{\mathsf{Morita}}(A)}(\mathrm{id}).
-$$</p>
-<p>进一步, Morita 范畴嵌入线性范畴的范畴, 从而<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 的中心也可定义为
-$$
-Z(R) := \operatorname{End}_{\operatorname{End}_{\mathsf{Cat}}(\mathsf{Mod}(A))}(\mathrm{id}).
-$$</p>
-<h3>幺半范畴</h3>
-<p>设 $\mathcal C$ 为 $k$-线性<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>,
-定义 $\mathcal C$ 的 <strong>Drinfeld 中心</strong> $Z(\mathcal C)$ 是一个<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半范畴</a></span>, 可理解为两个函子 $\mathcal C \to \operatorname{Hom}_k(\mathcal C,\mathcal C)$ 的<span class="link local"><a href="./等化子.html" title="等化子 [等化子]">等化子</a></span>, 其对象为 $\mathcal C$ 的对象 $X$ 配备自然变换
-$$
-X\otimes (-) \to (-)\otimes X,
-$$
-满足两个自然变换 $X\otimes (Y\otimes Z)\to (Y\otimes Z)\otimes X$ 相等.</p>
-<h3>2-范畴的对象</h3>
-<p>定义 $2$-范畴 $\mathcal C$ 的对象 $X$ 的<strong>中心</strong>为<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>
-$$
-Z(X) := \operatorname{End}_{\operatorname{End}_{\mathcal C}(X)}(\mathrm{id}_X).
-$$
-它类似于 $\mathcal C$ 在 $X$ 处的二阶<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>.
-由 <span class="link local"><a href="./Eckmann--Hilton论证.html" title="Eckmann–Hilton 论证 [Eckmann--Hilton论证]">Eckmann–Hilton 论证</a></span>, $Z(X)$ 为 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span> 幺半群 (辫幺半群).</p>
-<p>这样定义的中心又称 <span class="link local"><a href="./Hochschild上同调.html" title="Hochschild 上同调 [Hochschild上同调]">Hochschild 上同调</a></span>.</p>
-<h2>相关概念</h2>
-<p><span class="link local"><a href="./余中心.html" title="余中心 [余中心]">余中心</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="中心扩张"><header><h1><span class="taxon"></span>中心扩张 <a class="slug" href="./中心扩张.html">[中心扩张]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>抽象</h3>
@@ -1066,7 +1013,7 @@ $$
     \to\mathbf{B}^2 A.
 \end{aligned}
 $$</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="余纤维列"><header><h1><span class="taxon"></span>“余纤维列” <a class="slug" href="./余纤维列.html">[余纤维列]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="余纤维列"><header><h1><span class="taxon"></span>余纤维列 <a class="slug" href="./余纤维列.html">[余纤维列]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>在一个<span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">无穷范畴</a></span>中, 设 $0$ 为零对象, 称序列 $A\to B\to C$ 为余纤维列是指
 $$
 \begin{array}{ccc}
@@ -1075,7 +1022,7 @@ $$
 	0 &amp; \to &amp; C
 \end{array}
 $$
-为推出.</p>
+为<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>, <span class="link local"><a href="./稳定∞-范畴.html" title=" [稳定∞-范畴]">稳定无穷范畴</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="切结构"><header><h1><span class="taxon"></span>切结构 <a class="slug" href="./切结构.html">[切结构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -1138,7 +1085,7 @@ $$
 <p><strong>稳定范畴</strong>是满足如下条件的范畴 $\mathcal C$:</p>
 <ul>
 <li>$\mathcal C$ 具有有限极限和有限余极限; 特别地, 具有零对象 $0$, 以及态射的纤维, 余纤维;</li>
-<li>$\mathcal C$ 中的拉回方块等同于推出方块; 特别地, <span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>等同于<span class="link local"><a href="./余纤维列.html" title="“余纤维列” [余纤维列]">余纤维列</a></span>;</li>
+<li>$\mathcal C$ 中的拉回方块等同于推出方块; 特别地, <span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>等同于<span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">余纤维列</a></span>;</li>
 <li><span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span>函子 $\Sigma\colon \mathcal C\to\mathcal C$ 与<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>函子 $\Omega\colon \mathcal C\to \mathcal C$ 构成一对互逆的范畴等价.</li>
 </ul>
 <p><strong>记号</strong>. 对稳定范畴的对象 $X$ 以及整数 $n$, 记
@@ -1210,6 +1157,46 @@ $$
 <p><span class="link external"><a href="https://math.stackexchange.com/q/4676926" title="MSE 问题 [https://math.stackexchange.com/q/4676926]">MSE 问题</a></span></p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./奇异上同调.html" title="奇异上同调 [奇异上同调]">奇异上同调</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="群的外自同构"><header><h1><span class="taxon"></span>群的外自同构 <a class="slug" href="./群的外自同构.html">[群的外自同构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>定义 $n$-截断<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的 $n$-截断<strong>外自同构群</strong> (outer automorphism group) 为其<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> $\mathbf{B}G$ 作为<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的自同构群的 $n$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>:
+$$
+\begin{aligned}
+    \operatorname{Out}_{\leq n}(G)&amp;:=
+\tau_{\leq n}
+(\operatorname{Aut}_{\mathsf{Grp}}(G) /_{\mathrm{Ad}} G)\\
+&amp; =\tau_{\leq n}\operatorname{Aut}(\mathbf{B}G).
+\end{aligned}
+$$</p>
+<p><strong>注</strong>. 两个群的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>之间 (作为<strong>不带点</strong>生象) 的映射空间满足
+$$
+\operatorname{Hom}_{\mathsf{Ani}}(\mathbf{B}G,\mathbf{B}H)\simeq \operatorname{Hom}_{\mathsf{Grp}(\mathsf{Ani})}(G,H)/_{\mathrm{Ad}} H,
+$$
+即群同态的生象关于 $H$ 的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的商.</p>
+<h3>离散群</h3>
+<p>考虑 $G$ 为离散群 ($0$-截断群) 的情形.</p>
+<p>考虑群 $G$ 的<span class="link local"><a href="./群的外自同构.html" title="群的外自同构 [群的外自同构]">外自同构</a></span>群
+$$
+\begin{aligned}
+    \operatorname{Out}(G)&amp;=
+\tau_{\leq 0}
+(\operatorname{Aut}_{\mathsf{Grp}}(G) /_{\mathrm{Ad}} G)\\
+&amp; =\tau_{\leq 0}\operatorname{Aut}(\mathbf{B}G).
+\end{aligned}
+$$
+一个生象 $A$ 在某点处的连通分支是 $A\to\tau_{\leq 0} A$ 在该点的<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维</a></span>. 由<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span> $Z(G)$ 的定义, $\mathbf{B}Z(G)$ 是 $\operatorname{Aut}(\mathbf{B}G)$ 在 $\mathrm{id}$ 处的连通分支. 那么有<span class="link local"><a href="./群短正合列.html" title="群的短正合列 [群短正合列]">短正合列</a></span>
+$$
+\mathbf{B}Z(G) \to \operatorname{Aut}(\mathbf{B}G) \to \operatorname{Out}(G)
+$$
+以及<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
+$$
+\begin{aligned}
+    \mathbf{B}Z(G) &amp;\to \operatorname{Aut}(\mathbf{B}G) \to \operatorname{Out}(G)\\
+\to \mathbf{B}^2Z(G) &amp;\to \mathbf{B}\operatorname{Aut}(\mathbf{B}G) \to \mathbf{B}\operatorname{Out}(G).
+\end{aligned}
+$$</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./内自同构.html" title="群的内自同构 [内自同构]">内自同构</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="群短正合列"><header><h1><span class="taxon"></span>群的短正合列 <a class="slug" href="./群短正合列.html">[群短正合列]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>性质</h2>
 <h3>纤维列</h3>
@@ -1270,7 +1257,7 @@ $$
     F(j,j)=0 &amp; \to &amp; F(j,k),
 \end{array}
 $$
-也即 $F(j,k)$ 能写成<span class="link local"><a href="./余纤维列.html" title="“余纤维列” [余纤维列]">余纤维</a></span>
+也即 $F(j,k)$ 能写成<span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">余纤维</a></span>
 $$
 F(j,k) = \operatorname{cofib}(F(-\infty,j)\to F(-\infty,k)),
 $$
@@ -1282,7 +1269,7 @@ $$
 $$
 \mathsf{Gap}(\mathcal J,\mathcal C) \simeq \mathsf{Fun}(\mathcal J\backslash\{-\infty\},\mathcal C).
 $$</p>
-<p>特别地, 当 $\mathcal J\backslash\{-\infty\} = (\mathbb{Z},\leq)$ 时, $\mathcal J$-链复形等同于 $\mathcal C$ 中的<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤对象</a></span> $(\mathbb{Z},\leq) \to \mathcal C$, 链复形的每一项是滤对象的一个<span class="link local"><a href="./余纤维列.html" title="“余纤维列” [余纤维列]">余纤维</a></span>.</p>
+<p>特别地, 当 $\mathcal J\backslash\{-\infty\} = (\mathbb{Z},\leq)$ 时, $\mathcal J$-链复形等同于 $\mathcal C$ 中的<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤对象</a></span> $(\mathbb{Z},\leq) \to \mathcal C$, 链复形的每一项是滤对象的一个<span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">余纤维</a></span>.</p>
 <h3>稳定范畴的情形</h3>
 <p>设 $\mathcal C$ 是<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>, $F$ 是 $\mathcal J$-链复形. 由于余纤维列等同于<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>, 从而有同伦群的长正合列
 $$
@@ -1303,6 +1290,15 @@ $$
 $$
 \delta\colon \pi_{p+q} X(p-1,p) \to \pi_{p+q-1} X(p-2,p-1).
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="陪集空间"><header><h1><span class="taxon"></span>陪集空间 <a class="slug" href="./陪集空间.html">[陪集空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>对于群 $G$ 的子群 $H$, <strong>陪集空间</strong> $G / H$ 是 $G$ 关于 $H$ 的右乘<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>的商空间. 等价地, 它是如下的<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维</a></span>:
+$$
+G / H = \operatorname{fib}(\mathbf{B}H \to \mathbf{B}G)=
+{*} \times_{\mathbf{B}G} \mathbf{B}H,
+$$
+也即 $G / H$ 是 $G$ 关于子群 $*$ 和 $H$ 的<span class="link local"><a href="./双陪集空间.html" title="双陪集空间 [双陪集空间]">双陪集空间</a></span>.</p>
+<h2>例</h2>
+<p>群 $G$ 关于其<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span> $Z(G)$ 的陪集空间是<span class="link local"><a href="./内自同构.html" title="群的内自同构 [内自同构]">内自同构群</a></span> $\operatorname{Inn}(G)$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="非Abel上同调"><header><h1><span class="taxon"></span>非 Abel 上同调 <a class="slug" href="./非Abel上同调.html">[非Abel上同调]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>非 Abel 上同调是一种广义的<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>概念, 强调其系数对象并非 Abel 群.</p>

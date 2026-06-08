@@ -1343,7 +1343,7 @@ $$
 $$
 S_I \colon \mathcal A^{\otimes I} \to\mathcal C\otimes\mathsf{LS}(Y^I).
 $$</p>
-<p>对于点 $y\in Y$, 记 $\mathrm{ev}_y$ 为 $y$ 处的取值函子 $\mathsf{LS}(Y)\to\mathsf{Vect}$. 对于两个点 $y_1,y_2$ 之间的道路 $\gamma$, 有自然变换 $\mathrm{mon}_\gamma\colon \mathrm{ev}_{y_1} \to \mathrm{ev}_{y_2}$, 称为 “平行移动”.</p>
+<p>对于点 $y\in Y$, 记 $\mathrm{ev}_y$ 为 $y$ 处的取值函子 $\mathsf{LS}(Y)\to\mathsf{Vect}$. 对于两个点 $y_1,y_2$ 之间的道路 $\gamma$, 有自然变换 $\mathrm{mon}_\gamma\colon \mathrm{ev}_{y_1} \to \mathrm{ev}_{y_2}$, 称为 “<span class="link local"><a href="./平行移动.html" title="平行移动 [平行移动]">平行移动</a></span>”.</p>
 <p>设 $y_1,y_2\in Y$ 是两个点, $\gamma^J$ 是 $J$ 条 $y_1$ 到 $y_2$ 的道路, $\xi\in\operatorname{Hom}(1_{\mathcal A},\mathrm{mult}_J\circ\mathrm{mult}_J^R (1_{\mathcal A}))$.</p>
 <p><strong>断言</strong>. 远足算子为如下映射的复合.</p>
 <ul>
@@ -1720,30 +1720,9 @@ $$
 <li>$Z(G) = \Omega^2(\mathsf{Ani}^\simeq,\mathbf{B}G)$ 为 $\mathsf{Ani}^\simeq$ (“<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的生象”) 在 $\mathbf{B}G$ 处的二重<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> (可见 $Z(G)$ 是个 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span>-群);</li>
 <li>$\mathbf{B}Z(G)$ 是 $\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)$ 在 $\mathrm{id}_{\mathbf{B}G}$ 处的连通分支.</li>
 </ul>
-<p>一个生象 $A$ 的连通分支是 $A\to\tau_{\leq 0} A$ 的纤维. 此外, 两个群的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>之间 (作为<strong>不带点</strong>生象) 的映射空间满足
+<p>由定义, 中心 $Z(G)$ 到 $G$ 本身有一典范映射
 $$
-\operatorname{Hom}_{\mathsf{Ani}}(\mathbf{B}G,\mathbf{B}H)\simeq \operatorname{Hom}_{\mathsf{Grp}(\mathsf{Ani})}(G,H)/_{\mathrm{Ad}} H,
-$$
-即群同态的生象关于 $H$ 的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的商,
-因此该定义也可等价地陈述如下. 考虑群 $G$ 的<span class="link local"><a href="./群的外自同构.html" title="群的外自同构 [群的外自同构]">外自同构</a></span>群
-$$
-\begin{aligned}
-    \operatorname{Out}(G)&amp;=
-\tau_{\leq 0}
-(\operatorname{Aut}_{\mathsf{Grp}}(G) /_{\mathrm{Ad}} G)\\
-&amp; =\tau_{\leq 0}\operatorname{Aut}(\mathbf{B}G).
-\end{aligned}
-$$
-那么有<span class="link local"><a href="./群短正合列.html" title="群的短正合列 [群短正合列]">短正合列</a></span>
-$$
-\mathbf{B}Z(G) \to \mathsf{Aut}(\mathbf{B}G) \to \operatorname{Out}(G)
-$$
-以及<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
-$$
-\begin{aligned}
-    \mathbf{B}Z(G) &amp;\to \mathsf{Aut}(\mathbf{B}G) \to \operatorname{Out}(G)\\
-\to \mathbf{B}^2Z(G) &amp;\to \mathbf{B}\mathsf{Aut}(\mathbf{B}G) \to \mathbf{B}\operatorname{Out}(G).
-\end{aligned}
+Z(G)\to \operatorname{Aut}_{\mathbf{B}G}(*) = G.
 $$</p>
 <h3>环</h3>
 <p>固定交换环 $k$ 作为基环.
@@ -1770,9 +1749,17 @@ $$</p>
 $$
 Z(R) := \operatorname{End}_{\operatorname{End}_{\mathsf{Cat}}(\mathsf{Mod}(A))}(\mathrm{id}).
 $$</p>
+<h3>范畴</h3>
+<p>范畴 $\mathcal{C}$ 的中心为<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>
+$$
+Z(\mathcal{C}) := \operatorname{End}_{\operatorname{End}_{\mathsf{Cat}}(X)}(\mathrm{id}_{\mathcal{C}}).
+$$
+见后文 “$2$-范畴的对象”.</p>
+<p>由定义, 若将群 $G$ 视为单对象范畴 $\mathbf{B}G$, 则 $G$ 的中心即是范畴 $\mathbf{B}G$ 的中心. 当然, 一般的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的中心也可通过视为单对象<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>来定义.</p>
 <h3>幺半范畴</h3>
-<p>设 $\mathcal C$ 为 $k$-线性<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>,
-定义 $\mathcal C$ 的 <strong>Drinfeld 中心</strong> $Z(\mathcal C)$ 是一个<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半范畴</a></span>, 可理解为两个函子 $\mathcal C \to \operatorname{Hom}_k(\mathcal C,\mathcal C)$ 的<span class="link local"><a href="./等化子.html" title="等化子 [等化子]">等化子</a></span>, 其对象为 $\mathcal C$ 的对象 $X$ 配备自然变换
+<p><strong>注</strong>. 当我们说幺半范畴的中心时, 一般不是将其视为范畴像上一小节那样定义中心, 而是视为 $\mathsf{Cat}$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>定义中心.</p>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>,
+此时 $\mathcal C$ 的中心 (又称 <strong>Drinfeld 中心</strong>) $Z(\mathcal C)$ 是一个<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半范畴</a></span>, 可理解为两个函子 $\mathcal C \rightrightarrows \operatorname{End}(\mathcal C)$ 的<span class="link local"><a href="./等化子.html" title="等化子 [等化子]">等化子</a></span>, 其对象为 $\mathcal C$ 的对象 $X$ 配备自然变换
 $$
 X\otimes (-) \to (-)\otimes X,
 $$
@@ -1785,8 +1772,51 @@ $$
 它类似于 $\mathcal C$ 在 $X$ 处的二阶<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>.
 由 <span class="link local"><a href="./Eckmann--Hilton论证.html" title="Eckmann–Hilton 论证 [Eckmann--Hilton论证]">Eckmann–Hilton 论证</a></span>, $Z(X)$ 为 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span> 幺半群 (辫幺半群).</p>
 <p>这样定义的中心又称 <span class="link local"><a href="./Hochschild上同调.html" title="Hochschild 上同调 [Hochschild上同调]">Hochschild 上同调</a></span>.</p>
+<h2>性质</h2>
+<h3>万有中心映射</h3>
+<p>群 $G$ 的中心到 $G$ 的典范映射
+$$
+Z(G)\to G
+$$
+是万有的<span class="link local"><a href="./中心映射.html" title="中心群同态, 中心映射 [中心映射]">中心映射</a></span>.</p>
+<h3>与群作用, 模的关系</h3>
+<p>设群 $G$ 的中心为 $Z$, 考虑任意范畴中的 $G$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span> $X$, 那么 $Z$ 不仅作用于 $X$ 上, 而且该作用为 $G$-<span class="link local"><a href="./等变映射.html" title="等变映射 [等变映射]">等变</a></span>作用 (甚至为<span class="link local"><a href="./中心作用.html" title="中心作用 [中心作用]">中心作用</a></span>). 这是因为, 由定义,
+$$
+Z = \operatorname{Aut}(\mathrm{id}_{\mathbf{B}G})
+$$
+作用于 $\mathrm{id}_{\mathbf{B}G}$ 上, 故作用于任何函子 $\mathbf{B}G\to\mathcal{C}$ 上.</p>
+<p>推而广之, 对任意范畴 $\mathcal{C}$, 其中心
+$$
+Z(\mathcal{C})=\operatorname{Aut}(\mathrm{id}_{\mathcal{C}})
+$$
+<span class="link local"><a href="./中心作用.html" title="中心作用 [中心作用]">中心作用</a></span>于任何函子 $F\colon\mathcal{C} \to \mathcal{D}$ 上, 也即有群同态
+$$
+Z(\mathcal{C}) \to Z(\mathsf{Fun}(\mathcal{C},\mathcal{D})) \to Z(\operatorname{End}(F)).
+$$
+其中第二个箭头为 “取自然变换在 $F$ 上的分量”.</p>
+<h2>例</h2>
+<h3>中心不是子群的例子</h3>
+<p>生象群 $G$ 的中心不一定是 $G$ 的子群, 即典范映射 $Z(G)\to G$ 不一定是 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>映射.</p>
+<p>考虑 $G = \Omega S^2$, 映射
+$$
+Z(G) = \Omega_{\mathrm{id}}\operatorname{Aut}(S^2) \to \Omega S^2
+$$
+在基点处的纤维为 $\Omega_{\mathrm{id}}\operatorname{Aut}_*(S^2) \simeq \Omega^3 S^2$, 不是 $(-1)$-截断生象.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./余中心.html" title="余中心 [余中心]">余中心</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="中心映射"><header><h1><span class="taxon"></span>中心群同态, 中心映射 <a class="slug" href="./中心映射.html">[中心映射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>同态 $H \to G$, 若其穿过 $G$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span> $H\to Z(G)$, 则称之为<strong>中心群同态</strong>.</p>
+<p>注意, 一般生象群之间的一个同态构成中心群同态是<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构而非性质</a></span>.</p>
+<p>中心群同态的概念也可以不依赖于中心的概念而定义; 将<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>视为带基点连通<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>, 我们定义<strong>中心映射</strong>的概念.</p>
+<p>对于带基点连通生象的保基点映射 $f\colon Y\to X$, 若存在如下交换图 (左图与右图的信息等价), 则称之为<strong>中心映射</strong>.</p>
+<p><figure><img src="./中心映射-1.svg" class="color-invert"/></figure></p>
+<p>考虑 $\operatorname{End}_{\mathsf{Ani}}(X)$ 中基点 $\mathrm{id}_X$ 所在的连通分支 $\operatorname{End}_{\mathsf{Ani}}(X)_{0}$; 由定义, 万有的中心映射即是 $\mathrm{ev}_*\colon \operatorname{End}_{\mathsf{Ani}}(X)_{0}\to X$.</p>
+<p>注意当 $X=\mathbf{B}G$ 时,
+$$
+\Omega_{\mathrm{id}}\operatorname{End}_{\mathsf{Ani}}(X)_{0} = \Omega_{\mathrm{id}}\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G) = Z(G),
+$$
+其中 $Z(G)$ 是 $G$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="主丛"><header><h1><span class="taxon"></span>主齐性空间, 主丛 <a class="slug" href="./主丛.html">[主丛]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>主齐性空间</strong> (principal homogeneous space), 又称<strong>旋子</strong> (torsor), 是一个 “忘掉了单位元在哪里的群”. 对于群 $G$, 一个 $G$-主齐性空间是一个带有 $G$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>的对象 $P$, 且满足其商 $P / G$ 是一个点 (在 $1$-范畴语境中这等同于说作用是自由且<span class="link local"><a href="./传递作用.html" title="传递作用 [传递作用]">传递</a></span>的).</p>
@@ -1901,6 +1931,10 @@ $$</p>
 <p>当 $G$ 为平凡群时, 交叉模 $(G,H,\delta,\alpha)$ 退化为 Abel 群 $H$, 其对应的连通 $2$-截断<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>即为二阶<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> $\mathbf{B}^2 H$.</p>
 <h3></h3>
 <p>$0$-截断群 (即连通 $1$-截断生象) 构成一个 $2$-范畴, 其中态射为群同态, $2$-态射为群同态之间的同伦, 即共轭. 这个 $2$-范畴中的对象 $H$ 给出一个交叉模. 首先 $H$ 可视为一个群, $G = \operatorname{Aut}(H)$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="像"><header><h1><span class="taxon"></span>像 <a class="slug" href="./像.html">[像]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的映射 $f\colon Y\to X$ 的<strong>像</strong> $\operatorname{im}f \to X$ 是 $f$ 作为 $\mathsf{Ani}_{/X}$ 中的对象的 $(-1)$-<span class="link local"><a href="./连通-截断分解.html" title="(n-连通, n-截断) 分解 [连通-截断分解]">截断</a></span>.</p>
+<p>直观上 $\operatorname{im}f$ 是 $X$ 中所有 “被 $f$ 接触到” 的连通分支的并.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="充实范畴"><header><h1><span class="taxon"></span>充实范畴 <a class="slug" href="./充实范畴.html">[充实范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>充实范畴</strong>是范畴的推广, 其对象之间的 “态射集” 不是集合, 而是更一般的幺半范畴的对象.</p>
@@ -2079,6 +2113,10 @@ $$
 故 $M$ 有<span class="link local"><a href="./自旋流形.html" title="自旋流形 [自旋流形]">自旋结构</a></span>当且仅当 $w_2(M)=0$.</p>
 <h3>可积性</h3>
 <p>一些重要的结构如复结构, 辛结构, <span class="link local"><a href="./Kähler结构.html" title=" [Kähler结构]">Kähler 流形</a></span>, 是由 $G$-结构附加某些可积性条件得到的.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="单射"><header><h1><span class="taxon"></span>单射 <a class="slug" href="./单射.html">[单射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>单射就是 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>映射.</p>
+<p>在<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中, 映射 $f\colon Y\to X$ 是单射, 当且仅当它是 $X$ 的若干连通分支的含入.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="压缩积"><header><h1><span class="taxon"></span>压缩积 <a class="slug" href="./压缩积.html">[压缩积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>带基点空间 (<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>) 的压缩积是带基点空间范畴 $\mathsf{Ani}_*$ 的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半结构</a></span>, 单位为 $*$.</p>
 <p><span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的压缩积是<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半结构</a></span>, 单位为<span class="link local"><a href="./球谱.html" title="“球谱” [球谱]">球谱</a></span> $\mathbb{S}$.</p>
@@ -2633,6 +2671,10 @@ $$
 <p>采用从局部到整体的方法. 首先, 要证明的结论关于 $X$ 是<strong>局部</strong>的; 也就是对任意<span class="link local"><a href="./意象中的满射.html" title="意象中的满射 [意象中的满射]">满射</a></span> $U\to X$, 只要结论对拉回 $(n-1)$-束 $\tilde{X}\times_X U \to U$ 成立, 就有结论对 $(n-1)$-束 $\tilde{X}\to X$ 成立.</p>
 <h3>扭层</h3>
 <p>(集合值的) <span class="link local"><a href="./层.html" title="拓扑空间上的层 [层]">层</a></span>可以视为平凡束的截面; 一般地, 每一个束的截面给出一种<strong>扭层</strong>的概念, 用传统的观点即一个 “粘合条件被 $2$-上圈扭过” 的层.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="正规子群"><header><h1><span class="taxon"></span>正规子群, 正规同态 <a class="slug" href="./正规子群.html">[正规子群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>正规子群</strong>是可作为群同态的核的子群. 一般地 (尤其在<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>群的语境中), 我们不强调子群而是考虑一般同态; <strong>正规同态</strong>是可作为群同态的核的同态.</p>
+<h2>定义</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="生象化"><header><h1><span class="taxon"></span>生象化 <a class="slug" href="./生象化.html">[生象化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>许多代数结构 (环, 模, 交换代数等) 可在<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>语境中谈论, 例如<span class="link local"><a href="./生象环.html" title="生象环 [生象环]">生象环</a></span>; 此时其构成的范畴 (例如 $\mathsf{AniRing}$) 与集合语境中的相应范畴 (例如普通环的范畴 $\mathsf{Ring}$) 有特定的联系, 这种联系就是<strong>生象化</strong>. <span class="link local"><a href="./代数范畴.html" title="代数范畴 [代数范畴]">代数范畴</a></span>的生象化给出生象语境中的代数概念; 不过生象化不局限于代数范畴.</p>
@@ -2896,7 +2938,8 @@ $$
 F\colon \mathbf{B}G\to\mathcal C,
 $$
 将 $\mathbf{B}G$ 中的对象 $*$ 映射到 $X$.</p>
-<p>换言之, $\mathbf{B}G$ 中的对象 $*$ 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的 $G$-作用.</p>
+<p><strong>注</strong>. 根据人为选取的约定, 我们将函子 $\mathbf{B}G\to\mathcal C$ 称为 $G$ 的<strong>左作用</strong> (这仅仅是因为我们习惯将作用符号写在左边). 相应地, 函子 $\mathbf{B}G^{\mathrm{op}}\to\mathcal C$ 称为 $G$ 的<strong>右作用</strong>. 但实际上 $\mathbf{B}G$ 等价于 $\mathbf{B}G^{\mathrm{op}}$ (因为它是一个群胚), 所以两个概念是等价的.</p>
+<p>用<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的观点看, 范畴 $\mathbf{B}G$ 中的对象 $*$ 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的 $G$-作用.</p>
 <p>定义 $G$-作用 $F\colon \mathbf{B}G\to\mathcal C$ 的<strong></strong><span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>为极限
 $$
 X^G := \operatorname{lim} F ;
@@ -2944,9 +2987,10 @@ $$
 X^G = \operatorname{Hom}_{\mathsf{Ani}_{/\mathbf{B}G}}(\mathbf{B}G,X/G).
 $$</p>
 <h2>例</h2>
-<ul>
-<li>群在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span></li>
-</ul>
+<h3>左乘/右乘作用</h3>
+<p>对于生象群 $G$, 映射 $* \to \mathbf{B}G$ 对应的 $G$-作用即是 $G$ 在自身上的左乘作用.</p>
+<h3>共轭作用</h3>
+<p>每个群 $G$ 都有在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>.</p>
 <h3>$\mathbb{Z}$ 的作用</h3>
 <p>$\mathbb{Z}$ 在对象 $X$ 上的作用相当于 $X$ 的一个自同构 $\phi\colon X\to X$. 此时,</p>
 <ul>
@@ -2957,15 +3001,44 @@ $$</p>
 <p><span class="link local"><a href="./相对位置.html" title="相对位置 [相对位置]">相对位置</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="群的外自同构"><header><h1><span class="taxon"></span>群的外自同构 <a class="slug" href="./群的外自同构.html">[群的外自同构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>定义<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的<strong>外自同构群</strong> (outer automorphism group) 为其<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> $\mathbf{B}G$ 作为<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的自同构群的 $0$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>:
+<p>定义 $n$-截断<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的 $n$-截断<strong>外自同构群</strong> (outer automorphism group) 为其<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> $\mathbf{B}G$ 作为<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的自同构群的 $n$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>:
 $$
 \begin{aligned}
-    \operatorname{Out}(G)&amp;:=
+    \operatorname{Out}_{\leq n}(G)&amp;:=
+\tau_{\leq n}
+(\operatorname{Aut}_{\mathsf{Grp}}(G) /_{\mathrm{Ad}} G)\\
+&amp; =\tau_{\leq n}\operatorname{Aut}(\mathbf{B}G).
+\end{aligned}
+$$</p>
+<p><strong>注</strong>. 两个群的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>之间 (作为<strong>不带点</strong>生象) 的映射空间满足
+$$
+\operatorname{Hom}_{\mathsf{Ani}}(\mathbf{B}G,\mathbf{B}H)\simeq \operatorname{Hom}_{\mathsf{Grp}(\mathsf{Ani})}(G,H)/_{\mathrm{Ad}} H,
+$$
+即群同态的生象关于 $H$ 的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的商.</p>
+<h3>离散群</h3>
+<p>考虑 $G$ 为离散群 ($0$-截断群) 的情形.</p>
+<p>考虑群 $G$ 的<span class="link local"><a href="./群的外自同构.html" title="群的外自同构 [群的外自同构]">外自同构</a></span>群
+$$
+\begin{aligned}
+    \operatorname{Out}(G)&amp;=
 \tau_{\leq 0}
 (\operatorname{Aut}_{\mathsf{Grp}}(G) /_{\mathrm{Ad}} G)\\
 &amp; =\tau_{\leq 0}\operatorname{Aut}(\mathbf{B}G).
 \end{aligned}
+$$
+一个生象 $A$ 在某点处的连通分支是 $A\to\tau_{\leq 0} A$ 在该点的<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维</a></span>. 由<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span> $Z(G)$ 的定义, $\mathbf{B}Z(G)$ 是 $\operatorname{Aut}(\mathbf{B}G)$ 在 $\mathrm{id}$ 处的连通分支. 那么有<span class="link local"><a href="./群短正合列.html" title="群的短正合列 [群短正合列]">短正合列</a></span>
+$$
+\mathbf{B}Z(G) \to \operatorname{Aut}(\mathbf{B}G) \to \operatorname{Out}(G)
+$$
+以及<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
+$$
+\begin{aligned}
+    \mathbf{B}Z(G) &amp;\to \operatorname{Aut}(\mathbf{B}G) \to \operatorname{Out}(G)\\
+\to \mathbf{B}^2Z(G) &amp;\to \mathbf{B}\operatorname{Aut}(\mathbf{B}G) \to \mathbf{B}\operatorname{Out}(G).
+\end{aligned}
 $$</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./内自同构.html" title="群的内自同构 [内自同构]">内自同构</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="群胚"><header><h1><span class="taxon"></span>群胚 <a class="slug" href="./群胚.html">[群胚]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>群胚是所有态射均为同构的范畴.</p>

@@ -1083,6 +1083,107 @@ $$
 \mathsf{Mod}_{2\mathsf{Pr}}(-) \colon \mathsf{CAlg}(2\mathsf{Pr}) \to \mathsf{CAlg}(\mathsf{Mod}_{\mathsf{Pr}}(2\mathsf{Pr})).
 $$
 定义 $\mathsf{Mod}_{\mathsf{Pr}}(2\mathsf{Pr})$ 为 $3\mathsf{Pr}$, 这个过程可以重复下去, 定义 “可表现 $n$-范畴的范畴” $n\mathsf{Pr} \in \mathsf{Pr}$. 可表现 $n$-范畴是 “充实于 $(n-1)\mathsf{Pr}$ 的可表现范畴”.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="中心"><header><h1><span class="taxon"></span>中心 <a class="slug" href="./中心.html">[中心]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>群</h3>
+<p>$\mathsf{Set}$ 中的群 (或幺半群) $G$ 的<strong>中心</strong>为 $G$ 中与所有元素交换的元素构成的子集:
+$$
+Z(G) = \{g\in G | \forall h\in G, gh=hg\}.
+$$</p>
+<p>对更一般的<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> (如<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>群) $G$,
+定义
+$$
+Z(G) := \operatorname{Aut}_{\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)}(\mathrm{id}).
+$$
+换言之,</p>
+<ul>
+<li>$Z(G) = \Omega^2(\mathsf{Ani}^\simeq,\mathbf{B}G)$ 为 $\mathsf{Ani}^\simeq$ (“<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的生象”) 在 $\mathbf{B}G$ 处的二重<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> (可见 $Z(G)$ 是个 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span>-群);</li>
+<li>$\mathbf{B}Z(G)$ 是 $\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)$ 在 $\mathrm{id}_{\mathbf{B}G}$ 处的连通分支.</li>
+</ul>
+<p>由定义, 中心 $Z(G)$ 到 $G$ 本身有一典范映射
+$$
+Z(G)\to \operatorname{Aut}_{\mathbf{B}G}(*) = G.
+$$</p>
+<h3>环</h3>
+<p>固定交换环 $k$ 作为基环.
+设 $A$ 为 $k$ 上的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. $A$ 的<strong>中心</strong>是与所有元素交换的元素的集合
+$$
+Z(A) = \{a\in A | \forall b\in A, ab=ba\},
+$$
+也是 $A$ 作为 $(A,A)$-双模的自同态的集合
+$$
+Z(A) = \operatorname{End}_{\mathsf{BiMod}(A,A)}(A),
+$$
+也是<span class="link local"><a href="./等化子.html" title="等化子 [等化子]">等化子</a></span>
+$$
+Z(A) = \operatorname{eq}\big(
+    A\rightrightarrows \operatorname{Hom}_k(A,A)
+\big),
+$$
+其中两个映射分别为左乘与右乘.</p>
+<p>回忆 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>中, <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 的恒等态射即是 $A$ 作为 $(A,A)$-双模. 因此, $A$ 的中心又可理解为
+$$
+Z(A) = \operatorname{End}_{\operatorname{End}_{\mathsf{Morita}}(A)}(\mathrm{id}).
+$$</p>
+<p>进一步, Morita 范畴嵌入线性范畴的范畴, 从而<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 的中心也可定义为
+$$
+Z(R) := \operatorname{End}_{\operatorname{End}_{\mathsf{Cat}}(\mathsf{Mod}(A))}(\mathrm{id}).
+$$</p>
+<h3>范畴</h3>
+<p>范畴 $\mathcal{C}$ 的中心为<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>
+$$
+Z(\mathcal{C}) := \operatorname{End}_{\operatorname{End}_{\mathsf{Cat}}(X)}(\mathrm{id}_{\mathcal{C}}).
+$$
+见后文 “$2$-范畴的对象”.</p>
+<p>由定义, 若将群 $G$ 视为单对象范畴 $\mathbf{B}G$, 则 $G$ 的中心即是范畴 $\mathbf{B}G$ 的中心. 当然, 一般的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的中心也可通过视为单对象<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>来定义.</p>
+<h3>幺半范畴</h3>
+<p><strong>注</strong>. 当我们说幺半范畴的中心时, 一般不是将其视为范畴像上一小节那样定义中心, 而是视为 $\mathsf{Cat}$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>定义中心.</p>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>,
+此时 $\mathcal C$ 的中心 (又称 <strong>Drinfeld 中心</strong>) $Z(\mathcal C)$ 是一个<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半范畴</a></span>, 可理解为两个函子 $\mathcal C \rightrightarrows \operatorname{End}(\mathcal C)$ 的<span class="link local"><a href="./等化子.html" title="等化子 [等化子]">等化子</a></span>, 其对象为 $\mathcal C$ 的对象 $X$ 配备自然变换
+$$
+X\otimes (-) \to (-)\otimes X,
+$$
+满足两个自然变换 $X\otimes (Y\otimes Z)\to (Y\otimes Z)\otimes X$ 相等.</p>
+<h3>2-范畴的对象</h3>
+<p>定义 $2$-范畴 $\mathcal C$ 的对象 $X$ 的<strong>中心</strong>为<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>
+$$
+Z(X) := \operatorname{End}_{\operatorname{End}_{\mathcal C}(X)}(\mathrm{id}_X).
+$$
+它类似于 $\mathcal C$ 在 $X$ 处的二阶<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>.
+由 <span class="link local"><a href="./Eckmann--Hilton论证.html" title="Eckmann–Hilton 论证 [Eckmann--Hilton论证]">Eckmann–Hilton 论证</a></span>, $Z(X)$ 为 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span> 幺半群 (辫幺半群).</p>
+<p>这样定义的中心又称 <span class="link local"><a href="./Hochschild上同调.html" title="Hochschild 上同调 [Hochschild上同调]">Hochschild 上同调</a></span>.</p>
+<h2>性质</h2>
+<h3>万有中心映射</h3>
+<p>群 $G$ 的中心到 $G$ 的典范映射
+$$
+Z(G)\to G
+$$
+是万有的<span class="link local"><a href="./中心映射.html" title="中心群同态, 中心映射 [中心映射]">中心映射</a></span>.</p>
+<h3>与群作用, 模的关系</h3>
+<p>设群 $G$ 的中心为 $Z$, 考虑任意范畴中的 $G$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span> $X$, 那么 $Z$ 不仅作用于 $X$ 上, 而且该作用为 $G$-<span class="link local"><a href="./等变映射.html" title="等变映射 [等变映射]">等变</a></span>作用 (甚至为<span class="link local"><a href="./中心作用.html" title="中心作用 [中心作用]">中心作用</a></span>). 这是因为, 由定义,
+$$
+Z = \operatorname{Aut}(\mathrm{id}_{\mathbf{B}G})
+$$
+作用于 $\mathrm{id}_{\mathbf{B}G}$ 上, 故作用于任何函子 $\mathbf{B}G\to\mathcal{C}$ 上.</p>
+<p>推而广之, 对任意范畴 $\mathcal{C}$, 其中心
+$$
+Z(\mathcal{C})=\operatorname{Aut}(\mathrm{id}_{\mathcal{C}})
+$$
+<span class="link local"><a href="./中心作用.html" title="中心作用 [中心作用]">中心作用</a></span>于任何函子 $F\colon\mathcal{C} \to \mathcal{D}$ 上, 也即有群同态
+$$
+Z(\mathcal{C}) \to Z(\mathsf{Fun}(\mathcal{C},\mathcal{D})) \to Z(\operatorname{End}(F)).
+$$
+其中第二个箭头为 “取自然变换在 $F$ 上的分量”.</p>
+<h2>例</h2>
+<h3>中心不是子群的例子</h3>
+<p>生象群 $G$ 的中心不一定是 $G$ 的子群, 即典范映射 $Z(G)\to G$ 不一定是 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>映射.</p>
+<p>考虑 $G = \Omega S^2$, 映射
+$$
+Z(G) = \Omega_{\mathrm{id}}\operatorname{Aut}(S^2) \to \Omega S^2
+$$
+在基点处的纤维为 $\Omega_{\mathrm{id}}\operatorname{Aut}_*(S^2) \simeq \Omega^3 S^2$, 不是 $(-1)$-截断生象.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./余中心.html" title="余中心 [余中心]">余中心</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="代函子"><header><h1><span class="taxon"></span>代函子 <a class="slug" href="./代函子.html">[代函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>代函子</strong> (profunctor) 是函子的推广, 类似于关系是函数的推广.</p>
@@ -1707,7 +1808,8 @@ $$
 F\colon \mathbf{B}G\to\mathcal C,
 $$
 将 $\mathbf{B}G$ 中的对象 $*$ 映射到 $X$.</p>
-<p>换言之, $\mathbf{B}G$ 中的对象 $*$ 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的 $G$-作用.</p>
+<p><strong>注</strong>. 根据人为选取的约定, 我们将函子 $\mathbf{B}G\to\mathcal C$ 称为 $G$ 的<strong>左作用</strong> (这仅仅是因为我们习惯将作用符号写在左边). 相应地, 函子 $\mathbf{B}G^{\mathrm{op}}\to\mathcal C$ 称为 $G$ 的<strong>右作用</strong>. 但实际上 $\mathbf{B}G$ 等价于 $\mathbf{B}G^{\mathrm{op}}$ (因为它是一个群胚), 所以两个概念是等价的.</p>
+<p>用<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的观点看, 范畴 $\mathbf{B}G$ 中的对象 $*$ 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的 $G$-作用.</p>
 <p>定义 $G$-作用 $F\colon \mathbf{B}G\to\mathcal C$ 的<strong></strong><span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>为极限
 $$
 X^G := \operatorname{lim} F ;
@@ -1755,9 +1857,10 @@ $$
 X^G = \operatorname{Hom}_{\mathsf{Ani}_{/\mathbf{B}G}}(\mathbf{B}G,X/G).
 $$</p>
 <h2>例</h2>
-<ul>
-<li>群在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span></li>
-</ul>
+<h3>左乘/右乘作用</h3>
+<p>对于生象群 $G$, 映射 $* \to \mathbf{B}G$ 对应的 $G$-作用即是 $G$ 在自身上的左乘作用.</p>
+<h3>共轭作用</h3>
+<p>每个群 $G$ 都有在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>.</p>
 <h3>$\mathbb{Z}$ 的作用</h3>
 <p>$\mathbb{Z}$ 在对象 $X$ 上的作用相当于 $X$ 的一个自同构 $\phi\colon X\to X$. 此时,</p>
 <ul>

@@ -1320,6 +1320,19 @@ $$
 <p>在高阶范畴中做代数是一门极为深奥的学问. 一个难点在于分辨 $1$-范畴中的哪些代数现象在高阶范畴仍然存在, 哪些现象是由于 $1$-范畴 (集合) 的<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断性</a></span>带来的额外便利 (例如高阶代数中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>等结构在截断的 $1$-范畴中退化为<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">性质</a></span>). 现状往往是后者.</p>
 <p>目前, 人们表达代数结构的主要工具是<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>. 这样的现状大致归功于 Lurie 的 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Higher Algebra</a></span>; 但容易找到更简短而友好的材料如 <span class="link local"><a href="./HaugsengOp.html" title="An allegedly somewhat friendly introduction to ∞-operads [HaugsengOp]">Haugseng</a></span>.</p>
 <p>表达代数结构也有其它工具, 如 <span class="link local"><a href="./PROP.html" title="PROP [PROP]">PROP</a></span>; 算畴本身也有许多版本. 不过这些结构都大同小异.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="中心映射"><header><h1><span class="taxon"></span>中心群同态, 中心映射 <a class="slug" href="./中心映射.html">[中心映射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>同态 $H \to G$, 若其穿过 $G$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span> $H\to Z(G)$, 则称之为<strong>中心群同态</strong>.</p>
+<p>注意, 一般生象群之间的一个同态构成中心群同态是<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构而非性质</a></span>.</p>
+<p>中心群同态的概念也可以不依赖于中心的概念而定义; 将<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>视为带基点连通<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>, 我们定义<strong>中心映射</strong>的概念.</p>
+<p>对于带基点连通生象的保基点映射 $f\colon Y\to X$, 若存在如下交换图 (左图与右图的信息等价), 则称之为<strong>中心映射</strong>.</p>
+<p><figure><img src="./中心映射-1.svg" class="color-invert"/></figure></p>
+<p>考虑 $\operatorname{End}_{\mathsf{Ani}}(X)$ 中基点 $\mathrm{id}_X$ 所在的连通分支 $\operatorname{End}_{\mathsf{Ani}}(X)_{0}$; 由定义, 万有的中心映射即是 $\mathrm{ev}_*\colon \operatorname{End}_{\mathsf{Ani}}(X)_{0}\to X$.</p>
+<p>注意当 $X=\mathbf{B}G$ 时,
+$$
+\Omega_{\mathrm{id}}\operatorname{End}_{\mathsf{Ani}}(X)_{0} = \Omega_{\mathrm{id}}\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G) = Z(G),
+$$
+其中 $Z(G)$ 是 $G$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="切结构"><header><h1><span class="taxon"></span>切结构 <a class="slug" href="./切结构.html">[切结构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>切结构</strong>是基于光滑流形的切丛的一大类<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构</a></span>的统称, 包括<strong>定向</strong>, <strong>Riemann 度量</strong>, <strong></strong><span class="link local"><a href="./近复结构.html" title="近复结构 [近复结构]">近复结构</a></span>等. 它是流形的<span class="link local"><a href="./切丛.html" title="切丛 [切丛]">切丛</a></span>对应的 $\mathrm{GL}_n$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>的<span class="link local"><a href="./主丛的约化.html" title="主丛的约化 [主丛的约化]">约化</a></span>.</p>

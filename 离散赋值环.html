@@ -827,18 +827,26 @@
 
 <article><section class="block" data-taxon=""><details open><summary id="离散赋值环"><header><h1><span class="taxon"></span>离散赋值环 <a class="slug" href="./离散赋值环.html">[离散赋值环]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>离散赋值环在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">几何侧</a></span>对应一个点带有周围的小邻域, 使得其上的函数能够承载在该点处 “消失阶数” 的概念.</p>
+<p>离散赋值环是一种特殊的<span class="link local"><a href="./赋值环.html" title="赋值环 [赋值环]">赋值环</a></span>, 在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">几何侧</a></span>对应一维的曲线上的一点带有周围的小邻域, 其上的函数具有在该点处 “消失阶数” 的概念.</p>
 <h2>定义</h2>
-<p>离散赋值环是<span class="link local"><a href="./赋值环.html" title="赋值环 [赋值环]">赋值环</a></span>,</p>
+<p>离散赋值环是含幺交换环 $R$ 带有一个映射 $v\colon R \to\mathbb{Z}\cup\{\infty \}$, 满足</p>
+<ul>
+<li>$v(x)=\infty$ 当且仅当 $x=0$;</li>
+<li>$v$ 为满射;</li>
+<li>$v(xy) = v(x) + v(y)$ (约定 $n+\infty = \infty$);</li>
+<li>$v(x+y) \geq \operatorname{min}(v(x),v(y))$.</li>
+</ul>
 <h3>等价定义</h3>
-<p>一个离散赋值环是一个 (含幺交换) 环 $A$ 带有一个映射 $v\colon A\to\mathbb{Z}\cup\{\infty \}$, 满足 $v(ab)=v(a)+v(b)$, $v(a+b)\geq\operatorname{min}(v(a),v(b))$.</p>
 <p>离散赋值环是仅有一个极大理想的<span class="link local"><a href="./主理想整环.html" title=" [主理想整环]">主理想整环</a></span>. 其极大理想由赋值 $\geq 1$ 的元素构成.</p>
 <p>离散赋值环是具有唯一不可约元的<span class="link local"><a href="./唯一分解整环.html" title="“唯一分解整环” [唯一分解整环]">唯一分解整环</a></span>.</p>
 <h2>性质</h2>
-<p>离散赋值环是<span class="link local"><a href="./局部环.html" title="“局部环” [局部环]">局部环</a></span>.</p>
+<h3>局部环</h3>
+<p>离散赋值环是<span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span>, 其唯一的极大理想由赋值 $\geq 1$ 的元素构成.</p>
+<h3>赋值环</h3>
+<p>离散赋值环是<span class="link local"><a href="./赋值环.html" title="赋值环 [赋值环]">赋值环</a></span>. 设 $R$ 为离散赋值环, 对 $x\in\operatorname{Frac}R$, 有 $x\in R$ 或 $x^{-1}\in R$.</p>
 <h2>例</h2>
 <p><span class="link local"><a href="./p-进整数.html" title="p-进整数 [p-进整数]">$p$-进整数</a></span>环 $\mathbb{Z}_p = \operatorname{lim}_n \mathbb{Z}/(p^n)$ 是离散赋值环, 赋值是被 $p$ 整除的次数.</p>
-<p>$\mathbb{C}[x]$</p>
+<p>$\mathbb{C}[t]_{(t)}$ 是离散赋值环, 赋值是被 $t$ 整除的次数.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Dedekind整环"><header><h1><span class="taxon"></span>“Dedekind 整环” <a class="slug" href="./Dedekind整环.html">[Dedekind整环]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>Dedekind 整环 $\mathcal O$ 的谱 $\operatorname{Spec}\mathcal O$ 可理解为光滑曲线. 在每点 $\mathfrak p$ 处, $\mathcal O$ 的局部化 $\mathcal O_{\mathfrak p}$ 为<span class="link local"><a href="./离散赋值环.html" title="离散赋值环 [离散赋值环]">离散赋值环</a></span>, $\operatorname{Spec}\mathcal O_{\mathfrak p}$ 为 $\mathfrak p$ 附近的无穷小邻域.</p>
@@ -848,7 +856,7 @@
 <h2>观念</h2>
 <h2>定义</h2>
 <h3>局部环</h3>
-<p><span class="link local"><a href="./局部环.html" title="“局部环” [局部环]">局部环</a></span>的 <strong>Hensel 化</strong>是 <span class="link local"><a href="./Hensel环.html" title="Hensel 环 [Hensel环]">Hensel 环</a></span>的范畴到局部环的范畴的含入的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
+<p><span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span>的 <strong>Hensel 化</strong>是 <span class="link local"><a href="./Hensel环.html" title="Hensel 环 [Hensel环]">Hensel 环</a></span>的范畴到局部环的范畴的含入的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
 <h2>例</h2>
 <p>设 $R$ 为<span class="link local"><a href="./离散赋值环.html" title="离散赋值环 [离散赋值环]">离散赋值环</a></span>, 其分式域为 $K$, 极大理想为 $\mathfrak m$. 记
 $$
@@ -1047,7 +1055,7 @@ $$</p>
 $$
 \mathcal O = \{x\in F \mid \|x\|\leq 1\}.
 $$
-它是<span class="link local"><a href="./局部环.html" title="“局部环” [局部环]">局部环</a></span>, <span class="link local"><a href="./离散赋值环.html" title="离散赋值环 [离散赋值环]">离散赋值环</a></span>, 有唯一的极大理想
+它是<span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span>, <span class="link local"><a href="./离散赋值环.html" title="离散赋值环 [离散赋值环]">离散赋值环</a></span>, 有唯一的极大理想
 $$
 \mathfrak m = \{x\in F \mid  \|x \| &lt; 1\}.
 $$
@@ -1080,7 +1088,7 @@ $$
 $$</p>
 <h2>性质</h2>
 <h3>局部环</h3>
-<p><strong>命题</strong>. 赋值环是<span class="link local"><a href="./局部环.html" title="“局部环” [局部环]">局部环</a></span>.</p>
+<p><strong>命题</strong>. 赋值环是<span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span>.</p>
 <p><em>证明</em>. 设 $\mathscr O$ 是赋值环. 对任意 $x\in \mathscr O$ ($x\neq 0,1$), 在分式域中 $\frac{x}{1-x}$, $\frac{1-x}{x}$ 之一属于 $\mathcal O$, 这说明 $x,1-x$ 之一可逆, 故 $\mathscr O$ 为局部环.
 (这个证明使用了<span class="link local"><a href="./排中律.html" title="排中律 [排中律]">排中律</a></span>.)</p>
 <h3>理想</h3>

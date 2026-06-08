@@ -901,12 +901,22 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="A1-Gm"><header><h1><span class="taxon"></span>仿射直线对乘法群的商 <a class="slug" href="./A1-Gm.html">[A1-Gm]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./代数几何.html" title="代数几何 [代数几何]">代数几何</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>仿射直线 $\mathbb A^1 = \operatorname{Spec}\mathbb{Z}[x] = \operatorname{Spec}\mathbb{Z}[\mathbb{N}]$ 上有<span class="link local"><a href="./乘法群概形.html" title="乘法群概形 [乘法群概形]">乘法群</a></span> $\mathbb G_m = \operatorname{Spec}\mathbb{Z}[x^{\pm 1}] = \operatorname{Spec}\mathbb{Z}[\mathbb{Z}]$ 的<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>. 在 $\mathsf{Aff}$ 上的 ($\mathsf{Ani}$-值 fpqc) 层范畴中取其商, 记作 $\mathbb A^1 / \mathbb G_m$.</p>
 <h2>性质</h2>
-<h3>单纯消解</h3>
+<h3>拟凝聚层: 单纯消解</h3>
 <p>由 $\mathbb A^1\to \mathbb A^1 / \mathbb G_m$ 的 <span class="link local"><a href="./Čech脉.html" title="Čech 脉 [Čech脉]">Čech 脉</a></span> (其<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>为 $\mathbb A^1 / \mathbb G_m$) 可以将 $\mathsf{QCoh}(\mathbb A^1 / \mathbb G_m)$ <span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>为余单纯范畴
 $$
 \mathsf{QCoh}(\mathbb A^1) \rightrightarrows \mathsf{QCoh}(\mathbb A^1 \times \mathbb G_m) \to^3 \cdots
 $$
 的极限.</p>
+<h3>作为线丛截面的分类空间</h3>
+<p>概形 (叠) $X$ 到 $\mathbb A^1 / \mathbb G_m$ 的映射等同于 $X$ 上的线丛带有一个截面 (这个结构与 Cartier <span class="link local"><a href="./除子.html" title="“除子” [除子]">除子</a></span>有关). 具体地, 映射
+$$
+X \to \mathbb A^1 / \mathbb G_m
+$$
+相当于如下资料:</p>
+<ul>
+<li>映射 $X \to \mathbf{B}\mathbb G_m$, 对应 $X$ 上的 $\mathbb G_m$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span> $P\to X$ (也给出<span class="link local"><a href="./关联丛.html" title="关联丛 [关联丛]">关联</a></span>的<span class="link local"><a href="./线丛.html" title="线丛 [线丛]">线丛</a></span> $\mathcal L = P\times_{\mathbb G_m}\mathbb A^1$),</li>
+<li>以及 $\mathbb G_m$-<span class="link local"><a href="./等变映射.html" title="等变映射 [等变映射]">等变映射</a></span> $P\to\mathbb A^1$, 这又相当于 $\mathbb G_m$-等变截面 $P\to P\times\mathbb A^1$, 也即截面 $X\to\mathcal L$.</li>
+</ul>
 <h3>与滤的关系</h3>
 <p>见<span class="link local"><a href="./fil-gr.html" title="滤与分次的叠观点 [fil-gr]">滤与分次的叠观点</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="ADE奇点"><header><h1><span class="taxon"></span>ADE 奇点 <a class="slug" href="./ADE奇点.html">[ADE奇点]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -1255,7 +1265,7 @@ $$
 <li>$A$ 是<span class="link local"><a href="./凝聚层.html" title="凝聚层 [凝聚层]">凝聚</a></span> $\mathcal O_X$-模;</li>
 <li>对 $X$ 的闭点 $x$, $A_x$ 是 $\mathcal O_{X,x}$ 上的 Azumaya 代数. 由局部环上 Azumaya 代数的性质, 这个条件可以仅在点处的 “纤维” (剩余域) 上验证.</li>
 </ul>
-<p>下面是一个等价的定义, 可视为将局部环上 Azumaya 代数的条件用 $X$ 的<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>陈述 (在 $X$ 的<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>中 $\mathcal O_X$ 为<span class="link local"><a href="./局部环.html" title="“局部环” [局部环]">局部环</a></span>):</p>
+<p>下面是一个等价的定义, 可视为将局部环上 Azumaya 代数的条件用 $X$ 的<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>陈述 (在 $X$ 的<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>中 $\mathcal O_X$ 为<span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span>):</p>
 <p><strong>定义 2</strong> (“内语言定义”). $A$ 为 $\mathcal O_X$-代数, 且为有限型 “自由” $\mathcal O_X$-模, 且 $A\otimes A^{\mathrm{op}} \to \operatorname{End}_{\mathcal O_X}(A)$ 为同构.</p>
 <p><strong>注</strong>. 内语言中的 “自由” 翻译到外部即局部自由.</p>
 <p>另一个等价的定义是</p>
@@ -1827,7 +1837,7 @@ $$</p>
 <h2>定义</h2>
 <p>Calabi–丘流形是 Ricci 平坦的紧 <span class="link local"><a href="./Kähler流形.html" title="Kähler 流形 [Kähler流形]">Kähler 流形</a></span>. 其<span class="link local"><a href="./典范丛.html" title="“典范丛” [典范丛]">典范丛</a></span>平凡, 第一<span class="link local"><a href="./陈类.html" title="“陈类” [陈类]">陈类</a></span>消失.</p>
 <p>Calabi–丘流形可视为 <span class="link local"><a href="./K3曲面.html" title="“K3 曲面” [K3曲面]">K3 曲面</a></span>的推广.</p>
-<p>Calabi–丘流形的<span class="link local"><a href="./和乐.html" title="“和乐” [和乐]">和乐</a></span>属于 $SU(n)$.</p>
+<p>Calabi–丘流形的<span class="link local"><a href="./和乐.html" title="和乐群, 单值群 [和乐]">和乐</a></span>属于 $SU(n)$.</p>
 <h2>代数簇</h2>
 <p>设 $X$ 为 $k$ 上的光滑射影代数簇, 若<span class="link local"><a href="./典范层.html" title=" [典范层]">典范丛</a></span> $\mathscr K_X\simeq \mathscr O_X$, 则称其为 <strong>Calabi–丘</strong>的.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Cartan子代数"><header><h1><span class="taxon"></span>“Cartan 子代数” <a class="slug" href="./Cartan子代数.html">[Cartan子代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -1917,7 +1927,7 @@ $$</p>
 <h2>1. Hecke 叠</h2>
 <p>设 $X$ 为 $\mathbb F_q$ 上的不可约光滑射影曲线, $G$ 为约化群.</p>
 <p>设 $N\subset X$ 为有限点集, 定义 $\mathrm{Bun}_{G,N}$ 为 $X$ 上具有 “$N$ 级结构” 的 $G$-丛的<span class="link local"><a href="./模空间.html" title="模空间 [模空间]">模空间</a></span>. 所谓 “$N$ 级结构” (structure de niveau $N$) $(\mathcal G,\psi)$ 是指在 $N$ 上的平凡化 $\psi\colon \mathcal G|_N \simeq G|_N$.</p>
-<p>设 $I$ 为有限集, $(I_1,\cdots,I_k)$ 为 $I$ 的分划. 定义 Hecke 叠
+<p>设 $I$ 为有限集, $(I_1,\cdots,I_k)$ 为 $I$ 的分划, 计顺序. 定义 <strong>Hecke 叠</strong>
 $$
 \mathrm{Hecke}_{N,I}^{(I_1,\cdots,I_k)}
 $$
@@ -1927,11 +1937,50 @@ $$
 <li>$(\mathcal G_0,\psi_0),\cdots,(\mathcal G_k,\psi_k) \in \mathrm{Bun}_{G,N}$;</li>
 <li>对 $j\in\{1,\cdots,k\}$, 同构 $\phi_j\colon \mathcal G_{j-1}|_{X\setminus \{x_i\colon i\in I_j\}} \simeq \mathcal G_{j}|_{X\setminus \{x_i\colon i\in I_j\}}$, 保持级结构.</li>
 </ul>
-<p>简言之, $\mathrm{Hecke}_{N,I}^{(I_1,\cdots,I_k)}$ 的一个点对应着一个具有 $N$ 级结构的 $G$-丛经过一列调整, 每次调整 $I_j$ 个点处的平凡化.</p>
+<p>简言之, $\mathrm{Hecke}_{N,I}^{(I_1,\cdots,I_k)}$ 的一个点对应着一个具有 $N$ 级结构的 $G$-丛经过一列调整, 每次调整 $I_j$ 个点处.</p>
+<p>当 $N = \varnothing$ 时在记号中将其省略.</p>
+<p>将 $(I_1,\cdots,I_k)$ 的某些相连片段合并, 相应地将调整过程的中间步骤遗忘, 可得遗忘映射
+$$
+\pi^{(I_1,\cdots,I_k)}_{(I'_1,\cdots,I'_{k'})}\colon \mathrm{Hecke}_{N,I}^{(I_1,\cdots,I_k)} \to \mathrm{Hecke}_{N,I}^{(I'_1,\cdots,I'_{k'})}.
+$$
+当然, 还有投影映射
+$$
+p_0\colon \mathrm{Hecke}_{N,I}^{(I_1,\cdots,I_k)} \to \mathrm{Bun}_{G,N}.
+$$</p>
+<p>定义 <strong>Beilinson–Drinfeld Grassmann 空间</strong> $\mathrm{Gr}_I^{(I_1,\cdots,I_k)}$ 为类似 $\mathrm{Hecke}_{I}^{(I_1,\cdots,I_k)}$ 的模空间, 但增加一个 $\mathcal G_k$ 的平凡化.</p>
+<p>当 $I$ 为单点集时, 记 $\mathrm{Gr}_I^{(I)}$ 为 $\mathrm{Gr}$. 这个空间在一点 $x\in X$ 处的纤维就是通常说的<span class="link local"><a href="./仿射Grassmann空间.html" title="仿射 Grassmann 空间 [仿射Grassmann空间]">仿射 Grassmann 空间</a></span>, 即 fpqc 商 $G(F_x)/G(\mathcal O_x)$.</p>
+<p>以 $\sum\infty x_i$ 表示各点 $x_i$ 的形式邻域的并. 考虑去心邻域 $\sum\infty x_i \setminus x_i$. 我们无需给出其定义, 只要求如下性质: 去心邻域上的同构 $\phi\colon \mathcal G \to \mathcal G'$ 相当于对 $G$ 的任意有限维表示 $V$ 给出一个态射 $V_{\mathcal G} \to V_{\mathcal G'}(N\sum x_i)$, 其中 $N$ 依赖于 $V$, 这些态射满足函子性, 且与张量积, 对偶相容.</p>
+<blockquote>
+<p>注记. 这可视为 <span class="link local"><a href="./淡中对偶.html" title="淡中对偶 [淡中对偶]">Tannaka 重构</a></span>观念的应用; 形式圆盘 $\infty x_i$ 上的 $G$-丛等同于对称幺半函子 $\mathsf{Rep}(G)\to\mathsf{QCoh}(\infty x_i)$, 而 $G$-丛的同构等同于这种函子之间的自然变换; 去心形式圆盘 $\infty x_i\setminus x_i$ 上的拟凝聚层范畴 $\mathsf{QCoh}(\infty x_i\setminus x_i)$ 是 $\mathsf{QCoh}(\infty x_i)$ 的一个<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span> (将 $\mathcal O(D)$ 的截面变得可逆), 而局部化范畴中的态射可用原范畴中的态射 $V_{\mathcal G} \to V_{\mathcal G'}(N x_i)$ 计算.</p>
+</blockquote>
+<p>Beilinson–Drinfeld Grassmann 空间 $\mathrm{Gr}_I^{(I_1,\cdots,I_k)}$ 在 $(x_i)_{i\in I}$ 上的一个点是如下资料:</p>
+<ul>
+<li>$\sum\infty x_i$ 上的 $G$-丛 $\mathcal G_0,\cdots,\mathcal G_k$,</li>
+<li>$\mathcal G_{j-i}$ 和 $\mathcal G_{j}$ 在 $(\sum\infty x_i) \setminus \{x_i\colon i\in I_j\}$ 上的同构 $\phi_j$,</li>
+<li>$\mathcal G_k$ 的平凡化 $\theta$.</li>
+</ul>
+<p>直观: 由于加入了 $\mathcal G_k$ 的平凡化, 并且 $\mathcal G_k$ 和前面每个 $\mathcal G_i$ 在 $x_i$ 之外同构, 故 $\mathcal G_i$ 可以只保留 $x_i$ 的形式邻域上的部分.</p>
 <h2>2. $G$-Chtouca 的叠</h2>
 <p>设 $I$ 为有限集, $(I_1,\cdots,I_k)$ 是 $I$ 的分拆. 设 $N\subset X$ 为有限点集, 定义 $(X\setminus N)^I$ 上的叠
 $$
 \mathrm{Cht}_{N,I}^{(I_1,\cdots,I_k)}
+$$
+分类的资料为 Hecke 叠所分类的资料加上一个保持级结构的同构
+$$
+\sigma\colon {^\tau\mathcal G_0} \overset{\sim}{\to} \mathcal G_k.
+$$
+有遗忘映射
+$$
+\gamma_{N,(I)}^{(I_1,\cdots,I_k)} \colon \mathrm{Cht}_{N,I}^{(I_1,\cdots,I_k)} \to \mathrm{Hecke}_{N,I}^{(I_1,\cdots,I_k)},
+$$
+忘掉同构 $\sigma$; 有投影映射
+$$
+\mathfrak p_{N,I}^{(I_1,\cdots,I_k)}\colon \mathrm{Cht}_{N,I}^{(I_1,\cdots,I_k)} \to (X\setminus N)^I,
+$$
+称为<strong>爪</strong> (les pattes).</p>
+<p>将 $(I_1,\cdots,I_k)$ 的某些相连片段合并, 相应地将 chtoucas 的中间步骤遗忘, 可得遗忘映射
+$$
+\pi^{(I_1,\cdots,I_k)}_{(I'_1,\cdots,I'_{k'})}\colon \mathrm{Cht}_{N,I}^{(I_1,\cdots,I_k)} \to \mathrm{Cht}_{N,I}^{(I'_1,\cdots,I'_{k'})}.
 $$</p>
 <h2>4. 上同调的层</h2>
 <h3>4.2</h3>
@@ -2333,7 +2382,7 @@ $$
 <p>本节介绍概形 $X$ 的 Brauer 群与 $H^2(X,\mathbb G_m)$ 的关系; $X$ 上的 <span class="link local"><a href="./Azumaya代数.html" title="Azumaya 代数 [Azumaya代数]">Azumaya 代数</a></span>的相似等价类 (<span class="link local"><a href="./Morita等价.html" title="Morita 等价 [Morita等价]">Morita 等价</a></span>类) 给出 $H^2(X,\mathbb G_m)$ 的元素.</p>
 <p>假设读者了解域 $k$ 的 Brauer 群, 即 $k$ 上的<span class="link local"><a href="./中心单代数.html" title="中心单代数 [中心单代数]">中心单代数</a></span>的相似类关于张量积构成的群.</p>
 <h3>局部环的 Brauer 群</h3>
-<p>设 $R$ 为<span class="link local"><a href="./局部环.html" title="“局部环” [局部环]">局部环</a></span>.</p>
+<p>设 $R$ 为<span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span>.</p>
 <p>相比于一个 <span class="link local"><a href="./Azumaya代数.html" title="Azumaya 代数 [Azumaya代数]">Azumaya 代数</a></span>具体是什么, 我们其实更加关心 Azumaya 代数的<strong>自同构群</strong>是什么. 因为我们最后关心的是这种对象的<strong>丛的同构类</strong>集合; 而任何一个丛都关联于一个群的<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>, 这个群正是纤维的<strong>自同构群</strong>. 所以如下的命题是尤其重要的. 但目前我不知道如何更好地理解这个命题.</p>
 <p><strong>命题</strong> (<span class="link local"><a href="./Skolem–Noether定理.html" title="Skolem–Noether 定理 [Skolem–Noether定理]">Skolem–Noether 定理</a></span>, <span class="link local"><a href="./MilneEC.html" title="Etale Cohomology [MilneEC]">Milne</a></span> 命题 IV.1.4). 设 $A$ 是 $R$ 上的 <span class="link local"><a href="./Azumaya代数.html" title="Azumaya 代数 [Azumaya代数]">Azumaya 代数</a></span>. 则 $A$ 作为 $R$-代数的自同构均为内自同构, 即形如 $a\mapsto uau^{-1}$, 其中 $u\in A$ 为可逆元.</p>
 <p><strong>命题</strong> (<span class="link local"><a href="./MilneEC.html" title="Etale Cohomology [MilneEC]">Milne</a></span> 推论 IV.1.5). $M_n(R)$ 作为 $R$-代数的自同构群是 $\mathrm{PGL}_n(R) = \mathrm{GL}_n(R) / R^*$.</p>
@@ -2601,6 +2650,7 @@ e(E) = c_d(E)\in H^{2d}(X).
 $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Excursion"><header><h1><span class="taxon"></span>远足代数 Excursion Algebra <a class="slug" href="./Excursion.html">[Excursion]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./GaitsgoryLinReevesExcALg.html" title="On the excursion algebra [GaitsgoryLinReevesExcALg]">Gaitsgory–Lin–Reeves</a></span> 的阅读笔记.</p>
+<p>相关概念: <span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span></p>
 <h2>AGKRRV</h2>
 <p>本文依赖于 <span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span>.</p>
 <p>相关笔记: <span class="link local"><a href="./notes-AGKRRV.html" title="AGKRRV [notes-AGKRRV]">AGKRRV</a></span></p>
@@ -2832,6 +2882,8 @@ $$
 这是<span class="link local"><a href="./张量-同态伴随.html" title="“张量-同态伴随” [张量-同态伴随]">张量-同态伴随</a></span>的特例: $k[G]\otimes_{k[H]}-$ 是<span class="link local"><a href="./标量扩张.html" title="“标量扩张” [标量扩张]">标量扩张</a></span>, $\operatorname{Hom}_{k[G]}(k[G],-)$ 是<span class="link local"><a href="./标量限制.html" title="“标量限制” [标量限制]">标量限制</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Frobenius共轭类"><header><h1><span class="taxon"></span>Frobenius 共轭类 <a class="slug" href="./Frobenius共轭类.html">[Frobenius共轭类]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon=""><details ><summary id="Frobenius态射"><header><h1><span class="taxon"></span>Frobenius 态射 <a class="slug" href="./Frobenius态射.html">[Frobenius态射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>从<span class="link local"><a href="./平展同伦论.html" title="平展同伦论 [平展同伦论]">平展同伦论</a></span>的角度看, Frobenius 态射给出 $\operatorname{Spec}\mathbb F_q$ 上概形的平展同伦型的<span class="link local"><a href="./和乐.html" title="和乐群, 单值群 [和乐]">和乐</a></span>.</p>
 <h2>定义</h2>
 <h3>$\mathbb F_p$-代数的 Frobenius 映射</h3>
 <p>对于 $\mathbb F_p$-代数 (又叫 $p$ 特征环) $A$, 其 Frobenius 态射是 $A$ 的自同态 $\operatorname{Frob}_A \colon A \to A$, $a\mapsto a^p$.</p>
@@ -2958,7 +3010,7 @@ $$
 $$
 将中间域 $F\subset M\subset E$ 对应到子群 $\operatorname{Aut}(E/M)\subset\operatorname{Gal}(E/F)$; 且</p>
 <ul>
-<li>$M/F$ 为<span class="link local"><a href="./正规扩张.html" title="正规扩张 [正规扩张]">正规扩张</a></span>当且仅当 $\operatorname{Aut}(E/M)\subset\operatorname{Gal}(E/F)$ 为<span class="link local"><a href="./正规子群.html" title="正规子群 [正规子群]">正规子群</a></span>.</li>
+<li>$M/F$ 为<span class="link local"><a href="./正规扩张.html" title="正规扩张 [正规扩张]">正规扩张</a></span>当且仅当 $\operatorname{Aut}(E/M)\subset\operatorname{Gal}(E/F)$ 为<span class="link local"><a href="./正规子群.html" title="正规子群, 正规同态 [正规子群]">正规子群</a></span>.</li>
 </ul>
 <p>此时有<span class="link local"><a href="./群短正合列.html" title="群的短正合列 [群短正合列]">短正合列</a></span>
 $$
@@ -3574,6 +3626,37 @@ $$
 </blockquote>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./向量丛-投射模类比.html" title="向量丛-投射模类比 [向量丛-投射模类比]">向量丛-投射模类比</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="GrpAni"><header><h1><span class="taxon"></span>生象群 <a class="slug" href="./GrpAni.html">[GrpAni]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>在 $\infty$-范畴的语境中, 正如子集的概念常常替换为一般映射, <strong>子群</strong>的概念常常替换为一般同态. 对子群定义的<span class="link local"><a href="./陪集空间.html" title="陪集空间 [陪集空间]">陪集空间</a></span>也可对任何群同态定义.</p>
+<h3>核</h3>
+<p>对于生象群同态 $f\colon G\to H$, 其<strong>核</strong>由如下<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>定义:
+$$
+\mathbf{B}\ker f \to \mathbf{B}G \overset{\mathbf{B}f}{\to} \mathbf{B}H.
+$$
+也即
+$$
+\mathbf{B}\ker f = \operatorname{fib}(\mathbf{B}f) = \mathbf{B}G \times_{\mathbf{B}H}*.
+$$</p>
+<h3>余核</h3>
+<p>对于生象群同态 $f\colon G\to H$, 其<strong>余核</strong>由如下<span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">余纤维列</a></span>定义:
+$$
+\mathbf{B}G \overset{\mathbf{B}f}{\to} \mathbf{B}H \to \mathbf{B}\operatorname{coker}f.
+$$</p>
+<p><strong>注意</strong>. 余核的行为与经典群论中的概念很不同.</p>
+<ul>
+<li>即使对于正规子群, $\operatorname{coker}f$ 一般也不是 $H$ 在 $G$ 上右<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>的商 $G/H$.</li>
+<li>即使对于正规子群, $H\to\operatorname{coker}f$ 的核一般也不是 $G$.</li>
+</ul>
+<p><strong>例</strong>. $2\mathbb{Z} \to \mathbb{Z}$ 的余核是 $\Omega\mathbb{RP}^2$ 而不是 $\mathbb{Z}/2$.</p>
+<h2>相关概念</h2>
+<p>todo: 整合进来</p>
+<ul>
+<li><span class="link local"><a href="./群作用.html" title="群作用 [群作用]">群作用</a></span></li>
+<li><span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span></li>
+<li><span class="link local"><a href="./中心作用.html" title="中心作用 [中心作用]">中心作用</a></span></li>
+<li><span class="link local"><a href="./内自同构.html" title="群的内自同构 [内自同构]">群的内自同构</a></span></li>
+<li><span class="link local"><a href="./群的外自同构.html" title="群的外自同构 [群的外自同构]">群的外自同构</a></span></li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="Gysin同态"><header><h1><span class="taxon"></span>“Gysin 同态” <a class="slug" href="./Gysin同态.html">[Gysin同态]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>微分几何</h2>
 <p>设 $X, Y$ 为紧连通微分流形, 若映射 $f \colon X \to Y$ 满足
@@ -3705,7 +3788,7 @@ $$
 <h2>观念</h2>
 <h2>定义</h2>
 <h3>局部环</h3>
-<p><span class="link local"><a href="./局部环.html" title="“局部环” [局部环]">局部环</a></span>的 <strong>Hensel 化</strong>是 <span class="link local"><a href="./Hensel环.html" title="Hensel 环 [Hensel环]">Hensel 环</a></span>的范畴到局部环的范畴的含入的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
+<p><span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span>的 <strong>Hensel 化</strong>是 <span class="link local"><a href="./Hensel环.html" title="Hensel 环 [Hensel环]">Hensel 环</a></span>的范畴到局部环的范畴的含入的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
 <h2>例</h2>
 <p>设 $R$ 为<span class="link local"><a href="./离散赋值环.html" title="离散赋值环 [离散赋值环]">离散赋值环</a></span>, 其分式域为 $K$, 极大理想为 $\mathfrak m$. 记
 $$
@@ -3716,7 +3799,7 @@ $$
 <h2>观念</h2>
 <p>Hensel 环是 Nisnevich 拓扑意义下的局部环, 而严格 Hensel 环是<span class="link local"><a href="./平展景.html" title="平展景 [平展景]">平展拓扑</a></span>意义下的局部环.</p>
 <h2>定义</h2>
-<p><strong>Hensel 环</strong>是使得如下 <strong>Hensel 引理</strong>成立的<span class="link local"><a href="./局部环.html" title="“局部环” [局部环]">局部环</a></span> $(R,\mathfrak m)$, $k=R/\mathfrak m$:</p>
+<p><strong>Hensel 环</strong>是使得如下 <strong>Hensel 引理</strong>成立的<span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span> $(R,\mathfrak m)$, $k=R/\mathfrak m$:</p>
 <ul>
 <li>对任意首一多项式 $f\in R[x]$, 以及 $\bar f\in k[x]$ 的分解 $\bar f = g_0 h_0$ ($g_0,h_0$ 为互素的首一多项式), 有 $f$ 的分解 $f=gh$, 使得 $\bar g = g_0, \bar h = h_0$, 且 $g,h$ 互素.</li>
 </ul>
@@ -4670,7 +4753,7 @@ $$
 <blockquote>
 <p>上面这个结论是丘先生 2023 年 3 月 16 日在院长讨论班讲的. 同时他说, 假若和 Laplace 算子交换的微分算子的环比标准的 ($\triangle,d,d^*$ 等等) 要更大, 那么流形的几何会有有趣的性质. 这种用算子完全代替几何的想法与<span class="link local"><a href="./非交换几何.html" title=" [非交换几何]">非交换几何</a></span>有关系.</p>
 </blockquote>
-<p><span class="link local"><a href="./曲率.html" title="“曲率” [曲率]">曲率</a></span>张量与<span class="link local"><a href="./近复结构.html" title="近复结构 [近复结构]">近复结构</a></span>相容:
+<p><span class="link local"><a href="./曲率.html" title="曲率 [曲率]">曲率</a></span>张量与<span class="link local"><a href="./近复结构.html" title="近复结构 [近复结构]">近复结构</a></span>相容:
 $$
 R(X,Y)\circ J=J\circ R(X,Y).
 $$</p>
@@ -8375,6 +8458,7 @@ $$
 <p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">亟需施工处</a></span>列表 (“TODO list”)</p>
 <p><span class="link local"><a href="./terminologies.html" title="单纯百科 - 术语翻译表 [terminologies]">术语翻译表</a></span></p>
 <h2>最近</h2>
+<p><span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span></p>
 <p><span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span></p>
 <p><span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span></p>
 <p><span class="link local"><a href="./谱分解.html" title="谱分解 [谱分解]">谱分解</a></span></p>
@@ -8964,6 +9048,7 @@ $$</p>
 </ul>
 <p>计划中的讲稿 / 笔记:</p>
 <ul>
+<li><span class="link local"><a href="./GrpAni.html" title="生象群 [GrpAni]">生象群</a></span></li>
 <li><span class="link local"><a href="./Chtoucas.html" title="Chtouca 与整体 Langlands 参数 [Chtoucas]">Chtouca 与整体 Langlands 参数</a></span></li>
 <li><span class="link local"><a href="./Excursion.html" title="远足代数 Excursion Algebra [Excursion]">远足代数 Excursion Algebra</a></span></li>
 <li><span class="link local"><a href="./notes-stable-center.html" title="稳定中心猜想 [notes-stable-center]">稳定中心猜想</a></span></li>
@@ -9194,7 +9279,7 @@ $$
 $$
 S_I \colon \mathcal A^{\otimes I} \to\mathcal C\otimes\mathsf{LS}(Y^I).
 $$</p>
-<p>对于点 $y\in Y$, 记 $\mathrm{ev}_y$ 为 $y$ 处的取值函子 $\mathsf{LS}(Y)\to\mathsf{Vect}$. 对于两个点 $y_1,y_2$ 之间的道路 $\gamma$, 有自然变换 $\mathrm{mon}_\gamma\colon \mathrm{ev}_{y_1} \to \mathrm{ev}_{y_2}$, 称为 “平行移动”.</p>
+<p>对于点 $y\in Y$, 记 $\mathrm{ev}_y$ 为 $y$ 处的取值函子 $\mathsf{LS}(Y)\to\mathsf{Vect}$. 对于两个点 $y_1,y_2$ 之间的道路 $\gamma$, 有自然变换 $\mathrm{mon}_\gamma\colon \mathrm{ev}_{y_1} \to \mathrm{ev}_{y_2}$, 称为 “<span class="link local"><a href="./平行移动.html" title="平行移动 [平行移动]">平行移动</a></span>”.</p>
 <p>设 $y_1,y_2\in Y$ 是两个点, $\gamma^J$ 是 $J$ 条 $y_1$ 到 $y_2$ 的道路, $\xi\in\operatorname{Hom}(1_{\mathcal A},\mathrm{mult}_J\circ\mathrm{mult}_J^R (1_{\mathcal A}))$.</p>
 <p><strong>断言</strong>. 远足算子为如下映射的复合.</p>
 <ul>
@@ -12142,7 +12227,7 @@ $$</p>
 <p><span class="link local"><a href="./置换范畴.html" title="置换范畴 [置换范畴]">置换范畴</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="中山引理"><header><h1><span class="taxon"></span>中山引理 <a class="slug" href="./中山引理.html">[中山引理]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p><strong>中山引理</strong> (Nakayama lemma) 说的是<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>在<span class="link local"><a href="./局部环.html" title="“局部环” [局部环]">局部</a></span>的一些信息能由一点上的信息 (<span class="link local"><a href="./纤维函子.html" title="纤维函子 [纤维函子]">纤维函子</a></span>) 决定.</p>
+<p><strong>中山引理</strong> (Nakayama lemma) 说的是<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>在<span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部</a></span>的一些信息能由一点上的信息 (<span class="link local"><a href="./纤维函子.html" title="纤维函子 [纤维函子]">纤维函子</a></span>) 决定.</p>
 <h2>陈述</h2>
 <h3>一个较强的引理</h3>
 <p><strong>结论</strong>. 设 $R$ 是交换环, $I\subset R$ 是理想, $M$ 是 $n$ 个元素生成的 $R$-模. 那么对任意同态 $f\colon M\to IM$, 存在 $a_1,\cdots,a_n\in I$ 使得
@@ -12156,7 +12241,7 @@ $$
 (1+a) M = 0.
 $$</p>
 <h3>特例: 局部环与纤维</h3>
-<p><strong>命题</strong>. 设 $R$ 是<span class="link local"><a href="./局部环.html" title="“局部环” [局部环]">局部环</a></span>, 极大理想为 $\mathfrak m$, 剩余域为 $k= R/\mathfrak m$. 对于有限生成 $R$-模 $M$, 若 $M / \mathfrak m M = 0$ (即 $M\otimes_R k$ = 0), 则 $M = 0$. 换言之, <span class="link local"><a href="./纤维函子.html" title="纤维函子 [纤维函子]">纤维函子</a></span>
+<p><strong>命题</strong>. 设 $R$ 是<span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span>, 极大理想为 $\mathfrak m$, 剩余域为 $k= R/\mathfrak m$. 对于有限生成 $R$-模 $M$, 若 $M / \mathfrak m M = 0$ (即 $M\otimes_R k$ = 0), 则 $M = 0$. 换言之, <span class="link local"><a href="./纤维函子.html" title="纤维函子 [纤维函子]">纤维函子</a></span>
 $$
 \mathsf{Mod}(R)_{\mathrm{fg}} \to \mathsf{Vect}_{k}
 $$
@@ -12189,30 +12274,9 @@ $$
 <li>$Z(G) = \Omega^2(\mathsf{Ani}^\simeq,\mathbf{B}G)$ 为 $\mathsf{Ani}^\simeq$ (“<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的生象”) 在 $\mathbf{B}G$ 处的二重<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> (可见 $Z(G)$ 是个 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span>-群);</li>
 <li>$\mathbf{B}Z(G)$ 是 $\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)$ 在 $\mathrm{id}_{\mathbf{B}G}$ 处的连通分支.</li>
 </ul>
-<p>一个生象 $A$ 的连通分支是 $A\to\tau_{\leq 0} A$ 的纤维. 此外, 两个群的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>之间 (作为<strong>不带点</strong>生象) 的映射空间满足
+<p>由定义, 中心 $Z(G)$ 到 $G$ 本身有一典范映射
 $$
-\operatorname{Hom}_{\mathsf{Ani}}(\mathbf{B}G,\mathbf{B}H)\simeq \operatorname{Hom}_{\mathsf{Grp}(\mathsf{Ani})}(G,H)/_{\mathrm{Ad}} H,
-$$
-即群同态的生象关于 $H$ 的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的商,
-因此该定义也可等价地陈述如下. 考虑群 $G$ 的<span class="link local"><a href="./群的外自同构.html" title="群的外自同构 [群的外自同构]">外自同构</a></span>群
-$$
-\begin{aligned}
-    \operatorname{Out}(G)&amp;=
-\tau_{\leq 0}
-(\operatorname{Aut}_{\mathsf{Grp}}(G) /_{\mathrm{Ad}} G)\\
-&amp; =\tau_{\leq 0}\operatorname{Aut}(\mathbf{B}G).
-\end{aligned}
-$$
-那么有<span class="link local"><a href="./群短正合列.html" title="群的短正合列 [群短正合列]">短正合列</a></span>
-$$
-\mathbf{B}Z(G) \to \mathsf{Aut}(\mathbf{B}G) \to \operatorname{Out}(G)
-$$
-以及<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
-$$
-\begin{aligned}
-    \mathbf{B}Z(G) &amp;\to \mathsf{Aut}(\mathbf{B}G) \to \operatorname{Out}(G)\\
-\to \mathbf{B}^2Z(G) &amp;\to \mathbf{B}\mathsf{Aut}(\mathbf{B}G) \to \mathbf{B}\operatorname{Out}(G).
-\end{aligned}
+Z(G)\to \operatorname{Aut}_{\mathbf{B}G}(*) = G.
 $$</p>
 <h3>环</h3>
 <p>固定交换环 $k$ 作为基环.
@@ -12239,9 +12303,17 @@ $$</p>
 $$
 Z(R) := \operatorname{End}_{\operatorname{End}_{\mathsf{Cat}}(\mathsf{Mod}(A))}(\mathrm{id}).
 $$</p>
+<h3>范畴</h3>
+<p>范畴 $\mathcal{C}$ 的中心为<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>
+$$
+Z(\mathcal{C}) := \operatorname{End}_{\operatorname{End}_{\mathsf{Cat}}(X)}(\mathrm{id}_{\mathcal{C}}).
+$$
+见后文 “$2$-范畴的对象”.</p>
+<p>由定义, 若将群 $G$ 视为单对象范畴 $\mathbf{B}G$, 则 $G$ 的中心即是范畴 $\mathbf{B}G$ 的中心. 当然, 一般的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的中心也可通过视为单对象<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>来定义.</p>
 <h3>幺半范畴</h3>
-<p>设 $\mathcal C$ 为 $k$-线性<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>,
-定义 $\mathcal C$ 的 <strong>Drinfeld 中心</strong> $Z(\mathcal C)$ 是一个<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半范畴</a></span>, 可理解为两个函子 $\mathcal C \to \operatorname{Hom}_k(\mathcal C,\mathcal C)$ 的<span class="link local"><a href="./等化子.html" title="等化子 [等化子]">等化子</a></span>, 其对象为 $\mathcal C$ 的对象 $X$ 配备自然变换
+<p><strong>注</strong>. 当我们说幺半范畴的中心时, 一般不是将其视为范畴像上一小节那样定义中心, 而是视为 $\mathsf{Cat}$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>定义中心.</p>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>,
+此时 $\mathcal C$ 的中心 (又称 <strong>Drinfeld 中心</strong>) $Z(\mathcal C)$ 是一个<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半范畴</a></span>, 可理解为两个函子 $\mathcal C \rightrightarrows \operatorname{End}(\mathcal C)$ 的<span class="link local"><a href="./等化子.html" title="等化子 [等化子]">等化子</a></span>, 其对象为 $\mathcal C$ 的对象 $X$ 配备自然变换
 $$
 X\otimes (-) \to (-)\otimes X,
 $$
@@ -12254,8 +12326,51 @@ $$
 它类似于 $\mathcal C$ 在 $X$ 处的二阶<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>.
 由 <span class="link local"><a href="./Eckmann--Hilton论证.html" title="Eckmann–Hilton 论证 [Eckmann--Hilton论证]">Eckmann–Hilton 论证</a></span>, $Z(X)$ 为 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span> 幺半群 (辫幺半群).</p>
 <p>这样定义的中心又称 <span class="link local"><a href="./Hochschild上同调.html" title="Hochschild 上同调 [Hochschild上同调]">Hochschild 上同调</a></span>.</p>
+<h2>性质</h2>
+<h3>万有中心映射</h3>
+<p>群 $G$ 的中心到 $G$ 的典范映射
+$$
+Z(G)\to G
+$$
+是万有的<span class="link local"><a href="./中心映射.html" title="中心群同态, 中心映射 [中心映射]">中心映射</a></span>.</p>
+<h3>与群作用, 模的关系</h3>
+<p>设群 $G$ 的中心为 $Z$, 考虑任意范畴中的 $G$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span> $X$, 那么 $Z$ 不仅作用于 $X$ 上, 而且该作用为 $G$-<span class="link local"><a href="./等变映射.html" title="等变映射 [等变映射]">等变</a></span>作用 (甚至为<span class="link local"><a href="./中心作用.html" title="中心作用 [中心作用]">中心作用</a></span>). 这是因为, 由定义,
+$$
+Z = \operatorname{Aut}(\mathrm{id}_{\mathbf{B}G})
+$$
+作用于 $\mathrm{id}_{\mathbf{B}G}$ 上, 故作用于任何函子 $\mathbf{B}G\to\mathcal{C}$ 上.</p>
+<p>推而广之, 对任意范畴 $\mathcal{C}$, 其中心
+$$
+Z(\mathcal{C})=\operatorname{Aut}(\mathrm{id}_{\mathcal{C}})
+$$
+<span class="link local"><a href="./中心作用.html" title="中心作用 [中心作用]">中心作用</a></span>于任何函子 $F\colon\mathcal{C} \to \mathcal{D}$ 上, 也即有群同态
+$$
+Z(\mathcal{C}) \to Z(\mathsf{Fun}(\mathcal{C},\mathcal{D})) \to Z(\operatorname{End}(F)).
+$$
+其中第二个箭头为 “取自然变换在 $F$ 上的分量”.</p>
+<h2>例</h2>
+<h3>中心不是子群的例子</h3>
+<p>生象群 $G$ 的中心不一定是 $G$ 的子群, 即典范映射 $Z(G)\to G$ 不一定是 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>映射.</p>
+<p>考虑 $G = \Omega S^2$, 映射
+$$
+Z(G) = \Omega_{\mathrm{id}}\operatorname{Aut}(S^2) \to \Omega S^2
+$$
+在基点处的纤维为 $\Omega_{\mathrm{id}}\operatorname{Aut}_*(S^2) \simeq \Omega^3 S^2$, 不是 $(-1)$-截断生象.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./余中心.html" title="余中心 [余中心]">余中心</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="中心作用"><header><h1><span class="taxon"></span>中心作用 <a class="slug" href="./中心作用.html">[中心作用]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 在某范畴的对象 $X$ 上的<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span> $G\to\operatorname{End}(X)$, 若其穿过 $\operatorname{End}(X)$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>, 则称之为<strong>中心作用</strong>.</p>
+<h2>性质</h2>
+<h3>中心的中心作用</h3>
+<p>对于某 $2$-范畴 $\mathcal{C}$ 的对象 $X$, 考虑其<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>
+$$
+Z(X) := \operatorname{End}_{\operatorname{End}_{\mathcal C}(X)}(\mathrm{id}_X),
+$$
+那么 $Z(X)$ 在 $X$ 上有一个中心作用
+$$
+Z(X) \to Z(\operatorname{End}(X)).
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="中心单代数"><header><h1><span class="taxon"></span>中心单代数 <a class="slug" href="./中心单代数.html">[中心单代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>域 $k$ 上的中心单代数 $A$ 是满足如下条件的<strong>有限维</strong> $k$-代数:</p>
@@ -12312,6 +12427,19 @@ $$
     \to\mathbf{B}^2 A.
 \end{aligned}
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="中心映射"><header><h1><span class="taxon"></span>中心群同态, 中心映射 <a class="slug" href="./中心映射.html">[中心映射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>同态 $H \to G$, 若其穿过 $G$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span> $H\to Z(G)$, 则称之为<strong>中心群同态</strong>.</p>
+<p>注意, 一般生象群之间的一个同态构成中心群同态是<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构而非性质</a></span>.</p>
+<p>中心群同态的概念也可以不依赖于中心的概念而定义; 将<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>视为带基点连通<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>, 我们定义<strong>中心映射</strong>的概念.</p>
+<p>对于带基点连通生象的保基点映射 $f\colon Y\to X$, 若存在如下交换图 (左图与右图的信息等价), 则称之为<strong>中心映射</strong>.</p>
+<p><figure><img src="./中心映射-1.svg" class="color-invert"/></figure></p>
+<p>考虑 $\operatorname{End}_{\mathsf{Ani}}(X)$ 中基点 $\mathrm{id}_X$ 所在的连通分支 $\operatorname{End}_{\mathsf{Ani}}(X)_{0}$; 由定义, 万有的中心映射即是 $\mathrm{ev}_*\colon \operatorname{End}_{\mathsf{Ani}}(X)_{0}\to X$.</p>
+<p>注意当 $X=\mathbf{B}G$ 时,
+$$
+\Omega_{\mathrm{id}}\operatorname{End}_{\mathsf{Ani}}(X)_{0} = \Omega_{\mathrm{id}}\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G) = Z(G),
+$$
+其中 $Z(G)$ 是 $G$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="丰沛线丛"><header><h1><span class="taxon"></span>丰沛线丛 <a class="slug" href="./丰沛线丛.html">[丰沛线丛]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>丰沛性是代数几何中的一种 “正性”. 见<span class="link local"><a href="./正线丛.html" title="“正线丛” [正线丛]">正线丛</a></span>.</p>
@@ -13175,7 +13303,7 @@ $$
 Y\sqcup_{X\sqcup X}Y,
 $$
 其中两个映射分别为 $\mathrm{id}\sqcup\mathrm{id}$ 与 $f\sqcup g$.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="余纤维列"><header><h1><span class="taxon"></span>“余纤维列” <a class="slug" href="./余纤维列.html">[余纤维列]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="余纤维列"><header><h1><span class="taxon"></span>余纤维列 <a class="slug" href="./余纤维列.html">[余纤维列]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>在一个<span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">无穷范畴</a></span>中, 设 $0$ 为零对象, 称序列 $A\to B\to C$ 为余纤维列是指
 $$
 \begin{array}{ccc}
@@ -13184,7 +13312,7 @@ $$
 	0 &amp; \to &amp; C
 \end{array}
 $$
-为推出.</p>
+为<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>, <span class="link local"><a href="./稳定∞-范畴.html" title=" [稳定∞-范畴]">稳定无穷范畴</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="余骨架"><header><h1><span class="taxon"></span>余骨架 <a class="slug" href="./余骨架.html">[余骨架]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -13266,6 +13394,10 @@ $$
 H^+(H^+) \downarrow\,\Leftrightarrow H^+(H^+) \uparrow,
 $$
 矛盾.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="像"><header><h1><span class="taxon"></span>像 <a class="slug" href="./像.html">[像]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的映射 $f\colon Y\to X$ 的<strong>像</strong> $\operatorname{im}f \to X$ 是 $f$ 作为 $\mathsf{Ani}_{/X}$ 中的对象的 $(-1)$-<span class="link local"><a href="./连通-截断分解.html" title="(n-连通, n-截断) 分解 [连通-截断分解]">截断</a></span>.</p>
+<p>直观上 $\operatorname{im}f$ 是 $X$ 中所有 “被 $f$ 接触到” 的连通分支的并.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="元素范畴"><header><h1><span class="taxon"></span>元素范畴 <a class="slug" href="./元素范畴.html">[元素范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>函子 $F\colon \mathcal C\to\mathsf{Set}$ 的<strong>元素范畴</strong> (category of elements) $\mathsf{El}(F)$ 是如下范畴,</p>
@@ -13684,6 +13816,17 @@ $$
 \iota\colon \mathsf K^+(\mathcal I_{\mathcal A})\to \mathsf K^+(\mathcal A) \to \mathsf D^+(\mathcal A)
 $$
 是范畴等价. 特别地, 由内射对象组成的链复形之间的拟同构必为同伦等价.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="内自同构"><header><h1><span class="taxon"></span>群的内自同构 <a class="slug" href="./内自同构.html">[内自同构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$, 其<strong>内自同构</strong>是指由共轭
+$$
+g\mapsto hgh^{-1}
+$$
+给出的自同构.</p>
+<p>注意, 对于生象群 $G$ 上面的描述不能按字面意思理解; 内自同构的生象<strong>不是</strong> $G$ 的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span> $G\to\operatorname{Aut}(G)$ 的<span class="link local"><a href="./像.html" title="像 [像]">像</a></span>.</p>
+<p>对于生象群 $G$, 而是 $G/Z(G)$.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./群的外自同构.html" title="群的外自同构 [群的外自同构]">群的外自同构</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="内范畴"><header><h1><span class="taxon"></span>内范畴 (1-范畴论) <a class="slug" href="./内范畴.html">[内范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>内范畴</strong>是范畴<span class="link local"><a href="./内部观点.html" title="内部观点 [内部观点]">内部</a></span>的<span class="link local"><a href="./严格1-范畴.html" title="严格 1-范畴 [严格1-范畴]">严格 $1$-范畴</a></span>, 即严格 $1$-范畴的<span class="link local"><a href="./一阶语言.html" title="一阶语言与一阶逻辑 [一阶语言]">一阶理论</a></span>在范畴中的<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">模型</a></span>.</p>
@@ -14478,7 +14621,7 @@ $$
 <h2>定义</h2>
 <p>剩余域有两种不同但有关联的含义.</p>
 <h3>局部环, 概形</h3>
-<p><span class="link local"><a href="./局部环.html" title="“局部环” [局部环]">局部环</a></span>的剩余域是它唯一的极大理想的商.</p>
+<p><span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span>的剩余域是它唯一的极大理想的商.</p>
 <h3>非 Archimedes 赋值域</h3>
 <p>设 $(K,\|{-}\|)$ 为<span class="link local"><a href="./非Archimedes赋值域.html" title="非 Archimedes 赋值域 [非Archimedes赋值域]">非 Archimedes 赋值域</a></span>, $\mathcal O_K=\{x\in K\mid \|x\|\leq 1\}$ 为其<span class="link local"><a href="./赋值环.html" title="赋值环 [赋值环]">赋值环</a></span>, 其唯一的极大理想为 $\mathfrak m=\{x\in K\mid\|x\|&lt;1\}$. 此时称 $\mathcal O_K/\mathfrak m$ 为 $K$ 的剩余域.</p>
 <h2>例</h2>
@@ -14599,7 +14742,7 @@ $$
 <h3>Galois 群</h3>
 <p>$x^5 - 2$ 在 $\mathbb{Q}$ 上的<span class="link local"><a href="./分裂域.html" title="分裂域 [分裂域]">分裂域</a></span>为 $\mathbb{Q}[\zeta,\alpha]$, 其中 $\zeta=\exp(2\pi/5),\alpha=\sqrt[5]{2}$. 考虑</p>
 <ul>
-<li>$\mathbb{Q}[\zeta]$ 的固定子群 $N$, 由于 $\mathbb{Q}[\zeta]/\mathbb{Q}$ <span class="link local"><a href="./正规扩张.html" title="正规扩张 [正规扩张]">正规</a></span> (是 $x^5-1$ 的分裂域), 故 $N\hookrightarrow G$ 为<span class="link local"><a href="./正规子群.html" title="正规子群 [正规子群]">正规子群</a></span>;</li>
+<li>$\mathbb{Q}[\zeta]$ 的固定子群 $N$, 由于 $\mathbb{Q}[\zeta]/\mathbb{Q}$ <span class="link local"><a href="./正规扩张.html" title="正规扩张 [正规扩张]">正规</a></span> (是 $x^5-1$ 的分裂域), 故 $N\hookrightarrow G$ 为<span class="link local"><a href="./正规子群.html" title="正规子群, 正规同态 [正规子群]">正规子群</a></span>;</li>
 <li>$\mathbb{Q}[\alpha]$ 的固定子群 $H$,</li>
 </ul>
 <p>那么
@@ -14770,6 +14913,7 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单射"><header><h1><span class="taxon"></span>单射 <a class="slug" href="./单射.html">[单射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>单射就是 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>映射.</p>
+<p>在<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中, 映射 $f\colon Y\to X$ 是单射, 当且仅当它是 $X$ 的若干连通分支的含入.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单点(同伦类型论)"><header><h1><span class="taxon"></span>单点 (同伦类型论) <a class="slug" href="./单点(同伦类型论).html">[单点(同伦类型论)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./同伦类型论.html" title="同伦类型论 [同伦类型论]">同伦类型论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>单点是同伦类型论中零个类型的乘积. 只有一种方式构造类型 $\mathbf 1$ 的元素:</p>
@@ -15112,7 +15256,7 @@ $$</p>
 <p><span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>, <span class="link local"><a href="./双单纯集.html" title="“双单纯集” [双单纯集]">双单纯集</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单群"><header><h1><span class="taxon"></span>单群 <a class="slug" href="./单群.html">[单群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>在 $\mathsf{Set}$ 中, 单群是没有非平凡<span class="link local"><a href="./正规子群.html" title="正规子群 [正规子群]">正规子群</a></span>的群.</p>
+<p>在 $\mathsf{Set}$ 中, 单群是没有非平凡<span class="link local"><a href="./正规子群.html" title="正规子群, 正规同态 [正规子群]">正规子群</a></span>的群.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./有限单群分类.html" title="有限单群分类 [有限单群分类]">有限单群分类</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="卷积"><header><h1><span class="taxon"></span>卷积 <a class="slug" href="./卷积.html">[卷积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -15477,7 +15621,7 @@ $\mathcal C_{/(X+Y)} \to \mathcal C_{/X} \times\mathcal C_{/Y}$.</p>
 <ul>
 <li>$P$ 诱导自 $X$ 的万有覆盖 (视为 $\pi_1(X)$-主丛) 与同态 $\pi_1(X)\to G$, 又称基本群的<strong>和乐表示</strong> (holonomy representation);</li>
 <li>$P$ 诱导自某个 $G_d$-主丛与同态 $\operatorname{id}\colon G_d\to G$, 其中 $G_d$ 为 $G$ 的底层离散群;</li>
-<li><span class="link local"><a href="./和乐.html" title="“和乐” [和乐]">和乐</a></span>表示 $\Omega(X)\to G$ 在<strong>同伦</strong>的意义下分解穿过投影 $\Omega(X)\to \pi_1(X)$.</li>
+<li><span class="link local"><a href="./和乐.html" title="和乐群, 单值群 [和乐]">和乐</a></span>表示 $\Omega(X)\to G$ 在<strong>同伦</strong>的意义下分解穿过投影 $\Omega(X)\to \pi_1(X)$.</li>
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="可缩(同伦类型论)"><header><h1><span class="taxon"></span>可缩类型 (同伦类型论) <a class="slug" href="./可缩(同伦类型论).html">[可缩(同伦类型论)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
@@ -15944,11 +16088,14 @@ $$</p>
 <p><strong>和</strong> (sum), 又叫<strong>余积</strong> (coproduct), 是以集合 (离散范畴) 为指标的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积 (范畴论)</a></span></p>
-</details></section><section class="block" data-taxon=""><details ><summary id="和乐"><header><h1><span class="taxon"></span>“和乐” <a class="slug" href="./和乐.html">[和乐]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<h2>主丛的和乐映射</h2>
-<h3>拓扑版本</h3>
+</details></section><section class="block" data-taxon=""><details ><summary id="和乐"><header><h1><span class="taxon"></span>和乐群, 单值群 <a class="slug" href="./和乐.html">[和乐]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>和乐</strong> (holonomy) 和<strong>单值群</strong> (monodromy) 是两个相关但不同的概念, 粗略地说都是指 “沿一个圈的<span class="link local"><a href="./平行移动.html" title="平行移动 [平行移动]">平行移动</a></span>”. 和乐指的是与<span class="link local"><a href="./曲率.html" title="曲率 [曲率]">曲率</a></span>有关的现象, 而单值群是无曲率时完全由拓扑决定的现象.</p>
+<h2>定义</h2>
+<h3>主丛的和乐映射</h3>
+<h4>拓扑版本</h4>
 <p><strong>命题</strong>. 拓扑空间 $X$ 上的 $G$-主丛 $P\to X$ 在同伦和 $G$ 的内自同构的意义下确定了<strong>和乐映射</strong> $\Omega X\to G$.</p>
-<h3>微分版本</h3>
+<h4>微分版本</h4>
 <p>设 $G$ 为 Lie 群, 记 $L_x$ 为 $x$ 处的分段光滑环路的集合, 其上具有<span class="link local"><a href="./广义微分结构.html" title=" [广义微分结构]">广义微分结构</a></span>. 和乐映射 $L_x\to G$ 是满足如下条件的广义光滑映射:</p>
 <ul>
 <li>细同伦 (即同伦的像包含在曲线内) 的环路对应 $G$ 中相同的元素;</li>
@@ -16486,7 +16633,13 @@ $$
 <p>在<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>中, 由于我们常常默认无穷范畴语境, 故有关代数几何的概念常常默认属于导出代数几何.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="导出函子"><header><h1><span class="taxon"></span>导出函子 <a class="slug" href="./导出函子.html">[导出函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>导出函子是 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>之间的左正合或右正合函子 $f\colon \mathcal A\to\mathcal B$ 根据<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>的泛性质诱导的<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>之间的函子 $\mathsf{D}(\mathcal A) \to \mathsf{D}(\mathcal B)$.</p>
+<p>对于 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>之间的左正合或右正合函子 $f\colon \mathcal A\to\mathcal B$, 其<strong>导出函子</strong>是根据<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>的泛性质诱导的<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>之间的函子 $\mathsf{D}(\mathcal A) \to \mathsf{D}(\mathcal B)$.</p>
+<p>回忆 Abel 范畴的<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>可以分两步构造: 由 Abel 范畴开始, 先取<span class="link local"><a href="./链复形.html" title="链复形 [链复形]">链复形范畴</a></span>得到<span class="link local"><a href="./带弱等价的范畴.html" title="带弱等价的范畴 [带弱等价的范畴]">带弱等价的范畴</a></span>, 然后<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>得到导出范畴:
+$$
+\mathcal{A} \leadsto (\mathsf{Ch}(\mathcal{A}),\text{拟同构}) \leadsto \mathsf{D}(\mathcal{A}).
+$$
+实际上, 导出函子的故事只发生在其中的第二步, 即由<span class="link local"><a href="./带弱等价的范畴.html" title="带弱等价的范畴 [带弱等价的范畴]">带弱等价的范畴</a></span>之间的函子诱导其<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>的 ($\infty$-)范畴之间的函子.</p>
+<p>导出函子可通过沿局部化函子作左右 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>得到.</p>
 <p>传统的导出函子是导出范畴之间的函子再复合同伦群函子 $\mathsf{D}(\mathcal B)\to\mathcal B$ 回到原来的范畴.</p>
 <h2>定义</h2>
 <h2>例</h2>
@@ -16945,7 +17098,7 @@ $$</p>
 $$
 \mathcal O = \{x\in F \mid \|x\|\leq 1\}.
 $$
-它是<span class="link local"><a href="./局部环.html" title="“局部环” [局部环]">局部环</a></span>, <span class="link local"><a href="./离散赋值环.html" title="离散赋值环 [离散赋值环]">离散赋值环</a></span>, 有唯一的极大理想
+它是<span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span>, <span class="link local"><a href="./离散赋值环.html" title="离散赋值环 [离散赋值环]">离散赋值环</a></span>, 有唯一的极大理想
 $$
 \mathfrak m = \{x\in F \mid  \|x \| &lt; 1\}.
 $$
@@ -16984,7 +17137,7 @@ $$
 p^* \dashv (p_* = x^*) \dashv x_*.
 $$
 此时 $p\colon \mathcal X\to\mathrm{pt}$ 是 $x\colon \mathrm{pt}\to\mathcal X$ 在意象的 $2$-范畴中的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="局部环"><header><h1><span class="taxon"></span>“局部环” <a class="slug" href="./局部环.html">[局部环]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="局部环"><header><h1><span class="taxon"></span>局部环 <a class="slug" href="./局部环.html">[局部环]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>局部环是满足如下等价条件的环 $R$:</p>
 <ul>
@@ -17004,8 +17157,8 @@ $$
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="局部环化空间"><header><h1><span class="taxon"></span>局部环化空间 <a class="slug" href="./局部环化空间.html">[局部环化空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>局部环化空间是指每个<span class="link local"><a href="./茎.html" title="茎 [茎]">茎</a></span>为<span class="link local"><a href="./局部环.html" title="“局部环” [局部环]">局部环</a></span>的<span class="link local"><a href="./环化空间.html" title="环化空间 [环化空间]">环化空间</a></span>.</p>
-<p>使用<span class="link local"><a href="./环化意象.html" title="“环化意象” [环化意象]">环化意象</a></span>的语言, 局部环化空间是一个环化意象 $(\mathcal E,R)$, 使得 $R$ 在 $\mathcal E$ 的<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>中是<span class="link local"><a href="./局部环.html" title="“局部环” [局部环]">局部环</a></span> (注意内语言中的局部环不用极大理想定义, 而是用可逆元定义).</p>
+<p>局部环化空间是指每个<span class="link local"><a href="./茎.html" title="茎 [茎]">茎</a></span>为<span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span>的<span class="link local"><a href="./环化空间.html" title="环化空间 [环化空间]">环化空间</a></span>.</p>
+<p>使用<span class="link local"><a href="./环化意象.html" title="“环化意象” [环化意象]">环化意象</a></span>的语言, 局部环化空间是一个环化意象 $(\mathcal E,R)$, 使得 $R$ 在 $\mathcal E$ 的<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>中是<span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span> (注意内语言中的局部环不用极大理想定义, 而是用可逆元定义).</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="局部类"><header><h1><span class="taxon"></span>局部类 <a class="slug" href="./局部类.html">[局部类]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -17474,6 +17627,8 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="平展空间"><header><h1><span class="taxon"></span>“平展空间” <a class="slug" href="./平展空间.html">[平展空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./直像-逆像伴随.html" title="拓扑空间上的直像-逆像伴随 [直像-逆像伴随]">直像-逆像伴随</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="平行移动"><header><h1><span class="taxon"></span>平行移动 <a class="slug" href="./平行移动.html">[平行移动]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="幺半维数"><header><h1><span class="taxon"></span>对称幺半维数 <a class="slug" href="./幺半维数.html">[幺半维数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>中, 一个对象的幺半维数是其恒等映射的<span class="link local"><a href="./迹.html" title="迹 [迹]">迹</a></span>.</p>
 <h2>例</h2>
@@ -19047,7 +19202,9 @@ $$
 <li>对象为开集 $U\subset X$ 和其到 $S$ 上的一个提升,</li>
 <li>覆盖为 Zariski 覆盖.</li>
 </ul>
-</details></section><section class="block" data-taxon=""><details ><summary id="曲率"><header><h1><span class="taxon"></span>“曲率” <a class="slug" href="./曲率.html">[曲率]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="曲率"><header><h1><span class="taxon"></span>曲率 <a class="slug" href="./曲率.html">[曲率]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>曲率是带有度量的几何对象 (通常为 <span class="link local"><a href="./Riemann流形.html" title="Riemann 流形 [Riemann流形]">Riemann 流形</a></span>) 上沿无穷小圈的<span class="link local"><a href="./平行移动.html" title="平行移动 [平行移动]">平行移动</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="曲率形式"><header><h1><span class="taxon"></span>“曲率形式” <a class="slug" href="./曲率形式.html">[曲率形式]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li><li class="meta-item">曲率, 曲率张量</li></ul></div></header></summary>
 
 <h2>活动标架</h2>
@@ -19320,7 +19477,7 @@ $$</p>
 $$
 \mathcal L = \|F\|^2,
 $$
-其中 $F$ 是联络对应的<span class="link local"><a href="./曲率.html" title="“曲率” [曲率]">曲率</a></span>, $\|-\|$ 来源于 $\Omega^2(M,\mathfrak g)$ 上的一个内积.</p>
+其中 $F$ 是联络对应的<span class="link local"><a href="./曲率.html" title="曲率 [曲率]">曲率</a></span>, $\|-\|$ 来源于 $\Omega^2(M,\mathfrak g)$ 上的一个内积.</p>
 <p>$$
 S=\int \mathcal L \,\text{dVol} = -\int F\wedge\star F
 $$</p>
@@ -19335,7 +19492,7 @@ $$
 \nabla^* R = 0.
 $$
 其中 $\nabla^*$ 是其形式伴随; 这等价于 $R$ 为<span class="link local"><a href="./调和形式.html" title="“调和形式” [调和形式]">调和形式</a></span>.</p>
-<p>$4$ 维情形的杨–Mills 方程可表示为<span class="link local"><a href="./曲率.html" title="“曲率” [曲率]">曲率</a></span>的 (反) 自对偶性 $\star R = \pm R$, 此时称 $\nabla$ (反) 自对偶.</p>
+<p>$4$ 维情形的杨–Mills 方程可表示为<span class="link local"><a href="./曲率.html" title="曲率 [曲率]">曲率</a></span>的 (反) 自对偶性 $\star R = \pm R$, 此时称 $\nabla$ (反) 自对偶.</p>
 <p>Atiyah–Singer 证明
 $$
 SD :=\{\nabla: \nabla \text{自对偶} \}\big/ \text{规范等价}
@@ -19898,9 +20055,9 @@ $$</p>
 <h3>生象群</h3>
 <h2>相关概念</h2>
 <p>商群 $N_G(H) / H$ 又叫 $H$ 对应的 <span class="link local"><a href="./Weyl群.html" title="Weyl 群 (极大环面) [Weyl群]">Weyl 群</a></span>.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="正规子群"><header><h1><span class="taxon"></span>正规子群 <a class="slug" href="./正规子群.html">[正规子群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="正规子群"><header><h1><span class="taxon"></span>正规子群, 正规同态 <a class="slug" href="./正规子群.html">[正规子群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>正规子群是可作为群同态的核的子群.</p>
+<p><strong>正规子群</strong>是可作为群同态的核的子群. 一般地 (尤其在<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>群的语境中), 我们不强调子群而是考虑一般同态; <strong>正规同态</strong>是可作为群同态的核的同态.</p>
 <h2>定义</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="正规扩张"><header><h1><span class="taxon"></span>正规扩张 <a class="slug" href="./正规扩张.html">[正规扩张]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
@@ -20915,18 +21072,26 @@ $$
 其中 $\sigma_k$ 为 $x_1^2,\cdots,x_n^2\in H^{*}(BT)$ 的 $k$ 次基本对称多项式.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="离散赋值环"><header><h1><span class="taxon"></span>离散赋值环 <a class="slug" href="./离散赋值环.html">[离散赋值环]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>离散赋值环在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">几何侧</a></span>对应一个点带有周围的小邻域, 使得其上的函数能够承载在该点处 “消失阶数” 的概念.</p>
+<p>离散赋值环是一种特殊的<span class="link local"><a href="./赋值环.html" title="赋值环 [赋值环]">赋值环</a></span>, 在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">几何侧</a></span>对应一维的曲线上的一点带有周围的小邻域, 其上的函数具有在该点处 “消失阶数” 的概念.</p>
 <h2>定义</h2>
-<p>离散赋值环是<span class="link local"><a href="./赋值环.html" title="赋值环 [赋值环]">赋值环</a></span>,</p>
+<p>离散赋值环是含幺交换环 $R$ 带有一个映射 $v\colon R \to\mathbb{Z}\cup\{\infty \}$, 满足</p>
+<ul>
+<li>$v(x)=\infty$ 当且仅当 $x=0$;</li>
+<li>$v$ 为满射;</li>
+<li>$v(xy) = v(x) + v(y)$ (约定 $n+\infty = \infty$);</li>
+<li>$v(x+y) \geq \operatorname{min}(v(x),v(y))$.</li>
+</ul>
 <h3>等价定义</h3>
-<p>一个离散赋值环是一个 (含幺交换) 环 $A$ 带有一个映射 $v\colon A\to\mathbb{Z}\cup\{\infty \}$, 满足 $v(ab)=v(a)+v(b)$, $v(a+b)\geq\operatorname{min}(v(a),v(b))$.</p>
 <p>离散赋值环是仅有一个极大理想的<span class="link local"><a href="./主理想整环.html" title=" [主理想整环]">主理想整环</a></span>. 其极大理想由赋值 $\geq 1$ 的元素构成.</p>
 <p>离散赋值环是具有唯一不可约元的<span class="link local"><a href="./唯一分解整环.html" title="“唯一分解整环” [唯一分解整环]">唯一分解整环</a></span>.</p>
 <h2>性质</h2>
-<p>离散赋值环是<span class="link local"><a href="./局部环.html" title="“局部环” [局部环]">局部环</a></span>.</p>
+<h3>局部环</h3>
+<p>离散赋值环是<span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span>, 其唯一的极大理想由赋值 $\geq 1$ 的元素构成.</p>
+<h3>赋值环</h3>
+<p>离散赋值环是<span class="link local"><a href="./赋值环.html" title="赋值环 [赋值环]">赋值环</a></span>. 设 $R$ 为离散赋值环, 对 $x\in\operatorname{Frac}R$, 有 $x\in R$ 或 $x^{-1}\in R$.</p>
 <h2>例</h2>
 <p><span class="link local"><a href="./p-进整数.html" title="p-进整数 [p-进整数]">$p$-进整数</a></span>环 $\mathbb{Z}_p = \operatorname{lim}_n \mathbb{Z}/(p^n)$ 是离散赋值环, 赋值是被 $p$ 整除的次数.</p>
-<p>$\mathbb{C}[x]$</p>
+<p>$\mathbb{C}[t]_{(t)}$ 是离散赋值环, 赋值是被 $t$ 整除的次数.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="秩"><header><h1><span class="taxon"></span>“秩” <a class="slug" href="./秩.html">[秩]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon=""><details ><summary id="积(范畴论)"><header><h1><span class="taxon"></span>积 (范畴论) <a class="slug" href="./积(范畴论).html">[积(范畴论)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
@@ -21013,7 +21178,7 @@ $$</p>
 <p><strong>稳定范畴</strong>是满足如下条件的范畴 $\mathcal C$:</p>
 <ul>
 <li>$\mathcal C$ 具有有限极限和有限余极限; 特别地, 具有零对象 $0$, 以及态射的纤维, 余纤维;</li>
-<li>$\mathcal C$ 中的拉回方块等同于推出方块; 特别地, <span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>等同于<span class="link local"><a href="./余纤维列.html" title="“余纤维列” [余纤维列]">余纤维列</a></span>;</li>
+<li>$\mathcal C$ 中的拉回方块等同于推出方块; 特别地, <span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>等同于<span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">余纤维列</a></span>;</li>
 <li><span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span>函子 $\Sigma\colon \mathcal C\to\mathcal C$ 与<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>函子 $\Omega\colon \mathcal C\to \mathcal C$ 构成一对互逆的范畴等价.</li>
 </ul>
 <p><strong>记号</strong>. 对稳定范畴的对象 $X$ 以及整数 $n$, 记
@@ -21930,6 +22095,7 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="群"><header><h1><span class="taxon"></span>群 <a class="slug" href="./群.html">[群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>群记录了对称性, 也即范畴中的对象的自同构.</p>
+<p>相关讲义: <span class="link local"><a href="./GrpAni.html" title="生象群 [GrpAni]">生象群</a></span></p>
 <h2>定义</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="群上同调"><header><h1><span class="taxon"></span>群上同调 <a class="slug" href="./群上同调.html">[群上同调]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
@@ -21982,7 +22148,8 @@ $$
 F\colon \mathbf{B}G\to\mathcal C,
 $$
 将 $\mathbf{B}G$ 中的对象 $*$ 映射到 $X$.</p>
-<p>换言之, $\mathbf{B}G$ 中的对象 $*$ 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的 $G$-作用.</p>
+<p><strong>注</strong>. 根据人为选取的约定, 我们将函子 $\mathbf{B}G\to\mathcal C$ 称为 $G$ 的<strong>左作用</strong> (这仅仅是因为我们习惯将作用符号写在左边). 相应地, 函子 $\mathbf{B}G^{\mathrm{op}}\to\mathcal C$ 称为 $G$ 的<strong>右作用</strong>. 但实际上 $\mathbf{B}G$ 等价于 $\mathbf{B}G^{\mathrm{op}}$ (因为它是一个群胚), 所以两个概念是等价的.</p>
+<p>用<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的观点看, 范畴 $\mathbf{B}G$ 中的对象 $*$ 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的 $G$-作用.</p>
 <p>定义 $G$-作用 $F\colon \mathbf{B}G\to\mathcal C$ 的<strong></strong><span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>为极限
 $$
 X^G := \operatorname{lim} F ;
@@ -22030,9 +22197,10 @@ $$
 X^G = \operatorname{Hom}_{\mathsf{Ani}_{/\mathbf{B}G}}(\mathbf{B}G,X/G).
 $$</p>
 <h2>例</h2>
-<ul>
-<li>群在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span></li>
-</ul>
+<h3>左乘/右乘作用</h3>
+<p>对于生象群 $G$, 映射 $* \to \mathbf{B}G$ 对应的 $G$-作用即是 $G$ 在自身上的左乘作用.</p>
+<h3>共轭作用</h3>
+<p>每个群 $G$ 都有在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>.</p>
 <h3>$\mathbb{Z}$ 的作用</h3>
 <p>$\mathbb{Z}$ 在对象 $X$ 上的作用相当于 $X$ 的一个自同构 $\phi\colon X\to X$. 此时,</p>
 <ul>
@@ -22052,15 +22220,44 @@ $$</p>
 <p><span class="link local"><a href="./PGLn.html" title="PGLn [PGLn]">$\mathrm{PGL}_n$</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="群的外自同构"><header><h1><span class="taxon"></span>群的外自同构 <a class="slug" href="./群的外自同构.html">[群的外自同构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>定义<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的<strong>外自同构群</strong> (outer automorphism group) 为其<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> $\mathbf{B}G$ 作为<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的自同构群的 $0$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>:
+<p>定义 $n$-截断<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的 $n$-截断<strong>外自同构群</strong> (outer automorphism group) 为其<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> $\mathbf{B}G$ 作为<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的自同构群的 $n$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>:
 $$
 \begin{aligned}
-    \operatorname{Out}(G)&amp;:=
+    \operatorname{Out}_{\leq n}(G)&amp;:=
+\tau_{\leq n}
+(\operatorname{Aut}_{\mathsf{Grp}}(G) /_{\mathrm{Ad}} G)\\
+&amp; =\tau_{\leq n}\operatorname{Aut}(\mathbf{B}G).
+\end{aligned}
+$$</p>
+<p><strong>注</strong>. 两个群的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>之间 (作为<strong>不带点</strong>生象) 的映射空间满足
+$$
+\operatorname{Hom}_{\mathsf{Ani}}(\mathbf{B}G,\mathbf{B}H)\simeq \operatorname{Hom}_{\mathsf{Grp}(\mathsf{Ani})}(G,H)/_{\mathrm{Ad}} H,
+$$
+即群同态的生象关于 $H$ 的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的商.</p>
+<h3>离散群</h3>
+<p>考虑 $G$ 为离散群 ($0$-截断群) 的情形.</p>
+<p>考虑群 $G$ 的<span class="link local"><a href="./群的外自同构.html" title="群的外自同构 [群的外自同构]">外自同构</a></span>群
+$$
+\begin{aligned}
+    \operatorname{Out}(G)&amp;=
 \tau_{\leq 0}
 (\operatorname{Aut}_{\mathsf{Grp}}(G) /_{\mathrm{Ad}} G)\\
 &amp; =\tau_{\leq 0}\operatorname{Aut}(\mathbf{B}G).
 \end{aligned}
+$$
+一个生象 $A$ 在某点处的连通分支是 $A\to\tau_{\leq 0} A$ 在该点的<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维</a></span>. 由<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span> $Z(G)$ 的定义, $\mathbf{B}Z(G)$ 是 $\operatorname{Aut}(\mathbf{B}G)$ 在 $\mathrm{id}$ 处的连通分支. 那么有<span class="link local"><a href="./群短正合列.html" title="群的短正合列 [群短正合列]">短正合列</a></span>
+$$
+\mathbf{B}Z(G) \to \operatorname{Aut}(\mathbf{B}G) \to \operatorname{Out}(G)
+$$
+以及<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
+$$
+\begin{aligned}
+    \mathbf{B}Z(G) &amp;\to \operatorname{Aut}(\mathbf{B}G) \to \operatorname{Out}(G)\\
+\to \mathbf{B}^2Z(G) &amp;\to \mathbf{B}\operatorname{Aut}(\mathbf{B}G) \to \mathbf{B}\operatorname{Out}(G).
+\end{aligned}
 $$</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./内自同构.html" title="群的内自同构 [内自同构]">内自同构</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="群短正合列"><header><h1><span class="taxon"></span>群的短正合列 <a class="slug" href="./群短正合列.html">[群短正合列]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>性质</h2>
 <h3>纤维列</h3>
@@ -23002,7 +23199,7 @@ $$
 $$</p>
 <h2>性质</h2>
 <h3>局部环</h3>
-<p><strong>命题</strong>. 赋值环是<span class="link local"><a href="./局部环.html" title="“局部环” [局部环]">局部环</a></span>.</p>
+<p><strong>命题</strong>. 赋值环是<span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span>.</p>
 <p><em>证明</em>. 设 $\mathscr O$ 是赋值环. 对任意 $x\in \mathscr O$ ($x\neq 0,1$), 在分式域中 $\frac{x}{1-x}$, $\frac{1-x}{x}$ 之一属于 $\mathcal O$, 这说明 $x,1-x$ 之一可逆, 故 $\mathscr O$ 为局部环.
 (这个证明使用了<span class="link local"><a href="./排中律.html" title="排中律 [排中律]">排中律</a></span>.)</p>
 <h3>理想</h3>
@@ -23014,7 +23211,7 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="超Kähler流形"><header><h1><span class="taxon"></span>“超 Kähler 流形” <a class="slug" href="./超Kähler流形.html">[超Kähler流形]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>超 Kähler 流形是 <span class="link local"><a href="./K3曲面.html" title="“K3 曲面” [K3曲面]">K3 曲面</a></span>的高维推广.</p>
 <h2>定义</h2>
-<p>设 $(M,g)$ 是 $4n$ 维 Riemann 流形. 若其<span class="link local"><a href="./和乐.html" title="“和乐” [和乐]">和乐</a></span>属于<span class="link local"><a href="./辛群.html" title=" [辛群]">辛群</a></span> $\operatorname{Sp}(n)$, 则称其为超 Kähler 流形.</p>
+<p>设 $(M,g)$ 是 $4n$ 维 Riemann 流形. 若其<span class="link local"><a href="./和乐.html" title="和乐群, 单值群 [和乐]">和乐</a></span>属于<span class="link local"><a href="./辛群.html" title=" [辛群]">辛群</a></span> $\operatorname{Sp}(n)$, 则称其为超 Kähler 流形.</p>
 <p>超 Kähler 流形的切丛上有<span class="link local"><a href="./四元数.html" title=" [四元数]">四元数</a></span>的作用 (即切空间同构于 $\mathbb H^n$), 且这种作用是平行的. 换言之, 存在 $TM$ 的三个自同态 $I,J,K$, 满足 $I^2 = J^2 = K^2 = IJK = -1$, $\nabla I = \nabla J = \nabla K = 0$ (<span class="link local"><a href="./Levi-Civita联络.html" title="“Levi-Civita 联络” [Levi-Civita联络]">Levi-Civita 联络</a></span>). 另外, $I,J,K$ 中每个都给出了 $M$ 上可积的<span class="link local"><a href="./近复结构.html" title="近复结构 [近复结构]">近复结构</a></span>.</p>
 <h2>例</h2>
 <p>$\mathbb H^n$ 很明显是超 Kähler 流形.</p>
@@ -23323,6 +23520,12 @@ $$</p>
 $$
 X \to Y \overset{\mathrm{id}}{\to} Y.
 $$</p>
+<p>$n=-1$:</p>
+<p>态射 $f\colon X\to Y$ 的 ($(-1)$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>, $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>) 分解即<strong>满单分解</strong>
+$$
+X \to \operatorname{im}f \to Y,
+$$
+其中 $\operatorname{im}f$ 是 $f$ 的<span class="link local"><a href="./像.html" title="像 [像]">像</a></span>.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通性</a></span>, <span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断性</a></span>, <span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">正交分解系</a></span></p>
 <p><span class="link local"><a href="./Postnikov塔.html" title="Postnikov 塔 [Postnikov塔]">Postnikov 塔</a></span>, <span class="link local"><a href="./Whitehead塔.html" title="Whitehead 塔 [Whitehead塔]">Whitehead 塔</a></span></p>
@@ -23732,7 +23935,7 @@ $$
     F(j,j)=0 &amp; \to &amp; F(j,k),
 \end{array}
 $$
-也即 $F(j,k)$ 能写成<span class="link local"><a href="./余纤维列.html" title="“余纤维列” [余纤维列]">余纤维</a></span>
+也即 $F(j,k)$ 能写成<span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">余纤维</a></span>
 $$
 F(j,k) = \operatorname{cofib}(F(-\infty,j)\to F(-\infty,k)),
 $$
@@ -23744,7 +23947,7 @@ $$
 $$
 \mathsf{Gap}(\mathcal J,\mathcal C) \simeq \mathsf{Fun}(\mathcal J\backslash\{-\infty\},\mathcal C).
 $$</p>
-<p>特别地, 当 $\mathcal J\backslash\{-\infty\} = (\mathbb{Z},\leq)$ 时, $\mathcal J$-链复形等同于 $\mathcal C$ 中的<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤对象</a></span> $(\mathbb{Z},\leq) \to \mathcal C$, 链复形的每一项是滤对象的一个<span class="link local"><a href="./余纤维列.html" title="“余纤维列” [余纤维列]">余纤维</a></span>.</p>
+<p>特别地, 当 $\mathcal J\backslash\{-\infty\} = (\mathbb{Z},\leq)$ 时, $\mathcal J$-链复形等同于 $\mathcal C$ 中的<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤对象</a></span> $(\mathbb{Z},\leq) \to \mathcal C$, 链复形的每一项是滤对象的一个<span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">余纤维</a></span>.</p>
 <h3>稳定范畴的情形</h3>
 <p>设 $\mathcal C$ 是<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>, $F$ 是 $\mathcal J$-链复形. 由于余纤维列等同于<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>, 从而有同伦群的长正合列
 $$
@@ -23903,7 +24106,7 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="陈--Weil理论"><header><h1><span class="taxon"></span>“陈–Weil 理论” <a class="slug" href="./陈--Weil理论.html">[陈--Weil理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li><li class="meta-item">陈–Weil 同态</li></ul></div></header></summary>
 
 <p><span class="link external"><a href="https://www.bananaspace.org/wiki/%E8%AE%B2%E4%B9%89:%E7%A4%BA%E6%80%A7%E7%B1%BB/%E9%99%88%E2%80%93Weil_%E7%90%86%E8%AE%BA_(%E4%B8%8A)" title="香蕉空间 [https://www.bananaspace.org/wiki/%E8%AE%B2%E4%B9%89:%E7%A4%BA%E6%80%A7%E7%B1%BB/%E9%99%88%E2%80%93Weil_%E7%90%86%E8%AE%BA_(%E4%B8%8A)]">香蕉空间</a></span></p>
-<p>陈–Weil 理论由陈省身与 André Weil 在推广 <span class="link local"><a href="./陈--Gauss--Bonnet定理.html" title="“陈–Gauss–Bonnet 定理” [陈--Gauss--Bonnet定理]">陈–Gauss–Bonnet 定理</a></span>时建立, 其大意是由<span class="link local"><a href="./曲率.html" title="“曲率” [曲率]">曲率形式</a></span>构造向量丛的拓扑不变量, 如<span class="link local"><a href="./陈类.html" title="“陈类” [陈类]">陈类</a></span>.</p>
+<p>陈–Weil 理论由陈省身与 André Weil 在推广 <span class="link local"><a href="./陈--Gauss--Bonnet定理.html" title="“陈–Gauss–Bonnet 定理” [陈--Gauss--Bonnet定理]">陈–Gauss–Bonnet 定理</a></span>时建立, 其大意是由<span class="link local"><a href="./曲率.html" title="曲率 [曲率]">曲率形式</a></span>构造向量丛的拓扑不变量, 如<span class="link local"><a href="./陈类.html" title="“陈类” [陈类]">陈类</a></span>.</p>
 <h2>陈–Weil 同态</h2>
 <p>陈–Weil 同态是 $1$ 维 $G$ 系数<span class="link local"><a href="./非Abel上同调.html" title="非 Abel 上同调 [非Abel上同调]">非 Abel 上同调</a></span> (也即 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>) 到 de Rham 上同调的映射:
 $$
@@ -23922,7 +24125,7 @@ $$</p>
 <p>不变多项式来自 <span class="link local"><a href="./Weil代数.html" title="“Weil 代数” [Weil代数]">Weil 代数</a></span>.</p>
 <h2>主丛上的联络</h2>
 <p><span class="link local"><a href="./Lie代数.html" title="Lie 代数 [Lie代数]">Lie 代数</a></span> $\mathfrak g$ 上的不变多项式是指 $\mathfrak g$ 上 $\operatorname{ad}$-不变的多线性型.</p>
-<p>设 $M$ 上有 $G$-主丛 $P$ 及其联络 $\gamma$, <span class="link local"><a href="./曲率.html" title="“曲率” [曲率]">曲率</a></span> $R$, 则陈–Weil 映射
+<p>设 $M$ 上有 $G$-主丛 $P$ 及其联络 $\gamma$, <span class="link local"><a href="./曲率.html" title="曲率 [曲率]">曲率</a></span> $R$, 则陈–Weil 映射
 $$
 \left( \wedge^{2n} \mathfrak g^*\right)^{\mathfrak g}
 \overset{\wedge^n R}{\longrightarrow} \Omega^{2n}(M)
@@ -24052,7 +24255,7 @@ $$
 \omega^i_{j}=h^{i \bar k}\partial h_{\bar k j},\quad \omega = h^{-1}\partial h.
 $$</p>
 <h2>曲率</h2>
-<p><strong>定理</strong>. 带有 Hermite 结构的全纯向量丛上的陈联络的<span class="link local"><a href="./曲率.html" title="“曲率” [曲率]">曲率</a></span>是一个 $(1,1)$-形式
+<p><strong>定理</strong>. 带有 Hermite 结构的全纯向量丛上的陈联络的<span class="link local"><a href="./曲率.html" title="曲率 [曲率]">曲率</a></span>是一个 $(1,1)$-形式
 $$
 \Omega = \bar\partial (h^{-1}\partial h)= \bar\partial\omega.
 $$
@@ -24148,12 +24351,14 @@ $$
 </ul>
 <h2>例</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="陪集空间"><header><h1><span class="taxon"></span>陪集空间 <a class="slug" href="./陪集空间.html">[陪集空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>对于群 $G$ 的子群 $H$, 陪集空间 $G / H$ 是 $G$ 关于 $H$ 的右乘作用的商空间.</p>
-<p>陪集空间 $G / H$ 也可以表示为
+<p>对于群 $G$ 的子群 $H$, <strong>陪集空间</strong> $G / H$ 是 $G$ 关于 $H$ 的右乘<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>的商空间. 等价地, 它是如下的<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维</a></span>:
 $$
+G / H = \operatorname{fib}(\mathbf{B}H \to \mathbf{B}G)=
 {*} \times_{\mathbf{B}G} \mathbf{B}H,
 $$
-也即 $G$ 关于子群 $*$ 和 $H$ 的<span class="link local"><a href="./双陪集空间.html" title="双陪集空间 [双陪集空间]">双陪集空间</a></span>.</p>
+也即 $G / H$ 是 $G$ 关于子群 $*$ 和 $H$ 的<span class="link local"><a href="./双陪集空间.html" title="双陪集空间 [双陪集空间]">双陪集空间</a></span>.</p>
+<h2>例</h2>
+<p>群 $G$ 关于其<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span> $Z(G)$ 的陪集空间是<span class="link local"><a href="./内自同构.html" title="群的内自同构 [内自同构]">内自同构群</a></span> $\operatorname{Inn}(G)$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="集合(同伦类型论)"><header><h1><span class="taxon"></span>集合 (同伦类型论) <a class="slug" href="./集合(同伦类型论).html">[集合(同伦类型论)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./同伦类型论.html" title="同伦类型论 [同伦类型论]">同伦类型论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>在<span class="link local"><a href="./同伦类型论.html" title="同伦类型论 [同伦类型论]">同伦类型论</a></span>中, 若类型 $A$ 满足对任意 $x,y\colon A$, 任意 $p,q\colon x=y$, 都有 $p=q$, 则称 $A$ 为<strong>集合</strong>.</p>
