@@ -1007,7 +1007,7 @@ $$
 <p>本文是陈–赵的一篇短文 <span class="link local"><a href="./ChenZhaoQuantumTori.html" title="The Quantum Torus as an E_M-category [ChenZhaoQuantumTori]">The Quantum Torus as an $\mathbb E_M$-Category</a></span> 的阅读笔记.</p>
 <p>记号一览:</p>
 <ul>
-<li>$M$ 为定向 $2$ 维流形, 来自光滑 $\mathbb{C}$-代数曲线的解析化, 同时我们无歧义地用 $M$ 代表流形 $M$ 对应的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>, 但注意有些场合不得不使用 $M$ 的流形结构, 不能完全视为生象;</li>
+<li>$M$ 为<span class="link local"><a href="./定向.html" title="定向 [定向]">定向</a></span> $2$ 维流形, 来自光滑 $\mathbb{C}$-代数曲线的解析化, 同时我们无歧义地用 $M$ 代表流形 $M$ 对应的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>, 但注意有些场合不得不使用 $M$ 的流形结构, 不能完全视为生象;</li>
 <li>$G$ 为 $\mathsf{Ani}_{/M}$ 中的群, 本文取 $G$ 为圆环 $T$;</li>
 <li>$\Lambda$ 为函子 $M\to \mathsf{Mod}(\mathbb{Z})$, 其取值为有限维自由 $\mathbb{Z}$-模, $T = \mathbf{B}\Lambda$;</li>
 <li>$\mathbb{C}^\times$ 为非零复数乘法的<strong>离散</strong> Abel 群 (注意这里没有拓扑!!);</li>
@@ -2058,7 +2058,7 @@ $$
 <h2>定义</h2>
 <p>参考 <span class="link local"><a href="./VLafforgueShtICM.html" title="Shtukas for reductive groups and Langlands correspondence for function fields [VLafforgueShtICM]">Vincent Lafforgue 的 ICM 报告</a></span>.</p>
 <h3>$\mathrm{GL}_r$</h3>
-<p>当<span class="link local"><a href="./整体域.html" title="“整体域” [整体域]">整体域</a></span>为 $\mathbb{Q}$ 时, 自守形式<sup class="footnote-reference" id="自守形式_1-back"><a href="#自守形式_1">1</a></sup>是 $\mathrm{GL}_r(\mathbb{Z})\backslash\mathrm{GL}_r(\mathbb{R})$ 上的函数. 这个商空间分类的对象是 $r$ 阶自由 $\mathbb{Z}$-模 $M$ 带有同构 $M\otimes_{\mathbb{Z}}\mathbb{R}^r$ (换言之, 是 $\operatorname{Spec}\mathbb{Z}$ 上的 $r$ 阶向量丛带有 $\operatorname{Spec}\mathbb{R}$ 上的平凡化.)</p>
+<p>当<span class="link local"><a href="./整体域.html" title="整体域 [整体域]">整体域</a></span>为 $\mathbb{Q}$ 时, 自守形式<sup class="footnote-reference" id="自守形式_1-back"><a href="#自守形式_1">1</a></sup>是 $\mathrm{GL}_r(\mathbb{Z})\backslash\mathrm{GL}_r(\mathbb{R})$ 上的函数. 这个商空间分类的对象是 $r$ 阶自由 $\mathbb{Z}$-模 $M$ 带有同构 $M\otimes_{\mathbb{Z}}\mathbb{R}^r$ (换言之, 是 $\operatorname{Spec}\mathbb{Z}$ 上的 $r$ 阶向量丛带有 $\operatorname{Spec}\mathbb{R}$ 上的平凡化.)</p>
 <div class="footnote-definition" id="自守形式_1">
   <sup class="footnote-definition-label"><a href="#自守形式_1-back">1</a></sup>
 <p>此处的自守形式在有限<span class="link local"><a href="./位.html" title="位 [位]">位</a></span>没有级 (level).</p>
@@ -2100,6 +2100,9 @@ $$
     &amp; = \bigcup_n \underbrace{G * G * \cdots * G}_n.
 \end{aligned}
 $$</p>
+<h3>通过环路空间的逆/伴随</h3>
+<p><span class="link local"><a href="./群.html" title="群 [群]">群</a></span>的逆环路空间函子 $\mathbf{B}\colon \mathsf{Grp} \to \mathsf{Ani}_{*/}^{\text{conn}}$ 可直接定义为<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>函子 $\Omega\colon \mathsf{\mathsf{Ani}_{*/}^{\text{conn}}} \to \mathsf{Grp}$ 的逆.</p>
+<p><span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>的逆环路空间函子 $\mathbf{B}\colon \mathsf{Mon} \to \mathsf{Ani}_{*/}^{\text{conn}}$ 则是<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>函子 $\Omega\colon \mathsf{\mathsf{Ani}_{*/}^{\text{conn}}} \to \mathsf{Mon}$ 的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>. 复合函子 $\Omega\mathbf{B}\colon \mathsf{Mon}\to\mathsf{Grp}$ 是幺半群的<span class="link local"><a href="./群化.html" title="群化 [群化]">群化</a></span>.</p>
 <h2>例</h2>
 <ul>
 <li>$\mathbf{B}\mathbb{Z} \simeq S^1$.</li>

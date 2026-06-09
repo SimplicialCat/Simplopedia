@@ -1022,7 +1022,7 @@ $$
 使用该公式可证明 Künneth 公式.</p>
 <hr />
 <p>定向流形的上同调满足 <span class="link local"><a href="./Poincaré--Verdier对偶.html" title="Poincaré–Verdier 对偶 [Poincaré--Verdier对偶]">Poincaré 对偶</a></span>:</p>
-<p><strong>定理</strong> (Poincaré 对偶). 对于紧定向 $d$ 维流形 $X$,
+<p><strong>定理</strong> (Poincaré 对偶). 对于紧<span class="link local"><a href="./定向.html" title="定向 [定向]">定向</a></span> $d$ 维流形 $X$,
 $$
 R\Gamma(X,\mathbb{Z})[d] \simeq R\Gamma(X,\mathbb{Z})^\vee.
 $$
@@ -1891,6 +1891,9 @@ $$
 \end{array}
 $$
 等同于态射 $\Sigma X\to Y$, 也等同于态射 $X\to\Omega Y$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="群化"><header><h1><span class="taxon"></span>群化 <a class="slug" href="./群化.html">[群化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>群化是幺半群<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的群, 即群到幺半群的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>函子的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="脉"><header><h1><span class="taxon"></span>脉 <a class="slug" href="./脉.html">[脉]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>观念</h2>
 <h3>从几何对象中提取单纯集</h3>
 <p>脉的构造常用于提取出几何对象的 “形状”, 产生一个<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>, 而后人们往往关注这个单纯集<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</p>
@@ -1946,6 +1949,73 @@ $$</p>
 </ul>
 <p><em>证明</em>.</p>
 <p>由对偶性, 只需证明第一个命题. $G$ 为全忠实函子, 当且仅当 $\operatorname{Hom}_{\mathcal D}(-,-)\to \operatorname{Hom}_{\mathcal C}(G-,G-)$ 为同构; 由伴随, 这等价于 $\operatorname{Hom}_{\mathcal D}(-,-)\to \operatorname{Hom}_{\mathcal D}(FG-,-)$ 为同构. 由<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>, 这等价于余单位 $FG \to\mathrm{id}_{\mathcal D}$ 为同构.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="逆环路空间"><header><h1><span class="taxon"></span>逆环路空间 <a class="slug" href="./逆环路空间.html">[逆环路空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>群 $G$ 的<strong>逆环路空间</strong> (delooping) 是 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主齐性空间</a></span>的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>, 也即 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>的<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">分类空间</a></span>.</p>
+<p>在 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span> $\mathcal X$ 中, 逆环路空间函子给出了<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>的范畴 $\mathsf{Grp}(\mathcal X)$ 到带基点连通对象的范畴 $\mathcal X^{\geq 1}_{*/}$ 的等价.</p>
+<p>更一般地, $n$ 阶逆环路空间给出了 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$-群</a></span>的范畴到带基点 $n$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连合</a></span>对象的范畴 $\mathcal X^{\geq n}_{*/}$ 的等价.</p>
+<p>对象 $X$ 到 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$-群</a></span> $A$ 的 $n$ 阶逆环路空间 $\mathbf{B}^n A$ 的映射同伦类称为 $n$ 阶<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span> $H^n(X,A)$.</p>
+<p>比群更一般的<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span> $M$ 也可以谈论逆环路空间 $\mathbf{B}M$. 注意有两个不同对象记作 $\mathbf{B}M$, 一是逆环路空间, 二是 $M$ 对应的单对象范畴 (满足 $\operatorname{End}(*)=M$).</p>
+<h2>定义</h2>
+<h3>通过几何实现</h3>
+<p>在 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span>中, <span class="link local"><a href="./群.html" title="群 [群]">群</a></span> (或<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>) $G$ 的逆环路空间是<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>
+$$
+\mathbf{B}^\bullet G = (\cdots G\times G\times G \to^4 G\times G \to^3 G\rightrightarrows *)
+$$
+的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span> (余极限), 也即<span class="link local"><a href="./双边杠构造.html" title="双边杠构造 [双边杠构造]">杠构造</a></span>
+$$
+\mathbf{B}^\bullet G := *\times_G * := B(*,G,*).
+$$</p>
+<p>在拓扑空间的 $1$-范畴中, 拓扑群 $G$ 的逆环路空间可<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">实现</a></span>为拓扑空间
+$$
+\begin{aligned}
+    |\mathbf{B}G| &amp;= \bigcup_{(g_1,\cdots,g_n)} |\Delta^n|\\
+    &amp; = \bigcup_n \underbrace{G * G * \cdots * G}_n.
+\end{aligned}
+$$</p>
+<h3>通过环路空间的逆/伴随</h3>
+<p><span class="link local"><a href="./群.html" title="群 [群]">群</a></span>的逆环路空间函子 $\mathbf{B}\colon \mathsf{Grp} \to \mathsf{Ani}_{*/}^{\text{conn}}$ 可直接定义为<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>函子 $\Omega\colon \mathsf{\mathsf{Ani}_{*/}^{\text{conn}}} \to \mathsf{Grp}$ 的逆.</p>
+<p><span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>的逆环路空间函子 $\mathbf{B}\colon \mathsf{Mon} \to \mathsf{Ani}_{*/}^{\text{conn}}$ 则是<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>函子 $\Omega\colon \mathsf{\mathsf{Ani}_{*/}^{\text{conn}}} \to \mathsf{Mon}$ 的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>. 复合函子 $\Omega\mathbf{B}\colon \mathsf{Mon}\to\mathsf{Grp}$ 是幺半群的<span class="link local"><a href="./群化.html" title="群化 [群化]">群化</a></span>.</p>
+<h2>例</h2>
+<ul>
+<li>$\mathbf{B}\mathbb{Z} \simeq S^1$.</li>
+<li>$\mathbf{B}\mathbb{Z}/2 \simeq \mathbb RP^\infty$.</li>
+<li>$\mathbf{B}S^1 \simeq \mathbb{C}P^{\infty}$.</li>
+<li>$\mathbf{B}\mathrm{O}(n)\simeq\mathbf{B}\mathrm{GL}_n(\mathbb{R})=\text{Gr}_n(\mathbb{R}^{\infty})$ 是 <span class="link local"><a href="./Grassmann流形.html" title=" [Grassmann流形]">Grassmann 流形</a></span>, 其 $\mathbb{Z}_2$ 系数上同调类为 <span class="link local"><a href="./Stiefel--Whitney类.html" title="Stiefel–Whitney 类 [Stiefel--Whitney类]">Stiefel–Whitney 类</a></span>:
+$$
+      H^*(\mathbf{B}\mathrm{O}(n);\mathbb{Z}_2)=\mathbb{Z}_2[w_1,\cdots,w_n],
+  $$
+其中 $w_k\in H^k$.</li>
+<li>$\mathbf{B}\mathrm{U}(n)\simeq\mathbf{B}\mathrm{GL}_n(\mathbb{C})=\text{Gr}_n(\mathbb{C}^{\infty})$ 是复 <span class="link local"><a href="./Grassmann流形.html" title=" [Grassmann流形]">Grassmann 流形</a></span>, 其 $\mathbb{Z}$ 系数上同调为<span class="link local"><a href="./陈类.html" title="“陈类” [陈类]">陈类</a></span>:
+$$
+      H^*(\mathbf{B}\mathrm{U}(n);\mathbb{Z})=\mathbb{Z}[c_1,\cdots,c_n],
+  $$
+其中 $c_k\in H^{2k}$.</li>
+</ul>
+<h2>性质</h2>
+<h3>映射空间</h3>
+<p>两个群的逆环路空间之间的映射空间为
+$$
+\operatorname{Hom}(\mathbf{B}H,\mathbf{B}G) \simeq \operatorname{Hom}_{\mathsf{Grp}}(H,G)/_{\mathrm{Ad}}G,
+$$
+其中 $\mathrm{Ad}$ 是 $G$ 在 $\operatorname{Hom}_{\mathsf{Grp}}(H,G)$ 上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>.</p>
+<h3>函子性与关联丛</h3>
+<p>对于<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>同态 $\varphi\colon H\to G$, 有 $H$ 通过 $\varphi$ 在 $G$ 上的左乘<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>.
+映射 $\mathbf{B}\varphi\colon \mathbf{B}H\to \mathbf{B}G$ 是 $\mathbf{B}H$ 上的万有 $H$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>通过该作用<span class="link local"><a href="./关联丛.html" title="关联丛 [关联丛]">关联</a></span>的 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>的分类映射.</p>
+<h3>与 Eilenberg–Maclane 空间的关系</h3>
+<p>对于离散群 $G$, 其分类空间 $\mathbf{B}G$ 是 <span class="link local"><a href="./Eilenberg–MacLane空间.html" title="Eilenberg–MacLane 对象 [Eilenberg–MacLane空间]">Eilenberg–Maclane 空间</a></span> $K(G,1)$.</p>
+<h3>上同调</h3>
+<p>若 $G$ 紧或半单, <span class="link local"><a href="./陈--Weil理论.html" title="“陈–Weil 理论” [陈--Weil理论]">陈–Weil 理论</a></span>给出同构
+$$
+H^*(\mathbf{B}G;\mathbb{C})\simeq \mathbb{C}[\mathfrak g]^G.
+$$
+其中 $\mathbb{C}[\mathfrak g]^G$ 称为<span class="link local"><a href="./不变多项式.html" title="“不变多项式” [不变多项式]">不变多项式</a></span>代数, 从而由不变多项式可以给出<span class="link local"><a href="./示性类.html" title="“示性类” [示性类]">示性类</a></span>.</p>
+<h2>模型</h2>
+<h3>Milnor 构造</h3>
+<p>Milnor 将分类空间 $BG$ 构造为 $n$ 重连接 $G * G * \cdots * G$ 的余极限. (这个构造关于 $G$ 有函子性.)</p>
+<p>等价地, $BG$ 可构造为单对象范畴 $G$ 的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>.</p>
+<h3>有限群</h3>
+<p>对任意有限群 $G$, 取 $G$ 的酉表示, 则可得 $G$ 在 $S^\infty\subset \mathbb{C}^{\infty}$ 上的自由作用, 从而构造 $\mathbf{B}G$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="配边范畴"><header><h1><span class="taxon"></span>配边范畴 <a class="slug" href="./配边范畴.html">[配边范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>切结构</h3>

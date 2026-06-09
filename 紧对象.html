@@ -914,4 +914,51 @@ $$
 <blockquote>
 <p>注. 重言丛的截面层为什么是 $\mathcal O(-1)$: 以 $V=\mathbb{C}^{n+1}$ 为例. 分次模 $\mathbb{C}[x_0,\cdots,x_n](1)$ 以 $x_0,\cdots,x_n$ 为 $0$ 阶元素, 对应的 $\mathcal O(1)$ 以 $x_0,\cdots,x_n$ 为全局截面, 它们是 $V$ 上的线性函数. 故重言丛是 $\mathcal O(1)$ 的对偶, 即 $\mathcal O(-1)$.</p>
 </blockquote>
+</details></section><section class="block" data-taxon=""><details ><summary id="刚性幺半范畴"><header><h1><span class="taxon"></span>刚性幺半范畴 <a class="slug" href="./刚性幺半范畴.html">[刚性幺半范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设 $\mathcal A$ 为<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定</a></span><span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>. 若如下条件成立, 则称其<strong>刚性</strong>:</p>
+<ul>
+<li>$1_{\mathcal A}$ 为<span class="link local"><a href="./紧对象.html" title="紧对象 [紧对象]">紧对象</a></span>;</li>
+<li>乘法函子 $\mathrm{mult}\colon \mathcal A\otimes\mathcal A \to \mathcal A$ 的右伴随 $\mathrm{mult}^R$ 为连续函子;</li>
+<li>函子 $\mathrm{mult}^R\colon \mathcal A\to\mathcal A\otimes\mathcal A$ 为 $\mathcal A$-双模的同态 (它本来只是松同态).</li>
+</ul>
+<p>参考 <span class="link local"><a href="./Gaitsgory–RozenblyumDAG.html" title="A Study in Derived Algebraic Geometry [Gaitsgory–RozenblyumDAG]">Gaitsgory–Rozenblyum</a></span>.</p>
+<h2>性质</h2>
+<h3>基变换条件</h3>
+<p>刚性幺半范畴的条件中, $\mathrm{mult}^R$ 为 $\mathcal A$-双模同态的条件表明下图为交换图.
+<figure><img src="./刚性幺半范畴-1.svg" class="color-invert"/></figure>
+换言之, 由有限集的<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>图
+$$
+\begin{array}{ccc}
+4 &amp; \rightarrow &amp; 3 \\
+\downarrow &amp;  &amp; \downarrow \\
+2 &amp; \rightarrow &amp; 1
+\end{array}
+$$
+诱导的交换图
+$$
+\begin{array}{ccc}
+\mathcal A\otimes\mathcal A \otimes \mathcal A\otimes\mathcal A &amp; \rightarrow &amp; \mathcal A\otimes\mathcal A \otimes\mathcal A \\
+\downarrow &amp;  &amp; \downarrow \\
+\mathcal A\otimes\mathcal A &amp; \rightarrow &amp; \mathcal A
+\end{array}
+$$
+满足<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>条件.</p>
+<h3>对象的可对偶性</h3>
+<p>对于刚性范畴 $\mathcal A$ 中的<span class="link local"><a href="./紧对象.html" title="紧对象 [紧对象]">紧对象</a></span> $a$, 函子 $a \otimes -\colon \mathcal A\to\mathcal A$ 的右伴随由如下复合给出:
+$$
+G\colon \mathcal A
+\overset{\mathrm{mult}^R}{\longrightarrow}
+\mathcal A\otimes\mathcal A
+\overset{\operatorname{Hom}(a,-)\otimes \mathrm{id}}{\longrightarrow}
+\mathsf{Sp}\otimes\mathcal A=\mathcal A.
+$$
+具体地,
+$$
+\begin{aligned}
+\operatorname{Hom}_{\mathcal A}(a\otimes b,c)&amp;\simeq\operatorname{Hom}_{\mathcal A\otimes\mathcal A}(a\boxtimes b,\mathrm{mult}^R(c))\\
+&amp;\simeq \operatorname{Hom}_{\mathcal A}(b,G(c)).
+\end{aligned}
+$$
+这说明 $a$ <span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶</a></span>.</p>
 </details></section></details></section></footer></article></div></body></html>

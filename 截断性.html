@@ -847,6 +847,16 @@ $$
 a =_X b
 $$
 是 $(n-1)$-截断的.</p>
+<h3>通过环路空间定义</h3>
+<p>对于 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 的对象, 即<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$, 还有另一种等价的归纳定义:</p>
+<ul>
+<li>$X$ 是 $(-2)$-截断生象当且仅当 $X=1$;</li>
+<li>$X$ 是 $(-1)$-截断生象当且仅当 $\Delta_X$ 是等价;</li>
+<li>对于 $n\geq 0$ (注意必须从 $0$ 而不是 $-1$ 开始), $X$ 是 $n$-截断生象当且仅当对任意点 $x\in X$, <span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> $\Omega_x X$ 是 $(n-1)$-截断生象.</li>
+</ul>
+<p>在一般的意象中, 使用<span class="link local"><a href="./广义元素.html" title="广义元素 [广义元素]">广义点</a></span>也可实现上述定义.
+对于广义点 $x\colon U\to X$, 有 $\Omega_xX= U\times_X U$.</p>
+<p>这个事实的证明可以使用<span class="link local"><a href="./同伦类型论.html" title="同伦类型论 [同伦类型论]">同伦类型论</a></span>中的<span class="link local"><a href="./路径归纳.html" title="路径归纳 [路径归纳]">路径归纳</a></span>.</p>
 <h3>通过局部性定义</h3>
 <p>定义 $n$-截断对象为关于如下态射族的<span class="link local"><a href="./局部对象.html" title="局部对象 [局部对象]">局部对象</a></span>:
 $$
@@ -999,6 +1009,24 @@ $$</p>
 <p><span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span></p>
 <p><span class="link local"><a href="./非交换Čech上同调.html" title="非交换 Čech 上同调 [非交换Čech上同调]">非交换 Čech 上同调</a></span></p>
 <p><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="motivation-homotopy-theory"><header><h1><span class="taxon"></span>同伦论的动机 <a class="slug" href="./motivation-homotopy-theory.html">[motivation-homotopy-theory]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文的目标是以尽可能少的前置知识解释同伦论的动机.</p>
+<p>前置知识: 拓扑学基本概念.</p>
+<p>所谓<strong>同</strong>伦论就是研究什么是 “<strong>同</strong>” 的学问. 在拓扑学中, 人们作了如下规定:</p>
+<ul>
+<li>考虑单位区间 $I = [0,1]$. 规定在一个拓扑空间 $X$ 中, 两个点 $p,q$ 之间的 “<strong>同</strong>” 就是它们之间的道路 $\gamma\colon I\to X$, $\gamma(0) = p$, $\gamma(1) = q$.</li>
+</ul>
+<p>对于空间 $X$ 中的两个点 $p,q$, 我们不仅能谈论它们<strong>是否</strong>相同, 而且能 (而且应该) 谈论它们<strong>如何</strong>相同, 毕竟两个点之间的道路可能有许多种. 区分<strong>是否</strong>和<strong>如何</strong>是现代数学的一项重要课题. (参见<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构与性质</a></span>.)</p>
+<p>自然地, 我们应该好奇一个点 $p$ 如何与<strong>自身</strong>相同.
+虽然这个问题有一个平凡的答案, 即等号的自反性, 或着说空间上的常值路径; 但也可能有许多<strong>不平凡</strong>的答案, 如圆圈 $S^1$ 上绕行一周的路径. 正是这些不平凡的答案构成了同伦论这门学科.</p>
+<p>在数学中, 所有的等式满足一个基本的原则: 若对于一种事物 $x$ 有与之相关的另一种事物 $f(x)$, 那么对等式 $\alpha\colon x = y$ 就必须有等式 $f(\alpha)\colon f(x) = f(y)$. 这条基本原则引申出的结果是极为丰富的.</p>
+<p>现在假设点 $p$ 到点 $q$ 有一条指定的道路 $\alpha \colon p = q$, 即一种指定的将 $p$ 等同于 $q$ 的方式. 令 $f(x) := (x = q)$, 那么由 $\alpha$ 就得到 $f(\alpha) \colon f(p) = f(q)$, 即 $(p = q) = (q = q)$. 因此, 要研究 $p$ 到 $q$ 的所有道路, 只需要研究点 $q$ 到<strong>自身</strong>的所有道路.
+了解了每一个点如何与自身相同, 就足以了解任何两个点之间如何相同.</p>
+<p>上面说的空间和点, 并不是只有足球, 甜甜圈这种看得见的空间, 和摸得着的点. <strong>任何类型的数学对象的全体都构成一个空间, 每个对象是其中的一个点.</strong> (参见<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">分类空间</a></span>.) 所以, 有数学的地方就有同伦论.</p>
+<p>特别地, 点 $p$ 到自身的道路, 称为<strong>环路</strong>, 也是一种数学对象; 我们当然应该研究其构成的空间, 称为<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> $\Omega (X,p)$, 或在点 $p$ 明确时简记为 $\Omega X$.</p>
+<p>环路空间和许多事情一样, 没有理由仅做一次就停止, 我们自然地应该关心环路空间 $\Omega X$ 的环路空间 $\Omega^2 X$, 其环路空间 $\Omega^3 X$, … 以至于无穷.
+第 $n$ 阶环路空间 $\Omega^n X$ 所携带的信息粗略地称为 $X$ 的 $n$ 阶<strong>同伦信息</strong>.</p>
+<p>有时我们发现当 $n$ 较大时一个空间没有了 $n$ 阶同伦信息; 这就是说 $\Omega^n X = *$ 是一个点 (那么当然 $\Omega^{n+1}X,\Omega^{n+2}X,\cdots$ 也都是一个点). 例如一个传统数学中的集合, 其中的两个元素要么相等, 要么不相等, 没有任何非平凡的相等的方式; 我们说集合没有 $1$ 阶以上的同伦信息, 或者说集合是 $0$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>的.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="tutorial-highercat"><header><h1><span class="taxon"></span>高阶范畴论 <a class="slug" href="./tutorial-highercat.html">[tutorial-highercat]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文为初学者学习高阶范畴论提供一点参考.</p>
 <h2>范畴的语言</h2>
