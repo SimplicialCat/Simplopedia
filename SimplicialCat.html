@@ -8275,6 +8275,36 @@ $$
 <p>Zariski 景上有典范的结构<span class="link local"><a href="./层.html" title="拓扑空间上的层 [层]">层</a></span>, 它是局部环层.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="[Nicolaescu]NotesontheAtiyah-SingerIndexTheorem.pdf"><header><h1><span class="taxon"></span>“[Nicolaescu] Notes on the Atiyah-Singer Index Theorem.pdf” <a class="slug" href="./[Nicolaescu]NotesontheAtiyah-SingerIndexTheorem.pdf.html">[[Nicolaescu]NotesontheAtiyah-SingerIndexTheorem.pdf]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon=""><details ><summary id="alg-th"><header><h1><span class="taxon"></span>代数理论 <a class="slug" href="./alg-th.html">[alg-th]</a></h1><div class="metadata"><ul><li class="meta-item">讲义</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="ch-fil"><header><h1><span class="taxon"></span>链复形与滤对象 <a class="slug" href="./ch-fil.html">[ch-fil]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>, $F_\bullet$ 为其中的<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤对象</a></span>, 其<span class="link local"><a href="./分次对象.html" title="分次对象 [分次对象]">分次对象</a></span>为
+$$
+\operatorname{gr}_nF := \operatorname{cofib}(F_{n-1} \to F_n).
+$$
+那么有映射
+$$
+\operatorname{gr}_nF \to F_{n-1} [1],
+$$
+上述所有映射可以连成一个图:
+<figure><img src="./ch-fil-1.svg" class="color-invert"/></figure>
+其中复合映射
+$\operatorname{gr}_nF \to \operatorname{gr}_{n-2}F[2]$
+等于 $0$. 这便是滤对象对应的<span class="link local"><a href="./链复形.html" title="链复形 [链复形]">链复形</a></span>.</p>
+<p>现设 $F_{\bullet\bullet}$ 为双重滤对象, 即滤对象中的滤对象, 也即函子 $(\mathbb{Z},\leq)^2\to\mathcal C$. 其对应的双分次对象来自<strong>全余纤维</strong> (total cofiber)
+$$
+\operatorname{gr}_{p,q}F :=
+\operatorname{totcofib}
+\Bigg(
+{\begin{array}{ccc}
+F_{p-1,q-1} &amp; \rightarrow &amp; F_{p,q-1} \\
+\downarrow &amp;  &amp; \downarrow \\
+F_{p-1,q} &amp; \rightarrow &amp; F_{p,q}
+\end{array}}
+\Bigg).
+$$
+同时双分次对象也可以累次计算: 若将 $F$ 视为滤对象中的滤对象 $\tilde F\colon \mathbb{Z}\to\mathsf{Fun}(\mathbb{Z},\mathcal C)$, 则
+$$
+\operatorname{gr}_{p,q}F = \operatorname{gr}_p\operatorname{gr}_q \tilde F.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="comments"><header><h1><span class="taxon"></span>评论 <a class="slug" href="./comments.html">[comments]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>2026-05-17</p>
 <p><span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>使用 <span class="link external"><a href="https://twikoo.js.org/intro.html" title="Twikoo [https://twikoo.js.org/intro.html]">Twikoo</a></span> 建立评论模块.</p>
@@ -8343,8 +8373,8 @@ M\otimes_{A,\mathrm{act}}A[x^{\pm 1}] \simeq M\otimes_{A,\mathrm{triv}}A[x^{\pm 
 $$
 这至少给出一个映射 $M \to M[x^{\pm 1}]$, 它将 $M$ 的 $n$ 次齐次元素 $m$ 映射到 $m x^n \in M[x^{\pm 1}]$.</p>
 <h3>滤</h3>
-<p><span class="link local"><a href="./A1-Gm.html" title="仿射直线对乘法群的商 [A1-Gm]">仿射直线对乘法群的商</a></span> $\mathbb A^1 / \mathbb G_m$</p>
-<p>…</p>
+<p>特别地, 令 $A = \mathbb{Z}[t]$, 我们得到 $\mathbb{Z}$-分次的 $\mathbb{Z}[t]$-模相当于 $\mathbb A^1$ 上的 $\mathbb G_m$-等变拟凝聚层, 也即商叠 <span class="link local"><a href="./A1-Gm.html" title="仿射直线对乘法群的商 [A1-Gm]">$\mathbb A^1 / \mathbb G_m$</a></span> 上的拟凝聚层.</p>
+<p>另一方面, $\mathbb{Z}$-分次的 $\mathbb{Z}[t]$-模也相当于 $\mathbb{Z}$-模范畴中的<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤对象</a></span>, 其中 $t$ 的作用即为滤对象中的各阶结构映射.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./吸引子.html" title="吸引子, 排斥子 [吸引子]">吸引子, 排斥子</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="fragFOL"><header><h1><span class="taxon"></span>一阶逻辑的片断 <a class="slug" href="./fragFOL.html">[fragFOL]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -8460,6 +8490,8 @@ $$
 <p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">亟需施工处</a></span>列表 (“TODO list”)</p>
 <p><span class="link local"><a href="./terminologies.html" title="单纯百科 - 术语翻译表 [terminologies]">术语翻译表</a></span></p>
 <h2>最近</h2>
+<p><span class="link local"><a href="./fil-gr.html" title="滤与分次的叠观点 [fil-gr]">滤与分次的叠观点</a></span></p>
+<p><span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span></p>
 <p><span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span></p>
 <p><span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span></p>
 <p><span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span></p>
@@ -9052,6 +9084,7 @@ $$</p>
 </ul>
 <p>计划中的讲稿 / 笔记:</p>
 <ul>
+<li><span class="link local"><a href="./ch-fil.html" title="链复形与滤对象 [ch-fil]">链复形与滤对象</a></span></li>
 <li><span class="link local"><a href="./GrpAni.html" title="生象群 [GrpAni]">生象群</a></span></li>
 <li><span class="link local"><a href="./Chtoucas.html" title="Chtouca 与整体 Langlands 参数 [Chtoucas]">Chtouca 与整体 Langlands 参数</a></span></li>
 <li><span class="link local"><a href="./Excursion.html" title="远足代数 Excursion Algebra [Excursion]">远足代数 Excursion Algebra</a></span></li>
@@ -14242,6 +14275,8 @@ $$
 <p><span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">对偶</a></span>地, $\operatorname{Spec}k[M]$ 是<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>范畴中的交换幺半群, $A$ 上的 $M$-分次也等同于 $k$-概形 $\operatorname{Spec}A$ 上的 $\operatorname{Spec}k[M]$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>.</p>
 <h2>性质</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="分次对象"><header><h1><span class="taxon"></span>分次对象 <a class="slug" href="./分次对象.html">[分次对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>相关笔记: <span class="link local"><a href="./fil-gr.html" title="滤与分次的叠观点 [fil-gr]">滤与分次的叠观点</a></span></p>
 <h2>定义</h2>
 <p>设 $\mathcal C$ 为余完备<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, 且 $\otimes$ 保持每个分量的余极限. 设 $M$ 为交换幺半群. 定义 $\mathcal C$ 中的 $M$-<strong>分次对象</strong>的范畴为函子范畴
 $$
@@ -20541,6 +20576,7 @@ $$</p>
 <p><span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="滤过"><header><h1><span class="taxon"></span>滤对象 <a class="slug" href="./滤过.html">[滤过]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本页讨论一般 $(\infty,1)$-范畴中的滤对象. 另见 <span class="link local"><a href="./滤对象(1-范畴).html" title="1-范畴中的滤对象 [滤对象(1-范畴)]">$1$-范畴中的滤对象</a></span>.</p>
+<p>相关笔记: <span class="link local"><a href="./ch-fil.html" title="链复形与滤对象 [ch-fil]">链复形与滤对象</a></span></p>
 <h2>定义</h2>
 <p>范畴 $\mathcal C$ 中的<strong>滤对象</strong> (filtered object) 是一个序列
 $$
@@ -23998,7 +24034,8 @@ $$</p>
 <p>链同伦等价是<span class="link local"><a href="./拟同构.html" title="拟同构 [拟同构]">拟同构</a></span>, 但反之不然. 例如 $\mathsf {Ab}$ 中的链复形 $\mathbb{Z}\overset{\times 2}{\to}\mathbb{Z}$ 到 $\mathbb{Z}/2$ 有一个拟同构, 而两者之间不存在链同伦等价.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="链复形"><header><h1><span class="taxon"></span>链复形 <a class="slug" href="./链复形.html">[链复形]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>链复形是线性稳定同伦类的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>.</p>
+<p>链复形是一种代数结构, 常用作线性稳定同伦类的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>.</p>
+<p>见<span class="link local"><a href="./ch-fil.html" title="链复形与滤对象 [ch-fil]">链复形与滤对象</a></span>.</p>
 <h2>定义</h2>
 <h3>Abel 范畴</h3>
 <p><span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span> $\mathcal A$ 中的<strong>链复形</strong>是一列对象与映射

@@ -827,6 +827,7 @@
 
 <article><section class="block" data-taxon=""><details open><summary id="滤过"><header><h1><span class="taxon"></span>滤对象 <a class="slug" href="./滤过.html">[滤过]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本页讨论一般 $(\infty,1)$-范畴中的滤对象. 另见 <span class="link local"><a href="./滤对象(1-范畴).html" title="1-范畴中的滤对象 [滤对象(1-范畴)]">$1$-范畴中的滤对象</a></span>.</p>
+<p>相关笔记: <span class="link local"><a href="./ch-fil.html" title="链复形与滤对象 [ch-fil]">链复形与滤对象</a></span></p>
 <h2>定义</h2>
 <p>范畴 $\mathcal C$ 中的<strong>滤对象</strong> (filtered object) 是一个序列
 $$
@@ -920,6 +921,51 @@ $$</p>
 $$
 (\operatorname{Ran}X)_n = \operatorname{Sym}^nX:= X^n / S_n.
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="ch-fil"><header><h1><span class="taxon"></span>链复形与滤对象 <a class="slug" href="./ch-fil.html">[ch-fil]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>, $F_\bullet$ 为其中的<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤对象</a></span>, 其<span class="link local"><a href="./分次对象.html" title="分次对象 [分次对象]">分次对象</a></span>为
+$$
+\operatorname{gr}_nF := \operatorname{cofib}(F_{n-1} \to F_n).
+$$
+那么有映射
+$$
+\operatorname{gr}_nF \to F_{n-1} [1],
+$$
+上述所有映射可以连成一个图:
+<figure><img src="./ch-fil-1.svg" class="color-invert"/></figure>
+其中复合映射
+$\operatorname{gr}_nF \to \operatorname{gr}_{n-2}F[2]$
+等于 $0$. 这便是滤对象对应的<span class="link local"><a href="./链复形.html" title="链复形 [链复形]">链复形</a></span>.</p>
+<p>现设 $F_{\bullet\bullet}$ 为双重滤对象, 即滤对象中的滤对象, 也即函子 $(\mathbb{Z},\leq)^2\to\mathcal C$. 其对应的双分次对象来自<strong>全余纤维</strong> (total cofiber)
+$$
+\operatorname{gr}_{p,q}F :=
+\operatorname{totcofib}
+\Bigg(
+{\begin{array}{ccc}
+F_{p-1,q-1} &amp; \rightarrow &amp; F_{p,q-1} \\
+\downarrow &amp;  &amp; \downarrow \\
+F_{p-1,q} &amp; \rightarrow &amp; F_{p,q}
+\end{array}}
+\Bigg).
+$$
+同时双分次对象也可以累次计算: 若将 $F$ 视为滤对象中的滤对象 $\tilde F\colon \mathbb{Z}\to\mathsf{Fun}(\mathbb{Z},\mathcal C)$, 则
+$$
+\operatorname{gr}_{p,q}F = \operatorname{gr}_p\operatorname{gr}_q \tilde F.
+$$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="fil-gr"><header><h1><span class="taxon"></span>滤与分次的叠观点 <a class="slug" href="./fil-gr.html">[fil-gr]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./代数几何.html" title="代数几何 [代数几何]">代数几何</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>陈述</h2>
+<h3>分次与半群作用</h3>
+<p>设 $N$ 为交换幺半群, 则环 $A$ 上的 $N$-<span class="link local"><a href="./分次代数.html" title="分次代数 [分次代数]">分次</a></span>等同于仿射概形 $\operatorname{Spec}A$ 上的 $\operatorname{Spec}\mathbb{Z}[N]$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>. 详见<span class="link local"><a href="./分次代数.html" title="分次代数 [分次代数]">分次代数</a></span>.</p>
+<p>考虑 $N=\mathbb{Z}$ 的特殊情形, 记 $\mathbb G_m = \operatorname{Spec}\mathbb{Z}[x^{\pm 1}] = \operatorname{Spec}\mathbb{Z}[\mathbb{Z}]$ 为<span class="link local"><a href="./乘法群概形.html" title="乘法群概形 [乘法群概形]">乘法群概形</a></span>. 那么环 $A$ 上的 $\mathbb{Z}$-<span class="link local"><a href="./分次代数.html" title="分次代数 [分次代数]">分次</a></span>等同于 $\mathbb G_m$ 在<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span> $\operatorname{Spec}A$ 上的<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>. 在<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>情形中, <span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span> $X$ 上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚</a></span>代数 $A$ 上的 $\mathbb{Z}$-<span class="link local"><a href="./分次代数.html" title="分次代数 [分次代数]">分次</a></span>等同于<span class="link local"><a href="./相对谱.html" title="相对谱 [相对谱]">相对谱</a></span> $\operatorname{Spec}_X A$ 上的 $\mathbb G_m$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>.</p>
+<p>分次环 $A$ 上的<span class="link local"><a href="./分次模.html" title="分次模 [分次模]">分次模</a></span> $M$ 相当于 $\operatorname{Spec}A$ 上的 $\mathbb G_m$-等变拟凝聚层, 也即商叠 $\operatorname{Spec}A / \mathbb G_m$ 上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>. 具体地, 考虑两个作用 $\mathrm{act},\mathrm{triv} \colon \mathbb G_m\times\operatorname{Spec}A\to\operatorname{Spec}A$, 对应两个环同态 $A\to A[x^{\pm 1}]$, 那么 $\operatorname{Spec}A$ 上的 $\mathbb G_m$-等变拟凝聚层是 $A$-模 $M$ 带有同构
+$$
+M\otimes_{A,\mathrm{act}}A[x^{\pm 1}] \simeq M\otimes_{A,\mathrm{triv}}A[x^{\pm 1}],
+$$
+这至少给出一个映射 $M \to M[x^{\pm 1}]$, 它将 $M$ 的 $n$ 次齐次元素 $m$ 映射到 $m x^n \in M[x^{\pm 1}]$.</p>
+<h3>滤</h3>
+<p>特别地, 令 $A = \mathbb{Z}[t]$, 我们得到 $\mathbb{Z}$-分次的 $\mathbb{Z}[t]$-模相当于 $\mathbb A^1$ 上的 $\mathbb G_m$-等变拟凝聚层, 也即商叠 <span class="link local"><a href="./A1-Gm.html" title="仿射直线对乘法群的商 [A1-Gm]">$\mathbb A^1 / \mathbb G_m$</a></span> 上的拟凝聚层.</p>
+<p>另一方面, $\mathbb{Z}$-分次的 $\mathbb{Z}[t]$-模也相当于 $\mathbb{Z}$-模范畴中的<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤对象</a></span>, 其中 $t$ 的作用即为滤对象中的各阶结构映射.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./吸引子.html" title="吸引子, 排斥子 [吸引子]">吸引子, 排斥子</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="关联分次代数"><header><h1><span class="taxon"></span>关联分次对象 <a class="slug" href="./关联分次代数.html">[关联分次代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤对象</a></span> $X_\bullet$ 给出<span class="link local"><a href="./分次对象.html" title="分次对象 [分次对象]">分次对象</a></span> $\operatorname{gr}_\bullet (X_\bullet)$,
 $$
@@ -1049,7 +1095,8 @@ $$
 <p><span class="link local"><a href="./Postnikov塔.html" title="Postnikov 塔 [Postnikov塔]">Postnikov 塔</a></span>, <span class="link local"><a href="./Whitehead塔.html" title="Whitehead 塔 [Whitehead塔]">Whitehead 塔</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="链复形"><header><h1><span class="taxon"></span>链复形 <a class="slug" href="./链复形.html">[链复形]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>链复形是线性稳定同伦类的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>.</p>
+<p>链复形是一种代数结构, 常用作线性稳定同伦类的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>.</p>
+<p>见<span class="link local"><a href="./ch-fil.html" title="链复形与滤对象 [ch-fil]">链复形与滤对象</a></span>.</p>
 <h2>定义</h2>
 <h3>Abel 范畴</h3>
 <p><span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span> $\mathcal A$ 中的<strong>链复形</strong>是一列对象与映射

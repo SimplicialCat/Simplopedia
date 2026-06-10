@@ -988,6 +988,36 @@ $$
 $$
 (\mathsf{Set},\times) \to (\mathsf{Ani},\times) \overset{(-)_+}{\to} (\mathsf{Ani}_{*/},\wedge) \overset{\Sigma_{\infty}}{\to} (\mathsf{Sp},\wedge).
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="ch-fil"><header><h1><span class="taxon"></span>链复形与滤对象 <a class="slug" href="./ch-fil.html">[ch-fil]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>, $F_\bullet$ 为其中的<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤对象</a></span>, 其<span class="link local"><a href="./分次对象.html" title="分次对象 [分次对象]">分次对象</a></span>为
+$$
+\operatorname{gr}_nF := \operatorname{cofib}(F_{n-1} \to F_n).
+$$
+那么有映射
+$$
+\operatorname{gr}_nF \to F_{n-1} [1],
+$$
+上述所有映射可以连成一个图:
+<figure><img src="./ch-fil-1.svg" class="color-invert"/></figure>
+其中复合映射
+$\operatorname{gr}_nF \to \operatorname{gr}_{n-2}F[2]$
+等于 $0$. 这便是滤对象对应的<span class="link local"><a href="./链复形.html" title="链复形 [链复形]">链复形</a></span>.</p>
+<p>现设 $F_{\bullet\bullet}$ 为双重滤对象, 即滤对象中的滤对象, 也即函子 $(\mathbb{Z},\leq)^2\to\mathcal C$. 其对应的双分次对象来自<strong>全余纤维</strong> (total cofiber)
+$$
+\operatorname{gr}_{p,q}F :=
+\operatorname{totcofib}
+\Bigg(
+{\begin{array}{ccc}
+F_{p-1,q-1} &amp; \rightarrow &amp; F_{p,q-1} \\
+\downarrow &amp;  &amp; \downarrow \\
+F_{p-1,q} &amp; \rightarrow &amp; F_{p,q}
+\end{array}}
+\Bigg).
+$$
+同时双分次对象也可以累次计算: 若将 $F$ 视为滤对象中的滤对象 $\tilde F\colon \mathbb{Z}\to\mathsf{Fun}(\mathbb{Z},\mathcal C)$, 则
+$$
+\operatorname{gr}_{p,q}F = \operatorname{gr}_p\operatorname{gr}_q \tilde F.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="homalg-1-tri-st"><header><h1><span class="taxon"></span>从三角范畴到稳定范畴 <a class="slug" href="./homalg-1-tri-st.html">[homalg-1-tri-st]</a></h1><div class="metadata"><ul><li class="meta-item">讲义</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><strong>定义</strong> (特殊三角)
 范畴 $\mathcal C$ 中的<strong>特殊三角</strong> (distinguished triangle) 是指下图,
@@ -1309,6 +1339,7 @@ $$</p>
 <h3>Leray 谱序列</h3>
 </details></section><section class="block" data-taxon=""><details ><summary id="滤过"><header><h1><span class="taxon"></span>滤对象 <a class="slug" href="./滤过.html">[滤过]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本页讨论一般 $(\infty,1)$-范畴中的滤对象. 另见 <span class="link local"><a href="./滤对象(1-范畴).html" title="1-范畴中的滤对象 [滤对象(1-范畴)]">$1$-范畴中的滤对象</a></span>.</p>
+<p>相关笔记: <span class="link local"><a href="./ch-fil.html" title="链复形与滤对象 [ch-fil]">链复形与滤对象</a></span></p>
 <h2>定义</h2>
 <p>范畴 $\mathcal C$ 中的<strong>滤对象</strong> (filtered object) 是一个序列
 $$
@@ -1448,7 +1479,8 @@ $$
 <p>谱对象构成的范畴是<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>, 称为原范畴的<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="链复形"><header><h1><span class="taxon"></span>链复形 <a class="slug" href="./链复形.html">[链复形]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>链复形是线性稳定同伦类的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>.</p>
+<p>链复形是一种代数结构, 常用作线性稳定同伦类的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>.</p>
+<p>见<span class="link local"><a href="./ch-fil.html" title="链复形与滤对象 [ch-fil]">链复形与滤对象</a></span>.</p>
 <h2>定义</h2>
 <h3>Abel 范畴</h3>
 <p><span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span> $\mathcal A$ 中的<strong>链复形</strong>是一列对象与映射
