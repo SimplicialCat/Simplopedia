@@ -1086,12 +1086,7 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="中心"><header><h1><span class="taxon"></span>中心 <a class="slug" href="./中心.html">[中心]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>群</h3>
-<p>$\mathsf{Set}$ 中的群 (或幺半群) $G$ 的<strong>中心</strong>为 $G$ 中与所有元素交换的元素构成的子集:
-$$
-Z(G) = \{g\in G | \forall h\in G, gh=hg\}.
-$$</p>
-<p>对更一般的<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> (如<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>群) $G$,
-定义
+<p>对<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>群 $G$, 定义其中心为
 $$
 Z(G) := \operatorname{Aut}_{\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)}(\mathrm{id}).
 $$
@@ -1104,23 +1099,12 @@ $$
 $$
 Z(G)\to \operatorname{Aut}_{\mathbf{B}G}(*) = G.
 $$</p>
-<h3>环</h3>
+<h3>结合代数</h3>
 <p>固定交换环 $k$ 作为基环.
-设 $A$ 为 $k$ 上的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. $A$ 的<strong>中心</strong>是与所有元素交换的元素的集合
-$$
-Z(A) = \{a\in A | \forall b\in A, ab=ba\},
-$$
-也是 $A$ 作为 $(A,A)$-双模的自同态的集合
+设 $A$ 为 $k$ 上的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. $A$ 的<strong>中心</strong>是 $A$ 作为 $(A,A)$-双模的自同态集
 $$
 Z(A) = \operatorname{End}_{\mathsf{BiMod}(A,A)}(A),
-$$
-也是<span class="link local"><a href="./等化子.html" title="等化子 [等化子]">等化子</a></span>
-$$
-Z(A) = \operatorname{eq}\big(
-    A\rightrightarrows \operatorname{Hom}_k(A,A)
-\big),
-$$
-其中两个映射分别为左乘与右乘.</p>
+$$</p>
 <p>回忆 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>中, <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 的恒等态射即是 $A$ 作为 $(A,A)$-双模. 因此, $A$ 的中心又可理解为
 $$
 Z(A) = \operatorname{End}_{\operatorname{End}_{\mathsf{Morita}}(A)}(\mathrm{id}).
@@ -1159,6 +1143,19 @@ $$
 Z(G)\to G
 $$
 是万有的<span class="link local"><a href="./中心映射.html" title="中心群同态, 中心映射 [中心映射]">中心映射</a></span>.</p>
+<h3>共轭作用的不动点</h3>
+<p>群 $G$ 的中心是 $G$ 在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>.
+考虑下图.
+$$
+\begin{array}{ccccc}
+G &amp; \rightarrow &amp; \operatorname{Aut}_{\mathsf{Grp}}(G) &amp; \rightarrow &amp; * \
+\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \</p>
+<ul>
+<li>&amp; \underset{\mathrm{id}}{\rightarrow} &amp; \operatorname{Aut}<em>{\mathsf{Ani}}(\mathbf{B}G) &amp; \underset{\mathrm{ev}</em>*}{\rightarrow} &amp; \mathbf{B}G
+\end{array}
+$$
+其右边方块与整个方块为拉回, 故左边方块为拉回. 左边的群同态 $G\to\operatorname{Aut}_{\mathsf{Grp}}(G)$ 为 $G$ 在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>; 该同态的核为 $\Omega(\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G),\mathrm{id}) = Z(G)$.</li>
+</ul>
 <h3>与群作用, 模的关系</h3>
 <p>设群 $G$ 的中心为 $Z$, 考虑任意范畴中的 $G$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span> $X$, 那么 $Z$ 不仅作用于 $X$ 上, 而且该作用为 $G$-<span class="link local"><a href="./等变映射.html" title="等变映射 [等变映射]">等变</a></span>作用 (甚至为<span class="link local"><a href="./中心作用.html" title="中心作用 [中心作用]">中心作用</a></span>). 这是因为, 由定义,
 $$
@@ -1175,6 +1172,12 @@ Z(\mathcal{C}) \to Z(\mathsf{Fun}(\mathcal{C},\mathcal{D})) \to Z(\operatorname{
 $$
 其中第二个箭头为 “取自然变换在 $F$ 上的分量”.</p>
 <h2>例</h2>
+<h3>1-范畴语境</h3>
+<p>在 $1$-范畴语境中, 结合代数 $A$ 的中心是与所有元素交换的元素的集合
+$$
+Z(A) = \{a\in A | \forall b\in A, ab=ba\}.
+$$</p>
+<p>例如 $\mathsf{Set}$ 中的群 (或幺半群) $G$ 的中心即为 $G$ 中与所有元素交换的元素构成的子集.</p>
 <h3>中心不是子群的例子</h3>
 <p>生象群 $G$ 的中心不一定是 $G$ 的子群, 即典范映射 $Z(G)\to G$ 不一定是 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>映射.</p>
 <p>考虑 $G = \Omega S^2$, 映射
@@ -1547,6 +1550,17 @@ $$
 $$</p>
 <h2>例</h2>
 <p><span class="link local"><a href="./佐武等价.html" title="佐武等价 [佐武等价]">佐武 (Satake) 等价</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="相对张量积"><header><h1><span class="taxon"></span>相对张量积 <a class="slug" href="./相对张量积.html">[相对张量积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>在具有<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">单纯余极限</a></span>的范畴 $\mathcal C$ 中, 对于<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">右模</a></span> $M$ 与左模 $N$, 可作<strong>相对张量积</strong>
+$$
+M\otimes_A N := \operatorname{colim}_{\Delta} M\otimes A^{\otimes\bullet}\otimes N.
+$$
+$M\otimes_A N$ 一般没有 $A$-左模或右模结构.</p>
+<p>张量积也可以理解为 $\mathcal C$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>之间的<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span> $\mathbf{B}A\to\mathcal C$ 的复合
+$$
+\operatorname{colim}_{\mathbf{B}A} M\otimes N.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="算畴"><header><h1><span class="taxon"></span>算畴 <a class="slug" href="./算畴.html">[算畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>一个算畴表达了<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>的对象上可能具有的一族多元运算, 以及运算之间的关系. 算畴又叫<strong>多重范畴</strong> (multicategory), 是范畴的推广, 由<strong>颜色</strong> (多重范畴的对象) 与<strong>运算</strong> (多个对象到一个对象的态射) 构成.</p>
@@ -1668,7 +1682,7 @@ $$
 <li>$\operatorname{Hom}_{\mathsf{CM}}(a^{n}m,m) = 1$ (包括 $a^n m$ 的所有排列),</li>
 <li>其它 $\operatorname{Hom}$ 为空.</li>
 </ul>
-<p>“两个结合代数上的双模” 算畴 $\mathsf{BM}$ 作为多重范畴有三个对象 $l,m,r$, 且有</p>
+<p>“两个结合代数上的<span class="link local"><a href="./双模.html" title="结合代数上的双模 [双模]">双模</a></span>” 算畴 $\mathsf{BM}$ 作为多重范畴有三个对象 $l,m,r$, 且有</p>
 <ul>
 <li>$\operatorname{Hom}_{\mathsf{BM}}(l^n,l) = 1$,</li>
 <li>$\operatorname{Hom}_{\mathsf{BM}}(r^n,r) = 1$,</li>
@@ -1763,10 +1777,17 @@ $$</p>
 <p>注意另一个概念, $A$ 生成的自由 $\mathbb E_1$-群是 $\Omega\Sigma_+A$, 是 $\operatorname{List} A$ 的群化.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="结合代数上的模"><header><h1><span class="taxon"></span>结合代数上的模 <a class="slug" href="./结合代数上的模.html">[结合代数上的模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>可视为单对象<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>; 在这种意义上, 结合代数上的模可以推广为<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">充实范畴上的模</a></span>或者<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>.</p>
-<p>结合代数给出<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>; 在这种意义上, 结合代数上的模可以推广为<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的模</a></span>.</p>
+<p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 可视为单对象<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span> $\mathbf{B}A$; 在这种意义上, 结合代数上的模可以推广为<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">充实范畴上的模</a></span>或者<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>:
+$$
+\mathsf{LMod}(A) = \mathsf{Psh}(\mathbf{B}A).
+$$</p>
+<p>结合代数 $A$ 给出<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $A\otimes (-)$; 在这种意义上, 结合代数上的模可以推广为<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的模</a></span>.
+$$
+\mathsf{LMod}(A) = \mathsf{Mod}(A\otimes (-)).
+$$</p>
 <p>结合代数上的模范畴可视为结合代数的范畴的<span class="link local"><a href="./切范畴.html" title="切范畴 [切范畴]">切范畴</a></span>.</p>
-<p>另外, 对一般的<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span>也可定义<span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">模</a></span>的概念; 但这个概念对于<span class="link local"><a href="./A∞-算畴.html" title="结合算畴 [A∞-算畴]">结合算畴</a></span>给出的是<strong>双模</strong>, 而非左模或右模.</p>
+<p>更一般地, 对于幺半范畴 $\mathcal C$ 上的模 $\mathcal M$ 以及 $\mathcal C$ 中的结合代数 $A$, 可以谈论 $\mathcal M$ 中的 $A$-模.</p>
+<p>另外, 对一般的<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span>也可定义<span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">模</a></span>的概念; 但这个概念对于<span class="link local"><a href="./A∞-算畴.html" title="结合算畴 [A∞-算畴]">结合算畴</a></span>给出的是<strong></strong><span class="link local"><a href="./双模.html" title="结合代数上的双模 [双模]">双模</a></span>, 而非左模或右模.</p>
 <h2>定义</h2>
 <h3>通过算畴</h3>
 <p>考虑<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathsf{LM}$, 作为多重范畴有两个对象 $a,m$, 且有</p>
@@ -1786,7 +1807,7 @@ $$
 $$</p>
 <h2>性质</h2>
 <h3>相对张量积</h3>
-<p>在具有<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">单纯余极限</a></span>的范畴 $\mathcal C$ 中, 对于结合代数 $A$ 上的右模 $M$ 与左模 $N$, 可作相对张量积
+<p>在具有<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">单纯余极限</a></span>的范畴 $\mathcal C$ 中, 对于结合代数 $A$ 上的右模 $M$ 与左模 $N$, 可作<span class="link local"><a href="./相对张量积.html" title="相对张量积 [相对张量积]">相对张量积</a></span>
 $$
 M\otimes_A N := \operatorname{colim}_{\Delta} M\otimes A^{\otimes\bullet}\otimes N.
 $$
@@ -1856,6 +1877,19 @@ $$</p>
 $$
 X^G = \operatorname{Hom}_{\mathsf{Ani}_{/\mathbf{B}G}}(\mathbf{B}G,X/G).
 $$</p>
+<h3>群作用的同态</h3>
+<p>设 $F,H\colon \mathbf{B}G\to\mathcal C$ 是两个 $G$-作用, 记 $X=F(*)$, $Y=H(*)$. 那么 $\operatorname{Hom}(X,Y)$ 上有 $G$-作用:
+$$
+\mathbf{B}G \overset{\Delta}{\to}\mathbf{B}G^{\mathrm{op}} \times \mathbf{B}G \overset{\operatorname{Hom}(F-,H-)}{\longrightarrow} \mathsf{Ani}.
+$$
+且两个 $G$-作用 $F,H$ 之间的同态集, 即自然变换的集合
+$\operatorname{Hom}_{\mathsf{Fun}(\mathbf{B}G,\mathcal C)}(F,H)$
+可以写成<span class="link local"><a href="./端.html" title="端 [端]">端</a></span> (注意<span class="link local"><a href="./扭箭头范畴.html" title="扭箭头范畴 [扭箭头范畴]">扭箭头范畴</a></span> $\mathsf{Tw}(\mathbf{B}G)$ 等价于 $\mathbf{B}G$ 自身)
+$$
+\operatorname{Hom}_{\mathsf{Fun}(\mathbf{B}G,\mathcal C)}(F,H) = \int_{x\in \mathbf{B}G} \operatorname{Hom}(F(x),H(x))
+$$
+从而等价于<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>集
+$\operatorname{Hom}(X,Y)^{G}$.</p>
 <h2>例</h2>
 <h3>左乘/右乘作用</h3>
 <p>对于生象群 $G$, 映射 $* \to \mathbf{B}G$ 对应的 $G$-作用即是 $G$ 在自身上的左乘作用.</p>

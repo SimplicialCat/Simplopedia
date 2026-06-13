@@ -902,7 +902,9 @@ $$
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Hochschild上同调.html" title="Hochschild 上同调 [Hochschild上同调]">Hochschild 上同调</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="共轭作用"><header><h1><span class="taxon"></span>共轭作用 <a class="slug" href="./共轭作用.html">[共轭作用]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span><span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的<strong>共轭作用</strong> (又叫<strong>伴随作用</strong> $\mathrm{Ad}$) 是 $G$ 在自身上的一个<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>, 可定义为 $G\times G$ 在 $G$ 上的左乘右乘作用沿<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span> $\Delta\colon G\to G\times G$ 的拉回. $G\times G$ 在 $G$ 上的左乘右乘作用由<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> $\mathbf{B}G$ 的<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span>给出:
+<p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span><span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的<strong>共轭作用</strong> (又叫<strong>伴随作用</strong> $\mathrm{Ad}$) 是 $G$ 在自身上的一个<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>.</p>
+<h3>作为左乘右乘作用的拉回</h3>
+<p>可定义为 $G\times G$ 在 $G$ 上的左乘右乘作用沿<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span> $\Delta\colon G\to G\times G$ 的拉回. $G\times G$ 在 $G$ 上的左乘右乘作用由<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> $\mathbf{B}G$ 的<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span>给出:
 $$
 \begin{array}
 {c}
@@ -934,5 +936,29 @@ G /_{\mathrm{Ad}} A &amp; \to &amp; \mathbf{B}G\\
 \end{array}
 $$
 当然, 这个作用就是 $G$ 在 $G$ 上的共轭作用沿着群同态 $\phi\colon A\to G$ 的拉回.</p>
+<h3>作为环路群函子</h3>
+<p>对任意生象 $X$, 有<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>函子
+$$
+X \to \mathsf{Ani},\,x\mapsto\Omega(X,x).
+$$
+该函子可视为<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span>与 Hom 函子的复合
+$$
+X \overset{\Delta}{\to}X\times X\overset{\operatorname{Hom}(-,-)}{\longrightarrow}\mathsf{Ani}.
+$$
+我们知道 $\operatorname{Hom}(-,-)\colon X\times X\to\mathsf{Ani}$ 的 <span class="link local"><a href="./Grothendieck构造.html" title="Grothendieck 构造 [Grothendieck构造]">Grothendieck 构造</a></span> (也即 $X$ 的<span class="link local"><a href="./扭箭头范畴.html" title="扭箭头范畴 [扭箭头范畴]">扭箭头范畴</a></span>) 为对角线 $\Delta\colon X \to X\times X$.</p>
+<p>现设 $X = \mathbf{B}G$, 那么上述构造给出的函子
+$$
+\mathrm{Ad}\colon \mathbf{B}G \to \mathsf{Ani}
+$$
+正是 $G$ 在自身上的共轭作用.</p>
+<h2>性质</h2>
+<h3>不动点</h3>
+<p>群 $G$ 在自身上的共轭作用的<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>是 $G$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>.</p>
 <h2>例</h2>
+<h3>映射空间上的共轭作用</h3>
+<p>群 $H,G$ 的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> $\mathbf{B}H,\mathbf{B}G$ 之间的映射空间 $\operatorname{Hom}_{\mathsf{Ani}}(\mathbf{B}H,\mathbf{B}G)$ 是群同态集 $\operatorname{Hom}_{\mathsf{Grp}}(H,G)$ 上 $G$ 的共轭作用的商.</p>
+<p>这个作用来自复合函子
+$$
+\mathbf{B}G \overset{\mathrm{Ad}}{\to} \mathsf{Grp} \overset{\operatorname{Hom}(H,-)}{\longrightarrow} \mathsf{Ani}.
+$$</p>
 </details></section></details></section></footer></article></div></body></html>

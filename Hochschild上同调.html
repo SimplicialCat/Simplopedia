@@ -943,12 +943,7 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="中心"><header><h1><span class="taxon"></span>中心 <a class="slug" href="./中心.html">[中心]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>群</h3>
-<p>$\mathsf{Set}$ 中的群 (或幺半群) $G$ 的<strong>中心</strong>为 $G$ 中与所有元素交换的元素构成的子集:
-$$
-Z(G) = \{g\in G | \forall h\in G, gh=hg\}.
-$$</p>
-<p>对更一般的<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> (如<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>群) $G$,
-定义
+<p>对<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>群 $G$, 定义其中心为
 $$
 Z(G) := \operatorname{Aut}_{\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)}(\mathrm{id}).
 $$
@@ -961,23 +956,12 @@ $$
 $$
 Z(G)\to \operatorname{Aut}_{\mathbf{B}G}(*) = G.
 $$</p>
-<h3>环</h3>
+<h3>结合代数</h3>
 <p>固定交换环 $k$ 作为基环.
-设 $A$ 为 $k$ 上的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. $A$ 的<strong>中心</strong>是与所有元素交换的元素的集合
-$$
-Z(A) = \{a\in A | \forall b\in A, ab=ba\},
-$$
-也是 $A$ 作为 $(A,A)$-双模的自同态的集合
+设 $A$ 为 $k$ 上的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. $A$ 的<strong>中心</strong>是 $A$ 作为 $(A,A)$-双模的自同态集
 $$
 Z(A) = \operatorname{End}_{\mathsf{BiMod}(A,A)}(A),
-$$
-也是<span class="link local"><a href="./等化子.html" title="等化子 [等化子]">等化子</a></span>
-$$
-Z(A) = \operatorname{eq}\big(
-    A\rightrightarrows \operatorname{Hom}_k(A,A)
-\big),
-$$
-其中两个映射分别为左乘与右乘.</p>
+$$</p>
 <p>回忆 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>中, <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 的恒等态射即是 $A$ 作为 $(A,A)$-双模. 因此, $A$ 的中心又可理解为
 $$
 Z(A) = \operatorname{End}_{\operatorname{End}_{\mathsf{Morita}}(A)}(\mathrm{id}).
@@ -1016,6 +1000,19 @@ $$
 Z(G)\to G
 $$
 是万有的<span class="link local"><a href="./中心映射.html" title="中心群同态, 中心映射 [中心映射]">中心映射</a></span>.</p>
+<h3>共轭作用的不动点</h3>
+<p>群 $G$ 的中心是 $G$ 在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>.
+考虑下图.
+$$
+\begin{array}{ccccc}
+G &amp; \rightarrow &amp; \operatorname{Aut}_{\mathsf{Grp}}(G) &amp; \rightarrow &amp; * \
+\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \</p>
+<ul>
+<li>&amp; \underset{\mathrm{id}}{\rightarrow} &amp; \operatorname{Aut}<em>{\mathsf{Ani}}(\mathbf{B}G) &amp; \underset{\mathrm{ev}</em>*}{\rightarrow} &amp; \mathbf{B}G
+\end{array}
+$$
+其右边方块与整个方块为拉回, 故左边方块为拉回. 左边的群同态 $G\to\operatorname{Aut}_{\mathsf{Grp}}(G)$ 为 $G$ 在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>; 该同态的核为 $\Omega(\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G),\mathrm{id}) = Z(G)$.</li>
+</ul>
 <h3>与群作用, 模的关系</h3>
 <p>设群 $G$ 的中心为 $Z$, 考虑任意范畴中的 $G$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span> $X$, 那么 $Z$ 不仅作用于 $X$ 上, 而且该作用为 $G$-<span class="link local"><a href="./等变映射.html" title="等变映射 [等变映射]">等变</a></span>作用 (甚至为<span class="link local"><a href="./中心作用.html" title="中心作用 [中心作用]">中心作用</a></span>). 这是因为, 由定义,
 $$
@@ -1032,6 +1029,12 @@ Z(\mathcal{C}) \to Z(\mathsf{Fun}(\mathcal{C},\mathcal{D})) \to Z(\operatorname{
 $$
 其中第二个箭头为 “取自然变换在 $F$ 上的分量”.</p>
 <h2>例</h2>
+<h3>1-范畴语境</h3>
+<p>在 $1$-范畴语境中, 结合代数 $A$ 的中心是与所有元素交换的元素的集合
+$$
+Z(A) = \{a\in A | \forall b\in A, ab=ba\}.
+$$</p>
+<p>例如 $\mathsf{Set}$ 中的群 (或幺半群) $G$ 的中心即为 $G$ 中与所有元素交换的元素构成的子集.</p>
 <h3>中心不是子群的例子</h3>
 <p>生象群 $G$ 的中心不一定是 $G$ 的子群, 即典范映射 $Z(G)\to G$ 不一定是 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>映射.</p>
 <p>考虑 $G = \Omega S^2$, 映射

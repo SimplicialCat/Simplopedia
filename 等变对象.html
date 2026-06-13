@@ -1167,6 +1167,28 @@ $$</p>
 <h2>例</h2>
 <h3>等变对象</h3>
 <p>在数学上, “<span class="link local"><a href="./等变对象.html" title="等变对象 [等变对象]">等变对象</a></span>” (equivariant object) 某某对象常常可理解为带群作用的范畴的不动点. 等变即是<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>语境下的不变.</p>
+<h3>子群作用的不动点</h3>
+<p>设 $H\to G$ 为子群, 或为更一般的生象群同态.
+对于带 $G$-作用的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$, 可讨论其 $H$-不动点: 考虑如下拉回图,
+$$
+\begin{array}{ccccc}
+X &amp; \rightarrow &amp; X/H &amp; \rightarrow &amp; X/ G \
+\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \</p>
+<ul>
+<li>&amp; \rightarrow &amp; \mathbf{B}H &amp; \rightarrow &amp; \mathbf{B}G
+\end{array}
+$$
+那么 $X$ 的 $H$-不动点相当于提升 $\mathbf{B}H\to X/G$,
+$$
+X^H = \operatorname{Hom}_{\mathsf{Ani}_{/\mathbf{B}G}}(\mathbf{B}H,X/G).
+$$
+使用<span class="link local"><a href="./等变映射.html" title="等变映射 [等变映射]">等变映射</a></span>的记号,
+$$
+X^H = \operatorname{Hom}_G(G/H,X).
+$$</li>
+</ul>
+<h3>共轭作用的不动点</h3>
+<p>群 $G$ 在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的不动点是 $G$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="分次模"><header><h1><span class="taxon"></span>分次模 <a class="slug" href="./分次模.html">[分次模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>分次模有如下两种含义, 前一种是后一种的特例, 但前一种更为基本.</p>

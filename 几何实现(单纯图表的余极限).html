@@ -1067,6 +1067,17 @@ $$</p>
 <ul>
 <li>对任意 $U\in\mathcal C$ 与 $y\in Y(U)$, 存在 $U$ 的 $J$-覆盖 $\{U_i\to U\}$ 以及 $x_i\in X(U_i)$, 使得 $f_{U_i}(x_i) = y|_{U_i}$.</li>
 </ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="相对张量积"><header><h1><span class="taxon"></span>相对张量积 <a class="slug" href="./相对张量积.html">[相对张量积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>在具有<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">单纯余极限</a></span>的范畴 $\mathcal C$ 中, 对于<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">右模</a></span> $M$ 与左模 $N$, 可作<strong>相对张量积</strong>
+$$
+M\otimes_A N := \operatorname{colim}_{\Delta} M\otimes A^{\otimes\bullet}\otimes N.
+$$
+$M\otimes_A N$ 一般没有 $A$-左模或右模结构.</p>
+<p>张量积也可以理解为 $\mathcal C$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>之间的<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span> $\mathbf{B}A\to\mathcal C$ 的复合
+$$
+\operatorname{colim}_{\mathbf{B}A} M\otimes N.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="筛余极限"><header><h1><span class="taxon"></span>筛余极限 <a class="slug" href="./筛余极限.html">[筛余极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>筛余极限 (sifted colimit) 是以<span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span>为指标范畴的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>
@@ -1078,10 +1089,17 @@ A = \operatorname{colim}_{(S\to A)\in\mathsf{Fin}_{/A}} S.
 $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="结合代数上的模"><header><h1><span class="taxon"></span>结合代数上的模 <a class="slug" href="./结合代数上的模.html">[结合代数上的模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>可视为单对象<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>; 在这种意义上, 结合代数上的模可以推广为<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">充实范畴上的模</a></span>或者<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>.</p>
-<p>结合代数给出<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>; 在这种意义上, 结合代数上的模可以推广为<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的模</a></span>.</p>
+<p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 可视为单对象<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span> $\mathbf{B}A$; 在这种意义上, 结合代数上的模可以推广为<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">充实范畴上的模</a></span>或者<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>:
+$$
+\mathsf{LMod}(A) = \mathsf{Psh}(\mathbf{B}A).
+$$</p>
+<p>结合代数 $A$ 给出<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $A\otimes (-)$; 在这种意义上, 结合代数上的模可以推广为<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的模</a></span>.
+$$
+\mathsf{LMod}(A) = \mathsf{Mod}(A\otimes (-)).
+$$</p>
 <p>结合代数上的模范畴可视为结合代数的范畴的<span class="link local"><a href="./切范畴.html" title="切范畴 [切范畴]">切范畴</a></span>.</p>
-<p>另外, 对一般的<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span>也可定义<span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">模</a></span>的概念; 但这个概念对于<span class="link local"><a href="./A∞-算畴.html" title="结合算畴 [A∞-算畴]">结合算畴</a></span>给出的是<strong>双模</strong>, 而非左模或右模.</p>
+<p>更一般地, 对于幺半范畴 $\mathcal C$ 上的模 $\mathcal M$ 以及 $\mathcal C$ 中的结合代数 $A$, 可以谈论 $\mathcal M$ 中的 $A$-模.</p>
+<p>另外, 对一般的<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span>也可定义<span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">模</a></span>的概念; 但这个概念对于<span class="link local"><a href="./A∞-算畴.html" title="结合算畴 [A∞-算畴]">结合算畴</a></span>给出的是<strong></strong><span class="link local"><a href="./双模.html" title="结合代数上的双模 [双模]">双模</a></span>, 而非左模或右模.</p>
 <h2>定义</h2>
 <h3>通过算畴</h3>
 <p>考虑<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathsf{LM}$, 作为多重范畴有两个对象 $a,m$, 且有</p>
@@ -1101,7 +1119,7 @@ $$
 $$</p>
 <h2>性质</h2>
 <h3>相对张量积</h3>
-<p>在具有<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">单纯余极限</a></span>的范畴 $\mathcal C$ 中, 对于结合代数 $A$ 上的右模 $M$ 与左模 $N$, 可作相对张量积
+<p>在具有<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">单纯余极限</a></span>的范畴 $\mathcal C$ 中, 对于结合代数 $A$ 上的右模 $M$ 与左模 $N$, 可作<span class="link local"><a href="./相对张量积.html" title="相对张量积 [相对张量积]">相对张量积</a></span>
 $$
 M\otimes_A N := \operatorname{colim}_{\Delta} M\otimes A^{\otimes\bullet}\otimes N.
 $$
@@ -1171,6 +1189,19 @@ $$</p>
 $$
 X^G = \operatorname{Hom}_{\mathsf{Ani}_{/\mathbf{B}G}}(\mathbf{B}G,X/G).
 $$</p>
+<h3>群作用的同态</h3>
+<p>设 $F,H\colon \mathbf{B}G\to\mathcal C$ 是两个 $G$-作用, 记 $X=F(*)$, $Y=H(*)$. 那么 $\operatorname{Hom}(X,Y)$ 上有 $G$-作用:
+$$
+\mathbf{B}G \overset{\Delta}{\to}\mathbf{B}G^{\mathrm{op}} \times \mathbf{B}G \overset{\operatorname{Hom}(F-,H-)}{\longrightarrow} \mathsf{Ani}.
+$$
+且两个 $G$-作用 $F,H$ 之间的同态集, 即自然变换的集合
+$\operatorname{Hom}_{\mathsf{Fun}(\mathbf{B}G,\mathcal C)}(F,H)$
+可以写成<span class="link local"><a href="./端.html" title="端 [端]">端</a></span> (注意<span class="link local"><a href="./扭箭头范畴.html" title="扭箭头范畴 [扭箭头范畴]">扭箭头范畴</a></span> $\mathsf{Tw}(\mathbf{B}G)$ 等价于 $\mathbf{B}G$ 自身)
+$$
+\operatorname{Hom}_{\mathsf{Fun}(\mathbf{B}G,\mathcal C)}(F,H) = \int_{x\in \mathbf{B}G} \operatorname{Hom}(F(x),H(x))
+$$
+从而等价于<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>集
+$\operatorname{Hom}(X,Y)^{G}$.</p>
 <h2>例</h2>
 <h3>左乘/右乘作用</h3>
 <p>对于生象群 $G$, 映射 $* \to \mathbf{B}G$ 对应的 $G$-作用即是 $G$ 在自身上的左乘作用.</p>

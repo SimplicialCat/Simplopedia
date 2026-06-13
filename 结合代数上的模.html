@@ -827,10 +827,17 @@
 
 <article><section class="block" data-taxon=""><details open><summary id="结合代数上的模"><header><h1><span class="taxon"></span>结合代数上的模 <a class="slug" href="./结合代数上的模.html">[结合代数上的模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>可视为单对象<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>; 在这种意义上, 结合代数上的模可以推广为<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">充实范畴上的模</a></span>或者<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>.</p>
-<p>结合代数给出<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>; 在这种意义上, 结合代数上的模可以推广为<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的模</a></span>.</p>
+<p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 可视为单对象<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span> $\mathbf{B}A$; 在这种意义上, 结合代数上的模可以推广为<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">充实范畴上的模</a></span>或者<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>:
+$$
+\mathsf{LMod}(A) = \mathsf{Psh}(\mathbf{B}A).
+$$</p>
+<p>结合代数 $A$ 给出<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $A\otimes (-)$; 在这种意义上, 结合代数上的模可以推广为<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的模</a></span>.
+$$
+\mathsf{LMod}(A) = \mathsf{Mod}(A\otimes (-)).
+$$</p>
 <p>结合代数上的模范畴可视为结合代数的范畴的<span class="link local"><a href="./切范畴.html" title="切范畴 [切范畴]">切范畴</a></span>.</p>
-<p>另外, 对一般的<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span>也可定义<span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">模</a></span>的概念; 但这个概念对于<span class="link local"><a href="./A∞-算畴.html" title="结合算畴 [A∞-算畴]">结合算畴</a></span>给出的是<strong>双模</strong>, 而非左模或右模.</p>
+<p>更一般地, 对于幺半范畴 $\mathcal C$ 上的模 $\mathcal M$ 以及 $\mathcal C$ 中的结合代数 $A$, 可以谈论 $\mathcal M$ 中的 $A$-模.</p>
+<p>另外, 对一般的<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span>也可定义<span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">模</a></span>的概念; 但这个概念对于<span class="link local"><a href="./A∞-算畴.html" title="结合算畴 [A∞-算畴]">结合算畴</a></span>给出的是<strong></strong><span class="link local"><a href="./双模.html" title="结合代数上的双模 [双模]">双模</a></span>, 而非左模或右模.</p>
 <h2>定义</h2>
 <h3>通过算畴</h3>
 <p>考虑<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathsf{LM}$, 作为多重范畴有两个对象 $a,m$, 且有</p>
@@ -850,7 +857,7 @@ $$
 $$</p>
 <h2>性质</h2>
 <h3>相对张量积</h3>
-<p>在具有<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">单纯余极限</a></span>的范畴 $\mathcal C$ 中, 对于结合代数 $A$ 上的右模 $M$ 与左模 $N$, 可作相对张量积
+<p>在具有<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">单纯余极限</a></span>的范畴 $\mathcal C$ 中, 对于结合代数 $A$ 上的右模 $M$ 与左模 $N$, 可作<span class="link local"><a href="./相对张量积.html" title="相对张量积 [相对张量积]">相对张量积</a></span>
 $$
 M\otimes_A N := \operatorname{colim}_{\Delta} M\otimes A^{\otimes\bullet}\otimes N.
 $$
@@ -923,7 +930,7 @@ $$
 其中 $\mathcal A^{\text{rev}}$ 表示将 $\mathcal A$ 的乘法 (幺半结构) 反转.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="OpAlgMod"><header><h1><span class="taxon"></span>算畴上的代数上的模 <a class="slug" href="./OpAlgMod.html">[OpAlgMod]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>对于单色<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathcal O$ 上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span> $A$, 可以谈论 $A$-模. 这种模是如下的一个新的算畴 $\widetilde{\mathcal O}$ 上的代数:</p>
+<p>对于单色<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathcal O$ 上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span> $A$, 可以谈论 $A$ 上的 ($\mathcal O$-)模. 这种模是如下的一个新的算畴 $\widetilde{\mathcal O}$ 上的代数:</p>
 <p>记 $a$ 为算畴 $\mathcal O$ 唯一的颜色, 添加第二种颜色 $m$, 并且对每种运算 $a^n\to a$, 用 $m$ 代替左边的一个 $a$ 和右边的 $a$, 得到一种新的运算 $a\cdots a m a\cdots a \to m$, 即得到算畴 $\widetilde{\mathcal O}$.</p>
 <h2>定义</h2>
 <h3>通过算子范畴</h3>
@@ -937,7 +944,7 @@ $$
 $$
 其中 $\widetilde {\mathsf{Fin}}_*$ 是</p>
 <h2>例</h2>
-<p>对于 <span class="link local"><a href="./A∞-算畴.html" title="结合算畴 [A∞-算畴]">$\mathbb E_1$</a></span>-代数 (即<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>) $A$, 其上的模即为<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">双模</a></span>.</p>
+<p>对于 <span class="link local"><a href="./A∞-算畴.html" title="结合算畴 [A∞-算畴]">$\mathbb E_1$</a></span>-代数 (即<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>) $A$, 其上的 $\mathbb{E}_1$-模不是<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模或右模</a></span>, 而是 $(A,A)$-<span class="link local"><a href="./双模.html" title="结合代数上的双模 [双模]">双模</a></span>.</p>
 <h2>性质</h2>
 <h3>泛包络代数</h3>
 <p>算畴 $\mathcal O$ 上的代数 $A$ 上的模等同于一个结合代数上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>, 这个结合代数称为 $A$ 的<span class="link local"><a href="./泛包络代数(算畴).html" title="泛包络代数 (算畴上的代数) [泛包络代数(算畴)]">泛包络代数</a></span> $\mathcal UA$. <span class="link local"><a href="./泛包络代数.html" title="泛包络代数 (Lie 代数) [泛包络代数]">Lie 代数的泛包络代数</a></span>是这个概念的特例.</p>
@@ -1497,6 +1504,23 @@ $$
 $$</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, <span class="link local"><a href="./单纯范畴.html" title="“单纯范畴” [单纯范畴]">单纯范畴</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="双模"><header><h1><span class="taxon"></span>结合代数上的双模 <a class="slug" href="./双模.html">[双模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>通过双模算畴</h3>
+<p>双模可通过<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathsf{BM}$ 定义. 作为多重范畴, 其有三个对象 $l,m,r$, 且有</p>
+<ul>
+<li>$\operatorname{Hom}_{\mathsf{BM}}(l^n,l) = 1$,</li>
+<li>$\operatorname{Hom}_{\mathsf{BM}}(r^n,r) = 1$,</li>
+<li>$\operatorname{Hom}_{\mathsf{BM}}(l^p m r^q,m) = 1$ (包括 $l^p m r^q$ 的所有排列),</li>
+<li>其它 $\operatorname{Hom}$ 为空.</li>
+</ul>
+<h3>通过结合算畴的模</h3>
+<p>对于结合代数 $A$, 有 $A$ 上的 $\mathbb E_1$-模的概念, 且等同于 $(A,A)$-双模. 参见<span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">算畴上的代数上的模</a></span>.</p>
+<h3>左模中的右模</h3>
+<p>双模范畴 $\mathsf{Bimod}(A,B)$ 也可定义为 $\mathsf{RMod}(B)$ 中的 $A$-<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>范畴. 其中 $\mathsf{RMod}(B)$ 视为原范畴 $\mathcal C$ 上的模.</p>
+<h2>性质</h2>
+<h3>幺半结构</h3>
+<p>双模范畴上有<span class="link local"><a href="./相对张量积.html" title="相对张量积 [相对张量积]">相对张量积</a></span>给出的<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半结构</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="双边杠构造"><header><h1><span class="taxon"></span>双边杠构造 <a class="slug" href="./双边杠构造.html">[双边杠构造]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>如果说<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>是<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>, 那么双边杠构造就是<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">结合代数上的模</a></span>的相对张量积的范畴化.</p>
@@ -1775,6 +1799,17 @@ $$
 <h3>Hecke 作用</h3>
 <p>在<span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 对应</a></span>中,
 $A = \operatorname{Rep}(\check{G})$ 作用在 $V= D(D\text{-}\mathsf{Mod}(\mathrm{Bun}_G))$ 上, 特征向量称为 <span class="link local"><a href="./Hecke特征层.html" title="Hecke 特征层 [Hecke特征层]">Hecke 特征层</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="相对张量积"><header><h1><span class="taxon"></span>相对张量积 <a class="slug" href="./相对张量积.html">[相对张量积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>在具有<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">单纯余极限</a></span>的范畴 $\mathcal C$ 中, 对于<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">右模</a></span> $M$ 与左模 $N$, 可作<strong>相对张量积</strong>
+$$
+M\otimes_A N := \operatorname{colim}_{\Delta} M\otimes A^{\otimes\bullet}\otimes N.
+$$
+$M\otimes_A N$ 一般没有 $A$-左模或右模结构.</p>
+<p>张量积也可以理解为 $\mathcal C$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>之间的<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span> $\mathbf{B}A\to\mathcal C$ 的复合
+$$
+\operatorname{colim}_{\mathbf{B}A} M\otimes N.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="算畴"><header><h1><span class="taxon"></span>算畴 <a class="slug" href="./算畴.html">[算畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>一个算畴表达了<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>的对象上可能具有的一族多元运算, 以及运算之间的关系. 算畴又叫<strong>多重范畴</strong> (multicategory), 是范畴的推广, 由<strong>颜色</strong> (多重范畴的对象) 与<strong>运算</strong> (多个对象到一个对象的态射) 构成.</p>
@@ -1896,7 +1931,7 @@ $$
 <li>$\operatorname{Hom}_{\mathsf{CM}}(a^{n}m,m) = 1$ (包括 $a^n m$ 的所有排列),</li>
 <li>其它 $\operatorname{Hom}$ 为空.</li>
 </ul>
-<p>“两个结合代数上的双模” 算畴 $\mathsf{BM}$ 作为多重范畴有三个对象 $l,m,r$, 且有</p>
+<p>“两个结合代数上的<span class="link local"><a href="./双模.html" title="结合代数上的双模 [双模]">双模</a></span>” 算畴 $\mathsf{BM}$ 作为多重范畴有三个对象 $l,m,r$, 且有</p>
 <ul>
 <li>$\operatorname{Hom}_{\mathsf{BM}}(l^n,l) = 1$,</li>
 <li>$\operatorname{Hom}_{\mathsf{BM}}(r^n,r) = 1$,</li>

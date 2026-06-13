@@ -837,6 +837,13 @@ $$
     * &amp; \to &amp; X.
 \end{array}
 $$</p>
+<h2>性质</h2>
+<h3>群结构</h3>
+<p>环路空间 $\Omega(X,x)$ 有<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>结构. 该群结构关于 $x$ 有函子性, 也即有函子
+$$
+X \to \mathsf{Grp},\,x\mapsto\Omega(X,x).
+$$
+见<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="A∞-空间"><header><h1><span class="taxon"></span>“A∞-空间” <a class="slug" href="./A∞-空间.html">[A∞-空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>Stasheff 的 A∞-空间理论说明一个 H-空间 $X$ 是<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> (也即有<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">分类空间</a></span>) 当且仅当它满足结合律的所有高阶<span class="link local"><a href="./融贯.html" title="融贯 [融贯]">融贯</a></span>同伦.</p>
 <h2>例</h2>
@@ -879,12 +886,7 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="中心"><header><h1><span class="taxon"></span>中心 <a class="slug" href="./中心.html">[中心]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>群</h3>
-<p>$\mathsf{Set}$ 中的群 (或幺半群) $G$ 的<strong>中心</strong>为 $G$ 中与所有元素交换的元素构成的子集:
-$$
-Z(G) = \{g\in G | \forall h\in G, gh=hg\}.
-$$</p>
-<p>对更一般的<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> (如<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>群) $G$,
-定义
+<p>对<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>群 $G$, 定义其中心为
 $$
 Z(G) := \operatorname{Aut}_{\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G)}(\mathrm{id}).
 $$
@@ -897,23 +899,12 @@ $$
 $$
 Z(G)\to \operatorname{Aut}_{\mathbf{B}G}(*) = G.
 $$</p>
-<h3>环</h3>
+<h3>结合代数</h3>
 <p>固定交换环 $k$ 作为基环.
-设 $A$ 为 $k$ 上的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. $A$ 的<strong>中心</strong>是与所有元素交换的元素的集合
-$$
-Z(A) = \{a\in A | \forall b\in A, ab=ba\},
-$$
-也是 $A$ 作为 $(A,A)$-双模的自同态的集合
+设 $A$ 为 $k$ 上的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. $A$ 的<strong>中心</strong>是 $A$ 作为 $(A,A)$-双模的自同态集
 $$
 Z(A) = \operatorname{End}_{\mathsf{BiMod}(A,A)}(A),
-$$
-也是<span class="link local"><a href="./等化子.html" title="等化子 [等化子]">等化子</a></span>
-$$
-Z(A) = \operatorname{eq}\big(
-    A\rightrightarrows \operatorname{Hom}_k(A,A)
-\big),
-$$
-其中两个映射分别为左乘与右乘.</p>
+$$</p>
 <p>回忆 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>中, <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 的恒等态射即是 $A$ 作为 $(A,A)$-双模. 因此, $A$ 的中心又可理解为
 $$
 Z(A) = \operatorname{End}_{\operatorname{End}_{\mathsf{Morita}}(A)}(\mathrm{id}).
@@ -952,6 +943,19 @@ $$
 Z(G)\to G
 $$
 是万有的<span class="link local"><a href="./中心映射.html" title="中心群同态, 中心映射 [中心映射]">中心映射</a></span>.</p>
+<h3>共轭作用的不动点</h3>
+<p>群 $G$ 的中心是 $G$ 在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>.
+考虑下图.
+$$
+\begin{array}{ccccc}
+G &amp; \rightarrow &amp; \operatorname{Aut}_{\mathsf{Grp}}(G) &amp; \rightarrow &amp; * \
+\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \</p>
+<ul>
+<li>&amp; \underset{\mathrm{id}}{\rightarrow} &amp; \operatorname{Aut}<em>{\mathsf{Ani}}(\mathbf{B}G) &amp; \underset{\mathrm{ev}</em>*}{\rightarrow} &amp; \mathbf{B}G
+\end{array}
+$$
+其右边方块与整个方块为拉回, 故左边方块为拉回. 左边的群同态 $G\to\operatorname{Aut}_{\mathsf{Grp}}(G)$ 为 $G$ 在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>; 该同态的核为 $\Omega(\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G),\mathrm{id}) = Z(G)$.</li>
+</ul>
 <h3>与群作用, 模的关系</h3>
 <p>设群 $G$ 的中心为 $Z$, 考虑任意范畴中的 $G$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span> $X$, 那么 $Z$ 不仅作用于 $X$ 上, 而且该作用为 $G$-<span class="link local"><a href="./等变映射.html" title="等变映射 [等变映射]">等变</a></span>作用 (甚至为<span class="link local"><a href="./中心作用.html" title="中心作用 [中心作用]">中心作用</a></span>). 这是因为, 由定义,
 $$
@@ -968,6 +972,12 @@ Z(\mathcal{C}) \to Z(\mathsf{Fun}(\mathcal{C},\mathcal{D})) \to Z(\operatorname{
 $$
 其中第二个箭头为 “取自然变换在 $F$ 上的分量”.</p>
 <h2>例</h2>
+<h3>1-范畴语境</h3>
+<p>在 $1$-范畴语境中, 结合代数 $A$ 的中心是与所有元素交换的元素的集合
+$$
+Z(A) = \{a\in A | \forall b\in A, ab=ba\}.
+$$</p>
+<p>例如 $\mathsf{Set}$ 中的群 (或幺半群) $G$ 的中心即为 $G$ 中与所有元素交换的元素构成的子集.</p>
 <h3>中心不是子群的例子</h3>
 <p>生象群 $G$ 的中心不一定是 $G$ 的子群, 即典范映射 $Z(G)\to G$ 不一定是 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>映射.</p>
 <p>考虑 $G = \Omega S^2$, 映射
@@ -977,6 +987,66 @@ $$
 在基点处的纤维为 $\Omega_{\mathrm{id}}\operatorname{Aut}_*(S^2) \simeq \Omega^3 S^2$, 不是 $(-1)$-截断生象.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./余中心.html" title="余中心 [余中心]">余中心</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="共轭作用"><header><h1><span class="taxon"></span>共轭作用 <a class="slug" href="./共轭作用.html">[共轭作用]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span><span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的<strong>共轭作用</strong> (又叫<strong>伴随作用</strong> $\mathrm{Ad}$) 是 $G$ 在自身上的一个<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>.</p>
+<h3>作为左乘右乘作用的拉回</h3>
+<p>可定义为 $G\times G$ 在 $G$ 上的左乘右乘作用沿<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span> $\Delta\colon G\to G\times G$ 的拉回. $G\times G$ 在 $G$ 上的左乘右乘作用由<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> $\mathbf{B}G$ 的<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span>给出:
+$$
+\begin{array}
+{c}
+G/(G\times G)=\mathbf{B}G\\
+\downarrow{\scriptsize \Delta}\!\!\!\\
+\mathbf{B}G\times\mathbf{B}G
+\end{array}
+$$
+从而共轭作用的商 $G/_{\mathrm{Ad}}G$ 是 $\mathbf{B}G$ 的<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span> $\Delta_{\mathbf{B}G}$ 沿 $\Delta$ 自身的拉回.
+$$
+\begin{array}
+{ccc}
+G /_{\mathrm{Ad}} G &amp; \to &amp; \mathbf{B}G\\
+\downarrow &amp; &amp; \downarrow{\scriptsize \Delta}\!\!\! \\
+\mathbf{B}G &amp; \underset{\Delta}{\to} &amp; \mathbf{B}G\times\mathbf{B}G
+\end{array}
+$$
+注意到由 $S^1$ 的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span> $S^1 = *\sqcup_{*\sqcup *} *$, 前述拉回也等同于 $S^1$ 到 $\mathbf{B}G$ 的映射空间, 即 $\mathbf{B}G$ 的<span class="link local"><a href="./自由环路空间.html" title="自由环路空间 [自由环路空间]">自由环路空间</a></span>:
+$$
+G /_{\mathrm{Ad}} G = \operatorname{Hom}_{\mathsf{Ani}}(S^1,\mathbf{B}G).
+$$</p>
+<p>一般地, 对于群同态 $\phi\colon A\to G$, 有 $A$ 在 $G$ 上的共轭<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>, 其商 $G /_{\mathrm{Ad}} A$ 为如下拉回.
+$$
+\begin{array}
+{ccc}
+G /_{\mathrm{Ad}} A &amp; \to &amp; \mathbf{B}G\\
+\downarrow &amp; &amp; \downarrow{\scriptsize \Delta}\!\!\! \\
+\mathbf{B}A &amp; \underset{(\mathbf{B}\phi,\mathbf{B}\phi)}{\to} &amp; \mathbf{B}G\times\mathbf{B}G
+\end{array}
+$$
+当然, 这个作用就是 $G$ 在 $G$ 上的共轭作用沿着群同态 $\phi\colon A\to G$ 的拉回.</p>
+<h3>作为环路群函子</h3>
+<p>对任意生象 $X$, 有<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>函子
+$$
+X \to \mathsf{Ani},\,x\mapsto\Omega(X,x).
+$$
+该函子可视为<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span>与 Hom 函子的复合
+$$
+X \overset{\Delta}{\to}X\times X\overset{\operatorname{Hom}(-,-)}{\longrightarrow}\mathsf{Ani}.
+$$
+我们知道 $\operatorname{Hom}(-,-)\colon X\times X\to\mathsf{Ani}$ 的 <span class="link local"><a href="./Grothendieck构造.html" title="Grothendieck 构造 [Grothendieck构造]">Grothendieck 构造</a></span> (也即 $X$ 的<span class="link local"><a href="./扭箭头范畴.html" title="扭箭头范畴 [扭箭头范畴]">扭箭头范畴</a></span>) 为对角线 $\Delta\colon X \to X\times X$.</p>
+<p>现设 $X = \mathbf{B}G$, 那么上述构造给出的函子
+$$
+\mathrm{Ad}\colon \mathbf{B}G \to \mathsf{Ani}
+$$
+正是 $G$ 在自身上的共轭作用.</p>
+<h2>性质</h2>
+<h3>不动点</h3>
+<p>群 $G$ 在自身上的共轭作用的<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>是 $G$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>.</p>
+<h2>例</h2>
+<h3>映射空间上的共轭作用</h3>
+<p>群 $H,G$ 的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> $\mathbf{B}H,\mathbf{B}G$ 之间的映射空间 $\operatorname{Hom}_{\mathsf{Ani}}(\mathbf{B}H,\mathbf{B}G)$ 是群同态集 $\operatorname{Hom}_{\mathsf{Grp}}(H,G)$ 上 $G$ 的共轭作用的商.</p>
+<p>这个作用来自复合函子
+$$
+\mathbf{B}G \overset{\mathrm{Ad}}{\to} \mathsf{Grp} \overset{\operatorname{Hom}(H,-)}{\longrightarrow} \mathsf{Ani}.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="同伦群"><header><h1><span class="taxon"></span>同伦群 <a class="slug" href="./同伦群.html">[同伦群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本页面介绍<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的同伦群, 又称非稳定同伦群. 另见<span class="link local"><a href="./同伦群(稳定同伦论).html" title="同伦群 (稳定同伦论) [同伦群(稳定同伦论)]">同伦群 (稳定同伦论)</a></span>.</p>
 <h2>观念</h2>
