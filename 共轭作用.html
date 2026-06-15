@@ -869,12 +869,16 @@ $$
 $$
 X \overset{\Delta}{\to}X\times X\overset{\operatorname{Hom}(-,-)}{\longrightarrow}\mathsf{Ani}.
 $$
-我们知道 $\operatorname{Hom}(-,-)\colon X\times X\to\mathsf{Ani}$ 的 <span class="link local"><a href="./Grothendieck构造.html" title="Grothendieck 构造 [Grothendieck构造]">Grothendieck 构造</a></span> (也即 $X$ 的<span class="link local"><a href="./扭箭头范畴.html" title="扭箭头范畴 [扭箭头范畴]">扭箭头范畴</a></span>) 为对角线 $\Delta\colon X \to X\times X$.</p>
+我们知道 $\operatorname{Hom}(-,-)\colon X\times X\to\mathsf{Ani}$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span> (也即 <span class="link local"><a href="./Grothendieck构造.html" title="Grothendieck 构造 [Grothendieck构造]">Grothendieck 构造</a></span>, 即 $X$ 的<span class="link local"><a href="./扭箭头范畴.html" title="扭箭头范畴 [扭箭头范畴]">扭箭头范畴</a></span>) 为对角线 $\Delta\colon X \to X\times X$.</p>
 <p>现设 $X = \mathbf{B}G$, 那么上述构造给出的函子
 $$
 \mathrm{Ad}\colon \mathbf{B}G \to \mathsf{Ani}
 $$
 正是 $G$ 在自身上的共轭作用.</p>
+<p>对于子群 (或群同态) $H\to G$, $H$ 在 $G$ 上的共轭作用为
+$$
+\mathbf{B}H\to\mathbf{B}G\overset{\mathrm{Ad}}{\to}\mathsf{Ani}.
+$$</p>
 <h2>性质</h2>
 <h3>不动点</h3>
 <p>群 $G$ 在自身上的共轭作用的<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>是 $G$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>.</p>
@@ -950,6 +954,49 @@ $$
 \mathrm{LocSys}^{\text{Betti}}_G \simeq \operatorname{Map}(*/\pi_1, */G) = \operatorname{Hom}(\pi_1,G)/G.
 $$
 其中 $*/G$ 为<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>, $G$-作用为<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="GrpAni"><header><h1><span class="taxon"></span>生象群 <a class="slug" href="./GrpAni.html">[GrpAni]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>如果说<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>是集合在高阶范畴语境中对应的概念, 那么生象群则是群的对应概念. 所谓群就是一个对象的对称性的抽象; 生象群就是一个 $(\infty,1)$-范畴中一个对象的自同构的抽象, 也就是一个带基点 $(\infty,0)$-范畴.</p>
+<p>同时, 生象群也可视为 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中特殊的 <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">$\mathbb E_1$-代数</a></span>, 其每个元素都有逆.</p>
+<h2>群作用</h2>
+<p>群作用即是将抽象的群映射到具体的对称性: 群 $G$ 在范畴 $\mathcal C$ 的对象上的作用即是函子 $\mathbf{B}G \to \mathcal C$.</p>
+<p><span class="link local"><a href="./群作用.html" title="群作用 [群作用]">群作用</a></span></p>
+<h3>共轭作用</h3>
+<p>共轭作用是群 $G$ 给出的 $G$ 本身的对称性; 一种简明的看法是: 移动 $\mathbf{B}G$ 的基点, 给出其作为带基点生象的对称性.</p>
+<p><span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span></p>
+<h2>群同态</h2>
+<p>群同态是特殊的群作用: 一个群作用在另一个单对象范畴的唯一对象上.</p>
+<p>在 $\infty$-范畴的语境中, 正如子集的概念常常替换为一般映射, <strong>子群</strong>的概念常常替换为一般同态. 对子群定义的<span class="link local"><a href="./陪集空间.html" title="陪集空间 [陪集空间]">陪集空间</a></span>也可对任何群同态定义.</p>
+<h3>核</h3>
+<p>对于生象群同态 $f\colon G\to H$, 其<strong>核</strong>由如下<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>定义:
+$$
+\mathbf{B}\ker f \to \mathbf{B}G \overset{\mathbf{B}f}{\to} \mathbf{B}H.
+$$
+也即
+$$
+\mathbf{B}\ker f = \operatorname{fib}(\mathbf{B}f) = \mathbf{B}G \times_{\mathbf{B}H}*.
+$$</p>
+<h3>余核</h3>
+<p>对于生象群同态 $f\colon G\to H$, 其<strong>余核</strong>由如下<span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">余纤维列</a></span>定义:
+$$
+\mathbf{B}G \overset{\mathbf{B}f}{\to} \mathbf{B}H \to \mathbf{B}\operatorname{coker}f.
+$$</p>
+<p><strong>注意</strong>. 余核的行为与经典群论有很大差异.</p>
+<ul>
+<li>即使对于正规子群, $\operatorname{coker}f$ 一般也不是 $H$ 在 $G$ 上右<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>的商 $G/H$.</li>
+<li>即使对于正规子群, $H\to\operatorname{coker}f$ 的核一般也不是 $G$.</li>
+</ul>
+<p><strong>例</strong>. $2\mathbb{Z} \to \mathbb{Z}$ 的余核是 $\Omega\mathbb{RP}^2$ 而不是 $\mathbb{Z}/2$.</p>
+<p>一般地, 函子 $\mathsf{Grp}(\mathsf{Set}) \to \mathsf{Grp}(\mathsf{Ani})$ 保持极限, 但不保持余极限.</p>
+<h3>中心与中心化子</h3>
+<p>群 $G$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span> $Z(G)$ 是 $G$ 在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点集</a></span>.</p>
+<p>子群 (或群同态) $H\to G$ 的中心化子是 $H$ 在 $G$ 上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点集</a></span>.</p>
+<p><span class="link local"><a href="./中心作用.html" title="中心作用 [中心作用]">中心作用</a></span></p>
+<p><span class="link local"><a href="./内自同构.html" title="群的内自同构 [内自同构]">群的内自同构</a></span></p>
+<p><span class="link local"><a href="./群的外自同构.html" title="群的外自同构 [群的外自同构]">群的外自同构</a></span></p>
+<p>todo</p>
+<h3>正规子群与正规化子</h3>
+<p><span class="link local"><a href="./正规子群.html" title="正规子群, 正规同态 [正规子群]">正规子群, 正规同态</a></span></p>
+<p><span class="link local"><a href="./正规化子.html" title="正规化子 [正规化子]">正规化子</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Weyl群"><header><h1><span class="taxon"></span>Weyl 群 (极大环面) <a class="slug" href="./Weyl群.html">[Weyl群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>极大环面的 Weyl 群</h3>
@@ -1174,6 +1221,27 @@ $$
 在基点处的纤维为 $\Omega_{\mathrm{id}}\operatorname{Aut}_*(S^2) \simeq \Omega^3 S^2$, 不是 $(-1)$-截断生象.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./余中心.html" title="余中心 [余中心]">余中心</a></span></p>
+<p><span class="link local"><a href="./中心化子.html" title="中心化子 [中心化子]">中心化子</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="中心化子"><header><h1><span class="taxon"></span>中心化子 <a class="slug" href="./中心化子.html">[中心化子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>同态 $H\to G$, 定义其<strong>中心化子</strong>为 $H$ 在 $G$ 上<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点集</a></span>, 即
+$$
+C_G(H) = \operatorname{lim}(\mathbf{B}H\to\mathbf{B}G\overset{\mathrm{Ad}}{\to}\mathsf{Ani}),
+$$
+这等价于
+$$
+C_G(H) = \operatorname{Aut}_{\operatorname{Hom}(\mathbf{B}H,\mathbf{B}G)}(\mathbf{B}H \to \mathbf{B}G).
+$$
+(这是因为函子范畴中的态射集可表示为<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>.)</p>
+<h2>例</h2>
+<p>子群 $1\to G$ 的中心化子为 $G$ 本身:
+$$
+C_G(1)=\operatorname{Aut}_{\operatorname{Hom}(\mathbf{B}H,\mathbf{B}G)}(* \to \mathbf{B}G) = \Omega\mathbf{B}G = G.
+$$</p>
+<p>子群 $\mathrm{id}\colon G \to G$ 的中心化子为 $G$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>:
+$$
+C_G(G) = \operatorname{Aut}_{\operatorname{Aut}(\mathbf{B}G)}(\mathrm{id}) = Z(G).
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="内自同构"><header><h1><span class="taxon"></span>群的内自同构 <a class="slug" href="./内自同构.html">[内自同构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>对于<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$, 其<strong>内自同构</strong>是指由共轭
@@ -1258,8 +1326,41 @@ $$</p>
 <p>对于子群 $H \subset G$,
 其正规化子 $N_G(H)$ 是最大的使得 $H$ 在其中正规的子群.</p>
 <h3>生象群</h3>
-<h2>相关概念</h2>
-<p>商群 $N_G(H) / H$ 又叫 $H$ 对应的 <span class="link local"><a href="./Weyl群.html" title="Weyl 群 (极大环面) [Weyl群]">Weyl 群</a></span>.</p>
+<p>对于生象群同态 $H\to G$, 其<strong>中心化子</strong>为群范畴的<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span>中的自同构群
+$$
+\begin{aligned}
+    N_G(H) &amp;= \operatorname{Aut}_{\mathsf{Grp}_{/G}}(H \to G) \\
+    &amp;= \operatorname{Aut}_{\mathsf{Ani}_{*/,/\mathbf{B}G}}(\mathbf{B}H\to\mathbf{B}G).
+\end{aligned}
+$$</p>
+<h2>性质</h2>
+<h3>与 Weyl 群的关系</h3>
+<p>回忆 <span class="link local"><a href="./Weyl群(一般子群).html" title="Weyl 群 (一般子群) [Weyl群(一般子群)]">Weyl 群</a></span> $W$ 为
+$$
+W=\operatorname{Aut}_{\mathsf{Ani}_{/\mathbf{B}G}}(\mathbf{B}H\to\mathbf{B}G).
+$$
+换言之, $\mathbf{B}W$ 是 $\mathbf{B}H\to\mathbf{B}G$ 在 $(\mathsf{Ani}_{/\mathbf{B}G})^{\simeq}$ 中构成的全子范畴.
+由定义, $W$ 也作用于 $\mathsf{Ani}$ 的对象 $\mathbf{B}H$ 上. 由定义有拉回图
+$$
+\begin{array}{ccccc}
+H &amp; \rightarrow &amp; N_G(H) &amp; \rightarrow &amp; * \
+\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \</p>
+<ul>
+<li>&amp; \rightarrow &amp; W &amp; \rightarrow &amp; \mathbf{B}H,
+\end{array}
+$$
+也即有[纤维列](纤维列.md)
+$$
+H\to N \to W\to \mathbf{B}H \to \mathbf{B}N \to \mathbf{B}W,
+$$
+从而有
+$$
+\mathbf{B}N = \mathbf{B}H / W,
+$$
+$$
+W= N/H.
+$$</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="环路空间"><header><h1><span class="taxon"></span>环路空间 <a class="slug" href="./环路空间.html">[环路空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>另见<span class="link local"><a href="./环路空间(代数几何).html" title="环路空间 (代数几何) [环路空间(代数几何)]">环路空间 (代数几何)</a></span>.</p>
 <h2>定义</h2>

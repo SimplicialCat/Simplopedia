@@ -866,6 +866,16 @@ $$</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./内自同构.html" title="群的内自同构 [内自同构]">内自同构</a></span></p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="GrpAni"><header><h1><span class="taxon"></span>生象群 <a class="slug" href="./GrpAni.html">[GrpAni]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>如果说<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>是集合在高阶范畴语境中对应的概念, 那么生象群则是群的对应概念. 所谓群就是一个对象的对称性的抽象; 生象群就是一个 $(\infty,1)$-范畴中一个对象的自同构的抽象, 也就是一个带基点 $(\infty,0)$-范畴.</p>
+<p>同时, 生象群也可视为 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中特殊的 <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">$\mathbb E_1$-代数</a></span>, 其每个元素都有逆.</p>
+<h2>群作用</h2>
+<p>群作用即是将抽象的群映射到具体的对称性: 群 $G$ 在范畴 $\mathcal C$ 的对象上的作用即是函子 $\mathbf{B}G \to \mathcal C$.</p>
+<p><span class="link local"><a href="./群作用.html" title="群作用 [群作用]">群作用</a></span></p>
+<h3>共轭作用</h3>
+<p>共轭作用是群 $G$ 给出的 $G$ 本身的对称性; 一种简明的看法是: 移动 $\mathbf{B}G$ 的基点, 给出其作为带基点生象的对称性.</p>
+<p><span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span></p>
+<h2>群同态</h2>
+<p>群同态是特殊的群作用: 一个群作用在另一个单对象范畴的唯一对象上.</p>
 <p>在 $\infty$-范畴的语境中, 正如子集的概念常常替换为一般映射, <strong>子群</strong>的概念常常替换为一般同态. 对子群定义的<span class="link local"><a href="./陪集空间.html" title="陪集空间 [陪集空间]">陪集空间</a></span>也可对任何群同态定义.</p>
 <h3>核</h3>
 <p>对于生象群同态 $f\colon G\to H$, 其<strong>核</strong>由如下<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>定义:
@@ -881,21 +891,23 @@ $$</p>
 $$
 \mathbf{B}G \overset{\mathbf{B}f}{\to} \mathbf{B}H \to \mathbf{B}\operatorname{coker}f.
 $$</p>
-<p><strong>注意</strong>. 余核的行为与经典群论中的概念很不同.</p>
+<p><strong>注意</strong>. 余核的行为与经典群论有很大差异.</p>
 <ul>
 <li>即使对于正规子群, $\operatorname{coker}f$ 一般也不是 $H$ 在 $G$ 上右<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>的商 $G/H$.</li>
 <li>即使对于正规子群, $H\to\operatorname{coker}f$ 的核一般也不是 $G$.</li>
 </ul>
 <p><strong>例</strong>. $2\mathbb{Z} \to \mathbb{Z}$ 的余核是 $\Omega\mathbb{RP}^2$ 而不是 $\mathbb{Z}/2$.</p>
-<h2>相关概念</h2>
-<p>todo: 整合进来</p>
-<ul>
-<li><span class="link local"><a href="./群作用.html" title="群作用 [群作用]">群作用</a></span></li>
-<li><span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span></li>
-<li><span class="link local"><a href="./中心作用.html" title="中心作用 [中心作用]">中心作用</a></span></li>
-<li><span class="link local"><a href="./内自同构.html" title="群的内自同构 [内自同构]">群的内自同构</a></span></li>
-<li><span class="link local"><a href="./群的外自同构.html" title="群的外自同构 [群的外自同构]">群的外自同构</a></span></li>
-</ul>
+<p>一般地, 函子 $\mathsf{Grp}(\mathsf{Set}) \to \mathsf{Grp}(\mathsf{Ani})$ 保持极限, 但不保持余极限.</p>
+<h3>中心与中心化子</h3>
+<p>群 $G$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span> $Z(G)$ 是 $G$ 在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点集</a></span>.</p>
+<p>子群 (或群同态) $H\to G$ 的中心化子是 $H$ 在 $G$ 上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点集</a></span>.</p>
+<p><span class="link local"><a href="./中心作用.html" title="中心作用 [中心作用]">中心作用</a></span></p>
+<p><span class="link local"><a href="./内自同构.html" title="群的内自同构 [内自同构]">群的内自同构</a></span></p>
+<p><span class="link local"><a href="./群的外自同构.html" title="群的外自同构 [群的外自同构]">群的外自同构</a></span></p>
+<p>todo</p>
+<h3>正规子群与正规化子</h3>
+<p><span class="link local"><a href="./正规子群.html" title="正规子群, 正规同态 [正规子群]">正规子群, 正规同态</a></span></p>
+<p><span class="link local"><a href="./正规化子.html" title="正规化子 [正规化子]">正规化子</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="内自同构"><header><h1><span class="taxon"></span>群的内自同构 <a class="slug" href="./内自同构.html">[内自同构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>对于<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$, 其<strong>内自同构</strong>是指由共轭

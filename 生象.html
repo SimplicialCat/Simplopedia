@@ -923,6 +923,49 @@ $$
 <p>例如, 若 $X$ 为取值为带基点生象 $(A,a)$ 的常值函子, $M$ 的维数为 $n$, 则 $\Omega_M X$ 在一个圆盘 $U$ 处的分量等价于 $\Omega^n(A,a)$.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="GrpAni"><header><h1><span class="taxon"></span>生象群 <a class="slug" href="./GrpAni.html">[GrpAni]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>如果说<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>是集合在高阶范畴语境中对应的概念, 那么生象群则是群的对应概念. 所谓群就是一个对象的对称性的抽象; 生象群就是一个 $(\infty,1)$-范畴中一个对象的自同构的抽象, 也就是一个带基点 $(\infty,0)$-范畴.</p>
+<p>同时, 生象群也可视为 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中特殊的 <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">$\mathbb E_1$-代数</a></span>, 其每个元素都有逆.</p>
+<h2>群作用</h2>
+<p>群作用即是将抽象的群映射到具体的对称性: 群 $G$ 在范畴 $\mathcal C$ 的对象上的作用即是函子 $\mathbf{B}G \to \mathcal C$.</p>
+<p><span class="link local"><a href="./群作用.html" title="群作用 [群作用]">群作用</a></span></p>
+<h3>共轭作用</h3>
+<p>共轭作用是群 $G$ 给出的 $G$ 本身的对称性; 一种简明的看法是: 移动 $\mathbf{B}G$ 的基点, 给出其作为带基点生象的对称性.</p>
+<p><span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span></p>
+<h2>群同态</h2>
+<p>群同态是特殊的群作用: 一个群作用在另一个单对象范畴的唯一对象上.</p>
+<p>在 $\infty$-范畴的语境中, 正如子集的概念常常替换为一般映射, <strong>子群</strong>的概念常常替换为一般同态. 对子群定义的<span class="link local"><a href="./陪集空间.html" title="陪集空间 [陪集空间]">陪集空间</a></span>也可对任何群同态定义.</p>
+<h3>核</h3>
+<p>对于生象群同态 $f\colon G\to H$, 其<strong>核</strong>由如下<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>定义:
+$$
+\mathbf{B}\ker f \to \mathbf{B}G \overset{\mathbf{B}f}{\to} \mathbf{B}H.
+$$
+也即
+$$
+\mathbf{B}\ker f = \operatorname{fib}(\mathbf{B}f) = \mathbf{B}G \times_{\mathbf{B}H}*.
+$$</p>
+<h3>余核</h3>
+<p>对于生象群同态 $f\colon G\to H$, 其<strong>余核</strong>由如下<span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">余纤维列</a></span>定义:
+$$
+\mathbf{B}G \overset{\mathbf{B}f}{\to} \mathbf{B}H \to \mathbf{B}\operatorname{coker}f.
+$$</p>
+<p><strong>注意</strong>. 余核的行为与经典群论有很大差异.</p>
+<ul>
+<li>即使对于正规子群, $\operatorname{coker}f$ 一般也不是 $H$ 在 $G$ 上右<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>的商 $G/H$.</li>
+<li>即使对于正规子群, $H\to\operatorname{coker}f$ 的核一般也不是 $G$.</li>
+</ul>
+<p><strong>例</strong>. $2\mathbb{Z} \to \mathbb{Z}$ 的余核是 $\Omega\mathbb{RP}^2$ 而不是 $\mathbb{Z}/2$.</p>
+<p>一般地, 函子 $\mathsf{Grp}(\mathsf{Set}) \to \mathsf{Grp}(\mathsf{Ani})$ 保持极限, 但不保持余极限.</p>
+<h3>中心与中心化子</h3>
+<p>群 $G$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span> $Z(G)$ 是 $G$ 在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点集</a></span>.</p>
+<p>子群 (或群同态) $H\to G$ 的中心化子是 $H$ 在 $G$ 上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点集</a></span>.</p>
+<p><span class="link local"><a href="./中心作用.html" title="中心作用 [中心作用]">中心作用</a></span></p>
+<p><span class="link local"><a href="./内自同构.html" title="群的内自同构 [内自同构]">群的内自同构</a></span></p>
+<p><span class="link local"><a href="./群的外自同构.html" title="群的外自同构 [群的外自同构]">群的外自同构</a></span></p>
+<p>todo</p>
+<h3>正规子群与正规化子</h3>
+<p><span class="link local"><a href="./正规子群.html" title="正规子群, 正规同态 [正规子群]">正规子群, 正规同态</a></span></p>
+<p><span class="link local"><a href="./正规化子.html" title="正规化子 [正规化子]">正规化子</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Hochschild同调"><header><h1><span class="taxon"></span>Hochschild 同调 <a class="slug" href="./Hochschild同调.html">[Hochschild同调]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的 <strong>Hochschild 同调</strong>是其 “沿着流形 $S^1$ 的张量积”, 即 $S^1$ 上的<span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>.
@@ -1856,6 +1899,7 @@ $$
 在基点处的纤维为 $\Omega_{\mathrm{id}}\operatorname{Aut}_*(S^2) \simeq \Omega^3 S^2$, 不是 $(-1)$-截断生象.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./余中心.html" title="余中心 [余中心]">余中心</a></span></p>
+<p><span class="link local"><a href="./中心化子.html" title="中心化子 [中心化子]">中心化子</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="中心映射"><header><h1><span class="taxon"></span>中心群同态, 中心映射 <a class="slug" href="./中心映射.html">[中心映射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>对于<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>同态 $H \to G$, 若其穿过 $G$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span> $H\to Z(G)$, 则称之为<strong>中心群同态</strong>.</p>
@@ -2073,12 +2117,16 @@ $$
 $$
 X \overset{\Delta}{\to}X\times X\overset{\operatorname{Hom}(-,-)}{\longrightarrow}\mathsf{Ani}.
 $$
-我们知道 $\operatorname{Hom}(-,-)\colon X\times X\to\mathsf{Ani}$ 的 <span class="link local"><a href="./Grothendieck构造.html" title="Grothendieck 构造 [Grothendieck构造]">Grothendieck 构造</a></span> (也即 $X$ 的<span class="link local"><a href="./扭箭头范畴.html" title="扭箭头范畴 [扭箭头范畴]">扭箭头范畴</a></span>) 为对角线 $\Delta\colon X \to X\times X$.</p>
+我们知道 $\operatorname{Hom}(-,-)\colon X\times X\to\mathsf{Ani}$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span> (也即 <span class="link local"><a href="./Grothendieck构造.html" title="Grothendieck 构造 [Grothendieck构造]">Grothendieck 构造</a></span>, 即 $X$ 的<span class="link local"><a href="./扭箭头范畴.html" title="扭箭头范畴 [扭箭头范畴]">扭箭头范畴</a></span>) 为对角线 $\Delta\colon X \to X\times X$.</p>
 <p>现设 $X = \mathbf{B}G$, 那么上述构造给出的函子
 $$
 \mathrm{Ad}\colon \mathbf{B}G \to \mathsf{Ani}
 $$
 正是 $G$ 在自身上的共轭作用.</p>
+<p>对于子群 (或群同态) $H\to G$, $H$ 在 $G$ 上的共轭作用为
+$$
+\mathbf{B}H\to\mathbf{B}G\overset{\mathrm{Ad}}{\to}\mathsf{Ani}.
+$$</p>
 <h2>性质</h2>
 <h3>不动点</h3>
 <p>群 $G$ 在自身上的共轭作用的<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>是 $G$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>.</p>

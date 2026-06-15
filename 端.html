@@ -1056,6 +1056,26 @@ $$</p>
 $$
 \operatorname{Tr}(F) \simeq \operatorname{End}(1_{\operatorname{HH}_* (\mathcal C,F)}).
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="中心化子"><header><h1><span class="taxon"></span>中心化子 <a class="slug" href="./中心化子.html">[中心化子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>同态 $H\to G$, 定义其<strong>中心化子</strong>为 $H$ 在 $G$ 上<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点集</a></span>, 即
+$$
+C_G(H) = \operatorname{lim}(\mathbf{B}H\to\mathbf{B}G\overset{\mathrm{Ad}}{\to}\mathsf{Ani}),
+$$
+这等价于
+$$
+C_G(H) = \operatorname{Aut}_{\operatorname{Hom}(\mathbf{B}H,\mathbf{B}G)}(\mathbf{B}H \to \mathbf{B}G).
+$$
+(这是因为函子范畴中的态射集可表示为<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>.)</p>
+<h2>例</h2>
+<p>子群 $1\to G$ 的中心化子为 $G$ 本身:
+$$
+C_G(1)=\operatorname{Aut}_{\operatorname{Hom}(\mathbf{B}H,\mathbf{B}G)}(* \to \mathbf{B}G) = \Omega\mathbf{B}G = G.
+$$</p>
+<p>子群 $\mathrm{id}\colon G \to G$ 的中心化子为 $G$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>:
+$$
+C_G(G) = \operatorname{Aut}_{\operatorname{Aut}(\mathbf{B}G)}(\mathrm{id}) = Z(G).
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="余端"><header><h1><span class="taxon"></span>余端 <a class="slug" href="./余端.html">[余端]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>余端是<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>的对偶概念, 可理解为某种 (加权) 余极限, 或函数对测度积分的类比或<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>.</p>

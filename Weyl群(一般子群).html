@@ -828,10 +828,21 @@
 <article><section class="block" data-taxon=""><details open><summary id="Weyl群(一般子群)"><header><h1><span class="taxon"></span>Weyl 群 (一般子群) <a class="slug" href="./Weyl群(一般子群).html">[Weyl群(一般子群)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>对<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的子群 $H\subset G$, 定义其 <strong>Weyl 群</strong> $W_GH := N(H)/H$ 为<span class="link local"><a href="./正规化子.html" title="正规化子 [正规化子]">正规化子</a></span>的商.</p>
+<p>也可以不依赖于正规化子, 定义 Weyl 群为
+$$
+W=\operatorname{Aut}_{\mathsf{Ani}_{/\mathbf{B}G}}(\mathbf{B}H\to\mathbf{B}G).
+$$</p>
 <p>关于紧 Lie 群 (代数群) 的 Weyl 群详见 <span class="link local"><a href="./Weyl群.html" title="Weyl 群 (极大环面) [Weyl群]">Weyl 群 (极大环面)</a></span>.</p>
 <h2>性质</h2>
-<p>Weyl 子群是能够典范地作用于一个 $G$-作用的 $H$-<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>的最大群.</p>
-<p>Weyl 群也是陪集空间 $G/H$ 在 $G$ 的<span class="link local"><a href="./轨道范畴.html" title="轨道范畴 [轨道范畴]">轨道范畴</a></span>中的自同构群.</p>
+<p>由定义
+$$
+W=\operatorname{Aut}_{\mathsf{Ani}_{/\mathbf{B}G}}(\mathbf{B}H\to\mathbf{B}G),
+$$
+可知</p>
+<ul>
+<li>Weyl 子群是能够典范地作用于一个 $G$-作用的 $H$-<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>的最大群.</li>
+<li>Weyl 群也是陪集空间 $G/H$ 在 $G$ 的<span class="link local"><a href="./轨道范畴.html" title="轨道范畴 [轨道范畴]">轨道范畴</a></span>中的自同构群.</li>
+</ul>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Weyl群"><header><h1><span class="taxon"></span>Weyl 群 (极大环面) <a class="slug" href="./Weyl群.html">[Weyl群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>极大环面的 Weyl 群</h3>
@@ -851,4 +862,47 @@ $$</p>
 <p>$\mathrm {U}(n)$ 的极大环面是 $T=\{\operatorname{diag}(e^{i\theta_1},\cdots,e^{i\theta_n})\}$, 其 Weyl 群通过置换特征值作用在 $T$ 上, 故 Weyl 群为<span class="link local"><a href="./对称群.html" title="对称群 [对称群]">置换群</a></span> $S_n$.</p>
 <p>$\mathrm {SU}(n)$ 的 Weyl 群亦为置换群 $S_n$.</p>
 <p>$\mathrm {SO}(2n+1)$ 的 Weyl 群为 $(\mathbb{Z}/2)^n \rtimes S_n$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="正规化子"><header><h1><span class="taxon"></span>正规化子 <a class="slug" href="./正规化子.html">[正规化子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>子群 $H\subset G$ 的正规化子是在 $G$ 的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>下, 将 $H$ 映射到自身的元素的子群.</p>
+<h2>定义</h2>
+<h3>传统</h3>
+<p>对于子群 $H \subset G$,
+其正规化子 $N_G(H)$ 是最大的使得 $H$ 在其中正规的子群.</p>
+<h3>生象群</h3>
+<p>对于生象群同态 $H\to G$, 其<strong>中心化子</strong>为群范畴的<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span>中的自同构群
+$$
+\begin{aligned}
+    N_G(H) &amp;= \operatorname{Aut}_{\mathsf{Grp}_{/G}}(H \to G) \\
+    &amp;= \operatorname{Aut}_{\mathsf{Ani}_{*/,/\mathbf{B}G}}(\mathbf{B}H\to\mathbf{B}G).
+\end{aligned}
+$$</p>
+<h2>性质</h2>
+<h3>与 Weyl 群的关系</h3>
+<p>回忆 <span class="link local"><a href="./Weyl群(一般子群).html" title="Weyl 群 (一般子群) [Weyl群(一般子群)]">Weyl 群</a></span> $W$ 为
+$$
+W=\operatorname{Aut}_{\mathsf{Ani}_{/\mathbf{B}G}}(\mathbf{B}H\to\mathbf{B}G).
+$$
+换言之, $\mathbf{B}W$ 是 $\mathbf{B}H\to\mathbf{B}G$ 在 $(\mathsf{Ani}_{/\mathbf{B}G})^{\simeq}$ 中构成的全子范畴.
+由定义, $W$ 也作用于 $\mathsf{Ani}$ 的对象 $\mathbf{B}H$ 上. 由定义有拉回图
+$$
+\begin{array}{ccccc}
+H &amp; \rightarrow &amp; N_G(H) &amp; \rightarrow &amp; * \
+\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \</p>
+<ul>
+<li>&amp; \rightarrow &amp; W &amp; \rightarrow &amp; \mathbf{B}H,
+\end{array}
+$$
+也即有[纤维列](纤维列.md)
+$$
+H\to N \to W\to \mathbf{B}H \to \mathbf{B}N \to \mathbf{B}W,
+$$
+从而有
+$$
+\mathbf{B}N = \mathbf{B}H / W,
+$$
+$$
+W= N/H.
+$$</li>
+</ul>
 </details></section></details></section></footer></article></div></body></html>
