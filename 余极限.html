@@ -844,6 +844,44 @@
 <li>$\mathcal C$ 中的<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>无交 (即 $X + Y$ 的子对象 $X$ 与 $Y$ 的交为<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span> $0$);</li>
 <li>$\mathcal C$ 中的<span class="link local"><a href="./群胚对象.html" title="群胚对象 (∞-范畴论) [群胚对象]">群胚对象</a></span>均有效, 即等价于商映射的 <span class="link local"><a href="./Čech脉.html" title="Čech 脉 [Čech脉]">Čech 脉</a></span>.</li>
 </ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="Thom谱"><header><h1><span class="taxon"></span>Thom 谱 <a class="slug" href="./Thom谱.html">[Thom谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Thom 谱是<span class="link local"><a href="./球谱.html" title="“球谱” [球谱]">球谱</a></span>沿指定空间的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>
+<h2>定义</h2>
+<h3>通过向量丛的 Thom 空间</h3>
+<p>定义 $d$ 阶实<span class="link local"><a href="./向量丛.html" title="向量丛 [向量丛]">向量丛</a></span> $\xi\colon V\to X$ 的 <strong>Thom 谱</strong>为其 <span class="link local"><a href="./Thom空间.html" title="Thom 空间 [Thom空间]">Thom 空间</a></span>的<span class="link local"><a href="./纬悬谱.html" title="纬悬谱 [纬悬谱]">纬悬谱</a></span>的 $-d$ 次位移
+$$
+\operatorname{Th}(\xi) := \Sigma^{-d}\Sigma^{\infty}\text{Th}(V).
+$$</p>
+<h3>抽象定义</h3>
+<p>设空间 $X$ 上有一向量丛, 对应映射 $X\to\mathbf{B}\mathrm{O}_n$; 定义其 Thom 谱为 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 中的余极限
+$$
+\operatorname{colim}(X\to\mathbf{B}\mathrm{O}_n \to \mathsf{Sp}).
+$$</p>
+<p>对任意生象<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>同态 $G \to \mathrm{O}$, 定义 “<span class="link local"><a href="./切结构.html" title="切结构 [切结构]">$G$-结构</a></span>的万有 Thom 谱” 为<span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 中的余极限
+$$
+\mathrm{M}G:= \operatorname{colim}(\mathbf{B} G \to \mathbf{B}\mathrm{O}_n \to \mathsf{Sp}).
+$$</p>
+<h2>性质</h2>
+<h3>幺半性</h3>
+<p>对于 $X$ 上的向量丛 $\xi$ 与 $Y$ 上的向量丛 $\eta$, 记 $\xi\boxplus\eta$ 为 $X\times Y$ 上 $\xi$ 与 $\eta$ 的外直和, 则 $(X\times Y)^{\xi\boxplus\eta}\simeq X^\xi \wedge Y^{\eta}$, 从而
+$$
+\operatorname{Th}(\xi\boxplus\eta)\simeq\operatorname{Th}(\xi)\wedge\operatorname{Th}(\eta);
+$$
+这是由于空间偶的缩积
+$$
+	(V,V_0)\wedge (W,W_0)=(V\times W,V\times W_0\cup V_0\times W).
+$$</p>
+<h3>与配边的关系</h3>
+<p>$\mathrm{M}G$ 的 $n$ 阶同伦群自然同构于 $G$-结构 $n$ 维流形的<span class="link local"><a href="./配边.html" title="配边 [配边]">配边</a></span>群.</p>
+<h2>例</h2>
+<h3>万有 Thom 谱</h3>
+<ul>
+<li>万有实 Thom 谱 <span class="link local"><a href="./MO.html" title="MO [MO]">MO</a></span> 为万有实向量丛的 Thom 谱.</li>
+<li>万有复 Thom 谱 <span class="link local"><a href="./MU.html" title="MU [MU]">MU</a></span> 为万有复向量丛的 Thom 谱.</li>
+</ul>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./Thom空间.html" title="Thom 空间 [Thom空间]">Thom 空间</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="notes-Gestalten-Cat"><header><h1><span class="taxon"></span>Gestalten - 在范畴上做代数 <a class="slug" href="./notes-Gestalten-Cat.html">[notes-Gestalten-Cat]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>“在范畴上做代数” 指的是一种<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>, 将<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>等概念应用于<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>的范畴 $\mathsf{Pr}^{\mathrm{L}}$ (简记为 $\mathsf{Pr}$).</p>
 <p>本文中所有的 $n$-范畴指的是 $(\infty ,n)$-范畴.</p>

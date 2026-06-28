@@ -927,11 +927,12 @@ $$
 <p>如果说<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>是集合在高阶范畴语境中对应的概念, 那么生象群则是群的对应概念. 所谓群就是一个对象的对称性的抽象; 生象群就是一个 $(\infty,1)$-范畴中一个对象的自同构的抽象, 也就是一个带基点 $(\infty,0)$-范畴.</p>
 <p>同时, 生象群也可视为 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中特殊的 <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">$\mathbb E_1$-代数</a></span>, 其每个元素都有逆.</p>
 <h2>群作用</h2>
-<p>群作用即是将抽象的群映射到具体的对称性: 群 $G$ 在范畴 $\mathcal C$ 的对象上的作用即是函子 $\mathbf{B}G \to \mathcal C$.</p>
-<p><span class="link local"><a href="./群作用.html" title="群作用 [群作用]">群作用</a></span></p>
+<p><span class="link local"><a href="./群作用.html" title="群作用 [群作用]">群作用</a></span>即是将抽象的群映射到具体的对称性: 群 $G$ 在范畴 $\mathcal C$ 的对象上的作用即是函子 $\mathbf{B}G \to \mathcal C$.</p>
 <h3>共轭作用</h3>
-<p>共轭作用是群 $G$ 给出的 $G$ 本身的对称性; 一种简明的看法是: 移动 $\mathbf{B}G$ 的基点, 给出其作为带基点生象的对称性.</p>
-<p><span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span></p>
+<p><span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>是群 $G$ 给出的 $G$ 本身的对称性; 一种简明的看法是: 移动 $\mathbf{B}G$ 的基点, 给出其作为带基点生象的对称性.</p>
+<h3>半直积</h3>
+<p>此时一个自然的观察是, 群可以作用于另一个群上.
+设群 $H$ <span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>于群 $N$, 即作用于带基点连通对象 $\mathbf{B}N\in\mathsf{Ani}_{*/}^{\geq 1}$, 其商 $(\mathbf{B}N) / H$ 自然地是一个带基点生象, 对应于一个群 $G$, 称为 $N$ 与 $H$ 的<span class="link local"><a href="./半直积.html" title="半直积 [半直积]">半直积</a></span>.</p>
 <h2>群同态</h2>
 <p>群同态是特殊的群作用: 一个群作用在另一个单对象范畴的唯一对象上.</p>
 <p>在 $\infty$-范畴的语境中, 正如子集的概念常常替换为一般映射, <strong>子群</strong>的概念常常替换为一般同态. 对子群定义的<span class="link local"><a href="./陪集空间.html" title="陪集空间 [陪集空间]">陪集空间</a></span>也可对任何群同态定义.</p>
@@ -966,6 +967,12 @@ $$</p>
 <h3>正规子群与正规化子</h3>
 <p><span class="link local"><a href="./正规子群.html" title="正规子群, 正规同态 [正规子群]">正规子群, 正规同态</a></span></p>
 <p><span class="link local"><a href="./正规化子.html" title="正规化子 [正规化子]">正规化子</a></span></p>
+<h3>小结</h3>
+<p>群论中的许多构造都可以定义在生象群的语境中, 许多构造都形如某些熟悉对象的自同构群.</p>
+<p>对于群同态 $f\colon H\to G$, 即带基点生象的映射 $\mathbf{B}f\colon \mathbf{B}H \to \mathbf{B}G$,</p>
+<ul>
+<li>其作为生象映射的自同构群 $\operatorname{Aut}_{\operatorname{Hom}_{\mathsf{Ani}}(\mathbf{B}H,\mathbf{B}G)}(\mathbf{B}f)$ 即为 $f\colon H\to G$ 的<span class="link local"><a href="./中心化子.html" title="中心化子 [中心化子]">中心化子</a></span>;</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="Hochschild同调"><header><h1><span class="taxon"></span>Hochschild 同调 <a class="slug" href="./Hochschild同调.html">[Hochschild同调]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的 <strong>Hochschild 同调</strong>是其 “沿着流形 $S^1$ 的张量积”, 即 $S^1$ 上的<span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>.
@@ -2076,7 +2083,7 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="共轭作用"><header><h1><span class="taxon"></span>共轭作用 <a class="slug" href="./共轭作用.html">[共轭作用]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span><span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的<strong>共轭作用</strong> (又叫<strong>伴随作用</strong> $\mathrm{Ad}$) 是 $G$ 在自身上的一个<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>.</p>
 <h3>作为左乘右乘作用的拉回</h3>
-<p>可定义为 $G\times G$ 在 $G$ 上的左乘右乘作用沿<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span> $\Delta\colon G\to G\times G$ 的拉回. $G\times G$ 在 $G$ 上的左乘右乘作用由<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> $\mathbf{B}G$ 的<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span>给出:
+<p>共轭作用可定义为 $G\times G$ 在 $G$ 上的左乘右乘作用沿<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span> $\Delta\colon G\to G\times G$ 的拉回. $G\times G$ 在 $G$ 上的左乘右乘作用由<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> $\mathbf{B}G$ 的<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span>给出:
 $$
 \begin{array}
 {c}
@@ -2191,7 +2198,7 @@ $$
 <h2>观念</h2>
 <p><strong>切结构</strong>是基于光滑流形的切丛的一大类<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构</a></span>的统称, 包括<strong>定向</strong>, <strong>Riemann 度量</strong>, <strong></strong><span class="link local"><a href="./近复结构.html" title="近复结构 [近复结构]">近复结构</a></span>等. 它是流形的<span class="link local"><a href="./切丛.html" title="切丛 [切丛]">切丛</a></span>对应的 $\mathrm{GL}_n$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>的<span class="link local"><a href="./主丛的约化.html" title="主丛的约化 [主丛的约化]">约化</a></span>.</p>
 <h2>定义</h2>
-<p>设 $p \colon G\to \mathrm{GL}_n$ 为<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>的同态. (这里的 $\mathrm{GL}_n$ 可以是离散群, 也可以是 Lie 群, 甚至可以是<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>群, 依实际需要决定)</p>
+<p>设 $p \colon G\to \mathrm{GL}_n$ 为<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>的同态. (这里的 $\mathrm{GL}_n$ 可以是离散群, 也可以是 Lie 群, <span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>群, 依实际需要决定)</p>
 <p>对于 $m\leq n$, 定义 $m$ 维流形 $M$ 上的一个 $p$-结构是 $TM\oplus\mathbb{R}^{n-m}$ 的分类映射 $M\to \mathbf{B}\mathrm{GL}_n$ 的一个提升
 $$
 \begin{array}
@@ -2213,6 +2220,17 @@ $$
 \mathsf{Mfd}_n &amp; \to &amp; \mathsf{Ani}_{/\mathbf{B}\mathrm{GL}_n}
 \end{array}
 $$</p>
+<h3>稳定切结构</h3>
+<p>记 $\mathrm{GL} = \operatorname{colim}_n \mathrm{GL}_n$ 为稳定一般线性群, 对于群同态 $p\colon G \to \mathrm{GL}$ 可定义流形上的 “稳定 $G$-结构” 为提升
+$$
+\begin{array}
+	{ccc}
+	&amp;&amp; \mathbf{B}G\\
+	&amp;\nearrow&amp;\downarrow {\scriptsize \mathbf{B}p}\!\!\!\!\\
+	M&amp;\to &amp;\mathbf{B}\mathrm{GL}.
+\end{array}
+$$</p>
+<p>对任意正整数 $k$, 向量丛 $TM\oplus\mathbb{R}^{k}$ 上的 $G$-结构都给出 $M$ 上的一个稳定 $G$-结构.</p>
 <h2>例</h2>
 <p>在 $n$ 维流形上,</p>
 <ul>
@@ -3181,6 +3199,7 @@ $\operatorname{Hom}(X,Y)^{G}$.</p>
 </ul>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./相对位置.html" title="相对位置 [相对位置]">相对位置</a></span></p>
+<p><span class="link local"><a href="./稳定子.html" title="稳定子 [稳定子]">稳定子</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="群的外自同构"><header><h1><span class="taxon"></span>群的外自同构 <a class="slug" href="./群的外自同构.html">[群的外自同构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>定义 $n$-截断<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的 $n$-截断<strong>外自同构群</strong> (outer automorphism group) 为其<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> $\mathbf{B}G$ 作为<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的自同构群的 $n$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>:

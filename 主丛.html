@@ -1775,7 +1775,7 @@ $$
 <h2>观念</h2>
 <p><strong>切结构</strong>是基于光滑流形的切丛的一大类<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构</a></span>的统称, 包括<strong>定向</strong>, <strong>Riemann 度量</strong>, <strong></strong><span class="link local"><a href="./近复结构.html" title="近复结构 [近复结构]">近复结构</a></span>等. 它是流形的<span class="link local"><a href="./切丛.html" title="切丛 [切丛]">切丛</a></span>对应的 $\mathrm{GL}_n$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>的<span class="link local"><a href="./主丛的约化.html" title="主丛的约化 [主丛的约化]">约化</a></span>.</p>
 <h2>定义</h2>
-<p>设 $p \colon G\to \mathrm{GL}_n$ 为<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>的同态. (这里的 $\mathrm{GL}_n$ 可以是离散群, 也可以是 Lie 群, 甚至可以是<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>群, 依实际需要决定)</p>
+<p>设 $p \colon G\to \mathrm{GL}_n$ 为<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>的同态. (这里的 $\mathrm{GL}_n$ 可以是离散群, 也可以是 Lie 群, <span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>群, 依实际需要决定)</p>
 <p>对于 $m\leq n$, 定义 $m$ 维流形 $M$ 上的一个 $p$-结构是 $TM\oplus\mathbb{R}^{n-m}$ 的分类映射 $M\to \mathbf{B}\mathrm{GL}_n$ 的一个提升
 $$
 \begin{array}
@@ -1797,6 +1797,17 @@ $$
 \mathsf{Mfd}_n &amp; \to &amp; \mathsf{Ani}_{/\mathbf{B}\mathrm{GL}_n}
 \end{array}
 $$</p>
+<h3>稳定切结构</h3>
+<p>记 $\mathrm{GL} = \operatorname{colim}_n \mathrm{GL}_n$ 为稳定一般线性群, 对于群同态 $p\colon G \to \mathrm{GL}$ 可定义流形上的 “稳定 $G$-结构” 为提升
+$$
+\begin{array}
+	{ccc}
+	&amp;&amp; \mathbf{B}G\\
+	&amp;\nearrow&amp;\downarrow {\scriptsize \mathbf{B}p}\!\!\!\!\\
+	M&amp;\to &amp;\mathbf{B}\mathrm{GL}.
+\end{array}
+$$</p>
+<p>对任意正整数 $k$, 向量丛 $TM\oplus\mathbb{R}^{k}$ 上的 $G$-结构都给出 $M$ 上的一个稳定 $G$-结构.</p>
 <h2>例</h2>
 <p>在 $n$ 维流形上,</p>
 <ul>
@@ -1883,6 +1894,37 @@ $$
 X \to Y
 $$
 可视为<strong>相对于</strong>空间 $Y$ 的一个空间. 例如<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>可视为相对于基底的主齐性空间.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="稳定子"><header><h1><span class="taxon"></span>稳定子 <a class="slug" href="./稳定子.html">[稳定子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>稳定子是<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">群作用</a></span>中将指定的点变为其自身的子群; 换言之, 是商对象中一个点的自同构群.</p>
+<h2>定义</h2>
+<p>设群 $G$ 作用于生象 $X$, 定义点 $x\in X$ 的<strong>稳定子</strong>为
+$$
+\operatorname{Stab}_G(x) := \Omega(X/G,x).
+$$</p>
+<p>由定义,
+$$
+\begin{aligned}
+    \operatorname{Stab}_G(x) &amp;= *\times_{X/G} *\\
+    &amp;=*\times_X (X\times_{X/G} X)\times_X *\\
+    &amp;=*\times_{X} (X\times G)\times_X *\\
+    &amp;=*\times_{X\times X}(X\times G).
+\end{aligned}
+$$
+其中用到 $X\times_{X/G} X = X\times G$, 因为 $G$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>对应 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span> $X\to X/G$.</p>
+<h2>性质</h2>
+<h3>轨道–稳定子定理</h3>
+<p>记 $\operatorname{Orb}_G (x)$ 为 $X/G$ 中 $x$ 所在的连通分支, 则有<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
+$$
+\operatorname{Stab}_G(x) \to G \to \operatorname{Orb}_G (x).
+$$
+换言之, $\operatorname{Orb}_G (x) = G / \operatorname{Stab}_G (x)$.</p>
+<h2>例</h2>
+<h3>群同态的稳定子</h3>
+<p>设 $H,G$ 为<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>, 则 $G$ <span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>于 $\operatorname{Hom}(H,G)$ 上, 群同态 $H\to G$ 在其中的稳定子为<span class="link local"><a href="./中心化子.html" title="中心化子 [中心化子]">中心化子</a></span>:
+$$
+\operatorname{Stab}_G (H\to G) = C_G(H).
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="纤维丛"><header><h1><span class="taxon"></span>纤维丛 <a class="slug" href="./纤维丛.html">[纤维丛]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>纤维丛是一种<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>的空间, 其每个纤维具有相同的同构类, 局部上形如乘积空间, 而整体上可能不平凡.</p>

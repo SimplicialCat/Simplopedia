@@ -910,6 +910,44 @@ $$
 </ul>
 <h2>例</h2>
 <h3>Galois 覆叠</h3>
+</details></section><section class="block" data-taxon=""><details ><summary id="Thom谱"><header><h1><span class="taxon"></span>Thom 谱 <a class="slug" href="./Thom谱.html">[Thom谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Thom 谱是<span class="link local"><a href="./球谱.html" title="“球谱” [球谱]">球谱</a></span>沿指定空间的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>
+<h2>定义</h2>
+<h3>通过向量丛的 Thom 空间</h3>
+<p>定义 $d$ 阶实<span class="link local"><a href="./向量丛.html" title="向量丛 [向量丛]">向量丛</a></span> $\xi\colon V\to X$ 的 <strong>Thom 谱</strong>为其 <span class="link local"><a href="./Thom空间.html" title="Thom 空间 [Thom空间]">Thom 空间</a></span>的<span class="link local"><a href="./纬悬谱.html" title="纬悬谱 [纬悬谱]">纬悬谱</a></span>的 $-d$ 次位移
+$$
+\operatorname{Th}(\xi) := \Sigma^{-d}\Sigma^{\infty}\text{Th}(V).
+$$</p>
+<h3>抽象定义</h3>
+<p>设空间 $X$ 上有一向量丛, 对应映射 $X\to\mathbf{B}\mathrm{O}_n$; 定义其 Thom 谱为 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 中的余极限
+$$
+\operatorname{colim}(X\to\mathbf{B}\mathrm{O}_n \to \mathsf{Sp}).
+$$</p>
+<p>对任意生象<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>同态 $G \to \mathrm{O}$, 定义 “<span class="link local"><a href="./切结构.html" title="切结构 [切结构]">$G$-结构</a></span>的万有 Thom 谱” 为<span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 中的余极限
+$$
+\mathrm{M}G:= \operatorname{colim}(\mathbf{B} G \to \mathbf{B}\mathrm{O}_n \to \mathsf{Sp}).
+$$</p>
+<h2>性质</h2>
+<h3>幺半性</h3>
+<p>对于 $X$ 上的向量丛 $\xi$ 与 $Y$ 上的向量丛 $\eta$, 记 $\xi\boxplus\eta$ 为 $X\times Y$ 上 $\xi$ 与 $\eta$ 的外直和, 则 $(X\times Y)^{\xi\boxplus\eta}\simeq X^\xi \wedge Y^{\eta}$, 从而
+$$
+\operatorname{Th}(\xi\boxplus\eta)\simeq\operatorname{Th}(\xi)\wedge\operatorname{Th}(\eta);
+$$
+这是由于空间偶的缩积
+$$
+	(V,V_0)\wedge (W,W_0)=(V\times W,V\times W_0\cup V_0\times W).
+$$</p>
+<h3>与配边的关系</h3>
+<p>$\mathrm{M}G$ 的 $n$ 阶同伦群自然同构于 $G$-结构 $n$ 维流形的<span class="link local"><a href="./配边.html" title="配边 [配边]">配边</a></span>群.</p>
+<h2>例</h2>
+<h3>万有 Thom 谱</h3>
+<ul>
+<li>万有实 Thom 谱 <span class="link local"><a href="./MO.html" title="MO [MO]">MO</a></span> 为万有实向量丛的 Thom 谱.</li>
+<li>万有复 Thom 谱 <span class="link local"><a href="./MU.html" title="MU [MU]">MU</a></span> 为万有复向量丛的 Thom 谱.</li>
+</ul>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./Thom空间.html" title="Thom 空间 [Thom空间]">Thom 空间</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Weyl群(一般子群)"><header><h1><span class="taxon"></span>Weyl 群 (一般子群) <a class="slug" href="./Weyl群(一般子群).html">[Weyl群(一般子群)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>对<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的子群 $H\subset G$, 定义其 <strong>Weyl 群</strong> $W_GH := N(H)/H$ 为<span class="link local"><a href="./正规化子.html" title="正规化子 [正规化子]">正规化子</a></span>的商.</p>
@@ -990,7 +1028,9 @@ $$
 $$
 C_G(H) = \operatorname{Aut}_{\operatorname{Hom}(\mathbf{B}H,\mathbf{B}G)}(\mathbf{B}H \to \mathbf{B}G).
 $$
-(这是因为函子范畴中的态射集可表示为<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>.)</p>
+(这是因为函子范畴中的态射集可表示为<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>.)
+进而 $C_G(H)$ 可理解为
+$\operatorname{Hom}(H,G)$ 上 $G$-作用的<span class="link local"><a href="./稳定子.html" title="稳定子 [稳定子]">稳定子</a></span>.</p>
 <h2>例</h2>
 <p>子群 $1\to G$ 的中心化子为 $G$ 本身:
 $$
@@ -1092,7 +1132,7 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="共轭作用"><header><h1><span class="taxon"></span>共轭作用 <a class="slug" href="./共轭作用.html">[共轭作用]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span><span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的<strong>共轭作用</strong> (又叫<strong>伴随作用</strong> $\mathrm{Ad}$) 是 $G$ 在自身上的一个<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>.</p>
 <h3>作为左乘右乘作用的拉回</h3>
-<p>可定义为 $G\times G$ 在 $G$ 上的左乘右乘作用沿<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span> $\Delta\colon G\to G\times G$ 的拉回. $G\times G$ 在 $G$ 上的左乘右乘作用由<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> $\mathbf{B}G$ 的<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span>给出:
+<p>共轭作用可定义为 $G\times G$ 在 $G$ 上的左乘右乘作用沿<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span> $\Delta\colon G\to G\times G$ 的拉回. $G\times G$ 在 $G$ 上的左乘右乘作用由<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> $\mathbf{B}G$ 的<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span>给出:
 $$
 \begin{array}
 {c}
@@ -1198,7 +1238,7 @@ $$
 <h2>观念</h2>
 <p><strong>切结构</strong>是基于光滑流形的切丛的一大类<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构</a></span>的统称, 包括<strong>定向</strong>, <strong>Riemann 度量</strong>, <strong></strong><span class="link local"><a href="./近复结构.html" title="近复结构 [近复结构]">近复结构</a></span>等. 它是流形的<span class="link local"><a href="./切丛.html" title="切丛 [切丛]">切丛</a></span>对应的 $\mathrm{GL}_n$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>的<span class="link local"><a href="./主丛的约化.html" title="主丛的约化 [主丛的约化]">约化</a></span>.</p>
 <h2>定义</h2>
-<p>设 $p \colon G\to \mathrm{GL}_n$ 为<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>的同态. (这里的 $\mathrm{GL}_n$ 可以是离散群, 也可以是 Lie 群, 甚至可以是<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>群, 依实际需要决定)</p>
+<p>设 $p \colon G\to \mathrm{GL}_n$ 为<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>的同态. (这里的 $\mathrm{GL}_n$ 可以是离散群, 也可以是 Lie 群, <span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>群, 依实际需要决定)</p>
 <p>对于 $m\leq n$, 定义 $m$ 维流形 $M$ 上的一个 $p$-结构是 $TM\oplus\mathbb{R}^{n-m}$ 的分类映射 $M\to \mathbf{B}\mathrm{GL}_n$ 的一个提升
 $$
 \begin{array}
@@ -1220,6 +1260,17 @@ $$
 \mathsf{Mfd}_n &amp; \to &amp; \mathsf{Ani}_{/\mathbf{B}\mathrm{GL}_n}
 \end{array}
 $$</p>
+<h3>稳定切结构</h3>
+<p>记 $\mathrm{GL} = \operatorname{colim}_n \mathrm{GL}_n$ 为稳定一般线性群, 对于群同态 $p\colon G \to \mathrm{GL}$ 可定义流形上的 “稳定 $G$-结构” 为提升
+$$
+\begin{array}
+	{ccc}
+	&amp;&amp; \mathbf{B}G\\
+	&amp;\nearrow&amp;\downarrow {\scriptsize \mathbf{B}p}\!\!\!\!\\
+	M&amp;\to &amp;\mathbf{B}\mathrm{GL}.
+\end{array}
+$$</p>
+<p>对任意正整数 $k$, 向量丛 $TM\oplus\mathbb{R}^{k}$ 上的 $G$-结构都给出 $M$ 上的一个稳定 $G$-结构.</p>
 <h2>例</h2>
 <p>在 $n$ 维流形上,</p>
 <ul>
@@ -1419,6 +1470,37 @@ P = G \backslash ((G/H)\times (G/H)) \simeq H\backslash G / H.
 $$</p>
 <h2>例</h2>
 <p>对于 Lie 群 $G$ 的 Borel 子群 $B$, 陪集空间 $G/B$ 又称<span class="link local"><a href="./旗流形.html" title="旗流形 [旗流形]">旗流形</a></span> $\mathrm{Fl}$. 两个旗的相对位置是 $G$ 的 <span class="link local"><a href="./Weyl群.html" title="Weyl 群 (极大环面) [Weyl群]">Weyl 群</a></span> $B \backslash G / B \simeq W$ 的元素.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="稳定子"><header><h1><span class="taxon"></span>稳定子 <a class="slug" href="./稳定子.html">[稳定子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>稳定子是<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">群作用</a></span>中将指定的点变为其自身的子群; 换言之, 是商对象中一个点的自同构群.</p>
+<h2>定义</h2>
+<p>设群 $G$ 作用于生象 $X$, 定义点 $x\in X$ 的<strong>稳定子</strong>为
+$$
+\operatorname{Stab}_G(x) := \Omega(X/G,x).
+$$</p>
+<p>由定义,
+$$
+\begin{aligned}
+    \operatorname{Stab}_G(x) &amp;= *\times_{X/G} *\\
+    &amp;=*\times_X (X\times_{X/G} X)\times_X *\\
+    &amp;=*\times_{X} (X\times G)\times_X *\\
+    &amp;=*\times_{X\times X}(X\times G).
+\end{aligned}
+$$
+其中用到 $X\times_{X/G} X = X\times G$, 因为 $G$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>对应 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span> $X\to X/G$.</p>
+<h2>性质</h2>
+<h3>轨道–稳定子定理</h3>
+<p>记 $\operatorname{Orb}_G (x)$ 为 $X/G$ 中 $x$ 所在的连通分支, 则有<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
+$$
+\operatorname{Stab}_G(x) \to G \to \operatorname{Orb}_G (x).
+$$
+换言之, $\operatorname{Orb}_G (x) = G / \operatorname{Stab}_G (x)$.</p>
+<h2>例</h2>
+<h3>群同态的稳定子</h3>
+<p>设 $H,G$ 为<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>, 则 $G$ <span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>于 $\operatorname{Hom}(H,G)$ 上, 群同态 $H\to G$ 在其中的稳定子为<span class="link local"><a href="./中心化子.html" title="中心化子 [中心化子]">中心化子</a></span>:
+$$
+\operatorname{Stab}_G (H\to G) = C_G(H).
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="等变映射"><header><h1><span class="taxon"></span>等变映射 <a class="slug" href="./等变映射.html">[等变映射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>等变映射是<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">群作用</a></span>的范畴中的态射. <span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的作用等同于 $\mathbf{B}G$ 出发的函子, 在某些场合下<span class="link local"><a href="./直化.html" title="直化 [直化]">反直化</a></span>得到 $\mathbf{B}G$ 上的对象
@@ -1563,6 +1645,7 @@ $\operatorname{Hom}(X,Y)^{G}$.</p>
 </ul>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./相对位置.html" title="相对位置 [相对位置]">相对位置</a></span></p>
+<p><span class="link local"><a href="./稳定子.html" title="稳定子 [稳定子]">稳定子</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="群概形"><header><h1><span class="taxon"></span>群概形 <a class="slug" href="./群概形.html">[群概形]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>群概形是<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span>范畴中的<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>.</p>

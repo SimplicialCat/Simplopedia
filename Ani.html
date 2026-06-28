@@ -836,11 +836,12 @@
 <p>如果说<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>是集合在高阶范畴语境中对应的概念, 那么生象群则是群的对应概念. 所谓群就是一个对象的对称性的抽象; 生象群就是一个 $(\infty,1)$-范畴中一个对象的自同构的抽象, 也就是一个带基点 $(\infty,0)$-范畴.</p>
 <p>同时, 生象群也可视为 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中特殊的 <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">$\mathbb E_1$-代数</a></span>, 其每个元素都有逆.</p>
 <h2>群作用</h2>
-<p>群作用即是将抽象的群映射到具体的对称性: 群 $G$ 在范畴 $\mathcal C$ 的对象上的作用即是函子 $\mathbf{B}G \to \mathcal C$.</p>
-<p><span class="link local"><a href="./群作用.html" title="群作用 [群作用]">群作用</a></span></p>
+<p><span class="link local"><a href="./群作用.html" title="群作用 [群作用]">群作用</a></span>即是将抽象的群映射到具体的对称性: 群 $G$ 在范畴 $\mathcal C$ 的对象上的作用即是函子 $\mathbf{B}G \to \mathcal C$.</p>
 <h3>共轭作用</h3>
-<p>共轭作用是群 $G$ 给出的 $G$ 本身的对称性; 一种简明的看法是: 移动 $\mathbf{B}G$ 的基点, 给出其作为带基点生象的对称性.</p>
-<p><span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span></p>
+<p><span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>是群 $G$ 给出的 $G$ 本身的对称性; 一种简明的看法是: 移动 $\mathbf{B}G$ 的基点, 给出其作为带基点生象的对称性.</p>
+<h3>半直积</h3>
+<p>此时一个自然的观察是, 群可以作用于另一个群上.
+设群 $H$ <span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>于群 $N$, 即作用于带基点连通对象 $\mathbf{B}N\in\mathsf{Ani}_{*/}^{\geq 1}$, 其商 $(\mathbf{B}N) / H$ 自然地是一个带基点生象, 对应于一个群 $G$, 称为 $N$ 与 $H$ 的<span class="link local"><a href="./半直积.html" title="半直积 [半直积]">半直积</a></span>.</p>
 <h2>群同态</h2>
 <p>群同态是特殊的群作用: 一个群作用在另一个单对象范畴的唯一对象上.</p>
 <p>在 $\infty$-范畴的语境中, 正如子集的概念常常替换为一般映射, <strong>子群</strong>的概念常常替换为一般同态. 对子群定义的<span class="link local"><a href="./陪集空间.html" title="陪集空间 [陪集空间]">陪集空间</a></span>也可对任何群同态定义.</p>
@@ -875,6 +876,12 @@ $$</p>
 <h3>正规子群与正规化子</h3>
 <p><span class="link local"><a href="./正规子群.html" title="正规子群, 正规同态 [正规子群]">正规子群, 正规同态</a></span></p>
 <p><span class="link local"><a href="./正规化子.html" title="正规化子 [正规化子]">正规化子</a></span></p>
+<h3>小结</h3>
+<p>群论中的许多构造都可以定义在生象群的语境中, 许多构造都形如某些熟悉对象的自同构群.</p>
+<p>对于群同态 $f\colon H\to G$, 即带基点生象的映射 $\mathbf{B}f\colon \mathbf{B}H \to \mathbf{B}G$,</p>
+<ul>
+<li>其作为生象映射的自同构群 $\operatorname{Aut}_{\operatorname{Hom}_{\mathsf{Ani}}(\mathbf{B}H,\mathbf{B}G)}(\mathbf{B}f)$ 即为 $f\colon H\to G$ 的<span class="link local"><a href="./中心化子.html" title="中心化子 [中心化子]">中心化子</a></span>;</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="Sp"><header><h1><span class="taxon"></span>Sp <a class="slug" href="./Sp.html">[Sp]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴 $\mathsf{Sp}$ 是最基本的<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>, 是<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 的<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>
 $$

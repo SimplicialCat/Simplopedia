@@ -826,7 +826,11 @@
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
 <article><section class="block" data-taxon=""><details open><summary id="MU"><header><h1><span class="taxon"></span>MU <a class="slug" href="./MU.html">[MU]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>$MU$ 是复向量丛的万有 <span class="link local"><a href="./Thom谱.html" title="Thom 谱 [Thom谱]">Thom 谱</a></span>, 它表示了复配边上同调理论. $MU$ 是 <span class="link local"><a href="./MO.html" title="“MO” [MO]">MO</a></span> 的类比.</p>
+<p>$\mathrm{MU}$ 是复向量丛的万有 <span class="link local"><a href="./Thom谱.html" title="Thom 谱 [Thom谱]">Thom 谱</a></span>, 它表示了复配边上同调理论. $\mathrm{MU}$ 是 <span class="link local"><a href="./MO.html" title="MO [MO]">$\mathrm{MO}$</a></span> 的类比.</p>
+<p>抽象地, $\mathrm{MU}$ 可定义为 $\mathrm{U}$ 在<span class="link local"><a href="./球谱.html" title="“球谱” [球谱]">球谱</a></span>上作用的<span class="link local"><a href="./余不动点.html" title="余不动点 [余不动点]">余不动点</a></span>, 即余极限
+$$
+\mathrm{MU} = \operatorname{colim}(\mathbf{B}\mathrm{U}\to \mathbf{B}\mathrm{O} \to \mathsf{Sp}).
+$$</p>
 <p>作为<span class="link local"><a href="./序列谱.html" title="序列谱 [序列谱]">序列谱</a></span>, $MU$ 的第 $2k$ 项为万有 $k$ 阶复向量丛的 Thom 谱.</p>
 <h2>复配边上同调理论</h2>
 <p>对于空间 $X$, $\mathrm {MU}^*(X)$ 是 $X$ 上一种流形的配边 (bordism) 类, 其稳定法丛上带有近复结构.</p>
@@ -840,10 +844,22 @@ $$
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./MU.html" title="MU [MU]">MU</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Thom谱"><header><h1><span class="taxon"></span>Thom 谱 <a class="slug" href="./Thom谱.html">[Thom谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Thom 谱是<span class="link local"><a href="./球谱.html" title="“球谱” [球谱]">球谱</a></span>沿指定空间的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>
 <h2>定义</h2>
+<h3>通过向量丛的 Thom 空间</h3>
 <p>定义 $d$ 阶实<span class="link local"><a href="./向量丛.html" title="向量丛 [向量丛]">向量丛</a></span> $\xi\colon V\to X$ 的 <strong>Thom 谱</strong>为其 <span class="link local"><a href="./Thom空间.html" title="Thom 空间 [Thom空间]">Thom 空间</a></span>的<span class="link local"><a href="./纬悬谱.html" title="纬悬谱 [纬悬谱]">纬悬谱</a></span>的 $-d$ 次位移
 $$
 \operatorname{Th}(\xi) := \Sigma^{-d}\Sigma^{\infty}\text{Th}(V).
+$$</p>
+<h3>抽象定义</h3>
+<p>设空间 $X$ 上有一向量丛, 对应映射 $X\to\mathbf{B}\mathrm{O}_n$; 定义其 Thom 谱为 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 中的余极限
+$$
+\operatorname{colim}(X\to\mathbf{B}\mathrm{O}_n \to \mathsf{Sp}).
+$$</p>
+<p>对任意生象<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>同态 $G \to \mathrm{O}$, 定义 “<span class="link local"><a href="./切结构.html" title="切结构 [切结构]">$G$-结构</a></span>的万有 Thom 谱” 为<span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 中的余极限
+$$
+\mathrm{M}G:= \operatorname{colim}(\mathbf{B} G \to \mathbf{B}\mathrm{O}_n \to \mathsf{Sp}).
 $$</p>
 <h2>性质</h2>
 <h3>幺半性</h3>
@@ -855,11 +871,13 @@ $$
 $$
 	(V,V_0)\wedge (W,W_0)=(V\times W,V\times W_0\cup V_0\times W).
 $$</p>
+<h3>与配边的关系</h3>
+<p>$\mathrm{M}G$ 的 $n$ 阶同伦群自然同构于 $G$-结构 $n$ 维流形的<span class="link local"><a href="./配边.html" title="配边 [配边]">配边</a></span>群.</p>
 <h2>例</h2>
 <h3>万有 Thom 谱</h3>
 <ul>
-<li>万有实 Thom 谱 <span class="link local"><a href="./MO.html" title="“MO” [MO]">MO</a></span> 为万有实向量丛的 Thom 谱.</li>
-<li>万有实 Thom 谱 <span class="link local"><a href="./MU.html" title="MU [MU]">MU</a></span> 为万有复向量丛的 Thom 谱.</li>
+<li>万有实 Thom 谱 <span class="link local"><a href="./MO.html" title="MO [MO]">MO</a></span> 为万有实向量丛的 Thom 谱.</li>
+<li>万有复 Thom 谱 <span class="link local"><a href="./MU.html" title="MU [MU]">MU</a></span> 为万有复向量丛的 Thom 谱.</li>
 </ul>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Thom空间.html" title="Thom 空间 [Thom空间]">Thom 空间</a></span></p>

@@ -883,11 +883,12 @@ $$
 <p>如果说<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>是集合在高阶范畴语境中对应的概念, 那么生象群则是群的对应概念. 所谓群就是一个对象的对称性的抽象; 生象群就是一个 $(\infty,1)$-范畴中一个对象的自同构的抽象, 也就是一个带基点 $(\infty,0)$-范畴.</p>
 <p>同时, 生象群也可视为 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中特殊的 <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">$\mathbb E_1$-代数</a></span>, 其每个元素都有逆.</p>
 <h2>群作用</h2>
-<p>群作用即是将抽象的群映射到具体的对称性: 群 $G$ 在范畴 $\mathcal C$ 的对象上的作用即是函子 $\mathbf{B}G \to \mathcal C$.</p>
-<p><span class="link local"><a href="./群作用.html" title="群作用 [群作用]">群作用</a></span></p>
+<p><span class="link local"><a href="./群作用.html" title="群作用 [群作用]">群作用</a></span>即是将抽象的群映射到具体的对称性: 群 $G$ 在范畴 $\mathcal C$ 的对象上的作用即是函子 $\mathbf{B}G \to \mathcal C$.</p>
 <h3>共轭作用</h3>
-<p>共轭作用是群 $G$ 给出的 $G$ 本身的对称性; 一种简明的看法是: 移动 $\mathbf{B}G$ 的基点, 给出其作为带基点生象的对称性.</p>
-<p><span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span></p>
+<p><span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>是群 $G$ 给出的 $G$ 本身的对称性; 一种简明的看法是: 移动 $\mathbf{B}G$ 的基点, 给出其作为带基点生象的对称性.</p>
+<h3>半直积</h3>
+<p>此时一个自然的观察是, 群可以作用于另一个群上.
+设群 $H$ <span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>于群 $N$, 即作用于带基点连通对象 $\mathbf{B}N\in\mathsf{Ani}_{*/}^{\geq 1}$, 其商 $(\mathbf{B}N) / H$ 自然地是一个带基点生象, 对应于一个群 $G$, 称为 $N$ 与 $H$ 的<span class="link local"><a href="./半直积.html" title="半直积 [半直积]">半直积</a></span>.</p>
 <h2>群同态</h2>
 <p>群同态是特殊的群作用: 一个群作用在另一个单对象范畴的唯一对象上.</p>
 <p>在 $\infty$-范畴的语境中, 正如子集的概念常常替换为一般映射, <strong>子群</strong>的概念常常替换为一般同态. 对子群定义的<span class="link local"><a href="./陪集空间.html" title="陪集空间 [陪集空间]">陪集空间</a></span>也可对任何群同态定义.</p>
@@ -922,6 +923,12 @@ $$</p>
 <h3>正规子群与正规化子</h3>
 <p><span class="link local"><a href="./正规子群.html" title="正规子群, 正规同态 [正规子群]">正规子群, 正规同态</a></span></p>
 <p><span class="link local"><a href="./正规化子.html" title="正规化子 [正规化子]">正规化子</a></span></p>
+<h3>小结</h3>
+<p>群论中的许多构造都可以定义在生象群的语境中, 许多构造都形如某些熟悉对象的自同构群.</p>
+<p>对于群同态 $f\colon H\to G$, 即带基点生象的映射 $\mathbf{B}f\colon \mathbf{B}H \to \mathbf{B}G$,</p>
+<ul>
+<li>其作为生象映射的自同构群 $\operatorname{Aut}_{\operatorname{Hom}_{\mathsf{Ani}}(\mathbf{B}H,\mathbf{B}G)}(\mathbf{B}f)$ 即为 $f\colon H\to G$ 的<span class="link local"><a href="./中心化子.html" title="中心化子 [中心化子]">中心化子</a></span>;</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="t-结构"><header><h1><span class="taxon"></span>t-结构 <a class="slug" href="./t-结构.html">[t-结构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设 $\mathcal C$ 为<span class="link local"><a href="./三角范畴.html" title="“三角范畴” [三角范畴]">三角范畴</a></span>或<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span>, 其上的一个 t-结构是一对子范畴 $(\mathcal C_{\geq 0},\mathcal C_{\leq 0})$, 记 $\mathcal C_{\geq n}=\mathcal C_{\geq 0}[n]$, $\mathcal C_{\leq n}=\mathcal C_{\leq 0}[n]$, 满足</p>
@@ -1041,7 +1048,7 @@ $$
 <h2>观念</h2>
 <p><strong>切结构</strong>是基于光滑流形的切丛的一大类<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构</a></span>的统称, 包括<strong>定向</strong>, <strong>Riemann 度量</strong>, <strong></strong><span class="link local"><a href="./近复结构.html" title="近复结构 [近复结构]">近复结构</a></span>等. 它是流形的<span class="link local"><a href="./切丛.html" title="切丛 [切丛]">切丛</a></span>对应的 $\mathrm{GL}_n$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>的<span class="link local"><a href="./主丛的约化.html" title="主丛的约化 [主丛的约化]">约化</a></span>.</p>
 <h2>定义</h2>
-<p>设 $p \colon G\to \mathrm{GL}_n$ 为<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>的同态. (这里的 $\mathrm{GL}_n$ 可以是离散群, 也可以是 Lie 群, 甚至可以是<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>群, 依实际需要决定)</p>
+<p>设 $p \colon G\to \mathrm{GL}_n$ 为<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>的同态. (这里的 $\mathrm{GL}_n$ 可以是离散群, 也可以是 Lie 群, <span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>群, 依实际需要决定)</p>
 <p>对于 $m\leq n$, 定义 $m$ 维流形 $M$ 上的一个 $p$-结构是 $TM\oplus\mathbb{R}^{n-m}$ 的分类映射 $M\to \mathbf{B}\mathrm{GL}_n$ 的一个提升
 $$
 \begin{array}
@@ -1063,6 +1070,17 @@ $$
 \mathsf{Mfd}_n &amp; \to &amp; \mathsf{Ani}_{/\mathbf{B}\mathrm{GL}_n}
 \end{array}
 $$</p>
+<h3>稳定切结构</h3>
+<p>记 $\mathrm{GL} = \operatorname{colim}_n \mathrm{GL}_n$ 为稳定一般线性群, 对于群同态 $p\colon G \to \mathrm{GL}$ 可定义流形上的 “稳定 $G$-结构” 为提升
+$$
+\begin{array}
+	{ccc}
+	&amp;&amp; \mathbf{B}G\\
+	&amp;\nearrow&amp;\downarrow {\scriptsize \mathbf{B}p}\!\!\!\!\\
+	M&amp;\to &amp;\mathbf{B}\mathrm{GL}.
+\end{array}
+$$</p>
+<p>对任意正整数 $k$, 向量丛 $TM\oplus\mathbb{R}^{k}$ 上的 $G$-结构都给出 $M$ 上的一个稳定 $G$-结构.</p>
 <h2>例</h2>
 <p>在 $n$ 维流形上,</p>
 <ul>
@@ -1089,6 +1107,37 @@ $$
 故 $M$ 有<span class="link local"><a href="./自旋流形.html" title="自旋流形 [自旋流形]">自旋结构</a></span>当且仅当 $w_2(M)=0$.</p>
 <h3>可积性</h3>
 <p>一些重要的结构如复结构, 辛结构, <span class="link local"><a href="./Kähler结构.html" title=" [Kähler结构]">Kähler 流形</a></span>, 是由 $G$-结构附加某些可积性条件得到的.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="稳定子"><header><h1><span class="taxon"></span>稳定子 <a class="slug" href="./稳定子.html">[稳定子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>稳定子是<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">群作用</a></span>中将指定的点变为其自身的子群; 换言之, 是商对象中一个点的自同构群.</p>
+<h2>定义</h2>
+<p>设群 $G$ 作用于生象 $X$, 定义点 $x\in X$ 的<strong>稳定子</strong>为
+$$
+\operatorname{Stab}_G(x) := \Omega(X/G,x).
+$$</p>
+<p>由定义,
+$$
+\begin{aligned}
+    \operatorname{Stab}_G(x) &amp;= *\times_{X/G} *\\
+    &amp;=*\times_X (X\times_{X/G} X)\times_X *\\
+    &amp;=*\times_{X} (X\times G)\times_X *\\
+    &amp;=*\times_{X\times X}(X\times G).
+\end{aligned}
+$$
+其中用到 $X\times_{X/G} X = X\times G$, 因为 $G$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>对应 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span> $X\to X/G$.</p>
+<h2>性质</h2>
+<h3>轨道–稳定子定理</h3>
+<p>记 $\operatorname{Orb}_G (x)$ 为 $X/G$ 中 $x$ 所在的连通分支, 则有<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
+$$
+\operatorname{Stab}_G(x) \to G \to \operatorname{Orb}_G (x).
+$$
+换言之, $\operatorname{Orb}_G (x) = G / \operatorname{Stab}_G (x)$.</p>
+<h2>例</h2>
+<h3>群同态的稳定子</h3>
+<p>设 $H,G$ 为<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>, 则 $G$ <span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>于 $\operatorname{Hom}(H,G)$ 上, 群同态 $H\to G$ 在其中的稳定子为<span class="link local"><a href="./中心化子.html" title="中心化子 [中心化子]">中心化子</a></span>:
+$$
+\operatorname{Stab}_G (H\to G) = C_G(H).
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="稳定无穷范畴"><header><h1><span class="taxon"></span>稳定范畴 <a class="slug" href="./稳定无穷范畴.html">[稳定无穷范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>以下的范畴均默认为 $(\infty,1)$-范畴.</p>
