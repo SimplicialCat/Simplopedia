@@ -1362,7 +1362,7 @@ $$</p>
 <p>一般地, 函子 $\mathsf{Grp}(\mathsf{Set}) \to \mathsf{Grp}(\mathsf{Ani})$ 保持极限, 但不保持余极限.</p>
 <h3>中心与中心化子</h3>
 <p>群 $G$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span> $Z(G)$ 是 $G$ 在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点集</a></span>.</p>
-<p>子群 (或群同态) $H\to G$ 的中心化子是 $H$ 在 $G$ 上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点集</a></span>.</p>
+<p>子群 (或群同态) $H\to G$ 的<span class="link local"><a href="./中心化子.html" title="中心化子 [中心化子]">中心化子</a></span>是 $H$ 在 $G$ 上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点集</a></span>.</p>
 <p><span class="link local"><a href="./中心作用.html" title="中心作用 [中心作用]">中心作用</a></span></p>
 <p><span class="link local"><a href="./内自同构.html" title="群的内自同构 [内自同构]">群的内自同构</a></span></p>
 <p><span class="link local"><a href="./群的外自同构.html" title="群的外自同构 [群的外自同构]">群的外自同构</a></span></p>
@@ -1643,8 +1643,16 @@ $$
 <h3>3.3</h3>
 <p>记 $\Upsilon$ 为 $\mathrm{Fl}$ 的 $\mathbf I$-不变非空闭子概形构成的偏序集.</p>
 <h3>3.4 应用到经典情形</h3>
-<p>通过 <span class="link local"><a href="./Grothendieck函数–层字典.html" title="Grothendieck 函数–层字典 [Grothendieck函数–层字典]">Grothendieck 函数–层字典</a></span></p>
+<p>通过 <span class="link local"><a href="./Grothendieck函数–层字典.html" title="Grothendieck 函数–层字典 [Grothendieck函数–层字典]">Grothendieck 函数–层字典</a></span>可由 $X$ 上的 $\mathrm{Fr}$-不变层 $\mathcal F\in D^{\mathrm{Fr}}(X)$ 得到 $X$ 上的函数 $[\mathcal F]$.</p>
+<p>对于 $X=LG$ 的情形, 有 $[\mathcal F]\in C_c^{\infty}(G(F))$.</p>
+<p>定义
+$$
+\frak{Z}^{\mathrm{Fr}}(LG) := \operatorname{End}_{K_0M^{\mathrm{Fr}}(LG^2)}(K_0M^{\mathrm{Fr}}(LG)).
+$$</p>
 <h2>Bernstein 投影算子的稳定性</h2>
+<h2>5. 应用到经典 Bernstein 投影 $z^0$</h2>
+<p>在 3.4 节的情形,</p>
+<h2>6. 定理 5.1.8 的证明</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="不动点"><header><h1><span class="taxon"></span>不动点 <a class="slug" href="./不动点.html">[不动点]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>不动点, 顾名思义即<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">群作用</a></span>之下 “不变” 的元素:
@@ -1779,6 +1787,13 @@ $$
 \Omega_{\mathrm{id}}\operatorname{End}_{\mathsf{Ani}}(X)_{0} = \Omega_{\mathrm{id}}\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G) = Z(G),
 $$
 其中 $Z(G)$ 是 $G$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>.</p>
+<h3>交换的映射</h3>
+<p>对于带基点空间范畴中的两个映射 $Y\to X$, $Z\to X$, 若映射
+$$
+Y\vee Z \to X
+$$
+可延拓为 $Y\times Z\to X$, 则称两者<strong>交换</strong>.</p>
+<p>我们知道 $\mathrm{id}_X$ 是万有的指向 $X$ 的映射. 因此若 $Y\to X$ 与 $\mathrm{id}_X$ 交换 (这就是中心映射的定义), 那么它就与任何指向 $X$ 的映射交换. 这某种意义上解释了 “<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>” 的含义.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="充实范畴上的模"><header><h1><span class="taxon"></span>充实范畴上的模 <a class="slug" href="./充实范畴上的模.html">[充实范畴上的模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>可视为单对象<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>. <strong>充实范畴上的模</strong>是结合代数上的模和<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>的共同的推广.</p>

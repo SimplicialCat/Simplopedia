@@ -930,16 +930,25 @@ $$
 $$
 其中 $\operatorname{Ind}$ 是沿 $\Sigma_p\times \Sigma_q\hookrightarrow\Sigma_n$ 的 <span class="link local"><a href="./诱导表示.html" title="诱导表示 [诱导表示]">诱导表示</a></span>, 即限制表示的左伴随.</p>
 <h3>泛性质</h3>
-<p>对称序列的范畴 $\mathsf{Seq}:=\mathsf{Fun}(\mathsf{Fin}^{\simeq},\mathcal C)$ 是由一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span> $\mathcal C$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span><span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半范畴</a></span>. 换言之, 它是遗忘函子 $U\colon \mathcal C\text{-}\mathsf{Cat}^{\text{SymMon}} \to \mathsf{Cat}$ 的表示对象. 因此由 $(\infty,2)$-范畴版本的<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>,
+<p>设 $\mathcal C$ 为对称幺半<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>, 则 $\mathcal C$ 中对称序列的范畴 $\mathsf{SSeq}(\mathcal C):=\mathsf{Fun}(\mathsf{Fin}^{\simeq},\mathcal C)$ 是由一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>的<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半</a></span> $\mathcal C$-<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>. 换言之, 它是遗忘函子
+$$
+U\colon \mathsf{CAlg}(\mathsf{Pr})_{\mathcal C/}\simeq\mathsf{CAlg}(\mathsf{Mod}_{\mathsf{Pr}}(\mathcal C))\to \mathsf{Cat}
+$$
+的表示对象. 因此由 (<span class="link local"><a href="./n-r-范畴.html" title="(n,r)-范畴 [n-r-范畴]">$(\infty,2)$-范畴</a></span>版本的) <span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>,
 $$
 \begin{aligned}
-\mathsf{Seq} &amp;\simeq \mathsf{Fun}^{\text{SymMon}}(\mathsf{Seq},\mathsf{Seq}) \\&amp;\simeq \operatorname{End}(U).
+\mathsf{SSeq}(\mathcal C) &amp;\simeq \operatorname{Hom}_{\mathsf{CAlg}(\mathsf{Pr})}(\mathsf{SSeq}(\mathcal C),\mathsf{SSeq}(\mathcal C)) \\&amp;\simeq \operatorname{End}(U).
 \end{aligned}
 $$
 这给出其上的复合幺半结构. 这是<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由–遗忘伴随</a></span>的一般现象.</p>
+<p><strong>例</strong>. 带基点生象范畴 <span class="link local"><a href="./Ani_pt.html" title="带基点生象的范畴 [Ani_pt]">$\mathsf{Ani}_*$</a></span> 中的对称序列范畴
+$$
+\mathsf{SSeq}:=\mathsf{Fun}(\mathsf{Fin}^{\simeq},\mathsf{Ani}_*)
+$$
+是一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span><span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>. 其中有一个对象 $\mathbb S= (S^0,S^1,S^2,\cdots)$ 是 $S^1 = (0,S^1,0,\cdots)$ 自由生成的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>.</p>
 <p><strong>例</strong>. 固定一个域 $k$, 记 $\mathsf{Vect}$ 为 $k$-线性空间范畴的<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>. $\mathsf{Vect}$ 中的对称序列构成的范畴
 $$
-\mathsf{Vect}^\Sigma:= \mathsf{Fun}(\mathsf{Fin}^{\simeq},\mathsf{Vect}) \simeq \prod_{n\geq 1} \mathsf{Rep}(\Sigma_n)
+\mathsf{SSeq}(\mathsf{Vect}) := \mathsf{Fun}(\mathsf{Fin}^{\simeq},\mathsf{Vect}) \simeq \prod_{n\geq 1} \mathsf{Rep}(\Sigma_n)
 $$
 是一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span> <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>. 见 <span class="link local"><a href="./Gaitsgory–RozenblyumDAG.html" title="A Study in Derived Algebraic Geometry [Gaitsgory–RozenblyumDAG]">Gaitsgory–Rozenblyum 导出代数几何讲义</a></span> (关于 Lie 代数与 Koszul 对偶的一节).</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="算畴"><header><h1><span class="taxon"></span>算畴 <a class="slug" href="./算畴.html">[算畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>

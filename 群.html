@@ -912,7 +912,7 @@ $$
 <h3>Galois 覆叠</h3>
 </details></section><section class="block" data-taxon=""><details ><summary id="Thom谱"><header><h1><span class="taxon"></span>Thom 谱 <a class="slug" href="./Thom谱.html">[Thom谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>Thom 谱是<span class="link local"><a href="./球谱.html" title="“球谱” [球谱]">球谱</a></span>沿指定空间的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>
+<p>Thom 谱是<span class="link local"><a href="./球谱.html" title="球谱 [球谱]">球谱</a></span>沿指定空间的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>
 <h2>定义</h2>
 <h3>通过向量丛的 Thom 空间</h3>
 <p>定义 $d$ 阶实<span class="link local"><a href="./向量丛.html" title="向量丛 [向量丛]">向量丛</a></span> $\xi\colon V\to X$ 的 <strong>Thom 谱</strong>为其 <span class="link local"><a href="./Thom空间.html" title="Thom 空间 [Thom空间]">Thom 空间</a></span>的<span class="link local"><a href="./纬悬谱.html" title="纬悬谱 [纬悬谱]">纬悬谱</a></span>的 $-d$ 次位移
@@ -954,7 +954,8 @@ $$</p>
 <p>也可以不依赖于正规化子, 定义 Weyl 群为
 $$
 W=\operatorname{Aut}_{\mathsf{Ani}_{/\mathbf{B}G}}(\mathbf{B}H\to\mathbf{B}G).
-$$</p>
+$$
+换言之, $\mathbf{B}W$ 是 $\mathbf{B}H\to\mathbf{B}G$ 在 $(\mathsf{Ani}_{/\mathbf{B}G})^{\simeq}$ 中构成的全子范畴.</p>
 <p>关于紧 Lie 群 (代数群) 的 Weyl 群详见 <span class="link local"><a href="./Weyl群.html" title="Weyl 群 (极大环面) [Weyl群]">Weyl 群 (极大环面)</a></span>.</p>
 <h2>性质</h2>
 <p>由定义
@@ -1072,6 +1073,13 @@ $$
 \Omega_{\mathrm{id}}\operatorname{End}_{\mathsf{Ani}}(X)_{0} = \Omega_{\mathrm{id}}\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G) = Z(G),
 $$
 其中 $Z(G)$ 是 $G$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>.</p>
+<h3>交换的映射</h3>
+<p>对于带基点空间范畴中的两个映射 $Y\to X$, $Z\to X$, 若映射
+$$
+Y\vee Z \to X
+$$
+可延拓为 $Y\times Z\to X$, 则称两者<strong>交换</strong>.</p>
+<p>我们知道 $\mathrm{id}_X$ 是万有的指向 $X$ 的映射. 因此若 $Y\to X$ 与 $\mathrm{id}_X$ 交换 (这就是中心映射的定义), 那么它就与任何指向 $X$ 的映射交换. 这某种意义上解释了 “<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>” 的含义.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="主丛"><header><h1><span class="taxon"></span>主齐性空间, 主丛 <a class="slug" href="./主丛.html">[主丛]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>主齐性空间</strong> (principal homogeneous space), 又称<strong>旋子</strong> (torsor), 是一个 “忘掉了单位元在哪里的群”. 对于群 $G$, 一个 $G$-主齐性空间是一个带有 $G$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>的对象 $P$, 且满足其商 $P / G$ 是一个点 (在 $1$-范畴语境中这等同于说作用是自由且<span class="link local"><a href="./传递作用.html" title="传递作用 [传递作用]">传递</a></span>的).</p>
@@ -1484,7 +1492,8 @@ $$
     \operatorname{Stab}_G(x) &amp;= *\times_{X/G} *\\
     &amp;=*\times_X (X\times_{X/G} X)\times_X *\\
     &amp;=*\times_{X} (X\times G)\times_X *\\
-    &amp;=*\times_{X\times X}(X\times G).
+    &amp;=*\times_{X\times X}(X\times G)\\
+    &amp;=*\times_X G.
 \end{aligned}
 $$
 其中用到 $X\times_{X/G} X = X\times G$, 因为 $G$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>对应 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span> $X\to X/G$.</p>

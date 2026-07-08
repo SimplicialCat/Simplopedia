@@ -831,7 +831,8 @@
 <p>也可以不依赖于正规化子, 定义 Weyl 群为
 $$
 W=\operatorname{Aut}_{\mathsf{Ani}_{/\mathbf{B}G}}(\mathbf{B}H\to\mathbf{B}G).
-$$</p>
+$$
+换言之, $\mathbf{B}W$ 是 $\mathbf{B}H\to\mathbf{B}G$ 在 $(\mathsf{Ani}_{/\mathbf{B}G})^{\simeq}$ 中构成的全子范畴.</p>
 <p>关于紧 Lie 群 (代数群) 的 Weyl 群详见 <span class="link local"><a href="./Weyl群.html" title="Weyl 群 (极大环面) [Weyl群]">Weyl 群 (极大环面)</a></span>.</p>
 <h2>性质</h2>
 <p>由定义
@@ -870,21 +871,11 @@ $$</p>
 <p>对于子群 $H \subset G$,
 其正规化子 $N_G(H)$ 是最大的使得 $H$ 在其中正规的子群.</p>
 <h3>生象群</h3>
-<p>对于生象群同态 $H\to G$, 其<strong>正规化子</strong>为群范畴的<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span>中的自同构群
-$$
-\begin{aligned}
-    N_G(H) &amp;= \operatorname{Aut}_{\mathsf{Grp}_{/G}}(H \to G) \\
-    &amp;= \operatorname{Aut}_{\mathsf{Ani}_{*/,/\mathbf{B}G}}(\mathbf{B}H\to\mathbf{B}G).
-\end{aligned}
-$$</p>
-<h2>性质</h2>
-<h3>与 Weyl 群的关系</h3>
-<p>回忆 <span class="link local"><a href="./Weyl群(一般子群).html" title="Weyl 群 (一般子群) [Weyl群(一般子群)]">Weyl 群</a></span> $W$ 为
+<p>对于生象群同态 $H\to G$, 回忆 <span class="link local"><a href="./Weyl群(一般子群).html" title="Weyl 群 (一般子群) [Weyl群(一般子群)]">Weyl 群</a></span> $W$ 为
 $$
 W=\operatorname{Aut}_{\mathsf{Ani}_{/\mathbf{B}G}}(\mathbf{B}H\to\mathbf{B}G).
 $$
-换言之, $\mathbf{B}W$ 是 $\mathbf{B}H\to\mathbf{B}G$ 在 $(\mathsf{Ani}_{/\mathbf{B}G})^{\simeq}$ 中构成的全子范畴.
-由定义, $W$ 也作用于 $\mathsf{Ani}$ 的对象 $\mathbf{B}H$ 上. 由定义有拉回图
+那么 $W$ 也作用于 $\mathsf{Ani}$ 的对象 $\mathbf{B}H$ 上. 考虑取值映射 $\mathrm{ev}_*\colon W\to\mathbf{B}H$, 作如下拉回图
 $$
 \begin{array}{ccccc}
 H &amp; \rightarrow &amp; N_G(H) &amp; \rightarrow &amp; * \
@@ -893,7 +884,9 @@ H &amp; \rightarrow &amp; N_G(H) &amp; \rightarrow &amp; * \
 <li>&amp; \rightarrow &amp; W &amp; \rightarrow &amp; \mathbf{B}H,
 \end{array}
 $$
-也即有[纤维列](纤维列.md)
+其中 $N$ 称为同态 $H\to G$ 的<strong>正规化子</strong>.</li>
+</ul>
+<p>由定义, 有<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
 $$
 H\to N \to W\to \mathbf{B}H \to \mathbf{B}N \to \mathbf{B}W,
 $$
@@ -903,8 +896,7 @@ $$
 $$
 $$
 W= N/H.
-$$</li>
-</ul>
+$$</p>
 <h2>例</h2>
-<p>群同态 $G\to 1$ 的正规化子为 $\operatorname{Aut}_{\mathsf{Ani}_{*/}}(\mathbf{B}G)$, 其连通分支为 $\mathbf{B}Z(G)$.</p>
+<p>群同态 $G\to 1$ 的正规化子为 $\operatorname{Aut}_{\mathsf{Grp}}(G)$.</p>
 </details></section></details></section></footer></article></div></body></html>

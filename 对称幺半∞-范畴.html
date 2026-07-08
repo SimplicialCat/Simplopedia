@@ -941,8 +941,11 @@ $$
 <h2>性质</h2>
 <p>$\mathsf{Sp}$ 上有<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span> $\wedge$ 与<span class="link local"><a href="./映射谱.html" title="映射谱 [映射谱]">映射谱</a></span> $[-,-]$ 给出的<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span><span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半</a></span>结构. 有<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半函子</a></span>
 $$
-(\mathsf{Set},\times) \to (\mathsf{Ani},\times) \overset{(-)_+}{\to} (\mathsf{Ani}_{*/},\wedge) \overset{\Sigma_{\infty}}{\to} (\mathsf{Sp},\wedge).
-$$</p>
+(\mathsf{Set},\times) \to (\mathsf{Ani},\times) \overset{(-)_+}{\to} (\mathsf{Ani}_{*/},\wedge) \overset{\Sigma^{\infty}}{\to} (\mathsf{Sp},\wedge).
+$$
+其中单位的像为<span class="link local"><a href="./球谱.html" title="球谱 [球谱]">球谱</a></span> $\mathbb S = \Sigma^\infty_+(*)$.</p>
+<h3>泛性质</h3>
+<p>$\mathsf{Sp}$ 是一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span><span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定</a></span><span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="分解同调"><header><h1><span class="taxon"></span>分解同调 <a class="slug" href="./分解同调.html">[分解同调]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>分解同调</strong> (factorization homology), 又叫<strong>手性同调</strong> (chiral homology), 是将 $\mathbb E_n$-代数 “沿 $n$ 维流形作张量积”, 或更一般地将 <span class="link local"><a href="./E_M-算畴.html" title="E_M-算畴 [E_M-算畴]">$\mathbb E_M$-算畴</a></span>的代数在流形 $M$ 上作 “张量积”.</p>
@@ -1099,16 +1102,25 @@ $$
 $$
 其中 $\operatorname{Ind}$ 是沿 $\Sigma_p\times \Sigma_q\hookrightarrow\Sigma_n$ 的 <span class="link local"><a href="./诱导表示.html" title="诱导表示 [诱导表示]">诱导表示</a></span>, 即限制表示的左伴随.</p>
 <h3>泛性质</h3>
-<p>对称序列的范畴 $\mathsf{Seq}:=\mathsf{Fun}(\mathsf{Fin}^{\simeq},\mathcal C)$ 是由一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span> $\mathcal C$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span><span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半范畴</a></span>. 换言之, 它是遗忘函子 $U\colon \mathcal C\text{-}\mathsf{Cat}^{\text{SymMon}} \to \mathsf{Cat}$ 的表示对象. 因此由 $(\infty,2)$-范畴版本的<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>,
+<p>设 $\mathcal C$ 为对称幺半<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>, 则 $\mathcal C$ 中对称序列的范畴 $\mathsf{SSeq}(\mathcal C):=\mathsf{Fun}(\mathsf{Fin}^{\simeq},\mathcal C)$ 是由一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>的<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半</a></span> $\mathcal C$-<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>. 换言之, 它是遗忘函子
+$$
+U\colon \mathsf{CAlg}(\mathsf{Pr})_{\mathcal C/}\simeq\mathsf{CAlg}(\mathsf{Mod}_{\mathsf{Pr}}(\mathcal C))\to \mathsf{Cat}
+$$
+的表示对象. 因此由 (<span class="link local"><a href="./n-r-范畴.html" title="(n,r)-范畴 [n-r-范畴]">$(\infty,2)$-范畴</a></span>版本的) <span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>,
 $$
 \begin{aligned}
-\mathsf{Seq} &amp;\simeq \mathsf{Fun}^{\text{SymMon}}(\mathsf{Seq},\mathsf{Seq}) \\&amp;\simeq \operatorname{End}(U).
+\mathsf{SSeq}(\mathcal C) &amp;\simeq \operatorname{Hom}_{\mathsf{CAlg}(\mathsf{Pr})}(\mathsf{SSeq}(\mathcal C),\mathsf{SSeq}(\mathcal C)) \\&amp;\simeq \operatorname{End}(U).
 \end{aligned}
 $$
 这给出其上的复合幺半结构. 这是<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由–遗忘伴随</a></span>的一般现象.</p>
+<p><strong>例</strong>. 带基点生象范畴 <span class="link local"><a href="./Ani_pt.html" title="带基点生象的范畴 [Ani_pt]">$\mathsf{Ani}_*$</a></span> 中的对称序列范畴
+$$
+\mathsf{SSeq}:=\mathsf{Fun}(\mathsf{Fin}^{\simeq},\mathsf{Ani}_*)
+$$
+是一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span><span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>. 其中有一个对象 $\mathbb S= (S^0,S^1,S^2,\cdots)$ 是 $S^1 = (0,S^1,0,\cdots)$ 自由生成的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>.</p>
 <p><strong>例</strong>. 固定一个域 $k$, 记 $\mathsf{Vect}$ 为 $k$-线性空间范畴的<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>. $\mathsf{Vect}$ 中的对称序列构成的范畴
 $$
-\mathsf{Vect}^\Sigma:= \mathsf{Fun}(\mathsf{Fin}^{\simeq},\mathsf{Vect}) \simeq \prod_{n\geq 1} \mathsf{Rep}(\Sigma_n)
+\mathsf{SSeq}(\mathsf{Vect}) := \mathsf{Fun}(\mathsf{Fin}^{\simeq},\mathsf{Vect}) \simeq \prod_{n\geq 1} \mathsf{Rep}(\Sigma_n)
 $$
 是一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span> <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>. 见 <span class="link local"><a href="./Gaitsgory–RozenblyumDAG.html" title="A Study in Derived Algebraic Geometry [Gaitsgory–RozenblyumDAG]">Gaitsgory–Rozenblyum 导出代数几何讲义</a></span> (关于 Lie 代数与 Koszul 对偶的一节).</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="微分分次范畴"><header><h1><span class="taxon"></span>微分分次范畴 <a class="slug" href="./微分分次范畴.html">[微分分次范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -1321,7 +1333,7 @@ $$
 <h3>纬悬谱</h3>
 <p>设 $X$ 为带基点空间, $X$ 的<span class="link local"><a href="./纬悬谱.html" title="纬悬谱 [纬悬谱]">纬悬谱</a></span> $\Sigma^{\infty}X$ 可定义为<span class="link local"><a href="./序列谱.html" title="序列谱 [序列谱]">序列谱</a></span> $\{\Sigma^q X\}_{q\geq 0}$ 以及恒等映射 $\Sigma\Sigma^q X\to\Sigma^{q+1}X$.</p>
 <p>对于正整数 $n$, 定义 $\Sigma^{\infty -n}X$ 为如下<span class="link local"><a href="./序列谱.html" title="序列谱 [序列谱]">序列谱</a></span>: 第 $n$ 项以前为单点, 第 $q\geq n$ 项为 $\Sigma^{q-n}X$.</p>
-<p>特别地, 称 $X=S^0$ 的纬悬谱为<span class="link local"><a href="./球谱.html" title="“球谱” [球谱]">球谱</a></span> (sphere spectrum).</p>
+<p>特别地, 称 $X=S^0$ 的纬悬谱为<span class="link local"><a href="./球谱.html" title="球谱 [球谱]">球谱</a></span> (sphere spectrum).</p>
 <h3>谱化</h3>
 <p>对于预谱 $T_\bullet$, 若 $T_q\to \Omega T_{q+1}$ 为嵌入, 可定义一个谱 $(LT)_\bullet$,
 $$
