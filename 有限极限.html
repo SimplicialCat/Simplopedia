@@ -1068,11 +1068,10 @@ $$</p>
 <p><strong>例</strong>. $\mathsf{Corr}(\mathcal C,\mathrm{Isom}) \simeq \mathcal C^{\mathrm{op}}$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="几何"><header><h1><span class="taxon"></span>几何 <a class="slug" href="./几何.html">[几何]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本页介绍 Lurie 的 <span class="link local"><a href="./LurieDAGV.html" title="Derived Algebraic Geometry V: Structured Spaces [LurieDAGV]">DAG V</a></span> 描绘的 “几何” 图景. 加入了一些个人的见解.</p>
-<p>几何学的各个分支研究的<span class="link local"><a href="./概形.html" title="概形 [概形]">经典概形</a></span>, <span class="link local"><a href="./叠.html" title="叠 [叠]">Deligne–Mumford 叠</a></span>, 流形, 复解析流形, <span class="link local"><a href="./导出概形.html" title="导出概形 [导出概形]">导出概形</a></span>等等不同几何对象可在一个共同的框架下描述, 为此, 人们抽象出<strong>几何</strong> (geometry) 的概念.
-对每种几何 $\mathcal G$, 都有一种<strong>带结构的空间</strong> (structured space) 的概念, 它是一个带 $\mathcal G$-结构的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $(\mathcal X,\mathcal O_{\mathcal X})$, 类比于<span class="link local"><a href="./局部环化空间.html" title="局部环化空间 [局部环化空间]">局部环化空间</a></span>.</p>
-<p>从<span class="link local"><a href="./范畴逻辑.html" title="范畴逻辑 [范畴逻辑]">范畴逻辑</a></span>的角度, 这里的 $\mathcal G$-结构可以理解为一种<span class="link local"><a href="./本质代数理论.html" title="本质代数理论 [本质代数理论]">本质代数结构</a></span>加上一些 “局部性” (见后文).</p>
+<p>几何学的各个分支研究的<span class="link local"><a href="./概形.html" title="概形 [概形]">经典概形</a></span>, <span class="link local"><a href="./叠.html" title="叠 [叠]">Deligne–Mumford 叠</a></span>, 流形, 复解析流形, <span class="link local"><a href="./导出概形.html" title="导出概形 [导出概形]">导出概形</a></span>等等不同几何对象, 都可以描述为某种带结构的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $(\mathcal X,\mathcal O_{\mathcal X})$, 类比于<span class="link local"><a href="./局部环化空间.html" title="局部环化空间 [局部环化空间]">局部环化空间</a></span>. 从<span class="link local"><a href="./范畴逻辑.html" title="范畴逻辑 [范畴逻辑]">范畴逻辑</a></span>的角度, 这里的结构 $\mathcal O_{\mathcal X}$ 可以理解为一种<span class="link local"><a href="./本质代数理论.html" title="本质代数理论 [本质代数理论]">本质代数结构</a></span>加上一些 “局部性” (见后文). 同时, 这些结构可用<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span>描述: 一个结构就是一个意象态射 $\mathcal X \to \mathcal K$. 每种结构就是一种<strong>几何</strong>.</p>
+<h2>结构层</h2>
 <h3>意象上的层</h3>
-<p>所谓 “带结构的空间” 就是一个意象带有其上的一个带结构的层.</p>
+<p>所谓 “带结构的空间” 就是一个意象带有其上的一个带结构的层. (这里, 意象 $\mathcal X$ 上的层就是指范畴 $\mathcal X$ 的对象.)</p>
 <p>设 $\mathcal X$ 为<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>, $\mathcal C$ 为范畴, 我们定义 $\mathcal X$ 上的 $\mathcal C$-值层为保持极限的函子
 $$
 \mathcal X^{\mathrm{op}} \to \mathcal C.
@@ -1108,21 +1107,76 @@ $$
 <li>可容许态射关于<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>和<span class="link local"><a href="./收缩.html" title="收缩 [收缩]">收缩</a></span>封闭;</li>
 <li>若复合态射 $gf$ 与 $g$ 可容许, 则 $f$ 可容许.</li>
 </ul>
-<p>不必将上述定义奉为圭臬, 其不过是在用景的态射表现意象之间的态射. 这种表现是有冗余的, 后面我们将会明白其本质.</p>
+<p>两个几何之间的变换 $\mathcal G'\to \mathcal G$ 是保持可容许态射以及 Grothendieck 拓扑的函子.</p>
+<p>上述定义可理解为用景 (与景的态射) <span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>意象 (与意象之间的态射). 当然, 这种表现是有冗余的, 也即不同的景可以表现同一个意象.</p>
 <p>在环层的例子中, $\mathcal G = \mathsf{Aff}_{\mathrm{ft}}$ 是有限型仿射概形的范畴. 我们知道 $\mathcal G$ 上的 Zariski Grothendieck 拓扑给出了<span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span>的<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span> (见 <span class="link local"><a href="./MoniqueHakimToposAnneles.html" title="Topos annelés et schémas relatifs [MoniqueHakimToposAnneles]">Monique Hakim</a></span>).
 我们将看到一般的几何也可用分类意象来描述.</p>
 <p><strong>定义</strong> (意象上的 $\mathcal G$-结构). 设 $\mathcal G$ 为几何, $\mathcal X$ 为意象. 定义 $\mathcal X$ 上的 $\mathcal G$-结构为保持有限极限的函子 $\mathcal G\to\mathcal X$, 满足对 $\mathcal G$ 中任意一族可容许态射构成的覆盖, 其在 $\mathcal X$ 中也构成覆盖 (<span class="link local"><a href="./意象中的满射.html" title="意象中的满射 [意象中的满射]">满射</a></span>).</p>
-<p>这基本上是<span class="link local"><a href="./景的态射.html" title="景的态射 [景的态射]">景的态射</a></span>.</p>
+<p>这基本上是<span class="link local"><a href="./景的态射.html" title="景的态射 [景的态射]">景的态射</a></span> $\mathcal G\to\mathcal X$, 它将诱导意象的态射 $\mathcal X \to\mathsf{Sh}(\mathcal G)$ (注意 $\mathsf{Sh}(\mathcal X) = \mathcal X$). 在我们最熟悉的例子中, $\mathsf{Sh}(\mathcal G)$ 是局部环的分类意象, 意象的态射 $\mathcal X \to\mathsf{Sh}(\mathcal G)$ 等同于 $\mathcal X$ 上的局部环.</p>
 <p>记 $\mathcal X$ 上的 $\mathcal G$-结构的范畴为 $\mathsf{Str}_{\mathcal G}(\mathcal X)$.</p>
 <h3>分解系统</h3>
-<p>回忆, 交换环同态 $A\to B$ 总是可以分解为
+<p>局部环之间的同态 $A\to B$ 不仅要是环同态, 还需要如下的额外性质: $A$ 中的不可逆元在 $B$ 中仍不可逆. 这种环同态称为<strong>局部</strong>的. 这有点像是<span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守函子</a></span>的性质.</p>
+<p>交换环同态 $A\to B$ 总是可以分解为
 $$
 A \to A[S^{-1}] \to B,
 $$
-其中 $S = \{a\in A\mid f(a)\in B^\times\}$, 且 $A[S^{-1}]\to B$ 为<strong>局部同态</strong>, 也即它将可逆元都映射为可逆元.
+其中 $S = \{a\in A\mid f(a)\in B^\times\}$, 且 $A[S^{-1}]\to B$ 为局部同态.
 事实上, 这构成了交换环范畴上的一个<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">分解系统</a></span>.</p>
-<p>设 $\mathcal K$ 为意象. 定义 $\mathcal K$ 上的一个<strong>几何结构</strong>为如下资料: 对任意一个意象 $\mathcal X$, 指定 $\operatorname{Hom}(\mathcal X,\mathcal K)$ 的一个<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">分解系统</a></span> $(L_{\mathcal X},R_{\mathcal X})$. 定义 $\operatorname{Str}_{\mathcal K}^{\mathrm{loc}}(\mathcal X)$ 为 $\operatorname{Hom}_{\mathsf{Topos}}(\mathcal X,\mathcal K)$ 的对象及 $R_{\mathcal X}$ 中的态射构成的范畴.</p>
-<p>事实上, 这个 $\mathcal K$ 上的结构使它成为了一种几何结构的分类意象.</p>
+<p>类似地, $\mathsf{Str}_{\mathcal G}(\mathcal X)$ 上也有一个<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">分解系统</a></span>, 其右边分量为局部同态的类:</p>
+<p><strong>定义</strong> ($\mathcal G$-结构的局部同态). 设 $\mathcal O,\mathcal O'\colon \mathcal G\to\mathcal X$ 为 $\mathcal X$ 上的 $\mathcal G$-结构, 有自然变换 $\alpha\colon \mathcal O\to\mathcal O'$. 若对 $\mathcal G$ 中任意可容许态射 $U\to V$, 自然变换 $\alpha$ 给出的方块
+$$
+\begin{array}{ccc}
+\mathcal O(U) &amp; \rightarrow &amp; \mathcal O(V) \\
+\downarrow &amp;  &amp; \downarrow \\
+\mathcal O'(U) &amp; \rightarrow &amp; \mathcal O'(V)
+\end{array}
+$$
+都是拉回方块, 则称 $\alpha$ 为<strong>局部同态</strong>.</p>
+<p>注意, 范畴 $\mathsf{Str}_{\mathcal G}(\mathcal X)$ 本身只取决于 $\mathcal G$ 及其上的 Grothendieck 拓扑, 但局部同态的概念依赖于可容许结构.</p>
+<p>设 $\mathcal K$ 为意象. 定义 $\mathcal K$ 上的一个<strong>几何结构</strong>为如下资料: 对任意一个意象 $\mathcal X$, 函子性地指定 $\operatorname{Hom}(\mathcal X,\mathcal K)$ 的一个<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">分解系统</a></span> $(L_{\mathcal X},R_{\mathcal X})$.
+函子性是指对意象态射 $\mathcal Y\to \mathcal X$, 函子 $\mathsf{Fun}(\mathcal X,\mathcal K) \to \mathsf{Fun}(\mathcal Y,\mathcal K)$ 将 $L_{\mathcal X}$ 映射到 $L_{\mathcal Y}$, $R_{\mathcal X}$ 映射到 $R_{\mathcal Y}$.</p>
+<p>定义 $\operatorname{Str}_{\mathcal K}^{\mathrm{loc}}(\mathcal X)$ 为 $\operatorname{Hom}_{\mathsf{Topos}}(\mathcal X,\mathcal K)$ 的对象及 $R_{\mathcal X}$ 中的态射构成的范畴.</p>
+<p>每种几何 $\mathcal G$ 都表现一个意象 $\mathcal K := \mathsf{Sh}(\mathcal G)$, 称为其<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span>. 此时 $\mathcal K$ 上的几何结构所需的分解系统 $(L_{\mathcal X},R_{\mathcal X})$ 正是前述的 $\mathsf{Str}_{\mathcal G}(\mathcal X)$ 上的分解系统.</p>
+<p><strong>命题</strong>.
+$$
+\mathsf{Str}_{\mathcal G}^{\mathrm{loc}}(\mathcal X) \simeq \mathsf{Str}_{\mathcal K}^{\mathrm{loc}}(\mathcal X).
+$$</p>
+<p>上述概念关于 $\mathcal X$ 都是函子性的. 这可以通过考虑万有纤维范畴来说明, 但此处略去. 总之, 我们可以将所有意象 $\mathcal X$ 上的 $\mathcal G$-结构 (或 $\mathcal K$-结构) 放在一起, 定义 “带 $\mathcal G$-结构 (或带 $\mathcal K$-结构) 意象的范畴”
+$$
+\mathsf{Topos}_{\mathcal G} \simeq \mathsf{Topos}_{\mathcal K}.
+$$</p>
+<p><strong>例</strong>. 单点对应的意象 $\mathsf{Ani}$ 是平凡结构的分类意象: $\mathsf{Topos}_{\mathsf{Ani}} = \mathsf{Topos}$.</p>
+<p><strong>例</strong>. 任何一个意象 $\mathcal K$ 都带有平凡的几何结构, 此时 $\mathsf{Topos}_{\mathcal K}$ 即是 $(\infty,2)$-范畴 $\mathsf{Topos}$ 的切片范畴 $\mathsf{Topos}_{/\mathcal K}$, 其中对象为 $\mathcal K$ 上的相对意象 $\mathcal X\to\mathcal K$, 态射为交换图
+$$
+\begin{array}{ccc}
+\mathcal X &amp; \overset{f}{\rightarrow} &amp; \mathcal Y \\
+ &amp; \searrow &amp; \downarrow \\
+ &amp;  &amp; \mathcal K,
+\end{array}
+$$
+带有 $\mathcal K$-结构的态射 $f^*\mathcal O_{\mathcal Y} \to \mathcal O_{\mathcal X}$ (注意这个态射不要求为同构). 我们最熟悉的例子是
+$$
+\mathcal K = \mathsf{Sh}(\mathsf{Aff}_{\mathrm{ft}},\mathrm{Zar}),
+$$
+即局部环的分类意象, 意象 $\mathcal X$ 上的 $\mathcal K$-结构等同于 $\mathcal X$ 上的局部环.</p>
+<h2>概形论</h2>
+<h3>相对谱</h3>
+<p>设 $A$ 为交换环, 其<strong>谱</strong> $(\operatorname{Spec}A,\mathcal O_{\operatorname{Spec}A})$ 是具有如下泛性质的局部环化空间: 任意局部环化空间 $(X,\mathcal O_X)$ 到 $(\operatorname{Spec}A,\mathcal O_{\operatorname{Spec}A})$ 的态射等同于环同态 $A \to \Gamma(X,\mathcal O_X)$.
+我们可将后者视为环化空间的态射 $(X,\mathcal O_X)\to (*,A)$. 换言之, 谱这一操作是 “遗忘函子”
+$$
+\mathsf{LocRingSp} \to \mathsf{RingSp}
+$$
+的右伴随.</p>
+<p>类似地, 对于几何的变换 $\mathcal G' \to \mathcal G$ (意象的态射 $\mathsf{Sh}(\mathcal G) \to \mathsf{Sh}(\mathcal G')$), 其诱导的函子
+$$
+\mathsf{Topos}_{\mathcal G} \to \mathsf{Topos}_{\mathcal G'}
+$$
+有右伴随
+$$
+\operatorname{Spec}_{\mathcal G}^{\mathcal G'}\colon \mathsf{Topos}_{\mathcal G'} \to \mathsf{Topos}_{\mathcal G},
+$$
+称为<strong>相对谱</strong>.</p>
+<h2>光滑性</h2>
 <h3>预几何</h3>
 <p>上面说的 “几何” 都是所谓 “导出” 几何, 为了表达由 “经典” 几何过渡到 “导出” 几何的过程还需要<strong>预几何</strong> (pregeometry) 的概念. 预几何与最终的几何之间的区别在于<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断度</a></span>从 $0$ 到 $\infty$, 例如经典<span class="link local"><a href="./代数几何.html" title="代数几何 [代数几何]">代数几何</a></span>的截断度为 $0$, <span class="link local"><a href="./导出代数几何.html" title="导出代数几何 [导出代数几何]">导出代数几何</a></span>的截断度为 $\infty$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="几何态射"><header><h1><span class="taxon"></span>几何态射 <a class="slug" href="./几何态射.html">[几何态射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
