@@ -1366,10 +1366,13 @@ $$
 <p>对于<span class="link local"><a href="./正则基数.html" title="正则基数 [正则基数]">正则基数</a></span> $\kappa$ (通常取为 $\aleph_0$, 见<span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成范畴</a></span>), 称满足如下等价条件的范畴 $\mathcal C$ 为 $\kappa$-可表现范畴:</p>
 <ul>
 <li>$\mathcal C$ 余完备, 且有一族 <span class="link local"><a href="./可表现对象.html" title="可表现对象 [可表现对象]">$\kappa$-可表现对象</a></span>构成的集合, 在 <span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">$\kappa$-滤余极限</a></span>下生成整个范畴.</li>
-<li>$\mathcal C$ 等价于一个小范畴的 <span class="link local"><a href="./Ind范畴.html" title=" [Ind范畴]">$\kappa$-Ind 范畴</a></span>.</li>
+<li>$\mathcal C$ 等价于一个具有 $\kappa$-<span class="link local"><a href="./有限范畴.html" title="有限范畴 [有限范畴]">小</a></span>余极限的小范畴的 <span class="link local"><a href="./Ind范畴.html" title=" [Ind范畴]">$\kappa$-Ind 范畴</a></span>.</li>
 </ul>
-<p>称 $\mathcal C$ 为可表现范畴是指存在一个基数 $\kappa$, $\mathcal C$ 为 $\kappa$-可表现范畴.</p>
-<p>等价的定义是: 有一个小范畴到 $\mathcal C$ 的函子 $j\colon \mathcal S\hookrightarrow\mathcal C$, 使得米田扩张 $\mathsf{Psh}(\mathcal S) \to \mathcal C$ 是预层范畴 $\mathsf{Psh}(\mathcal S)$ 关于某个小态射族 $W \subset \mathsf{Fun}([1],\mathsf{Psh}(\mathcal S))$ 的局部化.</p>
+<p>称 $\mathcal C$ 为<strong>可表现范畴</strong>是指如下等价条件成立:</p>
+<ul>
+<li>存在一个正则基数 $\kappa$, 使得 $\mathcal C$ 为 $\kappa$-可表现范畴.</li>
+<li>有一个小范畴到 $\mathcal C$ 的函子 $j\colon \mathcal S\hookrightarrow\mathcal C$, 使得米田扩张 $\mathsf{Psh}(\mathcal S) \to \mathcal C$ 是预层范畴 $\mathsf{Psh}(\mathcal S)$ 关于某个小态射族 $W \subset \mathsf{Fun}([1],\mathsf{Psh}(\mathcal S))$ 的局部化.</li>
+</ul>
 <p>可表现范畴以及保持余极限的函子构成的范畴记为 $\mathsf{Pr}^{\mathrm{L}}$, 其中 $\mathrm{L}$ 的含义是这些函子是左伴随 (<span class="link local"><a href="./伴随函子定理.html" title="伴随函子定理 [伴随函子定理]">伴随函子定理</a></span>).</p>
 <p>可表现范畴以及保持极限的函子构成的范畴记为 $\mathsf{Pr}^{\mathrm{R}}$. 有
 $$
@@ -1411,6 +1414,8 @@ $$
 <h3>意象</h3>
 <p>(由<span class="link local"><a href="./景.html" title="景 [景]">景</a></span>表现的) <span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>是可表现范畴.</p>
 <p>其中, 由小范畴 $\mathcal C$ 上的平凡 <span class="link local"><a href="./Grothendieck拓扑.html" title="Grothendieck 拓扑 [Grothendieck拓扑]">Grothendieck 拓扑</a></span>表现的意象, 也即<span class="link local"><a href="./预层意象.md.html" title=" [预层意象.md]">预层意象</a></span> $\mathsf{Fun}(\mathcal C ^{\mathrm{op}},\mathsf{Ani})$, 是 $\mathcal C$ 生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>可表现范畴.</p>
+<h3>代数理论的模型的范畴</h3>
+<p>见<span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成范畴</a></span>.</p>
 <h2>相关概念</h2>
 <h3>带有代数结构的范畴</h3>
 <p>若 $\mathcal C$ 为可表现<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $A$ 为其中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>, 则<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>范畴 $\mathsf{Mod}(A)$ 为可表现<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>.</p>
@@ -1455,11 +1460,17 @@ $$
 <p>类似地, <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$(\infty,1)$-意象</a></span>是类似于生象的范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 的范畴, 其内语言提供了处理同伦型的直觉主义语言, 即<span class="link local"><a href="./同伦类型论.html" title="同伦类型论 [同伦类型论]">同伦类型论</a></span>.</p>
 <p>我们甚至可以期待 <span class="link local"><a href="./∞-2-意象.html" title="(∞,2)-意象 [∞-2-意象]">$(\infty,2)$-意象</a></span>提供了 “范畴的范畴” $\mathsf{Cat}$ 的推广, 以及相应的语言.</p>
 <h3>作为几何对象</h3>
+<p>意象虽然按定义是一个范畴, 但从 Grothendieck 开始, 人们都将其想象为一种几何对象. 那个范畴是这个假想的几何对象上的层范畴. 对于意象之间的态射
+$$
+f\colon \mathcal X\to\mathcal Y,
+$$
+其按定义是一对伴随 $f^* \dashv f_*$, 我们也应将其想象为假想的几何对象上层的拉回与推前.</p>
 <blockquote>
 <p>L’objet de la Topologie est l’étude des topos (et non des seuls espaces topologiques).</p>
 <p>拓扑学的目标是研究意象, 而不仅是拓扑空间.</p>
 <p>—— Grothendieck, <span class="link local"><a href="./SGA4.html" title="Théorie des topos et cohomologie étale des schémas [SGA4]">SGA 4</a></span></p>
 </blockquote>
+<p>高阶意象虽然按定义是个高阶范畴, 但它同样可想象为几何对象; 那个范畴是这个假想的几何对象上的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>值 (甚至范畴值) 层的范畴.</p>
 <h3>关于译名 “意象”</h3>
 <p><span class="link local"><a href="./关于译名-意象.html" title="关于译名 “意象” [关于译名-意象]">关于译名“意象“</a></span></p>
 <h2>定义</h2>
@@ -1537,6 +1548,8 @@ $$
 \operatorname{Hom}(Z,Y^X) \simeq \operatorname{Hom}(Z\times X,Y).
 $$</p>
 <p>对象 $X$ 的幂对象 $PX = \Omega^X$ 是幂集的类比, 满足 $\operatorname{Sub}(X\times Y)\simeq \operatorname{Hom}(Y,PX)$, 换言之, $PX$ 是 $\operatorname{Sub}(X\times -)$ 的表示对象.</p>
+<h3>分类意象</h3>
+<p>大致上, 意象上的每种 “结构” 都有一个<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span> $\mathcal K$, 即意象 $\mathcal X$ 上的这种结构等同于态射 $\mathcal X \to \mathcal K$.</p>
 <h2>例</h2>
 <h3>层意象</h3>
 <p><span class="link local"><a href="./层意象.html" title="层意象 [层意象]">层意象</a></span> $\operatorname{Sh}(X)$, “由 $X$ 连续参数化的一族集合”;</p>

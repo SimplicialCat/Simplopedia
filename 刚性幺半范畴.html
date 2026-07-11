@@ -1185,6 +1185,23 @@ $$</p>
 <li>这给出群同态 $T^\vee\simeq\widetilde T \to \widetilde G$, 给出 $\widetilde G$ 的一个极大环面. 于是 $\widetilde G$ 的权格与余权格对偶于 $G$.</li>
 </ul>
 <p>最后看单根和单余根. 一个权 $\lambda\in X^*(T^\vee)$ 落在正根生成的半群中, 当且仅当存在最高权表示 $L_\mu$ 使得 $\mu - \lambda$ 出现在其权中, 即存在 $\mu$ 使得 $t^{\mu-\lambda}\in\mathrm{Gr}_{\leq\mu}$, 这等价于 $\lambda$ 是 $G$ 的正余根的和.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="higherZar"><header><h1><span class="taxon"></span>高阶 Zariski 几何 <a class="slug" href="./higherZar.html">[higherZar]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文是 <span class="link local"><a href="./ABCSS25.html" title="Higher Zariski Geometry [ABCSS25]">ABCSS25</a></span> 的阅读笔记. 在 <span class="link local"><a href="./LurieDAGV.html" title="Derived Algebraic Geometry V: Structured Spaces [LurieDAGV]">Lurie DAG V</a></span> 的基础上, 建立局部 $2$-环化意象以及相应的 Zariski 谱等概念.</p>
+<p>用 “$2$-环” 来指代<span class="link local"><a href="./幂等完备范畴.html" title="幂等完备范畴 [幂等完备范畴]">幂等完备</a></span>的<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 记 $2$-环的范畴为 $2\mathsf{CAlg}$. 这是一个非常广泛的范畴, 包括了代数几何中许多对象:</p>
+<ul>
+<li><span class="link local"><a href="./拟紧概形.html" title="拟紧概形 [拟紧概形]">qc</a></span><span class="link local"><a href="./拟分离概形.html" title="拟分离概形 [拟分离概形]">qs</a></span> <span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span> $X$ 上的完美导出范畴 $\mathsf{Perf}_X$;</li>
+<li><span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 及其变体 (等变, 母题);</li>
+<li>非交换几何中的 Kasparov 可分 <span class="link local"><a href="./C-星代数.html" title="C*-代数 [C-星代数]">$C^*$-代数</a></span>范畴;</li>
+<li>Kontsevich 同调镜像对称猜想中的 Fukaya 范畴.</li>
+</ul>
+<p>这篇文章定义了局部 $2$-环化空间, 建立了如下伴随:
+$$
+\operatorname{Spec}\colon 2\mathsf{CAlg} \rightleftarrows \mathsf{Loc}2\mathsf{RingSp}^{\mathrm{op}} \colon \Gamma,
+$$
+其中右伴随部分 $\Gamma$ 是取整体截面的 $2$-环.
+并且左伴随部分 $\operatorname{Spec}$ 在<span class="link local"><a href="./刚性幺半范畴.html" title="刚性幺半范畴 [刚性幺半范畴]">刚性</a></span> $2$-环的子范畴上是全忠实的; 特别地, 每个刚性 $2$-环 $\mathcal K$ 都等同于 $\operatorname{Spec}\mathcal K$ 上的结构层的整体截面的 $2$-环.</p>
+<h2>2-环的范畴</h2>
+<p>记 $\mathsf{Cat}^{\mathrm{perf}}$ 为</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="notes-GKRV"><header><h1><span class="taxon"></span>GKRV <a class="slug" href="./notes-GKRV.html">[notes-GKRV]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是 <span class="link local"><a href="./GKRV.html" title="A toy model for the Drinfeld–Lafforgue shtuka construction [GKRV]">GKRV</a></span> 的阅读笔记. 这篇文章是 <span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span> 在拓扑语境中的玩具模型.</p>
 <h2>1. 对称幺半范畴沿空间积分</h2>

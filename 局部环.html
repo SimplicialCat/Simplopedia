@@ -1226,39 +1226,7 @@ $$
 <li>对任意首一多项式 $f\in R[x]$, 以及 $\bar f\in k[x]$ 的分解 $\bar f = g_0 h_0$ ($g_0,h_0$ 为互素的首一多项式), 有 $f$ 的分解 $f=gh$, 使得 $\bar g = g_0, \bar h = h_0$, 且 $g,h$ 互素.</li>
 </ul>
 <p>若剩余域 $k$ 为<span class="link local"><a href="./可分闭域.html" title="可分闭域 [可分闭域]">可分闭域</a></span>, 则称 $R$ 为<strong>严格 Hensel 环</strong>.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="中山引理"><header><h1><span class="taxon"></span>中山引理 <a class="slug" href="./中山引理.html">[中山引理]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<h2>观念</h2>
-<p><strong>中山引理</strong> (Nakayama lemma) 说的是<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>在<span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部</a></span>的一些信息能由一点上的信息 (<span class="link local"><a href="./纤维函子.html" title="纤维函子 [纤维函子]">纤维函子</a></span>) 决定.</p>
-<h2>陈述</h2>
-<h3>一个较强的引理</h3>
-<p><strong>结论</strong>. 设 $R$ 是交换环, $I\subset R$ 是理想, $M$ 是 $n$ 个元素生成的 $R$-模. 那么对任意同态 $f\colon M\to IM$, 存在 $a_1,\cdots,a_n\in I$ 使得
-$$
-f^n + a_1 f^{n-1} + \cdots + a_n = 0.
-$$</p>
-<p>这个结论是 Cayley–Hamilton 定理的直接应用.</p>
-<p>考虑 $f=\mathrm{id}$, 得到如下结论.</p>
-<p><strong>结论</strong>. 设 $R$ 是交换环, $I\subset R$ 是理想, $M$ 是 $n$ 个元素生成的 $R$-模, $IM = M$. 那么存在 $a\in I$ 使得
-$$
-(1+a) M = 0.
-$$</p>
-<h3>特例: 局部环与纤维</h3>
-<p><strong>命题</strong>. 设 $R$ 是<span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span>, 极大理想为 $\mathfrak m$, 剩余域为 $k= R/\mathfrak m$. 对于有限生成 $R$-模 $M$, 若 $M / \mathfrak m M = 0$ (即 $M\otimes_R k$ = 0), 则 $M = 0$. 换言之, <span class="link local"><a href="./纤维函子.html" title="纤维函子 [纤维函子]">纤维函子</a></span>
-$$
-\mathsf{Mod}(R)_{\mathrm{fg}} \to \mathsf{Vect}_{k}
-$$
-保守.</p>
-<p><em>证明</em>. 若 $M / \mathfrak m M = 0$, 则 $M = \mathfrak m M$, 而 $1 + \mathfrak m \subset R^\times$, 故前述结论给出 $M=0$.</p>
-<h3>拟凝聚层消失处为开集</h3>
-<p>设 $F$ 是<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span> $X$ 上的局部有限生成<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>. 定义 “$F$ 消失之处”
-$U_F\colon\mathsf{Aff}^{\mathrm{op}}\to\mathsf{Set}$,
-$$
-	\operatorname{Spec} B\mapsto \{f\colon \operatorname{Spec} B\to X\mid f^*F\simeq 0\},
-$$
-则 $U_F\to X$ 为<span class="link local"><a href="./开嵌入.html" title="开嵌入 [开嵌入]">开子概形</a></span>. 事实上, $U_F$ 是理想 $\operatorname{Ann}(F)$ 对应的<span class="link local"><a href="./闭嵌入.html" title="闭嵌入 [闭嵌入]">闭子概形</a></span>的补空间.</p>
-<p>等价的陈述: 设 $F$ 是概形 $X$ 上的局部有限生成<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>.
-若对于某个域 $k$ 以及态射 $f\colon \operatorname{Spec} k\to X$ 有 $f^*F\simeq 0$,
-则存在仿射<span class="link local"><a href="./开嵌入.html" title="开嵌入 [开嵌入]">开子概形</a></span> $j\colon U\to X$ 包含 $f$ (即 $f$ 穿过 $U$), 使得 $j^*F\simeq 0$.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="几何"><header><h1><span class="taxon"></span>几何 <a class="slug" href="./几何.html">[几何]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="geometry-DAGV"><header><h1><span class="taxon"></span>几何 (带结构的意象) <a class="slug" href="./geometry-DAGV.html">[geometry-DAGV]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本页介绍 Lurie 的 <span class="link local"><a href="./LurieDAGV.html" title="Derived Algebraic Geometry V: Structured Spaces [LurieDAGV]">DAG V</a></span> 描绘的 “几何” 图景. 加入了一些个人的见解.</p>
 <p>几何学的各个分支研究的<span class="link local"><a href="./概形.html" title="概形 [概形]">经典概形</a></span>, <span class="link local"><a href="./叠.html" title="叠 [叠]">Deligne–Mumford 叠</a></span>, 流形, 复解析流形, <span class="link local"><a href="./导出概形.html" title="导出概形 [导出概形]">导出概形</a></span>等等不同几何对象, 都可以描述为某种带结构的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $(\mathcal X,\mathcal O_{\mathcal X})$, 类比于<span class="link local"><a href="./局部环化空间.html" title="局部环化空间 [局部环化空间]">局部环化空间</a></span>. 从<span class="link local"><a href="./范畴逻辑.html" title="范畴逻辑 [范畴逻辑]">范畴逻辑</a></span>的角度, 这里的结构 $\mathcal O_{\mathcal X}$ 可以理解为一种<span class="link local"><a href="./本质代数理论.html" title="本质代数理论 [本质代数理论]">本质代数结构</a></span>加上一些 “局部性” (见后文). 同时, 这些结构可用<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span>描述: 一个结构就是一个意象态射 $\mathcal X \to \mathcal K$. 每种结构就是一种<strong>几何</strong>.</p>
 <h2>结构层</h2>
@@ -1371,6 +1339,38 @@ $$
 <h2>光滑性</h2>
 <h3>预几何</h3>
 <p>上面说的 “几何” 都是所谓 “导出” 几何, 为了表达由 “经典” 几何过渡到 “导出” 几何的过程还需要<strong>预几何</strong> (pregeometry) 的概念. 预几何与最终的几何之间的区别在于<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断度</a></span>从 $0$ 到 $\infty$, 例如经典<span class="link local"><a href="./代数几何.html" title="代数几何 [代数几何]">代数几何</a></span>的截断度为 $0$, <span class="link local"><a href="./导出代数几何.html" title="导出代数几何 [导出代数几何]">导出代数几何</a></span>的截断度为 $\infty$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="中山引理"><header><h1><span class="taxon"></span>中山引理 <a class="slug" href="./中山引理.html">[中山引理]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>中山引理</strong> (Nakayama lemma) 说的是<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>在<span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部</a></span>的一些信息能由一点上的信息 (<span class="link local"><a href="./纤维函子.html" title="纤维函子 [纤维函子]">纤维函子</a></span>) 决定.</p>
+<h2>陈述</h2>
+<h3>一个较强的引理</h3>
+<p><strong>结论</strong>. 设 $R$ 是交换环, $I\subset R$ 是理想, $M$ 是 $n$ 个元素生成的 $R$-模. 那么对任意同态 $f\colon M\to IM$, 存在 $a_1,\cdots,a_n\in I$ 使得
+$$
+f^n + a_1 f^{n-1} + \cdots + a_n = 0.
+$$</p>
+<p>这个结论是 Cayley–Hamilton 定理的直接应用.</p>
+<p>考虑 $f=\mathrm{id}$, 得到如下结论.</p>
+<p><strong>结论</strong>. 设 $R$ 是交换环, $I\subset R$ 是理想, $M$ 是 $n$ 个元素生成的 $R$-模, $IM = M$. 那么存在 $a\in I$ 使得
+$$
+(1+a) M = 0.
+$$</p>
+<h3>特例: 局部环与纤维</h3>
+<p><strong>命题</strong>. 设 $R$ 是<span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span>, 极大理想为 $\mathfrak m$, 剩余域为 $k= R/\mathfrak m$. 对于有限生成 $R$-模 $M$, 若 $M / \mathfrak m M = 0$ (即 $M\otimes_R k$ = 0), 则 $M = 0$. 换言之, <span class="link local"><a href="./纤维函子.html" title="纤维函子 [纤维函子]">纤维函子</a></span>
+$$
+\mathsf{Mod}(R)_{\mathrm{fg}} \to \mathsf{Vect}_{k}
+$$
+保守.</p>
+<p><em>证明</em>. 若 $M / \mathfrak m M = 0$, 则 $M = \mathfrak m M$, 而 $1 + \mathfrak m \subset R^\times$, 故前述结论给出 $M=0$.</p>
+<h3>拟凝聚层消失处为开集</h3>
+<p>设 $F$ 是<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span> $X$ 上的局部有限生成<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>. 定义 “$F$ 消失之处”
+$U_F\colon\mathsf{Aff}^{\mathrm{op}}\to\mathsf{Set}$,
+$$
+	\operatorname{Spec} B\mapsto \{f\colon \operatorname{Spec} B\to X\mid f^*F\simeq 0\},
+$$
+则 $U_F\to X$ 为<span class="link local"><a href="./开嵌入.html" title="开嵌入 [开嵌入]">开子概形</a></span>. 事实上, $U_F$ 是理想 $\operatorname{Ann}(F)$ 对应的<span class="link local"><a href="./闭嵌入.html" title="闭嵌入 [闭嵌入]">闭子概形</a></span>的补空间.</p>
+<p>等价的陈述: 设 $F$ 是概形 $X$ 上的局部有限生成<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>.
+若对于某个域 $k$ 以及态射 $f\colon \operatorname{Spec} k\to X$ 有 $f^*F\simeq 0$,
+则存在仿射<span class="link local"><a href="./开嵌入.html" title="开嵌入 [开嵌入]">开子概形</a></span> $j\colon U\to X$ 包含 $f$ (即 $f$ 穿过 $U$), 使得 $j^*F\simeq 0$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="剩余域"><header><h1><span class="taxon"></span>剩余域 <a class="slug" href="./剩余域.html">[剩余域]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>剩余域有两种不同但有关联的含义.</p>

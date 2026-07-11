@@ -835,10 +835,13 @@
 <p>对于<span class="link local"><a href="./正则基数.html" title="正则基数 [正则基数]">正则基数</a></span> $\kappa$ (通常取为 $\aleph_0$, 见<span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成范畴</a></span>), 称满足如下等价条件的范畴 $\mathcal C$ 为 $\kappa$-可表现范畴:</p>
 <ul>
 <li>$\mathcal C$ 余完备, 且有一族 <span class="link local"><a href="./可表现对象.html" title="可表现对象 [可表现对象]">$\kappa$-可表现对象</a></span>构成的集合, 在 <span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">$\kappa$-滤余极限</a></span>下生成整个范畴.</li>
-<li>$\mathcal C$ 等价于一个小范畴的 <span class="link local"><a href="./Ind范畴.html" title=" [Ind范畴]">$\kappa$-Ind 范畴</a></span>.</li>
+<li>$\mathcal C$ 等价于一个具有 $\kappa$-<span class="link local"><a href="./有限范畴.html" title="有限范畴 [有限范畴]">小</a></span>余极限的小范畴的 <span class="link local"><a href="./Ind范畴.html" title=" [Ind范畴]">$\kappa$-Ind 范畴</a></span>.</li>
 </ul>
-<p>称 $\mathcal C$ 为可表现范畴是指存在一个基数 $\kappa$, $\mathcal C$ 为 $\kappa$-可表现范畴.</p>
-<p>等价的定义是: 有一个小范畴到 $\mathcal C$ 的函子 $j\colon \mathcal S\hookrightarrow\mathcal C$, 使得米田扩张 $\mathsf{Psh}(\mathcal S) \to \mathcal C$ 是预层范畴 $\mathsf{Psh}(\mathcal S)$ 关于某个小态射族 $W \subset \mathsf{Fun}([1],\mathsf{Psh}(\mathcal S))$ 的局部化.</p>
+<p>称 $\mathcal C$ 为<strong>可表现范畴</strong>是指如下等价条件成立:</p>
+<ul>
+<li>存在一个正则基数 $\kappa$, 使得 $\mathcal C$ 为 $\kappa$-可表现范畴.</li>
+<li>有一个小范畴到 $\mathcal C$ 的函子 $j\colon \mathcal S\hookrightarrow\mathcal C$, 使得米田扩张 $\mathsf{Psh}(\mathcal S) \to \mathcal C$ 是预层范畴 $\mathsf{Psh}(\mathcal S)$ 关于某个小态射族 $W \subset \mathsf{Fun}([1],\mathsf{Psh}(\mathcal S))$ 的局部化.</li>
+</ul>
 <p>可表现范畴以及保持余极限的函子构成的范畴记为 $\mathsf{Pr}^{\mathrm{L}}$, 其中 $\mathrm{L}$ 的含义是这些函子是左伴随 (<span class="link local"><a href="./伴随函子定理.html" title="伴随函子定理 [伴随函子定理]">伴随函子定理</a></span>).</p>
 <p>可表现范畴以及保持极限的函子构成的范畴记为 $\mathsf{Pr}^{\mathrm{R}}$. 有
 $$
@@ -880,6 +883,8 @@ $$
 <h3>意象</h3>
 <p>(由<span class="link local"><a href="./景.html" title="景 [景]">景</a></span>表现的) <span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>是可表现范畴.</p>
 <p>其中, 由小范畴 $\mathcal C$ 上的平凡 <span class="link local"><a href="./Grothendieck拓扑.html" title="Grothendieck 拓扑 [Grothendieck拓扑]">Grothendieck 拓扑</a></span>表现的意象, 也即<span class="link local"><a href="./预层意象.md.html" title=" [预层意象.md]">预层意象</a></span> $\mathsf{Fun}(\mathcal C ^{\mathrm{op}},\mathsf{Ani})$, 是 $\mathcal C$ 生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>可表现范畴.</p>
+<h3>代数理论的模型的范畴</h3>
+<p>见<span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成范畴</a></span>.</p>
 <h2>相关概念</h2>
 <h3>带有代数结构的范畴</h3>
 <p>若 $\mathcal C$ 为可表现<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $A$ 为其中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>, 则<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>范畴 $\mathsf{Mod}(A)$ 为可表现<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>.</p>
@@ -962,6 +967,21 @@ $$
 <li>$\mathcal C$ 中的<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>无交 (即 $X + Y$ 的子对象 $X$ 与 $Y$ 的交为<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span> $0$);</li>
 <li>$\mathcal C$ 中的<span class="link local"><a href="./群胚对象.html" title="群胚对象 (∞-范畴论) [群胚对象]">群胚对象</a></span>均有效, 即等价于商映射的 <span class="link local"><a href="./Čech脉.html" title="Čech 脉 [Čech脉]">Čech 脉</a></span>.</li>
 </ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="Lawvere理论"><header><h1><span class="taxon"></span>Lawvere 理论 <a class="slug" href="./Lawvere理论.html">[Lawvere理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./逻辑.html" title="逻辑 [逻辑]">逻辑</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>语法范畴</h3>
+<p>Lawvere 理论的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>是满足如下条件的范畴 $\mathcal T$:</p>
+<ul>
+<li>$\mathcal T$ 具有有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>;</li>
+<li>$\mathcal T$ 有一个对象 $x$, 使得所有对象都同构于某个 $x^n$ ($n$ 为自然数).</li>
+</ul>
+<h2>性质</h2>
+<h3>由模型的范畴恢复</h3>
+<p>对于 Lawvere 理论 $\mathcal T$, 其在 $\mathsf{Set}$ (或 $\mathsf{Ani}$) 中的模型的范畴 $\mathsf{Mod}(\mathcal T)$ 可以恢复出 $\mathcal T$ 本身.</p>
+<p>具体地, 给定<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span> $\mathcal C$ 以及其中的一个对象 $\mathbf{1}$, 满足 $\operatorname{Hom}(\mathbf{1},-)\colon \mathcal C\to\mathsf{Set}$ <span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守</a></span>且保持<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>. 令 $\mathcal T$ 为 $\mathcal C$ 中的对象 $\mathbf{1}^{\sqcup n}\,(n\geq 0)$ (“有限生成自由对象”) 构成的全子范畴, 那么 $\mathcal C\simeq\mathsf{Mod}(\mathcal T)$.</p>
+<p>这是一件不寻常的事情: 一般的一阶理论不能由它在 $\mathsf{Set}$ 中的模型恢复出来.</p>
+<h2>例</h2>
+<p>见<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Sp"><header><h1><span class="taxon"></span>Sp <a class="slug" href="./Sp.html">[Sp]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴 $\mathsf{Sp}$ 是最基本的<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>, 是<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 的<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>
 $$
@@ -1453,6 +1473,16 @@ $$</p>
 <p>另一方面, $\mathcal V$-充实范畴也可自由地生成 $\mathcal V$-模: 对于 $\mathcal V$-充实范畴 $\mathcal A$, 其上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>的范畴, 也即 $\mathcal A$-<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">右模</a></span>的范畴 $\mathsf{Fun}(\mathcal A^{\mathrm{op}},\mathcal V)$ 是其自由生成的 $\mathcal V$-模.</p>
 <p>充实范畴与模的关系用在了<span class="link local"><a href="./高阶可表现范畴.html" title="高阶可表现范畴 [高阶可表现范畴]">高阶可表现范畴</a></span>的基本定义中.</p>
 <h2>相关概念</h2>
+</details></section><section class="block" data-taxon=""><details ><summary id="可表函子"><header><h1><span class="taxon"></span>可表函子 <a class="slug" href="./可表函子.html">[可表函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>可表函子是<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span>的像. 对于范畴 $\mathcal C$ 的对象 $X$,</p>
+<ul>
+<li>称函子 $\mathbf{y}(X):=\operatorname{Hom}(-,X)\colon \mathcal C^{\mathrm{op}} \to \mathsf{Set}$ 为对象 $X$ <strong>表示</strong>的函子;</li>
+<li>称函子 $\operatorname{Hom}(X,-)\colon \mathcal C \to \mathsf{Set}$ 为对象 $X$ <strong>余表示</strong>的函子.</li>
+</ul>
+<h2>性质</h2>
+<h3>可表现范畴上的可表函子</h3>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>, 那么函子 $F\colon \mathcal C^{\mathrm{op}} \to \mathsf{Set}$ 可表当且仅当其保持极限; 换言之, $F$ 将 $\mathcal C$ 中的余极限变为 $\mathsf{Set}$ 中的极限. 该性质与<span class="link local"><a href="./伴随函子定理.html" title="伴随函子定理 [伴随函子定理]">伴随函子定理</a></span>有关.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="对称序列"><header><h1><span class="taxon"></span>对称序列 <a class="slug" href="./对称序列.html">[对称序列]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>对称序列是一种可用于定义<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的结构.</p>
@@ -1544,11 +1574,17 @@ $$
 <p>类似地, <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$(\infty,1)$-意象</a></span>是类似于生象的范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 的范畴, 其内语言提供了处理同伦型的直觉主义语言, 即<span class="link local"><a href="./同伦类型论.html" title="同伦类型论 [同伦类型论]">同伦类型论</a></span>.</p>
 <p>我们甚至可以期待 <span class="link local"><a href="./∞-2-意象.html" title="(∞,2)-意象 [∞-2-意象]">$(\infty,2)$-意象</a></span>提供了 “范畴的范畴” $\mathsf{Cat}$ 的推广, 以及相应的语言.</p>
 <h3>作为几何对象</h3>
+<p>意象虽然按定义是一个范畴, 但从 Grothendieck 开始, 人们都将其想象为一种几何对象. 那个范畴是这个假想的几何对象上的层范畴. 对于意象之间的态射
+$$
+f\colon \mathcal X\to\mathcal Y,
+$$
+其按定义是一对伴随 $f^* \dashv f_*$, 我们也应将其想象为假想的几何对象上层的拉回与推前.</p>
 <blockquote>
 <p>L’objet de la Topologie est l’étude des topos (et non des seuls espaces topologiques).</p>
 <p>拓扑学的目标是研究意象, 而不仅是拓扑空间.</p>
 <p>—— Grothendieck, <span class="link local"><a href="./SGA4.html" title="Théorie des topos et cohomologie étale des schémas [SGA4]">SGA 4</a></span></p>
 </blockquote>
+<p>高阶意象虽然按定义是个高阶范畴, 但它同样可想象为几何对象; 那个范畴是这个假想的几何对象上的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>值 (甚至范畴值) 层的范畴.</p>
 <h3>关于译名 “意象”</h3>
 <p><span class="link local"><a href="./关于译名-意象.html" title="关于译名 “意象” [关于译名-意象]">关于译名“意象“</a></span></p>
 <h2>定义</h2>
@@ -1626,6 +1662,8 @@ $$
 \operatorname{Hom}(Z,Y^X) \simeq \operatorname{Hom}(Z\times X,Y).
 $$</p>
 <p>对象 $X$ 的幂对象 $PX = \Omega^X$ 是幂集的类比, 满足 $\operatorname{Sub}(X\times Y)\simeq \operatorname{Hom}(Y,PX)$, 换言之, $PX$ 是 $\operatorname{Sub}(X\times -)$ 的表示对象.</p>
+<h3>分类意象</h3>
+<p>大致上, 意象上的每种 “结构” 都有一个<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span> $\mathcal K$, 即意象 $\mathcal X$ 上的这种结构等同于态射 $\mathcal X \to \mathcal K$.</p>
 <h2>例</h2>
 <h3>层意象</h3>
 <p><span class="link local"><a href="./层意象.html" title="层意象 [层意象]">层意象</a></span> $\operatorname{Sh}(X)$, “由 $X$ 连续参数化的一族集合”;</p>
@@ -1840,8 +1878,14 @@ $$
 \operatorname{Stab}\colon \mathsf{CAlg}(\mathsf{Pr}) \to \mathsf{CAlg}(\mathsf{Pr}_{\mathrm{st}}).
 $$</p>
 <p>最基本的例子即是 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 上的对称幺半结构.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="紧生成范畴"><header><h1><span class="taxon"></span>紧生成范畴 <a class="slug" href="./紧生成范畴.html">[紧生成范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="紧生成范畴"><header><h1><span class="taxon"></span>紧生成范畴 <a class="slug" href="./紧生成范畴.html">[紧生成范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>紧生成范畴通常是指 <span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">$\aleph_0$-可表现范畴</a></span>.</p>
+<h2>性质</h2>
+<h3>Ind-范畴</h3>
+<p>紧生成范畴 $\mathcal C$ 是其紧对象的范畴的 <span class="link local"><a href="./ind-对象.html" title="ind-对象 [ind-对象]">ind-范畴</a></span>.</p>
+<h2>例</h2>
+<h3>代数理论的模型的范畴</h3>
+<p>设 $\mathbb T$ 为<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>或<span class="link local"><a href="./本质代数理论.html" title="本质代数理论 [本质代数理论]">本质代数理论</a></span>, 则其在 $\mathsf{Set}$ (或 $\mathsf{Ani}$) 中的模型的范畴是紧生成范畴.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="结合代数上的模"><header><h1><span class="taxon"></span>结合代数上的模 <a class="slug" href="./结合代数上的模.html">[结合代数上的模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 可视为单对象<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span> $\mathbf{B}A$; 在这种意义上, 结合代数上的模可以推广为<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">充实范畴上的模</a></span>或者<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>:

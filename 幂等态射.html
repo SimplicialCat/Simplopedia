@@ -850,9 +850,26 @@ $$
 <p>有明显的函子 $\mathsf{Idem} \to \mathsf{Ret}$.</p>
 <p>若函子 $\mathsf{Idem} \to \mathcal C$ (对应幂等态射 $f\colon X\to X$) 可延拓为 $\mathsf{Ret} \to \mathcal C$, 则称该幂等态射<strong>分裂</strong> (split).</p>
 <p><strong>命题</strong>. 一个幂等态射分裂, 当且仅当对应的函子 $\mathsf{Idem} \to \mathcal C$ 存在<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>或<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>; 此时极限和余极限都是同一个对象, 即 $y\in\mathsf{Ret}$ 在 $\mathcal C$ 中的像.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="幂等完备范畴"><header><h1><span class="taxon"></span>幂等完备范畴 <a class="slug" href="./幂等完备范畴.html">[幂等完备范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="幂等完备范畴"><header><h1><span class="taxon"></span>幂等完备范畴 <a class="slug" href="./幂等完备范畴.html">[幂等完备范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设 $f\colon X\to X$ 为<span class="link local"><a href="./幂等态射.html" title="幂等态射 [幂等态射]">幂等态射</a></span>, 若存在子对象 $i\colon X\to Y$ 以及收缩 $r\colon X\to Y$ 使得 $f=ir$, 则称 $f$ 分裂. 所有幂等态射都分裂的范畴称为幂等完备范畴, 又称 Cauchy 完备范畴.</p>
+<p>一个等价的定义是, 范畴 $\mathcal C$ 幂等完备当且仅当<span class="link local"><a href="./预层意象.html" title="预层意象 [预层意象]">预层范畴</a></span>中的<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>关于<span class="link local"><a href="./收缩.html" title="收缩 [收缩]">收缩</a></span>封闭.</p>
 <h3>幂等完备化</h3>
-<p>对于小范畴 $\mathcal C$, 定义 $\overline{\mathcal C}$ 为 $\widehat {\mathcal C}$ 中可表函子的收缩构成的全子范畴, 则 $\overline{\mathcal C}$ 为幂等完备范畴. 见<span class="link local"><a href="./幂等完备化.html" title="幂等完备化 [幂等完备化]">幂等完备化</a></span>.</p>
+<p>对于小范畴 $\mathcal C$, 定义 $\overline{\mathcal C}$ 为 $\widehat {\mathcal C}$ 中可表函子的<span class="link local"><a href="./收缩.html" title="收缩 [收缩]">收缩</a></span>构成的全子范畴, 则 $\overline{\mathcal C}$ 为幂等完备范畴. 见<span class="link local"><a href="./幂等完备化.html" title="幂等完备化 [幂等完备化]">幂等完备化</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="有限范畴"><header><h1><span class="taxon"></span>有限范畴 <a class="slug" href="./有限范畴.html">[有限范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>归纳定义</h3>
+<p>如下条件归纳定义了有限范畴.</p>
+<ul>
+<li>空范畴 $\varnothing$, 终范畴 $1$, 以及一个箭头 $\bullet \to \bullet$ 都是有限范畴;</li>
+<li>有限范畴的<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>为有限范畴;</li>
+<li>有限范畴的有限<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>为有限范畴.</li>
+</ul>
+<h2>例</h2>
+<p>注意有限范畴的概念在不同范畴语境中不同:</p>
+<ul>
+<li>有限群的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>如 $\mathbf {B}\mathbb{Z}/2$, 在 $(1,1)$-范畴语境中是有限范畴, 而在 $(\infty,1)$-范畴语境中不是有限范畴.</li>
+<li>游走的<span class="link local"><a href="./幂等态射.html" title="幂等态射 [幂等态射]">幂等自同态</a></span> $\mathsf{Idem}$ 在 $(1,1)$-范畴语境中是有限范畴, 而在 $(\infty,1)$-范畴语境中不是有限范畴.</li>
+<li>$S^1=\mathbf{B}\mathbb{Z}$ 在 $(1,1)$-范畴语境中不是有限范畴, 而在 $(\infty,1)$-范畴语境中是有限范畴.</li>
+</ul>
 </details></section></details></section></footer></article></div></body></html>

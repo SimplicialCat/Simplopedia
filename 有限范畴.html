@@ -825,7 +825,7 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon=""><details open><summary id="有限范畴"><header><h1><span class="taxon"></span>有限范畴 <a class="slug" href="./有限范畴.html">[有限范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<article><section class="block" data-taxon=""><details open><summary id="有限范畴"><header><h1><span class="taxon"></span>有限范畴 <a class="slug" href="./有限范畴.html">[有限范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>归纳定义</h3>
 <p>如下条件归纳定义了有限范畴.</p>
@@ -835,7 +835,12 @@
 <li>有限范畴的有限<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>为有限范畴.</li>
 </ul>
 <h2>例</h2>
-<p>注意, 有限群的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>如 $\mathbf {B}\mathbb{Z}/2$, 在 $1$-范畴语境中是有限范畴, 而在 $\infty$-范畴语境中不是有限范畴.</p>
+<p>注意有限范畴的概念在不同范畴语境中不同:</p>
+<ul>
+<li>有限群的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>如 $\mathbf {B}\mathbb{Z}/2$, 在 $(1,1)$-范畴语境中是有限范畴, 而在 $(\infty,1)$-范畴语境中不是有限范畴.</li>
+<li>游走的<span class="link local"><a href="./幂等态射.html" title="幂等态射 [幂等态射]">幂等自同态</a></span> $\mathsf{Idem}$ 在 $(1,1)$-范畴语境中是有限范畴, 而在 $(\infty,1)$-范畴语境中不是有限范畴.</li>
+<li>$S^1=\mathbf{B}\mathbb{Z}$ 在 $(1,1)$-范畴语境中不是有限范畴, 而在 $(\infty,1)$-范畴语境中是有限范畴.</li>
+</ul>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="lim-colim"><header><h1><span class="taxon"></span>极限与余极限交换 <a class="slug" href="./lim-colim.html">[lim-colim]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>陈述</h2>
 <p>在 $\mathsf{Set}$ 或 $\mathsf{Ani}$ 中, 对指标范畴 $I,J$ 以及一族对象 $X_{i,j}$, 有自然的映射
@@ -880,9 +885,83 @@ $$
 \operatorname{colim}_{j\in J}\operatorname{lim}_{i\in I}F(i,j) = 1.
 $$
 这说明存在 $j\in J$ 使得 $\operatorname{lim}_{i\in I}F(i,j)$ 至少存在一个元素. 而 $\operatorname{lim}_{i\in I}F(i,j)$ 的元素等同于 $X$ 上的余锥, 故结论成立.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="有限极限"><header><h1><span class="taxon"></span>有限极限 <a class="slug" href="./有限极限.html">[有限极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="可表现范畴"><header><h1><span class="taxon"></span>可表现范畴 <a class="slug" href="./可表现范畴.html">[可表现范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>可表现范畴</strong> $\mathcal C$ 是一个可能很大的范畴, 却能由较小的一族对象 $\mathcal S\hookrightarrow\mathcal C$ 控制.
+此时, $\mathcal C$ 可<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>为预层范畴 $\mathsf{Psh}(\mathcal S)$ 的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>.</p>
+<p><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中的许多结论依赖于范畴的可表现性, 例如<span class="link local"><a href="./伴随函子定理.html" title="伴随函子定理 [伴随函子定理]">伴随函子定理</a></span>, 以及刻画<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的 <span class="link local"><a href="./Giraud公理.html" title="Giraud 公理 [Giraud公理]">Giraud 公理</a></span>.</p>
+<p>另一种重要的观点: 从<span class="link local"><a href="./范畴逻辑.html" title="范畴逻辑 [范畴逻辑]">范畴逻辑学</a></span>的角度, 可表现范畴是<span class="link local"><a href="./本质代数理论.html" title="本质代数理论 [本质代数理论]">本质代数理论</a></span>的<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">模型</a></span>的范畴.</p>
+<h2>定义</h2>
+<p>对于<span class="link local"><a href="./正则基数.html" title="正则基数 [正则基数]">正则基数</a></span> $\kappa$ (通常取为 $\aleph_0$, 见<span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成范畴</a></span>), 称满足如下等价条件的范畴 $\mathcal C$ 为 $\kappa$-可表现范畴:</p>
+<ul>
+<li>$\mathcal C$ 余完备, 且有一族 <span class="link local"><a href="./可表现对象.html" title="可表现对象 [可表现对象]">$\kappa$-可表现对象</a></span>构成的集合, 在 <span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">$\kappa$-滤余极限</a></span>下生成整个范畴.</li>
+<li>$\mathcal C$ 等价于一个具有 $\kappa$-<span class="link local"><a href="./有限范畴.html" title="有限范畴 [有限范畴]">小</a></span>余极限的小范畴的 <span class="link local"><a href="./Ind范畴.html" title=" [Ind范畴]">$\kappa$-Ind 范畴</a></span>.</li>
+</ul>
+<p>称 $\mathcal C$ 为<strong>可表现范畴</strong>是指如下等价条件成立:</p>
+<ul>
+<li>存在一个正则基数 $\kappa$, 使得 $\mathcal C$ 为 $\kappa$-可表现范畴.</li>
+<li>有一个小范畴到 $\mathcal C$ 的函子 $j\colon \mathcal S\hookrightarrow\mathcal C$, 使得米田扩张 $\mathsf{Psh}(\mathcal S) \to \mathcal C$ 是预层范畴 $\mathsf{Psh}(\mathcal S)$ 关于某个小态射族 $W \subset \mathsf{Fun}([1],\mathsf{Psh}(\mathcal S))$ 的局部化.</li>
+</ul>
+<p>可表现范畴以及保持余极限的函子构成的范畴记为 $\mathsf{Pr}^{\mathrm{L}}$, 其中 $\mathrm{L}$ 的含义是这些函子是左伴随 (<span class="link local"><a href="./伴随函子定理.html" title="伴随函子定理 [伴随函子定理]">伴随函子定理</a></span>).</p>
+<p>可表现范畴以及保持极限的函子构成的范畴记为 $\mathsf{Pr}^{\mathrm{R}}$. 有
+$$
+\mathsf{Pr}^{\mathrm{R}} \simeq (\mathsf{Pr}^{\mathrm{L}})^{\mathrm{op}}.
+$$</p>
+<p>有这样一种观点: “范畴” 与 “可表现范畴” 可以是处于平等地位的两个概念, 每个都可以视为另一个的特殊情况, 但是嵌套会使得<span class="link local"><a href="./宇宙.html" title="宇宙 [宇宙]">宇宙</a></span>变大.</p>
+<h2>性质</h2>
+<h3>张量积</h3>
+<p>可表现范畴的范畴 $\mathsf{Pr}$ 上有一个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>结构, 称为 <strong>Lurie 张量积</strong>.</p>
+<p><strong>命题-定义</strong>. 对于可表现范畴 $\mathcal C,\mathcal D$, 存在万有的可表现范畴 $\mathcal C\otimes\mathcal D$, 带有一个双线性 (即保持每个分量的余极限) 的函子
+$$
+\mathcal C\times \mathcal D \to \mathcal C\otimes\mathcal D.
+$$</p>
+<p>可表现范畴的张量积的单位是 <span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">$\mathsf{Ani}$</a></span>.</p>
+<h3>极限</h3>
+<p>可表现范畴的极限即是其作为范畴的极限. 换言之, 遗忘函子 $\mathsf{Pr}^{\mathrm{L}} \to \mathsf{Cat}$ 保持极限.</p>
+<h3>余极限</h3>
+<p>可表现范畴的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>, <strong>不是</strong>其作为范畴的余极限; 但可以如下计算: 图表
+$X\colon I \to \mathsf{Pr}^{\mathrm{L}}$
+给出 $X^{\mathrm{op}}\colon I^{\mathrm{op}} \to \mathsf{Pr}^{\mathrm{R}}$, 而其余极限可计算为
+$$
+\operatorname{colim}^{\mathsf{Pr}^{\mathrm{L}}}X = \operatorname{lim}^{\mathsf{Pr}^{\mathrm{R}}}X^{\mathrm{op}}= \operatorname{lim}^{\mathsf{Cat}} X^{\mathrm{op}}.
+$$
+换言之, <span class="link local"><a href="./自由-遗忘伴随.md.html" title=" [自由-遗忘伴随.md]">遗忘</a></span>函子 $\mathsf{Pr}^{\mathrm{R}} \to\mathsf{Cat}$ 保持极限.</p>
+<p>对于指标范畴的代换 $I\to J$, 有如下伴随.
+$$
+\begin{array}{ccc}
+\operatorname{colim}_{i\in I}X_i &amp; = &amp; \operatorname{lim}_{i\in I^{\mathrm{op}}}X_i \\
+\downarrow &amp; \dashv &amp; \uparrow \\
+\operatorname{colim}_{j\in J}X_j &amp; = &amp; \operatorname{lim}_{j\in J^{\mathrm{op}}}X_j
+\end{array}
+$$</p>
+<p><strong>例</strong>. 对任意集合 $I$, 可表现范畴的 $I$-<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>实际上等同于可表现范畴的积, 也等同于其作为范畴的积:
+$$
+\coprod_{i\in I}^{\mathsf{Pr}^{\mathrm{L}}} \mathcal C_i \overset{\simeq}{\to} \prod_{i\in I}^{\mathsf{Cat}} \mathcal C_i \simeq \prod_{i\in I}^{\mathsf{Pr}^{\mathrm{L}}} \mathcal C_i.
+$$
+这是一个重要的性质, 称为<strong>半加性</strong> (semiadditivity).</p>
+<h2>例</h2>
+<h3>意象</h3>
+<p>(由<span class="link local"><a href="./景.html" title="景 [景]">景</a></span>表现的) <span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>是可表现范畴.</p>
+<p>其中, 由小范畴 $\mathcal C$ 上的平凡 <span class="link local"><a href="./Grothendieck拓扑.html" title="Grothendieck 拓扑 [Grothendieck拓扑]">Grothendieck 拓扑</a></span>表现的意象, 也即<span class="link local"><a href="./预层意象.md.html" title=" [预层意象.md]">预层意象</a></span> $\mathsf{Fun}(\mathcal C ^{\mathrm{op}},\mathsf{Ani})$, 是 $\mathcal C$ 生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>可表现范畴.</p>
+<h3>代数理论的模型的范畴</h3>
+<p>见<span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成范畴</a></span>.</p>
+<h2>相关概念</h2>
+<h3>带有代数结构的范畴</h3>
+<p>若 $\mathcal C$ 为可表现<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $A$ 为其中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>, 则<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>范畴 $\mathsf{Mod}(A)$ 为可表现<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>.</p>
+<p>相关讲义: <span class="link local"><a href="./notes-Gestalten-Cat.html" title="Gestalten - 在范畴上做代数 [notes-Gestalten-Cat]">Gestalten - 在范畴上做代数</a></span></p>
+<h3>高阶可表现范畴</h3>
+<p>见<span class="link local"><a href="./高阶可表现范畴.html" title="高阶可表现范畴 [高阶可表现范畴]">高阶可表现范畴</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="有限极限"><header><h1><span class="taxon"></span>有限极限 <a class="slug" href="./有限极限.html">[有限极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>有限极限是以<span class="link local"><a href="./有限范畴.html" title="有限范畴 [有限范畴]">有限范畴</a></span>为指标范畴的<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>.</p>
+<h2>性质</h2>
+<p>由于 $(1,1)$-范畴和 $(\infty,1)$-范畴语境中 “有限” 的定义有些冲突, 需要小心地定义有限极限的存在性. 但如下性质让事情变得简单:</p>
+<p><strong>命题</strong>. 对任意有限 $(\infty,1)$-范畴 $\mathcal K$, 存在有限<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span> $\mathcal J$ 以及<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首函子</a></span> $\mathcal J\to\mathcal K$.</p>
+<p>因此对于 $(\infty,1)$-范畴 $\mathcal C$, 如下条件等价:</p>
+<ul>
+<li>$\mathcal C$ 具有有限极限;</li>
+<li>$\mathcal C$ 具有以有限偏序集为指标的有限极限.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="滤范畴"><header><h1><span class="taxon"></span>滤范畴 <a class="slug" href="./滤范畴.html">[滤范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>滤范畴是满足如下等价条件的范畴 $\mathcal C$:</p>

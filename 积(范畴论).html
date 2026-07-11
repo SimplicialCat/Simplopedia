@@ -863,7 +863,7 @@ $$
 每个 <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>都是 Heyting 代数, 反之则不然.</p>
 <h2>参考资料</h2>
 <p><span class="link local"><a href="./盲人摸象.html" title="盲人摸象 [盲人摸象]">盲人摸象</a></span> 1.3 节</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="Lawvere理论"><header><h1><span class="taxon"></span>Lawvere 理论 <a class="slug" href="./Lawvere理论.html">[Lawvere理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="Lawvere理论"><header><h1><span class="taxon"></span>Lawvere 理论 <a class="slug" href="./Lawvere理论.html">[Lawvere理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./逻辑.html" title="逻辑 [逻辑]">逻辑</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>语法范畴</h3>
 <p>Lawvere 理论的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>是满足如下条件的范畴 $\mathcal T$:</p>
@@ -871,6 +871,11 @@ $$
 <li>$\mathcal T$ 具有有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>;</li>
 <li>$\mathcal T$ 有一个对象 $x$, 使得所有对象都同构于某个 $x^n$ ($n$ 为自然数).</li>
 </ul>
+<h2>性质</h2>
+<h3>由模型的范畴恢复</h3>
+<p>对于 Lawvere 理论 $\mathcal T$, 其在 $\mathsf{Set}$ (或 $\mathsf{Ani}$) 中的模型的范畴 $\mathsf{Mod}(\mathcal T)$ 可以恢复出 $\mathcal T$ 本身.</p>
+<p>具体地, 给定<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span> $\mathcal C$ 以及其中的一个对象 $\mathbf{1}$, 满足 $\operatorname{Hom}(\mathbf{1},-)\colon \mathcal C\to\mathsf{Set}$ <span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守</a></span>且保持<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>. 令 $\mathcal T$ 为 $\mathcal C$ 中的对象 $\mathbf{1}^{\sqcup n}\,(n\geq 0)$ (“有限生成自由对象”) 构成的全子范畴, 那么 $\mathcal C\simeq\mathsf{Mod}(\mathcal T)$.</p>
+<p>这是一件不寻常的事情: 一般的一阶理论不能由它在 $\mathsf{Set}$ 中的模型恢复出来.</p>
 <h2>例</h2>
 <p>见<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="PROP"><header><h1><span class="taxon"></span>PROP <a class="slug" href="./PROP.html">[PROP]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -970,7 +975,7 @@ $$
 $$
 \mathsf{CAlg}(\mathsf{Mod}_{\mathcal C}(A)) \simeq \mathsf{CAlg}(\mathcal C)_{A/}.
 $$</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="代数理论"><header><h1><span class="taxon"></span>代数理论 <a class="slug" href="./代数理论.html">[代数理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="代数理论"><header><h1><span class="taxon"></span>代数理论 <a class="slug" href="./代数理论.html">[代数理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./逻辑.html" title="逻辑 [逻辑]">逻辑</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>代数</strong>的最初意义是对运算与等式的研究. 一个<strong>代数理论</strong>就是若干种运算和这些运算之间的若干条等式. 代数理论的<strong>模型</strong>就是一个集合 (或一般范畴的对象) 上带有指定的运算, 满足指定的等式.</p>
 <p>一种更抽象的视角是, 运算和等式不过是一个具有有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">乘积</a></span> (<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>) 的范畴的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 故代数理论可 “无坐标” 式地定义为这样的一个范畴, 这个范畴就是它的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>. 而该理论的模型则是语法范畴到 $\mathsf{Set}$ (或一般范畴) 的保持结构的函子.</p>
@@ -991,7 +996,7 @@ $$</p>
 <h3>通过语法范畴</h3>
 <p>一个代数理论 (的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>) 是一个具有有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>的范畴 $\mathcal T$.</p>
 <p>若范畴 $\mathcal T$ 中有一个对象 $x$ 使得每个对象都形如 $x^n$ ($n\in\mathbb{N}_{\geq 0}$), 则称之为<strong>单类型</strong> (simgle-sorted) 代数理论.</p>
-<p>(单类型) 代数理论有时又称为 <strong></strong><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>.</p>
+<p>单类型代数理论又称为 <strong></strong><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>.</p>
 <h2>例</h2>
 <h3>幺半群</h3>
 <p>幺半群指的是<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span>中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 它是一种非常有代表性的代数理论.</p>

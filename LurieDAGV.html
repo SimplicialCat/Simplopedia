@@ -836,7 +836,7 @@
       url={https://arxiv.org/abs/0905.0459}, 
 }
 </code></pre>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="几何"><header><h1><span class="taxon"></span>几何 <a class="slug" href="./几何.html">[几何]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="geometry-DAGV"><header><h1><span class="taxon"></span>几何 (带结构的意象) <a class="slug" href="./geometry-DAGV.html">[geometry-DAGV]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本页介绍 Lurie 的 <span class="link local"><a href="./LurieDAGV.html" title="Derived Algebraic Geometry V: Structured Spaces [LurieDAGV]">DAG V</a></span> 描绘的 “几何” 图景. 加入了一些个人的见解.</p>
 <p>几何学的各个分支研究的<span class="link local"><a href="./概形.html" title="概形 [概形]">经典概形</a></span>, <span class="link local"><a href="./叠.html" title="叠 [叠]">Deligne–Mumford 叠</a></span>, 流形, 复解析流形, <span class="link local"><a href="./导出概形.html" title="导出概形 [导出概形]">导出概形</a></span>等等不同几何对象, 都可以描述为某种带结构的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $(\mathcal X,\mathcal O_{\mathcal X})$, 类比于<span class="link local"><a href="./局部环化空间.html" title="局部环化空间 [局部环化空间]">局部环化空间</a></span>. 从<span class="link local"><a href="./范畴逻辑.html" title="范畴逻辑 [范畴逻辑]">范畴逻辑</a></span>的角度, 这里的结构 $\mathcal O_{\mathcal X}$ 可以理解为一种<span class="link local"><a href="./本质代数理论.html" title="本质代数理论 [本质代数理论]">本质代数结构</a></span>加上一些 “局部性” (见后文). 同时, 这些结构可用<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span>描述: 一个结构就是一个意象态射 $\mathcal X \to \mathcal K$. 每种结构就是一种<strong>几何</strong>.</p>
 <h2>结构层</h2>
@@ -949,4 +949,21 @@ $$
 <h2>光滑性</h2>
 <h3>预几何</h3>
 <p>上面说的 “几何” 都是所谓 “导出” 几何, 为了表达由 “经典” 几何过渡到 “导出” 几何的过程还需要<strong>预几何</strong> (pregeometry) 的概念. 预几何与最终的几何之间的区别在于<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断度</a></span>从 $0$ 到 $\infty$, 例如经典<span class="link local"><a href="./代数几何.html" title="代数几何 [代数几何]">代数几何</a></span>的截断度为 $0$, <span class="link local"><a href="./导出代数几何.html" title="导出代数几何 [导出代数几何]">导出代数几何</a></span>的截断度为 $\infty$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="higherZar"><header><h1><span class="taxon"></span>高阶 Zariski 几何 <a class="slug" href="./higherZar.html">[higherZar]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文是 <span class="link local"><a href="./ABCSS25.html" title="Higher Zariski Geometry [ABCSS25]">ABCSS25</a></span> 的阅读笔记. 在 <span class="link local"><a href="./LurieDAGV.html" title="Derived Algebraic Geometry V: Structured Spaces [LurieDAGV]">Lurie DAG V</a></span> 的基础上, 建立局部 $2$-环化意象以及相应的 Zariski 谱等概念.</p>
+<p>用 “$2$-环” 来指代<span class="link local"><a href="./幂等完备范畴.html" title="幂等完备范畴 [幂等完备范畴]">幂等完备</a></span>的<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 记 $2$-环的范畴为 $2\mathsf{CAlg}$. 这是一个非常广泛的范畴, 包括了代数几何中许多对象:</p>
+<ul>
+<li><span class="link local"><a href="./拟紧概形.html" title="拟紧概形 [拟紧概形]">qc</a></span><span class="link local"><a href="./拟分离概形.html" title="拟分离概形 [拟分离概形]">qs</a></span> <span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span> $X$ 上的完美导出范畴 $\mathsf{Perf}_X$;</li>
+<li><span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 及其变体 (等变, 母题);</li>
+<li>非交换几何中的 Kasparov 可分 <span class="link local"><a href="./C-星代数.html" title="C*-代数 [C-星代数]">$C^*$-代数</a></span>范畴;</li>
+<li>Kontsevich 同调镜像对称猜想中的 Fukaya 范畴.</li>
+</ul>
+<p>这篇文章定义了局部 $2$-环化空间, 建立了如下伴随:
+$$
+\operatorname{Spec}\colon 2\mathsf{CAlg} \rightleftarrows \mathsf{Loc}2\mathsf{RingSp}^{\mathrm{op}} \colon \Gamma,
+$$
+其中右伴随部分 $\Gamma$ 是取整体截面的 $2$-环.
+并且左伴随部分 $\operatorname{Spec}$ 在<span class="link local"><a href="./刚性幺半范畴.html" title="刚性幺半范畴 [刚性幺半范畴]">刚性</a></span> $2$-环的子范畴上是全忠实的; 特别地, 每个刚性 $2$-环 $\mathcal K$ 都等同于 $\operatorname{Spec}\mathcal K$ 上的结构层的整体截面的 $2$-环.</p>
+<h2>2-环的范畴</h2>
+<p>记 $\mathsf{Cat}^{\mathrm{perf}}$ 为</p>
 </details></section></details></section></footer></article></div></body></html>
