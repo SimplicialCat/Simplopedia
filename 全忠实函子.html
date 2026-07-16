@@ -973,10 +973,38 @@ $$
 $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="保守函子"><header><h1><span class="taxon"></span>保守函子 <a class="slug" href="./保守函子.html">[保守函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p><strong>保守函子</strong> (conservative functor) 是<span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映同构</a></span>的函子.</p>
+<p><strong>保守函子</strong> (conservative functor) 是<span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映同构</a></span>的函子. 换言之, 保守函子 $F\colon \mathcal C\to\mathcal D$ 满足任意如下的方块都有提升:
+$$
+\begin{array}{ccc}
+\Delta^1 &amp; \rightarrow &amp; \mathcal C \\
+\downarrow &amp;  &amp; \downarrow \\
+\Delta^0 &amp; \rightarrow &amp; \mathcal D
+\end{array}
+$$</p>
 <h2>例</h2>
 <p><span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>为保守函子.</p>
 <p><span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘函子</a></span> $\mathsf{Grp}\to\mathsf{Set}$ 为保守函子. 对任何<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>乃至<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>都是如此.</p>
+<h2>性质</h2>
+<p>保守函子具有关于<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>的<span class="link local"><a href="./提升性质.html" title="提升性质 [提升性质]">右提升性质</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="单射"><header><h1><span class="taxon"></span>单射 <a class="slug" href="./单射.html">[单射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>生象</h3>
+<p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的单射就是 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>映射. 映射 $f\colon Y\to X$ 是单射, 当且仅当它是 $X$ 的若干连通分支的含入.</p>
+<h3>一般范畴</h3>
+<p>定义一般范畴 $\mathcal C$ 中的态射 $f\colon X\to Y$ 是单射当且仅当对任意对象 $X\in\mathcal C$,
+$$
+\operatorname{Hom}_{\mathcal C}(Z,X) \to \operatorname{Hom}_{\mathcal C}(Z,Y)
+$$
+是单射.</p>
+<p>参见 <span class="link local"><a href="./AyalaFrancisRozenblyumI.html" title="Factorization homology I: higher categories [AyalaFrancisRozenblyumI]">Ayala–Francis–Rozenblyum</a></span> 5.1 节.</p>
+<h2>例</h2>
+<h3>范畴的范畴</h3>
+<p>范畴的范畴 <span class="link local"><a href="./Cat.html" title="范畴的范畴 [Cat]">$\mathsf{Cat}$</a></span> 中的单射是满足如下条件的函子 $F\colon \mathcal C\to\mathcal D$:</p>
+<ul>
+<li>$F$ 给出<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>的单射 $\mathcal C^{\simeq} \to \mathcal D^{\simeq}$;</li>
+<li>对任意两个对象 $X,Y\in\mathcal C$, 映射 $\operatorname{Hom}_{\mathcal C}(X,Y)\to\operatorname{Hom}_{\mathcal D}(F(X),F(Y))$ 为单射.</li>
+</ul>
+<p>注意, 上述条件比<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>弱.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单纯对象的分裂"><header><h1><span class="taxon"></span>分裂单纯对象 <a class="slug" href="./单纯对象的分裂.html">[单纯对象的分裂]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>记 $\mathrm{surj}(j,k)$ 为单纯集 $\Delta^j$ 到 $\Delta^k$ 的满射的集合.</p>
@@ -1074,7 +1102,8 @@ $$
 不<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="自反子范畴"><header><h1><span class="taxon"></span>自反子范畴 <a class="slug" href="./自反子范畴.html">[自反子范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>自反子范畴, 又称自反<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span> (reflective localization), 是有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>的<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>.</p>
+<p><strong>自反子范畴</strong> (reflective/reflexive subcategory), 又称自反<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span> (reflective localization), 是有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>的<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>.</p>
+<p>对偶地, 有右伴随的全忠实函子称为余自反子范畴.</p>
 <h2>性质</h2>
 <p><strong>命题</strong>. 设 $F\colon \mathcal C\to\mathcal D$, $G\colon \mathcal D\to\mathcal C$,
 有伴随 $F\dashv G$. 如下两条件等价:</p>
@@ -1089,6 +1118,8 @@ $$
 </ul>
 <p><em>证明</em>.</p>
 <p>由对偶性, 只需证明第一个命题. $G$ 为全忠实函子, 当且仅当 $\operatorname{Hom}_{\mathcal D}(-,-)\to \operatorname{Hom}_{\mathcal C}(G-,G-)$ 为同构; 由伴随, 这等价于 $\operatorname{Hom}_{\mathcal D}(-,-)\to \operatorname{Hom}_{\mathcal D}(FG-,-)$ 为同构. 由<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>, 这等价于余单位 $FG \to\mathrm{id}_{\mathcal D}$ 为同构.</p>
+<h3>局部化</h3>
+<p>对于自反子范畴 $g\colon \mathcal D\to\mathcal C$, 设其左伴随为 $f$, 记 $W$ 为 $\mathcal C$ 中所有被 $f$ 变为同构的态射构成的类, 则 $f$ 等同于<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span> $\mathcal C \to \mathcal C[W^{-1}]$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="预层范畴之间的伴随"><header><h1><span class="taxon"></span>预层范畴之间的伴随 <a class="slug" href="./预层范畴之间的伴随.html">[预层范畴之间的伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>预层范畴之间的伴随是<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中十分常见的一种现象, 指的是范畴 $\mathcal C$, $\mathcal D$ 之间的函子诱导的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层范畴</a></span> $\widehat {\mathcal C} = \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set}),\widehat {\mathcal D} = \mathsf{Fun}(\mathcal D^{\mathrm{op}},\mathsf{Set})$ 之间的伴随.</p>

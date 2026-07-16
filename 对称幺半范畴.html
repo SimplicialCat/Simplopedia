@@ -852,6 +852,9 @@
 </ol>
 <p><strong>注</strong>. <span class="link local"><a href="./Azumaya代数.html" title="Azumaya 代数 [Azumaya代数]">Azumaya 代数</a></span>是上述概念 $\mathcal V = \mathsf{Mod}(R)$ 的特殊情形.</p>
 <p><span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">充实范畴上的模</a></span>页面解释了上述定义中涉及的概念. 这些概念都是环上的模与代数的类似概念的推广.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="Balmer谱"><header><h1><span class="taxon"></span>Balmer 谱 <a class="slug" href="./Balmer谱.html">[Balmer谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>环的<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>称为 $2$-环, 大致上是<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span><span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>. 环的<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>在 $2$-环中有一类比, 其中的点是所谓厚张量理想 (thick tensor ideal), 厚的意思是关于 <span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">(余) 纤维</a></span>与<span class="link local"><a href="./收缩.html" title="收缩 [收缩]">收缩</a></span>封闭. 在<span class="link local"><a href="./同伦范畴.html" title="同伦范畴 [同伦范畴]">同伦范畴</a></span>的层面这一概念称为张量三角范畴的 <strong>Balmer 谱</strong>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Day卷积"><header><h1><span class="taxon"></span>Day 卷积 <a class="slug" href="./Day卷积.html">[Day卷积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>设 $\mathcal C,\mathcal D$ 为<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $\mathcal D$ 余完备且 $\otimes_{\mathcal D}$ 保持每个分量的余极限, 则函子范畴 $\mathsf{Fun}(\mathcal C,\mathcal D)$ 上有一个对称幺半范畴结构, 称为 <strong>Day 卷积</strong>.</p>
 <h2>定义</h2>
@@ -1544,8 +1547,44 @@ $$
 $$
 其中右伴随部分 $\Gamma$ 是取整体截面的 $2$-环.
 并且左伴随部分 $\operatorname{Spec}$ 在<span class="link local"><a href="./刚性幺半范畴.html" title="刚性幺半范畴 [刚性幺半范畴]">刚性</a></span> $2$-环的子范畴上是全忠实的; 特别地, 每个刚性 $2$-环 $\mathcal K$ 都等同于 $\operatorname{Spec}\mathcal K$ 上的结构层的整体截面的 $2$-环.</p>
-<h2>2-环的范畴</h2>
-<p>记 $\mathsf{Cat}^{\mathrm{perf}}$ 为</p>
+<h2>2-环</h2>
+<p>记 $\mathsf{Cat}^{\mathrm{perf}}$ 为<span class="link local"><a href="./幂等完备范畴.html" title="幂等完备范畴 [幂等完备范畴]">幂等完备</a></span>的小<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>与正合函子构成的范畴, $\mathsf{Pr}_{\omega,\mathrm{st}}$ 为<span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成</a></span> (又叫有限表现) 稳定范畴与保持<span class="link local"><a href="./紧对象.html" title="紧对象 [紧对象]">紧对象</a></span>且保持<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>的函子构成的范畴. 那么两者作为<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>有等价
+$$
+\mathsf{Ind}\colon \mathsf{Cat}^{\mathrm{perf}} \rightleftarrows\mathsf{Pr}_{\omega,\mathrm{st}} \colon (-)^{\omega}.
+$$
+其中 $(-)^{\omega}$ 表示取<span class="link local"><a href="./紧对象.html" title="紧对象 [紧对象]">紧对象</a></span>的子范畴.</p>
+<p>定义 $2$-环为上述对称幺半范畴中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>:
+$$
+2\mathsf{CAlg} := \mathsf{CAlg}(\mathsf{Cat}^{\mathrm{perf}}) \simeq \mathsf{CAlg}(\mathsf{Pr}_{\omega,\mathrm{st}}).
+$$</p>
+<h3>理想</h3>
+<p>设 $\mathcal K$ 为 $2$-环, 定义 $\mathcal K$ 的<strong>厚张量理想</strong> (thick tensor ideal, 简称为<strong>理想</strong>) 为满足如下条件的全子范畴 $\mathcal J$:</p>
+<ul>
+<li>$\mathcal J$ 关于<span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">余纤维</a></span>, 平移, <span class="link local"><a href="./收缩.html" title="收缩 [收缩]">收缩</a></span>封闭;</li>
+<li>对任意 $x\in\mathcal K$ 与 $y\in\mathcal J$, 有 $x\otimes y\in\mathcal J$.</li>
+</ul>
+<p>那么 $\mathcal K$ 的理想在包含关系下构成<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span> $\mathsf{Ideal}(\mathcal K)$. 任何一族对象 $S$ 可以生成一个理想, 记为 $\langle S\rangle$. 一个对象 $x$ 生成的理想 $\langle x\rangle$ 称为<strong>主理想</strong>.
+若理想 $\mathcal J$ 满足 $x\otimes x\in \mathcal J$ 蕴涵 $x\in\mathcal J$, 则称其为<strong>根理想</strong>. 任何一族对象 $S$ 生成一个根理想, 记为 $\sqrt{S}$.</p>
+<p>$2$-环中的理想与一种局部化有关, 称为 Karoubi 商.
+对于理想 $\mathcal J$, 令 $W$ 为余纤维属于 $\mathcal J$ 的态射的全体, 定义 $\mathcal K$ 关于 $\mathcal K$ 的 Karoubi 商为<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>的<span class="link local"><a href="./幂等完备化.html" title="幂等完备化 [幂等完备化]">幂等完备化</a></span>:
+$$
+\mathcal K / \mathcal J := \mathsf{Idem}(\mathcal K [W^{-1}]).
+$$</p>
+<p><strong>命题</strong>. 对 $2$-环 $\mathcal K$, 有伴随
+$$
+\mathcal K/-\colon \mathsf{Ideal}(\mathcal K) \rightleftarrows 2\mathsf{CAlg}_{\mathcal K /} \colon \ker (-),
+$$
+换言之, 对 $\mathcal K$ 的理想 $\mathcal J$ 以及 $2$-环的态射 $f\colon \mathcal K\to\mathcal L$, 其穿过 $\mathcal K/\mathcal J$ 当且仅当 $\mathcal J$ 包含于 $\ker(f)$.</p>
+<p>这个命题至少直观上是对的: 态射 $f$ 将 $W$ 中的态射变为同构当且仅当 $f$ 将 $\mathcal J$ 的对象映射到 $0$.</p>
+<h2>2-环的 Zariski 几何</h2>
+<p>$2$-环上的 Zariski <span class="link local"><a href="./geometry-DAGV.html" title="几何 (带结构的意象) [geometry-DAGV]">几何</a></span>由如下资料定义:</p>
+<ul>
+<li>$\mathcal G_{\mathrm{Zar}} = (2\mathsf{CAlg}^{\omega})^{\mathrm{op}}$ (注意 $2\mathsf{CAlg}$ 为<span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成范畴</a></span>),</li>
+<li>可容许态射为 Karoubi 商;</li>
+<li>覆盖为有限个 Karoubi 商 $f_i\colon \mathcal K\to\mathcal K_i$, 满足 $\bigcap_i \ker f_i \subset \sqrt{0}$.</li>
+</ul>
+<h3>Balmer 谱</h3>
+<p>前述<span class="link local"><a href="./geometry-DAGV.html" title="几何 (带结构的意象) [geometry-DAGV]">几何</a></span>构造的谱能够恢复出 <span class="link local"><a href="./Balmer谱.html" title="Balmer 谱 [Balmer谱]">Balmer 谱</a></span>的概念.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="notes-GKRV"><header><h1><span class="taxon"></span>GKRV <a class="slug" href="./notes-GKRV.html">[notes-GKRV]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是 <span class="link local"><a href="./GKRV.html" title="A toy model for the Drinfeld–Lafforgue shtuka construction [GKRV]">GKRV</a></span> 的阅读笔记. 这篇文章是 <span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span> 在拓扑语境中的玩具模型.</p>
 <h2>1. 对称幺半范畴沿空间积分</h2>
@@ -3173,6 +3212,11 @@ $$</p>
 $$
 \operatorname{Tr}(A,M) = A\otimes_{A\otimes A^{\mathrm{op}}} M.
 $$</p>
+<p>特别地, $A$ 自身作为 $(A,A)$-双模的迹
+$$
+\operatorname{Tr}(A,A) = A\otimes_{A\otimes A^{\mathrm{op}}} A= \int_{S^1} A
+$$
+为 $A$ 的 <span class="link local"><a href="./Hochschild同调.html" title="Hochschild 同调 [Hochschild同调]">Hochschild 同调</a></span>.</p>
 <h2>例</h2>
 <p>当 $\mathcal C = \mathsf{Vect}_k$
 时,

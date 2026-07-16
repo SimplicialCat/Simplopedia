@@ -929,4 +929,20 @@ $$
 S^{-1} A = \operatorname{colim}_{s\in S} \frac{1}{s}A
 $$
 是一族有限生成自由模的滤余极限.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="理想(偏序集)"><header><h1><span class="taxon"></span>理想 (偏序集) <a class="slug" href="./理想(偏序集).html">[理想(偏序集)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span> $P$ 具有有限并. 定义 $P$ 的理想为满足如下条件的子集 $I\subset P$:</p>
+<ul>
+<li>对任意 $x\in I$, $y\in P$, 若 $y\leq x$, 则 $y\in I$;</li>
+<li>对任意 $x,y\in I$, 有 $x\lor y\in I$.</li>
+</ul>
+<p>换言之, 理想是关于有限并封闭的向下封闭子集.</p>
+<p>注意到 $I$ 为理想的条件又可以表述为</p>
+<ul>
+<li>$I$ 为向下封闭子集;</li>
+<li>$I$ 为<span class="link local"><a href="./滤范畴.html" title="滤范畴 [滤范畴]">滤范畴</a></span>.</li>
+</ul>
+<p>若将向下封闭子集 $I$ 理解为函子 $F\colon P \to \{0&lt;1\}$, 此时 $I = F^{-1}(0)$, 同时 $I$ 可理解为 $F$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素的范畴</a></span>, 则
+$I$ 为理想的条件又可以表述为 $F$ 为<span class="link local"><a href="./平坦函子.html" title="平坦函子 [平坦函子]">平坦函子</a></span>. 因为平坦函子的一个刻画就是其元素范畴为滤范畴.</p>
+<p>进而 $P$ 的理想构成的偏序集 $\mathsf{Ideal}(P)$ 等价于其 <span class="link local"><a href="./ind-对象.html" title="ind-对象 [ind-对象]">ind-完备化</a></span> $\mathsf{Ind}(P)$.</p>
 </details></section></details></section></footer></article></div></body></html>

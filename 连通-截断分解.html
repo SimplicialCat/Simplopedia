@@ -963,14 +963,32 @@ $$
 \end{array}
 $$
 存在唯一的态射 $B\to X$ 与上述态射交换. 在 $\infty$-范畴的语境下, 这是指 $\mathcal C_{A/,/Y}(B,X)$ 可缩.</p>
+<p>参见<span class="link local"><a href="./提升性质.html" title="提升性质 [提升性质]">提升性质</a></span>.</p>
 <p><strong>定义</strong> (正交分解系). 范畴 $\mathcal C$ 中的一个正交分解系 (orthogonal factorization system) 是指两族态射 $(L,R)$, 满足</p>
 <ul>
 <li>两族态射都关于<span class="link local"><a href="./收缩.html" title="收缩 [收缩]">收缩</a></span>封闭;</li>
 <li>$L$ 中的每个态射都左正交于 $R$ 中的每个态射;</li>
 <li>$\mathcal C$ 中的每个态射都是 $L$ 中态射与 $R$ 中态射的复合 (先 $L$ 后 $R$).</li>
 </ul>
+<p>在第三条 (提升存在) 的前提下, 前两个条件 (正交性和收缩封闭) 等价于 $L$ 和 $R$ 互为<span class="link local"><a href="./提升性质.html" title="提升性质 [提升性质]">提升</a></span>类:
+$$
+L = {^\perp R},\quad R = L^\perp.
+$$</p>
+<p>证明如下. 假设 $(L,R)$ 满足正交性和收缩封闭. 对任意 $f\in {^\perp R}$, 存在 $\ell\in L$ 与 $r\in R$ 使得 $f = r\ell$, 那么如下方块存在提升:
+$$
+\begin{array}{ccc}
+\bullet &amp; \!\!\!\overset{\ell}{\rightarrow}\!\!\! &amp; \bullet \\
+\!\!\!\!\!{\scriptsize f}\,\downarrow &amp;  &amp; \downarrow\,{\scriptsize r}\!\!\!\!\! \\
+\bullet &amp; \!\!\!=\!\!\! &amp; \bullet
+\end{array}
+$$
+这说明 $f$ 是 $\ell$ 的<span class="link local"><a href="./收缩.html" title="收缩 [收缩]">收缩</a></span>, 从而 $f\in L$.</p>
+<p>另一方面, 假设 $L = {^\perp R}$, $R = L^\perp$.
+注意到提升性质是由一个等价描述的, 而等价关于收缩封闭, 故提升类也关于收缩封闭. $\square$</p>
+<h2>性质</h2>
 <h2>例</h2>
 <p>在集合范畴中, (满射, 单射) 是一个正交分解系. 这是 <span class="link local"><a href="./连通-截断分解.html" title="(n-连通, n-截断) 分解 [连通-截断分解]">$n$-连通-$n$-截断分解</a></span>的特例 $(n=-1)$.</p>
+<h3>互为提升类不足</h3>
 </details></section><section class="block" data-taxon=""><details ><summary id="连通性"><header><h1><span class="taxon"></span>连通性 <a class="slug" href="./连通性.html">[连通性]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>用截断性定义</h3>

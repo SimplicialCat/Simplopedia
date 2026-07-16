@@ -828,11 +828,16 @@
 <article><section class="block" data-taxon=""><details open><summary id="生成元(范畴论)"><header><h1><span class="taxon"></span>生成元 (范畴论) <a class="slug" href="./生成元(范畴论).html">[生成元(范畴论)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>范畴 $\mathcal C$ 的对象 $X$ 称为<strong>生成元</strong>是指 $\operatorname{Hom}(X,-)\colon \mathcal C\to\mathsf{Set}$ 忠实; 换言之, 仅考虑 $X$ 出发的<span class="link local"><a href="./广义元素.html" title="广义元素 [广义元素]">广义元素</a></span>的去向, 就能区分处 $\mathcal C$ 中的态射.</p>
-<p>若范畴 $\mathcal C$ 具有余积, 则对象 $X$ 为生成元等价于对任意对象 $Y$,
+<p>若范畴 $\mathcal C$ 具有<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>, 则对象 $X$ 为生成元等价于对任意对象 $Y$,
 $$
 \bigsqcup_{X\to Y}X \to Y
 $$
-为<span class="link local"><a href="./满射(范畴论).html" title="满射 (范畴论) [满射(范畴论)]">满射</a></span>.</p>
+为<span class="link local"><a href="./满射(范畴论).html" title="满射 [满射(范畴论)]">满射</a></span>.</p>
+<h2>例</h2>
+<h3>模范畴</h3>
+<p>对任意环 $R$, 其自身构成 $R$-模范畴的生成元.</p>
+<h3>Lawvere 理论</h3>
+<p>对任意单类型 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>, 一个元素自由生成的模型是其 $\mathsf{Set}$-模型的范畴的生成元.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Morita等价"><header><h1><span class="taxon"></span>Morita 等价 <a class="slug" href="./Morita等价.html">[Morita等价]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>Morita 等价是<span class="link local"><a href="./高阶模.html" title="高阶模 [高阶模]">模范畴</a></span>的等价. 通过追踪具有特殊范畴论性质的对象 (<span class="link local"><a href="./紧投射生成元.html" title="紧投射生成元 [紧投射生成元]">有限生成投射生成元</a></span>), 可以给出 Morita 等价的具体刻画.</p>
@@ -976,6 +981,17 @@ $$</li>
 <h3>可分充实范畴</h3>
 <p>可分充实范畴是<span class="link local"><a href="./可分代数.html" title="可分代数 [可分代数]">可分代数</a></span>的推广.</p>
 <p>设 $\mathcal A$ 为 $\mathcal V$-充实范畴, 若 $\mathcal A$ 作为 $\mathcal A\otimes\mathcal A^{\mathrm{op}}$-模 $\mathcal A\otimes\mathcal A^{\mathrm{op}} \to \mathcal V$ 为小投射模, 则称 $\mathcal A$ <strong>可分</strong> (separable).</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="凝聚意象"><header><h1><span class="taxon"></span>凝聚意象 <a class="slug" href="./凝聚意象.html">[凝聚意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathcal C$, 若其中<span class="link local"><a href="./拟紧拟分离对象.html" title="拟紧对象, 拟分离对象 [拟紧拟分离对象]">拟紧拟分离对象</a></span>关于<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>封闭且构成<span class="link local"><a href="./生成元(范畴论).html" title="生成元 (范畴论) [生成元(范畴论)]">生成元</a></span>, 则称其为<strong>凝聚意象</strong> (coherent topos).</p>
+<h3>高阶凝聚性</h3>
+<table><thead><tr><th>概念</th><th>等价表述</th></tr></thead><tbody>
+<tr><td>$0$-凝聚对象</td><td>拟紧对象</td></tr>
+<tr><td>局部 $0$-凝聚意象</td><td>由拟紧对象生成</td></tr>
+<tr><td>$1$-凝聚对象</td><td></td></tr>
+</tbody></table>
+<p>归纳地定义 $n$-凝聚意象</p>
+<h2>例</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="紧投射生成元"><header><h1><span class="taxon"></span>紧投射生成元 <a class="slug" href="./紧投射生成元.html">[紧投射生成元]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><strong>紧投射生成元</strong> (compact projective generator) 大致是指范畴中的<span class="link local"><a href="./可表现对象.html" title="可表现对象 [可表现对象]">紧</a></span>, <span class="link local"><a href="./投射对象.html" title="投射对象 [投射对象]">投射</a></span>的<span class="link local"><a href="./生成元(范畴论).html" title="生成元 (范畴论) [生成元(范畴论)]">生成元</a></span>, 根据不同的范畴种类有稍微不同的概念.</p>
 <h2>定义</h2>

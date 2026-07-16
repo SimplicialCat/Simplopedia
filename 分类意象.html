@@ -835,6 +835,8 @@
 <p>一种结构的<strong>分类意象</strong>可理解为 $\mathsf{Set}$ (或 $\mathsf{Ani}$) 自由加入一个 “泛” (generic) 对象所得的意象. 例如带点对象的分类意象可理解为自由加入一个泛带点对象.</p>
 <h2>例</h2>
 <p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span><span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的分类意象即是其<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> $\mathbf{B}G$ 上的<span class="link local"><a href="./层意象.html" title="层意象 [层意象]">层意象</a></span>, 也即 $\mathsf{Ani}_{/\mathbf{B}G} \simeq \mathsf{Fun}(\mathbf{B}G,\mathsf{Ani})$.</p>
+<h3>凝聚理论</h3>
+<p><span class="link local"><a href="./凝聚理论.html" title="凝聚理论 [凝聚理论]">凝聚理论</a></span>的分类意象是<span class="link local"><a href="./凝聚意象.html" title="凝聚意象 [凝聚意象]">凝聚意象</a></span>.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="geometry-DAGV"><header><h1><span class="taxon"></span>几何 (带结构的意象) <a class="slug" href="./geometry-DAGV.html">[geometry-DAGV]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本页介绍 Lurie 的 <span class="link local"><a href="./LurieDAGV.html" title="Derived Algebraic Geometry V: Structured Spaces [LurieDAGV]">DAG V</a></span> 描绘的 “几何” 图景. 加入了一些个人的见解.</p>
 <p>几何学的各个分支研究的<span class="link local"><a href="./概形.html" title="概形 [概形]">经典概形</a></span>, <span class="link local"><a href="./叠.html" title="叠 [叠]">Deligne–Mumford 叠</a></span>, 流形, 复解析流形, <span class="link local"><a href="./导出概形.html" title="导出概形 [导出概形]">导出概形</a></span>等等不同几何对象, 都可以描述为某种带结构的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $(\mathcal X,\mathcal O_{\mathcal X})$, 类比于<span class="link local"><a href="./局部环化空间.html" title="局部环化空间 [局部环化空间]">局部环化空间</a></span>. 从<span class="link local"><a href="./范畴逻辑.html" title="范畴逻辑 [范畴逻辑]">范畴逻辑</a></span>的角度, 这里的结构 $\mathcal O_{\mathcal X}$ 可以理解为一种<span class="link local"><a href="./本质代数理论.html" title="本质代数理论 [本质代数理论]">本质代数结构</a></span>加上一些 “局部性” (见后文). 同时, 这些结构可用<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span>描述: 一个结构就是一个意象态射 $\mathcal X \to \mathcal K$. 每种结构就是一种<strong>几何</strong>.</p>
@@ -974,6 +976,25 @@ $$
 <li>它很酷.</li>
 </ul>
 <p>一个伟大的概念应该配上一个伟大的译名. 读者们, 未来的中国数学学者们, 这个名字的决定权在你们手上. 就这样吧!</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="凝聚理论"><header><h1><span class="taxon"></span>凝聚理论 <a class="slug" href="./凝聚理论.html">[凝聚理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./逻辑.html" title="逻辑 [逻辑]">逻辑</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>凝聚理论是只使用如下符号的<span class="link local"><a href="./一阶语言.html" title="一阶语言与一阶逻辑 [一阶语言]">一阶理论</a></span>:</p>
+<ul>
+<li>有限合取 (conjunction) $\land$, $\bot$,</li>
+<li>有限析取 (disjunction) $\lor$, $\top$,</li>
+<li>存在量词 $\exists$.</li>
+</ul>
+<h2>性质</h2>
+<p>凝聚理论的<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span> (即<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法景</a></span>上的<span class="link local"><a href="./层范畴.html" title="层范畴 [层范畴]">层范畴</a></span>) 是<span class="link local"><a href="./凝聚意象.html" title="凝聚意象 [凝聚意象]">凝聚意象</a></span>.</p>
+<h2>例</h2>
+<h3>局部环</h3>
+<p><span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span>的理论是环的理论加上如下公理, 从而是凝聚理论:</p>
+<ul>
+<li>$0 = 1 \vdash \bot$,</li>
+<li>$x+y=1 \vdash \exists z (xz=1)\lor (yz=1)$.</li>
+</ul>
+<h3>既约环</h3>
+<p><span class="link local"><a href="./既约环.html" title="既约环 [既约环]">既约环</a></span>的理论也是凝聚理论, 因为其公理可写成 $x^2=0 \vdash x=0$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="分类空间"><header><h1><span class="taxon"></span>分类空间 <a class="slug" href="./分类空间.html">[分类空间]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>一种结构 $P$ 的<strong>分类空间</strong> $B$ 是这样一个空间: 任何空间 $X$ 上的结构 $P$ 对应于 $X$ 到 $B$ 的映射.
 $$
@@ -1030,7 +1051,7 @@ $$
 <li>$\mathcal C$ 为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>;</li>
 <li>$\mathcal C$ 中的<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>保持<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>;</li>
 <li>$\mathcal C$ 中的<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>无交 (即 $X + Y$ 的子对象 $X$ 与 $Y$ 的交为<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span> $0$);</li>
-<li>$\mathcal C$ 中的<span class="link local"><a href="./满射(范畴论).html" title="满射 (范畴论) [满射(范畴论)]">满射</a></span>均为<span class="link local"><a href="./有效满射.html" title="有效满射 [有效满射]">有效满射</a></span>.</li>
+<li>$\mathcal C$ 中的<span class="link local"><a href="./满射(范畴论).html" title="满射 [满射(范畴论)]">满射</a></span>均为<span class="link local"><a href="./有效满射.html" title="有效满射 [有效满射]">有效满射</a></span>.</li>
 </ul>
 <h3>初等意象</h3>
 <p>逻辑学家从<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>的视角出发考虑了<strong>初等意象</strong>的概念. Grothendieck 意象都是初等意象, 但反之不然.</p>
@@ -1087,7 +1108,7 @@ $$
 </ul>
 <h2>性质</h2>
 <h3>指数对象与幂对象</h3>
-<p>意象中的两个对象 $X,Y$ 之间可构造<strong>指数对象</strong> $Y^X$ 与<strong>赋值映射</strong> $\operatorname{ev}\colon Y^X\times X \to Y$, 满足伴随
+<p>意象中的两个对象 $X,Y$ 之间可构造<strong></strong><span class="link local"><a href="./指数对象.html" title="指数对象 [指数对象]">指数对象</a></span> $Y^X$ 与<strong>赋值映射</strong> $\operatorname{ev}\colon Y^X\times X \to Y$, 满足伴随
 $$
 \operatorname{Hom}(Z,Y^X) \simeq \operatorname{Hom}(Z\times X,Y).
 $$</p>
@@ -1138,4 +1159,19 @@ $$
 <ul>
 <li><span class="link local"><a href="./Galois扩张.html" title="Galois 扩张 [Galois扩张]">Galois 扩张</a></span></li>
 </ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="语法范畴"><header><h1><span class="taxon"></span>语法范畴 <a class="slug" href="./语法范畴.html">[语法范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>语法范畴是一个理论的 “<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的模型” 所在的范畴, 换言之就是该理论的一个模型所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的范畴.</p>
+<p>一个类比: 环 $\mathbb{Z}[x]/(f)$ 是代数方程 $f(x) = 0$ 的游走解所在的环, 也就是该方程的一个解所自由生成的环. 参见<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法–语义对偶</a></span>.</p>
+<p>广义地说, 任何一个范畴都可以视为某种理论的 “语法范畴”, 而该范畴出发的保持结构的函子则可视为该理论的 “模型”, 这种称呼只是视角的选择: 我们将语法范畴理解为根据<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法</a></span>生成的结构.</p>
+<h2>性质</h2>
+<h3>语法景与分类意象</h3>
+<p>一般而言, 一阶理论的语法范畴带有某种可证明性给出的覆盖结构即 <span class="link local"><a href="./Grothendieck拓扑.html" title="Grothendieck 拓扑 [Grothendieck拓扑]">Grothendieck 拓扑</a></span>, 构成所谓<strong>语法景</strong> (syntactic site). 语法景上的层范畴是该理论的<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span>.</p>
+<h2>例</h2>
+<ul>
+<li><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>的语法范畴是一个对象生成的有限积范畴.</li>
+<li><span class="link local"><a href="./PROP.html" title="PROP [PROP]">PROP</a></span> 是一个对象生成的对称幺半范畴.</li>
+</ul>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法–语义对偶</a></span></p>
 </details></section></details></section></footer></article></div></body></html>

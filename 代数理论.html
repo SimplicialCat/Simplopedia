@@ -927,12 +927,27 @@ $$
 \operatorname{colim}_{j\in J}\operatorname{lim}_{i\in I}F(i,j) = 1.
 $$
 这说明存在 $j\in J$ 使得 $\operatorname{lim}_{i\in I}F(i,j)$ 至少存在一个元素. 而 $\operatorname{lim}_{i\in I}F(i,j)$ 的元素等同于 $X$ 上的余锥, 故结论成立.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="一阶逻辑的片段"><header><h1><span class="taxon"></span>一阶逻辑的片段 <a class="slug" href="./一阶逻辑的片段.html">[一阶逻辑的片段]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./逻辑.html" title="逻辑 [逻辑]">逻辑</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<ul>
+<li><span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数逻辑</a></span></li>
+<li><span class="link local"><a href="./凝聚理论.html" title="凝聚理论 [凝聚理论]">凝聚逻辑</a></span></li>
+<li><span class="link local"><a href="./几何逻辑.html" title="几何逻辑 [几何逻辑]">几何逻辑</a></span></li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="保守函子"><header><h1><span class="taxon"></span>保守函子 <a class="slug" href="./保守函子.html">[保守函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p><strong>保守函子</strong> (conservative functor) 是<span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映同构</a></span>的函子.</p>
+<p><strong>保守函子</strong> (conservative functor) 是<span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映同构</a></span>的函子. 换言之, 保守函子 $F\colon \mathcal C\to\mathcal D$ 满足任意如下的方块都有提升:
+$$
+\begin{array}{ccc}
+\Delta^1 &amp; \rightarrow &amp; \mathcal C \\
+\downarrow &amp;  &amp; \downarrow \\
+\Delta^0 &amp; \rightarrow &amp; \mathcal D
+\end{array}
+$$</p>
 <h2>例</h2>
 <p><span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>为保守函子.</p>
 <p><span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘函子</a></span> $\mathsf{Grp}\to\mathsf{Set}$ 为保守函子. 对任何<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>乃至<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>都是如此.</p>
+<h2>性质</h2>
+<p>保守函子具有关于<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>的<span class="link local"><a href="./提升性质.html" title="提升性质 [提升性质]">右提升性质</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="内部观点"><header><h1><span class="taxon"></span>内部观点 <a class="slug" href="./内部观点.html">[内部观点]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>通常一个 “数学结构” (尤其是<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数结构</a></span>) 是如下资料:</p>
 <ul>
@@ -1109,6 +1124,7 @@ $$</p>
 <li>对于对称幺半范畴 $\mathcal C$, 一个对象自由生成的 $\mathcal C$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>对称幺半范畴是<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>的范畴, 其上有一个幺半结构, 对应于自函子的复合. 详见<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>.</li>
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="逻辑"><header><h1><span class="taxon"></span>逻辑 <a class="slug" href="./逻辑.html">[逻辑]</a></h1><div class="metadata"><ul><li class="meta-item">学科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./一阶语言.html" title="一阶语言与一阶逻辑 [一阶语言]">一阶语言与一阶逻辑</a></span></p>
 <p><span class="link local"><a href="./范畴逻辑.html" title="范畴逻辑 [范畴逻辑]">范畴逻辑</a></span></p>
 <ul>
 <li><span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span></li>

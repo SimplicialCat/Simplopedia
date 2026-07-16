@@ -834,6 +834,7 @@
 <li>一些<strong>函数符号</strong> (function symbols), 每一个函数符号 $f$ 具有固定的 “输入类型” $A_1,\cdots,A_n$, “输出类型” $B$, 记作 $f \colon (A_1\times \cdots \times A_n) \to B$, 非负整数 $n$ 称为 $f$ 的<strong>元数</strong> (arity); (当 $n=0$ 时, 函数符号 $f$ 是 “零元函数”, 也即类型 $B$ 的<strong>常数</strong> $f : B$.)</li>
 <li>一些<strong>关系符号</strong> (relation symbols), 又叫<strong>谓词</strong> (predicates), 每一个关系符号 $R$ 具有固定的类型 $A_1,\cdots,A_n$, 记作 $R \hookrightarrow A_1\times \cdots\times A_n$, 非负整数 $n$ 称为 $R$ 的元数. (当 $n=0$ 时, 关系符号是 “零元关系”, 也即<strong>原子命题</strong> (atomic proposition).)</li>
 </ul>
+<p><span class="link local"><a href="./一阶逻辑的片段.html" title="一阶逻辑的片段 [一阶逻辑的片段]">一阶逻辑的片段</a></span></p>
 <h2>例</h2>
 <h3>初等算术</h3>
 <h3>群</h3>
@@ -990,6 +991,25 @@ $$
 <ul>
 <li><span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">意象的内语言</a></span></li>
 </ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="凝聚理论"><header><h1><span class="taxon"></span>凝聚理论 <a class="slug" href="./凝聚理论.html">[凝聚理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./逻辑.html" title="逻辑 [逻辑]">逻辑</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>凝聚理论是只使用如下符号的<span class="link local"><a href="./一阶语言.html" title="一阶语言与一阶逻辑 [一阶语言]">一阶理论</a></span>:</p>
+<ul>
+<li>有限合取 (conjunction) $\land$, $\bot$,</li>
+<li>有限析取 (disjunction) $\lor$, $\top$,</li>
+<li>存在量词 $\exists$.</li>
+</ul>
+<h2>性质</h2>
+<p>凝聚理论的<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span> (即<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法景</a></span>上的<span class="link local"><a href="./层范畴.html" title="层范畴 [层范畴]">层范畴</a></span>) 是<span class="link local"><a href="./凝聚意象.html" title="凝聚意象 [凝聚意象]">凝聚意象</a></span>.</p>
+<h2>例</h2>
+<h3>局部环</h3>
+<p><span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span>的理论是环的理论加上如下公理, 从而是凝聚理论:</p>
+<ul>
+<li>$0 = 1 \vdash \bot$,</li>
+<li>$x+y=1 \vdash \exists z (xz=1)\lor (yz=1)$.</li>
+</ul>
+<h3>既约环</h3>
+<p><span class="link local"><a href="./既约环.html" title="既约环 [既约环]">既约环</a></span>的理论也是凝聚理论, 因为其公理可写成 $x^2=0 \vdash x=0$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="意象的内语言"><header><h1><span class="taxon"></span>意象的内语言 <a class="slug" href="./意象的内语言.html">[意象的内语言]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>每个<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>都有一个以其对象为类型, 其态射为函数符号的<span class="link local"><a href="./一阶语言.html" title="一阶语言与一阶逻辑 [一阶语言]">一阶语言</a></span>, 称为<strong>内语言</strong>.</p>
 <p>直观地说, 使用这种语言, 我们可以假装<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>中的对象是集合, 态射是集合的映射, 并且像对待集合一样对 $\mathcal E$ 中的命题进行推理.</p>
@@ -1167,4 +1187,11 @@ $$
 其中映射 $\{1,2\} \to \{1\}$ 对应的映射 $A^2\to A$ 正是 $A$ 上的运算; 映射 $\varnothing\to\{1\}$ 对应的映射 $\{*\}\to A$ 正是其单位元.</p>
 <p>在本例中, $\mathsf{Set}^\times$ 可以替换为任何对称幺半范畴 $\mathcal D$, 称对称幺半函子 $\mathsf{Fin}^\sqcup \to \mathcal D$ 为 $\mathcal D$ 中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>. 例如交换环 $R$ 上的模关于张量积构成的范畴 $\mathsf{Mod}_R^\otimes$ 中的交换代数就是通常说的交换 $R$-代数.
 因此我们借用范畴逻辑学的术语, 称 $\mathsf{Fin}^\sqcup$ 记录了交换代数的<strong>语法</strong> (syntax), 而种种具体的交换代数都是这个范畴到其它对称幺半范畴的函子, 称之为<strong>语义</strong> (semantics).</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="逻辑"><header><h1><span class="taxon"></span>逻辑 <a class="slug" href="./逻辑.html">[逻辑]</a></h1><div class="metadata"><ul><li class="meta-item">学科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./一阶语言.html" title="一阶语言与一阶逻辑 [一阶语言]">一阶语言与一阶逻辑</a></span></p>
+<p><span class="link local"><a href="./范畴逻辑.html" title="范畴逻辑 [范畴逻辑]">范畴逻辑</a></span></p>
+<ul>
+<li><span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span></li>
+<li><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span></li>
+</ul>
 </details></section></details></section></footer></article></div></body></html>

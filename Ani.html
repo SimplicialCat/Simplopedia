@@ -973,10 +973,25 @@ $$
 <h2>例</h2>
 <p>单纯集 $X\colon \Delta^{\text{op}}\to\mathsf {Set}$ 在 $\mathsf{Set}$ (作为 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$\infty$-范畴</a></span>) 中的余极限是 $\pi_0(X)$.</p>
 <h2>性质</h2>
-</details></section><section class="block" data-taxon=""><details ><summary id="单射"><header><h1><span class="taxon"></span>单射 <a class="slug" href="./单射.html">[单射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<h2>观念</h2>
-<p>单射就是 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>映射.</p>
-<p>在<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中, 映射 $f\colon Y\to X$ 是单射, 当且仅当它是 $X$ 的若干连通分支的含入.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="单射"><header><h1><span class="taxon"></span>单射 <a class="slug" href="./单射.html">[单射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>生象</h3>
+<p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的单射就是 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>映射. 映射 $f\colon Y\to X$ 是单射, 当且仅当它是 $X$ 的若干连通分支的含入.</p>
+<h3>一般范畴</h3>
+<p>定义一般范畴 $\mathcal C$ 中的态射 $f\colon X\to Y$ 是单射当且仅当对任意对象 $X\in\mathcal C$,
+$$
+\operatorname{Hom}_{\mathcal C}(Z,X) \to \operatorname{Hom}_{\mathcal C}(Z,Y)
+$$
+是单射.</p>
+<p>参见 <span class="link local"><a href="./AyalaFrancisRozenblyumI.html" title="Factorization homology I: higher categories [AyalaFrancisRozenblyumI]">Ayala–Francis–Rozenblyum</a></span> 5.1 节.</p>
+<h2>例</h2>
+<h3>范畴的范畴</h3>
+<p>范畴的范畴 <span class="link local"><a href="./Cat.html" title="范畴的范畴 [Cat]">$\mathsf{Cat}$</a></span> 中的单射是满足如下条件的函子 $F\colon \mathcal C\to\mathcal D$:</p>
+<ul>
+<li>$F$ 给出<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>的单射 $\mathcal C^{\simeq} \to \mathcal D^{\simeq}$;</li>
+<li>对任意两个对象 $X,Y\in\mathcal C$, 映射 $\operatorname{Hom}_{\mathcal C}(X,Y)\to\operatorname{Hom}_{\mathcal D}(F(X),F(Y))$ 为单射.</li>
+</ul>
+<p>注意, 上述条件比<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>弱.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="同伦维数"><header><h1><span class="taxon"></span>同伦维数 (意象) <a class="slug" href="./同伦维数.html">[同伦维数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./意象理论.html" title="意象理论 [意象理论]">意象理论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>对于<span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">意象</a></span> $\mathcal X$ 与 $n\geq -1$, 若 $\mathcal X$ 中每个 $(n-1)$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>对象 $A$ 都有整体元素 $1\to A$, 则称 $\mathcal X$ 的<strong>同伦维数</strong> $\leq n$.</p>
@@ -1023,7 +1038,7 @@ $$
 <li>$\mathcal C$ 为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>;</li>
 <li>$\mathcal C$ 中的<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>保持<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>;</li>
 <li>$\mathcal C$ 中的<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>无交 (即 $X + Y$ 的子对象 $X$ 与 $Y$ 的交为<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span> $0$);</li>
-<li>$\mathcal C$ 中的<span class="link local"><a href="./满射(范畴论).html" title="满射 (范畴论) [满射(范畴论)]">满射</a></span>均为<span class="link local"><a href="./有效满射.html" title="有效满射 [有效满射]">有效满射</a></span>.</li>
+<li>$\mathcal C$ 中的<span class="link local"><a href="./满射(范畴论).html" title="满射 [满射(范畴论)]">满射</a></span>均为<span class="link local"><a href="./有效满射.html" title="有效满射 [有效满射]">有效满射</a></span>.</li>
 </ul>
 <h3>初等意象</h3>
 <p>逻辑学家从<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>的视角出发考虑了<strong>初等意象</strong>的概念. Grothendieck 意象都是初等意象, 但反之不然.</p>
@@ -1080,7 +1095,7 @@ $$
 </ul>
 <h2>性质</h2>
 <h3>指数对象与幂对象</h3>
-<p>意象中的两个对象 $X,Y$ 之间可构造<strong>指数对象</strong> $Y^X$ 与<strong>赋值映射</strong> $\operatorname{ev}\colon Y^X\times X \to Y$, 满足伴随
+<p>意象中的两个对象 $X,Y$ 之间可构造<strong></strong><span class="link local"><a href="./指数对象.html" title="指数对象 [指数对象]">指数对象</a></span> $Y^X$ 与<strong>赋值映射</strong> $\operatorname{ev}\colon Y^X\times X \to Y$, 满足伴随
 $$
 \operatorname{Hom}(Z,Y^X) \simeq \operatorname{Hom}(Z\times X,Y).
 $$</p>

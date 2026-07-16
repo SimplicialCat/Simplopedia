@@ -848,8 +848,44 @@ $$
 $$
 其中右伴随部分 $\Gamma$ 是取整体截面的 $2$-环.
 并且左伴随部分 $\operatorname{Spec}$ 在<span class="link local"><a href="./刚性幺半范畴.html" title="刚性幺半范畴 [刚性幺半范畴]">刚性</a></span> $2$-环的子范畴上是全忠实的; 特别地, 每个刚性 $2$-环 $\mathcal K$ 都等同于 $\operatorname{Spec}\mathcal K$ 上的结构层的整体截面的 $2$-环.</p>
-<h2>2-环的范畴</h2>
-<p>记 $\mathsf{Cat}^{\mathrm{perf}}$ 为</p>
+<h2>2-环</h2>
+<p>记 $\mathsf{Cat}^{\mathrm{perf}}$ 为<span class="link local"><a href="./幂等完备范畴.html" title="幂等完备范畴 [幂等完备范畴]">幂等完备</a></span>的小<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>与正合函子构成的范畴, $\mathsf{Pr}_{\omega,\mathrm{st}}$ 为<span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成</a></span> (又叫有限表现) 稳定范畴与保持<span class="link local"><a href="./紧对象.html" title="紧对象 [紧对象]">紧对象</a></span>且保持<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>的函子构成的范畴. 那么两者作为<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>有等价
+$$
+\mathsf{Ind}\colon \mathsf{Cat}^{\mathrm{perf}} \rightleftarrows\mathsf{Pr}_{\omega,\mathrm{st}} \colon (-)^{\omega}.
+$$
+其中 $(-)^{\omega}$ 表示取<span class="link local"><a href="./紧对象.html" title="紧对象 [紧对象]">紧对象</a></span>的子范畴.</p>
+<p>定义 $2$-环为上述对称幺半范畴中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>:
+$$
+2\mathsf{CAlg} := \mathsf{CAlg}(\mathsf{Cat}^{\mathrm{perf}}) \simeq \mathsf{CAlg}(\mathsf{Pr}_{\omega,\mathrm{st}}).
+$$</p>
+<h3>理想</h3>
+<p>设 $\mathcal K$ 为 $2$-环, 定义 $\mathcal K$ 的<strong>厚张量理想</strong> (thick tensor ideal, 简称为<strong>理想</strong>) 为满足如下条件的全子范畴 $\mathcal J$:</p>
+<ul>
+<li>$\mathcal J$ 关于<span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">余纤维</a></span>, 平移, <span class="link local"><a href="./收缩.html" title="收缩 [收缩]">收缩</a></span>封闭;</li>
+<li>对任意 $x\in\mathcal K$ 与 $y\in\mathcal J$, 有 $x\otimes y\in\mathcal J$.</li>
+</ul>
+<p>那么 $\mathcal K$ 的理想在包含关系下构成<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span> $\mathsf{Ideal}(\mathcal K)$. 任何一族对象 $S$ 可以生成一个理想, 记为 $\langle S\rangle$. 一个对象 $x$ 生成的理想 $\langle x\rangle$ 称为<strong>主理想</strong>.
+若理想 $\mathcal J$ 满足 $x\otimes x\in \mathcal J$ 蕴涵 $x\in\mathcal J$, 则称其为<strong>根理想</strong>. 任何一族对象 $S$ 生成一个根理想, 记为 $\sqrt{S}$.</p>
+<p>$2$-环中的理想与一种局部化有关, 称为 Karoubi 商.
+对于理想 $\mathcal J$, 令 $W$ 为余纤维属于 $\mathcal J$ 的态射的全体, 定义 $\mathcal K$ 关于 $\mathcal K$ 的 Karoubi 商为<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>的<span class="link local"><a href="./幂等完备化.html" title="幂等完备化 [幂等完备化]">幂等完备化</a></span>:
+$$
+\mathcal K / \mathcal J := \mathsf{Idem}(\mathcal K [W^{-1}]).
+$$</p>
+<p><strong>命题</strong>. 对 $2$-环 $\mathcal K$, 有伴随
+$$
+\mathcal K/-\colon \mathsf{Ideal}(\mathcal K) \rightleftarrows 2\mathsf{CAlg}_{\mathcal K /} \colon \ker (-),
+$$
+换言之, 对 $\mathcal K$ 的理想 $\mathcal J$ 以及 $2$-环的态射 $f\colon \mathcal K\to\mathcal L$, 其穿过 $\mathcal K/\mathcal J$ 当且仅当 $\mathcal J$ 包含于 $\ker(f)$.</p>
+<p>这个命题至少直观上是对的: 态射 $f$ 将 $W$ 中的态射变为同构当且仅当 $f$ 将 $\mathcal J$ 的对象映射到 $0$.</p>
+<h2>2-环的 Zariski 几何</h2>
+<p>$2$-环上的 Zariski <span class="link local"><a href="./geometry-DAGV.html" title="几何 (带结构的意象) [geometry-DAGV]">几何</a></span>由如下资料定义:</p>
+<ul>
+<li>$\mathcal G_{\mathrm{Zar}} = (2\mathsf{CAlg}^{\omega})^{\mathrm{op}}$ (注意 $2\mathsf{CAlg}$ 为<span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成范畴</a></span>),</li>
+<li>可容许态射为 Karoubi 商;</li>
+<li>覆盖为有限个 Karoubi 商 $f_i\colon \mathcal K\to\mathcal K_i$, 满足 $\bigcap_i \ker f_i \subset \sqrt{0}$.</li>
+</ul>
+<h3>Balmer 谱</h3>
+<p>前述<span class="link local"><a href="./geometry-DAGV.html" title="几何 (带结构的意象) [geometry-DAGV]">几何</a></span>构造的谱能够恢复出 <span class="link local"><a href="./Balmer谱.html" title="Balmer 谱 [Balmer谱]">Balmer 谱</a></span>的概念.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="仿射概形"><header><h1><span class="taxon"></span>仿射概形 <a class="slug" href="./仿射概形.html">[仿射概形]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./代数几何.html" title="代数几何 [代数几何]">代数几何</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>仿射概形是同构于某个环 $A$ 的谱 $\operatorname{spec}(A)$ 的<span class="link local"><a href="./局部环化空间.html" title="局部环化空间 [局部环化空间]">局部环化空间</a></span>. 它的特点是它的几何信息完全由整体函数环决定.</p>
 <p>仿射概形的范畴等价于环范畴的对偶, 这是<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>的一例.</p>

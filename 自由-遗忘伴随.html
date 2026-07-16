@@ -1047,10 +1047,19 @@ $$
 $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="保守函子"><header><h1><span class="taxon"></span>保守函子 <a class="slug" href="./保守函子.html">[保守函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p><strong>保守函子</strong> (conservative functor) 是<span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映同构</a></span>的函子.</p>
+<p><strong>保守函子</strong> (conservative functor) 是<span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映同构</a></span>的函子. 换言之, 保守函子 $F\colon \mathcal C\to\mathcal D$ 满足任意如下的方块都有提升:
+$$
+\begin{array}{ccc}
+\Delta^1 &amp; \rightarrow &amp; \mathcal C \\
+\downarrow &amp;  &amp; \downarrow \\
+\Delta^0 &amp; \rightarrow &amp; \mathcal D
+\end{array}
+$$</p>
 <h2>例</h2>
 <p><span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>为保守函子.</p>
 <p><span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘函子</a></span> $\mathsf{Grp}\to\mathsf{Set}$ 为保守函子. 对任何<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>乃至<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>都是如此.</p>
+<h2>性质</h2>
+<p>保守函子具有关于<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>的<span class="link local"><a href="./提升性质.html" title="提升性质 [提升性质]">右提升性质</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="列表"><header><h1><span class="taxon"></span>列表 <a class="slug" href="./列表.html">[列表]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>列表类型是类型生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span><span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>.</p>
@@ -1524,6 +1533,21 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="群化"><header><h1><span class="taxon"></span>群化 <a class="slug" href="./群化.html">[群化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>群化是幺半群<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的群, 即群到幺半群的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>函子的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="语法范畴"><header><h1><span class="taxon"></span>语法范畴 <a class="slug" href="./语法范畴.html">[语法范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>语法范畴是一个理论的 “<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的模型” 所在的范畴, 换言之就是该理论的一个模型所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的范畴.</p>
+<p>一个类比: 环 $\mathbb{Z}[x]/(f)$ 是代数方程 $f(x) = 0$ 的游走解所在的环, 也就是该方程的一个解所自由生成的环. 参见<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法–语义对偶</a></span>.</p>
+<p>广义地说, 任何一个范畴都可以视为某种理论的 “语法范畴”, 而该范畴出发的保持结构的函子则可视为该理论的 “模型”, 这种称呼只是视角的选择: 我们将语法范畴理解为根据<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法</a></span>生成的结构.</p>
+<h2>性质</h2>
+<h3>语法景与分类意象</h3>
+<p>一般而言, 一阶理论的语法范畴带有某种可证明性给出的覆盖结构即 <span class="link local"><a href="./Grothendieck拓扑.html" title="Grothendieck 拓扑 [Grothendieck拓扑]">Grothendieck 拓扑</a></span>, 构成所谓<strong>语法景</strong> (syntactic site). 语法景上的层范畴是该理论的<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span>.</p>
+<h2>例</h2>
+<ul>
+<li><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>的语法范畴是一个对象生成的有限积范畴.</li>
+<li><span class="link local"><a href="./PROP.html" title="PROP [PROP]">PROP</a></span> 是一个对象生成的对称幺半范畴.</li>
+</ul>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法–语义对偶</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="配边假设"><header><h1><span class="taxon"></span>配边假设 <a class="slug" href="./配边假设.html">[配边假设]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>陈述</h2>
 <p>配边假设是说, <span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span>是由一个<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半 $(\infty,n)$-范畴</a></span>.</p>

@@ -829,7 +829,7 @@
 <h2>观念</h2>
 <p>Boole 代数是经典逻辑的<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语义</a></span>. 如 Boole 代数中的积 (交) 是逻辑与 $X\wedge Y$, 指数 $Y^X$ 是逻辑蕴含 $X\Rightarrow Y$, 赋值映射是推理法则 $(X\Rightarrow Y)\wedge X \leq Y$ 等等.</p>
 <h2>定义</h2>
-<p>Boole 代数是具有补运算的<span class="link local"><a href="./分配格.html" title="“分配格” [分配格]">分配格</a></span>.</p>
+<p>Boole 代数是具有补运算的<span class="link local"><a href="./分配格.html" title="分配格 [分配格]">分配格</a></span>.</p>
 <p>Boole 代数与 <span class="link local"><a href="./Boole环.html" title="“Boole 环” [Boole环]">Boole 环</a></span>可以相互转化.</p>
 <h2>性质</h2>
 <p><span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span></p>
@@ -852,7 +852,7 @@
 <h2>观念</h2>
 <p>Heyting 代数是<span class="link local"><a href="./直觉主义逻辑.html" title="直觉主义逻辑 [直觉主义逻辑]">直觉主义</a></span>命题演算的模型.</p>
 <h2>定义</h2>
-<p>Heyting 代数是一个<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span>, 存在所有有限的<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>和<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>, 且构成<span class="link local"><a href="./积闭范畴.html" title="积闭范畴 [积闭范畴]">积闭范畴</a></span>. 换言之, Heyting 代数中有 $0$, $1$, 指数对象 $y^x$ (通常记作 $x\Rightarrow y$), 而指数对象由如下的伴随关系刻画:
+<p>Heyting 代数是一个<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span>, 存在所有有限的<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>和<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>, 且构成<span class="link local"><a href="./积闭范畴.html" title="积闭范畴 [积闭范畴]">积闭范畴</a></span>. 换言之, Heyting 代数中有 $0$, $1$, <span class="link local"><a href="./指数对象.html" title="指数对象 [指数对象]">指数对象</a></span> $y^x$ (通常记作 $x\Rightarrow y$), 而指数对象由如下的伴随关系刻画:
 $$
 z\leq (x\Rightarrow y) \quad \text{iff} \quad z\wedge x \leq y.
 $$</p>
@@ -879,6 +879,8 @@ $$
 (U \Rightarrow V) = \bigcup_{W\cap U\subset V} W.
 $$
 每个 <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>都是 Heyting 代数, 反之则不然.</p>
+<h3>位象</h3>
+<p>每个<span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span> $X$ 都给出一个 Heyting 代数 $\mathcal O(X)$. 由此容易给出不满足 Boole 性质的例子. 例如拓扑空间 $X$ 对应的 Heyting 代数中, 开集 $U$ 的<span class="link local"><a href="./否定.html" title="“否定” [否定]">否定</a></span> $U\Rightarrow \bot$ 实际上是 $X\setminus U$ 的内部, 除非 $U$ 既开又闭, 否则不会有 $\neg\neg U = U$.</p>
 <h2>参考资料</h2>
 <p><span class="link local"><a href="./盲人摸象.html" title="盲人摸象 [盲人摸象]">盲人摸象</a></span> 1.3 节</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="代数-几何对偶"><header><h1><span class="taxon"></span>代数–几何对偶 <a class="slug" href="./代数-几何对偶.html">[代数-几何对偶]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -903,16 +905,39 @@ $$
 <p><span class="link local"><a href="./淡中对偶.html" title="淡中对偶 [淡中对偶]">淡中 (Tannaka) 对偶</a></span>是某种几何对象与其上的某种层范畴的对偶.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法–语义对偶</a></span></p>
-</details></section><section class="block" data-taxon=""><details ><summary id="分配格"><header><h1><span class="taxon"></span>“分配格” <a class="slug" href="./分配格.html">[分配格]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="分配格"><header><h1><span class="taxon"></span>分配格 <a class="slug" href="./分配格.html">[分配格]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>分配格是交与并互相满足分配律的<span class="link local"><a href="./格.html" title="格 [格]">格</a></span>.</p>
+<p>分配格是交与并互相满足分配律的<span class="link local"><a href="./格.html" title="格 [格]">格</a></span>:</p>
+<ul>
+<li>$x \land (y \lor z) = (x\land y) \lor (x\land z)$;</li>
+<li>$x\lor (y\land z) = (x\lor y) \land (x\lor z)$.</li>
+</ul>
+<h2>性质</h2>
+<h3>对称性</h3>
+<p>设 $L$ 是分配格, 则 $L^{\mathrm{op}}$ 也是分配格.</p>
+<h2>例</h2>
+<h3>开子空间</h3>
+<ul>
+<li>拓扑空间的开集构成分配格.</li>
+<li>对于<span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span> $X$, $\mathcal O(X)$ 为分配格.</li>
+</ul>
+<h3>向下封闭子集</h3>
+<p>对任意偏序集 $P$, 其向下封闭子集的全体 $\mathsf{Down}(P)$ 构成分配格.</p>
+<p>注意到偏序集 $P$ 的向下封闭子集也可以视为函子
+$$
+P \to \{0 &lt; 1\},
+$$
+故 $\mathsf{Down}(P)$ 可视为函子范畴 $\mathsf{Fun}(P,\{0&lt;1\})$, 也即 $P^{\mathrm{op}}$ 上的 ($(0,1)$-范畴意义的) <span class="link local"><a href="./预层.html" title="预层 [预层]">预层范畴</a></span>.
+由此及 $\{0&lt;1\}$ 是分配格可以立刻看出 $\mathsf{Down}(P)$ 是分配格.</p>
+<p><strong>定理</strong> (Birkhoff). 每个<strong>有限</strong>分配格都是某个偏序集上的预层范畴.</p>
+<p>该定理可理解为一般的预层范畴的识别定理在 $(0,1)$-范畴语境下的特例. 这里的有限性保证了一个素元 $x\in P$ 一定是完全素元 (即为完全紧对象), 也即 $\operatorname{Hom}(x,-)\colon P\to \{0&lt;1\}$ 保持余极限.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="格"><header><h1><span class="taxon"></span>格 <a class="slug" href="./格.html">[格]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>格是有二元交和二元<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">并</a></span>的<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span>.</p>
 <h2>相关概念</h2>
-<p><span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span>, <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>, <span class="link local"><a href="./分配格.html" title="“分配格” [分配格]">分配格</a></span></p>
+<p><span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span>, <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>, <span class="link local"><a href="./分配格.html" title="分配格 [分配格]">分配格</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="谱(代数)"><header><h1><span class="taxon"></span>谱 (代数–几何对偶) <a class="slug" href="./谱(代数).html">[谱(代数)]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本页面谈论<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>中的 “谱” 的广泛概念. 同伦论中的<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>与这个概念没有从属关系, 只是不幸地占有同一个名称. (更不幸的是, 谱代数几何要讨论<span class="link local"><a href="./环谱.html" title="环谱 [环谱]">环谱</a></span>的谱…)</p>
 <hr />

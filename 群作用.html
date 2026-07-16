@@ -1995,7 +1995,7 @@ $$
 <li>$\mathcal C$ 为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>;</li>
 <li>$\mathcal C$ 中的<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>保持<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>;</li>
 <li>$\mathcal C$ 中的<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>无交 (即 $X + Y$ 的子对象 $X$ 与 $Y$ 的交为<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span> $0$);</li>
-<li>$\mathcal C$ 中的<span class="link local"><a href="./满射(范畴论).html" title="满射 (范畴论) [满射(范畴论)]">满射</a></span>均为<span class="link local"><a href="./有效满射.html" title="有效满射 [有效满射]">有效满射</a></span>.</li>
+<li>$\mathcal C$ 中的<span class="link local"><a href="./满射(范畴论).html" title="满射 [满射(范畴论)]">满射</a></span>均为<span class="link local"><a href="./有效满射.html" title="有效满射 [有效满射]">有效满射</a></span>.</li>
 </ul>
 <h3>初等意象</h3>
 <p>逻辑学家从<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>的视角出发考虑了<strong>初等意象</strong>的概念. Grothendieck 意象都是初等意象, 但反之不然.</p>
@@ -2052,7 +2052,7 @@ $$
 </ul>
 <h2>性质</h2>
 <h3>指数对象与幂对象</h3>
-<p>意象中的两个对象 $X,Y$ 之间可构造<strong>指数对象</strong> $Y^X$ 与<strong>赋值映射</strong> $\operatorname{ev}\colon Y^X\times X \to Y$, 满足伴随
+<p>意象中的两个对象 $X,Y$ 之间可构造<strong></strong><span class="link local"><a href="./指数对象.html" title="指数对象 [指数对象]">指数对象</a></span> $Y^X$ 与<strong>赋值映射</strong> $\operatorname{ev}\colon Y^X\times X \to Y$, 满足伴随
 $$
 \operatorname{Hom}(Z,Y^X) \simeq \operatorname{Hom}(Z\times X,Y).
 $$</p>
@@ -2356,7 +2356,7 @@ $$
 均为同构.</p>
 <p>特别地, 对于域 $k$, $H^1(\operatorname{Spec}k,\mathbb G_m)=0$. 这是 <span class="link local"><a href="./Hilbert定理90.html" title="Hilbert 定理 90 [Hilbert定理90]">Hilbert 定理 90</a></span>.</p>
 <p><em>证明</em>. 见 <span class="link local"><a href="./Zar-fl-et.html" title="Zariski 景, 平展景与平坦景的比较 [Zar-fl-et]">Zariski, 平展与平坦的比较</a></span>.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="预层"><header><h1><span class="taxon"></span>预层 <a class="slug" href="./预层.html">[预层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="预层"><header><h1><span class="taxon"></span>预层 <a class="slug" href="./预层.html">[预层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>范畴 $\mathcal C$ 上的<strong>预层</strong>即是其<span class="link local"><a href="./反范畴.html" title="反范畴 [反范畴]">反范畴</a></span> $\mathcal C^{\mathrm{op}}$ 到 $\mathsf{Set}$ (或 $\mathsf{Ani}$) 的函子.</p>
 <p><span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>中也有类似概念. $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>单对象范畴上的预层, 也可视为 $\mathcal V$ 中的结合代数上的模.</p>
 <h2>性质</h2>
@@ -2396,6 +2396,14 @@ $$</p>
     (c,d).
 \end{aligned}
 $$</p>
+<h3>识别定理</h3>
+<p>如下定理告诉我们如何识别一个范畴为预层范畴.</p>
+<p><strong>定理</strong>. 设范畴 $\mathcal D$ 有一个小的全子范畴 $\mathcal C$, 满足</p>
+<ul>
+<li>$\mathcal C$ 的对象 $c$ 在 $\mathcal D$ 中<strong>完全紧</strong>, 即 $\operatorname{Hom}(c,-)\colon \mathcal D\to\mathsf{Ani}$ 保持任意余极限;</li>
+<li>$\mathcal C$ 的对象在余极限下生成整个 $\mathcal D$;</li>
+</ul>
+<p>那么 $\mathcal D$ 等价于 $\mathcal C$ 上的预层范畴. 具体地, 函子 $\mathcal D\to\operatorname{Psh}(\mathcal C)$, $d\mapsto\operatorname{Hom}(-,d)$ 为等价.</p>
 <h2>例</h2>
 <h3>群作用</h3>
 <p><span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>等同于 $\mathbf{B}G$ 上的预层. 因此预层也可视为群作用的推广.</p>

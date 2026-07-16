@@ -882,6 +882,59 @@ $$</p>
 </ul>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Thom空间.html" title="Thom 空间 [Thom空间]">Thom 空间</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="higherZar"><header><h1><span class="taxon"></span>高阶 Zariski 几何 <a class="slug" href="./higherZar.html">[higherZar]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文是 <span class="link local"><a href="./ABCSS25.html" title="Higher Zariski Geometry [ABCSS25]">ABCSS25</a></span> 的阅读笔记. 在 <span class="link local"><a href="./LurieDAGV.html" title="Derived Algebraic Geometry V: Structured Spaces [LurieDAGV]">Lurie DAG V</a></span> 的基础上, 建立局部 $2$-环化意象以及相应的 Zariski 谱等概念.</p>
+<p>用 “$2$-环” 来指代<span class="link local"><a href="./幂等完备范畴.html" title="幂等完备范畴 [幂等完备范畴]">幂等完备</a></span>的<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 记 $2$-环的范畴为 $2\mathsf{CAlg}$. 这是一个非常广泛的范畴, 包括了代数几何中许多对象:</p>
+<ul>
+<li><span class="link local"><a href="./拟紧概形.html" title="拟紧概形 [拟紧概形]">qc</a></span><span class="link local"><a href="./拟分离概形.html" title="拟分离概形 [拟分离概形]">qs</a></span> <span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span> $X$ 上的完美导出范畴 $\mathsf{Perf}_X$;</li>
+<li><span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 及其变体 (等变, 母题);</li>
+<li>非交换几何中的 Kasparov 可分 <span class="link local"><a href="./C-星代数.html" title="C*-代数 [C-星代数]">$C^*$-代数</a></span>范畴;</li>
+<li>Kontsevich 同调镜像对称猜想中的 Fukaya 范畴.</li>
+</ul>
+<p>这篇文章定义了局部 $2$-环化空间, 建立了如下伴随:
+$$
+\operatorname{Spec}\colon 2\mathsf{CAlg} \rightleftarrows \mathsf{Loc}2\mathsf{RingSp}^{\mathrm{op}} \colon \Gamma,
+$$
+其中右伴随部分 $\Gamma$ 是取整体截面的 $2$-环.
+并且左伴随部分 $\operatorname{Spec}$ 在<span class="link local"><a href="./刚性幺半范畴.html" title="刚性幺半范畴 [刚性幺半范畴]">刚性</a></span> $2$-环的子范畴上是全忠实的; 特别地, 每个刚性 $2$-环 $\mathcal K$ 都等同于 $\operatorname{Spec}\mathcal K$ 上的结构层的整体截面的 $2$-环.</p>
+<h2>2-环</h2>
+<p>记 $\mathsf{Cat}^{\mathrm{perf}}$ 为<span class="link local"><a href="./幂等完备范畴.html" title="幂等完备范畴 [幂等完备范畴]">幂等完备</a></span>的小<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>与正合函子构成的范畴, $\mathsf{Pr}_{\omega,\mathrm{st}}$ 为<span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成</a></span> (又叫有限表现) 稳定范畴与保持<span class="link local"><a href="./紧对象.html" title="紧对象 [紧对象]">紧对象</a></span>且保持<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>的函子构成的范畴. 那么两者作为<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>有等价
+$$
+\mathsf{Ind}\colon \mathsf{Cat}^{\mathrm{perf}} \rightleftarrows\mathsf{Pr}_{\omega,\mathrm{st}} \colon (-)^{\omega}.
+$$
+其中 $(-)^{\omega}$ 表示取<span class="link local"><a href="./紧对象.html" title="紧对象 [紧对象]">紧对象</a></span>的子范畴.</p>
+<p>定义 $2$-环为上述对称幺半范畴中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>:
+$$
+2\mathsf{CAlg} := \mathsf{CAlg}(\mathsf{Cat}^{\mathrm{perf}}) \simeq \mathsf{CAlg}(\mathsf{Pr}_{\omega,\mathrm{st}}).
+$$</p>
+<h3>理想</h3>
+<p>设 $\mathcal K$ 为 $2$-环, 定义 $\mathcal K$ 的<strong>厚张量理想</strong> (thick tensor ideal, 简称为<strong>理想</strong>) 为满足如下条件的全子范畴 $\mathcal J$:</p>
+<ul>
+<li>$\mathcal J$ 关于<span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">余纤维</a></span>, 平移, <span class="link local"><a href="./收缩.html" title="收缩 [收缩]">收缩</a></span>封闭;</li>
+<li>对任意 $x\in\mathcal K$ 与 $y\in\mathcal J$, 有 $x\otimes y\in\mathcal J$.</li>
+</ul>
+<p>那么 $\mathcal K$ 的理想在包含关系下构成<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span> $\mathsf{Ideal}(\mathcal K)$. 任何一族对象 $S$ 可以生成一个理想, 记为 $\langle S\rangle$. 一个对象 $x$ 生成的理想 $\langle x\rangle$ 称为<strong>主理想</strong>.
+若理想 $\mathcal J$ 满足 $x\otimes x\in \mathcal J$ 蕴涵 $x\in\mathcal J$, 则称其为<strong>根理想</strong>. 任何一族对象 $S$ 生成一个根理想, 记为 $\sqrt{S}$.</p>
+<p>$2$-环中的理想与一种局部化有关, 称为 Karoubi 商.
+对于理想 $\mathcal J$, 令 $W$ 为余纤维属于 $\mathcal J$ 的态射的全体, 定义 $\mathcal K$ 关于 $\mathcal K$ 的 Karoubi 商为<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>的<span class="link local"><a href="./幂等完备化.html" title="幂等完备化 [幂等完备化]">幂等完备化</a></span>:
+$$
+\mathcal K / \mathcal J := \mathsf{Idem}(\mathcal K [W^{-1}]).
+$$</p>
+<p><strong>命题</strong>. 对 $2$-环 $\mathcal K$, 有伴随
+$$
+\mathcal K/-\colon \mathsf{Ideal}(\mathcal K) \rightleftarrows 2\mathsf{CAlg}_{\mathcal K /} \colon \ker (-),
+$$
+换言之, 对 $\mathcal K$ 的理想 $\mathcal J$ 以及 $2$-环的态射 $f\colon \mathcal K\to\mathcal L$, 其穿过 $\mathcal K/\mathcal J$ 当且仅当 $\mathcal J$ 包含于 $\ker(f)$.</p>
+<p>这个命题至少直观上是对的: 态射 $f$ 将 $W$ 中的态射变为同构当且仅当 $f$ 将 $\mathcal J$ 的对象映射到 $0$.</p>
+<h2>2-环的 Zariski 几何</h2>
+<p>$2$-环上的 Zariski <span class="link local"><a href="./geometry-DAGV.html" title="几何 (带结构的意象) [geometry-DAGV]">几何</a></span>由如下资料定义:</p>
+<ul>
+<li>$\mathcal G_{\mathrm{Zar}} = (2\mathsf{CAlg}^{\omega})^{\mathrm{op}}$ (注意 $2\mathsf{CAlg}$ 为<span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成范畴</a></span>),</li>
+<li>可容许态射为 Karoubi 商;</li>
+<li>覆盖为有限个 Karoubi 商 $f_i\colon \mathcal K\to\mathcal K_i$, 满足 $\bigcap_i \ker f_i \subset \sqrt{0}$.</li>
+</ul>
+<h3>Balmer 谱</h3>
+<p>前述<span class="link local"><a href="./geometry-DAGV.html" title="几何 (带结构的意象) [geometry-DAGV]">几何</a></span>构造的谱能够恢复出 <span class="link local"><a href="./Balmer谱.html" title="Balmer 谱 [Balmer谱]">Balmer 谱</a></span>的概念.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="notes-Gestalten-Cat"><header><h1><span class="taxon"></span>Gestalten - 在范畴上做代数 <a class="slug" href="./notes-Gestalten-Cat.html">[notes-Gestalten-Cat]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>“在范畴上做代数” 指的是一种<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>, 将<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>等概念应用于<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>的范畴 $\mathsf{Pr}^{\mathrm{L}}$ (简记为 $\mathsf{Pr}$).</p>
 <p>本文中所有的 $n$-范畴指的是 $(\infty ,n)$-范畴.</p>
@@ -1509,7 +1562,7 @@ $$
 <li>$\mathcal C$ 为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>;</li>
 <li>$\mathcal C$ 中的<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>保持<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>;</li>
 <li>$\mathcal C$ 中的<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>无交 (即 $X + Y$ 的子对象 $X$ 与 $Y$ 的交为<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span> $0$);</li>
-<li>$\mathcal C$ 中的<span class="link local"><a href="./满射(范畴论).html" title="满射 (范畴论) [满射(范畴论)]">满射</a></span>均为<span class="link local"><a href="./有效满射.html" title="有效满射 [有效满射]">有效满射</a></span>.</li>
+<li>$\mathcal C$ 中的<span class="link local"><a href="./满射(范畴论).html" title="满射 [满射(范畴论)]">满射</a></span>均为<span class="link local"><a href="./有效满射.html" title="有效满射 [有效满射]">有效满射</a></span>.</li>
 </ul>
 <h3>初等意象</h3>
 <p>逻辑学家从<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>的视角出发考虑了<strong>初等意象</strong>的概念. Grothendieck 意象都是初等意象, 但反之不然.</p>
@@ -1566,7 +1619,7 @@ $$
 </ul>
 <h2>性质</h2>
 <h3>指数对象与幂对象</h3>
-<p>意象中的两个对象 $X,Y$ 之间可构造<strong>指数对象</strong> $Y^X$ 与<strong>赋值映射</strong> $\operatorname{ev}\colon Y^X\times X \to Y$, 满足伴随
+<p>意象中的两个对象 $X,Y$ 之间可构造<strong></strong><span class="link local"><a href="./指数对象.html" title="指数对象 [指数对象]">指数对象</a></span> $Y^X$ 与<strong>赋值映射</strong> $\operatorname{ev}\colon Y^X\times X \to Y$, 满足伴随
 $$
 \operatorname{Hom}(Z,Y^X) \simeq \operatorname{Hom}(Z\times X,Y).
 $$</p>

@@ -837,14 +837,32 @@ $$
 \end{array}
 $$
 存在唯一的态射 $B\to X$ 与上述态射交换. 在 $\infty$-范畴的语境下, 这是指 $\mathcal C_{A/,/Y}(B,X)$ 可缩.</p>
+<p>参见<span class="link local"><a href="./提升性质.html" title="提升性质 [提升性质]">提升性质</a></span>.</p>
 <p><strong>定义</strong> (正交分解系). 范畴 $\mathcal C$ 中的一个正交分解系 (orthogonal factorization system) 是指两族态射 $(L,R)$, 满足</p>
 <ul>
 <li>两族态射都关于<span class="link local"><a href="./收缩.html" title="收缩 [收缩]">收缩</a></span>封闭;</li>
 <li>$L$ 中的每个态射都左正交于 $R$ 中的每个态射;</li>
 <li>$\mathcal C$ 中的每个态射都是 $L$ 中态射与 $R$ 中态射的复合 (先 $L$ 后 $R$).</li>
 </ul>
+<p>在第三条 (提升存在) 的前提下, 前两个条件 (正交性和收缩封闭) 等价于 $L$ 和 $R$ 互为<span class="link local"><a href="./提升性质.html" title="提升性质 [提升性质]">提升</a></span>类:
+$$
+L = {^\perp R},\quad R = L^\perp.
+$$</p>
+<p>证明如下. 假设 $(L,R)$ 满足正交性和收缩封闭. 对任意 $f\in {^\perp R}$, 存在 $\ell\in L$ 与 $r\in R$ 使得 $f = r\ell$, 那么如下方块存在提升:
+$$
+\begin{array}{ccc}
+\bullet &amp; \!\!\!\overset{\ell}{\rightarrow}\!\!\! &amp; \bullet \\
+\!\!\!\!\!{\scriptsize f}\,\downarrow &amp;  &amp; \downarrow\,{\scriptsize r}\!\!\!\!\! \\
+\bullet &amp; \!\!\!=\!\!\! &amp; \bullet
+\end{array}
+$$
+这说明 $f$ 是 $\ell$ 的<span class="link local"><a href="./收缩.html" title="收缩 [收缩]">收缩</a></span>, 从而 $f\in L$.</p>
+<p>另一方面, 假设 $L = {^\perp R}$, $R = L^\perp$.
+注意到提升性质是由一个等价描述的, 而等价关于收缩封闭, 故提升类也关于收缩封闭. $\square$</p>
+<h2>性质</h2>
 <h2>例</h2>
 <p>在集合范畴中, (满射, 单射) 是一个正交分解系. 这是 <span class="link local"><a href="./连通-截断分解.html" title="(n-连通, n-截断) 分解 [连通-截断分解]">$n$-连通-$n$-截断分解</a></span>的特例 $(n=-1)$.</p>
+<h3>互为提升类不足</h3>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="geometry-DAGV"><header><h1><span class="taxon"></span>几何 (带结构的意象) <a class="slug" href="./geometry-DAGV.html">[geometry-DAGV]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本页介绍 Lurie 的 <span class="link local"><a href="./LurieDAGV.html" title="Derived Algebraic Geometry V: Structured Spaces [LurieDAGV]">DAG V</a></span> 描绘的 “几何” 图景. 加入了一些个人的见解.</p>
 <p>几何学的各个分支研究的<span class="link local"><a href="./概形.html" title="概形 [概形]">经典概形</a></span>, <span class="link local"><a href="./叠.html" title="叠 [叠]">Deligne–Mumford 叠</a></span>, 流形, 复解析流形, <span class="link local"><a href="./导出概形.html" title="导出概形 [导出概形]">导出概形</a></span>等等不同几何对象, 都可以描述为某种带结构的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $(\mathcal X,\mathcal O_{\mathcal X})$, 类比于<span class="link local"><a href="./局部环化空间.html" title="局部环化空间 [局部环化空间]">局部环化空间</a></span>. 从<span class="link local"><a href="./范畴逻辑.html" title="范畴逻辑 [范畴逻辑]">范畴逻辑</a></span>的角度, 这里的结构 $\mathcal O_{\mathcal X}$ 可以理解为一种<span class="link local"><a href="./本质代数理论.html" title="本质代数理论 [本质代数理论]">本质代数结构</a></span>加上一些 “局部性” (见后文). 同时, 这些结构可用<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span>描述: 一个结构就是一个意象态射 $\mathcal X \to \mathcal K$. 每种结构就是一种<strong>几何</strong>.</p>

@@ -1014,10 +1014,19 @@ $$
 <p>由于<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$ 是 “一个对象生成的自由<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>”, 任意幺半范畴 $M$ 中的幺半对象都对应着函子 $\Delta \to M$, 也即 $M^{\text{op}}$ 中的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯集</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="保守函子"><header><h1><span class="taxon"></span>保守函子 <a class="slug" href="./保守函子.html">[保守函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p><strong>保守函子</strong> (conservative functor) 是<span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映同构</a></span>的函子.</p>
+<p><strong>保守函子</strong> (conservative functor) 是<span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映同构</a></span>的函子. 换言之, 保守函子 $F\colon \mathcal C\to\mathcal D$ 满足任意如下的方块都有提升:
+$$
+\begin{array}{ccc}
+\Delta^1 &amp; \rightarrow &amp; \mathcal C \\
+\downarrow &amp;  &amp; \downarrow \\
+\Delta^0 &amp; \rightarrow &amp; \mathcal D
+\end{array}
+$$</p>
 <h2>例</h2>
 <p><span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>为保守函子.</p>
 <p><span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘函子</a></span> $\mathsf{Grp}\to\mathsf{Set}$ 为保守函子. 对任何<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>乃至<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>都是如此.</p>
+<h2>性质</h2>
+<p>保守函子具有关于<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>的<span class="link local"><a href="./提升性质.html" title="提升性质 [提升性质]">右提升性质</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="创生(范畴论)"><header><h1><span class="taxon"></span>创生 (范畴论) <a class="slug" href="./创生(范畴论).html">[创生(范畴论)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>对于指标范畴 $I$, 称函子 $F\colon \mathcal C\to \mathcal D$ <strong>创生</strong> $I$-极限是指:</p>

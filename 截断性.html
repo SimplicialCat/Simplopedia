@@ -1286,10 +1286,96 @@ $$
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./余中心.html" title="余中心 [余中心]">余中心</a></span></p>
 <p><span class="link local"><a href="./中心化子.html" title="中心化子 [中心化子]">中心化子</a></span></p>
-</details></section><section class="block" data-taxon=""><details ><summary id="单射"><header><h1><span class="taxon"></span>单射 <a class="slug" href="./单射.html">[单射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="位象"><header><h1><span class="taxon"></span>位象 <a class="slug" href="./位象.html">[位象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>单射就是 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>映射.</p>
-<p>在<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中, 映射 $f\colon Y\to X$ 是单射, 当且仅当它是 $X$ 的若干连通分支的含入.</p>
+<p>位象是<span class="link local"><a href="./无点拓扑学.html" title="无点拓扑学 [无点拓扑学]">无点拓扑学</a></span>的最基本概念. 一个位象是一个偏序集, 满足与拓扑空间中的开集构成的偏序集类似的性质. 但是位象不像拓扑空间那样是由点构成的: 事实上, 一个非平凡的位象可以没有任何点.</p>
+<p>位象又称 $0$-<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>. 这体现了它是一座概念塔的最底层: 位象之上还有 $1$-意象直至 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span>.</p>
+<h2>定义</h2>
+<p>一个<strong>位象</strong> (locale) $X$ 对应满足如下条件的<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span> $\mathcal O(X)$:</p>
+<ul>
+<li>$\mathcal O(X)$ 具有有限交 (也即<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>) $a\land b$;</li>
+<li>$\mathcal O(X)$ 具有任意并 (也即任意余极限) $\bigvee_i a_i$;</li>
+<li>$\mathcal O(X)$ 的有限交关于任意并有分配律
+$$
+  \Big(\bigvee_i a_i\Big) \land b = \bigvee_i (a_i \land b).
+$$</li>
+</ul>
+<p>位象 $X$ 到 $Y$ 的态射 $f\colon X\to Y$ 对应于偏序集之间的一对伴随
+$$
+f^*\colon \mathcal O(Y) \rightleftarrows \mathcal O(X) \colon f_*,
+$$
+其中 $f^*$ 为左伴随 (从而 $f^*$ 须保持任意并), 且保持有限交. 相应地, $f_*$ 为右伴随, 从而须保持任意交.</p>
+<h3>位象的点</h3>
+<p>考虑单点对应的位象 $\mathrm{pt}$, 有 $\mathcal O(\mathrm{pt}) = \{\bot,\top\}$ ($\bot$ 是最小元, $\top$ 是最大元). 定义位象 $X$ 的<strong>点</strong>为态射
+$$
+x\colon \mathrm{pt} \to X.
+$$
+这等同于一个保持有限交和任意并的映射
+$$
+x^*\colon \mathcal O(X) \to \{\bot,\top\},
+$$
+从而等同于 $\mathcal O(X)$ 的一个子集 $P := (x^*)^{-1}(\top)$, 满足</p>
+<ul>
+<li>$\top\in P$;</li>
+<li>若 $U,V\in P$, 则 $U\land V\in P$;</li>
+<li>若 $U\in P$, $U\leq V$, 则 $V\in P$;</li>
+<li>对任意一族元素 $U_i$, 若 $\bigvee_i U_i\in P$, 则存在某个 $i$ 使得 $U_i\in P$.</li>
+</ul>
+<p>这样的子集 $P$ 称为<strong>完全素滤子</strong> (completely prime filter).</p>
+<h2>性质</h2>
+<h3>与拓扑空间的关系</h3>
+<p>每个拓扑空间 $X$ 都给出一个位象: $\mathcal O(X)$ 即是 $X$ 的全体开集构成的偏序集. 该构造给出一个函子
+$$
+\mathsf{Top} \to \mathsf{Loc}.
+$$
+当然, 这个函子不是全忠实的, 因为有的拓扑空间的开集很少, 不足以区分各个点. 这个函子在分离性较好的空间 (所谓<span class="link local"><a href="./清醒空间.html" title="清醒空间 [清醒空间]">清醒空间</a></span>) 上是全忠实的.</p>
+<h3>指数对象与蕴涵运算</h3>
+<p>对于位象 $X$, 任取 $a\in \mathcal O(X)$, 由于 $\mathcal O(X)$ 到自身的映射 $a\land -$ 保持余极限, 由<span class="link local"><a href="./伴随函子定理.html" title="伴随函子定理 [伴随函子定理]">伴随函子定理</a></span>其有右伴随, 记作 $a\Rightarrow -$, 即
+$$
+(a\land b)\leq c
+$$
+等价于
+$$
+b \leq (a\Rightarrow c).
+$$
+这一事实可理解为: 位象视为 $(0,1)$-范畴, 具有<span class="link local"><a href="./指数对象.html" title="指数对象 [指数对象]">指数对象</a></span>.</p>
+<p>运算 $a\Rightarrow b$ 在逻辑上又可理解为命题之间的 “蕴涵” 运算.
+上述结构使得一个位象构成一个 <span class="link local"><a href="./Heyting代数.html" title="Heyting 代数 [Heyting代数]">Heyting 代数</a></span>, 即<span class="link local"><a href="./直觉主义逻辑.html" title="直觉主义逻辑 [直觉主义逻辑]">直觉主义</a></span>命题演算的模型.</p>
+<h3>与意象的关系</h3>
+<p>位象是 $0$-意象, 每个位象 $X$ 都给出一个意象, 即 $\mathcal O(X)$ 上的层范畴 $\operatorname{Sh}(\mathcal O(X))$, 其中 $\mathcal O(X)$ 的覆盖结构是明显的: $\{U_i\leq U\}$ 覆盖 $U$ 当且仅当 $\bigvee_i U_i = U$.</p>
+<p>反过来, 每个意象 $\mathcal X$ 也给出一个位象 $X$, 偏序集 $\mathcal O(X) = \mathcal X_{\leq -1}$ 为 $\mathcal X$ 中的 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>对象的偏序集. 上述构造使得位象的范畴 $\mathsf{Locale}$ 构成意象的范畴 $\mathsf{Topos}$ 的<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">余自反子范畴</a></span>.
+意象的态射 $\mathcal X\to\mathrm{Topos}(\operatorname{Sh}(\mathcal O(Y)))$ 等同于位象的态射 $\mathrm{Locale}(\mathcal X_{\leq -1})\to Y$.</p>
+<h2>例</h2>
+<h3>Zariski 谱</h3>
+<p>含幺交换环 $A$ 的<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span> $\operatorname{Spec}A$ 作为位象, 可如下描述: $\mathcal O(\operatorname{Spec}A)$ 是 $A$ 的根理想构成的偏序集, 其中元素的交就是理想的交, 并则是理想的并的根理想. 这个位象还可描述为基本开集 $U_a\,(a\in A)$ 在如下关系下生成的位象:</p>
+<ul>
+<li>$U_0 = \bot,U_1=\top$;</li>
+<li>$U_{ab} = U_a \land U_b$;</li>
+<li>$U_{a+b}\leq U_a\lor U_b$.</li>
+</ul>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./凝聚位象.html" title="凝聚位象 [凝聚位象]">凝聚位象</a></span></p>
+<h2>参考资料</h2>
+<p><span class="link local"><a href="./盲人摸象.html" title="盲人摸象 [盲人摸象]">盲人摸象</a></span>第 2 章</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="单射"><header><h1><span class="taxon"></span>单射 <a class="slug" href="./单射.html">[单射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>生象</h3>
+<p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的单射就是 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>映射. 映射 $f\colon Y\to X$ 是单射, 当且仅当它是 $X$ 的若干连通分支的含入.</p>
+<h3>一般范畴</h3>
+<p>定义一般范畴 $\mathcal C$ 中的态射 $f\colon X\to Y$ 是单射当且仅当对任意对象 $X\in\mathcal C$,
+$$
+\operatorname{Hom}_{\mathcal C}(Z,X) \to \operatorname{Hom}_{\mathcal C}(Z,Y)
+$$
+是单射.</p>
+<p>参见 <span class="link local"><a href="./AyalaFrancisRozenblyumI.html" title="Factorization homology I: higher categories [AyalaFrancisRozenblyumI]">Ayala–Francis–Rozenblyum</a></span> 5.1 节.</p>
+<h2>例</h2>
+<h3>范畴的范畴</h3>
+<p>范畴的范畴 <span class="link local"><a href="./Cat.html" title="范畴的范畴 [Cat]">$\mathsf{Cat}$</a></span> 中的单射是满足如下条件的函子 $F\colon \mathcal C\to\mathcal D$:</p>
+<ul>
+<li>$F$ 给出<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>的单射 $\mathcal C^{\simeq} \to \mathcal D^{\simeq}$;</li>
+<li>对任意两个对象 $X,Y\in\mathcal C$, 映射 $\operatorname{Hom}_{\mathcal C}(X,Y)\to\operatorname{Hom}_{\mathcal D}(F(X),F(Y))$ 为单射.</li>
+</ul>
+<p>注意, 上述条件比<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>弱.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="同伦群"><header><h1><span class="taxon"></span>同伦群 <a class="slug" href="./同伦群.html">[同伦群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本页面介绍<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的同伦群, 又称非稳定同伦群. 另见<span class="link local"><a href="./同伦群(稳定同伦论).html" title="同伦群 (稳定同伦论) [同伦群(稳定同伦论)]">同伦群 (稳定同伦论)</a></span>.</p>
 <h2>观念</h2>
@@ -1329,6 +1415,11 @@ $$</p>
 <p>其中 $\pi_n(f)$ 是 $f\in \mathcal C_{/Y}$ 的同伦群, 是 $(\mathcal C_{/Y})_{/f} = \mathcal C_{/X}$ 的对象.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./相对同伦群.html" title="相对同伦群 [相对同伦群]">相对同伦群</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="同伦范畴"><header><h1><span class="taxon"></span>同伦范畴 <a class="slug" href="./同伦范畴.html">[同伦范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>动机</h2>
+<p>对于一个高阶范畴, 将通过 $2$-态射相连的两个态射等同起来, 换言之将映射空间作 $0$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>, 就得到一个 $(1,1)$-范畴, 称为其同伦范畴.</p>
+<h2>例</h2>
+<p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ 视为 $(\infty,1)$-范畴, 其同伦范畴 $hX$ 是<span class="link local"><a href="./基本群胚.html" title=" [基本群胚]">基本群胚</a></span> $\pi_{\leq 1}(X)$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="基本群"><header><h1><span class="taxon"></span>基本群 <a class="slug" href="./基本群.html">[基本群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的<strong>基本群</strong>是其<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>的 <span class="link local"><a href="./截断性.html" title="截断性 [截断性]">$0$-截断</a></span>.</p>
@@ -1361,7 +1452,7 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="意象中的满射"><header><h1><span class="taxon"></span>意象中的满射 <a class="slug" href="./意象中的满射.html">[意象中的满射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./意象理论.html" title="意象理论 [意象理论]">意象理论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>∞-意象</h3>
-<p>$\infty$-意象中的<strong>有效满射</strong> (effective epimorphism) 是可被 <span class="link local"><a href="./Čech脉.html" title="Čech 脉 [Čech脉]">Čech 脉</a></span>所<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">实现</a></span>的映射, 也等价于 $0$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>后为 $1$-意象中的 (有效) 满射.</p>
+<p>$\infty$-意象中的<strong></strong><span class="link local"><a href="./有效满射.html" title="有效满射 [有效满射]">有效满射</a></span> (effective epimorphism), 即可被 <span class="link local"><a href="./Čech脉.html" title="Čech 脉 [Čech脉]">Čech 脉</a></span>所<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">实现</a></span>的映射, 等价于<span class="link local"><a href="./满射(范畴论).html" title="满射 [满射(范畴论)]">范畴论满射</a></span>, 也等价于 $0$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>后为 $1$-意象中的 (有效) 满射.</p>
 <h3>1-意象, 内语言定义</h3>
 <p><span class="link local"><a href="./意象.html" title="意象 [意象]">$1$-意象</a></span>中的 (有效) 满射是<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>中满足如下条件的映射 $f\colon X\to Y$:
 $$
@@ -1373,6 +1464,8 @@ $$</p>
 <ul>
 <li>对任意 $U\in\mathcal C$ 与 $y\in Y(U)$, 存在 $U$ 的 $J$-覆盖 $\{U_i\to U\}$ 以及 $x_i\in X(U_i)$, 使得 $f_{U_i}(x_i) = y|_{U_i}$.</li>
 </ul>
+<h3>通过提升性质</h3>
+<p>意象中的满射也可定义为<span class="link local"><a href="./单射.html" title="单射 [单射]">单射</a></span> (即 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>态射) 的<span class="link local"><a href="./提升性质.html" title="提升性质 [提升性质]">左提升类</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="束"><header><h1><span class="taxon"></span>束 <a class="slug" href="./束.html">[束]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>束 (gerbe) 是<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>中的一种特殊的对象, 仅包含某一个阶数的非平凡同伦信息.</p>
 <h2>定义</h2>
