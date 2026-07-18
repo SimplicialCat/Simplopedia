@@ -832,7 +832,7 @@
 <h3>与分配格的关系</h3>
 <p><strong>命题</strong>. 位象 $X$ 是凝聚位象, 当且仅当存在<span class="link local"><a href="./分配格.html" title="分配格 [分配格]">分配格</a></span> $L$ 使得 $\mathcal O(X) \simeq \mathsf{Ideal}(L)$ 是其<span class="link local"><a href="./理想(偏序集).html" title="理想 (偏序集) [理想(偏序集)]">理想</a></span>的偏序集.</p>
 <p><em>证明</em>. 假设 $\mathcal O(X) = \mathsf{Ideal}(L)$. 对任意 $a\in L$, 主理想 $\downarrow(a)$ 是 $\mathsf{Ideal}(L)$ 中的<span class="link local"><a href="./紧对象.html" title="紧对象 [紧对象]">紧对象</a></span>. 另一方面, $\mathsf{Ideal}(L)$ 中的紧对象也都是主理想. 这说明 $X$ 为凝聚位象.</p>
-<p>现在设 $X$ 为凝聚位象, 令 $L = \mathcal O(X)^\omega$ 为紧对象的集合, 则 $L$ 为分配格. 对任意 $U\in \mathcal O(X)$, 考虑 $L$ 中不超过 $U$ 的元素构成的理想, 这给出映射 $\mathcal O(X) \to \mathsf{Ideal}(L)$, 我们需要证明该映射为同构. 任取 $I\in\mathsf{Ideal}(L)$, 其中所有元素的并 $\bigvee I\in\mathcal O(X)$ 对应于 $I$ 自身. 反过来, 由 $X$ 的凝聚性, $\mathcal O(X)$ 的每个元素都等于不超过它的紧对象的并. $\square$</p>
+<p>现在设 $X$ 为凝聚位象, 令 $L = \mathcal O(X)^\omega$ 为<span class="link local"><a href="./紧对象.html" title="紧对象 [紧对象]">紧对象</a></span>的集合, 则 $L$ 为分配格. 对任意 $U\in \mathcal O(X)$, 考虑 $L$ 中不超过 $U$ 的元素构成的理想, 这给出映射 $\mathcal O(X) \to \mathsf{Ideal}(L)$, 我们需要证明该映射为同构. 任取 $I\in\mathsf{Ideal}(L)$, 其中所有元素的并 $\bigvee I\in\mathcal O(X)$ 对应于 $I$ 自身. 反过来, 由 $X$ 的凝聚性, $\mathcal O(X)$ 的每个元素都等于不超过它的紧对象的并. $\square$</p>
 <p>事实上, 上述命题可理解为<span class="link local"><a href="./紧生成范畴.html" title="紧生成范畴 [紧生成范畴]">紧生成范畴</a></span>的性质在 $(0,1)$-范畴语境下的特例.</p>
 <h3>Hochster 对偶</h3>
 <p>对于凝聚位象 $X$, 定义其 <strong>Hochster 对偶</strong> $X^\vee$ 如下:
@@ -896,7 +896,7 @@ $$
 <p>运算 $a\Rightarrow b$ 在逻辑上又可理解为命题之间的 “蕴涵” 运算.
 上述结构使得一个位象构成一个 <span class="link local"><a href="./Heyting代数.html" title="Heyting 代数 [Heyting代数]">Heyting 代数</a></span>, 即<span class="link local"><a href="./直觉主义逻辑.html" title="直觉主义逻辑 [直觉主义逻辑]">直觉主义</a></span>命题演算的模型.</p>
 <h3>与意象的关系</h3>
-<p>位象是 $0$-意象, 每个位象 $X$ 都给出一个意象, 即 $\mathcal O(X)$ 上的层范畴 $\operatorname{Sh}(\mathcal O(X))$, 其中 $\mathcal O(X)$ 的覆盖结构是明显的: $\{U_i\leq U\}$ 覆盖 $U$ 当且仅当 $\bigvee_i U_i = U$.</p>
+<p>位象是 $0$-意象, 每个位象 $X$ 都给出一个意象, 即 $\mathcal O(X)$ 上的层范畴 $\operatorname{Sh}(\mathcal O(X))$, 其中 $\mathcal O(X)$ 的覆盖结构是<span class="link local"><a href="./次典范拓扑.html" title="次典范拓扑 [次典范拓扑]">典范拓扑</a></span>: $\{U_i\leq U\}$ 覆盖 $U$ 当且仅当 $\bigvee_i U_i = U$.</p>
 <p>反过来, 每个意象 $\mathcal X$ 也给出一个位象 $X$, 偏序集 $\mathcal O(X) = \mathcal X_{\leq -1}$ 为 $\mathcal X$ 中的 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>对象的偏序集. 上述构造使得位象的范畴 $\mathsf{Locale}$ 构成意象的范畴 $\mathsf{Topos}$ 的<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">余自反子范畴</a></span>.
 意象的态射 $\mathcal X\to\mathrm{Topos}(\operatorname{Sh}(\mathcal O(Y)))$ 等同于位象的态射 $\mathrm{Locale}(\mathcal X_{\leq -1})\to Y$.</p>
 <h2>例</h2>
@@ -907,6 +907,7 @@ $$
 <li>$U_{ab} = U_a \land U_b$;</li>
 <li>$U_{a+b}\leq U_a\lor U_b$.</li>
 </ul>
+<p>详见 <span class="link local"><a href="./Zariski位象.html" title="Zariski 位象 [Zariski位象]">Zariski 位象</a></span>.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./凝聚位象.html" title="凝聚位象 [凝聚位象]">凝聚位象</a></span></p>
 <h2>参考资料</h2>

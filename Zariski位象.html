@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>“可积联络”</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width"><title>Zariski 位象</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
 
 
 <div id="tcomment"></div>
@@ -825,88 +825,109 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon=""><details open><summary id="可积联络"><header><h1><span class="taxon"></span>“可积联络” <a class="slug" href="./可积联络.html">[可积联络]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li><li class="meta-item">平坦联络, 平坦向量丛</li></ul></div></header></summary>
-
-<p>又称平坦联络. <span class="link local"><a href="./Riemann--Hilbert对应.html" title="“Riemann–Hilbert 对应” [Riemann--Hilbert对应]">Riemann–Hilbert 对应</a></span>的研究对象.</p>
-<h2>拓扑主丛</h2>
-<p><strong>命题-定义</strong>. 对于拓扑群 $G$ 与拓扑空间 $X$ 上的 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span> $P$, 若以下三条等价的条件成立, 则称 $P$ 是<strong>平坦</strong>的:</p>
-<ul>
-<li>$P$ 诱导自 $X$ 的万有覆盖 (视为 $\pi_1(X)$-主丛) 与同态 $\pi_1(X)\to G$, 又称基本群的<strong>和乐表示</strong> (holonomy representation);</li>
-<li>$P$ 诱导自某个 $G_d$-主丛与同态 $\operatorname{id}\colon G_d\to G$, 其中 $G_d$ 为 $G$ 的底层离散群;</li>
-<li><span class="link local"><a href="./和乐.html" title="和乐群, 单值群 [和乐]">和乐</a></span>表示 $\Omega(X)\to G$ 在<strong>同伦</strong>的意义下分解穿过投影 $\Omega(X)\to \pi_1(X)$.</li>
-</ul>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="D-模"><header><h1><span class="taxon"></span>D-模 <a class="slug" href="./D-模.html">[D-模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<h2>观念</h2>
-<p>D-模是<span class="link local"><a href="./微分层.html" title="微分算子层 [微分层]">微分算子环 (层)</a></span> 上的模. D-模起源于微分方程, <span class="link local"><a href="./线性偏微分方程.html" title="线性偏微分方程 [线性偏微分方程]">线性偏微分方程</a></span>是 D-模的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>.</p>
-<p>微分算子层 $D_X$ 上的模可以描述微分方程局部的解; 它可以描述一个解沿闭合路径一周的解析延拓与原来不同的现象, 称为<strong></strong><span class="link local"><a href="./单值.html" title="单值 [单值]">单值</a></span> (monodromy).</p>
-<p>我们研究的主要对象是<strong>局部有限表现</strong>的 $D_X$-模, 也即<span class="link local"><a href="./凝聚层.html" title="凝聚层 [凝聚层]">凝聚</a></span> $D_X$-模. 函子
-$$
-\operatorname{Hom}_{D_X}(-,\mathcal O_X)\colon \mathsf {Mod}_{\text{coh}}(D_X) \to \mathsf {Mod}(\mathbb{C}_X),
-$$
-描述了微分方程组的解; 其<span class="link local"><a href="./导出函子.html" title="导出函子 [导出函子]">导出函子</a></span> $\operatorname{Ext}^\bullet_{D_X}(-,\mathcal O_X)$ 描述了微分方程的 “高阶解”.</p>
-<p>D-模可以推广为<span class="link local"><a href="./晶体.html" title="晶体 [晶体]">晶体</a></span>的概念, 适用于更多的场景, 例如有奇点的代数簇, 以及非线性对象如范畴上的平坦联络.</p>
-<h3>特征簇</h3>
-<p>设 $p=q=1$, $R$ 的<span class="link local"><a href="./特征簇.html" title="特征簇 (微分算子) [特征簇]">特征簇</a></span>是…</p>
+<article><section class="block" data-taxon=""><details open><summary id="Zariski位象"><header><h1><span class="taxon"></span>Zariski 位象 <a class="slug" href="./Zariski位象.html">[Zariski位象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>设 $X$ 是 $\mathbb C$ 上的光滑代数簇. $X$ 上的 D-模是<span class="link local"><a href="./正则微分算子.html" title="“正则微分算子” [正则微分算子]">正则微分算子</a></span>层 $D_X$ 上的模. 左 $D_X$-模即带有 $D_X$ 作用的 $\mathcal{O}_X$-模, 等同于线性映射
-$$
-\nabla\colon D_X \to \operatorname{End}_{\mathbb C}(M),
-$$
-满足</p>
+<h3>通过根理想</h3>
+<p>含幺交换环 $A$ 的<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span> $\operatorname{Spec}A$ 作为<span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span>, 可如下描述: $\mathcal O(\operatorname{Spec}A)$ 是 $A$ 的根理想构成的偏序集, 其中元素的交就是理想的交, 并则是理想的并的根理想.</p>
+<p><strong>命题</strong>.</p>
+<h3>通过生成元–关系</h3>
+<p>交换环 $A$ 的 Zariski 位象还可描述为基本开集 $U_a\,(a\in A)$ 在如下关系下生成的位象:</p>
 <ul>
-<li>$\nabla_{fv}(m)=f\nabla_v(m)$;</li>
-<li>$\nabla_v(fm)=v(f) m + f\nabla_v m$;</li>
-<li>$\nabla_{[v,w]}m=[\nabla_v,\nabla_w]m$.</li>
+<li>$U_0 = \bot,U_1=\top$;</li>
+<li>$U_{ab} = U_a \land U_b$;</li>
+<li>$U_{a+b}\leq U_a\lor U_b$.</li>
 </ul>
-<p>$X$ 上的 D-模也可视为带有<span class="link local"><a href="./平坦联络.html" title=" [平坦联络]">可积联络</a></span>的拟凝聚 $\mathcal{O}_X$-模.</p>
-<h2>函子性</h2>
-<p>与凝聚层类似, 不同代数簇上的 D-模由推出和拉回联系起来.</p>
-<h2>和乐</h2>
-<p>设 $M$ 为凝聚 $D_X$-模. 若其<span class="link local"><a href="./特征簇.html" title="特征簇 (微分算子) [特征簇]">特征簇</a></span>满足 $\dim \operatorname{Ch}(M)=\dim X$, 即特征簇的维数取到<strong>最小</strong>可能值, 则称 $M$ 为<strong>和乐</strong> (holonomic) 的.</p>
-<p>和乐 $D_X$-模是线性常微分方程在高维复流形的自然推广.</p>
-<h2>例</h2>
-<h3>函数层作为 D-模</h3>
-<p>函数层 $\mathcal O_X$ 是 D-模, 且可表现为
-$$
-\mathcal O_X \simeq \mathcal D_X / \mathcal D_X T_X.
-$$
-对于一般的 D-模 $M$, D-模同态 $\mathcal O_X \to M$ 等同于 $M$ 的平坦截面, 即被 $T_X$ 零化的截面.</p>
-<h3>向量丛</h3>
-<p>设 $E$ 是 $X$ 上带有<span class="link local"><a href="./平坦联络.html" title=" [平坦联络]">可积联络</a></span> $\nabla$ 的向量丛, 也即局部形如 $\bigoplus_i \mathcal O_U e_i$ 的层.</p>
-<p>回忆联络 $\nabla$ 可视为丛映射 $TX\to \operatorname{End}(E)$, 满足</p>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="位象"><header><h1><span class="taxon"></span>位象 <a class="slug" href="./位象.html">[位象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>位象是<span class="link local"><a href="./无点拓扑学.html" title="无点拓扑学 [无点拓扑学]">无点拓扑学</a></span>的最基本概念. 一个位象是一个偏序集, 满足与拓扑空间中的开集构成的偏序集类似的性质. 但是位象不像拓扑空间那样是由点构成的: 事实上, 一个非平凡的位象可以没有任何点.</p>
+<p>位象又称 $0$-<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>. 这体现了它是一座概念塔的最底层: 位象之上还有 $1$-意象直至 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span>.</p>
+<h2>定义</h2>
+<p>一个<strong>位象</strong> (locale) $X$ 对应满足如下条件的<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span> $\mathcal O(X)$:</p>
 <ul>
-<li>$\nabla_{av}=a\nabla_v$;</li>
-<li>$\nabla_v(as)=v(a)s+a\nabla_v s$;</li>
-<li>$\nabla_{[v,w]}=[\nabla_v,\nabla_w]$ (称为可积性或平坦性; 见<span class="link local"><a href="./可积联络.html" title="“可积联络” [可积联络]">可积联络</a></span>).</li>
+<li>$\mathcal O(X)$ 具有有限交 (也即<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>) $a\land b$;</li>
+<li>$\mathcal O(X)$ 具有任意并 (也即任意余极限) $\bigvee_i a_i$;</li>
+<li>$\mathcal O(X)$ 的有限交关于任意并有分配律
+$$
+  \Big(\bigvee_i a_i\Big) \land b = \bigvee_i (a_i \land b).
+$$</li>
 </ul>
-<p>此时左 $D_X$-模结构即由 $v\cdot s = \nabla_v s$ 给出.</p>
-<h3>“δ 函数” D-模</h3>
-<p>对于 $X$ 的闭点 $x$, 有 D-模
+<p>位象 $X$ 到 $Y$ 的态射 $f\colon X\to Y$ 对应于偏序集之间的一对伴随
 $$
-\delta_x:= \mathcal D_X / \mathcal D_X\mathfrak m_x\otimes_k\operatorname{det}T_xX.
+f^*\colon \mathcal O(Y) \rightleftarrows \mathcal O(X) \colon f_*,
 $$
-D-模同态 $\delta_x \to M$ 等同于 $M$ 上被 $\mathfrak m_x$ 零化的截面. 与直线 $\operatorname{det}T_xX$ 作张量积的目的是使得存在典范同构
+其中 $f^*$ 为左伴随 (从而 $f^*$ 须保持任意并), 且保持有限交. 相应地, $f_*$ 为右伴随, 从而须保持任意交.</p>
+<h3>位象的点</h3>
+<p>考虑单点对应的位象 $\mathrm{pt}$, 有 $\mathcal O(\mathrm{pt}) = \{\bot,\top\}$ ($\bot$ 是最小元, $\top$ 是最大元). 定义位象 $X$ 的<strong>点</strong>为态射
 $$
-f_*\delta_x \simeq \delta_{f(x)}.
-$$</p>
-<blockquote>
-<p>$\delta_x$ 是由 $\delta$ 函数和它的各阶导数张成的向量空间.</p>
-</blockquote>
-<h3>对偶层</h3>
-<p>对偶层 $\omega = \det \Omega^1$</p>
-<p>由于 Lie 导数 $L_v = [\iota_v, d]$, 对于 $\alpha\in\omega$ 有 $L_v\alpha = d \iota_v \alpha$.</p>
-<p>对偶层可以把右 D-模变成左 D-模:
+x\colon \mathrm{pt} \to X.
 $$
-D^{\text{op}} = \omega\otimes D \otimes \omega^{-1}
-$$</p>
-<h3>摩天大楼 D-模</h3>
-<p>$p\in X$, 定义
+这等同于一个保持有限交和任意并的映射
 $$
-M_p = D_X / D_X ()
-$$</p>
+x^*\colon \mathcal O(X) \to \{\bot,\top\},
+$$
+从而等同于 $\mathcal O(X)$ 的一个子集 $P := (x^*)^{-1}(\top)$, 满足</p>
+<ul>
+<li>$\top\in P$;</li>
+<li>若 $U,V\in P$, 则 $U\land V\in P$;</li>
+<li>若 $U\in P$, $U\leq V$, 则 $V\in P$;</li>
+<li>对任意一族元素 $U_i$, 若 $\bigvee_i U_i\in P$, 则存在某个 $i$ 使得 $U_i\in P$.</li>
+</ul>
+<p>这样的子集 $P$ 称为<strong>完全素滤子</strong> (completely prime filter).</p>
 <h2>性质</h2>
-<h3>与 de Rham 空间的关系</h3>
-<p>$X$ 上的 D-模等同于 $X$ 的 <span class="link local"><a href="./deRham空间.html" title="de Rham 空间 [deRham空间]">de Rham 空间</a></span>上的拟凝聚层.</p>
+<h3>与拓扑空间的关系</h3>
+<p>每个拓扑空间 $X$ 都给出一个位象: $\mathcal O(X)$ 即是 $X$ 的全体开集构成的偏序集. 该构造给出一个函子
+$$
+\mathsf{Top} \to \mathsf{Loc}.
+$$
+当然, 这个函子不是全忠实的, 因为有的拓扑空间的开集很少, 不足以区分各个点. 这个函子在分离性较好的空间 (所谓<span class="link local"><a href="./清醒空间.html" title="清醒空间 [清醒空间]">清醒空间</a></span>) 上是全忠实的.</p>
+<h3>指数对象与蕴涵运算</h3>
+<p>对于位象 $X$, 任取 $a\in \mathcal O(X)$, 由于 $\mathcal O(X)$ 到自身的映射 $a\land -$ 保持余极限, 由<span class="link local"><a href="./伴随函子定理.html" title="伴随函子定理 [伴随函子定理]">伴随函子定理</a></span>其有右伴随, 记作 $a\Rightarrow -$, 即
+$$
+(a\land b)\leq c
+$$
+等价于
+$$
+b \leq (a\Rightarrow c).
+$$
+这一事实可理解为: 位象视为 $(0,1)$-范畴, 具有<span class="link local"><a href="./指数对象.html" title="指数对象 [指数对象]">指数对象</a></span>.</p>
+<p>运算 $a\Rightarrow b$ 在逻辑上又可理解为命题之间的 “蕴涵” 运算.
+上述结构使得一个位象构成一个 <span class="link local"><a href="./Heyting代数.html" title="Heyting 代数 [Heyting代数]">Heyting 代数</a></span>, 即<span class="link local"><a href="./直觉主义逻辑.html" title="直觉主义逻辑 [直觉主义逻辑]">直觉主义</a></span>命题演算的模型.</p>
+<h3>与意象的关系</h3>
+<p>位象是 $0$-意象, 每个位象 $X$ 都给出一个意象, 即 $\mathcal O(X)$ 上的层范畴 $\operatorname{Sh}(\mathcal O(X))$, 其中 $\mathcal O(X)$ 的覆盖结构是<span class="link local"><a href="./次典范拓扑.html" title="次典范拓扑 [次典范拓扑]">典范拓扑</a></span>: $\{U_i\leq U\}$ 覆盖 $U$ 当且仅当 $\bigvee_i U_i = U$.</p>
+<p>反过来, 每个意象 $\mathcal X$ 也给出一个位象 $X$, 偏序集 $\mathcal O(X) = \mathcal X_{\leq -1}$ 为 $\mathcal X$ 中的 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>对象的偏序集. 上述构造使得位象的范畴 $\mathsf{Locale}$ 构成意象的范畴 $\mathsf{Topos}$ 的<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">余自反子范畴</a></span>.
+意象的态射 $\mathcal X\to\mathrm{Topos}(\operatorname{Sh}(\mathcal O(Y)))$ 等同于位象的态射 $\mathrm{Locale}(\mathcal X_{\leq -1})\to Y$.</p>
+<h2>例</h2>
+<h3>Zariski 谱</h3>
+<p>含幺交换环 $A$ 的<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span> $\operatorname{Spec}A$ 作为位象, 可如下描述: $\mathcal O(\operatorname{Spec}A)$ 是 $A$ 的根理想构成的偏序集, 其中元素的交就是理想的交, 并则是理想的并的根理想. 这个位象还可描述为基本开集 $U_a\,(a\in A)$ 在如下关系下生成的位象:</p>
+<ul>
+<li>$U_0 = \bot,U_1=\top$;</li>
+<li>$U_{ab} = U_a \land U_b$;</li>
+<li>$U_{a+b}\leq U_a\lor U_b$.</li>
+</ul>
+<p>详见 <span class="link local"><a href="./Zariski位象.html" title="Zariski 位象 [Zariski位象]">Zariski 位象</a></span>.</p>
 <h2>相关概念</h2>
-<p><span class="link local"><a href="./D-概形.html" title="D-概形 [D-概形]">D-概形</a></span></p>
+<p><span class="link local"><a href="./凝聚位象.html" title="凝聚位象 [凝聚位象]">凝聚位象</a></span></p>
+<h2>参考资料</h2>
+<p><span class="link local"><a href="./盲人摸象.html" title="盲人摸象 [盲人摸象]">盲人摸象</a></span>第 2 章</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="谱(代数)"><header><h1><span class="taxon"></span>谱 (代数–几何对偶) <a class="slug" href="./谱(代数).html">[谱(代数)]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本页面谈论<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>中的 “谱” 的广泛概念. 同伦论中的<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>与这个概念没有从属关系, 只是不幸地占有同一个名称. (更不幸的是, 谱代数几何要讨论<span class="link local"><a href="./环谱.html" title="环谱 [环谱]">环谱</a></span>的谱…)</p>
+<hr />
+<p>谱是一种与代数<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">对偶</a></span>的对象. 这里的 “代数” 是非常广泛的概念, 不限于<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 通常, 某种代数的谱 $\operatorname{Spec}A$ 满足这样的性质:</p>
+<ul>
+<li>代数同态 $A \to B$ 对应于谱的映射 $\operatorname{Spec}B\to \operatorname{Spec} A$. (这一事实有时可直接作为函子 $\operatorname{Spec}$ 的定义.)</li>
+<li>特别地, 若 $\operatorname{Spec}B$ 是一个类似于 “点” 的几何对象, 也就是其中没有 “更小” 的部分 (意味着 $B$ 是一个不能 “更小” 的代数), 那么代数同态 $A\to B$ 给出了 $\operatorname{Spec}A$ 的一个 “点”. 这个事实有时是 $\operatorname{Spec}A$ 的定义.</li>
+</ul>
+<h2>例</h2>
+<h3>交换代数</h3>
+<ul>
+<li>交换环的谱是<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>. 另见 <span class="link local"><a href="./Zariski位象.html" title="Zariski 位象 [Zariski位象]">Zariski 位象</a></span>.</li>
+<li>交换 <span class="link local"><a href="./C-星代数.html" title="C*-代数 [C-星代数]">C*-代数</a></span>的谱是<span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>.</li>
+</ul>
+<h3>逻辑学中的代数</h3>
+<ul>
+<li><span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>的谱是其 <span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span>.</li>
+<li><span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span> …</li>
+</ul>
+<h3>综合代数几何</h3>
+<p>…</p>
 </details></section></details></section></footer></article></div></body></html>
