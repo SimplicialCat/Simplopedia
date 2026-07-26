@@ -958,11 +958,17 @@ $$
 <p>范畴 $\mathcal C$ 的 ind-对象是其对象的形式<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>.</p>
 <p>对偶的概念是 <span class="link local"><a href="./pro-对象.html" title="pro-对象 [pro-对象]">pro-对象</a></span>.</p>
 <h2>定义</h2>
+<h3>通过可表函子的滤余极限</h3>
 <p>范畴 $\mathcal C$ 的 ind-对象的范畴
 $$
 \mathsf{Ind}(\mathcal C) \hookrightarrow \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set})
 $$
 是<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>在 $\mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set})$ 中的<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>构成的全子范畴.</p>
+<h3>通过平坦函子</h3>
+<p>范畴 $\mathcal C$ 的 ind-对象的范畴也可定义为<span class="link local"><a href="./平坦函子.html" title="平坦函子 [平坦函子]">平坦函子</a></span> $\mathcal C^{\mathrm{op}}\to\mathsf{Ani}$ (或 $\mathcal C^{\mathrm{op}}\to\mathsf{Set}$) 的范畴:
+$$
+\mathsf{Ind}(\mathcal C) \simeq \mathsf{Flat}(\mathcal C^{\mathrm{op}},\mathsf{Ani}).
+$$</p>
 <h2>例</h2>
 <p><span class="link local"><a href="./ind-概形.html" title=" [ind-概形]">ind-概形</a></span>是一类常见的 ind-对象.</p>
 <h2>相关概念</h2>
@@ -1016,16 +1022,24 @@ $$
 <p>范畴 $\mathcal C$ 的 pro-对象是其对象的形式<span class="link local"><a href="./余滤极限.html" title="余滤极限 [余滤极限]">余滤极限</a></span>.</p>
 <p>对偶的概念是 <span class="link local"><a href="./ind-对象.html" title="ind-对象 [ind-对象]">ind-对象</a></span>.</p>
 <h2>定义</h2>
+<h3>通过可表函子的余滤极限</h3>
 <p>范畴 $\mathcal C$ 的 pro-对象的范畴
 $$
 \mathsf{Pro}(\mathcal C) \hookrightarrow \mathsf{Fun}(\mathcal C,\mathsf{Set})^{\mathrm{op}}
 $$
 是<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>在 $\mathsf{Fun}(\mathcal C,\mathsf{Set})^{\mathrm{op}}$ 中的<span class="link local"><a href="./余滤极限.html" title="余滤极限 [余滤极限]">余滤极限</a></span>构成的全子范畴.</p>
+<h3>通过平坦函子</h3>
+<p>范畴 $\mathcal C$ 的 pro-对象的范畴也可定义为<span class="link local"><a href="./平坦函子.html" title="平坦函子 [平坦函子]">平坦函子</a></span> $\mathcal C\to\mathsf{Ani}$ (或 $\mathcal C\to\mathsf{Set}$) 的范畴的对偶:
+$$
+\mathsf{Pro}(\mathcal C) \simeq \mathsf{Flat}(\mathcal C,\mathsf{Ani})^{\mathrm{op}}.
+$$</p>
 <h2>例</h2>
 <ul>
 <li><span class="link local"><a href="./pro-有限集.html" title="pro-有限集 [pro-有限集]">pro-有限集</a></span></li>
 <li><span class="link local"><a href="./pro-有限群.html" title="pro-有限群 [pro-有限群]">pro-有限群</a></span></li>
 </ul>
+<h3>pro-同伦型</h3>
+<p><span class="link local"><a href="./∞-意象的形.html" title="意象的形 [∞-意象的形]">意象的形</a></span> (如<span class="link local"><a href="./平展同伦论.html" title="平展同伦论 [平展同伦论]">平展同伦型</a></span>) 是 pro-同伦型, 即 pro-<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</p>
 <h2>性质</h2>
 <h3>态射的计算</h3>
 <p>由<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>, 对于 $X\in\mathsf{Pro}(\mathcal C)$ (视为函子 $\mathcal C\to\mathsf{Set}$) 与 $c\in\mathcal C$,
@@ -1063,6 +1077,11 @@ $$
 $$
 其中标记为 $\simeq^*$ 的一步使用了 $i(d)$ 的余紧性. $\square$</p>
 <p>上述命题的一个重要应用是将 <span class="link local"><a href="./pro-有限集.html" title="pro-有限集 [pro-有限集]">pro-有限集</a></span>与 <span class="link local"><a href="./pro-有限群.html" title="pro-有限群 [pro-有限群]">pro-有限群</a></span>视为紧 Hausdorff 空间, 因为有限离散空间是紧 Hausdorff 空间范畴 $\mathsf{CHaus}$ 中的余紧对象.</p>
+<h3>有限极限范畴</h3>
+<p>设范畴 $\mathcal C$ 具有<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>. 那么 pro-对象 (反变地) 等同于保持有限极限的函子 $\mathcal C \to \mathsf{Ani}$, 即
+$$
+\mathsf{Pro}(\mathcal C) \simeq \mathsf{Fun}^{\mathrm{fin.~lim.}}(\mathcal C,\mathsf{Ani})^{\mathrm{op}}.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="subject"><header><h1><span class="taxon"></span>学科 <a class="slug" href="./subject.html">[subject]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>偏分析的数学:</p>
 <ul>
@@ -1443,12 +1462,11 @@ $$
 <h2>观念</h2>
 <p>平坦函子可视为<span class="link local"><a href="./平坦模.html" title="平坦模 [平坦模]">平坦模</a></span>的推广.</p>
 <h2>定义</h2>
+<h3>通过米田扩张</h3>
 <p>对于函子 $F\colon \mathcal C\to\mathsf{Set}$, 考虑其<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">米田扩张</a></span> $F\otimes (-)\colon \widehat {\mathcal C}\to\mathsf{Set}$; 若后者为左正合函子, 即保持有限极限, 则称 $F$ 为<strong>平坦函子</strong>.</p>
-<h2>性质</h2>
-<p>对于函子 $F\colon \mathcal C\to\mathsf{Set}$, 如下条件等价.</p>
-<ul>
-<li>$F$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span></li>
-</ul>
+<p>换言之, 平坦函子 $F\colon \mathcal C\to\mathsf{Set}$ 等同于<span class="link local"><a href="./预层意象.html" title="预层意象 [预层意象]">预层意象</a></span> $\widehat {\mathcal C}$ 的<span class="link local"><a href="./意象的点.html" title="意象的点 [意象的点]">点</a></span>.</p>
+<h3>通过元素范畴</h3>
+<p>函子 $F\colon \mathcal C\to\mathsf{Set}$ 平坦当且仅当 $F$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span>为<span class="link local"><a href="./余滤范畴.html" title="余滤范畴 [余滤范畴]">余滤范畴</a></span>.</p>
 <h2>相关资料</h2>
 <p>见<span class="link local"><a href="./盲人摸象.html" title="盲人摸象 [盲人摸象]">盲人摸象</a></span> A.5 节.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="扭箭头范畴"><header><h1><span class="taxon"></span>扭箭头范畴 <a class="slug" href="./扭箭头范畴.html">[扭箭头范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>

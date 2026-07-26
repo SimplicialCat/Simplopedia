@@ -1287,7 +1287,12 @@ $$</p>
 <li>设 $m\geq n$. 拉回函子 $f^*_{m-1}\colon A_m \to \mathsf{Mod}_{A_m}((B/A)_{m-1})$ 在 $\mathsf{Mod}_{\mathsf{Pr}}(A_m)$ 中有右伴随 $f_{m-1,*}$; 由仿射性, 函子 $\mathsf{Mod}(A_m) \to A_{m+1}$ 将 $\mathsf{Mod}((B/A)_{m-1})$ 映射到 $(B/A)_m$. 因此 $f_{m-1}^*\colon 1\to (B/A)_m$ 在 $A_{m+1}$ 中有右伴随.</li>
 </ul>
 <h2>平展性</h2>
-<p>对于 Stefanich 环的同态 $f\colon A\to B$,</p>
+<p><strong>定义</strong>. 设有 Stefanich 环的同态 $f\colon A\to B$, 若如下条件成立, 则称 $f$ 为 $n$-<strong><span class="link local"><a href="./term-suave.html" title="滑 [term-suave]">滑</a></span></strong> (suave) 态射:</p>
+<ul>
+<li>对任意 $m\geq n+1$, $f^*_{m-1}\colon 1\to (B/A)_m$ 在 $A_{m+1}$ 中有左伴随 $f_{m-1,\sharp}\colon (B/A)_m\to 1$;</li>
+<li>对任意 $m\geq n$, 令 $(B/A)^!_m = f_{m,\sharp}(1)\in A_{m+1}$, 其带有的映射 $f_{m-1,!}\colon (B/A)^!_{m} \to 1$ 当 $m\geq n+1$ 时有右伴随 $f^!_{m-1}$.</li>
+</ul>
+<p><strong>注</strong>. 这里的记号 $(B/A)_m^!$ 的直观是所谓 $!$-层, 在 fpqc 叠 $X/\mathbb{S}$ 上, $(X/\mathbb{S})_1^!$ 等于 $D(A)$ 沿 $!$-拉回的极限.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="six-functors"><header><h1><span class="taxon"></span>六函子 <a class="slug" href="./six-functors.html">[six-functors]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li></ul></div></header></summary>
 <p>本文是 <span class="link local"><a href="./ScholzeSixFunctors.html" title="Six-functor Formalisms [ScholzeSixFunctors]">Scholze 的六函子讲义</a></span>的阅读笔记.</p>
 <h2>引言</h2>
@@ -1766,6 +1771,8 @@ $$
 \operatorname{List}A := \bigsqcup_{n\geq 0} A^n.
 $$</p>
 <p>注意另一个概念, $A$ 生成的自由 $\mathbb E_1$-群是 $\Omega\Sigma_+A$, 是 $\operatorname{List} A$ 的群化.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./代数充实于余代数.html" title="代数充实于余代数 [代数充实于余代数]">代数充实于余代数</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="结合代数上的模"><header><h1><span class="taxon"></span>结合代数上的模 <a class="slug" href="./结合代数上的模.html">[结合代数上的模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 可视为单对象<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span> $\mathbf{B}A$; 在这种意义上, 结合代数上的模可以推广为<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">充实范畴上的模</a></span>或者<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>:

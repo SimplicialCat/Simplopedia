@@ -1352,7 +1352,12 @@ $$</p>
 <li>设 $m\geq n$. 拉回函子 $f^*_{m-1}\colon A_m \to \mathsf{Mod}_{A_m}((B/A)_{m-1})$ 在 $\mathsf{Mod}_{\mathsf{Pr}}(A_m)$ 中有右伴随 $f_{m-1,*}$; 由仿射性, 函子 $\mathsf{Mod}(A_m) \to A_{m+1}$ 将 $\mathsf{Mod}((B/A)_{m-1})$ 映射到 $(B/A)_m$. 因此 $f_{m-1}^*\colon 1\to (B/A)_m$ 在 $A_{m+1}$ 中有右伴随.</li>
 </ul>
 <h2>平展性</h2>
-<p>对于 Stefanich 环的同态 $f\colon A\to B$,</p>
+<p><strong>定义</strong>. 设有 Stefanich 环的同态 $f\colon A\to B$, 若如下条件成立, 则称 $f$ 为 $n$-<strong><span class="link local"><a href="./term-suave.html" title="滑 [term-suave]">滑</a></span></strong> (suave) 态射:</p>
+<ul>
+<li>对任意 $m\geq n+1$, $f^*_{m-1}\colon 1\to (B/A)_m$ 在 $A_{m+1}$ 中有左伴随 $f_{m-1,\sharp}\colon (B/A)_m\to 1$;</li>
+<li>对任意 $m\geq n$, 令 $(B/A)^!_m = f_{m,\sharp}(1)\in A_{m+1}$, 其带有的映射 $f_{m-1,!}\colon (B/A)^!_{m} \to 1$ 当 $m\geq n+1$ 时有右伴随 $f^!_{m-1}$.</li>
+</ul>
+<p><strong>注</strong>. 这里的记号 $(B/A)_m^!$ 的直观是所谓 $!$-层, 在 fpqc 叠 $X/\mathbb{S}$ 上, $(X/\mathbb{S})_1^!$ 等于 $D(A)$ 沿 $!$-拉回的极限.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="微分分次范畴"><header><h1><span class="taxon"></span>微分分次范畴 <a class="slug" href="./微分分次范畴.html">[微分分次范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>交换环 $k$ 上的微分分次范畴 (differential graded category, “dg category”) 是 “$k$-线性<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span>” 的一种模型, 也等同于充实于 <span class="link local"><a href="./Eilenberg–MacLane谱.html" title="Eilenberg–MacLane 谱 [Eilenberg–MacLane谱]">Eilenberg–MacLane 谱</a></span> $Hk$ 上的模范畴 $\mathsf{Mod}(Hk)$ 的范畴, 或 $\mathsf{Mod}(Hk)$-<span class="link local"><a href="./高阶模.html" title="高阶模 [高阶模]">模</a></span>;

@@ -830,11 +830,17 @@
 <p>范畴 $\mathcal C$ 的 ind-对象是其对象的形式<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>.</p>
 <p>对偶的概念是 <span class="link local"><a href="./pro-对象.html" title="pro-对象 [pro-对象]">pro-对象</a></span>.</p>
 <h2>定义</h2>
+<h3>通过可表函子的滤余极限</h3>
 <p>范畴 $\mathcal C$ 的 ind-对象的范畴
 $$
 \mathsf{Ind}(\mathcal C) \hookrightarrow \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set})
 $$
 是<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>在 $\mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set})$ 中的<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>构成的全子范畴.</p>
+<h3>通过平坦函子</h3>
+<p>范畴 $\mathcal C$ 的 ind-对象的范畴也可定义为<span class="link local"><a href="./平坦函子.html" title="平坦函子 [平坦函子]">平坦函子</a></span> $\mathcal C^{\mathrm{op}}\to\mathsf{Ani}$ (或 $\mathcal C^{\mathrm{op}}\to\mathsf{Set}$) 的范畴:
+$$
+\mathsf{Ind}(\mathcal C) \simeq \mathsf{Flat}(\mathcal C^{\mathrm{op}},\mathsf{Ani}).
+$$</p>
 <h2>例</h2>
 <p><span class="link local"><a href="./ind-概形.html" title=" [ind-概形]">ind-概形</a></span>是一类常见的 ind-对象.</p>
 <h2>相关概念</h2>
@@ -906,6 +912,14 @@ $$
 $$
 都是拉回方块, 则称 $\alpha$ 为<strong>局部同态</strong>.</p>
 <p>注意, 范畴 $\mathsf{Str}_{\mathcal G}(\mathcal X)$ 本身只取决于 $\mathcal G$ 及其上的 Grothendieck 拓扑, 但局部同态的概念依赖于可容许结构.</p>
+<p><strong>定理</strong>. 设 $\mathcal G$ 为任意几何, 对于意象 $\mathcal X$, 范畴 $\mathsf{Str}_{\mathcal G}(\mathcal X)$ 上有<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">分解系统</a></span> $(L_{\mathcal X},R_{\mathcal X})$, 使得 $R_{\mathcal X}$ 为局部同态的类.</p>
+<p><em>证明</em>.
+首先考虑 $\mathcal X = \mathsf{Ani}$ 的特例. 注意到
+$$
+\mathsf{Fun}^{\mathrm{fin.~lim.}}
+(\mathcal G, \mathsf{Ani}) \simeq \mathsf{Pro}(\mathcal G)^{\mathrm{op}},
+$$</p>
+<h3>分类意象</h3>
 <p>设 $\mathcal K$ 为意象. 定义 $\mathcal K$ 上的一个<strong>几何结构</strong>为如下资料: 对任意一个意象 $\mathcal X$, 函子性地指定 $\operatorname{Hom}(\mathcal X,\mathcal K)$ 的一个<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">分解系统</a></span> $(L_{\mathcal X},R_{\mathcal X})$.
 函子性是指对意象态射 $\mathcal Y\to \mathcal X$, 函子 $\mathsf{Fun}(\mathcal X,\mathcal K) \to \mathsf{Fun}(\mathcal Y,\mathcal K)$ 将 $L_{\mathcal X}$ 映射到 $L_{\mathcal Y}$, $R_{\mathcal X}$ 映射到 $R_{\mathcal Y}$.</p>
 <p>定义 $\operatorname{Str}_{\mathcal K}^{\mathrm{loc}}(\mathcal X)$ 为 $\operatorname{Hom}_{\mathsf{Topos}}(\mathcal X,\mathcal K)$ 的对象及 $R_{\mathcal X}$ 中的态射构成的范畴.</p>
@@ -1246,16 +1260,24 @@ $$</p>
 <p>范畴 $\mathcal C$ 的 pro-对象是其对象的形式<span class="link local"><a href="./余滤极限.html" title="余滤极限 [余滤极限]">余滤极限</a></span>.</p>
 <p>对偶的概念是 <span class="link local"><a href="./ind-对象.html" title="ind-对象 [ind-对象]">ind-对象</a></span>.</p>
 <h2>定义</h2>
+<h3>通过可表函子的余滤极限</h3>
 <p>范畴 $\mathcal C$ 的 pro-对象的范畴
 $$
 \mathsf{Pro}(\mathcal C) \hookrightarrow \mathsf{Fun}(\mathcal C,\mathsf{Set})^{\mathrm{op}}
 $$
 是<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>在 $\mathsf{Fun}(\mathcal C,\mathsf{Set})^{\mathrm{op}}$ 中的<span class="link local"><a href="./余滤极限.html" title="余滤极限 [余滤极限]">余滤极限</a></span>构成的全子范畴.</p>
+<h3>通过平坦函子</h3>
+<p>范畴 $\mathcal C$ 的 pro-对象的范畴也可定义为<span class="link local"><a href="./平坦函子.html" title="平坦函子 [平坦函子]">平坦函子</a></span> $\mathcal C\to\mathsf{Ani}$ (或 $\mathcal C\to\mathsf{Set}$) 的范畴的对偶:
+$$
+\mathsf{Pro}(\mathcal C) \simeq \mathsf{Flat}(\mathcal C,\mathsf{Ani})^{\mathrm{op}}.
+$$</p>
 <h2>例</h2>
 <ul>
 <li><span class="link local"><a href="./pro-有限集.html" title="pro-有限集 [pro-有限集]">pro-有限集</a></span></li>
 <li><span class="link local"><a href="./pro-有限群.html" title="pro-有限群 [pro-有限群]">pro-有限群</a></span></li>
 </ul>
+<h3>pro-同伦型</h3>
+<p><span class="link local"><a href="./∞-意象的形.html" title="意象的形 [∞-意象的形]">意象的形</a></span> (如<span class="link local"><a href="./平展同伦论.html" title="平展同伦论 [平展同伦论]">平展同伦型</a></span>) 是 pro-同伦型, 即 pro-<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</p>
 <h2>性质</h2>
 <h3>态射的计算</h3>
 <p>由<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>, 对于 $X\in\mathsf{Pro}(\mathcal C)$ (视为函子 $\mathcal C\to\mathsf{Set}$) 与 $c\in\mathcal C$,
@@ -1293,6 +1315,11 @@ $$
 $$
 其中标记为 $\simeq^*$ 的一步使用了 $i(d)$ 的余紧性. $\square$</p>
 <p>上述命题的一个重要应用是将 <span class="link local"><a href="./pro-有限集.html" title="pro-有限集 [pro-有限集]">pro-有限集</a></span>与 <span class="link local"><a href="./pro-有限群.html" title="pro-有限群 [pro-有限群]">pro-有限群</a></span>视为紧 Hausdorff 空间, 因为有限离散空间是紧 Hausdorff 空间范畴 $\mathsf{CHaus}$ 中的余紧对象.</p>
+<h3>有限极限范畴</h3>
+<p>设范畴 $\mathcal C$ 具有<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>. 那么 pro-对象 (反变地) 等同于保持有限极限的函子 $\mathcal C \to \mathsf{Ani}$, 即
+$$
+\mathsf{Pro}(\mathcal C) \simeq \mathsf{Fun}^{\mathrm{fin.~lim.}}(\mathcal C,\mathsf{Ani})^{\mathrm{op}}.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="余完备化"><header><h1><span class="taxon"></span>余完备化 <a class="slug" href="./余完备化.html">[余完备化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>余完备化是指向一个范畴<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加特定形状的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>的过程.</p>
