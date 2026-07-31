@@ -1815,13 +1815,38 @@ $$</p>
 <li>$\operatorname{Hom}_{\mathcal D}(-,f(-)) \colon \mathcal C \otimes\mathcal D^{\mathrm{op}} \to \mathsf{Set}$.</li>
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="代数充实于余代数"><header><h1><span class="taxon"></span>代数充实于余代数 <a class="slug" href="./代数充实于余代数.html">[代数充实于余代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<h2>陈述</h2>
-<p>设 $A,B$ 为<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">代数</a></span> (默认指结合代数), $C$ 为<span class="link local"><a href="./结合余代数.html" title="结合余代数 [结合余代数]">余代数</a></span>. 定义 $A$ 到 $B$ 的一个 $C$-值<strong>测量</strong>为映射
+<h2>定义</h2>
+<h3>通过余代数测量</h3>
+<p>设 $A,B$ 为某范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">代数</a></span> (默认指结合代数), $C$ 为<span class="link local"><a href="./结合余代数.html" title="结合余代数 [结合余代数]">余代数</a></span>. 定义 $A$ 到 $B$ 的一个 $C$-值<strong>测量</strong>为映射
 $$
 m\colon C \otimes A \to B,
 $$
 满足如下<span class="link local"><a href="./线图.html" title="线图 [线图]">线图</a></span>.</p>
-<img src="/assets/coalg-measure.svg" alt="" width="600" style="display:block; margin:auto;"></details></section><section class="block" data-taxon=""><details ><summary id="代数理论"><header><h1><span class="taxon"></span>代数理论 <a class="slug" href="./代数理论.html">[代数理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./逻辑.html" title="逻辑 [逻辑]">逻辑</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<img src="/assets/coalg-measure.svg" alt="" width="600" style="display:block; margin:auto;">
+<p>记 $\operatorname{Meas}(C;A,B)$ 为 $A$ 到 $B$ 的 $C$-值测量的全体.</p>
+<p>若存在万有的余代数测量, 则称之为 <strong>Sweedler 态射对象</strong> (Sweedler hom) $\{A,B\}$, 即
+$$
+\operatorname{Hom}_{\mathsf{Coalg}}(C,\{A,B\})\simeq\operatorname{Meas}(C;A,B).
+$$</p>
+<h3>通过卷积</h3>
+<p>设 $\mathcal C$ 为可表现对称幺半范畴, 则幺半函子
+$$
+{-\otimes -}\colon\mathcal C\times\mathcal C\to\mathcal C
+$$
+给出<span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">松幺半函子</a></span>
+$$
+[-,-]\colon\mathcal C^{\mathrm{op}}\times\mathcal C\to\mathcal C
+$$
+满足伴随关系 $-\otimes X \dashv [X,-]$,
+进而给出函子
+$$
+[-,-]\colon\mathsf{Alg}(\mathcal C^{\mathrm{op}})\times\mathsf{Alg}(\mathcal C)\to\mathsf{Alg}(\mathcal C),
+$$
+注意 $\mathsf{Alg}(\mathcal C^{\mathrm{op}}) = \mathsf{Coalg}(\mathcal{C})$. 这意味着对于余代数 $C$ 和代数 $B$, 内蕴态射对象 $[C,B]$ 有代数结构. 这个代数结构称为<strong></strong><span class="link local"><a href="./卷积.html" title="卷积 [卷积]">卷积</a></span>, 又称为 <strong>Sweedler 余张量</strong>. 它满足
+$$
+\operatorname{Hom}_{\mathsf{Alg}}(A,[C,B])\simeq\operatorname{Meas}(C;A,B).
+$$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="代数理论"><header><h1><span class="taxon"></span>代数理论 <a class="slug" href="./代数理论.html">[代数理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./逻辑.html" title="逻辑 [逻辑]">逻辑</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>代数</strong>的最初意义是对运算与等式的研究. 一个<strong>代数理论</strong>就是若干种运算和这些运算之间的若干条等式. 代数理论的<strong>模型</strong>就是一个集合 (或一般范畴的对象) 上带有指定的运算, 满足指定的等式.</p>
 <p>一种更抽象的视角是, 运算和等式不过是一个具有有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">乘积</a></span> (<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>) 的范畴的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 故代数理论可 “无坐标” 式地定义为这样的一个范畴, 这个范畴就是它的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>. 而该理论的模型则是语法范畴到 $\mathsf{Set}$ (或一般范畴) 的保持结构的函子.</p>

@@ -1205,4 +1205,36 @@ $$
 <h2>性质</h2>
 <h3>卷积</h3>
 <p><span class="link local"><a href="./卷积.html" title="卷积 [卷积]">卷积</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="代数充实于余代数"><header><h1><span class="taxon"></span>代数充实于余代数 <a class="slug" href="./代数充实于余代数.html">[代数充实于余代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>通过余代数测量</h3>
+<p>设 $A,B$ 为某范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">代数</a></span> (默认指结合代数), $C$ 为<span class="link local"><a href="./结合余代数.html" title="结合余代数 [结合余代数]">余代数</a></span>. 定义 $A$ 到 $B$ 的一个 $C$-值<strong>测量</strong>为映射
+$$
+m\colon C \otimes A \to B,
+$$
+满足如下<span class="link local"><a href="./线图.html" title="线图 [线图]">线图</a></span>.</p>
+<img src="/assets/coalg-measure.svg" alt="" width="600" style="display:block; margin:auto;">
+<p>记 $\operatorname{Meas}(C;A,B)$ 为 $A$ 到 $B$ 的 $C$-值测量的全体.</p>
+<p>若存在万有的余代数测量, 则称之为 <strong>Sweedler 态射对象</strong> (Sweedler hom) $\{A,B\}$, 即
+$$
+\operatorname{Hom}_{\mathsf{Coalg}}(C,\{A,B\})\simeq\operatorname{Meas}(C;A,B).
+$$</p>
+<h3>通过卷积</h3>
+<p>设 $\mathcal C$ 为可表现对称幺半范畴, 则幺半函子
+$$
+{-\otimes -}\colon\mathcal C\times\mathcal C\to\mathcal C
+$$
+给出<span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">松幺半函子</a></span>
+$$
+[-,-]\colon\mathcal C^{\mathrm{op}}\times\mathcal C\to\mathcal C
+$$
+满足伴随关系 $-\otimes X \dashv [X,-]$,
+进而给出函子
+$$
+[-,-]\colon\mathsf{Alg}(\mathcal C^{\mathrm{op}})\times\mathsf{Alg}(\mathcal C)\to\mathsf{Alg}(\mathcal C),
+$$
+注意 $\mathsf{Alg}(\mathcal C^{\mathrm{op}}) = \mathsf{Coalg}(\mathcal{C})$. 这意味着对于余代数 $C$ 和代数 $B$, 内蕴态射对象 $[C,B]$ 有代数结构. 这个代数结构称为<strong></strong><span class="link local"><a href="./卷积.html" title="卷积 [卷积]">卷积</a></span>, 又称为 <strong>Sweedler 余张量</strong>. 它满足
+$$
+\operatorname{Hom}_{\mathsf{Alg}}(A,[C,B])\simeq\operatorname{Meas}(C;A,B).
+$$</p>
 </details></section></details></section></footer></article></div></body></html>
