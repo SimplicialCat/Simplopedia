@@ -827,6 +827,7 @@
 
 <article><section class="block" data-taxon=""><details open><summary id="分层"><header><h1><span class="taxon"></span>分层 <a class="slug" href="./分层.html">[分层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>空间上的分层 (stratification) 是将其分解为一个偏序集参数化的若干子空间的方法.</p>
+<p><span class="link local"><a href="./strat-cat.html" title="分层空间与范畴 [strat-cat]">分层空间与范畴</a></span></p>
 <h2>定义</h2>
 <p>分层空间是拓扑空间 $X$ 带有到某个<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span> $P$ 的连续映射, 其中 $P$ 带有 <span class="link local"><a href="./Alexandroff拓扑.html" title="Alexandroff 拓扑 [Alexandroff拓扑]">Alexandroff 拓扑</a></span>.</p>
 <h2>例</h2>
@@ -839,9 +840,15 @@ $$
 $$
 (若将 $[0,1]$ 替换为 $[0,1)$, 则称为<strong>开锥</strong>),
 其中 $P^{\triangleleft}$ 表示 $P$ 上的<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">左锥</a></span>.</p>
-<p>空集的锥为单点. 一般地, $\Delta^n$ 的锥为 $\Delta^{n+1}$, 这给出了单纯形上的分层结构; 进而有<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>到分层空间范畴的嵌入
+<p>注意空集的锥为单点.</p>
+<h3>单形</h3>
+<p>对于自然数 $n$, 拓扑 $n$ 维<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单形</a></span> $|\Delta^n|$ 上的锥为 $|\Delta^{n+1}|$, 这归纳地给出了拓扑单形上的分层结构
 $$
-\Delta \to \mathsf{Strat}.
+(|\Delta^n| \to [n]) \in \mathsf{Strat},
+$$
+进而有<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>到分层空间范畴的嵌入
+$$
+\Delta \to \mathsf{Strat},\,[n]\mapsto (|\Delta^n|\to [n]).
 $$</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="index"><header><h1><span class="taxon"></span>单纯百科 Simplopedia <a class="slug" href="./index.html">[index]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <img src="/assets/simplopedia.svg" alt="Simplopedia" style="float: right; width: min(200px,30vw); margin-right: 20px; margin-top:-50px; filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));">
@@ -900,6 +907,19 @@ $$</p>
 <p><span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span></p>
 <p><span class="link local"><a href="./非交换Čech上同调.html" title="非交换 Čech 上同调 [非交换Čech上同调]">非交换 Čech 上同调</a></span></p>
 <p><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="strat-cat"><header><h1><span class="taxon"></span>分层空间与范畴 <a class="slug" href="./strat-cat.html">[strat-cat]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./AyalaFrancisRozenblyumStrat.html" title="A stratified homotopy hypothesis [AyalaFrancisRozenblyumStrat]">A stratified homotopy hypothesis</a></span></p>
+<h2>简介</h2>
+<p>本文说明适当的<span class="link local"><a href="./分层.html" title="分层 [分层]">分层空间</a></span>可通过所谓<span class="link local"><a href="./出路范畴.html" title="出路范畴 [出路范畴]">出路范畴</a></span>的构造得到一个范畴, 直观上即 “只允许走向更高分层” 的道路构成的范畴:
+$$
+\mathsf{Exit}\colon \mathsf{Strat} \to \mathsf{Cat}.
+$$
+且在本文研究的 “锥光滑分层空间” 的子范畴上, $\mathsf{Exit}$ 为全忠实函子.</p>
+<p>由于上述构造, $\infty$-范畴可以用锥光滑分层空间来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>, 从而视为这种分层空间的范畴上的层. 本文具体给出了一个层构成 $\infty$-范畴须满足的条件, 称之为<strong>条纹层</strong> (striation sheaves), 证明有范畴等价
+$$
+\mathsf{Stri} \simeq \mathsf{Cat}.
+$$
+换言之, 条纹层提供了 $\infty$-范畴的一个<span class="link local"><a href="./无穷范畴的模型.html" title="无穷范畴的模型 [无穷范畴的模型]">模型</a></span>, 其特点在于方便通过几何来构造一些通过单纯集等模型难以企及的无穷范畴. 无穷范畴的反转态射的对称性在这种模型中体现为 Poincaré 对偶.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="出路范畴"><header><h1><span class="taxon"></span>出路范畴 <a class="slug" href="./出路范畴.html">[出路范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>对于<span class="link local"><a href="./分层.html" title="分层 [分层]">分层空间</a></span> $X$,</p>
 </details></section></details></section></footer></article></div></body></html>
