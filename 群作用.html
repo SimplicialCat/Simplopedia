@@ -1507,6 +1507,8 @@ $$</li>
 <h3>共轭作用的不动点</h3>
 <p>群 $G$ 在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的不动点是 $G$ 的<span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="中心"><header><h1><span class="taxon"></span>中心 <a class="slug" href="./中心.html">[中心]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>许多不同数学结构都有 “中心” 的概念, 所有这些概念都是相互联系的. 每种中心的概念都是某个 (充实) $2$-范畴中的 “$2$ 阶环路”, 即 $\operatorname{End}(\mathrm{id})$, 这解释了其 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span>-结构.</p>
 <h2>定义</h2>
 <h3>群</h3>
 <p>对<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>群 $G$, 定义其中心为
@@ -2080,6 +2082,18 @@ $$</p>
 </ul>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./局部意象.html" title="局部意象 [局部意象]">局部意象</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="构形空间"><header><h1><span class="taxon"></span>构形空间 <a class="slug" href="./构形空间.html">[构形空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>构形空间在数学和物理上一般指的是某个系统的所有状态构成的空间. 在拓扑学中, 构形空间特指一个空间中的所有 (有序或无序的) 有限点集构成的空间.</p>
+<h2>定义</h2>
+<p>设 $X$ 为拓扑空间, $n$ 为正整数. 定义有序构形空间 $\operatorname{Conf}_n(X)$ 为 $X$ 中 $n$ 个互不相同的有序点的所有构形构成的空间:
+$$
+\operatorname{Conf}_n(X) := \{ (x_1, \ldots, x_n) \in X^n \mid x_i \neq x_j \text{ for } i \neq j \}.
+$$</p>
+<p>无序构形空间是有序构形空间在对称群 $S_n$ <span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>下的商空间:
+$$
+\operatorname{UConf}_n(X) := \operatorname{Conf}_n(X) / S_n.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="特征向量"><header><h1><span class="taxon"></span>特征向量 <a class="slug" href="./特征向量.html">[特征向量]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设 $(\mathcal C,\otimes,1)$ 为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, $A$ 为其中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 设 $A$ <span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">作用</a></span>于另一对象 $V$. 定义一个<strong>特征值</strong>为一个代数同态 $\sigma\colon A \to 1$. 定义对应于特征值 $\sigma$ 的<strong>特征向量</strong>为元素 $v \colon 1\to V$, 满足

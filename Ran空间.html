@@ -853,7 +853,43 @@ $$</p>
 $$
 (\operatorname{Ran}X)_n = \operatorname{Sym}^nX:= X^n / S_n.
 $$</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="分解空间"><header><h1><span class="taxon"></span>分解空间 <a class="slug" href="./分解空间.html">[分解空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="分层"><header><h1><span class="taxon"></span>分层 <a class="slug" href="./分层.html">[分层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>空间上的分层 (stratification) 是将其分解为一个偏序集参数化的若干子空间的方法.</p>
+<p><span class="link local"><a href="./strat-cat.html" title="分层空间与范畴 [strat-cat]">分层空间与范畴</a></span></p>
+<h2>定义</h2>
+<p>分层空间是拓扑空间 $X$ 带有到某个<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span> $P$ 的连续映射, 其中 $P$ 带有 <span class="link local"><a href="./Alexandroff拓扑.html" title="Alexandroff 拓扑 [Alexandroff拓扑]">Alexandroff 拓扑</a></span>, 即开集为向上封闭集, 闭集为向下封闭集.</p>
+<p>分层空间之间的映射为交换方块.</p>
+<p>定义一个分层空间的<strong>深度</strong>为其中偏序集中最长严格递增链的长度.</p>
+<h2>性质</h2>
+<ul>
+<li>分层空间的任何开子空间继承分层结构.</li>
+</ul>
+<h2>例</h2>
+<h3>半开半闭区间</h3>
+<p>半开半闭区间 $[0,1)$ 是个分层空间, 点 $0$ 是一层, 剩下的开区间 $(0,1)$ 是一层. 这个分层对应映射 $[0,1) \to \{\bot,\top\}$, $0\mapsto\bot$, $x\mapsto\top\,(x&gt;0)$.</p>
+<h3>锥</h3>
+<p>对任意分层空间 $X\to P$, 定义其<strong>闭锥</strong>为分层空间
+$$
+\frac{X\times [0,1]}{X\times \{0\}}\to P^{\triangleleft}
+$$
+(若将 $[0,1]$ 替换为 $[0,1)$, 则称为<strong>开锥</strong>),
+其中 $P^{\triangleleft}$ 表示 $P$ 上的<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">左锥</a></span>.</p>
+<p>注意空集的锥为单点.</p>
+<h3>单形</h3>
+<p>对于自然数 $n$, 拓扑 $n$ 维<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单形</a></span> $|\Delta^n|$ 上的锥为 $|\Delta^{n+1}|$, 这归纳地给出了拓扑单形上的分层结构
+$$
+(|\Delta^n| \to [n]) \in \mathsf{Strat},
+$$
+进而有<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>到分层空间范畴的嵌入
+$$
+\Delta \to \mathsf{Strat},\,[n]\mapsto (|\Delta^n|\to [n]).
+$$</p>
+<h3>群作用</h3>
+<p>对于拓扑空间 $X$ 上的有限群作用, 根据各点 $x\in X$ 的稳定子可给出 $X$ 上的分层.</p>
+<h3>碰撞与构形空间</h3>
+<p>对于拓扑空间 $X$ 与有限集 $I$, 空间 $X^I$ 可以根据点的碰撞来分层, 最上层为 $I$ 个点的 <span class="link local"><a href="./构形空间.html" title="构形空间 [构形空间]">(有序) 构形空间</a></span>.</p>
+<p>另见 <span class="link local"><a href="./Ran空间.html" title="Ran 空间 [Ran空间]">Ran 空间</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="分解空间"><header><h1><span class="taxon"></span>分解空间 <a class="slug" href="./分解空间.html">[分解空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>给定空间 $X$ 上的<strong>分解空间</strong>, 直观地说是由 $X$ 参数化的空间 $\mathcal Y_x\,(x\in X)$, 且带有额外的结构, 描述 $X$ 上的两个点 $x_1,x_2$ “融合” 到一起时, 其上的纤维 $\mathcal Y_{x_1}$, $\mathcal Y_{x_2}$ 的点如何 “融合”.</p>
 <p>参考 <span class="link local"><a href="./ABCCFGLRR_GLC.html" title="Proof of the geometric Langlands conjecture [ABCCFGLRR_GLC]">GLC2</a></span> 附录 B.</p>

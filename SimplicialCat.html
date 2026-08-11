@@ -2603,8 +2603,16 @@ $$</p>
 <h3>拓扑场论</h3>
 <p>每个 $\mathbb E_n$-代数都作为 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>的对象通过<span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>给出<span class="link local"><a href="./拓扑场论.html" title="拓扑场论 [拓扑场论]">拓扑场论</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="En-算畴"><header><h1><span class="taxon"></span>En-算畴 <a class="slug" href="./En-算畴.html">[En-算畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>$E_n$-算畴的一种构造是<span class="link local"><a href="./小n-方块算畴.html" title="小方块算畴 [小n-方块算畴]">小 $n$-方块算畴</a></span>, 其 $k$ 元运算是 $k$ 个方块 $\sqcup_k [0,1]^n$ 到一个方块的 “横平竖直” 的嵌入.</p>
+<h2>定义</h2>
+<h3>通过模型</h3>
+<p>$\mathbb E_n$-算畴的 $k$ 元运算的空间是 $\mathbb R^n$ 上 $k$ 个点的<span class="link local"><a href="./构形空间.html" title="构形空间 [构形空间]">构形空间</a></span> $\operatorname{Conf}_k(\mathbb R^n)$.</p>
+<p>另一种构造是<span class="link local"><a href="./小n-方块算畴.html" title="小方块算畴 [小n-方块算畴]">小 $n$-方块算畴</a></span>, 其 $k$ 元运算是 $k$ 个方块 $\sqcup_k [0,1]^n$ 到一个方块的 “横平竖直” 的嵌入. 这种嵌入的全体构成空间同伦等价于<span class="link local"><a href="./构形空间.html" title="构形空间 [构形空间]">构形空间</a></span> $\operatorname{Conf}_k(\mathbb R^n)$. 这种构造方便我们描述来自流形的 $\mathbb E_n$-代数.</p>
 <p>与 $\mathbb E_n$ 密切相关的一个算畴是 $\mathsf{BTop}(n)$, 见<span class="link local"><a href="./BTop_n.html" title="BTop_n [BTop_n]">拓扑圆盘的分类空间</a></span>.</p>
+<h3>范畴论刻画</h3>
+<p>算畴 $\mathbb E_n$ 同构于 $n$ 个 <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">$\mathbb E_1$</a></span> 的张量积:
+$$
+\mathbb E_n = \mathbb E_1^{\otimes n}.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Euler示性数"><header><h1><span class="taxon"></span>Euler 示性数 <a class="slug" href="./Euler示性数.html">[Euler示性数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>流形</h2>
 <p>流形的 Euler 示性数等于 <span class="link local"><a href="./Euler类.html" title="“Euler 类” [Euler类]">Euler 类</a></span>的积分.</p>
@@ -9197,12 +9205,14 @@ $$
 <li>其任何 $r$ 阶态射范畴为<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</li>
 </ul>
 <p>注. 不妨要求 $r\leq n+1$, 因为若任何 $(n+2)$ 阶态射范畴为单点, 则任何 $(n+1)$ 阶态射范畴为<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</p>
+<p>由定义, $(n,r)$-范畴中两个对象之间的态射范畴为 $(n-1,r-1)$-范畴.</p>
 <h2>例</h2>
 <ul>
 <li>$(-1,0)$-范畴是<span class="link local"><a href="./命题(同伦类型论).html" title="命题 (同伦类型论) [命题(同伦类型论)]">命题</a></span>.</li>
 <li>$(0,0)$-范畴是<span class="link local"><a href="./集合(同伦类型论).html" title="集合 (同伦类型论) [集合(同伦类型论)]">集合</a></span>.</li>
 <li>$(0,1)$-范畴是<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span>.</li>
 <li>$(1,1)$-范畴就是通常说的 “范畴”.</li>
+<li>$(1,2)$-范畴是<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span>的范畴, 例如<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>.</li>
 <li>$(\infty,0)$-范畴是<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</li>
 <li>$(\infty,1)$-范畴是通常说的 “<span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">无穷范畴</a></span>”.</li>
 </ul>
@@ -10900,6 +10910,33 @@ $$
 \mathsf{Stri} \simeq \mathsf{Cat}.
 $$
 换言之, 条纹层提供了 $\infty$-范畴的一个<span class="link local"><a href="./无穷范畴的模型.html" title="无穷范畴的模型 [无穷范畴的模型]">模型</a></span>, 其特点在于方便通过几何来构造一些通过单纯集等模型难以企及的无穷范畴. 无穷范畴的反转态射的对称性在这种模型中体现为 Poincaré 对偶.</p>
+<h2>锥光滑分层空间</h2>
+<p>定义 $C^0$ 分层空间为如下操作生成的最小类:</p>
+<ul>
+<li>空空间 $\varnothing$;</li>
+<li>紧 $C^0$ 分层空间 $X$ 的开锥 $C(X)$ 也是 $C^0$ 分层空间;</li>
+<li>对乘积封闭;</li>
+<li>对开子空间封闭;</li>
+<li>能被 $C^0$ 分层空间开覆盖的分层空间也是 $C^0$ 分层空间.</li>
+</ul>
+<p>归纳定义<strong>锥光滑分层空间</strong> (conically smooth stratified space) 为 $C^0$ <span class="link local"><a href="./分层.html" title="分层 [分层]">分层空间</a></span> $X$, 带有<strong>锥光滑图册</strong> (conically smooth atlas)
+$$
+\{ \mathbb R^i \times C(Z) \hookrightarrow X\},
+$$
+其中 $Z$ 是深度严格小于 $X$ 的紧的锥光滑分层空间. 每个 “坐标卡” $\mathbb R^i \times C(Z)$ 包含一个锥点部分
+$$
+\mathbb R^i\times * \hookrightarrow \mathbb R^i \times C(Z),
+$$
+其在分层结构中处于较低层级. 空间 $Z$ 的每个点都对应从锥点向外走出的一个方向. 当然 $Z$ 也可以是 $\varnothing$, 此时 $C(Z)$ 是单点, 这个坐标卡就像是普通的光滑流形的坐标卡.</p>
+<p>我们还需要归纳地定义两个坐标卡之间的映射
+$$
+f\colon \mathbb R^i \times C(Y) \to \mathbb R^j \times C(Z)
+$$
+何时<strong>光滑</strong>.</p>
+<ul>
+<li>在 $\mathbb R^i \times C(Y)$ 的锥点之外的部分, 光滑性通过 $Y$ 的各个坐标卡归纳定义. (因为 $Y$ 的深度较小, 可以假设光滑性已经定义好了.)</li>
+<li>考虑 $\mathbb R^i \times C(Y)$ 的锥点, 注意锥点未必打到锥点, 但是若不打到锥点则光滑性可由上一款定义, 故在此假设锥点打到锥点.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="subject"><header><h1><span class="taxon"></span>学科 <a class="slug" href="./subject.html">[subject]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>偏分析的数学:</p>
 <ul>
@@ -12730,6 +12767,8 @@ $$
 若对于某个域 $k$ 以及态射 $f\colon \operatorname{Spec} k\to X$ 有 $f^*F\simeq 0$,
 则存在仿射<span class="link local"><a href="./开嵌入.html" title="开嵌入 [开嵌入]">开子概形</a></span> $j\colon U\to X$ 包含 $f$ (即 $f$ 穿过 $U$), 使得 $j^*F\simeq 0$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="中心"><header><h1><span class="taxon"></span>中心 <a class="slug" href="./中心.html">[中心]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>许多不同数学结构都有 “中心” 的概念, 所有这些概念都是相互联系的. 每种中心的概念都是某个 (充实) $2$-范畴中的 “$2$ 阶环路”, 即 $\operatorname{End}(\mathrm{id})$, 这解释了其 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span>-结构.</p>
 <h2>定义</h2>
 <h3>群</h3>
 <p>对<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>群 $G$, 定义其中心为
@@ -13665,6 +13704,22 @@ $$</p>
 </ul>
 <p><em>证明</em>.</p>
 <p>由对偶性, 只需证明第一个命题. $G$ 为全忠实函子, 当且仅当 $\operatorname{Hom}_{\mathcal D}(-,-)\to \operatorname{Hom}_{\mathcal C}(G-,G-)$ 为同构; 由伴随, 这等价于 $\operatorname{Hom}_{\mathcal D}(-,-)\to \operatorname{Hom}_{\mathcal D}(FG-,-)$ 为同构. 由<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>, 这等价于余单位 $FG \to\mathrm{id}_{\mathcal D}$ 为同构.</p>
+<h3>伴随链</h3>
+<p><strong>命题</strong>. 当一列函子构成伴随链
+$$
+F_1 \dashv F_2 \dashv\cdots \dashv F_n
+$$
+时, 有伴随链
+$$
+F_2F_1\dashv F_2F_3\dashv F_4F_3\dashv F_4F_5\dashv\cdots.
+$$</p>
+<p><strong>命题</strong>. 考虑三元伴随 $F\dashv G \dashv H$. 如下条件等价:</p>
+<ul>
+<li>$F$ <span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实</a></span>;</li>
+<li>$F\dashv G$ 的单位 $\mathrm{id}\to GF$ 为同构;</li>
+<li>$G\dashv H$ 的余单位 $GH\to\mathrm{id}$ 为同构;</li>
+<li>$H$ 全忠实.</li>
+</ul>
 <h2>例</h2>
 <h3>自由-遗忘伴随</h3>
 <p><span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由-遗忘伴随</a></span></p>
@@ -13681,6 +13736,29 @@ $$
 $$
 \operatorname{Sh}(X) \rightleftarrows\mathsf {Et}(X).
 $$</p>
+<h3>依值和与依值积</h3>
+<p>在<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathcal C$ 中, 对任意态射 $f\colon X\to Y$ 有三元伴随
+$$
+\Sigma_f \dashv f^* \dashv \Pi_f.
+$$
+其中 $\Sigma_f,\Pi_f\colon \mathcal C_{/X} \to \mathcal C_{/Y}$ 分别为<span class="link local"><a href="./依值和.html" title="依值和 [依值和]">依值和</a></span>与<span class="link local"><a href="./依值积.html" title="依值积 [依值积]">依值积</a></span>的<span class="link local"><a href="./范畴语义.html" title="范畴语义 [范畴语义]">范畴语义</a></span>.</p>
+<p>特别地, 在 $Y=*$ 的<span class="link local"><a href="./相对.html" title="相对观点 [相对]">绝对</a></span>情形, 有三元伴随
+$$
+\Sigma_X \dashv X^* \dashv \Pi_X.
+$$
+其中 $X^*$ 表示函子 $-\times X \colon \mathcal C \to\mathcal C_{/X}$.</p>
+<p><span class="link local"><a href="./范畴逻辑.html" title="范畴逻辑 [范畴逻辑]">范畴逻辑</a></span>所谓 “量词即伴随” 是上述概念的特例; 考虑 $\mathcal C_{/X}$ 的 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>部分 $(\mathcal C_{/X})_{\leq -1}$, 其元素 $p$ 可理解为 $X$ 上的<span class="link local"><a href="./命题(同伦类型论).html" title="命题 (同伦类型论) [命题(同伦类型论)]">谓词</a></span>, 而
+$$
+\Sigma_X p, \quad \Pi_X p
+$$
+是逻辑学上
+$$
+\exists x .p,\quad \forall x .p
+$$
+的<span class="link local"><a href="./范畴语义.html" title="范畴语义 [范畴语义]">范畴语义</a></span>.</p>
+<h3>米田嵌入的伴随</h3>
+<p><strong>命题</strong>. 范畴 $\mathcal C$ 余完备当且仅当<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span> $\mathrm{y}\colon \mathcal C\to\mathsf{Psh}(\mathcal C)$ 有左伴随.</p>
+<p>证明. 若 $\mathcal C$ 余完备, 则可定义 $\mathrm{y}$ 的左伴随 $L\colon \mathsf{Psh}(\mathcal C)\to\mathcal C$ 为 $\mathrm{id}_{\mathcal C}$ 的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">米田扩张</a></span>. 另一方面, 假设左伴随 $L$ 存在, 那么由于 $L$ 保持余极限, $\mathcal C$ 中必须具有所有的余极限.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="伴随函子定理"><header><h1><span class="taxon"></span>伴随函子定理 <a class="slug" href="./伴随函子定理.html">[伴随函子定理]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon=""><details ><summary id="伴随给出单子"><header><h1><span class="taxon"></span>伴随给出单子 <a class="slug" href="./伴随给出单子.html">[伴随给出单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>陈述</h2>
@@ -13840,8 +13918,7 @@ $$</p>
 $$
 \mathcal C \hookrightarrow \mathsf{P}_{R}^K(\mathcal C).
 $$</p>
-<h2>定义/性质</h2>
-<h3>泛性质 (自由性)</h3>
+<h2>定义</h2>
 <p>记 $\mathsf{Cat}_K$ 为具有 $K$-形余极限的范畴以及保持 $K$-形余极限的函子构成的 $2$-范畴, 那么 $\mathsf{P}_R^K\colon \mathsf{Cat}_R \to \mathsf{Cat}_K$ 是<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>函子 $\mathsf{Cat}_K \to \mathsf{Cat}_R$ 的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>. 具体地, 对于具有 $R$-余极限的范畴 $\mathcal C$ 与具有 $K$-余极限的范畴 $\mathcal D$,
 $$
 \mathsf{Fun}^{K\text{-}\mathrm{colim}}(\mathsf{P}_R^K(\mathcal C),\mathcal D)\simeq
@@ -13849,6 +13926,8 @@ $$
 $$</p>
 <p>参考 <span class="link local"><a href="./LurieHTT.html" title="Higher Topos Theory [LurieHTT]">HTT</a></span> 命题 5.3.6.10.</p>
 <h2>例</h2>
+<h3>预层范畴</h3>
+<p>当 $K=\mathsf{Cat}$, $R=\varnothing$ 时, $\mathsf{P}_R^K(\mathcal C)$ 即为 $\mathcal C$ 的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层范畴</a></span>, “向 $\mathcal C$ 中自由地添加所有余极限”.</p>
 <h3>余积完备化</h3>
 <p>考虑 $K = \mathsf{Set}$ 为离散范畴的范畴, 那么 $\mathsf{P}^{K}(\mathcal C)$ 是 $\mathcal C$ 自由地添加余积所得的范畴; 其有一种具体构造: $\mathsf{P}^{K}(\mathcal C)$ 的对象为 $\mathcal C$ 的对象族 $(X_i)_{i\in I}$, 态射 $(X_i)_{i\in I} \to (Y_j)_{j\in J}$ 为映射 $f\colon I\to J$ 以及一族态射 $(X_i \to Y_{f(i)})_{i\in I}$. 这个范畴也可定义为<span class="link local"><a href="./松拉回.html" title="松拉回 [松拉回]">松拉回</a></span></p>
 <p><figure><img src="./余完备化-1.svg" class="color-invert"/></figure></p>
@@ -14712,7 +14791,8 @@ $$
 这个过程可表述为 “几何单纯形” 函子 $\Delta \to \mathsf{Top}$ 沿<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span> $\Delta\to\mathsf{sSet}$ 的左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>.
 其中 $\Delta$ 是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>, $\mathsf{sSet}$ 是 $\Delta$ 上的<span class="link local"><a href="./预层意象.html" title="预层意象 [预层意象]">预层范畴</a></span>. 当然 $\Delta$ 可以替换为任何范畴.</p>
 <h2>定义</h2>
-<p>给定余完备范畴 $\mathcal C$ 与函子 $F\colon \Delta \to \mathcal C$, <strong>几何实现</strong>
+<p>设 $\Delta$ 为小范畴, 通常为某种比较简单的几何对象的范畴.
+给定余完备范畴 $\mathcal C$ 与函子 $F\colon \Delta \to \mathcal C$, 所谓<strong>几何实现</strong> (又称<strong>米田扩张</strong>)
 $$
 |{-}|\colon \widehat {\Delta} \to \mathcal C
 $$
@@ -14865,7 +14945,13 @@ $$
 <p>空间上的分层 (stratification) 是将其分解为一个偏序集参数化的若干子空间的方法.</p>
 <p><span class="link local"><a href="./strat-cat.html" title="分层空间与范畴 [strat-cat]">分层空间与范畴</a></span></p>
 <h2>定义</h2>
-<p>分层空间是拓扑空间 $X$ 带有到某个<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span> $P$ 的连续映射, 其中 $P$ 带有 <span class="link local"><a href="./Alexandroff拓扑.html" title="Alexandroff 拓扑 [Alexandroff拓扑]">Alexandroff 拓扑</a></span>.</p>
+<p>分层空间是拓扑空间 $X$ 带有到某个<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span> $P$ 的连续映射, 其中 $P$ 带有 <span class="link local"><a href="./Alexandroff拓扑.html" title="Alexandroff 拓扑 [Alexandroff拓扑]">Alexandroff 拓扑</a></span>, 即开集为向上封闭集, 闭集为向下封闭集.</p>
+<p>分层空间之间的映射为交换方块.</p>
+<p>定义一个分层空间的<strong>深度</strong>为其中偏序集中最长严格递增链的长度.</p>
+<h2>性质</h2>
+<ul>
+<li>分层空间的任何开子空间继承分层结构.</li>
+</ul>
 <h2>例</h2>
 <h3>半开半闭区间</h3>
 <p>半开半闭区间 $[0,1)$ 是个分层空间, 点 $0$ 是一层, 剩下的开区间 $(0,1)$ 是一层. 这个分层对应映射 $[0,1) \to \{\bot,\top\}$, $0\mapsto\bot$, $x\mapsto\top\,(x&gt;0)$.</p>
@@ -14886,6 +14972,11 @@ $$
 $$
 \Delta \to \mathsf{Strat},\,[n]\mapsto (|\Delta^n|\to [n]).
 $$</p>
+<h3>群作用</h3>
+<p>对于拓扑空间 $X$ 上的有限群作用, 根据各点 $x\in X$ 的稳定子可给出 $X$ 上的分层.</p>
+<h3>碰撞与构形空间</h3>
+<p>对于拓扑空间 $X$ 与有限集 $I$, 空间 $X^I$ 可以根据点的碰撞来分层, 最上层为 $I$ 个点的 <span class="link local"><a href="./构形空间.html" title="构形空间 [构形空间]">(有序) 构形空间</a></span>.</p>
+<p>另见 <span class="link local"><a href="./Ran空间.html" title="Ran 空间 [Ran空间]">Ran 空间</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="分布"><header><h1><span class="taxon"></span>分布 <a class="slug" href="./分布.html">[分布]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>分布是一种广义函数, 可与测试函数配对得到一个数.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="分式域"><header><h1><span class="taxon"></span>分式域 <a class="slug" href="./分式域.html">[分式域]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -15901,6 +15992,8 @@ $$
 $$</p>
 <h3>几何单纯形</h3>
 <p>标准 $n$ 维几何单纯形是 $\mathbb{R}^{n+1}$ 的基向量 $e_0,e_1,\cdots,e_n$ 的凸包. 这定义了一个函子 $\Delta \to \mathsf {Top}$.</p>
+<h3>充实于偏序集</h3>
+<p>单纯形范畴 $\Delta$ 以及增广单纯形范畴 $\Delta_+$ <span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于偏序集的范畴, 换言之它们是 <span class="link local"><a href="./n-r-范畴.html" title="(n,r)-范畴 [n-r-范畴]">$(1,2)$-范畴</a></span>.</p>
 <h2>性质</h2>
 <h3>游走的结合代数</h3>
 <p>增广单纯形范畴 $\Delta_+$ 是一个<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $[0]$ 生成的自由<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 称 $[0]$ 为<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的结合代数; 也即对任意幺半范畴 $\mathcal M$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$, 存在唯一的幺半函子 $\Delta_+ \to M$, 将 $[0]$ 对应到 $A$.</p>
@@ -17010,24 +17103,9 @@ $$</p>
 <p><span class="link local"><a href="./Galois扩张.html" title="Galois 扩张 [Galois扩张]">Galois 扩张</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="基变换"><header><h1><span class="taxon"></span>基变换 <a class="slug" href="./基变换.html">[基变换]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>基变换是<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对观点</a></span>在不同基底空间之间的转换.</p>
+<p>Beck–Chevalley 基变换条件保证了<span class="link local"><a href="./拉-推.html" title="拉-推 [拉-推]">拉-推</a></span>构造的函子性.</p>
 <h2>定义</h2>
-<h3>几何对象的拉回</h3>
-<p>几何对象之间的基变换常常来自几何对象的<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>. 对于拉回图
-$$
-\begin{array}
-	{ccc}
-	X' &amp; \overset{u'}{\to} &amp; X \\
-	\!\!\!\!\!\! {}^{f'}\downarrow &amp;&amp; \downarrow {}^{f} \!\!\!\!\! \\
-	Y' &amp; \underset{u}{\to} &amp; Y
-\end{array}
-$$
-有自然变换
-$$
-u^* f_* \to f'_* u^{\prime *},
-$$
-称为基变换映射. 在许多条件下这个映射是同构.</p>
-<h3>一般交换图</h3>
-<p>对于一般的 $2$-范畴中的交换方块
+<p>对于 $2$-范畴中的交换方块
 $$
 \begin{array}
 	{ccc}
@@ -17044,13 +17122,54 @@ $$
 $$
 \mathrm{BC}\colon gv^R \to u^R f.
 $$
-当 $\mathrm{BC}$ 为自然同构时称上述交换图满足基变换条件.</p>
+当 $\mathrm{BC}$ 为自然同构时称上述交换图满足基变换条件 (或称 Beck–Chevalley 条件).</p>
 <h2>例</h2>
-<h3>平坦基变换</h3>
+<h3>几何对象的拉回</h3>
+<p>基变换常常来自几何对象的<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>. 对于拉回图
+$$
+\begin{array}
+	{ccc}
+	X' &amp; \overset{u'}{\to} &amp; X \\
+	\!\!\!\!\!\! {}^{f'}\downarrow &amp;&amp; \downarrow {}^{f} \!\!\!\!\! \\
+	Y' &amp; \underset{u}{\to} &amp; Y
+\end{array}
+$$
+有自然变换
+$$
+u^* f_* \to f'_* u^{\prime *},
+$$
+称为基变换映射. 在许多条件下这个映射是同构.</p>
+<h4>意象中的基变换</h4>
+<p>意象中的<span class="link local"><a href="./俯意象.html" title="俯意象 [俯意象]">俯意象</a></span>之间的拉回有左右伴随, 且满足 Beck–Chevalley 条件.</p>
+<h4>平坦基变换</h4>
 <p>若 $u$ 为<span class="link local"><a href="./平坦态射.html" title="“平坦态射” [平坦态射]">平坦态射</a></span>, 则基变换映射为同构. 这个事实的一个应用是 <span class="link local"><a href="./Kunneth公式.html" title=" [Kunneth公式]">Kunneth 公式</a></span>
 $$
 \Gamma(E\boxtimes F)\simeq \Gamma E\otimes \Gamma F.
 $$</p>
+<h3>预层范畴</h3>
+<p>对于 (局部小) 范畴 $\mathcal C$, 其为余完备范畴当且仅当<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span> $\mathrm{y}\colon \mathcal C\to\mathsf{Psh}(\mathcal C)$ 有左伴随 $L\colon \mathsf{Psh}(\mathcal C)\to\mathcal C$. 对任意图表 $X\colon I\to\mathcal C$,
+$$
+L(\operatorname{colim}(\mathrm{y}\circ X)) =\operatorname{colim} X.
+$$
+换言之, $L$ 的作用即是把 “形式余极限” 实现为 $\mathcal C$ 中真正的余极限.</p>
+<p>考虑两个余完备范畴之间的函子
+$F\colon \mathcal C\to\mathcal D$. 交换方块
+$$
+\begin{array}{ccc}
+\mathsf{Psh}(\mathcal C) &amp; \overset{F_!}{\rightarrow} &amp; \mathsf{Psh}(\mathcal D) \\
+\uparrow &amp;  &amp; \uparrow \\
+\mathcal C &amp; \underset{F}{\rightarrow} &amp; \mathcal D
+\end{array}
+$$
+给出 Beck–Chevalley 基变换
+$$
+L_D F_! \to F L_C,
+$$
+因此对任意图表 $X\colon I\to \mathcal C$ 有自然变换
+$$
+\operatorname{colim}_i F(X_i) \to F(\operatorname{colim}_i X_i).
+$$
+可见 Beck–Chevalley 基变换为同构当且仅当 $F$ 保持<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="基本形式"><header><h1><span class="taxon"></span>“基本形式” <a class="slug" href="./基本形式.html">[基本形式]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>基本形式是指(近) Hermite 流形 (参见<span class="link local"><a href="./近复结构.html" title="近复结构 [近复结构]">近复结构</a></span>, <span class="link local"><a href="./Hermite向量丛.html" title="“Hermite 向量丛” [Hermite向量丛]">Hermite 向量丛</a></span>) 上的一个非退化 $(1,1)$-形式 $\omega$, 其定义为
@@ -20650,6 +20769,18 @@ $$
 $$
 一般不是等价. 但在许多特殊情形它是等价.</p>
 <p>见<span class="link local"><a href="./lim-colim.html" title="极限与余极限交换 [lim-colim]">极限与余极限交换</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="构形空间"><header><h1><span class="taxon"></span>构形空间 <a class="slug" href="./构形空间.html">[构形空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>构形空间在数学和物理上一般指的是某个系统的所有状态构成的空间. 在拓扑学中, 构形空间特指一个空间中的所有 (有序或无序的) 有限点集构成的空间.</p>
+<h2>定义</h2>
+<p>设 $X$ 为拓扑空间, $n$ 为正整数. 定义有序构形空间 $\operatorname{Conf}_n(X)$ 为 $X$ 中 $n$ 个互不相同的有序点的所有构形构成的空间:
+$$
+\operatorname{Conf}_n(X) := \{ (x_1, \ldots, x_n) \in X^n \mid x_i \neq x_j \text{ for } i \neq j \}.
+$$</p>
+<p>无序构形空间是有序构形空间在对称群 $S_n$ <span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>下的商空间:
+$$
+\operatorname{UConf}_n(X) := \operatorname{Conf}_n(X) / S_n.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="标架配边"><header><h1><span class="taxon"></span>标架配边 <a class="slug" href="./标架配边.html">[标架配边]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>定义子流形的<strong>标架</strong> (frame) 是其法丛的平凡化.</p>
@@ -22036,6 +22167,7 @@ $$</p>
 <p><span class="link local"><a href="./拓扑序.html" title="“拓扑序” [拓扑序]">拓扑序</a></span>是指</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="相对"><header><h1><span class="taxon"></span>相对观点 <a class="slug" href="./相对.html">[相对]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>两个复杂的对象, 可能其中一个<strong>相对于</strong>另一个就不那么复杂. 因此采用相对的观点, 有时可以降低我们每次需要关注的问题的复杂性: 将复杂的问题拆解成一个基底的问题和这个基底之上的<strong>相对观点</strong>的问题.</p>
+<p>相对于 “平凡” 基底的事物称为<strong>绝对</strong>的.</p>
 <p>两个不同的基底上的相对的对象可以通过<strong></strong><span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>相联系; 基变换常构成<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">纤维范畴</a></span>.</p>
 <p>空间之间的映射 (如<span class="link local"><a href="./纤维丛.html" title="纤维丛 [纤维丛]">纤维丛</a></span>)
 $$
@@ -23289,6 +23421,9 @@ $$
 </ul>
 <h3>综合数学</h3>
 <p>通常, 一种综合数学的理论可视为对一个具有较丰富性质的范畴, 如<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>, 以<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>的方式强加的要求; 正如一个代数方程是对一个环强加的要求. 见<span class="link local"><a href="./synthetic.html" title="综合数学是抽象代数的范畴化 [synthetic]">综合数学是抽象代数的范畴化</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="缠结假设"><header><h1><span class="taxon"></span>缠结假设 <a class="slug" href="./缠结假设.html">[缠结假设]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>陈述</h2>
+<p><strong>缠结假设</strong> (tangle hypothesis) 是说范畴 $\operatorname{Bord}_1^{\mathrm{fr}}(\mathbb{R}^n)$ 是一个对象自由生成的<span class="link local"><a href="./刚性幺半范畴.html" title="刚性幺半范畴 [刚性幺半范畴]">刚性</a></span> <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半范畴.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="缠绕数"><header><h1><span class="taxon"></span>缠绕数 <a class="slug" href="./缠绕数.html">[缠绕数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon=""><details ><summary id="置换范畴"><header><h1><span class="taxon"></span>置换范畴 <a class="slug" href="./置换范畴.html">[置换范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
@@ -24984,7 +25119,7 @@ $$</p>
 <p>配边是一种<span class="link local"><a href="./广义上同调.html" title="广义上同调 [广义上同调]">广义上同调</a></span>, 配边群是一个<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的<span class="link local"><a href="./稳定同伦群.html" title=" [稳定同伦群]">稳定同伦群</a></span>, 称为 <span class="link local"><a href="./Thom谱.html" title="Thom 谱 [Thom谱]">Thom 谱</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="配边假设"><header><h1><span class="taxon"></span>配边假设 <a class="slug" href="./配边假设.html">[配边假设]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>陈述</h2>
-<p>配边假设是说, <span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span>是由一个<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半 $(\infty,n)$-范畴</a></span>.</p>
+<p><strong>配边假设</strong> (cobordism hypothesis) 是说, <span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span>是由一个<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半 $(\infty,n)$-范畴</a></span>.</p>
 <p><strong>命题</strong> (配边假设, 标架版本). 设 $\mathcal C$ 为<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半</a></span> $(\infty,n)$-范畴. 那么函子
 $$
 \mathsf{Bord}_n^{\mathrm{fr}} \to \mathcal C
@@ -24995,6 +25130,7 @@ $$
 $$
 其中 $(-)^{\sim}$ 表示取<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>.</p>
 <p>函子 $\mathsf{Bord}_n^{\mathrm{fr}} \to \mathcal C$ 又称<span class="link local"><a href="./拓扑场论.html" title="拓扑场论 [拓扑场论]">拓扑场论</a></span> (TFT) 或拓扑量子场论 (TQFT). 配边假设表明拓扑场论由其在一个点上的取值完全确定.</p>
+<p>配边假设可视为<span class="link local"><a href="./缠结假设.html" title="缠结假设 [缠结假设]">缠结假设</a></span>在余维数趋于 $+\infty$ 的极限情形.</p>
 <h2>例</h2>
 <h3>有限维线性空间</h3>
 <p>固定一个域 $k$. 有限维 $k$-线性空间 $V$ 是 $k$-线性空间范畴 $(\mathsf{Vect},\otimes)$ 中的可对偶对象, 给出一个函子

@@ -829,7 +829,13 @@
 <p>空间上的分层 (stratification) 是将其分解为一个偏序集参数化的若干子空间的方法.</p>
 <p><span class="link local"><a href="./strat-cat.html" title="分层空间与范畴 [strat-cat]">分层空间与范畴</a></span></p>
 <h2>定义</h2>
-<p>分层空间是拓扑空间 $X$ 带有到某个<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span> $P$ 的连续映射, 其中 $P$ 带有 <span class="link local"><a href="./Alexandroff拓扑.html" title="Alexandroff 拓扑 [Alexandroff拓扑]">Alexandroff 拓扑</a></span>.</p>
+<p>分层空间是拓扑空间 $X$ 带有到某个<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span> $P$ 的连续映射, 其中 $P$ 带有 <span class="link local"><a href="./Alexandroff拓扑.html" title="Alexandroff 拓扑 [Alexandroff拓扑]">Alexandroff 拓扑</a></span>, 即开集为向上封闭集, 闭集为向下封闭集.</p>
+<p>分层空间之间的映射为交换方块.</p>
+<p>定义一个分层空间的<strong>深度</strong>为其中偏序集中最长严格递增链的长度.</p>
+<h2>性质</h2>
+<ul>
+<li>分层空间的任何开子空间继承分层结构.</li>
+</ul>
 <h2>例</h2>
 <h3>半开半闭区间</h3>
 <p>半开半闭区间 $[0,1)$ 是个分层空间, 点 $0$ 是一层, 剩下的开区间 $(0,1)$ 是一层. 这个分层对应映射 $[0,1) \to \{\bot,\top\}$, $0\mapsto\bot$, $x\mapsto\top\,(x&gt;0)$.</p>
@@ -850,6 +856,11 @@ $$
 $$
 \Delta \to \mathsf{Strat},\,[n]\mapsto (|\Delta^n|\to [n]).
 $$</p>
+<h3>群作用</h3>
+<p>对于拓扑空间 $X$ 上的有限群作用, 根据各点 $x\in X$ 的稳定子可给出 $X$ 上的分层.</p>
+<h3>碰撞与构形空间</h3>
+<p>对于拓扑空间 $X$ 与有限集 $I$, 空间 $X^I$ 可以根据点的碰撞来分层, 最上层为 $I$ 个点的 <span class="link local"><a href="./构形空间.html" title="构形空间 [构形空间]">(有序) 构形空间</a></span>.</p>
+<p>另见 <span class="link local"><a href="./Ran空间.html" title="Ran 空间 [Ran空间]">Ran 空间</a></span>.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="index"><header><h1><span class="taxon"></span>单纯百科 Simplopedia <a class="slug" href="./index.html">[index]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <img src="/assets/simplopedia.svg" alt="Simplopedia" style="float: right; width: min(200px,30vw); margin-right: 20px; margin-top:-50px; filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));">
 <p>这里是<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>的主目录.</p>
@@ -920,6 +931,33 @@ $$
 \mathsf{Stri} \simeq \mathsf{Cat}.
 $$
 换言之, 条纹层提供了 $\infty$-范畴的一个<span class="link local"><a href="./无穷范畴的模型.html" title="无穷范畴的模型 [无穷范畴的模型]">模型</a></span>, 其特点在于方便通过几何来构造一些通过单纯集等模型难以企及的无穷范畴. 无穷范畴的反转态射的对称性在这种模型中体现为 Poincaré 对偶.</p>
+<h2>锥光滑分层空间</h2>
+<p>定义 $C^0$ 分层空间为如下操作生成的最小类:</p>
+<ul>
+<li>空空间 $\varnothing$;</li>
+<li>紧 $C^0$ 分层空间 $X$ 的开锥 $C(X)$ 也是 $C^0$ 分层空间;</li>
+<li>对乘积封闭;</li>
+<li>对开子空间封闭;</li>
+<li>能被 $C^0$ 分层空间开覆盖的分层空间也是 $C^0$ 分层空间.</li>
+</ul>
+<p>归纳定义<strong>锥光滑分层空间</strong> (conically smooth stratified space) 为 $C^0$ <span class="link local"><a href="./分层.html" title="分层 [分层]">分层空间</a></span> $X$, 带有<strong>锥光滑图册</strong> (conically smooth atlas)
+$$
+\{ \mathbb R^i \times C(Z) \hookrightarrow X\},
+$$
+其中 $Z$ 是深度严格小于 $X$ 的紧的锥光滑分层空间. 每个 “坐标卡” $\mathbb R^i \times C(Z)$ 包含一个锥点部分
+$$
+\mathbb R^i\times * \hookrightarrow \mathbb R^i \times C(Z),
+$$
+其在分层结构中处于较低层级. 空间 $Z$ 的每个点都对应从锥点向外走出的一个方向. 当然 $Z$ 也可以是 $\varnothing$, 此时 $C(Z)$ 是单点, 这个坐标卡就像是普通的光滑流形的坐标卡.</p>
+<p>我们还需要归纳地定义两个坐标卡之间的映射
+$$
+f\colon \mathbb R^i \times C(Y) \to \mathbb R^j \times C(Z)
+$$
+何时<strong>光滑</strong>.</p>
+<ul>
+<li>在 $\mathbb R^i \times C(Y)$ 的锥点之外的部分, 光滑性通过 $Y$ 的各个坐标卡归纳定义. (因为 $Y$ 的深度较小, 可以假设光滑性已经定义好了.)</li>
+<li>考虑 $\mathbb R^i \times C(Y)$ 的锥点, 注意锥点未必打到锥点, 但是若不打到锥点则光滑性可由上一款定义, 故在此假设锥点打到锥点.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="出路范畴"><header><h1><span class="taxon"></span>出路范畴 <a class="slug" href="./出路范畴.html">[出路范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>对于<span class="link local"><a href="./分层.html" title="分层 [分层]">分层空间</a></span> $X$,</p>
 </details></section></details></section></footer></article></div></body></html>

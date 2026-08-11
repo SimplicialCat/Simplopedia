@@ -828,24 +828,9 @@
 <article><section class="block" data-taxon=""><details open><summary id="平坦态射"><header><h1><span class="taxon"></span>“平坦态射” <a class="slug" href="./平坦态射.html">[平坦态射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="基变换"><header><h1><span class="taxon"></span>基变换 <a class="slug" href="./基变换.html">[基变换]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>基变换是<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对观点</a></span>在不同基底空间之间的转换.</p>
+<p>Beck–Chevalley 基变换条件保证了<span class="link local"><a href="./拉-推.html" title="拉-推 [拉-推]">拉-推</a></span>构造的函子性.</p>
 <h2>定义</h2>
-<h3>几何对象的拉回</h3>
-<p>几何对象之间的基变换常常来自几何对象的<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>. 对于拉回图
-$$
-\begin{array}
-	{ccc}
-	X' &amp; \overset{u'}{\to} &amp; X \\
-	\!\!\!\!\!\! {}^{f'}\downarrow &amp;&amp; \downarrow {}^{f} \!\!\!\!\! \\
-	Y' &amp; \underset{u}{\to} &amp; Y
-\end{array}
-$$
-有自然变换
-$$
-u^* f_* \to f'_* u^{\prime *},
-$$
-称为基变换映射. 在许多条件下这个映射是同构.</p>
-<h3>一般交换图</h3>
-<p>对于一般的 $2$-范畴中的交换方块
+<p>对于 $2$-范畴中的交换方块
 $$
 \begin{array}
 	{ccc}
@@ -862,13 +847,54 @@ $$
 $$
 \mathrm{BC}\colon gv^R \to u^R f.
 $$
-当 $\mathrm{BC}$ 为自然同构时称上述交换图满足基变换条件.</p>
+当 $\mathrm{BC}$ 为自然同构时称上述交换图满足基变换条件 (或称 Beck–Chevalley 条件).</p>
 <h2>例</h2>
-<h3>平坦基变换</h3>
+<h3>几何对象的拉回</h3>
+<p>基变换常常来自几何对象的<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>. 对于拉回图
+$$
+\begin{array}
+	{ccc}
+	X' &amp; \overset{u'}{\to} &amp; X \\
+	\!\!\!\!\!\! {}^{f'}\downarrow &amp;&amp; \downarrow {}^{f} \!\!\!\!\! \\
+	Y' &amp; \underset{u}{\to} &amp; Y
+\end{array}
+$$
+有自然变换
+$$
+u^* f_* \to f'_* u^{\prime *},
+$$
+称为基变换映射. 在许多条件下这个映射是同构.</p>
+<h4>意象中的基变换</h4>
+<p>意象中的<span class="link local"><a href="./俯意象.html" title="俯意象 [俯意象]">俯意象</a></span>之间的拉回有左右伴随, 且满足 Beck–Chevalley 条件.</p>
+<h4>平坦基变换</h4>
 <p>若 $u$ 为<span class="link local"><a href="./平坦态射.html" title="“平坦态射” [平坦态射]">平坦态射</a></span>, 则基变换映射为同构. 这个事实的一个应用是 <span class="link local"><a href="./Kunneth公式.html" title=" [Kunneth公式]">Kunneth 公式</a></span>
 $$
 \Gamma(E\boxtimes F)\simeq \Gamma E\otimes \Gamma F.
 $$</p>
+<h3>预层范畴</h3>
+<p>对于 (局部小) 范畴 $\mathcal C$, 其为余完备范畴当且仅当<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span> $\mathrm{y}\colon \mathcal C\to\mathsf{Psh}(\mathcal C)$ 有左伴随 $L\colon \mathsf{Psh}(\mathcal C)\to\mathcal C$. 对任意图表 $X\colon I\to\mathcal C$,
+$$
+L(\operatorname{colim}(\mathrm{y}\circ X)) =\operatorname{colim} X.
+$$
+换言之, $L$ 的作用即是把 “形式余极限” 实现为 $\mathcal C$ 中真正的余极限.</p>
+<p>考虑两个余完备范畴之间的函子
+$F\colon \mathcal C\to\mathcal D$. 交换方块
+$$
+\begin{array}{ccc}
+\mathsf{Psh}(\mathcal C) &amp; \overset{F_!}{\rightarrow} &amp; \mathsf{Psh}(\mathcal D) \\
+\uparrow &amp;  &amp; \uparrow \\
+\mathcal C &amp; \underset{F}{\rightarrow} &amp; \mathcal D
+\end{array}
+$$
+给出 Beck–Chevalley 基变换
+$$
+L_D F_! \to F L_C,
+$$
+因此对任意图表 $X\colon I\to \mathcal C$ 有自然变换
+$$
+\operatorname{colim}_i F(X_i) \to F(\operatorname{colim}_i X_i).
+$$
+可见 Beck–Chevalley 基变换为同构当且仅当 $F$ 保持<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="模空间"><header><h1><span class="taxon"></span>模空间 <a class="slug" href="./模空间.html">[模空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>模空间 (moduli space) 是 “参数化” 或 “分类” 一类对象的空间. 模空间的每一个点是一个对象, 模空间上的一条曲线为这种对象的单参数族, 等等.</p>
