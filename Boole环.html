@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>“Boole 环”</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width"><title>Boole 环</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
 
 
 <div id="tcomment"></div>
@@ -825,22 +825,57 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon=""><details open><summary id="Boole环"><header><h1><span class="taxon"></span>“Boole 环” <a class="slug" href="./Boole环.html">[Boole环]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<article><section class="block" data-taxon=""><details open><summary id="Boole环"><header><h1><span class="taxon"></span>Boole 环 <a class="slug" href="./Boole环.html">[Boole环]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>Boole 环是所有元素都幂等的环.</p>
-<p><span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span></p>
+<p>Boole 环是所有元素都幂等的环. 见 <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Boole代数"><header><h1><span class="taxon"></span>Boole 代数 <a class="slug" href="./Boole代数.html">[Boole代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>Boole 代数是经典逻辑的<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语义</a></span>. 如 Boole 代数中的积 (交) 是逻辑与 $X\wedge Y$, 指数 $Y^X$ 是逻辑蕴含 $X\Rightarrow Y$, 赋值映射是推理法则 $(X\Rightarrow Y)\wedge X \leq Y$ 等等.</p>
 <h2>定义</h2>
 <p>Boole 代数是具有补运算的<span class="link local"><a href="./分配格.html" title="分配格 [分配格]">分配格</a></span>.</p>
-<p>Boole 代数与 <span class="link local"><a href="./Boole环.html" title="“Boole 环” [Boole环]">Boole 环</a></span>可以相互转化.</p>
+<p>Boole 代数与 <span class="link local"><a href="./Boole环.html" title="Boole 环 [Boole环]">Boole 环</a></span>可以相互转化.</p>
 <h2>性质</h2>
+<h3>谱</h3>
+<p>记 Boole 代数 $B$ 的<strong>谱</strong>为
+$$
+\operatorname{Spec}(B) = \operatorname{Hom}_{\mathsf{Boole}}(B,2).
+$$
+则有
+$$
+\operatorname{Hom}_{\mathsf{Boole}}(B,2^X) \simeq \operatorname{Hom}_{\mathsf{Set}}(X,\operatorname{Spec}(B)),
+$$
+即函子 $2^{(-)}\colon \mathsf{Set}\to\mathsf{Boole}^{\mathrm{op}}$ 与 $\operatorname{Spec}\colon \mathsf{Boole}^{\mathrm{op}}\to\mathsf{Set}$ 满足<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>关系 $2^{(-)}\dashv\operatorname{Spec}$. 这对伴随<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span>为 $\mathsf{Set}$ 上的<span class="link local"><a href="./超滤.html" title="超滤 [超滤]">超滤单子</a></span>.</p>
+<h3>Stone 对偶</h3>
 <p><span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span></p>
-</details></section><section class="block" data-taxon=""><details ><summary id="超滤"><header><h1><span class="taxon"></span>“超滤” <a class="slug" href="./超滤.html">[超滤]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="超滤"><header><h1><span class="taxon"></span>超滤 <a class="slug" href="./超滤.html">[超滤]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>在集合与 Boole 代数的<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>中, 几何对象是集合, 代数对象是 Boole 代数. 超滤单子是这对伴随给出的单子. 集合 $X$ 上的超滤是 $X$ 的某种广义点.</p>
+<p>有一个有趣的设定, 集合 $X$ 是一些人的集合, 他们投票支持或反对某事, 每人必须支持或者反对. 定义 “统治集” 的概念, 意思是当一个子集中所有成员一致支持或一致反对时, 结果必然是这些人的选择. 这个概念有如下的性质:</p>
+<ul>
+<li>$X$ 本身是一个统治集;</li>
+<li>扩充一个统治集只会得到更大的统治集;</li>
+<li>有限个统治集的交集仍是统治集;</li>
+<li>两个互补的子集恰有一个是统治集.</li>
+</ul>
+<p>(我们没有说这个模型有任何现实意义.)</p>
 <h2>定义</h2>
 <h3>集合上的超滤</h3>
-<p>集合 $S$ 上的超滤是 $S$ 的子集的 <span class="link local"><a href="./Boole环.html" title="“Boole 环” [Boole环]">Boole 环</a></span> $2^S$ 到 $2$ 的同态, 也即 $2^S$ 的素理想.</p>
+<p>集合 $X$ 上的<strong>超滤</strong>是 $X$ 的子集的 <span class="link local"><a href="./Boole环.html" title="Boole 环 [Boole环]">Boole 环</a></span> $2^X$ 到 $2$ 的同态, 也即 $2^X$ 的<span class="link local"><a href="./理想(偏序集).html" title="理想 (偏序集) [理想(偏序集)]">素理想</a></span>.</p>
+<h4>主超滤</h4>
+<p>对于集合 $X$ 的元素 $x$, <strong>主超滤</strong> $[x]$ 是包含 $x$ 的子集构成的超滤, 也即 $x\colon *\to X$ 决定的 Boole 环同态 $2^X\to 2$.</p>
+<h2>性质</h2>
+<h3>单子</h3>
+<p>将集合 $X$ 对应到 $X$ 上全体超滤的集合, 这一过程构成一个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $\beta\colon \mathsf{Set}\to\mathsf{Set}$, 称为超滤单子. 它是 $\mathsf{Set}$ 与 <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">$\mathsf{Boole}^{\mathrm{op}}$</a></span> 之间的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $2^{(-)}\dashv\operatorname{Spec}$ <span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span>.</p>
+<p>超滤单子的乘法 $\mu\colon \beta\beta\to\beta$ 也可具体写出如下. 设 $X$ 为集合, $F\in\beta\beta X$ 为超滤的超滤. 对于 $A\subset X$ 则 $\mu_X(F)\in\beta X$ 为超滤
+$$
+\big\{A\subset X\mid \{G\in\beta X\mid A\in G\}\in F\big\}.
+$$
+另一种看法: 回忆 $\beta X = \operatorname{Hom}_{\mathsf{Boole}}(2^X,2)$, 则有求值映射 $\mathrm{ev}\colon 2^X\times\beta X \to 2$, 进一步给出 Boole 环同态 $2^X \to 2^{\beta X}$. 用它来预复合同态 $2^{\beta X}\to 2$, 就得到映射 $\beta\beta X\to \beta X$.
+这里 $2^X \to 2^{\beta X}$ 就是 $2^X$ 的 <span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span>的单位.</p>
+<p><strong>命题</strong>. 超滤单子上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>等同于<span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>.</p>
+<h3>有限集的情形</h3>
+<p><strong>命题</strong>. 有限集上的超滤均为主超滤.</p>
+<p>用 “统治集” 的设定, 这就是说有限个人的投票方案必有一个 “独裁者”. (反常识的原因在于这里的投票方案要求统治集的有限交仍是统治集, 而这不符合现实.)</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span></p>
 </details></section></details></section></footer></article></div></body></html>

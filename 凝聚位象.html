@@ -840,7 +840,38 @@ $$
 \mathcal O(X^{\vee}) = \mathsf{Ideal}((\mathcal O(X)^{\omega})^{\mathrm{op}}).
 $$
 换言之, 设凝聚位象 $X$ 对应于<span class="link local"><a href="./分配格.html" title="分配格 [分配格]">分配格</a></span> $L$, 那么 $X$ 的 Hochster 对偶就是分配格 $L^{\mathrm{op}}$ 对应的凝聚位象.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="位象"><header><h1><span class="taxon"></span>位象 <a class="slug" href="./位象.html">[位象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Stone对偶"><header><h1><span class="taxon"></span>Stone 对偶 <a class="slug" href="./Stone对偶.html">[Stone对偶]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>$2=\{0,1\}$ 同时具有 <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>和<span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>结构; 有两个方向的函子
+$$
+\operatorname{Hom}_{\mathsf{CHaus}}(-,2)\colon \mathsf{CHaus}^{\mathrm{op}} \to \mathsf{Boole}
+$$
+以及
+$$
+\operatorname{Hom}_{\mathsf{Boole}}(-,2)\colon \mathsf{Boole}^{\mathrm{op}} \to \mathsf{CHaus}.
+$$
+这就是 <strong>Stone 对偶</strong>.</p>
+<p>定义 <strong></strong><span class="link local"><a href="./Stone空间.html" title="Stone 空间 [Stone空间]">Stone 空间</a></span>为满足如下等价条件的空间 $X$:</p>
+<ul>
+<li>$X$ 是<strong>全不连通</strong> (totally disconnected) 紧 Hausdorff 空间, 全不连通是指其连通分支仅有单点集;</li>
+<li>$X$ 是<span class="link local"><a href="./凝聚位象.html" title="凝聚位象 [凝聚位象]">凝聚</a></span>的 Hausdorff 空间;</li>
+<li>$X$ 落在函子 $\operatorname{Hom}_{\mathsf{Boole}}(-,2)\colon \mathsf{Boole}^{\mathrm{op}} \to \mathsf{CHaus}$ 的像中.</li>
+</ul>
+<p><strong>命题</strong>. Stone 对偶给出了等价
+$$
+\mathsf{Boole}^{\mathrm{op}}\simeq\mathsf{Stone},
+$$
+将 $\mathsf{Boole}^{\mathrm{op}}$ 等同于 $\mathsf{CHaus}$ 的一个<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span>.</p>
+<p>Stone 对偶是<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>的一例.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="Stone空间"><header><h1><span class="taxon"></span>Stone 空间 <a class="slug" href="./Stone空间.html">[Stone空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><strong>Stone 空间</strong>为满足如下等价条件的拓扑空间 $X$:</p>
+<ul>
+<li>$X$ 是<strong>全不连通</strong> (totally disconnected) <span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>, 全不连通是指其连通分支仅有单点集;</li>
+<li>$X$ 是<span class="link local"><a href="./凝聚位象.html" title="凝聚位象 [凝聚位象]">凝聚</a></span>的 Hausdorff 空间;</li>
+<li>$X$ 落在函子 $\operatorname{Hom}_{\mathsf{Boole}}(-,2)\colon \mathsf{Boole}^{\mathrm{op}} \to \mathsf{CHaus}$ 的像中 (见 <span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span>).</li>
+</ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="位象"><header><h1><span class="taxon"></span>位象 <a class="slug" href="./位象.html">[位象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>位象是<span class="link local"><a href="./无点拓扑学.html" title="无点拓扑学 [无点拓扑学]">无点拓扑学</a></span>的最基本概念. 一个位象是一个偏序集, 满足与拓扑空间中的开集构成的偏序集类似的性质. 但是位象不像拓扑空间那样是由点构成的: 事实上, 一个非平凡的位象可以没有任何点.</p>
 <p>位象又称 $0$-<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>. 这体现了它是一座概念塔的最底层: 位象之上还有 $1$-意象直至 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span>.</p>

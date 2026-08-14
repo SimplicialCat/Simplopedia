@@ -892,8 +892,19 @@ $$
 <p>Boole 代数是经典逻辑的<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语义</a></span>. 如 Boole 代数中的积 (交) 是逻辑与 $X\wedge Y$, 指数 $Y^X$ 是逻辑蕴含 $X\Rightarrow Y$, 赋值映射是推理法则 $(X\Rightarrow Y)\wedge X \leq Y$ 等等.</p>
 <h2>定义</h2>
 <p>Boole 代数是具有补运算的<span class="link local"><a href="./分配格.html" title="分配格 [分配格]">分配格</a></span>.</p>
-<p>Boole 代数与 <span class="link local"><a href="./Boole环.html" title="“Boole 环” [Boole环]">Boole 环</a></span>可以相互转化.</p>
+<p>Boole 代数与 <span class="link local"><a href="./Boole环.html" title="Boole 环 [Boole环]">Boole 环</a></span>可以相互转化.</p>
 <h2>性质</h2>
+<h3>谱</h3>
+<p>记 Boole 代数 $B$ 的<strong>谱</strong>为
+$$
+\operatorname{Spec}(B) = \operatorname{Hom}_{\mathsf{Boole}}(B,2).
+$$
+则有
+$$
+\operatorname{Hom}_{\mathsf{Boole}}(B,2^X) \simeq \operatorname{Hom}_{\mathsf{Set}}(X,\operatorname{Spec}(B)),
+$$
+即函子 $2^{(-)}\colon \mathsf{Set}\to\mathsf{Boole}^{\mathrm{op}}$ 与 $\operatorname{Spec}\colon \mathsf{Boole}^{\mathrm{op}}\to\mathsf{Set}$ 满足<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>关系 $2^{(-)}\dashv\operatorname{Spec}$. 这对伴随<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span>为 $\mathsf{Set}$ 上的<span class="link local"><a href="./超滤.html" title="超滤 [超滤]">超滤单子</a></span>.</p>
+<h3>Stone 对偶</h3>
 <p><span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="LCCC"><header><h1><span class="taxon"></span>局部积闭范畴 <a class="slug" href="./LCCC.html">[LCCC]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
@@ -1024,7 +1035,10 @@ $$
 $$
 其中用到 $\int_{W\times\mathbb{R}}A$ 是<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> (因为有对称幺半函子 $W\times -\colon \mathsf{Disk}_1^{\text{fr}} \to \mathsf{Mfd}_n^{\text{fr}}$), 且 $\int_{X_0}A$ 是 $\int_{W\times \mathbb{R}}A$-右模
 (这是因为领口可以再加一个领口, 两个领口可以合成一个领口).</p>
-<h3>例: $S^1$ 的分解同调</h3>
+<h3>$\mathbb{E}_\infty$-代数的分解同调</h3>
+<p>设 $A$ 为 $\mathbb E_\infty$-代数, $M$ 为 $n$-流形, 那么 $A$ 作为 $\mathbb E_n$-代数在 $M$ 上的分解同调等同于 $A$ 作为 $\mathbb E_\infty$-代数沿 $M$ 的底生象的<span class="link local"><a href="./张量积.html" title="张量积 [张量积]">张量积</a></span>.</p>
+<h2>例</h2>
+<h3>$S^1$ 上的分解同调</h3>
 <p>由于 $S^1$ 可以写成
 $$
 S^1 = \mathbb{R} \cup_{S^0\times\mathbb{R}} \mathbb{R},

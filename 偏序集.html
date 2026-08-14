@@ -1125,9 +1125,9 @@ $$
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="格"><header><h1><span class="taxon"></span>格 <a class="slug" href="./格.html">[格]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>格是有二元交和二元<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">并</a></span>的<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span>.</p>
+<p>格是有二元<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">交</a></span>和二元<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">并</a></span>的<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span>.</p>
 <h2>相关概念</h2>
-<p><span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span>, <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>, <span class="link local"><a href="./分配格.html" title="分配格 [分配格]">分配格</a></span></p>
+<p><span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span>, <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>, <span class="link local"><a href="./分配格.html" title="分配格 [分配格]">分配格</a></span>, <span class="link local"><a href="./理想(偏序集).html" title="理想 (偏序集) [理想(偏序集)]">理想</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="理想(偏序集)"><header><h1><span class="taxon"></span>理想 (偏序集) <a class="slug" href="./理想(偏序集).html">[理想(偏序集)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span> $P$ 具有有限并. 定义 $P$ 的理想为满足如下条件的子集 $I\subset P$:</p>
@@ -1144,6 +1144,13 @@ $$
 <p>若将向下封闭子集 $I$ 理解为函子 $F\colon P \to \{0&lt;1\}$, 此时 $I = F^{-1}(0)$, 同时 $I$ 可理解为 $F$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素的范畴</a></span>, 则
 $I$ 为理想的条件又可以表述为 $F$ 为<span class="link local"><a href="./平坦函子.html" title="平坦函子 [平坦函子]">平坦函子</a></span>. 因为平坦函子的一个刻画就是其元素范畴为滤范畴.</p>
 <p>进而 $P$ 的理想构成的偏序集 $\mathsf{Ideal}(P)$ 等价于其 <span class="link local"><a href="./ind-对象.html" title="ind-对象 [ind-对象]">ind-完备化</a></span> $\mathsf{Ind}(P)$.</p>
+<h3>素理想</h3>
+<p>若偏序集 $P$ 具有有限并和有限交 (即 $P$ 构成<span class="link local"><a href="./格.html" title="格 [格]">格</a></span>), 当理想 $I$ 满足如下等价条件时, 称之为<strong>素理想</strong>:</p>
+<ul>
+<li>对 $x,y\in P$, 若 $x \land y\in I$, 则 $x\in I$ 或 $y\in I$;</li>
+<li>$I$ 是某个格同态 $P\to 2$ 的核;</li>
+<li>$I$ 是<strong>极大理想</strong>, 即包含 $I$ 的理想仅有 $I$ 与 $P$.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="结合代数"><header><h1><span class="taxon"></span>结合代数 <a class="slug" href="./结合代数.html">[结合代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>观念</h2>
 <p>结合代数, 又叫 $\mathbb E_1$-代数, <span class="link local"><a href="./A∞-代数.html" title="A∞-代数 [A∞-代数]">$A_\infty$-代数</a></span>, 是若干元素可以<strong>有序</strong>地结合起来的结构. 给定 $n$ 个元素的<strong>有序</strong>组 $(x_1,\cdots,x_n)$, 仅有<strong>唯一</strong>的方式将它们结合起来 $x_1\cdots x_n$, 即结合的最终结果 “与加括号的方式无关”.</p>
 <p>在结合代数的结构之上, 可以考虑 “结合代数中的结合代数” (<span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$-代数</a></span>, 也即有两种相容结合运算的代数), “结合代数中的结合代数中的结合代数” ($\mathbb E_3$-代数), …, 以至于无穷. 在无穷处, $\mathbb E_\infty$-代数就是<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>.</p>

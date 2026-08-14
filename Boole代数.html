@@ -830,8 +830,19 @@
 <p>Boole 代数是经典逻辑的<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语义</a></span>. 如 Boole 代数中的积 (交) 是逻辑与 $X\wedge Y$, 指数 $Y^X$ 是逻辑蕴含 $X\Rightarrow Y$, 赋值映射是推理法则 $(X\Rightarrow Y)\wedge X \leq Y$ 等等.</p>
 <h2>定义</h2>
 <p>Boole 代数是具有补运算的<span class="link local"><a href="./分配格.html" title="分配格 [分配格]">分配格</a></span>.</p>
-<p>Boole 代数与 <span class="link local"><a href="./Boole环.html" title="“Boole 环” [Boole环]">Boole 环</a></span>可以相互转化.</p>
+<p>Boole 代数与 <span class="link local"><a href="./Boole环.html" title="Boole 环 [Boole环]">Boole 环</a></span>可以相互转化.</p>
 <h2>性质</h2>
+<h3>谱</h3>
+<p>记 Boole 代数 $B$ 的<strong>谱</strong>为
+$$
+\operatorname{Spec}(B) = \operatorname{Hom}_{\mathsf{Boole}}(B,2).
+$$
+则有
+$$
+\operatorname{Hom}_{\mathsf{Boole}}(B,2^X) \simeq \operatorname{Hom}_{\mathsf{Set}}(X,\operatorname{Spec}(B)),
+$$
+即函子 $2^{(-)}\colon \mathsf{Set}\to\mathsf{Boole}^{\mathrm{op}}$ 与 $\operatorname{Spec}\colon \mathsf{Boole}^{\mathrm{op}}\to\mathsf{Set}$ 满足<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>关系 $2^{(-)}\dashv\operatorname{Spec}$. 这对伴随<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span>为 $\mathsf{Set}$ 上的<span class="link local"><a href="./超滤.html" title="超滤 [超滤]">超滤单子</a></span>.</p>
+<h3>Stone 对偶</h3>
 <p><span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span></p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Boole意象"><header><h1><span class="taxon"></span>Boole 意象 <a class="slug" href="./Boole意象.html">[Boole意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
@@ -844,10 +855,9 @@
 <li>对任意子对象 $S\hookrightarrow E$, 有 $\neg S \vee S = E$;</li>
 <li>态射 $\text{true}\colon 1\to\Omega$ 和 $\text{false}=\neg\circ \text{true}$ 给出同构 $1+1\simeq \Omega$.</li>
 </ul>
-</details></section><section class="block" data-taxon=""><details ><summary id="Boole环"><header><h1><span class="taxon"></span>“Boole 环” <a class="slug" href="./Boole环.html">[Boole环]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="Boole环"><header><h1><span class="taxon"></span>Boole 环 <a class="slug" href="./Boole环.html">[Boole环]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>Boole 环是所有元素都幂等的环.</p>
-<p><span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span></p>
+<p>Boole 环是所有元素都幂等的环. 见 <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Heyting代数"><header><h1><span class="taxon"></span>Heyting 代数 <a class="slug" href="./Heyting代数.html">[Heyting代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>Heyting 代数是<span class="link local"><a href="./直觉主义逻辑.html" title="直觉主义逻辑 [直觉主义逻辑]">直觉主义</a></span>命题演算的模型.</p>
@@ -883,6 +893,29 @@ $$
 <p>每个<span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span> $X$ 都给出一个 Heyting 代数 $\mathcal O(X)$. 由此容易给出不满足 Boole 性质的例子. 例如拓扑空间 $X$ 对应的 Heyting 代数中, 开集 $U$ 的<span class="link local"><a href="./否定.html" title="“否定” [否定]">否定</a></span> $U\Rightarrow \bot$ 实际上是 $X\setminus U$ 的内部, 除非 $U$ 既开又闭, 否则不会有 $\neg\neg U = U$.</p>
 <h2>参考资料</h2>
 <p><span class="link local"><a href="./盲人摸象.html" title="盲人摸象 [盲人摸象]">盲人摸象</a></span> 1.3 节</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="Stone对偶"><header><h1><span class="taxon"></span>Stone 对偶 <a class="slug" href="./Stone对偶.html">[Stone对偶]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>$2=\{0,1\}$ 同时具有 <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>和<span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>结构; 有两个方向的函子
+$$
+\operatorname{Hom}_{\mathsf{CHaus}}(-,2)\colon \mathsf{CHaus}^{\mathrm{op}} \to \mathsf{Boole}
+$$
+以及
+$$
+\operatorname{Hom}_{\mathsf{Boole}}(-,2)\colon \mathsf{Boole}^{\mathrm{op}} \to \mathsf{CHaus}.
+$$
+这就是 <strong>Stone 对偶</strong>.</p>
+<p>定义 <strong></strong><span class="link local"><a href="./Stone空间.html" title="Stone 空间 [Stone空间]">Stone 空间</a></span>为满足如下等价条件的空间 $X$:</p>
+<ul>
+<li>$X$ 是<strong>全不连通</strong> (totally disconnected) 紧 Hausdorff 空间, 全不连通是指其连通分支仅有单点集;</li>
+<li>$X$ 是<span class="link local"><a href="./凝聚位象.html" title="凝聚位象 [凝聚位象]">凝聚</a></span>的 Hausdorff 空间;</li>
+<li>$X$ 落在函子 $\operatorname{Hom}_{\mathsf{Boole}}(-,2)\colon \mathsf{Boole}^{\mathrm{op}} \to \mathsf{CHaus}$ 的像中.</li>
+</ul>
+<p><strong>命题</strong>. Stone 对偶给出了等价
+$$
+\mathsf{Boole}^{\mathrm{op}}\simeq\mathsf{Stone},
+$$
+将 $\mathsf{Boole}^{\mathrm{op}}$ 等同于 $\mathsf{CHaus}$ 的一个<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span>.</p>
+<p>Stone 对偶是<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>的一例.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="代数-几何对偶"><header><h1><span class="taxon"></span>代数–几何对偶 <a class="slug" href="./代数-几何对偶.html">[代数-几何对偶]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>代数–几何对偶是数学上的一大类现象, 某种几何对象与某种代数对象之间有对偶的关系 (即两个范畴互为<span class="link local"><a href="./反范畴.html" title="反范畴 [反范畴]">反范畴</a></span>):</p>
 <ul>
@@ -935,9 +968,9 @@ $$
 <p><span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="格"><header><h1><span class="taxon"></span>格 <a class="slug" href="./格.html">[格]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>格是有二元交和二元<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">并</a></span>的<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span>.</p>
+<p>格是有二元<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">交</a></span>和二元<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">并</a></span>的<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span>.</p>
 <h2>相关概念</h2>
-<p><span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span>, <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>, <span class="link local"><a href="./分配格.html" title="分配格 [分配格]">分配格</a></span></p>
+<p><span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span>, <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>, <span class="link local"><a href="./分配格.html" title="分配格 [分配格]">分配格</a></span>, <span class="link local"><a href="./理想(偏序集).html" title="理想 (偏序集) [理想(偏序集)]">理想</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="谱(代数)"><header><h1><span class="taxon"></span>谱 (代数–几何对偶) <a class="slug" href="./谱(代数).html">[谱(代数)]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本页面谈论<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>中的 “谱” 的广泛概念. 同伦论中的<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>与这个概念没有从属关系, 只是不幸地占有同一个名称. (更不幸的是, 谱代数几何要讨论<span class="link local"><a href="./环谱.html" title="环谱 [环谱]">环谱</a></span>的谱…)</p>
 <hr />
@@ -959,4 +992,35 @@ $$
 </ul>
 <h3>综合代数几何</h3>
 <p>…</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="超滤"><header><h1><span class="taxon"></span>超滤 <a class="slug" href="./超滤.html">[超滤]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>在集合与 Boole 代数的<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>中, 几何对象是集合, 代数对象是 Boole 代数. 超滤单子是这对伴随给出的单子. 集合 $X$ 上的超滤是 $X$ 的某种广义点.</p>
+<p>有一个有趣的设定, 集合 $X$ 是一些人的集合, 他们投票支持或反对某事, 每人必须支持或者反对. 定义 “统治集” 的概念, 意思是当一个子集中所有成员一致支持或一致反对时, 结果必然是这些人的选择. 这个概念有如下的性质:</p>
+<ul>
+<li>$X$ 本身是一个统治集;</li>
+<li>扩充一个统治集只会得到更大的统治集;</li>
+<li>有限个统治集的交集仍是统治集;</li>
+<li>两个互补的子集恰有一个是统治集.</li>
+</ul>
+<p>(我们没有说这个模型有任何现实意义.)</p>
+<h2>定义</h2>
+<h3>集合上的超滤</h3>
+<p>集合 $X$ 上的<strong>超滤</strong>是 $X$ 的子集的 <span class="link local"><a href="./Boole环.html" title="Boole 环 [Boole环]">Boole 环</a></span> $2^X$ 到 $2$ 的同态, 也即 $2^X$ 的<span class="link local"><a href="./理想(偏序集).html" title="理想 (偏序集) [理想(偏序集)]">素理想</a></span>.</p>
+<h4>主超滤</h4>
+<p>对于集合 $X$ 的元素 $x$, <strong>主超滤</strong> $[x]$ 是包含 $x$ 的子集构成的超滤, 也即 $x\colon *\to X$ 决定的 Boole 环同态 $2^X\to 2$.</p>
+<h2>性质</h2>
+<h3>单子</h3>
+<p>将集合 $X$ 对应到 $X$ 上全体超滤的集合, 这一过程构成一个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $\beta\colon \mathsf{Set}\to\mathsf{Set}$, 称为超滤单子. 它是 $\mathsf{Set}$ 与 <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">$\mathsf{Boole}^{\mathrm{op}}$</a></span> 之间的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $2^{(-)}\dashv\operatorname{Spec}$ <span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span>.</p>
+<p>超滤单子的乘法 $\mu\colon \beta\beta\to\beta$ 也可具体写出如下. 设 $X$ 为集合, $F\in\beta\beta X$ 为超滤的超滤. 对于 $A\subset X$ 则 $\mu_X(F)\in\beta X$ 为超滤
+$$
+\big\{A\subset X\mid \{G\in\beta X\mid A\in G\}\in F\big\}.
+$$
+另一种看法: 回忆 $\beta X = \operatorname{Hom}_{\mathsf{Boole}}(2^X,2)$, 则有求值映射 $\mathrm{ev}\colon 2^X\times\beta X \to 2$, 进一步给出 Boole 环同态 $2^X \to 2^{\beta X}$. 用它来预复合同态 $2^{\beta X}\to 2$, 就得到映射 $\beta\beta X\to \beta X$.
+这里 $2^X \to 2^{\beta X}$ 就是 $2^X$ 的 <span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span>的单位.</p>
+<p><strong>命题</strong>. 超滤单子上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>等同于<span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>.</p>
+<h3>有限集的情形</h3>
+<p><strong>命题</strong>. 有限集上的超滤均为主超滤.</p>
+<p>用 “统治集” 的设定, 这就是说有限个人的投票方案必有一个 “独裁者”. (反常识的原因在于这里的投票方案要求统治集的有限交仍是统治集, 而这不符合现实.)</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span></p>
 </details></section></details></section></footer></article></div></body></html>

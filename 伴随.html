@@ -942,7 +942,26 @@ $$
 <h3>米田嵌入的伴随</h3>
 <p><strong>命题</strong>. 范畴 $\mathcal C$ 余完备当且仅当<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span> $\mathrm{y}\colon \mathcal C\to\mathsf{Psh}(\mathcal C)$ 有左伴随.</p>
 <p>证明. 若 $\mathcal C$ 余完备, 则可定义 $\mathrm{y}$ 的左伴随 $L\colon \mathsf{Psh}(\mathcal C)\to\mathcal C$ 为 $\mathrm{id}_{\mathcal C}$ 的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">米田扩张</a></span>. 另一方面, 假设左伴随 $L$ 存在, 那么由于 $L$ 保持余极限, $\mathcal C$ 中必须具有所有的余极限.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Galois对应"><header><h1><span class="taxon"></span>Galois 对应 <a class="slug" href="./Galois对应.html">[Galois对应]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Boole代数"><header><h1><span class="taxon"></span>Boole 代数 <a class="slug" href="./Boole代数.html">[Boole代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Boole 代数是经典逻辑的<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语义</a></span>. 如 Boole 代数中的积 (交) 是逻辑与 $X\wedge Y$, 指数 $Y^X$ 是逻辑蕴含 $X\Rightarrow Y$, 赋值映射是推理法则 $(X\Rightarrow Y)\wedge X \leq Y$ 等等.</p>
+<h2>定义</h2>
+<p>Boole 代数是具有补运算的<span class="link local"><a href="./分配格.html" title="分配格 [分配格]">分配格</a></span>.</p>
+<p>Boole 代数与 <span class="link local"><a href="./Boole环.html" title="Boole 环 [Boole环]">Boole 环</a></span>可以相互转化.</p>
+<h2>性质</h2>
+<h3>谱</h3>
+<p>记 Boole 代数 $B$ 的<strong>谱</strong>为
+$$
+\operatorname{Spec}(B) = \operatorname{Hom}_{\mathsf{Boole}}(B,2).
+$$
+则有
+$$
+\operatorname{Hom}_{\mathsf{Boole}}(B,2^X) \simeq \operatorname{Hom}_{\mathsf{Set}}(X,\operatorname{Spec}(B)),
+$$
+即函子 $2^{(-)}\colon \mathsf{Set}\to\mathsf{Boole}^{\mathrm{op}}$ 与 $\operatorname{Spec}\colon \mathsf{Boole}^{\mathrm{op}}\to\mathsf{Set}$ 满足<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>关系 $2^{(-)}\dashv\operatorname{Spec}$. 这对伴随<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span>为 $\mathsf{Set}$ 上的<span class="link local"><a href="./超滤.html" title="超滤 [超滤]">超滤单子</a></span>.</p>
+<h3>Stone 对偶</h3>
+<p><span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="Galois对应"><header><h1><span class="taxon"></span>Galois 对应 <a class="slug" href="./Galois对应.html">[Galois对应]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>Galois 对应是<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span>之间的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
 <h2>例</h2>
@@ -1843,6 +1862,8 @@ $$
     (-)_+\wedge E \dashv \operatorname{Hom}_{\mathsf{Sp}}(E,-).
 $$</p>
 <p>函子 $(-)_+\wedge E\colon \mathsf{Ani} \to \mathsf{Sp}$ 保持余极限, 因而被它在一个点上的取值完全决定.</p>
+<h3>$\mathbb E_\infty$-代数的分解同调</h3>
+<p>设 $A$ 为 $\mathbb E_\infty$-代数, $M$ 为 $n$-流形, 那么 $A$ 作为 $\mathbb E_n$-代数在 $M$ 上的<span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>等同于 $A$ 作为 $\mathbb E_\infty$-代数沿 $M$ 的底生象的张量积.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="映射谱"><header><h1><span class="taxon"></span>映射谱 <a class="slug" href="./映射谱.html">[映射谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>映射谱是 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 上的<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span>对称幺半范畴结构的一部分.</p>
 <h2>定义</h2>
@@ -2017,6 +2038,37 @@ $$</p>
 <p>由对偶性, 只需证明第一个命题. $G$ 为全忠实函子, 当且仅当 $\operatorname{Hom}_{\mathcal D}(-,-)\to \operatorname{Hom}_{\mathcal C}(G-,G-)$ 为同构; 由伴随, 这等价于 $\operatorname{Hom}_{\mathcal D}(-,-)\to \operatorname{Hom}_{\mathcal D}(FG-,-)$ 为同构. 由<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>, 这等价于余单位 $FG \to\mathrm{id}_{\mathcal D}$ 为同构.</p>
 <h3>局部化</h3>
 <p>对于自反子范畴 $g\colon \mathcal D\to\mathcal C$, 设其左伴随为 $f$, 记 $W$ 为 $\mathcal C$ 中所有被 $f$ 变为同构的态射构成的类, 则 $f$ 等同于<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span> $\mathcal C \to \mathcal C[W^{-1}]$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="超滤"><header><h1><span class="taxon"></span>超滤 <a class="slug" href="./超滤.html">[超滤]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>在集合与 Boole 代数的<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>中, 几何对象是集合, 代数对象是 Boole 代数. 超滤单子是这对伴随给出的单子. 集合 $X$ 上的超滤是 $X$ 的某种广义点.</p>
+<p>有一个有趣的设定, 集合 $X$ 是一些人的集合, 他们投票支持或反对某事, 每人必须支持或者反对. 定义 “统治集” 的概念, 意思是当一个子集中所有成员一致支持或一致反对时, 结果必然是这些人的选择. 这个概念有如下的性质:</p>
+<ul>
+<li>$X$ 本身是一个统治集;</li>
+<li>扩充一个统治集只会得到更大的统治集;</li>
+<li>有限个统治集的交集仍是统治集;</li>
+<li>两个互补的子集恰有一个是统治集.</li>
+</ul>
+<p>(我们没有说这个模型有任何现实意义.)</p>
+<h2>定义</h2>
+<h3>集合上的超滤</h3>
+<p>集合 $X$ 上的<strong>超滤</strong>是 $X$ 的子集的 <span class="link local"><a href="./Boole环.html" title="Boole 环 [Boole环]">Boole 环</a></span> $2^X$ 到 $2$ 的同态, 也即 $2^X$ 的<span class="link local"><a href="./理想(偏序集).html" title="理想 (偏序集) [理想(偏序集)]">素理想</a></span>.</p>
+<h4>主超滤</h4>
+<p>对于集合 $X$ 的元素 $x$, <strong>主超滤</strong> $[x]$ 是包含 $x$ 的子集构成的超滤, 也即 $x\colon *\to X$ 决定的 Boole 环同态 $2^X\to 2$.</p>
+<h2>性质</h2>
+<h3>单子</h3>
+<p>将集合 $X$ 对应到 $X$ 上全体超滤的集合, 这一过程构成一个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $\beta\colon \mathsf{Set}\to\mathsf{Set}$, 称为超滤单子. 它是 $\mathsf{Set}$ 与 <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">$\mathsf{Boole}^{\mathrm{op}}$</a></span> 之间的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $2^{(-)}\dashv\operatorname{Spec}$ <span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span>.</p>
+<p>超滤单子的乘法 $\mu\colon \beta\beta\to\beta$ 也可具体写出如下. 设 $X$ 为集合, $F\in\beta\beta X$ 为超滤的超滤. 对于 $A\subset X$ 则 $\mu_X(F)\in\beta X$ 为超滤
+$$
+\big\{A\subset X\mid \{G\in\beta X\mid A\in G\}\in F\big\}.
+$$
+另一种看法: 回忆 $\beta X = \operatorname{Hom}_{\mathsf{Boole}}(2^X,2)$, 则有求值映射 $\mathrm{ev}\colon 2^X\times\beta X \to 2$, 进一步给出 Boole 环同态 $2^X \to 2^{\beta X}$. 用它来预复合同态 $2^{\beta X}\to 2$, 就得到映射 $\beta\beta X\to \beta X$.
+这里 $2^X \to 2^{\beta X}$ 就是 $2^X$ 的 <span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span>的单位.</p>
+<p><strong>命题</strong>. 超滤单子上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>等同于<span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>.</p>
+<h3>有限集的情形</h3>
+<p><strong>命题</strong>. 有限集上的超滤均为主超滤.</p>
+<p>用 “统治集” 的设定, 这就是说有限个人的投票方案必有一个 “独裁者”. (反常识的原因在于这里的投票方案要求统治集的有限交仍是统治集, 而这不符合现实.)</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="逆环路空间"><header><h1><span class="taxon"></span>逆环路空间 <a class="slug" href="./逆环路空间.html">[逆环路空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>群 $G$ 的<strong>逆环路空间</strong> (delooping) 是 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主齐性空间</a></span>的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>, 也即 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>的<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">分类空间</a></span>.</p>

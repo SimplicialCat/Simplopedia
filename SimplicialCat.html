@@ -1686,8 +1686,19 @@ $$
 <p>Boole 代数是经典逻辑的<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语义</a></span>. 如 Boole 代数中的积 (交) 是逻辑与 $X\wedge Y$, 指数 $Y^X$ 是逻辑蕴含 $X\Rightarrow Y$, 赋值映射是推理法则 $(X\Rightarrow Y)\wedge X \leq Y$ 等等.</p>
 <h2>定义</h2>
 <p>Boole 代数是具有补运算的<span class="link local"><a href="./分配格.html" title="分配格 [分配格]">分配格</a></span>.</p>
-<p>Boole 代数与 <span class="link local"><a href="./Boole环.html" title="“Boole 环” [Boole环]">Boole 环</a></span>可以相互转化.</p>
+<p>Boole 代数与 <span class="link local"><a href="./Boole环.html" title="Boole 环 [Boole环]">Boole 环</a></span>可以相互转化.</p>
 <h2>性质</h2>
+<h3>谱</h3>
+<p>记 Boole 代数 $B$ 的<strong>谱</strong>为
+$$
+\operatorname{Spec}(B) = \operatorname{Hom}_{\mathsf{Boole}}(B,2).
+$$
+则有
+$$
+\operatorname{Hom}_{\mathsf{Boole}}(B,2^X) \simeq \operatorname{Hom}_{\mathsf{Set}}(X,\operatorname{Spec}(B)),
+$$
+即函子 $2^{(-)}\colon \mathsf{Set}\to\mathsf{Boole}^{\mathrm{op}}$ 与 $\operatorname{Spec}\colon \mathsf{Boole}^{\mathrm{op}}\to\mathsf{Set}$ 满足<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>关系 $2^{(-)}\dashv\operatorname{Spec}$. 这对伴随<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span>为 $\mathsf{Set}$ 上的<span class="link local"><a href="./超滤.html" title="超滤 [超滤]">超滤单子</a></span>.</p>
+<h3>Stone 对偶</h3>
 <p><span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Boole意象"><header><h1><span class="taxon"></span>Boole 意象 <a class="slug" href="./Boole意象.html">[Boole意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
@@ -1700,10 +1711,9 @@ $$
 <li>对任意子对象 $S\hookrightarrow E$, 有 $\neg S \vee S = E$;</li>
 <li>态射 $\text{true}\colon 1\to\Omega$ 和 $\text{false}=\neg\circ \text{true}$ 给出同构 $1+1\simeq \Omega$.</li>
 </ul>
-</details></section><section class="block" data-taxon=""><details ><summary id="Boole环"><header><h1><span class="taxon"></span>“Boole 环” <a class="slug" href="./Boole环.html">[Boole环]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="Boole环"><header><h1><span class="taxon"></span>Boole 环 <a class="slug" href="./Boole环.html">[Boole环]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>Boole 环是所有元素都幂等的环.</p>
-<p><span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span></p>
+<p>Boole 环是所有元素都幂等的环. 见 <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Borel子代数"><header><h1><span class="taxon"></span>“Borel 子代数” <a class="slug" href="./Borel子代数.html">[Borel子代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p><span class="link local"><a href="./Lie代数.html" title="Lie 代数 [Lie代数]">Lie 代数</a></span>的 Borel 子代数是其极大<span class="link local"><a href="./可解.html" title=" [可解]">可解 Lie 代数</a></span>子代数.</p>
@@ -7870,11 +7880,36 @@ $$
 <h3>阻碍</h3>
 <p>第一 Stiefel–Whitney 类是<span class="link local"><a href="./定向.html" title="定向 [定向]">定向</a></span>的<span class="link local"><a href="./阻碍.html" title="阻碍 [阻碍]">阻碍</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Stone对偶"><header><h1><span class="taxon"></span>Stone 对偶 <a class="slug" href="./Stone对偶.html">[Stone对偶]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p><span class="link external"><a href="https://ncatlab.org/nlab/show/Stone+duality" title="nLab [https://ncatlab.org/nlab/show/Stone+duality]">nLab</a></span></p>
-<blockquote>
-<p>The two-element set carries a structure of Boolean algebra object in the category of compact Hausdorff spaces. So we have two algebraic structures on $\mathbb{F}_2$ whose operations commute with one another (here a compact Hausdorff space is an algebra for the ultrafilter monad, hence ‘algebraic’). This means two things: (1), that the hom-functor $CH(-, \mathbb{F}_2): CH^{op} \to Set$ is a Boolean algebra object, hence canonically lifts to a functor $CH^{op} \to Bool$. That’s one half of Stone duality. But equally well, $\mathbb{F}_2$ is a compact Hausdorff space object in the category of Boolean algebras. So (2), the hom-functor $Bool(-, \mathbb{F}_2): Bool^{op} \to Set$ is a compact Hausdorff space object, hence canonically lifts to a functor $Bool^{op} \to CH$. This is the other half of Stone duality. (All of this can be made set-theoretically rigorous.)</p>
-</blockquote>
+<h2>观念</h2>
+<p>$2=\{0,1\}$ 同时具有 <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>和<span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>结构; 有两个方向的函子
+$$
+\operatorname{Hom}_{\mathsf{CHaus}}(-,2)\colon \mathsf{CHaus}^{\mathrm{op}} \to \mathsf{Boole}
+$$
+以及
+$$
+\operatorname{Hom}_{\mathsf{Boole}}(-,2)\colon \mathsf{Boole}^{\mathrm{op}} \to \mathsf{CHaus}.
+$$
+这就是 <strong>Stone 对偶</strong>.</p>
+<p>定义 <strong></strong><span class="link local"><a href="./Stone空间.html" title="Stone 空间 [Stone空间]">Stone 空间</a></span>为满足如下等价条件的空间 $X$:</p>
+<ul>
+<li>$X$ 是<strong>全不连通</strong> (totally disconnected) 紧 Hausdorff 空间, 全不连通是指其连通分支仅有单点集;</li>
+<li>$X$ 是<span class="link local"><a href="./凝聚位象.html" title="凝聚位象 [凝聚位象]">凝聚</a></span>的 Hausdorff 空间;</li>
+<li>$X$ 落在函子 $\operatorname{Hom}_{\mathsf{Boole}}(-,2)\colon \mathsf{Boole}^{\mathrm{op}} \to \mathsf{CHaus}$ 的像中.</li>
+</ul>
+<p><strong>命题</strong>. Stone 对偶给出了等价
+$$
+\mathsf{Boole}^{\mathrm{op}}\simeq\mathsf{Stone},
+$$
+将 $\mathsf{Boole}^{\mathrm{op}}$ 等同于 $\mathsf{CHaus}$ 的一个<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span>.</p>
 <p>Stone 对偶是<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>的一例.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="Stone空间"><header><h1><span class="taxon"></span>Stone 空间 <a class="slug" href="./Stone空间.html">[Stone空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><strong>Stone 空间</strong>为满足如下等价条件的拓扑空间 $X$:</p>
+<ul>
+<li>$X$ 是<strong>全不连通</strong> (totally disconnected) <span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>, 全不连通是指其连通分支仅有单点集;</li>
+<li>$X$ 是<span class="link local"><a href="./凝聚位象.html" title="凝聚位象 [凝聚位象]">凝聚</a></span>的 Hausdorff 空间;</li>
+<li>$X$ 落在函子 $\operatorname{Hom}_{\mathsf{Boole}}(-,2)\colon \mathsf{Boole}^{\mathrm{op}} \to \mathsf{CHaus}$ 的像中 (见 <span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span>).</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="Tate不动点"><header><h1><span class="taxon"></span>Tate 不动点 <a class="slug" href="./Tate不动点.html">[Tate不动点]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>参考 <span class="link local"><a href="./NikolausScholzeTCH.html" title="On Topological Cyclic Homology [NikolausScholzeTCH]">Nikolaus–Scholze</a></span>.</p>
@@ -8811,6 +8846,7 @@ $$</p>
 <p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">亟需施工处</a></span>列表 (“TODO list”)</p>
 <p><span class="link local"><a href="./terminologies.html" title="单纯百科 - 术语翻译表 [terminologies]">术语翻译表</a></span></p>
 <h2>最近</h2>
+<p><span class="link local"><a href="./超滤.html" title="超滤 [超滤]">超滤</a></span></p>
 <p><span class="link local"><a href="./分层.html" title="分层 [分层]">分层</a></span></p>
 <p><span class="link local"><a href="./合聚意象.html" title="合聚意象 [合聚意象]">合聚意象</a></span></p>
 <p><span class="link local"><a href="./线图.html" title="线图 [线图]">线图</a></span></p>
@@ -15194,7 +15230,10 @@ $$
 $$
 其中用到 $\int_{W\times\mathbb{R}}A$ 是<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> (因为有对称幺半函子 $W\times -\colon \mathsf{Disk}_1^{\text{fr}} \to \mathsf{Mfd}_n^{\text{fr}}$), 且 $\int_{X_0}A$ 是 $\int_{W\times \mathbb{R}}A$-右模
 (这是因为领口可以再加一个领口, 两个领口可以合成一个领口).</p>
-<h3>例: $S^1$ 的分解同调</h3>
+<h3>$\mathbb{E}_\infty$-代数的分解同调</h3>
+<p>设 $A$ 为 $\mathbb E_\infty$-代数, $M$ 为 $n$-流形, 那么 $A$ 作为 $\mathbb E_n$-代数在 $M$ 上的分解同调等同于 $A$ 作为 $\mathbb E_\infty$-代数沿 $M$ 的底生象的<span class="link local"><a href="./张量积.html" title="张量积 [张量积]">张量积</a></span>.</p>
+<h2>例</h2>
+<h3>$S^1$ 上的分解同调</h3>
 <p>由于 $S^1$ 可以写成
 $$
 S^1 = \mathbb{R} \cup_{S^0\times\mathbb{R}} \mathbb{R},
@@ -18893,6 +18932,8 @@ $$
     (-)_+\wedge E \dashv \operatorname{Hom}_{\mathsf{Sp}}(E,-).
 $$</p>
 <p>函子 $(-)_+\wedge E\colon \mathsf{Ani} \to \mathsf{Sp}$ 保持余极限, 因而被它在一个点上的取值完全决定.</p>
+<h3>$\mathbb E_\infty$-代数的分解同调</h3>
+<p>设 $A$ 为 $\mathbb E_\infty$-代数, $M$ 为 $n$-流形, 那么 $A$ 作为 $\mathbb E_n$-代数在 $M$ 上的<span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>等同于 $A$ 作为 $\mathbb E_\infty$-代数沿 $M$ 的底生象的张量积.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="弧群"><header><h1><span class="taxon"></span>弧群 <a class="slug" href="./弧群.html">[弧群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>一个群的<strong>弧群</strong>是<span class="link local"><a href="./形式圆盘.html" title="形式圆盘 [形式圆盘]">形式圆盘</a></span>到它的映射构成的群.</p>
@@ -20914,9 +20955,9 @@ $$</p>
 <p>代数闭域上的约化群完全由这些资料确定. 有趣的是, 若 $(X^*, X_*, \Phi, \Phi^\vee)$ 是约化群 $G$ 的根数据, 则 $(X_*, X^*, \Phi^\vee, \Phi)$ 是另一个约化群 $G^\vee$ (或记为 $\widehat G$) 的根数据, 称为 <span class="link local"><a href="./Langlands对偶.html" title="Langlands 对偶群 [Langlands对偶]">Langlands 对偶</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="格"><header><h1><span class="taxon"></span>格 <a class="slug" href="./格.html">[格]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>格是有二元交和二元<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">并</a></span>的<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span>.</p>
+<p>格是有二元<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">交</a></span>和二元<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">并</a></span>的<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span>.</p>
 <h2>相关概念</h2>
-<p><span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span>, <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>, <span class="link local"><a href="./分配格.html" title="分配格 [分配格]">分配格</a></span></p>
+<p><span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span>, <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>, <span class="link local"><a href="./分配格.html" title="分配格 [分配格]">分配格</a></span>, <span class="link local"><a href="./理想(偏序集).html" title="理想 (偏序集) [理想(偏序集)]">理想</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="椭圆复形"><header><h1><span class="taxon"></span>“椭圆复形” <a class="slug" href="./椭圆复形.html">[椭圆复形]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>对于微分算子的正合列
 $$
@@ -22024,6 +22065,13 @@ $$</p>
 <p>若将向下封闭子集 $I$ 理解为函子 $F\colon P \to \{0&lt;1\}$, 此时 $I = F^{-1}(0)$, 同时 $I$ 可理解为 $F$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素的范畴</a></span>, 则
 $I$ 为理想的条件又可以表述为 $F$ 为<span class="link local"><a href="./平坦函子.html" title="平坦函子 [平坦函子]">平坦函子</a></span>. 因为平坦函子的一个刻画就是其元素范畴为滤范畴.</p>
 <p>进而 $P$ 的理想构成的偏序集 $\mathsf{Ideal}(P)$ 等价于其 <span class="link local"><a href="./ind-对象.html" title="ind-对象 [ind-对象]">ind-完备化</a></span> $\mathsf{Ind}(P)$.</p>
+<h3>素理想</h3>
+<p>若偏序集 $P$ 具有有限并和有限交 (即 $P$ 构成<span class="link local"><a href="./格.html" title="格 [格]">格</a></span>), 当理想 $I$ 满足如下等价条件时, 称之为<strong>素理想</strong>:</p>
+<ul>
+<li>对 $x,y\in P$, 若 $x \land y\in I$, 则 $x\in I$ 或 $y\in I$;</li>
+<li>$I$ 是某个格同态 $P\to 2$ 的核;</li>
+<li>$I$ 是<strong>极大理想</strong>, 即包含 $I$ 的理想仅有 $I$ 与 $P$.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="理想层"><header><h1><span class="taxon"></span>理想层 <a class="slug" href="./理想层.html">[理想层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>理想层是环<span class="link local"><a href="./层.html" title="拓扑空间上的层 [层]">层</a></span>的理想. <span class="link local"><a href="./环化空间.html" title="环化空间 [环化空间]">环化空间</a></span>的理想层对应<span class="link local"><a href="./闭嵌入.html" title="闭嵌入 [闭嵌入]">闭子空间</a></span>.</p>
 <h2>定义</h2>
@@ -22877,6 +22925,19 @@ $$</p>
 <p>$S^1$ 的粘构形范畴可给出 <span class="link local"><a href="./Hochschild同调.html" title="Hochschild 同调 [Hochschild同调]">Hochschild 同调</a></span>.</p>
 <p>记 $\mathbb{Z}\mathsf{Poset}$ 为带 $\mathbb{Z}$-作用的偏序集的范畴. 对正整数 $n$ 考虑其中的对象 $x_n$, 底层偏序集为 $(\mathbb{Z},\leq)$, $\mathbb{Z}$-作用由映射 $(-)+n$ 给出. 定义范畴 $\mathcal E$ 为 $\varnothing$ 与 $x_n\,(n\in\mathbb{Z}_{+})$ 在 $\mathbb{Z}\mathsf{Poset}$ 中构成的全子范畴, 原文称之为 <strong>Elmendorf 范畴</strong>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="紧Hausdorff空间"><header><h1><span class="taxon"></span>紧 Hausdorff 空间 <a class="slug" href="./紧Hausdorff空间.html">[紧Hausdorff空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>紧 Hausdorff 空间是一种非常特殊的拓扑空间, 特殊性在于这种空间构成的范畴 $\mathsf{CHaus}$ 是 “代数的”, 大约意思是这个范畴的定义可以完全不提到拓扑两个字.</p>
+<h2>性质</h2>
+<h3>单子性</h3>
+<p>紧 Hausdorff 空间范畴到集合范畴的遗忘
+$$
+\mathsf{CHaus} \to \mathsf{Set}
+$$
+是<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性函子</a></span>. 这是 “代数性” 的一种含义. 具体地, 这个单子是<span class="link local"><a href="./超滤.html" title="超滤 [超滤]">超滤</a></span>单子 $\beta$. 一个紧 Hausdorff 空间 $X$ 等同于 $\beta$-代数, 其中映射
+$$
+\beta X\to X
+$$
+给出 $X$ 中每个超滤所收敛到的唯一的点. 注意紧性表明超滤收敛, 而 Hausdorff 性质表明收敛到的点唯一.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="紧合几何态射"><header><h1><span class="taxon"></span>“紧合几何态射” <a class="slug" href="./紧合几何态射.html">[紧合几何态射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>称意象 $\mathcal C$ 为紧意象是指<span class="link local"><a href="./整体截面.html" title="整体截面 [整体截面]">整体截面</a></span>的直像部分保持<span class="link local"><a href="./子终对象.html" title="子终对象 [子终对象]">子终对象</a></span>的定向并.</p>
 <p>称<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>态射 $f\colon \mathcal F\to\mathcal E$ 为紧合的, 是指其为 $\mathcal E$ 上的紧意象. 这个条件可用<span class="link local"><a href="./叠语义.html" title="“叠语义” [叠语义]">叠语义</a></span>表述.</p>
@@ -24646,10 +24707,35 @@ $$
 $$c_1(H,h)= - \sqrt{-1}\partial \bar\partial \log h$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="超渡"><header><h1><span class="taxon"></span>超渡 <a class="slug" href="./超渡.html">[超渡]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-</details></section><section class="block" data-taxon=""><details ><summary id="超滤"><header><h1><span class="taxon"></span>“超滤” <a class="slug" href="./超滤.html">[超滤]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="超滤"><header><h1><span class="taxon"></span>超滤 <a class="slug" href="./超滤.html">[超滤]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>在集合与 Boole 代数的<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>中, 几何对象是集合, 代数对象是 Boole 代数. 超滤单子是这对伴随给出的单子. 集合 $X$ 上的超滤是 $X$ 的某种广义点.</p>
+<p>有一个有趣的设定, 集合 $X$ 是一些人的集合, 他们投票支持或反对某事, 每人必须支持或者反对. 定义 “统治集” 的概念, 意思是当一个子集中所有成员一致支持或一致反对时, 结果必然是这些人的选择. 这个概念有如下的性质:</p>
+<ul>
+<li>$X$ 本身是一个统治集;</li>
+<li>扩充一个统治集只会得到更大的统治集;</li>
+<li>有限个统治集的交集仍是统治集;</li>
+<li>两个互补的子集恰有一个是统治集.</li>
+</ul>
+<p>(我们没有说这个模型有任何现实意义.)</p>
 <h2>定义</h2>
 <h3>集合上的超滤</h3>
-<p>集合 $S$ 上的超滤是 $S$ 的子集的 <span class="link local"><a href="./Boole环.html" title="“Boole 环” [Boole环]">Boole 环</a></span> $2^S$ 到 $2$ 的同态, 也即 $2^S$ 的素理想.</p>
+<p>集合 $X$ 上的<strong>超滤</strong>是 $X$ 的子集的 <span class="link local"><a href="./Boole环.html" title="Boole 环 [Boole环]">Boole 环</a></span> $2^X$ 到 $2$ 的同态, 也即 $2^X$ 的<span class="link local"><a href="./理想(偏序集).html" title="理想 (偏序集) [理想(偏序集)]">素理想</a></span>.</p>
+<h4>主超滤</h4>
+<p>对于集合 $X$ 的元素 $x$, <strong>主超滤</strong> $[x]$ 是包含 $x$ 的子集构成的超滤, 也即 $x\colon *\to X$ 决定的 Boole 环同态 $2^X\to 2$.</p>
+<h2>性质</h2>
+<h3>单子</h3>
+<p>将集合 $X$ 对应到 $X$ 上全体超滤的集合, 这一过程构成一个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $\beta\colon \mathsf{Set}\to\mathsf{Set}$, 称为超滤单子. 它是 $\mathsf{Set}$ 与 <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">$\mathsf{Boole}^{\mathrm{op}}$</a></span> 之间的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $2^{(-)}\dashv\operatorname{Spec}$ <span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span>.</p>
+<p>超滤单子的乘法 $\mu\colon \beta\beta\to\beta$ 也可具体写出如下. 设 $X$ 为集合, $F\in\beta\beta X$ 为超滤的超滤. 对于 $A\subset X$ 则 $\mu_X(F)\in\beta X$ 为超滤
+$$
+\big\{A\subset X\mid \{G\in\beta X\mid A\in G\}\in F\big\}.
+$$
+另一种看法: 回忆 $\beta X = \operatorname{Hom}_{\mathsf{Boole}}(2^X,2)$, 则有求值映射 $\mathrm{ev}\colon 2^X\times\beta X \to 2$, 进一步给出 Boole 环同态 $2^X \to 2^{\beta X}$. 用它来预复合同态 $2^{\beta X}\to 2$, 就得到映射 $\beta\beta X\to \beta X$.
+这里 $2^X \to 2^{\beta X}$ 就是 $2^X$ 的 <span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span>的单位.</p>
+<p><strong>命题</strong>. 超滤单子上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>等同于<span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>.</p>
+<h3>有限集的情形</h3>
+<p><strong>命题</strong>. 有限集上的超滤均为主超滤.</p>
+<p>用 “统治集” 的设定, 这就是说有限个人的投票方案必有一个 “独裁者”. (反常识的原因在于这里的投票方案要求统治集的有限交仍是统治集, 而这不符合现实.)</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="超覆盖"><header><h1><span class="taxon"></span>超覆盖 <a class="slug" href="./超覆盖.html">[超覆盖]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>

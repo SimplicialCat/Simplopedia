@@ -942,10 +942,27 @@ $$
 $$</p>
 <p>其一种直观如下. 设想 $\mathcal C$ 是某种几何对象的范畴, 其上的预层范畴 $\mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathcal V)$ 是<span class="link local"><a href="./余完备化.html" title="余完备化 [余完备化]">余完备化</a></span>后的几何对象的范畴. <span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">对偶</a></span>地, $\mathcal C^{\mathrm{op}}$ 是某种代数对象的范畴, $\mathsf{Fun}(\mathcal C,\mathcal V)^{\mathrm{op}}$ 是… (todo)</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Stone对偶"><header><h1><span class="taxon"></span>Stone 对偶 <a class="slug" href="./Stone对偶.html">[Stone对偶]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p><span class="link external"><a href="https://ncatlab.org/nlab/show/Stone+duality" title="nLab [https://ncatlab.org/nlab/show/Stone+duality]">nLab</a></span></p>
-<blockquote>
-<p>The two-element set carries a structure of Boolean algebra object in the category of compact Hausdorff spaces. So we have two algebraic structures on $\mathbb{F}_2$ whose operations commute with one another (here a compact Hausdorff space is an algebra for the ultrafilter monad, hence ‘algebraic’). This means two things: (1), that the hom-functor $CH(-, \mathbb{F}_2): CH^{op} \to Set$ is a Boolean algebra object, hence canonically lifts to a functor $CH^{op} \to Bool$. That’s one half of Stone duality. But equally well, $\mathbb{F}_2$ is a compact Hausdorff space object in the category of Boolean algebras. So (2), the hom-functor $Bool(-, \mathbb{F}_2): Bool^{op} \to Set$ is a compact Hausdorff space object, hence canonically lifts to a functor $Bool^{op} \to CH$. This is the other half of Stone duality. (All of this can be made set-theoretically rigorous.)</p>
-</blockquote>
+<h2>观念</h2>
+<p>$2=\{0,1\}$ 同时具有 <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span>和<span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>结构; 有两个方向的函子
+$$
+\operatorname{Hom}_{\mathsf{CHaus}}(-,2)\colon \mathsf{CHaus}^{\mathrm{op}} \to \mathsf{Boole}
+$$
+以及
+$$
+\operatorname{Hom}_{\mathsf{Boole}}(-,2)\colon \mathsf{Boole}^{\mathrm{op}} \to \mathsf{CHaus}.
+$$
+这就是 <strong>Stone 对偶</strong>.</p>
+<p>定义 <strong></strong><span class="link local"><a href="./Stone空间.html" title="Stone 空间 [Stone空间]">Stone 空间</a></span>为满足如下等价条件的空间 $X$:</p>
+<ul>
+<li>$X$ 是<strong>全不连通</strong> (totally disconnected) 紧 Hausdorff 空间, 全不连通是指其连通分支仅有单点集;</li>
+<li>$X$ 是<span class="link local"><a href="./凝聚位象.html" title="凝聚位象 [凝聚位象]">凝聚</a></span>的 Hausdorff 空间;</li>
+<li>$X$ 落在函子 $\operatorname{Hom}_{\mathsf{Boole}}(-,2)\colon \mathsf{Boole}^{\mathrm{op}} \to \mathsf{CHaus}$ 的像中.</li>
+</ul>
+<p><strong>命题</strong>. Stone 对偶给出了等价
+$$
+\mathsf{Boole}^{\mathrm{op}}\simeq\mathsf{Stone},
+$$
+将 $\mathsf{Boole}^{\mathrm{op}}$ 等同于 $\mathsf{CHaus}$ 的一个<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span>.</p>
 <p>Stone 对偶是<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>的一例.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="tutorial-funAG"><header><h1><span class="taxon"></span>函子式代数几何 <a class="slug" href="./tutorial-funAG.html">[tutorial-funAG]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./代数几何.html" title="代数几何 [代数几何]">代数几何</a></span>起源于这样一个见解:
@@ -1814,4 +1831,35 @@ $$</p>
 特别地, 任何两个元素之间有整除关系.</p>
 <h2>例</h2>
 <p>对于<span class="link local"><a href="./非Archimedes赋值域.html" title="非 Archimedes 赋值域 [非Archimedes赋值域]">非 Archimedes 赋值域</a></span> $(K,|{-}|)$, 其整数环 $\mathcal O_K = \{x\in K \mid |x| \leq 1\}$ 为赋值环.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="超滤"><header><h1><span class="taxon"></span>超滤 <a class="slug" href="./超滤.html">[超滤]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>在集合与 Boole 代数的<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>中, 几何对象是集合, 代数对象是 Boole 代数. 超滤单子是这对伴随给出的单子. 集合 $X$ 上的超滤是 $X$ 的某种广义点.</p>
+<p>有一个有趣的设定, 集合 $X$ 是一些人的集合, 他们投票支持或反对某事, 每人必须支持或者反对. 定义 “统治集” 的概念, 意思是当一个子集中所有成员一致支持或一致反对时, 结果必然是这些人的选择. 这个概念有如下的性质:</p>
+<ul>
+<li>$X$ 本身是一个统治集;</li>
+<li>扩充一个统治集只会得到更大的统治集;</li>
+<li>有限个统治集的交集仍是统治集;</li>
+<li>两个互补的子集恰有一个是统治集.</li>
+</ul>
+<p>(我们没有说这个模型有任何现实意义.)</p>
+<h2>定义</h2>
+<h3>集合上的超滤</h3>
+<p>集合 $X$ 上的<strong>超滤</strong>是 $X$ 的子集的 <span class="link local"><a href="./Boole环.html" title="Boole 环 [Boole环]">Boole 环</a></span> $2^X$ 到 $2$ 的同态, 也即 $2^X$ 的<span class="link local"><a href="./理想(偏序集).html" title="理想 (偏序集) [理想(偏序集)]">素理想</a></span>.</p>
+<h4>主超滤</h4>
+<p>对于集合 $X$ 的元素 $x$, <strong>主超滤</strong> $[x]$ 是包含 $x$ 的子集构成的超滤, 也即 $x\colon *\to X$ 决定的 Boole 环同态 $2^X\to 2$.</p>
+<h2>性质</h2>
+<h3>单子</h3>
+<p>将集合 $X$ 对应到 $X$ 上全体超滤的集合, 这一过程构成一个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $\beta\colon \mathsf{Set}\to\mathsf{Set}$, 称为超滤单子. 它是 $\mathsf{Set}$ 与 <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">$\mathsf{Boole}^{\mathrm{op}}$</a></span> 之间的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $2^{(-)}\dashv\operatorname{Spec}$ <span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span>.</p>
+<p>超滤单子的乘法 $\mu\colon \beta\beta\to\beta$ 也可具体写出如下. 设 $X$ 为集合, $F\in\beta\beta X$ 为超滤的超滤. 对于 $A\subset X$ 则 $\mu_X(F)\in\beta X$ 为超滤
+$$
+\big\{A\subset X\mid \{G\in\beta X\mid A\in G\}\in F\big\}.
+$$
+另一种看法: 回忆 $\beta X = \operatorname{Hom}_{\mathsf{Boole}}(2^X,2)$, 则有求值映射 $\mathrm{ev}\colon 2^X\times\beta X \to 2$, 进一步给出 Boole 环同态 $2^X \to 2^{\beta X}$. 用它来预复合同态 $2^{\beta X}\to 2$, 就得到映射 $\beta\beta X\to \beta X$.
+这里 $2^X \to 2^{\beta X}$ 就是 $2^X$ 的 <span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span>的单位.</p>
+<p><strong>命题</strong>. 超滤单子上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>等同于<span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>.</p>
+<h3>有限集的情形</h3>
+<p><strong>命题</strong>. 有限集上的超滤均为主超滤.</p>
+<p>用 “统治集” 的设定, 这就是说有限个人的投票方案必有一个 “独裁者”. (反常识的原因在于这里的投票方案要求统治集的有限交仍是统治集, 而这不符合现实.)</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span></p>
 </details></section></details></section></footer></article></div></body></html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>“超滤”</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width"><title>超滤</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
 
 
 <div id="tcomment"></div>
@@ -825,10 +825,126 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon=""><details open><summary id="超滤"><header><h1><span class="taxon"></span>“超滤” <a class="slug" href="./超滤.html">[超滤]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<article><section class="block" data-taxon=""><details open><summary id="超滤"><header><h1><span class="taxon"></span>超滤 <a class="slug" href="./超滤.html">[超滤]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>在集合与 Boole 代数的<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>中, 几何对象是集合, 代数对象是 Boole 代数. 超滤单子是这对伴随给出的单子. 集合 $X$ 上的超滤是 $X$ 的某种广义点.</p>
+<p>有一个有趣的设定, 集合 $X$ 是一些人的集合, 他们投票支持或反对某事, 每人必须支持或者反对. 定义 “统治集” 的概念, 意思是当一个子集中所有成员一致支持或一致反对时, 结果必然是这些人的选择. 这个概念有如下的性质:</p>
+<ul>
+<li>$X$ 本身是一个统治集;</li>
+<li>扩充一个统治集只会得到更大的统治集;</li>
+<li>有限个统治集的交集仍是统治集;</li>
+<li>两个互补的子集恰有一个是统治集.</li>
+</ul>
+<p>(我们没有说这个模型有任何现实意义.)</p>
 <h2>定义</h2>
 <h3>集合上的超滤</h3>
-<p>集合 $S$ 上的超滤是 $S$ 的子集的 <span class="link local"><a href="./Boole环.html" title="“Boole 环” [Boole环]">Boole 环</a></span> $2^S$ 到 $2$ 的同态, 也即 $2^S$ 的素理想.</p>
+<p>集合 $X$ 上的<strong>超滤</strong>是 $X$ 的子集的 <span class="link local"><a href="./Boole环.html" title="Boole 环 [Boole环]">Boole 环</a></span> $2^X$ 到 $2$ 的同态, 也即 $2^X$ 的<span class="link local"><a href="./理想(偏序集).html" title="理想 (偏序集) [理想(偏序集)]">素理想</a></span>.</p>
+<h4>主超滤</h4>
+<p>对于集合 $X$ 的元素 $x$, <strong>主超滤</strong> $[x]$ 是包含 $x$ 的子集构成的超滤, 也即 $x\colon *\to X$ 决定的 Boole 环同态 $2^X\to 2$.</p>
+<h2>性质</h2>
+<h3>单子</h3>
+<p>将集合 $X$ 对应到 $X$ 上全体超滤的集合, 这一过程构成一个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $\beta\colon \mathsf{Set}\to\mathsf{Set}$, 称为超滤单子. 它是 $\mathsf{Set}$ 与 <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">$\mathsf{Boole}^{\mathrm{op}}$</a></span> 之间的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $2^{(-)}\dashv\operatorname{Spec}$ <span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span>.</p>
+<p>超滤单子的乘法 $\mu\colon \beta\beta\to\beta$ 也可具体写出如下. 设 $X$ 为集合, $F\in\beta\beta X$ 为超滤的超滤. 对于 $A\subset X$ 则 $\mu_X(F)\in\beta X$ 为超滤
+$$
+\big\{A\subset X\mid \{G\in\beta X\mid A\in G\}\in F\big\}.
+$$
+另一种看法: 回忆 $\beta X = \operatorname{Hom}_{\mathsf{Boole}}(2^X,2)$, 则有求值映射 $\mathrm{ev}\colon 2^X\times\beta X \to 2$, 进一步给出 Boole 环同态 $2^X \to 2^{\beta X}$. 用它来预复合同态 $2^{\beta X}\to 2$, 就得到映射 $\beta\beta X\to \beta X$.
+这里 $2^X \to 2^{\beta X}$ 就是 $2^X$ 的 <span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span>的单位.</p>
+<p><strong>命题</strong>. 超滤单子上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>等同于<span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>.</p>
+<h3>有限集的情形</h3>
+<p><strong>命题</strong>. 有限集上的超滤均为主超滤.</p>
+<p>用 “统治集” 的设定, 这就是说有限个人的投票方案必有一个 “独裁者”. (反常识的原因在于这里的投票方案要求统治集的有限交仍是统治集, 而这不符合现实.)</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span></p>
-</details></section><footer></footer></article></div></body></html>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Boole代数"><header><h1><span class="taxon"></span>Boole 代数 <a class="slug" href="./Boole代数.html">[Boole代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Boole 代数是经典逻辑的<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语义</a></span>. 如 Boole 代数中的积 (交) 是逻辑与 $X\wedge Y$, 指数 $Y^X$ 是逻辑蕴含 $X\Rightarrow Y$, 赋值映射是推理法则 $(X\Rightarrow Y)\wedge X \leq Y$ 等等.</p>
+<h2>定义</h2>
+<p>Boole 代数是具有补运算的<span class="link local"><a href="./分配格.html" title="分配格 [分配格]">分配格</a></span>.</p>
+<p>Boole 代数与 <span class="link local"><a href="./Boole环.html" title="Boole 环 [Boole环]">Boole 环</a></span>可以相互转化.</p>
+<h2>性质</h2>
+<h3>谱</h3>
+<p>记 Boole 代数 $B$ 的<strong>谱</strong>为
+$$
+\operatorname{Spec}(B) = \operatorname{Hom}_{\mathsf{Boole}}(B,2).
+$$
+则有
+$$
+\operatorname{Hom}_{\mathsf{Boole}}(B,2^X) \simeq \operatorname{Hom}_{\mathsf{Set}}(X,\operatorname{Spec}(B)),
+$$
+即函子 $2^{(-)}\colon \mathsf{Set}\to\mathsf{Boole}^{\mathrm{op}}$ 与 $\operatorname{Spec}\colon \mathsf{Boole}^{\mathrm{op}}\to\mathsf{Set}$ 满足<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>关系 $2^{(-)}\dashv\operatorname{Spec}$. 这对伴随<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span>为 $\mathsf{Set}$ 上的<span class="link local"><a href="./超滤.html" title="超滤 [超滤]">超滤单子</a></span>.</p>
+<h3>Stone 对偶</h3>
+<p><span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="index"><header><h1><span class="taxon"></span>单纯百科 Simplopedia <a class="slug" href="./index.html">[index]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<img src="/assets/simplopedia.svg" alt="Simplopedia" style="float: right; width: min(200px,30vw); margin-right: 20px; margin-top:-50px; filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));">
+<p>这里是<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>的主目录.</p>
+<p>欢迎访问<span class="link external"><a href="https://simplicialcat.github.io/index.html?lang=zh" title="我的个人主页 [https://simplicialcat.github.io/index.html?lang=zh]">我的个人主页</a></span>.</p>
+<p>You may also want to visit <span class="link external"><a href="https://simplicialcat.github.io/index.html?lang=en" title="my personal main page [https://simplicialcat.github.io/index.html?lang=en]">my personal main page</a></span> (in English).</p>
+<p>可以试试<span class="link local"><a href="./search.html" title="搜索 [search]">搜索单纯百科的页面</a></span>.</p>
+<p>欢迎所有读者在页面下方发布<span class="link local"><a href="./comments.html" title="评论 [comments]">评论</a></span>, 或<span class="link external"><a href="mailto:wangjiny24@mails.tsinghua.edu.cn" title="通过邮箱联系我 [mailto:wangjiny24@mails.tsinghua.edu.cn]">通过邮箱联系我</a></span> <code>wangjiny24@mails.tsinghua.edu.cn</code> , 交流, 催更. (对于好友, 通过微信或 QQ 联系我当然是更加欢迎的.)</p>
+<h2>分类</h2>
+<p>单纯百科的页面分为以下几类.</p>
+<ul>
+<li>百科 : 数学概念. 这类页面构成了单纯百科的主体.</li>
+<li><span class="link local"><a href="./notion.html" title="观念 [notion]">观念</a></span> : 模糊而普遍的数学思想.</li>
+<li><span class="link local"><a href="./pedagogy.html" title="教学 [pedagogy]">教学</a></span> : 面向基础读者的科普.</li>
+<li><span class="link local"><a href="./notes.html" title="讲稿, 笔记 [notes]">讲稿, 笔记</a></span> : 一些讨论班的讲稿, 文献的阅读笔记, 以及零散的见闻.</li>
+<li>文献 : 其它页面中引用到的参考文献.</li>
+<li><span class="link local"><a href="./subject.html" title="学科 [subject]">学科</a></span> : 用于部分页面的收集和分类.</li>
+<li>Meta : 关于单纯百科本身.</li>
+<li><span class="link local"><a href="./nonmath.html" title="非数学 [nonmath]">非数学</a></span> : 一些不属于上述分类, 且不属于数学的东西.</li>
+</ul>
+<p>点击 <span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span> 可以看到本站的所有页面.</p>
+<p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">亟需施工处</a></span>列表 (“TODO list”)</p>
+<p><span class="link local"><a href="./terminologies.html" title="单纯百科 - 术语翻译表 [terminologies]">术语翻译表</a></span></p>
+<h2>最近</h2>
+<p><span class="link local"><a href="./超滤.html" title="超滤 [超滤]">超滤</a></span></p>
+<p><span class="link local"><a href="./分层.html" title="分层 [分层]">分层</a></span></p>
+<p><span class="link local"><a href="./合聚意象.html" title="合聚意象 [合聚意象]">合聚意象</a></span></p>
+<p><span class="link local"><a href="./线图.html" title="线图 [线图]">线图</a></span></p>
+<p><span class="link local"><a href="./代数充实于余代数.html" title="代数充实于余代数 [代数充实于余代数]">代数充实于余代数</a></span></p>
+<p><span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span></p>
+<p><span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span></p>
+<p><span class="link local"><a href="./fil-gr.html" title="滤与分次的叠观点 [fil-gr]">滤与分次的叠观点</a></span></p>
+<p><span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span></p>
+<p><span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span></p>
+<p><span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span></p>
+<p><span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span></p>
+<p><span class="link local"><a href="./谱分解.html" title="谱分解 [谱分解]">谱分解</a></span></p>
+<p><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span></p>
+<p><span class="link local"><a href="./Barr–Beck–Lurie定理.html" title="Barr–Beck–Lurie 定理 [Barr–Beck–Lurie定理]">Barr–Beck–Lurie 定理</a></span></p>
+<p><span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span></p>
+<p><span class="link local"><a href="./吸引子.html" title="吸引子, 排斥子 [吸引子]">吸引子, 排斥子</a></span></p>
+<p><span class="link local"><a href="./Milnor纤维化.html" title="Milnor 纤维化 [Milnor纤维化]">Milnor 纤维化</a></span></p>
+<p><span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span></p>
+<p><span class="link local"><a href="./局部意象.html" title="局部意象 [局部意象]">局部意象</a></span></p>
+<p><span class="link local"><a href="./法形变.html" title="法形变 [法形变]">法形变</a></span>, <span class="link local"><a href="./微局部化.html" title="微局部化 [微局部化]">微局部化</a></span>, <span class="link local"><a href="./流形上的层.html" title="流形上的层 [流形上的层]">流形上的层</a></span>, <span class="link local"><a href="./microPerv.html" title="微局部偏屈层 [microPerv]">微局部偏屈层</a></span></p>
+<p><span class="link local"><a href="./love-and-math.html" title="爱与数学 [love-and-math]">爱与数学</a></span></p>
+<p><span class="link local"><a href="./余完备化.html" title="余完备化 [余完备化]">余完备化</a></span></p>
+<p><span class="link local"><a href="./Galois扩张.html" title="Galois 扩张 [Galois扩张]">Galois 扩张</a></span></p>
+<p><span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">算畴上的代数上的模</a></span></p>
+<p><span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>, <span class="link local"><a href="./LCCC.html" title="局部积闭范畴 [LCCC]">LCCC</a></span>, <span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>, <span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>, <span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span></p>
+<p><span class="link local"><a href="./高阶Morita范畴.html" title="高阶 Morita 范畴 [高阶Morita范畴]">高阶 Morita 范畴</a></span></p>
+<p><span class="link local"><a href="./Morita等价.html" title="Morita 等价 [Morita等价]">Morita 等价</a></span></p>
+<p><span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">充实范畴上的模</a></span></p>
+<p><span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断性</a></span></p>
+<p><span class="link local"><a href="./交叉模.html" title="交叉模 [交叉模]">交叉模</a></span></p>
+<p><span class="link local"><a href="./Gestalt.html" title="Gestalt [Gestalt]">Gestalt</a></span></p>
+<p><span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span></p>
+<p><span class="link local"><a href="./非交换Čech上同调.html" title="非交换 Čech 上同调 [非交换Čech上同调]">非交换 Čech 上同调</a></span></p>
+<p><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="紧Hausdorff空间"><header><h1><span class="taxon"></span>紧 Hausdorff 空间 <a class="slug" href="./紧Hausdorff空间.html">[紧Hausdorff空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>紧 Hausdorff 空间是一种非常特殊的拓扑空间, 特殊性在于这种空间构成的范畴 $\mathsf{CHaus}$ 是 “代数的”, 大约意思是这个范畴的定义可以完全不提到拓扑两个字.</p>
+<h2>性质</h2>
+<h3>单子性</h3>
+<p>紧 Hausdorff 空间范畴到集合范畴的遗忘
+$$
+\mathsf{CHaus} \to \mathsf{Set}
+$$
+是<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性函子</a></span>. 这是 “代数性” 的一种含义. 具体地, 这个单子是<span class="link local"><a href="./超滤.html" title="超滤 [超滤]">超滤</a></span>单子 $\beta$. 一个紧 Hausdorff 空间 $X$ 等同于 $\beta$-代数, 其中映射
+$$
+\beta X\to X
+$$
+给出 $X$ 中每个超滤所收敛到的唯一的点. 注意紧性表明超滤收敛, 而 Hausdorff 性质表明收敛到的点唯一.</p>
+</details></section></details></section></footer></article></div></body></html>
