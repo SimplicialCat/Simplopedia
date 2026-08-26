@@ -831,10 +831,17 @@
 $$
 M\otimes_A N := \operatorname{colim}_{\Delta} M\otimes A^{\otimes\bullet}\otimes N.
 $$
-$M\otimes_A N$ 一般没有 $A$-左模或右模结构.</p>
-<p>张量积也可以理解为 $\mathcal C$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>之间的<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span> $\mathbf{B}A\to\mathcal C$ 的复合
+注意 $M\otimes_A N$ 一般没有 $A$-左模或右模结构.</p>
+<p>这一构造在<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>的情形 (或者说是 “范畴化”) 又称<span class="link local"><a href="./双边杠构造.html" title="双边杠构造 [双边杠构造]">双边杠构造</a></span>.</p>
+<p>张量积也可以理解为 $\mathcal C$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>之间的<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span> $\mathbf{B}A\to\mathcal C$ 的复合 (<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>)
 $$
 \operatorname{colim}_{\mathbf{B}A} M\otimes N.
+$$</p>
+<h2>性质</h2>
+<h3>自由消解</h3>
+<p>对于结合代数 $A$ 上的左模 $N$, 自然映射 $A\otimes_A N \to N$ 为等价. 这给出了 $N$ 的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>消解
+$$
+N = \operatorname{colim}_\Delta A^{\otimes\bullet+1}\otimes N.
 $$</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="双模"><header><h1><span class="taxon"></span>结合代数上的双模 <a class="slug" href="./双模.html">[双模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
@@ -853,6 +860,45 @@ $$</p>
 <h2>性质</h2>
 <h3>幺半结构</h3>
 <p>双模范畴上有<span class="link local"><a href="./相对张量积.html" title="相对张量积 [相对张量积]">相对张量积</a></span>给出的<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半结构</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="双边杠构造"><header><h1><span class="taxon"></span>双边杠构造 <a class="slug" href="./双边杠构造.html">[双边杠构造]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>如果说<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>是<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>, 那么双边杠构造就是<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">结合代数上的模</a></span>的<span class="link local"><a href="./相对张量积.html" title="相对张量积 [相对张量积]">相对张量积</a></span>的范畴化.</p>
+<p>双边杠构造是<span class="link local"><a href="./杠构造.html" title="杠构造 [杠构造]">杠构造</a></span> (bar construction) 的推广.</p>
+<h2>定义</h2>
+<p>设 $T$ 为范畴 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>. 对于 $T$ 上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">左模</a></span> $X\colon I\to\mathcal C$ 与<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">右模</a></span> $Y\colon \mathcal C\to J$, <strong>双边杠构造</strong>是 $\mathsf{Fun}(I,J)$ 中的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>
+$$
+B(Y,T,X) = (\cdots YTTX \to^3 YTX \rightrightarrows YX).
+$$</p>
+<h2>例</h2>
+<h3>伴随的典范双边杠构造</h3>
+<p>对于函子 $F\colon \mathcal C\to\mathcal D$, $G\colon \mathcal D\to\mathcal C$ 之间的一对<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $F\dashv G$ 给出的<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">单子</a></span> $T = GF$,</p>
+<ul>
+<li>$F$ 有典范的 $T$-<strong>右模</strong>结构 $FT=FGF \to F$,</li>
+<li>$G$ 有典范的 $T$-<strong>左模</strong>结构 $TG=GFG \to G$.</li>
+</ul>
+<p>因此伴随 $F\dashv G$ 给出典范的<strong>双边杠构造</strong>
+$$
+B(F,T,G) = (\cdots FGFGFG \to^3 FGFG \rightrightarrows FG).
+$$</p>
+<h3>分解同调</h3>
+<p>记 $D_n$ 为 <span class="link local"><a href="./En-算畴.html" title="En-算畴 [En-算畴]">$\mathbb E_n$-算畴</a></span>对应的单子. 对于 $n$ 维标架流形 $M$, 记 $D_M$ 为<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span> $\{\operatorname{Emb}(\sqcup_k\mathbb{R}^n,M)\}$ 对应的函子, 则 $D_M$ 为单子 $D_n$ 上的右模:</p>
+<ul>
+<li>$D_n X$ 的直观是 “将 $X$ 的若干元素放在 $\mathbb{R}^n$ 的不交圆盘上” 的构形的空间;</li>
+<li>$D_M X$ 的直观是 “将 $X$ 的若干元素放在 $M$ 的不交圆盘上” 的构形的空间;</li>
+<li>因此 $D_M D_n X$ 的一个元素的直观是 $M$ 的若干个不交圆盘, 每个之中又有若干个不交的小圆盘, 每个小圆盘上放了 $X$ 的一个元素;</li>
+<li>映射 $D_M D_n X \to D_M X$ 直观上是将上述构形中的小圆盘直接视为 $M$ 上的圆盘, 得到 $D_M X$ 的元素.</li>
+</ul>
+<p>$M$ 上取值于 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$-代数</a></span> $A$ 的<span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>可表示为双边杠构造的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>
+$$
+\int_M A = |B(D_M, D_n, A)|.
+$$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="增广结合代数"><header><h1><span class="taxon"></span>增广结合代数 <a class="slug" href="./增广结合代数.html">[增广结合代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设 $A$ 为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $\mathcal C$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, $1$ 为 $\mathcal C$ 的单位, 定义 $A$ 的<strong>增广</strong>为结合代数同态 $A \to 1$.</p>
+<p>对偶地, <span class="link local"><a href="./结合余代数.html" title="结合余代数 [结合余代数]">结合余代数</a></span> $A$ 的增广则定义为结合余代数同态 $1\to A$.</p>
+<h2>性质</h2>
+<h3>双模</h3>
+<p>设结合代数 $A$ 有一增广, 则 $\mathcal C$ 的每个对象自动成为 $A$ 上的<span class="link local"><a href="./双模.html" title="结合代数上的双模 [双模]">双模</a></span>. 特别地, 单位 $1$ 成为 $A$ 上的双模. 这个结构的<span class="link local"><a href="./相对张量积.html" title="相对张量积 [相对张量积]">相对张量积</a></span> (见<span class="link local"><a href="./双边杠构造.html" title="双边杠构造 [双边杠构造]">双边杠构造</a></span>) 与<span class="link local"><a href="./杠–余杠对偶.html" title="杠–余杠对偶 [杠–余杠对偶]">杠–余杠对偶</a></span>有关.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="结合代数上的模"><header><h1><span class="taxon"></span>结合代数上的模 <a class="slug" href="./结合代数上的模.html">[结合代数上的模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 可视为单对象<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span> $\mathbf{B}A$; 在这种意义上, 结合代数上的模可以推广为<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">充实范畴上的模</a></span>或者<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>:

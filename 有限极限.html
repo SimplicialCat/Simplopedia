@@ -1370,6 +1370,40 @@ $$
 其中 $k_*=\prod_k$. 而 $k^*$ 左正合是由于它存在左伴随 $\sum_k$.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./几何态射的性质.html" title="“几何态射的性质” [几何态射的性质]">几何态射的性质</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="平坦函子"><header><h1><span class="taxon"></span>平坦函子 <a class="slug" href="./平坦函子.html">[平坦函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>平坦函子可视为<span class="link local"><a href="./平坦模.html" title="平坦模 [平坦模]">平坦模</a></span>的推广.</p>
+<h2>定义</h2>
+<h3>通过米田扩张</h3>
+<p>设 $\mathcal D$ 为<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>. 对于函子 $F\colon \mathcal C\to\mathcal D$, 若其<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">米田扩张</a></span>
+$$
+F\otimes (-)\colon \widehat {\mathcal C}\to\mathcal D
+$$
+为左正合函子, 即保持<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>, 则称 $F$ 为<strong>平坦函子</strong>.</p>
+<h3>通过元素范畴</h3>
+<p>函子 $F\colon \mathcal C\to\mathsf{Set}$ 平坦当且仅当 $F$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span>
+$$
+\int_{\mathcal C} F
+$$
+为<span class="link local"><a href="./余滤范畴.html" title="余滤范畴 [余滤范畴]">余滤范畴</a></span>. 展开来讲, 这等同于如下条件.</p>
+<ul>
+<li>存在 $c\in \mathcal C$, 使得 $F(c)$ 至少存在一个元素;</li>
+<li>对任意 $c,c'\in\mathcal C$, 以及 $x\in F(c)$, $x'\in F(c')$, 存在 $d\in\mathcal C$, $y\in F(d)$ 以及态射 $p\colon d\to c,p'\colon d\to c'$, 使得 $F(p)(y) = x$, $F(p')(y) = x'$;</li>
+<li>… (表达 $\int_{\mathcal C} F$ 的两个平行态射有余锥).</li>
+</ul>
+<p>对于一般的 $1$-意象 $\mathcal D$, 也可在 $\mathcal D$ 的<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>中理解上述条件, 得到平坦函子 $\mathcal C\to\mathcal D$ 的定义.</p>
+<h2>性质</h2>
+<h3>预层意象的点</h3>
+<p>平坦函子 $F\colon \mathcal C\to\mathsf{Set}$ 等同于<span class="link local"><a href="./预层意象.html" title="预层意象 [预层意象]">预层意象</a></span> $\widehat {\mathcal C}$ 的<span class="link local"><a href="./意象的点.html" title="意象的点 [意象的点]">点</a></span>.</p>
+<h2>例</h2>
+<h3>单纯形范畴</h3>
+<p><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$ 到<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathcal C$ 的平坦函子等同于 $\mathcal C$ 中的<span class="link local"><a href="./区间.html" title="区间 [区间]">区间</a></span>.</p>
+<p>因此, <span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>的意象是区间的<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span>.</p>
+<h3>群作用</h3>
+<p>设 $G$ 是 $\mathsf{Set}$ 中的群. 我们知道 $G$ 在范畴 $\mathcal C$ 中某个对象上的<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>等同于函子 $F\colon \mathrm{B}G\to\mathcal C$. 函子 $F$ 为平坦函子这一条件恰好可理解为该作用是 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>.</p>
+<p>因此, $G$-集合的意象 $G\mathsf{Set} = \mathsf{Psh}(\mathbf{B}G)$ 是 $G$-主丛的<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span>.</p>
+<h2>相关资料</h2>
+<p>见<span class="link local"><a href="./盲人摸象.html" title="盲人摸象 [盲人摸象]">盲人摸象</a></span> A.5 节.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="平坦模"><header><h1><span class="taxon"></span>平坦模 <a class="slug" href="./平坦模.html">[平坦模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>平坦模可视为<span class="link local"><a href="./平坦函子.html" title="平坦函子 [平坦函子]">平坦函子</a></span>的特例.</p>

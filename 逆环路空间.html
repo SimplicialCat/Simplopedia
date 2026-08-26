@@ -1908,6 +1908,54 @@ $$
 <li>游走的<span class="link local"><a href="./幂等态射.html" title="幂等态射 [幂等态射]">幂等自同态</a></span> $\mathsf{Idem}$ 在 $(1,1)$-范畴语境中是有限范畴, 而在 $(\infty,1)$-范畴语境中不是有限范畴.</li>
 <li>$S^1=\mathbf{B}\mathbb{Z}$ 在 $(1,1)$-范畴语境中不是有限范畴, 而在 $(\infty,1)$-范畴语境中是有限范畴.</li>
 </ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="杠–余杠对偶"><header><h1><span class="taxon"></span>杠–余杠对偶 <a class="slug" href="./杠–余杠对偶.html">[杠–余杠对偶]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $\mathcal C$ 具有<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>且单位 $1$ 是<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>. 对于<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$, 通过唯一的<span class="link local"><a href="./增广结合代数.html" title="增广结合代数 [增广结合代数]">增广</a></span> $A\to 1$, 单位 $1$ 具有 $A$ 上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>与右模结构. 考虑<span class="link local"><a href="./双边杠构造.html" title="双边杠构造 [双边杠构造]">双边杠构造</a></span>
+$$
+\operatorname{Bar}(A) = 1\otimes_A 1,
+$$
+即<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>
+$$
+1\otimes A^{\otimes\bullet}\otimes 1
+$$
+的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>, 那么该对象具有典范的<span class="link local"><a href="./结合余代数.html" title="结合余代数 [结合余代数]">结合余代数</a></span>结构. 这给出了函子
+$$
+\operatorname{Bar}\colon \mathsf{Alg}_{\mathbb E_1}(\mathcal C)\to\mathsf{Coalg}_{\mathbb E_1}(\mathcal C).
+$$</p>
+<p>注意 $\operatorname{Coalg}(\mathcal C) = \mathsf{Alg}(\mathcal C^{\mathrm{op}})^{\mathrm{op}}$. 对偶地, 若<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $\mathcal C$ 具有余单纯极限且单位 $1$ 是<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>, 则有函子
+$$
+\operatorname{Cobar}\colon \mathsf{Coalg}_{\mathbb E_1}(\mathcal C)\to \mathsf{Alg}_{\mathbb E_1}(\mathcal C).
+$$</p>
+<p>进一步, 当 $1$ 为<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>且单纯余极限, 余单纯极限都存在时, 上述两个函子构成一对<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>
+$$
+\operatorname{Bar}\dashv\operatorname{Cobar},
+$$
+也即
+$$
+\operatorname{Hom}_{\mathsf{Coalg}(\mathcal C)}(\operatorname{Bar}(A),B)
+\simeq
+\operatorname{Hom}_{\mathsf{Alg}(\mathcal C)}(A,\operatorname{Cobar}(B)).
+$$</p>
+<h2>例</h2>
+<h3>环路空间</h3>
+<p><span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span> <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的杠–余杠对偶即是<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>与<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>的对偶.</p>
+<p>回忆, 带基点<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ 的<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> $\Omega X$ 具有<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>结构, 特别地具有结合代数结构.</p>
+<p>另一个重要的事实是, 生象 $X$ 本身有结合余代数结构, 余乘法为<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span> $\Delta\colon X\times X$.</p>
+<p><strong>命题</strong>. $(\mathsf{Ani},\times)$ 中每个对象上有<strong>唯一</strong>的结合余代数结构. 具体地, 遗忘函子 $\mathsf{Coalg}(\mathsf{Ani}) \to \mathsf{Ani}$ 为等价. 而 $(\mathsf{Ani},\times)$ 中的<span class="link local"><a href="./增广结合代数.html" title="增广结合代数 [增广结合代数]">增广</a></span>余代数则等同于带基点生象 $*\to Y$.</p>
+<p>对于 $(\mathsf{Ani},\times)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> (幺半群) $X$ 与带基点生象 $Y$, 有等价
+$$
+\operatorname{Hom}_{\mathsf{Ani}_{*}}(\mathbf{B}X,Y)
+\simeq
+\operatorname{Hom}_{\mathsf{Alg}(\mathsf{Ani})}(X,\Omega Y).
+$$
+其中
+$$
+\mathbf{B}X=\operatorname{colim}(\cdots\to^4 X\times X\to^3 X\rightrightarrows *)=\operatorname{Bar}(X),
+$$
+$$
+\Omega Y =\operatorname{lim}(\cdots\leftarrow^4 Y\times Y\leftarrow^3 Y\leftleftarrows *) = \operatorname{Cobar}(Y).
+$$</p>
+<h3>多项式环</h3>
 </details></section><section class="block" data-taxon=""><details ><summary id="游走"><header><h1><span class="taxon"></span>游走 <a class="slug" href="./游走.html">[游走]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><strong>游走</strong> (walking) 的结构是某种范畴上的结构中最 “自由” 的, “万有” 的一个.</p>
 <p>设 $\mathcal S$ 是某种范畴的范畴 (如<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>的范畴), $X$ 是 $\mathcal S$ 的对象上的某种结构 (如<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>), 那么 “游走的 $X$” 是一个对象 $x\in \mathcal C$ ($\mathcal C\in\mathcal S$), 使得有自然等价

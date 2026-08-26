@@ -1137,6 +1137,54 @@ $$</p>
 </ul>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./局部意象.html" title="局部意象 [局部意象]">局部意象</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="杠–余杠对偶"><header><h1><span class="taxon"></span>杠–余杠对偶 <a class="slug" href="./杠–余杠对偶.html">[杠–余杠对偶]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $\mathcal C$ 具有<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>且单位 $1$ 是<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>. 对于<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$, 通过唯一的<span class="link local"><a href="./增广结合代数.html" title="增广结合代数 [增广结合代数]">增广</a></span> $A\to 1$, 单位 $1$ 具有 $A$ 上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>与右模结构. 考虑<span class="link local"><a href="./双边杠构造.html" title="双边杠构造 [双边杠构造]">双边杠构造</a></span>
+$$
+\operatorname{Bar}(A) = 1\otimes_A 1,
+$$
+即<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>
+$$
+1\otimes A^{\otimes\bullet}\otimes 1
+$$
+的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>, 那么该对象具有典范的<span class="link local"><a href="./结合余代数.html" title="结合余代数 [结合余代数]">结合余代数</a></span>结构. 这给出了函子
+$$
+\operatorname{Bar}\colon \mathsf{Alg}_{\mathbb E_1}(\mathcal C)\to\mathsf{Coalg}_{\mathbb E_1}(\mathcal C).
+$$</p>
+<p>注意 $\operatorname{Coalg}(\mathcal C) = \mathsf{Alg}(\mathcal C^{\mathrm{op}})^{\mathrm{op}}$. 对偶地, 若<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $\mathcal C$ 具有余单纯极限且单位 $1$ 是<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>, 则有函子
+$$
+\operatorname{Cobar}\colon \mathsf{Coalg}_{\mathbb E_1}(\mathcal C)\to \mathsf{Alg}_{\mathbb E_1}(\mathcal C).
+$$</p>
+<p>进一步, 当 $1$ 为<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>且单纯余极限, 余单纯极限都存在时, 上述两个函子构成一对<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>
+$$
+\operatorname{Bar}\dashv\operatorname{Cobar},
+$$
+也即
+$$
+\operatorname{Hom}_{\mathsf{Coalg}(\mathcal C)}(\operatorname{Bar}(A),B)
+\simeq
+\operatorname{Hom}_{\mathsf{Alg}(\mathcal C)}(A,\operatorname{Cobar}(B)).
+$$</p>
+<h2>例</h2>
+<h3>环路空间</h3>
+<p><span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span> <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的杠–余杠对偶即是<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>与<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>的对偶.</p>
+<p>回忆, 带基点<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ 的<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> $\Omega X$ 具有<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>结构, 特别地具有结合代数结构.</p>
+<p>另一个重要的事实是, 生象 $X$ 本身有结合余代数结构, 余乘法为<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span> $\Delta\colon X\times X$.</p>
+<p><strong>命题</strong>. $(\mathsf{Ani},\times)$ 中每个对象上有<strong>唯一</strong>的结合余代数结构. 具体地, 遗忘函子 $\mathsf{Coalg}(\mathsf{Ani}) \to \mathsf{Ani}$ 为等价. 而 $(\mathsf{Ani},\times)$ 中的<span class="link local"><a href="./增广结合代数.html" title="增广结合代数 [增广结合代数]">增广</a></span>余代数则等同于带基点生象 $*\to Y$.</p>
+<p>对于 $(\mathsf{Ani},\times)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> (幺半群) $X$ 与带基点生象 $Y$, 有等价
+$$
+\operatorname{Hom}_{\mathsf{Ani}_{*}}(\mathbf{B}X,Y)
+\simeq
+\operatorname{Hom}_{\mathsf{Alg}(\mathsf{Ani})}(X,\Omega Y).
+$$
+其中
+$$
+\mathbf{B}X=\operatorname{colim}(\cdots\to^4 X\times X\to^3 X\rightrightarrows *)=\operatorname{Bar}(X),
+$$
+$$
+\Omega Y =\operatorname{lim}(\cdots\leftarrow^4 Y\times Y\leftarrow^3 Y\leftleftarrows *) = \operatorname{Cobar}(Y).
+$$</p>
+<h3>多项式环</h3>
 </details></section><section class="block" data-taxon=""><details ><summary id="锥(范畴论)"><header><h1><span class="taxon"></span>锥 (范畴论) <a class="slug" href="./锥(范畴论).html">[锥(范畴论)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>对于范畴 $I$, 可<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加一个<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>或<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>, 得到<strong>左锥</strong> $I^{\triangleleft}$ 以及<strong>右锥</strong> $I^{\triangleright}$. 添加的那个始对象或终对象称为锥的<strong>顶点</strong>.</p>
@@ -1148,4 +1196,7 @@ $$</p>
 <li>集合 $\operatorname{lim}_{i\in I}\operatorname{Hom}(c,X_i)$ 的元素.</li>
 </ul>
 <p>对应地, 延拓 $I^{\triangleright} \to \mathcal C$ 称为 $X$ 上的<strong>余锥</strong> (cocone).</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="零对象"><header><h1><span class="taxon"></span>零对象 <a class="slug" href="./零对象.html">[零对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>既是<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>又是<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>的对象称为<strong>零对象</strong>.</p>
 </details></section></details></section></footer></article></div></body></html>

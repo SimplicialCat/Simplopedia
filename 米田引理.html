@@ -1173,11 +1173,12 @@ $$</p>
 <p>将一个算畴中记录的颜色与运算按照规定的关系实现到某个具体范畴中的方法称为<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">算畴上的代数</a></span>.</p>
 <h2>定义</h2>
 <h3>作为多重范畴</h3>
-<p><strong>有色算畴</strong> (colored operad) 等同于<strong>多重范畴</strong> (multicategory). 所谓多重范畴就是一族对象之间带有 “多个对象到一个对象的态射”
+<p><strong>有色算畴</strong> (colored operad) 等同于<strong></strong><span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span> (multicategory). 所谓多重范畴就是一族对象之间带有 “多个对象到一个对象的态射”
 $$
 \operatorname{Hom}(X_1,X_2,\cdots,X_n ; Y).
 $$</p>
 <p>算畴中的 “颜色” 即是多重范畴中的对象. 当多重范畴仅有一个对象时, 称之为<strong>单色算畴</strong>. 不同文献中对算畴是否默认为单色有不同的约定.</p>
+<p>多重范畴这一概念有多种貌似不同但互相等价的定义. 详见<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>.</p>
 <p><strong>对称算畴</strong> (symmetric operad) 是指多重范畴中的 $\operatorname{Hom}$ 带有对称群的作用, 即对 $\sigma\in S_n$ 有相容的同构 $\operatorname{Hom}(X_1,\cdots,X_n ; Y) \simeq \operatorname{Hom}(X_{\sigma(1),\cdots,\sigma(n)};Y)$.</p>
 <p>上面定义的是 <span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">$\mathsf{Ani}$</a></span> 上的算畴. 对于一般<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半范畴</a></span> $\mathcal C$, 也可定义相应的 “<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>多重范畴” 作为 $\mathcal C$ 上的算畴的概念.</p>
 <h3>作为对称序列</h3>
@@ -1259,6 +1260,8 @@ $$
 X \mapsto \coprod_{n\geq 0} \mathcal O(n)\otimes_{S_n}X^{\otimes n}.
 $$
 详见<span class="link local"><a href="./算畴给出单子.html" title="算畴给出单子 [算畴给出单子]">算畴给出单子</a></span>.</p>
+<h3>Koszul 对偶</h3>
+<p><span class="link local"><a href="./Koszul对偶.html" title="Koszul 对偶 [Koszul对偶]">Koszul 对偶</a></span></p>
 <h2>例</h2>
 <h3>二次算畴</h3>
 <p><span class="link local"><a href="./二次算畴.html" title="二次算畴 [二次算畴]">二次算畴</a></span>是一类有特殊性质的算畴, 包括交换算畴, 结合算畴, Lie 算畴.</p>
@@ -1324,7 +1327,17 @@ $$
 <p>等价地, $(\mathcal C,\mathcal G)$-空间是 $\mathcal C$-空间范畴中的 $\mathcal G$-代数.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="米田嵌入"><header><h1><span class="taxon"></span>米田嵌入 <a class="slug" href="./米田嵌入.html">[米田嵌入]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>米田嵌入是将范畴 $\mathcal C$ 中的对象视为 $\mathcal C$ 上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>的过程.</p>
+<p>米田嵌入是将范畴 $\mathcal C$ 中的对象视为 $\mathcal C$ 上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>的过程. 若将 $\mathcal C$ 上的预层理解为 $\mathcal C$ 的 “广义对象”, 则米田嵌入可理解为 “普通对象可忠实地视为广义对象”, 因为米田嵌入总是<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实</a></span>的.</p>
+<h2>例</h2>
+<p>即使我们只关心一个范畴 $\mathcal C$ 内部的结构, 米田嵌入也可提供一些方便. 例如, 一族态射
+$$
+A \to B_i\,(i\in I)
+$$
+等同于一个态射
+$$
+\mathbf{y}(A)\to\prod_{i\in I}\mathbf{y}(B_i).
+$$
+若范畴 $\mathcal C$ 存在积, 则无需米田嵌入. 但使用米田嵌入可以让人们不关心一些极限和余极限是否存在, 因为它们在预层范畴中总是存在.</p>
 <h2>性质</h2>
 <h3>全忠实性</h3>
 <p>米田嵌入是<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>; 换言之, 可表函子之间的态射等同于原来的对象之间的态射. 这是<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>的一个特殊情形.</p>

@@ -860,12 +860,10 @@
 </details></section><section class="block" data-taxon=""><details ><summary id="高阶范畴"><header><h1><span class="taxon"></span>高阶范畴 <a class="slug" href="./高阶范畴.html">[高阶范畴]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./tutorial-highercat.html" title="高阶范畴论 [tutorial-highercat]">教程 : 高阶范畴论</a></span></p>
 <p>一个高阶范畴是一类<strong>对象</strong>和对象之间的<strong>态射</strong>构成的全体; 不同于普通范畴的是, 高阶范畴两个对象 $X,Y$ 之间的态射全体 $\operatorname{Hom}(X,Y)$ 本身也构成高阶范畴, 从而可以谈论态射之间的态射 ($2$-态射), 态射之间的态射之间的态射 ($3$-态射), …, 以至于无穷.</p>
-<h2>(n,r)-范畴</h2>
-<p>根据有效信息的层级, 可将高阶范畴用两个整数 $n,r$ 分类. 见 <span class="link local"><a href="./n-r-范畴.html" title="(n,r)-范畴 [n-r-范畴]">$(n,r)$-范畴</a></span>.</p>
-<h2>与生象的关系</h2>
-<p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>, 又称 $\infty$-群胚, 即 $(\infty,0)$-范畴, 是一类重要的高阶范畴.</p>
-<p>对于每个高阶范畴 $\mathcal C$, 都可以去掉其中所有不可逆的态射, 仅保留对象与对象之间的同构, 得到一个生象 $\mathcal C^{\simeq}$, 称为 $\mathcal C$ 的<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>. 一般地, $(n,r)$-范畴也可遗忘为 $(n,r')$-范畴 ($r' &lt; r$).</p>
-<h2>范畴的范畴</h2>
+<p>根据同伦信息的层级, 可将高阶范畴用两个整数 $n,r$ 分类. 见 <span class="link local"><a href="./n-r-范畴.html" title="(n,r)-范畴 [n-r-范畴]">$(n,r)$-范畴</a></span>.</p>
+<p>笼统的高阶范畴的概念目前没有定义, 但是我们可以通过许多不同方式定义其特例.</p>
+<h2>性质</h2>
+<h3>范畴的范畴</h3>
 <p>高阶范畴之间也有态射, 称为<strong>函子</strong>. 函子不仅将对象映射到对象, 而且将态射范畴映射到态射范畴. 最重要的函子是 “态射” 函子
 $$
 \operatorname{Hom}_{\mathcal C}(-,-) \colon \mathcal C^{\mathrm{op}}\times\mathcal C \to \mathsf{Cat}.

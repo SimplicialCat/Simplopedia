@@ -838,6 +838,17 @@
 <p>$\mathsf{Ani}$ 是一个点在<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>下自由生成的范畴.</p>
 <h3>带基点对象</h3>
 <p>$\mathsf{Ani}$ 的终对象 $*$ 下的<span class="link local"><a href="./仰范畴.html" title="仰范畴 [仰范畴]">仰范畴</a></span>称为<strong>带基点生象</strong>的范畴 <span class="link local"><a href="./Ani_pt.html" title="带基点生象的范畴 [Ani_pt]">$\mathsf{Ani}_*$</a></span>.</p>
+<h3>识别</h3>
+<p>如何证明一个范畴 $\mathcal C$ 等价于 $\mathsf{Ani}$?</p>
+<p><strong>命题</strong>. 设范畴 $\mathcal C$ 余完备, 有函子 $f\colon \mathcal C \to \mathsf{Ani}$ 以及对象 $*\in \mathcal C$ 满足
+$$
+f(*)=*,\quad f\simeq\operatorname{Hom}(*,-),
+$$
+则 $f$ 为等价, 且其逆为
+$$
+\mathsf{Ani}\to\mathcal C,\quad X\mapsto\operatorname{colim}_X *.
+$$</p>
+<p><em>证明</em>. 由<span class="link local"><a href="./伴随函子定理.html" title="伴随函子定理 [伴随函子定理]">伴随函子定理</a></span>,</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="notes-stable-center"><header><h1><span class="taxon"></span>稳定中心猜想 <a class="slug" href="./notes-stable-center.html">[notes-stable-center]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是为准备 2026 年春季学期徐斌老师 “朗兰兹纲领选讲” 课程报告而记的笔记. 主要参考 <span class="link local"><a href="./BKV-SCC.html" title="A categorical approach to the stable center conjecture [BKV-SCC]">BKV</a></span>.</p>
 <h2>引言</h2>
@@ -1018,6 +1029,8 @@ $$</p>
 <li>带基点对象的<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>等同于原范畴中的极限.</li>
 <li>带基点对象的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>等同于原图表加上基点到各对象的态射后所得图表的余极限. 例如带基点对象 $X,Y$ 的<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>是原范畴中 $X \leftarrow * \to Y$ 的<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>.</li>
 </ul>
+<h3>Lawvere 理论</h3>
+<p>带基点对象的 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>是 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">Segal 范畴 $\Gamma$</a></span>, 定义为 $\Gamma = (\mathsf{Fin}_{*/})^{\mathrm{op}}$. 这就是说, 对于具有有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>的范畴 $\mathcal C$, 其中的带基点对象等同于保持有限积的函子 $\Gamma \to \mathcal C$.</p>
 <h2>例</h2>
 <p><span class="link local"><a href="./Ani_pt.html" title="带基点生象的范畴 [Ani_pt]">$\mathsf{Ani}_*$</a></span></p>
 </details></section></details></section></footer></article></div></body></html>

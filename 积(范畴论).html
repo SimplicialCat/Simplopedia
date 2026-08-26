@@ -902,6 +902,31 @@ $$
 <li>其对象为若干方块 $[0,1]^n$ 的无交并;</li>
 <li>态射 $f \colon \sqcup_k [0,1]^n \to \sqcup_m [0,1]^m$ 为横平竖直的嵌入, 即 $f$ 在每个 $[0,1]^n$ 上的限制均为缩放与平移的复合.</li>
 </ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="Segal范畴Γ"><header><h1><span class="taxon"></span>Segal 范畴 Γ <a class="slug" href="./Segal范畴Γ.html">[Segal范畴Γ]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<h2>定义</h2>
+<h3>直接定义</h3>
+<p>Segal 范畴 $\Gamma$ 是<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点</a></span>有限集范畴的<span class="link local"><a href="./反范畴.html" title="反范畴 [反范畴]">反范畴</a></span>:
+$$
+\Gamma := \mathsf{Fin}_*^{\mathrm{op}}.
+$$
+记其对象为 $\underline{n} = \{*,1,\cdots,n\}\,(n\geq 0)$.</p>
+<p>由定义, 范畴 $\Gamma$ 的态射可描述如下: 态射 $\underline{n} \to \underline{m}$ 将每个 $1\leq i\leq n$ 对应到 $\{1,\cdots,m\}$ 的一个子集, 这些子集互不相交.</p>
+<h3>通过泛性质</h3>
+<p>称具有<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>和有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>的范畴为<strong>半加性范畴</strong>.</p>
+<p><strong>定义</strong>. Segal 范畴 $\Gamma$ 是一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>半加性范畴.</p>
+<h2>性质</h2>
+<p>Segal 范畴 $\Gamma$ 的<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>为 $[0]$, <span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>为
+$$
+\underline{n}\times \underline{m} = \underline{n+m}.
+$$
+特别地,
+$$
+\underline{n} = \underline{1}^{\times n}.
+$$
+这说明 $\Gamma$ 是一个 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>. 事实上, 它正是<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点对象</a></span>的 Lawvere 理论.</p>
+<h3>与单纯形范畴的关系</h3>
+<p><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$ 到 $\Gamma$ 有一函子, 将对象 $[n]\in\Delta$ 对应到 $\underline{n}\in\Gamma$. 详见 <span class="link local"><a href="./Segal函子γ.html" title="Segal 函子 γ [Segal函子γ]">Segal 函子 $\gamma$</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="lim-colim"><header><h1><span class="taxon"></span>极限与余极限交换 <a class="slug" href="./lim-colim.html">[lim-colim]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>陈述</h2>
 <p>在 $\mathsf{Set}$ 或 $\mathsf{Ani}$ 中, 对指标范畴 $I,J$ 以及一族对象 $X_{i,j}$, 有自然的映射
@@ -1054,7 +1079,25 @@ $$
 <h2>定义</h2>
 <p>在具有<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>的范畴中, 对象 $X$ 的对角线是由两个 $\operatorname{id}_X\colon X\to X$ 确定的态射 $\Delta_X\colon X\to X\times X$.</p>
 <p>态射 $f\colon X\to Y$ 的对角线是<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span>中的对角线, 即 $\Delta_f \colon X\to X\times_Y X$.</p>
+<h2>性质</h2>
+<p><span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span>的每个对象 $X$ 有自然的<span class="link local"><a href="./结合余代数.html" title="结合余代数 [结合余代数]">结合余代数</a></span>结构, 余乘法 $X\to X\times X$ 即为对角线.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="带基点对象"><header><h1><span class="taxon"></span>带基点对象 <a class="slug" href="./带基点对象.html">[带基点对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>范畴 $\mathcal C$ 中带基点对象的范畴是其<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>下的<span class="link local"><a href="./仰范畴.html" title="仰范畴 [仰范畴]">仰范畴</a></span> $\mathcal C_{*/}$.</p>
+<h2>性质</h2>
+<h3>极限, 余极限</h3>
+<p>作为一种<span class="link local"><a href="./仰范畴.html" title="仰范畴 [仰范畴]">仰范畴</a></span>, 带基点对象的范畴中的极限 (余极限) 可用原范畴中的极限 (余极限) 表示:</p>
+<ul>
+<li>带基点对象的<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>等同于原范畴中的极限.</li>
+<li>带基点对象的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>等同于原图表加上基点到各对象的态射后所得图表的余极限. 例如带基点对象 $X,Y$ 的<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>是原范畴中 $X \leftarrow * \to Y$ 的<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>.</li>
+</ul>
+<h3>Lawvere 理论</h3>
+<p>带基点对象的 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>是 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">Segal 范畴 $\Gamma$</a></span>, 定义为 $\Gamma = (\mathsf{Fin}_{*/})^{\mathrm{op}}$. 这就是说, 对于具有有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>的范畴 $\mathcal C$, 其中的带基点对象等同于保持有限积的函子 $\Gamma \to \mathcal C$.</p>
+<h2>例</h2>
+<p><span class="link local"><a href="./Ani_pt.html" title="带基点生象的范畴 [Ani_pt]">$\mathsf{Ani}_*$</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="格"><header><h1><span class="taxon"></span>格 <a class="slug" href="./格.html">[格]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>格</strong>同时是一种序结构以及一种代数结构. 这个巧合是由于其范畴层级较低.</p>
 <h2>定义</h2>
 <p>格是有二元<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">交</a></span>和二元<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">并</a></span>的<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span>.</p>
 <h2>相关概念</h2>
@@ -1132,4 +1175,5 @@ $$</p>
 <p>注意另一个概念, $A$ 生成的自由 $\mathbb E_1$-群是 $\Omega\Sigma_+A$, 是 $\operatorname{List} A$ 的群化.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./代数充实于余代数.html" title="代数充实于余代数 [代数充实于余代数]">代数充实于余代数</a></span></p>
+<p><span class="link local"><a href="./增广结合代数.html" title="增广结合代数 [增广结合代数]">增广结合代数</a></span></p>
 </details></section></details></section></footer></article></div></body></html>

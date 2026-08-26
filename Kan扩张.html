@@ -1565,15 +1565,39 @@ $$
 <h2>定义</h2>
 <h2>例</h2>
 <p><span class="link local"><a href="./整体截面.html" title="整体截面 [整体截面]">整体截面</a></span>, <span class="link local"><a href="./导出前推.html" title="导出前推 [导出前推]">导出前推</a></span>, <span class="link local"><a href="./导出张量积.html" title="“导出张量积” [导出张量积]">导出张量积</a></span></p>
+<h3>意象中的导出函子</h3>
 </details></section><section class="block" data-taxon=""><details ><summary id="平坦函子"><header><h1><span class="taxon"></span>平坦函子 <a class="slug" href="./平坦函子.html">[平坦函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>平坦函子可视为<span class="link local"><a href="./平坦模.html" title="平坦模 [平坦模]">平坦模</a></span>的推广.</p>
 <h2>定义</h2>
 <h3>通过米田扩张</h3>
-<p>对于函子 $F\colon \mathcal C\to\mathsf{Set}$, 考虑其<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">米田扩张</a></span> $F\otimes (-)\colon \widehat {\mathcal C}\to\mathsf{Set}$; 若后者为左正合函子, 即保持有限极限, 则称 $F$ 为<strong>平坦函子</strong>.</p>
-<p>换言之, 平坦函子 $F\colon \mathcal C\to\mathsf{Set}$ 等同于<span class="link local"><a href="./预层意象.html" title="预层意象 [预层意象]">预层意象</a></span> $\widehat {\mathcal C}$ 的<span class="link local"><a href="./意象的点.html" title="意象的点 [意象的点]">点</a></span>.</p>
+<p>设 $\mathcal D$ 为<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>. 对于函子 $F\colon \mathcal C\to\mathcal D$, 若其<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">米田扩张</a></span>
+$$
+F\otimes (-)\colon \widehat {\mathcal C}\to\mathcal D
+$$
+为左正合函子, 即保持<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>, 则称 $F$ 为<strong>平坦函子</strong>.</p>
 <h3>通过元素范畴</h3>
-<p>函子 $F\colon \mathcal C\to\mathsf{Set}$ 平坦当且仅当 $F$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span>为<span class="link local"><a href="./余滤范畴.html" title="余滤范畴 [余滤范畴]">余滤范畴</a></span>.</p>
+<p>函子 $F\colon \mathcal C\to\mathsf{Set}$ 平坦当且仅当 $F$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span>
+$$
+\int_{\mathcal C} F
+$$
+为<span class="link local"><a href="./余滤范畴.html" title="余滤范畴 [余滤范畴]">余滤范畴</a></span>. 展开来讲, 这等同于如下条件.</p>
+<ul>
+<li>存在 $c\in \mathcal C$, 使得 $F(c)$ 至少存在一个元素;</li>
+<li>对任意 $c,c'\in\mathcal C$, 以及 $x\in F(c)$, $x'\in F(c')$, 存在 $d\in\mathcal C$, $y\in F(d)$ 以及态射 $p\colon d\to c,p'\colon d\to c'$, 使得 $F(p)(y) = x$, $F(p')(y) = x'$;</li>
+<li>… (表达 $\int_{\mathcal C} F$ 的两个平行态射有余锥).</li>
+</ul>
+<p>对于一般的 $1$-意象 $\mathcal D$, 也可在 $\mathcal D$ 的<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>中理解上述条件, 得到平坦函子 $\mathcal C\to\mathcal D$ 的定义.</p>
+<h2>性质</h2>
+<h3>预层意象的点</h3>
+<p>平坦函子 $F\colon \mathcal C\to\mathsf{Set}$ 等同于<span class="link local"><a href="./预层意象.html" title="预层意象 [预层意象]">预层意象</a></span> $\widehat {\mathcal C}$ 的<span class="link local"><a href="./意象的点.html" title="意象的点 [意象的点]">点</a></span>.</p>
+<h2>例</h2>
+<h3>单纯形范畴</h3>
+<p><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$ 到<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathcal C$ 的平坦函子等同于 $\mathcal C$ 中的<span class="link local"><a href="./区间.html" title="区间 [区间]">区间</a></span>.</p>
+<p>因此, <span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>的意象是区间的<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span>.</p>
+<h3>群作用</h3>
+<p>设 $G$ 是 $\mathsf{Set}$ 中的群. 我们知道 $G$ 在范畴 $\mathcal C$ 中某个对象上的<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>等同于函子 $F\colon \mathrm{B}G\to\mathcal C$. 函子 $F$ 为平坦函子这一条件恰好可理解为该作用是 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>.</p>
+<p>因此, $G$-集合的意象 $G\mathsf{Set} = \mathsf{Psh}(\mathbf{B}G)$ 是 $G$-主丛的<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span>.</p>
 <h2>相关资料</h2>
 <p>见<span class="link local"><a href="./盲人摸象.html" title="盲人摸象 [盲人摸象]">盲人摸象</a></span> A.5 节.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="拟凝聚层"><header><h1><span class="taxon"></span>拟凝聚层 <a class="slug" href="./拟凝聚层.html">[拟凝聚层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -1649,11 +1673,12 @@ $$</p>
 <p>将一个算畴中记录的颜色与运算按照规定的关系实现到某个具体范畴中的方法称为<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">算畴上的代数</a></span>.</p>
 <h2>定义</h2>
 <h3>作为多重范畴</h3>
-<p><strong>有色算畴</strong> (colored operad) 等同于<strong>多重范畴</strong> (multicategory). 所谓多重范畴就是一族对象之间带有 “多个对象到一个对象的态射”
+<p><strong>有色算畴</strong> (colored operad) 等同于<strong></strong><span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span> (multicategory). 所谓多重范畴就是一族对象之间带有 “多个对象到一个对象的态射”
 $$
 \operatorname{Hom}(X_1,X_2,\cdots,X_n ; Y).
 $$</p>
 <p>算畴中的 “颜色” 即是多重范畴中的对象. 当多重范畴仅有一个对象时, 称之为<strong>单色算畴</strong>. 不同文献中对算畴是否默认为单色有不同的约定.</p>
+<p>多重范畴这一概念有多种貌似不同但互相等价的定义. 详见<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>.</p>
 <p><strong>对称算畴</strong> (symmetric operad) 是指多重范畴中的 $\operatorname{Hom}$ 带有对称群的作用, 即对 $\sigma\in S_n$ 有相容的同构 $\operatorname{Hom}(X_1,\cdots,X_n ; Y) \simeq \operatorname{Hom}(X_{\sigma(1),\cdots,\sigma(n)};Y)$.</p>
 <p>上面定义的是 <span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">$\mathsf{Ani}$</a></span> 上的算畴. 对于一般<span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半范畴</a></span> $\mathcal C$, 也可定义相应的 “<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>多重范畴” 作为 $\mathcal C$ 上的算畴的概念.</p>
 <h3>作为对称序列</h3>
@@ -1735,6 +1760,8 @@ $$
 X \mapsto \coprod_{n\geq 0} \mathcal O(n)\otimes_{S_n}X^{\otimes n}.
 $$
 详见<span class="link local"><a href="./算畴给出单子.html" title="算畴给出单子 [算畴给出单子]">算畴给出单子</a></span>.</p>
+<h3>Koszul 对偶</h3>
+<p><span class="link local"><a href="./Koszul对偶.html" title="Koszul 对偶 [Koszul对偶]">Koszul 对偶</a></span></p>
 <h2>例</h2>
 <h3>二次算畴</h3>
 <p><span class="link local"><a href="./二次算畴.html" title="二次算畴 [二次算畴]">二次算畴</a></span>是一类有特殊性质的算畴, 包括交换算畴, 结合算畴, Lie 算畴.</p>

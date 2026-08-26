@@ -854,6 +854,8 @@
 <h2>观念</h2>
 <p>单纯形范畴的对象是 “标准” 的, “组合” 的单纯形, 也即有限全序集.</p>
 <p>单纯形与<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>密切相关. 增广单纯形范畴中有<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的结合代数.</p>
+<p>单纯形范畴也可理解为<span class="link local"><a href="./区间.html" title="区间 [区间]">区间</a></span>的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>. 详见<span class="link local"><a href="./区间.html" title="区间 [区间]">区间</a></span>.</p>
+<p>单纯形范畴是 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴 $\Theta_n$</a></span> 在 $n=1$ 的情形.</p>
 <h2>定义</h2>
 <p><strong>单纯形范畴</strong> (simplex category) $\Delta$ 是有限<strong>非空</strong><span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序集</a></span>的范畴
 $$
@@ -926,6 +928,51 @@ $$
 $$</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, <span class="link local"><a href="./单纯范畴.html" title="“单纯范畴” [单纯范畴]">单纯范畴</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="树"><header><h1><span class="taxon"></span>树 (范畴论) <a class="slug" href="./树.html">[树]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>树是表达 “多个对象到一个对象的态射” 所需的基本结构. 因此, 可被树<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>的对象 (即<span class="link local"><a href="./树形对象.html" title="树形对象 [树形对象]">树形对象</a></span>) 给出<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 的一种定义.</p>
+<p>这里所说的树特指有限, 有根 (rooted), 对称 (即一个节点上的边不计顺序) 的树.</p>
+<h2>定义</h2>
+<h3>通过结点和边</h3>
+<p>树由<strong>结点</strong> (vertex), <strong>内边</strong> (internal edge) 和<strong>外边</strong> (external edge) 构成, 内边是两个结点之间的边, 外边是仅联系到一个结点的边; 每个结点有若干个 (可能是零个) <strong>入边</strong>和一个<strong>出边</strong>. 整个树有一个唯一的<strong>根</strong> (root), 即唯一指向外部的出边.
+外部的入边称为<strong>叶</strong> (leaf).</p>
+<img src="/assets/tree.svg" alt="树" width="300" style="display:block; margin:auto;">
+<p>上图是一棵树的例子, 其中</p>
+<ul>
+<li>$g$ 是根,</li>
+<li>$e$ 是一个叶, 是外边, 是结点 $w$ 的入边,</li>
+<li>$f$ 是内边, 是结点 $v$ 的出边, 也是结点 $w$ 的入边.</li>
+</ul>
+<p>注意, 我们<strong>不</strong>要求树可以画在平面上. 同一结点的所有入边之间没有顺序.</p>
+<h3>作为偏序集</h3>
+<p>树的所有边的上下关系构成一个偏序. 具体地, 树可定义为满足如下条件的 (有限) <span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span> $(P,\leq)$:</p>
+<ul>
+<li>$P$ 有最小元 $\bot$ (即树的<strong>根</strong>);</li>
+<li>对任意 $x\in P$, 不超过 $x$ 的元素的子集构成一个<span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序</a></span>.</li>
+</ul>
+<p>此时 $P$ 的极大元 (可能不唯一) 即是树的<strong>叶</strong>.</p>
+<h3>树的态射</h3>
+<p>树的态射是个比较复杂的概念.</p>
+<p>…todo</p>
+<h2>例</h2>
+<h3>线性树</h3>
+<p>线性树是形如
+$$
+\begin{array}
+{c}
+\downarrow\\
+\bullet\\
+\downarrow\\
+\bullet\\
+\vdots\\
+\bullet\\
+\downarrow
+\end{array}
+$$
+的树. 这给出<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>到树的范畴的嵌入
+$$
+\Delta \hookrightarrow \Omega.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="结合代数"><header><h1><span class="taxon"></span>结合代数 <a class="slug" href="./结合代数.html">[结合代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>观念</h2>
 <p>结合代数, 又叫 $\mathbb E_1$-代数, <span class="link local"><a href="./A∞-代数.html" title="A∞-代数 [A∞-代数]">$A_\infty$-代数</a></span>, 是若干元素可以<strong>有序</strong>地结合起来的结构. 给定 $n$ 个元素的<strong>有序</strong>组 $(x_1,\cdots,x_n)$, 仅有<strong>唯一</strong>的方式将它们结合起来 $x_1\cdots x_n$, 即结合的最终结果 “与加括号的方式无关”.</p>
 <p>在结合代数的结构之上, 可以考虑 “结合代数中的结合代数” (<span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$-代数</a></span>, 也即有两种相容结合运算的代数), “结合代数中的结合代数中的结合代数” ($\mathbb E_3$-代数), …, 以至于无穷. 在无穷处, $\mathbb E_\infty$-代数就是<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>.</p>
@@ -987,6 +1034,7 @@ $$</p>
 <p>注意另一个概念, $A$ 生成的自由 $\mathbb E_1$-群是 $\Omega\Sigma_+A$, 是 $\operatorname{List} A$ 的群化.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./代数充实于余代数.html" title="代数充实于余代数 [代数充实于余代数]">代数充实于余代数</a></span></p>
+<p><span class="link local"><a href="./增广结合代数.html" title="增广结合代数 [增广结合代数]">增广结合代数</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="赋值环"><header><h1><span class="taxon"></span>赋值环 <a class="slug" href="./赋值环.html">[赋值环]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>赋值环是可以在某个单一的维度比较元素大小的环. 若通过<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>将环的元素理解为某几何对象上的函数, 则赋值的概念可理解为某种 “增长速率” 或 “消失速率”.</p>

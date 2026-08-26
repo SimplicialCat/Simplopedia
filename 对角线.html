@@ -829,6 +829,8 @@
 <h2>定义</h2>
 <p>在具有<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>的范畴中, 对象 $X$ 的对角线是由两个 $\operatorname{id}_X\colon X\to X$ 确定的态射 $\Delta_X\colon X\to X\times X$.</p>
 <p>态射 $f\colon X\to Y$ 的对角线是<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span>中的对角线, 即 $\Delta_f \colon X\to X\times_Y X$.</p>
+<h2>性质</h2>
+<p><span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span>的每个对象 $X$ 有自然的<span class="link local"><a href="./结合余代数.html" title="结合余代数 [结合余代数]">结合余代数</a></span>结构, 余乘法 $X\to X\times X$ 即为对角线.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="six-functors"><header><h1><span class="taxon"></span>六函子 <a class="slug" href="./six-functors.html">[six-functors]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li></ul></div></header></summary>
 <p>本文是 <span class="link local"><a href="./ScholzeSixFunctors.html" title="Six-functor Formalisms [ScholzeSixFunctors]">Scholze 的六函子讲义</a></span>的阅读笔记.</p>
 <h2>引言</h2>
@@ -1135,6 +1137,54 @@ $X$ 是 $n$-截断的, 当且仅当任意映射 $S^n \to X$ 都穿过某一个�
 <li><span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span> $\Delta_X\colon X\to X\times X$ 为<span class="link local"><a href="./拟紧态射.html" title="拟紧态射 [拟紧态射]">拟紧态射</a></span>.</li>
 </ul>
 <p>拟分离概形的<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>版本是<span class="link local"><a href="./拟分离态射.html" title="拟分离态射 [拟分离态射]">拟分离态射</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="杠–余杠对偶"><header><h1><span class="taxon"></span>杠–余杠对偶 <a class="slug" href="./杠–余杠对偶.html">[杠–余杠对偶]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $\mathcal C$ 具有<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>且单位 $1$ 是<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>. 对于<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$, 通过唯一的<span class="link local"><a href="./增广结合代数.html" title="增广结合代数 [增广结合代数]">增广</a></span> $A\to 1$, 单位 $1$ 具有 $A$ 上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>与右模结构. 考虑<span class="link local"><a href="./双边杠构造.html" title="双边杠构造 [双边杠构造]">双边杠构造</a></span>
+$$
+\operatorname{Bar}(A) = 1\otimes_A 1,
+$$
+即<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>
+$$
+1\otimes A^{\otimes\bullet}\otimes 1
+$$
+的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>, 那么该对象具有典范的<span class="link local"><a href="./结合余代数.html" title="结合余代数 [结合余代数]">结合余代数</a></span>结构. 这给出了函子
+$$
+\operatorname{Bar}\colon \mathsf{Alg}_{\mathbb E_1}(\mathcal C)\to\mathsf{Coalg}_{\mathbb E_1}(\mathcal C).
+$$</p>
+<p>注意 $\operatorname{Coalg}(\mathcal C) = \mathsf{Alg}(\mathcal C^{\mathrm{op}})^{\mathrm{op}}$. 对偶地, 若<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $\mathcal C$ 具有余单纯极限且单位 $1$ 是<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>, 则有函子
+$$
+\operatorname{Cobar}\colon \mathsf{Coalg}_{\mathbb E_1}(\mathcal C)\to \mathsf{Alg}_{\mathbb E_1}(\mathcal C).
+$$</p>
+<p>进一步, 当 $1$ 为<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>且单纯余极限, 余单纯极限都存在时, 上述两个函子构成一对<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>
+$$
+\operatorname{Bar}\dashv\operatorname{Cobar},
+$$
+也即
+$$
+\operatorname{Hom}_{\mathsf{Coalg}(\mathcal C)}(\operatorname{Bar}(A),B)
+\simeq
+\operatorname{Hom}_{\mathsf{Alg}(\mathcal C)}(A,\operatorname{Cobar}(B)).
+$$</p>
+<h2>例</h2>
+<h3>环路空间</h3>
+<p><span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span> <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的杠–余杠对偶即是<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>与<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>的对偶.</p>
+<p>回忆, 带基点<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ 的<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> $\Omega X$ 具有<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>结构, 特别地具有结合代数结构.</p>
+<p>另一个重要的事实是, 生象 $X$ 本身有结合余代数结构, 余乘法为<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span> $\Delta\colon X\times X$.</p>
+<p><strong>命题</strong>. $(\mathsf{Ani},\times)$ 中每个对象上有<strong>唯一</strong>的结合余代数结构. 具体地, 遗忘函子 $\mathsf{Coalg}(\mathsf{Ani}) \to \mathsf{Ani}$ 为等价. 而 $(\mathsf{Ani},\times)$ 中的<span class="link local"><a href="./增广结合代数.html" title="增广结合代数 [增广结合代数]">增广</a></span>余代数则等同于带基点生象 $*\to Y$.</p>
+<p>对于 $(\mathsf{Ani},\times)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> (幺半群) $X$ 与带基点生象 $Y$, 有等价
+$$
+\operatorname{Hom}_{\mathsf{Ani}_{*}}(\mathbf{B}X,Y)
+\simeq
+\operatorname{Hom}_{\mathsf{Alg}(\mathsf{Ani})}(X,\Omega Y).
+$$
+其中
+$$
+\mathbf{B}X=\operatorname{colim}(\cdots\to^4 X\times X\to^3 X\rightrightarrows *)=\operatorname{Bar}(X),
+$$
+$$
+\Omega Y =\operatorname{lim}(\cdots\leftarrow^4 Y\times Y\leftarrow^3 Y\leftleftarrows *) = \operatorname{Cobar}(Y).
+$$</p>
+<h3>多项式环</h3>
 </details></section><section class="block" data-taxon=""><details ><summary id="法形变"><header><h1><span class="taxon"></span>法形变 <a class="slug" href="./法形变.html">[法形变]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>法形变</strong> (normal deformation), 又称<strong>到法锥的形变</strong> (deformation to the normal cone)<sup class="footnote-reference" id="法形变_1-back"><a href="#法形变_1">1</a></sup>, 是对流形或概形等几何对象的<span class="link local"><a href="./闭嵌入.html" title="闭嵌入 [闭嵌入]">闭嵌入</a></span> $M\to X$ 定义的由 $X$ 到 $M$ 的法锥的<span class="link local"><a href="./形变.html" title="形变 [形变]">形变</a></span>. 直观上, 当形变参数趋近于 $0$ 时, $X$ 的其余部分被推到无穷远, 仅留下 $M$ 附近的部分, 也即法丛.</p>

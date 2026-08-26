@@ -1302,6 +1302,7 @@ $$</li>
 <li>$x \land (y \lor z) = (x\land y) \lor (x\land z)$;</li>
 <li>$x\lor (y\land z) = (x\lor y) \land (x\lor z)$.</li>
 </ul>
+<p><strong>注</strong>. 两条分配律中第一条分配律更加常见 (例如在<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>中有 $X\times (Y+Z) = X\times Y + X\times Z$), 而第二条较少见. 在<span class="link local"><a href="./格.html" title="格 [格]">格</a></span>中, 第一条推出第二条 (将右端展开即可).</p>
 <h2>性质</h2>
 <h3>对称性</h3>
 <p>设 $L$ 是分配格, 则 $L^{\mathrm{op}}$ 也是分配格.</p>
@@ -1326,6 +1327,13 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="单纯集"><header><h1><span class="taxon"></span>单纯集 <a class="slug" href="./单纯集.html">[单纯集]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>单纯集是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$ 上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>, 即集合范畴中的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>.</p>
+<h2>例</h2>
+<h3>$S^1$</h3>
+<p>单纯集 $S^1$ 可描述如下:</p>
+<ul>
+<li>“点集” $(S^1)_0 = \{*\}$;</li>
+<li></li>
+</ul>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>, <span class="link local"><a href="./双单纯集.html" title="“双单纯集” [双单纯集]">双单纯集</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="盲人摸象"><header><h1><span class="taxon"></span>盲人摸象 <a class="slug" href="./盲人摸象.html">[盲人摸象]</a></h1><div class="metadata"><ul><li class="meta-item">参考资料</li><li class="meta-item"><span class="link external"><a href="https://simplicialcat.github.io" title="我 [https://simplicialcat.github.io]">我</a></span></li></ul></div></header></summary>
@@ -1435,7 +1443,17 @@ $$
 <p>设 $k$ 为代数闭域, $\Lambda$ 为有限维 $k$-代数. 定义其 Ext-箭图 $Q(\Lambda)$ 是以 $\Lambda$-单模的同构类为顶点, 每两点 $S_i,S_j$ 之间 $\dim_k\operatorname{Ext}_{\Lambda}^1 (S_i,S_j)$ 条边构成的箭图.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="米田嵌入"><header><h1><span class="taxon"></span>米田嵌入 <a class="slug" href="./米田嵌入.html">[米田嵌入]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>米田嵌入是将范畴 $\mathcal C$ 中的对象视为 $\mathcal C$ 上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>的过程.</p>
+<p>米田嵌入是将范畴 $\mathcal C$ 中的对象视为 $\mathcal C$ 上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>的过程. 若将 $\mathcal C$ 上的预层理解为 $\mathcal C$ 的 “广义对象”, 则米田嵌入可理解为 “普通对象可忠实地视为广义对象”, 因为米田嵌入总是<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实</a></span>的.</p>
+<h2>例</h2>
+<p>即使我们只关心一个范畴 $\mathcal C$ 内部的结构, 米田嵌入也可提供一些方便. 例如, 一族态射
+$$
+A \to B_i\,(i\in I)
+$$
+等同于一个态射
+$$
+\mathbf{y}(A)\to\prod_{i\in I}\mathbf{y}(B_i).
+$$
+若范畴 $\mathcal C$ 存在积, 则无需米田嵌入. 但使用米田嵌入可以让人们不关心一些极限和余极限是否存在, 因为它们在预层范畴中总是存在.</p>
 <h2>性质</h2>
 <h3>全忠实性</h3>
 <p>米田嵌入是<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>; 换言之, 可表函子之间的态射等同于原来的对象之间的态射. 这是<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>的一个特殊情形.</p>

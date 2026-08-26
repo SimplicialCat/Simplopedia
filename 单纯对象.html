@@ -833,6 +833,7 @@
 <p>类似地, <strong>增广单纯对象</strong>是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span>的对偶到 $\mathcal C$ 的函子 $\Delta_+^{\text{op}}\to \mathcal C$.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>, <span class="link local"><a href="./常值单纯对象.html" title="“常值单纯对象” [常值单纯对象]">常值单纯对象</a></span>, <span class="link local"><a href="./单纯对象的分裂.html" title="分裂单纯对象 [单纯对象的分裂]">单纯对象的分裂</a></span></p>
+<p><span class="link local"><a href="./树形对象.html" title="树形对象 [树形对象]">树形对象</a></span></p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Dold–Kan对应"><header><h1><span class="taxon"></span>Dold–Kan 对应 <a class="slug" href="./Dold–Kan对应.html">[Dold–Kan对应]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>Dold–Kan 对应是某些<span class="link local"><a href="./链复形.html" title="链复形 [链复形]">链复形</a></span>与<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯</a></span> Abel 群之间的等价.</p>
@@ -905,15 +906,15 @@ $$
 <h2>与 Tor, Ext 的关系</h2>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Hochschild同调.html" title="Hochschild 同调 [Hochschild同调]">Hochschild 同调</a></span></p>
-</details></section><section class="block" data-taxon=""><details ><summary id="Segal空间"><header><h1><span class="taxon"></span>Segal 空间 <a class="slug" href="./Segal空间.html">[Segal空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>观念</h2>
-<p>Segal 空间 (Segal 生象) 可用于定义 $(\infty,1)$-范畴.
-道理是, 假设我们要在<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>概念的基础上定义范畴, 我们可以采用<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>的观念, 对一个假想的 $(\infty,1)$-范畴 $\mathcal C$, 用各个单形 $[n]$ 探测之, 得到<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯</a></span>生象 $N(\mathcal C)$:
+</details></section><section class="block" data-taxon=""><details ><summary id="Segal空间"><header><h1><span class="taxon"></span>Segal 对象 <a class="slug" href="./Segal空间.html">[Segal空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>观念</h2>
+<p>Segal 对象是用于定义<span class="link local"><a href="./范畴对象.html" title="范畴对象 (∞-范畴论) [范畴对象]">范畴对象</a></span> (如 $(\infty,1)$-范畴) 的一个中间概念.
+假设我们要在<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>概念的基础上定义范畴, 我们可以采用<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>的观念, 对一个假想的 $(\infty,1)$-范畴 $\mathcal C$, 用各个单形 $[n]$ 探测之, 得到<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯</a></span>生象 $N(\mathcal C)$:
 $$
 N(\mathcal C)_n = \operatorname{Hom}_{\mathsf{Cat}_{(\infty,1)}}([n],\mathcal C) = \operatorname{Fun}([n],\mathcal C)^{\simeq},
 $$
 其中 $(-)^\simeq$ 表示取范畴的<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>. 这一过程又称为 <strong>Rezk 脉</strong>.
-函子 $N$ 的像恰为完备 Segal 生象的范畴.</p>
-<p>类似地, 完备 Segal 对象也可用于定义一般的 $\infty$-范畴内部的范畴, 见<span class="link local"><a href="./范畴对象.html" title="范畴对象 (∞-范畴论) [范畴对象]">范畴对象</a></span>.</p>
+由设想, 这个单纯对象必须将单形之间的拼接 (余极限) 变为生象的极限, 这便是 Segal 对象的条件.</p>
+<p>Segal 对象要表达范畴的概念还需要具有 “完备性” (类似于<span class="link local"><a href="./泛等性.html" title="泛等性 [泛等性]">泛等性</a></span>). 见<span class="link local"><a href="./范畴对象.html" title="范畴对象 (∞-范畴论) [范畴对象]">范畴对象</a></span>.</p>
 <h2>定义</h2>
 <p>一个 Segal 生象是一个<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯生象</a></span> $X \colon \Delta^{\mathrm{op}} \to \mathsf{Ani}$, 满足对任意 $m,n\in\mathbb{N}$, 下图为拉回.
 $$
@@ -940,6 +941,40 @@ $$</p>
 $N(0\overset{\simeq}{\to} 1) \to {*}$
 的<span class="link local"><a href="./局部对象.html" title="局部对象 [局部对象]">局部对象</a></span>.</p>
 <p>完备 Segal 生象等同于 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$(\infty,1)$-范畴</a></span>. 另见<span class="link local"><a href="./范畴对象.html" title="范畴对象 (∞-范畴论) [范畴对象]">范畴对象</a></span>.</p>
+<h2>例</h2>
+<h3>群胚对象</h3>
+<p><span class="link local"><a href="./群胚对象.html" title="群胚对象 (∞-范畴论) [群胚对象]">群胚对象</a></span>是重要的 Segal 对象.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="opecat"><header><h1><span class="taxon"></span>Barwick 算子范畴 <a class="slug" href="./opecat.html">[opecat]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./BarwickOpeCat.html" title="From operator categories to higher operads [BarwickOpeCat]">Clark Barwick 文章</a></span>的笔记. 将原文转写为模型无关语言.</p>
+<hr />
+<p>回忆 $\infty$-范畴可由<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形</a></span> (即一串连续的箭头) <span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>, 给出<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯生象</a></span>. 类似地, <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 可由类似于<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>的对象探测. 本文建立了一个统一的框架, 由算子范畴 $\Phi$ 出发构造探测用的 “$\Phi$-序列”, 分别在 $\Phi = 1$ 和 $\Phi = \mathsf{Fin}$ 的情形恢复出 $\infty$-范畴与算畴的概念.</p>
+<hr />
+<p><strong>定义</strong>. 一个<strong>算子范畴</strong> (operator category) $\Phi$ 是满足如下条件的范畴:</p>
+<ul>
+<li>$\Phi$ 具有<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span> $1$; 记 $|I|=\operatorname{Hom}(1,I)$, 称之为 $I$ 的<strong>点</strong>的集合;</li>
+<li>态射集 $\operatorname{Hom}(I,J)$ 均为有限集;</li>
+<li>对任意态射 $I\to J$ 以及 $j\in |J|$, 有纤维 $\{j\}\times_J I$.</li>
+</ul>
+<p>定义算子范畴之间的态射为满足如下条件的函子 $G\colon \Psi\to\Phi$:</p>
+<ul>
+<li>$G$ 保持终对象以及纤维操作;</li>
+<li>对任意 $I\in\Psi$, $|I|\to |GI|$ 为满射.</li>
+</ul>
+<p>记算子范畴的 $2$-范畴为 $\mathsf{Op}$.</p>
+<p><strong>例</strong>. 终范畴 $1$, <span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$, 有限集范畴 $\mathsf{Fin}$ 均为算子范畴. $\mathsf{Fin}$ 是 $\mathsf{Op}$ 的终对象: 对任意算子范畴 $\Phi$, 有态射 $\Phi\to\mathsf{Fin}$, $I\mapsto |I|$.</p>
+<p><strong>定义</strong>. 对于算子范畴 $\Phi$ 与自然数 $n$, 记 $\Phi_{\leq n}$ 为其中具有不超过 $n$ 个点的对象构成的全子范畴. 这也是一个算子范畴.</p>
+<p><strong>定义</strong>. 对于算子范畴 $\Psi,\Phi$, 定义其<span class="link local"><a href="./圈积.html" title="圈积 (范畴论) [圈积]">圈积</a></span> $\Psi\wr\Phi$ 为如下范畴:</p>
+<ul>
+<li>其对象为
+$$
+  (I\in\Phi,(M_i\in\Psi)_{i\in |I|}),
+$$</li>
+<li>态射 $(I,(M_i)) \to (J,(N_j))$ 为
+$$
+  (\eta\colon I\to J,(\omega_j\colon M_i\to N_{\eta(i)})_{i\in |I|}).
+$$</li>
+</ul>
+<p><strong>定理</strong>. 圈积是 $\mathsf{Op}$ 上的一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半</a></span>结构.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Čech上同调"><header><h1><span class="taxon"></span>Čech 上同调 <a class="slug" href="./Čech上同调.html">[Čech上同调]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>Čech 上同调是一种用<span class="link local"><a href="./Grothendieck拓扑.html" title="Grothendieck 拓扑 [Grothendieck拓扑]">覆盖</a></span>的 <span class="link local"><a href="./Čech脉.html" title="Čech 脉 [Čech脉]">Čech 脉</a></span>来计算<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>的方法. 一般 Čech 上同调计算的是 Abel 群 (<span class="link local"><a href="./E∞-群.html" title="E∞-群 [E∞-群]">$\mathbb E_\infty$-群</a></span>) 系数的上同调, 但少数情形也有<span class="link local"><a href="./非交换Čech上同调.html" title="非交换 Čech 上同调 [非交换Čech上同调]">非交换 Čech 上同调</a></span>.</p>
@@ -1217,6 +1252,8 @@ $$
 <h2>观念</h2>
 <p>单纯形范畴的对象是 “标准” 的, “组合” 的单纯形, 也即有限全序集.</p>
 <p>单纯形与<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>密切相关. 增广单纯形范畴中有<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的结合代数.</p>
+<p>单纯形范畴也可理解为<span class="link local"><a href="./区间.html" title="区间 [区间]">区间</a></span>的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>. 详见<span class="link local"><a href="./区间.html" title="区间 [区间]">区间</a></span>.</p>
+<p>单纯形范畴是 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴 $\Theta_n$</a></span> 在 $n=1$ 的情形.</p>
 <h2>定义</h2>
 <p><strong>单纯形范畴</strong> (simplex category) $\Delta$ 是有限<strong>非空</strong><span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序集</a></span>的范畴
 $$
@@ -1292,6 +1329,13 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单纯集"><header><h1><span class="taxon"></span>单纯集 <a class="slug" href="./单纯集.html">[单纯集]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>单纯集是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$ 上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>, 即集合范畴中的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>.</p>
+<h2>例</h2>
+<h3>$S^1$</h3>
+<p>单纯集 $S^1$ 可描述如下:</p>
+<ul>
+<li>“点集” $(S^1)_0 = \{*\}$;</li>
+<li></li>
+</ul>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>, <span class="link local"><a href="./双单纯集.html" title="“双单纯集” [双单纯集]">双单纯集</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="双单纯集"><header><h1><span class="taxon"></span>“双单纯集” <a class="slug" href="./双单纯集.html">[双单纯集]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -1301,7 +1345,7 @@ $$</p>
 <h2>性质</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="双边杠构造"><header><h1><span class="taxon"></span>双边杠构造 <a class="slug" href="./双边杠构造.html">[双边杠构造]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>如果说<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>是<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>, 那么双边杠构造就是<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">结合代数上的模</a></span>的相对张量积的范畴化.</p>
+<p>如果说<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>是<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>, 那么双边杠构造就是<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">结合代数上的模</a></span>的<span class="link local"><a href="./相对张量积.html" title="相对张量积 [相对张量积]">相对张量积</a></span>的范畴化.</p>
 <p>双边杠构造是<span class="link local"><a href="./杠构造.html" title="杠构造 [杠构造]">杠构造</a></span> (bar construction) 的推广.</p>
 <h2>定义</h2>
 <p>设 $T$ 为范畴 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>. 对于 $T$ 上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">左模</a></span> $X\colon I\to\mathcal C$ 与<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">右模</a></span> $Y\colon \mathcal C\to J$, <strong>双边杠构造</strong>是 $\mathsf{Fun}(I,J)$ 中的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>
@@ -1340,6 +1384,54 @@ $$
 \operatorname{Hom}_{\mathsf C^{\Delta^{\text{op}}}}(\underline{c},X) \simeq \operatorname{Hom}_{\mathsf C}(c,X_0).
 $$</p>
 <p><strong>推论</strong>. 常值单纯对象的构造给出了 $\mathsf C$ 到 $\mathsf C^{\Delta^{\text{op}}}$ 的全忠实嵌入.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="杠–余杠对偶"><header><h1><span class="taxon"></span>杠–余杠对偶 <a class="slug" href="./杠–余杠对偶.html">[杠–余杠对偶]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $\mathcal C$ 具有<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>且单位 $1$ 是<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>. 对于<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$, 通过唯一的<span class="link local"><a href="./增广结合代数.html" title="增广结合代数 [增广结合代数]">增广</a></span> $A\to 1$, 单位 $1$ 具有 $A$ 上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>与右模结构. 考虑<span class="link local"><a href="./双边杠构造.html" title="双边杠构造 [双边杠构造]">双边杠构造</a></span>
+$$
+\operatorname{Bar}(A) = 1\otimes_A 1,
+$$
+即<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>
+$$
+1\otimes A^{\otimes\bullet}\otimes 1
+$$
+的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>, 那么该对象具有典范的<span class="link local"><a href="./结合余代数.html" title="结合余代数 [结合余代数]">结合余代数</a></span>结构. 这给出了函子
+$$
+\operatorname{Bar}\colon \mathsf{Alg}_{\mathbb E_1}(\mathcal C)\to\mathsf{Coalg}_{\mathbb E_1}(\mathcal C).
+$$</p>
+<p>注意 $\operatorname{Coalg}(\mathcal C) = \mathsf{Alg}(\mathcal C^{\mathrm{op}})^{\mathrm{op}}$. 对偶地, 若<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $\mathcal C$ 具有余单纯极限且单位 $1$ 是<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>, 则有函子
+$$
+\operatorname{Cobar}\colon \mathsf{Coalg}_{\mathbb E_1}(\mathcal C)\to \mathsf{Alg}_{\mathbb E_1}(\mathcal C).
+$$</p>
+<p>进一步, 当 $1$ 为<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>且单纯余极限, 余单纯极限都存在时, 上述两个函子构成一对<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>
+$$
+\operatorname{Bar}\dashv\operatorname{Cobar},
+$$
+也即
+$$
+\operatorname{Hom}_{\mathsf{Coalg}(\mathcal C)}(\operatorname{Bar}(A),B)
+\simeq
+\operatorname{Hom}_{\mathsf{Alg}(\mathcal C)}(A,\operatorname{Cobar}(B)).
+$$</p>
+<h2>例</h2>
+<h3>环路空间</h3>
+<p><span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span> <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的杠–余杠对偶即是<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span>与<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>的对偶.</p>
+<p>回忆, 带基点<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ 的<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> $\Omega X$ 具有<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>结构, 特别地具有结合代数结构.</p>
+<p>另一个重要的事实是, 生象 $X$ 本身有结合余代数结构, 余乘法为<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span> $\Delta\colon X\times X$.</p>
+<p><strong>命题</strong>. $(\mathsf{Ani},\times)$ 中每个对象上有<strong>唯一</strong>的结合余代数结构. 具体地, 遗忘函子 $\mathsf{Coalg}(\mathsf{Ani}) \to \mathsf{Ani}$ 为等价. 而 $(\mathsf{Ani},\times)$ 中的<span class="link local"><a href="./增广结合代数.html" title="增广结合代数 [增广结合代数]">增广</a></span>余代数则等同于带基点生象 $*\to Y$.</p>
+<p>对于 $(\mathsf{Ani},\times)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> (幺半群) $X$ 与带基点生象 $Y$, 有等价
+$$
+\operatorname{Hom}_{\mathsf{Ani}_{*}}(\mathbf{B}X,Y)
+\simeq
+\operatorname{Hom}_{\mathsf{Alg}(\mathsf{Ani})}(X,\Omega Y).
+$$
+其中
+$$
+\mathbf{B}X=\operatorname{colim}(\cdots\to^4 X\times X\to^3 X\rightrightarrows *)=\operatorname{Bar}(X),
+$$
+$$
+\Omega Y =\operatorname{lim}(\cdots\leftarrow^4 Y\times Y\leftarrow^3 Y\leftleftarrows *) = \operatorname{Cobar}(Y).
+$$</p>
+<h3>多项式环</h3>
 </details></section><section class="block" data-taxon=""><details ><summary id="杠构造"><header><h1><span class="taxon"></span>杠构造 <a class="slug" href="./杠构造.html">[杠构造]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>对于范畴 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 以及其上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span> $A$, 杠构造 (bar construction) 给出<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>范畴 $\mathcal C^T$ 中的一个<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">增广单纯对象</a></span>
@@ -1369,8 +1461,10 @@ $$</p>
 <h3>推广</h3>
 <p>杠构造的推广见<span class="link local"><a href="./双边杠构造.html" title="双边杠构造 [双边杠构造]">双边杠构造</a></span>, <span class="link local"><a href="./单纯杠构造.html" title=" [单纯杠构造]">单纯杠构造</a></span>. 使用双边杠构造的记号, 有 $\operatorname{Bar}_T(A)=B(F,T,A)$, $B(T,A)=B(T,T,A)$. 另见<span class="link local"><a href="./循环杠构造.html" title="循环杠构造 [循环杠构造]">循环杠构造</a></span>.</p>
 <h2>例</h2>
-<h3>群</h3>
-<p>设</p>
+<h3>结合代数</h3>
+<p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 的杠构造就是单子 $A\otimes -$ 的杠构造.</p>
+<h3>算畴</h3>
+<p>算畴的杠构造就是算畴对应的 “自由代数” <span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>的杠构造, 也可视为<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>作结合代数的杠构造.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="杠消解"><header><h1><span class="taxon"></span>杠消解 <a class="slug" href="./杠消解.html">[杠消解]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p><strong>杠消解</strong> (bar resolution) 指的是<span class="link local"><a href="./杠构造.html" title="杠构造 [杠构造]">杠构造</a></span>所得的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>或链复形 (<span class="link local"><a href="./Dold–Kan对应.html" title="Dold–Kan 对应 [Dold–Kan对应]">Dold–Kan 对应</a></span>).</p>
@@ -1528,12 +1622,13 @@ $$
 X_0 \to \operatorname{colim}X.
 $$</p>
 <p>其中 $\operatorname{colim}X$ 又称为 $X$ 的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="范畴对象"><header><h1><span class="taxon"></span>范畴对象 (∞-范畴论) <a class="slug" href="./范畴对象.html">[范畴对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>观念</h2>
-<p>在 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$\infty$-范畴</a></span>中, 一个范畴<span class="link local"><a href="./内部观点.html" title="内部观点 [内部观点]">内部</a></span>的范畴可由完备 <span class="link local"><a href="./Segal空间.html" title="Segal 空间 [Segal空间]">Segal 对象</a></span>描述.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="范畴对象"><header><h1><span class="taxon"></span>范畴对象 (∞-范畴论) <a class="slug" href="./范畴对象.html">[范畴对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>观念</h2>
+<p>在 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$\infty$-范畴</a></span>中, 一个范畴<span class="link local"><a href="./内部观点.html" title="内部观点 [内部观点]">内部</a></span>的范畴可由完备 <span class="link local"><a href="./Segal空间.html" title="Segal 对象 [Segal空间]">Segal 对象</a></span>描述.</p>
+<p>迭代这一构造可得 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n)$-范畴</a></span>的概念.</p>
 <h2>定义</h2>
 <h3>Segal 对象</h3>
-<p>首先我们重复 <span class="link local"><a href="./Segal空间.html" title="Segal 空间 [Segal空间]">Segal 对象</a></span>的定义. 直观上, 它是一些可复合的态射构成的结构, 已经接近于范畴的概念, 但还有差距.</p>
-<p>设 $\mathcal C$ 为 $\infty$-范畴. 定义 $\mathcal C$ 中的一个 <strong>Segal 对象</strong>是一个<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span> $X \colon \Delta^{\mathrm{op}} \to \mathcal C$, 满足对任意 $m,n\in\mathbb{N}$, 下图为拉回 (直观: “态射可复合”).
+<p>首先我们重复 <span class="link local"><a href="./Segal空间.html" title="Segal 对象 [Segal空间]">Segal 对象</a></span>的定义. 直观上, 它是一些可复合的态射构成的结构, 已经接近于范畴的概念, 但还有差距.</p>
+<p>设 $\mathcal C$ 为 $\infty$-范畴, 一般要求为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>. 定义 $\mathcal C$ 中的一个 <strong>Segal 对象</strong>是一个<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span> $X \colon \Delta^{\mathrm{op}} \to \mathcal C$, 满足对任意 $m,n\in\mathbb{N}$, 下图为拉回 (直观: “态射可复合”).
 $$
 \begin{array}
     {ccc}
@@ -1553,7 +1648,17 @@ $$
 $$</p>
 <p>记 $\mathsf{Segal}(\mathcal C) \hookrightarrow \mathsf{Fun}(\Delta^{\mathrm{op}},\mathcal C)$ 为 Segal 对象在单纯对象中构成的全子范畴.</p>
 <h3>完备 Segal 对象</h3>
-<p><span class="link local"><a href="./群胚对象.html" title="群胚对象 (∞-范畴论) [群胚对象]">群胚对象</a></span></p>
+<p>Segal 对象的完备性类似于<span class="link local"><a href="./泛等性.html" title="泛等性 [泛等性]">泛等性</a></span>, 说的是可逆态射的全体等同于对象的全体.</p>
+<p>考虑单纯对象
+$$
+J = (\{0,1\} \leftleftarrows \{00,01,10,11\} \cdots)
+$$
+即 “<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的等价”. 注意作为范畴它等价于单点, 但作为单纯对象它不等价于单点.</p>
+<p><strong>完备 Segal 对象</strong>就是 Segal 对象中关于 $J \to *$ 的<span class="link local"><a href="./局部对象.html" title="局部对象 [局部对象]">局部对象</a></span>, 即满足
+$$
+X_0 \to \operatorname{Hom}(J,X)
+$$
+为等价的 Segal 对象 $X$.</p>
 <h2>例</h2>
 <h3>对称幺半范畴</h3>
 <p>参考 <span class="link local"><a href="./AntieauCSO.html" title="Complete Segal objects [AntieauCSO]">Antieau</a></span>. 可证明<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>等同于 <span class="link local"><a href="./E∞-空间.html" title="E∞-空间 [E∞-空间]">$\mathbb E_\infty$-生象</a></span>范畴 $\mathsf{CAlg}(\mathsf{Ani})$ 中的范畴对象. 事实上, 两者均为

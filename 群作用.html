@@ -1957,6 +1957,40 @@ $$
 \mathsf{SSeq}(\mathsf{Vect}) := \mathsf{Fun}(\mathsf{Fin}^{\simeq},\mathsf{Vect}) \simeq \prod_{n\geq 1} \mathsf{Rep}(\Sigma_n)
 $$
 是一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span> <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>. 见 <span class="link local"><a href="./Gaitsgory–RozenblyumDAG.html" title="A Study in Derived Algebraic Geometry [Gaitsgory–RozenblyumDAG]">Gaitsgory–Rozenblyum 导出代数几何讲义</a></span> (关于 Lie 代数与 Koszul 对偶的一节).</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="平坦函子"><header><h1><span class="taxon"></span>平坦函子 <a class="slug" href="./平坦函子.html">[平坦函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>平坦函子可视为<span class="link local"><a href="./平坦模.html" title="平坦模 [平坦模]">平坦模</a></span>的推广.</p>
+<h2>定义</h2>
+<h3>通过米田扩张</h3>
+<p>设 $\mathcal D$ 为<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>. 对于函子 $F\colon \mathcal C\to\mathcal D$, 若其<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">米田扩张</a></span>
+$$
+F\otimes (-)\colon \widehat {\mathcal C}\to\mathcal D
+$$
+为左正合函子, 即保持<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>, 则称 $F$ 为<strong>平坦函子</strong>.</p>
+<h3>通过元素范畴</h3>
+<p>函子 $F\colon \mathcal C\to\mathsf{Set}$ 平坦当且仅当 $F$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span>
+$$
+\int_{\mathcal C} F
+$$
+为<span class="link local"><a href="./余滤范畴.html" title="余滤范畴 [余滤范畴]">余滤范畴</a></span>. 展开来讲, 这等同于如下条件.</p>
+<ul>
+<li>存在 $c\in \mathcal C$, 使得 $F(c)$ 至少存在一个元素;</li>
+<li>对任意 $c,c'\in\mathcal C$, 以及 $x\in F(c)$, $x'\in F(c')$, 存在 $d\in\mathcal C$, $y\in F(d)$ 以及态射 $p\colon d\to c,p'\colon d\to c'$, 使得 $F(p)(y) = x$, $F(p')(y) = x'$;</li>
+<li>… (表达 $\int_{\mathcal C} F$ 的两个平行态射有余锥).</li>
+</ul>
+<p>对于一般的 $1$-意象 $\mathcal D$, 也可在 $\mathcal D$ 的<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>中理解上述条件, 得到平坦函子 $\mathcal C\to\mathcal D$ 的定义.</p>
+<h2>性质</h2>
+<h3>预层意象的点</h3>
+<p>平坦函子 $F\colon \mathcal C\to\mathsf{Set}$ 等同于<span class="link local"><a href="./预层意象.html" title="预层意象 [预层意象]">预层意象</a></span> $\widehat {\mathcal C}$ 的<span class="link local"><a href="./意象的点.html" title="意象的点 [意象的点]">点</a></span>.</p>
+<h2>例</h2>
+<h3>单纯形范畴</h3>
+<p><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$ 到<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathcal C$ 的平坦函子等同于 $\mathcal C$ 中的<span class="link local"><a href="./区间.html" title="区间 [区间]">区间</a></span>.</p>
+<p>因此, <span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>的意象是区间的<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span>.</p>
+<h3>群作用</h3>
+<p>设 $G$ 是 $\mathsf{Set}$ 中的群. 我们知道 $G$ 在范畴 $\mathcal C$ 中某个对象上的<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>等同于函子 $F\colon \mathrm{B}G\to\mathcal C$. 函子 $F$ 为平坦函子这一条件恰好可理解为该作用是 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>.</p>
+<p>因此, $G$-集合的意象 $G\mathsf{Set} = \mathsf{Psh}(\mathbf{B}G)$ 是 $G$-主丛的<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span>.</p>
+<h2>相关资料</h2>
+<p>见<span class="link local"><a href="./盲人摸象.html" title="盲人摸象 [盲人摸象]">盲人摸象</a></span> A.5 节.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="意象"><header><h1><span class="taxon"></span>意象 <a class="slug" href="./意象.html">[意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <h3>作为集合范畴的推广</h3>
@@ -2094,6 +2128,8 @@ $$</p>
 $$
 \operatorname{UConf}_n(X) := \operatorname{Conf}_n(X) / S_n.
 $$</p>
+<h2>性质</h2>
+<p>$\mathbb R^2$ 上 $n$ 个点的无序构形空间 $\operatorname{UConf}_n(\mathbb R^2)$ 的<span class="link local"><a href="./基本群.html" title="基本群 [基本群]">基本群</a></span>是 $n$ 个生成元的<span class="link local"><a href="./辫群.html" title="辫群 [辫群]">辫群</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="特征向量"><header><h1><span class="taxon"></span>特征向量 <a class="slug" href="./特征向量.html">[特征向量]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设 $(\mathcal C,\otimes,1)$ 为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, $A$ 为其中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 设 $A$ <span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">作用</a></span>于另一对象 $V$. 定义一个<strong>特征值</strong>为一个代数同态 $\sigma\colon A \to 1$. 定义对应于特征值 $\sigma$ 的<strong>特征向量</strong>为元素 $v \colon 1\to V$, 满足
@@ -2228,6 +2264,25 @@ $$
 <h2>性质</h2>
 <h3>与 $G$-集合的关系</h3>
 <p>$G$-集合范畴 $G\text{-}\mathsf{Set}$ 是 $\mathsf{Orb}_G$ 的余积<span class="link local"><a href="./余完备化.html" title="余完备化 [余完备化]">完备化</a></span>, 即 “自由地添加余积” 所得的范畴. 直观上, 这就是说每个 $G$-作用都可分解为<span class="link local"><a href="./传递作用.html" title="传递作用 [传递作用]">传递</a></span>作用的无交并.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="辫群"><header><h1><span class="taxon"></span>辫群 <a class="slug" href="./辫群.html">[辫群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>辫群是平面上若干个点的构形的自同构.</p>
+<h2>定义</h2>
+<p>对于自然数 $n$, 辫群 $\mathrm{Br}_n$ 是 $\mathbb R^2$ 上 $n$ 个点的<span class="link local"><a href="./构形空间.html" title="构形空间 [构形空间]">无序构形空间</a></span>的<span class="link local"><a href="./基本群.html" title="基本群 [基本群]">基本群</a></span>.</p>
+<h2>性质</h2>
+<h3>表现</h3>
+<p>辫群 $\mathrm{Br}_n$ 具有如下<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>:</p>
+<ul>
+<li>生成元 $s_i$ ($i=1,\cdots,n$),</li>
+<li>关系 $s_is_js_i = s_js_is_j$ ($|i-j|=1$), $s_is_j=s_js_i$ ($|i-j|\geq 2$).</li>
+</ul>
+<h3>Artin 作用</h3>
+<p>由于平面去掉 $n$ 个点的<span class="link local"><a href="./基本群.html" title="基本群 [基本群]">基本群</a></span>为<span class="link local"><a href="./自由群.html" title="自由群 [自由群]">自由群</a></span> $F_n$, 而辫群 $\mathrm{Br}_n$ 作用于这一空间, 故 $\mathrm{Br}_n$ 也<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>于群 $F_n$, 这称为 <strong>Artin 作用</strong>. 通过生成元表现这一作用即</p>
+<ul>
+<li>$s_i(x_i)=x_i x_{i+1} x_i^{-1}$,</li>
+<li>$s_i(x_{i+1})=x_i$,</li>
+<li>$s_i(x_j)=x_j$ ($j\neq i,i+1$).</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="逆环路空间"><header><h1><span class="taxon"></span>逆环路空间 <a class="slug" href="./逆环路空间.html">[逆环路空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>群 $G$ 的<strong>逆环路空间</strong> (delooping) 是 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主齐性空间</a></span>的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>, 也即 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>的<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">分类空间</a></span>.</p>
