@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>Barwick 算子范畴</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width"><title>Iterated wreath product of the simplex category and iterated loop spaces</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
 
 
 <div id="tcomment"></div>
@@ -825,101 +825,31 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon=""><details open><summary id="opecat"><header><h1><span class="taxon"></span>Barwick 算子范畴 <a class="slug" href="./opecat.html">[opecat]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p><span class="link local"><a href="./BarwickOpeCat.html" title="From operator categories to higher operads [BarwickOpeCat]">Clark Barwick 文章</a></span>的笔记. 将原文转写为模型无关语言.</p>
-<hr />
-<p>回忆 $\infty$-范畴可由<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形</a></span> (即一串连续的箭头) <span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>, 给出<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯生象</a></span>. 类似地, <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 可由类似于<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>的对象探测. 本文建立了一个统一的框架, 由算子范畴 $\Phi$ 出发构造探测用的 “$\Phi$-序列”, 分别在 $\Phi = 1$ 和 $\Phi = \mathsf{Fin}$ 的情形恢复出 $\infty$-范畴与算畴的概念.</p>
-<hr />
-<p><strong>定义</strong>. 一个<strong>算子范畴</strong> (operator category) $\Phi$ 是满足如下条件的范畴:</p>
-<ul>
-<li>$\Phi$ 具有<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span> $1$; 记 $|I|=\operatorname{Hom}(1,I)$, 称之为 $I$ 的<strong>点</strong>的集合;</li>
-<li>态射集 $\operatorname{Hom}(I,J)$ 均为有限集;</li>
-<li>对任意态射 $I\to J$ 以及 $j\in |J|$, 有纤维 $\{j\}\times_J I$.</li>
-</ul>
-<p>定义算子范畴之间的态射为满足如下条件的函子 $G\colon \Psi\to\Phi$:</p>
-<ul>
-<li>$G$ 保持终对象以及纤维操作;</li>
-<li>对任意 $I\in\Psi$, $|I|\to |GI|$ 为满射.</li>
-</ul>
-<p>记算子范畴的 $2$-范畴为 $\mathsf{Op}$.</p>
-<p><strong>例</strong>. 终范畴 $1$, <span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$, 有限集范畴 $\mathsf{Fin}$ 均为算子范畴. $\mathsf{Fin}$ 是 $\mathsf{Op}$ 的终对象: 对任意算子范畴 $\Phi$, 有态射 $\Phi\to\mathsf{Fin}$, $I\mapsto |I|$.</p>
-<p><strong>定义</strong>. 对于算子范畴 $\Phi$ 与自然数 $n$, 记 $\Phi_{\leq n}$ 为其中具有不超过 $n$ 个点的对象构成的全子范畴. 这也是一个算子范畴.</p>
-<p><strong>定义</strong>. 对于算子范畴 $\Psi,\Phi$, 定义其<span class="link local"><a href="./圈积.html" title="圈积 (范畴论) [圈积]">圈积</a></span> $\Psi\wr\Phi$ 为如下范畴:</p>
-<ul>
-<li>其对象为
-$$
-  (I\in\Phi,(M_i\in\Psi)_{i\in |I|}),
-$$</li>
-<li>态射 $(I,(M_i)) \to (J,(N_j))$ 为
-$$
-  (\eta\colon I\to J,(\omega_j\colon M_i\to N_{\eta(i)})_{i\in |I|}).
-$$</li>
-</ul>
-<p><strong>定理</strong>. 圈积是 $\mathsf{Op}$ 上的一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半</a></span>结构.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="notes"><header><h1><span class="taxon"></span>讲稿, 笔记 <a class="slug" href="./notes.html">[notes]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>较完整的讲稿 / 笔记:</p>
-<ul>
-<li><span class="link local"><a href="./nearby.html" title="Nearby Cycles [nearby]">Nearby Cycles</a></span> (2026 年 4 月)</li>
-<li><span class="link local"><a href="./love-and-math.html" title="爱与数学 [love-and-math]">爱与数学</a></span></li>
-<li><span class="link local"><a href="./EC-H1-H2.html" title="平展上同调讨论班 : 非 Abel 上同调, 主齐性空间与 Brauer 群 [EC-H1-H2]">平展上同调讨论班 : 非 Abel 上同调, 主齐性空间与 Brauer 群</a></span> (2025 年 11 月)</li>
-<li><span class="link local"><a href="./ChShTrHecke.html" title="几何表示论报告 : 特征层与 Hecke 范畴的迹 [ChShTrHecke]">几何表示论报告 : 特征层与 Hecke 范畴的迹</a></span> (2025 年 12 月)</li>
-<li><span class="link local"><a href="./SDG-notes.html" title="综合微分几何讲稿 [SDG-notes]">综合微分几何讲稿</a></span> (2023 年 7 月)</li>
-<li><span class="link local"><a href="./盲人摸象.html" title="盲人摸象 [盲人摸象]">盲人摸象</a></span> (2023 年 -)</li>
-</ul>
-<p>计划中的讲稿 / 笔记:</p>
-<ul>
-<li><span class="link local"><a href="./opecat.html" title="Barwick 算子范畴 [opecat]">Barwick 算子范畴</a></span></li>
-<li><span class="link local"><a href="./HADR.html" title="Higher Algebra Done Right [HADR]">Higher Algebra Done Right</a></span></li>
-<li><span class="link local"><a href="./br-monodromy.html" title="辫群与单值表示 [br-monodromy]">辫群与单值表示</a></span></li>
-<li><span class="link local"><a href="./strat-cat.html" title="分层空间与范畴 [strat-cat]">分层空间与范畴</a></span></li>
-<li><span class="link local"><a href="./higherZar.html" title="高阶 Zariski 几何 [higherZar]">高阶 Zariski 几何</a></span></li>
-<li><span class="link local"><a href="./geometry-DAGV.html" title="几何 (带结构的意象) [geometry-DAGV]">几何 (带结构的意象)</a></span></li>
-<li><span class="link local"><a href="./ch-fil.html" title="链复形与滤对象 [ch-fil]">链复形与滤对象</a></span></li>
-<li><span class="link local"><a href="./GrpAni.html" title="生象群 [GrpAni]">生象群</a></span></li>
-<li><span class="link local"><a href="./Chtoucas.html" title="Chtouca 与整体 Langlands 参数 [Chtoucas]">Chtouca 与整体 Langlands 参数</a></span></li>
-<li><span class="link local"><a href="./Excursion.html" title="远足代数 Excursion Algebra [Excursion]">远足代数 Excursion Algebra</a></span></li>
-<li><span class="link local"><a href="./notes-stable-center.html" title="稳定中心猜想 [notes-stable-center]">稳定中心猜想</a></span></li>
-<li><span class="link local"><a href="./six-functors.html" title="六函子 [six-functors]">六函子</a></span></li>
-<li><span class="link local"><a href="./notes-Gestalten.html" title="Gestalten [notes-Gestalten]">Gestalten</a></span></li>
-<li><span class="link local"><a href="./on-P1.html" title="射影直线上的线丛 [on-P1]">射影直线上的线丛</a></span></li>
-<li><span class="link local"><a href="./GeoLang2.html" title="几何 Langlands 纲领 [GeoLang2]">几何 Langlands 纲领</a></span></li>
-<li><span class="link local"><a href="./microPerv.html" title="微局部偏屈层 [microPerv]">微局部偏屈层</a></span></li>
-<li><span class="link local"><a href="./homalg.html" title="同调代数 [homalg]">同调代数</a></span> (2026 年 3 月)</li>
-<li><span class="link local"><a href="./alg-th.html" title="代数理论 [alg-th]">代数理论</a></span> (2026 年 3 月)</li>
-<li><span class="link local"><a href="./Geo-Sat-eq.html" title="几何 Satake 等价 [Geo-Sat-eq]">几何 Satake 等价</a></span> (2026 年 3 月)</li>
-<li><span class="link local"><a href="./OP-DAHA-QCV.html" title="正交多项式, 双仿射 Hecke 代数与量子特征簇 [OP-DAHA-QCV]">正交多项式, 双仿射 Hecke 代数与量子特征簇</a></span> (2026 年 2 月)</li>
-<li><span class="link local"><a href="./quantumtori.html" title="量子圆环 [quantumtori]">量子圆环</a></span></li>
-</ul>
-</details></section><section class="block" data-taxon=""><details ><summary id="多重范畴"><header><h1><span class="taxon"></span>多重范畴 <a class="slug" href="./多重范畴.html">[多重范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<article><section class="block" data-taxon=""><details open><summary id="BergerWr"><header><h1><span class="taxon"></span>Iterated wreath product of the simplex category and iterated loop spaces <a class="slug" href="./BergerWr.html">[BergerWr]</a></h1><div class="metadata"><ul><li class="meta-item">参考资料</li><li class="meta-item">Clemens Berger</li></ul></div></header></summary>
+<pre><code>
+@article{berger2007iterated,
+  author    = {Clemens Berger},
+  title     = {Iterated wreath product of the simplex category and iterated loop spaces},
+  journal   = {Advances in Mathematics},
+  volume    = {213},
+  number    = {1},
+  pages     = {230--270},
+  year      = {2007},
+  doi       = {10.1016/j.aim.2006.12.006},
+  mrnumber  = {2331244},
+  zblnumber = {1127.18008},
+  issn      = {0001-8708}
+}
+
+</code></pre>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Joyal范畴"><header><h1><span class="taxon"></span>Joyal 范畴 Θn <a class="slug" href="./Joyal范畴.html">[Joyal范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>多重范畴可由类似于<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>的对象来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>.</p>
+<p>Joyal 范畴 $\Theta_n$ 的对象是<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span> $(\infty,n)$-范畴的基本单元, 是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形</a></span>的推广.</p>
 <h2>定义</h2>
-<p>多重范畴这一概念有多种貌似不同但互相等价的定义.</p>
-<h3>通过 Barwick 范畴 $\Delta_{\mathsf{Fin}}$</h3>
-<p>记 $\Delta_{\mathsf{Fin}}$ 为如下范畴:</p>
-<ul>
-<li>其对象为
-$$
-  ([n]\in\Delta, f\colon [n] \to \mathsf{Fin}),
-$$
-即 $\mathsf{Fin}$ 中的非空有限序列 $X_0 \to X_1\to\cdots\to X_n$;</li>
-<li>态射 $([n],f) \to ([m],g)$ 为
-$$
-  (\phi\colon [n]\to [m],\eta\colon f\to g\phi),
-$$
-满足逐分量为单射, 且自然性方块均为拉回.</li>
-</ul>
-<p>这个记号沿用了 Barwick 范畴 $\Delta_{\Phi}$ 的记号, 取 $\Phi = \mathsf{Fin}$ (它是算子范畴的范畴 $\mathsf{Op}$ 中的终对象), 参见 <span class="link local"><a href="./opecat.html" title="Barwick 算子范畴 [opecat]">Barwick 算子范畴</a></span>.</p>
-<p>范畴 $\Delta_{\mathsf{Fin}}$ 的对象 $X_0 \to X_1\to\cdots\to X_n$ 可理解为一族带有层级的<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>组成的 “森林”, $X_0$ 为<strong>叶</strong>的集合, $X_n$ 为<strong>根</strong>的集合, 中间每个 $X_i$ 为第 $i$ 层<strong>内边</strong>的集合, 映射 $X_i\to X_{i+1}$ 将每个边对应到与其相连的下一层的边.</p>
-<p>这个结构不完全等同于<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>, 因为其中的 “边” 有固定的层级.</p>
-<p>定义 $\Delta_{\mathsf{Fin}}$ 上的 <strong>Segal 预层</strong>为满足如下条件的 $\mathsf{Ani}$-值预层 $F\colon \Delta_{\mathsf{Fin}}^{\mathrm{op}} \to \mathsf{Ani}$:</p>
-<ul>
-<li>$F(X_0\to\cdots\to X_n)\simeq F(X_0\to X_1)\times_{F(X_1)}\cdots\times_{F(X_{n-1})}F(X_{n-1}\to X_n)$;</li>
-<li>$F(X\to Y) \simeq \prod_{y\in Y} F(X_y\to \{y\})$;</li>
-<li>$F(X)\simeq\prod_{x\in X}F(\{x\})$.</li>
-</ul>
-<p>这个条件是 <span class="link local"><a href="./Segal空间.html" title="Segal 对象 [Segal空间]">Segal 生象</a></span>的类比.</p>
-<p>定义<strong>多重范畴</strong>为 $\Delta_{\mathsf{Fin}}$ 上满足完备性的 Segal 预层 $F$; 完备性即是说 $F$ 在子范畴 $\Delta\hookrightarrow\Delta_{\mathsf{Fin}}$ 上的限制是一个<span class="link local"><a href="./范畴对象.html" title="范畴对象 (∞-范畴论) [范畴对象]">完备 Segal 生象</a></span>.</p>
-<h3>树形生象</h3>
-<p>多重范畴的另一种定义使用<span class="link local"><a href="./树形对象.html" title="树形对象 [树形对象]">树形</a></span><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</p>
+<h3>归纳定义</h3>
+<p>记 $\Delta$ 为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>, $\Gamma$ 为 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">Segal 范畴 $\Gamma$</a></span>, 有典范的函子 $\gamma\colon \Delta\to\Gamma$; 详见 <span class="link local"><a href="./Segal函子γ.html" title="Segal 函子 γ [Segal函子γ]">Segal 函子 $\gamma$</a></span>.</p>
+<p><strong>定义</strong>. Joyal 范畴 $\Theta_n$ 是 $n$ 个 $\Delta$ 的<span class="link local"><a href="./圈积.html" title="圈积 (范畴论) [圈积]">圈积</a></span>, 带有典范函子 $\Theta_n \to \Gamma$.</p>
+<p>该定义出自 <span class="link local"><a href="./BergerWr.html" title="Iterated wreath product of the simplex category and iterated loop spaces [BergerWr]">Berger</a></span>.</p>
+<h3>通过组合 $n$-圆盘</h3>
+<p>范畴 $\Theta_n$ 可通过 Joyal 的 “<span class="link local"><a href="./组合圆盘.html" title="组合圆盘 [组合圆盘]">组合 $n$-圆盘</a></span>” 直接定义.</p>
 </details></section></details></section></footer></article></div></body></html>

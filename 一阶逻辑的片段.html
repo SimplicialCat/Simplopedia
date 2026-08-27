@@ -834,13 +834,26 @@
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="一阶语言"><header><h1><span class="taxon"></span>一阶语言与一阶逻辑 <a class="slug" href="./一阶语言.html">[一阶语言]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./tutorial-FOL.html" title="一阶语言与一阶逻辑 [tutorial-FOL]">教程 : 一阶语言与一阶逻辑</a></span></p>
 <h2>定义</h2>
-<p><strong>定义</strong> (符号表). 一个 (一阶) <strong>符号表</strong> $\Sigma$ 由如下资料构成:</p>
+<p><strong>定义</strong>. 一个 (一阶) <strong>符号表</strong> $\Sigma$ 由如下资料构成:</p>
 <ul>
-<li>一族<strong>类型</strong> (types),</li>
+<li>一族<strong>类型</strong> (type/sort),</li>
 <li>一些<strong>函数符号</strong> (function symbols), 每一个函数符号 $f$ 具有固定的 “输入类型” $A_1,\cdots,A_n$, “输出类型” $B$, 记作 $f \colon (A_1\times \cdots \times A_n) \to B$, 非负整数 $n$ 称为 $f$ 的<strong>元数</strong> (arity); (当 $n=0$ 时, 函数符号 $f$ 是 “零元函数”, 也即类型 $B$ 的<strong>常数</strong> $f : B$.)</li>
 <li>一些<strong>关系符号</strong> (relation symbols), 又叫<strong>谓词</strong> (predicates), 每一个关系符号 $R$ 具有固定的类型 $A_1,\cdots,A_n$, 记作 $R \hookrightarrow A_1\times \cdots\times A_n$, 非负整数 $n$ 称为 $R$ 的元数. (当 $n=0$ 时, 关系符号是 “零元关系”, 也即<strong>原子命题</strong> (atomic proposition).)</li>
 </ul>
-<p><span class="link local"><a href="./一阶逻辑的片段.html" title="一阶逻辑的片段 [一阶逻辑的片段]">一阶逻辑的片段</a></span></p>
+<p>在指定的符号表 $\Sigma$ 上, 归纳定义<strong>公式</strong> (formula) 与<strong>项</strong> (term) 如下:</p>
+<ul>
+<li>每个类型 $A$ 的变量 $x\colon A$ 是 $A$ 的项;</li>
+<li>对于函数 $f\colon (A_1\times \cdots \times A_n) \to B$ 与项 $x_1\colon A_1,\cdots,x_n\colon A_n$, $f(x_1,\cdots,x_n)$ 是类型 $B$ 的项;</li>
+<li>对于关系 $R\hookrightarrow A_1\times \cdots\times A_n$ 与项 $x_1\colon A_1,\cdots,x_n\colon A_n$, $R(x_1,\cdots,x_n)$ 是公式;</li>
+<li>公式可用逻辑符号 $\land,\lor,\bigvee,\bigwedge,\forall,\exists,\neg,\Rightarrow$ 等组合得到新的公式.</li>
+</ul>
+<p>每条公式都有相适应的语境, 语境中包含其所需的变量.</p>
+<p>在指定的符号表 $\Sigma$ 上, 一个<strong>一阶理论</strong>由若干条<strong>公理</strong>构成. 每条公理形如
+$$
+\psi \vdash_\Gamma \varphi,
+$$
+其中 $\Gamma$ 是语境, $\psi$ 和 $\varphi$ 是该语境所适应的公式.</p>
+<p>有些<span class="link local"><a href="./一阶逻辑的片段.html" title="一阶逻辑的片段 [一阶逻辑的片段]">一阶逻辑的片段</a></span>会限制公式中可以使用的逻辑符号.</p>
 <h2>例</h2>
 <h3>初等算术</h3>
 <h3>群</h3>

@@ -907,15 +907,15 @@ $$
 其中 $(a,b]$ 表示整数的左开右闭区间 $\{x\in \mathbb{Z}\mid a &lt; x \leq b\}$.</li>
 </ul>
 <h3>通过 $S^1$</h3>
-<p>回忆<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span> $S^1$ 是 $\Delta^1$ 两端粘到一起的结果, 即
+<p>将<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span> $\Delta^1$ 两端粘到一起, 定义
 $$
 S^1 := \operatorname{coeq}(\Delta^0 \rightrightarrows \Delta^1).
 $$
-因而 $S^1$ 有一个基点 $\Delta^0 \to S^1$; 又注意到单纯集 $S^1$ 的每个分量有限, 故有函子
+其分量为
 $$
-S^1\colon \Delta^{\mathrm{op}} \to \mathsf{Fin}_{*/}.
+(S^1)_m = \operatorname{Hom}_{\mathsf{sSet}}(\Delta^m,S^1) \simeq \underline{m}.
 $$
-此时定义函子
+可验证函子 $S^1\colon \Delta^{\mathrm{op}} \to \mathsf{Fin}_{*/}$ 在取反范畴后正是前面定义的函子
 $$
 \gamma := (S^1)^{\mathrm{op}} \colon \Delta \to (\mathsf{Fin}_{*/})^{\mathrm{op}} = \Gamma.
 $$</p>
@@ -938,7 +938,7 @@ $$</p>
 <li>$\vdash (0\leq x)\land (x\leq 1)$;</li>
 <li>$(x\leq y) \land (y\leq z) \vdash (x\leq z)$;</li>
 <li>$(x\leq y) \land (y\leq x) \vdash (x=y)$;</li>
-<li>$(0=1)\vdash\bot$.</li>
+<li>$(0=1)\vdash\bot$ (有时人们也不加这一条, 而称满足这条公式的区间为<strong>严格区间</strong>).</li>
 </ul>
 <h3>通过语法范畴</h3>
 <p>区间的语法范畴是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>

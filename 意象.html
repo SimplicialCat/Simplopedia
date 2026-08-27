@@ -1993,7 +1993,7 @@ $$
 <li>$\vdash (0\leq x)\land (x\leq 1)$;</li>
 <li>$(x\leq y) \land (y\leq z) \vdash (x\leq z)$;</li>
 <li>$(x\leq y) \land (y\leq x) \vdash (x=y)$;</li>
-<li>$(0=1)\vdash\bot$.</li>
+<li>$(0=1)\vdash\bot$ (有时人们也不加这一条, 而称满足这条公式的区间为<strong>严格区间</strong>).</li>
 </ul>
 <h3>通过语法范畴</h3>
 <p>区间的语法范畴是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>
@@ -2594,6 +2594,29 @@ $$</p>
 <h2>观念</h2>
 <p>纤维函子指的是某种空间 $X$ 上的层范畴 (作为几何对象的<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数侧对偶</a></span>) 到点上的层范畴的函子, 在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>下对应空间 $X$ 的一个<strong>点</strong>.</p>
 <p><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的<span class="link local"><a href="./茎.html" title="茎 [茎]">茎</a></span>是最常见的纤维函子.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="组合圆盘"><header><h1><span class="taxon"></span>组合圆盘 <a class="slug" href="./组合圆盘.html">[组合圆盘]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>直接定义</h3>
+<p>组合 $n$-圆盘的理论是一种<span class="link local"><a href="./凝聚理论.html" title="凝聚理论 [凝聚理论]">凝聚理论</a></span>:</p>
+<ul>
+<li>类型 $X_0,\cdots,X_n$;</li>
+<li>函数符号 $s_k,t_k\colon X_k\to X_{k+1}$, $i_{k+1}\colon X_{k+1}\to X_{k}$ ($0\leq k &lt; n$);</li>
+<li>等式 $i_{k+1} s_{k} = i_{k+1} t_{k} = \mathrm{id}_{X_{k}}$, $s_{k+1} s_k = t_{k+1} s_k$, $s_{k+1} t_k = t_{k+1} t_k$ ($0\leq k &lt; n$);</li>
+<li>$X_0$ 有唯一的元素 $*$;</li>
+<li>$s_0(*) \neq t_0(*)$;</li>
+<li>若 $s_k(x) = t_k(x)$, 则 $x = s_{k-1}(y)$ 或 $x=t_{k-1}(y)$ ($1\leq k &lt; n$);</li>
+<li>对任意 $x\in X_k$, $i_{k+1}^{-1}(x)$ 带有<span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序</a></span>关系 $\leq$, 端点为 $s_k(x)$ 与 $t_k(x)$.</li>
+</ul>
+<h3>通过相对观点归纳定义</h3>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>, 可通过<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对观点</a></span>归纳定义 $\mathcal C$ 中的组合 $n$-圆盘: 它是一个序列
+$$
+X_0=*,X_1,\cdots,X_n,
+$$
+每个 $X_{k+1}$ 都是<span class="link local"><a href="./俯意象.html" title="俯意象 [俯意象]">俯意象</a></span> $\mathcal C_{/X_k}$ 中的<span class="link local"><a href="./区间.html" title="区间 [区间]">区间</a></span> (不要求为严格区间), 区间的两端分别为
+$$
+s_k,t_k\colon X_{k}\to X_{k+1};
+$$
+要求这个区间退化的地方恰好等于 $X_k$ 的边界 $s_{k-1}(X_{k-1}) \cup t_{k-1}(X_{k-1})$. 这体现了圆盘的直观: $n+1$ 维圆盘是相对于 $n$ 维圆盘的区间, 且恰在 $n$ 维圆盘的边界上退化.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="综合微分几何"><header><h1><span class="taxon"></span>综合微分几何 <a class="slug" href="./综合微分几何.html">[综合微分几何]</a></h1><div class="metadata"><ul><li class="meta-item">学科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>综合微分几何是<span class="link local"><a href="./综合数学.html" title="综合数学 [综合数学]">综合数学</a></span>的微分几何的分支.</p>
 <p>综合微分几何的模型一般是一个包含光滑流形和一些微分几何关心的<span class="link local"><a href="./无穷小空间.html" title="无穷小对象 (综合微分几何) [无穷小空间]">无穷小对象</a></span>的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>, 即其语言可理解为该意象的<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>.</p>

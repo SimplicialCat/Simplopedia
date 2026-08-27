@@ -907,8 +907,12 @@ $$</p>
 <h2>观念</h2>
 <p>Joyal 范畴 $\Theta_n$ 的对象是<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span> $(\infty,n)$-范畴的基本单元, 是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形</a></span>的推广.</p>
 <h2>定义</h2>
+<h3>归纳定义</h3>
 <p>记 $\Delta$ 为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>, $\Gamma$ 为 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">Segal 范畴 $\Gamma$</a></span>, 有典范的函子 $\gamma\colon \Delta\to\Gamma$; 详见 <span class="link local"><a href="./Segal函子γ.html" title="Segal 函子 γ [Segal函子γ]">Segal 函子 $\gamma$</a></span>.</p>
 <p><strong>定义</strong>. Joyal 范畴 $\Theta_n$ 是 $n$ 个 $\Delta$ 的<span class="link local"><a href="./圈积.html" title="圈积 (范畴论) [圈积]">圈积</a></span>, 带有典范函子 $\Theta_n \to \Gamma$.</p>
+<p>该定义出自 <span class="link local"><a href="./BergerWr.html" title="Iterated wreath product of the simplex category and iterated loop spaces [BergerWr]">Berger</a></span>.</p>
+<h3>通过组合 $n$-圆盘</h3>
+<p>范畴 $\Theta_n$ 可通过 Joyal 的 “<span class="link local"><a href="./组合圆盘.html" title="组合圆盘 [组合圆盘]">组合 $n$-圆盘</a></span>” 直接定义.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Segal函子γ"><header><h1><span class="taxon"></span>Segal 函子 γ <a class="slug" href="./Segal函子γ.html">[Segal函子γ]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>直接定义</h3>
@@ -922,15 +926,15 @@ $$
 其中 $(a,b]$ 表示整数的左开右闭区间 $\{x\in \mathbb{Z}\mid a &lt; x \leq b\}$.</li>
 </ul>
 <h3>通过 $S^1$</h3>
-<p>回忆<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span> $S^1$ 是 $\Delta^1$ 两端粘到一起的结果, 即
+<p>将<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span> $\Delta^1$ 两端粘到一起, 定义
 $$
 S^1 := \operatorname{coeq}(\Delta^0 \rightrightarrows \Delta^1).
 $$
-因而 $S^1$ 有一个基点 $\Delta^0 \to S^1$; 又注意到单纯集 $S^1$ 的每个分量有限, 故有函子
+其分量为
 $$
-S^1\colon \Delta^{\mathrm{op}} \to \mathsf{Fin}_{*/}.
+(S^1)_m = \operatorname{Hom}_{\mathsf{sSet}}(\Delta^m,S^1) \simeq \underline{m}.
 $$
-此时定义函子
+可验证函子 $S^1\colon \Delta^{\mathrm{op}} \to \mathsf{Fin}_{*/}$ 在取反范畴后正是前面定义的函子
 $$
 \gamma := (S^1)^{\mathrm{op}} \colon \Delta \to (\mathsf{Fin}_{*/})^{\mathrm{op}} = \Gamma.
 $$</p>
@@ -1231,7 +1235,7 @@ $$</p>
 <li>$\vdash (0\leq x)\land (x\leq 1)$;</li>
 <li>$(x\leq y) \land (y\leq z) \vdash (x\leq z)$;</li>
 <li>$(x\leq y) \land (y\leq x) \vdash (x=y)$;</li>
-<li>$(0=1)\vdash\bot$.</li>
+<li>$(0=1)\vdash\bot$ (有时人们也不加这一条, 而称满足这条公式的区间为<strong>严格区间</strong>).</li>
 </ul>
 <h3>通过语法范畴</h3>
 <p>区间的语法范畴是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>
@@ -1432,7 +1436,13 @@ $$</p>
 <p>此时 $P$ 的极大元 (可能不唯一) 即是树的<strong>叶</strong>.</p>
 <h3>树的态射</h3>
 <p>树的态射是个比较复杂的概念.</p>
-<p>…todo</p>
+<p>一种方便的定义是, 树的态射由如下几种<strong>基本态射</strong>生成:</p>
+<ul>
+<li>树的<strong>同构</strong>;</li>
+<li><strong>退化</strong> (degeneracy) $S \twoheadrightarrow T$, 其中 $S$ 是由 $T$ 在一条边中间插入一个新结点所得;</li>
+<li><strong>内部面映射</strong> (inner face map) $S \hookrightarrow T$, 其中 $S$ 是由 $T$ 缩合一条内边所得;</li>
+<li><strong>外部面映射</strong> (outer face map) $S \to T$, 其中 $S$ 是由 $T$ 剪除一个外顶点 (仅关联一条内边的顶点) 所得;</li>
+</ul>
 <h2>例</h2>
 <h3>线性树</h3>
 <p>线性树是形如
