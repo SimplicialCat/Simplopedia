@@ -846,12 +846,7 @@ $$
 其中两个映射 $TTX \to TX$ 分别来自 $T$ 带有的自然变换 $T^2\to T$ 以及 $X$ 带有的态射 $TX\to X$.</p>
 <p>更一般地, 对范畴 $I$, 函子范畴 $\mathsf{Fun}(I,\mathcal C)$ 也是 $\operatorname{End}(\mathcal C)$ 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>, 从而可以定义 $X\colon I\to\mathcal C$ 上的 $T$-<strong>左模</strong> (或称 $T$-代数) 结构. 它包含一个自然变换 $TX \to X$ 以及左模的条件.</p>
 <h3>作为松极限</h3>
-<p>单子上的代数还有另一种看法. 范畴 $\mathcal C^{T}$ 可定义为如下<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">余单纯对象</a></span>的<span class="link local"><a href="./松极限.html" title="松极限 [松极限]">松极限</a></span>:
-$$
-\mathcal C \rightrightarrows \mathcal C \to^3 \mathcal C\to^4\cdots,
-$$
-其中前两个函子 $\mathcal C\rightrightarrows\mathcal C$ 为 $T$ 与 $\mathrm{id}_{\mathcal C}$.</p>
-<p>甚至 $\mathcal C^{T}$ 可以更加简练地写成<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 对应的<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span> $1\to\mathsf{Cat}$ 的<span class="link local"><a href="./松极限.html" title="松极限 [松极限]">松极限</a></span>. 换言之, 考虑所有范畴上所有单子构成的 $2$-范畴
+<p>对象 $\mathcal C^{T}$ 可以更加简练地写成<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 对应的<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span> $1\to\mathsf{Cat}$ 的<span class="link local"><a href="./松极限.html" title="松极限 [松极限]">松极限</a></span>. 换言之, 考虑所有范畴上所有单子构成的 $2$-范畴
 $$
 \mathsf{Mnd}(\mathsf{Cat}) = \mathsf{Fun}^{\mathrm{lax}}(1,\mathsf{Cat}),
 $$
@@ -911,6 +906,63 @@ $$</li>
 <p>固定 $\mathcal C$ 上的一个单子 $T$. 考虑函子 $F\colon \mathcal C \to \mathsf{Kl}$, 对象 $X$ 映射到 $X$, 态射 $X\to Y$ 映射到 $\mathcal C$ 中的态射 $X\to Y\to TY$. 那么 $F$ 具有 $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">右模</a></span>结构:
 自然变换 $FT \to F$ 在对象 $X$ 上即为 $\mathcal C$ 中的态射 $\mathrm{id}\colon TX\to TX$.</p>
 <p>进一步, 该右模结构是万有的 $T$-右模, 即任意 $T$-右模 $G\colon \mathcal C\to\mathcal D$ 唯一地穿过 $F\colon \mathcal C\to\mathsf{Kl}$. 换言之, 右模结构 $G\colon \mathcal C\to\mathcal D$ 等同于 $\mathsf{Kl}$ 出发的函子 $\mathsf{Kl}\to\mathcal D$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="下降"><header><h1><span class="taxon"></span>下降 <a class="slug" href="./下降.html">[下降]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>基本设定</h2>
+<p>下降的概念来自几何学中各种结构沿覆盖映射的 “粘合”.</p>
+<p>这里所说的结构, 就是对每个几何对象 $X$ 赋予一个范畴
+$\mathcal C_{X}\in \mathsf{Cat}$,
+且对每个态射 $f\colon Y\to X$ 可作<span class="link local"><a href="./推前.html" title="推前, 拉回 (纤维范畴) [推前]">拉回</a></span>
+$f^*\colon \mathcal C_Y\to\mathcal C_X$.
+这种结构又称为<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">纤维范畴</a></span>. 常见的 “结构” 包括向量丛, 层, 以及<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对观点</a></span>的几何对象 (此时范畴 $\mathcal C_{X}$ 往往就是<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span> $\mathcal C_{/X}$).</p>
+<p>常常还要求可作<span class="link local"><a href="./推前.html" title="推前, 拉回 (纤维范畴) [推前]">推前</a></span>
+$f_!\colon \mathcal C_X\to\mathcal C_Y,$
+满足
+$f_! \dashv f^*.$
+这种结构又称为<span class="link local"><a href="./双纤维化.html" title="双纤维化 [双纤维化]">双纤维化</a></span> (bifibration).</p>
+<p>设
+$f\colon Y\to X$
+是某种 “覆盖”, 例如 $X$ 为拓扑空间, $Y = \bigsqcup U_i$ 是 $X$ 的若干开集构成的开覆盖, 那么对于 $Y$ 上的一个结构 $\mathcal F_Y\in\mathcal C_Y$, 我们可以问它是否来自 $X$ 上的某个对象 $\mathcal F_X$ 的<span class="link local"><a href="./推前.html" title="推前, 拉回 (纤维范畴) [推前]">拉回</a></span>
+$$
+\mathcal F_Y \simeq f^* \mathcal F_X.
+$$
+进一步, 若 $\mathcal F_Y$ 具有某性质, 我们可以问是否 $\mathcal F_X$ 也有同样的性质.</p>
+<h3>Čech 脉</h3>
+<p>一般而言, 几何对象 $X,Y$ 是某个<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的对象, 或者这类几何对象的范畴至少可以嵌入到某个意象中. 对于<span class="link local"><a href="./意象中的满射.html" title="意象中的满射 [意象中的满射]">意象中的满射</a></span> $f\colon Y\to X$, 我们知道 $X$ 可以<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>为 $f$ 的 <span class="link local"><a href="./Čech脉.html" title="Čech 脉 [Čech脉]">Čech 脉</a></span>的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>
+$$
+X = \operatorname{colim}\big(\cdots \to^3 Y\times_X Y \rightrightarrows Y \big).
+$$
+这可以理解为用 $Y$ 及其相对于 $X$ 的各阶自相交 “粘出” $X$ 的具体方法.</p>
+<p>一族相容的结构
+$$
+\mathcal F_Y, \mathcal F_{Y\times_X Y},\cdots
+$$
+称为沿态射 $f\colon Y\to X$ 的一份<strong>下降资料</strong> (descent datum).
+下降资料的范畴是余单纯极限
+$$
+\mathsf{Desc}(f):= \operatorname{lim} \big(\mathcal C_Y \rightrightarrows \mathcal C_{Y\times_X Y} \to^3 \cdots\big).
+$$</p>
+<p>对于许多种结构, 我们有理由希望下降资料能够给出 $\mathcal F_X$, 即比较函子 $\mathcal C_X\to\mathsf{Desc}(f)$ 为等价.</p>
+<p>例如在<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>中, <span class="link local"><a href="./俯意象.html" title="俯意象 [俯意象]">俯意象</a></span> $\mathcal C_{/X}$ 的下降性质就是意象的一种定义.</p>
+<h2>单子式下降</h2>
+<p>Bénabou 与 Roubaud 的文章 <em></em><span class="link local"><a href="./BénabouRoubaudMonDesc.html" title="Monades et descente [BénabouRoubaudMonDesc]">Monades et descente</a></span> (单子与下降) 指出在适当的 <span class="link local"><a href="./基变换.html" title="基变换 [基变换]">Beck–Chevalley 条件</a></span>下, 沿态射 $f$ 的下降资料可以转化为<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $f^*f_!$ 的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>.</p>
+<p>回忆, 伴随 $f_! \dashv f^*$ 诱导了 $\mathcal C_Y$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>
+$T_f := f^*f_!\colon \mathcal C_Y \to \mathcal C_Y.$
+参见<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">伴随给出单子</a></span>.</p>
+<p>考虑<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>图
+$$
+\begin{CD}
+Y\times_X Y @&gt;{\mathrm{pr}_1}&gt;&gt; Y \\
+@V{\mathrm{pr}_0}VV @VV{f}V \\
+Y @&gt;&gt;{f}&gt; X
+\end{CD}
+$$
+给出的 <span class="link local"><a href="./基变换.html" title="基变换 [基变换]">Beck–Chevalley 基变换</a></span>
+$$
+(\mathrm{pr}_1)_!\mathrm{pr}_0^* \to f^* f_! = T_f,
+$$</p>
+<p><strong>假设 1</strong>. 上述变换为同构.</p>
+<p>在假设 1 之下,</p>
+<p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">todo</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="代数理论"><header><h1><span class="taxon"></span>代数理论 <a class="slug" href="./代数理论.html">[代数理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./逻辑.html" title="逻辑 [逻辑]">逻辑</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>代数</strong>的最初意义是对运算与等式的研究. 一个<strong>代数理论</strong>就是若干种运算和这些运算之间的若干条等式. 代数理论的<strong>模型</strong>就是一个集合 (或一般范畴的对象) 上带有指定的运算, 满足指定的等式.</p>
@@ -1036,6 +1088,70 @@ $$</p>
 $$
 \int_M A = |B(D_M, D_n, A)|.
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="带元数的单子"><header><h1><span class="taxon"></span>带元数的单子 <a class="slug" href="./带元数的单子.html">[带元数的单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>带元数的单子</strong> (monad with arities) 是 <span class="link local"><a href="./BergerMelliesWeberMonAr.html" title="Monads with arities and their associated theories [BergerMelliesWeberMonAr]">Berger–Melliès–Weber</a></span> 引入的概念, 能够表达以下结构:</p>
+<ul>
+<li><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴</a></span> (甚至<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>);</li>
+<li><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>;</li>
+<li><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>.</li>
+</ul>
+<p>直观上, 范畴 $\mathcal E$ 上的单子 $T$ 以子范畴 $\mathcal A\subset\mathcal E$ 为元数, 就是说为了表达一个 $T$-结构所需的运算, 只需用 $\mathcal A$ 的对象来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>. 例如要表达一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ 上的一个<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>结构, 只需要考虑所有 $n$ 元集合到 $X$ 的映射 ($n=0,1,2,\cdots$).</p>
+<h2>定义</h2>
+<p>设 $\mathcal A\subset\mathcal E$ 为<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>全子范畴, 称为<strong>元数</strong> (arities) 的范畴.</p>
+<p>回忆, 子范畴 $\mathcal A$ 的稠密性是指</p>
+<ul>
+<li><span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子
+$$
+  \nu_{\mathcal A}\colon \mathcal E \to \widehat {\mathcal A}
+$$
+是<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>;</li>
+<li>$\mathcal E$ 的每个对象 $X$ 都是如下余极限:
+$$
+X = \operatorname{colim}_{A\to X,A\in\mathcal A}A.\ (\star)
+$$</li>
+</ul>
+<p><strong>定义</strong>. 对于 $\mathcal E$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$, 若 $T$ 保持所有形如 $(\star)$ 的余极限, 则称单子 $T$ 以 $\mathcal A$ 为<strong>元数</strong> (arity).</p>
+<h3>范畴 $\Theta_T$</h3>
+<p>设 $T$ 为 $\mathcal E$ 上的单子, 定义 $\Theta_T$ 为 $\mathcal A$ 的对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span> $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>构成的范畴. 那么有自由代数函子
+$$
+j_T\colon \mathcal A \to \Theta_T.
+$$</p>
+<p>我们也可以将 $\Theta_T$ 的对象理解为 $\mathcal A$ 的对象 $A$, 而将 $\Theta_T$ 中的态射 $A\to B$ 理解为 $\mathcal E$ 中的态射 $A \to TB$. (这是 <span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>的一个全子范畴.)</p>
+<p>嵌入 $\Theta_T \hookrightarrow \mathcal E^T$ 也有相应的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子
+$$
+\nu_T \colon \mathcal E^T \to \widehat {\Theta_T},
+$$
+且有交换方块
+$$
+\begin{CD}
+\mathcal E^T @&gt;{\nu_T}&gt;&gt; \widehat {\Theta_T} \\
+@V{U}VV @VV{j_T^*}V \\
+\mathcal E @&gt;&gt;{\nu_A}&gt; \widehat {\mathcal A}.
+\end{CD}
+$$</p>
+<p>注意到由于 $j_T$ <span class="link local"><a href="./本质满函子.html" title="本质满函子 [本质满函子]">本质满</a></span>, 故 $j_T^*$ 是<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的.</p>
+<p><strong>命题</strong>. 如下两个条件等价:</p>
+<ul>
+<li>$T$ 是以 $\mathcal A$ 为元数的单子;</li>
+<li></li>
+</ul>
+<p><strong>定理</strong>. 在上述命题的条件下,</p>
+<ul>
+<li>$\nu_T$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>. 换言之, $T$-代数可由 $\mathcal A$ 的对象生成的自由代数来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>;</li>
+<li>对于 $\Theta_T$ 上的预层 $X$, 其落在 $\nu_T$ 的像中当且仅当其沿 $j_T$ 的限制落在 $\nu_A$ 的像中.</li>
+</ul>
+<h3>理论</h3>
+<p>上述范畴 $\Theta_T$ 及函子 $j_T\colon \mathcal A\to\Theta_T$ 可以抽象如下.</p>
+<p>设 $\mathcal A\subset\mathcal E$ 为<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>全子范畴, 定义一个以 $\mathcal A$ 为元数的<strong>理论</strong>为一个函子
+$$
+j\colon \mathcal A \to \Theta,
+$$
+使得伴随 $j_! \dashv j^*$ <span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">诱导的单子</a></span> $j^*j_!\colon \widehat {\mathcal A} \to \widehat {\mathcal A}$ 保持<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子 $\nu_{\mathcal A}\colon \mathcal E\to\widehat {\mathcal A}$ 的像.</p>
+<p>该理论的一个<strong>模型</strong>是 $\Theta$ 上的一个预层, 满足其沿 $j$ 的限制落在 $\nu_{\mathcal A}$ 的像中.</p>
+<p><strong>定理</strong>. 对于固定的 $(\mathcal E,\mathcal A)$, $\mathcal E$ 上以 $\mathcal A$ 为元数的单子 $T$ 等价于以 $\mathcal A$ 为元数的理论 $j_T\colon \mathcal A\to \Theta_T$, 且单子 $T$ 上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>等同于理论 $\Theta_T$ 的模型.</p>
+<h2>例</h2>
+<h3>Lawvere 理论</h3>
 </details></section><section class="block" data-taxon=""><details ><summary id="杠构造"><header><h1><span class="taxon"></span>杠构造 <a class="slug" href="./杠构造.html">[杠构造]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>对于范畴 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 以及其上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span> $A$, 杠构造 (bar construction) 给出<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>范畴 $\mathcal C^T$ 中的一个<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">增广单纯对象</a></span>
@@ -1170,7 +1286,7 @@ $$</p>
 $$
 U=\operatorname{Hom}_{\mathsf{Set}}(1,U-)=\operatorname{Hom}_{\mathcal C}(F(1),-).
 $$
-且此时 $F(1)$ 的底层结构具有<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的结构. 这是<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>的简单应用:
+且此时 $F(1)$ 的底层集合 (或范畴) 具有<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的结构. 这是<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>的简单应用:
 $$
 U(F(1)) = \operatorname{Hom}_{\mathcal C}(F(1),F(1)) = \operatorname{End}_{\mathsf{Fun}(\mathcal C,\mathsf{Set})}(U).
 $$</p>
@@ -1180,6 +1296,7 @@ $$</p>
 <li>一个元素自由生成的交换环 $\mathbb{Z}[x]$ 是遗忘函子 $U\colon \mathsf{Ring} \to \mathsf{Set}$ 的余表示对象, $U(\mathbb{Z}[x]) = \operatorname{Hom}_{\mathsf{Ring}}(\mathbb{Z}[x],\mathbb{Z}[x]) = \operatorname{End}(U)\simeq (\mathbb{Z}[x],\circ)$.</li>
 <li>更一般地, 给定交换环 $A$, 一个元素自由生成的 $A$-代数 $A[x]$ 是遗忘函子 $U\colon \mathsf{Alg}_A \to \mathsf{Set}$ 的余表示对象, $U(A[x]) = \operatorname{Hom}_{\mathsf{Alg}_A}(A[x],A[x]) = \operatorname{End}(U)$.</li>
 <li>对于对称幺半范畴 $\mathcal C$, 一个对象自由生成的 $\mathcal C$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>对称幺半范畴是<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>的范畴, 其上有一个幺半结构, 对应于自函子的复合. 详见<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>.</li>
+<li>一个对象自由生成的<span class="link local"><a href="./半加性范畴.html" title="半加性范畴 [半加性范畴]">半加性 $(1,1)$-范畴</a></span>是 $\operatorname{h}\mathsf{Span}(\mathsf{Fin})$ (也即 $\mathsf{Fin}$ 的<span class="link local"><a href="./关系2-范畴.html" title="关系 2-范畴 [关系2-范畴]">关系范畴</a></span>的同伦范畴),</li>
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="超滤"><header><h1><span class="taxon"></span>超滤 <a class="slug" href="./超滤.html">[超滤]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>

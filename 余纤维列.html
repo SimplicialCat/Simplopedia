@@ -842,6 +842,32 @@ $$
 <p>环的<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>称为 <span class="link local"><a href="./higherZar.html" title="高阶 Zariski 几何 [higherZar]">$2$-环</a></span>, 大致上是<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span><span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>. 环的<span class="link local"><a href="./谱(代数).html" title="谱 (代数–几何对偶) [谱(代数)]">谱</a></span>在 $2$-环中有一类比, 称为 <strong>Balmer 谱</strong>, 其中的点是所谓厚张量理想 (thick tensor ideal), 厚的意思是关于 <span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">(余) 纤维</a></span>与<span class="link local"><a href="./收缩.html" title="收缩 [收缩]">收缩</a></span>封闭.</p>
 <h2>定义</h2>
 <p>设 $\mathcal K$ 为 <span class="link local"><a href="./higherZar.html" title="高阶 Zariski 几何 [higherZar]">$2$-环</a></span>, 即<span class="link local"><a href="./幂等完备范畴.html" title="幂等完备范畴 [幂等完备范畴]">幂等完备</a></span>小<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span>范畴. 考虑其中的根理想, 即满足 $x^{\otimes 2}\in\mathcal J$ 蕴涵 $x\in\mathcal J$ 的厚张量理想 $\mathcal J$, 构成的<span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span> $\mathsf{Rad}(\mathcal K)$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="CW复形"><header><h1><span class="taxon"></span>CW 复形 <a class="slug" href="./CW复形.html">[CW复形]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>CW 复形是通过一系列粘贴胞腔操作得到的空间:
+$$
+X = \operatorname{colim}(X_0\to X_1\to\cdots),
+$$
+每个嵌入 $X_n\to X_{n+1}$ 来自拓扑空间范畴中的<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>
+$$
+\begin{CD}
+\bigcup_I S^n @&gt;&gt;&gt; X_n \\
+@VVV @VVV \\
+\bigcup_I D^{n+1} @&gt;&gt;&gt; X_{n+1}.
+\end{CD}
+$$</p>
+<p>CW 复形在<span class="link local"><a href="./同伦论.html" title="同伦论 [同伦论]">同伦论</a></span>上的意义是其对应的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ 自动带有一个<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤过</a></span>
+$$
+X_0 \to X_1 \to X_2\to \cdots,
+$$
+其逐项<span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">余纤维</a></span>为球面束 (球面的一点并).
+$$
+\begin{CD}
+I\times S^n @&gt;&gt;&gt; X_n @&gt;&gt;&gt; * \\
+@VVV @VVV @VVV \\
+I @&gt;&gt;&gt; X_{n+1} @&gt;&gt;&gt; \bigvee_I S^{n+1}
+\end{CD}
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="GrpAni"><header><h1><span class="taxon"></span>生象群 <a class="slug" href="./GrpAni.html">[GrpAni]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>如果说<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>是集合在高阶范畴语境中对应的概念, 那么生象群则是群的对应概念. 所谓群就是一个对象的对称性的抽象; 生象群就是一个 $(\infty,1)$-范畴中一个对象的自同构的抽象, 也就是一个带基点 $(\infty,0)$-范畴.</p>
 <p>同时, 生象群也可视为 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中特殊的 <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">$\mathbb E_1$-代数</a></span>, 其每个元素都有逆.</p>

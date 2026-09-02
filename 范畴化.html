@@ -1063,42 +1063,65 @@ $$
 <p>表格有没有可能向右延申? 有没有可能, 范畴的 $2$-范畴 $\mathsf{Cat}$ 不是唯一合理的 “范畴的范畴”, 而是所有的范畴论语言都可以在一个 “$2$-意象” 中解读? 这种语言该如何设计? 我不知道.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="余端"><header><h1><span class="taxon"></span>余端 <a class="slug" href="./余端.html">[余端]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>余端是<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>的对偶概念, 可理解为某种 (加权) 余极限, 或函数对测度积分的类比或<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>.</p>
-<h3>与测度积分的类比</h3>
-<p>对于函子 $F\colon \mathcal C\to \mathsf{Set}$, $G\colon \mathcal C^{\mathrm{op}}\to\mathsf{Set}$, 余端
-$$
-\int_{c\in\mathcal C} F(c) \times G(c)
-$$
-可视为可测空间上的函数对测度积分的类比或<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>, 其中 $F$ 是 “被积函数”, $G$ 是 “测度”.
-这个余端也可理解为<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span> $F\colon 1\to \mathcal C$ 与 $G\colon \mathcal C\to 1$ 的复合, 也即<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">模</a></span>的张量积. (当然, 这里的范畴也可以改成 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>, $\mathsf{Set}$ 改成 $\mathcal V$.)</p>
-<p><strong>例</strong>. 关于常值函子 $G = 1$ 的积分 $\int_{c\in\mathcal C}F(c)$ 就是函子 $F$ 的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>; 因此一般地上述余端又称为<strong>加权余极限</strong> (weighted colimit).</p>
-<p><strong>例</strong>. <span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span> $G = \operatorname{Hom}_{\mathcal C}(-,X)$ 是 “delta 分布” 的类比,
-$$
-\int_{c\in \mathcal C} F(c) \times \operatorname{Hom}_{\mathcal C}(-,X) \simeq F(X).
-$$</p>
+<p>余端是<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>的对偶概念, 可理解为<span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span>, 它是 “函数对测度积分” 的类比与<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>.</p>
 <h2>定义</h2>
-<h3>作为余等化子</h3>
-<p>函子 $F\colon \mathcal C^{\mathrm{op}}\times\mathcal C\to\mathsf{Set}$ 的余端是如下的<span class="link local"><a href="./余等化子.html" title="余等化子 [余等化子]">余等化子</a></span>:
+<h3>作为余极限</h3>
+<p>函子 $F\colon \mathcal C^{\mathrm{op}}\times\mathcal C\to\mathcal{D}$ 的余端是以<span class="link local"><a href="./扭箭头范畴.html" title="扭箭头范畴 [扭箭头范畴]">扭箭头范畴</a></span>为指标的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>:
+$$
+\int_{\mathcal C} F = \operatorname{colim}_{(X\to Y)\in\mathsf{TwArr}(\mathcal C)} F(X,Y).
+$$</p>
+<p>上式的一种计算方式是如下的<span class="link local"><a href="./余等化子.html" title="余等化子 [余等化子]">余等化子</a></span>:
 $$
 \int_{\mathcal{C}}F = \operatorname{coeq}\Big(
     \coprod_{X\to Y} F(X,Y) \rightrightarrows \coprod_{X}F(X,X)
 \Big).
 $$</p>
-<h3>作为余极限</h3>
-<p>函子 $F\colon \mathcal C^{\mathrm{op}}\times\mathcal C\to\mathsf{Set}$ 的余端是以<span class="link local"><a href="./扭箭头范畴.html" title="扭箭头范畴 [扭箭头范畴]">扭箭头范畴</a></span>为指标的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>:
-$$
-\int_{\mathcal C} F = \operatorname{colim}_{(X\to Y)\in\mathsf{TwArr}(\mathcal C)} F(X,Y).
-$$</p>
 <h2>性质</h2>
-<h3>与 Hom 的交互</h3>
+<h3>与 Hom 及加权余极限的关系</h3>
 <p>由余端出发的 Hom 可转换为 Hom 的<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>:
 $$
-\operatorname{Hom}(\int_{\mathcal C}F(-,-),-) \simeq \int_{\mathcal C}\operatorname{Hom}(F(-,-),-).
+\begin{aligned}
+&amp;\operatorname{Hom}_{\mathcal D}\Big(\int_{\mathcal C}F(-,-),d\Big) \\
+&amp;\simeq
+\operatorname{lim}_{(X\to Y)\in\mathsf{TwArr}(\mathcal C)}\operatorname{Hom}_{\mathcal D}(F(X,Y),d)\\
+&amp;\simeq \int^*_{\mathcal C}\operatorname{Hom}_{\mathcal D}(F(-,-),d).
+\end{aligned}
+$$</p>
+<p><strong>推论</strong>. 函子 $F\colon \mathcal C^{\mathrm{op}}\times\mathcal C\to\mathcal{D}$ 的余端等于以 $\operatorname{Hom}$ 函子为权的<span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span>:
+$$
+\int_{\mathcal C} F = \operatorname{colim}^{\operatorname{Hom}}F.
+$$</p>
+<p><em>证明</em>.
+$$
+\begin{aligned}
+&amp;{\operatorname{Hom}_{\mathcal D}}{\Big(
+    \int_{\mathcal C}F,d\Big)}\\
+    &amp;\simeq
+    \int_{\mathcal C}^*\operatorname{Hom}_{\mathcal D}(F(-,-),d)\\
+    &amp;\simeq
+    \int^*_{(X,Y)\in\mathcal C^{\mathrm{op}}\times\mathcal C}\operatorname{Hom}(\operatorname{Hom}_{\mathcal C}(X,Y),\operatorname{Hom}_{\mathcal D}(F(X,Y),d))\\
+    &amp;\simeq\operatorname{Hom}_{\mathcal D}(\operatorname{colim}^{\operatorname{Hom}}F,d)
+\end{aligned}
 $$</p>
 <h2>例</h2>
-<ul>
-<li><span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>的复合</li>
-</ul>
+<h3>代函子的复合</h3>
+<p>参见<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>.</p>
+<h3>与测度积分的类比</h3>
+<p>对于函子 $F\colon \mathcal C\to \mathcal{V}$, $G\colon \mathcal C^{\mathrm{op}}\to\mathcal{V}$, 余端
+$$
+\int_{c\in\mathcal C} F(c) \times G(c)
+$$
+可视为可测空间上的函数对测度积分的类比或<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>, 其中 $F$ 是 “被积函数”, $G$ 是 “测度”.
+这个余端也可理解为<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span> $F\colon 1\to \mathcal C$ 与 $G\colon \mathcal C\to 1$ 的复合, 也即<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">模</a></span>的张量积.</p>
+<p><strong>例</strong>. 在 $\mathcal V = \mathsf{Ani}$ 情形, 关于常值函子 $G = 1$ 的 “积分”
+$$
+\int_{c\in\mathcal C}F(c)
+$$
+就是函子 $F$ 的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>; 一般地余端可理解为<span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span>.</p>
+<p><strong>例</strong>. <span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span> $G = \operatorname{Hom}_{\mathcal C}(-,X)$ 是 “$\delta$-分布” 的类比,
+$$
+\int_{c\in \mathcal C} F(c) \times \operatorname{Hom}_{\mathcal C}(-,X) \simeq F(X).
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单子"><header><h1><span class="taxon"></span>单子 <a class="slug" href="./单子.html">[单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>单子 (monad) 是一种具有许多理解方式的对象, 很难说哪种理解最为基本:</p>
@@ -1316,7 +1339,7 @@ $$
 $$
 U \mapsto \mathsf{Mod}(D(U)).
 $$</p>
-<p>设 $\iota\colon \mathcal C \to \widehat {\mathcal C}$ 为稠密嵌入 (如<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span>), 有两种方式将 $D$ 的范畴化扩张至 $\widehat {\mathcal C}$:</p>
+<p>设 $\iota\colon \mathcal C \to \widehat {\mathcal C}$ 为<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密嵌入</a></span> (如<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span>), 有两种方式将 $D$ 的范畴化扩张至 $\widehat {\mathcal C}$:</p>
 <ol>
 <li>先将右 Kan 扩张至 $\widehat {\mathcal C}$, 再范畴化;</li>
 <li>先范畴化, 再右 Kan 扩张至 $\widehat {\mathcal C}$.</li>

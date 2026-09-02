@@ -829,9 +829,25 @@
 <h2>定义</h2>
 <p><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span>仍是意象, 称之为俯意象.</p>
 <h2>性质</h2>
+<h3>函子性</h3>
 <p>意象 $\mathcal C$ 的所有俯意象构成函子
 $$
 \mathcal C^{\mathrm{op}} \to \mathsf{Cat},\ X\mapsto\mathcal C_{/X}.
+$$</p>
+<h3>下降</h3>
+<p>俯意象函子
+$$
+    \mathcal C^{\mathrm{op}} \to \mathsf{Cat},\, X\mapsto\mathcal C_{/X}
+$$
+保持极限. 换言之, 对于 $\mathcal C$ 中的余极限 $X=\operatorname{colim}_i X_i$, 有
+$$
+\mathcal C_{/X} \simeq \operatorname{lim}_i \mathcal C_{/X_i}.
+$$
+这一事实甚至可以作为意象的定义.</p>
+<h3>与几何态射的互动</h3>
+<p>对于意象之间的几何态射 $f\colon \mathcal E \to \mathcal S$ 与 $\mathcal S$ 的对象 $X$, 有几何态射
+$$
+f_{/X} \colon \mathcal E_{/f^*X} \to \mathcal S_{/X}.
 $$</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Postnikov塔"><header><h1><span class="taxon"></span>Postnikov 塔 <a class="slug" href="./Postnikov塔.html">[Postnikov塔]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
@@ -845,6 +861,63 @@ $$</p>
 <p>在一般的<span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">意象</a></span> $\mathcal C$ 中, Postnikov 塔中的映射 $\tau_{\leq n} X \to \tau_{\leq n-1} X$ 是<span class="link local"><a href="./俯意象.html" title="俯意象 [俯意象]">俯意象</a></span> $\mathcal C_{/ \tau_{\leq n-1}X}$ 中的 $n$-截断 $(n-1)$-连通对象, 即 $n$-<span class="link local"><a href="./束.html" title="束 [束]">束</a></span>.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Whitehead塔.html" title="Whitehead 塔 [Whitehead塔]">Whitehead 塔</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="下降"><header><h1><span class="taxon"></span>下降 <a class="slug" href="./下降.html">[下降]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>基本设定</h2>
+<p>下降的概念来自几何学中各种结构沿覆盖映射的 “粘合”.</p>
+<p>这里所说的结构, 就是对每个几何对象 $X$ 赋予一个范畴
+$\mathcal C_{X}\in \mathsf{Cat}$,
+且对每个态射 $f\colon Y\to X$ 可作<span class="link local"><a href="./推前.html" title="推前, 拉回 (纤维范畴) [推前]">拉回</a></span>
+$f^*\colon \mathcal C_Y\to\mathcal C_X$.
+这种结构又称为<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">纤维范畴</a></span>. 常见的 “结构” 包括向量丛, 层, 以及<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对观点</a></span>的几何对象 (此时范畴 $\mathcal C_{X}$ 往往就是<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span> $\mathcal C_{/X}$).</p>
+<p>常常还要求可作<span class="link local"><a href="./推前.html" title="推前, 拉回 (纤维范畴) [推前]">推前</a></span>
+$f_!\colon \mathcal C_X\to\mathcal C_Y,$
+满足
+$f_! \dashv f^*.$
+这种结构又称为<span class="link local"><a href="./双纤维化.html" title="双纤维化 [双纤维化]">双纤维化</a></span> (bifibration).</p>
+<p>设
+$f\colon Y\to X$
+是某种 “覆盖”, 例如 $X$ 为拓扑空间, $Y = \bigsqcup U_i$ 是 $X$ 的若干开集构成的开覆盖, 那么对于 $Y$ 上的一个结构 $\mathcal F_Y\in\mathcal C_Y$, 我们可以问它是否来自 $X$ 上的某个对象 $\mathcal F_X$ 的<span class="link local"><a href="./推前.html" title="推前, 拉回 (纤维范畴) [推前]">拉回</a></span>
+$$
+\mathcal F_Y \simeq f^* \mathcal F_X.
+$$
+进一步, 若 $\mathcal F_Y$ 具有某性质, 我们可以问是否 $\mathcal F_X$ 也有同样的性质.</p>
+<h3>Čech 脉</h3>
+<p>一般而言, 几何对象 $X,Y$ 是某个<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的对象, 或者这类几何对象的范畴至少可以嵌入到某个意象中. 对于<span class="link local"><a href="./意象中的满射.html" title="意象中的满射 [意象中的满射]">意象中的满射</a></span> $f\colon Y\to X$, 我们知道 $X$ 可以<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>为 $f$ 的 <span class="link local"><a href="./Čech脉.html" title="Čech 脉 [Čech脉]">Čech 脉</a></span>的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>
+$$
+X = \operatorname{colim}\big(\cdots \to^3 Y\times_X Y \rightrightarrows Y \big).
+$$
+这可以理解为用 $Y$ 及其相对于 $X$ 的各阶自相交 “粘出” $X$ 的具体方法.</p>
+<p>一族相容的结构
+$$
+\mathcal F_Y, \mathcal F_{Y\times_X Y},\cdots
+$$
+称为沿态射 $f\colon Y\to X$ 的一份<strong>下降资料</strong> (descent datum).
+下降资料的范畴是余单纯极限
+$$
+\mathsf{Desc}(f):= \operatorname{lim} \big(\mathcal C_Y \rightrightarrows \mathcal C_{Y\times_X Y} \to^3 \cdots\big).
+$$</p>
+<p>对于许多种结构, 我们有理由希望下降资料能够给出 $\mathcal F_X$, 即比较函子 $\mathcal C_X\to\mathsf{Desc}(f)$ 为等价.</p>
+<p>例如在<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>中, <span class="link local"><a href="./俯意象.html" title="俯意象 [俯意象]">俯意象</a></span> $\mathcal C_{/X}$ 的下降性质就是意象的一种定义.</p>
+<h2>单子式下降</h2>
+<p>Bénabou 与 Roubaud 的文章 <em></em><span class="link local"><a href="./BénabouRoubaudMonDesc.html" title="Monades et descente [BénabouRoubaudMonDesc]">Monades et descente</a></span> (单子与下降) 指出在适当的 <span class="link local"><a href="./基变换.html" title="基变换 [基变换]">Beck–Chevalley 条件</a></span>下, 沿态射 $f$ 的下降资料可以转化为<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $f^*f_!$ 的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>.</p>
+<p>回忆, 伴随 $f_! \dashv f^*$ 诱导了 $\mathcal C_Y$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>
+$T_f := f^*f_!\colon \mathcal C_Y \to \mathcal C_Y.$
+参见<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">伴随给出单子</a></span>.</p>
+<p>考虑<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>图
+$$
+\begin{CD}
+Y\times_X Y @&gt;{\mathrm{pr}_1}&gt;&gt; Y \\
+@V{\mathrm{pr}_0}VV @VV{f}V \\
+Y @&gt;&gt;{f}&gt; X
+\end{CD}
+$$
+给出的 <span class="link local"><a href="./基变换.html" title="基变换 [基变换]">Beck–Chevalley 基变换</a></span>
+$$
+(\mathrm{pr}_1)_!\mathrm{pr}_0^* \to f^* f_! = T_f,
+$$</p>
+<p><strong>假设 1</strong>. 上述变换为同构.</p>
+<p>在假设 1 之下,</p>
+<p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">todo</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="主丛"><header><h1><span class="taxon"></span>主齐性空间, 主丛 <a class="slug" href="./主丛.html">[主丛]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>主齐性空间</strong> (principal homogeneous space), 又称<strong>旋子</strong> (torsor), 是一个 “忘掉了单位元在哪里的群”. 对于群 $G$, 一个 $G$-主齐性空间是一个带有 $G$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>的对象 $P$, 且满足其商 $P / G$ 是一个点 (在 $1$-范畴语境中这等同于说作用是自由且<span class="link local"><a href="./传递作用.html" title="传递作用 [传递作用]">传递</a></span>的).</p>
@@ -967,6 +1040,7 @@ $$
 <h2>观念</h2>
 <h3>作为集合范畴的推广</h3>
 <p>意象 (topos) 是一种具有类似集合范畴 $\mathsf{Set}$ 的性质的范畴; 这些性质使得意象的<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>能够支持集合的许多操作, 如构造两个集合 $X,Y$ 的无交并 $X + Y$, 乘积 $X\times Y$, 映射的集合 $Y^X$ 等等.</p>
+<p>用这种观念看待的意象称为<span class="link local"><a href="./大意象.html" title="大意象 [大意象]">大意象</a></span>.</p>
 <p>不过需要注意的是, 意象的<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>所支持的逻辑是<span class="link local"><a href="./直觉主义逻辑.html" title="直觉主义逻辑 [直觉主义逻辑]">直觉主义逻辑</a></span>, 而不一定是经典逻辑 (见 <span class="link local"><a href="./Boole意象.html" title="Boole 意象 [Boole意象]">Boole 意象</a></span>), 其中排中律和选择公理可能不成立. 例如拓扑空间上的层意象一般不是 Boole 意象, 原因来自于开集的补集不一定是开集.</p>
 <blockquote>
 <p>没有人能将我们驱逐出 Contor 为我们创造的 (集合论的) 天堂. —— David Hilbert (1926)</p>
@@ -982,6 +1056,7 @@ $$
 f\colon \mathcal X\to\mathcal Y,
 $$
 其按定义是一对伴随 $f^* \dashv f_*$, 我们也应将其想象为假想的几何对象上层的拉回与推前.</p>
+<p>用这种观念看待的意象称为<span class="link local"><a href="./小意象.html" title="小意象 [小意象]">小意象</a></span>.</p>
 <blockquote>
 <p>L’objet de la Topologie est l’étude des topos (et non des seuls espaces topologiques).</p>
 <p>拓扑学的目标是研究意象, 而不仅是拓扑空间.</p>
@@ -1258,23 +1333,34 @@ $$</p>
 <p>组合 $n$-圆盘的理论是一种<span class="link local"><a href="./凝聚理论.html" title="凝聚理论 [凝聚理论]">凝聚理论</a></span>:</p>
 <ul>
 <li>类型 $X_0,\cdots,X_n$;</li>
-<li>函数符号 $s_k,t_k\colon X_k\to X_{k+1}$, $i_{k+1}\colon X_{k+1}\to X_{k}$ ($0\leq k &lt; n$);</li>
-<li>等式 $i_{k+1} s_{k} = i_{k+1} t_{k} = \mathrm{id}_{X_{k}}$, $s_{k+1} s_k = t_{k+1} s_k$, $s_{k+1} t_k = t_{k+1} t_k$ ($0\leq k &lt; n$);</li>
+<li>函数符号 $s_k,t_k\colon X_k\to X_{k+1}$, $p_{k+1}\colon X_{k+1}\to X_{k}$ ($0\leq k &lt; n$);</li>
+<li>等式 $p_{k+1} s_{k} = p_{k+1} t_{k} = \mathrm{id}_{X_{k}}$, $s_{k+1} s_k = t_{k+1} s_k$, $s_{k+1} t_k = t_{k+1} t_k$ ($0\leq k &lt; n$);</li>
 <li>$X_0$ 有唯一的元素 $*$;</li>
 <li>$s_0(*) \neq t_0(*)$;</li>
 <li>若 $s_k(x) = t_k(x)$, 则 $x = s_{k-1}(y)$ 或 $x=t_{k-1}(y)$ ($1\leq k &lt; n$);</li>
-<li>对任意 $x\in X_k$, $i_{k+1}^{-1}(x)$ 带有<span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序</a></span>关系 $\leq$, 端点为 $s_k(x)$ 与 $t_k(x)$.</li>
+<li>对任意 $x\in X_k$, $p_{k+1}^{-1}(x)$ 带有<span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序</a></span>关系 $\leq$, 端点为 $s_k(x)$ 与 $t_k(x)$.</li>
 </ul>
 <h3>通过相对观点归纳定义</h3>
 <p>设 $\mathcal C$ 为<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>, 可通过<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对观点</a></span>归纳定义 $\mathcal C$ 中的组合 $n$-圆盘: 它是一个序列
 $$
-X_0=*,X_1,\cdots,X_n,
+*=X_0\leftarrow X_1\leftarrow \cdots \leftarrow X_n,
 $$
 每个 $X_{k+1}$ 都是<span class="link local"><a href="./俯意象.html" title="俯意象 [俯意象]">俯意象</a></span> $\mathcal C_{/X_k}$ 中的<span class="link local"><a href="./区间.html" title="区间 [区间]">区间</a></span> (不要求为严格区间), 区间的两端分别为
 $$
 s_k,t_k\colon X_{k}\to X_{k+1};
 $$
-要求这个区间退化的地方恰好等于 $X_k$ 的边界 $s_{k-1}(X_{k-1}) \cup t_{k-1}(X_{k-1})$. 这体现了圆盘的直观: $n+1$ 维圆盘是相对于 $n$ 维圆盘的区间, 且恰在 $n$ 维圆盘的边界上退化.</p>
+要求这个区间退化的地方恰好等于 $X_k$ 的边界 $s_{k-1}(X_{k-1}) \cup t_{k-1}(X_{k-1})$. 这体现了圆盘的直观: $(n+1)$ 维圆盘是相对于 $n$ 维圆盘的区间, 且恰在 $n$ 维圆盘的边界上退化.</p>
+<h2>例</h2>
+<h3>欧式球</h3>
+<p>欧氏空间中的圆盘 $D^n$ 是圆盘的朴素例子. 两个映射
+$$
+s_k,t_k\colon D^k\to D^{k+1}, \vec x\mapsto (\vec x,\pm\sqrt{1-|\vec x|^2})
+$$
+分别给出 $D^{k+1}$ 的边界的两个半球. 投影映射
+$$
+p_{k+1}\colon D^{k+1}\to D^k
+$$
+即为前 $k$ 分量的投影.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="群作用"><header><h1><span class="taxon"></span>群作用 <a class="slug" href="./群作用.html">[群作用]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>定义</h2>
 <h3>生象群</h3>
 <p>对于<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span><span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 与范畴 $\mathcal C$ 的对象 $X$, 定义 $G$ 在 $X$ 上的<strong>作用</strong>为函子

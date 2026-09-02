@@ -831,23 +831,34 @@
 <p>组合 $n$-圆盘的理论是一种<span class="link local"><a href="./凝聚理论.html" title="凝聚理论 [凝聚理论]">凝聚理论</a></span>:</p>
 <ul>
 <li>类型 $X_0,\cdots,X_n$;</li>
-<li>函数符号 $s_k,t_k\colon X_k\to X_{k+1}$, $i_{k+1}\colon X_{k+1}\to X_{k}$ ($0\leq k &lt; n$);</li>
-<li>等式 $i_{k+1} s_{k} = i_{k+1} t_{k} = \mathrm{id}_{X_{k}}$, $s_{k+1} s_k = t_{k+1} s_k$, $s_{k+1} t_k = t_{k+1} t_k$ ($0\leq k &lt; n$);</li>
+<li>函数符号 $s_k,t_k\colon X_k\to X_{k+1}$, $p_{k+1}\colon X_{k+1}\to X_{k}$ ($0\leq k &lt; n$);</li>
+<li>等式 $p_{k+1} s_{k} = p_{k+1} t_{k} = \mathrm{id}_{X_{k}}$, $s_{k+1} s_k = t_{k+1} s_k$, $s_{k+1} t_k = t_{k+1} t_k$ ($0\leq k &lt; n$);</li>
 <li>$X_0$ 有唯一的元素 $*$;</li>
 <li>$s_0(*) \neq t_0(*)$;</li>
 <li>若 $s_k(x) = t_k(x)$, 则 $x = s_{k-1}(y)$ 或 $x=t_{k-1}(y)$ ($1\leq k &lt; n$);</li>
-<li>对任意 $x\in X_k$, $i_{k+1}^{-1}(x)$ 带有<span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序</a></span>关系 $\leq$, 端点为 $s_k(x)$ 与 $t_k(x)$.</li>
+<li>对任意 $x\in X_k$, $p_{k+1}^{-1}(x)$ 带有<span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序</a></span>关系 $\leq$, 端点为 $s_k(x)$ 与 $t_k(x)$.</li>
 </ul>
 <h3>通过相对观点归纳定义</h3>
 <p>设 $\mathcal C$ 为<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>, 可通过<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对观点</a></span>归纳定义 $\mathcal C$ 中的组合 $n$-圆盘: 它是一个序列
 $$
-X_0=*,X_1,\cdots,X_n,
+*=X_0\leftarrow X_1\leftarrow \cdots \leftarrow X_n,
 $$
 每个 $X_{k+1}$ 都是<span class="link local"><a href="./俯意象.html" title="俯意象 [俯意象]">俯意象</a></span> $\mathcal C_{/X_k}$ 中的<span class="link local"><a href="./区间.html" title="区间 [区间]">区间</a></span> (不要求为严格区间), 区间的两端分别为
 $$
 s_k,t_k\colon X_{k}\to X_{k+1};
 $$
-要求这个区间退化的地方恰好等于 $X_k$ 的边界 $s_{k-1}(X_{k-1}) \cup t_{k-1}(X_{k-1})$. 这体现了圆盘的直观: $n+1$ 维圆盘是相对于 $n$ 维圆盘的区间, 且恰在 $n$ 维圆盘的边界上退化.</p>
+要求这个区间退化的地方恰好等于 $X_k$ 的边界 $s_{k-1}(X_{k-1}) \cup t_{k-1}(X_{k-1})$. 这体现了圆盘的直观: $(n+1)$ 维圆盘是相对于 $n$ 维圆盘的区间, 且恰在 $n$ 维圆盘的边界上退化.</p>
+<h2>例</h2>
+<h3>欧式球</h3>
+<p>欧氏空间中的圆盘 $D^n$ 是圆盘的朴素例子. 两个映射
+$$
+s_k,t_k\colon D^k\to D^{k+1}, \vec x\mapsto (\vec x,\pm\sqrt{1-|\vec x|^2})
+$$
+分别给出 $D^{k+1}$ 的边界的两个半球. 投影映射
+$$
+p_{k+1}\colon D^{k+1}\to D^k
+$$
+即为前 $k$ 分量的投影.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Joyal范畴"><header><h1><span class="taxon"></span>Joyal 范畴 Θn <a class="slug" href="./Joyal范畴.html">[Joyal范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>Joyal 范畴 $\Theta_n$ 的对象是<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span> $(\infty,n)$-范畴的基本单元, 是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形</a></span>的推广.</p>

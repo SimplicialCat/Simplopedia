@@ -863,7 +863,8 @@ $$
 <p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">亟需施工处</a></span>列表 (“TODO list”)</p>
 <p><span class="link local"><a href="./terminologies.html" title="单纯百科 - 术语翻译表 [terminologies]">术语翻译表</a></span></p>
 <h2>最近</h2>
-<p><span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span></p>
+<p><span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span></p>
+<p><span class="link local"><a href="./代数胚.html" title="代数胚 [代数胚]">代数胚</a></span>, <span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span></p>
 <p><span class="link local"><a href="./平坦函子.html" title="平坦函子 [平坦函子]">平坦函子</a></span></p>
 <p><span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">Segal 范畴 Γ</a></span>, <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴 Θn</a></span></p>
 <p><span class="link local"><a href="./杠–余杠对偶.html" title="杠–余杠对偶 [杠–余杠对偶]">杠–余杠对偶</a></span></p>
@@ -1040,6 +1041,101 @@ $$
 (R\Psi F)_{(x,t)} \simeq R\Gamma(X_{(x)}\times_{S_{f(x)}}S_{(t)},F).
 $$
 Moreover, $R\Psi F$ is equipped with a Galois action.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="合聚意象"><header><h1><span class="taxon"></span>合聚意象 <a class="slug" href="./合聚意象.html">[合聚意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>动机</h2>
+<p>一类空间 $H$ 中的所谓<strong>合聚</strong> (cohesion) 的概念是描述空间 $X\in H$ 的<strong>点</strong>如何聚集在一起的方法, 如同液体聚成小滴.</p>
+<p>William Lawvere 指出了如下公理.</p>
+<ul>
+<li>对 $H$ 中的每个空间 $X$ 指定了<strong>合聚连通分支</strong> (cohesively connected components) 的集合 (或<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>) $\Pi(X)$;</li>
+<li>每个集合 $S$ 都可以两种方式视为<strong>合聚空间</strong> (cohesive space):
+<ul>
+<li>将 $S$ 每个点分别视为一个液滴, 称为<strong>离散合聚空间</strong> (discrete cohesive space);</li>
+<li>将 $S$ 的所有点共同视为一个液滴, 称为<strong>余离散合聚空间</strong> (codiscrete cohesive space).</li>
+</ul>
+</li>
+<li>离散与余离散的合聚空间与其他合聚空间满足一些符合直觉的关系. 例如, 两个离散合聚空间之间的映射就是底层集合的映射.</li>
+</ul>
+<p>合聚空间总是局部可缩 (局部 $\infty$-连通) 的.</p>
+<p>有一个典范的<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span>, 即全局截面 $\Gamma\colon \mathcal E\to\mathsf {Set}$, 将空间 $X$ 对应到其点集 $\Gamma(X)$, 即 $X$ “遗忘所有合聚”. 离散和余离散分别是 $\Gamma$ 的左右伴随:
+$$
+\begin{aligned}
+	\operatorname{Hom}(\operatorname{Disc}(X),Y)&amp;=\operatorname{Hom}(X,\Gamma(Y));\\
+	\operatorname{Hom}(\Gamma(X),Y)&amp;=\operatorname{Hom}(X,\operatorname{coDisc}(Y)).
+\end{aligned}
+$$</p>
+<p>$\Pi\colon \mathcal E\to\mathsf {Set}$ 将空间 $X$ 对应到其连通分支的集合, 是 $\operatorname{Disc}$ 的左伴随:
+$$
+\operatorname{Hom}(\Pi(X),Y)=\operatorname{Hom}(X,\operatorname{Disc}(Y)).
+$$</p>
+<h2>定义</h2>
+<p>设 $\mathcal E$ 是基意象 $\mathcal S$ 上的意象, 即具有<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span> $(f^*\dashv f_*)\colon \mathcal E \to\mathcal S$. 若如下条件成立, 则称其为<strong>合聚意象</strong>:</p>
+<ul>
+<li>它是<span class="link local"><a href="./局部连通意象.html" title="局部连通意象 [局部连通意象]">局部连通意象</a></span>, 即 $f^*$ 存在左伴随 $f_! \dashv f^*$;</li>
+<li>进一步, 它是<span class="link local"><a href="./连通意象.html" title=" [连通意象]">连通意象</a></span>, 即 $f_!$ 保持终对象, 或 $f^*$ <span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实</a></span>, 或 $f_! f^*\to \mathrm{id}_{\mathcal S}$ 为等价;</li>
+<li>进一步, 它强连通, 即 $f_!$ 保持所有有限积;</li>
+<li>并且它是<span class="link local"><a href="./局部意象.html" title="局部意象 [局部意象]">局部意象</a></span>, 即 $f_*$ 存在额外的右伴随 $f_*\dashv f^!$;</li>
+</ul>
+<p>总结起来, 我们有伴随四元组
+$$
+(f_!\dashv f^* \dashv f_* \dashv f^!)\colon \mathcal E
+\begin{array}
+	{ccc}
+	&amp; \overset{f_!}{\longrightarrow} &amp;\\
+	&amp; \overset{f^*}{\longleftarrow} &amp;\\
+	&amp; \overset{f_*}{\longrightarrow} &amp;\\
+	&amp; \overset{f^!}{\longleftarrow} &amp;\\
+\end{array}
+\mathcal S.
+$$</p>
+<p>这些函子各自又有 “几何” 味道的名称:</p>
+<ul>
+<li>$f_! =:\Pi$ 是 “基本 $\infty$-群胚” (或 $1$-意象语境中的 “连通分支集”) 函子;</li>
+<li>$f^* =:\operatorname{Disc}$ 是 “离散几何对象” (这里的离散是相对于<strong>合聚</strong>而言的);</li>
+<li>$f_* =: \Gamma$ 是 “底层点集”;</li>
+<li>$f^! =: \operatorname{coDisc}$ 是 “余离散几何对象”, 直观上是合聚的一个极端, 所有点都聚在一起.</li>
+</ul>
+<p>$$
+(\Pi \dashv \operatorname{Disc} \dashv \Gamma \dashv \operatorname{coDisc})\colon \mathcal E
+\begin{array}
+	{ccc}
+	&amp; \overset{\Pi}{\longrightarrow} &amp;\\
+	&amp; \overset{\operatorname{Disc}}{\longleftarrow} &amp;\\
+	&amp; \overset{\Gamma}{\longrightarrow} &amp;\\
+	&amp; \overset{\operatorname{coDisc}}{\longleftarrow} &amp;\\
+\end{array}
+\mathcal S.
+$$</p>
+<p>相应地, 范畴论性质也有 “几何” 味道的解释:</p>
+<ul>
+<li>$\Gamma\operatorname{Disc}\to\mathrm{id}_{\mathcal S}$ 是等价, 意味着对任意 $X\in\mathcal S$, 意象 $\mathcal E$ 上局部常值 $X$-值函数必为常值, 也即 $\mathcal E$ 连通;</li>
+<li>$\Pi(1) = *$, 意味着终对象的形状是一个点;</li>
+</ul>
+<p>上述种种范畴论性质表明, 意象 $\mathcal E$ 本身作为<span class="link local"><a href="./小意象.html" title="小意象 [小意象]">小意象</a></span>是没有广延的一个 “胖点”, 从而它理应作为一个<span class="link local"><a href="./大意象.html" title="大意象 [大意象]">大意象</a></span>来看待, 在心理上我们可将其想象为以胖点为局部模型的几何对象的范畴.</p>
+<h3>三个模态</h3>
+<p>凝集意象 $\mathcal E$ 上有伴随四元组给出的三个<span class="link local"><a href="./模态.html" title="模态 [模态]">模态</a></span>:</p>
+<ul>
+<li><strong>形</strong> (shape) 模态 $ʃ = \operatorname{Disc} \circ \operatorname{\Pi}$;</li>
+<li><strong>平</strong> (flat) 模态 $\flat = \operatorname{Disc}\circ\operatorname{\Gamma}$;</li>
+<li><strong>尖</strong> (sharp) 模态 $\sharp = \operatorname{coDisc}\circ\operatorname{\Gamma}$.</li>
+</ul>
+<p>由<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>的纯范畴论性质, 它们构成伴随三元组
+$$
+	(ʃ \dashv \flat \dashv \sharp)\colon \mathcal E
+	\begin{array}
+	{ccc}
+	&amp; \overset{ʃ}{\longrightarrow} &amp;\\
+	&amp; \overset{\flat}{\longleftarrow} &amp;\\
+	&amp; \overset{\sharp}{\longrightarrow} &amp;
+	\end{array}
+	\mathcal E.
+$$</p>
+<h3>联络与曲率</h3>
+<p>固定一个合聚意象 $\mathcal E$.</p>
+<p><strong>定义</strong>. 对象 $X$ 的取值于对象 $A$ 的<strong>平坦联络</strong>的空间为
+$$
+\operatorname{Flat}(X,A):=\operatorname{Hom}(ʃ X,A) = \operatorname{Hom}(X,\flat A).
+$$</p>
+<h2>例</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="带点意象"><header><h1><span class="taxon"></span>带点意象 <a class="slug" href="./带点意象.html">[带点意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>带点意象就是意象带有点到它的一个<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span>.</p>
@@ -1072,6 +1168,7 @@ $$
 <h2>观念</h2>
 <h3>作为集合范畴的推广</h3>
 <p>意象 (topos) 是一种具有类似集合范畴 $\mathsf{Set}$ 的性质的范畴; 这些性质使得意象的<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>能够支持集合的许多操作, 如构造两个集合 $X,Y$ 的无交并 $X + Y$, 乘积 $X\times Y$, 映射的集合 $Y^X$ 等等.</p>
+<p>用这种观念看待的意象称为<span class="link local"><a href="./大意象.html" title="大意象 [大意象]">大意象</a></span>.</p>
 <p>不过需要注意的是, 意象的<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>所支持的逻辑是<span class="link local"><a href="./直觉主义逻辑.html" title="直觉主义逻辑 [直觉主义逻辑]">直觉主义逻辑</a></span>, 而不一定是经典逻辑 (见 <span class="link local"><a href="./Boole意象.html" title="Boole 意象 [Boole意象]">Boole 意象</a></span>), 其中排中律和选择公理可能不成立. 例如拓扑空间上的层意象一般不是 Boole 意象, 原因来自于开集的补集不一定是开集.</p>
 <blockquote>
 <p>没有人能将我们驱逐出 Contor 为我们创造的 (集合论的) 天堂. —— David Hilbert (1926)</p>
@@ -1087,6 +1184,7 @@ $$
 f\colon \mathcal X\to\mathcal Y,
 $$
 其按定义是一对伴随 $f^* \dashv f_*$, 我们也应将其想象为假想的几何对象上层的拉回与推前.</p>
+<p>用这种观念看待的意象称为<span class="link local"><a href="./小意象.html" title="小意象 [小意象]">小意象</a></span>.</p>
 <blockquote>
 <p>L’objet de la Topologie est l’étude des topos (et non des seuls espaces topologiques).</p>
 <p>拓扑学的目标是研究意象, 而不仅是拓扑空间.</p>

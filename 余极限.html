@@ -1277,42 +1277,65 @@ $$
 $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="余端"><header><h1><span class="taxon"></span>余端 <a class="slug" href="./余端.html">[余端]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>余端是<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>的对偶概念, 可理解为某种 (加权) 余极限, 或函数对测度积分的类比或<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>.</p>
-<h3>与测度积分的类比</h3>
-<p>对于函子 $F\colon \mathcal C\to \mathsf{Set}$, $G\colon \mathcal C^{\mathrm{op}}\to\mathsf{Set}$, 余端
-$$
-\int_{c\in\mathcal C} F(c) \times G(c)
-$$
-可视为可测空间上的函数对测度积分的类比或<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>, 其中 $F$ 是 “被积函数”, $G$ 是 “测度”.
-这个余端也可理解为<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span> $F\colon 1\to \mathcal C$ 与 $G\colon \mathcal C\to 1$ 的复合, 也即<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">模</a></span>的张量积. (当然, 这里的范畴也可以改成 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>, $\mathsf{Set}$ 改成 $\mathcal V$.)</p>
-<p><strong>例</strong>. 关于常值函子 $G = 1$ 的积分 $\int_{c\in\mathcal C}F(c)$ 就是函子 $F$ 的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>; 因此一般地上述余端又称为<strong>加权余极限</strong> (weighted colimit).</p>
-<p><strong>例</strong>. <span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span> $G = \operatorname{Hom}_{\mathcal C}(-,X)$ 是 “delta 分布” 的类比,
-$$
-\int_{c\in \mathcal C} F(c) \times \operatorname{Hom}_{\mathcal C}(-,X) \simeq F(X).
-$$</p>
+<p>余端是<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>的对偶概念, 可理解为<span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span>, 它是 “函数对测度积分” 的类比与<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>.</p>
 <h2>定义</h2>
-<h3>作为余等化子</h3>
-<p>函子 $F\colon \mathcal C^{\mathrm{op}}\times\mathcal C\to\mathsf{Set}$ 的余端是如下的<span class="link local"><a href="./余等化子.html" title="余等化子 [余等化子]">余等化子</a></span>:
+<h3>作为余极限</h3>
+<p>函子 $F\colon \mathcal C^{\mathrm{op}}\times\mathcal C\to\mathcal{D}$ 的余端是以<span class="link local"><a href="./扭箭头范畴.html" title="扭箭头范畴 [扭箭头范畴]">扭箭头范畴</a></span>为指标的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>:
+$$
+\int_{\mathcal C} F = \operatorname{colim}_{(X\to Y)\in\mathsf{TwArr}(\mathcal C)} F(X,Y).
+$$</p>
+<p>上式的一种计算方式是如下的<span class="link local"><a href="./余等化子.html" title="余等化子 [余等化子]">余等化子</a></span>:
 $$
 \int_{\mathcal{C}}F = \operatorname{coeq}\Big(
     \coprod_{X\to Y} F(X,Y) \rightrightarrows \coprod_{X}F(X,X)
 \Big).
 $$</p>
-<h3>作为余极限</h3>
-<p>函子 $F\colon \mathcal C^{\mathrm{op}}\times\mathcal C\to\mathsf{Set}$ 的余端是以<span class="link local"><a href="./扭箭头范畴.html" title="扭箭头范畴 [扭箭头范畴]">扭箭头范畴</a></span>为指标的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>:
-$$
-\int_{\mathcal C} F = \operatorname{colim}_{(X\to Y)\in\mathsf{TwArr}(\mathcal C)} F(X,Y).
-$$</p>
 <h2>性质</h2>
-<h3>与 Hom 的交互</h3>
+<h3>与 Hom 及加权余极限的关系</h3>
 <p>由余端出发的 Hom 可转换为 Hom 的<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>:
 $$
-\operatorname{Hom}(\int_{\mathcal C}F(-,-),-) \simeq \int_{\mathcal C}\operatorname{Hom}(F(-,-),-).
+\begin{aligned}
+&amp;\operatorname{Hom}_{\mathcal D}\Big(\int_{\mathcal C}F(-,-),d\Big) \\
+&amp;\simeq
+\operatorname{lim}_{(X\to Y)\in\mathsf{TwArr}(\mathcal C)}\operatorname{Hom}_{\mathcal D}(F(X,Y),d)\\
+&amp;\simeq \int^*_{\mathcal C}\operatorname{Hom}_{\mathcal D}(F(-,-),d).
+\end{aligned}
+$$</p>
+<p><strong>推论</strong>. 函子 $F\colon \mathcal C^{\mathrm{op}}\times\mathcal C\to\mathcal{D}$ 的余端等于以 $\operatorname{Hom}$ 函子为权的<span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span>:
+$$
+\int_{\mathcal C} F = \operatorname{colim}^{\operatorname{Hom}}F.
+$$</p>
+<p><em>证明</em>.
+$$
+\begin{aligned}
+&amp;{\operatorname{Hom}_{\mathcal D}}{\Big(
+    \int_{\mathcal C}F,d\Big)}\\
+    &amp;\simeq
+    \int_{\mathcal C}^*\operatorname{Hom}_{\mathcal D}(F(-,-),d)\\
+    &amp;\simeq
+    \int^*_{(X,Y)\in\mathcal C^{\mathrm{op}}\times\mathcal C}\operatorname{Hom}(\operatorname{Hom}_{\mathcal C}(X,Y),\operatorname{Hom}_{\mathcal D}(F(X,Y),d))\\
+    &amp;\simeq\operatorname{Hom}_{\mathcal D}(\operatorname{colim}^{\operatorname{Hom}}F,d)
+\end{aligned}
 $$</p>
 <h2>例</h2>
-<ul>
-<li><span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>的复合</li>
-</ul>
+<h3>代函子的复合</h3>
+<p>参见<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>.</p>
+<h3>与测度积分的类比</h3>
+<p>对于函子 $F\colon \mathcal C\to \mathcal{V}$, $G\colon \mathcal C^{\mathrm{op}}\to\mathcal{V}$, 余端
+$$
+\int_{c\in\mathcal C} F(c) \times G(c)
+$$
+可视为可测空间上的函数对测度积分的类比或<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>, 其中 $F$ 是 “被积函数”, $G$ 是 “测度”.
+这个余端也可理解为<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span> $F\colon 1\to \mathcal C$ 与 $G\colon \mathcal C\to 1$ 的复合, 也即<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">模</a></span>的张量积.</p>
+<p><strong>例</strong>. 在 $\mathcal V = \mathsf{Ani}$ 情形, 关于常值函子 $G = 1$ 的 “积分”
+$$
+\int_{c\in\mathcal C}F(c)
+$$
+就是函子 $F$ 的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>; 一般地余端可理解为<span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span>.</p>
+<p><strong>例</strong>. <span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span> $G = \operatorname{Hom}_{\mathcal C}(-,X)$ 是 “$\delta$-分布” 的类比,
+$$
+\int_{c\in \mathcal C} F(c) \times \operatorname{Hom}_{\mathcal C}(-,X) \simeq F(X).
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="俯范畴"><header><h1><span class="taxon"></span>俯范畴 <a class="slug" href="./俯范畴.html">[俯范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>俯范畴是表达<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对观念</a></span>的一种方式.</p>
@@ -1492,7 +1515,7 @@ $$
 $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="同调"><header><h1><span class="taxon"></span>同调 <a class="slug" href="./同调.html">[同调]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p><strong>同调</strong>在数学上有许多含义. 其共性是一种表现得像<span class="link local"><a href="./张量积.html" title="张量积 [张量积]">张量积</a></span>, <span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>那样的协变函子. 而与之相对的<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>则是一种表现得像 Hom, <span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>那样的反变函子.</p>
+<p><strong>同调</strong>在数学上有许多含义. 其共性是一种表现得像<span class="link local"><a href="./张量积.html" title="张量积, 余幂 [张量积]">张量积</a></span>, <span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>那样的协变函子. 而与之相对的<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>则是一种表现得像 Hom, <span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>那样的反变函子.</p>
 <h2>定义</h2>
 <p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ 的<strong>同调群</strong> $H_n(X)$ 是其<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的交换群 (见 <span class="link local"><a href="./Dold–Thom定理.html" title="Dold–Thom 定理 [Dold–Thom定理]">Dold–Thom 定理</a></span>) 对应的<span class="link local"><a href="./连合谱.html" title="连合谱 [连合谱]">连合谱</a></span> $\Sigma^\infty X \wedge H\mathbb{Z}$ 的<span class="link local"><a href="./同伦群(稳定同伦论).html" title="同伦群 (稳定同伦论) [同伦群(稳定同伦论)]">同伦群</a></span>:
 $$
@@ -1651,6 +1674,7 @@ $$</p>
 <h2>观念</h2>
 <h3>作为集合范畴的推广</h3>
 <p>意象 (topos) 是一种具有类似集合范畴 $\mathsf{Set}$ 的性质的范畴; 这些性质使得意象的<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>能够支持集合的许多操作, 如构造两个集合 $X,Y$ 的无交并 $X + Y$, 乘积 $X\times Y$, 映射的集合 $Y^X$ 等等.</p>
+<p>用这种观念看待的意象称为<span class="link local"><a href="./大意象.html" title="大意象 [大意象]">大意象</a></span>.</p>
 <p>不过需要注意的是, 意象的<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>所支持的逻辑是<span class="link local"><a href="./直觉主义逻辑.html" title="直觉主义逻辑 [直觉主义逻辑]">直觉主义逻辑</a></span>, 而不一定是经典逻辑 (见 <span class="link local"><a href="./Boole意象.html" title="Boole 意象 [Boole意象]">Boole 意象</a></span>), 其中排中律和选择公理可能不成立. 例如拓扑空间上的层意象一般不是 Boole 意象, 原因来自于开集的补集不一定是开集.</p>
 <blockquote>
 <p>没有人能将我们驱逐出 Contor 为我们创造的 (集合论的) 天堂. —— David Hilbert (1926)</p>
@@ -1666,6 +1690,7 @@ $$
 f\colon \mathcal X\to\mathcal Y,
 $$
 其按定义是一对伴随 $f^* \dashv f_*$, 我们也应将其想象为假想的几何对象上层的拉回与推前.</p>
+<p>用这种观念看待的意象称为<span class="link local"><a href="./小意象.html" title="小意象 [小意象]">小意象</a></span>.</p>
 <blockquote>
 <p>L’objet de la Topologie est l’étude des topos (et non des seuls espaces topologiques).</p>
 <p>拓扑学的目标是研究意象, 而不仅是拓扑空间.</p>
@@ -1791,6 +1816,19 @@ $$
 <li>无穷维射影空间 $\mathbb{C}P^\infty$ 是有限维射影空间的序列余极限.</li>
 <li><span class="link local"><a href="./形式圆盘.html" title="形式圆盘 [形式圆盘]">形式圆盘</a></span> $\operatorname{Spec}R[[t]]$ ($\operatorname{Spf}R[[t]]$) 是 $\operatorname{Spec}R[t]/(t^n)$ 在仿射概形范畴 (概形范畴) 中的滤余极限.</li>
 </ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="稠密子范畴"><header><h1><span class="taxon"></span>稠密子范畴 <a class="slug" href="./稠密子范畴.html">[稠密子范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>稠密子范畴</strong>是可用于忠实地<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>整个范畴的一族 “足够有代表性” 的对象构成的子范畴.</p>
+<h2>定义</h2>
+<p>称函子 $\mathcal C \to \mathcal D$ <strong>稠密</strong>是指其对应的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子 $\mathcal D \to\widehat {\mathcal C}$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>.</p>
+<h3>通过余极限</h3>
+<p>函子 $\mathcal C \to \mathcal D$ 稠密当且仅当 $\mathcal D$ 的每个对象 $X$ 都是 $\mathcal C$ 的对象的如下<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>:
+$$
+X = \operatorname{colim}_{c\to X,c\in\mathcal C} c.
+$$</p>
+<h2>例</h2>
+<h3>代数范畴</h3>
+<p>对于<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span> (<span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>) $\mathbb T$, 考虑其在集合范畴中的模型 $\mathsf{Mod}_{\mathsf{Set}}(\mathbb T)$, 那么有限生成自由代数构成稠密子范畴.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="稳定化"><header><h1><span class="taxon"></span>稳定化 <a class="slug" href="./稳定化.html">[稳定化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>以下的范畴默认为 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$(\infty,1)$-范畴</a></span>.</p>

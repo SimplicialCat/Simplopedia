@@ -837,11 +837,11 @@
 <h3>传统</h3>
 <p>设 $\mathcal{V}$ 为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 定义 $\mathcal{V}$-充实范畴 $\mathcal C$ 为如下结构: 一族对象 $\operatorname{ob}(\mathcal C)$, 每两个对象之间有一个态射对象 $\operatorname{Hom}(x,y)\in\operatorname{ob}(\mathcal{V})$, 每三个对象之间有一个复合态射
 $$
-\circ\colon \operatorname{Hom}(y,z)\otimes \operatorname{Hom}(x,y) \to \operatorname{Hom}(x,z).
-$$</p>
+\circ\colon \operatorname{Hom}(y,z)\otimes \operatorname{Hom}(x,y) \to \operatorname{Hom}(x,z),
+$$
+满足结合律, 单位律等.</p>
 <h3>使用代数胚</h3>
-<p>充实范畴是<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的推广, 是一种<span class="link local"><a href="./代数胚.html" title="代数胚 [代数胚]">代数胚</a></span>.</p>
-<p>…</p>
+<p>充实范畴是<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的推广, 是一种特殊的<span class="link local"><a href="./代数胚.html" title="代数胚 [代数胚]">代数胚</a></span>, 其底层 <span class="link local"><a href="./Segal空间.html" title="Segal 对象 [Segal空间]">Segal 对象</a></span>要<span class="link local"><a href="./范畴对象.html" title="范畴对象 (∞-范畴论) [范畴对象]">完备</a></span>.</p>
 <p>参考 <span class="link local"><a href="./GepnerHaugsengEnrichedCategories.html" title="Enriched ∞-categories via non-symmetric ∞-operads [GepnerHaugsengEnrichedCategories]">Gepner–Haugseng</a></span>, <span class="link local"><a href="./HinichYonedaEnriched.html" title="Yoneda lemma for enriched infinity categories [HinichYonedaEnriched]">Hinich</a></span>, <span class="link local"><a href="./StefanichHigherQCoh.html" title="Higher Quasicoherent Sheaves [StefanichHigherQCoh]">Stefanich</a></span>.</p>
 <h2>性质</h2>
 <h3>充实用范畴的更换</h3>
@@ -1054,7 +1054,7 @@ $$
 <li>其任何 $r$ 阶态射范畴为<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</li>
 </ul>
 <p>注. 不妨要求 $r\leq n+1$, 因为若任何 $(n+2)$ 阶态射范畴为单点, 则任何 $(n+1)$ 阶态射范畴为<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</p>
-<p>由定义, $(n,r)$-范畴中两个对象之间的态射范畴为 $(n-1,r-1)$-范畴.</p>
+<p>由定义, $(n,r)$-范畴中两个对象之间的态射范畴为 $(n-1,r-1)$-范畴. 这个事实也可以作为 $(n,r)$-范畴的一种定义: $(n,r)$-范畴就是<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于 $\mathsf{Cat}_{(n-1,r-1)}$ 的范畴.</p>
 <h2>例</h2>
 <table><thead><tr><th>$(n,r)$</th><th>名称</th></tr></thead><tbody>
 <tr><td>$(-1,0)$</td><td><span class="link local"><a href="./命题(同伦类型论).html" title="命题 (同伦类型论) [命题(同伦类型论)]">命题</a></span></td></tr>
@@ -1150,12 +1150,13 @@ $$
 <p>第一个需要理解的概念是<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>. 它是 “集合” 这一概念在高阶范畴论中的正确类比. 对它的直观常来自<span class="link local"><a href="./同伦论.html" title="同伦论 [同伦论]">同伦论</a></span>. 谈论生象的一种语言是<span class="link local"><a href="./同伦类型论.html" title="同伦类型论 [同伦类型论]">同伦类型论</a></span>, 掌握这种语言对理解高阶范畴很有帮助.</p>
 <p>例如, 有人 (<span class="link local"><a href="./CnossenAxiomInfCat.html" title="Axiomatization of ∞-categories [CnossenAxiomInfCat]">Cnossen</a></span>) 正在尝试以类似 HoTT 的语言建立 $\infty$-范畴的公理化数学基础.</p>
 <h3>关于模型</h3>
-<p>这里所谓<strong>模型</strong>, 指的是在集合论 ($1$-范畴论) 的基础上搭建的能够模拟高阶范畴的结构. 模型对于理解高阶范畴的语言是<strong>不需要</strong>的. 它的作用是</p>
+<p>这里所谓<strong>模型</strong>, 指的是在集合论 ($1$-范畴论) 的基础上搭建的能够模拟高阶范畴的结构, 包括<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>, $k$-<span class="link local"><a href="./链复形.html" title="链复形 [链复形]">链复形</a></span>等. 模型对于理解高阶范畴的语言是<strong>不需要</strong>的. 它的作用是</p>
 <ul>
 <li>在少数场合, 构造具体的高阶范畴 (如 Fukaya 范畴).</li>
 <li>让人们相信高阶范畴的数学基础是牢固的 (尤其是说服那些奉集合论为圭臬的人). (这是 Lurie 的 <span class="link local"><a href="./LurieHTT.html" title="Higher Topos Theory [LurieHTT]">HTT</a></span> 的一大贡献.)</li>
 </ul>
-<p>“模型” 的另一种含义是<span class="link local"><a href="./模型范畴.html" title="“模型范畴” [模型范畴]">模型范畴</a></span>; 这是一类具有良好性质的高阶范畴的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 但同样地, 理解高阶范畴的语言也不需要模型范畴的概念.</p>
+<p>“模型” 的另一种含义是<span class="link local"><a href="./模型范畴.html" title="“模型范畴” [模型范畴]">模型范畴</a></span>; 这是一类具有良好性质的高阶范畴的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 但同样地, 理解高阶范畴的语言也<strong>不需要</strong>模型范畴的概念.</p>
+<p>“模型” 还有第三种含义: 在<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> ($(\infty,0)$-范畴) 的基础上搭建 $(\infty,1)$-范畴乃至 $(\infty,n)$-范畴的理论. 这通常指的是 <span class="link local"><a href="./Segal空间.html" title="Segal 对象 [Segal空间]">Segal 生象</a></span>, $n$ 重 Segal 生象或 <span class="link local"><a href="./Θ-n-空间.html" title=" [Θ-n-空间]">$\Theta_n$-生象</a></span>等概念. 尽管叫做模型, 这些概念的确属于前面说的<strong>模型无关</strong>的范围.</p>
 <h2>高阶代数</h2>
 <p>在高阶范畴中做代数是一门极为深奥的学问. 一个难点在于分辨 $1$-范畴中的哪些代数现象在高阶范畴仍然存在, 哪些现象是由于 $1$-范畴 (集合) 的<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断性</a></span>带来的额外便利 (例如高阶代数中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>等结构在截断的 $1$-范畴中退化为<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">性质</a></span>). 现状往往是后者.</p>
 <p>目前, 人们表达代数结构的主要工具是<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>. 这样的现状大致归功于 Lurie 的 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Higher Algebra</a></span>; 但容易找到更简短而友好的材料如 <span class="link local"><a href="./HaugsengOp.html" title="An allegedly somewhat friendly introduction to ∞-operads [HaugsengOp]">Haugseng</a></span>.</p>
@@ -1228,15 +1229,13 @@ $$
 <p>群 $G$ 的中心是 $G$ 在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>的<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>.
 考虑下图.
 $$
-\begin{array}{ccccc}
-G &amp; \rightarrow &amp; \operatorname{Aut}_{\mathsf{Grp}}(G) &amp; \rightarrow &amp; * \
-\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \</p>
-<ul>
-<li>&amp; \underset{\mathrm{id}}{\rightarrow} &amp; \operatorname{Aut}<em>{\mathsf{Ani}}(\mathbf{B}G) &amp; \underset{\mathrm{ev}</em>*}{\rightarrow} &amp; \mathbf{B}G
-\end{array}
+    \begin{array}{ccccc}
+        G &amp; \rightarrow &amp; \operatorname{Aut}_{\mathsf{Grp}}(G) &amp; \rightarrow &amp; * \\
+        \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
+        * &amp; \underset{\mathrm{id}}{\rightarrow} &amp; \operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G) &amp; \underset{\mathrm{ev}_*}{\rightarrow} &amp; \mathbf{B}G
+    \end{array}
 $$
-其右边方块与整个方块为拉回, 故左边方块为拉回. 左边的群同态 $G\to\operatorname{Aut}_{\mathsf{Grp}}(G)$ 为 $G$ 在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>; 该同态的核为 $\Omega(\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G),\mathrm{id}) = Z(G)$.</li>
-</ul>
+其右边方块与整个方块为拉回, 故左边方块为拉回. 左边的群同态 $G\to\operatorname{Aut}_{\mathsf{Grp}}(G)$ 为 $G$ 在自身上的<span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span>; 该同态的核为 $\Omega(\operatorname{Aut}_{\mathsf{Ani}}(\mathbf{B}G),\mathrm{id}) = Z(G)$.</p>
 <h3>与群作用, 模的关系</h3>
 <p>设群 $G$ 的中心为 $Z$, 考虑任意范畴中的 $G$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span> $X$, 那么 $Z$ 不仅作用于 $X$ 上, 而且该作用为 $G$-<span class="link local"><a href="./等变映射.html" title="等变映射 [等变映射]">等变</a></span>作用 (甚至为<span class="link local"><a href="./中心作用.html" title="中心作用 [中心作用]">中心作用</a></span>). 这是因为, 由定义,
 $$
@@ -1296,44 +1295,6 @@ $$</p>
 <ul>
 <li>$\operatorname{Hom}_{\mathcal D}(f(-),-) \colon \mathcal D \otimes\mathcal C^{\mathrm{op}} \to \mathsf{Set}$;</li>
 <li>$\operatorname{Hom}_{\mathcal D}(-,f(-)) \colon \mathcal C \otimes\mathcal D^{\mathrm{op}} \to \mathsf{Set}$.</li>
-</ul>
-</details></section><section class="block" data-taxon=""><details ><summary id="余端"><header><h1><span class="taxon"></span>余端 <a class="slug" href="./余端.html">[余端]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<h2>观念</h2>
-<p>余端是<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>的对偶概念, 可理解为某种 (加权) 余极限, 或函数对测度积分的类比或<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>.</p>
-<h3>与测度积分的类比</h3>
-<p>对于函子 $F\colon \mathcal C\to \mathsf{Set}$, $G\colon \mathcal C^{\mathrm{op}}\to\mathsf{Set}$, 余端
-$$
-\int_{c\in\mathcal C} F(c) \times G(c)
-$$
-可视为可测空间上的函数对测度积分的类比或<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>, 其中 $F$ 是 “被积函数”, $G$ 是 “测度”.
-这个余端也可理解为<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span> $F\colon 1\to \mathcal C$ 与 $G\colon \mathcal C\to 1$ 的复合, 也即<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">模</a></span>的张量积. (当然, 这里的范畴也可以改成 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>, $\mathsf{Set}$ 改成 $\mathcal V$.)</p>
-<p><strong>例</strong>. 关于常值函子 $G = 1$ 的积分 $\int_{c\in\mathcal C}F(c)$ 就是函子 $F$ 的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>; 因此一般地上述余端又称为<strong>加权余极限</strong> (weighted colimit).</p>
-<p><strong>例</strong>. <span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span> $G = \operatorname{Hom}_{\mathcal C}(-,X)$ 是 “delta 分布” 的类比,
-$$
-\int_{c\in \mathcal C} F(c) \times \operatorname{Hom}_{\mathcal C}(-,X) \simeq F(X).
-$$</p>
-<h2>定义</h2>
-<h3>作为余等化子</h3>
-<p>函子 $F\colon \mathcal C^{\mathrm{op}}\times\mathcal C\to\mathsf{Set}$ 的余端是如下的<span class="link local"><a href="./余等化子.html" title="余等化子 [余等化子]">余等化子</a></span>:
-$$
-\int_{\mathcal{C}}F = \operatorname{coeq}\Big(
-    \coprod_{X\to Y} F(X,Y) \rightrightarrows \coprod_{X}F(X,X)
-\Big).
-$$</p>
-<h3>作为余极限</h3>
-<p>函子 $F\colon \mathcal C^{\mathrm{op}}\times\mathcal C\to\mathsf{Set}$ 的余端是以<span class="link local"><a href="./扭箭头范畴.html" title="扭箭头范畴 [扭箭头范畴]">扭箭头范畴</a></span>为指标的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>:
-$$
-\int_{\mathcal C} F = \operatorname{colim}_{(X\to Y)\in\mathsf{TwArr}(\mathcal C)} F(X,Y).
-$$</p>
-<h2>性质</h2>
-<h3>与 Hom 的交互</h3>
-<p>由余端出发的 Hom 可转换为 Hom 的<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>:
-$$
-\operatorname{Hom}(\int_{\mathcal C}F(-,-),-) \simeq \int_{\mathcal C}\operatorname{Hom}(F(-,-),-).
-$$</p>
-<h2>例</h2>
-<ul>
-<li><span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>的复合</li>
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="偏序集"><header><h1><span class="taxon"></span>偏序集 <a class="slug" href="./偏序集.html">[偏序集]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
@@ -1415,6 +1376,44 @@ $$</li>
 <p>加性范畴是有有限<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>的 $\mathsf {Ab}$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="加权余极限"><header><h1><span class="taxon"></span>加权余极限 <a class="slug" href="./加权余极限.html">[加权余极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设 $\mathcal V$ 为完备, 余完备闭<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $I,\mathcal C$ 为 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>.</p>
+<p>给定 $\mathcal V$-充实的图 $X\colon I\to\mathcal C$ 与<strong>权</strong> (weight) $W\colon I^{\mathrm{op}}\to\mathcal V$, <strong>加权余极限</strong> $\operatorname{colim}^W X$ (又记作 $W\otimes_I X$) 满足如下泛性质:
+$$
+\begin{aligned}
+&amp;\operatorname{Hom}_{\mathcal C}(\operatorname{colim}^W X,c)\\
+\simeq\,
+&amp;\operatorname{Hom}_{\mathsf{Fun}_{\mathcal V}(I^{\mathrm{op}},\mathcal V)}(W,\operatorname{Hom}_{\mathcal C}(X(-),c)).
+\end{aligned}
+$$</p>
+<p>换言之, $\operatorname{colim}^W$ 是<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子
+$$
+\mathcal C\to \mathsf{Fun}_{\mathcal V}(I^{\mathrm{op}},\mathcal V), c\mapsto\operatorname{Hom}_{\mathcal C}(X(-),c)
+$$
+的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>, 也可以理解为权 $W$ 作为 $I$ 上<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span> (米田扩张).</p>
+<h2>性质</h2>
+<h3>与余端的关系</h3>
+<p>当 $\mathcal C$ 中对象沿 $\mathcal V$ 中对象的<span class="link local"><a href="./张量积.html" title="张量积, 余幂 [张量积]">张量积</a></span>存在时, 加权余极限等于<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>
+$$
+\operatorname{colim}^W X = \int_{i\in I} W_i \otimes X_i.
+$$</p>
+<h3>权的余极限</h3>
+<p>由定义, 加权余极限保持权 $W$ 的余极限, 即当 $W = \operatorname{colim}_j W_j$ 时,
+$$
+\operatorname{colim}^W X = \operatorname{colim}_j\operatorname{colim}^{W_j}X.
+$$</p>
+<h3>沿元素范畴的余极限</h3>
+<p><strong>命题</strong>. 当 $\mathcal V = \mathsf{Ani}$ 时, 加权余极限等于沿权函子 $W$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span> $\mathsf{Elts}(W)$ 的余极限:
+$$
+\operatorname{colim}^W X = \operatorname{colim}(\mathsf{Elts}(W)^{\mathrm{op}}\to I\overset{X}{\to}\mathcal C).
+$$</p>
+<p><em>证明</em>. 先对 $W$ 为<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span> $W=\mathbf{y}(i)$ 的情形验证:
+$$
+\operatorname{colim}^{\mathbf{y}(i)}X=X(i)=\operatorname{colim}(\mathsf{Elts}(\mathbf{y}(i))\to\mathcal C),
+$$
+这是因为 $\mathsf{Elts}(\mathbf{y}(i))$ 有终对象.</p>
+<p>再使用关于 $W$ 的余连续性即证 ($W$ 是可表函子沿 $\mathsf{Elts}(W)$ 的余极限, 参见<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>).</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单纯形范畴"><header><h1><span class="taxon"></span>单纯形范畴 <a class="slug" href="./单纯形范畴.html">[单纯形范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>单纯形范畴的对象是 “标准” 的, “组合” 的单纯形, 也即有限全序集.</p>
@@ -1493,7 +1492,67 @@ $$
 $$</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, <span class="link local"><a href="./单纯范畴.html" title="“单纯范畴” [单纯范畴]">单纯范畴</a></span></p>
-</details></section><section class="block" data-taxon=""><details ><summary id="张量积"><header><h1><span class="taxon"></span>张量积 <a class="slug" href="./张量积.html">[张量积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="圈积"><header><h1><span class="taxon"></span>圈积 (范畴论) <a class="slug" href="./圈积.html">[圈积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>圈积是 $\mathsf{Cat}_{/\Gamma}$ 上的一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半</a></span>结构, 表现的是 $\mathsf{Cat}$ 上某种<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>的复合, 类似于<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>的复合积.</p>
+<p>类似于<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>中的结合代数即为<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>, 圈积下的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>也可给出 $\mathsf{Cat}$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</p>
+<h2>定义</h2>
+<p>记 $\Gamma$ 为 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">Segal 范畴</a></span>.</p>
+<h3>直接定义</h3>
+<p>设范畴 $\mathcal A,\mathcal B$ 带有到 $\Gamma$ 的函子 $F\colon \mathcal A\to\Gamma$, $G\colon \mathcal B\to\Gamma$.</p>
+<p>我们定义范畴 $\mathcal A \wr \mathcal B$ 以及函子 $\mathcal A \wr \mathcal B \to \Gamma$. 范畴 $\mathcal A \wr \mathcal B$ 的对象为
+$$
+(a,\{b_i\}_{i\in F(a)}),
+$$
+态射 $(a,\{b_i\}) \to (a',\{b'_i\})$ 为 $\mathcal A$ 中的态射 $f\colon a\to a'$ 以及对每个 $j\in F(f)(i)$ 一个态射 $\eta_{ij}\colon a_i\to a'_j$.</p>
+<p><strong>命题</strong>. 当范畴 $\mathcal B$ 有<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>时,
+$$
+\mathcal A \wr \mathcal B = \int_{a\in \mathcal A}\mathcal B^{F(a)}.
+$$</p>
+<h3>通过自由半加性范畴</h3>
+<p>首先, 对任意范畴 $\mathcal C$ 定义 $\Gamma \wr \mathcal C$ 为 $\mathcal C$ 生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>的 “具有<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>和<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">有限积</a></span>的范畴”. (<span class="link local"><a href="./BergerWr.html" title="Iterated wreath product of the simplex category and iterated loop spaces [BergerWr]">Berger</a></span> 称之为 “半加性范畴”, 但一般人们说的半加性范畴还要求余积与积等价.)</p>
+<p>然后对于 $\mathcal A\in\mathsf{Cat}_{/\Gamma}$ 以及 $\mathcal B\in\mathsf{Cat}$ (或 $\mathcal B\in\mathsf{Cat}_{/\Gamma}$), 定义
+$$
+\mathcal A \wr \mathcal B = \mathcal A \times_{\Gamma} (\Gamma \wr \mathcal B).
+$$</p>
+<h2>性质</h2>
+<h3></h3>
+<h2>例</h2>
+<h3>与 Segal 范畴 $\Gamma$ 圈积</h3>
+<h3>与单纯形范畴圈积</h3>
+<p>对范畴 $\mathcal A$, 范畴 $\Delta \wr \mathcal A$ 的对象 $([n],(A_1,\cdots,A_n))$ 可视为某种链条状的 “<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>”, 其对象为 $0,1,\cdots,n$, 态射对象为
+$$
+\operatorname{Hom}(i-1,i) = A_i;
+$$
+一般地,
+$$
+\operatorname{Hom}(i,j) = A_{i+1}\times\cdots\times A_{j}.
+$$</p>
+<p>为了使这一陈述有意义, 设 $\mathcal V$ 为余完备<span class="link local"><a href="./积闭范畴.html" title="积闭范畴 [积闭范畴]">积闭范畴</a></span>, $\mathcal A\subset\mathcal V$ 为全子范畴, 则 $\Delta\wr\mathcal A$ 嵌入到 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>的范畴 $\mathcal V\text{-}\mathsf{Cat}$:
+$$
+\Delta\wr\mathcal A \hookrightarrow \mathcal V\text{-}\mathsf{Cat}.
+$$</p>
+<p><strong>命题</strong>. 若 $\mathcal A\subset\mathcal V$ <span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>, 则 $\Delta\wr\mathcal A \hookrightarrow \mathcal V\text{-}\mathsf{Cat}$ 也稠密.</p>
+<p><em>证明</em>. 约化到 $\mathcal V = \widehat {\mathcal A}$ 的情形.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="幂"><header><h1><span class="taxon"></span>幂, 余张量积 <a class="slug" href="./幂.html">[幂]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于范畴 $\mathcal C$ 的对象 $X$, 以及<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $A$, <strong>幂</strong> $X^A$ 给出自然同构
+$$
+\operatorname{Hom}_{\mathcal C}(-, X^A)
+\simeq \operatorname{Hom}_{\mathsf{Ani}}(A,\operatorname{Hom}_{\mathcal C}(-,X)),
+$$
+也即两个函子</p>
+<ul>
+<li>$X^{(-)}\colon \mathsf{Ani}^{\mathrm{op}}\to\mathcal C$</li>
+<li>$\operatorname{Hom}_{\mathcal C}(-,X)\colon \mathcal C^{\mathrm{op}}\to\mathsf{Ani}$</li>
+</ul>
+<p>满足<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>
+$$
+\operatorname{Hom}_{\mathcal C}(-,X)^{\mathrm{op}}\dashv X^{(-)}.
+$$</p>
+<p>当然, <span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>的对象也有类似的幂的概念.</p>
+<p>幂又称余张量积 (cotensor), 对偶的概念是<span class="link local"><a href="./张量积.html" title="张量积, 余幂 [张量积]">张量积</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="张量积"><header><h1><span class="taxon"></span>张量积, 余幂 <a class="slug" href="./张量积.html">[张量积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>这里所说的<strong>张量积</strong>特指如下概念: 对于范畴 $\mathcal C$ 的对象 $X$, 以及<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $A$, <strong>张量积</strong> $A\cdot X$ 给出自然同构
 $$
@@ -1506,6 +1565,7 @@ $$
 $$
 张量积 $A\cdot X$ 也是 $A$ 形状, 取值于 $X$ 的常值图表的余极限 $\operatorname{colim}_A X$.</p>
 <p>当然, <span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>的对象也有类似的张量积的概念.</p>
+<p>张量积又称余幂 (copower), 对偶的概念是<span class="link local"><a href="./幂.html" title="幂, 余张量积 [幂]">幂</a></span>.</p>
 <h2>例</h2>
 <p>给定一个<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span> $E$, <span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ 的 $E$-值<span class="link local"><a href="./广义同调.html" title="广义同调 [广义同调]">广义同调</a></span>为
 $$
@@ -1956,7 +2016,7 @@ $\operatorname{Hom}(X,Y)^{G}$.</p>
 $$
 U=\operatorname{Hom}_{\mathsf{Set}}(1,U-)=\operatorname{Hom}_{\mathcal C}(F(1),-).
 $$
-且此时 $F(1)$ 的底层结构具有<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的结构. 这是<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>的简单应用:
+且此时 $F(1)$ 的底层集合 (或范畴) 具有<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的结构. 这是<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>的简单应用:
 $$
 U(F(1)) = \operatorname{Hom}_{\mathcal C}(F(1),F(1)) = \operatorname{End}_{\mathsf{Fun}(\mathcal C,\mathsf{Set})}(U).
 $$</p>
@@ -1966,6 +2026,7 @@ $$</p>
 <li>一个元素自由生成的交换环 $\mathbb{Z}[x]$ 是遗忘函子 $U\colon \mathsf{Ring} \to \mathsf{Set}$ 的余表示对象, $U(\mathbb{Z}[x]) = \operatorname{Hom}_{\mathsf{Ring}}(\mathbb{Z}[x],\mathbb{Z}[x]) = \operatorname{End}(U)\simeq (\mathbb{Z}[x],\circ)$.</li>
 <li>更一般地, 给定交换环 $A$, 一个元素自由生成的 $A$-代数 $A[x]$ 是遗忘函子 $U\colon \mathsf{Alg}_A \to \mathsf{Set}$ 的余表示对象, $U(A[x]) = \operatorname{Hom}_{\mathsf{Alg}_A}(A[x],A[x]) = \operatorname{End}(U)$.</li>
 <li>对于对称幺半范畴 $\mathcal C$, 一个对象自由生成的 $\mathcal C$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>对称幺半范畴是<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>的范畴, 其上有一个幺半结构, 对应于自函子的复合. 详见<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>.</li>
+<li>一个对象自由生成的<span class="link local"><a href="./半加性范畴.html" title="半加性范畴 [半加性范畴]">半加性 $(1,1)$-范畴</a></span>是 $\operatorname{h}\mathsf{Span}(\mathsf{Fin})$ (也即 $\mathsf{Fin}$ 的<span class="link local"><a href="./关系2-范畴.html" title="关系 2-范畴 [关系2-范畴]">关系范畴</a></span>的同伦范畴),</li>
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="范畴代数"><header><h1><span class="taxon"></span>Möbius 反演 <a class="slug" href="./范畴代数.html">[范畴代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
@@ -2017,7 +2078,8 @@ $$
 <p>每个预层 $X\colon\mathcal{C}^{\mathrm{op}}\to\mathsf{Set}$ 都是<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>的余极限:
 $$
 X = \operatorname{colim}_{\mathbf{y}(c) \to X}\mathbf{y}(c).
-$$</p>
+$$
+该余极限的指标范畴为 $X$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span>.</p>
 <h3>预层意象</h3>
 <p>任何 $\mathsf{Set}$ (或 $\mathsf{Ani}$) 取值的预层范畴都是<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>; 见<span class="link local"><a href="./预层意象.html" title="预层意象 [预层意象]">预层意象</a></span>.</p>
 <h3>态射的计算</h3>
@@ -2141,11 +2203,18 @@ f_! \dashv (f^*=g_!) \dashv (f_*=g^*) \dashv g_*.
 $$</p>
 <h2>性质</h2>
 <h3>对可表函子的作用</h3>
-<p>设函子 $f\colon \mathcal C \to \mathcal D$ 诱导<span class="link local"><a href="./预层.html" title="预层 [预层]">预层范畴</a></span> $\widehat {\mathcal C} = \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set}),\widehat {\mathcal D} = \mathsf{Fun}(\mathcal D^{\mathrm{op}},\mathsf{Set})$ 之间的伴随
+<p>预层拉回的左伴随 $f_!$ 将可表函子映射到可表函子. 具体地, 设函子 $f\colon \mathcal C \to \mathcal D$ 诱导<span class="link local"><a href="./预层.html" title="预层 [预层]">预层范畴</a></span> $\widehat {\mathcal C} = \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set}),\widehat {\mathcal D} = \mathsf{Fun}(\mathcal D^{\mathrm{op}},\mathsf{Set})$ 之间的伴随
 $$
 f_! \dashv f^* \dashv f_*,
 $$
-则对于 $c\in \mathcal C$, 有 $f_! \mathbf{y}(c) = \mathbf{y}(f(c))$.</p>
+则对于 $c\in \mathcal C$, 有
+$$
+f_! \mathbf{y}(c) = \mathbf{y}(f(c)).
+$$
+道理很简单:
+$$
+\operatorname{Hom}_{\widehat {\mathcal D}}(f_!\mathbf{y}(c),X) = \operatorname{Hom}_{\widehat {\mathcal C}}(\mathbf{y}(c),f^*X) = X(f(c)).
+$$</p>
 <h3>先推再拉</h3>
 <p>当 $f\colon \mathcal C\to\mathcal D$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>, 即全子范畴的嵌入时,
 $$

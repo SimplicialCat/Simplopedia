@@ -935,6 +935,11 @@ $N(0\overset{\simeq}{\to} 1) \to {*}$
 </tbody></table>
 <h2>相关内容</h2>
 <p><span class="link local"><a href="./关于译名-意象.html" title="关于译名 “意象” [关于译名-意象]">关于译名 “意象”</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="代数胚"><header><h1><span class="taxon"></span>代数胚 <a class="slug" href="./代数胚.html">[代数胚]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设 $\mathcal{V}$ 为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 其中的<strong>代数胚</strong>是一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ 配备<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathrm{Assoc}_X$ 在 $\mathcal V$ 中的一个<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span>.</p>
+<p>对任意范畴 $X$ 可定义算畴 $\mathrm{Assoc}_X$, 它是<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合算畴</a></span> $\mathrm{Assoc}$ 的 “多对象版本”, 其中的颜色为 $X^{\mathrm{op}}\times X$ (颜色 $(x,y)$ 的一个元素记作 $f\colon x\to y$), 多元运算是一串箭头的复合.</p>
+<p>算畴 $\mathrm{Assoc}_X$ 的上述直观的严格表述参见 <span class="link local"><a href="./StefanichHigherQCoh.html" title="Higher Quasicoherent Sheaves [StefanichHigherQCoh]">Stefanich</a></span>. 定义函子 $\mathfrak C\colon \mathsf{Op}_{/\mathrm{Assoc}}\to\mathsf{Cat}$, 然后定义 $\mathrm{Assoc}_{-}$ 为 $\mathfrak C$ 的右伴随 (这个右伴随类似于<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">脉–几何实现伴随</a></span>中的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子); 主要想法仍是用最基本的花形 (代表一个 $n$ 元运算) 来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>一个算畴 (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>).</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="几何实现"><header><h1><span class="taxon"></span>几何实现 (作为米田扩张) <a class="slug" href="./几何实现.html">[几何实现]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>几何实现有两种不同的含义, 本页面介绍的是其作为沿<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span>的 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>的含义. 另见<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现 (作为单纯图表的余极限)</a></span>.</p>
@@ -966,11 +971,121 @@ $$</p>
 <p>考虑终范畴 $1$, 其上的预层范畴即为生象的范畴 $\mathsf{Ani}$. 沿米田嵌入 $1\to\mathsf{Ani}$ 的左 Kan 扩张给出的是</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, <span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="加权余极限"><header><h1><span class="taxon"></span>加权余极限 <a class="slug" href="./加权余极限.html">[加权余极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设 $\mathcal V$ 为完备, 余完备闭<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $I,\mathcal C$ 为 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>.</p>
+<p>给定 $\mathcal V$-充实的图 $X\colon I\to\mathcal C$ 与<strong>权</strong> (weight) $W\colon I^{\mathrm{op}}\to\mathcal V$, <strong>加权余极限</strong> $\operatorname{colim}^W X$ (又记作 $W\otimes_I X$) 满足如下泛性质:
+$$
+\begin{aligned}
+&amp;\operatorname{Hom}_{\mathcal C}(\operatorname{colim}^W X,c)\\
+\simeq\,
+&amp;\operatorname{Hom}_{\mathsf{Fun}_{\mathcal V}(I^{\mathrm{op}},\mathcal V)}(W,\operatorname{Hom}_{\mathcal C}(X(-),c)).
+\end{aligned}
+$$</p>
+<p>换言之, $\operatorname{colim}^W$ 是<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子
+$$
+\mathcal C\to \mathsf{Fun}_{\mathcal V}(I^{\mathrm{op}},\mathcal V), c\mapsto\operatorname{Hom}_{\mathcal C}(X(-),c)
+$$
+的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>, 也可以理解为权 $W$ 作为 $I$ 上<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span> (米田扩张).</p>
+<h2>性质</h2>
+<h3>与余端的关系</h3>
+<p>当 $\mathcal C$ 中对象沿 $\mathcal V$ 中对象的<span class="link local"><a href="./张量积.html" title="张量积, 余幂 [张量积]">张量积</a></span>存在时, 加权余极限等于<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>
+$$
+\operatorname{colim}^W X = \int_{i\in I} W_i \otimes X_i.
+$$</p>
+<h3>权的余极限</h3>
+<p>由定义, 加权余极限保持权 $W$ 的余极限, 即当 $W = \operatorname{colim}_j W_j$ 时,
+$$
+\operatorname{colim}^W X = \operatorname{colim}_j\operatorname{colim}^{W_j}X.
+$$</p>
+<h3>沿元素范畴的余极限</h3>
+<p><strong>命题</strong>. 当 $\mathcal V = \mathsf{Ani}$ 时, 加权余极限等于沿权函子 $W$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span> $\mathsf{Elts}(W)$ 的余极限:
+$$
+\operatorname{colim}^W X = \operatorname{colim}(\mathsf{Elts}(W)^{\mathrm{op}}\to I\overset{X}{\to}\mathcal C).
+$$</p>
+<p><em>证明</em>. 先对 $W$ 为<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span> $W=\mathbf{y}(i)$ 的情形验证:
+$$
+\operatorname{colim}^{\mathbf{y}(i)}X=X(i)=\operatorname{colim}(\mathsf{Elts}(\mathbf{y}(i))\to\mathcal C),
+$$
+这是因为 $\mathsf{Elts}(\mathbf{y}(i))$ 有终对象.</p>
+<p>再使用关于 $W$ 的余连续性即证 ($W$ 是可表函子沿 $\mathsf{Elts}(W)$ 的余极限, 参见<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>).</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="单纯集"><header><h1><span class="taxon"></span>单纯集 <a class="slug" href="./单纯集.html">[单纯集]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>单纯集是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$ 上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>, 即集合范畴中的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>.</p>
+<h2>例</h2>
+<h3>脉</h3>
+<p>构造单纯集 (或任何范畴上的预层) 的一种重要手段是脉. 给定任意函子 $\Delta\to\mathcal C$, 将其想象为抽象的单形对应的具体的几何对象, 都可由 $\mathcal C$ 的对象造出单纯集; 当 $\mathcal C$ 具有余极限时还可构造相伴随的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>. 参见<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>, <span class="link local"><a href="./双单纯集.html" title="“双单纯集” [双单纯集]">双单纯集</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="奇异单纯集"><header><h1><span class="taxon"></span>奇异单纯集 <a class="slug" href="./奇异单纯集.html">[奇异单纯集]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>拓扑空间的奇异单纯集是一种<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>.</p>
 <h2>性质</h2>
 <p>奇异单纯集函子是<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>的右伴随.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="带元数的单子"><header><h1><span class="taxon"></span>带元数的单子 <a class="slug" href="./带元数的单子.html">[带元数的单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>带元数的单子</strong> (monad with arities) 是 <span class="link local"><a href="./BergerMelliesWeberMonAr.html" title="Monads with arities and their associated theories [BergerMelliesWeberMonAr]">Berger–Melliès–Weber</a></span> 引入的概念, 能够表达以下结构:</p>
+<ul>
+<li><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴</a></span> (甚至<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>);</li>
+<li><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>;</li>
+<li><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>.</li>
+</ul>
+<p>直观上, 范畴 $\mathcal E$ 上的单子 $T$ 以子范畴 $\mathcal A\subset\mathcal E$ 为元数, 就是说为了表达一个 $T$-结构所需的运算, 只需用 $\mathcal A$ 的对象来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>. 例如要表达一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ 上的一个<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>结构, 只需要考虑所有 $n$ 元集合到 $X$ 的映射 ($n=0,1,2,\cdots$).</p>
+<h2>定义</h2>
+<p>设 $\mathcal A\subset\mathcal E$ 为<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>全子范畴, 称为<strong>元数</strong> (arities) 的范畴.</p>
+<p>回忆, 子范畴 $\mathcal A$ 的稠密性是指</p>
+<ul>
+<li><span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子
+$$
+  \nu_{\mathcal A}\colon \mathcal E \to \widehat {\mathcal A}
+$$
+是<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>;</li>
+<li>$\mathcal E$ 的每个对象 $X$ 都是如下余极限:
+$$
+X = \operatorname{colim}_{A\to X,A\in\mathcal A}A.\ (\star)
+$$</li>
+</ul>
+<p><strong>定义</strong>. 对于 $\mathcal E$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$, 若 $T$ 保持所有形如 $(\star)$ 的余极限, 则称单子 $T$ 以 $\mathcal A$ 为<strong>元数</strong> (arity).</p>
+<h3>范畴 $\Theta_T$</h3>
+<p>设 $T$ 为 $\mathcal E$ 上的单子, 定义 $\Theta_T$ 为 $\mathcal A$ 的对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span> $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>构成的范畴. 那么有自由代数函子
+$$
+j_T\colon \mathcal A \to \Theta_T.
+$$</p>
+<p>我们也可以将 $\Theta_T$ 的对象理解为 $\mathcal A$ 的对象 $A$, 而将 $\Theta_T$ 中的态射 $A\to B$ 理解为 $\mathcal E$ 中的态射 $A \to TB$. (这是 <span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>的一个全子范畴.)</p>
+<p>嵌入 $\Theta_T \hookrightarrow \mathcal E^T$ 也有相应的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子
+$$
+\nu_T \colon \mathcal E^T \to \widehat {\Theta_T},
+$$
+且有交换方块
+$$
+\begin{CD}
+\mathcal E^T @&gt;{\nu_T}&gt;&gt; \widehat {\Theta_T} \\
+@V{U}VV @VV{j_T^*}V \\
+\mathcal E @&gt;&gt;{\nu_A}&gt; \widehat {\mathcal A}.
+\end{CD}
+$$</p>
+<p>注意到由于 $j_T$ <span class="link local"><a href="./本质满函子.html" title="本质满函子 [本质满函子]">本质满</a></span>, 故 $j_T^*$ 是<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的.</p>
+<p><strong>命题</strong>. 如下两个条件等价:</p>
+<ul>
+<li>$T$ 是以 $\mathcal A$ 为元数的单子;</li>
+<li></li>
+</ul>
+<p><strong>定理</strong>. 在上述命题的条件下,</p>
+<ul>
+<li>$\nu_T$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>. 换言之, $T$-代数可由 $\mathcal A$ 的对象生成的自由代数来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>;</li>
+<li>对于 $\Theta_T$ 上的预层 $X$, 其落在 $\nu_T$ 的像中当且仅当其沿 $j_T$ 的限制落在 $\nu_A$ 的像中.</li>
+</ul>
+<h3>理论</h3>
+<p>上述范畴 $\Theta_T$ 及函子 $j_T\colon \mathcal A\to\Theta_T$ 可以抽象如下.</p>
+<p>设 $\mathcal A\subset\mathcal E$ 为<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>全子范畴, 定义一个以 $\mathcal A$ 为元数的<strong>理论</strong>为一个函子
+$$
+j\colon \mathcal A \to \Theta,
+$$
+使得伴随 $j_! \dashv j^*$ <span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">诱导的单子</a></span> $j^*j_!\colon \widehat {\mathcal A} \to \widehat {\mathcal A}$ 保持<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子 $\nu_{\mathcal A}\colon \mathcal E\to\widehat {\mathcal A}$ 的像.</p>
+<p>该理论的一个<strong>模型</strong>是 $\Theta$ 上的一个预层, 满足其沿 $j$ 的限制落在 $\nu_{\mathcal A}$ 的像中.</p>
+<p><strong>定理</strong>. 对于固定的 $(\mathcal E,\mathcal A)$, $\mathcal E$ 上以 $\mathcal A$ 为元数的单子 $T$ 等价于以 $\mathcal A$ 为元数的理论 $j_T\colon \mathcal A\to \Theta_T$, 且单子 $T$ 上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>等同于理论 $\Theta_T$ 的模型.</p>
+<h2>例</h2>
+<h3>Lawvere 理论</h3>
 </details></section><section class="block" data-taxon=""><details ><summary id="拟范畴"><header><h1><span class="taxon"></span>“拟范畴” <a class="slug" href="./拟范畴.html">[拟范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>拟范畴是一种用<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>建立的<span class="link local"><a href="./无穷范畴的模型.html" title="无穷范畴的模型 [无穷范畴的模型]">无穷范畴的模型</a></span>.</p>
 <h2>定义</h2>
@@ -982,6 +1097,19 @@ $$
 <h2>例</h2>
 <p><span class="link local"><a href="./Kan复形.html" title="“Kan 复形” [Kan复形]">Kan 复形</a></span>是拟范畴.</p>
 <p>范畴的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>是拟范畴.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="稠密子范畴"><header><h1><span class="taxon"></span>稠密子范畴 <a class="slug" href="./稠密子范畴.html">[稠密子范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>稠密子范畴</strong>是可用于忠实地<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>整个范畴的一族 “足够有代表性” 的对象构成的子范畴.</p>
+<h2>定义</h2>
+<p>称函子 $\mathcal C \to \mathcal D$ <strong>稠密</strong>是指其对应的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子 $\mathcal D \to\widehat {\mathcal C}$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>.</p>
+<h3>通过余极限</h3>
+<p>函子 $\mathcal C \to \mathcal D$ 稠密当且仅当 $\mathcal D$ 的每个对象 $X$ 都是 $\mathcal C$ 的对象的如下<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>:
+$$
+X = \operatorname{colim}_{c\to X,c\in\mathcal C} c.
+$$</p>
+<h2>例</h2>
+<h3>代数范畴</h3>
+<p>对于<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span> (<span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>) $\mathbb T$, 考虑其在集合范畴中的模型 $\mathsf{Mod}_{\mathsf{Set}}(\mathbb T)$, 那么有限生成自由代数构成稠密子范畴.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="逆环路空间"><header><h1><span class="taxon"></span>逆环路空间 <a class="slug" href="./逆环路空间.html">[逆环路空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>群 $G$ 的<strong>逆环路空间</strong> (delooping) 是 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主齐性空间</a></span>的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>, 也即 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>的<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">分类空间</a></span>.</p>

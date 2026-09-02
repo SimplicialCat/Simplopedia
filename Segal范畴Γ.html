@@ -908,7 +908,8 @@ $$</p>
 <p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">亟需施工处</a></span>列表 (“TODO list”)</p>
 <p><span class="link local"><a href="./terminologies.html" title="单纯百科 - 术语翻译表 [terminologies]">术语翻译表</a></span></p>
 <h2>最近</h2>
-<p><span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span></p>
+<p><span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span></p>
+<p><span class="link local"><a href="./代数胚.html" title="代数胚 [代数胚]">代数胚</a></span>, <span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span></p>
 <p><span class="link local"><a href="./平坦函子.html" title="平坦函子 [平坦函子]">平坦函子</a></span></p>
 <p><span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">Segal 范畴 Γ</a></span>, <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴 Θn</a></span></p>
 <p><span class="link local"><a href="./杠–余杠对偶.html" title="杠–余杠对偶 [杠–余杠对偶]">杠–余杠对偶</a></span></p>
@@ -948,6 +949,48 @@ $$</p>
 <p><span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span></p>
 <p><span class="link local"><a href="./非交换Čech上同调.html" title="非交换 Čech 上同调 [非交换Čech上同调]">非交换 Čech 上同调</a></span></p>
 <p><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="圈积"><header><h1><span class="taxon"></span>圈积 (范畴论) <a class="slug" href="./圈积.html">[圈积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>圈积是 $\mathsf{Cat}_{/\Gamma}$ 上的一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半</a></span>结构, 表现的是 $\mathsf{Cat}$ 上某种<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>的复合, 类似于<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>的复合积.</p>
+<p>类似于<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>中的结合代数即为<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>, 圈积下的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>也可给出 $\mathsf{Cat}$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</p>
+<h2>定义</h2>
+<p>记 $\Gamma$ 为 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">Segal 范畴</a></span>.</p>
+<h3>直接定义</h3>
+<p>设范畴 $\mathcal A,\mathcal B$ 带有到 $\Gamma$ 的函子 $F\colon \mathcal A\to\Gamma$, $G\colon \mathcal B\to\Gamma$.</p>
+<p>我们定义范畴 $\mathcal A \wr \mathcal B$ 以及函子 $\mathcal A \wr \mathcal B \to \Gamma$. 范畴 $\mathcal A \wr \mathcal B$ 的对象为
+$$
+(a,\{b_i\}_{i\in F(a)}),
+$$
+态射 $(a,\{b_i\}) \to (a',\{b'_i\})$ 为 $\mathcal A$ 中的态射 $f\colon a\to a'$ 以及对每个 $j\in F(f)(i)$ 一个态射 $\eta_{ij}\colon a_i\to a'_j$.</p>
+<p><strong>命题</strong>. 当范畴 $\mathcal B$ 有<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>时,
+$$
+\mathcal A \wr \mathcal B = \int_{a\in \mathcal A}\mathcal B^{F(a)}.
+$$</p>
+<h3>通过自由半加性范畴</h3>
+<p>首先, 对任意范畴 $\mathcal C$ 定义 $\Gamma \wr \mathcal C$ 为 $\mathcal C$ 生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>的 “具有<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>和<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">有限积</a></span>的范畴”. (<span class="link local"><a href="./BergerWr.html" title="Iterated wreath product of the simplex category and iterated loop spaces [BergerWr]">Berger</a></span> 称之为 “半加性范畴”, 但一般人们说的半加性范畴还要求余积与积等价.)</p>
+<p>然后对于 $\mathcal A\in\mathsf{Cat}_{/\Gamma}$ 以及 $\mathcal B\in\mathsf{Cat}$ (或 $\mathcal B\in\mathsf{Cat}_{/\Gamma}$), 定义
+$$
+\mathcal A \wr \mathcal B = \mathcal A \times_{\Gamma} (\Gamma \wr \mathcal B).
+$$</p>
+<h2>性质</h2>
+<h3></h3>
+<h2>例</h2>
+<h3>与 Segal 范畴 $\Gamma$ 圈积</h3>
+<h3>与单纯形范畴圈积</h3>
+<p>对范畴 $\mathcal A$, 范畴 $\Delta \wr \mathcal A$ 的对象 $([n],(A_1,\cdots,A_n))$ 可视为某种链条状的 “<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>”, 其对象为 $0,1,\cdots,n$, 态射对象为
+$$
+\operatorname{Hom}(i-1,i) = A_i;
+$$
+一般地,
+$$
+\operatorname{Hom}(i,j) = A_{i+1}\times\cdots\times A_{j}.
+$$</p>
+<p>为了使这一陈述有意义, 设 $\mathcal V$ 为余完备<span class="link local"><a href="./积闭范畴.html" title="积闭范畴 [积闭范畴]">积闭范畴</a></span>, $\mathcal A\subset\mathcal V$ 为全子范畴, 则 $\Delta\wr\mathcal A$ 嵌入到 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>的范畴 $\mathcal V\text{-}\mathsf{Cat}$:
+$$
+\Delta\wr\mathcal A \hookrightarrow \mathcal V\text{-}\mathsf{Cat}.
+$$</p>
+<p><strong>命题</strong>. 若 $\mathcal A\subset\mathcal V$ <span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>, 则 $\Delta\wr\mathcal A \hookrightarrow \mathcal V\text{-}\mathsf{Cat}$ 也稠密.</p>
+<p><em>证明</em>. 约化到 $\mathcal V = \widehat {\mathcal A}$ 的情形.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="带基点对象"><header><h1><span class="taxon"></span>带基点对象 <a class="slug" href="./带基点对象.html">[带基点对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>范畴 $\mathcal C$ 中带基点对象的范畴是其<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>下的<span class="link local"><a href="./仰范畴.html" title="仰范畴 [仰范畴]">仰范畴</a></span> $\mathcal C_{*/}$.</p>

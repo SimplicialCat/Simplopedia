@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>张量积</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width"><title>张量积, 余幂</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
 
 
 <div id="tcomment"></div>
@@ -825,7 +825,7 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon=""><details open><summary id="张量积"><header><h1><span class="taxon"></span>张量积 <a class="slug" href="./张量积.html">[张量积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<article><section class="block" data-taxon=""><details open><summary id="张量积"><header><h1><span class="taxon"></span>张量积, 余幂 <a class="slug" href="./张量积.html">[张量积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>这里所说的<strong>张量积</strong>特指如下概念: 对于范畴 $\mathcal C$ 的对象 $X$, 以及<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $A$, <strong>张量积</strong> $A\cdot X$ 给出自然同构
 $$
@@ -838,6 +838,7 @@ $$
 $$
 张量积 $A\cdot X$ 也是 $A$ 形状, 取值于 $X$ 的常值图表的余极限 $\operatorname{colim}_A X$.</p>
 <p>当然, <span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>的对象也有类似的张量积的概念.</p>
+<p>张量积又称余幂 (copower), 对偶的概念是<span class="link local"><a href="./幂.html" title="幂, 余张量积 [幂]">幂</a></span>.</p>
 <h2>例</h2>
 <p>给定一个<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span> $E$, <span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ 的 $E$-值<span class="link local"><a href="./广义同调.html" title="广义同调 [广义同调]">广义同调</a></span>为
 $$
@@ -854,7 +855,7 @@ $$</p>
 <h2>观念</h2>
 <p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的 <strong>Hochschild 同调</strong>是其 “沿着流形 $S^1$ 的张量积”, 即 $S^1$ 上的<span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>.
 Hochschild 同调又叫 “<span class="link local"><a href="./迹.html" title="迹 [迹]">迹</a></span>”, “<span class="link local"><a href="./余中心.html" title="余中心 [余中心]">余中心</a></span>”.</p>
-<p><span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>的 Hochschild 同调是其与<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $S^1$ 的<span class="link local"><a href="./张量积.html" title="张量积 [张量积]">张量积</a></span>.</p>
+<p><span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>的 Hochschild 同调是其与<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $S^1$ 的<span class="link local"><a href="./张量积.html" title="张量积, 余幂 [张量积]">张量积</a></span>.</p>
 <h2>定义</h2>
 <h3>结合代数</h3>
 <p>设 $\mathcal C$ 为<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $A$ 为 $\mathcal C$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 定义其 <strong>Hochschild 同调</strong>为
@@ -962,7 +963,7 @@ $$
 其中用到 $\int_{W\times\mathbb{R}}A$ 是<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> (因为有对称幺半函子 $W\times -\colon \mathsf{Disk}_1^{\text{fr}} \to \mathsf{Mfd}_n^{\text{fr}}$), 且 $\int_{X_0}A$ 是 $\int_{W\times \mathbb{R}}A$-右模
 (这是因为领口可以再加一个领口, 两个领口可以合成一个领口).</p>
 <h3>$\mathbb{E}_\infty$-代数的分解同调</h3>
-<p>设 $A$ 为 $\mathbb E_\infty$-代数, $M$ 为 $n$-流形, 那么 $A$ 作为 $\mathbb E_n$-代数在 $M$ 上的分解同调等同于 $A$ 作为 $\mathbb E_\infty$-代数沿 $M$ 的底生象的<span class="link local"><a href="./张量积.html" title="张量积 [张量积]">张量积</a></span>.</p>
+<p>设 $A$ 为 $\mathbb E_\infty$-代数, $M$ 为 $n$-流形, 那么 $A$ 作为 $\mathbb E_n$-代数在 $M$ 上的分解同调等同于 $A$ 作为 $\mathbb E_\infty$-代数沿 $M$ 的底生象的<span class="link local"><a href="./张量积.html" title="张量积, 余幂 [张量积]">张量积</a></span>.</p>
 <h2>例</h2>
 <h3>$S^1$ 上的分解同调</h3>
 <p>由于 $S^1$ 可以写成
@@ -974,9 +975,47 @@ $$
 \int_{S^1}A\simeq A\otimes_{A^{\mathrm{op}}\otimes A}A.
 $$
 这便是 <span class="link local"><a href="./Hochschild同调.html" title="Hochschild 同调 [Hochschild同调]">Hochschild 同调</a></span>的一种定义.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="加权余极限"><header><h1><span class="taxon"></span>加权余极限 <a class="slug" href="./加权余极限.html">[加权余极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设 $\mathcal V$ 为完备, 余完备闭<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $I,\mathcal C$ 为 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>.</p>
+<p>给定 $\mathcal V$-充实的图 $X\colon I\to\mathcal C$ 与<strong>权</strong> (weight) $W\colon I^{\mathrm{op}}\to\mathcal V$, <strong>加权余极限</strong> $\operatorname{colim}^W X$ (又记作 $W\otimes_I X$) 满足如下泛性质:
+$$
+\begin{aligned}
+&amp;\operatorname{Hom}_{\mathcal C}(\operatorname{colim}^W X,c)\\
+\simeq\,
+&amp;\operatorname{Hom}_{\mathsf{Fun}_{\mathcal V}(I^{\mathrm{op}},\mathcal V)}(W,\operatorname{Hom}_{\mathcal C}(X(-),c)).
+\end{aligned}
+$$</p>
+<p>换言之, $\operatorname{colim}^W$ 是<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子
+$$
+\mathcal C\to \mathsf{Fun}_{\mathcal V}(I^{\mathrm{op}},\mathcal V), c\mapsto\operatorname{Hom}_{\mathcal C}(X(-),c)
+$$
+的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>, 也可以理解为权 $W$ 作为 $I$ 上<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span> (米田扩张).</p>
+<h2>性质</h2>
+<h3>与余端的关系</h3>
+<p>当 $\mathcal C$ 中对象沿 $\mathcal V$ 中对象的<span class="link local"><a href="./张量积.html" title="张量积, 余幂 [张量积]">张量积</a></span>存在时, 加权余极限等于<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>
+$$
+\operatorname{colim}^W X = \int_{i\in I} W_i \otimes X_i.
+$$</p>
+<h3>权的余极限</h3>
+<p>由定义, 加权余极限保持权 $W$ 的余极限, 即当 $W = \operatorname{colim}_j W_j$ 时,
+$$
+\operatorname{colim}^W X = \operatorname{colim}_j\operatorname{colim}^{W_j}X.
+$$</p>
+<h3>沿元素范畴的余极限</h3>
+<p><strong>命题</strong>. 当 $\mathcal V = \mathsf{Ani}$ 时, 加权余极限等于沿权函子 $W$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span> $\mathsf{Elts}(W)$ 的余极限:
+$$
+\operatorname{colim}^W X = \operatorname{colim}(\mathsf{Elts}(W)^{\mathrm{op}}\to I\overset{X}{\to}\mathcal C).
+$$</p>
+<p><em>证明</em>. 先对 $W$ 为<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span> $W=\mathbf{y}(i)$ 的情形验证:
+$$
+\operatorname{colim}^{\mathbf{y}(i)}X=X(i)=\operatorname{colim}(\mathsf{Elts}(\mathbf{y}(i))\to\mathcal C),
+$$
+这是因为 $\mathsf{Elts}(\mathbf{y}(i))$ 有终对象.</p>
+<p>再使用关于 $W$ 的余连续性即证 ($W$ 是可表函子沿 $\mathsf{Elts}(W)$ 的余极限, 参见<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>).</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="同调"><header><h1><span class="taxon"></span>同调 <a class="slug" href="./同调.html">[同调]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p><strong>同调</strong>在数学上有许多含义. 其共性是一种表现得像<span class="link local"><a href="./张量积.html" title="张量积 [张量积]">张量积</a></span>, <span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>那样的协变函子. 而与之相对的<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>则是一种表现得像 Hom, <span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>那样的反变函子.</p>
+<p><strong>同调</strong>在数学上有许多含义. 其共性是一种表现得像<span class="link local"><a href="./张量积.html" title="张量积, 余幂 [张量积]">张量积</a></span>, <span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>那样的协变函子. 而与之相对的<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>则是一种表现得像 Hom, <span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>那样的反变函子.</p>
 <h2>定义</h2>
 <p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ 的<strong>同调群</strong> $H_n(X)$ 是其<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的交换群 (见 <span class="link local"><a href="./Dold–Thom定理.html" title="Dold–Thom 定理 [Dold–Thom定理]">Dold–Thom 定理</a></span>) 对应的<span class="link local"><a href="./连合谱.html" title="连合谱 [连合谱]">连合谱</a></span> $\Sigma^\infty X \wedge H\mathbb{Z}$ 的<span class="link local"><a href="./同伦群(稳定同伦论).html" title="同伦群 (稳定同伦论) [同伦群(稳定同伦论)]">同伦群</a></span>:
 $$
@@ -990,4 +1029,22 @@ $$</p>
 <h2>性质</h2>
 <h3>Dold–Thom 定理</h3>
 <p><span class="link local"><a href="./Dold–Thom定理.html" title="Dold–Thom 定理 [Dold–Thom定理]">Dold–Thom 定理</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="幂"><header><h1><span class="taxon"></span>幂, 余张量积 <a class="slug" href="./幂.html">[幂]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于范畴 $\mathcal C$ 的对象 $X$, 以及<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $A$, <strong>幂</strong> $X^A$ 给出自然同构
+$$
+\operatorname{Hom}_{\mathcal C}(-, X^A)
+\simeq \operatorname{Hom}_{\mathsf{Ani}}(A,\operatorname{Hom}_{\mathcal C}(-,X)),
+$$
+也即两个函子</p>
+<ul>
+<li>$X^{(-)}\colon \mathsf{Ani}^{\mathrm{op}}\to\mathcal C$</li>
+<li>$\operatorname{Hom}_{\mathcal C}(-,X)\colon \mathcal C^{\mathrm{op}}\to\mathsf{Ani}$</li>
+</ul>
+<p>满足<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>
+$$
+\operatorname{Hom}_{\mathcal C}(-,X)^{\mathrm{op}}\dashv X^{(-)}.
+$$</p>
+<p>当然, <span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>的对象也有类似的幂的概念.</p>
+<p>幂又称余张量积 (cotensor), 对偶的概念是<span class="link local"><a href="./张量积.html" title="张量积, 余幂 [张量积]">张量积</a></span>.</p>
 </details></section></details></section></footer></article></div></body></html>

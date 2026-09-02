@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>“模态”</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width"><title>模态</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
 
 
 <div id="tcomment"></div>
@@ -825,6 +825,102 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon=""><details open><summary id="模态"><header><h1><span class="taxon"></span>“模态” <a class="slug" href="./模态.html">[模态]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<article><section class="block" data-taxon=""><details open><summary id="模态"><header><h1><span class="taxon"></span>模态 <a class="slug" href="./模态.html">[模态]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>在形式逻辑中, 模态体现为<span class="link local"><a href="./模态算子.html" title="“模态算子” [模态算子]">模态算子</a></span>, 将命题/类型对应到新的命题/类型.</p>
-</details></section><footer></footer></article></div></body></html>
+<p>在<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中, 模态通常定义为<span class="link local"><a href="./幂等单子.html" title="幂等单子 [幂等单子]">幂等单子</a></span>.</p>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="合聚意象"><header><h1><span class="taxon"></span>合聚意象 <a class="slug" href="./合聚意象.html">[合聚意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>动机</h2>
+<p>一类空间 $H$ 中的所谓<strong>合聚</strong> (cohesion) 的概念是描述空间 $X\in H$ 的<strong>点</strong>如何聚集在一起的方法, 如同液体聚成小滴.</p>
+<p>William Lawvere 指出了如下公理.</p>
+<ul>
+<li>对 $H$ 中的每个空间 $X$ 指定了<strong>合聚连通分支</strong> (cohesively connected components) 的集合 (或<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>) $\Pi(X)$;</li>
+<li>每个集合 $S$ 都可以两种方式视为<strong>合聚空间</strong> (cohesive space):
+<ul>
+<li>将 $S$ 每个点分别视为一个液滴, 称为<strong>离散合聚空间</strong> (discrete cohesive space);</li>
+<li>将 $S$ 的所有点共同视为一个液滴, 称为<strong>余离散合聚空间</strong> (codiscrete cohesive space).</li>
+</ul>
+</li>
+<li>离散与余离散的合聚空间与其他合聚空间满足一些符合直觉的关系. 例如, 两个离散合聚空间之间的映射就是底层集合的映射.</li>
+</ul>
+<p>合聚空间总是局部可缩 (局部 $\infty$-连通) 的.</p>
+<p>有一个典范的<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span>, 即全局截面 $\Gamma\colon \mathcal E\to\mathsf {Set}$, 将空间 $X$ 对应到其点集 $\Gamma(X)$, 即 $X$ “遗忘所有合聚”. 离散和余离散分别是 $\Gamma$ 的左右伴随:
+$$
+\begin{aligned}
+	\operatorname{Hom}(\operatorname{Disc}(X),Y)&amp;=\operatorname{Hom}(X,\Gamma(Y));\\
+	\operatorname{Hom}(\Gamma(X),Y)&amp;=\operatorname{Hom}(X,\operatorname{coDisc}(Y)).
+\end{aligned}
+$$</p>
+<p>$\Pi\colon \mathcal E\to\mathsf {Set}$ 将空间 $X$ 对应到其连通分支的集合, 是 $\operatorname{Disc}$ 的左伴随:
+$$
+\operatorname{Hom}(\Pi(X),Y)=\operatorname{Hom}(X,\operatorname{Disc}(Y)).
+$$</p>
+<h2>定义</h2>
+<p>设 $\mathcal E$ 是基意象 $\mathcal S$ 上的意象, 即具有<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span> $(f^*\dashv f_*)\colon \mathcal E \to\mathcal S$. 若如下条件成立, 则称其为<strong>合聚意象</strong>:</p>
+<ul>
+<li>它是<span class="link local"><a href="./局部连通意象.html" title="局部连通意象 [局部连通意象]">局部连通意象</a></span>, 即 $f^*$ 存在左伴随 $f_! \dashv f^*$;</li>
+<li>进一步, 它是<span class="link local"><a href="./连通意象.html" title=" [连通意象]">连通意象</a></span>, 即 $f_!$ 保持终对象, 或 $f^*$ <span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实</a></span>, 或 $f_! f^*\to \mathrm{id}_{\mathcal S}$ 为等价;</li>
+<li>进一步, 它强连通, 即 $f_!$ 保持所有有限积;</li>
+<li>并且它是<span class="link local"><a href="./局部意象.html" title="局部意象 [局部意象]">局部意象</a></span>, 即 $f_*$ 存在额外的右伴随 $f_*\dashv f^!$;</li>
+</ul>
+<p>总结起来, 我们有伴随四元组
+$$
+(f_!\dashv f^* \dashv f_* \dashv f^!)\colon \mathcal E
+\begin{array}
+	{ccc}
+	&amp; \overset{f_!}{\longrightarrow} &amp;\\
+	&amp; \overset{f^*}{\longleftarrow} &amp;\\
+	&amp; \overset{f_*}{\longrightarrow} &amp;\\
+	&amp; \overset{f^!}{\longleftarrow} &amp;\\
+\end{array}
+\mathcal S.
+$$</p>
+<p>这些函子各自又有 “几何” 味道的名称:</p>
+<ul>
+<li>$f_! =:\Pi$ 是 “基本 $\infty$-群胚” (或 $1$-意象语境中的 “连通分支集”) 函子;</li>
+<li>$f^* =:\operatorname{Disc}$ 是 “离散几何对象” (这里的离散是相对于<strong>合聚</strong>而言的);</li>
+<li>$f_* =: \Gamma$ 是 “底层点集”;</li>
+<li>$f^! =: \operatorname{coDisc}$ 是 “余离散几何对象”, 直观上是合聚的一个极端, 所有点都聚在一起.</li>
+</ul>
+<p>$$
+(\Pi \dashv \operatorname{Disc} \dashv \Gamma \dashv \operatorname{coDisc})\colon \mathcal E
+\begin{array}
+	{ccc}
+	&amp; \overset{\Pi}{\longrightarrow} &amp;\\
+	&amp; \overset{\operatorname{Disc}}{\longleftarrow} &amp;\\
+	&amp; \overset{\Gamma}{\longrightarrow} &amp;\\
+	&amp; \overset{\operatorname{coDisc}}{\longleftarrow} &amp;\\
+\end{array}
+\mathcal S.
+$$</p>
+<p>相应地, 范畴论性质也有 “几何” 味道的解释:</p>
+<ul>
+<li>$\Gamma\operatorname{Disc}\to\mathrm{id}_{\mathcal S}$ 是等价, 意味着对任意 $X\in\mathcal S$, 意象 $\mathcal E$ 上局部常值 $X$-值函数必为常值, 也即 $\mathcal E$ 连通;</li>
+<li>$\Pi(1) = *$, 意味着终对象的形状是一个点;</li>
+</ul>
+<p>上述种种范畴论性质表明, 意象 $\mathcal E$ 本身作为<span class="link local"><a href="./小意象.html" title="小意象 [小意象]">小意象</a></span>是没有广延的一个 “胖点”, 从而它理应作为一个<span class="link local"><a href="./大意象.html" title="大意象 [大意象]">大意象</a></span>来看待, 在心理上我们可将其想象为以胖点为局部模型的几何对象的范畴.</p>
+<h3>三个模态</h3>
+<p>凝集意象 $\mathcal E$ 上有伴随四元组给出的三个<span class="link local"><a href="./模态.html" title="模态 [模态]">模态</a></span>:</p>
+<ul>
+<li><strong>形</strong> (shape) 模态 $ʃ = \operatorname{Disc} \circ \operatorname{\Pi}$;</li>
+<li><strong>平</strong> (flat) 模态 $\flat = \operatorname{Disc}\circ\operatorname{\Gamma}$;</li>
+<li><strong>尖</strong> (sharp) 模态 $\sharp = \operatorname{coDisc}\circ\operatorname{\Gamma}$.</li>
+</ul>
+<p>由<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>的纯范畴论性质, 它们构成伴随三元组
+$$
+	(ʃ \dashv \flat \dashv \sharp)\colon \mathcal E
+	\begin{array}
+	{ccc}
+	&amp; \overset{ʃ}{\longrightarrow} &amp;\\
+	&amp; \overset{\flat}{\longleftarrow} &amp;\\
+	&amp; \overset{\sharp}{\longrightarrow} &amp;
+	\end{array}
+	\mathcal E.
+$$</p>
+<h3>联络与曲率</h3>
+<p>固定一个合聚意象 $\mathcal E$.</p>
+<p><strong>定义</strong>. 对象 $X$ 的取值于对象 $A$ 的<strong>平坦联络</strong>的空间为
+$$
+\operatorname{Flat}(X,A):=\operatorname{Hom}(ʃ X,A) = \operatorname{Hom}(X,\flat A).
+$$</p>
+<h2>例</h2>
+</details></section></details></section></footer></article></div></body></html>

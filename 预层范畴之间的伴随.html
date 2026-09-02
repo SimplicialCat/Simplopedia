@@ -906,11 +906,18 @@ f_! \dashv (f^*=g_!) \dashv (f_*=g^*) \dashv g_*.
 $$</p>
 <h2>性质</h2>
 <h3>对可表函子的作用</h3>
-<p>设函子 $f\colon \mathcal C \to \mathcal D$ 诱导<span class="link local"><a href="./预层.html" title="预层 [预层]">预层范畴</a></span> $\widehat {\mathcal C} = \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set}),\widehat {\mathcal D} = \mathsf{Fun}(\mathcal D^{\mathrm{op}},\mathsf{Set})$ 之间的伴随
+<p>预层拉回的左伴随 $f_!$ 将可表函子映射到可表函子. 具体地, 设函子 $f\colon \mathcal C \to \mathcal D$ 诱导<span class="link local"><a href="./预层.html" title="预层 [预层]">预层范畴</a></span> $\widehat {\mathcal C} = \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set}),\widehat {\mathcal D} = \mathsf{Fun}(\mathcal D^{\mathrm{op}},\mathsf{Set})$ 之间的伴随
 $$
 f_! \dashv f^* \dashv f_*,
 $$
-则对于 $c\in \mathcal C$, 有 $f_! \mathbf{y}(c) = \mathbf{y}(f(c))$.</p>
+则对于 $c\in \mathcal C$, 有
+$$
+f_! \mathbf{y}(c) = \mathbf{y}(f(c)).
+$$
+道理很简单:
+$$
+\operatorname{Hom}_{\widehat {\mathcal D}}(f_!\mathbf{y}(c),X) = \operatorname{Hom}_{\widehat {\mathcal C}}(\mathbf{y}(c),f^*X) = X(f(c)).
+$$</p>
 <h3>先推再拉</h3>
 <p>当 $f\colon \mathcal C\to\mathcal D$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>, 即全子范畴的嵌入时,
 $$
@@ -1006,6 +1013,21 @@ $$
 <p>单纯对象若存在分裂, 则分裂唯一.</p>
 <h2>参考资料</h2>
 <p>Artin, Mazur, Etale Homotopy Theory</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="本质满函子"><header><h1><span class="taxon"></span>本质满函子 <a class="slug" href="./本质满函子.html">[本质满函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于范畴之间的函子, 若其在<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>上诱导<span class="link local"><a href="./满射(范畴论).html" title="满射 [满射(范畴论)]">满射</a></span> (对于生象这等同于在 $\pi_0$ 上为满射; 另见<span class="link local"><a href="./意象中的满射.html" title="意象中的满射 [意象中的满射]">意象中的满射</a></span>), 则称之为<strong>本质满函子</strong> (essentially surjective functor).</p>
+<h2>性质</h2>
+<h3>预层的下降</h3>
+<p>设 $F\colon \mathcal C\to\mathcal D$ 为本质满函子, 则<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>的拉回
+$$
+F^*\colon \widehat {\mathcal D} \to \widehat {\mathcal C}
+$$
+为<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性函子</a></span>; $\widehat {\mathcal C}$ 上的单子 $F^*F_!$ 的代数等同于 $\widehat {\mathcal D}$ 的对象. (其中 $F_!$ 是 $F^*$ 的左伴随, 见<span class="link local"><a href="./预层范畴之间的伴随.html" title="预层范畴之间的伴随 [预层范畴之间的伴随]">预层范畴之间的伴随</a></span>.)</p>
+<p><em>证明</em>. 考虑比较函子
+$$
+K\colon \widehat {\mathcal D} \to \mathsf{Alg}(F^*F_!),
+\ X\mapsto F^*X.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="概形的约化"><header><h1><span class="taxon"></span>概形的约化 <a class="slug" href="./概形的约化.html">[概形的约化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>陈述</h2>
 <p>记 $\mathsf{Sch}_{\mathrm{red}}\hookrightarrow\mathsf{Sch}$ 为既约概形构成的子范畴. 嵌入函子 $\mathsf{Sch}_{\mathrm{red}}\hookrightarrow\mathsf{Sch}$ 有右伴随; 换言之, 对于既约概形 $X$ 和任意概形 $Y$, 映射 $X\to Y$ 唯一地穿过 $Y_{\mathrm{red}}$.</p>

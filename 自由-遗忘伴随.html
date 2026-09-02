@@ -842,7 +842,7 @@
 $$
 U=\operatorname{Hom}_{\mathsf{Set}}(1,U-)=\operatorname{Hom}_{\mathcal C}(F(1),-).
 $$
-且此时 $F(1)$ 的底层结构具有<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的结构. 这是<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>的简单应用:
+且此时 $F(1)$ 的底层集合 (或范畴) 具有<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的结构. 这是<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>的简单应用:
 $$
 U(F(1)) = \operatorname{Hom}_{\mathcal C}(F(1),F(1)) = \operatorname{End}_{\mathsf{Fun}(\mathcal C,\mathsf{Set})}(U).
 $$</p>
@@ -852,6 +852,7 @@ $$</p>
 <li>一个元素自由生成的交换环 $\mathbb{Z}[x]$ 是遗忘函子 $U\colon \mathsf{Ring} \to \mathsf{Set}$ 的余表示对象, $U(\mathbb{Z}[x]) = \operatorname{Hom}_{\mathsf{Ring}}(\mathbb{Z}[x],\mathbb{Z}[x]) = \operatorname{End}(U)\simeq (\mathbb{Z}[x],\circ)$.</li>
 <li>更一般地, 给定交换环 $A$, 一个元素自由生成的 $A$-代数 $A[x]$ 是遗忘函子 $U\colon \mathsf{Alg}_A \to \mathsf{Set}$ 的余表示对象, $U(A[x]) = \operatorname{Hom}_{\mathsf{Alg}_A}(A[x],A[x]) = \operatorname{End}(U)$.</li>
 <li>对于对称幺半范畴 $\mathcal C$, 一个对象自由生成的 $\mathcal C$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>对称幺半范畴是<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>的范畴, 其上有一个幺半结构, 对应于自函子的复合. 详见<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>.</li>
+<li>一个对象自由生成的<span class="link local"><a href="./半加性范畴.html" title="半加性范畴 [半加性范畴]">半加性 $(1,1)$-范畴</a></span>是 $\operatorname{h}\mathsf{Span}(\mathsf{Fin})$ (也即 $\mathsf{Fin}$ 的<span class="link local"><a href="./关系2-范畴.html" title="关系 2-范畴 [关系2-范畴]">关系范畴</a></span>的同伦范畴),</li>
 </ul>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Kleisli范畴"><header><h1><span class="taxon"></span>Kleisli 范畴 <a class="slug" href="./Kleisli范畴.html">[Kleisli范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
@@ -1251,7 +1252,7 @@ $$
 <p>见<span class="link local"><a href="./高阶可表现范畴.html" title="高阶可表现范畴 [高阶可表现范畴]">高阶可表现范畴</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="同调"><header><h1><span class="taxon"></span>同调 <a class="slug" href="./同调.html">[同调]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p><strong>同调</strong>在数学上有许多含义. 其共性是一种表现得像<span class="link local"><a href="./张量积.html" title="张量积 [张量积]">张量积</a></span>, <span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>那样的协变函子. 而与之相对的<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>则是一种表现得像 Hom, <span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>那样的反变函子.</p>
+<p><strong>同调</strong>在数学上有许多含义. 其共性是一种表现得像<span class="link local"><a href="./张量积.html" title="张量积, 余幂 [张量积]">张量积</a></span>, <span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>那样的协变函子. 而与之相对的<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>则是一种表现得像 Hom, <span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>那样的反变函子.</p>
 <h2>定义</h2>
 <p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ 的<strong>同调群</strong> $H_n(X)$ 是其<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的交换群 (见 <span class="link local"><a href="./Dold–Thom定理.html" title="Dold–Thom 定理 [Dold–Thom定理]">Dold–Thom 定理</a></span>) 对应的<span class="link local"><a href="./连合谱.html" title="连合谱 [连合谱]">连合谱</a></span> $\Sigma^\infty X \wedge H\mathbb{Z}$ 的<span class="link local"><a href="./同伦群(稳定同伦论).html" title="同伦群 (稳定同伦论) [同伦群(稳定同伦论)]">同伦群</a></span>:
 $$
@@ -1270,6 +1271,7 @@ $$</p>
 <p>圈积是 $\mathsf{Cat}_{/\Gamma}$ 上的一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半</a></span>结构, 表现的是 $\mathsf{Cat}$ 上某种<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>的复合, 类似于<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>的复合积.</p>
 <p>类似于<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>中的结合代数即为<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>, 圈积下的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>也可给出 $\mathsf{Cat}$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</p>
 <h2>定义</h2>
+<p>记 $\Gamma$ 为 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">Segal 范畴</a></span>.</p>
 <h3>直接定义</h3>
 <p>设范畴 $\mathcal A,\mathcal B$ 带有到 $\Gamma$ 的函子 $F\colon \mathcal A\to\Gamma$, $G\colon \mathcal B\to\Gamma$.</p>
 <p>我们定义范畴 $\mathcal A \wr \mathcal B$ 以及函子 $\mathcal A \wr \mathcal B \to \Gamma$. 范畴 $\mathcal A \wr \mathcal B$ 的对象为
@@ -1277,19 +1279,35 @@ $$
 (a,\{b_i\}_{i\in F(a)}),
 $$
 态射 $(a,\{b_i\}) \to (a',\{b'_i\})$ 为 $\mathcal A$ 中的态射 $f\colon a\to a'$ 以及对每个 $j\in F(f)(i)$ 一个态射 $\eta_{ij}\colon a_i\to a'_j$.</p>
-<p>上述定义可用稍简洁的符号记作
+<p><strong>命题</strong>. 当范畴 $\mathcal B$ 有<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>时,
 $$
 \mathcal A \wr \mathcal B = \int_{a\in \mathcal A}\mathcal B^{F(a)}.
 $$</p>
 <h3>通过自由半加性范畴</h3>
-<p>首先, 对任意范畴 $\mathcal C$ 定义 $\Gamma \wr \mathcal C$ 为 $\mathcal C$ 生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>半加性范畴.
-定义
+<p>首先, 对任意范畴 $\mathcal C$ 定义 $\Gamma \wr \mathcal C$ 为 $\mathcal C$ 生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>的 “具有<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>和<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">有限积</a></span>的范畴”. (<span class="link local"><a href="./BergerWr.html" title="Iterated wreath product of the simplex category and iterated loop spaces [BergerWr]">Berger</a></span> 称之为 “半加性范畴”, 但一般人们说的半加性范畴还要求余积与积等价.)</p>
+<p>然后对于 $\mathcal A\in\mathsf{Cat}_{/\Gamma}$ 以及 $\mathcal B\in\mathsf{Cat}$ (或 $\mathcal B\in\mathsf{Cat}_{/\Gamma}$), 定义
 $$
 \mathcal A \wr \mathcal B = \mathcal A \times_{\Gamma} (\Gamma \wr \mathcal B).
 $$</p>
 <h2>性质</h2>
 <h3></h3>
 <h2>例</h2>
+<h3>与 Segal 范畴 $\Gamma$ 圈积</h3>
+<h3>与单纯形范畴圈积</h3>
+<p>对范畴 $\mathcal A$, 范畴 $\Delta \wr \mathcal A$ 的对象 $([n],(A_1,\cdots,A_n))$ 可视为某种链条状的 “<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>”, 其对象为 $0,1,\cdots,n$, 态射对象为
+$$
+\operatorname{Hom}(i-1,i) = A_i;
+$$
+一般地,
+$$
+\operatorname{Hom}(i,j) = A_{i+1}\times\cdots\times A_{j}.
+$$</p>
+<p>为了使这一陈述有意义, 设 $\mathcal V$ 为余完备<span class="link local"><a href="./积闭范畴.html" title="积闭范畴 [积闭范畴]">积闭范畴</a></span>, $\mathcal A\subset\mathcal V$ 为全子范畴, 则 $\Delta\wr\mathcal A$ 嵌入到 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>的范畴 $\mathcal V\text{-}\mathsf{Cat}$:
+$$
+\Delta\wr\mathcal A \hookrightarrow \mathcal V\text{-}\mathsf{Cat}.
+$$</p>
+<p><strong>命题</strong>. 若 $\mathcal A\subset\mathcal V$ <span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>, 则 $\Delta\wr\mathcal A \hookrightarrow \mathcal V\text{-}\mathsf{Cat}$ 也稠密.</p>
+<p><em>证明</em>. 约化到 $\mathcal V = \widehat {\mathcal A}$ 的情形.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="对称序列"><header><h1><span class="taxon"></span>对称序列 <a class="slug" href="./对称序列.html">[对称序列]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>对称序列是一种可用于定义<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的结构.</p>
@@ -1367,6 +1385,70 @@ $$
 \mathsf{SSeq}(\mathsf{Vect}) := \mathsf{Fun}(\mathsf{Fin}^{\simeq},\mathsf{Vect}) \simeq \prod_{n\geq 1} \mathsf{Rep}(\Sigma_n)
 $$
 是一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span> <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>. 见 <span class="link local"><a href="./Gaitsgory–RozenblyumDAG.html" title="A Study in Derived Algebraic Geometry [Gaitsgory–RozenblyumDAG]">Gaitsgory–Rozenblyum 导出代数几何讲义</a></span> (关于 Lie 代数与 Koszul 对偶的一节).</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="带元数的单子"><header><h1><span class="taxon"></span>带元数的单子 <a class="slug" href="./带元数的单子.html">[带元数的单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>带元数的单子</strong> (monad with arities) 是 <span class="link local"><a href="./BergerMelliesWeberMonAr.html" title="Monads with arities and their associated theories [BergerMelliesWeberMonAr]">Berger–Melliès–Weber</a></span> 引入的概念, 能够表达以下结构:</p>
+<ul>
+<li><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴</a></span> (甚至<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>);</li>
+<li><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>;</li>
+<li><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>.</li>
+</ul>
+<p>直观上, 范畴 $\mathcal E$ 上的单子 $T$ 以子范畴 $\mathcal A\subset\mathcal E$ 为元数, 就是说为了表达一个 $T$-结构所需的运算, 只需用 $\mathcal A$ 的对象来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>. 例如要表达一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ 上的一个<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>结构, 只需要考虑所有 $n$ 元集合到 $X$ 的映射 ($n=0,1,2,\cdots$).</p>
+<h2>定义</h2>
+<p>设 $\mathcal A\subset\mathcal E$ 为<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>全子范畴, 称为<strong>元数</strong> (arities) 的范畴.</p>
+<p>回忆, 子范畴 $\mathcal A$ 的稠密性是指</p>
+<ul>
+<li><span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子
+$$
+  \nu_{\mathcal A}\colon \mathcal E \to \widehat {\mathcal A}
+$$
+是<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>;</li>
+<li>$\mathcal E$ 的每个对象 $X$ 都是如下余极限:
+$$
+X = \operatorname{colim}_{A\to X,A\in\mathcal A}A.\ (\star)
+$$</li>
+</ul>
+<p><strong>定义</strong>. 对于 $\mathcal E$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$, 若 $T$ 保持所有形如 $(\star)$ 的余极限, 则称单子 $T$ 以 $\mathcal A$ 为<strong>元数</strong> (arity).</p>
+<h3>范畴 $\Theta_T$</h3>
+<p>设 $T$ 为 $\mathcal E$ 上的单子, 定义 $\Theta_T$ 为 $\mathcal A$ 的对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span> $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>构成的范畴. 那么有自由代数函子
+$$
+j_T\colon \mathcal A \to \Theta_T.
+$$</p>
+<p>我们也可以将 $\Theta_T$ 的对象理解为 $\mathcal A$ 的对象 $A$, 而将 $\Theta_T$ 中的态射 $A\to B$ 理解为 $\mathcal E$ 中的态射 $A \to TB$. (这是 <span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>的一个全子范畴.)</p>
+<p>嵌入 $\Theta_T \hookrightarrow \mathcal E^T$ 也有相应的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子
+$$
+\nu_T \colon \mathcal E^T \to \widehat {\Theta_T},
+$$
+且有交换方块
+$$
+\begin{CD}
+\mathcal E^T @&gt;{\nu_T}&gt;&gt; \widehat {\Theta_T} \\
+@V{U}VV @VV{j_T^*}V \\
+\mathcal E @&gt;&gt;{\nu_A}&gt; \widehat {\mathcal A}.
+\end{CD}
+$$</p>
+<p>注意到由于 $j_T$ <span class="link local"><a href="./本质满函子.html" title="本质满函子 [本质满函子]">本质满</a></span>, 故 $j_T^*$ 是<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的.</p>
+<p><strong>命题</strong>. 如下两个条件等价:</p>
+<ul>
+<li>$T$ 是以 $\mathcal A$ 为元数的单子;</li>
+<li></li>
+</ul>
+<p><strong>定理</strong>. 在上述命题的条件下,</p>
+<ul>
+<li>$\nu_T$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>. 换言之, $T$-代数可由 $\mathcal A$ 的对象生成的自由代数来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>;</li>
+<li>对于 $\Theta_T$ 上的预层 $X$, 其落在 $\nu_T$ 的像中当且仅当其沿 $j_T$ 的限制落在 $\nu_A$ 的像中.</li>
+</ul>
+<h3>理论</h3>
+<p>上述范畴 $\Theta_T$ 及函子 $j_T\colon \mathcal A\to\Theta_T$ 可以抽象如下.</p>
+<p>设 $\mathcal A\subset\mathcal E$ 为<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>全子范畴, 定义一个以 $\mathcal A$ 为元数的<strong>理论</strong>为一个函子
+$$
+j\colon \mathcal A \to \Theta,
+$$
+使得伴随 $j_! \dashv j^*$ <span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">诱导的单子</a></span> $j^*j_!\colon \widehat {\mathcal A} \to \widehat {\mathcal A}$ 保持<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子 $\nu_{\mathcal A}\colon \mathcal E\to\widehat {\mathcal A}$ 的像.</p>
+<p>该理论的一个<strong>模型</strong>是 $\Theta$ 上的一个预层, 满足其沿 $j$ 的限制落在 $\nu_{\mathcal A}$ 的像中.</p>
+<p><strong>定理</strong>. 对于固定的 $(\mathcal E,\mathcal A)$, $\mathcal E$ 上以 $\mathcal A$ 为元数的单子 $T$ 等价于以 $\mathcal A$ 为元数的理论 $j_T\colon \mathcal A\to \Theta_T$, 且单子 $T$ 上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>等同于理论 $\Theta_T$ 的模型.</p>
+<h2>例</h2>
+<h3>Lawvere 理论</h3>
 </details></section><section class="block" data-taxon=""><details ><summary id="相对张量积"><header><h1><span class="taxon"></span>相对张量积 <a class="slug" href="./相对张量积.html">[相对张量积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>在具有<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">单纯余极限</a></span>的范畴 $\mathcal C$ 中, 对于<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">右模</a></span> $M$ 与左模 $N$, 可作<strong>相对张量积</strong>

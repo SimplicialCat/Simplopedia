@@ -833,7 +833,8 @@
 <p>每个预层 $X\colon\mathcal{C}^{\mathrm{op}}\to\mathsf{Set}$ 都是<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>的余极限:
 $$
 X = \operatorname{colim}_{\mathbf{y}(c) \to X}\mathbf{y}(c).
-$$</p>
+$$
+该余极限的指标范畴为 $X$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span>.</p>
 <h3>预层意象</h3>
 <p>任何 $\mathsf{Set}$ (或 $\mathsf{Ani}$) 取值的预层范畴都是<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>; 见<span class="link local"><a href="./预层意象.html" title="预层意象 [预层意象]">预层意象</a></span>.</p>
 <h3>态射的计算</h3>
@@ -1196,11 +1197,11 @@ $$</p>
 <h3>传统</h3>
 <p>设 $\mathcal{V}$ 为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 定义 $\mathcal{V}$-充实范畴 $\mathcal C$ 为如下结构: 一族对象 $\operatorname{ob}(\mathcal C)$, 每两个对象之间有一个态射对象 $\operatorname{Hom}(x,y)\in\operatorname{ob}(\mathcal{V})$, 每三个对象之间有一个复合态射
 $$
-\circ\colon \operatorname{Hom}(y,z)\otimes \operatorname{Hom}(x,y) \to \operatorname{Hom}(x,z).
-$$</p>
+\circ\colon \operatorname{Hom}(y,z)\otimes \operatorname{Hom}(x,y) \to \operatorname{Hom}(x,z),
+$$
+满足结合律, 单位律等.</p>
 <h3>使用代数胚</h3>
-<p>充实范畴是<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的推广, 是一种<span class="link local"><a href="./代数胚.html" title="代数胚 [代数胚]">代数胚</a></span>.</p>
-<p>…</p>
+<p>充实范畴是<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的推广, 是一种特殊的<span class="link local"><a href="./代数胚.html" title="代数胚 [代数胚]">代数胚</a></span>, 其底层 <span class="link local"><a href="./Segal空间.html" title="Segal 对象 [Segal空间]">Segal 对象</a></span>要<span class="link local"><a href="./范畴对象.html" title="范畴对象 (∞-范畴论) [范畴对象]">完备</a></span>.</p>
 <p>参考 <span class="link local"><a href="./GepnerHaugsengEnrichedCategories.html" title="Enriched ∞-categories via non-symmetric ∞-operads [GepnerHaugsengEnrichedCategories]">Gepner–Haugseng</a></span>, <span class="link local"><a href="./HinichYonedaEnriched.html" title="Yoneda lemma for enriched infinity categories [HinichYonedaEnriched]">Hinich</a></span>, <span class="link local"><a href="./StefanichHigherQCoh.html" title="Higher Quasicoherent Sheaves [StefanichHigherQCoh]">Stefanich</a></span>.</p>
 <h2>性质</h2>
 <h3>充实用范畴的更换</h3>
@@ -1324,18 +1325,67 @@ $$
 <p>该定理可理解为一般的预层范畴的识别定理在 $(0,1)$-范畴语境下的特例. 这里的有限性保证了一个素元 $x\in P$ 一定是完全素元 (即为完全紧对象), 也即 $\operatorname{Hom}(x,-)\colon P\to \{0&lt;1\}$ 保持余极限.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="加权余极限"><header><h1><span class="taxon"></span>加权余极限 <a class="slug" href="./加权余极限.html">[加权余极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设 $\mathcal V$ 为完备, 余完备闭<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $I,\mathcal C$ 为 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>.</p>
+<p>给定 $\mathcal V$-充实的图 $X\colon I\to\mathcal C$ 与<strong>权</strong> (weight) $W\colon I^{\mathrm{op}}\to\mathcal V$, <strong>加权余极限</strong> $\operatorname{colim}^W X$ (又记作 $W\otimes_I X$) 满足如下泛性质:
+$$
+\begin{aligned}
+&amp;\operatorname{Hom}_{\mathcal C}(\operatorname{colim}^W X,c)\\
+\simeq\,
+&amp;\operatorname{Hom}_{\mathsf{Fun}_{\mathcal V}(I^{\mathrm{op}},\mathcal V)}(W,\operatorname{Hom}_{\mathcal C}(X(-),c)).
+\end{aligned}
+$$</p>
+<p>换言之, $\operatorname{colim}^W$ 是<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子
+$$
+\mathcal C\to \mathsf{Fun}_{\mathcal V}(I^{\mathrm{op}},\mathcal V), c\mapsto\operatorname{Hom}_{\mathcal C}(X(-),c)
+$$
+的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>, 也可以理解为权 $W$ 作为 $I$ 上<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span> (米田扩张).</p>
+<h2>性质</h2>
+<h3>与余端的关系</h3>
+<p>当 $\mathcal C$ 中对象沿 $\mathcal V$ 中对象的<span class="link local"><a href="./张量积.html" title="张量积, 余幂 [张量积]">张量积</a></span>存在时, 加权余极限等于<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>
+$$
+\operatorname{colim}^W X = \int_{i\in I} W_i \otimes X_i.
+$$</p>
+<h3>权的余极限</h3>
+<p>由定义, 加权余极限保持权 $W$ 的余极限, 即当 $W = \operatorname{colim}_j W_j$ 时,
+$$
+\operatorname{colim}^W X = \operatorname{colim}_j\operatorname{colim}^{W_j}X.
+$$</p>
+<h3>沿元素范畴的余极限</h3>
+<p><strong>命题</strong>. 当 $\mathcal V = \mathsf{Ani}$ 时, 加权余极限等于沿权函子 $W$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span> $\mathsf{Elts}(W)$ 的余极限:
+$$
+\operatorname{colim}^W X = \operatorname{colim}(\mathsf{Elts}(W)^{\mathrm{op}}\to I\overset{X}{\to}\mathcal C).
+$$</p>
+<p><em>证明</em>. 先对 $W$ 为<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span> $W=\mathbf{y}(i)$ 的情形验证:
+$$
+\operatorname{colim}^{\mathbf{y}(i)}X=X(i)=\operatorname{colim}(\mathsf{Elts}(\mathbf{y}(i))\to\mathcal C),
+$$
+这是因为 $\mathsf{Elts}(\mathbf{y}(i))$ 有终对象.</p>
+<p>再使用关于 $W$ 的余连续性即证 ($W$ 是可表函子沿 $\mathsf{Elts}(W)$ 的余极限, 参见<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>).</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单纯集"><header><h1><span class="taxon"></span>单纯集 <a class="slug" href="./单纯集.html">[单纯集]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>单纯集是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$ 上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>, 即集合范畴中的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>.</p>
 <h2>例</h2>
-<h3>$S^1$</h3>
-<p>单纯集 $S^1$ 可描述如下:</p>
-<ul>
-<li>“点集” $(S^1)_0 = \{*\}$;</li>
-<li></li>
-</ul>
+<h3>脉</h3>
+<p>构造单纯集 (或任何范畴上的预层) 的一种重要手段是脉. 给定任意函子 $\Delta\to\mathcal C$, 将其想象为抽象的单形对应的具体的几何对象, 都可由 $\mathcal C$ 的对象造出单纯集; 当 $\mathcal C$ 具有余极限时还可构造相伴随的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>. 参见<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>, <span class="link local"><a href="./双单纯集.html" title="“双单纯集” [双单纯集]">双单纯集</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="本质满函子"><header><h1><span class="taxon"></span>本质满函子 <a class="slug" href="./本质满函子.html">[本质满函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于范畴之间的函子, 若其在<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>上诱导<span class="link local"><a href="./满射(范畴论).html" title="满射 [满射(范畴论)]">满射</a></span> (对于生象这等同于在 $\pi_0$ 上为满射; 另见<span class="link local"><a href="./意象中的满射.html" title="意象中的满射 [意象中的满射]">意象中的满射</a></span>), 则称之为<strong>本质满函子</strong> (essentially surjective functor).</p>
+<h2>性质</h2>
+<h3>预层的下降</h3>
+<p>设 $F\colon \mathcal C\to\mathcal D$ 为本质满函子, 则<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>的拉回
+$$
+F^*\colon \widehat {\mathcal D} \to \widehat {\mathcal C}
+$$
+为<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性函子</a></span>; $\widehat {\mathcal C}$ 上的单子 $F^*F_!$ 的代数等同于 $\widehat {\mathcal D}$ 的对象. (其中 $F_!$ 是 $F^*$ 的左伴随, 见<span class="link local"><a href="./预层范畴之间的伴随.html" title="预层范畴之间的伴随 [预层范畴之间的伴随]">预层范畴之间的伴随</a></span>.)</p>
+<p><em>证明</em>. 考虑比较函子
+$$
+K\colon \widehat {\mathcal D} \to \mathsf{Alg}(F^*F_!),
+\ X\mapsto F^*X.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="盲人摸象"><header><h1><span class="taxon"></span>盲人摸象 <a class="slug" href="./盲人摸象.html">[盲人摸象]</a></h1><div class="metadata"><ul><li class="meta-item">参考资料</li><li class="meta-item"><span class="link external"><a href="https://simplicialcat.github.io" title="我 [https://simplicialcat.github.io]">我</a></span></li></ul></div></header></summary>
 <p>项目 (包括 tex 源代码): https://github.com/SimplicialCat/topos</p>
 <p>PDF : https://simplicialcat.github.io/topos.pdf</p>
@@ -1627,11 +1677,18 @@ f_! \dashv (f^*=g_!) \dashv (f_*=g^*) \dashv g_*.
 $$</p>
 <h2>性质</h2>
 <h3>对可表函子的作用</h3>
-<p>设函子 $f\colon \mathcal C \to \mathcal D$ 诱导<span class="link local"><a href="./预层.html" title="预层 [预层]">预层范畴</a></span> $\widehat {\mathcal C} = \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set}),\widehat {\mathcal D} = \mathsf{Fun}(\mathcal D^{\mathrm{op}},\mathsf{Set})$ 之间的伴随
+<p>预层拉回的左伴随 $f_!$ 将可表函子映射到可表函子. 具体地, 设函子 $f\colon \mathcal C \to \mathcal D$ 诱导<span class="link local"><a href="./预层.html" title="预层 [预层]">预层范畴</a></span> $\widehat {\mathcal C} = \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set}),\widehat {\mathcal D} = \mathsf{Fun}(\mathcal D^{\mathrm{op}},\mathsf{Set})$ 之间的伴随
 $$
 f_! \dashv f^* \dashv f_*,
 $$
-则对于 $c\in \mathcal C$, 有 $f_! \mathbf{y}(c) = \mathbf{y}(f(c))$.</p>
+则对于 $c\in \mathcal C$, 有
+$$
+f_! \mathbf{y}(c) = \mathbf{y}(f(c)).
+$$
+道理很简单:
+$$
+\operatorname{Hom}_{\widehat {\mathcal D}}(f_!\mathbf{y}(c),X) = \operatorname{Hom}_{\widehat {\mathcal C}}(\mathbf{y}(c),f^*X) = X(f(c)).
+$$</p>
 <h3>先推再拉</h3>
 <p>当 $f\colon \mathcal C\to\mathcal D$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>, 即全子范畴的嵌入时,
 $$
