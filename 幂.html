@@ -827,7 +827,7 @@
 
 <article><section class="block" data-taxon=""><details open><summary id="幂"><header><h1><span class="taxon"></span>幂, 余张量积 <a class="slug" href="./幂.html">[幂]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>对于范畴 $\mathcal C$ 的对象 $X$, 以及<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $A$, <strong>幂</strong> $X^A$ 给出自然同构
+<p>对于范畴 $\mathcal C$ 的对象 $X$, 以及<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $A$, <strong>幂</strong> $X^A$ (又记作 $[A,X]$) 给出自然同构
 $$
 \operatorname{Hom}_{\mathcal C}(-, X^A)
 \simeq \operatorname{Hom}_{\mathsf{Ani}}(A,\operatorname{Hom}_{\mathcal C}(-,X)),
@@ -843,7 +843,89 @@ $$
 $$</p>
 <p>当然, <span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>的对象也有类似的幂的概念.</p>
 <p>幂又称余张量积 (cotensor), 对偶的概念是<span class="link local"><a href="./张量积.html" title="张量积, 余幂 [张量积]">张量积</a></span>.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="张量积"><header><h1><span class="taxon"></span>张量积, 余幂 <a class="slug" href="./张量积.html">[张量积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Kan扩张"><header><h1><span class="taxon"></span>Kan 扩张 <a class="slug" href="./Kan扩张.html">[Kan扩张]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于函子 $f\colon \mathcal C \to \mathcal D$ 以及范畴 $\mathcal E$, 有拉回函子
+$$
+f^*\colon \mathsf {Fun}(\mathcal D,\mathcal E)\to \mathsf {Fun}(\mathcal C,\mathcal E).
+$$
+左右 Kan 扩张
+$$
+\operatorname{LKE}_f,\operatorname{RKE}_f
+\colon \mathsf {Fun}(\mathcal C,\mathcal E)\to \mathsf {Fun}(\mathcal D,\mathcal E)
+$$
+即是 $f^*$ 的左右伴随.</p>
+<h2>性质</h2>
+<h3>计算式</h3>
+<p>左右 Kan 扩张具有用余极限和极限的具体计算式:
+$$
+\operatorname{LKE}_f (F)(d) = \operatorname{colim}_{f(c) \to d} F(c),
+$$
+$$
+\operatorname{RKE}_f (F)(d) = \operatorname{lim}_{d\to f(c)} F(c).
+$$</p>
+<p>这两条计算式也可以用<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>与<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>表述为
+$$
+\operatorname{LKE}_f(F)(d) = \int_{c\in \mathcal C}\operatorname{Hom}(f(c),d)\otimes F(c),
+$$
+$$
+\operatorname{RKE}_f(F)(d) = \int_{c\in \mathcal C}^*[\operatorname{Hom}(d,f(c)),F(c)].
+$$
+其中 $\otimes,[-,-]$ 分别表示<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>在 $\mathcal D$ 的对象上的<span class="link local"><a href="./张量积.html" title="张量积, 余幂 [张量积]">张量积</a></span>与<span class="link local"><a href="./幂.html" title="幂, 余张量积 [幂]">幂</a></span>.</p>
+<h2>例</h2>
+<h3>极限</h3>
+<p>对于指标范畴 $\mathcal I$, 沿 $\mathcal I\to 1$ 的左右 Kan 扩张 $\mathsf {Fun}(\mathcal I,\mathcal C)\to\mathcal C$ 分别为余极限和极限:
+$$
+\operatorname{LKE} (X) = \operatorname{colim}_{i} X(i),
+$$
+$$
+\operatorname{RKE} (X) = \operatorname{lim}_{i} X(i).
+$$</p>
+<h3>几何实现 (米田扩张)</h3>
+<p><span class="link local"><a href="./预层意象.html" title="预层意象 [预层意象]">预层范畴</a></span>是自由<span class="link local"><a href="./余完备化.html" title="余完备化 [余完备化]">余完备化</a></span>, 换言之, 任意到余完备范畴 $\mathcal D$ 的函子 $F\colon \mathcal C\to\mathcal D$ 都可扩张到预层范畴 $\widehat {\mathcal C}$, 这正是沿<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span>的左 Kan 扩张.
+该左 Kan 扩张有时记为张量积
+$$
+F \otimes - \colon \widehat {\mathcal C} \to \mathsf{Set}.
+$$
+这也可理解为<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span> $1 \to \mathcal C$ 与 $\mathcal C\to 1$ 的复合.</p>
+<p>例如, $|{-}|\colon \Delta\to\mathsf {Top}$ 沿<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span> $\mathbf{y}\colon \Delta\to\mathsf {sSet}$ 的左 Kan 扩张 $\mathsf {sSet}\to\mathsf {Top}$ 为单纯集的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>:
+$$
+|X| := \operatorname{colim}_{\Delta^n \to X} |\Delta^n|,
+$$
+其中 $\Delta^n = \mathbf{y}([n])$.</p>
+<h3>预层范畴之间的伴随</h3>
+<p><span class="link local"><a href="./预层范畴之间的伴随.html" title="预层范畴之间的伴随 [预层范畴之间的伴随]">预层范畴之间的伴随</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="加权极限"><header><h1><span class="taxon"></span>加权极限 <a class="slug" href="./加权极限.html">[加权极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>加权极限是<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>的推广, <span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span>的对偶概念.</p>
+<h2>定义</h2>
+<p>设 $\mathcal V$ 为完备, 余完备闭<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $I,\mathcal C$ 为 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>.</p>
+<p>给定 $\mathcal V$-充实的图 $X\colon I\to\mathcal C$ 与<strong>权</strong> (weight) $W\colon I\to\mathcal V$, <strong>加权极限</strong> $\operatorname{lim}^W X$ (又记作 $\{W,X\}_I$) 满足如下泛性质:
+$$
+\begin{aligned}
+&amp;\operatorname{Hom}_{\mathcal C}(c,\operatorname{lim}^W X)\\
+\simeq\,
+&amp;\operatorname{Hom}_{\mathsf{Fun}_{\mathcal V}(I,\mathcal V)}(W,\operatorname{Hom}_{\mathcal C}(c,X(-))).
+\end{aligned}
+$$</p>
+<h2>性质</h2>
+<h3>与端的关系</h3>
+<p>当 $\mathcal C$ 中对象沿 $\mathcal V$ 中对象的<span class="link local"><a href="./幂.html" title="幂, 余张量积 [幂]">幂</a></span>存在时, 加权余极限等于<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>
+$$
+\operatorname{lim}^W X = \int^*_{i\in I} [W_i, X_i].
+$$</p>
+<p><em>证明</em>.
+$$
+\begin{aligned}
+&amp;\operatorname{Hom}_{\mathcal C}(c,\operatorname{lim}^W X)\\
+&amp;\simeq\operatorname{Hom}_{\mathsf{Fun}_{\mathcal V}(I,\mathcal V)}(W,\operatorname{Hom}_{\mathcal C}(c,X(-)))\\
+&amp;\simeq\int^*_{i\in I}\operatorname{Hom}_{\mathcal V}(W_i,\operatorname{Hom}_{\mathcal C} (c,X_i))\\
+&amp;\simeq\int^*_{i\in I}\operatorname{Hom}_{\mathcal C}(c,[W_i, X_i])\\
+&amp;\simeq\operatorname{Hom}_{\mathcal C}\Big(
+   c, \int^*_{i\in I}[W_i, X_i]\Big).
+\end{aligned}
+$$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="张量积"><header><h1><span class="taxon"></span>张量积, 余幂 <a class="slug" href="./张量积.html">[张量积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>这里所说的<strong>张量积</strong>特指如下概念: 对于范畴 $\mathcal C$ 的对象 $X$, 以及<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $A$, <strong>张量积</strong> $A\cdot X$ 给出自然同构
 $$

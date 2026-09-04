@@ -2151,6 +2151,16 @@ $$
 $$
 \mathsf{CAlg}(\mathsf{Mod}_{\mathcal C}(A)) \simeq \mathsf{CAlg}(\mathcal C)_{A/}.
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="余米田引理"><header><h1><span class="taxon"></span>余米田引理 <a class="slug" href="./余米田引理.html">[余米田引理]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>陈述</h2>
+<p>设 $(\mathcal V,\otimes,[-,-])$ 为完备, 余完备闭<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $\mathcal C$ 为 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>. 设 $X\colon \mathcal C^{\mathrm{op}}\to\mathcal V$ 是 $\mathcal C$ 上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>. 记 $\mathbf{y}\colon \mathcal C\to \mathsf{Fun}_{\mathcal V}(\mathcal C^{\mathrm{op}},\mathcal V)$ 为<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span>. 那么 $X$ 可展开为<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span> (<span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span>)
+$$
+X(c)\simeq \int_{c'\in\mathcal C} X(c') \otimes \operatorname{Hom}(c,c').
+$$</p>
+<p>这与如下形式的<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>相对偶:
+$$
+X(c) \simeq \int_{c'\in\mathcal C}^* [\operatorname{Hom}(c',c),X(c')].
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="充实范畴"><header><h1><span class="taxon"></span>充实范畴 <a class="slug" href="./充实范畴.html">[充实范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>充实范畴</strong>是范畴的推广, 其对象之间的 “态射集” 不是集合, 而是更一般的幺半范畴的对象.</p>
@@ -2398,7 +2408,18 @@ $$
 $$
 \operatorname{colim}^W X = \int_{i\in I} W_i \otimes X_i.
 $$</p>
-<h3>权的余极限</h3>
+<p><em>证明</em>.
+$$
+\begin{aligned}
+&amp;\operatorname{Hom}_{\mathcal C}(\operatorname{colim}^W X,c)\\
+&amp;\simeq\operatorname{Hom}_{\mathsf{Fun}_{\mathcal V}(I^{\mathrm{op}},\mathcal V)}(W,\operatorname{Hom}_{\mathcal C}(X(-),c))\\
+&amp;\simeq\int^*_{i\in I}\operatorname{Hom}_{\mathcal V}(W_i,\operatorname{Hom}_{\mathcal C} (X_i,c))\\
+&amp;\simeq\int^*_{i\in I}\operatorname{Hom}_{\mathcal C}(W_i\otimes X_i,c)\\
+&amp;\simeq\operatorname{Hom}_{\mathcal C}\Big(
+    \int_{i\in I}W_i\otimes X_i,c\Big).
+\end{aligned}
+$$</p>
+<h3>对权的余连续性</h3>
 <p>由定义, 加权余极限保持权 $W$ 的余极限, 即当 $W = \operatorname{colim}_j W_j$ 时,
 $$
 \operatorname{colim}^W X = \operatorname{colim}_j\operatorname{colim}^{W_j}X.
@@ -2412,8 +2433,45 @@ $$</p>
 $$
 \operatorname{colim}^{\mathbf{y}(i)}X=X(i)=\operatorname{colim}(\mathsf{Elts}(\mathbf{y}(i))\to\mathcal C),
 $$
-这是因为 $\mathsf{Elts}(\mathbf{y}(i))$ 有终对象.</p>
-<p>再使用关于 $W$ 的余连续性即证 ($W$ 是可表函子沿 $\mathsf{Elts}(W)$ 的余极限, 参见<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>).</p>
+第二个等号是因为 $\mathsf{Elts}(\mathbf{y}(i))$ 有<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span> $(i,\mathrm{id}_i)$.</p>
+<p>对于一般的 $W$, 注意到 $W$ 是可表函子沿 $\mathsf{Elts}(W)$ 的余极限, 参见<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>. 由 $\operatorname{colim}^W X$ 关于 $W$ 的余连续性,
+$$
+\begin{aligned}
+\operatorname{colim}^W X &amp;=\operatorname{colim}
+_{(i,w)\in\mathsf{Elts}(W)}\operatorname{colim}^{\mathbf{y}(i)}X\\
+&amp;=\operatorname{colim}(\mathsf{Elts}(W)^{\mathrm{op}}\to I\overset{X}{\to}\mathcal C).
+\end{aligned}
+$$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="加权极限"><header><h1><span class="taxon"></span>加权极限 <a class="slug" href="./加权极限.html">[加权极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>加权极限是<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>的推广, <span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span>的对偶概念.</p>
+<h2>定义</h2>
+<p>设 $\mathcal V$ 为完备, 余完备闭<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $I,\mathcal C$ 为 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>.</p>
+<p>给定 $\mathcal V$-充实的图 $X\colon I\to\mathcal C$ 与<strong>权</strong> (weight) $W\colon I\to\mathcal V$, <strong>加权极限</strong> $\operatorname{lim}^W X$ (又记作 $\{W,X\}_I$) 满足如下泛性质:
+$$
+\begin{aligned}
+&amp;\operatorname{Hom}_{\mathcal C}(c,\operatorname{lim}^W X)\\
+\simeq\,
+&amp;\operatorname{Hom}_{\mathsf{Fun}_{\mathcal V}(I,\mathcal V)}(W,\operatorname{Hom}_{\mathcal C}(c,X(-))).
+\end{aligned}
+$$</p>
+<h2>性质</h2>
+<h3>与端的关系</h3>
+<p>当 $\mathcal C$ 中对象沿 $\mathcal V$ 中对象的<span class="link local"><a href="./幂.html" title="幂, 余张量积 [幂]">幂</a></span>存在时, 加权余极限等于<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>
+$$
+\operatorname{lim}^W X = \int^*_{i\in I} [W_i, X_i].
+$$</p>
+<p><em>证明</em>.
+$$
+\begin{aligned}
+&amp;\operatorname{Hom}_{\mathcal C}(c,\operatorname{lim}^W X)\\
+&amp;\simeq\operatorname{Hom}_{\mathsf{Fun}_{\mathcal V}(I,\mathcal V)}(W,\operatorname{Hom}_{\mathcal C}(c,X(-)))\\
+&amp;\simeq\int^*_{i\in I}\operatorname{Hom}_{\mathcal V}(W_i,\operatorname{Hom}_{\mathcal C} (c,X_i))\\
+&amp;\simeq\int^*_{i\in I}\operatorname{Hom}_{\mathcal C}(c,[W_i, X_i])\\
+&amp;\simeq\operatorname{Hom}_{\mathcal C}\Big(
+   c, \int^*_{i\in I}[W_i, X_i]\Big).
+\end{aligned}
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单纯形范畴"><header><h1><span class="taxon"></span>单纯形范畴 <a class="slug" href="./单纯形范畴.html">[单纯形范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>单纯形范畴的对象是 “标准” 的, “组合” 的单纯形, 也即有限全序集.</p>

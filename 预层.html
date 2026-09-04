@@ -835,6 +835,7 @@ $$
 X = \operatorname{colim}_{\mathbf{y}(c) \to X}\mathbf{y}(c).
 $$
 该余极限的指标范畴为 $X$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span>.</p>
+<p>上述命题又称为<span class="link local"><a href="./余米田引理.html" title="余米田引理 [余米田引理]">余米田引理</a></span>.</p>
 <h3>预层意象</h3>
 <p>任何 $\mathsf{Set}$ (或 $\mathsf{Ani}$) 取值的预层范畴都是<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>; 见<span class="link local"><a href="./预层意象.html" title="预层意象 [预层意象]">预层意象</a></span>.</p>
 <h3>态射的计算</h3>
@@ -1185,6 +1186,16 @@ $$</p>
 $$
 \mathsf{Mod}(\mathcal T) = \mathsf{P}_R^K(\mathcal T^{\mathrm{op}}).
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="余米田引理"><header><h1><span class="taxon"></span>余米田引理 <a class="slug" href="./余米田引理.html">[余米田引理]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>陈述</h2>
+<p>设 $(\mathcal V,\otimes,[-,-])$ 为完备, 余完备闭<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $\mathcal C$ 为 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>. 设 $X\colon \mathcal C^{\mathrm{op}}\to\mathcal V$ 是 $\mathcal C$ 上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>. 记 $\mathbf{y}\colon \mathcal C\to \mathsf{Fun}_{\mathcal V}(\mathcal C^{\mathrm{op}},\mathcal V)$ 为<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span>. 那么 $X$ 可展开为<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span> (<span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span>)
+$$
+X(c)\simeq \int_{c'\in\mathcal C} X(c') \otimes \operatorname{Hom}(c,c').
+$$</p>
+<p>这与如下形式的<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>相对偶:
+$$
+X(c) \simeq \int_{c'\in\mathcal C}^* [\operatorname{Hom}(c',c),X(c')].
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="充实范畴"><header><h1><span class="taxon"></span>充实范畴 <a class="slug" href="./充实范畴.html">[充实范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>充实范畴</strong>是范畴的推广, 其对象之间的 “态射集” 不是集合, 而是更一般的幺半范畴的对象.</p>
@@ -1347,7 +1358,18 @@ $$
 $$
 \operatorname{colim}^W X = \int_{i\in I} W_i \otimes X_i.
 $$</p>
-<h3>权的余极限</h3>
+<p><em>证明</em>.
+$$
+\begin{aligned}
+&amp;\operatorname{Hom}_{\mathcal C}(\operatorname{colim}^W X,c)\\
+&amp;\simeq\operatorname{Hom}_{\mathsf{Fun}_{\mathcal V}(I^{\mathrm{op}},\mathcal V)}(W,\operatorname{Hom}_{\mathcal C}(X(-),c))\\
+&amp;\simeq\int^*_{i\in I}\operatorname{Hom}_{\mathcal V}(W_i,\operatorname{Hom}_{\mathcal C} (X_i,c))\\
+&amp;\simeq\int^*_{i\in I}\operatorname{Hom}_{\mathcal C}(W_i\otimes X_i,c)\\
+&amp;\simeq\operatorname{Hom}_{\mathcal C}\Big(
+    \int_{i\in I}W_i\otimes X_i,c\Big).
+\end{aligned}
+$$</p>
+<h3>对权的余连续性</h3>
 <p>由定义, 加权余极限保持权 $W$ 的余极限, 即当 $W = \operatorname{colim}_j W_j$ 时,
 $$
 \operatorname{colim}^W X = \operatorname{colim}_j\operatorname{colim}^{W_j}X.
@@ -1361,8 +1383,15 @@ $$</p>
 $$
 \operatorname{colim}^{\mathbf{y}(i)}X=X(i)=\operatorname{colim}(\mathsf{Elts}(\mathbf{y}(i))\to\mathcal C),
 $$
-这是因为 $\mathsf{Elts}(\mathbf{y}(i))$ 有终对象.</p>
-<p>再使用关于 $W$ 的余连续性即证 ($W$ 是可表函子沿 $\mathsf{Elts}(W)$ 的余极限, 参见<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>).</p>
+第二个等号是因为 $\mathsf{Elts}(\mathbf{y}(i))$ 有<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span> $(i,\mathrm{id}_i)$.</p>
+<p>对于一般的 $W$, 注意到 $W$ 是可表函子沿 $\mathsf{Elts}(W)$ 的余极限, 参见<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>. 由 $\operatorname{colim}^W X$ 关于 $W$ 的余连续性,
+$$
+\begin{aligned}
+\operatorname{colim}^W X &amp;=\operatorname{colim}
+_{(i,w)\in\mathsf{Elts}(W)}\operatorname{colim}^{\mathbf{y}(i)}X\\
+&amp;=\operatorname{colim}(\mathsf{Elts}(W)^{\mathrm{op}}\to I\overset{X}{\to}\mathcal C).
+\end{aligned}
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单纯集"><header><h1><span class="taxon"></span>单纯集 <a class="slug" href="./单纯集.html">[单纯集]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>单纯集是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$ 上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>, 即集合范畴中的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>.</p>
@@ -1621,6 +1650,23 @@ $$
   (f_* X)(d) = \operatorname{lim}_{f(c)\to d} X(c).
 $$</li>
 </ul>
+<p>注意上述公式中 $d\to f(c)$, $f(c)\to d$ 等为 $\mathcal D$ 中而非 $\mathcal D^{\mathrm{op}}$ 中的态射. 这导致公式的形式与左 Kan 扩张公式相反.</p>
+<h3>余端</h3>
+<p>拉回的左伴随 $f_!$ 的公式也可用<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>给出表述与证明. 由<span class="link local"><a href="./余米田引理.html" title="余米田引理 [余米田引理]">余米田引理</a></span>
+$$
+X=\int_{c\in\mathcal C} X(c)\otimes \mathbf{y}(c),
+$$
+以及 $f_!$ 作为左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>保持余极限, 且 $f_!$ 将可表函子对应到可表函子 (见后文), 得
+$$
+\begin{aligned}
+f_!(X) &amp;=\int_{c\in\mathcal C}X(c)\otimes f_!(\mathbf{y}(c))\\
+&amp;=\int_{c\in\mathcal C}X(c)\otimes \mathbf{y}(f(c)).
+\end{aligned}
+$$</p>
+<p>对偶地, $f_*$ 的公式也可用<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>表述为
+$$
+f_*(X)(d)=\int^*_{c\in\mathcal C}[\operatorname{Hom}_{\mathcal C}(f(c),d),X(c)].
+$$</p>
 <h3>代函子</h3>
 <p>左 Kan 扩张可视为<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>的复合, 右 Kan 扩张可视为<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>的同态集.</p>
 <p>若将 $f\colon \mathcal C\to\mathcal D$ 视为 $\mathcal C$ 到 $\mathcal D$ 的 <span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>

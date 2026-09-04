@@ -1046,6 +1046,128 @@ $$
 <h3>米田嵌入的伴随</h3>
 <p><strong>命题</strong>. 范畴 $\mathcal C$ 余完备当且仅当<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span> $\mathrm{y}\colon \mathcal C\to\mathsf{Psh}(\mathcal C)$ 有左伴随.</p>
 <p>证明. 若 $\mathcal C$ 余完备, 则可定义 $\mathrm{y}$ 的左伴随 $L\colon \mathsf{Psh}(\mathcal C)\to\mathcal C$ 为 $\mathrm{id}_{\mathcal C}$ 的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">米田扩张</a></span>. 另一方面, 假设左伴随 $L$ 存在, 那么由于 $L$ 保持余极限, $\mathcal C$ 中必须具有所有的余极限.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="余端"><header><h1><span class="taxon"></span>余端 <a class="slug" href="./余端.html">[余端]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>余端是<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>的对偶概念, 可理解为<span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span>, 它是 “函数对测度积分” 的类比与<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>.</p>
+<h2>定义</h2>
+<h3>作为余极限</h3>
+<p>函子 $F\colon \mathcal C^{\mathrm{op}}\times\mathcal C\to\mathcal{D}$ 的余端是以<span class="link local"><a href="./扭箭头范畴.html" title="扭箭头范畴 [扭箭头范畴]">扭箭头范畴</a></span>为指标的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>:
+$$
+\int_{\mathcal C} F = \operatorname{colim}_{(X\to Y)\in\mathsf{TwArr}(\mathcal C)} F(X,Y).
+$$</p>
+<p>上式的一种计算方式是如下的<span class="link local"><a href="./余等化子.html" title="余等化子 [余等化子]">余等化子</a></span>:
+$$
+\int_{\mathcal{C}}F = \operatorname{coeq}\Big(
+    \coprod_{X\to Y} F(X,Y) \rightrightarrows \coprod_{X}F(X,X)
+\Big).
+$$</p>
+<p>然而在<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>语境中, 由于<span class="link local"><a href="./扭箭头范畴.html" title="扭箭头范畴 [扭箭头范畴]">扭箭头范畴</a></span> ($\operatorname{Hom}$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span>) 的概念缺失, 我们需要更 “纯范畴论” 的定义.</p>
+<h3>作为加权余极限</h3>
+<p>设 $\mathcal C,\mathcal D$ 为 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>.
+函子 $F\colon \mathcal C^{\mathrm{op}}\boxtimes\mathcal C\to\mathcal{D}$ 的余端定义为以反范畴 $\mathcal C^{\mathrm{op}}$ 的 $\operatorname{Hom}$ 函子 $\operatorname{Hom}_{\mathcal C^{\mathrm{op}}}\colon \mathcal C\boxtimes\mathcal C^{\mathrm{op}}\to\mathcal V$ 为权的<span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span>:
+$$
+\int_{\mathcal C} F = \operatorname{colim}^{\operatorname{Hom}_{\mathcal C^{\mathrm{op}}}}F.
+$$
+在后文中我们将验证这种定义的合理性.</p>
+<h3>通过伴随</h3>
+<p>余端作为<span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span>的定义可以等价地表述为, 余端函子
+$$
+\int_{\mathcal C}\colon \mathsf{Fun}(\mathcal C^{\mathrm{op}}\times\mathcal C,\mathcal D) \to \mathcal D
+$$
+是如下函子的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>:
+$$
+\mathcal D\to\mathsf{Fun}(\mathcal C^{\mathrm{op}}\times\mathcal C,\mathcal D),\,
+d\mapsto\operatorname{Hom}_{\mathcal D}(\operatorname{Hom}_{\mathcal C^{\mathrm{op}}}(-,-),d).
+$$</p>
+<p><strong>关于 (余) 端的记号的注</strong>. 单纯百科使用的记号 —— <span class="link local"><a href="./端.html" title="端 [端]">端</a></span> $\int^*_{\mathcal C}$, 余端 $\int_{\mathcal C}$, 是 Yoneda 最初的记号.
+后来流行的另一套记号 —— 端 $\int_{\mathcal C}$, 余端 $\int^{\mathcal C}$ 与 “上同调-极限-反变-上指标” 以及 “同调-余极限-协变-下指标” 的模式相冲突 (端是一种极限并且关于指标反变, 余端是一种余极限并且关于指标协变), 故不采用.</p>
+<h2>性质</h2>
+<h3>与 Hom 的交互</h3>
+<p>由余端出发的 Hom 可转换为 Hom 的<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>. 具体地, 对 $F\colon \mathcal C^{\mathrm{op}}\times\mathcal C\to\mathcal D$ 以及任意 $d\in\mathcal D$, 有
+$$
+\begin{aligned}
+&amp;\operatorname{Hom}_{\mathcal D}\Big(\int_{\mathcal C}F,d\Big) \\
+&amp;\simeq
+\operatorname{lim}_{(X\to Y)\in\mathsf{TwArr}(\mathcal C)}\operatorname{Hom}_{\mathcal D}(F(X,Y),d)\\
+&amp;\simeq \int^*_{\mathcal C^{\mathrm{op}}}\operatorname{Hom}_{\mathcal D}(F(-,-),d).
+\end{aligned}
+$$</p>
+<h3>与加权余极限的关系</h3>
+<p>函子 $F\colon \mathcal C^{\mathrm{op}}\times\mathcal C\to\mathcal{D}$ 的余端等于以反范畴 $\mathcal C^{\mathrm{op}}$ 的 $\operatorname{Hom}$ 函子为权的<span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span>:
+$$
+\int_{\mathcal C} F = \operatorname{colim}^{\operatorname{Hom}_{\mathcal C^{\mathrm{op}}}}F.
+$$
+在<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>语境中, 这条性质有时也作为余端的定义. 现在我们基于余端与 Hom 的交互以及 Fubini 定理给出一个证明.</p>
+<p><em>证明</em>. 记 $G$ 为如下函子 $\mathcal C\times\mathcal C^{\mathrm{op}}\to\mathsf{Ani}$,
+$$
+G(X,Y) := {\operatorname{Hom}_{\mathcal D}}(
+    F(X,Y),d).
+$$
+(注意 $G$ 关于第一分量协变, 第二分量反变!)
+那么
+$$
+{\operatorname{Hom}_{\mathcal D}}{\Big(
+    \int_{\mathcal C}F,d\Big)}\simeq
+    \int^*_{\mathcal C^{\mathrm{op}}}G,
+$$
+而
+$$
+\begin{aligned}
+&amp;\operatorname{Hom}_{\mathcal D}(\operatorname{colim}^{\operatorname{Hom}_{\mathcal C^{\mathrm{op}}}}F,d)\\
+&amp;\simeq
+\operatorname{Hom}_{\mathsf{Fun}(\mathcal C\times\mathcal C^{\mathrm{op}},\mathsf{Ani})}
+(\operatorname{Hom}_{\mathcal C^{\mathrm{op}}},G)\\
+&amp;\simeq
+    \int^*_{(X,Y)\in\mathcal C\times\mathcal C^{\mathrm{op}}}\operatorname{Hom}(\operatorname{Hom}_{\mathcal C^{\mathrm{op}}}(X,Y),G(X,Y))\\
+    &amp;\simeq\int^*_{Y\in\mathcal C^{\mathrm{op}}}\int^*_{X\in\mathcal C}\operatorname{Hom}(\operatorname{Hom}_{\mathcal C}(Y,X),G(X,Y))\,(\heartsuit)\\
+    &amp;\simeq\int^*_{Y\in\mathcal C^{\mathrm{op}}}\operatorname{Hom}_{\mathsf{Fun}(\mathcal C,\mathsf{Ani})}(\operatorname{Hom}_{\mathcal C}(Y,-),G(-,Y))
+    \\
+    &amp;\simeq\int^*_{Y\in\mathcal C^{\mathrm{op}}}G(Y,Y).\,(\star)
+\end{aligned}
+$$
+其中 $(\heartsuit)$ 是由于<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>的 Fubini 定理, 而 $(\star)$ 是<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>.</p>
+<h3>Fubini 定理</h3>
+<p><strong>定理</strong>. 设 $F\colon (\mathcal C\times\mathcal E)^{\mathrm{op}}\times (\mathcal C\times\mathcal E) \to\mathcal D$, 范畴 $\mathcal D$ 具有所需的余端. 那么
+$$
+\int_{\mathcal C\times\mathcal E}F=\int_{\mathcal C}\int_{\mathcal E}F = \int_{\mathcal E}\int_{\mathcal C}F.
+$$</p>
+<p><em>证明</em>. 考虑沿如下方块的复合的伴随.
+$$
+\begin{CD}
+\mathcal D @&gt;&gt;&gt; \mathsf{Fun}(\mathcal C^{\mathrm{op}}\times\mathcal C,\mathcal D) \\
+@VVV @VVV \\
+\mathsf{Fun}(\mathcal E^{\mathrm{op}}\times\mathcal E,\mathcal D) @&gt;&gt;&gt; \mathsf{Fun}(\mathcal C^{\mathrm{op}}\times\mathcal C\times\mathcal E^{\mathrm{op}}\times\mathcal E,\mathcal D)
+\end{CD}
+$$</p>
+<h2>例</h2>
+<h3>代函子的复合</h3>
+<p>参见<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>.</p>
+<h3>与测度积分的类比</h3>
+<p>对于函子 $F\colon \mathcal C\to \mathsf{Ani}$, $G\colon \mathcal C^{\mathrm{op}}\to\mathsf{Ani}$, 余端
+$$
+\int_{c\in\mathcal C} F(c) \times G(c)
+$$
+可视为可测空间上的函数对测度积分的类比或<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>, 其中 $F$ 是 “被积函数”, $G$ 是 “测度”.
+这个余端也可理解为<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span> $F\colon 1\to \mathcal C$ 与 $G\colon \mathcal C\to 1$ 的复合, 也即<span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">模</a></span>的张量积.</p>
+<p><strong>例</strong>. 关于常值函子 $G = 1$ 的 “积分”
+$$
+\int_{c\in\mathcal C}F(c)
+$$
+就是函子 $F$ 的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>; 一般地余端可理解为<span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span>.</p>
+<p><strong>例</strong>. <span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span> $G = \operatorname{Hom}_{\mathcal C}(-,X)$ 是 “$\delta$-分布” 的类比,
+$$
+\int_{c\in \mathcal C} F(c) \times \operatorname{Hom}_{\mathcal C}(-,X) \simeq F(X).
+$$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="余米田引理"><header><h1><span class="taxon"></span>余米田引理 <a class="slug" href="./余米田引理.html">[余米田引理]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>陈述</h2>
+<p>设 $(\mathcal V,\otimes,[-,-])$ 为完备, 余完备闭<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $\mathcal C$ 为 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>. 设 $X\colon \mathcal C^{\mathrm{op}}\to\mathcal V$ 是 $\mathcal C$ 上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>. 记 $\mathbf{y}\colon \mathcal C\to \mathsf{Fun}_{\mathcal V}(\mathcal C^{\mathrm{op}},\mathcal V)$ 为<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span>. 那么 $X$ 可展开为<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span> (<span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span>)
+$$
+X(c)\simeq \int_{c'\in\mathcal C} X(c') \otimes \operatorname{Hom}(c,c').
+$$</p>
+<p>这与如下形式的<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>相对偶:
+$$
+X(c) \simeq \int_{c'\in\mathcal C}^* [\operatorname{Hom}(c',c),X(c')].
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="对称序列"><header><h1><span class="taxon"></span>对称序列 <a class="slug" href="./对称序列.html">[对称序列]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>对称序列是一种可用于定义<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的结构.</p>

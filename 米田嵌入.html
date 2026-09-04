@@ -1008,6 +1008,14 @@ $$
 $$
 \operatorname{RKE}_f (F)(d) = \operatorname{lim}_{d\to f(c)} F(c).
 $$</p>
+<p>这两条计算式也可以用<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>与<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>表述为
+$$
+\operatorname{LKE}_f(F)(d) = \int_{c\in \mathcal C}\operatorname{Hom}(f(c),d)\otimes F(c),
+$$
+$$
+\operatorname{RKE}_f(F)(d) = \int_{c\in \mathcal C}^*[\operatorname{Hom}(d,f(c)),F(c)].
+$$
+其中 $\otimes,[-,-]$ 分别表示<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>在 $\mathcal D$ 的对象上的<span class="link local"><a href="./张量积.html" title="张量积, 余幂 [张量积]">张量积</a></span>与<span class="link local"><a href="./幂.html" title="幂, 余张量积 [幂]">幂</a></span>.</p>
 <h2>例</h2>
 <h3>极限</h3>
 <p>对于指标范畴 $\mathcal I$, 沿 $\mathcal I\to 1$ 的左右 Kan 扩张 $\mathsf {Fun}(\mathcal I,\mathcal C)\to\mathcal C$ 分别为余极限和极限:
@@ -1366,6 +1374,16 @@ $$
 <h3>米田嵌入的伴随</h3>
 <p><strong>命题</strong>. 范畴 $\mathcal C$ 余完备当且仅当<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span> $\mathrm{y}\colon \mathcal C\to\mathsf{Psh}(\mathcal C)$ 有左伴随.</p>
 <p>证明. 若 $\mathcal C$ 余完备, 则可定义 $\mathrm{y}$ 的左伴随 $L\colon \mathsf{Psh}(\mathcal C)\to\mathcal C$ 为 $\mathrm{id}_{\mathcal C}$ 的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">米田扩张</a></span>. 另一方面, 假设左伴随 $L$ 存在, 那么由于 $L$ 保持余极限, $\mathcal C$ 中必须具有所有的余极限.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="余米田引理"><header><h1><span class="taxon"></span>余米田引理 <a class="slug" href="./余米田引理.html">[余米田引理]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>陈述</h2>
+<p>设 $(\mathcal V,\otimes,[-,-])$ 为完备, 余完备闭<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $\mathcal C$ 为 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>. 设 $X\colon \mathcal C^{\mathrm{op}}\to\mathcal V$ 是 $\mathcal C$ 上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>. 记 $\mathbf{y}\colon \mathcal C\to \mathsf{Fun}_{\mathcal V}(\mathcal C^{\mathrm{op}},\mathcal V)$ 为<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span>. 那么 $X$ 可展开为<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span> (<span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span>)
+$$
+X(c)\simeq \int_{c'\in\mathcal C} X(c') \otimes \operatorname{Hom}(c,c').
+$$</p>
+<p>这与如下形式的<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>相对偶:
+$$
+X(c) \simeq \int_{c'\in\mathcal C}^* [\operatorname{Hom}(c',c),X(c')].
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="几何实现"><header><h1><span class="taxon"></span>几何实现 (作为米田扩张) <a class="slug" href="./几何实现.html">[几何实现]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>几何实现有两种不同的含义, 本页面介绍的是其作为沿<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span>的 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>的含义. 另见<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现 (作为单纯图表的余极限)</a></span>.</p>

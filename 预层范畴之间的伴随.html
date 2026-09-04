@@ -850,6 +850,23 @@ $$
   (f_* X)(d) = \operatorname{lim}_{f(c)\to d} X(c).
 $$</li>
 </ul>
+<p>注意上述公式中 $d\to f(c)$, $f(c)\to d$ 等为 $\mathcal D$ 中而非 $\mathcal D^{\mathrm{op}}$ 中的态射. 这导致公式的形式与左 Kan 扩张公式相反.</p>
+<h3>余端</h3>
+<p>拉回的左伴随 $f_!$ 的公式也可用<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>给出表述与证明. 由<span class="link local"><a href="./余米田引理.html" title="余米田引理 [余米田引理]">余米田引理</a></span>
+$$
+X=\int_{c\in\mathcal C} X(c)\otimes \mathbf{y}(c),
+$$
+以及 $f_!$ 作为左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>保持余极限, 且 $f_!$ 将可表函子对应到可表函子 (见后文), 得
+$$
+\begin{aligned}
+f_!(X) &amp;=\int_{c\in\mathcal C}X(c)\otimes f_!(\mathbf{y}(c))\\
+&amp;=\int_{c\in\mathcal C}X(c)\otimes \mathbf{y}(f(c)).
+\end{aligned}
+$$</p>
+<p>对偶地, $f_*$ 的公式也可用<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>表述为
+$$
+f_*(X)(d)=\int^*_{c\in\mathcal C}[\operatorname{Hom}_{\mathcal C}(f(c),d),X(c)].
+$$</p>
 <h3>代函子</h3>
 <p>左 Kan 扩张可视为<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>的复合, 右 Kan 扩张可视为<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>的同态集.</p>
 <p>若将 $f\colon \mathcal C\to\mathcal D$ 视为 $\mathcal C$ 到 $\mathcal D$ 的 <span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>
@@ -963,6 +980,14 @@ $$
 $$
 \operatorname{RKE}_f (F)(d) = \operatorname{lim}_{d\to f(c)} F(c).
 $$</p>
+<p>这两条计算式也可以用<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>与<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>表述为
+$$
+\operatorname{LKE}_f(F)(d) = \int_{c\in \mathcal C}\operatorname{Hom}(f(c),d)\otimes F(c),
+$$
+$$
+\operatorname{RKE}_f(F)(d) = \int_{c\in \mathcal C}^*[\operatorname{Hom}(d,f(c)),F(c)].
+$$
+其中 $\otimes,[-,-]$ 分别表示<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>在 $\mathcal D$ 的对象上的<span class="link local"><a href="./张量积.html" title="张量积, 余幂 [张量积]">张量积</a></span>与<span class="link local"><a href="./幂.html" title="幂, 余张量积 [幂]">幂</a></span>.</p>
 <h2>例</h2>
 <h3>极限</h3>
 <p>对于指标范畴 $\mathcal I$, 沿 $\mathcal I\to 1$ 的左右 Kan 扩张 $\mathsf {Fun}(\mathcal I,\mathcal C)\to\mathcal C$ 分别为余极限和极限:

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>本质满函子</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width"><title>余米田引理</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
 
 
 <div id="tcomment"></div>
@@ -825,115 +825,201 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon=""><details open><summary id="本质满函子"><header><h1><span class="taxon"></span>本质满函子 <a class="slug" href="./本质满函子.html">[本质满函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<h2>定义</h2>
-<p>对于范畴之间的函子, 若其在<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>上诱导<span class="link local"><a href="./满射(范畴论).html" title="满射 [满射(范畴论)]">满射</a></span> (对于生象这等同于在 $\pi_0$ 上为满射; 另见<span class="link local"><a href="./意象中的满射.html" title="意象中的满射 [意象中的满射]">意象中的满射</a></span>), 则称之为<strong>本质满函子</strong> (essentially surjective functor).</p>
-<h2>性质</h2>
-<h3>预层的下降</h3>
-<p>设 $F\colon \mathcal C\to\mathcal D$ 为本质满函子, 则<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>的拉回
+<article><section class="block" data-taxon=""><details open><summary id="余米田引理"><header><h1><span class="taxon"></span>余米田引理 <a class="slug" href="./余米田引理.html">[余米田引理]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>陈述</h2>
+<p>设 $(\mathcal V,\otimes,[-,-])$ 为完备, 余完备闭<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $\mathcal C$ 为 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>. 设 $X\colon \mathcal C^{\mathrm{op}}\to\mathcal V$ 是 $\mathcal C$ 上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>. 记 $\mathbf{y}\colon \mathcal C\to \mathsf{Fun}_{\mathcal V}(\mathcal C^{\mathrm{op}},\mathcal V)$ 为<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span>. 那么 $X$ 可展开为<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span> (<span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span>)
 $$
-F^*\colon \widehat {\mathcal D} \to \widehat {\mathcal C}
-$$
-为<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性函子</a></span>; $\widehat {\mathcal C}$ 上的单子 $F^*F_!$ 的代数等同于 $\widehat {\mathcal D}$ 的对象. (其中 $F_!$ 是 $F^*$ 的左伴随, 见<span class="link local"><a href="./预层范畴之间的伴随.html" title="预层范畴之间的伴随 [预层范畴之间的伴随]">预层范畴之间的伴随</a></span>.)</p>
-<p><em>证明</em>. 考虑比较函子
-$$
-K\colon \widehat {\mathcal D} \to \mathsf{Alg}(F^*F_!),
-\ X\mapsto F^*X.
+X(c)\simeq \int_{c'\in\mathcal C} X(c') \otimes \operatorname{Hom}(c,c').
 $$</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="带元数的单子"><header><h1><span class="taxon"></span>带元数的单子 <a class="slug" href="./带元数的单子.html">[带元数的单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<h2>观念</h2>
-<p><strong>带元数的单子</strong> (monad with arities) 是 <span class="link local"><a href="./BergerMelliesWeberMonAr.html" title="Monads with arities and their associated theories [BergerMelliesWeberMonAr]">Berger–Melliès–Weber</a></span> 引入的概念, 能够表达以下结构:</p>
+<p>这与如下形式的<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>相对偶:
+$$
+X(c) \simeq \int_{c'\in\mathcal C}^* [\operatorname{Hom}(c',c),X(c')].
+$$</p>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="预层"><header><h1><span class="taxon"></span>预层 <a class="slug" href="./预层.html">[预层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>范畴 $\mathcal C$ 上的<strong>预层</strong>即是其<span class="link local"><a href="./反范畴.html" title="反范畴 [反范畴]">反范畴</a></span> $\mathcal C^{\mathrm{op}}$ 到 $\mathsf{Set}$ (或 $\mathsf{Ani}$) 的函子.</p>
+<p><span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>中也有类似概念. $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>单对象范畴上的预层, 也可视为 $\mathcal V$ 中的结合代数上的模.</p>
+<h2>性质</h2>
+<h3>可表函子的余极限</h3>
+<p>每个预层 $X\colon\mathcal{C}^{\mathrm{op}}\to\mathsf{Set}$ 都是<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>的余极限:
+$$
+X = \operatorname{colim}_{\mathbf{y}(c) \to X}\mathbf{y}(c).
+$$
+该余极限的指标范畴为 $X$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span>.</p>
+<p>上述命题又称为<span class="link local"><a href="./余米田引理.html" title="余米田引理 [余米田引理]">余米田引理</a></span>.</p>
+<h3>预层意象</h3>
+<p>任何 $\mathsf{Set}$ (或 $\mathsf{Ani}$) 取值的预层范畴都是<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>; 见<span class="link local"><a href="./预层意象.html" title="预层意象 [预层意象]">预层意象</a></span>.</p>
+<h3>态射的计算</h3>
+<p>$$
+\begin{aligned}
+    \operatorname{Hom}_{\mathsf{Psh}(\mathcal C)}(X,Y)
+    &amp;=
+    \operatorname{Hom}_{\mathsf{Psh}(\mathcal C)}(
+        \operatorname{colim}_{c\to X}\mathbf{y}(c),Y)\\
+    &amp;=
+    \operatorname{lim}_{c\to X}
+    \operatorname{Hom}_{\mathsf{Psh}(\mathcal C)}
+    (\mathbf{y}(c),Y)\\
+    &amp;=
+    \operatorname{lim}_{c\to X}
+    \operatorname{Hom}_{\mathsf{Psh}(\mathcal C)}
+    (\mathbf{y}(c),
+        \operatorname{colim}_{d\to Y}\mathbf{y}(d))\\
+    &amp;=
+    \operatorname{lim}_{c\to X}
+    \operatorname{colim}_{d\to Y}
+    \operatorname{Hom}_{\mathsf{Psh}(\mathcal C)}
+    (\mathbf{y}(c),
+    \mathbf{y}(d))\\
+    &amp;=
+    \operatorname{lim}_{c\to X}
+    \operatorname{colim}_{d\to Y}
+    \operatorname{Hom}_{\mathcal C}
+    (c,d).
+\end{aligned}
+$$</p>
+<h3>识别定理</h3>
+<p>如下定理告诉我们如何识别一个范畴为预层范畴.</p>
+<p><strong>定理</strong>. 设范畴 $\mathcal D$ 有一个小的全子范畴 $\mathcal C$, 满足</p>
 <ul>
-<li><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴</a></span> (甚至<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>);</li>
-<li><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>;</li>
-<li><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>.</li>
+<li>$\mathcal C$ 的对象 $c$ 在 $\mathcal D$ 中<strong>完全紧</strong>, 即 $\operatorname{Hom}(c,-)\colon \mathcal D\to\mathsf{Ani}$ 保持任意余极限;</li>
+<li>$\mathcal C$ 的对象在余极限下生成整个 $\mathcal D$;</li>
 </ul>
-<p>直观上, 范畴 $\mathcal E$ 上的单子 $T$ 以子范畴 $\mathcal A\subset\mathcal E$ 为元数, 就是说为了表达一个 $T$-结构所需的运算, 只需用 $\mathcal A$ 的对象来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>.</p>
-<p>例如要表达一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ 上的一个<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>结构, 只需要考虑所有有限集到 $X$ 的映射, 此时有限集 (的元素个束) 就对应运算的元数.</p>
-<p>元数不一定是有限集. 例如要表达一个图 $G$ 上的范畴结构, 要考虑的是所有态射串的复合. 此时元数是形如 $\bullet\to\bullet\to\cdots\to\bullet$ 的有限图.</p>
-<h2>定义</h2>
-<p>设 $\mathcal A\subset\mathcal E$ 为<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>全子范畴, 称为<strong>元数</strong> (arities) 的范畴. 设 $T$ 为 $\mathcal E$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>. 记 $\mathcal E^T$ 为 $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>的范畴, 带有<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由-遗忘伴随</a></span> $F\dashv U\colon \mathcal E\rightleftarrows\mathcal E^{T}$.</p>
-<p>回忆, 子范畴 $\mathcal A$ 的稠密性是指</p>
+<p>那么 $\mathcal D$ 等价于 $\mathcal C$ 上的预层范畴. 具体地, 函子 $\mathcal D\to\operatorname{Psh}(\mathcal C)$, $d\mapsto\operatorname{Hom}(-,d)$ 为等价.</p>
+<h2>例</h2>
+<h3>群作用</h3>
+<p><span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>等同于 $\mathbf{B}G$ 上的预层. 因此预层也可视为群作用的推广.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="预层范畴之间的伴随"><header><h1><span class="taxon"></span>预层范畴之间的伴随 <a class="slug" href="./预层范畴之间的伴随.html">[预层范畴之间的伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>预层范畴之间的伴随是<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中十分常见的一种现象, 指的是范畴 $\mathcal C$, $\mathcal D$ 之间的函子诱导的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层范畴</a></span> $\widehat {\mathcal C} = \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set}),\widehat {\mathcal D} = \mathsf{Fun}(\mathcal D^{\mathrm{op}},\mathsf{Set})$ 之间的伴随.</p>
+<p>当然, <span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>中也有相应的现象.</p>
+<p>预层范畴之间的伴随是是 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>的特例, 而数学中的许多现象又是它的特例.</p>
+<h2>陈述</h2>
+<p>函子 $f\colon \mathcal C \to \mathcal D$ 诱导<span class="link local"><a href="./预层.html" title="预层 [预层]">预层范畴</a></span> $\widehat {\mathcal C} = \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set}),\widehat {\mathcal D} = \mathsf{Fun}(\mathcal D^{\mathrm{op}},\mathsf{Set})$ 之间的伴随
+$$
+f_! \dashv f^* \dashv f_*,
+$$
+其中</p>
 <ul>
-<li><span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子
+<li>$f^*\colon \mathsf{Fun}(\mathcal D^{\mathrm{op}},\mathsf{Set}) \to \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set})$ 是预层的拉回 (函子的复合),
 $$
-  \nu_{\mathcal A}\colon \mathcal E \to \widehat {\mathcal A}
+  (f^* X)(c) = X(f(c)).
+$$</li>
+<li>拉回的左伴随 $f_!$ 是沿 $f$ 的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">左 Kan 扩张</a></span>,
 $$
-是<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>;</li>
-<li>$\mathcal E$ 的每个对象 $X$ 都是如下余极限:
+  (f_! X)(d) = \operatorname{colim}_{d\to f(c)} X(c).
+$$</li>
+<li>拉回的右伴随 $f_*$ 是沿 $f$ 的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">右 Kan 扩张</a></span>,
 $$
-X = \operatorname{colim}_{A\to X,A\in\mathcal A}A.\ (\star)
+  (f_* X)(d) = \operatorname{lim}_{f(c)\to d} X(c).
 $$</li>
 </ul>
-<p><strong>定义</strong>. 若<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 保持所有形如 $(\star)$ 的余极限, 则称单子 $T$ 以 $\mathcal A$ 为<strong>元数</strong> (arity).</p>
-<h3>范畴 $\Theta_T$</h3>
-<p>设 $T$ 为 $\mathcal E$ 上的单子, 定义 $\Theta_T$ 为 $\mathcal A$ 的对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span> $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>构成的范畴. 那么有自由代数函子
+<p>注意上述公式中 $d\to f(c)$, $f(c)\to d$ 等为 $\mathcal D$ 中而非 $\mathcal D^{\mathrm{op}}$ 中的态射. 这导致公式的形式与左 Kan 扩张公式相反.</p>
+<h3>余端</h3>
+<p>拉回的左伴随 $f_!$ 的公式也可用<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>给出表述与证明. 由<span class="link local"><a href="./余米田引理.html" title="余米田引理 [余米田引理]">余米田引理</a></span>
 $$
-j_T\colon \mathcal A \to \Theta_T.
-$$</p>
-<p>我们也可以将 $\Theta_T$ 的对象理解为 $\mathcal A$ 的对象 $A$, 而将 $\Theta_T$ 中的态射 $A\to B$ 理解为 $\mathcal E$ 中的态射 $A \to TB$. (这是 <span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>的一个全子范畴.)</p>
-<p>嵌入 $\Theta_T \hookrightarrow \mathcal E^T$ 也有相应的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子
+X=\int_{c\in\mathcal C} X(c)\otimes \mathbf{y}(c),
 $$
-\nu_T \colon \mathcal E^T \to \widehat {\Theta_T},
-$$
-且有交换方块
-$$
-\begin{CD}
-\mathcal E^T @&gt;{\nu_T}&gt;&gt; \widehat {\Theta_T} \\
-@V{U}VV @VV{j_T^*}V \\
-\mathcal E @&gt;&gt;{\nu_{\mathcal A}}&gt; \widehat {\mathcal A}.
-\end{CD}
-\quad(\heartsuit)
-$$</p>
-<p>注意到由于 $j_T$ <span class="link local"><a href="./本质满函子.html" title="本质满函子 [本质满函子]">本质满</a></span>, 故 $j_T^*$ 是<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的<span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守函子</a></span>.</p>
-<p><strong>命题</strong>. 如下三个条件等价:</p>
-<ol>
-<li>$T$ 是以 $\mathcal A$ 为元数的单子;</li>
-<li>交换方块 $(\heartsuit)$ 满足 <span class="link local"><a href="./基变换.html" title="基变换 [基变换]">Beck–Chevalley 条件</a></span>, 即 Beck–Chevalley 自然变换 $(j_T)_!\nu_A \to \nu_T F$ 为同构.</li>
-<li>自然变换 $j_T^*(j_T)_!\nu_A \to j_T^*\nu_T F= \nu_AUF =\nu_A T$ 为同构. (由于 $j_T^*$ <span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守</a></span>, 条件 2 与条件 3 明显等价.)</li>
-</ol>
-<p><strong>注</strong>. 这里的 Beck–Chevalley 自然变换的理解如下. 对于 $X\in\mathcal E$, 由左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>的<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>公式, $(j_T)_!\nu_{\mathcal A} X$ 对每个元数的自由代数 $j_T A$ 给出
-$$
-  \begin{aligned}
-  [(j_T)_!\nu_{\mathcal A} X] (j_T A) &amp;=\int_{B\in \mathcal A}\operatorname{Hom}_{\Theta_T}(j_T A,j_T B)\times \operatorname{Hom}_{\mathcal E}(B,X)\\
-  &amp;=\int_{B\in\mathcal A}\operatorname{Hom}_{\mathcal E}(A,TB)\times \operatorname{Hom}_{\mathcal E}(B,X),
-  \end{aligned}
-$$
-即 “$A$ 个 $B$ 元运算” 搭配 “$B$ 个 $X$ 的元素”.</p>
-<p>而自然变换的右边给出
+以及 $f_!$ 作为左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>保持余极限, 且 $f_!$ 将可表函子对应到可表函子 (见后文), 得
 $$
 \begin{aligned}
-[\nu_T F(X)](j_T A) &amp;=\operatorname{Hom}_{\mathcal E^T}(FA,FX)
-\\
-&amp;=\operatorname{Hom}_{\mathcal E}(A,TX),
+f_!(X) &amp;=\int_{c\in\mathcal C}X(c)\otimes f_!(\mathbf{y}(c))\\
+&amp;=\int_{c\in\mathcal C}X(c)\otimes \mathbf{y}(f(c)).
+\end{aligned}
+$$</p>
+<p>对偶地, $f_*$ 的公式也可用<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>表述为
+$$
+f_*(X)(d)=\int^*_{c\in\mathcal C}[\operatorname{Hom}_{\mathcal C}(f(c),d),X(c)].
+$$</p>
+<h3>代函子</h3>
+<p>左 Kan 扩张可视为<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>的复合, 右 Kan 扩张可视为<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>的同态集.</p>
+<p>若将 $f\colon \mathcal C\to\mathcal D$ 视为 $\mathcal C$ 到 $\mathcal D$ 的 <span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>
+$$
+\widetilde f\colon \mathcal C\times\mathcal D^{\mathrm{op}} \to\mathsf{Set},\,
+(c,d)\mapsto\operatorname{Hom}_{\mathcal D}(d,f(c)),
+$$
+将 $F\colon \mathcal C^{\mathrm{op}}\to\mathsf{Set}$ 视为 $1$ 到 $\mathcal C$ 的<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>, 那么两者的复合为
+$F\otimes_{\mathcal C}\widetilde f \colon \mathcal D^{\mathrm{op}}\to\mathsf{Set}$,
+$$
+d\mapsto\operatorname{colim}_{c}
+F(c)\times\operatorname{Hom}_{\mathcal D}(d,f(c)).
+$$</p>
+<p>若将 $f\colon \mathcal C\to\mathcal D$ 视为 $\mathcal D$ 到 $\mathcal C$ 的<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>
+$$
+\bar f\colon \mathcal D\times\mathcal C^{\mathrm{op}} \to \mathsf{Set},\,
+(d,c)\mapsto \operatorname{Hom}_{\mathcal D}(f(c),d),
+$$
+将 $F\colon \mathcal C^{\mathrm{op}}\to\mathsf{Set}$ 视为 $1$ 到 $\mathcal C$ 的<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>, 那么 $\widetilde f$ 到 $F$ 的同态集为 $1$ 到 $\mathcal D$ 的<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span> $[\bar f,F]\colon \mathcal D^{\mathrm{op}} \to \mathsf{Set}$,
+$$
+d\mapsto \operatorname{lim}_{c}
+\operatorname{Hom}_{\mathsf{Set}}
+\big({\operatorname{Hom}_{\mathcal D}(f(c),d)},F(c)\big).
+$$</p>
+<h3>伴随诱导预层范畴之间的伴随</h3>
+<p>设 $f\colon \mathcal C \to \mathcal D$, $g\colon \mathcal D\to\mathcal C$ 是一对<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>, $f\dashv g$.
+注意到
+$$
+\mathsf{Psh} = \operatorname{Hom}((-)^{\mathrm{op}},\mathsf{Set})\colon \mathsf{Cat}^{\mathrm{op}}\to\mathsf{Cat}
+$$
+是 $2$-范畴之间的函子, 它保持<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>; 即 $f^*\colon \widehat {\mathcal D} \to \widehat {\mathcal C}$, $g^*\colon \widehat {\mathcal C} \to \widehat {\mathcal D}$ 也是一对伴随, $f^* \dashv g^*$.
+换言之,
+$$
+f^* = g_!,\quad f_* = g^*.
+$$
+这两个等价也可使用 $g_!$, $f_*$ 的具体表达式验证:
+$$
+\begin{aligned}
+(g_! X) (c) &amp;= \operatorname{colim}_{c\to g(d)} X(d) \\
+&amp;= \operatorname{colim}_{f(c)\to d} X(d)\\
+&amp;= X(f(c)) = (f^*X) (c),
 \end{aligned}
 $$
-即 “$A$ 个 $TX$ 的元素”.</p>
-<p>自然变换 $(j_T)_!\nu_{\mathcal A} X\to\nu_T F (X)$ 由如下资料给出:
 $$
-\operatorname{Hom}_{\mathcal E}(A,TB)\times\operatorname{Hom}_{\mathcal E}(B,X) \to \operatorname{Hom}_{\mathcal E}(A,TX),
+\begin{aligned}
+(f_* X) (d) &amp;= \operatorname{lim}_{f(c)\to d} X(c) \\
+&amp;= \operatorname{colim}_{c\to g(d)} X(c)\\
+&amp;= X(g(d)) = (g^*X) (d).
+\end{aligned}
+$$</p>
+<p>总结起来, 对于伴随 $f\dashv g$, 有预层范畴之间的四元伴随
 $$
-即 “通过 $A$ 个 $B$ 元运算搭配 $B$ 个 $X$ 的元素, 给出 $A$ 个 $TX$ 的元素”. 而这个自然变换为同构, 直观上说的就是 $TX$ 的任何元素都由 $X$ 中的某 $B$ 个元素运算得到.</p>
-<p><em>证明</em>. 注意到 $(j_T)_!$ 将可表函子对应到可表函子. 故条件 2 与条件 3 中的自然变换在子范畴 $\mathcal A$ 上总是同构.
-现在任取 $X\in\mathcal E$, 将其表现为余极限
+f_! \dashv (f^*=g_!) \dashv (f_*=g^*) \dashv g_*.
+$$</p>
+<h2>性质</h2>
+<h3>对可表函子的作用</h3>
+<p>预层拉回的左伴随 $f_!$ 将可表函子映射到可表函子. 具体地, 设函子 $f\colon \mathcal C \to \mathcal D$ 诱导<span class="link local"><a href="./预层.html" title="预层 [预层]">预层范畴</a></span> $\widehat {\mathcal C} = \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set}),\widehat {\mathcal D} = \mathsf{Fun}(\mathcal D^{\mathrm{op}},\mathsf{Set})$ 之间的伴随
 $$
-X = \operatorname{colim}_{A\to X, A\in\mathcal A}A,
+f_! \dashv f^* \dashv f_*,
 $$
-假若单子 $T$ 保持该余极限, 那么条件 3 中的自然变换在 $X$ 上也是同构.</p>
-<p><strong>定理</strong>. 假设上述命题中的两个条件成立, 那么</p>
-<ul>
-<li>$\nu_T$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>. 换言之, $T$-代数可由 $\mathcal A$ 的对象生成的自由代数来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>;</li>
-<li>对于 $\Theta_T$ 上的预层 $X$, 其落在 $\nu_T$ 的像中当且仅当其沿 $j_T$ 的限制落在 $\nu_A$ 的像中.</li>
-</ul>
-<h3>理论</h3>
-<p>上述范畴 $\Theta_T$ 及函子 $j_T\colon \mathcal A\to\Theta_T$ 可以抽象如下.</p>
-<p>设 $\mathcal A\subset\mathcal E$ 为<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>全子范畴, 定义一个以 $\mathcal A$ 为元数的<strong>理论</strong>为一个函子
+则对于 $c\in \mathcal C$, 有
 $$
-j\colon \mathcal A \to \Theta,
+f_! \mathbf{y}(c) = \mathbf{y}(f(c)).
 $$
-使得伴随 $j_! \dashv j^*$ <span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">诱导的单子</a></span> $j^*j_!\colon \widehat {\mathcal A} \to \widehat {\mathcal A}$ 保持<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子 $\nu_{\mathcal A}\colon \mathcal E\to\widehat {\mathcal A}$ 的像.</p>
-<p>该理论的一个<strong>模型</strong>是 $\Theta$ 上的一个预层, 满足其沿 $j$ 的限制落在 $\nu_{\mathcal A}$ 的像中.</p>
-<p><strong>定理</strong>. 对于固定的 $(\mathcal E,\mathcal A)$, $\mathcal E$ 上以 $\mathcal A$ 为元数的单子 $T$ 等价于以 $\mathcal A$ 为元数的理论 $j_T\colon \mathcal A\to \Theta_T$, 且单子 $T$ 上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>等同于理论 $\Theta_T$ 的模型.</p>
+道理很简单:
+$$
+\operatorname{Hom}_{\widehat {\mathcal D}}(f_!\mathbf{y}(c),X) = \operatorname{Hom}_{\widehat {\mathcal C}}(\mathbf{y}(c),f^*X) = X(f(c)).
+$$</p>
+<h3>先推再拉</h3>
+<p>当 $f\colon \mathcal C\to\mathcal D$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>, 即全子范畴的嵌入时,
+$$
+\begin{aligned}
+f^*f_! X (c) &amp;=
+f_! X(f(c))\\
+&amp;=
+\operatorname{colim}_{f(c) \to f(c')} X(c')\\
+&amp;=
+\operatorname{colim}_{c \to c'} X(c') = X(c),
+\end{aligned}
+$$
+$$
+\begin{aligned}
+f^*f_* X (c) &amp;=
+f_* X(f(c))\\
+&amp;=
+\operatorname{lim}_{f(c') \to f(c)} X(c')\\
+&amp;=
+\operatorname{lim}_{c' \to c} X(c') = X(c),
+\end{aligned}
+$$
+即两个自然映射 $f^*f_*\to X \to f^*f_! X$ 均为同构.</p>
 <h2>例</h2>
-<h3>Lawvere 理论</h3>
 </details></section></details></section></footer></article></div></body></html>
