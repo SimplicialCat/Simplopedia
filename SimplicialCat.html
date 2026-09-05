@@ -1531,7 +1531,7 @@ $$
 <h3>经典</h3>
 <p>经典范畴论中的 Barr–Beck 定理如下.</p>
 <p><strong>定理</strong>. 对于函子 $G\colon \mathcal D\to\mathcal C$, 设有左伴随 $F$, 则 $G$ 为<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性函子</a></span>当且仅当 $G$ 反映同构, 且 $G$ <span class="link local"><a href="./创生(范畴论).html" title="创生 (范畴论) [创生(范畴论)]">创生</a></span> $G$-<span class="link local"><a href="./分裂余等化子.html" title="分裂余等化子 [分裂余等化子]">分裂余等化子</a></span>.</p>
-<p>具体地, 后一个条件是说每当有图表</p>
+<p>具体地, 后一个条件 “创生分裂余等化子” 是说每当有图表</p>
 <p><figure><img src="./Barr–Beck-G-split-coequalizer.svg" class="color-invert"/></figure></p>
 <p>其中 $h\circ G(f) = h\circ G(g)$,</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Beilinson–Bernstein局部化"><header><h1><span class="taxon"></span>“Beilinson–Bernstein 局部化” <a class="slug" href="./Beilinson–Bernstein局部化.html">[Beilinson–Bernstein局部化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -2643,9 +2643,24 @@ $$</p>
 <p>关于 $n=2$ 的特殊情形, 见 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$-代数</a></span>.</p>
 <p>对于一个 $1$-范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> (如幺半群), 它<strong>要么是</strong>交换的, <strong>要么不是</strong>交换的; 这是<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">性质而非结构</a></span>. 而对于<span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">无穷范畴</a></span>中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 有一列无穷多个概念, 称为 $\mathbb E_n$-代数. 当 $n$ 越来越大时, $\mathbb E_n$-代数接近于<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>, 又称 $\mathbb E_\infty$-代数.</p>
 <h2>性质</h2>
-<p>如下事实体现了 “$\mathbb{E}_n$-代数是有 $n$ 个相容的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合运算</a></span>的代数” 的直观. 对于<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal C$,
+<p>如下事实体现了 “$\mathbb{E}_n$-代数是有 $n$ 个相容的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合运算</a></span>的代数” 的直观.</p>
+<p><strong>命题</strong> (Dunn 可加性). 对于<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal C$,
 $$
 \mathsf{Alg}_{\mathbb E_n}(\mathcal C)\simeq \underbrace{\mathsf{Alg}_{\mathbb E_1}\cdots \mathsf{Alg}_{\mathbb E_1}}_{\text{$n$}}(\mathcal C).
+$$</p>
+<h3>模范畴</h3>
+<p>对于<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span>对称幺半范畴 $\mathcal C$, 有对称幺半函子
+$$
+\mathsf{Mod}\colon \mathsf{Alg}_{\mathbb{E}_1}(\mathcal C) \to \mathsf{Mod}_{\mathsf{Pr}}(\mathcal C).
+$$
+对上式取 $\mathsf{Alg}_{\mathbb E_{(n-1)}}$, 得到函子
+$$
+\mathsf{Mod}\colon \mathsf{Alg}_{\mathbb E_n}(\mathcal C) \to \mathsf{Alg}_{\mathbb E_{(n-1)}}(\mathsf{Mod}_{\mathsf{Pr}}(\mathcal C)).
+$$
+直观地, 一个 $\mathbb E_n$-代数可以 “拿出一个 $\mathbb E_1$-结构” 构造模范畴, “还剩” $\mathbb E_{(n-1)}$-结构.</p>
+<p>迭代这一操作, $\mathbb E_n$-代数可定义 $n$-阶模
+$$
+\mathsf{Mod}^n\colon \mathsf{Alg}_{\mathbb E_n}(\mathcal C) \to \mathsf{Mod}^n(\mathcal C).
 $$</p>
 <h3>拓扑场论</h3>
 <p>每个 $\mathbb E_n$-代数都作为 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>的对象通过<span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>给出<span class="link local"><a href="./拓扑场论.html" title="拓扑场论 [拓扑场论]">拓扑场论</a></span>.</p>
@@ -5123,12 +5138,14 @@ $$
 <p><strong>命题</strong>. 小范畴 $C$ 上的 <span class="link local"><a href="./Grothendieck拓扑.html" title="Grothendieck 拓扑 [Grothendieck拓扑]">Grothendieck 拓扑</a></span>给出<span class="link local"><a href="./预层意象.html" title="预层意象 [预层意象]">预层意象</a></span> $\mathsf {Set}^{C^{\mathrm{op}}}$ 上的 Lawvere–Tierney 拓扑.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Lawvere理论"><header><h1><span class="taxon"></span>Lawvere 理论 <a class="slug" href="./Lawvere理论.html">[Lawvere理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./逻辑.html" title="逻辑 [逻辑]">逻辑</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<h3>语法范畴</h3>
+<h3>作为语法范畴</h3>
 <p>Lawvere 理论的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>是满足如下条件的范畴 $\mathcal T$:</p>
 <ul>
 <li>$\mathcal T$ 具有有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>;</li>
 <li>$\mathcal T$ 有一个对象 $x$, 使得所有对象都同构于某个 $x^n$ ($n$ 为自然数).</li>
 </ul>
+<h3>作为自由代数单子</h3>
+<p>Lawvere 理论是 $\mathsf{Set}$ 上的<span class="link local"><a href="./有限性单子.html" title="有限性单子 [有限性单子]">有限性单子</a></span>, 即保持滤余极限的单子.</p>
 <h2>性质</h2>
 <h3>由模型的范畴恢复</h3>
 <p>对于 Lawvere 理论 $\mathcal T$, 其在 $\mathsf{Set}$ (或 $\mathsf{Ani}$) 中的模型的范畴 $\mathsf{Mod}(\mathcal T)$ 可以恢复出 $\mathcal T$ 本身.</p>
@@ -15495,17 +15512,25 @@ $$
 <p><span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的<strong>分类空间</strong>指的是其<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> $\mathbf{B}G$, 它是一个带基点连通空间, 带有万有 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span> ${*}\to \mathbf{B}G$.</p>
 <p>另见<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span>, <span class="link local"><a href="./分类叠.html" title="分类叠 (模叠) [分类叠]">分类叠</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="分裂余等化子"><header><h1><span class="taxon"></span>分裂余等化子 <a class="slug" href="./分裂余等化子.html">[分裂余等化子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>分裂余等化子是<span class="link local"><a href="./单纯对象的分裂.html" title="分裂单纯对象 [单纯对象的分裂]">分裂单纯对象</a></span>的截断情形.</p>
 <h2>定义</h2>
+<h3>直接定义</h3>
 <p>对于等化两个态射 $f,g$ 的态射 $h$ (即 $hf=hg$), 称图表</p>
 <p><figure><img src="./split-coequalizer.svg" class="color-invert"/></figure></p>
 <p>为<strong>分裂余等化子</strong> (split coequalizer) 是指: 存在 $h$ 的截面 $s$, $f$ 的截面 $t$, 满足 $sh=gt$.</p>
+<h3>通过单纯形范畴</h3>
+<p>要理解定义中涉及的态射, 一种方法是将它们放在<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>中.
+考虑有限非空全序集与保持最小值的映射构成的范畴 $\Delta_{\bot}$, 其对象记为
+$$</p>
+<p>$$</p>
 <h2>例</h2>
 <h3>有向图</h3>
-<p>考虑有向图的边集 $E$ 与点集 $V$, 映射 $s,t\colon E\rightrightarrows V$ 给出有向边的起点和终点. 图表
+<p>考虑有向图 $(V,E)$, 映射 $s,t\colon E\rightrightarrows V$ 给出有向边的起点和终点. 余等化子
 $$
-E \rightrightarrows V \to 1
+E \rightrightarrows V \to \operatorname{coeq}(s,t)
 $$
-为分裂余等化子, 等价于存在点 $v$ 使得每个点都有指向 $v$ 的边.</p>
+给出图 $(V,E)$ 的连通分支的集合; 该余等化子<strong>分裂</strong>等价于每个连通分支可以选一个代表, 并且每个点都发出一条边指向其所在连通分支的代表.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="分裂域"><header><h1><span class="taxon"></span>分裂域 <a class="slug" href="./分裂域.html">[分裂域]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>若<span class="link local"><a href="./域扩张.html" title="域扩张 [域扩张]">域扩张</a></span>类比于覆叠, 那么分裂域则是覆叠的局部平凡化. 这里的局部是指通过<span class="link local"><a href="./Grothendieck拓扑.html" title="Grothendieck 拓扑 [Grothendieck拓扑]">覆盖</a></span> (更具体地说是<span class="link local"><a href="./平展景.html" title="平展景 [平展景]">平展覆盖</a></span>).</p>
@@ -16458,26 +16483,36 @@ $$
 <p><span class="link local"><a href="./树形对象.html" title="树形对象 [树形对象]">树形对象</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单纯对象的分裂"><header><h1><span class="taxon"></span>分裂单纯对象 <a class="slug" href="./单纯对象的分裂.html">[单纯对象的分裂]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>记 $\mathrm{surj}(j,k)$ 为单纯集 $\Delta^j$ 到 $\Delta^k$ 的满射的集合.</p>
-<p>设 $K$ 为<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, 其 $n$ 阶<strong>分裂</strong>是一系列子对象 $N_k \subset K_k\,(k\leq n)$, 称为非退化部分, 满足对 $0\leq j\leq n$, 有典范的同构 $\coprod_{\mathrm{surj}(j,k)}N_k \to K_j$. 直观上, 这个条件是说 $K$ 的每个可能退化的单形都唯一地对应一个非退化单形.</p>
-<h3>作为可缩单纯对象</h3>
+<h3>1</h3>
 <p>记 $\Delta_{\bot}$ 为有限非空全序集与保持最小值的映射构成的范畴. 事实上,
 $$
 \Delta_{\bot} = \mathsf{LMod}_{\Delta_+}([0])
 $$
 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的结合代数 $[0]$ 上的左<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>范畴.
-因此其到<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span> $\Delta_+$ 的函子 (注意并非<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>) $i\colon \Delta_{\bot}\hookrightarrow \Delta_+$ 有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $C_+\colon \Delta_+ \to \Delta_{\bot}$, $[n]\mapsto [0] * [n]$ (“对全序集<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加一个最小值”, 可类比于锥操作).
+因此其到<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span> $\Delta_+$ 的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>函子 (注意并非<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>)
+$$
+i\colon \Delta_{\bot}\rightarrow \Delta_+
+$$
+有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>
+$$
+C_+\colon \Delta_+ \to \Delta_{\bot}, [n]\mapsto [0] * [n]
+$$
+对全序集<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加一个最小值“, 可类比于<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">锥</a></span>操作.
 从而 (当 $\mathcal C$ 完备且余完备时) 有<span class="link local"><a href="./预层范畴之间的伴随.html" title="预层范畴之间的伴随 [预层范畴之间的伴随]">预层范畴之间的四元伴随</a></span>
 $$
  i_!\dashv [(C_+)_!=i^*] \dashv [(C_+)^* =i_*] \dashv (C_+)_*
 $$</p>
 <p>设 $X\colon \Delta_+^{\mathrm{op}}\to\mathcal C$ 为<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">增广单纯对象</a></span>, 定义其<strong>分裂</strong>为下图.</p>
 <p><figure><img src="./split-simplicial-object.svg" class="color-invert"/></figure></p>
-<p>换言之, $X = (C_+)^* \overline{X} = i_*\overline{X}$. 注意, 伴随关系
+<p>换言之, $X = (C_+)^* \overline{X} = i_*\overline{X}$.</p>
+<p>注意到, 伴随关系
 $$
 \operatorname{Hom}_{\Delta_\bot}(C_+-,-)\simeq\operatorname{Hom}_{\Delta_+}(-,i-)
 $$
-直接给出 $(C_+)^*$ 在<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>上的作用 $(C_+)^*\mathbf{y}([n]) = \mathbf{y}(i[n])$. 而 $(C_+)^*$ 作为左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>保持余极限, 故有如下直观: $\Delta_\bot$ 的对象为固定顶点的锥, $\overline{X}$ 是一族固定顶点的锥的粘合, 从而是可缩到顶点的单纯对象.</p>
+直接给出 $(C_+)^*$ 在<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>上的作用 $(C_+)^*\mathbf{y}([n]) = \mathbf{y}(i[n])$. 而 $(C_+)^*$ 作为左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>保持余极限, 故有如下直观: $\Delta_\bot$ 的对象为固定顶点的锥, $\overline{X}$ 是一族固定顶点的锥的粘合, 从而是 “可以缩到顶点” 的单纯对象.</p>
+<h3>2</h3>
+<p>记 $\mathrm{surj}(j,k)$ 为单纯集 $\Delta^j$ 到 $\Delta^k$ 的满射的集合.</p>
+<p>设 $K$ 为<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, 其 $n$ 阶<strong>分裂</strong>是一系列子对象 $N_k \subset K_k\,(k\leq n)$, 称为非退化部分, 满足对 $0\leq j\leq n$, 有典范的同构 $\coprod_{\mathrm{surj}(j,k)}N_k \to K_j$. 直观上, 这个条件是说 $K$ 的每个可能退化的单形都唯一地对应一个非退化单形.</p>
 <h2>性质</h2>
 <p>集合范畴中的单纯对象 (<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>) 有唯一的分裂.</p>
 <p>单纯对象若存在分裂, 则分裂唯一.</p>
@@ -19030,9 +19065,10 @@ $$
 <li><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>;</li>
 <li><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>.</li>
 </ul>
-<p>直观上, 范畴 $\mathcal E$ 上的单子 $T$ 以子范畴 $\mathcal A\subset\mathcal E$ 为元数, 就是说为了表达一个 $T$-结构所需的运算, 只需用 $\mathcal A$ 的对象来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>.</p>
+<p>直观上, 范畴 $\mathcal E$ 上的单子 $T$ 以子范畴 $\mathcal A\subset\mathcal E$ 为元数, 就是说为了表达一个 $T$-结构所需的运算, 只需用 $\mathcal A$ 的对象来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>. 进而 $T$-代数可以定义为满足某种条件的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>.</p>
 <p>例如要表达一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ 上的一个<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>结构, 只需要考虑所有有限集到 $X$ 的映射, 此时有限集 (的元素个束) 就对应运算的元数.</p>
-<p>元数不一定是有限集. 例如要表达一个图 $G$ 上的范畴结构, 要考虑的是所有态射串的复合. 此时元数是形如 $\bullet\to\bullet\to\cdots\to\bullet$ 的有限图.</p>
+<p>元数不一定是有限集. 例如要表达一个图 $G$ 上的范畴结构, 要考虑的是所有态射串的复合. 此时元数是形如 $\bullet\to\bullet\to\cdots\to\bullet$ 的有限图. 这样, 范畴就可以定义为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>上满足某种条件的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>, 即单纯生象. 见 <span class="link local"><a href="./Segal空间.html" title="Segal 对象 [Segal空间]">Segal 生象</a></span>.</p>
+<p>带元数的单子又被<span class="link local"><a href="./相对单子.html" title="相对单子 [相对单子]">相对单子</a></span>涵盖.</p>
 <h2>定义</h2>
 <p>设 $\mathcal A\subset\mathcal E$ 为<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>全子范畴, 称为<strong>元数</strong> (arities) 的范畴. 设 $T$ 为 $\mathcal E$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>. 记 $\mathcal E^T$ 为 $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>的范畴, 带有<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由-遗忘伴随</a></span> $F\dashv U\colon \mathcal E\rightleftarrows\mathcal E^{T}$.</p>
 <p>回忆, 子范畴 $\mathcal A$ 的稠密性是指</p>
@@ -19047,7 +19083,20 @@ $$
 X = \operatorname{colim}_{A\to X,A\in\mathcal A}A.\ (\star)
 $$</li>
 </ul>
-<p><strong>定义</strong>. 若<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 保持所有形如 $(\star)$ 的余极限, 则称单子 $T$ 以 $\mathcal A$ 为<strong>元数</strong> (arity).</p>
+<p><strong>定义</strong>. 若<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 满足以下等价条件, 则称单子 $T$ 以 $\mathcal A$ 为<strong>元数</strong> (arity):</p>
+<ul>
+<li>$T$ 保持所有形如 $(\star)$ 的余极限;</li>
+<li>$T$ 是其在 $\mathcal A$ 上的限制的左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>.</li>
+</ul>
+<p>或许 $(\star)$ 更有启发性的一种写法是写成<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>
+$$
+X = \int_{A\in\mathcal A} A \times X^A,
+$$
+(这里 $X^A$ 代表 $\operatorname{Hom}(A,X)$, 这样写只是为了更有启发性), 而函子 $T$ 保持该余极限意味着
+$$
+TX = \int_{A\in\mathcal A} TA \times X^A.
+$$
+换言之, $T$ 具有以 $A\in\mathcal A$ 为 “次数”, $TA$ 为系数的 “多项式展开”. (参考<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>, <span class="link local"><a href="./解析函子.html" title="解析函子 (算畴理论) [解析函子]">解析函子</a></span>.)</p>
 <h3>范畴 $\Theta_T$</h3>
 <p>设 $T$ 为 $\mathcal E$ 上的单子, 定义 $\Theta_T$ 为 $\mathcal A$ 的对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span> $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>构成的范畴. 那么有自由代数函子
 $$
@@ -19072,7 +19121,14 @@ $$</p>
 <ol>
 <li>$T$ 是以 $\mathcal A$ 为元数的单子;</li>
 <li>交换方块 $(\heartsuit)$ 满足 <span class="link local"><a href="./基变换.html" title="基变换 [基变换]">Beck–Chevalley 条件</a></span>, 即 Beck–Chevalley 自然变换 $(j_T)_!\nu_A \to \nu_T F$ 为同构.</li>
-<li>自然变换 $j_T^*(j_T)_!\nu_A \to j_T^*\nu_T F= \nu_AUF =\nu_A T$ 为同构. (由于 $j_T^*$ <span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守</a></span>, 条件 2 与条件 3 明显等价.)</li>
+<li>自然变换 $j_T^*(j_T)_!\nu_A \to j_T^*\nu_T F= \nu_AUF =\nu_A T$ 为同构. (由于 $j_T^*$ <span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守</a></span>, 条件 2 与条件 3 明显等价.) 换言之, 存在<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>的态射
+$$
+\begin{CD}
+\mathcal E @&gt;{\nu_A}&gt;&gt; \widehat {\mathcal A} \\
+@V{T}VV @VV{j^*j_!}V \\
+\mathcal E @&gt;&gt;{\nu_A}&gt; \widehat {\mathcal A.}
+\end{CD}
+$$</li>
 </ol>
 <p><strong>注</strong>. 这里的 Beck–Chevalley 自然变换的理解如下. 对于 $X\in\mathcal E$, 由左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>的<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>公式, $(j_T)_!\nu_{\mathcal A} X$ 对每个元数的自由代数 $j_T A$ 给出
 $$
@@ -19096,17 +19152,20 @@ $$
 \operatorname{Hom}_{\mathcal E}(A,TB)\times\operatorname{Hom}_{\mathcal E}(B,X) \to \operatorname{Hom}_{\mathcal E}(A,TX),
 $$
 即 “通过 $A$ 个 $B$ 元运算搭配 $B$ 个 $X$ 的元素, 给出 $A$ 个 $TX$ 的元素”. 而这个自然变换为同构, 直观上说的就是 $TX$ 的任何元素都由 $X$ 中的某 $B$ 个元素运算得到.</p>
+<p>(<strong>例</strong>. 对任意集合 $X$, 其生成的自由群的每个元素均为 $X$ 中有限个元素的运算结果.)</p>
 <p><em>证明</em>. 注意到 $(j_T)_!$ 将可表函子对应到可表函子. 故条件 2 与条件 3 中的自然变换在子范畴 $\mathcal A$ 上总是同构.
 现在任取 $X\in\mathcal E$, 将其表现为余极限
 $$
 X = \operatorname{colim}_{A\to X, A\in\mathcal A}A,
 $$
 假若单子 $T$ 保持该余极限, 那么条件 3 中的自然变换在 $X$ 上也是同构.</p>
-<p><strong>定理</strong>. 假设上述命题中的两个条件成立, 那么</p>
+<p><strong>推论</strong> (常称为<strong>脉定理</strong>). 设 $T$ 是以 $\mathcal A$ 为元数的单子, 那么</p>
 <ul>
 <li>$\nu_T$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>. 换言之, $T$-代数可由 $\mathcal A$ 的对象生成的自由代数来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>;</li>
 <li>对于 $\Theta_T$ 上的预层 $X$, 其落在 $\nu_T$ 的像中当且仅当其沿 $j_T$ 的限制落在 $\nu_A$ 的像中.</li>
 </ul>
+<p>因此, $T$-代数可以定义为 $\Theta_T$ 上满足某种条件的预层.</p>
+<p><em>证明</em>. 将 $\mathcal E$ 等同于 $\nu_A\colon \mathcal E\to\widehat {\mathcal A}$ 的像, 那么单子 $T$ 等同于单子 $j^*j_!$ 在 $\mathcal E$ 上的限制, 所以 $T$-代数等同于落在 $\mathcal E$ 中的 $j^*j_!$-代数, 而 $j_!\dashv j^*$ <span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>意味着 $j^*j_!$-代数就是 $\Theta_T$ 上的预层. $\square$</p>
 <h3>理论</h3>
 <p>上述范畴 $\Theta_T$ 及函子 $j_T\colon \mathcal A\to\Theta_T$ 可以抽象如下.</p>
 <p>设 $\mathcal A\subset\mathcal E$ 为<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>全子范畴, 定义一个以 $\mathcal A$ 为元数的<strong>理论</strong>为一个函子
@@ -21239,6 +21298,14 @@ $$</p>
 <p>证明. 考虑 $\mathbb F_p$ 的一个代数闭包 $\overline{\mathbb F_p}$, 则其中 $x^{p^n}-x$ 恰有 $p^n$ 个根, 这些根互不相同, 且构成一个 $p^n$ 元域. 另一方面, 任何 $p^n$ 元域都嵌入 $\mathbb F_p$ 的某个代数闭包, 且为其中多项式 $x^{p^n}-x$ 的根. 结论得证.</p>
 <h3>Galois 群</h3>
 <p><strong>命题</strong>. 设 $q=p^n$, 则 Galois 群 $\operatorname{Gal}(\mathbb F_q/\mathbb F_p)$ 同构于 $\mathbb{Z}/n$, 有生成元 $\alpha\mapsto \alpha^p$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="有限性单子"><header><h1><span class="taxon"></span>有限性单子 <a class="slug" href="./有限性单子.html">[有限性单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>有限性单子是<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>的特殊情形.</p>
+<p>($\mathsf{Set}$ 上的) 有限性单子可视为 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>的自由代数函子.</p>
+<h2>定义</h2>
+<p><strong>有限性单子</strong> (finitary monad) 就是保持<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</p>
+<h2>性质</h2>
+<p>由于每个集合都是有限集的<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>, 故 $\mathsf{Set}$ 上的有限性单子 $T$ 由其在有限集上的行为完全决定. 对于有限集 $\{x_1,\cdots,x_n\}$, 称 $T(\{x_1,\cdots,x_n\})$ 为 $n$ 元运算的集合; 这给出了一个 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>. 此时函子 $T$ 是这种理论的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>代数函子.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="有限极限"><header><h1><span class="taxon"></span>有限极限 <a class="slug" href="./有限极限.html">[有限极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>有限极限是以<span class="link local"><a href="./有限范畴.html" title="有限范畴 [有限范畴]">有限范畴</a></span>为指标范畴的<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>.</p>
@@ -21308,7 +21375,11 @@ $$
 F^*\colon \widehat {\mathcal D} \to \widehat {\mathcal C}
 $$
 为<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性函子</a></span>; $\widehat {\mathcal C}$ 上的单子 $F^*F_!$ 的代数等同于 $\widehat {\mathcal D}$ 的对象. (其中 $F_!$ 是 $F^*$ 的左伴随, 见<span class="link local"><a href="./预层范畴之间的伴随.html" title="预层范畴之间的伴随 [预层范畴之间的伴随]">预层范畴之间的伴随</a></span>.)</p>
-<p><em>证明</em>. 考虑比较函子
+<p><em>证明</em>.</p>
+<p>$$
+F^*F_! X (c) = \operatorname{colim}_{F(c')\to F(c)} X(c')
+$$</p>
+<p>考虑比较函子
 $$
 K\colon \widehat {\mathcal D} \to \mathsf{Alg}(F^*F_!),
 \ X\mapsto F^*X.
@@ -22562,6 +22633,25 @@ $$</li>
 <h2>性质</h2>
 <h3>与游走的单子的关系</h3>
 <p>注意到上述资料中 $\operatorname{Hom}(+,+) = \{\mathrm{id}_+,rl,rlrl,\cdots\} = \Delta_+$ 为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span>, 其中 $rl$ 为<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 换言之, 对象 $+$ 处的全子范畴正是<span class="link local"><a href="./游走的单子.html" title="游走的单子 [游走的单子]">游走的单子</a></span>. 故任意伴随中 $rl$ 给出一个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>. 见<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">伴随给出单子</a></span>.</p>
+<h3>与自身反范畴的关系</h3>
+<p>$\mathsf{Adj}$ 到自身的<span class="link local"><a href="./反范畴.html" title="反范畴 [反范畴]">反范畴</a></span> $\mathsf{Adj}^{\mathrm{op}}$ 有一个函子
+$$
+\Phi\colon \mathsf{Adj}\to\mathsf{Adj}^{\mathrm{op}}.
+$$
+其中 $\mathrm{op}$ 只反转 $1$-态射的方向, 不反转 $2$-态射. 为了避免造成困惑, 我们用撇号重新命名 $\mathsf{Adj}^{\mathrm{op}}$ 的对象, 态射和 $2$-态射:</p>
+<ul>
+<li>两个对象 $+',-'$;</li>
+<li>两个态射 $l'\colon -'\to +'$, $r'\colon +'\to -'$;</li>
+<li>两个 $2$-态射 $\eta'\colon \mathrm{id}_{+'} \to l'r'$, $\epsilon'\colon r'l'\to\mathrm{id}_{-'}$.</li>
+</ul>
+<p>函子 $\Phi$ 的行为如下:</p>
+<ul>
+<li>对象 $+\mapsto +'$, $-\mapsto -'$;</li>
+<li>态射 $l\mapsto r'$, $r\mapsto l'$;</li>
+<li>$2$-态射 $\eta\mapsto \eta'$, $\epsilon\mapsto\epsilon'$.</li>
+</ul>
+<p>换言之, $\mathsf{Adj}^{\mathrm{op}}$ 中有一对伴随 $r'\dashv l'$. 注意这与原来的伴随 $l\dashv r$ 在名称上是相反的.</p>
+<p>这个事实的推论是: 对于 $2$-范畴 $\mathcal C$ 中的一对伴随 $f\dashv g$, 相应地有 $\mathcal C^{\mathrm{op}}$ 中的一对伴随 $g'\dashv f'$, 其中 $f',g'$ 分别是 $f,g$ 在反范畴操作下对应的 $1$-态射.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="游走的单子"><header><h1><span class="taxon"></span>游走的单子 <a class="slug" href="./游走的单子.html">[游走的单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>游走的单子是 $2$-范畴 $\mathbf{B}\Delta_+$. 其有一个对象 $*$, 且 $\operatorname{Hom}(*,*)\simeq\Delta_+$.</p>
@@ -23166,6 +23256,8 @@ P = G \backslash ((G/H)\times (G/H)) \simeq H\backslash G / H.
 $$</p>
 <h2>例</h2>
 <p>对于 Lie 群 $G$ 的 Borel 子群 $B$, 陪集空间 $G/B$ 又称<span class="link local"><a href="./旗流形.html" title="旗流形 [旗流形]">旗流形</a></span> $\mathrm{Fl}$. 两个旗的相对位置是 $G$ 的 <span class="link local"><a href="./Weyl群.html" title="Weyl 群 (极大环面) [Weyl群]">Weyl 群</a></span> $B \backslash G / B \simeq W$ 的元素.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="相对单子"><header><h1><span class="taxon"></span>相对单子 <a class="slug" href="./相对单子.html">[相对单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="相对同伦群"><header><h1><span class="taxon"></span>相对同伦群 <a class="slug" href="./相对同伦群.html">[相对同伦群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>相对同伦群是<span class="link local"><a href="./同伦群.html" title="同伦群 [同伦群]">同伦群</a></span>的<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>版本.</p>

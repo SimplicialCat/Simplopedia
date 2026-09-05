@@ -826,23 +826,31 @@
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
 <article><section class="block" data-taxon=""><details open><summary id="分裂余等化子"><header><h1><span class="taxon"></span>分裂余等化子 <a class="slug" href="./分裂余等化子.html">[分裂余等化子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>分裂余等化子是<span class="link local"><a href="./单纯对象的分裂.html" title="分裂单纯对象 [单纯对象的分裂]">分裂单纯对象</a></span>的截断情形.</p>
 <h2>定义</h2>
+<h3>直接定义</h3>
 <p>对于等化两个态射 $f,g$ 的态射 $h$ (即 $hf=hg$), 称图表</p>
 <p><figure><img src="./split-coequalizer.svg" class="color-invert"/></figure></p>
 <p>为<strong>分裂余等化子</strong> (split coequalizer) 是指: 存在 $h$ 的截面 $s$, $f$ 的截面 $t$, 满足 $sh=gt$.</p>
+<h3>通过单纯形范畴</h3>
+<p>要理解定义中涉及的态射, 一种方法是将它们放在<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>中.
+考虑有限非空全序集与保持最小值的映射构成的范畴 $\Delta_{\bot}$, 其对象记为
+$$</p>
+<p>$$</p>
 <h2>例</h2>
 <h3>有向图</h3>
-<p>考虑有向图的边集 $E$ 与点集 $V$, 映射 $s,t\colon E\rightrightarrows V$ 给出有向边的起点和终点. 图表
+<p>考虑有向图 $(V,E)$, 映射 $s,t\colon E\rightrightarrows V$ 给出有向边的起点和终点. 余等化子
 $$
-E \rightrightarrows V \to 1
+E \rightrightarrows V \to \operatorname{coeq}(s,t)
 $$
-为分裂余等化子, 等价于存在点 $v$ 使得每个点都有指向 $v$ 的边.</p>
+给出图 $(V,E)$ 的连通分支的集合; 该余等化子<strong>分裂</strong>等价于每个连通分支可以选一个代表, 并且每个点都发出一条边指向其所在连通分支的代表.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Barr–Beck–Lurie定理"><header><h1><span class="taxon"></span>Barr–Beck–Lurie 定理 <a class="slug" href="./Barr–Beck–Lurie定理.html">[Barr–Beck–Lurie定理]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>陈述</h2>
 <h3>经典</h3>
 <p>经典范畴论中的 Barr–Beck 定理如下.</p>
 <p><strong>定理</strong>. 对于函子 $G\colon \mathcal D\to\mathcal C$, 设有左伴随 $F$, 则 $G$ 为<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性函子</a></span>当且仅当 $G$ 反映同构, 且 $G$ <span class="link local"><a href="./创生(范畴论).html" title="创生 (范畴论) [创生(范畴论)]">创生</a></span> $G$-<span class="link local"><a href="./分裂余等化子.html" title="分裂余等化子 [分裂余等化子]">分裂余等化子</a></span>.</p>
-<p>具体地, 后一个条件是说每当有图表</p>
+<p>具体地, 后一个条件 “创生分裂余等化子” 是说每当有图表</p>
 <p><figure><img src="./Barr–Beck-G-split-coequalizer.svg" class="color-invert"/></figure></p>
 <p>其中 $h\circ G(f) = h\circ G(g)$,</p>
 </details></section></details></section></footer></article></div></body></html>

@@ -2845,9 +2845,10 @@ $$
 <li><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>;</li>
 <li><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>.</li>
 </ul>
-<p>直观上, 范畴 $\mathcal E$ 上的单子 $T$ 以子范畴 $\mathcal A\subset\mathcal E$ 为元数, 就是说为了表达一个 $T$-结构所需的运算, 只需用 $\mathcal A$ 的对象来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>.</p>
+<p>直观上, 范畴 $\mathcal E$ 上的单子 $T$ 以子范畴 $\mathcal A\subset\mathcal E$ 为元数, 就是说为了表达一个 $T$-结构所需的运算, 只需用 $\mathcal A$ 的对象来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>. 进而 $T$-代数可以定义为满足某种条件的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>.</p>
 <p>例如要表达一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ 上的一个<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>结构, 只需要考虑所有有限集到 $X$ 的映射, 此时有限集 (的元素个束) 就对应运算的元数.</p>
-<p>元数不一定是有限集. 例如要表达一个图 $G$ 上的范畴结构, 要考虑的是所有态射串的复合. 此时元数是形如 $\bullet\to\bullet\to\cdots\to\bullet$ 的有限图.</p>
+<p>元数不一定是有限集. 例如要表达一个图 $G$ 上的范畴结构, 要考虑的是所有态射串的复合. 此时元数是形如 $\bullet\to\bullet\to\cdots\to\bullet$ 的有限图. 这样, 范畴就可以定义为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>上满足某种条件的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>, 即单纯生象. 见 <span class="link local"><a href="./Segal空间.html" title="Segal 对象 [Segal空间]">Segal 生象</a></span>.</p>
+<p>带元数的单子又被<span class="link local"><a href="./相对单子.html" title="相对单子 [相对单子]">相对单子</a></span>涵盖.</p>
 <h2>定义</h2>
 <p>设 $\mathcal A\subset\mathcal E$ 为<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>全子范畴, 称为<strong>元数</strong> (arities) 的范畴. 设 $T$ 为 $\mathcal E$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>. 记 $\mathcal E^T$ 为 $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>的范畴, 带有<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由-遗忘伴随</a></span> $F\dashv U\colon \mathcal E\rightleftarrows\mathcal E^{T}$.</p>
 <p>回忆, 子范畴 $\mathcal A$ 的稠密性是指</p>
@@ -2862,7 +2863,20 @@ $$
 X = \operatorname{colim}_{A\to X,A\in\mathcal A}A.\ (\star)
 $$</li>
 </ul>
-<p><strong>定义</strong>. 若<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 保持所有形如 $(\star)$ 的余极限, 则称单子 $T$ 以 $\mathcal A$ 为<strong>元数</strong> (arity).</p>
+<p><strong>定义</strong>. 若<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 满足以下等价条件, 则称单子 $T$ 以 $\mathcal A$ 为<strong>元数</strong> (arity):</p>
+<ul>
+<li>$T$ 保持所有形如 $(\star)$ 的余极限;</li>
+<li>$T$ 是其在 $\mathcal A$ 上的限制的左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>.</li>
+</ul>
+<p>或许 $(\star)$ 更有启发性的一种写法是写成<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>
+$$
+X = \int_{A\in\mathcal A} A \times X^A,
+$$
+(这里 $X^A$ 代表 $\operatorname{Hom}(A,X)$, 这样写只是为了更有启发性), 而函子 $T$ 保持该余极限意味着
+$$
+TX = \int_{A\in\mathcal A} TA \times X^A.
+$$
+换言之, $T$ 具有以 $A\in\mathcal A$ 为 “次数”, $TA$ 为系数的 “多项式展开”. (参考<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>, <span class="link local"><a href="./解析函子.html" title="解析函子 (算畴理论) [解析函子]">解析函子</a></span>.)</p>
 <h3>范畴 $\Theta_T$</h3>
 <p>设 $T$ 为 $\mathcal E$ 上的单子, 定义 $\Theta_T$ 为 $\mathcal A$ 的对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span> $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>构成的范畴. 那么有自由代数函子
 $$
@@ -2887,7 +2901,14 @@ $$</p>
 <ol>
 <li>$T$ 是以 $\mathcal A$ 为元数的单子;</li>
 <li>交换方块 $(\heartsuit)$ 满足 <span class="link local"><a href="./基变换.html" title="基变换 [基变换]">Beck–Chevalley 条件</a></span>, 即 Beck–Chevalley 自然变换 $(j_T)_!\nu_A \to \nu_T F$ 为同构.</li>
-<li>自然变换 $j_T^*(j_T)_!\nu_A \to j_T^*\nu_T F= \nu_AUF =\nu_A T$ 为同构. (由于 $j_T^*$ <span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守</a></span>, 条件 2 与条件 3 明显等价.)</li>
+<li>自然变换 $j_T^*(j_T)_!\nu_A \to j_T^*\nu_T F= \nu_AUF =\nu_A T$ 为同构. (由于 $j_T^*$ <span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守</a></span>, 条件 2 与条件 3 明显等价.) 换言之, 存在<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>的态射
+$$
+\begin{CD}
+\mathcal E @&gt;{\nu_A}&gt;&gt; \widehat {\mathcal A} \\
+@V{T}VV @VV{j^*j_!}V \\
+\mathcal E @&gt;&gt;{\nu_A}&gt; \widehat {\mathcal A.}
+\end{CD}
+$$</li>
 </ol>
 <p><strong>注</strong>. 这里的 Beck–Chevalley 自然变换的理解如下. 对于 $X\in\mathcal E$, 由左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>的<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>公式, $(j_T)_!\nu_{\mathcal A} X$ 对每个元数的自由代数 $j_T A$ 给出
 $$
@@ -2911,17 +2932,20 @@ $$
 \operatorname{Hom}_{\mathcal E}(A,TB)\times\operatorname{Hom}_{\mathcal E}(B,X) \to \operatorname{Hom}_{\mathcal E}(A,TX),
 $$
 即 “通过 $A$ 个 $B$ 元运算搭配 $B$ 个 $X$ 的元素, 给出 $A$ 个 $TX$ 的元素”. 而这个自然变换为同构, 直观上说的就是 $TX$ 的任何元素都由 $X$ 中的某 $B$ 个元素运算得到.</p>
+<p>(<strong>例</strong>. 对任意集合 $X$, 其生成的自由群的每个元素均为 $X$ 中有限个元素的运算结果.)</p>
 <p><em>证明</em>. 注意到 $(j_T)_!$ 将可表函子对应到可表函子. 故条件 2 与条件 3 中的自然变换在子范畴 $\mathcal A$ 上总是同构.
 现在任取 $X\in\mathcal E$, 将其表现为余极限
 $$
 X = \operatorname{colim}_{A\to X, A\in\mathcal A}A,
 $$
 假若单子 $T$ 保持该余极限, 那么条件 3 中的自然变换在 $X$ 上也是同构.</p>
-<p><strong>定理</strong>. 假设上述命题中的两个条件成立, 那么</p>
+<p><strong>推论</strong> (常称为<strong>脉定理</strong>). 设 $T$ 是以 $\mathcal A$ 为元数的单子, 那么</p>
 <ul>
 <li>$\nu_T$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>. 换言之, $T$-代数可由 $\mathcal A$ 的对象生成的自由代数来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>;</li>
 <li>对于 $\Theta_T$ 上的预层 $X$, 其落在 $\nu_T$ 的像中当且仅当其沿 $j_T$ 的限制落在 $\nu_A$ 的像中.</li>
 </ul>
+<p>因此, $T$-代数可以定义为 $\Theta_T$ 上满足某种条件的预层.</p>
+<p><em>证明</em>. 将 $\mathcal E$ 等同于 $\nu_A\colon \mathcal E\to\widehat {\mathcal A}$ 的像, 那么单子 $T$ 等同于单子 $j^*j_!$ 在 $\mathcal E$ 上的限制, 所以 $T$-代数等同于落在 $\mathcal E$ 中的 $j^*j_!$-代数, 而 $j_!\dashv j^*$ <span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>意味着 $j^*j_!$-代数就是 $\Theta_T$ 上的预层. $\square$</p>
 <h3>理论</h3>
 <p>上述范畴 $\Theta_T$ 及函子 $j_T\colon \mathcal A\to\Theta_T$ 可以抽象如下.</p>
 <p>设 $\mathcal A\subset\mathcal E$ 为<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>全子范畴, 定义一个以 $\mathcal A$ 为元数的<strong>理论</strong>为一个函子

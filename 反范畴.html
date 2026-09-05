@@ -883,6 +883,55 @@ $$
 <p><span class="link local"><a href="./淡中对偶.html" title="淡中对偶 [淡中对偶]">淡中 (Tannaka) 对偶</a></span>是某种几何对象与其上的某种层范畴的对偶.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法–语义对偶</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="游走的伴随"><header><h1><span class="taxon"></span>游走的伴随 <a class="slug" href="./游走的伴随.html">[游走的伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>游走的伴随</strong>是一个具有两个对象的 $2$-范畴 $\mathsf{Adj}$, 任何 $2$-范畴 $\mathcal C$ (例如 $\mathsf{Cat}$) 中的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>等同于函子
+$$
+\mathsf{Adj} \to \mathcal C.
+$$
+因此这是一种<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span> (“自由”) 的结构.</p>
+<h2>定义</h2>
+<p>$2$-范畴 $\mathsf{Adj}$ 有如下对象与态射:</p>
+<ul>
+<li>两个对象 $+,-$;</li>
+<li>两个态射 $l\colon +\to -$, $r\colon -\to +$;</li>
+<li>两个 $2$-态射 $\eta\colon \mathrm{id}_+ \to rl$; $\epsilon\colon lr\to\mathrm{id}_-$, 满足<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>的条件 (注意 $\mathsf{Adj}$ 仅为 $2$-范畴, 故这些条件是<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">性质而非结构</a></span>), 即
+$$
+l \overset{\eta}{\to} lrl \overset{\epsilon}{\to} l = \mathrm{id}_l,\,
+r \overset{\eta}{\to} rlr \overset{\epsilon}{\to} r = \mathrm{id}_r;
+$$</li>
+<li>以及上述资料按照条件 “自由生成” 的所有态射与 $2$-态射.</li>
+</ul>
+<p>上述资料生成的结果为</p>
+<ul>
+<li>$\operatorname{Hom}(+,+) = \{\mathrm{id}_+,rl,rlrl,\cdots\} = \Delta_+$ 为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span>, 其中 $\mathrm{id}_+$ 对应 $[-1]\in\Delta_+$, $rl$ 对应 $[0]\in\Delta_+$, 唯一的态射 $\mathrm{id}_+\to rl$ 对应 $[-1]\to [0]$, 也即伴随的<strong>单位</strong>;</li>
+<li>$\operatorname{Hom}(+,-) = \{l,lrl,lrlrl,\cdots\}=\Delta_\bot\simeq\mathsf{LMod}([0])$ (保持最小值的映射构成的范畴, 等同于 $[0]$ 的左模范畴, 详见<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>);</li>
+<li>$\operatorname{Hom}(-,+) = \{r,rlr,rlrlr,\cdots\} = \Delta_\top\simeq\mathsf{RMod}([0])$;</li>
+<li>$\operatorname{Hom}(-,-) = \{\mathrm{id}_d,lr,lrlr,\cdots\} = \Delta_+^{\mathrm{op}}\simeq\mathsf{BiMod}([0])$.</li>
+</ul>
+<p>故 $\mathsf{Adj}$ 为 $\Delta_+$ 的 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>在 $[-1],[0]$ 两个对象上的全子范畴.</p>
+<h2>性质</h2>
+<h3>与游走的单子的关系</h3>
+<p>注意到上述资料中 $\operatorname{Hom}(+,+) = \{\mathrm{id}_+,rl,rlrl,\cdots\} = \Delta_+$ 为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span>, 其中 $rl$ 为<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 换言之, 对象 $+$ 处的全子范畴正是<span class="link local"><a href="./游走的单子.html" title="游走的单子 [游走的单子]">游走的单子</a></span>. 故任意伴随中 $rl$ 给出一个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>. 见<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">伴随给出单子</a></span>.</p>
+<h3>与自身反范畴的关系</h3>
+<p>$\mathsf{Adj}$ 到自身的<span class="link local"><a href="./反范畴.html" title="反范畴 [反范畴]">反范畴</a></span> $\mathsf{Adj}^{\mathrm{op}}$ 有一个函子
+$$
+\Phi\colon \mathsf{Adj}\to\mathsf{Adj}^{\mathrm{op}}.
+$$
+其中 $\mathrm{op}$ 只反转 $1$-态射的方向, 不反转 $2$-态射. 为了避免造成困惑, 我们用撇号重新命名 $\mathsf{Adj}^{\mathrm{op}}$ 的对象, 态射和 $2$-态射:</p>
+<ul>
+<li>两个对象 $+',-'$;</li>
+<li>两个态射 $l'\colon -'\to +'$, $r'\colon +'\to -'$;</li>
+<li>两个 $2$-态射 $\eta'\colon \mathrm{id}_{+'} \to l'r'$, $\epsilon'\colon r'l'\to\mathrm{id}_{-'}$.</li>
+</ul>
+<p>函子 $\Phi$ 的行为如下:</p>
+<ul>
+<li>对象 $+\mapsto +'$, $-\mapsto -'$;</li>
+<li>态射 $l\mapsto r'$, $r\mapsto l'$;</li>
+<li>$2$-态射 $\eta\mapsto \eta'$, $\epsilon\mapsto\epsilon'$.</li>
+</ul>
+<p>换言之, $\mathsf{Adj}^{\mathrm{op}}$ 中有一对伴随 $r'\dashv l'$. 注意这与原来的伴随 $l\dashv r$ 在名称上是相反的.</p>
+<p>这个事实的推论是: 对于 $2$-范畴 $\mathcal C$ 中的一对伴随 $f\dashv g$, 相应地有 $\mathcal C^{\mathrm{op}}$ 中的一对伴随 $g'\dashv f'$, 其中 $f',g'$ 分别是 $f,g$ 在反范畴操作下对应的 $1$-态射.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="预层"><header><h1><span class="taxon"></span>预层 <a class="slug" href="./预层.html">[预层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>范畴 $\mathcal C$ 上的<strong>预层</strong>即是其<span class="link local"><a href="./反范畴.html" title="反范畴 [反范畴]">反范畴</a></span> $\mathcal C^{\mathrm{op}}$ 到 $\mathsf{Set}$ (或 $\mathsf{Ani}$) 的函子.</p>
 <p><span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>中也有类似概念. $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>单对象范畴上的预层, 也可视为 $\mathcal V$ 中的结合代数上的模.</p>
