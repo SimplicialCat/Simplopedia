@@ -1766,16 +1766,12 @@ $$
 对全序集<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加一个最小值“, 可类比于<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">锥</a></span>操作.
 从而 (当 $\mathcal C$ 完备且余完备时) 有<span class="link local"><a href="./预层范畴之间的伴随.html" title="预层范畴之间的伴随 [预层范畴之间的伴随]">预层范畴之间的四元伴随</a></span>
 $$
- i_!\dashv [(C_+)_!=i^*] \dashv [(C_+)^* =i_*] \dashv (C_+)_*
+ (C_+)_!\dashv [i_!=(C_+)^*] \dashv [i^* =(C_+)_*] \dashv i_*.
 $$</p>
 <p>设 $X\colon \Delta_+^{\mathrm{op}}\to\mathcal C$ 为<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">增广单纯对象</a></span>, 定义其<strong>分裂</strong>为下图.</p>
 <p><figure><img src="./split-simplicial-object.svg" class="color-invert"/></figure></p>
-<p>换言之, $X = (C_+)^* \overline{X} = i_*\overline{X}$.</p>
-<p>注意到, 伴随关系
-$$
-\operatorname{Hom}_{\Delta_\bot}(C_+-,-)\simeq\operatorname{Hom}_{\Delta_+}(-,i-)
-$$
-直接给出 $(C_+)^*$ 在<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>上的作用 $(C_+)^*\mathbf{y}([n]) = \mathbf{y}(i[n])$. 而 $(C_+)^*$ 作为左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>保持余极限, 故有如下直观: $\Delta_\bot$ 的对象为固定顶点的锥, $\overline{X}$ 是一族固定顶点的锥的粘合, 从而是 “可以缩到顶点” 的单纯对象.</p>
+<p>换言之, $X = (C_+)^* \overline{X} = i_!\overline{X}$.</p>
+<p>注意到, $(C_+)^*=i_!$ 在<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>上的作用为 $(C_+)^*\mathbf{y}([n]) = \mathbf{y}(i[n])$. 而 $(C_+)^*$ 作为左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>保持余极限, 故有如下直观: $\Delta_\bot$ 的对象为固定顶点的锥, $\overline{X}$ 是一族固定顶点的锥的粘合, 从而是 “可以缩到顶点” 的单纯对象.</p>
 <h3>2</h3>
 <p>记 $\mathrm{surj}(j,k)$ 为单纯集 $\Delta^j$ 到 $\Delta^k$ 的满射的集合.</p>
 <p>设 $K$ 为<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, 其 $n$ 阶<strong>分裂</strong>是一系列子对象 $N_k \subset K_k\,(k\leq n)$, 称为非退化部分, 满足对 $0\leq j\leq n$, 有典范的同构 $\coprod_{\mathrm{surj}(j,k)}N_k \to K_j$. 直观上, 这个条件是说 $K$ 的每个可能退化的单形都唯一地对应一个非退化单形.</p>
@@ -2272,7 +2268,32 @@ $$
 <li>$2$-态射 $\eta\mapsto \eta'$, $\epsilon\mapsto\epsilon'$.</li>
 </ul>
 <p>换言之, $\mathsf{Adj}^{\mathrm{op}}$ 中有一对伴随 $r'\dashv l'$. 注意这与原来的伴随 $l\dashv r$ 在名称上是相反的.</p>
-<p>这个事实的推论是: 对于 $2$-范畴 $\mathcal C$ 中的一对伴随 $f\dashv g$, 相应地有 $\mathcal C^{\mathrm{op}}$ 中的一对伴随 $g'\dashv f'$, 其中 $f',g'$ 分别是 $f,g$ 在反范畴操作下对应的 $1$-态射.</p>
+<p>这个事实结合 $\mathsf{Adj}$ 的游走性质有如下的推论:</p>
+<ul>
+<li>对于 $2$-范畴 $\mathcal C$ 中的一对伴随 $f\dashv g$, 相应地有 $\mathcal C^{\mathrm{op}}$ 中的一对伴随 $g'\dashv f'$.</li>
+</ul>
+<h3>与自身 $2$-反范畴的关系</h3>
+<p>$\mathsf{Adj}$ 到自身的 <span class="link local"><a href="./反范畴.html" title="反范畴 [反范畴]">$2$-反范畴</a></span> $\mathsf{Adj}^{2\text{-op}}$ 有一个函子
+$$
+\Psi\colon \mathsf{Adj}\to\mathsf{Adj}^{2\text{-}\mathrm{op}}.
+$$
+我们用两撇号重新命名 $\mathsf{Adj}^{2\text{-}\mathrm{op}}$ 的对象, 态射和 $2$-态射:</p>
+<ul>
+<li>两个对象 $+'',-''$;</li>
+<li>两个态射 $l''\colon +''\to -''$, $r''\colon -''\to +''$;</li>
+<li>两个 $2$-态射 $\eta''\colon r''l'' \to\mathrm{id}_{+''}$, $\epsilon''\colon \mathrm{id}_{-''}\to l''r''$.</li>
+</ul>
+<p>函子 $\Psi$ 的行为如下:</p>
+<ul>
+<li>对象 $+\mapsto -''$, $-\mapsto +''$;</li>
+<li>态射 $l\mapsto r''$, $r\mapsto l''$;</li>
+<li>$2$-态射 $\eta\mapsto \epsilon''$, $\epsilon\mapsto\eta''$.</li>
+</ul>
+<p>换言之, $\mathsf{Adj}^{2\text{-}\mathrm{op}}$ 中有一对伴随 $r''\dashv l''$. 注意这同样与原来的伴随 $l\dashv r$ 在名称上是相反的.</p>
+<p>这个事实结合 $\mathsf{Adj}$ 的游走性质有如下的推论:</p>
+<ul>
+<li>todo</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="直像"><header><h1><span class="taxon"></span>“直像” <a class="slug" href="./直像.html">[直像]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li><li class="meta-item">前推</li></ul></div></header></summary>
 
 <p><span class="link external"><a href="https://stacks.math.columbia.edu/tag/03PV" title="Stacks 页面 [https://stacks.math.columbia.edu/tag/03PV]">Stacks 页面</a></span></p>
@@ -2621,11 +2642,11 @@ d\mapsto \operatorname{lim}_{c}
 $$</p>
 <h3>伴随诱导预层范畴之间的伴随</h3>
 <p>设 $f\colon \mathcal C \to \mathcal D$, $g\colon \mathcal D\to\mathcal C$ 是一对<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>, $f\dashv g$.
-注意到
+考虑 $2$-范畴之间的函子 $\mathsf{Psh} = \mathsf{Fun}((-)^{\mathrm{op}},\mathsf{Set})$, 即
 $$
-\mathsf{Psh} = \operatorname{Hom}((-)^{\mathrm{op}},\mathsf{Set})\colon \mathsf{Cat}^{\mathrm{op}}\to\mathsf{Cat}
+\mathfrak{Cat}^{(1,2)\text{-op}}\overset{(-)^{\mathrm{op}}}{\longrightarrow}\mathfrak{Cat}^{\mathrm{op}}\xrightarrow{\mathsf{Fun}(-,\mathsf{Set})}\mathfrak{Cat},
 $$
-是 $2$-范畴之间的函子, 它保持<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>; 即 $f^*\colon \widehat {\mathcal D} \to \widehat {\mathcal C}$, $g^*\colon \widehat {\mathcal C} \to \widehat {\mathcal D}$ 也是一对伴随, $f^* \dashv g^*$.
+它保持<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> (道理参见<span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span>); 综上我们有 $f^*\colon \widehat {\mathcal D} \to \widehat {\mathcal C}$, $g^*\colon \widehat {\mathcal C} \to \widehat {\mathcal D}$ 也是一对伴随, $f^* \dashv g^*$.
 换言之,
 $$
 f^* = g_!,\quad f_* = g^*.
@@ -2641,7 +2662,7 @@ $$
 $$
 \begin{aligned}
 (f_* X) (d) &amp;= \operatorname{lim}_{f(c)\to d} X(c) \\
-&amp;= \operatorname{colim}_{c\to g(d)} X(c)\\
+&amp;= \operatorname{lim}_{c\to g(d)} X(c)\\
 &amp;= X(g(d)) = (g^*X) (d).
 \end{aligned}
 $$</p>

@@ -1473,14 +1473,33 @@ $$</p>
 <p><span class="link local"><a href="./量子动量映射.html" title="量子动量映射 [量子动量映射]">量子动量映射</a></span></p>
 <p><span class="link local"><a href="./Delzant多面体.html" title="“Delzant 多面体” [Delzant多面体]">Delzant 多面体</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="反范畴"><header><h1><span class="taxon"></span>反范畴 <a class="slug" href="./反范畴.html">[反范畴]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
 <p>范畴的<strong>反范畴</strong> (opposite category) 是将其中的态射方向反转得到的范畴:
 $$
 \mathcal C^{\mathrm{op}}(X,Y) := \mathcal C(Y,X).
 $$</p>
+<p>记 $\mathsf{Cat}$ 为 $(\infty,1)$-范畴的 $(\infty,1)$-范畴. 那么取反范畴
+$$
+(-)^{\mathrm{op}}\colon \mathsf{Cat} \to \mathsf{Cat}
+$$
+是 $\mathsf{Cat}$ 的自同构. <strong>注意</strong>, 这里的 $\mathsf{Cat}$ 只能是 $(\infty,1)$-范畴, 作为 $(\infty,2)$-范畴则没有这个自同构. 原因如下.</p>
+<h3>$k$-反范畴</h3>
+<p><span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>可在不止一个层级上取反范畴. 对于 $(\infty,n)$-范畴 $\mathcal C$, 可在第 $1\leq k\leq n$ 层级取反范畴 $\mathcal C^{k\text{-op}}$.
+对于 $k\geq 2$,
+$$
+\mathcal C^{k\text{-op}}(X,Y) :=\mathcal C(X,Y)^{(k-1)\text{-op}}.
+$$</p>
+<p>记 $\mathfrak{Cat}$ 为 $(\infty,1)$-范畴的 $(\infty,2)$-范畴. 那么取反范畴是一个函子
+$$
+(-)^{\mathrm{op}}\colon \mathfrak{Cat}^{2\text{-op}} \to \mathfrak{Cat}.
+$$</p>
+<p>记 $\mathfrak{Cat}_n$ 为 $(\infty,n)$-范畴的 $(\infty,n+1)$-范畴. 那么取 $k$-反范畴是一个函子
+$$
+(-)^{k\text{-op}}\colon \mathfrak{Cat}_n^{(k+1)\text{-op}} \to \mathfrak{Cat}.
+$$</p>
 <h2>性质</h2>
-<p>取反范畴 $(-)^{\mathrm{op}}\colon \mathsf{Cat} \to \mathsf{Cat}$ 是范畴的范畴 $\mathsf{Cat}$ 的自同构.</p>
-<p><strong>命题</strong>. 范畴的范畴 $\mathsf{Cat}$ 的自同构群为 $\mathbb{Z}/2$, 仅有的非平凡自同构为取反范畴.
-更一般地, $(\infty,n)$-范畴的范畴 $\mathsf{Cat}_{(\infty ,n)}$ 的自同构群为 $(\mathbb{Z}/2)^n$, 对应在 $n$ 个层级上取反范畴.</p>
+<p><strong>命题</strong>. $\mathsf{Cat}$ 的自同构群为 $\mathbb{Z}/2$, 仅有的非平凡自同构为取反范畴.
+更一般地, $(\infty,n)$-范畴的 $(\infty,1)$-范畴 $\mathsf{Cat}_{(\infty ,n)}$ 的自同构群为 $(\mathbb{Z}/2)^n$, 对应在 $n$ 个层级上取反范畴.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="可分扩张"><header><h1><span class="taxon"></span>可分扩张 <a class="slug" href="./可分扩张.html">[可分扩张]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>

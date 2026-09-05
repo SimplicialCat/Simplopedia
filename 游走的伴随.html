@@ -873,7 +873,32 @@ $$
 <li>$2$-态射 $\eta\mapsto \eta'$, $\epsilon\mapsto\epsilon'$.</li>
 </ul>
 <p>换言之, $\mathsf{Adj}^{\mathrm{op}}$ 中有一对伴随 $r'\dashv l'$. 注意这与原来的伴随 $l\dashv r$ 在名称上是相反的.</p>
-<p>这个事实的推论是: 对于 $2$-范畴 $\mathcal C$ 中的一对伴随 $f\dashv g$, 相应地有 $\mathcal C^{\mathrm{op}}$ 中的一对伴随 $g'\dashv f'$, 其中 $f',g'$ 分别是 $f,g$ 在反范畴操作下对应的 $1$-态射.</p>
+<p>这个事实结合 $\mathsf{Adj}$ 的游走性质有如下的推论:</p>
+<ul>
+<li>对于 $2$-范畴 $\mathcal C$ 中的一对伴随 $f\dashv g$, 相应地有 $\mathcal C^{\mathrm{op}}$ 中的一对伴随 $g'\dashv f'$.</li>
+</ul>
+<h3>与自身 $2$-反范畴的关系</h3>
+<p>$\mathsf{Adj}$ 到自身的 <span class="link local"><a href="./反范畴.html" title="反范畴 [反范畴]">$2$-反范畴</a></span> $\mathsf{Adj}^{2\text{-op}}$ 有一个函子
+$$
+\Psi\colon \mathsf{Adj}\to\mathsf{Adj}^{2\text{-}\mathrm{op}}.
+$$
+我们用两撇号重新命名 $\mathsf{Adj}^{2\text{-}\mathrm{op}}$ 的对象, 态射和 $2$-态射:</p>
+<ul>
+<li>两个对象 $+'',-''$;</li>
+<li>两个态射 $l''\colon +''\to -''$, $r''\colon -''\to +''$;</li>
+<li>两个 $2$-态射 $\eta''\colon r''l'' \to\mathrm{id}_{+''}$, $\epsilon''\colon \mathrm{id}_{-''}\to l''r''$.</li>
+</ul>
+<p>函子 $\Psi$ 的行为如下:</p>
+<ul>
+<li>对象 $+\mapsto -''$, $-\mapsto +''$;</li>
+<li>态射 $l\mapsto r''$, $r\mapsto l''$;</li>
+<li>$2$-态射 $\eta\mapsto \epsilon''$, $\epsilon\mapsto\eta''$.</li>
+</ul>
+<p>换言之, $\mathsf{Adj}^{2\text{-}\mathrm{op}}$ 中有一对伴随 $r''\dashv l''$. 注意这同样与原来的伴随 $l\dashv r$ 在名称上是相反的.</p>
+<p>这个事实结合 $\mathsf{Adj}$ 的游走性质有如下的推论:</p>
+<ul>
+<li>todo</li>
+</ul>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="伴随"><header><h1><span class="taxon"></span>伴随 <a class="slug" href="./伴随.html">[伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>伴随是 <span class="link local"><a href="./2-范畴.html" title="2-范畴 [2-范畴]">$2$-范畴</a></span>的两个对象之间一对态射的一种关系, 可理解为某种<span class="link local"><a href="./对偶对象.html" title="对偶对象 [对偶对象]">对偶</a></span>; 它是 $1$-范畴中态射的互逆关系的推广.</p>
@@ -1025,4 +1050,138 @@ $$</p>
 <h2>定义</h2>
 <p>游走的单子是 $2$-范畴 $\mathbf{B}\Delta_+$. 其有一个对象 $*$, 且 $\operatorname{Hom}(*,*)\simeq\Delta_+$.</p>
 <p>游走的单子 $\mathbf{B}\Delta_+$ 也是<span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span> $\mathsf{Adj}$ 的一个全子范畴.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="预层范畴之间的伴随"><header><h1><span class="taxon"></span>预层范畴之间的伴随 <a class="slug" href="./预层范畴之间的伴随.html">[预层范畴之间的伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>预层范畴之间的伴随是<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中十分常见的一种现象, 指的是范畴 $\mathcal C$, $\mathcal D$ 之间的函子诱导的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层范畴</a></span> $\widehat {\mathcal C} = \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set}),\widehat {\mathcal D} = \mathsf{Fun}(\mathcal D^{\mathrm{op}},\mathsf{Set})$ 之间的伴随.</p>
+<p>当然, <span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>中也有相应的现象.</p>
+<p>预层范畴之间的伴随是是 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>的特例, 而数学中的许多现象又是它的特例.</p>
+<h2>陈述</h2>
+<p>函子 $f\colon \mathcal C \to \mathcal D$ 诱导<span class="link local"><a href="./预层.html" title="预层 [预层]">预层范畴</a></span> $\widehat {\mathcal C} = \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set}),\widehat {\mathcal D} = \mathsf{Fun}(\mathcal D^{\mathrm{op}},\mathsf{Set})$ 之间的伴随
+$$
+f_! \dashv f^* \dashv f_*,
+$$
+其中</p>
+<ul>
+<li>$f^*\colon \mathsf{Fun}(\mathcal D^{\mathrm{op}},\mathsf{Set}) \to \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set})$ 是预层的拉回 (函子的复合),
+$$
+  (f^* X)(c) = X(f(c)).
+$$</li>
+<li>拉回的左伴随 $f_!$ 是沿 $f$ 的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">左 Kan 扩张</a></span>,
+$$
+  (f_! X)(d) = \operatorname{colim}_{d\to f(c)} X(c).
+$$</li>
+<li>拉回的右伴随 $f_*$ 是沿 $f$ 的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">右 Kan 扩张</a></span>,
+$$
+  (f_* X)(d) = \operatorname{lim}_{f(c)\to d} X(c).
+$$</li>
+</ul>
+<p>注意上述公式中 $d\to f(c)$, $f(c)\to d$ 等为 $\mathcal D$ 中而非 $\mathcal D^{\mathrm{op}}$ 中的态射. 这导致公式的形式与左 Kan 扩张公式相反.</p>
+<h3>余端</h3>
+<p>拉回的左伴随 $f_!$ 的公式也可用<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>给出表述与证明. 由<span class="link local"><a href="./余米田引理.html" title="余米田引理 [余米田引理]">余米田引理</a></span>
+$$
+X=\int_{c\in\mathcal C} X(c)\otimes \mathbf{y}(c),
+$$
+以及 $f_!$ 作为左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>保持余极限, 且 $f_!$ 将可表函子对应到可表函子 (见后文), 得
+$$
+\begin{aligned}
+f_!(X) &amp;=\int_{c\in\mathcal C}X(c)\otimes f_!(\mathbf{y}(c))\\
+&amp;=\int_{c\in\mathcal C}X(c)\otimes \mathbf{y}(f(c)).
+\end{aligned}
+$$</p>
+<p>对偶地, $f_*$ 的公式也可用<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>表述为
+$$
+f_*(X)(d)=\int^*_{c\in\mathcal C}[\operatorname{Hom}_{\mathcal C}(f(c),d),X(c)].
+$$</p>
+<h3>代函子</h3>
+<p>左 Kan 扩张可视为<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>的复合, 右 Kan 扩张可视为<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>的同态集.</p>
+<p>若将 $f\colon \mathcal C\to\mathcal D$ 视为 $\mathcal C$ 到 $\mathcal D$ 的 <span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>
+$$
+\widetilde f\colon \mathcal C\times\mathcal D^{\mathrm{op}} \to\mathsf{Set},\,
+(c,d)\mapsto\operatorname{Hom}_{\mathcal D}(d,f(c)),
+$$
+将 $F\colon \mathcal C^{\mathrm{op}}\to\mathsf{Set}$ 视为 $1$ 到 $\mathcal C$ 的<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>, 那么两者的复合为
+$F\otimes_{\mathcal C}\widetilde f \colon \mathcal D^{\mathrm{op}}\to\mathsf{Set}$,
+$$
+d\mapsto\operatorname{colim}_{c}
+F(c)\times\operatorname{Hom}_{\mathcal D}(d,f(c)).
+$$</p>
+<p>若将 $f\colon \mathcal C\to\mathcal D$ 视为 $\mathcal D$ 到 $\mathcal C$ 的<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>
+$$
+\bar f\colon \mathcal D\times\mathcal C^{\mathrm{op}} \to \mathsf{Set},\,
+(d,c)\mapsto \operatorname{Hom}_{\mathcal D}(f(c),d),
+$$
+将 $F\colon \mathcal C^{\mathrm{op}}\to\mathsf{Set}$ 视为 $1$ 到 $\mathcal C$ 的<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span>, 那么 $\widetilde f$ 到 $F$ 的同态集为 $1$ 到 $\mathcal D$ 的<span class="link local"><a href="./代函子.html" title="代函子 [代函子]">代函子</a></span> $[\bar f,F]\colon \mathcal D^{\mathrm{op}} \to \mathsf{Set}$,
+$$
+d\mapsto \operatorname{lim}_{c}
+\operatorname{Hom}_{\mathsf{Set}}
+\big({\operatorname{Hom}_{\mathcal D}(f(c),d)},F(c)\big).
+$$</p>
+<h3>伴随诱导预层范畴之间的伴随</h3>
+<p>设 $f\colon \mathcal C \to \mathcal D$, $g\colon \mathcal D\to\mathcal C$ 是一对<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>, $f\dashv g$.
+考虑 $2$-范畴之间的函子 $\mathsf{Psh} = \mathsf{Fun}((-)^{\mathrm{op}},\mathsf{Set})$, 即
+$$
+\mathfrak{Cat}^{(1,2)\text{-op}}\overset{(-)^{\mathrm{op}}}{\longrightarrow}\mathfrak{Cat}^{\mathrm{op}}\xrightarrow{\mathsf{Fun}(-,\mathsf{Set})}\mathfrak{Cat},
+$$
+它保持<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> (道理参见<span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span>); 综上我们有 $f^*\colon \widehat {\mathcal D} \to \widehat {\mathcal C}$, $g^*\colon \widehat {\mathcal C} \to \widehat {\mathcal D}$ 也是一对伴随, $f^* \dashv g^*$.
+换言之,
+$$
+f^* = g_!,\quad f_* = g^*.
+$$
+这两个等价也可使用 $g_!$, $f_*$ 的具体表达式验证:
+$$
+\begin{aligned}
+(g_! X) (c) &amp;= \operatorname{colim}_{c\to g(d)} X(d) \\
+&amp;= \operatorname{colim}_{f(c)\to d} X(d)\\
+&amp;= X(f(c)) = (f^*X) (c),
+\end{aligned}
+$$
+$$
+\begin{aligned}
+(f_* X) (d) &amp;= \operatorname{lim}_{f(c)\to d} X(c) \\
+&amp;= \operatorname{lim}_{c\to g(d)} X(c)\\
+&amp;= X(g(d)) = (g^*X) (d).
+\end{aligned}
+$$</p>
+<p>总结起来, 对于伴随 $f\dashv g$, 有预层范畴之间的四元伴随
+$$
+f_! \dashv (f^*=g_!) \dashv (f_*=g^*) \dashv g_*.
+$$</p>
+<h2>性质</h2>
+<h3>对可表函子的作用</h3>
+<p>预层拉回的左伴随 $f_!$ 将可表函子映射到可表函子. 具体地, 设函子 $f\colon \mathcal C \to \mathcal D$ 诱导<span class="link local"><a href="./预层.html" title="预层 [预层]">预层范畴</a></span> $\widehat {\mathcal C} = \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set}),\widehat {\mathcal D} = \mathsf{Fun}(\mathcal D^{\mathrm{op}},\mathsf{Set})$ 之间的伴随
+$$
+f_! \dashv f^* \dashv f_*,
+$$
+则对于 $c\in \mathcal C$, 有
+$$
+f_! \mathbf{y}(c) = \mathbf{y}(f(c)).
+$$
+道理很简单:
+$$
+\operatorname{Hom}_{\widehat {\mathcal D}}(f_!\mathbf{y}(c),X) = \operatorname{Hom}_{\widehat {\mathcal C}}(\mathbf{y}(c),f^*X) = X(f(c)).
+$$</p>
+<h3>先推再拉</h3>
+<p>当 $f\colon \mathcal C\to\mathcal D$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>, 即全子范畴的嵌入时,
+$$
+\begin{aligned}
+f^*f_! X (c) &amp;=
+f_! X(f(c))\\
+&amp;=
+\operatorname{colim}_{f(c) \to f(c')} X(c')\\
+&amp;=
+\operatorname{colim}_{c \to c'} X(c') = X(c),
+\end{aligned}
+$$
+$$
+\begin{aligned}
+f^*f_* X (c) &amp;=
+f_* X(f(c))\\
+&amp;=
+\operatorname{lim}_{f(c') \to f(c)} X(c')\\
+&amp;=
+\operatorname{lim}_{c' \to c} X(c') = X(c),
+\end{aligned}
+$$
+即两个自然映射 $f^*f_*\to X \to f^*f_! X$ 均为同构.</p>
+<h2>例</h2>
 </details></section></details></section></footer></article></div></body></html>

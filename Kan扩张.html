@@ -2133,11 +2133,11 @@ d\mapsto \operatorname{lim}_{c}
 $$</p>
 <h3>伴随诱导预层范畴之间的伴随</h3>
 <p>设 $f\colon \mathcal C \to \mathcal D$, $g\colon \mathcal D\to\mathcal C$ 是一对<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>, $f\dashv g$.
-注意到
+考虑 $2$-范畴之间的函子 $\mathsf{Psh} = \mathsf{Fun}((-)^{\mathrm{op}},\mathsf{Set})$, 即
 $$
-\mathsf{Psh} = \operatorname{Hom}((-)^{\mathrm{op}},\mathsf{Set})\colon \mathsf{Cat}^{\mathrm{op}}\to\mathsf{Cat}
+\mathfrak{Cat}^{(1,2)\text{-op}}\overset{(-)^{\mathrm{op}}}{\longrightarrow}\mathfrak{Cat}^{\mathrm{op}}\xrightarrow{\mathsf{Fun}(-,\mathsf{Set})}\mathfrak{Cat},
 $$
-是 $2$-范畴之间的函子, 它保持<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>; 即 $f^*\colon \widehat {\mathcal D} \to \widehat {\mathcal C}$, $g^*\colon \widehat {\mathcal C} \to \widehat {\mathcal D}$ 也是一对伴随, $f^* \dashv g^*$.
+它保持<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> (道理参见<span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span>); 综上我们有 $f^*\colon \widehat {\mathcal D} \to \widehat {\mathcal C}$, $g^*\colon \widehat {\mathcal C} \to \widehat {\mathcal D}$ 也是一对伴随, $f^* \dashv g^*$.
 换言之,
 $$
 f^* = g_!,\quad f_* = g^*.
@@ -2153,7 +2153,7 @@ $$
 $$
 \begin{aligned}
 (f_* X) (d) &amp;= \operatorname{lim}_{f(c)\to d} X(c) \\
-&amp;= \operatorname{colim}_{c\to g(d)} X(c)\\
+&amp;= \operatorname{lim}_{c\to g(d)} X(c)\\
 &amp;= X(g(d)) = (g^*X) (d).
 \end{aligned}
 $$</p>
