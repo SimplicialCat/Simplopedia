@@ -1527,13 +1527,13 @@ $$
 <p><span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>是自函子范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>; 自由单子就是这种代数中的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>代数.</p>
 <h2>例</h2>
 <h3>树的自由单子</h3>
-<p><span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span> 上的自由单子通过如下具体过程给出. 对于树
+<p><span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>上的自由单子通过如下具体过程给出. 对于树
 $$
 T = (I\overset{s}{\leftarrow} E \overset{p}{\to} B \overset{t}{\to} I),
 $$
 记</p>
 <ul>
-<li>$\operatorname{Sub}(T) := \mathsf{TEmb}_{/T}^{\simeq}$ 为 $T$ 的子树的集合 ($\mathsf{TEmb}$ 为<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>及含入构成的范畴),</li>
+<li>$\operatorname{Sub}(T) := \mathsf{TEmb}_{/T}^{\simeq}$ 为 $T$ 的<span class="link local"><a href="./P-树.html" title="P-树 (多项式函子标记的树) [P-树]">子树</a></span>的集合 ($\mathsf{TEmb}$ 为<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>及含入构成的范畴),</li>
 <li>$\operatorname{Sub}'(T)$ 为 $T$ 的带一个标记叶的子树的集合.</li>
 </ul>
 <p>那么树 $T$ (对应的<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>)的<strong>自由单子</strong>即是如下多项式函子:
@@ -1542,12 +1542,16 @@ $$
 $$</p>
 <p>事实上, 上述构造对一般的<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>也是成立的.</p>
 <h3>自函子的自由单子</h3>
-<p><strong>命题</strong> (参考 <span class="link local"><a href="./GHK-analytic-monads.html" title="∞-Operads as Analytic Monads [GHK-analytic-monads]">GHK</a></span> 4.2 节). 设范畴 $\mathcal C$ 具有<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>和二元<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>, 自函子 $P\colon \mathcal C\to\mathcal C$ 保持<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>. 记 $\mathsf{alg}_P(\mathcal C)$ 为 $P$-Lambek 代数 (即对象 $X$ 带有态射 $\alpha\colon P(X)\to X$ 的结构) 的范畴. 那么有<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由–遗忘伴随</a></span>
+<p><strong>命题</strong> (参考 <span class="link local"><a href="./GHK-analytic-monads.html" title="∞-Operads as Analytic Monads [GHK-analytic-monads]">GHK</a></span> 4.2 节). 设范畴 $\mathcal C$ 具有<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>和二元<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>, 自函子 $P\colon \mathcal C\to\mathcal C$ 保持<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>. 记 $\mathsf{alg}_P(\mathcal C)$ 为 $P$-<span class="link local"><a href="./Lambek代数.html" title="Lambek 代数 [Lambek代数]">Lambek 代数</a></span> (即对象 $X$ 带有态射 $\alpha\colon P(X)\to X$ 的结构) 的范畴. 那么有<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由–遗忘伴随</a></span>
 $$
 F\colon \mathcal C \rightleftarrows \mathsf{alg}_{P}(\mathcal C)\colon U,
 $$
 且这对伴随<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span> $\overline{P}$ 正是自函子 $P$ 上的自由单子. 进一步有
 $$
 \mathsf{Alg}_{\overline{P}}(\mathcal C) \simeq \mathsf{alg}_P(\mathcal C).
+$$</p>
+<p>自由单子还可更显式地写出: 定义 $P_0 = \mathrm{id}$, $P_{n+1} = \mathrm{id} + PP_n$, 有一列自然变换 $P_0\to P_1\to\cdots$, 那么
+$$
+\overline{P} =\operatorname{colim}_n P_n.
 $$</p>
 </details></section></details></section></footer></article></div></body></html>

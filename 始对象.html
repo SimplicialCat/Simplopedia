@@ -1170,7 +1170,21 @@ $\mathcal C_{/(X+Y)} \to \mathcal C_{/X} \times\mathcal C_{/Y}$.</p>
 <h2>观念</h2>
 <p>始代数可理解为某些<span class="link local"><a href="./归纳类型.html" title="归纳类型 (同伦类型论) [归纳类型]">归纳类型</a></span>的<span class="link local"><a href="./范畴语义.html" title="范畴语义 [范畴语义]">范畴语义</a></span>.</p>
 <h2>定义</h2>
-<p>对于范畴 $\mathcal C$ 的自函子 $F\colon \mathcal C \to \mathcal C$, 称一个对象 $X$ 配备一个态射 $F(X)\to X$ 的结构为 $F$-<strong>代数</strong> (又称 Lambek 代数). 定义 $F$ 的<strong>始代数</strong>为 $F$-代数范畴的<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>.</p>
+<p>对于范畴 $\mathcal C$ 的自函子 $F\colon \mathcal C \to \mathcal C$, 称一个对象 $X$ 配备一个态射 $F(X)\to X$ 的结构为 $F$-<strong>代数</strong> (又称 <span class="link local"><a href="./Lambek代数.html" title="Lambek 代数 [Lambek代数]">Lambek 代数</a></span>). 定义 $F$ 的<strong>始代数</strong>为 $F$-代数范畴 $\mathsf{alg}_F(\mathcal C)$ 的<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>.</p>
+<p>值得注意的是始代数还有个<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>版本. 对于任意对象 $c\in\mathcal C$, 自函子 $F$ 给出切片的自函子 $c+F\colon \mathcal C_{c/} \to\mathcal C_{c/}$, $(c\to d)\mapsto (c\to c+F(d))$; 那么
+$$
+\begin{aligned}
+\mathsf{alg}_{c+F}(\mathcal C_{c/})&amp;=\Big\{
+\begin{array}{ccc}
+c &amp;  &amp;  \\
+\downarrow &amp; \searrow &amp;  \\
+c+F(d) &amp; \rightarrow &amp; d
+\end{array}
+    \Big\}\\
+    &amp;=\mathsf{alg}_F(\mathcal C)_{c/}.
+\end{aligned}
+$$
+因此 $c+F$ 的始代数等同于 $\mathsf{alg}_F(\mathcal C)_{c/}$ 的始对象, 即 “$c$ 生成的最小 $F$-代数”.</p>
 <h2>性质</h2>
 <h3>Lambek 定理</h3>
 <p><strong>定理</strong> (Lambek). 若 $F$ 有始代数 $\alpha\colon F(X) \to X$, 则 $\alpha$ 为同构.</p>

@@ -829,7 +829,21 @@
 <h2>观念</h2>
 <p>始代数可理解为某些<span class="link local"><a href="./归纳类型.html" title="归纳类型 (同伦类型论) [归纳类型]">归纳类型</a></span>的<span class="link local"><a href="./范畴语义.html" title="范畴语义 [范畴语义]">范畴语义</a></span>.</p>
 <h2>定义</h2>
-<p>对于范畴 $\mathcal C$ 的自函子 $F\colon \mathcal C \to \mathcal C$, 称一个对象 $X$ 配备一个态射 $F(X)\to X$ 的结构为 $F$-<strong>代数</strong> (又称 Lambek 代数). 定义 $F$ 的<strong>始代数</strong>为 $F$-代数范畴的<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>.</p>
+<p>对于范畴 $\mathcal C$ 的自函子 $F\colon \mathcal C \to \mathcal C$, 称一个对象 $X$ 配备一个态射 $F(X)\to X$ 的结构为 $F$-<strong>代数</strong> (又称 <span class="link local"><a href="./Lambek代数.html" title="Lambek 代数 [Lambek代数]">Lambek 代数</a></span>). 定义 $F$ 的<strong>始代数</strong>为 $F$-代数范畴 $\mathsf{alg}_F(\mathcal C)$ 的<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>.</p>
+<p>值得注意的是始代数还有个<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>版本. 对于任意对象 $c\in\mathcal C$, 自函子 $F$ 给出切片的自函子 $c+F\colon \mathcal C_{c/} \to\mathcal C_{c/}$, $(c\to d)\mapsto (c\to c+F(d))$; 那么
+$$
+\begin{aligned}
+\mathsf{alg}_{c+F}(\mathcal C_{c/})&amp;=\Big\{
+\begin{array}{ccc}
+c &amp;  &amp;  \\
+\downarrow &amp; \searrow &amp;  \\
+c+F(d) &amp; \rightarrow &amp; d
+\end{array}
+    \Big\}\\
+    &amp;=\mathsf{alg}_F(\mathcal C)_{c/}.
+\end{aligned}
+$$
+因此 $c+F$ 的始代数等同于 $\mathsf{alg}_F(\mathcal C)_{c/}$ 的始对象, 即 “$c$ 生成的最小 $F$-代数”.</p>
 <h2>性质</h2>
 <h3>Lambek 定理</h3>
 <p><strong>定理</strong> (Lambek). 若 $F$ 有始代数 $\alpha\colon F(X) \to X$, 则 $\alpha$ 为同构.</p>
@@ -862,7 +876,137 @@ $$
 $$
 也即 $A$ 上的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span><span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>.</p>
 <p>上述三个例子都是<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>, 这种函子总是保持滤余极限.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="始对象"><header><h1><span class="taxon"></span>始对象 <a class="slug" href="./始对象.html">[始对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Lambek代数"><header><h1><span class="taxon"></span>Lambek 代数 <a class="slug" href="./Lambek代数.html">[Lambek代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>范畴 $\mathcal C$ 的自函子 $F$ 的 <strong>Lambek 代数</strong>就是对象 $X\in\mathcal C$ 配备一个态射 $F(X)\to X$.</p>
+<p>记 $\mathsf{alg}_F(\mathcal C)$ 为 $F$-Lambek 代数的范畴.</p>
+<h2>性质</h2>
+<h3>始对象</h3>
+<p>Lambek 代数范畴中的始对象是一种重要范畴论构造, 见<span class="link local"><a href="./始代数.html" title="始代数 (自函子) [始代数]">始代数</a></span>.</p>
+<h3>自由–遗忘伴随</h3>
+<p><span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由–遗忘伴随</a></span>
+$$
+\mathsf{alg}_F(\mathcal C) \rightleftarrows \mathcal C
+$$</p>
+<h3>杠–余杠对偶</h3>
+</details></section><section class="block" data-taxon=""><details ><summary id="P-树"><header><h1><span class="taxon"></span>P-树 (多项式函子标记的树) <a class="slug" href="./P-树.html">[P-树]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设
+$$
+P = (I \overset{s}{\leftarrow} A \overset{p}{\to} B \overset{t}{\to} I)
+$$
+为<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>, 定义 $P$-<strong>树</strong>为<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span> $T = (E \leftarrow M \to N \to E)$ 到 $P$ (作为多项式函子) 的态射, 也即 “边由 $I$ 标记, 结点由 $B$ 标记的树”.</p>
+<p>注意由定义, 对于 $P$-树的每个以 $b\in B$ 为标记的结点, 记 $p^{-1}(b) = \{a_1,\cdots,a_n\}$, 那么</p>
+<ul>
+<li>该节点的<strong>入边</strong>必须一一对应于 $\{a_1,\cdots,a_n\}$, 且入边的标记分别为 $s(a_1),\cdots,s(a_n)$;</li>
+<li>该结点的<strong>出边</strong>的标记为 $t(b)$.</li>
+</ul>
+<h3>归纳定义</h3>
+<p>类似于普通的树, $P$-树也具有如下归纳定义:</p>
+<ul>
+<li>元素 $i\in I$ 本身是 $P$-树 (无节点, 只有一条边的树);</li>
+<li>设 $T_1,\cdots,T_n$ 是 $P$-树, 其根的标记分别为 $i_1,\cdots,i_n\in I$. 设 $b\in B$, 满足 $p^{-1}(b) = \{a_1,\cdots,a_n\}$, $s(a_1) = i_1$, $\cdots$, $s(a_n) = i_n$, 则有一棵 $P$-树, 根节点以 $b$ 标记, 以 $t(b)$ 为根标记, 根节点上长着 $T_1,\cdots,T_n$.</li>
+</ul>
+<h2>性质</h2>
+<h3>始代数</h3>
+<p>$P$-树的集合 (生象) 为 $\mathsf{Set}_{/I}$ 上自函子
+$$
+X \mapsto I + P(X)
+$$
+的<span class="link local"><a href="./始代数.html" title="始代数 (自函子) [始代数]">始代数</a></span>. 这直接体现了 $P$-树的归纳定义. 因为 $P$ 作为 $\mathsf{Set}_{/I}$ 的自函子, 在 $(f\colon I\to\mathsf{Set})\in\mathsf{Set}^I =\mathsf{Set}_{/I}$ 的值为
+$$
+P(f)(i) = \sum_{b\in t^{-1}(i)}\prod_{a\in p^{-1}(b)} f(s(a)),
+$$
+直观上, 以 $i$ 为根标记的 $P$-树,</p>
+<ul>
+<li>要么是无节点的树,</li>
+<li>要么是一个 $b\in t^{-1}(i)$, 以及对每个 $a\in p^{-1}(b)$ 包含一个以 s(a) 为根标记的 $P$-树.</li>
+</ul>
+<h2>例</h2>
+<h3>线性树</h3>
+<p>当 $P = (1 \leftarrow 1 \to 1 \to 1)$ (对应 $\mathsf{Set}$ 上的恒等函子) 时, $P$-树即为线性树, 即形如
+$$
+\begin{array}
+{c}
+\downarrow\\
+\bullet\\
+\downarrow\\
+\bullet\\
+\vdots\\
+\bullet\\
+\downarrow
+\end{array}
+$$
+的树.</p>
+<h3>树的子树</h3>
+<p><span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span> $T$ 本身也是多项式, 此时 $T$-树就是 $T$ 的子树.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="index"><header><h1><span class="taxon"></span>单纯百科 Simplopedia <a class="slug" href="./index.html">[index]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<img src="/assets/simplopedia.svg" alt="Simplopedia" style="float: right; width: min(200px,30vw); margin-right: 20px; margin-top:-50px; filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));">
+<p>这里是<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>的主目录.</p>
+<p>欢迎访问<span class="link external"><a href="https://simplicialcat.github.io/index.html?lang=zh" title="我的个人主页 [https://simplicialcat.github.io/index.html?lang=zh]">我的个人主页</a></span>.</p>
+<p>You may also want to visit <span class="link external"><a href="https://simplicialcat.github.io/index.html?lang=en" title="my personal main page [https://simplicialcat.github.io/index.html?lang=en]">my personal main page</a></span> (in English).</p>
+<p>可以试试<span class="link local"><a href="./search.html" title="搜索 [search]">搜索单纯百科的页面</a></span>.</p>
+<p>欢迎所有读者在页面下方发布<span class="link local"><a href="./comments.html" title="评论 [comments]">评论</a></span>, 或<span class="link external"><a href="mailto:wangjiny24@mails.tsinghua.edu.cn" title="通过邮箱联系我 [mailto:wangjiny24@mails.tsinghua.edu.cn]">通过邮箱联系我</a></span> <code>wangjiny24@mails.tsinghua.edu.cn</code> , 交流, 催更. (对于好友, 通过微信或 QQ 联系我当然是更加欢迎的.)</p>
+<h2>分类</h2>
+<p>单纯百科的页面分为以下几类.</p>
+<ul>
+<li>百科 : 数学概念. 这类页面构成了单纯百科的主体.</li>
+<li><span class="link local"><a href="./notion.html" title="观念 [notion]">观念</a></span> : 模糊而普遍的数学思想.</li>
+<li><span class="link local"><a href="./pedagogy.html" title="教学 [pedagogy]">教学</a></span> : 面向基础读者的科普.</li>
+<li><span class="link local"><a href="./notes.html" title="讲稿, 笔记 [notes]">讲稿, 笔记</a></span> : 一些讨论班的讲稿, 文献的阅读笔记, 以及零散的见闻.</li>
+<li>文献 : 其它页面中引用到的参考文献.</li>
+<li><span class="link local"><a href="./subject.html" title="学科 [subject]">学科</a></span> : 用于部分页面的收集和分类.</li>
+<li>Meta : 关于单纯百科本身.</li>
+<li><span class="link local"><a href="./nonmath.html" title="非数学 [nonmath]">非数学</a></span> : 一些不属于上述分类, 且不属于数学的东西.</li>
+</ul>
+<p>点击 <span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span> 可以看到本站的所有页面.</p>
+<p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">亟需施工处</a></span>列表 (“TODO list”)</p>
+<p><span class="link local"><a href="./terminologies.html" title="单纯百科 - 术语翻译表 [terminologies]">术语翻译表</a></span></p>
+<h2>最近</h2>
+<p><span class="link local"><a href="./始代数.html" title="始代数 (自函子) [始代数]">始代数 (自函子)</a></span>, <span class="link local"><a href="./P-树.html" title="P-树 (多项式函子标记的树) [P-树]">P-树 (多项式函子标记的树)</a></span>, <span class="link local"><a href="./自由单子.html" title="自由单子 [自由单子]">自由单子</a></span></p>
+<p><span class="link local"><a href="./Idem.html" title="游走的幂等映射 [Idem]">游走的幂等映射</a></span>, <span class="link local"><a href="./游走的收缩.html" title="游走的收缩 [游走的收缩]">游走的收缩</a></span></p>
+<p><span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span></p>
+<p><span class="link local"><a href="./代数胚.html" title="代数胚 [代数胚]">代数胚</a></span>, <span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span></p>
+<p><span class="link local"><a href="./平坦函子.html" title="平坦函子 [平坦函子]">平坦函子</a></span></p>
+<p><span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">Segal 范畴 Γ</a></span>, <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴 Θn</a></span></p>
+<p><span class="link local"><a href="./杠–余杠对偶.html" title="杠–余杠对偶 [杠–余杠对偶]">杠–余杠对偶</a></span></p>
+<p><span class="link local"><a href="./辫群.html" title="辫群 [辫群]">辫群</a></span></p>
+<p><span class="link local"><a href="./超滤.html" title="超滤 [超滤]">超滤</a></span></p>
+<p><span class="link local"><a href="./分层.html" title="分层 [分层]">分层</a></span></p>
+<p><span class="link local"><a href="./合聚意象.html" title="合聚意象 [合聚意象]">合聚意象</a></span></p>
+<p><span class="link local"><a href="./线图.html" title="线图 [线图]">线图</a></span></p>
+<p><span class="link local"><a href="./代数充实于余代数.html" title="代数充实于余代数 [代数充实于余代数]">代数充实于余代数</a></span></p>
+<p><span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span></p>
+<p><span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span></p>
+<p><span class="link local"><a href="./fil-gr.html" title="滤与分次的叠观点 [fil-gr]">滤与分次的叠观点</a></span></p>
+<p><span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span></p>
+<p><span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span></p>
+<p><span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span></p>
+<p><span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span></p>
+<p><span class="link local"><a href="./谱分解.html" title="谱分解 [谱分解]">谱分解</a></span></p>
+<p><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span></p>
+<p><span class="link local"><a href="./Barr–Beck–Lurie定理.html" title="Barr–Beck–Lurie 定理 [Barr–Beck–Lurie定理]">Barr–Beck–Lurie 定理</a></span></p>
+<p><span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span></p>
+<p><span class="link local"><a href="./吸引子.html" title="吸引子, 排斥子 [吸引子]">吸引子, 排斥子</a></span></p>
+<p><span class="link local"><a href="./Milnor纤维化.html" title="Milnor 纤维化 [Milnor纤维化]">Milnor 纤维化</a></span></p>
+<p><span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span></p>
+<p><span class="link local"><a href="./局部意象.html" title="局部意象 [局部意象]">局部意象</a></span></p>
+<p><span class="link local"><a href="./法形变.html" title="法形变 [法形变]">法形变</a></span>, <span class="link local"><a href="./微局部化.html" title="微局部化 [微局部化]">微局部化</a></span>, <span class="link local"><a href="./流形上的层.html" title="流形上的层 [流形上的层]">流形上的层</a></span>, <span class="link local"><a href="./microPerv.html" title="微局部偏屈层 [microPerv]">微局部偏屈层</a></span></p>
+<p><span class="link local"><a href="./love-and-math.html" title="爱与数学 [love-and-math]">爱与数学</a></span></p>
+<p><span class="link local"><a href="./余完备化.html" title="余完备化 [余完备化]">余完备化</a></span></p>
+<p><span class="link local"><a href="./Galois扩张.html" title="Galois 扩张 [Galois扩张]">Galois 扩张</a></span></p>
+<p><span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">算畴上的代数上的模</a></span></p>
+<p><span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>, <span class="link local"><a href="./LCCC.html" title="局部积闭范畴 [LCCC]">LCCC</a></span>, <span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>, <span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>, <span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span></p>
+<p><span class="link local"><a href="./高阶Morita范畴.html" title="高阶 Morita 范畴 [高阶Morita范畴]">高阶 Morita 范畴</a></span></p>
+<p><span class="link local"><a href="./Morita等价.html" title="Morita 等价 [Morita等价]">Morita 等价</a></span></p>
+<p><span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">充实范畴上的模</a></span></p>
+<p><span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断性</a></span></p>
+<p><span class="link local"><a href="./交叉模.html" title="交叉模 [交叉模]">交叉模</a></span></p>
+<p><span class="link local"><a href="./Gestalt.html" title="Gestalt [Gestalt]">Gestalt</a></span></p>
+<p><span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span></p>
+<p><span class="link local"><a href="./非交换Čech上同调.html" title="非交换 Čech 上同调 [非交换Čech上同调]">非交换 Čech 上同调</a></span></p>
+<p><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="始对象"><header><h1><span class="taxon"></span>始对象 <a class="slug" href="./始对象.html">[始对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>始对象是到任意对象有唯一态射的对象.</p>
 <p>始对象是空的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>
