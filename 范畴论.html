@@ -872,6 +872,56 @@ $$
 <p>见 <span class="link local"><a href="./Segal空间.html" title="Segal 对象 [Segal空间]">Segal 空间</a></span>.</p>
 <h2>性质</h2>
 <h3>余极限</h3>
+</details></section><section class="block" data-taxon=""><details ><summary id="Descartes自然变换"><header><h1><span class="taxon"></span>Descartes 自然变换 <a class="slug" href="./Descartes自然变换.html">[Descartes自然变换]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>Descartes 自然变换是指每个自然性方块都是<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>的自然变换.</p>
+<h2>例</h2>
+<h3>多项式函子</h3>
+<p><span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>之间的 Descartes 自然变换有如下形状: 考虑交换图
+$$
+\begin{CD}
+I @&lt;{s}&lt;&lt; E @&gt;{p}&gt;&gt; B @&gt;{t}&gt;&gt; J \\
+@| @VfVV @VVgV @| \\
+I @&lt;&lt;{s'}&lt; E' @&gt;&gt;{p'}&gt; B' @&gt;&gt;{t'}&gt; J,
+\end{CD}
+$$
+其中方块
+$$
+\begin{CD}
+E @&gt;{p}&gt;&gt; B \\
+@VfVV @VVgV \\
+E' @&gt;&gt;{p'}&gt; B'
+\end{CD}
+$$
+是拉回, 则有自然变换
+$$
+\begin{aligned}
+t_!p_*s^* &amp;= t'_!g_!p_*f^*(s')^*\\
+&amp;= t'_! g_! g^* p'_* (s')^* \,(\star)\\
+&amp;\to t'_!p'_*(s')^*,
+\end{aligned}
+$$
+其中 $(\star)$ 是 <span class="link local"><a href="./基变换.html" title="基变换 [基变换]">Beck–Chevalley 基变换</a></span>.</p>
+<p>直观上, $p\colon E\to B$ 的纤维是多项式的 “次数”, 而 $B$ 中有多项式的每个 “系数”. <span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>之间的 Descartes 自然变换就是变系数而不变次数的变换.</p>
+<p><strong>例</strong>. 对任意态射 $f\colon A\to B$, 乘法函子之间的自然变换 $A\times X \to B\times X$ 是 Descartes 自然变换. 这来自如下交换图.
+$$
+\begin{CD}
+1 @&lt;&lt;&lt; A @= A @&gt;&gt;&gt; 1 \\
+@| @VfVV @VVfV @| \\
+1 @&lt;&lt;&lt; B @= B @&gt;&gt;&gt; 1
+\end{CD}
+$$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="Idem"><header><h1><span class="taxon"></span>游走的幂等映射 <a class="slug" href="./Idem.html">[Idem]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>考虑<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span> $\Delta_+$ 上 $[0]$ 的左模范畴 $\Delta_{\bot}$, 即有最小值的全序集
+$$C_+([n]) = [n+1] = \{\bot,0,1,\cdots,n\}$$
+($n\geq -1$) 和保持最小值的保序映射的范畴.</p>
+<p>定义<strong>游走的幂等映射</strong> (walking idempotent) $\mathsf{Idem}$ 为 $\Delta_\bot$ 在对象
+$$
+    C_+([0]) = [1] =\{\bot,0\}
+$$
+上的全子范畴.</p>
+<p>由定义, $\mathsf{Idem}$ 是<span class="link local"><a href="./游走的收缩.html" title="游走的收缩 [游走的收缩]">游走的收缩 $\mathsf{Ret}$</a></span> 的全子范畴. 这体现了每个<span class="link local"><a href="./收缩.html" title="收缩 [收缩]">收缩</a></span>都给出一个<span class="link local"><a href="./幂等态射.html" title="幂等态射 [幂等态射]">幂等映射</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Isbell对偶"><header><h1><span class="taxon"></span>Isbell 对偶 <a class="slug" href="./Isbell对偶.html">[Isbell对偶]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>Isbell 对偶是预层和余预层之间的一对伴随, 在许多场合可理解为<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>.</p>
@@ -1300,15 +1350,53 @@ $$
 <h3>与可表函子的关系</h3>
 <p>函子 $F\colon \mathcal C\to\mathsf{Ani}$ 余可表 (即 $F = \operatorname{Hom}(c,-)$) 当且仅当其元素范畴有<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>, 此时始对象为 $(c,\mathrm{id}_c)$.</p>
 <p>对偶地, 函子 $F\colon \mathcal C^{\mathrm{op}}\to\mathsf{Ani}$ <span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表</a></span>当且仅当其元素范畴有<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>, 此时终对象为 $(c,\mathrm{id}_c)$.</p>
+<h3>与余极限的关系</h3>
+<p>函子 $F\colon \mathcal C\to\mathsf{Ani}$ 的元素范畴的底层生象 (关于所有态射的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>) 就是 $F$ 的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="共尾函子"><header><h1><span class="taxon"></span>共尾函子 <a class="slug" href="./共尾函子.html">[共尾函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>共尾函子是不改变<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>的指标代换, 即对于共尾函子 $f\colon I\to J$ 以及图表 $X\colon J\to \mathcal C$,
+<p><strong>共尾函子</strong> (cofinal functor) 又叫<strong>终函子</strong> (final functor), 是不改变<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>的指标代换, 即对于共尾函子 $f\colon I\to J$ 以及图表 $X\colon J\to \mathcal C$,
 $$
 \operatorname{colim}_{i\in I}X_{f(i)}\to \operatorname{colim}_{j\in J}X_j
 $$
 为等价.</p>
+<p><strong>关于英文名称的注</strong>. Cofinal functor 的前缀 co- 是 “<strong>共</strong>” (来自拉丁文 cum) 而非 “余” (来自拉丁文 contra) 的意思.</p>
+<p>对偶的概念是<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首函子</a></span>.</p>
+<h2>定义</h2>
+<p><strong>命题-定义</strong>. 对于函子 $f\colon I\to J$, 若下列等价条件成立, 则称之为<strong>共尾函子</strong>:</p>
+<ul>
+<li>对任意 (有余极限的) 图表 $X\colon J\to \mathcal C$, 比较映射 $\operatorname{colim}_{i\in I}X_{f(i)}\to \operatorname{colim}_{j\in J}X_j$ 为等价;</li>
+<li>同上一个条件, 但只要求 $\mathcal C$ 为 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 的情形;</li>
+<li>对任意图表 $X\colon J\to \mathcal C$ 以及 $c\in\mathcal C$, 比较映射 $\operatorname{Hom}(X,\operatorname{const}_J c)\to \operatorname{Hom}(Xf,\operatorname{const}_I c)$ 为等价;</li>
+<li>对任意 $j\in J$, 范畴 $(j\downarrow f):=\{(i,u\colon j\to f(i))\}$ <span class="link local"><a href="./弱可缩范畴.html" title="弱可缩范畴 [弱可缩范畴]">弱可缩</a></span> (即底层<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>是<span class="link local"><a href="./可缩(同伦类型论).html" title="可缩类型 (同伦类型论) [可缩(同伦类型论)]">可缩</a></span>的).</li>
+<li>对任意 $j\in J$,
+$$
+  \int_{i\in I}\operatorname{Hom}_J(j,f(i)) = *.
+$$</li>
+</ul>
+<p>核心观察是由于<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>的 Fubini 定理,
+$$
+    \begin{aligned}
+    \operatorname{colim}_{i\in I}X_{f(i)}
+    &amp;=\int_{i\in I}X_{f(i)}\\
+    &amp;\simeq\int_{i\in I}\int_{j\in J}\operatorname{Hom}_{J}(j,f(i))\times X_j\\
+    &amp;\simeq\int_{j\in J}\Big(\int_{i\in I}\operatorname{Hom}_{J}(j,f(i))\Big)\times X_j.
+    \end{aligned}
+$$</p>
+<p>另外, 范畴 $(j \downarrow f)$ 的底层<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> (把所有态射取逆得到的 $\infty$-群胚) 正是 $\int_{i\in I}\operatorname{Hom}_{J}(j,f(i))$.</p>
+<h2>例</h2>
+<h3>伴随</h3>
+<p><strong>命题</strong>. 右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>是共尾函子. 或者说有左伴随的函子是共尾函子.</p>
+<p><em>证明</em>. 设函子 $f\colon I\to J$ 有左伴随 $l$, 则
+$$
+(j\downarrow f) = \{(i,u\colon j\to f(i))\} = \{i,l(j)\to i\} = I_{l(j)/}
+$$
+有始对象, 当然可缩; 另一种看法是
+$$
+\int_{i\in I}\operatorname{Hom}_J(j,f(i)) = \int_{i\in I}\operatorname{Hom}_I(l(j),i)=*.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="共首函子"><header><h1><span class="taxon"></span>共首函子 <a class="slug" href="./共首函子.html">[共首函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>共首函子 (initial functor) 是不改变<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>的指标代换, 是<span class="link local"><a href="./共尾函子.html" title="共尾函子 [共尾函子]">共尾函子</a></span>的对偶概念.</p>
+<h2>观念</h2>
+<p><strong>共首函子</strong> (initial functor) 是不改变<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>的指标代换, 是<span class="link local"><a href="./共尾函子.html" title="共尾函子 [共尾函子]">共尾函子</a></span>的对偶概念.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="加权余极限"><header><h1><span class="taxon"></span>加权余极限 <a class="slug" href="./加权余极限.html">[加权余极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设 $\mathcal V$ 为完备, 余完备闭<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, $I,\mathcal C$ 为 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>.</p>
@@ -1441,6 +1529,7 @@ $$</p>
 $$
 \Delta_\bot = \mathsf{LMod}_{\Delta_+}([0]),\ \Delta_\top = \mathsf{RMod}_{\Delta_+}([0]).
 $$</p>
+<p>当然, 这两个范畴有一个 “反转全序” 给出的等价 $\Delta_\bot \simeq \Delta_\top$.</p>
 <h3>几何单纯形</h3>
 <p>标准 $n$ 维几何单纯形是 $\mathbb{R}^{n+1}$ 的基向量 $e_0,e_1,\cdots,e_n$ 的凸包. 这定义了一个函子 $\Delta \to \mathsf {Top}$.</p>
 <h3>充实于偏序集</h3>
@@ -1605,6 +1694,13 @@ $$
 <p>相关讲义: <span class="link local"><a href="./notes-Gestalten-Cat.html" title="Gestalten - 在范畴上做代数 [notes-Gestalten-Cat]">Gestalten - 在范畴上做代数</a></span></p>
 <h3>高阶可表现范畴</h3>
 <p>见<span class="link local"><a href="./高阶可表现范畴.html" title="高阶可表现范畴 [高阶可表现范畴]">高阶可表现范畴</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="可达函子"><header><h1><span class="taxon"></span>可达函子 <a class="slug" href="./可达函子.html">[可达函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设 $\kappa$ 为<span class="link local"><a href="./正则基数.html" title="正则基数 [正则基数]">正则基数</a></span>. 称 $\kappa$-<span class="link local"><a href="./可达范畴.html" title="可达范畴 [可达范畴]">可达范畴</a></span>之间保持 $\kappa$-<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>的函子为<strong>可达函子</strong> (accessible functor).</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="可达范畴"><header><h1><span class="taxon"></span>可达范畴 <a class="slug" href="./可达范畴.html">[可达范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设 $\kappa$ 为<span class="link local"><a href="./正则基数.html" title="正则基数 [正则基数]">正则基数</a></span>. 定义 $\kappa$-<strong>可达范畴</strong> (accessible category) 为具有 $\kappa$-<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>且由一族 $\kappa$-<span class="link local"><a href="./可表现对象.html" title="可表现对象 [可表现对象]">紧对象</a></span>在 $\kappa$-<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>下生成的范畴.</p>
+<p>范畴 $\mathcal C$ 是 $\kappa$-可达范畴等价于 $\mathcal C = \mathsf{Ind}_\kappa(\mathcal S)$ 是小范畴的 $\kappa$-<span class="link local"><a href="./ind-对象.html" title="ind-对象 [ind-对象]">Ind 完备化</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="圈积"><header><h1><span class="taxon"></span>圈积 (范畴论) <a class="slug" href="./圈积.html">[圈积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>圈积是 $\mathsf{Cat}_{/\Gamma}$ 上的一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半</a></span>结构, 表现的是 $\mathsf{Cat}$ 上某种<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>的复合, 类似于<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>的复合积.</p>
@@ -1679,6 +1775,53 @@ $$
 <p>定义<strong>多重范畴</strong>为 $\Delta_{\mathsf{Fin}}$ 上满足完备性的 Segal 预层 $F$; 完备性即是说 $F$ 在子范畴 $\Delta\hookrightarrow\Delta_{\mathsf{Fin}}$ 上的限制是一个<span class="link local"><a href="./范畴对象.html" title="范畴对象 (∞-范畴论) [范畴对象]">完备 Segal 生象</a></span>.</p>
 <h3>树形生象</h3>
 <p>多重范畴的另一种定义使用<span class="link local"><a href="./树形对象.html" title="树形对象 [树形对象]">树形</a></span><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="多项式单子"><header><h1><span class="taxon"></span>多项式单子 <a class="slug" href="./多项式单子.html">[多项式单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>固定一个基范畴 $\mathcal C$, 通常为 $\mathsf{Set}$ 或 $\mathsf{Ani}$. 记 $\mathsf{Poly}(\mathcal C)$ 为切片范畴 $\mathcal C_{/X}$ 及其之间的<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>以及 <span class="link local"><a href="./Descartes自然变换.html" title="Descartes 自然变换 [Descartes自然变换]">Descartes 自然变换</a></span>构成的 $2$-范畴.</p>
+<p>定义 $\mathcal C_{/X}$ 上的<strong>多项式单子</strong> (polynomial monad) 是 $2$-范畴 $\mathsf{Poly}(\mathcal C)$ 中 $\mathcal C_{/X}$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>, 也即<span class="link local"><a href="./游走的单子.html" title="游走的单子 [游走的单子]">游走的单子</a></span>到 $\mathsf{Poly}$ 的函子
+$$
+\mathsf{Mnd} \to \mathsf{Poly},\ *\mapsto\mathcal C_{/X}.
+$$</p>
+<h2>例</h2>
+<h3>自由幺半群</h3>
+<p>自由幺半群单子 (即<span class="link local"><a href="./列表.html" title="列表 [列表]">列表</a></span>函子) 是多项式单子.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="始代数"><header><h1><span class="taxon"></span>始代数 (自函子) <a class="slug" href="./始代数.html">[始代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>始代数可理解为某些<span class="link local"><a href="./归纳类型.html" title="归纳类型 (同伦类型论) [归纳类型]">归纳类型</a></span>的<span class="link local"><a href="./范畴语义.html" title="范畴语义 [范畴语义]">范畴语义</a></span>.</p>
+<h2>定义</h2>
+<p>对于范畴 $\mathcal C$ 的自函子 $F\colon \mathcal C \to \mathcal C$, 称一个对象 $X$ 配备一个态射 $F(X)\to X$ 的结构为 $F$-<strong>代数</strong> (又称 Lambek 代数). 定义 $F$ 的<strong>始代数</strong>为 $F$-代数范畴的<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>.</p>
+<h2>性质</h2>
+<h3>Lambek 定理</h3>
+<p><strong>定理</strong> (Lambek). 若 $F$ 有始代数 $\alpha\colon F(X) \to X$, 则 $\alpha$ 为同构.</p>
+<p>因此始代数又称<strong>最小不动点</strong>.</p>
+<p><strong>命题</strong>. 假设范畴 $\mathcal C$ 有<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>及始对象 $0$, 且 $F$ 保持滤余极限. 那么 $F$ 有始代数
+$$
+\operatorname{colim}_n F^n0.
+$$</p>
+<h2>例</h2>
+<h3>自然数</h3>
+<p>自然数集 $\mathbb{N}$ 是 $\mathsf{Set}$ 上的函子 $X\mapsto 1+X$ 的始代数:
+$$
+\mathbb{N} = \operatorname{colim}_n \underbrace{1+1+\cdots+1}_{n}.
+$$</p>
+<h3>二叉树</h3>
+<p>二叉树的集合 $B$ 是 $\mathsf{Set}$ 上的自函子 $X\mapsto 1 + X^2$ 的始代数.
+注意, 由于一棵二叉树要么为空要么由两棵更小的二叉树构成, 故有
+$$
+B \simeq 1 + B^2.
+$$
+更有趣的是, 由上式可得
+$$
+B\simeq B^7,
+$$
+并且这个同构由 Andreas Blass 的著名文章 “<span class="link external"><a href="https://arxiv.org/abs/math/9405205" title="七树合一 [https://arxiv.org/abs/math/9405205]">七树合一</a></span>” 显式构造.</p>
+<h3>列表</h3>
+<p>对于集合 $A$, 函子 $X \mapsto 1 + A\times X$ 的始代数是 $A$ 的<span class="link local"><a href="./列表.html" title="列表 [列表]">列表</a></span>集合
+$$
+\operatorname{List}(A) = \bigsqcup_n A^n,
+$$
+也即 $A$ 上的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span><span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>.</p>
+<p>上述三个例子都是<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>, 这种函子总是保持滤余极限.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="局部化(范畴论)"><header><h1><span class="taxon"></span>局部化 (范畴论) <a class="slug" href="./局部化(范畴论).html">[局部化(范畴论)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>在<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中, <strong>局部化</strong>是一种万有的使一些态射变得可逆的方法.</p>
@@ -1706,6 +1849,47 @@ $$
 其中 $\{\cdot\to\cdot\}$ 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的箭头.</p>
 <h2>例</h2>
 <p><span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> $\mathcal D\hookrightarrow\mathcal C$ 是一个局部化: 记其左伴随为 $L\colon \mathcal C\to\mathcal D$, 取 $S$ 为所有被 $L$ 变为同构的态射构成的类.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="局部右伴随"><header><h1><span class="taxon"></span>局部右伴随 <a class="slug" href="./局部右伴随.html">[局部右伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<h2>定义</h2>
+<p>函子 $F\colon \mathcal C \to \mathcal D$ 称为<strong>局部右伴随</strong> (local right adjoint), 是指对每个对象 $c\in\mathcal C$, 函子 $F_{/c}\colon \mathcal C_{/c} \to \mathcal D_{/F(c)}$ 都是右伴随.</p>
+<p>当 $\mathcal C$ 有<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span> $1$ 时, 只需 $F_{/1}\colon \mathcal C \to \mathcal D_{/F(1)}$ 为右伴随.</p>
+<p>由<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>的定义, 函子 $F\colon \mathcal C_{/c} \to \mathcal D_{/F(c)}$ 为右伴随, 当且仅当对任意 $(d\to F(c))\in\mathcal D_{/F(c)}$, 范畴 $\{d\to F(c')\to F(c)\}$ 有<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>. 这个范畴的对象是 $d\to F(c)$ 的分解, 要求后一个态射在 $F$ 的像中.</p>
+<h3>一般映射</h3>
+<p>局部右伴随还可用<strong>一般映射</strong>来刻画.
+称 $d\to F(c)$ 为<strong>一般映射</strong> (generic map), 是指: 对任意 $c\to c'$, 范畴 $\{d\to F(c'')\to F(c')\}$ 的始对象都是 $d\to F(c) \to F(c')$. 一个等价的表述是 $d\to F(c)$ 具有关于 $F$ 的像中所有态射的<span class="link local"><a href="./提升性质.html" title="提升性质 [提升性质]">左提升性质</a></span>且提升唯一.</p>
+<p><strong>命题</strong>. 函子 $F\colon \mathcal C\to\mathcal D$ 是局部右伴随当且仅当所有态射 $d\to F(c)$ 分解为一个一般映射复合一个 $F$ 的像中的态射.</p>
+<h2>性质</h2>
+<h3>与弱可缩极限的关系</h3>
+<p><strong>命题</strong> (<span class="link local"><a href="./GHK-analytic-monads.html" title="∞-Operads as Analytic Monads [GHK-analytic-monads]">GHK</a></span>, 命题 2.2.9). 设 $F\colon \mathcal C \to \mathcal D$ 是<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>之间的<span class="link local"><a href="./可达函子.html" title="可达函子 [可达函子]">可达函子</a></span>, 则 $F$ 是局部右伴随当且仅当 $F$ 保持<span class="link local"><a href="./弱可缩极限.html" title="弱可缩极限 [弱可缩极限]">弱可缩极限</a></span>.</p>
+<p><em>证明</em>. 注意到 $F_{/X}\colon \mathcal C_{/X} \to\mathcal D_{/FX}$ 为可达函子, 它是右伴随当且仅当它保持极限. 这相当于 $F$ 保持所有<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">右锥</a></span>极限, 由<span class="link local"><a href="./弱可缩极限.html" title="弱可缩极限 [弱可缩极限]">弱可缩极限</a></span>的性质等价于 $F$ 保持<span class="link local"><a href="./弱可缩极限.html" title="弱可缩极限 [弱可缩极限]">弱可缩极限</a></span>.</p>
+<h2>例</h2>
+<h3>自由幺半群</h3>
+<p>自由幺半群函子 (即<span class="link local"><a href="./列表.html" title="列表 [列表]">列表</a></span>函子) $\mathrm{List}\colon \mathsf{Set} \to \mathsf{Set}$,
+$$
+X\mapsto\bigsqcup_n X^n
+$$
+是局部右伴随.</p>
+<p>映射 $f\colon Y \to \operatorname{List}(X)$ 是一般映射当且仅当所有 $f(y)$ 恰包含 $X$ 的每个元素一次.</p>
+<p>对任何映射 $f\colon Y \to \operatorname{List}(X)$, 考虑 $Z = \bigsqcup_{y\in Y} f(y)$, 那么 $f$ 分解为
+$$
+Y \to \operatorname{List}(Z)\to \operatorname{List}(X),
+$$
+且第一个映射 $Y\to \operatorname{List}(Z)$ 为一般映射.</p>
+<h3>多项式函子</h3>
+<p>自由幺半群函子是一个<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>. 任何多项式函子都是局部右伴随.</p>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./LCCC.html" title="局部积闭范畴 [LCCC]">局部积闭范畴</a></span>. 考虑
+$$
+X \overset{s}{\leftarrow} E \overset{p}{\rightarrow} B \overset{t}{\rightarrow} Y
+$$
+对应的多项式函子 $f=t_!p_*s^*\colon \mathcal C_{/X}\to\mathcal C_{/Y}$, 则有 $f_{/X} = p_*s^*\colon \mathcal C_{/X} \to\mathcal C_{/B}$ 的左伴随为 $s_! p^*\colon \mathcal C_{/B} \to \mathcal C_{/X}$.</p>
+<h3>图的自由范畴单子</h3>
+<p>参考 <span class="link local"><a href="./WeberFamParRAdj.html" title="Familial 2-functors and parametric right adjoints [WeberFamParRAdj]">Weber</a></span> 例 2.5. 记 $\mathsf{Graph}$ 为有向图的范畴, 其终对象 $1$ 是一个顶点和一条边构成的图. 考虑其上的自由范畴单子 $T$. 函子在终对象上的值 $T1 = \mathbf{B}\mathbb{N}$ 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的自同态. 于是有函子
+$$
+T_{/1}\colon \mathsf{Graph} \to \mathsf{Graph}_{/\mathbf{B}\mathbb{N}}.
+$$
+范畴 $\mathsf{Graph}_{/\mathbf{B}\mathbb{N}}$ 可理解为 “每条边带有一个自然数标记” 的图的范畴.
+函子 $T_{/1}$ 的左伴随 $L$ 可描述为: 对一个带自然数标记的图, 将每个标记为 $n$ 的边替换为 $n$ 条串联的边.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="带元数的单子"><header><h1><span class="taxon"></span>带元数的单子 <a class="slug" href="./带元数的单子.html">[带元数的单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>带元数的单子</strong> (monad with arities) 是 <span class="link local"><a href="./BergerMelliesWeberMonAr.html" title="Monads with arities and their associated theories [BergerMelliesWeberMonAr]">Berger–Melliès–Weber</a></span> 引入的概念, 能够表达以下结构:</p>
@@ -1734,18 +1918,23 @@ $$</li>
 </ul>
 <p><strong>定义</strong>. 若<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 满足以下等价条件, 则称单子 $T$ 以 $\mathcal A$ 为<strong>元数</strong> (arity):</p>
 <ul>
-<li>$T$ 保持所有形如 $(\star)$ 的余极限;</li>
-<li>$T$ 是其在 $\mathcal A$ 上的限制的左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>.</li>
+<li>$\nu_{\mathcal A} T\colon \mathcal E\to\widehat {\mathcal A}$ 保持所有形如 $(\star)$ 的余极限 (由于 $\nu_A$ 全忠实, 这蕴涵 $T$ 本身也保持 $\star$);</li>
+<li>$\nu_{\mathcal A} T$ 是其在 $\mathcal A$ 上的限制的左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>.</li>
 </ul>
 <p>或许 $(\star)$ 更有启发性的一种写法是写成<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>
 $$
-X = \int_{A\in\mathcal A} A \times X^A,
+X = \int_{A\in\mathcal A} \operatorname{Hom}(A,X)\times A,
 $$
-(这里 $X^A$ 代表 $\operatorname{Hom}(A,X)$, 这样写只是为了更有启发性), 而函子 $T$ 保持该余极限意味着
+条件 $\nu_{\mathcal A}T$ 保持余极限 $(\star)$ 相当于
+$$
+\operatorname{Hom}(B,TX)=\int_{A\in\mathcal A}\operatorname{Hom}(A,X)\times\operatorname{Hom}(B,TA),
+$$
+(我们后面会解读这个等式的含义)
+而函子 $T$ 保持该余极限意味着
 $$
 TX = \int_{A\in\mathcal A} TA \times X^A.
 $$
-换言之, $T$ 具有以 $A\in\mathcal A$ 为 “次数”, $TA$ 为系数的 “多项式展开”. (参考<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>, <span class="link local"><a href="./解析函子.html" title="解析函子 (算畴理论) [解析函子]">解析函子</a></span>.)</p>
+(这里 $X^A$ 代表 $\operatorname{Hom}(A,X)$, 这样写只是为了更有启发性) 换言之, $T$ 具有以 $A\in\mathcal A$ 为 “次数”, $TA$ 为系数的 “多项式展开”. (参考<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>, <span class="link local"><a href="./解析函子.html" title="解析函子 (算畴理论) [解析函子]">解析函子</a></span>.)</p>
 <h3>范畴 $\Theta_T$</h3>
 <p>设 $T$ 为 $\mathcal E$ 上的单子, 定义 $\Theta_T$ 为 $\mathcal A$ 的对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span> $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>构成的范畴. 那么有自由代数函子
 $$
@@ -1817,15 +2006,40 @@ $$
 <p><em>证明</em>. 将 $\mathcal E$ 等同于 $\nu_A\colon \mathcal E\to\widehat {\mathcal A}$ 的像, 那么单子 $T$ 等同于单子 $j^*j_!$ 在 $\mathcal E$ 上的限制, 所以 $T$-代数等同于落在 $\mathcal E$ 中的 $j^*j_!$-代数, 而 $j_!\dashv j^*$ <span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>意味着 $j^*j_!$-代数就是 $\Theta_T$ 上的预层. $\square$</p>
 <h3>理论</h3>
 <p>上述范畴 $\Theta_T$ 及函子 $j_T\colon \mathcal A\to\Theta_T$ 可以抽象如下.</p>
-<p>设 $\mathcal A\subset\mathcal E$ 为<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>全子范畴, 定义一个以 $\mathcal A$ 为元数的<strong>理论</strong>为一个函子
+<p>设 $\mathcal A\subset\mathcal E$ 为<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>全子范畴, 定义一个以 $\mathcal A$ 为元数的<strong>理论</strong>为一个<span class="link local"><a href="./本质满函子.html" title="本质满函子 [本质满函子]">本质满函子</a></span>
 $$
 j\colon \mathcal A \to \Theta,
 $$
 使得伴随 $j_! \dashv j^*$ <span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">诱导的单子</a></span> $j^*j_!\colon \widehat {\mathcal A} \to \widehat {\mathcal A}$ 保持<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子 $\nu_{\mathcal A}\colon \mathcal E\to\widehat {\mathcal A}$ 的像.</p>
 <p>该理论的一个<strong>模型</strong>是 $\Theta$ 上的一个预层, 满足其沿 $j$ 的限制落在 $\nu_{\mathcal A}$ 的像中.</p>
-<p><strong>定理</strong>. 对于固定的 $(\mathcal E,\mathcal A)$, $\mathcal E$ 上以 $\mathcal A$ 为元数的单子 $T$ 等价于以 $\mathcal A$ 为元数的理论 $j_T\colon \mathcal A\to \Theta_T$, 且单子 $T$ 上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>等同于理论 $\Theta_T$ 的模型.</p>
+<p><strong>单子给出理论</strong>. 由定义, $\mathcal E$ 上以 $\mathcal A$ 为元数的单子 $T$, 有理论 $(\Theta_T,j_T)$.</p>
+<p><strong>理论恢复出单子</strong>. 由定义, 对理论 $(\Theta,j)$ 可以恢复出 $\mathcal E$ 上的一个单子 $T$: 若将 $\mathcal E$ 等同于 $\widehat {\mathcal A}$ 的子范畴, 那么单子 $T$ 等于 $j^*j_!$ 的限制.</p>
+<p><strong>定理</strong>. 对于固定的 $(\mathcal E,\mathcal A)$, $\mathcal E$ 上以 $\mathcal A$ 为元数的单子 $T$ 等价于以 $\mathcal A$ 为元数的理论 $j_T\colon \mathcal A\to \Theta_T$, 且单子 $T$ 上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>等同于理论 $\Theta_T$ 的模型.
+事实上, 这一对应构成范畴等价. (<span class="link local"><a href="./BergerMelliesWeberMonAr.html" title="Monads with arities and their associated theories [BergerMelliesWeberMonAr]">BMW</a></span>, 定理 3.4)</p>
+<p><strong>模型条件表述为层条件</strong>. 常常 $\mathcal E = \widehat {\mathcal C}$ 是个预层范畴, 而 $\mathcal A$ 是包含了可表函子的一个子范畴 (那么 $\mathcal A$ 当然是稠密的, 因为可表函子是稠密的). 这时脉函子 $\nu_{\mathcal A}\colon \mathcal E \to \widehat {\mathcal A}$ 构成<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>之间的<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span>, 于是它的像恰好是 $\mathcal A$ 上由形如 $\{c\to a\mid c\in \mathcal C\}$ 的余锥生成的 <span class="link local"><a href="./Grothendieck拓扑.html" title="Grothendieck 拓扑 [Grothendieck拓扑]">Grothendieck 拓扑</a></span>的层范畴. 这给出了判断预层是否在 $\nu_{\mathcal A}$ 的像中的一个稍微直接一点的条件.</p>
+<h4>一般映射与自由映射</h4>
+<p>对于理论 $j\colon \mathcal A \to \Theta$, 称 $j$ 的像中的态射为<strong>自由映射</strong>, 而对 $\Theta$ 中的态射 $g$, 若对任意分解 $g = j(f) g'$, 都有 $f$ 可逆, 则称 $g$ 为<strong>一般映射</strong>.</p>
 <h2>例</h2>
 <h3>Lawvere 理论</h3>
+<p><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>等同于 $\mathsf{Set}$ 上以 $\mathsf{Fin}$ 为元数的单子, 即保持滤余极限的单子 (这里用到 $\nu_{\mathsf{Fin}}$ 不仅保持而且<span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映</a></span><span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>). 见<span class="link local"><a href="./有限性单子.html" title="有限性单子 [有限性单子]">有限性单子</a></span>.</p>
+<p>另一方面, Lawvere 理论也可视为上文所述的 “理论”. 回忆 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span> $\mathbb T$ 的对象形如 $1,x,x^2,\cdots$, 事实上在这里它对应理论 $j\colon \mathsf{Fin} \to \mathbb T^{\mathrm{op}}$, $\{1,\cdots,n\}\mapsto x^n$. 下面我们给出一个论证.</p>
+<p>脉函子 $\nu_{\mathsf{Fin}}\colon \mathsf{Set} \to \widehat {\mathsf{Fin}}$ 的像为 $\mathsf{Fin}$ 上的<span class="link local"><a href="./平坦函子.html" title="平坦函子 [平坦函子]">平坦</a></span>预层, 也即<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span>为<span class="link local"><a href="./滤范畴.html" title="滤范畴 [滤范畴]">滤范畴</a></span>的预层. 因此,</p>
+<ul>
+<li>$\mathsf{Set}$ 上以 $\mathsf{Fin}$ 为元数的理论</li>
+</ul>
+<p>等同于</p>
+<ul>
+<li>本质满函子 $j\colon \mathsf{Fin} \to \Theta$, 满足 $j^*j_!$ 保持平坦预层,</li>
+</ul>
+<p>因为 $j_!$ 保持可表函子, 且 $j^*j_!$ 保持余极限, 上述结构又等同于</p>
+<ul>
+<li>本质满函子 $j\colon \mathsf{Fin} \to \Theta$, 满足 $j^*$ 将 $\Theta$ 上的可表函子映射到 $\mathsf{Fin}$ 上的平坦预层,</li>
+</ul>
+<p>但 $\mathsf{Fin}$ 上的平坦预层就等同于保持有限积的函子 $\mathsf{Fin}^{\mathrm{op}}\to\mathsf{Set}$, 故上述结构等同于</p>
+<ul>
+<li>本质满函子 $j\colon \mathsf{Fin} \to \Theta$, 满足 $j$ 保持有限余积.</li>
+</ul>
+<p>这正是 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>的定义.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="幂等单子"><header><h1><span class="taxon"></span>幂等单子 <a class="slug" href="./幂等单子.html">[幂等单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>幂等单子是乘法映射为同构的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</p>
@@ -1881,6 +2095,18 @@ $$
 <p>因此, $G$-集合的意象 $G\mathsf{Set} = \mathsf{Psh}(\mathbf{B}G)$ 是 $G$-主丛的<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span>.</p>
 <h2>相关资料</h2>
 <p>见<span class="link local"><a href="./盲人摸象.html" title="盲人摸象 [盲人摸象]">盲人摸象</a></span> A.5 节.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="弱可缩极限"><header><h1><span class="taxon"></span>弱可缩极限 <a class="slug" href="./弱可缩极限.html">[弱可缩极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>弱可缩极限是以<span class="link local"><a href="./弱可缩范畴.html" title="弱可缩范畴 [弱可缩范畴]">弱可缩范畴</a></span>为指标范畴的<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>.</p>
+<h2>性质</h2>
+<p><strong>命题</strong>. 函子 $\mathcal C_{/c} \to \mathcal C$ 保持且<span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映</a></span>弱可缩极限.</p>
+<p><em>证明</em>. 设 $I$ 为弱可缩范畴, 图表 $X\colon I\to\mathcal C_{/c}$ 的极限是<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">右锥</a></span>图表 $\widetilde {X}\colon I^{\triangleright}\to\mathcal C$ 的极限, 而 $I\to I^{\triangleright}$ <span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首</a></span>, 故该极限等同于 $\widetilde {X}|_{I}$ 的极限.</p>
+<p><strong>命题</strong>. <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的弱可缩极限与<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>指标的余极限交换.</p>
+<p><em>证明</em>. 以生象 $A$ 为指标的余极限操作即为复合函子
+$$
+\mathsf{Fun}(A,\mathsf{Ani}) \simeq \mathsf{Ani}_{/A} \to \mathsf{Ani}.
+$$
+而由前一个命题, 遗忘函子 $\mathsf{Ani}_{/A} \to \mathsf{Ani}$ 保持弱可缩极限.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="扭箭头范畴"><header><h1><span class="taxon"></span>扭箭头范畴 <a class="slug" href="./扭箭头范畴.html">[扭箭头范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>范畴 $\mathcal C$ 的<strong>扭箭头范畴</strong> (twisted arrow category) $\mathsf{TwArr}(\mathcal C)$ 是其 Hom 函子 $\operatorname{Hom}_{\mathcal C}(-,-)\colon \mathcal C^{\mathrm{op}}\times\mathcal C\to\mathsf{Ani}$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span>.</p>
@@ -1947,6 +2173,26 @@ $$
 <h3>关于自身提升</h3>
 <p>对于态射 $f$, 有 $f\perp f$ 当且仅当 $f$ 可逆.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="收缩"><header><h1><span class="taxon"></span>收缩 <a class="slug" href="./收缩.html">[收缩]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>朴素定义</h3>
+<p>范畴 $\mathcal C$ 中, 一个对象 $X$ 的一个<strong>收缩</strong>是一个态射 $r\colon X\to Y$ 以及 $i\colon Y\to X$, 满足 $ri=\mathrm{id}_Y$.</p>
+<h3>通过单纯形</h3>
+<p>考虑<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span> $\Delta_+$ 上 $[0]$ 的左模范畴 $\Delta_{\bot}$, 即有最小值的全序集
+$$C_+([n]) = [n+1] = \{\bot,0,1,\cdots,n\}$$
+($n\geq -1$) 和保持最小值的保序映射的范畴.
+考虑其在两个对象 $C_+([-1]) = \{\bot\}$ 和 $C_+([0]) = \{\bot,0\}$ 上的全子范畴, 记为 $\mathsf{Ret}$. 详见<span class="link local"><a href="./游走的收缩.html" title="游走的收缩 [游走的收缩]">游走的收缩</a></span>.</p>
+<p>范畴 $\mathcal C$ 中的收缩就定义为函子 $\mathsf{Ret} \to \mathcal C$.</p>
+<p>按定义, 收缩等同于<span class="link local"><a href="./幂等态射.html" title="幂等态射 [幂等态射]">分裂幂等态射</a></span>.</p>
+<h2>性质</h2>
+<h3>余极限</h3>
+<p><strong>命题</strong>. 设 $f\colon \mathsf{Ret}\to\mathcal C$ 为范畴 $\mathcal C$ 中的收缩, 给出幂等映射 $\mathsf{Idem}\to\mathcal C$, 那么 $f(\{\bot\})$ 同时是 $f|_{\mathsf{Idem}}$ 的极限和余极限.</p>
+<p><em>证明</em>. $\mathsf{Idem}\to\mathsf{Ret}$ 同时是<span class="link local"><a href="./共尾函子.html" title="共尾函子 [共尾函子]">共尾函子</a></span>与<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首函子</a></span>. 又注意到 $\{\bot\}$ 是 $\mathsf{Ret}$ 的零对象, 故有
+$$
+f(\{\bot\}) = \operatorname{colim}f =\operatorname{colim}f|_{\mathsf{Idem}},
+$$
+$$
+f(\{\bot\}) = \operatorname{lim}f =\operatorname{lim}f|_{\mathsf{Idem}}.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="数学基础"><header><h1><span class="taxon"></span>数学基础 <a class="slug" href="./数学基础.html">[数学基础]</a></h1><div class="metadata"><ul><li class="meta-item">学科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>分支</h2>
 <h3>范畴论</h3>
@@ -2053,6 +2299,25 @@ $$</p>
 <li>对任意 $x\in P$, 不超过 $x$ 的元素的子集构成一个<span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序</a></span>.</li>
 </ul>
 <p>此时 $P$ 的极大元 (可能不唯一) 即是树的<strong>叶</strong>.</p>
+<h3>作为递归嵌套结构</h3>
+<p>树有一种递归定义:</p>
+<ul>
+<li>平凡树 $\{\}$ 是树;</li>
+<li>若 $x_1,\cdots,x_n$ 是树, 那么 $\{x_1,\cdots,x_n\}$ 也是树.</li>
+</ul>
+<h3>作为多项式</h3>
+<p>树还可以简洁地定义为 “多项式” (这个名词的直观参见<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>):
+$$
+E\overset{s}{\leftarrow} M \overset{p}{\rightarrow} N \overset{t}{\to} E,
+$$
+其中</p>
+<ul>
+<li>$E$ 是边的集合;</li>
+<li>$N$ 是顶点的集合, $t\colon N\to E$ 给出顶点的唯一出边, 要求 $t$ 为单射;</li>
+<li>$M$ 是边与顶点之间的 “入边” <span class="link local"><a href="./关系2-范畴.html" title="关系 2-范畴 [关系2-范畴]">关系</a></span>, 分别带有到 $E$ 和 $N$ 的投影, 满足 $s\colon M\to E$ 为单射, 且 $E\setminus M$ 只有一个元素, 即树的根.</li>
+</ul>
+<p>注意即使在<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>语境中, 我们也要求树的定义中 $E,M,N$ 是集合 ($0$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>生象). 因为上述定义中涉及的差集只对集合有意义.</p>
+<p>但对于任意<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span> $P$ (其分量未必为集合) 我们可以定义 $P$-树, 即树 (作为多项式函子) 到 $P$ 的态射. 这里, 多项式 $X\overset{s}{\leftarrow} E \overset{p}{\rightarrow} B \overset{t}{\to} Y$ 中, $p\colon E\to B$ 的纤维要求为集合.</p>
 <h3>树的态射</h3>
 <p>树的态射是个比较复杂的概念.</p>
 <p>一种方便的定义是, 树的态射由如下几种<strong>基本态射</strong>生成:</p>
@@ -2062,6 +2327,34 @@ $$</p>
 <li><strong>内部面映射</strong> (inner face map) $S \hookrightarrow T$, 其中 $S$ 是由 $T$ 缩合一条内边所得;</li>
 <li><strong>外部面映射</strong> (outer face map) $S \to T$, 其中 $S$ 是由 $T$ 剪除一个外顶点 (仅关联一条内边的顶点) 所得;</li>
 </ul>
+<p>另一种概念性的理解是通过树对应的<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>之间的态射
+$$
+\begin{CD}
+E @&lt;{s}&lt;&lt; M @&gt;{p}&gt;&gt; N @&gt;{t}&gt;&gt; E \\
+@VVV @VVV \square @VVV @VVV \\
+E' @&lt;&lt;{s'}&lt; M' @&gt;&gt;{p'}&gt; N' @&gt;&gt;{t'}&gt; E',
+\end{CD}
+$$
+其中标记 $\square$ 的方块为<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>. 换言之, 树的这种态射要保持 $p\colon M\to N$ 的纤维, 也即每个结点的入边的数量.
+但这样定义的只是树的态射中的一部分, 即树的<strong>含入</strong>映射 (<span class="link local"><a href="./KockPolyFun.html" title="Polynomial Functors and Trees [KockPolyFun]">Kock</a></span> 的 $\mathsf{TEmb}$), 又称<strong>惰性</strong> (inert) 映射 (<span class="link local"><a href="./GHK-analytic-monads.html" title="∞-Operads as Analytic Monads [GHK-analytic-monads]">GHK</a></span> 中的 $\Omega_{\mathrm{int}}$).</p>
+<p><strong>例</strong>. 树的每个边给出一个含入
+$$
+\begin{array}{ccccccc}
+1 &amp; \leftarrow &amp; 0 &amp; \rightarrow &amp; 0 &amp; \rightarrow &amp; 1 \\
+\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
+E &amp; \leftarrow &amp; M &amp; \rightarrow &amp; N &amp; \rightarrow &amp; E,
+\end{array}
+$$
+每个结点给出一个含入
+$$
+\begin{array}{ccccccc}
+K+1 &amp; \leftarrow &amp; K &amp; \rightarrow &amp; 1 &amp; \rightarrow &amp; K+1 \\
+\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
+E &amp; \leftarrow &amp; M &amp; \rightarrow &amp; N &amp; \rightarrow &amp; E,
+\end{array}
+$$
+其中 $K$ 是 $p\colon M\to N$ 在 $1\to N$ 处的纤维, 即该结点的入边的全体.</p>
+<p>要得到树的全部态射需要考虑多项式函子生成的<span class="link local"><a href="./自由单子.html" title="自由单子 [自由单子]">自由单子</a></span>.</p>
 <h2>例</h2>
 <h3>线性树</h3>
 <p>线性树是形如
@@ -2085,6 +2378,17 @@ $$</p>
 <p>在形式逻辑中, 模态体现为<span class="link local"><a href="./模态算子.html" title="“模态算子” [模态算子]">模态算子</a></span>, 将命题/类型对应到新的命题/类型.</p>
 <p>在<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中, 模态通常定义为<span class="link local"><a href="./幂等单子.html" title="幂等单子 [幂等单子]">幂等单子</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="正则基数"><header><h1><span class="taxon"></span>正则基数 <a class="slug" href="./正则基数.html">[正则基数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="游走的收缩"><header><h1><span class="taxon"></span>游走的收缩 <a class="slug" href="./游走的收缩.html">[游走的收缩]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>考虑<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span> $\Delta_+$ 上 $[0]$ 的左模范畴 $\Delta_{\bot}$, 即有最小值的全序集
+$$C_+([n]) = [n+1] = \{\bot,0,1,\cdots,n\}$$
+($n\geq -1$) 和保持最小值的保序映射的范畴.</p>
+<p>定义<strong>游走的收缩</strong> (walking retract) $\mathsf{Ret}$ 为 $\Delta_\bot$ 在两个对象</p>
+<ul>
+<li>$C_+([-1]) = [0] = \{\bot\}$,</li>
+<li>$C_+([0]) = [1] =\{\bot,0\}$</li>
+</ul>
+<p>上的全子范畴.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="满射(范畴论)"><header><h1><span class="taxon"></span>满射 <a class="slug" href="./满射(范畴论).html">[满射(范畴论)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>称某范畴中的态射 $f\colon X\to Y$ 为<strong>满射</strong>是指对任意对象 $Z$, 映射
@@ -2243,6 +2547,45 @@ $$</p>
 <h2>例</h2>
 <h3>代数理论的模型的范畴</h3>
 <p>设 $\mathbb T$ 为<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>或<span class="link local"><a href="./本质代数理论.html" title="本质代数理论 [本质代数理论]">本质代数理论</a></span>, 则其在 $\mathsf{Set}$ (或 $\mathsf{Ani}$) 中的模型的范畴是紧生成范畴.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="绝对余极限"><header><h1><span class="taxon"></span>绝对余极限 <a class="slug" href="./绝对余极限.html">[绝对余极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>绝对余极限是被任何函子保持的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>
+<p><strong>命题</strong>. 对于函子 $F\colon I\to\mathcal C$ 下的余锥 $F\to \operatorname{const}X$, 如下条件等价:</p>
+<ul>
+<li>这个余极限是绝对余极限;</li>
+<li>这个余极限被<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span> $\mathcal C \to \widehat {\mathcal C}$ 保持.</li>
+</ul>
+<h2>例</h2>
+<h3>共尾函子</h3>
+<p>设</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="自由单子"><header><h1><span class="taxon"></span>自由单子 <a class="slug" href="./自由单子.html">[自由单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>是自函子范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>; 自由单子就是这种代数中的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>代数.</p>
+<h2>例</h2>
+<h3>树的自由单子</h3>
+<p><span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span> 上的自由单子通过如下具体过程给出. 对于树
+$$
+T = (I\overset{s}{\leftarrow} E \overset{p}{\to} B \overset{t}{\to} I),
+$$
+记</p>
+<ul>
+<li>$\operatorname{Sub}(T) := \mathsf{TEmb}_{/T}^{\simeq}$ 为 $T$ 的子树的集合 ($\mathsf{TEmb}$ 为<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>及含入构成的范畴),</li>
+<li>$\operatorname{Sub}'(T)$ 为 $T$ 的带一个标记叶的子树的集合.</li>
+</ul>
+<p>那么树 $T$ (对应的<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>)的<strong>自由单子</strong>即是如下多项式函子:
+$$
+\overline{T} = (I \leftarrow \operatorname{Sub}'(T) \to \operatorname{Sub}(T) \to I).
+$$</p>
+<p>事实上, 上述构造对一般的<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>也是成立的.</p>
+<h3>自函子的自由单子</h3>
+<p><strong>命题</strong> (参考 <span class="link local"><a href="./GHK-analytic-monads.html" title="∞-Operads as Analytic Monads [GHK-analytic-monads]">GHK</a></span> 4.2 节). 设范畴 $\mathcal C$ 具有<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>和二元<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>, 自函子 $P\colon \mathcal C\to\mathcal C$ 保持<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>. 记 $\mathsf{alg}_P(\mathcal C)$ 为 $P$-Lambek 代数 (即对象 $X$ 带有态射 $\alpha\colon P(X)\to X$ 的结构) 的范畴. 那么有<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由–遗忘伴随</a></span>
+$$
+F\colon \mathcal C \rightleftarrows \mathsf{alg}_{P}(\mathcal C)\colon U,
+$$
+且这对伴随<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span> $\overline{P}$ 正是自函子 $P$ 上的自由单子. 进一步有
+$$
+\mathsf{Alg}_{\overline{P}}(\mathcal C) \simeq \mathsf{alg}_P(\mathcal C).
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="范畴对象"><header><h1><span class="taxon"></span>范畴对象 (∞-范畴论) <a class="slug" href="./范畴对象.html">[范畴对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>观念</h2>
 <p>在 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$\infty$-范畴</a></span>中, 一个范畴<span class="link local"><a href="./内部观点.html" title="内部观点 [内部观点]">内部</a></span>的范畴可由完备 <span class="link local"><a href="./Segal空间.html" title="Segal 对象 [Segal空间]">Segal 对象</a></span>描述.</p>
 <p>迭代这一构造可得 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n)$-范畴</a></span>的概念.</p>

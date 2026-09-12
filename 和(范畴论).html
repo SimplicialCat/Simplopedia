@@ -1522,4 +1522,32 @@ $$
 <p><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>的对偶 $\Delta^{\mathrm{op}}$ 为筛范畴. 以此为指标的余极限叫单纯对象的几何实现, 也叫<span class="link local"><a href="./杠构造.html" title="杠构造 [杠构造]">杠构造</a></span>.</p>
 <p>具有有限<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>的范畴都是筛范畴.</p>
 <p>一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> ($\infty$-群胚) $A$ 是筛范畴当且仅当 $A\simeq 1$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="自由单子"><header><h1><span class="taxon"></span>自由单子 <a class="slug" href="./自由单子.html">[自由单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>是自函子范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>; 自由单子就是这种代数中的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>代数.</p>
+<h2>例</h2>
+<h3>树的自由单子</h3>
+<p><span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span> 上的自由单子通过如下具体过程给出. 对于树
+$$
+T = (I\overset{s}{\leftarrow} E \overset{p}{\to} B \overset{t}{\to} I),
+$$
+记</p>
+<ul>
+<li>$\operatorname{Sub}(T) := \mathsf{TEmb}_{/T}^{\simeq}$ 为 $T$ 的子树的集合 ($\mathsf{TEmb}$ 为<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>及含入构成的范畴),</li>
+<li>$\operatorname{Sub}'(T)$ 为 $T$ 的带一个标记叶的子树的集合.</li>
+</ul>
+<p>那么树 $T$ (对应的<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>)的<strong>自由单子</strong>即是如下多项式函子:
+$$
+\overline{T} = (I \leftarrow \operatorname{Sub}'(T) \to \operatorname{Sub}(T) \to I).
+$$</p>
+<p>事实上, 上述构造对一般的<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>也是成立的.</p>
+<h3>自函子的自由单子</h3>
+<p><strong>命题</strong> (参考 <span class="link local"><a href="./GHK-analytic-monads.html" title="∞-Operads as Analytic Monads [GHK-analytic-monads]">GHK</a></span> 4.2 节). 设范畴 $\mathcal C$ 具有<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>和二元<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>, 自函子 $P\colon \mathcal C\to\mathcal C$ 保持<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>. 记 $\mathsf{alg}_P(\mathcal C)$ 为 $P$-Lambek 代数 (即对象 $X$ 带有态射 $\alpha\colon P(X)\to X$ 的结构) 的范畴. 那么有<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由–遗忘伴随</a></span>
+$$
+F\colon \mathcal C \rightleftarrows \mathsf{alg}_{P}(\mathcal C)\colon U,
+$$
+且这对伴随<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span> $\overline{P}$ 正是自函子 $P$ 上的自由单子. 进一步有
+$$
+\mathsf{Alg}_{\overline{P}}(\mathcal C) \simeq \mathsf{alg}_P(\mathcal C).
+$$</p>
 </details></section></details></section></footer></article></div></body></html>

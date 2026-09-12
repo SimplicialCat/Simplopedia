@@ -877,6 +877,7 @@ $$</p>
 $$
 \Delta_\bot = \mathsf{LMod}_{\Delta_+}([0]),\ \Delta_\top = \mathsf{RMod}_{\Delta_+}([0]).
 $$</p>
+<p>当然, 这两个范畴有一个 “反转全序” 给出的等价 $\Delta_\bot \simeq \Delta_\top$.</p>
 <h3>几何单纯形</h3>
 <p>标准 $n$ 维几何单纯形是 $\mathbb{R}^{n+1}$ 的基向量 $e_0,e_1,\cdots,e_n$ 的凸包. 这定义了一个函子 $\Delta \to \mathsf {Top}$.</p>
 <h3>充实于偏序集</h3>
@@ -951,6 +952,25 @@ $$</p>
 <li>对任意 $x\in P$, 不超过 $x$ 的元素的子集构成一个<span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序</a></span>.</li>
 </ul>
 <p>此时 $P$ 的极大元 (可能不唯一) 即是树的<strong>叶</strong>.</p>
+<h3>作为递归嵌套结构</h3>
+<p>树有一种递归定义:</p>
+<ul>
+<li>平凡树 $\{\}$ 是树;</li>
+<li>若 $x_1,\cdots,x_n$ 是树, 那么 $\{x_1,\cdots,x_n\}$ 也是树.</li>
+</ul>
+<h3>作为多项式</h3>
+<p>树还可以简洁地定义为 “多项式” (这个名词的直观参见<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>):
+$$
+E\overset{s}{\leftarrow} M \overset{p}{\rightarrow} N \overset{t}{\to} E,
+$$
+其中</p>
+<ul>
+<li>$E$ 是边的集合;</li>
+<li>$N$ 是顶点的集合, $t\colon N\to E$ 给出顶点的唯一出边, 要求 $t$ 为单射;</li>
+<li>$M$ 是边与顶点之间的 “入边” <span class="link local"><a href="./关系2-范畴.html" title="关系 2-范畴 [关系2-范畴]">关系</a></span>, 分别带有到 $E$ 和 $N$ 的投影, 满足 $s\colon M\to E$ 为单射, 且 $E\setminus M$ 只有一个元素, 即树的根.</li>
+</ul>
+<p>注意即使在<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>语境中, 我们也要求树的定义中 $E,M,N$ 是集合 ($0$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>生象). 因为上述定义中涉及的差集只对集合有意义.</p>
+<p>但对于任意<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span> $P$ (其分量未必为集合) 我们可以定义 $P$-树, 即树 (作为多项式函子) 到 $P$ 的态射. 这里, 多项式 $X\overset{s}{\leftarrow} E \overset{p}{\rightarrow} B \overset{t}{\to} Y$ 中, $p\colon E\to B$ 的纤维要求为集合.</p>
 <h3>树的态射</h3>
 <p>树的态射是个比较复杂的概念.</p>
 <p>一种方便的定义是, 树的态射由如下几种<strong>基本态射</strong>生成:</p>
@@ -960,6 +980,34 @@ $$</p>
 <li><strong>内部面映射</strong> (inner face map) $S \hookrightarrow T$, 其中 $S$ 是由 $T$ 缩合一条内边所得;</li>
 <li><strong>外部面映射</strong> (outer face map) $S \to T$, 其中 $S$ 是由 $T$ 剪除一个外顶点 (仅关联一条内边的顶点) 所得;</li>
 </ul>
+<p>另一种概念性的理解是通过树对应的<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>之间的态射
+$$
+\begin{CD}
+E @&lt;{s}&lt;&lt; M @&gt;{p}&gt;&gt; N @&gt;{t}&gt;&gt; E \\
+@VVV @VVV \square @VVV @VVV \\
+E' @&lt;&lt;{s'}&lt; M' @&gt;&gt;{p'}&gt; N' @&gt;&gt;{t'}&gt; E',
+\end{CD}
+$$
+其中标记 $\square$ 的方块为<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>. 换言之, 树的这种态射要保持 $p\colon M\to N$ 的纤维, 也即每个结点的入边的数量.
+但这样定义的只是树的态射中的一部分, 即树的<strong>含入</strong>映射 (<span class="link local"><a href="./KockPolyFun.html" title="Polynomial Functors and Trees [KockPolyFun]">Kock</a></span> 的 $\mathsf{TEmb}$), 又称<strong>惰性</strong> (inert) 映射 (<span class="link local"><a href="./GHK-analytic-monads.html" title="∞-Operads as Analytic Monads [GHK-analytic-monads]">GHK</a></span> 中的 $\Omega_{\mathrm{int}}$).</p>
+<p><strong>例</strong>. 树的每个边给出一个含入
+$$
+\begin{array}{ccccccc}
+1 &amp; \leftarrow &amp; 0 &amp; \rightarrow &amp; 0 &amp; \rightarrow &amp; 1 \\
+\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
+E &amp; \leftarrow &amp; M &amp; \rightarrow &amp; N &amp; \rightarrow &amp; E,
+\end{array}
+$$
+每个结点给出一个含入
+$$
+\begin{array}{ccccccc}
+K+1 &amp; \leftarrow &amp; K &amp; \rightarrow &amp; 1 &amp; \rightarrow &amp; K+1 \\
+\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
+E &amp; \leftarrow &amp; M &amp; \rightarrow &amp; N &amp; \rightarrow &amp; E,
+\end{array}
+$$
+其中 $K$ 是 $p\colon M\to N$ 在 $1\to N$ 处的纤维, 即该结点的入边的全体.</p>
+<p>要得到树的全部态射需要考虑多项式函子生成的<span class="link local"><a href="./自由单子.html" title="自由单子 [自由单子]">自由单子</a></span>.</p>
 <h2>例</h2>
 <h3>线性树</h3>
 <p>线性树是形如

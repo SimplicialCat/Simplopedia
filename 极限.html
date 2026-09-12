@@ -886,12 +886,24 @@ $$
 $$</p>
 <h2>定义</h2>
 <h3>伴随函子</h3>
-<p>一对伴随函子 $F\dashv G$ 是满足如下条件的函子:
+<p>一对伴随函子 $F\dashv G$ 是带有如下自然同构的函子:
 $$
 \operatorname{Hom}(F-,-)\simeq\operatorname{Hom}(-,G-).
 $$</p>
+<p><strong>命题</strong>. 如下条件等价:</p>
+<ul>
+<li>函子 $F\colon \mathcal C\to\mathcal D$ 有右伴随;</li>
+<li>对任意 $d\in\mathcal D$, 函子 $\operatorname{Hom}(F-,d)\colon \mathcal C^{\mathrm{op}} \to\mathsf{Ani}$ <span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表</a></span>;</li>
+<li>对任意 $d\in\mathcal D$, <span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span> $\int_{\mathcal C}\operatorname{Hom}(Fc,d)$ 有<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>.</li>
+</ul>
+<p>对偶地, 如下条件等价:</p>
+<ul>
+<li>函子 $G\colon \mathcal D\to\mathcal C$ 有左伴随;</li>
+<li>对任意 $c\in\mathcal C$, 函子 $\operatorname{Hom}(c,G-)\colon \mathcal D \to\mathsf{Ani}$ <span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">余可表</a></span>;</li>
+<li>对任意 $c\in\mathcal C$, <span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span> $\int_{\mathcal D}\operatorname{Hom}(c,Gd)$ 有<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>.</li>
+</ul>
 <h3>$2$-范畴中的伴随</h3>
-<p>$2$-范畴 $\mathcal C$ 中的伴随等同于<span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span> $\mathsf{Adj}$ 到 $\mathcal C$ 的函子
+<p>通常说的伴随是 $2$-范畴 $\mathsf{Cat}$ 中的伴随. 更一般地, $2$-范畴 $\mathcal C$ 中的伴随等同于<span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span> $\mathsf{Adj}$ 到 $\mathcal C$ 的函子
 $$
 \mathsf{Adj} \to \mathcal C.
 $$</p>
@@ -1007,7 +1019,8 @@ $$
 <li>俯范畴中的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>等同于原范畴中的余极限.</li>
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="共首函子"><header><h1><span class="taxon"></span>共首函子 <a class="slug" href="./共首函子.html">[共首函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>共首函子 (initial functor) 是不改变<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>的指标代换, 是<span class="link local"><a href="./共尾函子.html" title="共尾函子 [共尾函子]">共尾函子</a></span>的对偶概念.</p>
+<h2>观念</h2>
+<p><strong>共首函子</strong> (initial functor) 是不改变<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>的指标代换, 是<span class="link local"><a href="./共尾函子.html" title="共尾函子 [共尾函子]">共尾函子</a></span>的对偶概念.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="加权极限"><header><h1><span class="taxon"></span>加权极限 <a class="slug" href="./加权极限.html">[加权极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>加权极限是<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>的推广, <span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span>的对偶概念.</p>
@@ -1070,7 +1083,7 @@ $$</p>
 <p><span class="link local"><a href="./Ani_pt.html" title="带基点生象的范畴 [Ani_pt]">$\mathsf{Ani}_*$</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="幂等态射"><header><h1><span class="taxon"></span>幂等态射 <a class="slug" href="./幂等态射.html">[幂等态射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>考虑 $(1,1)$-范畴 $\mathsf{Idem}$, 其有一个对象 $*$ 和两个态射 $\mathrm{id},e\colon *\to *$, 满足 $e^2=e$. 换言之,
+<p>考虑 $(1,1)$-范畴 <span class="link local"><a href="./Idem.html" title="游走的幂等映射 [Idem]">$\mathsf{Idem}$</a></span>, 其有一个对象 $*$ 和两个态射 $\mathrm{id},e\colon *\to *$, 满足 $e^2=e$. 换言之,
 $$
 \mathsf{Idem} = \mathrm{B}\langle e \mid e^2 = e \rangle.
 $$</p>
@@ -1081,9 +1094,9 @@ $$</p>
 $$
 \operatorname{Fun}(\mathsf{Idem},\mathcal C)\to \mathsf{Fun}(\Delta^1,\mathcal C)
 $$
-不是 $(-1)$-截断的.</p>
+不是 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>的.</p>
 <h3>分裂性</h3>
-<p>考虑 $(1,1)$-范畴 $\mathsf{Ret}$, 其有两个对象 $x,y$,</p>
+<p>考虑 $(1,1)$-范畴 <span class="link local"><a href="./游走的收缩.html" title="游走的收缩 [游走的收缩]">$\mathsf{Ret}$</a></span>, 其有两个对象 $x,y$,</p>
 <ul>
 <li>$\operatorname{Hom}(x,x) = \{\mathrm{id}_x,e\}$, $e^2=e=ir$,</li>
 <li>$\operatorname{Hom}(x,y) = \{r\}$,</li>
@@ -1091,8 +1104,20 @@ $$
 <li>$\operatorname{Hom}(y,y) = \{\mathrm{id}_y\}$.</li>
 </ul>
 <p>有明显的函子 $\mathsf{Idem} \to \mathsf{Ret}$.</p>
-<p>若函子 $\mathsf{Idem} \to \mathcal C$ (对应幂等态射 $f\colon X\to X$) 可延拓为 $\mathsf{Ret} \to \mathcal C$, 则称该幂等态射<strong>分裂</strong> (split).</p>
+<p>若函子 $\mathsf{Idem} \to \mathcal C$ (对应幂等态射 $f\colon X\to X$) 可延拓为一个<span class="link local"><a href="./收缩.html" title="收缩 [收缩]">收缩</a></span> $\mathsf{Ret} \to \mathcal C$, 则称该幂等态射<strong>分裂</strong> (split).</p>
 <p><strong>命题</strong>. 一个幂等态射分裂, 当且仅当对应的函子 $\mathsf{Idem} \to \mathcal C$ 存在<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>或<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>; 此时极限和余极限都是同一个对象, 即 $y\in\mathsf{Ret}$ 在 $\mathcal C$ 中的像.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="弱可缩极限"><header><h1><span class="taxon"></span>弱可缩极限 <a class="slug" href="./弱可缩极限.html">[弱可缩极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>弱可缩极限是以<span class="link local"><a href="./弱可缩范畴.html" title="弱可缩范畴 [弱可缩范畴]">弱可缩范畴</a></span>为指标范畴的<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>.</p>
+<h2>性质</h2>
+<p><strong>命题</strong>. 函子 $\mathcal C_{/c} \to \mathcal C$ 保持且<span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映</a></span>弱可缩极限.</p>
+<p><em>证明</em>. 设 $I$ 为弱可缩范畴, 图表 $X\colon I\to\mathcal C_{/c}$ 的极限是<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">右锥</a></span>图表 $\widetilde {X}\colon I^{\triangleright}\to\mathcal C$ 的极限, 而 $I\to I^{\triangleright}$ <span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首</a></span>, 故该极限等同于 $\widetilde {X}|_{I}$ 的极限.</p>
+<p><strong>命题</strong>. <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的弱可缩极限与<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>指标的余极限交换.</p>
+<p><em>证明</em>. 以生象 $A$ 为指标的余极限操作即为复合函子
+$$
+\mathsf{Fun}(A,\mathsf{Ani}) \simeq \mathsf{Ani}_{/A} \to \mathsf{Ani}.
+$$
+而由前一个命题, 遗忘函子 $\mathsf{Ani}_{/A} \to \mathsf{Ani}$ 保持弱可缩极限.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="拉回"><header><h1><span class="taxon"></span>拉回 (范畴论) <a class="slug" href="./拉回.html">[拉回]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>在一个范畴中, <strong>拉回</strong> (pullback) 一般是指以如下范畴为指标范畴的<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>:
 $$

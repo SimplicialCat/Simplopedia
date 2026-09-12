@@ -904,6 +904,36 @@ $$
 R\simeq \operatorname{End}(R).
 $$
 结论得证.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="HADR-1-ope"><header><h1><span class="taxon"></span>HADR (1) 算畴 <a class="slug" href="./HADR-1-ope.html">[HADR-1-ope]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>引子</h2>
+<p><span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>是记录许多代数结构的统一的工具. 对于每种代数结构都有一个<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>函子, 对应的单子是自由和遗忘的复合, 一般的结构则是<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>.</p>
+<ul>
+<li>对于环 $R$, $R$-<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>是单子 $T_R := R\otimes -\colon \mathsf{Ab}\to\mathsf{Ab}$ 上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>.</li>
+<li>考虑<span class="link local"><a href="./张量.html" title="张量 [张量]">张量代数</a></span>单子 $T\colon \mathsf{Ab} \to \mathsf{Ab}$, 那么一个环等同于一个 $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>.</li>
+<li>考虑自由群单子 $T_{\mathrm{Grp}}\colon \mathsf{Set} \to \mathsf{Set}$, 那么一个群等同于一个 $T_{\mathrm{Grp}}$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>. 更一般地, 每个 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>都给出 $\mathsf{Set}$ 上的一个单子 $T$. 记 $T(n)$ 为该理论中所有可能的 $n$ 元项的集合, 例如群的理论中 $x^2 y^{-1}x$ 是一个 $2$ 元项. 那么函子 $T$ 可表示为
+$$
+  TX = \int_{N\in\mathsf{Fin}} T(N)\times X^N.
+$$
+这是一个<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>记号, 可以粗略地理解为对所有 $N$ 取并, 然后商掉必要的关系.</li>
+<li>对于 $\mathsf{Ani}$-值单色<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathcal O$, 我们有 (<span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 上的) 自由 $\mathcal O$-代数单子
+$$
+  T_{\mathcal O} X = \int_{N\in\mathsf{Fin}^\simeq} \mathcal O(N)\times X^N.
+$$
+例如自由 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-代数单子
+$$
+  T_{\mathbb E_n}X = \int_{N\in\mathsf{Fin}^\simeq}\operatorname{Conf}_N(\mathbb{R}^n)\times X^N.
+$$
+注意, 与 Lawvere 理论不同的是, 这里<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>的指标范畴为<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">群胚</a></span> $\mathsf{Fin}^\simeq$. 本讲的第一个主要目标便是用这种方式解释什么是算畴.</li>
+</ul>
+<p>有一些看起来不那么 “代数” 的结构也可以用单子来记录. 关键在于, “不那么代数” 的信息被储存在了一个基范畴中, 而单子本身只负责记录 “代数” 运算.</p>
+<ul>
+<li>考虑有向图的范畴 $\mathsf{Graph}$, 其对象为两个生象带有两个映射 $E\rightrightarrows V$, 其上有一个自由范畴单子 $T_{\mathsf{Cat}}\colon \mathsf{Graph}\to\mathsf{Graph}$, 这个单子上的代数就是<strong>范畴</strong>.</li>
+<li><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 也可以类似定义, 底层的结构是<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>. 树与图的区别在于它能记录 “多个对象到一个对象的态射”. 这是本讲的第二个主要目标. 注意在本讲中, 算畴 (多重范畴) 有了两个不同层次的角色: 先是一个算畴定义一种结构, 然后算畴这种结构本身也可以用单子来定义.</li>
+</ul>
+<p>在上述每个例子中, “自由代数” 单子都不仅仅是单子, 而是所谓<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>. 元数 (arity) 的本义是一个函数的自变量的个数, 例如加法的元数是 $2$, 取逆的元数是 $1$, 而常数的元数是 $0$.</p>
+<h2>带元数的单子</h2>
+<p>如果定义一种代数结构的每种运算只涉及了一个集合里有限个元素, 那么一个代数 $X$ 就可以被全体有限集 $A$ 生成的自由代数 $TA$ <span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>. 所谓探测就是说用全体态射 $TA\to X$ 的信息可以完全恢复出 $X$ 的信息. 这就是<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>的直观.</p>
+<h2>齐性理论与 Descartes 单子</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="Morita等价(观念)"><header><h1><span class="taxon"></span>Morita 等价 <a class="slug" href="./Morita等价(观念).html">[Morita等价(观念)]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本页介绍广义的 Morita 等价观念. 关于环的 Morita 等价, 见 <span class="link local"><a href="./Morita等价.html" title="Morita 等价 [Morita等价]">Morita 等价</a></span>.</p>
 <p><span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法</a></span>对象的 Morita 等价是它们的语义之间的等价.</p>
@@ -1401,7 +1431,6 @@ $$</p>
 <p>见<span class="link local"><a href="./双边杠构造.html" title="双边杠构造 [双边杠构造]">双边杠构造</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单纯对象的分裂"><header><h1><span class="taxon"></span>分裂单纯对象 <a class="slug" href="./单纯对象的分裂.html">[单纯对象的分裂]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<h3>1</h3>
 <p>记 $\Delta_{\bot}$ 为有限非空全序集与保持最小值的映射构成的范畴. 事实上,
 $$
 \Delta_{\bot} = \mathsf{LMod}_{\Delta_+}([0])
@@ -1409,7 +1438,7 @@ $$
 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的结合代数 $[0]$ 上的左<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>范畴.
 因此其到<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span> $\Delta_+$ 的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>函子 (注意并非<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>)
 $$
-i\colon \Delta_{\bot}\rightarrow \Delta_+
+U\colon \Delta_{\bot}\rightarrow \Delta_+, [n]\mapsto [n]
 $$
 有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>
 $$
@@ -1418,18 +1447,25 @@ $$
 对全序集<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加一个最小值“, 可类比于<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">锥</a></span>操作.
 从而 (当 $\mathcal C$ 完备且余完备时) 有<span class="link local"><a href="./预层范畴之间的伴随.html" title="预层范畴之间的伴随 [预层范畴之间的伴随]">预层范畴之间的四元伴随</a></span>
 $$
- (C_+)_!\dashv [i_!=(C_+)^*] \dashv [i^* =(C_+)_*] \dashv i_*.
+ (C_+)_!\dashv [U_!=(C_+)^*] \dashv [U^* =(C_+)_*] \dashv U_*.
 $$</p>
 <p>设 $X\colon \Delta_+^{\mathrm{op}}\to\mathcal C$ 为<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">增广单纯对象</a></span>, 定义其<strong>分裂</strong>为下图.</p>
 <p><figure><img src="./split-simplicial-object.svg" class="color-invert"/></figure></p>
-<p>换言之, $X = (C_+)^* \overline{X} = i_!\overline{X}$.</p>
-<p>注意到, $(C_+)^*=i_!$ 在<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>上的作用为 $(C_+)^*\mathbf{y}([n]) = \mathbf{y}(i[n])$. 而 $(C_+)^*$ 作为左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>保持余极限, 故有如下直观: $\Delta_\bot$ 的对象为固定顶点的锥, $\overline{X}$ 是一族固定顶点的锥的粘合, 从而是 “可以缩到顶点” 的单纯对象.</p>
-<h3>2</h3>
-<p>记 $\mathrm{surj}(j,k)$ 为单纯集 $\Delta^j$ 到 $\Delta^k$ 的满射的集合.</p>
-<p>设 $K$ 为<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, 其 $n$ 阶<strong>分裂</strong>是一系列子对象 $N_k \subset K_k\,(k\leq n)$, 称为非退化部分, 满足对 $0\leq j\leq n$, 有典范的同构 $\coprod_{\mathrm{surj}(j,k)}N_k \to K_j$. 直观上, 这个条件是说 $K$ 的每个可能退化的单形都唯一地对应一个非退化单形.</p>
+<p>换言之, $X = (C_+)^* \overline{X} = U_!\overline{X}$. 分裂是<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构而非性质</a></span>.</p>
+<p>注意到, $(C_+)^*=U_!$ 在<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>上的作用为 $(C_+)^*\mathbf{y}([n]) = \mathbf{y}([n])$. 而 $(C_+)^*$ 作为左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>保持余极限, 故有如下直观: $\Delta_\bot$ 的对象为固定顶点的锥, $\overline{X}$ 是一族固定顶点的锥的粘合, 从而是 “可以缩到顶点” 的单纯对象.</p>
+<hr />
+<p>有另外一种不同的 “分裂” 概念, 并且似乎不等价 (因为下面的概念是性质而非结构), 我不知道下面的概念有什么用, 暂且记录于此.</p>
+<p>记 $\mathrm{surj}(j,k)$ 为单纯集 $\Delta^j$ 到 $\Delta^k$ 的满射的集合. 设 $K$ 为<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, 其 $n$ 阶<strong>分裂</strong>是一系列子对象 $N_k \subset K_k\,(k\leq n)$, 称为非退化部分, 满足对 $0\leq j\leq n$, 有典范的同构 $\coprod_{\mathrm{surj}(j,k)}N_k \to K_j$.</p>
+<p>直观上, 这个条件是说 $K$ 的每个可能退化的单形都唯一地对应一个非退化单形.</p>
 <h2>性质</h2>
-<p>集合范畴中的单纯对象 (<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>) 有唯一的分裂.</p>
-<p>单纯对象若存在分裂, 则分裂唯一.</p>
+<h3>余极限</h3>
+<p><strong>命题</strong>. 设单纯对象 $X\colon \Delta^{\mathrm{op}}\to\mathcal C$ 有一分裂 $\overline{X}\colon \Delta^{\mathrm{op}}_{\bot} \to \mathcal C$, 那么其自带的增广 $\overline{X}(\{\bot\})$ 即是 $X$ 的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>.</p>
+<p><em>证明</em>. 因为 $C_+\colon \Delta\to\Delta_{\bot}$ 是左伴随, 所以 $(C_+)^{\mathrm{op}}\colon \Delta^{\mathrm{op}} \to\Delta_{\bot}^{\mathrm{op}}$ 是右伴随, 从而是<span class="link local"><a href="./共尾函子.html" title="共尾函子 [共尾函子]">共尾函子</a></span>. 又注意到 $\{\bot\}$ 是 $\Delta_{\bot}$ 的零对象, 故有
+$$
+\overline{X}(\{\bot\}) = \operatorname{colim}\overline{X} =\operatorname{colim}X.
+$$</p>
+<p><strong>推论</strong>. 分裂单纯对象是<span class="link local"><a href="./绝对余极限.html" title="绝对余极限 [绝对余极限]">绝对余极限</a></span>.</p>
+<h3>单子性</h3>
 <h2>参考资料</h2>
 <p>Artin, Mazur, Etale Homotopy Theory</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单纯形范畴"><header><h1><span class="taxon"></span>单纯形范畴 <a class="slug" href="./单纯形范畴.html">[单纯形范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -1459,6 +1495,7 @@ $$</p>
 $$
 \Delta_\bot = \mathsf{LMod}_{\Delta_+}([0]),\ \Delta_\top = \mathsf{RMod}_{\Delta_+}([0]).
 $$</p>
+<p>当然, 这两个范畴有一个 “反转全序” 给出的等价 $\Delta_\bot \simeq \Delta_\top$.</p>
 <h3>几何单纯形</h3>
 <p>标准 $n$ 维几何单纯形是 $\mathbb{R}^{n+1}$ 的基向量 $e_0,e_1,\cdots,e_n$ 的凸包. 这定义了一个函子 $\Delta \to \mathsf {Top}$.</p>
 <h3>充实于偏序集</h3>

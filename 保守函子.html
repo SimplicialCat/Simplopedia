@@ -1045,18 +1045,23 @@ $$</li>
 </ul>
 <p><strong>定义</strong>. 若<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 满足以下等价条件, 则称单子 $T$ 以 $\mathcal A$ 为<strong>元数</strong> (arity):</p>
 <ul>
-<li>$T$ 保持所有形如 $(\star)$ 的余极限;</li>
-<li>$T$ 是其在 $\mathcal A$ 上的限制的左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>.</li>
+<li>$\nu_{\mathcal A} T\colon \mathcal E\to\widehat {\mathcal A}$ 保持所有形如 $(\star)$ 的余极限 (由于 $\nu_A$ 全忠实, 这蕴涵 $T$ 本身也保持 $\star$);</li>
+<li>$\nu_{\mathcal A} T$ 是其在 $\mathcal A$ 上的限制的左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>.</li>
 </ul>
 <p>或许 $(\star)$ 更有启发性的一种写法是写成<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>
 $$
-X = \int_{A\in\mathcal A} A \times X^A,
+X = \int_{A\in\mathcal A} \operatorname{Hom}(A,X)\times A,
 $$
-(这里 $X^A$ 代表 $\operatorname{Hom}(A,X)$, 这样写只是为了更有启发性), 而函子 $T$ 保持该余极限意味着
+条件 $\nu_{\mathcal A}T$ 保持余极限 $(\star)$ 相当于
+$$
+\operatorname{Hom}(B,TX)=\int_{A\in\mathcal A}\operatorname{Hom}(A,X)\times\operatorname{Hom}(B,TA),
+$$
+(我们后面会解读这个等式的含义)
+而函子 $T$ 保持该余极限意味着
 $$
 TX = \int_{A\in\mathcal A} TA \times X^A.
 $$
-换言之, $T$ 具有以 $A\in\mathcal A$ 为 “次数”, $TA$ 为系数的 “多项式展开”. (参考<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>, <span class="link local"><a href="./解析函子.html" title="解析函子 (算畴理论) [解析函子]">解析函子</a></span>.)</p>
+(这里 $X^A$ 代表 $\operatorname{Hom}(A,X)$, 这样写只是为了更有启发性) 换言之, $T$ 具有以 $A\in\mathcal A$ 为 “次数”, $TA$ 为系数的 “多项式展开”. (参考<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>, <span class="link local"><a href="./解析函子.html" title="解析函子 (算畴理论) [解析函子]">解析函子</a></span>.)</p>
 <h3>范畴 $\Theta_T$</h3>
 <p>设 $T$ 为 $\mathcal E$ 上的单子, 定义 $\Theta_T$ 为 $\mathcal A$ 的对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span> $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>构成的范畴. 那么有自由代数函子
 $$
@@ -1128,13 +1133,38 @@ $$
 <p><em>证明</em>. 将 $\mathcal E$ 等同于 $\nu_A\colon \mathcal E\to\widehat {\mathcal A}$ 的像, 那么单子 $T$ 等同于单子 $j^*j_!$ 在 $\mathcal E$ 上的限制, 所以 $T$-代数等同于落在 $\mathcal E$ 中的 $j^*j_!$-代数, 而 $j_!\dashv j^*$ <span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>意味着 $j^*j_!$-代数就是 $\Theta_T$ 上的预层. $\square$</p>
 <h3>理论</h3>
 <p>上述范畴 $\Theta_T$ 及函子 $j_T\colon \mathcal A\to\Theta_T$ 可以抽象如下.</p>
-<p>设 $\mathcal A\subset\mathcal E$ 为<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>全子范畴, 定义一个以 $\mathcal A$ 为元数的<strong>理论</strong>为一个函子
+<p>设 $\mathcal A\subset\mathcal E$ 为<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>全子范畴, 定义一个以 $\mathcal A$ 为元数的<strong>理论</strong>为一个<span class="link local"><a href="./本质满函子.html" title="本质满函子 [本质满函子]">本质满函子</a></span>
 $$
 j\colon \mathcal A \to \Theta,
 $$
 使得伴随 $j_! \dashv j^*$ <span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">诱导的单子</a></span> $j^*j_!\colon \widehat {\mathcal A} \to \widehat {\mathcal A}$ 保持<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子 $\nu_{\mathcal A}\colon \mathcal E\to\widehat {\mathcal A}$ 的像.</p>
 <p>该理论的一个<strong>模型</strong>是 $\Theta$ 上的一个预层, 满足其沿 $j$ 的限制落在 $\nu_{\mathcal A}$ 的像中.</p>
-<p><strong>定理</strong>. 对于固定的 $(\mathcal E,\mathcal A)$, $\mathcal E$ 上以 $\mathcal A$ 为元数的单子 $T$ 等价于以 $\mathcal A$ 为元数的理论 $j_T\colon \mathcal A\to \Theta_T$, 且单子 $T$ 上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>等同于理论 $\Theta_T$ 的模型.</p>
+<p><strong>单子给出理论</strong>. 由定义, $\mathcal E$ 上以 $\mathcal A$ 为元数的单子 $T$, 有理论 $(\Theta_T,j_T)$.</p>
+<p><strong>理论恢复出单子</strong>. 由定义, 对理论 $(\Theta,j)$ 可以恢复出 $\mathcal E$ 上的一个单子 $T$: 若将 $\mathcal E$ 等同于 $\widehat {\mathcal A}$ 的子范畴, 那么单子 $T$ 等于 $j^*j_!$ 的限制.</p>
+<p><strong>定理</strong>. 对于固定的 $(\mathcal E,\mathcal A)$, $\mathcal E$ 上以 $\mathcal A$ 为元数的单子 $T$ 等价于以 $\mathcal A$ 为元数的理论 $j_T\colon \mathcal A\to \Theta_T$, 且单子 $T$ 上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>等同于理论 $\Theta_T$ 的模型.
+事实上, 这一对应构成范畴等价. (<span class="link local"><a href="./BergerMelliesWeberMonAr.html" title="Monads with arities and their associated theories [BergerMelliesWeberMonAr]">BMW</a></span>, 定理 3.4)</p>
+<p><strong>模型条件表述为层条件</strong>. 常常 $\mathcal E = \widehat {\mathcal C}$ 是个预层范畴, 而 $\mathcal A$ 是包含了可表函子的一个子范畴 (那么 $\mathcal A$ 当然是稠密的, 因为可表函子是稠密的). 这时脉函子 $\nu_{\mathcal A}\colon \mathcal E \to \widehat {\mathcal A}$ 构成<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>之间的<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span>, 于是它的像恰好是 $\mathcal A$ 上由形如 $\{c\to a\mid c\in \mathcal C\}$ 的余锥生成的 <span class="link local"><a href="./Grothendieck拓扑.html" title="Grothendieck 拓扑 [Grothendieck拓扑]">Grothendieck 拓扑</a></span>的层范畴. 这给出了判断预层是否在 $\nu_{\mathcal A}$ 的像中的一个稍微直接一点的条件.</p>
+<h4>一般映射与自由映射</h4>
+<p>对于理论 $j\colon \mathcal A \to \Theta$, 称 $j$ 的像中的态射为<strong>自由映射</strong>, 而对 $\Theta$ 中的态射 $g$, 若对任意分解 $g = j(f) g'$, 都有 $f$ 可逆, 则称 $g$ 为<strong>一般映射</strong>.</p>
 <h2>例</h2>
 <h3>Lawvere 理论</h3>
+<p><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>等同于 $\mathsf{Set}$ 上以 $\mathsf{Fin}$ 为元数的单子, 即保持滤余极限的单子 (这里用到 $\nu_{\mathsf{Fin}}$ 不仅保持而且<span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映</a></span><span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>). 见<span class="link local"><a href="./有限性单子.html" title="有限性单子 [有限性单子]">有限性单子</a></span>.</p>
+<p>另一方面, Lawvere 理论也可视为上文所述的 “理论”. 回忆 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span> $\mathbb T$ 的对象形如 $1,x,x^2,\cdots$, 事实上在这里它对应理论 $j\colon \mathsf{Fin} \to \mathbb T^{\mathrm{op}}$, $\{1,\cdots,n\}\mapsto x^n$. 下面我们给出一个论证.</p>
+<p>脉函子 $\nu_{\mathsf{Fin}}\colon \mathsf{Set} \to \widehat {\mathsf{Fin}}$ 的像为 $\mathsf{Fin}$ 上的<span class="link local"><a href="./平坦函子.html" title="平坦函子 [平坦函子]">平坦</a></span>预层, 也即<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span>为<span class="link local"><a href="./滤范畴.html" title="滤范畴 [滤范畴]">滤范畴</a></span>的预层. 因此,</p>
+<ul>
+<li>$\mathsf{Set}$ 上以 $\mathsf{Fin}$ 为元数的理论</li>
+</ul>
+<p>等同于</p>
+<ul>
+<li>本质满函子 $j\colon \mathsf{Fin} \to \Theta$, 满足 $j^*j_!$ 保持平坦预层,</li>
+</ul>
+<p>因为 $j_!$ 保持可表函子, 且 $j^*j_!$ 保持余极限, 上述结构又等同于</p>
+<ul>
+<li>本质满函子 $j\colon \mathsf{Fin} \to \Theta$, 满足 $j^*$ 将 $\Theta$ 上的可表函子映射到 $\mathsf{Fin}$ 上的平坦预层,</li>
+</ul>
+<p>但 $\mathsf{Fin}$ 上的平坦预层就等同于保持有限积的函子 $\mathsf{Fin}^{\mathrm{op}}\to\mathsf{Set}$, 故上述结构等同于</p>
+<ul>
+<li>本质满函子 $j\colon \mathsf{Fin} \to \Theta$, 满足 $j$ 保持有限余积.</li>
+</ul>
+<p>这正是 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>的定义.</p>
 </details></section></details></section></footer></article></div></body></html>

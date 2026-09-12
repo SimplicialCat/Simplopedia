@@ -839,15 +839,78 @@ $$
 (注意该嵌入的右伴随为取<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>)</p>
 <p>对于范畴 $\mathcal C$, 若 $|\mathcal C|=1$, 则称 $\mathcal C$ <strong>弱可缩</strong> (weakly contractible).</p>
 <h2>性质</h2>
-<p><strong>命题</strong>. 函子 $\mathcal C_{/c} \to \mathcal C$ 保持且<span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映</a></span>弱可缩极限.</p>
+<p><strong>命题</strong>. 函子 $\mathcal C_{/c} \to \mathcal C$ 保持且<span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映</a></span><span class="link local"><a href="./弱可缩极限.html" title="弱可缩极限 [弱可缩极限]">弱可缩极限</a></span>.</p>
+<p><em>证明</em>. 设 $I$ 为弱可缩范畴, 图表 $X\colon I\to\mathcal C_{/c}$ 的极限是<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">右锥</a></span>图表 $\widetilde {X}\colon I^{\triangleright}\to\mathcal C$ 的极限, 而 $I\to I^{\triangleright}$ <span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首</a></span>, 故该极限等同于 $\widetilde {X}|_{I}$ 的极限.</p>
 <h2>例</h2>
 <p>范畴的<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">锥</a></span>是弱可缩的.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="解析函子"><header><h1><span class="taxon"></span>解析函子 (算畴理论) <a class="slug" href="./解析函子.html">[解析函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="共尾函子"><header><h1><span class="taxon"></span>共尾函子 <a class="slug" href="./共尾函子.html">[共尾函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>共尾函子</strong> (cofinal functor) 又叫<strong>终函子</strong> (final functor), 是不改变<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>的指标代换, 即对于共尾函子 $f\colon I\to J$ 以及图表 $X\colon J\to \mathcal C$,
+$$
+\operatorname{colim}_{i\in I}X_{f(i)}\to \operatorname{colim}_{j\in J}X_j
+$$
+为等价.</p>
+<p><strong>关于英文名称的注</strong>. Cofinal functor 的前缀 co- 是 “<strong>共</strong>” (来自拉丁文 cum) 而非 “余” (来自拉丁文 contra) 的意思.</p>
+<p>对偶的概念是<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首函子</a></span>.</p>
+<h2>定义</h2>
+<p><strong>命题-定义</strong>. 对于函子 $f\colon I\to J$, 若下列等价条件成立, 则称之为<strong>共尾函子</strong>:</p>
+<ul>
+<li>对任意 (有余极限的) 图表 $X\colon J\to \mathcal C$, 比较映射 $\operatorname{colim}_{i\in I}X_{f(i)}\to \operatorname{colim}_{j\in J}X_j$ 为等价;</li>
+<li>同上一个条件, 但只要求 $\mathcal C$ 为 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 的情形;</li>
+<li>对任意图表 $X\colon J\to \mathcal C$ 以及 $c\in\mathcal C$, 比较映射 $\operatorname{Hom}(X,\operatorname{const}_J c)\to \operatorname{Hom}(Xf,\operatorname{const}_I c)$ 为等价;</li>
+<li>对任意 $j\in J$, 范畴 $(j\downarrow f):=\{(i,u\colon j\to f(i))\}$ <span class="link local"><a href="./弱可缩范畴.html" title="弱可缩范畴 [弱可缩范畴]">弱可缩</a></span> (即底层<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>是<span class="link local"><a href="./可缩(同伦类型论).html" title="可缩类型 (同伦类型论) [可缩(同伦类型论)]">可缩</a></span>的).</li>
+<li>对任意 $j\in J$,
+$$
+  \int_{i\in I}\operatorname{Hom}_J(j,f(i)) = *.
+$$</li>
+</ul>
+<p>核心观察是由于<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>的 Fubini 定理,
+$$
+    \begin{aligned}
+    \operatorname{colim}_{i\in I}X_{f(i)}
+    &amp;=\int_{i\in I}X_{f(i)}\\
+    &amp;\simeq\int_{i\in I}\int_{j\in J}\operatorname{Hom}_{J}(j,f(i))\times X_j\\
+    &amp;\simeq\int_{j\in J}\Big(\int_{i\in I}\operatorname{Hom}_{J}(j,f(i))\Big)\times X_j.
+    \end{aligned}
+$$</p>
+<p>另外, 范畴 $(j \downarrow f)$ 的底层<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> (把所有态射取逆得到的 $\infty$-群胚) 正是 $\int_{i\in I}\operatorname{Hom}_{J}(j,f(i))$.</p>
+<h2>例</h2>
+<h3>伴随</h3>
+<p><strong>命题</strong>. 右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>是共尾函子. 或者说有左伴随的函子是共尾函子.</p>
+<p><em>证明</em>. 设函子 $f\colon I\to J$ 有左伴随 $l$, 则
+$$
+(j\downarrow f) = \{(i,u\colon j\to f(i))\} = \{i,l(j)\to i\} = I_{l(j)/}
+$$
+有始对象, 当然可缩; 另一种看法是
+$$
+\int_{i\in I}\operatorname{Hom}_J(j,f(i)) = \int_{i\in I}\operatorname{Hom}_I(l(j),i)=*.
+$$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="弱可缩极限"><header><h1><span class="taxon"></span>弱可缩极限 <a class="slug" href="./弱可缩极限.html">[弱可缩极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>弱可缩极限是以<span class="link local"><a href="./弱可缩范畴.html" title="弱可缩范畴 [弱可缩范畴]">弱可缩范畴</a></span>为指标范畴的<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>.</p>
+<h2>性质</h2>
+<p><strong>命题</strong>. 函子 $\mathcal C_{/c} \to \mathcal C$ 保持且<span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映</a></span>弱可缩极限.</p>
+<p><em>证明</em>. 设 $I$ 为弱可缩范畴, 图表 $X\colon I\to\mathcal C_{/c}$ 的极限是<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">右锥</a></span>图表 $\widetilde {X}\colon I^{\triangleright}\to\mathcal C$ 的极限, 而 $I\to I^{\triangleright}$ <span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首</a></span>, 故该极限等同于 $\widetilde {X}|_{I}$ 的极限.</p>
+<p><strong>命题</strong>. <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的弱可缩极限与<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>指标的余极限交换.</p>
+<p><em>证明</em>. 以生象 $A$ 为指标的余极限操作即为复合函子
+$$
+\mathsf{Fun}(A,\mathsf{Ani}) \simeq \mathsf{Ani}_{/A} \to \mathsf{Ani}.
+$$
+而由前一个命题, 遗忘函子 $\mathsf{Ani}_{/A} \to \mathsf{Ani}$ 保持弱可缩极限.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="解析函子"><header><h1><span class="taxon"></span>解析函子 (算畴理论) <a class="slug" href="./解析函子.html">[解析函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><strong>解析函子</strong>是解析函数 (形式幂级数) 的<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>, 有多个不同场合的相互关联的概念.</p>
 <p>注意这个概念不同于 <span class="link local"><a href="./Goodwillie演算.html" title="Goodwillie 演算 [Goodwillie演算]">Goodwillie 演算</a></span>中的<span class="link local"><a href="./解析函子(Goodwillie).html" title="解析函子 (Goodwillie 演算) [解析函子(Goodwillie)]">解析函子</a></span>.</p>
 <h2>定义</h2>
 <h3>生象范畴上</h3>
-<p>考虑<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span>. 根据 <span class="link local"><a href="./GHK-analytic-monads.html" title="∞-Operads as Analytic Monads [GHK-analytic-monads]">Gepner–Haugseng–Kock</a></span>, 我们称保持<span class="link local"><a href="./弱可缩范畴.html" title="弱可缩范畴 [弱可缩范畴]">弱可缩</a></span>极限与<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>的函子 $\mathsf{Ani}_{/I} \to \mathsf{Ani}_{/J}$ 为<strong>解析函子</strong>.</p>
+<p>参考 <span class="link local"><a href="./GHK-analytic-monads.html" title="∞-Operads as Analytic Monads [GHK-analytic-monads]">Gepner–Haugseng–Kock</a></span>.</p>
+<p>考虑<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span>.</p>
+<p><strong>定义</strong>. 称保持<span class="link local"><a href="./弱可缩范畴.html" title="弱可缩范畴 [弱可缩范畴]">弱可缩</a></span>极限与<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>的函子 $\mathsf{Ani}_{/I} \to \mathsf{Ani}_{/J}$ 为<strong>解析函子</strong>.</p>
+<p>下面的命题为理解上述定义提供了重要的直观.</p>
+<p><strong>命题</strong>. 函子 $F\colon \mathsf{Ani} \to \mathsf{Ani}$ 为解析函子, 当且仅当 $F$ 为其在 $\mathsf{Fin}^{\simeq}$ 上的限制的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">左 Kan 扩张</a></span>, 也即有如下 “Taylor 展开”
+$$
+F(A) = \int_{N\in\mathsf{Fin}^{\simeq}}F(N)\times A^N = \bigsqcup_{N\geq 0}F(N)\times_{S_N}A^N.
+$$
+其中 $S_N$ 表示<span class="link local"><a href="./对称群.html" title="对称群 [对称群]">对称群</a></span>, 作用于 $F(N)$ 与 $A^N$ 上.</p>
 <h2>性质</h2>
 <h3>与多项式函子的关系</h3>
 <p>见<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>.</p>

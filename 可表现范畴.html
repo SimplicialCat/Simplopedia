@@ -1603,6 +1603,47 @@ $$
 \mathsf{SSeq}(\mathsf{Vect}) := \mathsf{Fun}(\mathsf{Fin}^{\simeq},\mathsf{Vect}) \simeq \prod_{n\geq 1} \mathsf{Rep}(\Sigma_n)
 $$
 是一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span> <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>. 见 <span class="link local"><a href="./Gaitsgory–RozenblyumDAG.html" title="A Study in Derived Algebraic Geometry [Gaitsgory–RozenblyumDAG]">Gaitsgory–Rozenblyum 导出代数几何讲义</a></span> (关于 Lie 代数与 Koszul 对偶的一节).</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="局部右伴随"><header><h1><span class="taxon"></span>局部右伴随 <a class="slug" href="./局部右伴随.html">[局部右伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<h2>定义</h2>
+<p>函子 $F\colon \mathcal C \to \mathcal D$ 称为<strong>局部右伴随</strong> (local right adjoint), 是指对每个对象 $c\in\mathcal C$, 函子 $F_{/c}\colon \mathcal C_{/c} \to \mathcal D_{/F(c)}$ 都是右伴随.</p>
+<p>当 $\mathcal C$ 有<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span> $1$ 时, 只需 $F_{/1}\colon \mathcal C \to \mathcal D_{/F(1)}$ 为右伴随.</p>
+<p>由<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>的定义, 函子 $F\colon \mathcal C_{/c} \to \mathcal D_{/F(c)}$ 为右伴随, 当且仅当对任意 $(d\to F(c))\in\mathcal D_{/F(c)}$, 范畴 $\{d\to F(c')\to F(c)\}$ 有<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>. 这个范畴的对象是 $d\to F(c)$ 的分解, 要求后一个态射在 $F$ 的像中.</p>
+<h3>一般映射</h3>
+<p>局部右伴随还可用<strong>一般映射</strong>来刻画.
+称 $d\to F(c)$ 为<strong>一般映射</strong> (generic map), 是指: 对任意 $c\to c'$, 范畴 $\{d\to F(c'')\to F(c')\}$ 的始对象都是 $d\to F(c) \to F(c')$. 一个等价的表述是 $d\to F(c)$ 具有关于 $F$ 的像中所有态射的<span class="link local"><a href="./提升性质.html" title="提升性质 [提升性质]">左提升性质</a></span>且提升唯一.</p>
+<p><strong>命题</strong>. 函子 $F\colon \mathcal C\to\mathcal D$ 是局部右伴随当且仅当所有态射 $d\to F(c)$ 分解为一个一般映射复合一个 $F$ 的像中的态射.</p>
+<h2>性质</h2>
+<h3>与弱可缩极限的关系</h3>
+<p><strong>命题</strong> (<span class="link local"><a href="./GHK-analytic-monads.html" title="∞-Operads as Analytic Monads [GHK-analytic-monads]">GHK</a></span>, 命题 2.2.9). 设 $F\colon \mathcal C \to \mathcal D$ 是<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>之间的<span class="link local"><a href="./可达函子.html" title="可达函子 [可达函子]">可达函子</a></span>, 则 $F$ 是局部右伴随当且仅当 $F$ 保持<span class="link local"><a href="./弱可缩极限.html" title="弱可缩极限 [弱可缩极限]">弱可缩极限</a></span>.</p>
+<p><em>证明</em>. 注意到 $F_{/X}\colon \mathcal C_{/X} \to\mathcal D_{/FX}$ 为可达函子, 它是右伴随当且仅当它保持极限. 这相当于 $F$ 保持所有<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">右锥</a></span>极限, 由<span class="link local"><a href="./弱可缩极限.html" title="弱可缩极限 [弱可缩极限]">弱可缩极限</a></span>的性质等价于 $F$ 保持<span class="link local"><a href="./弱可缩极限.html" title="弱可缩极限 [弱可缩极限]">弱可缩极限</a></span>.</p>
+<h2>例</h2>
+<h3>自由幺半群</h3>
+<p>自由幺半群函子 (即<span class="link local"><a href="./列表.html" title="列表 [列表]">列表</a></span>函子) $\mathrm{List}\colon \mathsf{Set} \to \mathsf{Set}$,
+$$
+X\mapsto\bigsqcup_n X^n
+$$
+是局部右伴随.</p>
+<p>映射 $f\colon Y \to \operatorname{List}(X)$ 是一般映射当且仅当所有 $f(y)$ 恰包含 $X$ 的每个元素一次.</p>
+<p>对任何映射 $f\colon Y \to \operatorname{List}(X)$, 考虑 $Z = \bigsqcup_{y\in Y} f(y)$, 那么 $f$ 分解为
+$$
+Y \to \operatorname{List}(Z)\to \operatorname{List}(X),
+$$
+且第一个映射 $Y\to \operatorname{List}(Z)$ 为一般映射.</p>
+<h3>多项式函子</h3>
+<p>自由幺半群函子是一个<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>. 任何多项式函子都是局部右伴随.</p>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./LCCC.html" title="局部积闭范畴 [LCCC]">局部积闭范畴</a></span>. 考虑
+$$
+X \overset{s}{\leftarrow} E \overset{p}{\rightarrow} B \overset{t}{\rightarrow} Y
+$$
+对应的多项式函子 $f=t_!p_*s^*\colon \mathcal C_{/X}\to\mathcal C_{/Y}$, 则有 $f_{/X} = p_*s^*\colon \mathcal C_{/X} \to\mathcal C_{/B}$ 的左伴随为 $s_! p^*\colon \mathcal C_{/B} \to \mathcal C_{/X}$.</p>
+<h3>图的自由范畴单子</h3>
+<p>参考 <span class="link local"><a href="./WeberFamParRAdj.html" title="Familial 2-functors and parametric right adjoints [WeberFamParRAdj]">Weber</a></span> 例 2.5. 记 $\mathsf{Graph}$ 为有向图的范畴, 其终对象 $1$ 是一个顶点和一条边构成的图. 考虑其上的自由范畴单子 $T$. 函子在终对象上的值 $T1 = \mathbf{B}\mathbb{N}$ 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的自同态. 于是有函子
+$$
+T_{/1}\colon \mathsf{Graph} \to \mathsf{Graph}_{/\mathbf{B}\mathbb{N}}.
+$$
+范畴 $\mathsf{Graph}_{/\mathbf{B}\mathbb{N}}$ 可理解为 “每条边带有一个自然数标记” 的图的范畴.
+函子 $T_{/1}$ 的左伴随 $L$ 可描述为: 对一个带自然数标记的图, 将每个标记为 $n$ 的边替换为 $n$ 条串联的边.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="意象"><header><h1><span class="taxon"></span>意象 <a class="slug" href="./意象.html">[意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <h3>作为集合范畴的推广</h3>

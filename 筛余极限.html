@@ -1234,7 +1234,15 @@ $$
 <p>注意这个概念不同于 <span class="link local"><a href="./Goodwillie演算.html" title="Goodwillie 演算 [Goodwillie演算]">Goodwillie 演算</a></span>中的<span class="link local"><a href="./解析函子(Goodwillie).html" title="解析函子 (Goodwillie 演算) [解析函子(Goodwillie)]">解析函子</a></span>.</p>
 <h2>定义</h2>
 <h3>生象范畴上</h3>
-<p>考虑<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span>. 根据 <span class="link local"><a href="./GHK-analytic-monads.html" title="∞-Operads as Analytic Monads [GHK-analytic-monads]">Gepner–Haugseng–Kock</a></span>, 我们称保持<span class="link local"><a href="./弱可缩范畴.html" title="弱可缩范畴 [弱可缩范畴]">弱可缩</a></span>极限与<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>的函子 $\mathsf{Ani}_{/I} \to \mathsf{Ani}_{/J}$ 为<strong>解析函子</strong>.</p>
+<p>参考 <span class="link local"><a href="./GHK-analytic-monads.html" title="∞-Operads as Analytic Monads [GHK-analytic-monads]">Gepner–Haugseng–Kock</a></span>.</p>
+<p>考虑<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span>.</p>
+<p><strong>定义</strong>. 称保持<span class="link local"><a href="./弱可缩范畴.html" title="弱可缩范畴 [弱可缩范畴]">弱可缩</a></span>极限与<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>的函子 $\mathsf{Ani}_{/I} \to \mathsf{Ani}_{/J}$ 为<strong>解析函子</strong>.</p>
+<p>下面的命题为理解上述定义提供了重要的直观.</p>
+<p><strong>命题</strong>. 函子 $F\colon \mathsf{Ani} \to \mathsf{Ani}$ 为解析函子, 当且仅当 $F$ 为其在 $\mathsf{Fin}^{\simeq}$ 上的限制的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">左 Kan 扩张</a></span>, 也即有如下 “Taylor 展开”
+$$
+F(A) = \int_{N\in\mathsf{Fin}^{\simeq}}F(N)\times A^N = \bigsqcup_{N\geq 0}F(N)\times_{S_N}A^N.
+$$
+其中 $S_N$ 表示<span class="link local"><a href="./对称群.html" title="对称群 [对称群]">对称群</a></span>, 作用于 $F(N)$ 与 $A^N$ 上.</p>
 <h2>性质</h2>
 <h3>与多项式函子的关系</h3>
 <p>见<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>.</p>

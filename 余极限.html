@@ -1131,12 +1131,24 @@ $$
 $$</p>
 <h2>定义</h2>
 <h3>伴随函子</h3>
-<p>一对伴随函子 $F\dashv G$ 是满足如下条件的函子:
+<p>一对伴随函子 $F\dashv G$ 是带有如下自然同构的函子:
 $$
 \operatorname{Hom}(F-,-)\simeq\operatorname{Hom}(-,G-).
 $$</p>
+<p><strong>命题</strong>. 如下条件等价:</p>
+<ul>
+<li>函子 $F\colon \mathcal C\to\mathcal D$ 有右伴随;</li>
+<li>对任意 $d\in\mathcal D$, 函子 $\operatorname{Hom}(F-,d)\colon \mathcal C^{\mathrm{op}} \to\mathsf{Ani}$ <span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表</a></span>;</li>
+<li>对任意 $d\in\mathcal D$, <span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span> $\int_{\mathcal C}\operatorname{Hom}(Fc,d)$ 有<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>.</li>
+</ul>
+<p>对偶地, 如下条件等价:</p>
+<ul>
+<li>函子 $G\colon \mathcal D\to\mathcal C$ 有左伴随;</li>
+<li>对任意 $c\in\mathcal C$, 函子 $\operatorname{Hom}(c,G-)\colon \mathcal D \to\mathsf{Ani}$ <span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">余可表</a></span>;</li>
+<li>对任意 $c\in\mathcal C$, <span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span> $\int_{\mathcal D}\operatorname{Hom}(c,Gd)$ 有<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>.</li>
+</ul>
 <h3>$2$-范畴中的伴随</h3>
-<p>$2$-范畴 $\mathcal C$ 中的伴随等同于<span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span> $\mathsf{Adj}$ 到 $\mathcal C$ 的函子
+<p>通常说的伴随是 $2$-范畴 $\mathsf{Cat}$ 中的伴随. 更一般地, $2$-范畴 $\mathcal C$ 中的伴随等同于<span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span> $\mathsf{Adj}$ 到 $\mathcal C$ 的函子
 $$
 \mathsf{Adj} \to \mathcal C.
 $$</p>
@@ -1399,13 +1411,71 @@ $$</p>
 <li>俯范畴 $\mathcal C_{/X}$ 中的<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>等同于 $\mathcal C$ 中的原图表加上各对象到 $X$ 的态射后所得图表的极限. 例如 $\mathcal C_{/X}$ 中 $Y\to X, Z\to X$ 的<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>是 $\mathcal C$ 中 $Y \to X \leftarrow Z$ 的<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>.</li>
 <li>俯范畴中的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>等同于原范畴中的余极限.</li>
 </ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="元素范畴"><header><h1><span class="taxon"></span>元素范畴 <a class="slug" href="./元素范畴.html">[元素范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>朴素定义</h3>
+<p>函子 $F\colon \mathcal C\to\mathsf{Set}$ 的<strong>元素范畴</strong> (category of elements) $\mathsf{El}(F)$ 是如下范畴,</p>
+<ul>
+<li>其对象为 $(c,x)$, 其中 $c\in\mathcal C$, $x\in F(c)$;</li>
+<li>态射 $(c,x) \to (d,y)$ 为 $f\colon c\to d$, $F(f)(x) = y$.</li>
+</ul>
+<p>函子 $F\colon \mathcal C^{\mathrm{op}}\to\mathsf{Set}$ 的元素范畴为如下范畴,</p>
+<ul>
+<li>其对象为 $(c,x)$, 其中 $c\in\mathcal C^{\mathrm{op}}$, $x\in F(c)$;</li>
+<li>态射 $(c,x) \to (d,y)$ 为 $f\colon c\to d$, $F(f)(y) = x$.</li>
+</ul>
+<p>在 $\infty$-范畴语境中 $\mathsf{Set}$ 往往换成 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span>.</p>
+<h3>作为松拉回</h3>
+<p>函子 $F\colon \mathcal C\to\mathsf{Set}$ 的元素范畴 $\mathsf{El}(F)$ 是如下的<span class="link local"><a href="./松拉回.html" title="松拉回 [松拉回]">松拉回</a></span>.</p>
+<p><figure><img src="./元素范畴-1.svg" class="color-invert"/></figure></p>
+<h2>性质</h2>
+<h3>与可表函子的关系</h3>
+<p>函子 $F\colon \mathcal C\to\mathsf{Ani}$ 余可表 (即 $F = \operatorname{Hom}(c,-)$) 当且仅当其元素范畴有<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>, 此时始对象为 $(c,\mathrm{id}_c)$.</p>
+<p>对偶地, 函子 $F\colon \mathcal C^{\mathrm{op}}\to\mathsf{Ani}$ <span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表</a></span>当且仅当其元素范畴有<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>, 此时终对象为 $(c,\mathrm{id}_c)$.</p>
+<h3>与余极限的关系</h3>
+<p>函子 $F\colon \mathcal C\to\mathsf{Ani}$ 的元素范畴的底层生象 (关于所有态射的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>) 就是 $F$ 的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="共尾函子"><header><h1><span class="taxon"></span>共尾函子 <a class="slug" href="./共尾函子.html">[共尾函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>共尾函子是不改变<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>的指标代换, 即对于共尾函子 $f\colon I\to J$ 以及图表 $X\colon J\to \mathcal C$,
+<p><strong>共尾函子</strong> (cofinal functor) 又叫<strong>终函子</strong> (final functor), 是不改变<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>的指标代换, 即对于共尾函子 $f\colon I\to J$ 以及图表 $X\colon J\to \mathcal C$,
 $$
 \operatorname{colim}_{i\in I}X_{f(i)}\to \operatorname{colim}_{j\in J}X_j
 $$
 为等价.</p>
+<p><strong>关于英文名称的注</strong>. Cofinal functor 的前缀 co- 是 “<strong>共</strong>” (来自拉丁文 cum) 而非 “余” (来自拉丁文 contra) 的意思.</p>
+<p>对偶的概念是<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首函子</a></span>.</p>
+<h2>定义</h2>
+<p><strong>命题-定义</strong>. 对于函子 $f\colon I\to J$, 若下列等价条件成立, 则称之为<strong>共尾函子</strong>:</p>
+<ul>
+<li>对任意 (有余极限的) 图表 $X\colon J\to \mathcal C$, 比较映射 $\operatorname{colim}_{i\in I}X_{f(i)}\to \operatorname{colim}_{j\in J}X_j$ 为等价;</li>
+<li>同上一个条件, 但只要求 $\mathcal C$ 为 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 的情形;</li>
+<li>对任意图表 $X\colon J\to \mathcal C$ 以及 $c\in\mathcal C$, 比较映射 $\operatorname{Hom}(X,\operatorname{const}_J c)\to \operatorname{Hom}(Xf,\operatorname{const}_I c)$ 为等价;</li>
+<li>对任意 $j\in J$, 范畴 $(j\downarrow f):=\{(i,u\colon j\to f(i))\}$ <span class="link local"><a href="./弱可缩范畴.html" title="弱可缩范畴 [弱可缩范畴]">弱可缩</a></span> (即底层<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>是<span class="link local"><a href="./可缩(同伦类型论).html" title="可缩类型 (同伦类型论) [可缩(同伦类型论)]">可缩</a></span>的).</li>
+<li>对任意 $j\in J$,
+$$
+  \int_{i\in I}\operatorname{Hom}_J(j,f(i)) = *.
+$$</li>
+</ul>
+<p>核心观察是由于<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>的 Fubini 定理,
+$$
+    \begin{aligned}
+    \operatorname{colim}_{i\in I}X_{f(i)}
+    &amp;=\int_{i\in I}X_{f(i)}\\
+    &amp;\simeq\int_{i\in I}\int_{j\in J}\operatorname{Hom}_{J}(j,f(i))\times X_j\\
+    &amp;\simeq\int_{j\in J}\Big(\int_{i\in I}\operatorname{Hom}_{J}(j,f(i))\Big)\times X_j.
+    \end{aligned}
+$$</p>
+<p>另外, 范畴 $(j \downarrow f)$ 的底层<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> (把所有态射取逆得到的 $\infty$-群胚) 正是 $\int_{i\in I}\operatorname{Hom}_{J}(j,f(i))$.</p>
+<h2>例</h2>
+<h3>伴随</h3>
+<p><strong>命题</strong>. 右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>是共尾函子. 或者说有左伴随的函子是共尾函子.</p>
+<p><em>证明</em>. 设函子 $f\colon I\to J$ 有左伴随 $l$, 则
+$$
+(j\downarrow f) = \{(i,u\colon j\to f(i))\} = \{i,l(j)\to i\} = I_{l(j)/}
+$$
+有始对象, 当然可缩; 另一种看法是
+$$
+\int_{i\in I}\operatorname{Hom}_J(j,f(i)) = \int_{i\in I}\operatorname{Hom}_I(l(j),i)=*.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="凝聚态集合"><header><h1><span class="taxon"></span>凝聚态集合 <a class="slug" href="./凝聚态集合.html">[凝聚态集合]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./凝聚态数学.html" title="凝聚态数学 [凝聚态数学]">凝聚态数学</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>凝聚态集合是由 <span class="link local"><a href="./pro-有限集.html" title="pro-有限集 [pro-有限集]">pro-有限集</a></span>通过<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>组建起来的. 它有点像带有拓扑的集合, 但凝聚态集合范畴比拓扑空间范畴性质更好: 它构成一个<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>.</p>
@@ -1658,6 +1728,8 @@ $$
 <h2>定义</h2>
 <p>始对象是到任意对象有唯一态射的对象.</p>
 <p>始对象是空的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./始代数.html" title="始代数 (自函子) [始代数]">始代数</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="带基点对象"><header><h1><span class="taxon"></span>带基点对象 <a class="slug" href="./带基点对象.html">[带基点对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>范畴 $\mathcal C$ 中带基点对象的范畴是其<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>下的<span class="link local"><a href="./仰范畴.html" title="仰范畴 [仰范畴]">仰范畴</a></span> $\mathcal C_{*/}$.</p>
@@ -1674,7 +1746,7 @@ $$
 <p><span class="link local"><a href="./Ani_pt.html" title="带基点生象的范畴 [Ani_pt]">$\mathsf{Ani}_*$</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="幂等态射"><header><h1><span class="taxon"></span>幂等态射 <a class="slug" href="./幂等态射.html">[幂等态射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>考虑 $(1,1)$-范畴 $\mathsf{Idem}$, 其有一个对象 $*$ 和两个态射 $\mathrm{id},e\colon *\to *$, 满足 $e^2=e$. 换言之,
+<p>考虑 $(1,1)$-范畴 <span class="link local"><a href="./Idem.html" title="游走的幂等映射 [Idem]">$\mathsf{Idem}$</a></span>, 其有一个对象 $*$ 和两个态射 $\mathrm{id},e\colon *\to *$, 满足 $e^2=e$. 换言之,
 $$
 \mathsf{Idem} = \mathrm{B}\langle e \mid e^2 = e \rangle.
 $$</p>
@@ -1685,9 +1757,9 @@ $$</p>
 $$
 \operatorname{Fun}(\mathsf{Idem},\mathcal C)\to \mathsf{Fun}(\Delta^1,\mathcal C)
 $$
-不是 $(-1)$-截断的.</p>
+不是 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>的.</p>
 <h3>分裂性</h3>
-<p>考虑 $(1,1)$-范畴 $\mathsf{Ret}$, 其有两个对象 $x,y$,</p>
+<p>考虑 $(1,1)$-范畴 <span class="link local"><a href="./游走的收缩.html" title="游走的收缩 [游走的收缩]">$\mathsf{Ret}$</a></span>, 其有两个对象 $x,y$,</p>
 <ul>
 <li>$\operatorname{Hom}(x,x) = \{\mathrm{id}_x,e\}$, $e^2=e=ir$,</li>
 <li>$\operatorname{Hom}(x,y) = \{r\}$,</li>
@@ -1695,7 +1767,7 @@ $$
 <li>$\operatorname{Hom}(y,y) = \{\mathrm{id}_y\}$.</li>
 </ul>
 <p>有明显的函子 $\mathsf{Idem} \to \mathsf{Ret}$.</p>
-<p>若函子 $\mathsf{Idem} \to \mathcal C$ (对应幂等态射 $f\colon X\to X$) 可延拓为 $\mathsf{Ret} \to \mathcal C$, 则称该幂等态射<strong>分裂</strong> (split).</p>
+<p>若函子 $\mathsf{Idem} \to \mathcal C$ (对应幂等态射 $f\colon X\to X$) 可延拓为一个<span class="link local"><a href="./收缩.html" title="收缩 [收缩]">收缩</a></span> $\mathsf{Ret} \to \mathcal C$, 则称该幂等态射<strong>分裂</strong> (split).</p>
 <p><strong>命题</strong>. 一个幂等态射分裂, 当且仅当对应的函子 $\mathsf{Idem} \to \mathcal C$ 存在<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>或<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>; 此时极限和余极限都是同一个对象, 即 $y\in\mathsf{Ret}$ 在 $\mathcal C$ 中的像.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="形式概形"><header><h1><span class="taxon"></span>形式概形 <a class="slug" href="./形式概形.html">[形式概形]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
@@ -1919,6 +1991,17 @@ $$</p>
 $$
 A = \operatorname{colim}_{(S\to A)\in\mathsf{Fin}_{/A}} S.
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="绝对余极限"><header><h1><span class="taxon"></span>绝对余极限 <a class="slug" href="./绝对余极限.html">[绝对余极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>绝对余极限是被任何函子保持的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>
+<p><strong>命题</strong>. 对于函子 $F\colon I\to\mathcal C$ 下的余锥 $F\to \operatorname{const}X$, 如下条件等价:</p>
+<ul>
+<li>这个余极限是绝对余极限;</li>
+<li>这个余极限被<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span> $\mathcal C \to \widehat {\mathcal C}$ 保持.</li>
+</ul>
+<h2>例</h2>
+<h3>共尾函子</h3>
+<p>设</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="茎"><header><h1><span class="taxon"></span>茎 <a class="slug" href="./茎.html">[茎]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p><strong>茎</strong> (stalk) 是<span class="link local"><a href="./意象的点.html" title="意象的点 [意象的点]">意象的点</a></span>的<span class="link local"><a href="./逆像.html" title="逆像 [逆像]">逆像</a></span>函子.</p>

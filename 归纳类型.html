@@ -827,7 +827,7 @@
 
 <article><section class="block" data-taxon=""><details open><summary id="归纳类型"><header><h1><span class="taxon"></span>归纳类型 (同伦类型论) <a class="slug" href="./归纳类型.html">[归纳类型]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./同伦类型论.html" title="同伦类型论 [同伦类型论]">同伦类型论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>归纳类型是数学归纳法的推广.</p>
+<p>归纳类型是数学归纳法的推广, 常常可理解为自函子的<span class="link local"><a href="./始代数.html" title="始代数 (自函子) [始代数]">始代数</a></span>.</p>
 <h2>例</h2>
 <ul>
 <li><span class="link local"><a href="./列表.html" title="列表 [列表]">列表类型</a></span></li>
@@ -842,6 +842,43 @@
 <li>空列表 $(\,\,)$ 是 $\operatorname{List}A$ 的元素;</li>
 <li>对于 $a : A$, $s : \operatorname{List}A$, 有 $(a,s) : \operatorname{List}A$.</li>
 </ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="始代数"><header><h1><span class="taxon"></span>始代数 (自函子) <a class="slug" href="./始代数.html">[始代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>始代数可理解为某些<span class="link local"><a href="./归纳类型.html" title="归纳类型 (同伦类型论) [归纳类型]">归纳类型</a></span>的<span class="link local"><a href="./范畴语义.html" title="范畴语义 [范畴语义]">范畴语义</a></span>.</p>
+<h2>定义</h2>
+<p>对于范畴 $\mathcal C$ 的自函子 $F\colon \mathcal C \to \mathcal C$, 称一个对象 $X$ 配备一个态射 $F(X)\to X$ 的结构为 $F$-<strong>代数</strong> (又称 Lambek 代数). 定义 $F$ 的<strong>始代数</strong>为 $F$-代数范畴的<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>.</p>
+<h2>性质</h2>
+<h3>Lambek 定理</h3>
+<p><strong>定理</strong> (Lambek). 若 $F$ 有始代数 $\alpha\colon F(X) \to X$, 则 $\alpha$ 为同构.</p>
+<p>因此始代数又称<strong>最小不动点</strong>.</p>
+<p><strong>命题</strong>. 假设范畴 $\mathcal C$ 有<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>及始对象 $0$, 且 $F$ 保持滤余极限. 那么 $F$ 有始代数
+$$
+\operatorname{colim}_n F^n0.
+$$</p>
+<h2>例</h2>
+<h3>自然数</h3>
+<p>自然数集 $\mathbb{N}$ 是 $\mathsf{Set}$ 上的函子 $X\mapsto 1+X$ 的始代数:
+$$
+\mathbb{N} = \operatorname{colim}_n \underbrace{1+1+\cdots+1}_{n}.
+$$</p>
+<h3>二叉树</h3>
+<p>二叉树的集合 $B$ 是 $\mathsf{Set}$ 上的自函子 $X\mapsto 1 + X^2$ 的始代数.
+注意, 由于一棵二叉树要么为空要么由两棵更小的二叉树构成, 故有
+$$
+B \simeq 1 + B^2.
+$$
+更有趣的是, 由上式可得
+$$
+B\simeq B^7,
+$$
+并且这个同构由 Andreas Blass 的著名文章 “<span class="link external"><a href="https://arxiv.org/abs/math/9405205" title="七树合一 [https://arxiv.org/abs/math/9405205]">七树合一</a></span>” 显式构造.</p>
+<h3>列表</h3>
+<p>对于集合 $A$, 函子 $X \mapsto 1 + A\times X$ 的始代数是 $A$ 的<span class="link local"><a href="./列表.html" title="列表 [列表]">列表</a></span>集合
+$$
+\operatorname{List}(A) = \bigsqcup_n A^n,
+$$
+也即 $A$ 上的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span><span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>.</p>
+<p>上述三个例子都是<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>, 这种函子总是保持滤余极限.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="截断性(同伦类型论)"><header><h1><span class="taxon"></span>截断性 (同伦类型论) <a class="slug" href="./截断性(同伦类型论).html">[截断性(同伦类型论)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./同伦类型论.html" title="同伦类型论 [同伦类型论]">同伦类型论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>在同伦类型论中, <span class="link local"><a href="./归纳类型.html" title="归纳类型 (同伦类型论) [归纳类型]">归纳</a></span>定义类型 $A$ 上的谓词

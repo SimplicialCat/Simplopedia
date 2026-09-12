@@ -1584,12 +1584,24 @@ $$
 $$</p>
 <h2>定义</h2>
 <h3>伴随函子</h3>
-<p>一对伴随函子 $F\dashv G$ 是满足如下条件的函子:
+<p>一对伴随函子 $F\dashv G$ 是带有如下自然同构的函子:
 $$
 \operatorname{Hom}(F-,-)\simeq\operatorname{Hom}(-,G-).
 $$</p>
+<p><strong>命题</strong>. 如下条件等价:</p>
+<ul>
+<li>函子 $F\colon \mathcal C\to\mathcal D$ 有右伴随;</li>
+<li>对任意 $d\in\mathcal D$, 函子 $\operatorname{Hom}(F-,d)\colon \mathcal C^{\mathrm{op}} \to\mathsf{Ani}$ <span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表</a></span>;</li>
+<li>对任意 $d\in\mathcal D$, <span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span> $\int_{\mathcal C}\operatorname{Hom}(Fc,d)$ 有<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>.</li>
+</ul>
+<p>对偶地, 如下条件等价:</p>
+<ul>
+<li>函子 $G\colon \mathcal D\to\mathcal C$ 有左伴随;</li>
+<li>对任意 $c\in\mathcal C$, 函子 $\operatorname{Hom}(c,G-)\colon \mathcal D \to\mathsf{Ani}$ <span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">余可表</a></span>;</li>
+<li>对任意 $c\in\mathcal C$, <span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span> $\int_{\mathcal D}\operatorname{Hom}(c,Gd)$ 有<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>.</li>
+</ul>
 <h3>$2$-范畴中的伴随</h3>
-<p>$2$-范畴 $\mathcal C$ 中的伴随等同于<span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span> $\mathsf{Adj}$ 到 $\mathcal C$ 的函子
+<p>通常说的伴随是 $2$-范畴 $\mathsf{Cat}$ 中的伴随. 更一般地, $2$-范畴 $\mathcal C$ 中的伴随等同于<span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span> $\mathsf{Adj}$ 到 $\mathcal C$ 的函子
 $$
 \mathsf{Adj} \to \mathcal C.
 $$</p>

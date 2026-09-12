@@ -1423,9 +1423,48 @@ $$
 故 $M$ 有<span class="link local"><a href="./自旋流形.html" title="自旋流形 [自旋流形]">自旋结构</a></span>当且仅当 $w_2(M)=0$.</p>
 <h3>可积性</h3>
 <p>一些重要的结构如复结构, 辛结构, <span class="link local"><a href="./Kähler结构.html" title=" [Kähler结构]">Kähler 流形</a></span>, 是由 $G$-结构附加某些可积性条件得到的.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="单纯对象的分裂"><header><h1><span class="taxon"></span>分裂单纯对象 <a class="slug" href="./单纯对象的分裂.html">[单纯对象的分裂]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>记 $\Delta_{\bot}$ 为有限非空全序集与保持最小值的映射构成的范畴. 事实上,
+$$
+\Delta_{\bot} = \mathsf{LMod}_{\Delta_+}([0])
+$$
+是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的结合代数 $[0]$ 上的左<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>范畴.
+因此其到<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span> $\Delta_+$ 的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>函子 (注意并非<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>)
+$$
+U\colon \Delta_{\bot}\rightarrow \Delta_+, [n]\mapsto [n]
+$$
+有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>
+$$
+C_+\colon \Delta_+ \to \Delta_{\bot}, [n]\mapsto [0] * [n]
+$$
+对全序集<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加一个最小值“, 可类比于<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">锥</a></span>操作.
+从而 (当 $\mathcal C$ 完备且余完备时) 有<span class="link local"><a href="./预层范畴之间的伴随.html" title="预层范畴之间的伴随 [预层范畴之间的伴随]">预层范畴之间的四元伴随</a></span>
+$$
+ (C_+)_!\dashv [U_!=(C_+)^*] \dashv [U^* =(C_+)_*] \dashv U_*.
+$$</p>
+<p>设 $X\colon \Delta_+^{\mathrm{op}}\to\mathcal C$ 为<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">增广单纯对象</a></span>, 定义其<strong>分裂</strong>为下图.</p>
+<p><figure><img src="./split-simplicial-object.svg" class="color-invert"/></figure></p>
+<p>换言之, $X = (C_+)^* \overline{X} = U_!\overline{X}$. 分裂是<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构而非性质</a></span>.</p>
+<p>注意到, $(C_+)^*=U_!$ 在<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>上的作用为 $(C_+)^*\mathbf{y}([n]) = \mathbf{y}([n])$. 而 $(C_+)^*$ 作为左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>保持余极限, 故有如下直观: $\Delta_\bot$ 的对象为固定顶点的锥, $\overline{X}$ 是一族固定顶点的锥的粘合, 从而是 “可以缩到顶点” 的单纯对象.</p>
+<hr />
+<p>有另外一种不同的 “分裂” 概念, 并且似乎不等价 (因为下面的概念是性质而非结构), 我不知道下面的概念有什么用, 暂且记录于此.</p>
+<p>记 $\mathrm{surj}(j,k)$ 为单纯集 $\Delta^j$ 到 $\Delta^k$ 的满射的集合. 设 $K$ 为<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, 其 $n$ 阶<strong>分裂</strong>是一系列子对象 $N_k \subset K_k\,(k\leq n)$, 称为非退化部分, 满足对 $0\leq j\leq n$, 有典范的同构 $\coprod_{\mathrm{surj}(j,k)}N_k \to K_j$.</p>
+<p>直观上, 这个条件是说 $K$ 的每个可能退化的单形都唯一地对应一个非退化单形.</p>
+<h2>性质</h2>
+<h3>余极限</h3>
+<p><strong>命题</strong>. 设单纯对象 $X\colon \Delta^{\mathrm{op}}\to\mathcal C$ 有一分裂 $\overline{X}\colon \Delta^{\mathrm{op}}_{\bot} \to \mathcal C$, 那么其自带的增广 $\overline{X}(\{\bot\})$ 即是 $X$ 的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>.</p>
+<p><em>证明</em>. 因为 $C_+\colon \Delta\to\Delta_{\bot}$ 是左伴随, 所以 $(C_+)^{\mathrm{op}}\colon \Delta^{\mathrm{op}} \to\Delta_{\bot}^{\mathrm{op}}$ 是右伴随, 从而是<span class="link local"><a href="./共尾函子.html" title="共尾函子 [共尾函子]">共尾函子</a></span>. 又注意到 $\{\bot\}$ 是 $\Delta_{\bot}$ 的零对象, 故有
+$$
+\overline{X}(\{\bot\}) = \operatorname{colim}\overline{X} =\operatorname{colim}X.
+$$</p>
+<p><strong>推论</strong>. 分裂单纯对象是<span class="link local"><a href="./绝对余极限.html" title="绝对余极限 [绝对余极限]">绝对余极限</a></span>.</p>
+<h3>单子性</h3>
+<h2>参考资料</h2>
+<p>Artin, Mazur, Etale Homotopy Theory</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="幂等态射"><header><h1><span class="taxon"></span>幂等态射 <a class="slug" href="./幂等态射.html">[幂等态射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>考虑 $(1,1)$-范畴 $\mathsf{Idem}$, 其有一个对象 $*$ 和两个态射 $\mathrm{id},e\colon *\to *$, 满足 $e^2=e$. 换言之,
+<p>考虑 $(1,1)$-范畴 <span class="link local"><a href="./Idem.html" title="游走的幂等映射 [Idem]">$\mathsf{Idem}$</a></span>, 其有一个对象 $*$ 和两个态射 $\mathrm{id},e\colon *\to *$, 满足 $e^2=e$. 换言之,
 $$
 \mathsf{Idem} = \mathrm{B}\langle e \mid e^2 = e \rangle.
 $$</p>
@@ -1436,9 +1475,9 @@ $$</p>
 $$
 \operatorname{Fun}(\mathsf{Idem},\mathcal C)\to \mathsf{Fun}(\Delta^1,\mathcal C)
 $$
-不是 $(-1)$-截断的.</p>
+不是 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>的.</p>
 <h3>分裂性</h3>
-<p>考虑 $(1,1)$-范畴 $\mathsf{Ret}$, 其有两个对象 $x,y$,</p>
+<p>考虑 $(1,1)$-范畴 <span class="link local"><a href="./游走的收缩.html" title="游走的收缩 [游走的收缩]">$\mathsf{Ret}$</a></span>, 其有两个对象 $x,y$,</p>
 <ul>
 <li>$\operatorname{Hom}(x,x) = \{\mathrm{id}_x,e\}$, $e^2=e=ir$,</li>
 <li>$\operatorname{Hom}(x,y) = \{r\}$,</li>
@@ -1446,7 +1485,7 @@ $$
 <li>$\operatorname{Hom}(y,y) = \{\mathrm{id}_y\}$.</li>
 </ul>
 <p>有明显的函子 $\mathsf{Idem} \to \mathsf{Ret}$.</p>
-<p>若函子 $\mathsf{Idem} \to \mathcal C$ (对应幂等态射 $f\colon X\to X$) 可延拓为 $\mathsf{Ret} \to \mathcal C$, 则称该幂等态射<strong>分裂</strong> (split).</p>
+<p>若函子 $\mathsf{Idem} \to \mathcal C$ (对应幂等态射 $f\colon X\to X$) 可延拓为一个<span class="link local"><a href="./收缩.html" title="收缩 [收缩]">收缩</a></span> $\mathsf{Ret} \to \mathcal C$, 则称该幂等态射<strong>分裂</strong> (split).</p>
 <p><strong>命题</strong>. 一个幂等态射分裂, 当且仅当对应的函子 $\mathsf{Idem} \to \mathcal C$ 存在<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>或<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>; 此时极限和余极限都是同一个对象, 即 $y\in\mathsf{Ret}$ 在 $\mathcal C$ 中的像.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="游走的伴随"><header><h1><span class="taxon"></span>游走的伴随 <a class="slug" href="./游走的伴随.html">[游走的伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
@@ -1520,7 +1559,10 @@ $$
 <p>换言之, $\mathsf{Adj}^{2\text{-}\mathrm{op}}$ 中有一对伴随 $r''\dashv l''$. 注意这同样与原来的伴随 $l\dashv r$ 在名称上是相反的.</p>
 <p>这个事实结合 $\mathsf{Adj}$ 的游走性质有如下的推论:</p>
 <ul>
-<li>todo</li>
+<li>对于 $\mathsf{Cat}$ 中的伴随 $f\dashv g$, 相应地有 $\mathsf{Cat}$ 中的另一对伴随 $g^{\mathrm{op}}\dashv f^{\mathrm{op}}$, 由如下复合给出:
+$$
+\mathsf{Adj}\to\mathsf{Adj}^{2\text{-op}}\to\mathsf{Cat}^{2\text{-op}}\overset{(-)^{\mathrm{op}}}{\longrightarrow}\mathsf{Cat}.
+$$</li>
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="生象"><header><h1><span class="taxon"></span>生象, ∞-群胚 <a class="slug" href="./生象.html">[生象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>

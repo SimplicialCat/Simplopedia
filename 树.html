@@ -848,6 +848,25 @@
 <li>对任意 $x\in P$, 不超过 $x$ 的元素的子集构成一个<span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序</a></span>.</li>
 </ul>
 <p>此时 $P$ 的极大元 (可能不唯一) 即是树的<strong>叶</strong>.</p>
+<h3>作为递归嵌套结构</h3>
+<p>树有一种递归定义:</p>
+<ul>
+<li>平凡树 $\{\}$ 是树;</li>
+<li>若 $x_1,\cdots,x_n$ 是树, 那么 $\{x_1,\cdots,x_n\}$ 也是树.</li>
+</ul>
+<h3>作为多项式</h3>
+<p>树还可以简洁地定义为 “多项式” (这个名词的直观参见<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>):
+$$
+E\overset{s}{\leftarrow} M \overset{p}{\rightarrow} N \overset{t}{\to} E,
+$$
+其中</p>
+<ul>
+<li>$E$ 是边的集合;</li>
+<li>$N$ 是顶点的集合, $t\colon N\to E$ 给出顶点的唯一出边, 要求 $t$ 为单射;</li>
+<li>$M$ 是边与顶点之间的 “入边” <span class="link local"><a href="./关系2-范畴.html" title="关系 2-范畴 [关系2-范畴]">关系</a></span>, 分别带有到 $E$ 和 $N$ 的投影, 满足 $s\colon M\to E$ 为单射, 且 $E\setminus M$ 只有一个元素, 即树的根.</li>
+</ul>
+<p>注意即使在<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>语境中, 我们也要求树的定义中 $E,M,N$ 是集合 ($0$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>生象). 因为上述定义中涉及的差集只对集合有意义.</p>
+<p>但对于任意<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span> $P$ (其分量未必为集合) 我们可以定义 $P$-树, 即树 (作为多项式函子) 到 $P$ 的态射. 这里, 多项式 $X\overset{s}{\leftarrow} E \overset{p}{\rightarrow} B \overset{t}{\to} Y$ 中, $p\colon E\to B$ 的纤维要求为集合.</p>
 <h3>树的态射</h3>
 <p>树的态射是个比较复杂的概念.</p>
 <p>一种方便的定义是, 树的态射由如下几种<strong>基本态射</strong>生成:</p>
@@ -857,6 +876,34 @@
 <li><strong>内部面映射</strong> (inner face map) $S \hookrightarrow T$, 其中 $S$ 是由 $T$ 缩合一条内边所得;</li>
 <li><strong>外部面映射</strong> (outer face map) $S \to T$, 其中 $S$ 是由 $T$ 剪除一个外顶点 (仅关联一条内边的顶点) 所得;</li>
 </ul>
+<p>另一种概念性的理解是通过树对应的<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>之间的态射
+$$
+\begin{CD}
+E @&lt;{s}&lt;&lt; M @&gt;{p}&gt;&gt; N @&gt;{t}&gt;&gt; E \\
+@VVV @VVV \square @VVV @VVV \\
+E' @&lt;&lt;{s'}&lt; M' @&gt;&gt;{p'}&gt; N' @&gt;&gt;{t'}&gt; E',
+\end{CD}
+$$
+其中标记 $\square$ 的方块为<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>. 换言之, 树的这种态射要保持 $p\colon M\to N$ 的纤维, 也即每个结点的入边的数量.
+但这样定义的只是树的态射中的一部分, 即树的<strong>含入</strong>映射 (<span class="link local"><a href="./KockPolyFun.html" title="Polynomial Functors and Trees [KockPolyFun]">Kock</a></span> 的 $\mathsf{TEmb}$), 又称<strong>惰性</strong> (inert) 映射 (<span class="link local"><a href="./GHK-analytic-monads.html" title="∞-Operads as Analytic Monads [GHK-analytic-monads]">GHK</a></span> 中的 $\Omega_{\mathrm{int}}$).</p>
+<p><strong>例</strong>. 树的每个边给出一个含入
+$$
+\begin{array}{ccccccc}
+1 &amp; \leftarrow &amp; 0 &amp; \rightarrow &amp; 0 &amp; \rightarrow &amp; 1 \\
+\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
+E &amp; \leftarrow &amp; M &amp; \rightarrow &amp; N &amp; \rightarrow &amp; E,
+\end{array}
+$$
+每个结点给出一个含入
+$$
+\begin{array}{ccccccc}
+K+1 &amp; \leftarrow &amp; K &amp; \rightarrow &amp; 1 &amp; \rightarrow &amp; K+1 \\
+\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
+E &amp; \leftarrow &amp; M &amp; \rightarrow &amp; N &amp; \rightarrow &amp; E,
+\end{array}
+$$
+其中 $K$ 是 $p\colon M\to N$ 在 $1\to N$ 处的纤维, 即该结点的入边的全体.</p>
+<p>要得到树的全部态射需要考虑多项式函子生成的<span class="link local"><a href="./自由单子.html" title="自由单子 [自由单子]">自由单子</a></span>.</p>
 <h2>例</h2>
 <h3>线性树</h3>
 <p>线性树是形如
@@ -876,7 +923,37 @@ $$
 $$
 \Delta \hookrightarrow \Omega.
 $$</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="opecat"><header><h1><span class="taxon"></span>Barwick 算子范畴 <a class="slug" href="./opecat.html">[opecat]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="HADR-1-ope"><header><h1><span class="taxon"></span>HADR (1) 算畴 <a class="slug" href="./HADR-1-ope.html">[HADR-1-ope]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>引子</h2>
+<p><span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>是记录许多代数结构的统一的工具. 对于每种代数结构都有一个<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>函子, 对应的单子是自由和遗忘的复合, 一般的结构则是<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>.</p>
+<ul>
+<li>对于环 $R$, $R$-<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>是单子 $T_R := R\otimes -\colon \mathsf{Ab}\to\mathsf{Ab}$ 上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>.</li>
+<li>考虑<span class="link local"><a href="./张量.html" title="张量 [张量]">张量代数</a></span>单子 $T\colon \mathsf{Ab} \to \mathsf{Ab}$, 那么一个环等同于一个 $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>.</li>
+<li>考虑自由群单子 $T_{\mathrm{Grp}}\colon \mathsf{Set} \to \mathsf{Set}$, 那么一个群等同于一个 $T_{\mathrm{Grp}}$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>. 更一般地, 每个 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>都给出 $\mathsf{Set}$ 上的一个单子 $T$. 记 $T(n)$ 为该理论中所有可能的 $n$ 元项的集合, 例如群的理论中 $x^2 y^{-1}x$ 是一个 $2$ 元项. 那么函子 $T$ 可表示为
+$$
+  TX = \int_{N\in\mathsf{Fin}} T(N)\times X^N.
+$$
+这是一个<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>记号, 可以粗略地理解为对所有 $N$ 取并, 然后商掉必要的关系.</li>
+<li>对于 $\mathsf{Ani}$-值单色<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathcal O$, 我们有 (<span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 上的) 自由 $\mathcal O$-代数单子
+$$
+  T_{\mathcal O} X = \int_{N\in\mathsf{Fin}^\simeq} \mathcal O(N)\times X^N.
+$$
+例如自由 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-代数单子
+$$
+  T_{\mathbb E_n}X = \int_{N\in\mathsf{Fin}^\simeq}\operatorname{Conf}_N(\mathbb{R}^n)\times X^N.
+$$
+注意, 与 Lawvere 理论不同的是, 这里<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>的指标范畴为<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">群胚</a></span> $\mathsf{Fin}^\simeq$. 本讲的第一个主要目标便是用这种方式解释什么是算畴.</li>
+</ul>
+<p>有一些看起来不那么 “代数” 的结构也可以用单子来记录. 关键在于, “不那么代数” 的信息被储存在了一个基范畴中, 而单子本身只负责记录 “代数” 运算.</p>
+<ul>
+<li>考虑有向图的范畴 $\mathsf{Graph}$, 其对象为两个生象带有两个映射 $E\rightrightarrows V$, 其上有一个自由范畴单子 $T_{\mathsf{Cat}}\colon \mathsf{Graph}\to\mathsf{Graph}$, 这个单子上的代数就是<strong>范畴</strong>.</li>
+<li><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 也可以类似定义, 底层的结构是<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>. 树与图的区别在于它能记录 “多个对象到一个对象的态射”. 这是本讲的第二个主要目标. 注意在本讲中, 算畴 (多重范畴) 有了两个不同层次的角色: 先是一个算畴定义一种结构, 然后算畴这种结构本身也可以用单子来定义.</li>
+</ul>
+<p>在上述每个例子中, “自由代数” 单子都不仅仅是单子, 而是所谓<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>. 元数 (arity) 的本义是一个函数的自变量的个数, 例如加法的元数是 $2$, 取逆的元数是 $1$, 而常数的元数是 $0$.</p>
+<h2>带元数的单子</h2>
+<p>如果定义一种代数结构的每种运算只涉及了一个集合里有限个元素, 那么一个代数 $X$ 就可以被全体有限集 $A$ 生成的自由代数 $TA$ <span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>. 所谓探测就是说用全体态射 $TA\to X$ 的信息可以完全恢复出 $X$ 的信息. 这就是<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>的直观.</p>
+<h2>齐性理论与 Descartes 单子</h2>
+</details></section><section class="block" data-taxon=""><details ><summary id="opecat"><header><h1><span class="taxon"></span>Barwick 算子范畴 <a class="slug" href="./opecat.html">[opecat]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./BarwickOpeCat.html" title="From operator categories to higher operads [BarwickOpeCat]">Clark Barwick 文章</a></span>的笔记. 将原文转写为模型无关语言.</p>
 <hr />
 <p>回忆 $\infty$-范畴可由<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形</a></span> (即一串连续的箭头) <span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>, 给出<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯生象</a></span>. 类似地, <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 可由类似于<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>的对象探测. 本文建立了一个统一的框架, 由算子范畴 $\Phi$ 出发构造探测用的 “$\Phi$-序列”, 分别在 $\Phi = 1$ 和 $\Phi = \mathsf{Fin}$ 的情形恢复出 $\infty$-范畴与算畴的概念.</p>
@@ -942,4 +1019,32 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="树形对象"><header><h1><span class="taxon"></span>树形对象 <a class="slug" href="./树形对象.html">[树形对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>树形对象是能用<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>的结构.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="自由单子"><header><h1><span class="taxon"></span>自由单子 <a class="slug" href="./自由单子.html">[自由单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>是自函子范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>; 自由单子就是这种代数中的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>代数.</p>
+<h2>例</h2>
+<h3>树的自由单子</h3>
+<p><span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span> 上的自由单子通过如下具体过程给出. 对于树
+$$
+T = (I\overset{s}{\leftarrow} E \overset{p}{\to} B \overset{t}{\to} I),
+$$
+记</p>
+<ul>
+<li>$\operatorname{Sub}(T) := \mathsf{TEmb}_{/T}^{\simeq}$ 为 $T$ 的子树的集合 ($\mathsf{TEmb}$ 为<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>及含入构成的范畴),</li>
+<li>$\operatorname{Sub}'(T)$ 为 $T$ 的带一个标记叶的子树的集合.</li>
+</ul>
+<p>那么树 $T$ (对应的<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>)的<strong>自由单子</strong>即是如下多项式函子:
+$$
+\overline{T} = (I \leftarrow \operatorname{Sub}'(T) \to \operatorname{Sub}(T) \to I).
+$$</p>
+<p>事实上, 上述构造对一般的<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>也是成立的.</p>
+<h3>自函子的自由单子</h3>
+<p><strong>命题</strong> (参考 <span class="link local"><a href="./GHK-analytic-monads.html" title="∞-Operads as Analytic Monads [GHK-analytic-monads]">GHK</a></span> 4.2 节). 设范畴 $\mathcal C$ 具有<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>和二元<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>, 自函子 $P\colon \mathcal C\to\mathcal C$ 保持<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>. 记 $\mathsf{alg}_P(\mathcal C)$ 为 $P$-Lambek 代数 (即对象 $X$ 带有态射 $\alpha\colon P(X)\to X$ 的结构) 的范畴. 那么有<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由–遗忘伴随</a></span>
+$$
+F\colon \mathcal C \rightleftarrows \mathsf{alg}_{P}(\mathcal C)\colon U,
+$$
+且这对伴随<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span> $\overline{P}$ 正是自函子 $P$ 上的自由单子. 进一步有
+$$
+\mathsf{Alg}_{\overline{P}}(\mathcal C) \simeq \mathsf{alg}_P(\mathcal C).
+$$</p>
 </details></section></details></section></footer></article></div></body></html>

@@ -827,13 +827,109 @@
 
 <article><section class="block" data-taxon=""><details open><summary id="共尾函子"><header><h1><span class="taxon"></span>共尾函子 <a class="slug" href="./共尾函子.html">[共尾函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>共尾函子是不改变<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>的指标代换, 即对于共尾函子 $f\colon I\to J$ 以及图表 $X\colon J\to \mathcal C$,
+<p><strong>共尾函子</strong> (cofinal functor) 又叫<strong>终函子</strong> (final functor), 是不改变<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>的指标代换, 即对于共尾函子 $f\colon I\to J$ 以及图表 $X\colon J\to \mathcal C$,
 $$
 \operatorname{colim}_{i\in I}X_{f(i)}\to \operatorname{colim}_{j\in J}X_j
 $$
 为等价.</p>
+<p><strong>关于英文名称的注</strong>. Cofinal functor 的前缀 co- 是 “<strong>共</strong>” (来自拉丁文 cum) 而非 “余” (来自拉丁文 contra) 的意思.</p>
+<p>对偶的概念是<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首函子</a></span>.</p>
+<h2>定义</h2>
+<p><strong>命题-定义</strong>. 对于函子 $f\colon I\to J$, 若下列等价条件成立, 则称之为<strong>共尾函子</strong>:</p>
+<ul>
+<li>对任意 (有余极限的) 图表 $X\colon J\to \mathcal C$, 比较映射 $\operatorname{colim}_{i\in I}X_{f(i)}\to \operatorname{colim}_{j\in J}X_j$ 为等价;</li>
+<li>同上一个条件, 但只要求 $\mathcal C$ 为 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 的情形;</li>
+<li>对任意图表 $X\colon J\to \mathcal C$ 以及 $c\in\mathcal C$, 比较映射 $\operatorname{Hom}(X,\operatorname{const}_J c)\to \operatorname{Hom}(Xf,\operatorname{const}_I c)$ 为等价;</li>
+<li>对任意 $j\in J$, 范畴 $(j\downarrow f):=\{(i,u\colon j\to f(i))\}$ <span class="link local"><a href="./弱可缩范畴.html" title="弱可缩范畴 [弱可缩范畴]">弱可缩</a></span> (即底层<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>是<span class="link local"><a href="./可缩(同伦类型论).html" title="可缩类型 (同伦类型论) [可缩(同伦类型论)]">可缩</a></span>的).</li>
+<li>对任意 $j\in J$,
+$$
+  \int_{i\in I}\operatorname{Hom}_J(j,f(i)) = *.
+$$</li>
+</ul>
+<p>核心观察是由于<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>的 Fubini 定理,
+$$
+    \begin{aligned}
+    \operatorname{colim}_{i\in I}X_{f(i)}
+    &amp;=\int_{i\in I}X_{f(i)}\\
+    &amp;\simeq\int_{i\in I}\int_{j\in J}\operatorname{Hom}_{J}(j,f(i))\times X_j\\
+    &amp;\simeq\int_{j\in J}\Big(\int_{i\in I}\operatorname{Hom}_{J}(j,f(i))\Big)\times X_j.
+    \end{aligned}
+$$</p>
+<p>另外, 范畴 $(j \downarrow f)$ 的底层<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> (把所有态射取逆得到的 $\infty$-群胚) 正是 $\int_{i\in I}\operatorname{Hom}_{J}(j,f(i))$.</p>
+<h2>例</h2>
+<h3>伴随</h3>
+<p><strong>命题</strong>. 右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>是共尾函子. 或者说有左伴随的函子是共尾函子.</p>
+<p><em>证明</em>. 设函子 $f\colon I\to J$ 有左伴随 $l$, 则
+$$
+(j\downarrow f) = \{(i,u\colon j\to f(i))\} = \{i,l(j)\to i\} = I_{l(j)/}
+$$
+有始对象, 当然可缩; 另一种看法是
+$$
+\int_{i\in I}\operatorname{Hom}_J(j,f(i)) = \int_{i\in I}\operatorname{Hom}_I(l(j),i)=*.
+$$</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="共首函子"><header><h1><span class="taxon"></span>共首函子 <a class="slug" href="./共首函子.html">[共首函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>共首函子 (initial functor) 是不改变<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>的指标代换, 是<span class="link local"><a href="./共尾函子.html" title="共尾函子 [共尾函子]">共尾函子</a></span>的对偶概念.</p>
+<h2>观念</h2>
+<p><strong>共首函子</strong> (initial functor) 是不改变<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>的指标代换, 是<span class="link local"><a href="./共尾函子.html" title="共尾函子 [共尾函子]">共尾函子</a></span>的对偶概念.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="单纯对象的分裂"><header><h1><span class="taxon"></span>分裂单纯对象 <a class="slug" href="./单纯对象的分裂.html">[单纯对象的分裂]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>记 $\Delta_{\bot}$ 为有限非空全序集与保持最小值的映射构成的范畴. 事实上,
+$$
+\Delta_{\bot} = \mathsf{LMod}_{\Delta_+}([0])
+$$
+是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的结合代数 $[0]$ 上的左<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>范畴.
+因此其到<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span> $\Delta_+$ 的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>函子 (注意并非<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>)
+$$
+U\colon \Delta_{\bot}\rightarrow \Delta_+, [n]\mapsto [n]
+$$
+有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>
+$$
+C_+\colon \Delta_+ \to \Delta_{\bot}, [n]\mapsto [0] * [n]
+$$
+对全序集<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加一个最小值“, 可类比于<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">锥</a></span>操作.
+从而 (当 $\mathcal C$ 完备且余完备时) 有<span class="link local"><a href="./预层范畴之间的伴随.html" title="预层范畴之间的伴随 [预层范畴之间的伴随]">预层范畴之间的四元伴随</a></span>
+$$
+ (C_+)_!\dashv [U_!=(C_+)^*] \dashv [U^* =(C_+)_*] \dashv U_*.
+$$</p>
+<p>设 $X\colon \Delta_+^{\mathrm{op}}\to\mathcal C$ 为<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">增广单纯对象</a></span>, 定义其<strong>分裂</strong>为下图.</p>
+<p><figure><img src="./split-simplicial-object.svg" class="color-invert"/></figure></p>
+<p>换言之, $X = (C_+)^* \overline{X} = U_!\overline{X}$. 分裂是<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构而非性质</a></span>.</p>
+<p>注意到, $(C_+)^*=U_!$ 在<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>上的作用为 $(C_+)^*\mathbf{y}([n]) = \mathbf{y}([n])$. 而 $(C_+)^*$ 作为左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>保持余极限, 故有如下直观: $\Delta_\bot$ 的对象为固定顶点的锥, $\overline{X}$ 是一族固定顶点的锥的粘合, 从而是 “可以缩到顶点” 的单纯对象.</p>
+<hr />
+<p>有另外一种不同的 “分裂” 概念, 并且似乎不等价 (因为下面的概念是性质而非结构), 我不知道下面的概念有什么用, 暂且记录于此.</p>
+<p>记 $\mathrm{surj}(j,k)$ 为单纯集 $\Delta^j$ 到 $\Delta^k$ 的满射的集合. 设 $K$ 为<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, 其 $n$ 阶<strong>分裂</strong>是一系列子对象 $N_k \subset K_k\,(k\leq n)$, 称为非退化部分, 满足对 $0\leq j\leq n$, 有典范的同构 $\coprod_{\mathrm{surj}(j,k)}N_k \to K_j$.</p>
+<p>直观上, 这个条件是说 $K$ 的每个可能退化的单形都唯一地对应一个非退化单形.</p>
+<h2>性质</h2>
+<h3>余极限</h3>
+<p><strong>命题</strong>. 设单纯对象 $X\colon \Delta^{\mathrm{op}}\to\mathcal C$ 有一分裂 $\overline{X}\colon \Delta^{\mathrm{op}}_{\bot} \to \mathcal C$, 那么其自带的增广 $\overline{X}(\{\bot\})$ 即是 $X$ 的<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>.</p>
+<p><em>证明</em>. 因为 $C_+\colon \Delta\to\Delta_{\bot}$ 是左伴随, 所以 $(C_+)^{\mathrm{op}}\colon \Delta^{\mathrm{op}} \to\Delta_{\bot}^{\mathrm{op}}$ 是右伴随, 从而是<span class="link local"><a href="./共尾函子.html" title="共尾函子 [共尾函子]">共尾函子</a></span>. 又注意到 $\{\bot\}$ 是 $\Delta_{\bot}$ 的零对象, 故有
+$$
+\overline{X}(\{\bot\}) = \operatorname{colim}\overline{X} =\operatorname{colim}X.
+$$</p>
+<p><strong>推论</strong>. 分裂单纯对象是<span class="link local"><a href="./绝对余极限.html" title="绝对余极限 [绝对余极限]">绝对余极限</a></span>.</p>
+<h3>单子性</h3>
+<h2>参考资料</h2>
+<p>Artin, Mazur, Etale Homotopy Theory</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="收缩"><header><h1><span class="taxon"></span>收缩 <a class="slug" href="./收缩.html">[收缩]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>朴素定义</h3>
+<p>范畴 $\mathcal C$ 中, 一个对象 $X$ 的一个<strong>收缩</strong>是一个态射 $r\colon X\to Y$ 以及 $i\colon Y\to X$, 满足 $ri=\mathrm{id}_Y$.</p>
+<h3>通过单纯形</h3>
+<p>考虑<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span> $\Delta_+$ 上 $[0]$ 的左模范畴 $\Delta_{\bot}$, 即有最小值的全序集
+$$C_+([n]) = [n+1] = \{\bot,0,1,\cdots,n\}$$
+($n\geq -1$) 和保持最小值的保序映射的范畴.
+考虑其在两个对象 $C_+([-1]) = \{\bot\}$ 和 $C_+([0]) = \{\bot,0\}$ 上的全子范畴, 记为 $\mathsf{Ret}$. 详见<span class="link local"><a href="./游走的收缩.html" title="游走的收缩 [游走的收缩]">游走的收缩</a></span>.</p>
+<p>范畴 $\mathcal C$ 中的收缩就定义为函子 $\mathsf{Ret} \to \mathcal C$.</p>
+<p>按定义, 收缩等同于<span class="link local"><a href="./幂等态射.html" title="幂等态射 [幂等态射]">分裂幂等态射</a></span>.</p>
+<h2>性质</h2>
+<h3>余极限</h3>
+<p><strong>命题</strong>. 设 $f\colon \mathsf{Ret}\to\mathcal C$ 为范畴 $\mathcal C$ 中的收缩, 给出幂等映射 $\mathsf{Idem}\to\mathcal C$, 那么 $f(\{\bot\})$ 同时是 $f|_{\mathsf{Idem}}$ 的极限和余极限.</p>
+<p><em>证明</em>. $\mathsf{Idem}\to\mathsf{Ret}$ 同时是<span class="link local"><a href="./共尾函子.html" title="共尾函子 [共尾函子]">共尾函子</a></span>与<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首函子</a></span>. 又注意到 $\{\bot\}$ 是 $\mathsf{Ret}$ 的零对象, 故有
+$$
+f(\{\bot\}) = \operatorname{colim}f =\operatorname{colim}f|_{\mathsf{Idem}},
+$$
+$$
+f(\{\bot\}) = \operatorname{lim}f =\operatorname{lim}f|_{\mathsf{Idem}}.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="滤范畴"><header><h1><span class="taxon"></span>滤范畴 <a class="slug" href="./滤范畴.html">[滤范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>滤范畴是满足如下等价条件的范畴 $\mathcal C$:</p>

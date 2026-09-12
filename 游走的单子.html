@@ -829,7 +829,17 @@
 <h2>定义</h2>
 <p>游走的单子是 $2$-范畴 $\mathbf{B}\Delta_+$. 其有一个对象 $*$, 且 $\operatorname{Hom}(*,*)\simeq\Delta_+$.</p>
 <p>游走的单子 $\mathbf{B}\Delta_+$ 也是<span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span> $\mathsf{Adj}$ 的一个全子范畴.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="游走的伴随"><header><h1><span class="taxon"></span>游走的伴随 <a class="slug" href="./游走的伴随.html">[游走的伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="多项式单子"><header><h1><span class="taxon"></span>多项式单子 <a class="slug" href="./多项式单子.html">[多项式单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>固定一个基范畴 $\mathcal C$, 通常为 $\mathsf{Set}$ 或 $\mathsf{Ani}$. 记 $\mathsf{Poly}(\mathcal C)$ 为切片范畴 $\mathcal C_{/X}$ 及其之间的<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>以及 <span class="link local"><a href="./Descartes自然变换.html" title="Descartes 自然变换 [Descartes自然变换]">Descartes 自然变换</a></span>构成的 $2$-范畴.</p>
+<p>定义 $\mathcal C_{/X}$ 上的<strong>多项式单子</strong> (polynomial monad) 是 $2$-范畴 $\mathsf{Poly}(\mathcal C)$ 中 $\mathcal C_{/X}$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>, 也即<span class="link local"><a href="./游走的单子.html" title="游走的单子 [游走的单子]">游走的单子</a></span>到 $\mathsf{Poly}$ 的函子
+$$
+\mathsf{Mnd} \to \mathsf{Poly},\ *\mapsto\mathcal C_{/X}.
+$$</p>
+<h2>例</h2>
+<h3>自由幺半群</h3>
+<p>自由幺半群单子 (即<span class="link local"><a href="./列表.html" title="列表 [列表]">列表</a></span>函子) 是多项式单子.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="游走的伴随"><header><h1><span class="taxon"></span>游走的伴随 <a class="slug" href="./游走的伴随.html">[游走的伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>游走的伴随</strong>是一个具有两个对象的 $2$-范畴 $\mathsf{Adj}$, 任何 $2$-范畴 $\mathcal C$ (例如 $\mathsf{Cat}$) 中的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>等同于函子
 $$
@@ -901,6 +911,9 @@ $$
 <p>换言之, $\mathsf{Adj}^{2\text{-}\mathrm{op}}$ 中有一对伴随 $r''\dashv l''$. 注意这同样与原来的伴随 $l\dashv r$ 在名称上是相反的.</p>
 <p>这个事实结合 $\mathsf{Adj}$ 的游走性质有如下的推论:</p>
 <ul>
-<li>todo</li>
+<li>对于 $\mathsf{Cat}$ 中的伴随 $f\dashv g$, 相应地有 $\mathsf{Cat}$ 中的另一对伴随 $g^{\mathrm{op}}\dashv f^{\mathrm{op}}$, 由如下复合给出:
+$$
+\mathsf{Adj}\to\mathsf{Adj}^{2\text{-op}}\to\mathsf{Cat}^{2\text{-op}}\overset{(-)^{\mathrm{op}}}{\longrightarrow}\mathsf{Cat}.
+$$</li>
 </ul>
 </details></section></details></section></footer></article></div></body></html>

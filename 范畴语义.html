@@ -945,12 +945,24 @@ $$
 $$</p>
 <h2>定义</h2>
 <h3>伴随函子</h3>
-<p>一对伴随函子 $F\dashv G$ 是满足如下条件的函子:
+<p>一对伴随函子 $F\dashv G$ 是带有如下自然同构的函子:
 $$
 \operatorname{Hom}(F-,-)\simeq\operatorname{Hom}(-,G-).
 $$</p>
+<p><strong>命题</strong>. 如下条件等价:</p>
+<ul>
+<li>函子 $F\colon \mathcal C\to\mathcal D$ 有右伴随;</li>
+<li>对任意 $d\in\mathcal D$, 函子 $\operatorname{Hom}(F-,d)\colon \mathcal C^{\mathrm{op}} \to\mathsf{Ani}$ <span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表</a></span>;</li>
+<li>对任意 $d\in\mathcal D$, <span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span> $\int_{\mathcal C}\operatorname{Hom}(Fc,d)$ 有<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>.</li>
+</ul>
+<p>对偶地, 如下条件等价:</p>
+<ul>
+<li>函子 $G\colon \mathcal D\to\mathcal C$ 有左伴随;</li>
+<li>对任意 $c\in\mathcal C$, 函子 $\operatorname{Hom}(c,G-)\colon \mathcal D \to\mathsf{Ani}$ <span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">余可表</a></span>;</li>
+<li>对任意 $c\in\mathcal C$, <span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span> $\int_{\mathcal D}\operatorname{Hom}(c,Gd)$ 有<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>.</li>
+</ul>
 <h3>$2$-范畴中的伴随</h3>
-<p>$2$-范畴 $\mathcal C$ 中的伴随等同于<span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span> $\mathsf{Adj}$ 到 $\mathcal C$ 的函子
+<p>通常说的伴随是 $2$-范畴 $\mathsf{Cat}$ 中的伴随. 更一般地, $2$-范畴 $\mathcal C$ 中的伴随等同于<span class="link local"><a href="./游走的伴随.html" title="游走的伴随 [游走的伴随]">游走的伴随</a></span> $\mathsf{Adj}$ 到 $\mathcal C$ 的函子
 $$
 \mathsf{Adj} \to \mathcal C.
 $$</p>
@@ -1053,6 +1065,43 @@ $$
 <h3>米田嵌入的伴随</h3>
 <p><strong>命题</strong>. 范畴 $\mathcal C$ 余完备当且仅当<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span> $\mathrm{y}\colon \mathcal C\to\mathsf{Psh}(\mathcal C)$ 有左伴随.</p>
 <p>证明. 若 $\mathcal C$ 余完备, 则可定义 $\mathrm{y}$ 的左伴随 $L\colon \mathsf{Psh}(\mathcal C)\to\mathcal C$ 为 $\mathrm{id}_{\mathcal C}$ 的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">米田扩张</a></span>. 另一方面, 假设左伴随 $L$ 存在, 那么由于 $L$ 保持余极限, $\mathcal C$ 中必须具有所有的余极限.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="始代数"><header><h1><span class="taxon"></span>始代数 (自函子) <a class="slug" href="./始代数.html">[始代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>始代数可理解为某些<span class="link local"><a href="./归纳类型.html" title="归纳类型 (同伦类型论) [归纳类型]">归纳类型</a></span>的<span class="link local"><a href="./范畴语义.html" title="范畴语义 [范畴语义]">范畴语义</a></span>.</p>
+<h2>定义</h2>
+<p>对于范畴 $\mathcal C$ 的自函子 $F\colon \mathcal C \to \mathcal C$, 称一个对象 $X$ 配备一个态射 $F(X)\to X$ 的结构为 $F$-<strong>代数</strong> (又称 Lambek 代数). 定义 $F$ 的<strong>始代数</strong>为 $F$-代数范畴的<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>.</p>
+<h2>性质</h2>
+<h3>Lambek 定理</h3>
+<p><strong>定理</strong> (Lambek). 若 $F$ 有始代数 $\alpha\colon F(X) \to X$, 则 $\alpha$ 为同构.</p>
+<p>因此始代数又称<strong>最小不动点</strong>.</p>
+<p><strong>命题</strong>. 假设范畴 $\mathcal C$ 有<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>及始对象 $0$, 且 $F$ 保持滤余极限. 那么 $F$ 有始代数
+$$
+\operatorname{colim}_n F^n0.
+$$</p>
+<h2>例</h2>
+<h3>自然数</h3>
+<p>自然数集 $\mathbb{N}$ 是 $\mathsf{Set}$ 上的函子 $X\mapsto 1+X$ 的始代数:
+$$
+\mathbb{N} = \operatorname{colim}_n \underbrace{1+1+\cdots+1}_{n}.
+$$</p>
+<h3>二叉树</h3>
+<p>二叉树的集合 $B$ 是 $\mathsf{Set}$ 上的自函子 $X\mapsto 1 + X^2$ 的始代数.
+注意, 由于一棵二叉树要么为空要么由两棵更小的二叉树构成, 故有
+$$
+B \simeq 1 + B^2.
+$$
+更有趣的是, 由上式可得
+$$
+B\simeq B^7,
+$$
+并且这个同构由 Andreas Blass 的著名文章 “<span class="link external"><a href="https://arxiv.org/abs/math/9405205" title="七树合一 [https://arxiv.org/abs/math/9405205]">七树合一</a></span>” 显式构造.</p>
+<h3>列表</h3>
+<p>对于集合 $A$, 函子 $X \mapsto 1 + A\times X$ 的始代数是 $A$ 的<span class="link local"><a href="./列表.html" title="列表 [列表]">列表</a></span>集合
+$$
+\operatorname{List}(A) = \bigsqcup_n A^n,
+$$
+也即 $A$ 上的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span><span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>.</p>
+<p>上述三个例子都是<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>, 这种函子总是保持滤余极限.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="截断性"><header><h1><span class="taxon"></span>截断性 <a class="slug" href="./截断性.html">[截断性]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <h2>定义</h2>
