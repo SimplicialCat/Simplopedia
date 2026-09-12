@@ -827,17 +827,31 @@
 
 <article><section class="block" data-taxon=""><details open><summary id="Lambek代数"><header><h1><span class="taxon"></span>Lambek 代数 <a class="slug" href="./Lambek代数.html">[Lambek代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>范畴 $\mathcal C$ 的自函子 $F$ 的 <strong>Lambek 代数</strong>就是对象 $X\in\mathcal C$ 配备一个态射 $F(X)\to X$.</p>
-<p>记 $\mathsf{alg}_F(\mathcal C)$ 为 $F$-Lambek 代数的范畴.</p>
+<p>范畴 $\mathcal C$ 的自函子 $F$ 的 <strong>Lambek 代数</strong>就是对象 $X\in\mathcal C$ 配备一个态射 $F(X)\to X$. 记 $\mathsf{alg}_F(\mathcal C)$ 为 $F$-Lambek 代数的范畴.</p>
+<p>对偶地, $F$-<strong>Lambek 余代数</strong>是对象 $X\in\mathcal C$ 配备一个态射 $X\to F(X)$. 记 $\mathsf{coalg}_F(\mathcal C)$ 为 $F$-Lambek 余代数的范畴.</p>
 <h2>性质</h2>
 <h3>始对象</h3>
 <p>Lambek 代数范畴中的始对象是一种重要范畴论构造, 见<span class="link local"><a href="./始代数.html" title="始代数 (自函子) [始代数]">始代数</a></span>.</p>
 <h3>自由–遗忘伴随</h3>
-<p><span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由–遗忘伴随</a></span>
+<p><strong>命题</strong> (参考 <span class="link local"><a href="./GHK-analytic-monads.html" title="∞-Operads as Analytic Monads [GHK-analytic-monads]">GHK</a></span> 4.2 节). 设范畴 $\mathcal C$ 具有<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>和二元<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>, 自函子 $P\colon \mathcal C\to\mathcal C$ 保持<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>. 那么有<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由–遗忘伴随</a></span>
 $$
-\mathsf{alg}_F(\mathcal C) \rightleftarrows \mathcal C
+F\colon \mathcal C \rightleftarrows \mathsf{alg}_{P}(\mathcal C)\colon U,
+$$
+且这对伴随<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span> $\overline{P}$ 正是自函子 $P$ 上的<span class="link local"><a href="./自由单子.html" title="自由单子 [自由单子]">自由单子</a></span>. 进一步有
+$$
+\mathsf{Alg}_{\overline{P}}(\mathcal C) \simeq \mathsf{alg}_P(\mathcal C).
 $$</p>
 <h3>杠–余杠对偶</h3>
+<p>考虑<span class="link local"><a href="./扭箭头范畴.html" title="扭箭头范畴 [扭箭头范畴]">扭箭头范畴</a></span> $\mathsf{Tw}(\mathcal C) \to\mathcal C^{\mathrm{op}}\times\mathcal C$ (即 $\operatorname{Hom}\colon \mathcal C^{\mathrm{op}}\times\mathcal C\to\mathsf{Ani}$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span>), 有函子
+$$
+\mathsf{Tw}(P)\colon \mathsf{Tw}(\mathcal C) \to \mathsf{Tw}(\mathcal C),
+$$
+且其 Lambek 代数范畴有函子
+$$
+\begin{aligned}
+\mathsf{alg}_{\mathsf{Tw}(P)}(\mathsf{Tw}(\mathcal C)) &amp;\to \mathsf{alg}_{P^{\mathrm{op}}}(\mathcal C^{\mathrm{op}}) \times \mathsf{alg}_P(\mathcal C) \\&amp;= \mathsf{coalg}_P(\mathcal C)\times\mathsf{alg}_P(\mathcal C).
+\end{aligned}
+$$</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="始代数"><header><h1><span class="taxon"></span>始代数 (自函子) <a class="slug" href="./始代数.html">[始代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>始代数可理解为某些<span class="link local"><a href="./归纳类型.html" title="归纳类型 (同伦类型论) [归纳类型]">归纳类型</a></span>的<span class="link local"><a href="./范畴语义.html" title="范畴语义 [范畴语义]">范畴语义</a></span>.</p>
@@ -908,6 +922,26 @@ $$
 \overline{T} = (I \leftarrow \operatorname{Sub}'(T) \to \operatorname{Sub}(T) \to I).
 $$</p>
 <p>事实上, 上述构造对一般的<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>也是成立的.</p>
+<h3>多项式的自由单子</h3>
+<p>对于<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>
+$$
+P = (I\overset{s}{\leftarrow} E \overset{p}{\to} B \overset{t}{\to} I),
+$$
+记</p>
+<ul>
+<li>$\operatorname{tr}(P) := \mathsf{TEmb}_{/P}^{\simeq}$ 为 $P$-<span class="link local"><a href="./P-树.html" title="P-树 (多项式函子标记的树) [P-树]">树</a></span>的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>, 映射 $\operatorname{tr}(P)\to I$ 将 $P$-树映射到其根的标记;</li>
+<li>$\operatorname{tr}'(P)$ 为带一个特殊标记叶的 $P$-树的生象, 映射 $\operatorname{tr}'(P)\to I$ 将 $P$-树映射到其特殊标记叶的标记.</li>
+</ul>
+<p><strong>命题</strong> (<span class="link local"><a href="./KockPolyFun.html" title="Polynomial Functors and Trees [KockPolyFun]">Kock</a></span>, 命题 1.2.8). <span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span> $P$ 的<strong>自由单子</strong>即是如下多项式函子:
+$$
+\overline{P} = (I \leftarrow \operatorname{tr}'(P) \to \operatorname{tr}(P) \to I).
+$$</p>
+<p><em>证明</em>. 由定义, 对于 $(X\to I)\in\mathsf{Ani}_{/I}$,
+$$
+\overline{P}(X)_i = \sum_{T\in\operatorname{tr}(P)_i}\prod_{\ell\in\ell(T)}X_\ell,
+$$
+其中 $\ell(T)$ 表示树 $T$ 的叶的集合; 换言之, $\overline{P}(X)$ 是每个叶带 $X$ 标记的树的生象 (更准确地说, 每个带 $i\in I$ 标记的叶, 都额外带一个 $X_i$ 中的标记).</p>
+<p>于是 $\overline{P}(X)$ 就是自函子 $X + P\colon \mathsf{Ani}_{X/}\to\mathsf{Ani}_{X/}$, $(X\to Y)\mapsto (X+P(Y))$ 的<span class="link local"><a href="./始代数.html" title="始代数 (自函子) [始代数]">始代数</a></span>, 也即 $X$ 上的自由 $P$-<span class="link local"><a href="./Lambek代数.html" title="Lambek 代数 [Lambek代数]">Lambek 代数</a></span>. 这说明 $\overline{P}$ 是 $P$ 的自由单子 (见下文 “自函子的自由单子”). $\square$</p>
 <h3>自函子的自由单子</h3>
 <p><strong>命题</strong> (参考 <span class="link local"><a href="./GHK-analytic-monads.html" title="∞-Operads as Analytic Monads [GHK-analytic-monads]">GHK</a></span> 4.2 节). 设范畴 $\mathcal C$ 具有<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>和二元<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>, 自函子 $P\colon \mathcal C\to\mathcal C$ 保持<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>. 记 $\mathsf{alg}_P(\mathcal C)$ 为 $P$-<span class="link local"><a href="./Lambek代数.html" title="Lambek 代数 [Lambek代数]">Lambek 代数</a></span> (即对象 $X$ 带有态射 $\alpha\colon P(X)\to X$ 的结构) 的范畴. 那么有<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由–遗忘伴随</a></span>
 $$

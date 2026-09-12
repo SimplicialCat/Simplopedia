@@ -835,7 +835,64 @@
 <li>空列表 $(\,\,)$ 是 $\operatorname{List}A$ 的元素;</li>
 <li>对于 $a : A$, $s : \operatorname{List}A$, 有 $(a,s) : \operatorname{List}A$.</li>
 </ul>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="代数理论"><header><h1><span class="taxon"></span>代数理论 <a class="slug" href="./代数理论.html">[代数理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./逻辑.html" title="逻辑 [逻辑]">逻辑</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="P-树"><header><h1><span class="taxon"></span>P-树 (多项式函子标记的树) <a class="slug" href="./P-树.html">[P-树]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设
+$$
+P = (I \overset{s}{\leftarrow} A \overset{p}{\to} B \overset{t}{\to} I)
+$$
+为<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>, 定义 $P$-<strong>树</strong>为<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span> $T = (E \leftarrow M \to N \to E)$ 到 $P$ (作为多项式函子) 的态射, 也即 “边由 $I$ 标记, 结点由 $B$ 标记的树”.</p>
+<p>注意由定义, 对于 $P$-树的每个以 $b\in B$ 为标记的结点, 记 $p^{-1}(b) = \{a_1,\cdots,a_n\}$, 那么</p>
+<ul>
+<li>该节点的<strong>入边</strong>必须一一对应于 $\{a_1,\cdots,a_n\}$, 且入边的标记分别为 $s(a_1),\cdots,s(a_n)$;</li>
+<li>该结点的<strong>出边</strong>的标记为 $t(b)$.</li>
+</ul>
+<h3>归纳定义</h3>
+<p>类似于普通的树, $P$-树也具有如下归纳定义:</p>
+<ul>
+<li>元素 $i\in I$ 本身是 $P$-树 (无节点, 只有一条边的树);</li>
+<li>设 $T_1,\cdots,T_n$ 是 $P$-树, 其根的标记分别为 $i_1,\cdots,i_n\in I$. 设 $b\in B$, 满足 $p^{-1}(b) = \{a_1,\cdots,a_n\}$, $s(a_1) = i_1$, $\cdots$, $s(a_n) = i_n$, 则有一棵 $P$-树, 根节点以 $b$ 标记, 以 $t(b)$ 为根标记, 根节点上长着 $T_1,\cdots,T_n$.</li>
+</ul>
+<h2>性质</h2>
+<h3>始代数</h3>
+<p><strong>命题</strong>. $P$-树的集合 (生象) 为 $\mathsf{Set}_{/I}$ 上自函子
+$$
+X \mapsto I + P(X)
+$$
+的<span class="link local"><a href="./始代数.html" title="始代数 (自函子) [始代数]">始代数</a></span>. 这直接体现了 $P$-树的归纳定义. 因为 $P$ 作为 $\mathsf{Set}_{/I}$ 的自函子, 在 $(f\colon I\to\mathsf{Set})\in\mathsf{Set}^I =\mathsf{Set}_{/I}$ 的值为
+$$
+P(f)(i) = \sum_{b\in t^{-1}(i)}\prod_{a\in p^{-1}(b)} f(s(a)),
+$$
+直观上, 以 $i$ 为根标记的 $P$-树,</p>
+<ul>
+<li>要么是无节点的树,</li>
+<li>要么是一个 $b\in t^{-1}(i)$, 以及对每个 $a\in p^{-1}(b)$ 包含一个以 s(a) 为根标记的 $P$-树.</li>
+</ul>
+<h2>例</h2>
+<h3>线性树</h3>
+<p>当 $P = (1 \leftarrow 1 \to 1 \to 1)$ (对应 $\mathsf{Set}$ 上的恒等函子) 时, $P$-树即为线性树, 即形如
+$$
+\begin{array}
+{c}
+\downarrow\\
+\bullet\\
+\downarrow\\
+\bullet\\
+\vdots\\
+\bullet\\
+\downarrow
+\end{array}
+$$
+的树.</p>
+<h3>树的子树</h3>
+<p><span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span> $T$ 本身也是多项式, 此时 $T$-树就是 $T$ 的子树.</p>
+<h3>平面树</h3>
+<p>考虑自由幺半群单子 (<span class="link local"><a href="./列表.html" title="列表 [列表]">列表</a></span>函子) $L$, 其对应多项式
+$$
+1\leftarrow \{(n,m)\in\mathbb{N}^2\mid n&lt;m \} \to \mathbb{N} \to 1,
+$$
+那么 $L$-树就是每个结点的入边带有一个<span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序</a></span>的树, 又称<strong>平面树</strong> (planar tree).</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="代数理论"><header><h1><span class="taxon"></span>代数理论 <a class="slug" href="./代数理论.html">[代数理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./逻辑.html" title="逻辑 [逻辑]">逻辑</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>代数</strong>的最初意义是对运算与等式的研究. 一个<strong>代数理论</strong>就是若干种运算和这些运算之间的若干条等式. 代数理论的<strong>模型</strong>就是一个集合 (或一般范畴的对象) 上带有指定的运算, 满足指定的等式.</p>
 <p>一种更抽象的视角是, 运算和等式不过是一个具有有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">乘积</a></span> (<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>) 的范畴的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 故代数理论可 “无坐标” 式地定义为这样的一个范畴, 这个范畴就是它的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>. 而该理论的模型则是语法范畴到 $\mathsf{Set}$ (或一般范畴) 的保持结构的函子.</p>

@@ -851,7 +851,34 @@ $$</p>
 <h2>例</h2>
 <h3>群胚</h3>
 <p>群胚 (<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>) $X$ 视为范畴, 其扭箭头范畴等价于 $X$ 自身.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="余端"><header><h1><span class="taxon"></span>余端 <a class="slug" href="./余端.html">[余端]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Lambek代数"><header><h1><span class="taxon"></span>Lambek 代数 <a class="slug" href="./Lambek代数.html">[Lambek代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>范畴 $\mathcal C$ 的自函子 $F$ 的 <strong>Lambek 代数</strong>就是对象 $X\in\mathcal C$ 配备一个态射 $F(X)\to X$. 记 $\mathsf{alg}_F(\mathcal C)$ 为 $F$-Lambek 代数的范畴.</p>
+<p>对偶地, $F$-<strong>Lambek 余代数</strong>是对象 $X\in\mathcal C$ 配备一个态射 $X\to F(X)$. 记 $\mathsf{coalg}_F(\mathcal C)$ 为 $F$-Lambek 余代数的范畴.</p>
+<h2>性质</h2>
+<h3>始对象</h3>
+<p>Lambek 代数范畴中的始对象是一种重要范畴论构造, 见<span class="link local"><a href="./始代数.html" title="始代数 (自函子) [始代数]">始代数</a></span>.</p>
+<h3>自由–遗忘伴随</h3>
+<p><strong>命题</strong> (参考 <span class="link local"><a href="./GHK-analytic-monads.html" title="∞-Operads as Analytic Monads [GHK-analytic-monads]">GHK</a></span> 4.2 节). 设范畴 $\mathcal C$ 具有<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>和二元<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>, 自函子 $P\colon \mathcal C\to\mathcal C$ 保持<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>. 那么有<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由–遗忘伴随</a></span>
+$$
+F\colon \mathcal C \rightleftarrows \mathsf{alg}_{P}(\mathcal C)\colon U,
+$$
+且这对伴随<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span> $\overline{P}$ 正是自函子 $P$ 上的<span class="link local"><a href="./自由单子.html" title="自由单子 [自由单子]">自由单子</a></span>. 进一步有
+$$
+\mathsf{Alg}_{\overline{P}}(\mathcal C) \simeq \mathsf{alg}_P(\mathcal C).
+$$</p>
+<h3>杠–余杠对偶</h3>
+<p>考虑<span class="link local"><a href="./扭箭头范畴.html" title="扭箭头范畴 [扭箭头范畴]">扭箭头范畴</a></span> $\mathsf{Tw}(\mathcal C) \to\mathcal C^{\mathrm{op}}\times\mathcal C$ (即 $\operatorname{Hom}\colon \mathcal C^{\mathrm{op}}\times\mathcal C\to\mathsf{Ani}$ 的<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span>), 有函子
+$$
+\mathsf{Tw}(P)\colon \mathsf{Tw}(\mathcal C) \to \mathsf{Tw}(\mathcal C),
+$$
+且其 Lambek 代数范畴有函子
+$$
+\begin{aligned}
+\mathsf{alg}_{\mathsf{Tw}(P)}(\mathsf{Tw}(\mathcal C)) &amp;\to \mathsf{alg}_{P^{\mathrm{op}}}(\mathcal C^{\mathrm{op}}) \times \mathsf{alg}_P(\mathcal C) \\&amp;= \mathsf{coalg}_P(\mathcal C)\times\mathsf{alg}_P(\mathcal C).
+\end{aligned}
+$$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="余端"><header><h1><span class="taxon"></span>余端 <a class="slug" href="./余端.html">[余端]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>余端是<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>的对偶概念, 可理解为<span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span>, 它是 “函数对测度积分” 的类比与<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>.</p>
 <h2>定义</h2>

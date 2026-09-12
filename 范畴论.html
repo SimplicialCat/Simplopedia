@@ -1034,7 +1034,7 @@ $$
 </ul>
 <h2>性质</h2>
 <h3>始代数</h3>
-<p>$P$-树的集合 (生象) 为 $\mathsf{Set}_{/I}$ 上自函子
+<p><strong>命题</strong>. $P$-树的集合 (生象) 为 $\mathsf{Set}_{/I}$ 上自函子
 $$
 X \mapsto I + P(X)
 $$
@@ -1065,6 +1065,12 @@ $$
 的树.</p>
 <h3>树的子树</h3>
 <p><span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span> $T$ 本身也是多项式, 此时 $T$-树就是 $T$ 的子树.</p>
+<h3>平面树</h3>
+<p>考虑自由幺半群单子 (<span class="link local"><a href="./列表.html" title="列表 [列表]">列表</a></span>函子) $L$, 其对应多项式
+$$
+1\leftarrow \{(n,m)\in\mathbb{N}^2\mid n&lt;m \} \to \mathbb{N} \to 1,
+$$
+那么 $L$-树就是每个结点的入边带有一个<span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序</a></span>的树, 又称<strong>平面树</strong> (planar tree).</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="ind-对象"><header><h1><span class="taxon"></span>ind-对象 <a class="slug" href="./ind-对象.html">[ind-对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>范畴 $\mathcal C$ 的 ind-对象是其对象的形式<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>.</p>
@@ -2642,6 +2648,26 @@ $$
 \overline{T} = (I \leftarrow \operatorname{Sub}'(T) \to \operatorname{Sub}(T) \to I).
 $$</p>
 <p>事实上, 上述构造对一般的<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>也是成立的.</p>
+<h3>多项式的自由单子</h3>
+<p>对于<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>
+$$
+P = (I\overset{s}{\leftarrow} E \overset{p}{\to} B \overset{t}{\to} I),
+$$
+记</p>
+<ul>
+<li>$\operatorname{tr}(P) := \mathsf{TEmb}_{/P}^{\simeq}$ 为 $P$-<span class="link local"><a href="./P-树.html" title="P-树 (多项式函子标记的树) [P-树]">树</a></span>的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>, 映射 $\operatorname{tr}(P)\to I$ 将 $P$-树映射到其根的标记;</li>
+<li>$\operatorname{tr}'(P)$ 为带一个特殊标记叶的 $P$-树的生象, 映射 $\operatorname{tr}'(P)\to I$ 将 $P$-树映射到其特殊标记叶的标记.</li>
+</ul>
+<p><strong>命题</strong> (<span class="link local"><a href="./KockPolyFun.html" title="Polynomial Functors and Trees [KockPolyFun]">Kock</a></span>, 命题 1.2.8). <span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span> $P$ 的<strong>自由单子</strong>即是如下多项式函子:
+$$
+\overline{P} = (I \leftarrow \operatorname{tr}'(P) \to \operatorname{tr}(P) \to I).
+$$</p>
+<p><em>证明</em>. 由定义, 对于 $(X\to I)\in\mathsf{Ani}_{/I}$,
+$$
+\overline{P}(X)_i = \sum_{T\in\operatorname{tr}(P)_i}\prod_{\ell\in\ell(T)}X_\ell,
+$$
+其中 $\ell(T)$ 表示树 $T$ 的叶的集合; 换言之, $\overline{P}(X)$ 是每个叶带 $X$ 标记的树的生象 (更准确地说, 每个带 $i\in I$ 标记的叶, 都额外带一个 $X_i$ 中的标记).</p>
+<p>于是 $\overline{P}(X)$ 就是自函子 $X + P\colon \mathsf{Ani}_{X/}\to\mathsf{Ani}_{X/}$, $(X\to Y)\mapsto (X+P(Y))$ 的<span class="link local"><a href="./始代数.html" title="始代数 (自函子) [始代数]">始代数</a></span>, 也即 $X$ 上的自由 $P$-<span class="link local"><a href="./Lambek代数.html" title="Lambek 代数 [Lambek代数]">Lambek 代数</a></span>. 这说明 $\overline{P}$ 是 $P$ 的自由单子 (见下文 “自函子的自由单子”). $\square$</p>
 <h3>自函子的自由单子</h3>
 <p><strong>命题</strong> (参考 <span class="link local"><a href="./GHK-analytic-monads.html" title="∞-Operads as Analytic Monads [GHK-analytic-monads]">GHK</a></span> 4.2 节). 设范畴 $\mathcal C$ 具有<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>和二元<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>, 自函子 $P\colon \mathcal C\to\mathcal C$ 保持<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>. 记 $\mathsf{alg}_P(\mathcal C)$ 为 $P$-<span class="link local"><a href="./Lambek代数.html" title="Lambek 代数 [Lambek代数]">Lambek 代数</a></span> (即对象 $X$ 带有态射 $\alpha\colon P(X)\to X$ 的结构) 的范畴. 那么有<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由–遗忘伴随</a></span>
 $$
