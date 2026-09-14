@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width"><title>代数模式</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+
+
+<div id="tcomment"></div>
+<script src="https://cdn.jsdelivr.net/npm/twikoo@1.7.9/dist/twikoo.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const footer = document.querySelector('footer');
+    const commentEl = document.getElementById('tcomment');
+    if (footer && commentEl) {
+      footer.parentNode.insertBefore(commentEl, footer.nextSibling);
+    }
+    twikoo.init({
+      envId: 'https://simplopedia.netlify.app/.netlify/functions/twikoo',
+      el: '#tcomment',
+      path: location.pathname,
+    });
+  });
+</script><style>
+  @font-face {
+    font-family: 'NewCM10';
+    src: url(assets/NewCM10-Book.otf) format('opentype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'NewCM10';
+    src: url(assets/NewCM10-Italic.otf) format('opentype');
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'NewCM10';
+    src: url(assets/NewCM10-Bold.otf) format('opentype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  body {
+    --text-font-family: "NewCM10", serif !important;
+  }
+</style><template id="inline-section">
+  <section class="inline block" data-taxon="">
+    <details open="">
+      <summary>
+        <header>
+          <h1>
+            <span class="taxon"></span>
+            <div id="title"></div>
+          </h1>
+        </header>
+      </summary>
+      <div id="content"></div>
+    </details>
+  </section>
+</template>
+
+<script>
+  function inlineSection(template, section, taxon, title) {
+    taxon = taxon || section.getAttribute("taxon") || null;
+    title = title || section.getAttribute("title") || "";
+
+    const clone = template.content.cloneNode(true);
+    clone.querySelector("section").dataset.taxon = taxon;
+    clone.querySelector(".taxon").textContent = taxon ? `${taxon}. ` : "";
+    clone.querySelector("#title").replaceWith(title);
+    clone.querySelector("#content").replaceWith(...section.childNodes);
+
+    if (section.hasAttribute("close")) {
+      clone.querySelector("details").removeAttribute("open");
+    }
+    
+    section.replaceWith(clone);
+  }
+
+  const tagTaxonTable = {
+    "exegesis": "Exegesis",
+    "definition": "Definition",
+    "proposition": "Proposition",
+    "remark": "Remark",
+    "conjecture": "Conjecture",
+    "postulate": "Postulate",
+    "claim": "Claim",
+    "observation": "Observation",
+    "fact": "Fact",
+    "hypothesis": "Hypothesis",
+    "axiom": "Axiom",
+    "lemma": "Lemma",
+    "theorem": "Theorem",
+    "corollary": "Corollary",
+    "example": "Example", 
+    "proof": "Proof",
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const template = document.getElementById("inline-section");
+
+    [...document.getElementsByTagName("block")].forEach(section => inlineSection(template, section));
+
+    Object.entries(tagTaxonTable).forEach(([tag, taxon]) => {
+      [...document.getElementsByTagName(tag)].forEach(section => inlineSection(template, section, taxon));
+    });
+  });
+</script><script>
+  function toggleDetailsOpen() {
+    const details = document.querySelector("#toc>div>details");
+    if (!details) return;
+
+    if (window.matchMedia("(max-width: 1000px)").matches) {
+      details.removeAttribute("open");
+    } else {
+      details.setAttribute("open", "");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", toggleDetailsOpen);
+  window.addEventListener("resize", toggleDetailsOpen);
+</script><style>
+  theme-option {
+    display: inline-block;
+  }
+
+  theme-option>input {
+    display: none;
+  }
+
+  theme-option>label {
+    color: var(--slug-color);
+  }
+
+  theme-option>label:hover {
+    background-color: var(--hover-color-link);
+  }
+
+  theme-option:has(input:checked)>label {
+    color: var(--link-color);
+  }
+
+  theme-option>label::before {
+    content: "[";
+    color: rgba(0, 0, 0, 0);
+  }
+
+  theme-option>label::after {
+    content: "]";
+    color: rgba(0, 0, 0, 0);
+  }
+
+  theme-option:has(input:checked)>label::before {
+    color: var(--link-color);
+  }
+
+  theme-option:has(input:checked)>label::after {
+    color: var(--link-color);
+  }
+</style>
+
+<template id="theme-option-template">
+  <input type="radio" name="theme" />
+  <label></label>
+</template>
+
+<script>
+  const THEME_KEY = `kodama-theme`;
+
+  function storeSelectedTheme(name) {
+    localStorage.setItem(THEME_KEY, name);
+  }
+
+  function getCurrentTheme() {
+    return localStorage.getItem(THEME_KEY) || window.primaryTheme;
+  }
+
+  function selectTheme(themeName) {
+    storeSelectedTheme(themeName);
+    requestAnimationFrame(applyDynamicColorInvert);
+  }
+
+  function applyFavorTheme() {
+    const favoredTheme = getCurrentTheme();
+    if (favoredTheme) {
+      const selector = `input[type='radio'][id='${favoredTheme}']`;
+      const favoredOption = window.themeOptions.querySelector(selector);
+
+      if (favoredOption) {
+        favoredOption.checked = true;
+      } else if (window.primaryOption) {
+        // Fallback to primary theme, if the favored theme is not found
+        // e.g., when the theme options have changed, and the stored theme is no longer available.
+        window.primaryOption.checked = true;
+      }
+    }
+    applyDynamicColorInvert();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    window.themeOptions = document.getElementById("theme-options");
+    const templateContent = document.getElementById("theme-option-template").content;
+
+    customElements.define(
+      "theme-option",
+      class extends HTMLElement {
+        constructor() {
+          super();
+
+          const node = templateContent.cloneNode(true);
+          const themeName = this.getAttribute("name");
+
+          const input = node.querySelector("input");
+          input.setAttribute("id", themeName);
+          input.setAttribute("value", themeName);
+
+          const label = node.querySelector("label");
+          label.setAttribute("for", themeName);
+          label.addEventListener("click", () => selectTheme(themeName));
+
+          while (this.firstChild) {
+            label.appendChild(this.firstChild);
+          }
+          this.appendChild(node);
+        }
+      },
+    );
+
+    window.primaryOption = window.themeOptions.querySelector("input[type='radio']");
+    window.primaryTheme = primaryOption?.value;
+
+    applyFavorTheme();
+  });
+</script>
+
+<script>
+  const clamp = (value) => Math.max(0, Math.min(255, value));
+
+  const multiply = ([r, g, b], matrix) => {
+    const nr = clamp(r * matrix[0] + g * matrix[1] + b * matrix[2]);
+    const ng = clamp(r * matrix[3] + g * matrix[4] + b * matrix[5]);
+    const nb = clamp(r * matrix[6] + g * matrix[7] + b * matrix[8]);
+    return [nr, ng, nb];
+  };
+
+  const hueRotate = ([r, g, b], angle = 0) => {
+    const rad = (angle / 180) * Math.PI;
+    const sin = Math.sin(rad);
+    const cos = Math.cos(rad);
+    const matrix = [
+      0.213 + cos * 0.787 - sin * 0.213,
+      0.715 - cos * 0.715 - sin * 0.715,
+      0.072 - cos * 0.072 + sin * 0.928,
+      0.213 - cos * 0.213 + sin * 0.143,
+      0.715 + cos * 0.285 + sin * 0.140,
+      0.072 - cos * 0.072 - sin * 0.283,
+      0.213 - cos * 0.213 - sin * 0.787,
+      0.715 - cos * 0.715 + sin * 0.715,
+      0.072 + cos * 0.928 + sin * 0.072,
+    ];
+    return multiply([r, g, b], matrix);
+  };
+
+  const grayscale = ([r, g, b], value = 1) => {
+    const matrix = [
+      0.2126 + 0.7874 * (1 - value),
+      0.7152 - 0.7152 * (1 - value),
+      0.0722 - 0.0722 * (1 - value),
+      0.2126 - 0.2126 * (1 - value),
+      0.7152 + 0.2848 * (1 - value),
+      0.0722 - 0.0722 * (1 - value),
+      0.2126 - 0.2126 * (1 - value),
+      0.7152 - 0.7152 * (1 - value),
+      0.0722 + 0.9278 * (1 - value),
+    ];
+    return multiply([r, g, b], matrix);
+  };
+
+  const sepia = ([r, g, b], value = 1) => {
+    const matrix = [
+      0.393 + 0.607 * (1 - value),
+      0.769 - 0.769 * (1 - value),
+      0.189 - 0.189 * (1 - value),
+      0.349 - 0.349 * (1 - value),
+      0.686 + 0.314 * (1 - value),
+      0.168 - 0.168 * (1 - value),
+      0.272 - 0.272 * (1 - value),
+      0.534 - 0.534 * (1 - value),
+      0.131 + 0.869 * (1 - value),
+    ];
+    return multiply([r, g, b], matrix);
+  };
+
+  const saturate = ([r, g, b], value = 1) => {
+    const matrix = [
+      0.213 + 0.787 * value,
+      0.715 - 0.715 * value,
+      0.072 - 0.072 * value,
+      0.213 - 0.213 * value,
+      0.715 + 0.285 * value,
+      0.072 - 0.072 * value,
+      0.213 - 0.213 * value,
+      0.715 - 0.715 * value,
+      0.072 + 0.928 * value,
+    ];
+    return multiply([r, g, b], matrix);
+  };
+
+  const linear = ([r, g, b], slope = 1, intercept = 0) => {
+    const scale = 255;
+    return [
+      clamp(r * slope + intercept * scale),
+      clamp(g * slope + intercept * scale),
+      clamp(b * slope + intercept * scale),
+    ];
+  };
+
+  const brightness = (rgb, value = 1) => linear(rgb, value);
+  const contrast = (rgb, value = 1) => linear(rgb, value, -0.5 * value + 0.5);
+
+  const invert = ([r, g, b], value = 1) => {
+    const nr = (value + r / 255 * (1 - 2 * value)) * 255;
+    const ng = (value + g / 255 * (1 - 2 * value)) * 255;
+    const nb = (value + b / 255 * (1 - 2 * value)) * 255;
+    return [clamp(nr), clamp(ng), clamp(nb)];
+  };
+
+  // Code taken from https://stackoverflow.com/a/9493060/2688027, licensed under CC BY-SA.
+  const rgbToHsl = (r, g, b) => {
+    r /= 255; g /= 255; b /= 255;
+    const max = Math.max(r, g, b);
+    const min = Math.min(r, g, b);
+    let h, s, l = (max + min) / 2;
+    if (max === min) {
+      h = s = 0;
+    } else {
+      const d = max - min;
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      switch (max) {
+        case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+        case g: h = (b - r) / d + 2; break;
+        case b: h = (r - g) / d + 4; break;
+      }
+      h /= 6;
+    }
+    return { h: h * 100, s: s * 100, l: l * 100 };
+  };
+
+  const applyFilters = (rgb, [inv, sep, sat, hue, bri, con]) => {
+    let color = [...rgb];
+    color = invert(color, inv / 100);
+    color = sepia(color, sep / 100);
+    color = saturate(color, sat / 100);
+    color = hueRotate(color, hue * 3.6);
+    color = brightness(color, bri / 100);
+    color = contrast(color, con / 100);
+    return color;
+  };
+
+  const lossFn = (targetRgb, filters) => {
+    const resultRgb = applyFilters([0, 0, 0], filters);
+    const targetHsl = rgbToHsl(...targetRgb);
+    const resultHsl = rgbToHsl(...resultRgb);
+    return (
+      Math.abs(resultRgb[0] - targetRgb[0]) +
+      Math.abs(resultRgb[1] - targetRgb[1]) +
+      Math.abs(resultRgb[2] - targetRgb[2]) +
+      Math.abs(resultHsl.h - targetHsl.h) +
+      Math.abs(resultHsl.s - targetHsl.s) +
+      Math.abs(resultHsl.l - targetHsl.l)
+    );
+  };
+
+  const fix = (value, idx) => {
+    let max = 100;
+    if (idx === 2) max = 7500;                  // saturate
+    else if (idx === 4 || idx === 5) max = 200; // brightness, contrast
+    if (idx === 3) { // hue-rotate
+      if (value > max) return value % max;
+      if (value < 0) return max + (value % max);
+      return value;
+    }
+    return Math.max(0, Math.min(max, value));
+  };
+
+  const spsa = (targetRgb, A, a, c, initial, iters) => {
+    const alpha = 1;
+    const gamma = 1 / 6;
+    let values = [...initial];
+    let best = [...values];
+    let bestLoss = Infinity;
+
+    for (let k = 0; k < iters; k++) {
+      const ck = c / Math.pow(k + 1, gamma);
+      const deltas = Array(6).fill().map(() => (Math.random() > 0.5 ? 1 : -1));
+      const highArgs = values.map((v, i) => v + ck * deltas[i]);
+      const lowArgs = values.map((v, i) => v - ck * deltas[i]);
+      const lossDiff = lossFn(targetRgb, highArgs) - lossFn(targetRgb, lowArgs);
+
+      values = values.map((v, i) => {
+        const g = (lossDiff / (2 * ck)) * deltas[i];
+        const ak = a[i] / Math.pow(A + k + 1, alpha);
+        return fix(v - ak * g, i);
+      });
+
+      const loss = lossFn(targetRgb, values);
+      if (loss < bestLoss) {
+        best = [...values];
+        bestLoss = loss;
+      }
+    }
+    return { values: best, loss: bestLoss };
+  };
+
+  // Threshold for acceptable color loss. This value determines when the SPSA algorithm stops early.
+  // A loss below this value is considered visually indistinguishable for most use cases.
+  // The value 25 was determined empirically to balance performance and color accuracy.
+  const ACCEPTABLE_COLOR_LOSS = 25;
+
+  const solveWide = (targetRgb) => {
+    const A = 5;
+    const c = 15;
+    const a = [60, 180, 18000, 600, 1.2, 1.2];
+    let best = { loss: Infinity, values: null };
+    for (let i = 0; best.loss > ACCEPTABLE_COLOR_LOSS && i < 3; i++) {
+      const initial = [50, 20, 3750, 50, 100, 100];
+      const result = spsa(targetRgb, A, a, c, initial, 1000);
+      if (result.loss < best.loss) best = result;
+    }
+    return best;
+  };
+
+  const solveNarrow = (targetRgb, wideResult) => {
+    const A = wideResult.loss;
+    const c = 2;
+    const A1 = A + 1;
+    const a = [0.25 * A1, 0.25 * A1, A1, 0.25 * A1, 0.2 * A1, 0.2 * A1];
+    return spsa(targetRgb, A, a, c, wideResult.values, 500);
+  };
+
+  const cssFilterString = (filters) => {
+    const [inv, sep, sat, hue, bri, con] = filters.map(Math.round);
+    const hueDeg = Math.round(hue * 3.6);
+    return `filter: invert(${inv}%) sepia(${sep}%) saturate(${sat}%) hue-rotate(${hueDeg}deg) brightness(${bri}%) contrast(${con}%);`;
+  };
+
+  const solveColor = (targetRgb) => {
+    const wide = solveWide(targetRgb);
+    const narrow = solveNarrow(targetRgb, wide);
+    return {
+      values: narrow.values,
+      loss: narrow.loss,
+      filter: cssFilterString(narrow.values),
+    };
+  };
+
+  // Reuse a single canvas / context to avoid memory leaks
+  const colorParseCanvas = document.createElement('canvas');
+  colorParseCanvas.width = 1;
+  colorParseCanvas.height = 1;
+  const colorParseContext = colorParseCanvas.getContext('2d');
+
+  const toRGBArray = (cssColor) => {
+    colorParseContext.fillStyle = cssColor;
+    colorParseContext.fillRect(0, 0, 1, 1);
+
+    // The `getImageData().data` returns a Uint8ClampedArray with 4 values per pixel (RGBA). 
+    // also see: https://developer.mozilla.org/zh-CN/docs/Web/API/ImageData/data
+    const rgba = colorParseContext.getImageData(0, 0, 1, 1).data;
+    return Array.from(rgba.slice(0, 3));
+  };
+
+  const DYNAMIC_STYLE_ID = 'dynamic-color-invert-style';
+  const SOLVED_COLOR_KEY = "solved-";
+
+  function memorizedSolvedFilter(color) {
+    const colorKey = SOLVED_COLOR_KEY + color;
+    const storedFilterOption = localStorage.getItem(colorKey);
+    if (storedFilterOption) {
+      return storedFilterOption;
+    } else {
+      const filter = solveColor(color).filter;
+      localStorage.setItem(colorKey, filter);
+      return filter;
+    }
+  }
+
+  function applyDynamicColorInvert() {
+    const textColor = getComputedStyle(document.body).getPropertyValue('--text-color');
+    if (textColor && textColor.length > 0) {
+      const rgb = toRGBArray(textColor);
+      const filter = memorizedSolvedFilter(rgb);
+
+      const existingStyle = document.getElementById(DYNAMIC_STYLE_ID);
+      if (existingStyle) {
+        existingStyle.textContent = `.color-invert {${filter}}`;
+      } else {
+        const style = document.createElement('style');
+        style.id = DYNAMIC_STYLE_ID;
+        style.textContent = `.color-invert {${filter}}`;
+        document.head.appendChild(style);
+      }
+    }
+  }
+</script><script>
+  (() => {
+    const url = "/kodama.json";
+    const interval = 1000; // 1 second
+
+    let lastModified = null;
+
+    async function check() {
+      try {
+        const res = await fetch(url + "?t=" + Date.now(), {
+          method: "HEAD",
+          cache: "no-store",
+        });
+
+        const lm = res.headers.get("last-modified");
+
+        if (lastModified && lm && lm !== lastModified) {
+          location.reload();
+          return;
+        }
+
+        lastModified = lm || lastModified;
+      } catch (e) {
+        // Ignore
+        console.warn("Reload check failed:", e);
+      }
+
+      setTimeout(check, interval);
+    }
+
+    check();
+  })();
+</script><!-- Also see: https://katex.org/docs/autorender -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.css" integrity="sha384-WcoG4HRXMzYzfCgiyfrySxx90XSl2rxY5mnVY5TwtWE6KLrArNKn0T/mOgNL0Mmi" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.js" integrity="sha384-J+9dG2KMoiR9hqcFao0IBLwxt6zpcyN68IgwzsCSkbreXUjmNVRhPFTssqdSGjwQ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
+<!-- Also see: https://github.com/KaTeX/KaTeX/tree/main/contrib/copy-tex -->
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/contrib/copy-tex.min.js" integrity="sha384-HORx6nWi8j5/mYA+y57/9/CZc5z8HnEw4WUZWy5yOn9ToKBv1l58vJaufFAn9Zzi" crossorigin="anonymous"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true },
+      ],
+      trust: true,
+      strict: false,
+      throwOnError: false,
+      minRuleThickness: 0.05,
+    });
+  });
+</script>
+<link rel="stylesheet" href="./main.css"><style>
+@media only screen and (min-width: 1000px) {
+  #grid-wrapper { grid-template-columns: var(--article-max-width) var(--toc-max-width); }
+  nav#toc { max-width: max-content; }
+}
+</style></head><body><header class="header"><nav class="nav"><div class="logo"><span class="cursor-pointer" onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper" style="grid-template-areas: 'article toc';" data-base-url="./"><nav id="toc" class="sticky-nav mobile-sticky-nav"><div id="theme-options"><style>
+  body:has(input[value="furina"]:checked) {
+    --article-max-width: 110ex; /* default: 90ex */
+
+    --color-Furina-deep-navy: #253085;
+    --color-Furina-royal-blue: #465BCF;
+    --color-Furina-aqua-cyan: #6AC6E8;
+    --color-Furina-frost-white: #FAFBFC;
+    --color-Furina-misty-blue: #C4D7ED;
+    --color-Furina-vivid-sapphire: #5670E9;
+    --color-Furina-luminous-hydro: #70DBFF;
+    --color-Furina-bright-periwinkle: #8D84F1;
+    --color-Furina-vintage-gold: #BD9368;
+    --color-Furina-vintage-gold-light: #DDB368;
+    --color-Furina-vintage-gold-ultra-light: #FDF388;
+
+    --background-color: var(--color-Furina-frost-white);
+    --link-color: var(--color-Furina-vivid-sapphire);
+    --slug-color: var(--color-Furina-aqua-cyan);
+    --logo-color: var(--color-Furina-deep-navy);
+
+    --block-background-color: var(--background-color);
+    --shadow-color: rgba(27, 63, 143, 0.06);
+    --radius: 5px;
+    --margin-left: 14px;
+
+    --hover-color-block: var(--block-background-color);
+    --logo-hover-color: #88d;
+    --span-tag-color: #88d;
+    --article-tag-color: #88d;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body:has(input[value="furina"]:checked) {
+      --color-Furina-deep-navy: #B5C0F5;
+      --color-Furina-royal-blue: #D6EBFF;
+      --color-Furina-vivid-sapphire: #96A0FF;
+
+      --background-color: #2f2f2f;
+      --block-background-color: #2f2f2f;
+    }
+  }
+
+  .block {
+    /*2026-3-16 21:10 新增*/
+    padding: 15px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+
+    /*2026-4-17 新增*/
+    /*margin-left: auto;
+    margin-right: auto; -- 好像没有用, 网站设计上不欢迎 block 居中*/
+
+    border-radius: var(--radius);
+    background-color: var(--block-background-color);
+    box-shadow: 0 2px 12px var(--shadow-color);
+  }
+
+  .footnote-definition {
+    margin-left: var(--margin-left);
+  }
+
+  h5,
+  h6,
+  p {
+    margin: 5px;
+  }
+
+  hr {
+    border: none;
+    height: 0;
+    border-bottom: 1px solid var(--color-Furina-luminous-hydro);
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  tr {
+    border-bottom: 1px solid var(--color-Furina-bright-periwinkle);
+  }
+
+  /* 可选：去除表头下方的重复横线（如果表头需要特殊样式） */
+  thead tr {
+    border-bottom: 2px solid var(--color-Furina-deep-navy);
+  }
+
+  /* 去除最后一行的边框 */
+  tbody tr:last-child {
+    border-bottom: none;
+  }
+
+  .footnote-definition>p {
+    display: inline;
+    margin-left: 0;
+    color: var(--color-Furina-bright-periwinkle);
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    font-weight: 600 !important;
+  }
+
+  article > section > details > summary > header > h1 {
+    font-size: 1.75rem !important;
+  }
+
+  h2 {
+    font-weight: 500;
+    font-size: 1.5rem !important;
+    color: var(--color-Furina-deep-navy);
+    margin-bottom: 10px;
+    border-bottom: 1px solid #88d;
+    padding-bottom: 1px;
+    /* 增加底部内边距让横线和文字有间距 */
+  }
+
+  h2::before {
+    content: "\2726";
+    /* ✦ 的Unicode转义码 */
+    display: inline-block;
+    margin-right: 0.3em;
+    /*color: var(--color-Furina-vintage-gold-light);*/
+    /* 替换 color 属性，改为以下背景和裁剪属性 */
+    background: linear-gradient(150deg,
+        var(--color-Furina-vintage-gold-ultra-light) 30%,
+        var(--color-Furina-vintage-gold-light) 60%,
+        var(--color-Furina-vintage-gold) 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* 将文字颜色设为透明以显示背景 */
+    /* 组合径向渐变（中心高光）和线性渐变（基础色调） */
+    /*background: radial-gradient(
+      ellipse at center,
+      var(--color-Furina-vintage-gold-ultra-light) 20%,
+      transparent 70%
+    ),
+    linear-gradient(
+      to bottom,
+      var(--color-Furina-vintage-gold-light),
+      var(--color-Furina-vintage-gold)
+    );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; */
+    filter: drop-shadow(0px 1px 1px rgba(184, 150, 131, 0.5));
+    /* 可选：增加与主色呼应的柔和投影 */
+    font-weight: normal;
+  }
+
+
+  h3 {
+    font-weight: 500;
+    color: var(--color-Furina-royal-blue);
+    margin-bottom: 5px;
+  }
+
+  h3::before {
+    content: "\2726";
+    /* ✦ 的Unicode转义码 */
+    display: inline-block;
+    margin-left: 0.06em;
+    margin-right: 0.36em;
+    /*color: var(--color-Furina-vintage-gold-ultra-light);*/
+    background: linear-gradient(150deg,
+        var(--color-Furina-vintage-gold-ultra-light) 20%,
+        var(--color-Furina-vintage-gold-light) 90%,
+        var(--color-Furina-vintage-gold) 95%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: normal;
+  }
+
+  h4 {
+    text-indent: var(--margin-left);
+    font-weight: 700;
+    color: #696cd9;
+    margin-bottom: 0;
+  }
+
+  h5 {
+    text-indent: var(--margin-left);
+    font-weight: 700;
+    color: #8a8ff4;
+    margin-bottom: 0;
+  }
+
+  h6 {
+    text-indent: var(--margin-left);
+    font-weight: 700;
+    color: #aaaff4;
+    margin-bottom: 0;
+  }
+
+  code, pre, .mono {
+    font-family: "Liberation Mono", "Courier New", monospace;
+    font-size: 0.9em; /* 可选微调尺寸 */
+  }
+
+  @media only screen and (max-width: 1000px) {
+    #grid-wrapper>nav {
+      display: none !important;
+    }
+  }
+
+  #toc,
+  #toc .block {
+    background: none !important;
+    box-shadow: none !important;
+  }
+
+  ul {
+    margin: 5px;
+    margin-left: calc(5px + 2em);
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  ul li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 0;
+    /*color: var(--text-secondary);*/
+  }
+
+  ul li::before {
+    content: '✦';
+    position: absolute;
+    left : -1em;
+    /*color: var(--color-Furina-vintage-gold-ultra-light);*/
+    font-size: 0.9em;
+  }
+
+  .metadata {
+    color: var(--article-tag-color);
+  }
+
+  .metadata ul {
+    margin : 0;
+  }
+
+  .metadata li::before {
+    content: none;
+  }
+
+  .music-player button {
+    text-decoration: none;
+  }
+
+  .music-player button:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--color-Furina-vintage-gold-light);
+    /* 金色 */
+    text-underline-offset: 6px;
+    /* 调整下划线与文字距离 */
+    text-decoration-thickness: 1px;
+    /* 线条粗细 */
+  }
+</style>
+
+<theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
+
+<article><section class="block" data-taxon=""><details open><summary id="代数模式"><header><h1><span class="taxon"></span>代数模式 <a class="slug" href="./代数模式.html">[代数模式]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>代数模式</strong> (algebraic pattern) 是 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">Chu–Haugseng</a></span> 对如下现象的抽象:</p>
+<ul>
+<li>一个 <span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">$\mathbb E_\infty$</a></span>-空间等同于一个函子 $F\colon \mathsf{Fin}_* \to\mathsf{Ani}$, 满足 $F(\langle n \rangle) \to \prod_{i=1}^n F(\langle 1 \rangle)$ 为等价;</li>
+<li>一个 <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">$\mathbb A_\infty$</a></span>-空间等同于一个函子 $F\colon \Delta^{\mathrm{op}}\to\mathsf{Ani}$, 满足 $F([0]) = 1$ 且 $F([n])\to F([1])^{n}$ 为等价;</li>
+<li>一个 $\infty$-范畴等同于一个函子 $\Delta^{\mathrm{op}}\to\mathsf{Ani}$, 满足 $F([n])\to F([1])^{\times_{F([0])} n}$ 为等价 (见 <span class="link local"><a href="./Segal空间.html" title="Segal 对象 [Segal空间]">Segal 对象</a></span>), 以及某种完备性 (见<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 对象</a></span>);</li>
+<li>$(\infty,n)$-算畴等同于函子 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">$\Theta_n^{\mathrm{op}}$</a></span> $\to \mathsf{Ani}$ (见 <span class="link local"><a href="./Θ-n-空间.html" title=" [Θ-n-空间]">$\Theta_n$-生象</a></span>), 满足某些条件;</li>
+<li>$\infty$-算畴等同于函子 <span class="link local"><a href="./树.html" title="树 (范畴论) [树]">$\Omega^{\mathrm{op}}$</a></span> $\to \mathsf{Ani}$ (见<span class="link local"><a href="./树形对象.html" title="树形对象 [树形对象]">树形对象</a></span>), 满足某些条件;</li>
+<li>一个特定 $\infty$-算畴 $\mathcal O$ 在 $\mathsf{Ani}$ 中的代数等同于 $\mathcal O$ 的 “算子范畴” 出发的一个满足某些条件的函子.</li>
+</ul>
+<p>下面我们逐层对每个例子解释代数模式的各个成分的直观.</p>
+<h3>1. 底层结构与基本对象</h3>
+<p>每种代数结构都有一种和代数无关的<strong>底层结构</strong>. 我们现在假设底层结构总可以由一些<strong>基本对象</strong> (elementary object) 来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>, 例如</p>
+<ul>
+<li>$\mathbb E_\infty$-代数, $\mathbb A_{\infty}$-代数的底层结构就是<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>, 由一个点 $[0]$ 探测;</li>
+<li>$\infty$-范畴的底层结构是<strong>图</strong>, 由点 $[0]$ 与有向线段 $[1]$ 探测 (注意这里有向线段 $[1]$ 没有到 $[0]$ 的映射, 意味着图的顶点处不需要有一个平凡的边, 也就是说底层结构中甚至连 “零元运算” 这样平凡的代数结构都没有, 完完全全和代数无关);</li>
+<li>$(\infty,n)$-范畴的底层结构由各维数的胞腔探测;</li>
+<li>$\infty$-算畴的底层结构由花形 (<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>的基本构件) 与一个只有一条边的<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>探测.</li>
+</ul>
+<p>总之, 底层结构可视为基本对象的范畴上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>. 但是 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span> 选择将其记为 $\mathcal O^{\mathrm{el}} \to \mathsf{Ani}$, 如果尊重这一选择, 那么我们心目中基本对象的范畴就是反范畴 $(\mathcal O^{\mathrm{el}})^{\mathrm{op}}$. 但是下面为了服务我们的直观, 我们所说的态射都是反范畴 $(\mathcal O^{\mathrm{el}})^{\mathrm{op}}$ (以及 $\mathcal O^{\mathrm{op}}$) 中的态射.</p>
+<h3>2. 代数结构</h3>
+<p>为了探测底层结构之上的代数结构, 我们需要一些比基本对象更多的对象, 一些能够承载 “代数运算” 的对象, 例如</p>
+<ul>
+<li>$\mathbb E_\infty$-代数结构由 (带基点) 有限集探测<sup class="footnote-reference" id="代数模式_1-back"><a href="#代数模式_1">1</a></sup>;</li>
+<li>$\mathbb A_{\infty}$-代数和 $\infty$-范畴结构均由<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形</a></span>探测;</li>
+<li>$(\infty,n)$-范畴结构由 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴 $\Theta_n$</a></span>的对象探测;</li>
+<li>$\infty$-算畴结构由<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>探测.</li>
+</ul>
+<div class="footnote-definition" id="代数模式_1">
+  <sup class="footnote-definition-label"><a href="#代数模式_1-back">1</a></sup>
+<p>注意这里若要按我们的理解, “探测对象” 的范畴实际上是 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">Segal 范畴</a></span> $\Gamma := \mathsf{Fin}_*^{\mathrm{op}}$. 可以理解为: $\Gamma = \mathsf{Fin}_*^{\mathrm{op}}$ 的对象是有限集, 态射 $S\to T$ 是给 $S$ 的每个元素指定 $T$ 的一个互不相交的子集. 对此我有一种开玩笑的解释: $\langle 1\rangle$ 是一个维数无限的实心球, 以至于把它切成两块的方法本质上是唯一的; $\Gamma = \mathsf{Fin}_*^{\mathrm{op}}$ 中的映射 $\langle 1\rangle \to \langle 2\rangle,1\mapsto\{1,2\}$ 可理解为把一个球切开变成两个球, 但由于维数无限, 那两个球的位置关系不起任何作用. 如果读者对这个解释感到莫名其妙, 可以忽略.</p>
+</div>
+<p>总之, 一个代数结构可视为一个函子 $\mathcal O\to\mathsf{Ani}$, 其中 $\mathcal O$ 包含了基本对象 $\mathcal O^{\mathrm{el}}$ 作为子范畴 (但不要求是全子范畴). 这个函子还要满足某种 <strong>Segal 条件</strong>, 直观上说的是: 当我们用更多的一些对象<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>时, 探测的结果必须与基本对象的探测相容, 即
+$$
+  F(X) \simeq \operatorname{lim}_{E\text{ 基本, }E\to X\text{ 惰性}} F(E).
+$$
+这里的直观是一些基本对象 $E$ 组成了 $X$, 比如</p>
+<ul>
+<li>在 $\mathbb E_\infty$-代数的例子中, 一些单元子集组成了一个有限集;</li>
+<li>在 $\infty$-范畴的例子中, 一些有向线段和点组成了一个链条;</li>
+<li>在 $\infty$-算畴的例子中, 一些花形和边组成了一棵树;</li>
+</ul>
+<p>注意上式中的 $E\to X$ 在 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span> 文中是 $X\to E$.</p>
+<h3>3. 惰性映射与活性映射</h3>
+<p>上个公式中有一个没有解释的概念叫<strong>惰性映射</strong> (inert morphism). 直观上, 惰性映射就是是测试对象之间纯粹由 “几何形状” 造成的映射, 是不表达任何 “代数运算” 的映射, 比如</p>
+<ul>
+<li>$\mathbb E_\infty$-代数的测试对象 $\Gamma = \mathsf{Fin}_*^{\mathrm{op}}$ 中, 惰性映射 $S\to T$ 是给 $S$ 的每个元素指定 $T$ 的一个单元子集;</li>
+<li>$\mathbb A_\infty$-代数和 $\infty$-范畴的测试对象 $\Delta$ 中, 惰性映射就是区间的含入 $\{k\leq k+1\leq\cdots\leq l\}\subset [m]$;</li>
+<li>$\infty$-算畴的测试对象 $\Omega$ (<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>) 中, 惰性映射就是<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>的含入 (可由<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>之间的 <span class="link local"><a href="./Descartes自然变换.html" title="Descartes 自然变换 [Descartes自然变换]">Descartes 自然变换</a></span>描述, 详见<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>页面).</li>
+</ul>
+<p>特别地, 基本对象之间的映射都是惰性映射. 用 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">Chu–Haugseng</a></span> 文中的记号, $\mathcal O^{\mathrm{el}}\to\mathcal O^{\mathrm{int}}$ 是全子范畴.</p>
+<p>与惰性映射相对的是<strong>活性映射</strong> (active morphism), 就是那些专门用来表达代数运算的映射, 比如</p>
+<ul>
+<li>$\mathbb E_\infty$-代数的测试对象 $\Gamma = \mathsf{Fin}_*^{\mathrm{op}}$ 中, 活性映射 $S\to T$ 就是给 $S$ 的所有元素指定的 $T$ 的子集并在一起等于 $T$ 的映射, 其中 $\langle 1\rangle \to \langle 2\rangle$, $1\mapsto \{1,2\}$ 表达了 $\mathbb E_\infty$-代数中的乘法;</li>
+<li>$\mathbb A_\infty$-代数和 $\infty$-范畴的测试对象 $\Delta$ 中, 活性映射 $[n] \to [m]$ 就是保持端点的映射, 其中 $[1] \to [2], 0\mapsto 0, 1\mapsto 2$ 表达了 $\mathbb A_\infty$-代数中的乘法和 $\infty$-范畴中态射的复合;</li>
+</ul>
+<h3>4. 分解系统</h3>
+<p>惰性映射和活性映射构成<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">分解系统</a></span>: 测试对象之间的任何态射唯一地分解为 “先一个活性映射, 再一个惰性映射”. 注意在 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span> 文中是先惰性, 再活性 (因为他们的取反).</p>
+<ul>
+<li>$\mathsf{Fin}_*^{\mathrm{op}}$ 中, 态射 $f\colon S\to T$ 可分解为 $S \to \bigsqcup_s f(s)\to T$.</li>
+<li>$\Delta$ 中, 态射 $f\colon [n] \to [m]$ 可分解为 $[n]\to \{f(0)\leq \cdots \leq f(n)\}\hookrightarrow [m]$.</li>
+</ul>
+<h2>定义</h2>
+<h3>模型 (Segal 对象)</h3>
+<p>给定有适当<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>的范畴 $\mathcal C$, 代数模式 $\mathcal O$ 的<strong>模型</strong> (或称 <strong>Segal 对象</strong>) 是函子 $F\colon \mathcal O \to \mathcal C$, 满足 $F|_{\mathcal O^{\mathrm{int}}}$ 是 $F|_{\mathcal O^{\mathrm{el}}}$ 的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">右 Kan 扩张</a></span>.</p>
+<h3>代数模式的态射</h3>
+<p><strong>定义</strong>. 代数模式之间的态射 $f\colon \mathcal O \to \mathcal P$ 是保持活性和惰性映射, 并将基本对象映射到基本对象的函子.</p>
+<p><strong>定义</strong>. 代数模式之间的 <strong>Segal 态射</strong> $f\colon \mathcal O \to \mathcal P$ 是满足如下条件的态射: 对任意 Segal $\mathcal P$-生象 $F\colon \mathcal P \to \mathsf{Ani}$ 以及 $X\in\mathcal O$, 典范映射
+$$
+    \begin{aligned}
+      F(f(X))&amp;\simeq \operatorname{lim}_{E\text{ 基本, }E\to f(X)\text{ 惰性}}F(E) \\
+      &amp;\to \operatorname{lim}_{e\text{ 基本, }e\to X\text{ 惰性}}F(f(e))
+    \end{aligned}
+$$
+为等价.</p>
+<p>在实践中, 上式的指标范畴之间的映射常为<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首函子</a></span>, 从而两极限相等.</p>
+<p><strong>命题</strong>. 对于代数模式之间的态射 $f\colon \mathcal O \to \mathcal P$, 如下条件等价:</p>
+<ul>
+<li>$f$ 是 Segal 态射;</li>
+<li>$f^*\colon \mathsf{Fun}(\mathcal P,\mathsf{Ani}) \to \mathsf{Fun}(\mathcal O,\mathsf{Ani})$ 限制为函子 $f^*\colon \mathsf{Seg}_{\mathcal P}(\mathsf{Ani}) \to \mathsf{Seg}_{\mathcal O}(\mathsf{Ani})$;</li>
+<li>对任意合适的范畴 $\mathcal C$, $f^*\colon \mathsf{Fun}(\mathcal P,\mathcal C) \to \mathsf{Fun}(\mathcal O,\mathcal C)$ 限制为函子 $f^*\colon \mathsf{Seg}_{\mathcal P}(\mathcal C) \to \mathsf{Seg}_{\mathcal O}(\mathcal C)$.</li>
+</ul>
+<p><strong>命题</strong> (自由函子).
+设 $f\colon \mathcal O\to\mathcal P$ 是代数模式之间的 Segal 态射, $\mathcal C$ 为可表现范畴, 则 $f^*\colon \mathsf{Seg}_{\mathcal P}(\mathcal C) \to \mathsf{Seg}_{\mathcal O}(\mathcal C)$ 有左伴随 $L_{\mathrm{Seg}}\circ f_!$, 其中 $L_{\mathrm{Seg}}$ 是 $\mathsf{Seg}_{\mathcal O}(\mathcal C)\hookrightarrow\mathsf{Fun}(\mathcal O,\mathcal C)$ 的左伴随 (局部化), $f_!$ 是沿 $f$ <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">左 Kan 扩张</a></span>.</p>
+<p><em>证明</em>. 展开定义. $\square$</p>
+<p>后面我们会进一步讨论什么情况下不需要这个局部化 $L_{\mathrm{Seg}}$, 以及什么情况下这个伴随是<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的.</p>
+<h2>性质</h2>
+<h3>与算畴的关系</h3>
+<p>注意算畴在这个故事中有两个层级的角色: 一个算畴既可以给出一种代数模式, 同时又是 “算畴” 这种代数模式的一个模型 (Segal 对象). 本节讲的是<strong>前一种</strong>角色, 即一个 (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 中的) <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>如何给出一个代数模式.</p>
+<p>按 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 的定义, 一个算畴是一个纤维范畴
+$$
+p\colon \mathcal O^{\otimes} \to \mathsf{Fin}_*,
+$$
+满足以下条件:</p>
+<ul>
+<li>(惰性提升) $\mathsf{Fin}_*$ 中每个惰性映射都有沿 $p$ 的水平 (coCartesian) 提升;</li>
+<li>(Segal 条件) 由惰性映射 $\rho^i\colon \langle n\rangle\to\langle 1\rangle$ (在前面所述的直观中, 就是将 $\{1\}$ 唯一的元素对应到单元子集 $\{i\}\subset \{1,\cdots,n\}$) 给出的态射 $\mathcal O_{\langle k \rangle}^{\otimes} \to \prod_{i=1}^k\mathcal O_{\langle 1\rangle}^{\otimes}$ 是等价;</li>
+<li>对于 $X\in\mathcal O_{\langle k\rangle}^{\otimes}$, $Y\in\mathcal O_{\langle \ell\rangle}^{\otimes}$ 以及 $f\colon \langle k\rangle \to \langle \ell \rangle$,
+$$
+  \operatorname{Hom}^f(X,Y) \simeq \prod_{i=1}^{\ell}\operatorname{Hom}^{\rho^i f}(X,Y_i),
+$$
+其中 $Y_i$ 是 $Y$ 根据第二条 (Segal 条件) 分解出的第 $i$ 分量.</li>
+</ul>
+<p>我们构造一个代数模式 $\mathcal O$:</p>
+<ul>
+<li>范畴 $\mathcal O$ 就取 $\mathcal O^{\otimes}$ 本身;</li>
+<li>初等对象的范畴取 $\mathcal O_{\langle 1\rangle}^{\otimes}$;</li>
+<li>惰性映射就是定义中的惰性提升;</li>
+<li>活性映射就是居于 $\mathsf{Fin}_*$ 中的活性映射之上的映射.</li>
+</ul>
+<h3>自由–遗忘伴随, 以及拉回的左伴随</h3>
+<p>设 $\mathcal O$ 为代数模式, $\mathcal C$ 为具有合适极限的范畴, 将 Segal 对象限制到基本对象可得遗忘函子
+$$
+U_{\mathcal O} \colon \mathsf{Seg}_{\mathcal O}(\mathcal C) \to \mathsf{Fun}(\mathcal O^{\mathrm{el}},\mathcal C).
+$$
+当该函子有左伴随 $F_{\mathcal O}$ 时, 称之为<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span> Segal $\mathcal O$-对象.</p>
+<p>注意到 $\mathcal O^{\mathrm{int}}$ 本身也可视为一个代数模式, 其中的活性映射仅有同构 (“没有任何代数运算”), 基本对象仍为 $\mathcal O^{\mathrm{el}}$; 那么 $\mathsf{Seg}_{\mathcal O^{\mathrm{int}}}(\mathcal C)$ 等价于 $\mathsf{Fun}(\mathcal O^{\mathrm{el}},\mathcal C)$. 这样, 上述遗忘函子可视为特殊的拉回函子
+$$
+j_{\mathcal O}^*\colon \mathsf{Seg}_{\mathcal O}(\mathcal C) \to \mathsf{Seg}_{\mathcal O^{\mathrm{int}}}(\mathcal C).
+$$
+于是, 自由函子是 “拉回的左伴随” 的特例.</p>
+<p><strong>命题</strong>. 设 $f\colon \mathcal O \to \mathcal P$ 为本质满 Segal 态射, $\mathcal C$ 为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>, 则</p>
+<ul>
+<li>$F\colon \mathcal P \to \mathcal C$ 是 Segal 对象当且仅当 $f^*F\colon \mathcal O\to\mathcal C$ 是 Segal 对象;</li>
+<li>存在<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性伴随</a></span> $f_!\dashv f^*\colon \mathsf{Seg}_{\mathcal O}(\mathcal C) \rightleftarrows \mathsf{Seg}_{\mathcal P}(\mathcal C)$.</li>
+</ul>
+<h3>与单子的关系</h3>
+<p>每个代数模式 $\mathcal O$ 给出底层结构 $\mathsf{Fun}(\mathcal O^{\mathrm{el}},\mathsf{Ani})$ 上的一个<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数</a></span>的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</p>
+<p><strong>命题</strong>. todo</p>
+<h2>例</h2>
+<p>较为简单的例子在前面都已讲过.</p>
+<h3>$\mathbb E_n$-代数与 $n$-范畴的模式</h3>
+<p>这里所说的 $n$-范畴是指 $(\infty,n)$-范畴.</p>
+<p>回忆 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴 $\Theta_n$</a></span> 是如下归纳定义的范畴:</p>
+<ul>
+<li>$\Theta_0 = \{*\}$;</li>
+<li>$\Theta_1 =$ <span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">$\Delta$</a></span>;</li>
+<li>$\Theta_n$ 的对象是 $[k](X_1,\cdots,X_k),X_i\in\Theta_{n-1}$, 而态射 $[k](X_1,\cdots,X_k) \to [\ell](Y_1,\cdots,Y_\ell)$ 是一个偏序集映射 $\phi\colon [k] \to [\ell]$ 以及 $\widehat{\Theta}_{n-1}$ 中的映射 $X_j \to Y_{\phi(j-1)+1}\times\cdots\times Y_{\phi(j)}$ (按<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span>理解). 定义一个态射为<strong>活性</strong> / <strong>惰性</strong>映射当且仅当映射 $\phi$ 和所有 $X_j\to Y_i$ 为活性 / 惰性映射.</li>
+</ul>
+<p>我们应该想象 $[k](X_1,\cdots,X_k),X_i\in\Theta_{n-1}$ 为一个长为 $n$ 的 $\widehat {\Theta}_{n-1}$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>, 每相邻两个对象之间的态射对象是 $\Theta_{n-1}$ 的一个对象 $X_i$, 不相邻的两个对象之间的态射对象是中间所有态射对象的乘积 (不落在 $\Theta_n$ 中, 所以用预层范畴来充实). 这样, $\Theta_n$ 的态射也就很好理解了: 它就是 $\widehat {\Theta}_{n-1}$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>之间的充实函子.</p>
+<p>归纳地定义对象 $C_n \in \Theta_n$:</p>
+<ul>
+<li>$C_0 = * \in \Theta_0$;</li>
+<li>$C_1 = [1] (C_0) \in \Theta_1$, 即 $[1]\in\Delta$;</li>
+<li>$C_n = [1] (C_{n-1}) \in \Theta_n$.</li>
+</ul>
+<p>牢记 “$n$-范畴就是<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于 $(n-1)$-范畴的范畴”, 我们应该将 $C_n$ 想象为用于探测 $n$-范畴中 $n$-态射的一个最基本的 $n$-胞腔.</p>
+<p>令这些对象 $C_0,\cdots,C_n$ 为基本对象, 我们就得到了 $n$-范畴的底层结构: 一种没有任何代数运算的 $n$ 维 “图”.</p>
+<p>若仅令 $C_n$ 一个对象为基本对象, 我们就得到了 $\mathbb E_n$-代数的底层结构.</p>
+<p>另一个代数模式是 $\Delta^n$ 上的. 归纳定义函子 $\tau_n\colon \Delta^n \to \Theta_n$:</p>
+<ul>
+<li>$\tau_0\colon \Delta^0 = 1 \to 1 = \Theta_0$ 为恒等;</li>
+<li>$\tau_1\colon \Delta \to \Theta_1$ 为恒等;</li>
+<li>$\tau_n\colon \Delta^n \to \Theta_n$ 将 $([i_1],\cdots,[i_n])$ 对应到 $[i_1] (\tau_{n-1}([i_2],\cdots,[i_n]),\cdots,\tau_{n-1}([i_2],\cdots,[i_n]))$.</li>
+</ul>
+<p>这给出一个 Segal 态射 $\Delta^n \to \Theta_n$.</p>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="HADR-1-ope"><header><h1><span class="taxon"></span>HADR (1) 算畴 <a class="slug" href="./HADR-1-ope.html">[HADR-1-ope]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>单子</h2>
+<p><span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>是记录许多代数结构的统一的工具. 对于每种代数结构都有一个<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>函子, 对应的单子是自由和遗忘的复合, 一般的结构则是<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>.</p>
+<ul>
+<li>对于环 $R$, $R$-<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>是单子 $T_R := R\otimes -\colon \mathsf{Ab}\to\mathsf{Ab}$ 上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>.</li>
+<li>考虑<span class="link local"><a href="./张量.html" title="张量 [张量]">张量代数</a></span>单子 $T\colon \mathsf{Ab} \to \mathsf{Ab}$, 那么一个环等同于一个 $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>.</li>
+<li>考虑自由群单子 $T_{\mathrm{Grp}}\colon \mathsf{Set} \to \mathsf{Set}$, 那么一个群等同于一个 $T_{\mathrm{Grp}}$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>. 更一般地, 每个 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>都给出 $\mathsf{Set}$ 上的一个单子 $T$. 记 $T(n)$ 为该理论中所有可能的 $n$ 元项的集合, 例如群的理论中 $x^2 y^{-1}x$ 是一个 $2$ 元项. 那么函子 $T$ 可表示为
+$$
+  TX = \int_{N\in\mathsf{Fin}} T(N)\times X^N.
+$$
+这是一个<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>记号, 可以粗略地理解为对所有 $N$ 取并, 然后商掉必要的关系.</li>
+<li>对于 $\mathsf{Ani}$-值单色<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathcal O$, 我们有 (<span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 上的) 自由 $\mathcal O$-代数单子
+$$
+  T_{\mathcal O} X = \int_{N\in\mathsf{Fin}^\simeq} \mathcal O(N)\times X^N.
+$$
+例如自由 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-代数单子
+$$
+  T_{\mathbb E_n}X = \int_{N\in\mathsf{Fin}^\simeq}\operatorname{Conf}_N(\mathbb{R}^n)\times X^N.
+$$
+注意, 与 Lawvere 理论不同的是, 这里<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>的指标范畴为<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">群胚</a></span> $\mathsf{Fin}^\simeq$. 本讲的第一个主要目标便是用这种方式解释什么是算畴.</li>
+</ul>
+<p>有一些看起来不那么 “代数” 的结构也可以用单子来记录. 关键在于, “不那么代数” 的信息被储存在了一个基范畴中, 而单子本身只负责记录 “代数” 运算.</p>
+<ul>
+<li>考虑有向图的范畴 $\mathsf{Graph}$, 其对象为两个生象带有两个映射 $E\rightrightarrows V$, 其上有一个自由范畴单子 $T_{\mathsf{Cat}}\colon \mathsf{Graph}\to\mathsf{Graph}$, 这个单子上的代数就是<strong>范畴</strong>.</li>
+<li><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 也可以类似定义, 底层的结构是<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>. 树与图的区别在于它能记录 “多个对象到一个对象的态射”. 这是本讲的第二个主要目标. 注意在本讲中, 算畴 (多重范畴) 有了两个不同层次的角色: 先是一个算畴定义一种结构, 然后算畴这种结构本身也可以用单子来定义.</li>
+</ul>
+<p>在上述每个例子中, “自由代数” 单子都不仅仅是单子, 而是所谓<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>. 元数 (arity) 的本义是一个函数的自变量的个数, 例如加法的元数是 $2$, 取逆的元数是 $1$, 而常数的元数是 $0$.</p>
+<h3>带元数的单子</h3>
+<p>如果定义一种代数结构的每种运算只涉及了一个集合里有限个元素, 那么一个代数 $X$ 就可以被全体有限集 $A$ 生成的自由代数 $TA$ <span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>. 所谓探测就是说用全体态射 $TA\to X$ 的信息可以完全恢复出 $X$ 的信息. 这就是<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>的直观.</p>
+<h3>齐性理论与 Descartes 单子</h3>
+<h2>代数模式</h2>
+<p><span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="Joyal范畴"><header><h1><span class="taxon"></span>Joyal 范畴 Θn <a class="slug" href="./Joyal范畴.html">[Joyal范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Joyal 范畴 $\Theta_n$ 的对象是<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span> $(\infty,n)$-范畴的基本单元, 是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形</a></span>的推广.</p>
+<h2>定义</h2>
+<h3>归纳定义</h3>
+<p>记 $\Delta$ 为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>, $\Gamma$ 为 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">Segal 范畴 $\Gamma$</a></span>, 有典范的函子 $\gamma\colon \Delta\to\Gamma$; 详见 <span class="link local"><a href="./Segal函子γ.html" title="Segal 函子 γ [Segal函子γ]">Segal 函子 $\gamma$</a></span>.</p>
+<p><strong>定义</strong>. Joyal 范畴 $\Theta_n$ 是 $n$ 个 $\Delta$ 的<span class="link local"><a href="./圈积.html" title="圈积 (范畴论) [圈积]">圈积</a></span>, 带有典范函子 $\Theta_n \to \Gamma$.</p>
+<p>该定义出自 <span class="link local"><a href="./BergerWr.html" title="Iterated wreath product of the simplex category and iterated loop spaces [BergerWr]">Berger</a></span>.</p>
+<h3>通过组合 $n$-圆盘</h3>
+<p>范畴 $\Theta_n$ 可通过 Joyal 的 “<span class="link local"><a href="./组合圆盘.html" title="组合圆盘 [组合圆盘]">组合 $n$-圆盘</a></span>” 直接定义.</p>
+<h2>性质</h2>
+<p>由<span class="link local"><a href="./圈积.html" title="圈积 (范畴论) [圈积]">圈积</a></span>的性质, $\Theta_n$ 在 $n$-范畴的范畴中<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>.</p>
+<p>范畴 $\Theta_n$ 可用于定义 $n$-范畴以及 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$-代数</a></span>的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="Segal范畴Γ"><header><h1><span class="taxon"></span>Segal 范畴 Γ <a class="slug" href="./Segal范畴Γ.html">[Segal范畴Γ]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<h2>定义</h2>
+<h3>直接定义</h3>
+<p>Segal 范畴 $\Gamma$ 是<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点</a></span>有限集范畴的<span class="link local"><a href="./反范畴.html" title="反范畴 [反范畴]">反范畴</a></span>:
+$$
+\Gamma := \mathsf{Fin}_*^{\mathrm{op}}.
+$$
+记其对象为 $\underline{n} = \{*,1,\cdots,n\}\,(n\geq 0)$.</p>
+<p>由定义, 范畴 $\Gamma$ 的态射可描述如下: 态射 $\underline{n} \to \underline{m}$ 将每个 $1\leq i\leq n$ 对应到 $\{1,\cdots,m\}$ 的一个子集, 这些子集互不相交.</p>
+<h3>通过泛性质</h3>
+<p>称具有<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>和有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>的范畴为<strong>半加性范畴</strong>.</p>
+<p><strong>定义</strong>. Segal 范畴 $\Gamma$ 是一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>半加性范畴.</p>
+<h2>性质</h2>
+<p>Segal 范畴 $\Gamma$ 的<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>为 $[0]$, <span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>为
+$$
+\underline{n}\times \underline{m} = \underline{n+m}.
+$$
+特别地,
+$$
+\underline{n} = \underline{1}^{\times n}.
+$$
+这说明 $\Gamma$ 是一个 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>. 事实上, 它正是<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点对象</a></span>的 Lawvere 理论.</p>
+<h3>与单纯形范畴的关系</h3>
+<p><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$ 到 $\Gamma$ 有一函子, 将对象 $[n]\in\Delta$ 对应到 $\underline{n}\in\Gamma$. 详见 <span class="link local"><a href="./Segal函子γ.html" title="Segal 函子 γ [Segal函子γ]">Segal 函子 $\gamma$</a></span>.</p>
+<h3>代数模式</h3>
+<p>范畴 $\Gamma$ 可用于定义 <span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">$\mathbb E_\infty$-代数</a></span>的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="index"><header><h1><span class="taxon"></span>单纯百科 Simplopedia <a class="slug" href="./index.html">[index]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<img src="/assets/simplopedia.svg" alt="Simplopedia" style="float: right; width: min(200px,30vw); margin-right: 20px; margin-top:-50px; filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));">
+<p>这里是<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>的主目录.</p>
+<p>欢迎访问<span class="link external"><a href="https://simplicialcat.github.io/index.html?lang=zh" title="我的个人主页 [https://simplicialcat.github.io/index.html?lang=zh]">我的个人主页</a></span>.</p>
+<p>You may also want to visit <span class="link external"><a href="https://simplicialcat.github.io/index.html?lang=en" title="my personal main page [https://simplicialcat.github.io/index.html?lang=en]">my personal main page</a></span> (in English).</p>
+<p>可以试试<span class="link local"><a href="./search.html" title="搜索 [search]">搜索单纯百科的页面</a></span>.</p>
+<p>欢迎所有读者在页面下方发布<span class="link local"><a href="./comments.html" title="评论 [comments]">评论</a></span>, 或<span class="link external"><a href="mailto:wangjiny24@mails.tsinghua.edu.cn" title="通过邮箱联系我 [mailto:wangjiny24@mails.tsinghua.edu.cn]">通过邮箱联系我</a></span> <code>wangjiny24@mails.tsinghua.edu.cn</code> , 交流, 催更. (对于好友, 通过微信或 QQ 联系我当然是更加欢迎的.)</p>
+<h2>分类</h2>
+<p>单纯百科的页面分为以下几类.</p>
+<ul>
+<li>百科 : 数学概念. 这类页面构成了单纯百科的主体.</li>
+<li><span class="link local"><a href="./notion.html" title="观念 [notion]">观念</a></span> : 模糊而普遍的数学思想.</li>
+<li><span class="link local"><a href="./pedagogy.html" title="教学 [pedagogy]">教学</a></span> : 面向基础读者的科普.</li>
+<li><span class="link local"><a href="./notes.html" title="讲稿, 笔记 [notes]">讲稿, 笔记</a></span> : 一些讨论班的讲稿, 文献的阅读笔记, 以及零散的见闻.</li>
+<li>文献 : 其它页面中引用到的参考文献.</li>
+<li><span class="link local"><a href="./subject.html" title="学科 [subject]">学科</a></span> : 用于部分页面的收集和分类.</li>
+<li>Meta : 关于单纯百科本身.</li>
+<li><span class="link local"><a href="./nonmath.html" title="非数学 [nonmath]">非数学</a></span> : 一些不属于上述分类, 且不属于数学的东西.</li>
+</ul>
+<p>点击 <span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span> 可以看到本站的所有页面.</p>
+<p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">亟需施工处</a></span>列表 (“TODO list”)</p>
+<p><span class="link local"><a href="./terminologies.html" title="单纯百科 - 术语翻译表 [terminologies]">术语翻译表</a></span></p>
+<h2>最近</h2>
+<p><span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span></p>
+<p><span class="link local"><a href="./始代数.html" title="始代数 (自函子) [始代数]">始代数 (自函子)</a></span>, <span class="link local"><a href="./P-树.html" title="P-树 (多项式函子标记的树) [P-树]">P-树 (多项式函子标记的树)</a></span>, <span class="link local"><a href="./自由单子.html" title="自由单子 [自由单子]">自由单子</a></span></p>
+<p><span class="link local"><a href="./Idem.html" title="游走的幂等映射 [Idem]">游走的幂等映射</a></span>, <span class="link local"><a href="./游走的收缩.html" title="游走的收缩 [游走的收缩]">游走的收缩</a></span></p>
+<p><span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span></p>
+<p><span class="link local"><a href="./代数胚.html" title="代数胚 [代数胚]">代数胚</a></span>, <span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span></p>
+<p><span class="link local"><a href="./平坦函子.html" title="平坦函子 [平坦函子]">平坦函子</a></span></p>
+<p><span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">Segal 范畴 Γ</a></span>, <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴 Θn</a></span></p>
+<p><span class="link local"><a href="./杠–余杠对偶.html" title="杠–余杠对偶 [杠–余杠对偶]">杠–余杠对偶</a></span></p>
+<p><span class="link local"><a href="./辫群.html" title="辫群 [辫群]">辫群</a></span></p>
+<p><span class="link local"><a href="./超滤.html" title="超滤 [超滤]">超滤</a></span></p>
+<p><span class="link local"><a href="./分层.html" title="分层 [分层]">分层</a></span></p>
+<p><span class="link local"><a href="./合聚意象.html" title="合聚意象 [合聚意象]">合聚意象</a></span></p>
+<p><span class="link local"><a href="./线图.html" title="线图 [线图]">线图</a></span></p>
+<p><span class="link local"><a href="./代数充实于余代数.html" title="代数充实于余代数 [代数充实于余代数]">代数充实于余代数</a></span></p>
+<p><span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span></p>
+<p><span class="link local"><a href="./共轭作用.html" title="共轭作用 [共轭作用]">共轭作用</a></span></p>
+<p><span class="link local"><a href="./fil-gr.html" title="滤与分次的叠观点 [fil-gr]">滤与分次的叠观点</a></span></p>
+<p><span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span></p>
+<p><span class="link local"><a href="./中心.html" title="中心 [中心]">中心</a></span></p>
+<p><span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span></p>
+<p><span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span></p>
+<p><span class="link local"><a href="./谱分解.html" title="谱分解 [谱分解]">谱分解</a></span></p>
+<p><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span></p>
+<p><span class="link local"><a href="./Barr–Beck–Lurie定理.html" title="Barr–Beck–Lurie 定理 [Barr–Beck–Lurie定理]">Barr–Beck–Lurie 定理</a></span></p>
+<p><span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span></p>
+<p><span class="link local"><a href="./吸引子.html" title="吸引子, 排斥子 [吸引子]">吸引子, 排斥子</a></span></p>
+<p><span class="link local"><a href="./Milnor纤维化.html" title="Milnor 纤维化 [Milnor纤维化]">Milnor 纤维化</a></span></p>
+<p><span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span></p>
+<p><span class="link local"><a href="./局部意象.html" title="局部意象 [局部意象]">局部意象</a></span></p>
+<p><span class="link local"><a href="./法形变.html" title="法形变 [法形变]">法形变</a></span>, <span class="link local"><a href="./微局部化.html" title="微局部化 [微局部化]">微局部化</a></span>, <span class="link local"><a href="./流形上的层.html" title="流形上的层 [流形上的层]">流形上的层</a></span>, <span class="link local"><a href="./microPerv.html" title="微局部偏屈层 [microPerv]">微局部偏屈层</a></span></p>
+<p><span class="link local"><a href="./love-and-math.html" title="爱与数学 [love-and-math]">爱与数学</a></span></p>
+<p><span class="link local"><a href="./余完备化.html" title="余完备化 [余完备化]">余完备化</a></span></p>
+<p><span class="link local"><a href="./Galois扩张.html" title="Galois 扩张 [Galois扩张]">Galois 扩张</a></span></p>
+<p><span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">算畴上的代数上的模</a></span></p>
+<p><span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>, <span class="link local"><a href="./LCCC.html" title="局部积闭范畴 [LCCC]">LCCC</a></span>, <span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>, <span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>, <span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span></p>
+<p><span class="link local"><a href="./高阶Morita范畴.html" title="高阶 Morita 范畴 [高阶Morita范畴]">高阶 Morita 范畴</a></span></p>
+<p><span class="link local"><a href="./Morita等价.html" title="Morita 等价 [Morita等价]">Morita 等价</a></span></p>
+<p><span class="link local"><a href="./充实范畴上的模.html" title="充实范畴上的模 [充实范畴上的模]">充实范畴上的模</a></span></p>
+<p><span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断性</a></span></p>
+<p><span class="link local"><a href="./交叉模.html" title="交叉模 [交叉模]">交叉模</a></span></p>
+<p><span class="link local"><a href="./Gestalt.html" title="Gestalt [Gestalt]">Gestalt</a></span></p>
+<p><span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span></p>
+<p><span class="link local"><a href="./非交换Čech上同调.html" title="非交换 Čech 上同调 [非交换Čech上同调]">非交换 Čech 上同调</a></span></p>
+<p><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="带元数的单子"><header><h1><span class="taxon"></span>带元数的单子 <a class="slug" href="./带元数的单子.html">[带元数的单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>带元数的单子</strong> (monad with arities) 是 <span class="link local"><a href="./BergerMelliesWeberMonAr.html" title="Monads with arities and their associated theories [BergerMelliesWeberMonAr]">Berger–Melliès–Weber</a></span> 引入的概念, 能够表达以下结构:</p>
+<ul>
+<li><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴</a></span> (甚至<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>);</li>
+<li><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>;</li>
+<li><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>.</li>
+</ul>
+<p>直观上, 范畴 $\mathcal E$ 上的单子 $T$ 以子范畴 $\mathcal A\subset\mathcal E$ 为元数, 就是说为了表达一个 $T$-结构所需的运算, 只需用 $\mathcal A$ 的对象来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>. 进而 $T$-代数可以定义为满足某种条件的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>.</p>
+<p>例如要表达一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ 上的一个<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>结构, 只需要考虑所有有限集到 $X$ 的映射, 此时有限集 (的元素个束) 就对应运算的元数.</p>
+<p>元数不一定是有限集. 例如要表达一个图 $G$ 上的范畴结构, 要考虑的是所有态射串的复合. 此时元数是形如 $\bullet\to\bullet\to\cdots\to\bullet$ 的有限图. 这样, 范畴就可以定义为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>上满足某种条件的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>, 即单纯生象. 见 <span class="link local"><a href="./Segal空间.html" title="Segal 对象 [Segal空间]">Segal 生象</a></span>.</p>
+<p>带元数的单子又被<span class="link local"><a href="./相对单子.html" title="相对单子 [相对单子]">相对单子</a></span>涵盖.</p>
+<p>另见<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>.</p>
+<h2>定义</h2>
+<p>设 $\mathcal A\subset\mathcal E$ 为<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>全子范畴, 称为<strong>元数</strong> (arities) 的范畴. 设 $T$ 为 $\mathcal E$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>. 记 $\mathcal E^T$ 为 $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>的范畴, 带有<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由-遗忘伴随</a></span> $F\dashv U\colon \mathcal E\rightleftarrows\mathcal E^{T}$.</p>
+<p>回忆, 子范畴 $\mathcal A$ 的稠密性是指</p>
+<ul>
+<li><span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子
+$$
+  \nu_{\mathcal A}\colon \mathcal E \to \widehat {\mathcal A}
+$$
+是<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>;</li>
+<li>$\mathcal E$ 的每个对象 $X$ 都是如下余极限:
+$$
+X = \operatorname{colim}_{A\to X,A\in\mathcal A}A.\ (\star)
+$$</li>
+</ul>
+<p><strong>定义</strong>. 若<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 满足以下等价条件, 则称单子 $T$ 以 $\mathcal A$ 为<strong>元数</strong> (arity):</p>
+<ul>
+<li>$\nu_{\mathcal A} T\colon \mathcal E\to\widehat {\mathcal A}$ 保持所有形如 $(\star)$ 的余极限 (由于 $\nu_A$ 全忠实, 这蕴涵 $T$ 本身也保持 $\star$);</li>
+<li>$\nu_{\mathcal A} T$ 是其在 $\mathcal A$ 上的限制的左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>.</li>
+</ul>
+<p>或许 $(\star)$ 更有启发性的一种写法是写成<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>
+$$
+X = \int_{A\in\mathcal A} \operatorname{Hom}(A,X)\times A,
+$$
+条件 $\nu_{\mathcal A}T$ 保持余极限 $(\star)$ 相当于
+$$
+\operatorname{Hom}(B,TX)=\int_{A\in\mathcal A}\operatorname{Hom}(A,X)\times\operatorname{Hom}(B,TA),
+$$
+(我们后面会解读这个等式的含义)
+而函子 $T$ 保持该余极限意味着
+$$
+TX = \int_{A\in\mathcal A} TA \times X^A.
+$$
+(这里 $X^A$ 代表 $\operatorname{Hom}(A,X)$, 这样写只是为了更有启发性) 换言之, $T$ 具有以 $A\in\mathcal A$ 为 “次数”, $TA$ 为系数的 “多项式展开”. (参考<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>, <span class="link local"><a href="./解析函子.html" title="解析函子 (算畴理论) [解析函子]">解析函子</a></span>.)</p>
+<h3>范畴 $\Theta_T$</h3>
+<p>设 $T$ 为 $\mathcal E$ 上的单子, 定义 $\Theta_T$ 为 $\mathcal A$ 的对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span> $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>构成的范畴. 那么有自由代数函子
+$$
+j_T\colon \mathcal A \to \Theta_T.
+$$</p>
+<p>我们也可以将 $\Theta_T$ 的对象理解为 $\mathcal A$ 的对象 $A$, 而将 $\Theta_T$ 中的态射 $A\to B$ 理解为 $\mathcal E$ 中的态射 $A \to TB$. (这是 <span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>的一个全子范畴.)</p>
+<p>嵌入 $\Theta_T \hookrightarrow \mathcal E^T$ 也有相应的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子
+$$
+\nu_T \colon \mathcal E^T \to \widehat {\Theta_T},
+$$
+且有交换方块
+$$
+\begin{CD}
+\mathcal E^T @&gt;{\nu_T}&gt;&gt; \widehat {\Theta_T} \\
+@V{U}VV @VV{j_T^*}V \\
+\mathcal E @&gt;&gt;{\nu_{\mathcal A}}&gt; \widehat {\mathcal A}.
+\end{CD}
+\quad(\heartsuit)
+$$</p>
+<p>注意到由于 $j_T$ <span class="link local"><a href="./本质满函子.html" title="本质满函子 [本质满函子]">本质满</a></span>, 故 $j_T^*$ 是<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的<span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守函子</a></span>.</p>
+<p><strong>命题</strong>. 如下三个条件等价:</p>
+<ol>
+<li>$T$ 是以 $\mathcal A$ 为元数的单子;</li>
+<li>交换方块 $(\heartsuit)$ 满足 <span class="link local"><a href="./基变换.html" title="基变换 [基变换]">Beck–Chevalley 条件</a></span>, 即 Beck–Chevalley 自然变换 $(j_T)_!\nu_A \to \nu_T F$ 为同构.</li>
+<li>自然变换 $j_T^*(j_T)_!\nu_A \to j_T^*\nu_T F= \nu_AUF =\nu_A T$ 为同构. (由于 $j_T^*$ <span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守</a></span>, 条件 2 与条件 3 明显等价.) 换言之, 存在<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>的态射
+$$
+\begin{CD}
+\mathcal E @&gt;{\nu_A}&gt;&gt; \widehat {\mathcal A} \\
+@V{T}VV @VV{j^*j_!}V \\
+\mathcal E @&gt;&gt;{\nu_A}&gt; \widehat {\mathcal A.}
+\end{CD}
+$$</li>
+</ol>
+<p><strong>注</strong>. 这里的 Beck–Chevalley 自然变换的理解如下. 对于 $X\in\mathcal E$, 由左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>的<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>公式, $(j_T)_!\nu_{\mathcal A} X$ 对每个元数的自由代数 $j_T A$ 给出
+$$
+  \begin{aligned}
+  [(j_T)_!\nu_{\mathcal A} X] (j_T A) &amp;=\int_{B\in \mathcal A}\operatorname{Hom}_{\Theta_T}(j_T A,j_T B)\times \operatorname{Hom}_{\mathcal E}(B,X)\\
+  &amp;=\int_{B\in\mathcal A}\operatorname{Hom}_{\mathcal E}(A,TB)\times \operatorname{Hom}_{\mathcal E}(B,X),
+  \end{aligned}
+$$
+即 “$A$ 个 $B$ 元运算” 搭配 “$B$ 个 $X$ 的元素”.</p>
+<p>而自然变换的右边给出
+$$
+\begin{aligned}
+[\nu_T F(X)](j_T A) &amp;=\operatorname{Hom}_{\mathcal E^T}(FA,FX)
+\\
+&amp;=\operatorname{Hom}_{\mathcal E}(A,TX),
+\end{aligned}
+$$
+即 “$A$ 个 $TX$ 的元素”.</p>
+<p>自然变换 $(j_T)_!\nu_{\mathcal A} X\to\nu_T F (X)$ 由如下资料给出:
+$$
+\operatorname{Hom}_{\mathcal E}(A,TB)\times\operatorname{Hom}_{\mathcal E}(B,X) \to \operatorname{Hom}_{\mathcal E}(A,TX),
+$$
+即 “通过 $A$ 个 $B$ 元运算搭配 $B$ 个 $X$ 的元素, 给出 $A$ 个 $TX$ 的元素”. 而这个自然变换为同构, 直观上说的就是 $TX$ 的任何元素都由 $X$ 中的某 $B$ 个元素运算得到.</p>
+<p>(<strong>例</strong>. 对任意集合 $X$, 其生成的自由群的每个元素均为 $X$ 中有限个元素的运算结果.)</p>
+<p><em>证明</em>. 注意到 $(j_T)_!$ 将可表函子对应到可表函子. 故条件 2 与条件 3 中的自然变换在子范畴 $\mathcal A$ 上总是同构.
+现在任取 $X\in\mathcal E$, 将其表现为余极限
+$$
+X = \operatorname{colim}_{A\to X, A\in\mathcal A}A,
+$$
+假若单子 $T$ 保持该余极限, 那么条件 3 中的自然变换在 $X$ 上也是同构.</p>
+<p><strong>推论</strong> (常称为<strong>脉定理</strong>). 设 $T$ 是以 $\mathcal A$ 为元数的单子, 那么</p>
+<ul>
+<li>$\nu_T$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>. 换言之, $T$-代数可由 $\mathcal A$ 的对象生成的自由代数来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>;</li>
+<li>对于 $\Theta_T$ 上的预层 $X$, 其落在 $\nu_T$ 的像中当且仅当其沿 $j_T$ 的限制落在 $\nu_A$ 的像中.</li>
+</ul>
+<p>因此, $T$-代数可以定义为 $\Theta_T$ 上满足某种条件的预层.</p>
+<p><em>证明</em>. 将 $\mathcal E$ 等同于 $\nu_A\colon \mathcal E\to\widehat {\mathcal A}$ 的像, 那么单子 $T$ 等同于单子 $j^*j_!$ 在 $\mathcal E$ 上的限制, 所以 $T$-代数等同于落在 $\mathcal E$ 中的 $j^*j_!$-代数, 而 $j_!\dashv j^*$ <span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>意味着 $j^*j_!$-代数就是 $\Theta_T$ 上的预层. $\square$</p>
+<h3>理论</h3>
+<p>上述范畴 $\Theta_T$ 及函子 $j_T\colon \mathcal A\to\Theta_T$ 可以抽象如下.</p>
+<p>设 $\mathcal A\subset\mathcal E$ 为<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>全子范畴, 定义一个以 $\mathcal A$ 为元数的<strong>理论</strong>为一个<span class="link local"><a href="./本质满函子.html" title="本质满函子 [本质满函子]">本质满函子</a></span>
+$$
+j\colon \mathcal A \to \Theta,
+$$
+使得伴随 $j_! \dashv j^*$ <span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">诱导的单子</a></span> $j^*j_!\colon \widehat {\mathcal A} \to \widehat {\mathcal A}$ 保持<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子 $\nu_{\mathcal A}\colon \mathcal E\to\widehat {\mathcal A}$ 的像.</p>
+<p>该理论的一个<strong>模型</strong>是 $\Theta$ 上的一个预层, 满足其沿 $j$ 的限制落在 $\nu_{\mathcal A}$ 的像中.</p>
+<p><strong>单子给出理论</strong>. 由定义, $\mathcal E$ 上以 $\mathcal A$ 为元数的单子 $T$, 有理论 $(\Theta_T,j_T)$.</p>
+<p><strong>理论恢复出单子</strong>. 由定义, 对理论 $(\Theta,j)$ 可以恢复出 $\mathcal E$ 上的一个单子 $T$: 若将 $\mathcal E$ 等同于 $\widehat {\mathcal A}$ 的子范畴, 那么单子 $T$ 等于 $j^*j_!$ 的限制.</p>
+<p><strong>定理</strong>. 对于固定的 $(\mathcal E,\mathcal A)$, $\mathcal E$ 上以 $\mathcal A$ 为元数的单子 $T$ 等价于以 $\mathcal A$ 为元数的理论 $j_T\colon \mathcal A\to \Theta_T$, 且单子 $T$ 上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>等同于理论 $\Theta_T$ 的模型.
+事实上, 这一对应构成范畴等价. (<span class="link local"><a href="./BergerMelliesWeberMonAr.html" title="Monads with arities and their associated theories [BergerMelliesWeberMonAr]">BMW</a></span>, 定理 3.4)</p>
+<p><strong>模型条件表述为层条件</strong>. 常常 $\mathcal E = \widehat {\mathcal C}$ 是个预层范畴, 而 $\mathcal A$ 是包含了可表函子的一个子范畴 (那么 $\mathcal A$ 当然是稠密的, 因为可表函子是稠密的). 这时脉函子 $\nu_{\mathcal A}\colon \mathcal E \to \widehat {\mathcal A}$ 构成<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>之间的<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span>, 于是它的像恰好是 $\mathcal A$ 上由形如 $\{c\to a\mid c\in \mathcal C\}$ 的余锥生成的 <span class="link local"><a href="./Grothendieck拓扑.html" title="Grothendieck 拓扑 [Grothendieck拓扑]">Grothendieck 拓扑</a></span>的层范畴. 这给出了判断预层是否在 $\nu_{\mathcal A}$ 的像中的一个稍微直接一点的条件.</p>
+<h4>一般映射与自由映射</h4>
+<p>对于理论 $j\colon \mathcal A \to \Theta$, 称 $j$ 的像中的态射为<strong>自由映射</strong>, 而对 $\Theta$ 中的态射 $g$, 若对任意分解 $g = j(f) g'$, 都有 $f$ 可逆, 则称 $g$ 为<strong>一般映射</strong>.</p>
+<h2>例</h2>
+<h3>Lawvere 理论</h3>
+<p><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>等同于 $\mathsf{Set}$ 上以 $\mathsf{Fin}$ 为元数的单子, 即保持滤余极限的单子 (这里用到 $\nu_{\mathsf{Fin}}$ 不仅保持而且<span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映</a></span><span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>). 见<span class="link local"><a href="./有限性单子.html" title="有限性单子 [有限性单子]">有限性单子</a></span>.</p>
+<p>另一方面, Lawvere 理论也可视为上文所述的 “理论”. 回忆 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span> $\mathbb T$ 的对象形如 $1,x,x^2,\cdots$, 事实上在这里它对应理论 $j\colon \mathsf{Fin} \to \mathbb T^{\mathrm{op}}$, $\{1,\cdots,n\}\mapsto x^n$. 下面我们给出一个论证.</p>
+<p>脉函子 $\nu_{\mathsf{Fin}}\colon \mathsf{Set} \to \widehat {\mathsf{Fin}}$ 的像为 $\mathsf{Fin}$ 上的<span class="link local"><a href="./平坦函子.html" title="平坦函子 [平坦函子]">平坦</a></span>预层, 也即<span class="link local"><a href="./元素范畴.html" title="元素范畴 [元素范畴]">元素范畴</a></span>为<span class="link local"><a href="./滤范畴.html" title="滤范畴 [滤范畴]">滤范畴</a></span>的预层. 因此,</p>
+<ul>
+<li>$\mathsf{Set}$ 上以 $\mathsf{Fin}$ 为元数的理论</li>
+</ul>
+<p>等同于</p>
+<ul>
+<li>本质满函子 $j\colon \mathsf{Fin} \to \Theta$, 满足 $j^*j_!$ 保持平坦预层,</li>
+</ul>
+<p>因为 $j_!$ 保持可表函子, 且 $j^*j_!$ 保持余极限, 上述结构又等同于</p>
+<ul>
+<li>本质满函子 $j\colon \mathsf{Fin} \to \Theta$, 满足 $j^*$ 将 $\Theta$ 上的可表函子映射到 $\mathsf{Fin}$ 上的平坦预层,</li>
+</ul>
+<p>但 $\mathsf{Fin}$ 上的平坦预层就等同于保持有限积的函子 $\mathsf{Fin}^{\mathrm{op}}\to\mathsf{Set}$, 故上述结构等同于</p>
+<ul>
+<li>本质满函子 $j\colon \mathsf{Fin} \to \Theta$, 满足 $j$ 保持有限余积.</li>
+</ul>
+<p>这正是 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>的定义.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="树"><header><h1><span class="taxon"></span>树 (范畴论) <a class="slug" href="./树.html">[树]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>树是表达 “多个对象到一个对象的态射” 所需的基本结构. 因此, 可被树<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>的对象 (即<span class="link local"><a href="./树形对象.html" title="树形对象 [树形对象]">树形对象</a></span>) 给出<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 的一种定义.</p>
+<p>这里所说的树特指有限, 有根 (rooted), 对称 (即一个节点上的边不计顺序) 的树.</p>
+<h2>定义</h2>
+<h3>通过结点和边</h3>
+<p>树由<strong>结点</strong> (vertex), <strong>内边</strong> (internal edge) 和<strong>外边</strong> (external edge) 构成, 内边是两个结点之间的边, 外边是仅联系到一个结点的边; 每个结点有若干个 (可能是零个) <strong>入边</strong>和一个<strong>出边</strong>. 整个树有一个唯一的<strong>根</strong> (root), 即唯一指向外部的出边.
+外部的入边称为<strong>叶</strong> (leaf).</p>
+<img src="/assets/tree.svg" alt="树" width="300" style="display:block; margin:auto;">
+<p>上图是一棵树的例子, 其中</p>
+<ul>
+<li>$g$ 是根,</li>
+<li>$e$ 是一个叶, 是外边, 是结点 $w$ 的入边,</li>
+<li>$f$ 是内边, 是结点 $v$ 的出边, 也是结点 $w$ 的入边.</li>
+</ul>
+<p>注意, 我们<strong>不</strong>要求树可以画在平面上. 同一结点的所有入边之间没有顺序.</p>
+<h3>作为偏序集</h3>
+<p>树的所有边的上下关系构成一个偏序. 具体地, 树可定义为满足如下条件的 (有限) <span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span> $(P,\leq)$:</p>
+<ul>
+<li>$P$ 有最小元 $\bot$ (即树的<strong>根</strong>);</li>
+<li>对任意 $x\in P$, 不超过 $x$ 的元素的子集构成一个<span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序</a></span>.</li>
+</ul>
+<p>此时 $P$ 的极大元 (可能不唯一) 即是树的<strong>叶</strong>.</p>
+<h3>作为递归嵌套结构</h3>
+<p>树有一种递归定义:</p>
+<ul>
+<li>平凡树 $\{\}$ 是树;</li>
+<li>若 $x_1,\cdots,x_n$ 是树, 那么 $\{x_1,\cdots,x_n\}$ 也是树.</li>
+</ul>
+<h3>作为多项式</h3>
+<p>树还可以简洁地定义为 “多项式” (这个名词的直观参见<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>):
+$$
+E\overset{s}{\leftarrow} M \overset{p}{\rightarrow} N \overset{t}{\to} E,
+$$
+其中</p>
+<ul>
+<li>$E$ 是边的集合;</li>
+<li>$N$ 是顶点的集合, $t\colon N\to E$ 给出顶点的唯一出边, 要求 $t$ 为单射;</li>
+<li>$M$ 是边与顶点之间的 “入边” <span class="link local"><a href="./关系2-范畴.html" title="关系 2-范畴 [关系2-范畴]">关系</a></span>, 分别带有到 $E$ 和 $N$ 的投影, 满足 $s\colon M\to E$ 为单射, 且 $E\setminus M$ 只有一个元素, 即树的根.</li>
+</ul>
+<p>注意即使在<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>语境中, 我们也要求树的定义中 $E,M,N$ 是集合 ($0$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>生象). 因为上述定义中涉及的差集只对集合有意义.</p>
+<p>但对于任意<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span> $P$ (其分量未必为集合) 我们可以定义 <span class="link local"><a href="./P-树.html" title="P-树 (多项式函子标记的树) [P-树]">$P$-树</a></span>, 即树 (作为多项式函子) 到 $P$ 的态射. 这里, 多项式 $X\overset{s}{\leftarrow} E \overset{p}{\rightarrow} B \overset{t}{\to} Y$ 中, $p\colon E\to B$ 的纤维要求为集合.</p>
+<h3>树的态射</h3>
+<p>树 $S$ 到 $T$ 的映射是如下资料:</p>
+<ul>
+<li>将 $S$ 的每个结点 $n$ 对应到 $T$ 的一个<span class="link local"><a href="./P-树.html" title="P-树 (多项式函子标记的树) [P-树]">子树</a></span> (例如下图中蓝色结点对应到右边蓝圈中的子树), 满足结点 $n$ 的入边数等于该子树的叶数;</li>
+<li>将 $S$ 的每个边对应到 $T$ 的一个边, 且与结点的对应相容.</li>
+</ul>
+<img src="/assets/tree-morphism.svg" alt="tree morphism" width="400" style="display:block; margin:auto;">
+<p>树的态射由如下几种<strong>基本态射</strong>生成:</p>
+<ul>
+<li>树的<strong>同构</strong>;</li>
+<li><strong>退化</strong> (degeneracy) $S \twoheadrightarrow T$, 其中 $S$ 是由 $T$ 在一条边中间插入一个新结点所得 ($S$ 的这个新结点对应到无结点的子树);</li>
+<li><strong>内部面映射</strong> (inner face map) $S \hookrightarrow T$, 其中 $S$ 是由 $T$ 缩合一条内边所得;</li>
+<li><strong>外部面映射</strong> (outer face map) $S \to T$, 其中 $S$ 是由 $T$ 剪除一个外顶点 (仅关联一条内边的顶点) 所得;</li>
+</ul>
+<p>另一种概念性的理解是将树理解为特殊的<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>, 考虑<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>之间的态射
+$$
+\begin{CD}
+E @&lt;{s}&lt;&lt; M @&gt;{p}&gt;&gt; N @&gt;{t}&gt;&gt; E \\
+@VVV @VVV \square @VVV @VVV \\
+E' @&lt;&lt;{s'}&lt; M' @&gt;&gt;{p'}&gt; N' @&gt;&gt;{t'}&gt; E',
+\end{CD}
+$$
+其中标记 $\square$ 的方块为<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>. 换言之, 树的这种态射要保持 $p\colon M\to N$ 的纤维, 也即每个结点的入边的数量.
+但这样定义的只是树的态射中的一部分, 即树的<strong>含入</strong>映射 (<span class="link local"><a href="./KockPolyFun.html" title="Polynomial Functors and Trees [KockPolyFun]">Kock</a></span> 的 $\mathsf{TEmb}$), 又称<strong>惰性</strong> (inert) 映射 (<span class="link local"><a href="./GHK-analytic-monads.html" title="∞-Operads as Analytic Monads [GHK-analytic-monads]">GHK</a></span> 中的 $\Omega_{\mathrm{int}}$, 也即算畴的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>中的惰性映射).</p>
+<p><strong>例</strong>. 树的每个边给出一个含入
+$$
+\begin{array}{ccccccc}
+1 &amp; \leftarrow &amp; 0 &amp; \rightarrow &amp; 0 &amp; \rightarrow &amp; 1 \\
+\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
+E &amp; \leftarrow &amp; M &amp; \rightarrow &amp; N &amp; \rightarrow &amp; E,
+\end{array}
+$$
+每个结点给出一个含入
+$$
+\begin{array}{ccccccc}
+K+1 &amp; \leftarrow &amp; K &amp; \rightarrow &amp; 1 &amp; \rightarrow &amp; K+1 \\
+\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
+E &amp; \leftarrow &amp; M &amp; \rightarrow &amp; N &amp; \rightarrow &amp; E,
+\end{array}
+$$
+其中 $K$ 是 $p\colon M\to N$ 在 $1\to N$ 处的纤维, 即该结点的入边的全体.</p>
+<p>要得到树的全部态射需要考虑多项式函子生成的<span class="link local"><a href="./自由单子.html" title="自由单子 [自由单子]">自由单子</a></span>.</p>
+<p><strong>命题</strong>. 树 $T$ 的<span class="link local"><a href="./自由单子.html" title="自由单子 [自由单子]">自由单子</a></span>是<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>
+$$
+E\leftarrow\operatorname{Sub}(T)'\to\operatorname{Sub}(T)\to E
+$$
+给出的函子. 其中 $E$ 是 $T$ 的边集, $\operatorname{Sub}(T)$ 是 $T$ 的子树的集合, $\operatorname{Sub}'(T)$ 是带一个特殊标记的子树的集合, 到 $E$ 的映射给出子树的根.</p>
+<p>因此, 树 $S$ 到 $T$ 的映射恰好等同于 $S$ 对应的<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>到 $T$ 的自由单子的态射.</p>
+<h2>例</h2>
+<h3>线性树</h3>
+<p>线性树是形如
+$$
+\begin{array}
+{c}
+\downarrow\\
+\bullet\\
+\downarrow\\
+\bullet\\
+\vdots\\
+\bullet\\
+\downarrow
+\end{array}
+$$
+的树. 这给出<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>到树的范畴的嵌入
+$$
+\Delta \hookrightarrow \Omega.
+$$</p>
+</details></section></details></section></footer></article></div></body></html>

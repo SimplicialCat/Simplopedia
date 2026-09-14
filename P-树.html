@@ -905,6 +905,7 @@ $$
 <p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">亟需施工处</a></span>列表 (“TODO list”)</p>
 <p><span class="link local"><a href="./terminologies.html" title="单纯百科 - 术语翻译表 [terminologies]">术语翻译表</a></span></p>
 <h2>最近</h2>
+<p><span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span></p>
 <p><span class="link local"><a href="./始代数.html" title="始代数 (自函子) [始代数]">始代数 (自函子)</a></span>, <span class="link local"><a href="./P-树.html" title="P-树 (多项式函子标记的树) [P-树]">P-树 (多项式函子标记的树)</a></span>, <span class="link local"><a href="./自由单子.html" title="自由单子 [自由单子]">自由单子</a></span></p>
 <p><span class="link local"><a href="./Idem.html" title="游走的幂等映射 [Idem]">游走的幂等映射</a></span>, <span class="link local"><a href="./游走的收缩.html" title="游走的收缩 [游走的收缩]">游走的收缩</a></span></p>
 <p><span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span></p>
@@ -991,11 +992,16 @@ $$
 <p>注意即使在<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>语境中, 我们也要求树的定义中 $E,M,N$ 是集合 ($0$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>生象). 因为上述定义中涉及的差集只对集合有意义.</p>
 <p>但对于任意<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span> $P$ (其分量未必为集合) 我们可以定义 <span class="link local"><a href="./P-树.html" title="P-树 (多项式函子标记的树) [P-树]">$P$-树</a></span>, 即树 (作为多项式函子) 到 $P$ 的态射. 这里, 多项式 $X\overset{s}{\leftarrow} E \overset{p}{\rightarrow} B \overset{t}{\to} Y$ 中, $p\colon E\to B$ 的纤维要求为集合.</p>
 <h3>树的态射</h3>
-<p>树的态射是个比较复杂的概念.</p>
-<p>一种方便的定义是, 树的态射由如下几种<strong>基本态射</strong>生成:</p>
+<p>树 $S$ 到 $T$ 的映射是如下资料:</p>
+<ul>
+<li>将 $S$ 的每个结点 $n$ 对应到 $T$ 的一个<span class="link local"><a href="./P-树.html" title="P-树 (多项式函子标记的树) [P-树]">子树</a></span> (例如下图中蓝色结点对应到右边蓝圈中的子树), 满足结点 $n$ 的入边数等于该子树的叶数;</li>
+<li>将 $S$ 的每个边对应到 $T$ 的一个边, 且与结点的对应相容.</li>
+</ul>
+<img src="/assets/tree-morphism.svg" alt="tree morphism" width="400" style="display:block; margin:auto;">
+<p>树的态射由如下几种<strong>基本态射</strong>生成:</p>
 <ul>
 <li>树的<strong>同构</strong>;</li>
-<li><strong>退化</strong> (degeneracy) $S \twoheadrightarrow T$, 其中 $S$ 是由 $T$ 在一条边中间插入一个新结点所得;</li>
+<li><strong>退化</strong> (degeneracy) $S \twoheadrightarrow T$, 其中 $S$ 是由 $T$ 在一条边中间插入一个新结点所得 ($S$ 的这个新结点对应到无结点的子树);</li>
 <li><strong>内部面映射</strong> (inner face map) $S \hookrightarrow T$, 其中 $S$ 是由 $T$ 缩合一条内边所得;</li>
 <li><strong>外部面映射</strong> (outer face map) $S \to T$, 其中 $S$ 是由 $T$ 剪除一个外顶点 (仅关联一条内边的顶点) 所得;</li>
 </ul>
@@ -1008,7 +1014,7 @@ E' @&lt;&lt;{s'}&lt; M' @&gt;&gt;{p'}&gt; N' @&gt;&gt;{t'}&gt; E',
 \end{CD}
 $$
 其中标记 $\square$ 的方块为<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>. 换言之, 树的这种态射要保持 $p\colon M\to N$ 的纤维, 也即每个结点的入边的数量.
-但这样定义的只是树的态射中的一部分, 即树的<strong>含入</strong>映射 (<span class="link local"><a href="./KockPolyFun.html" title="Polynomial Functors and Trees [KockPolyFun]">Kock</a></span> 的 $\mathsf{TEmb}$), 又称<strong>惰性</strong> (inert) 映射 (<span class="link local"><a href="./GHK-analytic-monads.html" title="∞-Operads as Analytic Monads [GHK-analytic-monads]">GHK</a></span> 中的 $\Omega_{\mathrm{int}}$).</p>
+但这样定义的只是树的态射中的一部分, 即树的<strong>含入</strong>映射 (<span class="link local"><a href="./KockPolyFun.html" title="Polynomial Functors and Trees [KockPolyFun]">Kock</a></span> 的 $\mathsf{TEmb}$), 又称<strong>惰性</strong> (inert) 映射 (<span class="link local"><a href="./GHK-analytic-monads.html" title="∞-Operads as Analytic Monads [GHK-analytic-monads]">GHK</a></span> 中的 $\Omega_{\mathrm{int}}$, 也即算畴的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>中的惰性映射).</p>
 <p><strong>例</strong>. 树的每个边给出一个含入
 $$
 \begin{array}{ccccccc}
@@ -1027,6 +1033,12 @@ E &amp; \leftarrow &amp; M &amp; \rightarrow &amp; N &amp; \rightarrow &amp; E,
 $$
 其中 $K$ 是 $p\colon M\to N$ 在 $1\to N$ 处的纤维, 即该结点的入边的全体.</p>
 <p>要得到树的全部态射需要考虑多项式函子生成的<span class="link local"><a href="./自由单子.html" title="自由单子 [自由单子]">自由单子</a></span>.</p>
+<p><strong>命题</strong>. 树 $T$ 的<span class="link local"><a href="./自由单子.html" title="自由单子 [自由单子]">自由单子</a></span>是<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>
+$$
+E\leftarrow\operatorname{Sub}(T)'\to\operatorname{Sub}(T)\to E
+$$
+给出的函子. 其中 $E$ 是 $T$ 的边集, $\operatorname{Sub}(T)$ 是 $T$ 的子树的集合, $\operatorname{Sub}'(T)$ 是带一个特殊标记的子树的集合, 到 $E$ 的映射给出子树的根.</p>
+<p>因此, 树 $S$ 到 $T$ 的映射恰好等同于 $S$ 对应的<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>到 $T$ 的自由单子的态射.</p>
 <h2>例</h2>
 <h3>线性树</h3>
 <p>线性树是形如
@@ -1098,4 +1110,5 @@ $$</p>
 $$
 \overline{P} =\operatorname{colim}_n P_n.
 $$</p>
+<p>在 $P$ 本身为多项式函子时, 我们还可以进一步显式写出 $P_n$: 粗略地说, 它是由高度不超过 $n$ 的 $P$-<span class="link local"><a href="./P-树.html" title="P-树 (多项式函子标记的树) [P-树]">树</a></span>通过类似上一节的方式定义的多项式函子.</p>
 </details></section></details></section></footer></article></div></body></html>

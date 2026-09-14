@@ -929,6 +929,8 @@ $$
 这说明 $\Gamma$ 是一个 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>. 事实上, 它正是<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点对象</a></span>的 Lawvere 理论.</p>
 <h3>与单纯形范畴的关系</h3>
 <p><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$ 到 $\Gamma$ 有一函子, 将对象 $[n]\in\Delta$ 对应到 $\underline{n}\in\Gamma$. 详见 <span class="link local"><a href="./Segal函子γ.html" title="Segal 函子 γ [Segal函子γ]">Segal 函子 $\gamma$</a></span>.</p>
+<h3>代数模式</h3>
+<p>范畴 $\Gamma$ 可用于定义 <span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">$\mathbb E_\infty$-代数</a></span>的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="lim-colim"><header><h1><span class="taxon"></span>极限与余极限交换 <a class="slug" href="./lim-colim.html">[lim-colim]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>陈述</h2>
 <p>在 $\mathsf{Set}$ 或 $\mathsf{Ani}$ 中, 对指标范畴 $I,J$ 以及一族对象 $X_{i,j}$, 有自然的映射
@@ -1105,10 +1107,19 @@ $$
 \Delta\wr\mathcal A \hookrightarrow \mathcal V\text{-}\mathsf{Cat}.
 $$</p>
 <p><strong>命题</strong>. 若 $\mathcal A\subset\mathcal V$ <span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>, 则 $\Delta\wr\mathcal A \hookrightarrow \mathcal V\text{-}\mathsf{Cat}$ 也稠密.</p>
-<p><em>证明</em>. 约化到 $\mathcal V = \widehat {\mathcal A}$ 的情形.</p>
+<p><em>证明</em>. 约化到 $\mathcal V = \widehat {\mathcal A}$ 的情形. $\square$</p>
+<p>迭代上述命题会给出一系列稠密性:</p>
+<ul>
+<li>开始, 我们有 $1$ 在 $\mathsf{Ani}$ 中稠密;</li>
+<li>使用上述命题 (或使用常识), 我们有 $\Delta$ 在 $\mathsf{Cat}$ 中稠密;</li>
+<li>使用上述命题, 我们有 $\Delta \wr \Delta$ 在 $\mathsf{Cat}\text{-}\mathsf{Cat} = 2\mathsf{Cat}$ 中稠密;</li>
+<li>…</li>
+<li>使用上述命题, 我们有 $\Delta \wr \cdots \wr \Delta$ 在 $\mathsf{Cat}\text{-}\cdots\text{-}\mathsf{Cat} = n\mathsf{Cat}$ 中稠密.</li>
+</ul>
+<p>范畴 $\Delta \wr \cdots \wr \Delta$ 就是 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴 $\Theta_n$</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="对称幺半范畴"><header><h1><span class="taxon"></span>对称幺半范畴 <a class="slug" href="./对称幺半范畴.html">[对称幺半范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>定义</h2>
 <p>对称幺半范畴是 $(\mathsf{Cat},\times)$ 中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>.</p>
-<p><span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半 $\infty$-范畴</a></span>也可等价地定义为 <span class="link local"><a href="./E∞-空间.html" title="E∞-空间 [E∞-空间]">$\mathbb E_\infty$-生象</a></span>范畴 $\mathsf{CAlg}(\mathsf{Ani})$ 中的<span class="link local"><a href="./范畴对象.html" title="范畴对象 (∞-范畴论) [范畴对象]">范畴对象</a></span>.</p>
+<p><span class="link local"><a href="./对称幺半∞-范畴.html" title="对称幺半 ∞-范畴 [对称幺半∞-范畴]">对称幺半 $\infty$-范畴</a></span>也可等价地定义为 <span class="link local"><a href="./E∞-空间.html" title="E∞-空间 [E∞-空间]">$\mathbb E_\infty$-生象</a></span>范畴 $\mathsf{CAlg}(\mathsf{Ani})$ 中的<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">范畴对象</a></span>.</p>
 <h2>性质</h2>
 <h3>严格化</h3>
 <p><span class="link local"><a href="./对称幺半范畴的严格化.html" title="对称幺半范畴的严格化 [对称幺半范畴的严格化]">严格化</a></span></p>
