@@ -1061,7 +1061,7 @@ $$</li>
 <li>一个 <span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">$\mathbb E_\infty$</a></span>-空间等同于一个函子 $F\colon \mathsf{Fin}_* \to\mathsf{Ani}$, 满足 $F(\langle n \rangle) \to \prod_{i=1}^n F(\langle 1 \rangle)$ 为等价;</li>
 <li>一个 <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">$\mathbb A_\infty$</a></span>-空间等同于一个函子 $F\colon \Delta^{\mathrm{op}}\to\mathsf{Ani}$, 满足 $F([0]) = 1$ 且 $F([n])\to F([1])^{n}$ 为等价;</li>
 <li>一个 $\infty$-范畴等同于一个函子 $\Delta^{\mathrm{op}}\to\mathsf{Ani}$, 满足 $F([n])\to F([1])^{\times_{F([0])} n}$ 为等价 (见 <span class="link local"><a href="./Segal空间.html" title="Segal 对象 [Segal空间]">Segal 对象</a></span>), 以及某种完备性 (见<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 对象</a></span>);</li>
-<li>$(\infty,n)$-算畴等同于函子 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">$\Theta_n^{\mathrm{op}}$</a></span> $\to \mathsf{Ani}$ (见 <span class="link local"><a href="./Θ-n-空间.html" title=" [Θ-n-空间]">$\Theta_n$-生象</a></span>), 满足某些条件;</li>
+<li>$(\infty,n)$-算畴等同于函子 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">$\Theta_n^{\mathrm{op}}$</a></span> $\to \mathsf{Ani}$ (见 <span class="link local"><a href="./Θ-n-空间.html" title="Θn-空间 [Θ-n-空间]">$\Theta_n$-生象</a></span>), 满足某些条件;</li>
 <li>$\infty$-算畴等同于函子 <span class="link local"><a href="./树.html" title="树 (范畴论) [树]">$\Omega^{\mathrm{op}}$</a></span> $\to \mathsf{Ani}$ (见<span class="link local"><a href="./树形对象.html" title="树形对象 [树形对象]">树形对象</a></span>), 满足某些条件;</li>
 <li>一个特定 $\infty$-算畴 $\mathcal O$ 在 $\mathsf{Ani}$ 中的代数等同于 $\mathcal O$ 的 “算子范畴” 出发的一个满足某些条件的函子.</li>
 </ul>
@@ -1140,7 +1140,7 @@ $$
 <p><strong>命题</strong> (自由函子).
 设 $f\colon \mathcal O\to\mathcal P$ 是代数模式之间的 Segal 态射, $\mathcal C$ 为可表现范畴, 则 $f^*\colon \mathsf{Seg}_{\mathcal P}(\mathcal C) \to \mathsf{Seg}_{\mathcal O}(\mathcal C)$ 有左伴随 $L_{\mathrm{Seg}}\circ f_!$, 其中 $L_{\mathrm{Seg}}$ 是 $\mathsf{Seg}_{\mathcal O}(\mathcal C)\hookrightarrow\mathsf{Fun}(\mathcal O,\mathcal C)$ 的左伴随 (局部化), $f_!$ 是沿 $f$ <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">左 Kan 扩张</a></span>.</p>
 <p><em>证明</em>. 展开定义. $\square$</p>
-<p>后面我们会进一步讨论什么情况下不需要这个局部化 $L_{\mathrm{Seg}}$, 以及什么情况下这个伴随是<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的.</p>
+<p>在一些良好的情况下, 我们不需要这个局部化 $L_{\mathrm{Seg}}$, 甚至这个伴随是<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的.</p>
 <h2>性质</h2>
 <h3>与算畴的关系</h3>
 <p>注意算畴在这个故事中有两个层级的角色: 一个算畴既可以给出一种代数模式, 同时又是 “算畴” 这种代数模式的一个模型 (Segal 对象). 本节讲的是<strong>前一种</strong>角色, 即一个 (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 中的) <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>如何给出一个代数模式.</p>
@@ -1176,14 +1176,36 @@ $$
 j_{\mathcal O}^*\colon \mathsf{Seg}_{\mathcal O}(\mathcal C) \to \mathsf{Seg}_{\mathcal O^{\mathrm{int}}}(\mathcal C).
 $$
 于是, 自由函子是 “拉回的左伴随” 的特例.</p>
-<p><strong>命题</strong>. 设 $f\colon \mathcal O \to \mathcal P$ 为本质满 Segal 态射, $\mathcal C$ 为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>, 则</p>
+<p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Proposition 8.1). 设 $f\colon \mathcal O \to \mathcal P$ 为本质满 Segal 态射, $\mathcal C$ 为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>, 则</p>
 <ul>
 <li>$F\colon \mathcal P \to \mathcal C$ 是 Segal 对象当且仅当 $f^*F\colon \mathcal O\to\mathcal C$ 是 Segal 对象;</li>
-<li>存在<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性伴随</a></span> $f_!\dashv f^*\colon \mathsf{Seg}_{\mathcal O}(\mathcal C) \rightleftarrows \mathsf{Seg}_{\mathcal P}(\mathcal C)$.</li>
+<li>存在<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性伴随</a></span> $(L_{\mathrm{Seg}}\circ f_!)\dashv f^*\colon \mathsf{Seg}_{\mathcal O}(\mathcal C) \rightleftarrows \mathsf{Seg}_{\mathcal P}(\mathcal C)$.</li>
 </ul>
 <h3>与单子的关系</h3>
 <p>每个代数模式 $\mathcal O$ 给出底层结构 $\mathsf{Fun}(\mathcal O^{\mathrm{el}},\mathsf{Ani})$ 上的一个<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数</a></span>的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</p>
-<p><strong>命题</strong>. todo</p>
+<p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Corollary 8.2). 设 $\mathcal O$ 为代数模式, $\mathcal C$ 为可表现范畴, 则<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由–遗忘伴随</a></span>
+$$
+ F_{\mathcal O}\colon \mathsf{Fun}(\mathcal O^{\mathrm{el}},\mathcal C) \rightleftarrows \mathsf{Seg}_{\mathcal O}(\mathcal C) \colon U_{\mathcal O}
+$$
+是<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的.</p>
+<p><strong>定义</strong>. 称满足如下条件的代数模式 $\mathcal O$ <strong>可延拓</strong> (extendable):</p>
+<ol>
+<li>考虑函子 $\operatorname{Act}_{\mathcal O}\colon \mathcal O \to \mathsf{Ani}$, $\operatorname{Act}_{\mathcal O}(X)$ 为指向 $X$ 的活性映射构成的生象, 则 $\operatorname{Act}_{\mathcal O}$ 为 Segal $\mathcal O$-生象;</li>
+<li>对 $\mathcal O$ 中任意活性映射 $X\to Y$, todo</li>
+</ol>
+<p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Proposition 8.8). 代数模式 $\mathcal O$ 可延拓当且仅当沿 $j_{\mathcal O}$ 的左 Kan 扩张限制为函子
+$$
+j_{\mathcal O,!}\colon \mathsf{Seg}_{\mathcal O^{\mathrm{int}}}(\mathsf{Ani}) \to \mathsf{Seg}_{\mathcal O}(\mathsf{Ani}).
+$$</p>
+<p><strong>推论</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Proposition 8.12). 设 $\mathcal O$ 为可延拓代数模式, $\mathcal C$ 为 $\mathcal O$-可容许范畴 (某些极限对余极限的分配律), 则自由函子 $F_{\mathcal O}$ 可表达为
+$$
+\begin{aligned}
+F_{\mathcal O}(\Phi)(X) = (j_{\mathcal O,!}i_{\mathcal O,*}\Phi) (X) = \operatorname{colim}_{Y\in\operatorname{Act}_{\mathcal O}(X)}\operatorname{lim}_{E\in\mathcal O^{\mathrm{el}}_{Y/}} \Phi(E).
+\end{aligned}
+$$
+其中 $i_{\mathcal O}\colon \mathcal O^{\mathrm{el}}\hookrightarrow\mathcal O^{\mathrm{int}}$ 为嵌入, $j_{\mathcal O}\colon \mathcal O^{\mathrm{int}} \to \mathcal O$.</p>
+<p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Proposition 10.6). 设 $\mathcal O$ 为可延拓代数模式, 则 $\mathsf{Fun}(\mathcal O^{\mathrm{el}},\mathsf{Ani})$ 上的自由 Segal $\mathcal O$-生象单子 $T_{\mathcal O}$ 为多项式单子. 这里多项式单子的定义是 <span class="link local"><a href="./Descartes单子.html" title="Descartes 单子 [Descartes单子]">Descartes 单子</a></span>且为<span class="link local"><a href="./局部右伴随.html" title="局部右伴随 [局部右伴随]">局部右伴随</a></span>.</p>
+<p>这个结论保证了这些代数模式给出<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>.</p>
 <h2>例</h2>
 <p>较为简单的例子在前面都已讲过.</p>
 <h3>$\mathbb E_n$-代数与 $n$-范畴的模式</h3>
@@ -1211,6 +1233,19 @@ $$
 <li>$\tau_n\colon \Delta^n \to \Theta_n$ 将 $([i_1],\cdots,[i_n])$ 对应到 $[i_1] (\tau_{n-1}([i_2],\cdots,[i_n]),\cdots,\tau_{n-1}([i_2],\cdots,[i_n]))$.</li>
 </ul>
 <p>这给出一个 Segal 态射 $\Delta^n \to \Theta_n$.</p>
+<h3>Barwick 算子范畴</h3>
+<p>设 $\Phi$ 为一个<span class="link local"><a href="./opecat.html" title="Barwick 算子范畴 [opecat]">算子范畴</a></span>, 记 $\Delta_\Phi$ 为 $\Phi$-序列的范畴, 其对象为有限全序集到 $\Phi$ 的函子, 态射为交换三角, 要求某些条件.</p>
+<ul>
+<li>$\Phi = 1$ 时 $\Delta_\Phi = \Delta$;</li>
+<li>$\Delta_{\mathsf{Fin}}$ 是 “带层级结构的树” 的范畴.</li>
+</ul>
+<p>令基本对象为 $([0],*)$ 与 $([1],I\to *)$ ($*$ 表示终对象), 令态射为惰性映射当且仅当对应的 $\Delta$ 中的态射为惰性映射, 活性映射当且仅当对应的 $\Delta$ 中的态射为活性映射且自然变换为同构. 这定义了一个代数模式 $\Delta_{\Phi}$.</p>
+<p>当 $\Phi = \mathsf{Fin}$ 时该代数模式的 Segal 对象正是 Lurie 的 $\infty$-算畴. 此外, <span class="link local"><a href="./CHHoperads.html" title="Two models for the homotopy theory of ∞-operads [CHHoperads]">CHH</a></span> 证明了一系列等价
+$$
+\mathsf{Seg}_{\Omega} \overset{\simeq}{\to} \mathsf{Seg}_{\Delta_{\mathsf{Fin}}^1} \overset{\simeq}{\leftarrow}\mathsf{Seg}_{\Delta_{\mathsf{Fin}}},
+$$
+(其中 $\Delta_{\mathsf{Fin}}^1$ 是所有以 $*$ 结尾的 $\mathsf{Fin}$-序列的范畴)
+从而说明算畴的所有定义等价.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="多重范畴"><header><h1><span class="taxon"></span>多重范畴 <a class="slug" href="./多重范畴.html">[多重范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>多重范畴可由类似于<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>的对象来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>.</p>
