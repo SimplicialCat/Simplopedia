@@ -955,6 +955,59 @@ $\Omega^n\otimes\mathcal E^*$ 被 $K^{n,*}_{\text{c}}$ (紧支集分布 ?) 消�
 <h2>一般结论</h2>
 <p>Grothendieck 的做法来源于对<span class="link local"><a href="./前推.html" title=" [前推]">直像</a></span> $f_*$ 的右伴随的探索 (它的左伴随是拉回).</p>
 <p>对于 $n$ 维光滑射影概形 $X$,</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="notes-perverse"><header><h1><span class="taxon"></span>偏屈层笔记 <a class="slug" href="./notes-perverse.html">[notes-perverse]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>偏屈层始于奇性的代数簇的几何. 常值层的上同调不能正确描述这种几何对象; 人们最初发明<span class="link local"><a href="./相交上同调.html" title=" [相交上同调]">相交上同调</a></span>描述它们.</p>
+<h3>Poincaré 对偶</h3>
+<p>设 $X$ 为 $d$ 维光滑复射影代数簇,
+$$
+H^r\times H^{2d-r}\to H^{2d}(X,\mathbb{Q}) \to \mathbb{Q}
+$$
+为完美配对.</p>
+<p>对于带奇点的代数簇如结曲线 (nodal curve) $C$, 记 $\widetilde C \simeq \mathbb P^1$ 为其正规化, 映射
+$$
+\nu\colon \widetilde C \to C
+$$
+相当于粘合 $\mathbb P^1$ 的两点. 在这两点之外, 映射为同构. 我们尝试计算 $C$ 的上同调.
+$$
+H^r(C,\mathbb{Q}) = \begin{cases}
+    \mathbb{Q} &amp; r = 0,1,2\\
+    0 &amp; \text{其它.}
+\end{cases}
+$$
+可见 $H^1$ 上的配对退化 (因为杯积分次交换, 在 $H^1$ 上反交换), 没有完美配对.</p>
+<p>为了找一个层尽可能接近常值层, 同时修复 Poincaré 对偶, 考虑
+$$
+\mathcal N = \nu_* \underline{\mathbb{Q}}_{\widetilde C},
+$$
+直观上这个层 “记住了结点的两支”.</p>
+<p><strong>引理</strong>. 有短正合列
+$$
+\underline{\mathbb{Q}}_C \to \mathcal N \to i_*\mathbb{Q},
+$$
+映射 $\mathcal N \to i_*\mathbb{Q}$ 取结点的两支的差.</p>
+<p>暂且定义 “IC 层”
+$$
+\mathrm{IC}_C := \mathcal N[1]
+$$
+以及 (按照历史记号)
+$$
+\mathrm{IH}^r(C,\mathbb{Q}) = H^{r-1}(C,\mathrm{IC}_C) = H^r(C,\mathcal N).
+$$</p>
+<p>取长正合列给出
+$$
+\mathrm{IH}^r(C,\mathbb{Q}) = \begin{cases}
+    \mathbb{Q} &amp; r = 0,2\\
+    0 &amp; \text{其它}.
+\end{cases}
+$$</p>
+<p><strong>定义</strong>. 对于光滑的 $X$,
+$$
+\mathrm{IC}_X := \underline{\mathbb{Q}}_X [\operatorname{dim}X].
+$$</p>
+<p>一般的 $X$ 的 IC 层是奇点消解的常值层的 (导出) 推前.</p>
+<h3>可构造层与六函子</h3>
+<p>回忆, Abel 范畴 $\mathcal A$ 的<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span> $D(\mathcal A)$ 是<span class="link local"><a href="./链复形.html" title="链复形 [链复形]">链复形</a></span>的范畴的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>, 使得链复形之间的拟同构 (诱导上同调之间的同构的映射) 变为导出范畴中的同构.</p>
+<p>$D(\mathcal A)$ 是个<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>, 其中有一些关键的三角 (<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>).</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="t-结构"><header><h1><span class="taxon"></span>t-结构 <a class="slug" href="./t-结构.html">[t-结构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设 $\mathcal C$ 为<span class="link local"><a href="./三角范畴.html" title="“三角范畴” [三角范畴]">三角范畴</a></span>或<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span>, 其上的一个 t-结构是一对子范畴 $(\mathcal C_{\geq 0},\mathcal C_{\leq 0})$, 记 $\mathcal C_{\geq n}=\mathcal C_{\geq 0}[n]$, $\mathcal C_{\leq n}=\mathcal C_{\leq 0}[n]$, 满足</p>
