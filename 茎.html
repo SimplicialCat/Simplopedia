@@ -1045,10 +1045,15 @@ $$</p>
 <p><strong>命题</strong>.</p>
 <ul>
 <li>$\mathbb D$ 为正合函子;</li>
+<li>$\mathbb D\circ\mathbb D = \mathrm{id}$;</li>
 <li>$\mathbb D \circ [1] = [-1] \circ \mathbb D$;</li>
-<li>$\mathbb D f_! = f_* \mathbb D$;</li>
-<li>$\mathbb D f^! = f^* \mathbb D$;</li>
 <li>$\mathbb D \underline{\mathbb{Q}}_X = \omega_X$;</li>
+<li>对于 $f\colon X\to Y$,
+<ul>
+<li>$\mathbb D_Y f_! = f_* \mathbb D_X$,</li>
+<li>$\mathbb D f^! = f^* \mathbb D$,</li>
+</ul>
+</li>
 <li>若 $X$ 为 $d$ 维光滑代数簇, 则 $\omega_X = \underline{\mathbb{Q}}_X [2d]$.</li>
 <li>(Poincaré 对偶) 设 $X$ 光滑紧合, 那么 $\Gamma (X,\underline{\mathbb{Q}})^*=\Gamma_c(\mathbb D_X \underline{\mathbb{Q}}) = \Gamma(\mathbb{Q}[2d])$. (因此 Verdier 对偶可视为相对 Poincaré 对偶.)</li>
 </ul>
@@ -1080,11 +1085,33 @@ $$
 $$
 q^* f_! \simeq (f')_! p^*.
 $$</p>
+<p>我们将以 $j_!$ 与 $j_*$ 之间的一种操作 $j_{!*}$ 来定义 $\mathrm{IC}$.</p>
+<hr />
 <p><strong>习题</strong>. $\mathbb A^1 \setminus 0$ 上的 $\mathbb{Q}$-局部系统 $\mathcal L$ 等同于有限维 $\mathbb{Q}$-线性空间 $V$ 带一个自同构 $T$. 证明
 $$
 i^*j_* \mathcal L = [V \overset{T-1}{\to} V].
 $$</p>
-<p>我们将以 $j_!$ 与 $j_*$ 之间的一种操作 $j_{!*}$ 来定义 $\mathrm{IC}$.</p>
+<p><em>解答</em> (我的尝试, 不一定对 / 好).
+$$
+\begin{aligned}
+i^*j_*\mathcal L &amp;= \operatorname{colim}_{0\in U} \Gamma(U,j_*\mathcal L)\\
+&amp;=\operatorname{colim}_{0\in U}\Gamma(U\setminus 0, \mathcal L).
+\end{aligned}
+$$
+考虑 $U$ 为以 $0$ 为中心的圆盘, 将 $U \setminus 0$ 写成两个可缩开集 $U_1, U_2$ 的并, 满足交集 $U_{12}=U_1\times_{U_0} U_2$ 为两个可缩分支, 那么 (假设 $D(-)$ 的下降)
+$$
+D(U\setminus 0) \simeq D(U_1)\times_{D(U_{12})} D(U_2),
+$$
+$D(U \setminus 0)$ 的一个对象等同于三元组 $(F_1\in D(U_1),F_2\in D(U_2),\phi\colon F_1|_{U_{12}}\simeq F_2|_{U_{12}})$. 那么 $\mathcal L$ 对应 $(V,V,(\mathrm{id},T)\colon V\oplus V\simeq V\oplus V)$, 常值层 $\mathbb{Q}_{U\setminus 0}$ 对应 $(\mathbb{Q},\mathbb{Q},\mathrm{id})$.
+$$
+\begin{aligned}
+\Gamma(U\setminus 0,\mathcal L)
+&amp;=\operatorname{Hom}_{U\setminus 0}(\mathbb{Q}_{U\setminus 0},\mathcal L)\\
+&amp;=\operatorname{Hom}_{U_1}(\mathbb{Q}_{U_1},\mathcal L)\times_{\operatorname{Hom}_{U_{12}}(\mathbb{Q}_{U_{12}},\mathcal L)}\operatorname{Hom}_{U_2}(\mathbb{Q}_{U_2},\mathcal L)\\
+&amp;= V\times_{V\oplus V} V \\&amp;= \operatorname{fib}((\mathrm{id},T)\colon V\oplus V \to V\oplus V)\\&amp;=\operatorname{fib}(T-\mathrm{id}\colon V\to V).
+\end{aligned}
+$$</p>
+<hr />
 </details></section><section class="block" data-taxon=""><details ><summary id="terminologies"><header><h1><span class="taxon"></span>单纯百科 - 术语翻译表 <a class="slug" href="./terminologies.html">[terminologies]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>下表的第二列是<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>使用的译文.</p>
 <p>表格第三列是其它地方也曾出现的译文, 它们有的是历史淘汰的选择, 有的是机翻造成的错误. 这个表格的作用是为 LLM 提供正确的术语.</p>
