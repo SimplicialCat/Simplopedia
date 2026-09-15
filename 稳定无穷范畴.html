@@ -1160,7 +1160,20 @@ $$</p>
 <p>一般的 $X$ 的 IC 层是奇点消解的常值层的 (导出) 推前.</p>
 <h3>可构造层与六函子</h3>
 <p>回忆, Abel 范畴 $\mathcal A$ 的<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span> $D(\mathcal A)$ 是<span class="link local"><a href="./链复形.html" title="链复形 [链复形]">链复形</a></span>的范畴的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>, 使得链复形之间的拟同构 (诱导上同调之间的同构的映射) 变为导出范畴中的同构.</p>
-<p>$D(\mathcal A)$ 是个<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>, 其中有一些关键的三角 (<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>).</p>
+<p>$D(\mathcal A)$ 是个<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>, 其中有一些关键的三角 (<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>). 三角给出上同调的长正合列.</p>
+<p>稳定范畴之间的<strong>正合函子</strong>是保持这些特殊三角的函子.</p>
+<p>Abel 范畴之间的正合函子 $F\colon \mathcal A \to \mathcal A'$ 给出导出范畴之间的正合函子 $F\colon D(\mathcal A) \to D(\mathcal A')$.</p>
+<p>不仅如此, Abel 范畴之间的<strong>左</strong>正合函子 $F\colon \mathcal A \to \mathcal A'$ 给出导出范畴之间的正合函子<sup class="footnote-reference" id="notes-perverse_1-back"><a href="#notes-perverse_1">1</a></sup> (称为<strong>右导出函子</strong>) $RF\colon D(\mathcal A) \to D(\mathcal A')$. 通过这个函子再取上同调就得到传统的导出函子 $R^d F$. Abel 范畴之间的<strong>右</strong>正合函子 $F\colon \mathcal A \to \mathcal A'$ 给出导出范畴之间的正合函子 (称为<strong>左导出函子</strong>) $LF\colon D(\mathcal A) \to D(\mathcal A')$.</p>
+<div class="footnote-definition" id="notes-perverse_1">
+  <sup class="footnote-definition-label"><a href="#notes-perverse_1-back">1</a></sup>
+<p>这里忽略了一些有限上同调振幅的限制条件, 或者实际上考虑的是有界导出范畴.</p>
+</div>
+<p>稳定范畴 $\mathcal D$ 的关键性质是移位 $[1]\colon \mathcal D \to \mathcal D$ 是个等价. 对任意三角 $M\to N \to L$, 可旋转得到三角 $N \to L \to M[1]$, $L\to M[1]\to N[1]$ 等等.</p>
+<p>回到正题. <span class="link local"><a href="./可构造层.html" title="可构造层 [可构造层]">可构造层</a></span>是可由有限步基本操作得到的层, 具体地, 称 $X$ 上的层 $F$ <strong>可构造</strong>, 意思是存在 $X$ 的有限分层 $X = \bigsqcup_\alpha S_\alpha$, 每个 $S_\alpha$ 为子簇, 且 $F|_{S_\alpha}$ 为 $\mathbb{Q}$-局部系统 (局部常值的 $\mathbb{Q}$-线性空间层). 记
+$$
+D_c^b (X,\mathbb{Q}) \subset D(\mathsf{Shv}(X))
+$$
+为上同调可构造且有界的对象构成的全子范畴. 这是我们的主要工作范畴, 我们要构造的奇性代数簇 $X$ 上的 IC 层就是其中的对象.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="t-结构"><header><h1><span class="taxon"></span>t-结构 <a class="slug" href="./t-结构.html">[t-结构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设 $\mathcal C$ 为<span class="link local"><a href="./三角范畴.html" title="“三角范畴” [三角范畴]">三角范畴</a></span>或<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span>, 其上的一个 t-结构是一对子范畴 $(\mathcal C_{\geq 0},\mathcal C_{\leq 0})$, 记 $\mathcal C_{\geq n}=\mathcal C_{\geq 0}[n]$, $\mathcal C_{\leq n}=\mathcal C_{\leq 0}[n]$, 满足</p>
