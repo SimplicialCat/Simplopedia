@@ -10708,9 +10708,42 @@ $$
 H^r\times H^{2d-r}\to H^{2d}(X,\mathbb{Q}) \to \mathbb{Q}
 $$
 为完美配对.</p>
-<p>对于带奇点的代数簇如结曲线 (nodal curve) $C$, 记 $\widetilde C \simeq \mathbb P^1$ 为其正规化, 映射 $\widetilde C \to C$ 相当于粘合 $\mathbb P^1$ 的两点. 在这两点之外, 映射为同构. 我们尝试计算 $C$ 的上同调.
+<p>对于带奇点的代数簇如结曲线 (nodal curve) $C$, 记 $\widetilde C \simeq \mathbb P^1$ 为其正规化, 映射
 $$
-H^r(C,\mathbb{Q})
+\nu\colon \widetilde C \to C
+$$
+相当于粘合 $\mathbb P^1$ 的两点. 在这两点之外, 映射为同构. 我们尝试计算 $C$ 的上同调.
+$$
+H^r(C,\mathbb{Q}) = \begin{cases}
+    \mathbb{Q} &amp; r = 0,1,2\\
+    0 &amp; \text{其它.}
+\end{cases}
+$$
+可见 $H^1$ 上的配对退化 (因为杯积分次交换, 在 $H^1$ 上反交换), 没有完美配对.</p>
+<p>为了找一个层尽可能接近常值层, 同时修复 Poincaré 对偶, 考虑
+$$
+\mathcal N = \nu_* \underline{\mathbb{Q}}_{\widetilde C},
+$$
+直观上这个层 “记住了结点的两支”.</p>
+<p><strong>引理</strong>. 有短正合列
+$$
+\underline{\mathbb{Q}}_C \to \mathcal N \to i_*\mathbb{Q},
+$$
+映射 $\mathcal N \to i_*\mathbb{Q}$ 取结点的两支的差.</p>
+<p>暂且定义 “IC 层”
+$$
+\mathrm{IC}_C := \mathcal N[1]
+$$
+以及 (按照历史记号)
+$$
+\mathrm{IH}^r(C,\mathbb{Q}) = H^{r-1}(C,\mathrm{IC}_C) = H^r(C,\mathcal N).
+$$</p>
+<p>取长正合列给出
+$$
+\mathrm{IH}^r(C,\mathbb{Q}) = \begin{cases}
+    \mathbb{Q} &amp; r = 0,2\\
+    0 &amp; \text{其它}.
+\end{cases}
 $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="notes-stable-center"><header><h1><span class="taxon"></span>稳定中心猜想 <a class="slug" href="./notes-stable-center.html">[notes-stable-center]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是为准备 2026 年春季学期徐斌老师 “朗兰兹纲领选讲” 课程报告而记的笔记. 主要参考 <span class="link local"><a href="./BKV-SCC.html" title="A categorical approach to the stable center conjecture [BKV-SCC]">BKV</a></span>.</p>
