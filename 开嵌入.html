@@ -826,7 +826,86 @@
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
 <article><section class="block" data-taxon=""><details open><summary id="开嵌入"><header><h1><span class="taxon"></span>开嵌入 <a class="slug" href="./开嵌入.html">[开嵌入]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="中山引理"><header><h1><span class="taxon"></span>中山引理 <a class="slug" href="./中山引理.html">[中山引理]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="notes-perverse"><header><h1><span class="taxon"></span>偏屈层笔记 <a class="slug" href="./notes-perverse.html">[notes-perverse]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>偏屈层始于奇性的代数簇的几何. 常值层的上同调不能正确描述这种几何对象; 人们最初发明<span class="link local"><a href="./相交上同调.html" title=" [相交上同调]">相交上同调</a></span>描述它们.</p>
+<h3>Poincaré 对偶</h3>
+<p>设 $X$ 为 $d$ 维光滑复射影代数簇,
+$$
+H^r\times H^{2d-r}\to H^{2d}(X,\mathbb{Q}) \to \mathbb{Q}
+$$
+为完美配对.</p>
+<p>对于带奇点的代数簇如结曲线 (nodal curve) $C$, 记 $\widetilde C \simeq \mathbb P^1$ 为其正规化, 映射
+$$
+\nu\colon \widetilde C \to C
+$$
+相当于粘合 $\mathbb P^1$ 的两点. 在这两点之外, 映射为同构. 我们尝试计算 $C$ 的上同调.
+$$
+H^r(C,\mathbb{Q}) = \begin{cases}
+    \mathbb{Q} &amp; r = 0,1,2\\
+    0 &amp; \text{其它.}
+\end{cases}
+$$
+可见 $H^1$ 上的配对退化 (因为杯积分次交换, 在 $H^1$ 上反交换), 没有完美配对.</p>
+<p>为了找一个层尽可能接近常值层, 同时修复 Poincaré 对偶, 考虑
+$$
+\mathcal N = \nu_* \underline{\mathbb{Q}}_{\widetilde C},
+$$
+直观上这个层 “记住了结点的两支”.</p>
+<p><strong>引理</strong>. 有短正合列
+$$
+\underline{\mathbb{Q}}_C \to \mathcal N \to i_*\mathbb{Q},
+$$
+映射 $\mathcal N \to i_*\mathbb{Q}$ 取结点的两支的差.</p>
+<p>暂且定义 “IC 层”
+$$
+\mathrm{IC}_C := \mathcal N[1]
+$$
+以及 (按照历史记号)
+$$
+\mathrm{IH}^r(C,\mathbb{Q}) = H^{r-1}(C,\mathrm{IC}_C) = H^r(C,\mathcal N).
+$$</p>
+<p>取长正合列给出
+$$
+\mathrm{IH}^r(C,\mathbb{Q}) = \begin{cases}
+    \mathbb{Q} &amp; r = 0,2\\
+    0 &amp; \text{其它}.
+\end{cases}
+$$</p>
+<p><strong>定义</strong>. 对于光滑的 $X$,
+$$
+\mathrm{IC}_X := \underline{\mathbb{Q}}_X [\operatorname{dim}X].
+$$</p>
+<p>一般的 $X$ 的 IC 层是奇点消解的常值层的 (导出) 推前.</p>
+<h3>可构造层与六函子</h3>
+<p>回忆, Abel 范畴 $\mathcal A$ 的<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span> $D(\mathcal A)$ 是<span class="link local"><a href="./链复形.html" title="链复形 [链复形]">链复形</a></span>的范畴的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>, 使得链复形之间的拟同构 (诱导上同调之间的同构的映射) 变为导出范畴中的同构.</p>
+<p>$D(\mathcal A)$ 是个<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>, 其中有一些关键的三角 (<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>). 三角给出上同调的长正合列.</p>
+<p>稳定范畴之间的<strong>正合函子</strong>是保持这些特殊三角的函子.</p>
+<p>Abel 范畴之间的正合函子 $F\colon \mathcal A \to \mathcal A'$ 给出导出范畴之间的正合函子 $F\colon D(\mathcal A) \to D(\mathcal A')$.</p>
+<p>不仅如此, Abel 范畴之间的<strong>左</strong>正合函子 $F\colon \mathcal A \to \mathcal A'$ 给出导出范畴之间的正合函子<sup class="footnote-reference" id="notes-perverse_1-back"><a href="#notes-perverse_1">1</a></sup> (称为<strong>右导出函子</strong>) $RF\colon D(\mathcal A) \to D(\mathcal A')$. 通过这个函子再取上同调就得到传统的导出函子 $R^d F$. Abel 范畴之间的<strong>右</strong>正合函子 $F\colon \mathcal A \to \mathcal A'$ 给出导出范畴之间的正合函子 (称为<strong>左导出函子</strong>) $LF\colon D(\mathcal A) \to D(\mathcal A')$. 但在导出范畴语境中, 我们常常直接用 $F$ 的符号表示导出函子 (不写 $R,L$), 因为它是唯一合理的选择.</p>
+<div class="footnote-definition" id="notes-perverse_1">
+  <sup class="footnote-definition-label"><a href="#notes-perverse_1-back">1</a></sup>
+<p>这里忽略了一些有限上同调振幅的限制条件, 或者实际上考虑的是有界导出范畴.</p>
+</div>
+<p>稳定范畴 $\mathcal D$ 的关键性质是移位 $[1]\colon \mathcal D \to \mathcal D$ 是个等价. 对任意三角 $M\to N \to L$, 可旋转得到三角 $N \to L \to M[1]$, $L\to M[1]\to N[1]$ 等等.</p>
+<p>回到正题. <span class="link local"><a href="./可构造层.html" title="可构造层 [可构造层]">可构造层</a></span>是可由有限步基本操作得到的层, 具体地, 称 $X$ 上的层 $F$ <strong>可构造</strong>, 意思是存在 $X$ 的有限分层 $X = \bigsqcup_\alpha S_\alpha$, 每个 $S_\alpha$ 为子簇, 且 $F|_{S_\alpha}$ 为 $\mathbb{Q}$-局部系统 (局部常值的 $\mathbb{Q}$-线性空间层). 记
+$$
+D_c^b (X,\mathbb{Q}) \subset D(\mathsf{Shv}(X))
+$$
+为上同调可构造且有界的对象构成的全子范畴. 这是我们的主要工作范畴, 我们要构造的奇性代数簇 $X$ 上的 IC 层就是其中的对象.</p>
+<p><strong>记号</strong>. $f_*^{\heartsuit}\colon \mathsf{Shv}_c(X) \to \mathsf{Shv}_c(Y)$ 为可构造层的推前, $f_*\colon D_c^b(X) \to D_c^b(Y)$ 为其导出函子.</p>
+<p>对于映射 $f\colon X \to Y$ 有三对伴随 (<span class="link local"><a href="./六函子.html" title="六函子 [六函子]">六函子</a></span>):</p>
+<ul>
+<li>$f^* \dashv f_*$</li>
+<li>$f_! \dashv f^!$</li>
+<li>${(-\otimes K)} \dashv {\operatorname{Hom}(K,-)}$.</li>
+</ul>
+<p>“叹号推前” $f_!$ 是 $f_!^\heartsuit\colon \mathsf{Shv}_c(X) \to \mathsf{Shv}_c(Y)$ 的导出函子, $f_!^\heartsuit$ 的一个定义是: 对开集 $V\subset Y$, $(f_!^\heartsuit M)(V) = \{s\in M(f^{-1}(V))\mid\operatorname{supp}s \text{ 紧合}\}$. 特别地, 对于 $Y = \mathrm{pt}$ 的情形, $f_!^\heartsuit M = \Gamma_c (X;M)$ 是紧支集截面.</p>
+<ul>
+<li>若 $f$ 为<span class="link local"><a href="./开嵌入.html" title="开嵌入 [开嵌入]">开嵌入</a></span>, 则 $f^! \simeq f^*$;</li>
+<li>若 $f$ <span class="link local"><a href="./紧合映射.html" title="紧合映射 [紧合映射]">紧合</a></span>, 则 $f_! \simeq f_*$.</li>
+</ul>
+<p>我们将视上述结构为黑箱.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="中山引理"><header><h1><span class="taxon"></span>中山引理 <a class="slug" href="./中山引理.html">[中山引理]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>中山引理</strong> (Nakayama lemma) 说的是<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>在<span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部</a></span>的一些信息能由一点上的信息 (<span class="link local"><a href="./纤维函子.html" title="纤维函子 [纤维函子]">纤维函子</a></span>) 决定.</p>
 <h2>陈述</h2>
