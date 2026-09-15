@@ -1026,12 +1026,76 @@ $$
 <li>$f_! \dashv f^!$</li>
 <li>${(-\otimes K)} \dashv {\operatorname{Hom}(K,-)}$.</li>
 </ul>
-<p>“叹号推前” $f_!$ 是 $f_!^\heartsuit\colon \mathsf{Shv}_c(X) \to \mathsf{Shv}_c(Y)$ 的导出函子, $f_!^\heartsuit$ 的一个定义是: 对开集 $V\subset Y$, $(f_!^\heartsuit M)(V) = \{s\in M(f^{-1}(V))\mid\operatorname{supp}s \text{ 紧合}\}$. 特别地, 对于 $Y = \mathrm{pt}$ 的情形, $f_!^\heartsuit M = \Gamma_c (X;M)$ 是紧支集截面.</p>
+<p>“叹号推前” $f_!$ 是 $f_!^\heartsuit\colon \mathsf{Shv}_c(X) \to \mathsf{Shv}_c(Y)$ 的导出函子. 在拓扑空间中, $f_!^\heartsuit$ 的一个定义是: 对开集 $V\subset Y$, $(f_!^\heartsuit M)(V) = \{s\in M(f^{-1}(V))\mid\operatorname{supp}s \text{ 紧合}\}$. 特别地, 对于 $Y = \mathrm{pt}$ 的情形, $f_!^\heartsuit M = \Gamma_c (X;M)$ 是紧支集截面.</p>
+<p>或许两个更有用的一般性质是</p>
 <ul>
 <li>若 $f$ 为<span class="link local"><a href="./开嵌入.html" title="开嵌入 [开嵌入]">开嵌入</a></span>, 则 $f^! \simeq f^*$;</li>
 <li>若 $f$ <span class="link local"><a href="./紧合映射.html" title="紧合映射 [紧合映射]">紧合</a></span>, 则 $f_! \simeq f_*$.</li>
 </ul>
 <p>我们将视上述结构为黑箱.</p>
+<p><strong>例</strong>. $X = \mathbb A^1$, $X(\mathbb{C}) = \mathbb{C}$, 此时</p>
+<ul>
+<li>$p_*\underline{\mathbb{Q}} = \Gamma(X,\underline{\mathbb{Q}}) = \mathbb{Q}$,</li>
+<li>$p_!\underline{\mathbb{Q}} =\Gamma_c(X,\underline{\mathbb{Q}})=\mathbb{Q}[-2].$</li>
+</ul>
+<p>提示: 考虑紧化 $j\colon X \to \overline{X} = \mathbb P^1$, 记 $i\colon \{\infty\} \to \mathbb P^1$ 为其补闭集, 则有三角
+$$
+j_! \underline{\mathbb{Q}}_X \to \underline{\mathbb{Q}}_{\overline{X}} \to i_*\mathbb{Q}.
+$$</p>
+<h3>Verdier 对偶</h3>
+<p>定义 $X$ 的<strong>对偶复形</strong>为
+$$
+\omega_X := p^!\mathbb{Q}.
+$$
+考虑函子
+$$
+\mathbb D_X \colon M\mapsto\operatorname{Hom}(M,\omega_X).
+$$</p>
+<p><strong>定理</strong> (<span class="link local"><a href="./Poincaré--Verdier对偶.html" title="Poincaré–Verdier 对偶 [Poincaré--Verdier对偶]">Verdier 对偶</a></span>). $\mathbb D_X\colon D_c^b(X)^{\mathrm{op}} \to D_c^b(X)$ 为等价.</p>
+<p><strong>例</strong>. $X = \mathrm{pt}$ 时, $\mathbb D M = M^*$ (线性对偶).</p>
+<p><strong>命题</strong>.</p>
+<ul>
+<li>$\mathbb D$ 为正合函子;</li>
+<li>$\mathbb D \circ [1] = [-1] \circ \mathbb D$;</li>
+<li>$\mathbb D f_! = f_* \mathbb D$;</li>
+<li>$\mathbb D f^! = f^* \mathbb D$;</li>
+<li>$\mathbb D \underline{\mathbb{Q}}_X = \omega_X$;</li>
+<li>若 $X$ 为 $d$ 维光滑代数簇, 则 $\omega_X = \underline{\mathbb{Q}}_X [2d]$.</li>
+<li>(Poincaré 对偶) 设 $X$ 光滑紧合, 那么 $\Gamma (X,\underline{\mathbb{Q}})^*=\Gamma_c(\mathbb D_X \underline{\mathbb{Q}}) = \Gamma(\mathbb{Q}[2d])$. (因此 Verdier 对偶可视为相对 Poincaré 对偶.)</li>
+</ul>
+<p>我们将说明
+$$
+\mathbb D \mathrm{IC}_X = \mathrm{IC}_X.
+$$</p>
+<p>对于点 $x\in X$, 称 $i_x^*$ 为<span class="link local"><a href="./茎.html" title="茎 [茎]">茎</a></span>, $i_x^!$ 为余茎 (costalk). 特殊三角可由所有点处的茎探测.</p>
+<p>余茎的一个计算方法是
+$$
+H^r(i_x^! \underline{\mathbb{Q}}_X) = H^r(B, B\setminus\{x\},\mathbb{Q}).
+$$</p>
+<p>考虑映射 $j\colon \mathbb A^1 \setminus 0 \to \mathbb A^1$, $i\colon 0\to\mathbb A^1$. 有自然映射
+$$
+j_! \to j_*
+$$</p>
+<p><strong>定理</strong> (<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>). 对于拉回图</p>
+<p>$$
+\begin{CD}
+X' @&gt;{f'}&gt;&gt; Y' \\
+@V{p}VV @VV{q}V \\
+X @&gt;&gt;{f}&gt; Y
+\end{CD}
+$$</p>
+<p>有
+$$
+q^! f_* \simeq (f')_* p^!,
+$$
+$$
+q^* f_! \simeq (f')_! p^*.
+$$</p>
+<p><strong>习题</strong>. $\mathbb A^1 \setminus 0$ 上的 $\mathbb{Q}$-局部系统 $\mathcal L$ 等同于有限维 $\mathbb{Q}$-线性空间 $V$ 带一个自同构 $T$. 证明
+$$
+i^*j_* \mathcal L = [V \overset{T-1}{\to} V].
+$$</p>
+<p>我们将以 $j_!$ 与 $j_*$ 之间的一种操作 $j_{!*}$ 来定义 $\mathrm{IC}$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="six-functors"><header><h1><span class="taxon"></span>六函子 <a class="slug" href="./six-functors.html">[six-functors]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li></ul></div></header></summary>
 <p>本文是 <span class="link local"><a href="./ScholzeSixFunctors.html" title="Six-functor Formalisms [ScholzeSixFunctors]">Scholze 的六函子讲义</a></span>的阅读笔记.</p>
 <h2>引言</h2>
