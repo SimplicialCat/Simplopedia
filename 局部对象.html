@@ -834,6 +834,7 @@ N(\mathcal C)_n = \operatorname{Hom}_{\mathsf{Cat}_{(\infty,1)}}([n],\mathcal C)
 $$
 其中 $(-)^\simeq$ 表示取范畴的<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>. 这一过程又称为 <strong>Rezk 脉</strong>.
 由设想, 这个单纯对象必须将单形之间的拼接 (余极限) 变为生象的极限, 这便是 Segal 对象的条件.</p>
+<p>范畴的 Segal 条件可推广为 (或者说启发了) <span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>的 Segal 条件.</p>
 <p>Segal 对象要表达范畴的概念还需要具有 “完备性” (类似于<span class="link local"><a href="./泛等性.html" title="泛等性 [泛等性]">泛等性</a></span>). 见<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">范畴对象</a></span>.</p>
 <h2>定义</h2>
 <p>一个 Segal 生象是一个<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯生象</a></span> $X \colon \Delta^{\mathrm{op}} \to \mathsf{Ani}$, 满足对任意 $m,n\in\mathbb{N}$, 下图为拉回.
@@ -868,6 +869,7 @@ $N(0\overset{\simeq}{\to} 1) \to {*}$
 <h2>观念</h2>
 <h2>定义</h2>
 <p>固定一个 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span> (或更一般的<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>) $\mathcal C$, 例如<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span>.</p>
+<p>(一般范畴中的对象 $X$ 的截断性化归为 $\operatorname{Hom}(Y,X)$ 的截断性, 故只需定义生象的截断性.)</p>
 <h3>归纳定义</h3>
 <p>我们对 $n\geq -2$ 归纳定义 $\mathcal X$ 中的对象和态射的 $n$-截断性. 态射 $X\to Y$ $n$-截断就是指其在<span class="link local"><a href="./俯意象.html" title="俯意象 [俯意象]">俯意象</a></span> $\mathcal C_{/Y}$ 中是 $n$-截断对象.</p>
 <p>$n=-2$:</p>
@@ -911,8 +913,18 @@ $X$ 是 $n$-截断的, 当且仅当任意映射 $S^n \to X$ 都穿过某一个�
 <ul>
 <li>$(-1)$-截断对象就是<span class="link local"><a href="./子终对象.html" title="子终对象 [子终对象]">子终对象</a></span>, 又称<span class="link local"><a href="./真值.html" title="真值 [真值]">真值</a></span>.</li>
 <li>$(-1)$-截断态射就是<span class="link local"><a href="./单射.html" title="单射 [单射]">单射</a></span>.</li>
+<li>截断函子 $\tau_{\leq (-1)}\colon \mathsf{Ani} \to \mathsf{Ani}_{\leq (-1)} = \mathsf{Prop}$ 是判断生象是否为空.</li>
+</ul>
+<p>$n = 0$:</p>
+<ul>
+<li>$0$-截断生象就是<span class="link local"><a href="./集合(同伦类型论).html" title="集合 (同伦类型论) [集合(同伦类型论)]">集合</a></span>.</li>
+<li>$0$-截断的生象映射就是<span class="link local"><a href="./覆叠.html" title="覆叠 [覆叠]">覆叠</a></span>.</li>
+<li>截断函子 $\tau_{\leq 0}\colon \mathsf{Ani} \to \mathsf{Ani}_{\leq 0} = \mathsf{Set}$ 是取生象的连通分支的集合.</li>
 </ul>
 <h2>性质</h2>
+<h3>截断函子</h3>
+<p>在 $\infty$-意象 $\mathcal C$ 中, $n$-截断对象构成<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> $\mathcal C_{\leq n} \hookrightarrow \mathcal C$, 其左伴随是截断函子 $\tau_{\leq n}\colon \mathcal C \to \mathcal C_{\leq n}$.</p>
+<p><strong>命题</strong>. 截断函子 $\tau_{\leq n}$ 保持有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通性</a></span></p>
 <p><span class="link local"><a href="./连通-截断分解.html" title="(n-连通, n-截断) 分解 [连通-截断分解]">($n$-连通, $n$-截断) 分解</a></span></p>
@@ -953,6 +965,7 @@ $$
 X_0 \to \operatorname{Hom}(J,X)
 $$
 为等价的 Segal 对象 $X$.</p>
+<p><strong>定理</strong> (Rezk). 记 $\mathrm{ff.es.}$ 为全忠实本质满态射的类; 那么 Segal 生象的<strong>完备化</strong> (即完备 Segal 生象范畴到 Segal 生象范畴的含入的左伴随) 正是关于 $\mathrm{ff.es.}$ 的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>.</p>
 <h2>例</h2>
 <h3>对称幺半范畴</h3>
 <p>参考 <span class="link local"><a href="./AntieauCSO.html" title="Complete Segal objects [AntieauCSO]">Antieau</a></span>. 可证明<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>等同于 <span class="link local"><a href="./E∞-空间.html" title="E∞-空间 [E∞-空间]">$\mathbb E_\infty$-生象</a></span>范畴 $\mathsf{CAlg}(\mathsf{Ani})$ 中的范畴对象. 事实上, 两者均为
@@ -962,7 +975,7 @@ $$
 的全子范畴. 又由于函子范畴中的极限是逐点的, 可验证两个子范畴相同.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="超完备∞-意象"><header><h1><span class="taxon"></span>超完备 ∞-意象 <a class="slug" href="./超完备∞-意象.html">[超完备∞-意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>定义 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">∞-意象</a></span>中的超完备对象为关于 $\infty$-连通态射的<span class="link local"><a href="./局部对象.html" title="局部对象 [局部对象]">局部对象</a></span>.</p>
+<p>定义 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">∞-意象</a></span>中的超完备对象为关于 <span class="link local"><a href="./连通性.html" title="连通性 [连通性]">$\infty$-连通</a></span>态射的<span class="link local"><a href="./局部对象.html" title="局部对象 [局部对象]">局部对象</a></span>.</p>
 <p>∞-意象 $\mathcal X$ 的超完备化 $\mathcal X^\wedge$ 是其中的超完备对象构成的全子范畴, 也即 $\mathcal X$ 对于其中所有 $\infty$-连通态射的局部化. 这是一个<span class="link local"><a href="./正合局部化.html" title="正合局部化 [正合局部化]">正合局部化</a></span>, 故 $\mathcal X^\wedge$ 本身为 ∞-意象. 当 $\mathcal X^\wedge=\mathcal X$ 时, 称 $\mathcal X$ 为超完备 ∞-意象.</p>
 <p>$\mathcal X$ 为超完备 ∞-意象当且仅当 $\mathcal X$ 中 Whitehead 定理成立: $\infty$-连通的映射为等价.</p>
 <h2>性质</h2>

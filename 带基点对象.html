@@ -847,25 +847,36 @@
 $$
 \Gamma := \mathsf{Fin}_*^{\mathrm{op}}.
 $$
-记其对象为 $\underline{n} = \{*,1,\cdots,n\}\,(n\geq 0)$.</p>
-<p>由定义, 范畴 $\Gamma$ 的态射可描述如下: 态射 $\underline{n} \to \underline{m}$ 将每个 $1\leq i\leq n$ 对应到 $\{1,\cdots,m\}$ 的一个子集, 这些子集互不相交.</p>
+记 $\mathsf{Fin}_*$ 的对象 $\{*,1,\cdots,n\}$ 在 $\Gamma$ 中的对应物为 $\langle n\rangle$.</p>
+<p>范畴 $\Gamma$ 的态射可描述如下: 态射 $\langle n\rangle \to \langle m\rangle$ 将每个 $1\leq i\leq n$ 对应到 $\{1,\cdots,m\}$ 的一个子集, 这些子集互不相交.</p>
 <h3>通过泛性质</h3>
 <p>称具有<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>和有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>的范畴为<strong>半加性范畴</strong>.</p>
 <p><strong>定义</strong>. Segal 范畴 $\Gamma$ 是一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>半加性范畴.</p>
 <h2>性质</h2>
-<p>Segal 范畴 $\Gamma$ 的<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>为 $[0]$, <span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>为
+<p>Segal 范畴 $\Gamma$ 的<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>为 $\langle 0\rangle$, <span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>为
 $$
-\underline{n}\times \underline{m} = \underline{n+m}.
+\langle n\rangle\times \langle m\rangle = \langle n+m\rangle.
 $$
 特别地,
 $$
-\underline{n} = \underline{1}^{\times n}.
+\langle n\rangle = \langle 1\rangle^{\times n}.
 $$
 这说明 $\Gamma$ 是一个 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>. 事实上, 它正是<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点对象</a></span>的 Lawvere 理论.</p>
+<h3>张量积</h3>
+<p>范畴 $\Gamma$ 带有一个张量积 $\otimes\colon \Gamma\times\Gamma \to \Gamma$,
+$$
+\langle n\rangle\otimes \langle m\rangle = \langle nm\rangle.
+$$</p>
+<p>它对应带基点有限集的<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span> $\land\colon \mathsf{Fin}_*\times\mathsf{Fin}_* \to \mathsf{Fin}_*$.</p>
+<p>这个张量积既不是范畴论积, 也不是范畴论和.</p>
 <h3>与单纯形范畴的关系</h3>
-<p><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$ 到 $\Gamma$ 有一函子, 将对象 $[n]\in\Delta$ 对应到 $\underline{n}\in\Gamma$. 详见 <span class="link local"><a href="./Segal函子γ.html" title="Segal 函子 γ [Segal函子γ]">Segal 函子 $\gamma$</a></span>.</p>
+<p><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$ 到 $\Gamma$ 有一函子, 将对象 $[n]\in\Delta$ 对应到 $\langle n\rangle\in\Gamma$. 详见 <span class="link local"><a href="./Segal函子γ.html" title="Segal 函子 γ [Segal函子γ]">Segal 函子 $\gamma$</a></span>.</p>
 <h3>代数模式</h3>
-<p>范畴 $\Gamma$ 可用于定义 <span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">$\mathbb E_\infty$-代数</a></span>的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>.</p>
+<p>范畴 $\Gamma$ 可用于定义 <span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">$\mathbb E_\infty$-代数</a></span>的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>. 例如 $\mathsf{Ani}$ 中的交换代数等同于函子
+$$
+F\colon \Gamma^{\mathrm{op}} \to\mathsf{Ani},
+$$
+满足 $F(\langle n\rangle) \simeq F(\langle 1 \rangle)^n$. 这种函子又称为 Segal $\Gamma$-生象. 该函子与函子 $\gamma\colon \Delta \to \Gamma$ 的复合给出<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>到<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>, 沿 $\gamma$ 的左 Kan 扩张给出相应的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>函子.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="交换代数"><header><h1><span class="taxon"></span>交换代数 <a class="slug" href="./交换代数.html">[交换代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>交换代数又称 $\mathbb E_\infty$-代数, 即<span class="link local"><a href="./E∞-算畴.html" title="E∞-算畴 [E∞-算畴]">交换算畴</a></span>上的代数.</p>
 <p>另见<span class="link local"><a href="./交换代数(学科).html" title="交换代数 [交换代数(学科)]">交换代数 (学科)</a></span>.</p>
@@ -906,6 +917,33 @@ $$</p>
 <li>单子是<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>的推广. 许多<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数结构</a></span>可理解为某个<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>; 此时这个单子给出 “自由代数”. 这件事可由<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性函子</a></span>描述.</li>
 <li>在 <span class="link local"><a href="./2-范畴.html" title="2-范畴 [2-范畴]">$2$-范畴</a></span>的理论中, 单子可视为 $1$ 到 $\mathsf{Cat}$ 的<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span>, 从而进一步推广为 $1$ 到一般的 $2$-范畴的<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span>.</li>
 </ul>
+<h3>代数结构</h3>
+<p>单子是记录许多代数结构的统一的工具. 对于每种代数结构都有一个<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>函子, 对应的单子是自由和遗忘的复合, 一般的结构则是<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>.</p>
+<ul>
+<li>对于环 $R$, $R$-<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>是单子 $T_R := R\otimes -\colon \mathsf{Ab}\to\mathsf{Ab}$ 上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>.</li>
+<li>考虑<span class="link local"><a href="./张量.html" title="张量 [张量]">张量代数</a></span>单子 $T\colon \mathsf{Ab} \to \mathsf{Ab}$, 那么一个环等同于一个 $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>.</li>
+<li>考虑自由群单子 $T_{\mathrm{Grp}}\colon \mathsf{Set} \to \mathsf{Set}$, 那么一个群等同于一个 $T_{\mathrm{Grp}}$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>. 更一般地, 每个 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>都给出 $\mathsf{Set}$ 上的一个单子 $T$. 记 $T(n)$ 为该理论中所有可能的 $n$ 元项的集合, 例如群的理论中 $x^2 y^{-1}x$ 是一个 $2$ 元项. 那么函子 $T$ 可表示为
+$$
+  TX = \int_{N\in\mathsf{Fin}} T(N)\times X^N.
+$$
+这是一个<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>记号, 可以粗略地理解为对所有 $N$ 取并, 然后商掉必要的关系.</li>
+<li>对于 $\mathsf{Ani}$-值单色<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathcal O$, 我们有 (<span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 上的) 自由 $\mathcal O$-代数单子
+$$
+  T_{\mathcal O} X = \int_{N\in\mathsf{Fin}^\simeq} \mathcal O(N)\times X^N.
+$$
+例如自由 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-代数单子
+$$
+  T_{\mathbb E_n}X = \int_{N\in\mathsf{Fin}^\simeq}\operatorname{Conf}_N(\mathbb{R}^n)\times X^N.
+$$
+注意, 与 Lawvere 理论不同的是, 这里<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>的指标范畴为<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">群胚</a></span> $\mathsf{Fin}^\simeq$. 本讲的第一个主要目标便是用这种方式解释什么是算畴.</li>
+</ul>
+<p>有一些看起来不那么 “代数” 的结构也可以用单子来记录. 关键在于, “不那么代数” 的信息被储存在了一个基范畴中, 而单子本身只负责记录 “代数” 运算.</p>
+<ul>
+<li>考虑有向图的范畴 $\mathsf{Graph}$, 其对象为两个生象带有两个映射 $E\rightrightarrows V$, 其上有一个自由范畴单子 $T_{\mathsf{Cat}}\colon \mathsf{Graph}\to\mathsf{Graph}$, 这个单子上的代数就是<strong>范畴</strong>.</li>
+<li><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 也可以类似定义, 底层的结构是<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>. 树与图的区别在于它能记录 “多个对象到一个对象的态射”. 这是本讲的第二个主要目标. 注意在本讲中, 算畴 (多重范畴) 有了两个不同层次的角色: 先是一个算畴定义一种结构, 然后算畴这种结构本身也可以用单子来定义.</li>
+</ul>
+<p>在上述每个例子中, “自由代数” 单子都不仅仅是单子, 而是所谓<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>. 元数 (arity) 的本义是一个函数的自变量的个数, 例如加法的元数是 $2$, 取逆的元数是 $1$, 而常数的元数是 $0$.</p>
+<p>如果定义一种代数结构的每种运算只涉及了一个集合里有限个元素, 那么一个代数 $X$ 就可以被全体有限集 $A$ 生成的自由代数 $TA$ <span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>. 所谓探测就是说用全体态射 $TA\to X$ 的信息可以完全恢复出 $X$ 的信息. 这就是<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>的直观.</p>
 <h2>定义</h2>
 <h3>自函子范畴中的结合代数</h3>
 <p>一个范畴 $\mathcal C$ <strong>上</strong>的单子是其自函子范畴 $\operatorname{End}(\mathcal C)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 对偶范畴 $\mathcal C^{\mathrm{op}}$ 上的单子称为 $\mathcal C$ 上的<span class="link local"><a href="./余单子.html" title="余单子 [余单子]">余单子</a></span>.</p>
@@ -988,4 +1026,58 @@ $$
 \end{array}
 $$
 等同于态射 $\Sigma X\to Y$, 也等同于态射 $X\to\Omega Y$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="连通性"><header><h1><span class="taxon"></span>连通性 <a class="slug" href="./连通性.html">[连通性]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>用截断性定义</h3>
+<p>称一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ $n$-连通是指其 <span class="link local"><a href="./截断性.html" title="截断性 [截断性]">$n$-截断</a></span> $\tau_{\leq n} X$ 等于单点.</p>
+<p>称一个映射 $X\to Y$ $n$-连通是指其每个纤维都 $n$-连通.</p>
+<p>称一个生象或映射 $\infty$-连通是指其对任意 $n$ 都 $n$-连通.</p>
+<h3>用同伦群定义</h3>
+<p>称一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $n$-连通是指其 $n$ 阶<strong>及</strong>以下<span class="link local"><a href="./同伦群.html" title="同伦群 [同伦群]">同伦群</a></span>平凡.</p>
+<p><strong>注意</strong>. 有些文献中对象的 $n$-连通性的定义与此处可能相差 $1$. 此处的定义的优点在于, 对象的 $n$-连通性与态射的 $n$-连通性相容: 一个对象 $X$ $n$-连通当且仅当唯一的态射 $X\to *$ 是 $n$-连通态射.</p>
+<p>在 HoTT 中, 称一个映射 $n$-连通是指其纤维 $n$-连通. 注意传统拓扑学的 $n$-连通映射在HoTT 中称为 $(n-1)$-连通映射.</p>
+<h2>性质</h2>
+<h3>“$n$-连通覆叠” 函子</h3>
+<p>在 $\infty$-意象 $\mathcal C$ 中, <span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点</a></span> $n$-连通对象构成<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点对象</a></span>范畴 $\mathcal C_{*}$ 的<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">余自反子范畴</a></span> $\mathcal C_{*,\geq n} \hookrightarrow \mathcal C_{*}$, 其右伴随是 “$n$-连通覆叠” 函子 $\tau_{\geq n}\colon \mathcal C_{*} \to \mathcal C_{*,\geq n}$.</p>
+<p>对于带基点对象 $X$ 有<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
+$$
+\tau_{\geq n}X \to X \to \tau_{\leq n} X.
+$$</p>
+<p>对于不带基点的对象<strong>没有</strong> $n$-连通覆叠函子. 例如 $n=1$ 时, <span class="link local"><a href="./万有覆叠.html" title="万有覆叠 [万有覆叠]">万有覆叠</a></span>函子必须对带基点空间定义.</p>
+<h2>例</h2>
+<p>$n=-2$:</p>
+<ul>
+<li>任何生象都是 $(-2)$-连通的.</li>
+<li>任何映射都是 $(-2)$-连通的.</li>
+</ul>
+<p>$n=-1$:</p>
+<ul>
+<li>$(-1)$-连通生象是<strong>非空</strong>生象.</li>
+<li>$(-1)$-连通映射是<span class="link local"><a href="./意象中的满射.html" title="意象中的满射 [意象中的满射]">满射</a></span>.</li>
+</ul>
+<p>$n=0$:</p>
+<ul>
+<li>$0$-连通生象就是通常所说的非空连通生象.</li>
+<li>函子 $\tau_{\geq 0}\colon \mathsf{Ani}_{*} \to \mathsf{Ani}_{*,\geq 0}$ 取出基点所在的<strong>连通分支</strong>.</li>
+</ul>
+<p>$n=1$:</p>
+<ul>
+<li>$1$-连通生象就是通常所说的<strong>单连通</strong>生象.</li>
+<li>函子 $\tau_{\geq 1}\colon \mathsf{Ani}_{*} \to \mathsf{Ani}_{*,\geq 1}$ 取出基点所在连通分支的<span class="link local"><a href="./万有覆叠.html" title="万有覆叠 [万有覆叠]">万有覆叠</a></span>.</li>
+</ul>
+<h3>球面</h3>
+<p><span class="link local"><a href="./球面.html" title="球面 [球面]">球面</a></span> $S^n$ 是 $(n-1)$-连通的.</p>
+<h2>性质</h2>
+<h3>用对角线刻画</h3>
+<p><strong>定理</strong>. 设 $n\geq 0$. 映射 $f\colon X\to Y$ $n$-连通当且仅当 $f$ 为<span class="link local"><a href="./意象中的满射.html" title="意象中的满射 [意象中的满射]">满射</a></span>且<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span> $\Delta_f \colon X\to X\times_Y X$ 为 $(n-1)$-连通映射.</p>
+<h3>用俯意象刻画</h3>
+<p><strong>命题</strong>. <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">意象</a></span> $\mathcal C$ 中, 映射 $f\colon X\to Y$ $n$-连通当且仅当 $f^* \colon (\mathcal C_{/Y})_{\leq n} \to (\mathcal C_{/X})_{\leq n}$ 全忠实; 换言之, 对任意 $n$-截断映射 $Z\to Y$, $Z'\to Y$,
+$$
+\operatorname{Hom}_{Y}(Z,Z')\simeq \operatorname{Hom}_X(Z_X,Z'_X) \simeq\operatorname{Hom}_Y(Z_X,Z').
+$$
+假设 $f$ $n$-连通, 则 $Z_X \to Z$ 亦 $n$-连通, 而 $Z'\to Y$ $n$-截断, 由正交性得 $\operatorname{Hom}_{Y}(Z,Z')\simeq\operatorname{Hom}_Y(Z_X,Z')$. 另一方面, 假设有上述等价, 令 $Z=Y$, 得 $f\colon X\to Y$ 正交于所有 $n$-截断映射 $Z'\to Y$, 故 $X\to Y$ $n$-连通. $\square$</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断性</a></span></p>
+<p><span class="link local"><a href="./连通-截断分解.html" title="(n-连通, n-截断) 分解 [连通-截断分解]">($n$-连通, $n$-截断) 分解</a></span></p>
+<p><span class="link local"><a href="./超完备∞-意象.html" title="超完备 ∞-意象 [超完备∞-意象]">超完备意象</a></span></p>
 </details></section></details></section></footer></article></div></body></html>

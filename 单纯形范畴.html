@@ -961,6 +961,7 @@ N(\mathcal C)_n = \operatorname{Hom}_{\mathsf{Cat}_{(\infty,1)}}([n],\mathcal C)
 $$
 其中 $(-)^\simeq$ 表示取范畴的<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>. 这一过程又称为 <strong>Rezk 脉</strong>.
 由设想, 这个单纯对象必须将单形之间的拼接 (余极限) 变为生象的极限, 这便是 Segal 对象的条件.</p>
+<p>范畴的 Segal 条件可推广为 (或者说启发了) <span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>的 Segal 条件.</p>
 <p>Segal 对象要表达范畴的概念还需要具有 “完备性” (类似于<span class="link local"><a href="./泛等性.html" title="泛等性 [泛等性]">泛等性</a></span>). 见<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">范畴对象</a></span>.</p>
 <h2>定义</h2>
 <p>一个 Segal 生象是一个<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯生象</a></span> $X \colon \Delta^{\mathrm{op}} \to \mathsf{Ani}$, 满足对任意 $m,n\in\mathbb{N}$, 下图为拉回.
@@ -999,25 +1000,36 @@ $N(0\overset{\simeq}{\to} 1) \to {*}$
 $$
 \Gamma := \mathsf{Fin}_*^{\mathrm{op}}.
 $$
-记其对象为 $\underline{n} = \{*,1,\cdots,n\}\,(n\geq 0)$.</p>
-<p>由定义, 范畴 $\Gamma$ 的态射可描述如下: 态射 $\underline{n} \to \underline{m}$ 将每个 $1\leq i\leq n$ 对应到 $\{1,\cdots,m\}$ 的一个子集, 这些子集互不相交.</p>
+记 $\mathsf{Fin}_*$ 的对象 $\{*,1,\cdots,n\}$ 在 $\Gamma$ 中的对应物为 $\langle n\rangle$.</p>
+<p>范畴 $\Gamma$ 的态射可描述如下: 态射 $\langle n\rangle \to \langle m\rangle$ 将每个 $1\leq i\leq n$ 对应到 $\{1,\cdots,m\}$ 的一个子集, 这些子集互不相交.</p>
 <h3>通过泛性质</h3>
 <p>称具有<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>和有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>的范畴为<strong>半加性范畴</strong>.</p>
 <p><strong>定义</strong>. Segal 范畴 $\Gamma$ 是一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>半加性范畴.</p>
 <h2>性质</h2>
-<p>Segal 范畴 $\Gamma$ 的<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>为 $[0]$, <span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>为
+<p>Segal 范畴 $\Gamma$ 的<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>为 $\langle 0\rangle$, <span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>为
 $$
-\underline{n}\times \underline{m} = \underline{n+m}.
+\langle n\rangle\times \langle m\rangle = \langle n+m\rangle.
 $$
 特别地,
 $$
-\underline{n} = \underline{1}^{\times n}.
+\langle n\rangle = \langle 1\rangle^{\times n}.
 $$
 这说明 $\Gamma$ 是一个 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>. 事实上, 它正是<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点对象</a></span>的 Lawvere 理论.</p>
+<h3>张量积</h3>
+<p>范畴 $\Gamma$ 带有一个张量积 $\otimes\colon \Gamma\times\Gamma \to \Gamma$,
+$$
+\langle n\rangle\otimes \langle m\rangle = \langle nm\rangle.
+$$</p>
+<p>它对应带基点有限集的<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span> $\land\colon \mathsf{Fin}_*\times\mathsf{Fin}_* \to \mathsf{Fin}_*$.</p>
+<p>这个张量积既不是范畴论积, 也不是范畴论和.</p>
 <h3>与单纯形范畴的关系</h3>
-<p><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$ 到 $\Gamma$ 有一函子, 将对象 $[n]\in\Delta$ 对应到 $\underline{n}\in\Gamma$. 详见 <span class="link local"><a href="./Segal函子γ.html" title="Segal 函子 γ [Segal函子γ]">Segal 函子 $\gamma$</a></span>.</p>
+<p><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$ 到 $\Gamma$ 有一函子, 将对象 $[n]\in\Delta$ 对应到 $\langle n\rangle\in\Gamma$. 详见 <span class="link local"><a href="./Segal函子γ.html" title="Segal 函子 γ [Segal函子γ]">Segal 函子 $\gamma$</a></span>.</p>
 <h3>代数模式</h3>
-<p>范畴 $\Gamma$ 可用于定义 <span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">$\mathbb E_\infty$-代数</a></span>的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>.</p>
+<p>范畴 $\Gamma$ 可用于定义 <span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">$\mathbb E_\infty$-代数</a></span>的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>. 例如 $\mathsf{Ani}$ 中的交换代数等同于函子
+$$
+F\colon \Gamma^{\mathrm{op}} \to\mathsf{Ani},
+$$
+满足 $F(\langle n\rangle) \simeq F(\langle 1 \rangle)^n$. 这种函子又称为 Segal $\Gamma$-生象. 该函子与函子 $\gamma\colon \Delta \to \Gamma$ 的复合给出<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>到<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>, 沿 $\gamma$ 的左 Kan 扩张给出相应的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>函子.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="index"><header><h1><span class="taxon"></span>单纯百科 Simplopedia <a class="slug" href="./index.html">[index]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <img src="/assets/simplopedia.svg" alt="Simplopedia" style="float: right; width: min(200px,30vw); margin-right: 20px; margin-top:-50px; filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));">
 <p>这里是<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>的主目录.</p>
@@ -1223,6 +1235,11 @@ $$
 <h2>定义</h2>
 <h3>模型 (Segal 对象)</h3>
 <p>给定有适当<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>的范畴 $\mathcal C$, 代数模式 $\mathcal O$ 的<strong>模型</strong> (或称 <strong>Segal 对象</strong>) 是函子 $F\colon \mathcal O \to \mathcal C$, 满足 $F|_{\mathcal O^{\mathrm{int}}}$ 是 $F|_{\mathcal O^{\mathrm{el}}}$ 的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">右 Kan 扩张</a></span>.</p>
+<p>注意, 对于一个函子 $F\colon \mathcal O \to \mathcal C$, Segal 条件是<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">性质而非结构</a></span>. 故 Segal 对象的范畴
+$$
+\mathsf{Seg}_{\mathcal O}(\mathcal C)
+$$
+应当定义为函子范畴 $\mathsf{Fun}(\mathcal O,\mathcal C)$ 的<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全子范畴</a></span>.</p>
 <h3>代数模式的态射</h3>
 <p><strong>定义</strong>. 代数模式之间的态射 $f\colon \mathcal O \to \mathcal P$ 是保持活性和惰性映射, 并将基本对象映射到基本对象的函子.</p>
 <p><strong>定义</strong>. 代数模式之间的 <strong>Segal 态射</strong> $f\colon \mathcal O \to \mathcal P$ 是满足如下条件的态射: 对任意 Segal $\mathcal P$-生象 $F\colon \mathcal P \to \mathsf{Ani}$ 以及 $X\in\mathcal O$, 典范映射
@@ -1232,7 +1249,7 @@ $$
       &amp;\to \operatorname{lim}_{e\text{ 基本, }e\to X\text{ 惰性}}F(f(e))
     \end{aligned}
 $$
-为等价.</p>
+为等价. 换言之, $f^*F|_{\mathcal O^{\mathrm{int}}}$ 是 $f^*F|_{\mathcal O^{\mathrm{el}}}$ 的右 Kan 扩张.</p>
 <p>在实践中, 上式的指标范畴之间的映射常为<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首函子</a></span>, 从而两极限相等.</p>
 <p><strong>命题</strong>. 对于代数模式之间的态射 $f\colon \mathcal O \to \mathcal P$, 如下条件等价:</p>
 <ul>
@@ -1294,7 +1311,7 @@ $$
 <p><strong>定义</strong>. 称满足如下条件的代数模式 $\mathcal O$ <strong>可延拓</strong> (extendable):</p>
 <ol>
 <li>考虑函子 $\operatorname{Act}_{\mathcal O}\colon \mathcal O \to \mathsf{Ani}$, $\operatorname{Act}_{\mathcal O}(X)$ 为指向 $X$ 的活性映射构成的生象, 则 $\operatorname{Act}_{\mathcal O}$ 为 Segal $\mathcal O$-生象;</li>
-<li>对 $\mathcal O$ 中任意活性映射 $X\to Y$, todo</li>
+<li>对 $\mathcal O$ 中任意活性映射 $X\to Y$, <span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">todo</a></span></li>
 </ol>
 <p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Proposition 8.8). 代数模式 $\mathcal O$ 可延拓当且仅当沿 $j_{\mathcal O}$ 的左 Kan 扩张限制为函子
 $$
@@ -1309,8 +1326,81 @@ $$
 其中 $i_{\mathcal O}\colon \mathcal O^{\mathrm{el}}\hookrightarrow\mathcal O^{\mathrm{int}}$ 为嵌入, $j_{\mathcal O}\colon \mathcal O^{\mathrm{int}} \to \mathcal O$.</p>
 <p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Proposition 10.6). 设 $\mathcal O$ 为可延拓代数模式, 则 $\mathsf{Fun}(\mathcal O^{\mathrm{el}},\mathsf{Ani})$ 上的自由 Segal $\mathcal O$-生象单子 $T_{\mathcal O}$ 为多项式单子. 这里多项式单子的定义是 <span class="link local"><a href="./Descartes单子.html" title="Descartes 单子 [Descartes单子]">Descartes 单子</a></span>且为<span class="link local"><a href="./局部右伴随.html" title="局部右伴随 [局部右伴随]">局部右伴随</a></span>.</p>
 <p>这个结论保证了这些代数模式给出<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>.</p>
+<h3>极限和余极限</h3>
+<p><strong>命题</strong>. 代数模式的范畴具有极限和<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>. 具体地, 记
+$$
+\mathsf{OFS}\hookrightarrow\mathsf{Fun}(\Lambda_2^2,\mathsf{Cat})
+$$
+为带<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">正交分解系</a></span>的范畴的范畴, 代数模式的范畴为
+$$
+\mathsf{AlgPatt} \hookrightarrow \mathsf{OFS}\times_{\mathsf{Cat}}\mathsf{Ar}(\mathsf{Cat})
+$$
+$$
+=\{\big((\mathcal C,\mathcal C^{\mathrm{int}},\mathcal C^{\mathrm{\mathrm{act}}})\in\mathsf{OFS},\mathcal C^{\mathrm{el}}\hookrightarrow\mathcal C^{\mathrm{int}}\big)\}.
+$$
+(以上 $\hookrightarrow$ 均表示全忠实函子.) 那么 $\mathsf{AlgPatt}$ 关于 $\mathsf{OFS}\times_{\mathsf{Cat}}\mathsf{Ar}(\mathsf{Cat})$ 中的极限和滤余极限封闭.</p>
+<p>下面我们给出一些代数模式的极限和滤余极限的例子.</p>
+<h4>代数模式的乘积</h4>
+<p>代数模式具有有限积 $\mathcal O\times\mathcal P$, 其中基本对象的子范畴为 $\mathcal O^{\mathrm{el}}\times\mathcal P^{\mathrm{el}}$, 惰性映射构成的子范畴为 $\mathcal O^{\mathrm{int}}\times\mathcal P^{\mathrm{int}}$, 且满足
+$$
+\mathsf{Seg}_{\mathcal O \times \mathcal P} (\mathcal C) \simeq \mathsf{Seg}_{\mathcal O}(\mathsf{Seg}_{\mathcal P}(\mathcal C)).
+$$
+具体地, 函子 $F\colon \mathcal O\times\mathcal P \to\mathcal C$ 为 Segal 对象, 当且仅当 $F|_{\mathcal O^{\mathrm{int}}\times\mathcal P^{\mathrm{int}}}$ 同构于 $F|_{\mathcal O^{\mathrm{el}}\times\mathcal P^{\mathrm{el}}}$ 的右 Kan 扩张; 注意这个右 Kan 扩张有两种路径, 最终结果一致.</p>
+<h4>代数模式的拉回</h4>
+<p>范畴 $\Delta$ 上有两个模式, 记只有一个基本对象的为 $\Delta^\flat$, 两个基本对象的为 $\Delta^{\natural}$. 类似地, 范畴 $\Gamma$ 上有两个模式 $\Gamma^\flat$, $\Gamma^\natural$. 有代数模式的拉回图
+$$
+\begin{CD}
+\Delta^{\flat} @&gt;{\gamma}&gt;&gt; \Gamma^\flat \\
+@VVV @VVV \\
+\Delta^\natural @&gt;&gt;{\gamma}&gt; \Gamma^\natural.
+\end{CD}
+$$</p>
+<h4>代数模式的序列余极限</h4>
+<p>考虑序列余极限
+$$
+\Theta^\natural := \operatorname{colim}_n \Theta_n^\natural,
+$$
+有
+$$
+\mathsf{Seg}_{\Theta^\natural}(\mathsf{Ani}) = \operatorname{lim}_n\mathsf{Seg}_{\Theta_n^\natural}(\mathsf{Ani}),
+$$
+故 $\mathsf{Seg}_{\Theta^\natural}(\mathsf{Ani})$ 的对象可视为 “$(\infty ,\infty )$-范畴” 的模型, 函子 $\mathsf{Seg}_{\Theta^\natural}(\mathsf{Ani}) \to \mathsf{Seg}_{\Theta_n^\natural}(\mathsf{Ani})$ 给出其底层 $(\infty,n)$-范畴.</p>
+<h3>模式的圈积</h3>
+<p>为了契合我们的记号, 本节的 $\mathcal O$ 是 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span> 的 $\mathcal O^{\mathrm{op}}$. 以下许多构造都与 CH 的构造差一个反范畴.</p>
+<p><strong>定义</strong> (模式与 $\Gamma$ 的圈积). 对于代数模式 $\mathcal O$, 定义一个模式 $\Gamma \wr \mathcal O$ 如下:</p>
+<ul>
+<li>范畴 $\Gamma \wr \mathcal O$ 即是 $\Gamma$ 与范畴 $\mathcal O$ 的<span class="link local"><a href="./圈积.html" title="圈积 (范畴论) [圈积]">圈积</a></span>; 具体地, 其对象形如 $\langle n \rangle (X_1,\cdots,X_n)$, 态射 $\langle n \rangle (X_1,\cdots,X_n) \to \langle m \rangle (Y_1,\cdots,Y_m)$ 包含一个 $\Gamma$ 中的态射 $\phi\colon \langle n\rangle \to \langle m \rangle$ 以及 $\mathcal O$ 中的一族态射 $X_i \to Y_j$, $j\in \phi(i)$.</li>
+<li>代数模式 $\Gamma \wr \mathcal O$ 的基本对象定义为 $\langle 0 \rangle ()$ 以及 $\langle 1 \rangle (E)$, $E\in\mathcal O^{\mathrm{el}}$.</li>
+<li>态射 $\langle n \rangle (X_1,\cdots,X_n) \to \langle m \rangle (Y_1,\cdots,Y_m)$ 为惰性 (活性) 当且仅当每个成分 $\phi\colon \langle n\rangle \to \langle m \rangle$ 以及 $X_i \to Y_j$ 均为惰性 (活性).</li>
+</ul>
+<p>一般地, 对于 $\Gamma^{\natural}$ 上的代数模式 $\mathcal O$ 以及任意代数模式 $\mathcal P$, 其圈积定义为
+$$
+\mathcal O \wr \mathcal P = \mathcal O \times_{\Gamma^{\natural}}(\Gamma\wr\mathcal P).
+$$</p>
 <h2>例</h2>
 <p>较为简单的例子在前面都已讲过.</p>
+<h3>Segal 态射 $\gamma\colon \Delta\to\Gamma$</h3>
+<p>结合代数的模式到交换代数的模式有一个重要的态射 $\gamma\colon \Delta\to\Gamma$.</p>
+<p>函子层面, $\gamma$ 将 $[n]\in\Delta$ 对应到 $\langle n \rangle\in\Gamma$, 详见 <span class="link local"><a href="./Segal函子γ.html" title="Segal 函子 γ [Segal函子γ]">Segal 函子 $\gamma$</a></span>. 唯一的基本对象 $[1]$ 对应基本对象 $\langle 1\rangle$.</p>
+<p>态射 $\gamma\colon \Delta \to \Gamma$ 对合适的范畴给出伴随
+$$
+\gamma_!\dashv\gamma^*\colon \mathsf{Seg}_{\Delta}(\mathcal C)
+\rightleftarrows
+\mathsf{Seg}_{\Gamma}(\mathcal C),
+$$
+$$
+\gamma_! A (\langle n \rangle) = \operatorname{colim}_{\langle n\rangle \to \langle m \rangle} A([m]).
+$$
+其中</p>
+<ul>
+<li>右伴随 $\gamma^*$ 给出交换代数到结合代数的遗忘.</li>
+<li>左伴随 $\gamma_!$ 给出结合代数的交换化. 直观上, $A([m])$ 的元素是结合代数 $A$ 的 $m$ 个有序元素. 但在 $\gamma_! A$ 中, 这 $m$ 个元素的所有顺序的结合方式都相等, 都等于映射 $\langle 1\rangle \to \langle m \rangle$, $1\mapsto\{1,\cdots,m\}$ 诱导的 $A([m]) \to \gamma_! A(\langle 1\rangle)$ 的像.</li>
+</ul>
+<h3>交换代数中的交换代数</h3>
+<p>范畴 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">$\Gamma$</a></span> 有个乘法 $\land\colon \Gamma\times \Gamma \to \Gamma$, $\langle n\rangle \land \langle m \rangle = \langle nm \rangle$. (注意这<strong>不是</strong> $\Gamma$ 中的范畴论乘积.) 由代数模式乘积的性质, 有函子
+$$
+\mathsf{Seg}_{\Gamma}(\mathcal C) \to \mathsf{Seg}_{\Gamma} (\mathsf{Seg}_{\Gamma} (\mathcal C)).
+$$</p>
 <h3>$\mathbb E_n$-代数与 $n$-范畴的模式</h3>
 <p>这里所说的 $n$-范畴是指 $(\infty,n)$-范畴.</p>
 <p>回忆 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴 $\Theta_n$</a></span> 是如下归纳定义的范畴:</p>
@@ -1329,13 +1419,30 @@ $$
 <p>牢记 “$n$-范畴就是<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于 $(n-1)$-范畴的范畴”, 我们应该将 $C_n$ 想象为用于探测 $n$-范畴中 $n$-态射的一个最基本的 $n$-胞腔.</p>
 <p>令这些对象 $C_0,\cdots,C_n$ 为基本对象, 我们就得到了 $n$-范畴的底层结构: 一种没有任何代数运算的 $n$ 维 “图”.</p>
 <p>若仅令 $C_n$ 一个对象为基本对象, 我们就得到了 $\mathbb E_n$-代数的底层结构.</p>
-<p>另一个代数模式是 $\Delta^n$ 上的. 归纳定义函子 $\tau_n\colon \Delta^n \to \Theta_n$:</p>
+<hr />
+<p>另一个代数模式是 $\Delta^n$ 上的. 代数模式 $\Delta^n$ 就是 $\Delta$ 的 $n$ 次积 (代数模式的范畴具有有限积),</p>
+<ul>
+<li>作为 $\mathbb E_n$-代数的模式时, 其唯一的基本对象为 $([1],\cdots,[1])$,</li>
+<li>作为 $(\infty,n)$-范畴的模式时, 其基本对象为 $([i_1],\cdots,[i_n])\,(i_1,\cdots,i_n \in \{0,1\})$. (准确地说这样定义的 Segal 对象是 $n$ 重 Segal 生象, 还不是 $(\infty,n)$-范畴, 需要加一些完备性和退化性.)</li>
+</ul>
+<p>$\Delta^n$ 中的惰性映射就是每个分量都惰性的映射.</p>
+<p>由代数模式乘积的性质,
+$$
+\mathsf{Seg}_{\Delta^n}(\mathcal C) \simeq \mathsf{Seg}_{\Delta}(\mathsf{Seg}_{\Delta}(\cdots\mathsf{Seg}_{\Delta}(\mathcal C)\cdots)).
+$$
+因此当 $\Delta$ 表示 $\mathbb E_1$-代数的模式时, $\Delta^n$ 是 $\mathbb E_n$-代数的模式.</p>
+<p>归纳定义函子 $\tau_n\colon \Delta^n \to \Theta_n$:</p>
 <ul>
 <li>$\tau_0\colon \Delta^0 = 1 \to 1 = \Theta_0$ 为恒等;</li>
 <li>$\tau_1\colon \Delta \to \Theta_1$ 为恒等;</li>
 <li>$\tau_n\colon \Delta^n \to \Theta_n$ 将 $([i_1],\cdots,[i_n])$ 对应到 $[i_1] (\tau_{n-1}([i_2],\cdots,[i_n]),\cdots,\tau_{n-1}([i_2],\cdots,[i_n]))$.</li>
 </ul>
-<p>这给出一个 Segal 态射 $\Delta^n \to \Theta_n$.</p>
+<p>这给出一个 Segal 态射 $\Delta^n \to \Theta_n$. 要验证它是 Segal 态射, 只需验证函子
+$$
+\Delta^{n,\mathrm{el}}_{/X} \to (\Theta_n^{\mathrm{el}})_{/\tau_n X}
+$$
+是<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首函子</a></span>, 而这又等价于对任意基本对象 $E\in\Theta_n$ 到 $\tau_n X$ 的惰性映射 $E\to \tau_n X$, 范畴 $\{e\in\Delta^n \text{ 基本, }e\to X\text{ 惰性, }\tau_n e\to E\}$ <span class="link local"><a href="./弱可缩范畴.html" title="弱可缩范畴 [弱可缩范畴]">弱可缩</a></span>. (下略)</p>
+<p>直观上, Segal 态射 $\Delta^n \to \Theta_n$ 给出了 $(\infty,n)$-范畴的 “$n$ 个方向的复合”.</p>
 <h3>Barwick 算子范畴</h3>
 <p>设 $\Phi$ 为一个<span class="link local"><a href="./opecat.html" title="Barwick 算子范畴 [opecat]">算子范畴</a></span>, 记 $\Delta_\Phi$ 为 $\Phi$-序列的范畴, 其对象为有限全序集到 $\Phi$ 的函子, 态射为交换三角, 要求某些条件.</p>
 <ul>
@@ -1468,6 +1575,33 @@ $$</p>
 <li>单子是<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>的推广. 许多<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数结构</a></span>可理解为某个<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>; 此时这个单子给出 “自由代数”. 这件事可由<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性函子</a></span>描述.</li>
 <li>在 <span class="link local"><a href="./2-范畴.html" title="2-范畴 [2-范畴]">$2$-范畴</a></span>的理论中, 单子可视为 $1$ 到 $\mathsf{Cat}$ 的<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span>, 从而进一步推广为 $1$ 到一般的 $2$-范畴的<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span>.</li>
 </ul>
+<h3>代数结构</h3>
+<p>单子是记录许多代数结构的统一的工具. 对于每种代数结构都有一个<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>函子, 对应的单子是自由和遗忘的复合, 一般的结构则是<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>.</p>
+<ul>
+<li>对于环 $R$, $R$-<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>是单子 $T_R := R\otimes -\colon \mathsf{Ab}\to\mathsf{Ab}$ 上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>.</li>
+<li>考虑<span class="link local"><a href="./张量.html" title="张量 [张量]">张量代数</a></span>单子 $T\colon \mathsf{Ab} \to \mathsf{Ab}$, 那么一个环等同于一个 $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>.</li>
+<li>考虑自由群单子 $T_{\mathrm{Grp}}\colon \mathsf{Set} \to \mathsf{Set}$, 那么一个群等同于一个 $T_{\mathrm{Grp}}$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>. 更一般地, 每个 <span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>都给出 $\mathsf{Set}$ 上的一个单子 $T$. 记 $T(n)$ 为该理论中所有可能的 $n$ 元项的集合, 例如群的理论中 $x^2 y^{-1}x$ 是一个 $2$ 元项. 那么函子 $T$ 可表示为
+$$
+  TX = \int_{N\in\mathsf{Fin}} T(N)\times X^N.
+$$
+这是一个<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>记号, 可以粗略地理解为对所有 $N$ 取并, 然后商掉必要的关系.</li>
+<li>对于 $\mathsf{Ani}$-值单色<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathcal O$, 我们有 (<span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 上的) 自由 $\mathcal O$-代数单子
+$$
+  T_{\mathcal O} X = \int_{N\in\mathsf{Fin}^\simeq} \mathcal O(N)\times X^N.
+$$
+例如自由 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-代数单子
+$$
+  T_{\mathbb E_n}X = \int_{N\in\mathsf{Fin}^\simeq}\operatorname{Conf}_N(\mathbb{R}^n)\times X^N.
+$$
+注意, 与 Lawvere 理论不同的是, 这里<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>的指标范畴为<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">群胚</a></span> $\mathsf{Fin}^\simeq$. 本讲的第一个主要目标便是用这种方式解释什么是算畴.</li>
+</ul>
+<p>有一些看起来不那么 “代数” 的结构也可以用单子来记录. 关键在于, “不那么代数” 的信息被储存在了一个基范畴中, 而单子本身只负责记录 “代数” 运算.</p>
+<ul>
+<li>考虑有向图的范畴 $\mathsf{Graph}$, 其对象为两个生象带有两个映射 $E\rightrightarrows V$, 其上有一个自由范畴单子 $T_{\mathsf{Cat}}\colon \mathsf{Graph}\to\mathsf{Graph}$, 这个单子上的代数就是<strong>范畴</strong>.</li>
+<li><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 也可以类似定义, 底层的结构是<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>. 树与图的区别在于它能记录 “多个对象到一个对象的态射”. 这是本讲的第二个主要目标. 注意在本讲中, 算畴 (多重范畴) 有了两个不同层次的角色: 先是一个算畴定义一种结构, 然后算畴这种结构本身也可以用单子来定义.</li>
+</ul>
+<p>在上述每个例子中, “自由代数” 单子都不仅仅是单子, 而是所谓<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>. 元数 (arity) 的本义是一个函数的自变量的个数, 例如加法的元数是 $2$, 取逆的元数是 $1$, 而常数的元数是 $0$.</p>
+<p>如果定义一种代数结构的每种运算只涉及了一个集合里有限个元素, 那么一个代数 $X$ 就可以被全体有限集 $A$ 生成的自由代数 $TA$ <span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>. 所谓探测就是说用全体态射 $TA\to X$ 的信息可以完全恢复出 $X$ 的信息. 这就是<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>的直观.</p>
 <h2>定义</h2>
 <h3>自函子范畴中的结合代数</h3>
 <p>一个范畴 $\mathcal C$ <strong>上</strong>的单子是其自函子范畴 $\operatorname{End}(\mathcal C)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 对偶范畴 $\mathcal C^{\mathrm{op}}$ 上的单子称为 $\mathcal C$ 上的<span class="link local"><a href="./余单子.html" title="余单子 [余单子]">余单子</a></span>.</p>
@@ -1512,6 +1646,8 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="单纯对象"><header><h1><span class="taxon"></span>单纯对象 <a class="slug" href="./单纯对象.html">[单纯对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>当范畴 $\mathcal C$ 的对象是某种空间 (几何对象) 时, 若要用单纯形 $\Delta^n$ 来 “探测” 一个与 $\mathcal C$ 的对象类似的空间 $X$, 使得 “映射空间” $\operatorname{Map}(\Delta^n, X)$ 是 $\mathcal C$ 的对象, 则会得到 $\mathcal C$ 中的单纯对象 $X\colon \Delta^{\mathrm{op}} \to \mathcal C$.</p>
+<p>范畴 $\mathcal C$ 中的 $n$ 重单纯对象是函子 $(\Delta^n)^{\mathrm{op}} \to \mathcal C$, 也即归纳地为 $(n-1)$ 重单纯对象之中的单纯对象.</p>
+<p>单纯对象可用于定义<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">范畴对象</a></span>.</p>
 <h2>定义</h2>
 <p>范畴 $\mathcal C$ 中的<strong>单纯对象</strong>是其<span class="link local"><a href="./内部观点.html" title="内部观点 [内部观点]">内部</a></span>的<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>, 也即<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>的对偶到 $\mathcal C$ 的函子 $\Delta^{\text{op}}\to \mathcal C$.</p>
 <p>类似地, <strong>增广单纯对象</strong>是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span>的对偶到 $\mathcal C$ 的函子 $\Delta_+^{\text{op}}\to \mathcal C$.</p>
@@ -1573,7 +1709,7 @@ $$</p>
 <li><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>;</li>
 <li><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>.</li>
 </ul>
-<p>直观上, 范畴 $\mathcal E$ 上的单子 $T$ 以子范畴 $\mathcal A\subset\mathcal E$ 为元数, 就是说为了表达一个 $T$-结构所需的运算, 只需用 $\mathcal A$ 的对象来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>. 进而 $T$-代数可以定义为满足某种条件的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>.</p>
+<p>直观上, 范畴 $\mathcal E$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 以子范畴 $\mathcal A\subset\mathcal E$ 为元数, 就是说为了表达一个 $T$-结构所需的运算, 只需用 $\mathcal A$ 的对象来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>. 进而 $T$-代数可以定义为满足某种条件的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>.</p>
 <p>例如要表达一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ 上的一个<span class="link local"><a href="./幺半群.html" title="幺半群 [幺半群]">幺半群</a></span>结构, 只需要考虑所有有限集到 $X$ 的映射, 此时有限集 (的元素个束) 就对应运算的元数.</p>
 <p>元数不一定是有限集. 例如要表达一个图 $G$ 上的范畴结构, 要考虑的是所有态射串的复合. 此时元数是形如 $\bullet\to\bullet\to\cdots\to\bullet$ 的有限图. 这样, 范畴就可以定义为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>上满足某种条件的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>, 即单纯生象. 见 <span class="link local"><a href="./Segal空间.html" title="Segal 对象 [Segal空间]">Segal 生象</a></span>.</p>
 <p>带元数的单子又被<span class="link local"><a href="./相对单子.html" title="相对单子 [相对单子]">相对单子</a></span>涵盖.</p>
@@ -1688,13 +1824,28 @@ j\colon \mathcal A \to \Theta,
 $$
 使得伴随 $j_! \dashv j^*$ <span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">诱导的单子</a></span> $j^*j_!\colon \widehat {\mathcal A} \to \widehat {\mathcal A}$ 保持<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子 $\nu_{\mathcal A}\colon \mathcal E\to\widehat {\mathcal A}$ 的像.</p>
 <p>该理论的一个<strong>模型</strong>是 $\Theta$ 上的一个预层, 满足其沿 $j$ 的限制落在 $\nu_{\mathcal A}$ 的像中.</p>
+<p>我们应该将 $\Theta$ 理解为元数 $\mathcal A$ 生成的自由代数的范畴, 将 $j\colon \mathcal A \to\Theta$ 理解为自由函子.</p>
 <p><strong>单子给出理论</strong>. 由定义, $\mathcal E$ 上以 $\mathcal A$ 为元数的单子 $T$, 有理论 $(\Theta_T,j_T)$.</p>
 <p><strong>理论恢复出单子</strong>. 由定义, 对理论 $(\Theta,j)$ 可以恢复出 $\mathcal E$ 上的一个单子 $T$: 若将 $\mathcal E$ 等同于 $\widehat {\mathcal A}$ 的子范畴, 那么单子 $T$ 等于 $j^*j_!$ 的限制.</p>
+<p><strong>例</strong> (范畴的理论). 考虑 $\mathcal E = \mathsf{Graph}$ (有向图的范畴), $\mathcal A = \Delta^{\mathrm{int}}$ 为有限长的链 $[n] = \{0\to 1\to\cdots\to n\}$ 构成的全子范畴. (注意 $\Delta^{\mathrm{int}}$ 中的态射只有 “区间含入”, 没有一般的全序集态射. $\mathrm{int}$ 是 “惰性” inert 的缩写, $\Delta^{\mathrm{int}}$ 这个记号暗示了它在<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>中的作用.) 此时有一个理论 $j\colon \mathcal \Delta^{\mathrm{int}}\to \Delta$, 将图 $[n]$ 对应到全序集 $[n]$. 单子 $j^*j_!\colon \widehat {\Delta^{\mathrm{int}}} \to \widehat {\Delta^{\mathrm{int}}}$ 为
+$$
+(j^*j_! X)([n]) = \int_{[m]}\operatorname{Hom}_{\Delta}([n],[m])\times X([m]).
+$$
+可以这样理解: 一个图 $G$ 的自由范畴 $\operatorname{Free}(G)$ 是一个更大的图, 通过 $G$ 上长为 $m$ 的道路以及全序集映射 $[n] \to [m]$ 可以给出 $\operatorname{Free}(G)$ 上长为 $n$ 的道路. 于是 $\mathsf{Graph}$ 上的自由范畴单子就是以所有有限长的链为元数的单子.</p>
+<p><strong>例</strong> (交换代数的理论). 考虑 $\mathcal E = \mathsf{Ani}$, $\mathcal A = \mathsf{Fin}$, 有一个理论 $j\colon \mathsf{Fin} \to$ … todo</p>
 <p><strong>定理</strong>. 对于固定的 $(\mathcal E,\mathcal A)$, $\mathcal E$ 上以 $\mathcal A$ 为元数的单子 $T$ 等价于以 $\mathcal A$ 为元数的理论 $j_T\colon \mathcal A\to \Theta_T$, 且单子 $T$ 上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>等同于理论 $\Theta_T$ 的模型.
 事实上, 这一对应构成范畴等价. (<span class="link local"><a href="./BergerMelliesWeberMonAr.html" title="Monads with arities and their associated theories [BergerMelliesWeberMonAr]">BMW</a></span>, 定理 3.4)</p>
-<p><strong>模型条件表述为层条件</strong>. 常常 $\mathcal E = \widehat {\mathcal C}$ 是个预层范畴, 而 $\mathcal A$ 是包含了可表函子的一个子范畴 (那么 $\mathcal A$ 当然是稠密的, 因为可表函子是稠密的). 这时脉函子 $\nu_{\mathcal A}\colon \mathcal E \to \widehat {\mathcal A}$ 构成<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>之间的<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span>, 于是它的像恰好是 $\mathcal A$ 上由形如 $\{c\to a\mid c\in \mathcal C\}$ 的余锥生成的 <span class="link local"><a href="./Grothendieck拓扑.html" title="Grothendieck 拓扑 [Grothendieck拓扑]">Grothendieck 拓扑</a></span>的层范畴. 这给出了判断预层是否在 $\nu_{\mathcal A}$ 的像中的一个稍微直接一点的条件.</p>
+<p><strong>模型条件表述为层条件</strong>. 常常 $\mathcal E = \widehat {\mathcal C}$ 是个预层范畴, 而 $\mathcal A$ 是包含了可表函子的一个子范畴 (那么 $\mathcal A$ 当然是稠密的, 因为可表函子是稠密的). 这时脉函子 $\nu_{\mathcal A}\colon \mathcal E \to \widehat {\mathcal A}$ 构成<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>之间的<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span>, 于是它的像恰好是 $\mathcal A$ 上由形如 $\{c\to a\mid c\in \mathcal C\}$ 的余锥生成的 <span class="link local"><a href="./Grothendieck拓扑.html" title="Grothendieck 拓扑 [Grothendieck拓扑]">Grothendieck 拓扑</a></span>的层范畴. 这给出了判断预层是否在 $\nu_{\mathcal A}$ 的像中的一个稍微直接一点的条件. (注意, 这并不意味着理论 $(\Theta,j)$ 的模型的范畴是个意象.)</p>
 <h4>一般映射与自由映射</h4>
 <p>对于理论 $j\colon \mathcal A \to \Theta$, 称 $j$ 的像中的态射为<strong>自由映射</strong>, 而对 $\Theta$ 中的态射 $g$, 若对任意分解 $g = j(f) g'$, 都有 $f$ 可逆, 则称 $g$ 为<strong>一般映射</strong>.</p>
+<p><strong>例</strong>. 对于 $(\mathsf{Graph},\Delta^{\mathrm{el}})$ 上的理论 $(\Delta,j\colon \Delta^{\mathrm{el}}\to\Delta)$, 容易验证一般态射 $g$ 是保持端点的映射 (假设 $g=j(f)g'$, 则 $f$ 保持端点, 从而必为同构). 注意这里的一个重要性质: 若一个态射是区间含入, 且保持端点, 则其为同构.</p>
+<p><strong>例</strong>. 对于 $(\mathsf{Ani},\mathsf{Fin})$ 上的理论… todo</p>
+<h4>齐性理论</h4>
+<p><strong>定义</strong> (齐性理论, <span class="link local"><a href="./BergerMelliesWeberMonAr.html" title="Monads with arities and their associated theories [BergerMelliesWeberMonAr]">BMW</a></span> 定义 3.9). 满足如下条件的理论 $(\Theta,j)$ 称为<strong>齐性理论</strong>:</p>
+<ul>
+<li>$j\colon \mathcal A \to \Theta$ 忠实;</li>
+<li>$\Theta$ 中的一般映射与自由映射构成<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">正交分解系</a></span>: 每个映射唯一地分解为先一个一般映射后一个自由映射, 一般映射关于复合封闭, 同为一般映射和自由映射的映射为等价.</li>
+</ul>
 <h2>例</h2>
 <h3>Lawvere 理论</h3>
 <p><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>等同于 $\mathsf{Set}$ 上以 $\mathsf{Fin}$ 为元数的单子, 即保持滤余极限的单子 (这里用到 $\nu_{\mathsf{Fin}}$ 不仅保持而且<span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映</a></span><span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>). 见<span class="link local"><a href="./有限性单子.html" title="有限性单子 [有限性单子]">有限性单子</a></span>.</p>
@@ -2137,6 +2288,7 @@ $$
 X_0 \to \operatorname{Hom}(J,X)
 $$
 为等价的 Segal 对象 $X$.</p>
+<p><strong>定理</strong> (Rezk). 记 $\mathrm{ff.es.}$ 为全忠实本质满态射的类; 那么 Segal 生象的<strong>完备化</strong> (即完备 Segal 生象范畴到 Segal 生象范畴的含入的左伴随) 正是关于 $\mathrm{ff.es.}$ 的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>.</p>
 <h2>例</h2>
 <h3>对称幺半范畴</h3>
 <p>参考 <span class="link local"><a href="./AntieauCSO.html" title="Complete Segal objects [AntieauCSO]">Antieau</a></span>. 可证明<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>等同于 <span class="link local"><a href="./E∞-空间.html" title="E∞-空间 [E∞-空间]">$\mathbb E_\infty$-生象</a></span>范畴 $\mathsf{CAlg}(\mathsf{Ani})$ 中的范畴对象. 事实上, 两者均为

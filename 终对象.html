@@ -1452,6 +1452,7 @@ $$
 <h2>观念</h2>
 <h2>定义</h2>
 <p>固定一个 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span> (或更一般的<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>) $\mathcal C$, 例如<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span>.</p>
+<p>(一般范畴中的对象 $X$ 的截断性化归为 $\operatorname{Hom}(Y,X)$ 的截断性, 故只需定义生象的截断性.)</p>
 <h3>归纳定义</h3>
 <p>我们对 $n\geq -2$ 归纳定义 $\mathcal X$ 中的对象和态射的 $n$-截断性. 态射 $X\to Y$ $n$-截断就是指其在<span class="link local"><a href="./俯意象.html" title="俯意象 [俯意象]">俯意象</a></span> $\mathcal C_{/Y}$ 中是 $n$-截断对象.</p>
 <p>$n=-2$:</p>
@@ -1495,8 +1496,18 @@ $X$ 是 $n$-截断的, 当且仅当任意映射 $S^n \to X$ 都穿过某一个�
 <ul>
 <li>$(-1)$-截断对象就是<span class="link local"><a href="./子终对象.html" title="子终对象 [子终对象]">子终对象</a></span>, 又称<span class="link local"><a href="./真值.html" title="真值 [真值]">真值</a></span>.</li>
 <li>$(-1)$-截断态射就是<span class="link local"><a href="./单射.html" title="单射 [单射]">单射</a></span>.</li>
+<li>截断函子 $\tau_{\leq (-1)}\colon \mathsf{Ani} \to \mathsf{Ani}_{\leq (-1)} = \mathsf{Prop}$ 是判断生象是否为空.</li>
+</ul>
+<p>$n = 0$:</p>
+<ul>
+<li>$0$-截断生象就是<span class="link local"><a href="./集合(同伦类型论).html" title="集合 (同伦类型论) [集合(同伦类型论)]">集合</a></span>.</li>
+<li>$0$-截断的生象映射就是<span class="link local"><a href="./覆叠.html" title="覆叠 [覆叠]">覆叠</a></span>.</li>
+<li>截断函子 $\tau_{\leq 0}\colon \mathsf{Ani} \to \mathsf{Ani}_{\leq 0} = \mathsf{Set}$ 是取生象的连通分支的集合.</li>
 </ul>
 <h2>性质</h2>
+<h3>截断函子</h3>
+<p>在 $\infty$-意象 $\mathcal C$ 中, $n$-截断对象构成<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> $\mathcal C_{\leq n} \hookrightarrow \mathcal C$, 其左伴随是截断函子 $\tau_{\leq n}\colon \mathcal C \to \mathcal C_{\leq n}$.</p>
+<p><strong>命题</strong>. 截断函子 $\tau_{\leq n}$ 保持有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通性</a></span></p>
 <p><span class="link local"><a href="./连通-截断分解.html" title="(n-连通, n-截断) 分解 [连通-截断分解]">($n$-连通, $n$-截断) 分解</a></span></p>

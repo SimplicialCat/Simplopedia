@@ -873,6 +873,30 @@ $$
 $$
 \int_{i\in I}\operatorname{Hom}_J(j,f(i)) = \int_{i\in I}\operatorname{Hom}_I(l(j),i)=*.
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="共首函子"><header><h1><span class="taxon"></span>共首函子 <a class="slug" href="./共首函子.html">[共首函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>共首函子</strong> (initial functor) 是不改变<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>的指标代换, 是<span class="link local"><a href="./共尾函子.html" title="共尾函子 [共尾函子]">共尾函子</a></span>的对偶概念.</p>
+<h2>定义</h2>
+<p><strong>命题-定义</strong>. 对于函子 $f\colon I\to J$, 若下列等价条件成立, 则称之为<strong>共首函子</strong>:</p>
+<ul>
+<li>对任意 (有极限的) 图表 $X\colon J\to \mathcal C$, 比较映射 $\operatorname{lim}_{j\in J}X_j \to \operatorname{lim}_{i\in I}X_{f(i)}$ 为等价;</li>
+<li>同上一个条件, 但只要求 $\mathcal C$ 为 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 的情形;</li>
+<li>对任意图表 $X\colon J\to \mathcal C$ 以及 $c\in\mathcal C$, 比较映射 $\operatorname{Hom}(\operatorname{const}_J c,X)\to \operatorname{Hom}(\operatorname{const}_I c,Xf)$ 为等价;</li>
+<li>对任意 $j\in J$, 范畴 $(f\downarrow j):=\{(i,u\colon f(i)\to j)\}$ <span class="link local"><a href="./弱可缩范畴.html" title="弱可缩范畴 [弱可缩范畴]">弱可缩</a></span> (即底层<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>是<span class="link local"><a href="./可缩(同伦类型论).html" title="可缩类型 (同伦类型论) [可缩(同伦类型论)]">可缩</a></span>的).</li>
+<li>对任意 $j\in J$,
+$$
+  \int_{i\in I}\operatorname{Hom}_J(f(i),j) = *.
+$$</li>
+</ul>
+<p>核心观察是由于<span class="link local"><a href="./端.html" title="端 [端]">端</a></span>的 Fubini 定理,
+$$
+    \begin{aligned}
+    \operatorname{lim}_{i\in I}X_{f(i)}
+    &amp;=\int_{i\in I}^*X_{f(i)}\\
+    &amp;\simeq\int_{i\in I}^*\int_{j\in J}^*{\operatorname{Hom}}{\big({\operatorname{Hom}_{J}(f(i),j), X_j}\big)}\\
+    &amp;\simeq\int_{j\in J}^*{\operatorname{Hom}}\Big(\int_{i\in I}\operatorname{Hom}_{J}(f(i),j), X_j\Big).
+    \end{aligned}
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="命题(同伦类型论)"><header><h1><span class="taxon"></span>命题 (同伦类型论) <a class="slug" href="./命题(同伦类型论).html">[命题(同伦类型论)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>在<span class="link local"><a href="./同伦类型论.html" title="同伦类型论 [同伦类型论]">同伦类型论</a></span>中, 称类型 $A$ 是命题, 是指 $A$ 的任意两个元素都相等, 即

@@ -829,6 +829,7 @@
 <h2>观念</h2>
 <h2>定义</h2>
 <p>固定一个 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span> (或更一般的<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>) $\mathcal C$, 例如<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span>.</p>
+<p>(一般范畴中的对象 $X$ 的截断性化归为 $\operatorname{Hom}(Y,X)$ 的截断性, 故只需定义生象的截断性.)</p>
 <h3>归纳定义</h3>
 <p>我们对 $n\geq -2$ 归纳定义 $\mathcal X$ 中的对象和态射的 $n$-截断性. 态射 $X\to Y$ $n$-截断就是指其在<span class="link local"><a href="./俯意象.html" title="俯意象 [俯意象]">俯意象</a></span> $\mathcal C_{/Y}$ 中是 $n$-截断对象.</p>
 <p>$n=-2$:</p>
@@ -872,8 +873,18 @@ $X$ 是 $n$-截断的, 当且仅当任意映射 $S^n \to X$ 都穿过某一个�
 <ul>
 <li>$(-1)$-截断对象就是<span class="link local"><a href="./子终对象.html" title="子终对象 [子终对象]">子终对象</a></span>, 又称<span class="link local"><a href="./真值.html" title="真值 [真值]">真值</a></span>.</li>
 <li>$(-1)$-截断态射就是<span class="link local"><a href="./单射.html" title="单射 [单射]">单射</a></span>.</li>
+<li>截断函子 $\tau_{\leq (-1)}\colon \mathsf{Ani} \to \mathsf{Ani}_{\leq (-1)} = \mathsf{Prop}$ 是判断生象是否为空.</li>
+</ul>
+<p>$n = 0$:</p>
+<ul>
+<li>$0$-截断生象就是<span class="link local"><a href="./集合(同伦类型论).html" title="集合 (同伦类型论) [集合(同伦类型论)]">集合</a></span>.</li>
+<li>$0$-截断的生象映射就是<span class="link local"><a href="./覆叠.html" title="覆叠 [覆叠]">覆叠</a></span>.</li>
+<li>截断函子 $\tau_{\leq 0}\colon \mathsf{Ani} \to \mathsf{Ani}_{\leq 0} = \mathsf{Set}$ 是取生象的连通分支的集合.</li>
 </ul>
 <h2>性质</h2>
+<h3>截断函子</h3>
+<p>在 $\infty$-意象 $\mathcal C$ 中, $n$-截断对象构成<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> $\mathcal C_{\leq n} \hookrightarrow \mathcal C$, 其左伴随是截断函子 $\tau_{\leq n}\colon \mathcal C \to \mathcal C_{\leq n}$.</p>
+<p><strong>命题</strong>. 截断函子 $\tau_{\leq n}$ 保持有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通性</a></span></p>
 <p><span class="link local"><a href="./连通-截断分解.html" title="(n-连通, n-截断) 分解 [连通-截断分解]">($n$-连通, $n$-截断) 分解</a></span></p>
@@ -924,7 +935,11 @@ $$</p>
 <p><span class="link local"><a href="./Whitehead塔.html" title="Whitehead 塔 [Whitehead塔]">Whitehead 塔</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Whitehead塔"><header><h1><span class="taxon"></span>Whitehead 塔 <a class="slug" href="./Whitehead塔.html">[Whitehead塔]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>带基点<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $*\to X$ 的 Whitehead 塔是对映射 $*\to X$ 作 <span class="link local"><a href="./连通-截断分解.html" title="(n-连通, n-截断) 分解 [连通-截断分解]">($n$-连通, $n$-截断) 分解</a></span>所得的序列
+<p>带基点<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>
+$*\to X$
+的 <strong>Whitehead 塔</strong>是对映射
+$*\to X$
+作 <span class="link local"><a href="./连通-截断分解.html" title="(n-连通, n-截断) 分解 [连通-截断分解]">($n$-连通, $n$-截断) 分解</a></span>所得的序列
 $$
 *\to \cdots \to Z_2 \to Z_1 \to Z_0 \to Z_{-1} \to Z_{-2} =X,
 $$
@@ -947,12 +962,25 @@ $$
 	\downarrow &amp;&amp; \downarrow\\
 	X &amp; \to &amp; \tau_{\leq n+1} X.
 \end{array}
+$$
+换言之, $Z_n$ 是 $X$ 的万有 $(n+1)$-连通覆叠. 对任意 $(n+1)$-连通带基点生象 $Y$, 保基点映射 $Y\to X$ 唯一地穿过 $Z_n$,
+$$
+\operatorname{Hom}_*(Y,X) \simeq \operatorname{Hom}_*(Y,Z_n).
 $$</p>
 <h2>例</h2>
 <p>$n=-1$:</p>
-<p>$Z_{-1}\to X$ 是基点处的连通分支.</p>
+<ul>
+<li>$Z_{-1}\to X$ 是基点处的连通分支. 任何带基点连通生象到 $X$ 的保基点映射唯一地穿过 $Z_{-1}$.</li>
+<li>$Z_{-1}X = \mathbf{B}\Omega X$.</li>
+<li>$Z_{-1}$ 同构于纤维 $\operatorname{fib}(X\to \pi_{0}X)$.</li>
+</ul>
 <p>$n=0$:</p>
-<p>$Z_0 \to Z_{-1}$ 是<span class="link local"><a href="./万有覆叠.html" title="万有覆叠 [万有覆叠]">万有覆叠</a></span>.</p>
+<ul>
+<li>$Z_0 \to X$ 是<span class="link local"><a href="./万有覆叠.html" title="万有覆叠 [万有覆叠]">万有覆叠</a></span>. 任何带基点单连通生象到 $X$ 的映射唯一地穿过 $Z_0$.</li>
+<li>$Z_0 X = \mathbf{B}^2\Omega^2 X$.</li>
+<li>$Z_{0}$ 同构于纤维 $\operatorname{fib}(X \to \tau_{\leq 1}X)=\operatorname{fib}(X\to\mathbf{B}\pi_1(X))$.</li>
+<li>纤维 $\operatorname{fib}(Z_0\to Z_{-1})$ 是基点处的<span class="link local"><a href="./基本群.html" title="基本群 [基本群]">基本群</a></span> $\pi_1(X,x_0)$.</li>
+</ul>
 <h3>正交群</h3>
 <p>正交群 $\mathrm{O}_n$ 的 Whitehead 塔为
 $$
@@ -1567,12 +1595,15 @@ $$
 <p>参见 <span class="link local"><a href="./AyalaFrancisRozenblyumI.html" title="Factorization homology I: higher categories [AyalaFrancisRozenblyumI]">Ayala–Francis–Rozenblyum</a></span> 5.1 节.</p>
 <h2>例</h2>
 <h3>范畴的范畴</h3>
-<p>范畴的范畴 <span class="link local"><a href="./Cat.html" title="范畴的范畴 [Cat]">$\mathsf{Cat}$</a></span> 中的单射是满足如下条件的函子 $F\colon \mathcal C\to\mathcal D$:</p>
+<p>范畴的范畴 <span class="link local"><a href="./Cat.html" title="范畴的范畴 [Cat]">$\mathsf{Cat}$</a></span> 中的单射又称<span class="link local"><a href="./子范畴.html" title="子范畴 [子范畴]">子范畴</a></span>, 是满足如下条件的函子 $F\colon \mathcal C\to\mathcal D$:</p>
 <ul>
 <li>$F$ 给出<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>的单射 $\mathcal C^{\simeq} \to \mathcal D^{\simeq}$;</li>
 <li>对任意两个对象 $X,Y\in\mathcal C$, 映射 $\operatorname{Hom}_{\mathcal C}(X,Y)\to\operatorname{Hom}_{\mathcal D}(F(X),F(Y))$ 为单射.</li>
 </ul>
-<p>注意, 上述条件比<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>弱.</p>
+<p>注意, 上述条件比<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全子范畴</a></span>弱 (全子范畴要求第二个映射为等价).</p>
+<h2>性质</h2>
+<h3>极限封闭</h3>
+<p>单射关于<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>封闭. 准确地说, 记 $\mathsf{Ar}(\mathcal C)^{\mathrm{mono}}\subset \mathsf{Ar}(\mathcal C)$ 为箭头范畴中单射构成的<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全子范畴</a></span>, 假设图 $X\colon I\to\mathsf{Ar}(\mathcal C)^{\mathrm{mono}}$ 在 $\mathsf{Ar}(\mathcal C)$ 中存在极限, 那么极限也落在 $\mathsf{Ar}(\mathcal C)^{\mathrm{mono}}$ 中.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="同伦群"><header><h1><span class="taxon"></span>同伦群 <a class="slug" href="./同伦群.html">[同伦群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本页面介绍<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的同伦群, 又称非稳定同伦群. 另见<span class="link local"><a href="./同伦群(稳定同伦论).html" title="同伦群 (稳定同伦论) [同伦群(稳定同伦论)]">同伦群 (稳定同伦论)</a></span>.</p>
 <h2>观念</h2>
@@ -1634,6 +1665,17 @@ $$
 此时, 逻辑公式 $\varphi$ 的真值是 $X$ 中最大的使得 $U\models\varphi$ 的开集 $U$.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./对象分类子.html" title="对象分类子 [对象分类子]">对象分类子</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="对象的生象"><header><h1><span class="taxon"></span>对象的生象 <a class="slug" href="./对象的生象.html">[对象的生象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>在<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>语境中, 对于一个<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴</a></span> $\mathcal C$, 我们不能谈论它的 “对象的集合”, 因为两个对象之间的 “相等” 未必是一个<span class="link local"><a href="./命题(同伦类型论).html" title="命题 (同伦类型论) [命题(同伦类型论)]">命题</a></span>. 但我们总可以谈论对象的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $\mathcal C^{\simeq}$.</p>
+<p>如果一定要谈论 “对象的集合”, 可以取对象的生象的<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span> $\pi_0\mathcal C^{\simeq}$.</p>
+<h2>定义</h2>
+<p>将一个范畴中的不可逆态射去除, 仅保留可逆态射, 得到一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>, 称为其对象的生象, 又叫<strong>核</strong> (core), <strong>极大子群胚</strong> (maximal subgroupoid).</p>
+<p>这一操作为嵌入
+$$
+\mathsf{Ani} \to \mathsf{Cat}
+$$
+的右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="局部类的分类子"><header><h1><span class="taxon"></span>局部类 <a class="slug" href="./局部类的分类子.html">[局部类的分类子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>设 $\Sigma$ 为<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathcal C$ 中映射的<span class="link local"><a href="./局部类.html" title="局部类 [局部类]">局部类</a></span> (关于<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>与<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">余积</a></span>封闭, 且被<span class="link local"><a href="./意象中的满射.html" title="意象中的满射 [意象中的满射]">满射</a></span>的<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>探测).
 定义 $\Sigma$ 的<strong>分类子</strong>为态射 $f_\Sigma\colon Y_\Sigma \to X_\Sigma$, 又称为 $\Sigma$ 中的<strong>万有态射</strong>, 满足 “$\Sigma$ 的任何态射都是其基变换”; 具体地, 对任意对象 $X$,
@@ -2019,19 +2061,32 @@ $$
 X \to \operatorname{im}f \to Y,
 $$
 其中 $\operatorname{im}f$ 是 $f$ 的<span class="link local"><a href="./像.html" title="像 [像]">像</a></span>.</p>
+<p>$n = \infty$:</p>
+<p>在<span class="link local"><a href="./超完备∞-意象.html" title="超完备 ∞-意象 [超完备∞-意象]">超完备意象</a></span>中, 态射 $f\colon X\to Y$ 的 ($\infty$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>, $\infty$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>) 分解为
+$$
+X \overset{\mathrm{id}}{\to} X \to Y.
+$$</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通性</a></span>, <span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断性</a></span>, <span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">正交分解系</a></span></p>
 <p><span class="link local"><a href="./Postnikov塔.html" title="Postnikov 塔 [Postnikov塔]">Postnikov 塔</a></span>, <span class="link local"><a href="./Whitehead塔.html" title="Whitehead 塔 [Whitehead塔]">Whitehead 塔</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="连通性"><header><h1><span class="taxon"></span>连通性 <a class="slug" href="./连通性.html">[连通性]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>用截断性定义</h3>
-<p>…</p>
-<h3>归纳定义</h3>
+<p>称一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ $n$-连通是指其 <span class="link local"><a href="./截断性.html" title="截断性 [截断性]">$n$-截断</a></span> $\tau_{\leq n} X$ 等于单点.</p>
+<p>称一个映射 $X\to Y$ $n$-连通是指其每个纤维都 $n$-连通.</p>
+<p>称一个生象或映射 $\infty$-连通是指其对任意 $n$ 都 $n$-连通.</p>
 <h3>用同伦群定义</h3>
 <p>称一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $n$-连通是指其 $n$ 阶<strong>及</strong>以下<span class="link local"><a href="./同伦群.html" title="同伦群 [同伦群]">同伦群</a></span>平凡.</p>
-<p>称生象</p>
 <p><strong>注意</strong>. 有些文献中对象的 $n$-连通性的定义与此处可能相差 $1$. 此处的定义的优点在于, 对象的 $n$-连通性与态射的 $n$-连通性相容: 一个对象 $X$ $n$-连通当且仅当唯一的态射 $X\to *$ 是 $n$-连通态射.</p>
 <p>在 HoTT 中, 称一个映射 $n$-连通是指其纤维 $n$-连通. 注意传统拓扑学的 $n$-连通映射在HoTT 中称为 $(n-1)$-连通映射.</p>
+<h2>性质</h2>
+<h3>“$n$-连通覆叠” 函子</h3>
+<p>在 $\infty$-意象 $\mathcal C$ 中, <span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点</a></span> $n$-连通对象构成<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点对象</a></span>范畴 $\mathcal C_{*}$ 的<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">余自反子范畴</a></span> $\mathcal C_{*,\geq n} \hookrightarrow \mathcal C_{*}$, 其右伴随是 “$n$-连通覆叠” 函子 $\tau_{\geq n}\colon \mathcal C_{*} \to \mathcal C_{*,\geq n}$.</p>
+<p>对于带基点对象 $X$ 有<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
+$$
+\tau_{\geq n}X \to X \to \tau_{\leq n} X.
+$$</p>
+<p>对于不带基点的对象<strong>没有</strong> $n$-连通覆叠函子. 例如 $n=1$ 时, <span class="link local"><a href="./万有覆叠.html" title="万有覆叠 [万有覆叠]">万有覆叠</a></span>函子必须对带基点空间定义.</p>
 <h2>例</h2>
 <p>$n=-2$:</p>
 <ul>
@@ -2046,11 +2101,15 @@ $$
 <p>$n=0$:</p>
 <ul>
 <li>$0$-连通生象就是通常所说的非空连通生象.</li>
+<li>函子 $\tau_{\geq 0}\colon \mathsf{Ani}_{*} \to \mathsf{Ani}_{*,\geq 0}$ 取出基点所在的<strong>连通分支</strong>.</li>
 </ul>
 <p>$n=1$:</p>
 <ul>
 <li>$1$-连通生象就是通常所说的<strong>单连通</strong>生象.</li>
+<li>函子 $\tau_{\geq 1}\colon \mathsf{Ani}_{*} \to \mathsf{Ani}_{*,\geq 1}$ 取出基点所在连通分支的<span class="link local"><a href="./万有覆叠.html" title="万有覆叠 [万有覆叠]">万有覆叠</a></span>.</li>
 </ul>
+<h3>球面</h3>
+<p><span class="link local"><a href="./球面.html" title="球面 [球面]">球面</a></span> $S^n$ 是 $(n-1)$-连通的.</p>
 <h2>性质</h2>
 <h3>用对角线刻画</h3>
 <p><strong>定理</strong>. 设 $n\geq 0$. 映射 $f\colon X\to Y$ $n$-连通当且仅当 $f$ 为<span class="link local"><a href="./意象中的满射.html" title="意象中的满射 [意象中的满射]">满射</a></span>且<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span> $\Delta_f \colon X\to X\times_Y X$ 为 $(n-1)$-连通映射.</p>
@@ -2063,4 +2122,5 @@ $$
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断性</a></span></p>
 <p><span class="link local"><a href="./连通-截断分解.html" title="(n-连通, n-截断) 分解 [连通-截断分解]">($n$-连通, $n$-截断) 分解</a></span></p>
+<p><span class="link local"><a href="./超完备∞-意象.html" title="超完备 ∞-意象 [超完备∞-意象]">超完备意象</a></span></p>
 </details></section></details></section></footer></article></div></body></html>

@@ -828,7 +828,62 @@
 <article><section class="block" data-taxon=""><details open><summary id="基本群"><header><h1><span class="taxon"></span>基本群 <a class="slug" href="./基本群.html">[基本群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的<strong>基本群</strong>是其<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>的 <span class="link local"><a href="./截断性.html" title="截断性 [截断性]">$0$-截断</a></span>.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="同伦群"><header><h1><span class="taxon"></span>同伦群 <a class="slug" href="./同伦群.html">[同伦群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Whitehead塔"><header><h1><span class="taxon"></span>Whitehead 塔 <a class="slug" href="./Whitehead塔.html">[Whitehead塔]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>带基点<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>
+$*\to X$
+的 <strong>Whitehead 塔</strong>是对映射
+$*\to X$
+作 <span class="link local"><a href="./连通-截断分解.html" title="(n-连通, n-截断) 分解 [连通-截断分解]">($n$-连通, $n$-截断) 分解</a></span>所得的序列
+$$
+*\to \cdots \to Z_2 \to Z_1 \to Z_0 \to Z_{-1} \to Z_{-2} =X,
+$$
+满足</p>
+<ul>
+<li>$*\to Z_n$ 是 $n$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>映射, 也即 $Z_n$ 是 $(n+1)$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>生象;</li>
+<li>$Z_n\to X$ 是 $n$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>映射.</li>
+</ul>
+<h2>性质</h2>
+<h3>纤维</h3>
+<p>记号如上. 映射 $Z_n\to Z_{n-1}$ 的纤维为 <span class="link local"><a href="./Eilenberg–MacLane空间.html" title="Eilenberg–MacLane 对象 [Eilenberg–MacLane空间]">Eilenberg–MacLane 空间</a></span> $K(\pi_{n+1}(X),n)$.</p>
+<h3>一种显式构造</h3>
+<p>$Z_n$ 的一种显式构造为 $\mathbf{B}^{n+2}\Omega^{n+2}X$.</p>
+<h3>与截断的关系</h3>
+<p>$Z_n$ 是如下的拉回.
+$$
+\begin{array}
+	{ccc}
+	Z_n &amp; \to &amp; *\\
+	\downarrow &amp;&amp; \downarrow\\
+	X &amp; \to &amp; \tau_{\leq n+1} X.
+\end{array}
+$$
+换言之, $Z_n$ 是 $X$ 的万有 $(n+1)$-连通覆叠. 对任意 $(n+1)$-连通带基点生象 $Y$, 保基点映射 $Y\to X$ 唯一地穿过 $Z_n$,
+$$
+\operatorname{Hom}_*(Y,X) \simeq \operatorname{Hom}_*(Y,Z_n).
+$$</p>
+<h2>例</h2>
+<p>$n=-1$:</p>
+<ul>
+<li>$Z_{-1}\to X$ 是基点处的连通分支. 任何带基点连通生象到 $X$ 的保基点映射唯一地穿过 $Z_{-1}$.</li>
+<li>$Z_{-1}X = \mathbf{B}\Omega X$.</li>
+<li>$Z_{-1}$ 同构于纤维 $\operatorname{fib}(X\to \pi_{0}X)$.</li>
+</ul>
+<p>$n=0$:</p>
+<ul>
+<li>$Z_0 \to X$ 是<span class="link local"><a href="./万有覆叠.html" title="万有覆叠 [万有覆叠]">万有覆叠</a></span>. 任何带基点单连通生象到 $X$ 的映射唯一地穿过 $Z_0$.</li>
+<li>$Z_0 X = \mathbf{B}^2\Omega^2 X$.</li>
+<li>$Z_{0}$ 同构于纤维 $\operatorname{fib}(X \to \tau_{\leq 1}X)=\operatorname{fib}(X\to\mathbf{B}\pi_1(X))$.</li>
+<li>纤维 $\operatorname{fib}(Z_0\to Z_{-1})$ 是基点处的<span class="link local"><a href="./基本群.html" title="基本群 [基本群]">基本群</a></span> $\pi_1(X,x_0)$.</li>
+</ul>
+<h3>正交群</h3>
+<p>正交群 $\mathrm{O}_n$ 的 Whitehead 塔为
+$$
+\cdots\to \text{String}_n \to \mathrm{Spin}_n \to \mathrm{SO}_n \to \mathrm{O}_n.
+$$</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./Postnikov塔.html" title="Postnikov 塔 [Postnikov塔]">Postnikov 塔</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="同伦群"><header><h1><span class="taxon"></span>同伦群 <a class="slug" href="./同伦群.html">[同伦群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本页面介绍<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的同伦群, 又称非稳定同伦群. 另见<span class="link local"><a href="./同伦群(稳定同伦论).html" title="同伦群 (稳定同伦论) [同伦群(稳定同伦论)]">同伦群 (稳定同伦论)</a></span>.</p>
 <h2>观念</h2>
 <p>同伦群是用<span class="link local"><a href="./球面.html" title="球面 [球面]">球面</a></span>到一个空间 (<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>) $X$ 的映射提取出的 $X$ 的同伦信息.</p>

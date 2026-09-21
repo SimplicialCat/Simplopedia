@@ -846,12 +846,29 @@ $$
 <p>参见 <span class="link local"><a href="./AyalaFrancisRozenblyumI.html" title="Factorization homology I: higher categories [AyalaFrancisRozenblyumI]">Ayala–Francis–Rozenblyum</a></span> 5.1 节.</p>
 <h2>例</h2>
 <h3>范畴的范畴</h3>
-<p>范畴的范畴 <span class="link local"><a href="./Cat.html" title="范畴的范畴 [Cat]">$\mathsf{Cat}$</a></span> 中的单射是满足如下条件的函子 $F\colon \mathcal C\to\mathcal D$:</p>
+<p>范畴的范畴 <span class="link local"><a href="./Cat.html" title="范畴的范畴 [Cat]">$\mathsf{Cat}$</a></span> 中的单射又称<span class="link local"><a href="./子范畴.html" title="子范畴 [子范畴]">子范畴</a></span>, 是满足如下条件的函子 $F\colon \mathcal C\to\mathcal D$:</p>
 <ul>
 <li>$F$ 给出<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>的单射 $\mathcal C^{\simeq} \to \mathcal D^{\simeq}$;</li>
 <li>对任意两个对象 $X,Y\in\mathcal C$, 映射 $\operatorname{Hom}_{\mathcal C}(X,Y)\to\operatorname{Hom}_{\mathcal D}(F(X),F(Y))$ 为单射.</li>
 </ul>
-<p>注意, 上述条件比<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>弱.</p>
+<p>注意, 上述条件比<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全子范畴</a></span>弱 (全子范畴要求第二个映射为等价).</p>
+<h2>性质</h2>
+<h3>极限封闭</h3>
+<p>单射关于<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>封闭. 准确地说, 记 $\mathsf{Ar}(\mathcal C)^{\mathrm{mono}}\subset \mathsf{Ar}(\mathcal C)$ 为箭头范畴中单射构成的<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全子范畴</a></span>, 假设图 $X\colon I\to\mathsf{Ar}(\mathcal C)^{\mathrm{mono}}$ 在 $\mathsf{Ar}(\mathcal C)$ 中存在极限, 那么极限也落在 $\mathsf{Ar}(\mathcal C)^{\mathrm{mono}}$ 中.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="子范畴"><header><h1><span class="taxon"></span>子范畴 <a class="slug" href="./子范畴.html">[子范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>子范畴是 <span class="link local"><a href="./Cat.html" title="范畴的范畴 [Cat]">$\mathsf{Cat}$</a></span> 中的<span class="link local"><a href="./单射.html" title="单射 [单射]">单射</a></span>.</p>
+<p><strong>命题</strong>. 子范畴就是满足如下条件的函子 $F\colon \mathcal C\to\mathcal D$:</p>
+<ol>
+<li>$F$ 给出<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>的<span class="link local"><a href="./单射.html" title="单射 [单射]">单射</a></span> $\mathcal C^{\simeq} \to \mathcal D^{\simeq}$;</li>
+<li>对任意两个对象 $X,Y\in\mathcal C$, 映射 $\operatorname{Hom}_{\mathcal C}(X,Y)\to\operatorname{Hom}_{\mathcal D}(F(X),F(Y))$ 为<span class="link local"><a href="./单射.html" title="单射 [单射]">单射</a></span>.</li>
+</ol>
+<p><em>证明</em>. 这本质上是因为用于探测对象的 $[0]$ 和用于探测态射的 $[1]$ 构成 $\mathsf{Cat}$ 的<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密子范畴</a></span>. 详见 <span class="link local"><a href="./AyalaFrancisRozenblyumI.html" title="Factorization homology I: higher categories [AyalaFrancisRozenblyumI]">AFR</a></span> Lemma 5.6.</p>
+<p><strong>定义</strong>.</p>
+<ul>
+<li>要求上述条件 1 中的态射为等价, 称之为<span class="link local"><a href="./宽子范畴.html" title="宽子范畴 [宽子范畴]">宽子范畴</a></span> (wide subcategory);</li>
+<li>要求上述条件 2 中的态射为等价, 称之为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全子范畴</a></span> (full subcategory).</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="局部化(范畴论)"><header><h1><span class="taxon"></span>局部化 (范畴论) <a class="slug" href="./局部化(范畴论).html">[局部化(范畴论)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>在<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中, <strong>局部化</strong>是一种万有的使一些态射变得可逆的方法.</p>

@@ -1527,6 +1527,51 @@ $$
 <p>由对偶性, 只需证明第一个命题. $G$ 为全忠实函子, 当且仅当 $\operatorname{Hom}_{\mathcal D}(-,-)\to \operatorname{Hom}_{\mathcal C}(G-,G-)$ 为同构; 由伴随, 这等价于 $\operatorname{Hom}_{\mathcal D}(-,-)\to \operatorname{Hom}_{\mathcal D}(FG-,-)$ 为同构. 由<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>, 这等价于余单位 $FG \to\mathrm{id}_{\mathcal D}$ 为同构.</p>
 <h3>局部化</h3>
 <p>对于自反子范畴 $g\colon \mathcal D\to\mathcal C$, 设其左伴随为 $f$, 记 $W$ 为 $\mathcal C$ 中所有被 $f$ 变为同构的态射构成的类, 则 $f$ 等同于<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span> $\mathcal C \to \mathcal C[W^{-1}]$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="范畴对象"><header><h1><span class="taxon"></span>范畴对象 (完备 Segal 对象) <a class="slug" href="./范畴对象.html">[范畴对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>观念</h2>
+<p>在 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$\infty$-范畴</a></span>中, 一个范畴<span class="link local"><a href="./内部观点.html" title="内部观点 [内部观点]">内部</a></span>的范畴可由完备 <span class="link local"><a href="./Segal空间.html" title="Segal 对象 [Segal空间]">Segal 对象</a></span>描述.</p>
+<p>迭代这一构造可得 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n)$-范畴</a></span>的概念.</p>
+<h2>定义</h2>
+<h3>Segal 对象</h3>
+<p>首先我们重复 <span class="link local"><a href="./Segal空间.html" title="Segal 对象 [Segal空间]">Segal 对象</a></span>的定义. 直观上, 它是一些可复合的态射构成的结构, 已经接近于范畴的概念, 但还有差距.</p>
+<p>设 $\mathcal C$ 为 $\infty$-范畴, 一般要求为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>. 定义 $\mathcal C$ 中的一个 <strong>Segal 对象</strong>是一个<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span> $X \colon \Delta^{\mathrm{op}} \to \mathcal C$, 满足对任意 $m,n\in\mathbb{N}$, 下图为拉回 (直观: “态射可复合”).
+$$
+\begin{array}
+    {ccc}
+    X_{m+n} &amp; \to &amp; X_m \\
+    \downarrow &amp;&amp; \downarrow \\
+    X_n &amp; \to &amp; X_0
+\end{array}
+$$
+该图来自 <span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">$\Delta$</a></span> 中的如下交换图.
+$$
+\begin{array}
+    {ccc}
+    \{0 &lt; \cdots &lt; m+n\} &amp; \leftarrow &amp; \{0 &lt; \cdots &lt; m\} \\
+    \uparrow &amp;&amp; \uparrow \\
+    \{m &lt; \cdots &lt; m+n\} &amp; \leftarrow &amp; \{m\}
+\end{array}
+$$</p>
+<p>记 $\mathsf{Segal}(\mathcal C) \hookrightarrow \mathsf{Fun}(\Delta^{\mathrm{op}},\mathcal C)$ 为 Segal 对象在单纯对象中构成的全子范畴.</p>
+<h3>完备 Segal 对象</h3>
+<p>Segal 对象的完备性类似于<span class="link local"><a href="./泛等性.html" title="泛等性 [泛等性]">泛等性</a></span>, 说的是可逆态射的全体等同于对象的全体.</p>
+<p>考虑单纯对象
+$$
+J = (\{0,1\} \leftleftarrows \{00,01,10,11\} \cdots)
+$$
+即 “<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的等价”. 注意作为范畴它等价于单点, 但作为单纯对象它不等价于单点.</p>
+<p><strong>完备 Segal 对象</strong>就是 Segal 对象中关于 $J \to *$ 的<span class="link local"><a href="./局部对象.html" title="局部对象 [局部对象]">局部对象</a></span>, 即满足
+$$
+X_0 \to \operatorname{Hom}(J,X)
+$$
+为等价的 Segal 对象 $X$.</p>
+<p><strong>定理</strong> (Rezk). 记 $\mathrm{ff.es.}$ 为全忠实本质满态射的类; 那么 Segal 生象的<strong>完备化</strong> (即完备 Segal 生象范畴到 Segal 生象范畴的含入的左伴随) 正是关于 $\mathrm{ff.es.}$ 的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>.</p>
+<h2>例</h2>
+<h3>对称幺半范畴</h3>
+<p>参考 <span class="link local"><a href="./AntieauCSO.html" title="Complete Segal objects [AntieauCSO]">Antieau</a></span>. 可证明<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>等同于 <span class="link local"><a href="./E∞-空间.html" title="E∞-空间 [E∞-空间]">$\mathbb E_\infty$-生象</a></span>范畴 $\mathsf{CAlg}(\mathsf{Ani})$ 中的范畴对象. 事实上, 两者均为
+$$
+\mathsf{Fun}(\mathsf{Fin}_*\times\Delta^{\mathrm{op}},\mathsf{Ani})
+$$
+的全子范畴. 又由于函子范畴中的极限是逐点的, 可验证两个子范畴相同.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="链复形无穷范畴"><header><h1><span class="taxon"></span>链复形无穷范畴 <a class="slug" href="./链复形无穷范畴.html">[链复形无穷范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设 $\mathcal A$ 为<span class="link local"><a href="./加性范畴.html" title="加性范畴 [加性范畴]">加性范畴</a></span>, 记 $\mathsf {Ch}(\mathcal A)$ 为其中<span class="link local"><a href="./链复形.html" title="链复形 [链复形]">链复形</a></span>的范畴 ($1$-范畴).</p>

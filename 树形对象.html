@@ -894,6 +894,11 @@ $$
 <h2>定义</h2>
 <h3>模型 (Segal 对象)</h3>
 <p>给定有适当<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>的范畴 $\mathcal C$, 代数模式 $\mathcal O$ 的<strong>模型</strong> (或称 <strong>Segal 对象</strong>) 是函子 $F\colon \mathcal O \to \mathcal C$, 满足 $F|_{\mathcal O^{\mathrm{int}}}$ 是 $F|_{\mathcal O^{\mathrm{el}}}$ 的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">右 Kan 扩张</a></span>.</p>
+<p>注意, 对于一个函子 $F\colon \mathcal O \to \mathcal C$, Segal 条件是<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">性质而非结构</a></span>. 故 Segal 对象的范畴
+$$
+\mathsf{Seg}_{\mathcal O}(\mathcal C)
+$$
+应当定义为函子范畴 $\mathsf{Fun}(\mathcal O,\mathcal C)$ 的<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全子范畴</a></span>.</p>
 <h3>代数模式的态射</h3>
 <p><strong>定义</strong>. 代数模式之间的态射 $f\colon \mathcal O \to \mathcal P$ 是保持活性和惰性映射, 并将基本对象映射到基本对象的函子.</p>
 <p><strong>定义</strong>. 代数模式之间的 <strong>Segal 态射</strong> $f\colon \mathcal O \to \mathcal P$ 是满足如下条件的态射: 对任意 Segal $\mathcal P$-生象 $F\colon \mathcal P \to \mathsf{Ani}$ 以及 $X\in\mathcal O$, 典范映射
@@ -903,7 +908,7 @@ $$
       &amp;\to \operatorname{lim}_{e\text{ 基本, }e\to X\text{ 惰性}}F(f(e))
     \end{aligned}
 $$
-为等价.</p>
+为等价. 换言之, $f^*F|_{\mathcal O^{\mathrm{int}}}$ 是 $f^*F|_{\mathcal O^{\mathrm{el}}}$ 的右 Kan 扩张.</p>
 <p>在实践中, 上式的指标范畴之间的映射常为<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首函子</a></span>, 从而两极限相等.</p>
 <p><strong>命题</strong>. 对于代数模式之间的态射 $f\colon \mathcal O \to \mathcal P$, 如下条件等价:</p>
 <ul>
@@ -965,7 +970,7 @@ $$
 <p><strong>定义</strong>. 称满足如下条件的代数模式 $\mathcal O$ <strong>可延拓</strong> (extendable):</p>
 <ol>
 <li>考虑函子 $\operatorname{Act}_{\mathcal O}\colon \mathcal O \to \mathsf{Ani}$, $\operatorname{Act}_{\mathcal O}(X)$ 为指向 $X$ 的活性映射构成的生象, 则 $\operatorname{Act}_{\mathcal O}$ 为 Segal $\mathcal O$-生象;</li>
-<li>对 $\mathcal O$ 中任意活性映射 $X\to Y$, todo</li>
+<li>对 $\mathcal O$ 中任意活性映射 $X\to Y$, <span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">todo</a></span></li>
 </ol>
 <p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Proposition 8.8). 代数模式 $\mathcal O$ 可延拓当且仅当沿 $j_{\mathcal O}$ 的左 Kan 扩张限制为函子
 $$
@@ -980,8 +985,81 @@ $$
 其中 $i_{\mathcal O}\colon \mathcal O^{\mathrm{el}}\hookrightarrow\mathcal O^{\mathrm{int}}$ 为嵌入, $j_{\mathcal O}\colon \mathcal O^{\mathrm{int}} \to \mathcal O$.</p>
 <p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Proposition 10.6). 设 $\mathcal O$ 为可延拓代数模式, 则 $\mathsf{Fun}(\mathcal O^{\mathrm{el}},\mathsf{Ani})$ 上的自由 Segal $\mathcal O$-生象单子 $T_{\mathcal O}$ 为多项式单子. 这里多项式单子的定义是 <span class="link local"><a href="./Descartes单子.html" title="Descartes 单子 [Descartes单子]">Descartes 单子</a></span>且为<span class="link local"><a href="./局部右伴随.html" title="局部右伴随 [局部右伴随]">局部右伴随</a></span>.</p>
 <p>这个结论保证了这些代数模式给出<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>.</p>
+<h3>极限和余极限</h3>
+<p><strong>命题</strong>. 代数模式的范畴具有极限和<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>. 具体地, 记
+$$
+\mathsf{OFS}\hookrightarrow\mathsf{Fun}(\Lambda_2^2,\mathsf{Cat})
+$$
+为带<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">正交分解系</a></span>的范畴的范畴, 代数模式的范畴为
+$$
+\mathsf{AlgPatt} \hookrightarrow \mathsf{OFS}\times_{\mathsf{Cat}}\mathsf{Ar}(\mathsf{Cat})
+$$
+$$
+=\{\big((\mathcal C,\mathcal C^{\mathrm{int}},\mathcal C^{\mathrm{\mathrm{act}}})\in\mathsf{OFS},\mathcal C^{\mathrm{el}}\hookrightarrow\mathcal C^{\mathrm{int}}\big)\}.
+$$
+(以上 $\hookrightarrow$ 均表示全忠实函子.) 那么 $\mathsf{AlgPatt}$ 关于 $\mathsf{OFS}\times_{\mathsf{Cat}}\mathsf{Ar}(\mathsf{Cat})$ 中的极限和滤余极限封闭.</p>
+<p>下面我们给出一些代数模式的极限和滤余极限的例子.</p>
+<h4>代数模式的乘积</h4>
+<p>代数模式具有有限积 $\mathcal O\times\mathcal P$, 其中基本对象的子范畴为 $\mathcal O^{\mathrm{el}}\times\mathcal P^{\mathrm{el}}$, 惰性映射构成的子范畴为 $\mathcal O^{\mathrm{int}}\times\mathcal P^{\mathrm{int}}$, 且满足
+$$
+\mathsf{Seg}_{\mathcal O \times \mathcal P} (\mathcal C) \simeq \mathsf{Seg}_{\mathcal O}(\mathsf{Seg}_{\mathcal P}(\mathcal C)).
+$$
+具体地, 函子 $F\colon \mathcal O\times\mathcal P \to\mathcal C$ 为 Segal 对象, 当且仅当 $F|_{\mathcal O^{\mathrm{int}}\times\mathcal P^{\mathrm{int}}}$ 同构于 $F|_{\mathcal O^{\mathrm{el}}\times\mathcal P^{\mathrm{el}}}$ 的右 Kan 扩张; 注意这个右 Kan 扩张有两种路径, 最终结果一致.</p>
+<h4>代数模式的拉回</h4>
+<p>范畴 $\Delta$ 上有两个模式, 记只有一个基本对象的为 $\Delta^\flat$, 两个基本对象的为 $\Delta^{\natural}$. 类似地, 范畴 $\Gamma$ 上有两个模式 $\Gamma^\flat$, $\Gamma^\natural$. 有代数模式的拉回图
+$$
+\begin{CD}
+\Delta^{\flat} @&gt;{\gamma}&gt;&gt; \Gamma^\flat \\
+@VVV @VVV \\
+\Delta^\natural @&gt;&gt;{\gamma}&gt; \Gamma^\natural.
+\end{CD}
+$$</p>
+<h4>代数模式的序列余极限</h4>
+<p>考虑序列余极限
+$$
+\Theta^\natural := \operatorname{colim}_n \Theta_n^\natural,
+$$
+有
+$$
+\mathsf{Seg}_{\Theta^\natural}(\mathsf{Ani}) = \operatorname{lim}_n\mathsf{Seg}_{\Theta_n^\natural}(\mathsf{Ani}),
+$$
+故 $\mathsf{Seg}_{\Theta^\natural}(\mathsf{Ani})$ 的对象可视为 “$(\infty ,\infty )$-范畴” 的模型, 函子 $\mathsf{Seg}_{\Theta^\natural}(\mathsf{Ani}) \to \mathsf{Seg}_{\Theta_n^\natural}(\mathsf{Ani})$ 给出其底层 $(\infty,n)$-范畴.</p>
+<h3>模式的圈积</h3>
+<p>为了契合我们的记号, 本节的 $\mathcal O$ 是 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span> 的 $\mathcal O^{\mathrm{op}}$. 以下许多构造都与 CH 的构造差一个反范畴.</p>
+<p><strong>定义</strong> (模式与 $\Gamma$ 的圈积). 对于代数模式 $\mathcal O$, 定义一个模式 $\Gamma \wr \mathcal O$ 如下:</p>
+<ul>
+<li>范畴 $\Gamma \wr \mathcal O$ 即是 $\Gamma$ 与范畴 $\mathcal O$ 的<span class="link local"><a href="./圈积.html" title="圈积 (范畴论) [圈积]">圈积</a></span>; 具体地, 其对象形如 $\langle n \rangle (X_1,\cdots,X_n)$, 态射 $\langle n \rangle (X_1,\cdots,X_n) \to \langle m \rangle (Y_1,\cdots,Y_m)$ 包含一个 $\Gamma$ 中的态射 $\phi\colon \langle n\rangle \to \langle m \rangle$ 以及 $\mathcal O$ 中的一族态射 $X_i \to Y_j$, $j\in \phi(i)$.</li>
+<li>代数模式 $\Gamma \wr \mathcal O$ 的基本对象定义为 $\langle 0 \rangle ()$ 以及 $\langle 1 \rangle (E)$, $E\in\mathcal O^{\mathrm{el}}$.</li>
+<li>态射 $\langle n \rangle (X_1,\cdots,X_n) \to \langle m \rangle (Y_1,\cdots,Y_m)$ 为惰性 (活性) 当且仅当每个成分 $\phi\colon \langle n\rangle \to \langle m \rangle$ 以及 $X_i \to Y_j$ 均为惰性 (活性).</li>
+</ul>
+<p>一般地, 对于 $\Gamma^{\natural}$ 上的代数模式 $\mathcal O$ 以及任意代数模式 $\mathcal P$, 其圈积定义为
+$$
+\mathcal O \wr \mathcal P = \mathcal O \times_{\Gamma^{\natural}}(\Gamma\wr\mathcal P).
+$$</p>
 <h2>例</h2>
 <p>较为简单的例子在前面都已讲过.</p>
+<h3>Segal 态射 $\gamma\colon \Delta\to\Gamma$</h3>
+<p>结合代数的模式到交换代数的模式有一个重要的态射 $\gamma\colon \Delta\to\Gamma$.</p>
+<p>函子层面, $\gamma$ 将 $[n]\in\Delta$ 对应到 $\langle n \rangle\in\Gamma$, 详见 <span class="link local"><a href="./Segal函子γ.html" title="Segal 函子 γ [Segal函子γ]">Segal 函子 $\gamma$</a></span>. 唯一的基本对象 $[1]$ 对应基本对象 $\langle 1\rangle$.</p>
+<p>态射 $\gamma\colon \Delta \to \Gamma$ 对合适的范畴给出伴随
+$$
+\gamma_!\dashv\gamma^*\colon \mathsf{Seg}_{\Delta}(\mathcal C)
+\rightleftarrows
+\mathsf{Seg}_{\Gamma}(\mathcal C),
+$$
+$$
+\gamma_! A (\langle n \rangle) = \operatorname{colim}_{\langle n\rangle \to \langle m \rangle} A([m]).
+$$
+其中</p>
+<ul>
+<li>右伴随 $\gamma^*$ 给出交换代数到结合代数的遗忘.</li>
+<li>左伴随 $\gamma_!$ 给出结合代数的交换化. 直观上, $A([m])$ 的元素是结合代数 $A$ 的 $m$ 个有序元素. 但在 $\gamma_! A$ 中, 这 $m$ 个元素的所有顺序的结合方式都相等, 都等于映射 $\langle 1\rangle \to \langle m \rangle$, $1\mapsto\{1,\cdots,m\}$ 诱导的 $A([m]) \to \gamma_! A(\langle 1\rangle)$ 的像.</li>
+</ul>
+<h3>交换代数中的交换代数</h3>
+<p>范畴 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">$\Gamma$</a></span> 有个乘法 $\land\colon \Gamma\times \Gamma \to \Gamma$, $\langle n\rangle \land \langle m \rangle = \langle nm \rangle$. (注意这<strong>不是</strong> $\Gamma$ 中的范畴论乘积.) 由代数模式乘积的性质, 有函子
+$$
+\mathsf{Seg}_{\Gamma}(\mathcal C) \to \mathsf{Seg}_{\Gamma} (\mathsf{Seg}_{\Gamma} (\mathcal C)).
+$$</p>
 <h3>$\mathbb E_n$-代数与 $n$-范畴的模式</h3>
 <p>这里所说的 $n$-范畴是指 $(\infty,n)$-范畴.</p>
 <p>回忆 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴 $\Theta_n$</a></span> 是如下归纳定义的范畴:</p>
@@ -1000,13 +1078,30 @@ $$
 <p>牢记 “$n$-范畴就是<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于 $(n-1)$-范畴的范畴”, 我们应该将 $C_n$ 想象为用于探测 $n$-范畴中 $n$-态射的一个最基本的 $n$-胞腔.</p>
 <p>令这些对象 $C_0,\cdots,C_n$ 为基本对象, 我们就得到了 $n$-范畴的底层结构: 一种没有任何代数运算的 $n$ 维 “图”.</p>
 <p>若仅令 $C_n$ 一个对象为基本对象, 我们就得到了 $\mathbb E_n$-代数的底层结构.</p>
-<p>另一个代数模式是 $\Delta^n$ 上的. 归纳定义函子 $\tau_n\colon \Delta^n \to \Theta_n$:</p>
+<hr />
+<p>另一个代数模式是 $\Delta^n$ 上的. 代数模式 $\Delta^n$ 就是 $\Delta$ 的 $n$ 次积 (代数模式的范畴具有有限积),</p>
+<ul>
+<li>作为 $\mathbb E_n$-代数的模式时, 其唯一的基本对象为 $([1],\cdots,[1])$,</li>
+<li>作为 $(\infty,n)$-范畴的模式时, 其基本对象为 $([i_1],\cdots,[i_n])\,(i_1,\cdots,i_n \in \{0,1\})$. (准确地说这样定义的 Segal 对象是 $n$ 重 Segal 生象, 还不是 $(\infty,n)$-范畴, 需要加一些完备性和退化性.)</li>
+</ul>
+<p>$\Delta^n$ 中的惰性映射就是每个分量都惰性的映射.</p>
+<p>由代数模式乘积的性质,
+$$
+\mathsf{Seg}_{\Delta^n}(\mathcal C) \simeq \mathsf{Seg}_{\Delta}(\mathsf{Seg}_{\Delta}(\cdots\mathsf{Seg}_{\Delta}(\mathcal C)\cdots)).
+$$
+因此当 $\Delta$ 表示 $\mathbb E_1$-代数的模式时, $\Delta^n$ 是 $\mathbb E_n$-代数的模式.</p>
+<p>归纳定义函子 $\tau_n\colon \Delta^n \to \Theta_n$:</p>
 <ul>
 <li>$\tau_0\colon \Delta^0 = 1 \to 1 = \Theta_0$ 为恒等;</li>
 <li>$\tau_1\colon \Delta \to \Theta_1$ 为恒等;</li>
 <li>$\tau_n\colon \Delta^n \to \Theta_n$ 将 $([i_1],\cdots,[i_n])$ 对应到 $[i_1] (\tau_{n-1}([i_2],\cdots,[i_n]),\cdots,\tau_{n-1}([i_2],\cdots,[i_n]))$.</li>
 </ul>
-<p>这给出一个 Segal 态射 $\Delta^n \to \Theta_n$.</p>
+<p>这给出一个 Segal 态射 $\Delta^n \to \Theta_n$. 要验证它是 Segal 态射, 只需验证函子
+$$
+\Delta^{n,\mathrm{el}}_{/X} \to (\Theta_n^{\mathrm{el}})_{/\tau_n X}
+$$
+是<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首函子</a></span>, 而这又等价于对任意基本对象 $E\in\Theta_n$ 到 $\tau_n X$ 的惰性映射 $E\to \tau_n X$, 范畴 $\{e\in\Delta^n \text{ 基本, }e\to X\text{ 惰性, }\tau_n e\to E\}$ <span class="link local"><a href="./弱可缩范畴.html" title="弱可缩范畴 [弱可缩范畴]">弱可缩</a></span>. (下略)</p>
+<p>直观上, Segal 态射 $\Delta^n \to \Theta_n$ 给出了 $(\infty,n)$-范畴的 “$n$ 个方向的复合”.</p>
 <h3>Barwick 算子范畴</h3>
 <p>设 $\Phi$ 为一个<span class="link local"><a href="./opecat.html" title="Barwick 算子范畴 [opecat]">算子范畴</a></span>, 记 $\Delta_\Phi$ 为 $\Phi$-序列的范畴, 其对象为有限全序集到 $\Phi$ 的函子, 态射为交换三角, 要求某些条件.</p>
 <ul>
@@ -1023,6 +1118,8 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="单纯对象"><header><h1><span class="taxon"></span>单纯对象 <a class="slug" href="./单纯对象.html">[单纯对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>当范畴 $\mathcal C$ 的对象是某种空间 (几何对象) 时, 若要用单纯形 $\Delta^n$ 来 “探测” 一个与 $\mathcal C$ 的对象类似的空间 $X$, 使得 “映射空间” $\operatorname{Map}(\Delta^n, X)$ 是 $\mathcal C$ 的对象, 则会得到 $\mathcal C$ 中的单纯对象 $X\colon \Delta^{\mathrm{op}} \to \mathcal C$.</p>
+<p>范畴 $\mathcal C$ 中的 $n$ 重单纯对象是函子 $(\Delta^n)^{\mathrm{op}} \to \mathcal C$, 也即归纳地为 $(n-1)$ 重单纯对象之中的单纯对象.</p>
+<p>单纯对象可用于定义<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">范畴对象</a></span>.</p>
 <h2>定义</h2>
 <p>范畴 $\mathcal C$ 中的<strong>单纯对象</strong>是其<span class="link local"><a href="./内部观点.html" title="内部观点 [内部观点]">内部</a></span>的<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>, 也即<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>的对偶到 $\mathcal C$ 的函子 $\Delta^{\text{op}}\to \mathcal C$.</p>
 <p>类似地, <strong>增广单纯对象</strong>是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span>的对偶到 $\mathcal C$ 的函子 $\Delta_+^{\text{op}}\to \mathcal C$.</p>
@@ -1031,7 +1128,8 @@ $$
 <p><span class="link local"><a href="./树形对象.html" title="树形对象 [树形对象]">树形对象</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="多重范畴"><header><h1><span class="taxon"></span>多重范畴 <a class="slug" href="./多重范畴.html">[多重范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>多重范畴可由类似于<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>的对象来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>.</p>
+<p>多重范畴 (multicategory) 可由类似于<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>的对象来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>.</p>
+<p>注意区分多重范畴与另一个概念 “<span class="link local"><a href="./n-重范畴.html" title="n 重范畴 [n-重范畴]">$n$ 重范畴</a></span>”.</p>
 <h2>定义</h2>
 <p>多重范畴这一概念有多种貌似不同但互相等价的定义.</p>
 <h3>通过 Barwick 范畴 $\Delta_{\mathsf{Fin}}$</h3>
