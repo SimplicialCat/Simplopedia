@@ -827,31 +827,37 @@
 
 <article><section class="block" data-taxon=""><details open><summary id="t-结构"><header><h1><span class="taxon"></span>t-结构 <a class="slug" href="./t-结构.html">[t-结构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>设 $\mathcal C$ 为<span class="link local"><a href="./三角范畴.html" title="“三角范畴” [三角范畴]">三角范畴</a></span>或<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span>, 其上的一个 t-结构是一对子范畴 $(\mathcal C_{\geq 0},\mathcal C_{\leq 0})$, 记 $\mathcal C_{\geq n}=\mathcal C_{\geq 0}[n]$, $\mathcal C_{\leq n}=\mathcal C_{\leq 0}[n]$, 满足</p>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./三角范畴.html" title="“三角范畴” [三角范畴]">三角范畴</a></span>或<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span>, 在<strong>同调指标</strong>中, 其上的一个 $t$-结构是一对子范畴 $(\mathcal C_{\geq 0},\mathcal C_{\leq 0})$, 记 $\mathcal C_{\geq n}=\mathcal C_{\geq 0}[n]$, $\mathcal C_{\leq n}=\mathcal C_{\leq 0}[n]$, 满足</p>
 <ul>
 <li>对任意 $X\in\mathcal C_{\geq 0}$, $Y\in\mathcal C_{\leq -1}$, $\operatorname{Hom}(X,Y)=0$.</li>
 <li>$\mathcal C_{\geq 1}\subset\mathcal C_{\geq 0}$, $\mathcal C_{\leq -1}\subset\mathcal C_{\leq 0}$.</li>
 <li>对任意 $X\in\mathcal C$ 存在<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span> $X'\to X\to X''$, $X'\in\mathcal C_{\geq 0}$, $X''\in\mathcal C_{\leq -1}$.</li>
 </ul>
 <p>$\mathcal C_{\geq 0}$ 的对象又称连合 (connective) 对象.</p>
-<p>注意另一种记号 “上同调记号”, $\mathcal C^{\geq n}$, 对应此处的 $\mathcal C_{\leq -n}$.</p>
+<p>注意另一种记号称为 “<strong>上同调指标</strong>”, $\mathcal C^{\geq n}$ 对应此处的 $\mathcal C_{\leq -n}$.</p>
+<ul>
+<li>对任意 $X\in\mathcal C^{\leq 0}$, $Y\in\mathcal C^{\geq 1}$, $\operatorname{Hom}(X,Y)=0$.</li>
+<li>$\mathcal C^{\leq 0}\subset\mathcal C^{\leq 1}$, $\mathcal C^{\geq 1}\subset\mathcal C^{\geq 0}$.</li>
+<li>对任意 $X\in\mathcal C$ 存在<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span> $X'\to X\to X''$, $X'\in\mathcal C^{\leq 0}$, $X''\in\mathcal C^{\geq 1}$.</li>
+</ul>
 <p><span class="link local"><a href="./稳定∞-范畴.html" title=" [稳定∞-范畴]">稳定无穷范畴</a></span>上的 t-结构等同于其<span class="link local"><a href="./链复形范畴的同伦范畴.html" title="“链复形范畴的同伦范畴” [链复形范畴的同伦范畴]">链复形范畴的同伦范畴</a></span>上的 t-结构.</p>
-<p>t-结构的<strong>心</strong> (heart) 是 $\mathcal C_{\leq 0}\cap\mathcal C_{\geq 0}$.</p>
-<p>t-结构之间的正合函子是保持两个子范畴 $\mathcal C_{\geq 0},\mathcal C_{\leq 0}$ 的函子.</p>
+<p>$t$-结构的<strong>心</strong> (heart) 是 $\mathcal C_{\leq 0}\cap\mathcal C_{\geq 0}$.</p>
+<p>$t$-结构之间的 <strong>$t$-正合函子</strong>是保持两个子范畴 $\mathcal C_{\geq 0},\mathcal C_{\leq 0}$ 的函子.</p>
 <h2>性质</h2>
 <p>对于 $m&lt;n$, 容易证明
 $$
 \mathcal C_{\leq m} \cap \mathcal C_{\geq n} \simeq \{0\}.
 $$
-在<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span>的 t-结构中, 对于 $X\in\mathcal C_{\geq 0}$ 与 $Y\in\mathcal C_{\leq n}$, $\operatorname{Hom}(X,Y)$ 为 $n$-类型. 这是因为
+在<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span>的 $t$-结构中, 对于 $X\in\mathcal C_{\geq 0}$ 与 $Y\in\mathcal C_{\leq n}$, $\operatorname{Hom}(X,Y)$ 为 <span class="link local"><a href="./截断性(同伦类型论).html" title="截断性 (同伦类型论) [截断性(同伦类型论)]">$n$-类型</a></span>. 这是因为
 $$
 \Omega \operatorname{Hom}(X,Y)\simeq \operatorname{Hom}(X,\Omega Y).
 $$
-特别地, 对于 $X\in\mathcal C_{\geq 0}$ 与 $Y\in\mathcal C_{\leq 0}$, $\operatorname{Hom}(X,Y)$ 为集合 ($0$-类型).</p>
-<p>由此可知 t-结构的心为 $1$-范畴. 事实上, 它是 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>, 其中的短正合列正是 $\mathcal C$ 中的纤维列.</p>
-<p>注意 t-结构的心不能反过来决定 t-结构. 稳定无穷范畴一般也不等价于其上 t-结构的心的<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>. 不是所有的 t-结构都来自导出范畴. 例如<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴不同于 $\mathsf {Ab}$ 的导出范畴 (否则稳定同伦论就没有意义了).</p>
+特别地, 对于 $X\in\mathcal C_{\geq 0}$ 与 $Y\in\mathcal C_{\leq 0}$, $\operatorname{Hom}(X,Y)$ 为<span class="link local"><a href="./集合(同伦类型论).html" title="集合 (同伦类型论) [集合(同伦类型论)]">集合</a></span> ($0$-类型).</p>
+<p>由此可知 $t$-结构的心为 $(1,1)$-范畴. 事实上, 它是 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>, 其中的短正合列是 $\mathcal C$ 中的纤维列.</p>
+<p>注意 $t$-结构的心不能反过来决定 $t$-结构. 稳定无穷范畴一般也不等价于其上 $t$-结构的心的<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>. 不是所有的 t-结构都来自导出范畴. 例如<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴不同于 $\mathsf {Ab}$ 的导出范畴 (否则稳定同伦论就没有意义了).</p>
 <h3>截断</h3>
-<p>嵌入 $\mathcal C_{\leq n}\to \mathcal C$ 有左伴随 $\tau_{\leq n}$, 嵌入 $\mathcal C_{\geq n}\to\mathcal C$ 有右伴随 $\tau_{\geq n}$.</p>
+<p>同调指标: 嵌入 $\mathcal C_{\leq n}\to \mathcal C$ 有左伴随 $\tau_{\leq n}$, 嵌入 $\mathcal C_{\geq n}\to\mathcal C$ 有右伴随 $\tau_{\geq n}$.</p>
+<p>上同调指标: 嵌入 $\mathcal C^{\geq n}\to \mathcal C$ 有左伴随 $\tau^{\geq n}$, 嵌入 $\mathcal C^{\leq n}\to\mathcal C$ 有右伴随 $\tau^{\leq n}$.</p>
 <p>$X\in\mathcal C_{\geq 0}$ 当且仅当 $\operatorname{Hom}(X,Y)\simeq\operatorname{Hom}(\tau_{\leq -1}X,Y)\{0\}$ 对任意 $Y\in\mathcal C_{\leq -1}$ 成立.</p>
 <p>$X\in\mathcal C_{\leq 0}$ 当且仅当 $\operatorname{Hom}(Y,X)\simeq\operatorname{Hom}(Y,\tau_{\geq 1}X)\{0\}$ 对任意 $Y\in\mathcal C_{\geq 1}$ 成立.</p>
 <p>$\tau_{\leq m}\tau_{\leq n}\simeq\tau_{\leq\operatorname{min}(m,n)}$.</p>
@@ -870,16 +876,21 @@ $$
 </ul>
 <p>(后两条可通过第一条旋转三角形得到.)</p>
 <h3>分离性</h3>
-<p>称 t-结构右分离 (因为给我讲这个概念的人使用上同调记号) 是指 $\mathcal C_{\leq-\infty}=\bigcap_n\mathcal C_{\leq n}\simeq\{0\}$, 左分离是指 $\mathcal C_{\geq \infty}=\bigcap_n\mathcal C_{\geq n}\simeq\{0\}$.</p>
+<p>称 t-结构<strong>右分离</strong>是指</p>
+<p>上同调指标: $\mathcal C^{\geq\infty} =\bigcap_n\mathcal C^{\geq n} = \{0\}$,</p>
+<p>同调指标: $\mathcal C_{\leq-\infty}=\bigcap_n\mathcal C_{\leq n}=\{0\}$,</p>
+<p><strong>左分离</strong>是指</p>
+<p>上同调指标: $\mathcal C^{\leq -\infty} = \bigcap_n\mathcal C^{\leq n} = \{0\}$,</p>
+<p>同调指标: $\mathcal C_{\geq \infty}=\bigcap_n\mathcal C_{\geq n}\simeq\{0\}$.</p>
 <h3>完备性与完备化</h3>
-<p>t-结构的完备化为
+<p>$t$-结构的完备化为
 $$
 \widehat {\mathcal C} =\operatorname{lim} (\cdots \overset{\tau_{\leq 2}}{\to}\mathcal C_{\leq 2}\overset{\tau_{\leq 1}}{\to}\mathcal C_{\leq 1}\overset{\tau_{\leq 0}}{\to}\mathcal C_{\leq 0}\overset{\tau_{\leq -1}}{\to}\cdots).
 $$
 注意此图的右边是不重要的, 可从任意一处截断只保留其左边. 这个极限的一个对象是一个 <span class="link local"><a href="./Postnikov塔.html" title="Postnikov 塔 [Postnikov塔]">Postnikov 塔</a></span>. 由定义有自然的函子 $\mathcal C\to\widehat {\mathcal C}$, 当这个函子为同构时, 称 $\mathcal C$ 左完备.</p>
-<p>左完备 t-结构是左分离的, 反之不一定.</p>
-<h3>粘 t-结构</h3>
-<p><span class="link local"><a href="./粘t-结构.html" title="粘 t-结构 [粘t-结构]">粘 t-结构</a></span></p>
+<p>左完备 $t$-结构是左分离的, 反之不一定.</p>
+<h3>粘 $t$-结构</h3>
+<p><span class="link local"><a href="./粘t-结构.html" title="粘 t-结构 [粘t-结构]">粘 $t$-结构</a></span></p>
 <h2>例</h2>
 <h3>谱范畴</h3>
 <p>无穷范畴的<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>上有典范的 t-结构:</p>
@@ -947,6 +958,184 @@ $$</p>
 <p>直观: 局部系统模叠的一个 $S$-点是一个映射 $S\times X\to \mathbf{B}G$.</p>
 </blockquote>
 <p><strong>例</strong>. 对于 $X = \mathrm{pt}$, 有 $\mathsf{QLisse}(X) = \mathsf{Vect}$, 从而上述 $S$-点等同于映射 $S\to \mathbf{B}G$, 即 $\mathrm{LocSys}_G^{\text{restr}}(\mathrm{pt}) = \mathbf{B}G$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="notes-perverse"><header><h1><span class="taxon"></span>偏屈层笔记 <a class="slug" href="./notes-perverse.html">[notes-perverse]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>偏屈层始于奇性的代数簇的几何. 常值层的上同调不能正确描述这种几何对象; 人们最初发明<span class="link local"><a href="./相交上同调.html" title=" [相交上同调]">相交上同调</a></span>描述它们.</p>
+<h2>第 1 讲</h2>
+<h3>Poincaré 对偶</h3>
+<p>设 $X$ 为 $d$ 维光滑复射影代数簇,
+$$
+H^r\times H^{2d-r}\to H^{2d}(X,\mathbb{Q}) \to \mathbb{Q}
+$$
+为完美配对.</p>
+<p>对于带奇点的代数簇如结曲线 (nodal curve) $C$, 记 $\widetilde C \simeq \mathbb P^1$ 为其正规化, 映射
+$$
+\nu\colon \widetilde C \to C
+$$
+相当于粘合 $\mathbb P^1$ 的两点. 在这两点之外, 映射为同构. 我们尝试计算 $C$ 的上同调.
+$$
+H^r(C,\mathbb{Q}) = \begin{cases}
+    \mathbb{Q} &amp; r = 0,1,2\\
+    0 &amp; \text{其它.}
+\end{cases}
+$$
+可见 $H^1$ 上的配对退化 (因为杯积分次交换, 在 $H^1$ 上反交换), 没有完美配对.</p>
+<p>为了找一个层尽可能接近常值层, 同时修复 Poincaré 对偶, 考虑
+$$
+\mathcal N = \nu_* \underline{\mathbb{Q}}_{\widetilde C},
+$$
+直观上这个层 “记住了结点的两支”.</p>
+<p><strong>引理</strong>. 有短正合列
+$$
+\underline{\mathbb{Q}}_C \to \mathcal N \to i_*\mathbb{Q},
+$$
+映射 $\mathcal N \to i_*\mathbb{Q}$ 取结点的两支的差.</p>
+<p>暂且定义 “IC 层”
+$$
+\mathrm{IC}_C := \mathcal N[1]
+$$
+以及 (按照历史记号)
+$$
+\mathrm{IH}^r(C,\mathbb{Q}) = H^{r-1}(C,\mathrm{IC}_C) = H^r(C,\mathcal N).
+$$</p>
+<p>取长正合列给出
+$$
+\mathrm{IH}^r(C,\mathbb{Q}) = \begin{cases}
+    \mathbb{Q} &amp; r = 0,2\\
+    0 &amp; \text{其它}.
+\end{cases}
+$$</p>
+<p><strong>定义</strong>. 对于光滑的 $X$,
+$$
+\mathrm{IC}_X := \underline{\mathbb{Q}}_X [\operatorname{dim}X].
+$$</p>
+<p>一般的 $X$ 的 IC 层是奇点消解的常值层的 (导出) 推前.</p>
+<h3>可构造层与六函子</h3>
+<p>回忆, Abel 范畴 $\mathcal A$ 的<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span> $D(\mathcal A)$ 是<span class="link local"><a href="./链复形.html" title="链复形 [链复形]">链复形</a></span>的范畴的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>, 使得链复形之间的拟同构 (诱导上同调之间的同构的映射) 变为导出范畴中的同构.</p>
+<p>$D(\mathcal A)$ 是个<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>, 其中有一些关键的三角 (<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>). 三角给出上同调的长正合列.</p>
+<p>稳定范畴之间的<strong>正合函子</strong>是保持这些特殊三角的函子.</p>
+<p>Abel 范畴之间的正合函子 $F\colon \mathcal A \to \mathcal A'$ 给出导出范畴之间的正合函子 $F\colon D(\mathcal A) \to D(\mathcal A')$.</p>
+<p>不仅如此, Abel 范畴之间的<strong>左</strong>正合函子 $F\colon \mathcal A \to \mathcal A'$ 给出导出范畴之间的正合函子<sup class="footnote-reference" id="notes-perverse_1-back"><a href="#notes-perverse_1">1</a></sup> (称为<strong>右导出函子</strong>) $RF\colon D(\mathcal A) \to D(\mathcal A')$. 通过这个函子再取上同调就得到传统的导出函子 $R^d F$. Abel 范畴之间的<strong>右</strong>正合函子 $F\colon \mathcal A \to \mathcal A'$ 给出导出范畴之间的正合函子 (称为<strong>左导出函子</strong>) $LF\colon D(\mathcal A) \to D(\mathcal A')$. 但在导出范畴语境中, 我们常常直接用 $F$ 的符号表示导出函子 (不写 $R,L$), 因为它是唯一合理的选择.</p>
+<div class="footnote-definition" id="notes-perverse_1">
+  <sup class="footnote-definition-label"><a href="#notes-perverse_1-back">1</a></sup>
+<p>这里忽略了一些有限上同调振幅的限制条件, 或者实际上考虑的是有界导出范畴.</p>
+</div>
+<p>稳定范畴 $\mathcal D$ 的关键性质是移位 $[1]\colon \mathcal D \to \mathcal D$ 是个等价. 对任意三角 $M\to N \to L$, 可旋转得到三角 $N \to L \to M[1]$, $L\to M[1]\to N[1]$ 等等.</p>
+<p>回到正题. <span class="link local"><a href="./可构造层.html" title="可构造层 [可构造层]">可构造层</a></span>是可由有限步基本操作得到的层, 具体地, 称 $X$ 上的层 $F$ <strong>可构造</strong>, 意思是存在 $X$ 的有限分层 $X = \bigsqcup_\alpha S_\alpha$, 每个 $S_\alpha$ 为子簇, 且 $F|_{S_\alpha}$ 为 $\mathbb{Q}$-局部系统 (局部常值的 $\mathbb{Q}$-线性空间层). 记
+$$
+D_c^b (X,\mathbb{Q}) \subset D(\mathsf{Shv}(X))
+$$
+为上同调可构造且有界的对象构成的全子范畴. 这是我们的主要工作范畴, 我们要构造的奇性代数簇 $X$ 上的 IC 层就是其中的对象.</p>
+<p><strong>记号</strong>. $f_*^{\heartsuit}\colon \mathsf{Shv}_c(X) \to \mathsf{Shv}_c(Y)$ 为可构造层的推前, $f_*\colon D_c^b(X) \to D_c^b(Y)$ 为其导出函子.</p>
+<p>对于映射 $f\colon X \to Y$ 有三对伴随 (<span class="link local"><a href="./六函子.html" title="六函子 [六函子]">六函子</a></span>):</p>
+<ul>
+<li>$f^* \dashv f_*$</li>
+<li>$f_! \dashv f^!$</li>
+<li>${(-\otimes K)} \dashv {\operatorname{Hom}(K,-)}$.</li>
+</ul>
+<p>“叹号推前” $f_!$ 是 $f_!^\heartsuit\colon \mathsf{Shv}_c(X) \to \mathsf{Shv}_c(Y)$ 的导出函子. 在拓扑空间中, $f_!^\heartsuit$ 的一个定义是: 对开集 $V\subset Y$, $(f_!^\heartsuit M)(V) = \{s\in M(f^{-1}(V))\mid\operatorname{supp}s \text{ 紧合}\}$. 特别地, 对于 $Y = \mathrm{pt}$ 的情形, $f_!^\heartsuit M = \Gamma_c (X;M)$ 是紧支集截面.</p>
+<p>或许两个更有用的一般性质是</p>
+<ul>
+<li>若 $f$ 为<span class="link local"><a href="./开嵌入.html" title="开嵌入 [开嵌入]">开嵌入</a></span>, 则 $f^! \simeq f^*$;</li>
+<li>若 $f$ <span class="link local"><a href="./紧合映射.html" title="紧合映射 [紧合映射]">紧合</a></span>, 则 $f_! \simeq f_*$.</li>
+</ul>
+<p>我们将视上述结构为黑箱.</p>
+<p><strong>例</strong>. $X = \mathbb A^1$, $X(\mathbb{C}) = \mathbb{C}$, 此时</p>
+<ul>
+<li>$p_*\underline{\mathbb{Q}} = \Gamma(X,\underline{\mathbb{Q}}) = \mathbb{Q}$,</li>
+<li>$p_!\underline{\mathbb{Q}} =\Gamma_c(X,\underline{\mathbb{Q}})=\mathbb{Q}[-2].$</li>
+</ul>
+<p>提示: 考虑紧化 $j\colon X \to \overline{X} = \mathbb P^1$, 记 $i\colon \{\infty\} \to \mathbb P^1$ 为其补闭集, 则有三角
+$$
+j_! \underline{\mathbb{Q}}_X \to \underline{\mathbb{Q}}_{\overline{X}} \to i_*\mathbb{Q}.
+$$</p>
+<h3>Verdier 对偶</h3>
+<p>定义 $X$ 的<strong>对偶复形</strong>为
+$$
+\omega_X := p^!\mathbb{Q}.
+$$
+考虑函子
+$$
+\mathbb D_X \colon M\mapsto\operatorname{Hom}(M,\omega_X).
+$$</p>
+<p><strong>定理</strong> (<span class="link local"><a href="./Poincaré--Verdier对偶.html" title="Poincaré–Verdier 对偶 [Poincaré--Verdier对偶]">Verdier 对偶</a></span>). $\mathbb D_X\colon D_c^b(X)^{\mathrm{op}} \to D_c^b(X)$ 为等价.</p>
+<p><strong>例</strong>. $X = \mathrm{pt}$ 时, $\mathbb D M = M^*$ (线性对偶).</p>
+<p><strong>命题</strong>.</p>
+<ul>
+<li>$\mathbb D$ 为正合函子;</li>
+<li>$\mathbb D\circ\mathbb D = \mathrm{id}$;</li>
+<li>$\mathbb D \circ [1] = [-1] \circ \mathbb D$;</li>
+<li>$\mathbb D \underline{\mathbb{Q}}_X = \omega_X$;</li>
+<li>对于 $f\colon X\to Y$,
+<ul>
+<li>$\mathbb D_Y f_! = f_* \mathbb D_X$,</li>
+<li>$\mathbb D f^! = f^* \mathbb D$,</li>
+</ul>
+</li>
+<li>若 $X$ 为 $d$ 维光滑代数簇, 则 $\omega_X = \underline{\mathbb{Q}}_X [2d]$.</li>
+<li>(Poincaré 对偶) 设 $X$ 光滑紧合, 那么 $\Gamma (X,\underline{\mathbb{Q}})^*=\Gamma_c(\mathbb D_X \underline{\mathbb{Q}}) = \Gamma(\mathbb{Q}[2d])$. (因此 Verdier 对偶可视为相对 Poincaré 对偶.)</li>
+</ul>
+<p>我们将说明
+$$
+\mathbb D \mathrm{IC}_X = \mathrm{IC}_X.
+$$</p>
+<p>对于点 $x\in X$, 称 $i_x^*$ 为<span class="link local"><a href="./茎.html" title="茎 [茎]">茎</a></span>, $i_x^!$ 为余茎 (costalk). 特殊三角可由所有点处的茎探测.</p>
+<p>余茎的一个计算方法是
+$$
+H^r(i_x^! \underline{\mathbb{Q}}_X) = H^r(B, B\setminus\{x\},\mathbb{Q}).
+$$</p>
+<p>考虑映射 $j\colon \mathbb A^1 \setminus 0 \to \mathbb A^1$, $i\colon 0\to\mathbb A^1$. 有自然映射
+$$
+j_! \to j_*
+$$</p>
+<p><strong>定理</strong> (<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>). 对于拉回图</p>
+<p>$$
+\begin{CD}
+X' @&gt;{f'}&gt;&gt; Y' \\
+@V{p}VV @VV{q}V \\
+X @&gt;&gt;{f}&gt; Y
+\end{CD}
+$$</p>
+<p>有
+$$
+q^! f_* \simeq (f')_* p^!,
+$$
+$$
+q^* f_! \simeq (f')_! p^*.
+$$</p>
+<p>我们将以 $j_!$ 与 $j_*$ 之间的一种操作 $j_{!*}$ 来定义 $\mathrm{IC}$.</p>
+<hr />
+<p><strong>习题</strong>. $\mathbb A^1 \setminus 0$ 上的 $\mathbb{Q}$-局部系统 $\mathcal L$ 等同于有限维 $\mathbb{Q}$-线性空间 $V$ 带一个自同构 $T$. 证明
+$$
+i^*j_* \mathcal L = [V \overset{T-1}{\to} V].
+$$</p>
+<p><em>解答</em> (我的尝试, 不一定对 / 好).
+$$
+\begin{aligned}
+i^*j_*\mathcal L &amp;= \operatorname{colim}_{0\in U} \Gamma(U,j_*\mathcal L)\\
+&amp;=\operatorname{colim}_{0\in U}\Gamma(U\setminus 0, \mathcal L).
+\end{aligned}
+$$
+考虑 $U$ 为以 $0$ 为中心的圆盘, 将 $U \setminus 0$ 写成两个可缩开集 $U_1, U_2$ 的并, 满足交集 $U_{12}=U_1\times_{U_0} U_2$ 为两个可缩分支, 那么 (假设 $D(-)$ 的下降)
+$$
+D(U\setminus 0) \simeq D(U_1)\times_{D(U_{12})} D(U_2),
+$$
+$D(U \setminus 0)$ 的一个对象等同于三元组 $(F_1\in D(U_1),F_2\in D(U_2),\phi\colon F_1|_{U_{12}}\simeq F_2|_{U_{12}})$. 那么 $\mathcal L$ 对应 $(V,V,(\mathrm{id},T)\colon V\oplus V\simeq V\oplus V)$, 常值层 $\mathbb{Q}_{U\setminus 0}$ 对应 $(\mathbb{Q},\mathbb{Q},\mathrm{id})$.
+$$
+\begin{aligned}
+\Gamma(U\setminus 0,\mathcal L)
+&amp;=\operatorname{Hom}_{U\setminus 0}(\mathbb{Q}_{U\setminus 0},\mathcal L)\\
+&amp;=\operatorname{Hom}_{U_1}(\mathbb{Q}_{U_1},\mathcal L)\times_{\operatorname{Hom}_{U_{12}}(\mathbb{Q}_{U_{12}},\mathcal L)}\operatorname{Hom}_{U_2}(\mathbb{Q}_{U_2},\mathcal L)\\
+&amp;= V\times_{V\oplus V} V \\&amp;= \operatorname{fib}((\mathrm{id},T)\colon V\oplus V \to V\oplus V)\\&amp;=\operatorname{fib}(T-\mathrm{id}\colon V\to V).
+\end{aligned}
+$$</p>
+<hr />
+<h2>第 2 讲</h2>
+<p>设 $X$ 具有分层 $X = \bigsqcup S_\alpha$, 且 $\mathcal F\in D^b_c(X)$ 逐层局部常值. 我们将定义 $D^b_c(X)$ 上的可构造 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">$t$-结构</a></span>, 使得</p>
+<ul>
+<li>$\mathcal F\in D(X)^{\leq 0}$ 当且仅当 $r &gt; -\operatorname{dim}S_\alpha$ 时 $H^r(\mathcal F|^{*}_{S_\alpha}) =0$;</li>
+<li>$\mathcal F\in D(X)^{\geq 0}$ 当且仅当 $r &lt; -\operatorname{dim}S_\alpha$ 时 $H^r(\mathcal F|^{!}_{S_\alpha}) =0$.</li>
+</ul>
+<p>(我们采用上同调指标.)</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="佐武等价"><header><h1><span class="taxon"></span>佐武等价 <a class="slug" href="./佐武等价.html">[佐武等价]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>佐武 (Satake) 等价</strong>是 <span class="link local"><a href="./Langlands对偶.html" title="Langlands 对偶群 [Langlands对偶]">Langlands 对偶群</a></span>的一种 “实现”: 由 $G$ 构造的某个几何对象上的某种层范畴实现了其对偶群 $^LG$ 的表示范畴; 再由<span class="link local"><a href="./淡中对偶.html" title="淡中对偶 [淡中对偶]">淡中对偶</a></span>可提取出对偶群. 几何佐武等价是<span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 对应</a></span>的基石.</p>
@@ -1006,6 +1195,22 @@ $$
 $$</p>
 <h2>性质</h2>
 <p>在 $\mathcal A$ 为 <span class="link local"><a href="./GrothendieckAbel范畴.html" title=" [GrothendieckAbel范畴]">Grothendieck Abel 范畴</a></span>的前提下, $\mathsf {D}(\mathcal A)$ 是<span class="link local"><a href="./稳定∞-范畴.html" title=" [稳定∞-范畴]">稳定无穷范畴</a></span>.</p>
+<h3>$t$-结构</h3>
+<p>链复形 $X= (X_\bullet)$ 代表的对象的截断分别为</p>
+<p>同调指标:</p>
+<p>$$
+\tau_{\leq n}X = (\cdots\to 0\to \operatorname{coker}d_{n+1}\to X_{n-1}\to\cdots),
+$$
+$$
+\tau_{\geq n}X = (\cdots\to X_{n+1}\to \operatorname{ker}d_{n}\to 0\to\cdots).
+$$</p>
+<p>上同调指标:</p>
+<p>$$
+\tau^{\geq n}X = (\cdots\to 0\to \operatorname{coker}d^{n-1}\to X^{n+1}\to\cdots),
+$$
+$$
+\tau^{\leq n}X = (\cdots\to X^{n-1}\to \operatorname{ker}d^{n}\to 0\to\cdots).
+$$</p>
 <h2>相关概念</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="滤对象的谱序列"><header><h1><span class="taxon"></span>滤对象的谱序列 <a class="slug" href="./滤对象的谱序列.html">[滤对象的谱序列]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>设 $\mathcal C$ 为<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>, 带有 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">t 结构</a></span>且其心为 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span> $\mathcal A$. 那么对 $\mathcal C$ 中的<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤对象</a></span> $X$ 可构造 $\mathcal A$ 中的<span class="link local"><a href="./谱序列.html" title="谱序列 [谱序列]">谱序列</a></span>.</p>

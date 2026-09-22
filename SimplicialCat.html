@@ -10699,6 +10699,7 @@ $$</p>
 <p><strong>注</strong>. 这里的记号 $(B/A)_m^!$ 的直观是所谓 $!$-层, 在 fpqc 叠 $X/\mathbb{S}$ 上, $(X/\mathbb{S})_1^!$ 等于 $D(A)$ 沿 $!$-拉回的极限.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="notes-perverse"><header><h1><span class="taxon"></span>偏屈层笔记 <a class="slug" href="./notes-perverse.html">[notes-perverse]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>偏屈层始于奇性的代数簇的几何. 常值层的上同调不能正确描述这种几何对象; 人们最初发明<span class="link local"><a href="./相交上同调.html" title=" [相交上同调]">相交上同调</a></span>描述它们.</p>
+<h2>第 1 讲</h2>
 <h3>Poincaré 对偶</h3>
 <p>设 $X$ 为 $d$ 维光滑复射影代数簇,
 $$
@@ -10867,6 +10868,13 @@ $$
 \end{aligned}
 $$</p>
 <hr />
+<h2>第 2 讲</h2>
+<p>设 $X$ 具有分层 $X = \bigsqcup S_\alpha$, 且 $\mathcal F\in D^b_c(X)$ 逐层局部常值. 我们将定义 $D^b_c(X)$ 上的可构造 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">$t$-结构</a></span>, 使得</p>
+<ul>
+<li>$\mathcal F\in D(X)^{\leq 0}$ 当且仅当 $r &gt; -\operatorname{dim}S_\alpha$ 时 $H^r(\mathcal F|^{*}_{S_\alpha}) =0$;</li>
+<li>$\mathcal F\in D(X)^{\geq 0}$ 当且仅当 $r &lt; -\operatorname{dim}S_\alpha$ 时 $H^r(\mathcal F|^{!}_{S_\alpha}) =0$.</li>
+</ul>
+<p>(我们采用上同调指标.)</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="notes-stable-center"><header><h1><span class="taxon"></span>稳定中心猜想 <a class="slug" href="./notes-stable-center.html">[notes-stable-center]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是为准备 2026 年春季学期徐斌老师 “朗兰兹纲领选讲” 课程报告而记的笔记. 主要参考 <span class="link local"><a href="./BKV-SCC.html" title="A categorical approach to the stable center conjecture [BKV-SCC]">BKV</a></span>.</p>
 <h2>引言</h2>
@@ -11661,31 +11669,37 @@ $$
 <p>表格有没有可能向右延申? 有没有可能, 范畴的 $2$-范畴 $\mathsf{Cat}$ 不是唯一合理的 “范畴的范畴”, 而是所有的范畴论语言都可以在一个 “$2$-意象” 中解读? 这种语言该如何设计? 我不知道.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="t-结构"><header><h1><span class="taxon"></span>t-结构 <a class="slug" href="./t-结构.html">[t-结构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>设 $\mathcal C$ 为<span class="link local"><a href="./三角范畴.html" title="“三角范畴” [三角范畴]">三角范畴</a></span>或<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span>, 其上的一个 t-结构是一对子范畴 $(\mathcal C_{\geq 0},\mathcal C_{\leq 0})$, 记 $\mathcal C_{\geq n}=\mathcal C_{\geq 0}[n]$, $\mathcal C_{\leq n}=\mathcal C_{\leq 0}[n]$, 满足</p>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./三角范畴.html" title="“三角范畴” [三角范畴]">三角范畴</a></span>或<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span>, 在<strong>同调指标</strong>中, 其上的一个 $t$-结构是一对子范畴 $(\mathcal C_{\geq 0},\mathcal C_{\leq 0})$, 记 $\mathcal C_{\geq n}=\mathcal C_{\geq 0}[n]$, $\mathcal C_{\leq n}=\mathcal C_{\leq 0}[n]$, 满足</p>
 <ul>
 <li>对任意 $X\in\mathcal C_{\geq 0}$, $Y\in\mathcal C_{\leq -1}$, $\operatorname{Hom}(X,Y)=0$.</li>
 <li>$\mathcal C_{\geq 1}\subset\mathcal C_{\geq 0}$, $\mathcal C_{\leq -1}\subset\mathcal C_{\leq 0}$.</li>
 <li>对任意 $X\in\mathcal C$ 存在<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span> $X'\to X\to X''$, $X'\in\mathcal C_{\geq 0}$, $X''\in\mathcal C_{\leq -1}$.</li>
 </ul>
 <p>$\mathcal C_{\geq 0}$ 的对象又称连合 (connective) 对象.</p>
-<p>注意另一种记号 “上同调记号”, $\mathcal C^{\geq n}$, 对应此处的 $\mathcal C_{\leq -n}$.</p>
+<p>注意另一种记号称为 “<strong>上同调指标</strong>”, $\mathcal C^{\geq n}$ 对应此处的 $\mathcal C_{\leq -n}$.</p>
+<ul>
+<li>对任意 $X\in\mathcal C^{\leq 0}$, $Y\in\mathcal C^{\geq 1}$, $\operatorname{Hom}(X,Y)=0$.</li>
+<li>$\mathcal C^{\leq 0}\subset\mathcal C^{\leq 1}$, $\mathcal C^{\geq 1}\subset\mathcal C^{\geq 0}$.</li>
+<li>对任意 $X\in\mathcal C$ 存在<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span> $X'\to X\to X''$, $X'\in\mathcal C^{\leq 0}$, $X''\in\mathcal C^{\geq 1}$.</li>
+</ul>
 <p><span class="link local"><a href="./稳定∞-范畴.html" title=" [稳定∞-范畴]">稳定无穷范畴</a></span>上的 t-结构等同于其<span class="link local"><a href="./链复形范畴的同伦范畴.html" title="“链复形范畴的同伦范畴” [链复形范畴的同伦范畴]">链复形范畴的同伦范畴</a></span>上的 t-结构.</p>
-<p>t-结构的<strong>心</strong> (heart) 是 $\mathcal C_{\leq 0}\cap\mathcal C_{\geq 0}$.</p>
-<p>t-结构之间的正合函子是保持两个子范畴 $\mathcal C_{\geq 0},\mathcal C_{\leq 0}$ 的函子.</p>
+<p>$t$-结构的<strong>心</strong> (heart) 是 $\mathcal C_{\leq 0}\cap\mathcal C_{\geq 0}$.</p>
+<p>$t$-结构之间的 <strong>$t$-正合函子</strong>是保持两个子范畴 $\mathcal C_{\geq 0},\mathcal C_{\leq 0}$ 的函子.</p>
 <h2>性质</h2>
 <p>对于 $m&lt;n$, 容易证明
 $$
 \mathcal C_{\leq m} \cap \mathcal C_{\geq n} \simeq \{0\}.
 $$
-在<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span>的 t-结构中, 对于 $X\in\mathcal C_{\geq 0}$ 与 $Y\in\mathcal C_{\leq n}$, $\operatorname{Hom}(X,Y)$ 为 $n$-类型. 这是因为
+在<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span>的 $t$-结构中, 对于 $X\in\mathcal C_{\geq 0}$ 与 $Y\in\mathcal C_{\leq n}$, $\operatorname{Hom}(X,Y)$ 为 <span class="link local"><a href="./截断性(同伦类型论).html" title="截断性 (同伦类型论) [截断性(同伦类型论)]">$n$-类型</a></span>. 这是因为
 $$
 \Omega \operatorname{Hom}(X,Y)\simeq \operatorname{Hom}(X,\Omega Y).
 $$
-特别地, 对于 $X\in\mathcal C_{\geq 0}$ 与 $Y\in\mathcal C_{\leq 0}$, $\operatorname{Hom}(X,Y)$ 为集合 ($0$-类型).</p>
-<p>由此可知 t-结构的心为 $1$-范畴. 事实上, 它是 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>, 其中的短正合列正是 $\mathcal C$ 中的纤维列.</p>
-<p>注意 t-结构的心不能反过来决定 t-结构. 稳定无穷范畴一般也不等价于其上 t-结构的心的<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>. 不是所有的 t-结构都来自导出范畴. 例如<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴不同于 $\mathsf {Ab}$ 的导出范畴 (否则稳定同伦论就没有意义了).</p>
+特别地, 对于 $X\in\mathcal C_{\geq 0}$ 与 $Y\in\mathcal C_{\leq 0}$, $\operatorname{Hom}(X,Y)$ 为<span class="link local"><a href="./集合(同伦类型论).html" title="集合 (同伦类型论) [集合(同伦类型论)]">集合</a></span> ($0$-类型).</p>
+<p>由此可知 $t$-结构的心为 $(1,1)$-范畴. 事实上, 它是 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>, 其中的短正合列是 $\mathcal C$ 中的纤维列.</p>
+<p>注意 $t$-结构的心不能反过来决定 $t$-结构. 稳定无穷范畴一般也不等价于其上 $t$-结构的心的<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>. 不是所有的 t-结构都来自导出范畴. 例如<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴不同于 $\mathsf {Ab}$ 的导出范畴 (否则稳定同伦论就没有意义了).</p>
 <h3>截断</h3>
-<p>嵌入 $\mathcal C_{\leq n}\to \mathcal C$ 有左伴随 $\tau_{\leq n}$, 嵌入 $\mathcal C_{\geq n}\to\mathcal C$ 有右伴随 $\tau_{\geq n}$.</p>
+<p>同调指标: 嵌入 $\mathcal C_{\leq n}\to \mathcal C$ 有左伴随 $\tau_{\leq n}$, 嵌入 $\mathcal C_{\geq n}\to\mathcal C$ 有右伴随 $\tau_{\geq n}$.</p>
+<p>上同调指标: 嵌入 $\mathcal C^{\geq n}\to \mathcal C$ 有左伴随 $\tau^{\geq n}$, 嵌入 $\mathcal C^{\leq n}\to\mathcal C$ 有右伴随 $\tau^{\leq n}$.</p>
 <p>$X\in\mathcal C_{\geq 0}$ 当且仅当 $\operatorname{Hom}(X,Y)\simeq\operatorname{Hom}(\tau_{\leq -1}X,Y)\{0\}$ 对任意 $Y\in\mathcal C_{\leq -1}$ 成立.</p>
 <p>$X\in\mathcal C_{\leq 0}$ 当且仅当 $\operatorname{Hom}(Y,X)\simeq\operatorname{Hom}(Y,\tau_{\geq 1}X)\{0\}$ 对任意 $Y\in\mathcal C_{\geq 1}$ 成立.</p>
 <p>$\tau_{\leq m}\tau_{\leq n}\simeq\tau_{\leq\operatorname{min}(m,n)}$.</p>
@@ -11704,16 +11718,21 @@ $$
 </ul>
 <p>(后两条可通过第一条旋转三角形得到.)</p>
 <h3>分离性</h3>
-<p>称 t-结构右分离 (因为给我讲这个概念的人使用上同调记号) 是指 $\mathcal C_{\leq-\infty}=\bigcap_n\mathcal C_{\leq n}\simeq\{0\}$, 左分离是指 $\mathcal C_{\geq \infty}=\bigcap_n\mathcal C_{\geq n}\simeq\{0\}$.</p>
+<p>称 t-结构<strong>右分离</strong>是指</p>
+<p>上同调指标: $\mathcal C^{\geq\infty} =\bigcap_n\mathcal C^{\geq n} = \{0\}$,</p>
+<p>同调指标: $\mathcal C_{\leq-\infty}=\bigcap_n\mathcal C_{\leq n}=\{0\}$,</p>
+<p><strong>左分离</strong>是指</p>
+<p>上同调指标: $\mathcal C^{\leq -\infty} = \bigcap_n\mathcal C^{\leq n} = \{0\}$,</p>
+<p>同调指标: $\mathcal C_{\geq \infty}=\bigcap_n\mathcal C_{\geq n}\simeq\{0\}$.</p>
 <h3>完备性与完备化</h3>
-<p>t-结构的完备化为
+<p>$t$-结构的完备化为
 $$
 \widehat {\mathcal C} =\operatorname{lim} (\cdots \overset{\tau_{\leq 2}}{\to}\mathcal C_{\leq 2}\overset{\tau_{\leq 1}}{\to}\mathcal C_{\leq 1}\overset{\tau_{\leq 0}}{\to}\mathcal C_{\leq 0}\overset{\tau_{\leq -1}}{\to}\cdots).
 $$
 注意此图的右边是不重要的, 可从任意一处截断只保留其左边. 这个极限的一个对象是一个 <span class="link local"><a href="./Postnikov塔.html" title="Postnikov 塔 [Postnikov塔]">Postnikov 塔</a></span>. 由定义有自然的函子 $\mathcal C\to\widehat {\mathcal C}$, 当这个函子为同构时, 称 $\mathcal C$ 左完备.</p>
-<p>左完备 t-结构是左分离的, 反之不一定.</p>
-<h3>粘 t-结构</h3>
-<p><span class="link local"><a href="./粘t-结构.html" title="粘 t-结构 [粘t-结构]">粘 t-结构</a></span></p>
+<p>左完备 $t$-结构是左分离的, 反之不一定.</p>
+<h3>粘 $t$-结构</h3>
+<p><span class="link local"><a href="./粘t-结构.html" title="粘 t-结构 [粘t-结构]">粘 $t$-结构</a></span></p>
 <h2>例</h2>
 <h3>谱范畴</h3>
 <p>无穷范畴的<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>上有典范的 t-结构:</p>
@@ -19402,6 +19421,22 @@ $$
 $$</p>
 <h2>性质</h2>
 <p>在 $\mathcal A$ 为 <span class="link local"><a href="./GrothendieckAbel范畴.html" title=" [GrothendieckAbel范畴]">Grothendieck Abel 范畴</a></span>的前提下, $\mathsf {D}(\mathcal A)$ 是<span class="link local"><a href="./稳定∞-范畴.html" title=" [稳定∞-范畴]">稳定无穷范畴</a></span>.</p>
+<h3>$t$-结构</h3>
+<p>链复形 $X= (X_\bullet)$ 代表的对象的截断分别为</p>
+<p>同调指标:</p>
+<p>$$
+\tau_{\leq n}X = (\cdots\to 0\to \operatorname{coker}d_{n+1}\to X_{n-1}\to\cdots),
+$$
+$$
+\tau_{\geq n}X = (\cdots\to X_{n+1}\to \operatorname{ker}d_{n}\to 0\to\cdots).
+$$</p>
+<p>上同调指标:</p>
+<p>$$
+\tau^{\geq n}X = (\cdots\to 0\to \operatorname{coker}d^{n-1}\to X^{n+1}\to\cdots),
+$$
+$$
+\tau^{\leq n}X = (\cdots\to X^{n-1}\to \operatorname{ker}d^{n}\to 0\to\cdots).
+$$</p>
 <h2>相关概念</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="导子"><header><h1><span class="taxon"></span>导子 <a class="slug" href="./导子.html">[导子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
