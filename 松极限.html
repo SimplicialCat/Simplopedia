@@ -834,8 +834,24 @@ $$
 \operatorname{Hom}_{\mathcal C}(c,\operatorname{laxlim}X)\simeq\operatorname{Hom}_{\mathsf{Fun}^{\mathrm{lax}}(I,\mathcal C)}(\Delta c,X).
 $$</p>
 <h2>例</h2>
+<h3>一个函子的松极限</h3>
+<p>一个函子 $F\colon \mathcal C \to \mathcal D$ 作为 $\mathsf{Cat}$ 这个 $(\infty,2)$-范畴中的图表, 其松极限为范畴 $F \downarrow \mathcal D$: 对象为 $F(X)\to Y$, 态射为交换图
+$$
+\begin{array}{ccc}
+F(X) &amp; \rightarrow &amp; Y \\
+\downarrow &amp;  &amp; \downarrow \\
+F(X') &amp; \rightarrow &amp; Y'.
+\end{array}
+$$
+(其中态射 $F(X)\to F(X')$ 须来自 $X\to X'$.)</p>
+<p>这是因为, 对于范畴 $\mathcal A$, 常值图 $\Delta\mathcal A$ 到 $F\colon \mathcal C \to \mathcal D$ 的松自然变换就是两个函子 $G\colon \mathcal A \to \mathcal C$, $H\colon \mathcal A\to\mathcal D$ 以及一个自然变换 $FG \to H$. 这等价于一个函子 $\mathcal A \to (F\downarrow \mathcal D)$.</p>
+<p>更特别地,</p>
+<ul>
+<li>$\mathrm{id}\colon \mathcal C\to\mathcal C$ 作为 $\mathsf{Cat}$ 中的图表, 其松极限为箭头范畴 $\mathsf{Ar}(\mathcal C)$.</li>
+<li>$c\colon 1\to\mathcal C$ 的松极限为切片范畴 $\mathcal C_{c/}$.</li>
+</ul>
 <h3>Eilenberg–Moore 对象</h3>
-<p>回忆, $2$-范畴 $\mathcal C$ 的对象 $c$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $t$ 等同于松函子 $*\to \mathcal C$, 将对象 $*$ 对应到 $c$, 自同态 $\mathrm{id}_c$ 对应到单子 $t\colon c\to c$. 这个图 $*\to \mathcal C$ 的松极限即为单子 $t$ 的 <span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">Eilenberg–Moore 对象</a></span></p>
+<p>回忆, $2$-范畴 $\mathcal C$ 的对象 $c$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $t$ 等同于松函子 $*\to \mathcal C$, 将对象 $*$ 对应到 $c$, 自同态 $\mathrm{id}_c$ 对应到单子 $t\colon c\to c$. 这个图 $*\to \mathcal C$ 的松极限即为单子 $t$ 的 <span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">Eilenberg–Moore 对象</a></span>.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="单子上的代数"><header><h1><span class="taxon"></span>单子上的代数 <a class="slug" href="./单子上的代数.html">[单子上的代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>范畴 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 上的<strong>代数</strong>是一个对象 $1\to\mathcal C$, 带有单子 $T$ 上的<strong>左模</strong>结构.</p>
@@ -902,4 +918,27 @@ $$</p>
 <h2>观念</h2>
 <p>松拉回, 又叫<strong>有向纤维积</strong> (oriented fiber product), 是一种<span class="link local"><a href="./松极限.html" title="松极限 [松极限]">松极限</a></span>, 是<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span> (纤维积) 在<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>中的推广.</p>
 <h2>定义</h2>
+</details></section><section class="block" data-taxon=""><details ><summary id="粘t-结构"><header><h1><span class="taxon"></span>粘 t-结构 <a class="slug" href="./粘t-结构.html">[粘t-结构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./term-recollement.html" title="粘合 [term-recollement]">粘合</a></span></p>
+<h2>例</h2>
+<p>设 $i\colon Z\to X$ 为闭子簇, $j\colon U\to X$ 为相补的开子簇, 那么
+$$
+i^*\dashv (i_* = i_!) \dashv i^! \colon D_c^b(Z)
+\begin{aligned}
+&amp;\leftarrow \\ &amp;\rightarrow \\ &amp;\leftarrow
+\end{aligned}
+D_c^b (X)
+\begin{aligned}
+&amp;\leftarrow \\ &amp;\rightarrow \\ &amp;\leftarrow
+\end{aligned}
+D_c^b(U)\colon j_!\dashv (j^* = j^!)\dashv j_*
+$$</p>
+<p>对于 $M\in D_c^b(X)$ 有<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
+$$
+i_!i^! M \to M \to j_*j^* M
+$$</p>
+<p>这一构造也可写成<span class="link local"><a href="./松极限.html" title="松极限 [松极限]">松极限</a></span>
+$$
+D_c^b(X) = \operatorname{laxlim} [D_c^b(U) \overset{i^*j_* [-1]}{\longrightarrow} D_c^b(Z) ].
+$$</p>
 </details></section></details></section></footer></article></div></body></html>

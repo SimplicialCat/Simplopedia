@@ -1014,7 +1014,13 @@ $$
 <li>$(\infty,n)$-范畴的底层结构由各维数的胞腔探测;</li>
 <li>$\infty$-算畴的底层结构由花形 (<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>的基本构件) 与一个只有一条边的<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>探测.</li>
 </ul>
-<p>总之, 底层结构可视为基本对象的范畴上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>. 但是 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span> 选择将其记为 $\mathcal O^{\mathrm{el}} \to \mathsf{Ani}$, 如果尊重这一选择, 那么我们心目中基本对象的范畴就是反范畴 $(\mathcal O^{\mathrm{el}})^{\mathrm{op}}$. 但是下面为了服务我们的直观, 我们所说的态射都是反范畴 $(\mathcal O^{\mathrm{el}})^{\mathrm{op}}$ (以及 $\mathcal O^{\mathrm{op}}$) 中的态射.</p>
+<p>总之, 底层结构可视为基本对象的范畴上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>. 但是 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span> 选择将其记为 $\mathcal O^{\mathrm{el}} \to \mathsf{Ani}$. 为了尽量不与他们的选择产生记号冲突, 我们将用<strong>下标</strong> $\mathcal O_{\mathrm{el}}$ 表示我们心目中基本对象的范畴,</p>
+<ul>
+<li>$\mathcal O_{\mathrm{el}} := (\mathcal O^{\mathrm{el}})^{\mathrm{op}}$,</li>
+<li>$\mathcal O_{\mathrm{int}} := (\mathcal O^{\mathrm{int}})^{\mathrm{op}}$,</li>
+<li>我们的 $\mathcal O$ 是 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span> 的 $\mathcal O^{\mathrm{op}}$.</li>
+</ul>
+<p>下面我们所说的惰性态射都是 $\mathcal O_{\mathrm{int}}$ 中的态射.</p>
 <h3>2. 代数结构</h3>
 <p>为了探测底层结构之上的代数结构, 我们需要一些比基本对象更多的对象, 一些能够承载 “代数运算” 的对象, 例如</p>
 <ul>
@@ -1027,7 +1033,7 @@ $$
   <sup class="footnote-definition-label"><a href="#代数模式_1-back">1</a></sup>
 <p>注意这里若要按我们的理解, “探测对象” 的范畴实际上是 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">Segal 范畴</a></span> $\Gamma := \mathsf{Fin}_*^{\mathrm{op}}$. 可以理解为: $\Gamma = \mathsf{Fin}_*^{\mathrm{op}}$ 的对象是有限集, 态射 $S\to T$ 是给 $S$ 的每个元素指定 $T$ 的一个互不相交的子集. 对此我有一种开玩笑的解释: $\langle 1\rangle$ 是一个维数无限的实心球, 以至于把它切成两块的方法本质上是唯一的; $\Gamma = \mathsf{Fin}_*^{\mathrm{op}}$ 中的映射 $\langle 1\rangle \to \langle 2\rangle,1\mapsto\{1,2\}$ 可理解为把一个球切开变成两个球, 但由于维数无限, 那两个球的位置关系不起任何作用. 如果读者对这个解释感到莫名其妙, 可以忽略.</p>
 </div>
-<p>总之, 一个代数结构可视为一个函子 $\mathcal O\to\mathsf{Ani}$, 其中 $\mathcal O$ 包含了基本对象 $\mathcal O^{\mathrm{el}}$ 作为子范畴 (但不要求是全子范畴). 这个函子还要满足某种 <strong>Segal 条件</strong>, 直观上说的是: 当我们用更多的一些对象<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>时, 探测的结果必须与基本对象的探测相容, 即
+<p>总之, 一个代数结构可视为一个函子 $\mathcal O^{\mathrm{op}}\to\mathsf{Ani}$, 其中 $\mathcal O$ 包含了基本对象 $\mathcal O_{\mathrm{el}}$ 作为子范畴 (但不要求是全子范畴). 这个函子还要满足某种 <strong>Segal 条件</strong>, 直观上说的是: 当我们用更多的一些对象<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>时, 探测的结果必须与基本对象的探测相容, 即
 $$
   F(X) \simeq \operatorname{lim}_{E\text{ 基本, }E\to X\text{ 惰性}} F(E).
 $$
@@ -1037,7 +1043,6 @@ $$
 <li>在 $\infty$-范畴的例子中, 一些有向线段和点组成了一个链条;</li>
 <li>在 $\infty$-算畴的例子中, 一些花形和边组成了一棵树;</li>
 </ul>
-<p>注意上式中的 $E\to X$ 在 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span> 文中是 $X\to E$.</p>
 <h3>3. 惰性映射与活性映射</h3>
 <p>上个公式中有一个没有解释的概念叫<strong>惰性映射</strong> (inert morphism). 直观上, 惰性映射就是是测试对象之间纯粹由 “几何形状” 造成的映射, 是不表达任何 “代数运算” 的映射, 比如</p>
 <ul>
@@ -1045,29 +1050,34 @@ $$
 <li>$\mathbb A_\infty$-代数和 $\infty$-范畴的测试对象 $\Delta$ 中, 惰性映射就是区间的含入 $\{k\leq k+1\leq\cdots\leq l\}\subset [m]$;</li>
 <li>$\infty$-算畴的测试对象 $\Omega$ (<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>) 中, 惰性映射就是<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>的含入 (可由<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>之间的 <span class="link local"><a href="./Descartes自然变换.html" title="Descartes 自然变换 [Descartes自然变换]">Descartes 自然变换</a></span>描述, 详见<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>页面).</li>
 </ul>
-<p>特别地, 基本对象之间的映射都是惰性映射. 用 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">Chu–Haugseng</a></span> 文中的记号, $\mathcal O^{\mathrm{el}}\to\mathcal O^{\mathrm{int}}$ 是全子范畴.</p>
-<p>与惰性映射相对的是<strong>活性映射</strong> (active morphism), 就是那些专门用来表达代数运算的映射, 比如</p>
+<p>特别地, 基本对象之间的映射都是惰性映射, 也即
+$$
+\mathcal O_{\mathrm{el}}\to\mathcal O_{\mathrm{int}}
+$$
+是全子范畴.</p>
+<p>与惰性映射相对的是<strong>活性映射</strong> (active morphism) $\mathcal O_{\mathrm{act}}$, 就是那些专门用来表达代数运算的映射, 比如</p>
 <ul>
 <li>$\mathbb E_\infty$-代数的测试对象 $\Gamma = \mathsf{Fin}_*^{\mathrm{op}}$ 中, 活性映射 $S\to T$ 就是给 $S$ 的所有元素指定的 $T$ 的子集并在一起等于 $T$ 的映射, 其中 $\langle 1\rangle \to \langle 2\rangle$, $1\mapsto \{1,2\}$ 表达了 $\mathbb E_\infty$-代数中的乘法;</li>
 <li>$\mathbb A_\infty$-代数和 $\infty$-范畴的测试对象 $\Delta$ 中, 活性映射 $[n] \to [m]$ 就是保持端点的映射, 其中 $[1] \to [2], 0\mapsto 0, 1\mapsto 2$ 表达了 $\mathbb A_\infty$-代数中的乘法和 $\infty$-范畴中态射的复合;</li>
 </ul>
+<p>我们要求惰性映射和活性映射构成 $\mathcal O$ 的<span class="link local"><a href="./宽子范畴.html" title="宽子范畴 [宽子范畴]">宽子范畴</a></span>, 即包含所有对象的<span class="link local"><a href="./子范畴.html" title="子范畴 [子范畴]">子范畴</a></span>.</p>
 <h3>4. 分解系统</h3>
-<p>惰性映射和活性映射构成<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">分解系统</a></span>: 测试对象之间的任何态射唯一地分解为 “先一个活性映射, 再一个惰性映射”. 注意在 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span> 文中是先惰性, 再活性 (因为他们的取反).</p>
+<p>惰性映射和活性映射构成<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">分解系统</a></span> $(\mathcal O_{\mathrm{act}},\mathcal O_{\mathrm{int}})$: 测试对象之间的任何态射唯一地分解为 “先一个活性映射, 再一个惰性映射”. 注意在 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span> 文中是先惰性, 再活性 (因为他们的取反).</p>
 <ul>
 <li>$\mathsf{Fin}_*^{\mathrm{op}}$ 中, 态射 $f\colon S\to T$ 可分解为 $S \to \bigsqcup_s f(s)\to T$.</li>
 <li>$\Delta$ 中, 态射 $f\colon [n] \to [m]$ 可分解为 $[n]\to \{f(0)\leq \cdots \leq f(n)\}\hookrightarrow [m]$.</li>
 </ul>
 <h2>定义</h2>
 <h3>模型 (Segal 对象)</h3>
-<p>给定有适当<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>的范畴 $\mathcal C$, 代数模式 $\mathcal O$ 的<strong>模型</strong> (或称 <strong>Segal 对象</strong>) 是函子 $F\colon \mathcal O \to \mathcal C$, 满足 $F|_{\mathcal O^{\mathrm{int}}}$ 是 $F|_{\mathcal O^{\mathrm{el}}}$ 的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">右 Kan 扩张</a></span>.</p>
-<p>注意, 对于一个函子 $F\colon \mathcal O \to \mathcal C$, Segal 条件是<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">性质而非结构</a></span>. 故 Segal 对象的范畴
+<p>给定有适当<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>的范畴 $\mathcal C$, 代数模式 $\mathcal O$ 的<strong>模型</strong> (或称 <strong>Segal 对象</strong>) 是函子 $F\colon \mathcal O^{\mathrm{op}} \to \mathcal C$, 满足 $F|_{\mathcal O_{\mathrm{int}}}$ 是 $F|_{\mathcal O_{\mathrm{el}}}$ 的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">右 Kan 扩张</a></span>.</p>
+<p>注意, 对于一个函子 $F\colon \mathcal O^{\mathrm{op}} \to \mathcal C$, Segal 条件是<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">性质而非结构</a></span>. 故 Segal 对象的范畴
 $$
 \mathsf{Seg}_{\mathcal O}(\mathcal C)
 $$
-应当定义为函子范畴 $\mathsf{Fun}(\mathcal O,\mathcal C)$ 的<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全子范畴</a></span>.</p>
+应当定义为函子范畴 $\mathsf{Fun}(\mathcal O^{\mathrm{op}},\mathcal C)$ 的<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全子范畴</a></span>.</p>
 <h3>代数模式的态射</h3>
 <p><strong>定义</strong>. 代数模式之间的态射 $f\colon \mathcal O \to \mathcal P$ 是保持活性和惰性映射, 并将基本对象映射到基本对象的函子.</p>
-<p><strong>定义</strong>. 代数模式之间的 <strong>Segal 态射</strong> $f\colon \mathcal O \to \mathcal P$ 是满足如下条件的态射: 对任意 Segal $\mathcal P$-生象 $F\colon \mathcal P \to \mathsf{Ani}$ 以及 $X\in\mathcal O$, 典范映射
+<p><strong>定义</strong>. 代数模式之间的 <strong>Segal 态射</strong> $f\colon \mathcal O \to \mathcal P$ 是满足如下条件的态射: 对任意 Segal $\mathcal P$-生象 $F\colon \mathcal P^{\mathrm{op}} \to \mathsf{Ani}$ 以及 $X\in\mathcal O$, 典范映射
 $$
     \begin{aligned}
       F(f(X))&amp;\simeq \operatorname{lim}_{E\text{ 基本, }E\to f(X)\text{ 惰性}}F(E) \\
@@ -1079,8 +1089,8 @@ $$
 <p><strong>命题</strong>. 对于代数模式之间的态射 $f\colon \mathcal O \to \mathcal P$, 如下条件等价:</p>
 <ul>
 <li>$f$ 是 Segal 态射;</li>
-<li>$f^*\colon \mathsf{Fun}(\mathcal P,\mathsf{Ani}) \to \mathsf{Fun}(\mathcal O,\mathsf{Ani})$ 限制为函子 $f^*\colon \mathsf{Seg}_{\mathcal P}(\mathsf{Ani}) \to \mathsf{Seg}_{\mathcal O}(\mathsf{Ani})$;</li>
-<li>对任意合适的范畴 $\mathcal C$, $f^*\colon \mathsf{Fun}(\mathcal P,\mathcal C) \to \mathsf{Fun}(\mathcal O,\mathcal C)$ 限制为函子 $f^*\colon \mathsf{Seg}_{\mathcal P}(\mathcal C) \to \mathsf{Seg}_{\mathcal O}(\mathcal C)$.</li>
+<li>$f^*\colon \widehat {\mathcal P} \to \widehat {\mathcal O}$ 限制为函子 $f^*\colon \mathsf{Seg}_{\mathcal P}(\mathsf{Ani}) \to \mathsf{Seg}_{\mathcal O}(\mathsf{Ani})$;</li>
+<li>对任意合适的范畴 $\mathcal C$, $f^*\colon \mathsf{Fun}(\mathcal P^{\mathrm{op}},\mathcal C) \to \mathsf{Fun}(\mathcal O^{\mathrm{op}},\mathcal C)$ 限制为函子 $f^*\colon \mathsf{Seg}_{\mathcal P}(\mathcal C) \to \mathsf{Seg}_{\mathcal O}(\mathcal C)$.</li>
 </ul>
 <p><strong>命题</strong> (自由函子).
 设 $f\colon \mathcal O\to\mathcal P$ 是代数模式之间的 Segal 态射, $\mathcal C$ 为可表现范畴, 则 $f^*\colon \mathsf{Seg}_{\mathcal P}(\mathcal C) \to \mathsf{Seg}_{\mathcal O}(\mathcal C)$ 有左伴随 $L_{\mathrm{Seg}}\circ f_!$, 其中 $L_{\mathrm{Seg}}$ 是 $\mathsf{Seg}_{\mathcal O}(\mathcal C)\hookrightarrow\mathsf{Fun}(\mathcal O,\mathcal C)$ 的左伴随 (局部化), $f_!$ 是沿 $f$ <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">左 Kan 扩张</a></span>.</p>
@@ -1089,48 +1099,47 @@ $$
 <h2>性质</h2>
 <h3>与算畴的关系</h3>
 <p>注意算畴在这个故事中有两个层级的角色: 一个算畴既可以给出一种代数模式, 同时又是 “算畴” 这种代数模式的一个模型 (Segal 对象). 本节讲的是<strong>前一种</strong>角色, 即一个 (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 中的) <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>如何给出一个代数模式.</p>
-<p>按 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 的定义, 一个算畴是一个纤维范畴
+<p>我们回顾 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 的定义, 但转换为我们的直观 (注意很多地方方向是反的): 一个算畴是一个纤维范畴
 $$
-p\colon \mathcal O^{\otimes} \to \mathsf{Fin}_*,
+p\colon \mathcal O \to \Gamma,
 $$
-满足以下条件:</p>
+记 $p^{-1}(\langle n\rangle)$ 为 $\mathcal O_{\langle n \rangle}$, 满足以下条件:</p>
 <ul>
-<li>(惰性提升) $\mathsf{Fin}_*$ 中每个惰性映射都有沿 $p$ 的水平 (coCartesian) 提升;</li>
-<li>(Segal 条件) 由惰性映射 $\rho^i\colon \langle n\rangle\to\langle 1\rangle$ (在前面所述的直观中, 就是将 $\{1\}$ 唯一的元素对应到单元子集 $\{i\}\subset \{1,\cdots,n\}$) 给出的态射 $\mathcal O_{\langle k \rangle}^{\otimes} \to \prod_{i=1}^k\mathcal O_{\langle 1\rangle}^{\otimes}$ 是等价;</li>
-<li>对于 $X\in\mathcal O_{\langle k\rangle}^{\otimes}$, $Y\in\mathcal O_{\langle \ell\rangle}^{\otimes}$ 以及 $f\colon \langle k\rangle \to \langle \ell \rangle$,
+<li>(惰性提升) $\Gamma$ 中每个惰性映射 $\langle n\rangle \to \langle m \rangle$ 都有沿 $p$ 的水平 (Cartesian) 提升, 且给出反向的函子 $\mathcal O_{\langle m \rangle} \to \mathcal O_{\langle n \rangle}$;</li>
+<li>(Segal 条件) 由惰性映射 $\rho_i\colon \langle 1\rangle\to\langle n\rangle$ (将 $\{1\}$ 唯一的元素对应到单元子集 $\{i\}\subset \{1,\cdots,n\}$) 给出的态射 $\mathcal O_{\langle n \rangle} \to \prod_{i=1}^n \mathcal O_{\langle 1 \rangle}$ 是等价;</li>
+<li>对于 $X\in\mathcal O_{\langle k\rangle}$, $Y\in\mathcal O_{\langle \ell\rangle}$ 以及 $f\colon \langle k\rangle \to \langle \ell \rangle$,
 $$
-  \operatorname{Hom}^f(X,Y) \simeq \prod_{i=1}^{\ell}\operatorname{Hom}^{\rho^i f}(X,Y_i),
+  \operatorname{Hom}^f(X,Y) \simeq \prod_{i=1}^{k}\operatorname{Hom}^{f\rho_i}(X_i,Y),
 $$
-其中 $Y_i$ 是 $Y$ 根据第二条 (Segal 条件) 分解出的第 $i$ 分量.</li>
+其中 $X_i$ 是 $X$ 根据第二条 (Segal 条件) 分解出的第 $i$ 分量.</li>
 </ul>
-<p>我们构造一个代数模式 $\mathcal O$:</p>
+<p>我们构造 $\mathcal O$ 上的一个代数模式结构:</p>
 <ul>
-<li>范畴 $\mathcal O$ 就取 $\mathcal O^{\otimes}$ 本身;</li>
-<li>初等对象的范畴取 $\mathcal O_{\langle 1\rangle}^{\otimes}$;</li>
+<li>基本对象的范畴取 $\mathcal O_{\langle 1\rangle}$;</li>
 <li>惰性映射就是定义中的惰性提升;</li>
-<li>活性映射就是居于 $\mathsf{Fin}_*$ 中的活性映射之上的映射.</li>
+<li>活性映射就是居于 $\Gamma$ 中的活性映射之上的映射.</li>
 </ul>
 <h3>自由–遗忘伴随, 以及拉回的左伴随</h3>
 <p>设 $\mathcal O$ 为代数模式, $\mathcal C$ 为具有合适极限的范畴, 将 Segal 对象限制到基本对象可得遗忘函子
 $$
-U_{\mathcal O} \colon \mathsf{Seg}_{\mathcal O}(\mathcal C) \to \mathsf{Fun}(\mathcal O^{\mathrm{el}},\mathcal C).
+U_{\mathcal O} \colon \mathsf{Seg}_{\mathcal O}(\mathcal C) \to \mathsf{Fun}(\mathcal O_{\mathrm{el}}^{\mathrm{op}},\mathcal C).
 $$
 当该函子有左伴随 $F_{\mathcal O}$ 时, 称之为<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span> Segal $\mathcal O$-对象.</p>
-<p>注意到 $\mathcal O^{\mathrm{int}}$ 本身也可视为一个代数模式, 其中的活性映射仅有同构 (“没有任何代数运算”), 基本对象仍为 $\mathcal O^{\mathrm{el}}$; 那么 $\mathsf{Seg}_{\mathcal O^{\mathrm{int}}}(\mathcal C)$ 等价于 $\mathsf{Fun}(\mathcal O^{\mathrm{el}},\mathcal C)$. 这样, 上述遗忘函子可视为特殊的拉回函子
+<p>注意到 $\mathcal O_{\mathrm{int}}$ 本身也可视为一个代数模式, 其中的活性映射仅有同构 (“没有任何代数运算”), 基本对象仍为 $\mathcal O_{\mathrm{el}}$; 那么 $\mathsf{Seg}_{\mathcal O_{\mathrm{int}}}(\mathcal C)$ 等价于 $\mathsf{Fun}(\mathcal O_{\mathrm{el}}^{\mathrm{op}},\mathcal C)$. 这样, 上述遗忘函子可视为特殊的拉回函子
 $$
-j_{\mathcal O}^*\colon \mathsf{Seg}_{\mathcal O}(\mathcal C) \to \mathsf{Seg}_{\mathcal O^{\mathrm{int}}}(\mathcal C).
+j_{\mathcal O}^*\colon \mathsf{Seg}_{\mathcal O}(\mathcal C) \to \mathsf{Seg}_{\mathcal O_{\mathrm{int}}}(\mathcal C).
 $$
 于是, 自由函子是 “拉回的左伴随” 的特例.</p>
 <p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Proposition 8.1). 设 $f\colon \mathcal O \to \mathcal P$ 为本质满 Segal 态射, $\mathcal C$ 为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>, 则</p>
 <ul>
-<li>$F\colon \mathcal P \to \mathcal C$ 是 Segal 对象当且仅当 $f^*F\colon \mathcal O\to\mathcal C$ 是 Segal 对象;</li>
+<li>$F\colon \mathcal P^{\mathrm{op}} \to \mathcal C$ 是 Segal 对象当且仅当 $f^*F\colon \mathcal O^{\mathrm{op}}\to\mathcal C$ 是 Segal 对象;</li>
 <li>存在<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性伴随</a></span> $(L_{\mathrm{Seg}}\circ f_!)\dashv f^*\colon \mathsf{Seg}_{\mathcal O}(\mathcal C) \rightleftarrows \mathsf{Seg}_{\mathcal P}(\mathcal C)$.</li>
 </ul>
 <h3>与单子的关系</h3>
-<p>每个代数模式 $\mathcal O$ 给出底层结构 $\mathsf{Fun}(\mathcal O^{\mathrm{el}},\mathsf{Ani})$ 上的一个<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数</a></span>的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</p>
+<p>每个代数模式 $\mathcal O$ 给出底层结构 $\widehat {\mathcal O_{\mathrm{el}}}$ 上的一个<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数</a></span>的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</p>
 <p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Corollary 8.2). 设 $\mathcal O$ 为代数模式, $\mathcal C$ 为可表现范畴, 则<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由–遗忘伴随</a></span>
 $$
- F_{\mathcal O}\colon \mathsf{Fun}(\mathcal O^{\mathrm{el}},\mathcal C) \rightleftarrows \mathsf{Seg}_{\mathcal O}(\mathcal C) \colon U_{\mathcal O}
+ F_{\mathcal O}\colon \mathsf{Fun}(\mathcal O_{\mathrm{el}}^{\mathrm{op}},\mathcal C) \rightleftarrows \mathsf{Seg}_{\mathcal O}(\mathcal C) \colon U_{\mathcal O}
 $$
 是<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的.</p>
 <p><strong>定义</strong>. 称满足如下条件的代数模式 $\mathcal O$ <strong>可延拓</strong> (extendable):</p>

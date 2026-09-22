@@ -1280,7 +1280,7 @@ $$
 $$</p>
 <hr />
 <h2>第 2 讲</h2>
-<p>设 $X$ 具有分层 $X = \bigsqcup S_\alpha$, 且 $\mathcal F\in D^b_c(X)$ 逐层局部常值. 我们将定义 $D^b_c(X)$ 上的可构造 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">$t$-结构</a></span>, 使得</p>
+<p>设 $X$ 具有分层 $X = \bigsqcup S_\alpha$, 且 $\mathcal F\in D^b_c(X)$ 逐层局部常值. 我们将定义 $D^b_c(X)$ 上的可构造 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">$t$-结构</a></span> (<span class="link local"><a href="./偏屈t-结构.html" title="偏屈 t-结构 [偏屈t-结构]">偏屈 $t$-结构</a></span>), 使得</p>
 <ul>
 <li>$\mathcal F\in D(X)^{\leq 0}$ 当且仅当 $r &gt; -\operatorname{dim}S_\alpha$ 时 $H^r(\mathcal F|^{*}_{S_\alpha}) =0$;</li>
 <li>$\mathcal F\in D(X)^{\geq 0}$ 当且仅当 $r &lt; -\operatorname{dim}S_\alpha$ 时 $H^r(\mathcal F|^{!}_{S_\alpha}) =0$.</li>
@@ -1324,7 +1324,15 @@ $$
 <p>$\tau_{\leq m}\tau_{\leq n}\simeq\tau_{\leq\operatorname{min}(m,n)}$.</p>
 <p>$\tau_{\geq m}\tau_{\geq n}\simeq\tau_{\leq\operatorname{max}(m,n)}$.</p>
 <p>由 $\mathcal C$ 到 $\mathcal C_{\leq m}\cap\mathcal C_{\geq n}$ 的两种截断方式是等价的.</p>
-<p>对任意 $n$, $\mathcal C_{\leq n}\cap\mathcal C_{\geq n}\simeq \mathcal C^{\heartsuit}$. 一个对象截断到这个范畴中的像又称为它的第 $n$ 阶同调, 对于所有的 $n$ 这些同调形成长正合列.</p>
+<p>对任意 $n$, $\mathcal C_{\leq n}\cap\mathcal C_{\geq n}\simeq \mathcal C^{\heartsuit}$. 一个对象截断到这个范畴中的像又称为它的第 $n$ 阶<strong>同调</strong>
+$$
+H_n = [-n]\tau_{\geq n}\tau_{\leq n} \colon \mathcal C \to \mathcal C^{\heartsuit}.
+$$
+对于所有的 $n$ 这些同调形成长正合列.</p>
+<p>在上同调指标中, 对应物称为<strong>上同调</strong>:
+$$
+H^n = [n]\tau_{\leq n}\tau_{\geq n} \colon \mathcal C \to \mathcal C^{\heartsuit}.
+$$</p>
 <p>注意所有同调为 $0$ 不能推出这个对象为 $0$, 这个现象在许多场合是有趣的, 如无穷维表示论, 无限型代数几何.</p>
 <h3>(余) 极限封闭性</h3>
 <p>$\mathcal C_{\geq 0}$ 关于余极限封闭, $\mathcal C_{\leq 0}$ 关于极限封闭.</p>
@@ -1359,7 +1367,7 @@ $$
 <li>$\operatorname{Sp}(\mathcal C)_{\geq 0}$ 是 $\Sigma^{\infty}$ 的像在扩张和余极限之下生成的子范畴.</li>
 <li>$\operatorname{Sp}(\mathcal C)_{\leq -1}$ 是 $\Omega^{\infty}$ 为 $0$ 的子范畴.</li>
 </ul>
-<p><span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>范畴的心与 $\mathsf {Ab}$ 的同构由 <span class="link local"><a href="./Eilenberg–MacLane谱.html" title="Eilenberg–MacLane 谱 [Eilenberg–MacLane谱]">Eilenberg–MacLane 谱</a></span>给出. 此时同调是谱的同伦群.</p>
+<p><span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>范畴的心与 $\mathsf {Ab}$ 的同构由 <span class="link local"><a href="./Eilenberg–MacLane谱.html" title="Eilenberg–MacLane 谱 [Eilenberg–MacLane谱]">Eilenberg–MacLane 谱</a></span>给出. 此时同调是谱的同伦群. 这是一个稳定范畴不等于其心的<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>的重要例子.</p>
 <p><span class="link local"><a href="./偏屈t-结构.html" title="偏屈 t-结构 [偏屈t-结构]">偏屈 t-结构</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="tutorial-stable-homotopy"><header><h1><span class="taxon"></span>稳定同伦论 <a class="slug" href="./tutorial-stable-homotopy.html">[tutorial-stable-homotopy]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文的目的是, 以尽可能少的前置知识, 解释<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span> (<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>) 这一概念的意义和必要性, 从而使读者能够接受其抽象定义. 为此我试图解释<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>的动机, 也即为什么要将<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span> $\Sigma$ 变为可逆函子.</p>
@@ -1555,7 +1563,7 @@ $$</p>
 <h2>性质</h2>
 <p>在 $\mathcal A$ 为 <span class="link local"><a href="./GrothendieckAbel范畴.html" title=" [GrothendieckAbel范畴]">Grothendieck Abel 范畴</a></span>的前提下, $\mathsf {D}(\mathcal A)$ 是<span class="link local"><a href="./稳定∞-范畴.html" title=" [稳定∞-范畴]">稳定无穷范畴</a></span>.</p>
 <h3>$t$-结构</h3>
-<p>链复形 $X= (X_\bullet)$ 代表的对象的截断分别为</p>
+<p>导出范畴带有自然的 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">$t$-结构</a></span>. 链复形 $X= (X_\bullet)$ 代表的对象的截断分别为</p>
 <p>同调指标:</p>
 <p>$$
 \tau_{\leq n}X = (\cdots\to 0\to \operatorname{coker}d_{n+1}\to X_{n-1}\to\cdots),

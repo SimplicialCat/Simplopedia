@@ -827,6 +827,27 @@
 
 <article><section class="block" data-taxon=""><details open><summary id="粘t-结构"><header><h1><span class="taxon"></span>粘 t-结构 <a class="slug" href="./粘t-结构.html">[粘t-结构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./term-recollement.html" title="粘合 [term-recollement]">粘合</a></span></p>
+<h2>例</h2>
+<p>设 $i\colon Z\to X$ 为闭子簇, $j\colon U\to X$ 为相补的开子簇, 那么
+$$
+i^*\dashv (i_* = i_!) \dashv i^! \colon D_c^b(Z)
+\begin{aligned}
+&amp;\leftarrow \\ &amp;\rightarrow \\ &amp;\leftarrow
+\end{aligned}
+D_c^b (X)
+\begin{aligned}
+&amp;\leftarrow \\ &amp;\rightarrow \\ &amp;\leftarrow
+\end{aligned}
+D_c^b(U)\colon j_!\dashv (j^* = j^!)\dashv j_*
+$$</p>
+<p>对于 $M\in D_c^b(X)$ 有<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
+$$
+i_!i^! M \to M \to j_*j^* M
+$$</p>
+<p>这一构造也可写成<span class="link local"><a href="./松极限.html" title="松极限 [松极限]">松极限</a></span>
+$$
+D_c^b(X) = \operatorname{laxlim} [D_c^b(U) \overset{i^*j_* [-1]}{\longrightarrow} D_c^b(Z) ].
+$$</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="t-结构"><header><h1><span class="taxon"></span>t-结构 <a class="slug" href="./t-结构.html">[t-结构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设 $\mathcal C$ 为<span class="link local"><a href="./三角范畴.html" title="“三角范畴” [三角范畴]">三角范畴</a></span>或<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span>, 在<strong>同调指标</strong>中, 其上的一个 $t$-结构是一对子范畴 $(\mathcal C_{\geq 0},\mathcal C_{\leq 0})$, 记 $\mathcal C_{\geq n}=\mathcal C_{\geq 0}[n]$, $\mathcal C_{\leq n}=\mathcal C_{\leq 0}[n]$, 满足</p>
@@ -865,7 +886,15 @@ $$
 <p>$\tau_{\leq m}\tau_{\leq n}\simeq\tau_{\leq\operatorname{min}(m,n)}$.</p>
 <p>$\tau_{\geq m}\tau_{\geq n}\simeq\tau_{\leq\operatorname{max}(m,n)}$.</p>
 <p>由 $\mathcal C$ 到 $\mathcal C_{\leq m}\cap\mathcal C_{\geq n}$ 的两种截断方式是等价的.</p>
-<p>对任意 $n$, $\mathcal C_{\leq n}\cap\mathcal C_{\geq n}\simeq \mathcal C^{\heartsuit}$. 一个对象截断到这个范畴中的像又称为它的第 $n$ 阶同调, 对于所有的 $n$ 这些同调形成长正合列.</p>
+<p>对任意 $n$, $\mathcal C_{\leq n}\cap\mathcal C_{\geq n}\simeq \mathcal C^{\heartsuit}$. 一个对象截断到这个范畴中的像又称为它的第 $n$ 阶<strong>同调</strong>
+$$
+H_n = [-n]\tau_{\geq n}\tau_{\leq n} \colon \mathcal C \to \mathcal C^{\heartsuit}.
+$$
+对于所有的 $n$ 这些同调形成长正合列.</p>
+<p>在上同调指标中, 对应物称为<strong>上同调</strong>:
+$$
+H^n = [n]\tau_{\leq n}\tau_{\geq n} \colon \mathcal C \to \mathcal C^{\heartsuit}.
+$$</p>
 <p>注意所有同调为 $0$ 不能推出这个对象为 $0$, 这个现象在许多场合是有趣的, 如无穷维表示论, 无限型代数几何.</p>
 <h3>(余) 极限封闭性</h3>
 <p>$\mathcal C_{\geq 0}$ 关于余极限封闭, $\mathcal C_{\leq 0}$ 关于极限封闭.</p>
@@ -900,6 +929,6 @@ $$
 <li>$\operatorname{Sp}(\mathcal C)_{\geq 0}$ 是 $\Sigma^{\infty}$ 的像在扩张和余极限之下生成的子范畴.</li>
 <li>$\operatorname{Sp}(\mathcal C)_{\leq -1}$ 是 $\Omega^{\infty}$ 为 $0$ 的子范畴.</li>
 </ul>
-<p><span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>范畴的心与 $\mathsf {Ab}$ 的同构由 <span class="link local"><a href="./Eilenberg–MacLane谱.html" title="Eilenberg–MacLane 谱 [Eilenberg–MacLane谱]">Eilenberg–MacLane 谱</a></span>给出. 此时同调是谱的同伦群.</p>
+<p><span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>范畴的心与 $\mathsf {Ab}$ 的同构由 <span class="link local"><a href="./Eilenberg–MacLane谱.html" title="Eilenberg–MacLane 谱 [Eilenberg–MacLane谱]">Eilenberg–MacLane 谱</a></span>给出. 此时同调是谱的同伦群. 这是一个稳定范畴不等于其心的<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>的重要例子.</p>
 <p><span class="link local"><a href="./偏屈t-结构.html" title="偏屈 t-结构 [偏屈t-结构]">偏屈 t-结构</a></span></p>
 </details></section></details></section></footer></article></div></body></html>
