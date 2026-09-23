@@ -1086,6 +1086,33 @@ $$
 $$</p>
 <p>总之, 如果任何空间都是某空间的<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span>, 那么任何两个空间之间的映射空间 (或映射同伦类的集合) 构成群.</p>
 <p>当然, 纬悬的效果不仅如此. 如果任何空间都是某空间的<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span>, 那么自然也是某空间的两次纬悬; 而 $\Sigma^2 X = X \wedge S^1\wedge S^1$ 上的两种相容的余群结构合在一起, 构成了一种 $\mathbb E_2$-余群结构, 使得映射同伦类的集合 $[\Sigma^2 X, Y]$ 构成 <strong>Abel 群</strong>.</p>
+<p>或许更好理解的是, $[\Sigma^2 X,Y] = [X,\Omega^2 Y]$, 而 $\Omega^2 Y$ 是 $\mathbb E_2$-群, 所以 $[X,\Omega^2 Y]$ 是 Abel 群.</p>
+<p>读者或许明白 $\pi_2(Y)$ 是个 Abel 群. 这是因为, $\pi_2(Y)$ 是 $S^2$ 到 $Y$ 的映射的同伦类, 其中的乘法是由 $S^2 \to S^2 \vee S^2 \to Y$ 给出的. 而映射 $S^2 \to S^2 \vee S^2$ 的给法不止一种 — 事实上, 有 $S^1$ 那么多种. $\pi_2(Y)$ 的两个元素可以沿着东南西北任何一个方向相乘. 从东边到南边, 再到西边, 有一个连续的过程. 所以其实哪个方向的乘法都是一样的. 特别地, 西乘和东乘是一样的.</p>
+<p>$\pi_2(Y)$ 是 $\Omega^2(Y)$ 的连通分支集合 ($0$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>). 它的交换性是继承自 $\Omega^2(Y)$ 的 $\mathbb E_2$-结构.</p>
+<p>在集合的世界中 $\mathbb E_2$-群就是交换群. 但在生象的世界中, $\mathbb E_2$-群要称为交换群还不够格. 因为交换群是这样的一种群: 其中任意 $n$ 个元素乘在一起有<strong>唯一</strong>的方式. 唯一就是说方式构成的空间同伦等价于一个点.</p>
+<p>然而在 $\mathbb E_2$-群中, 两个元素乘在一起就有 $S^1$ 种方式. $S^1$ 是连通的, 但不同伦等价于一个点.</p>
+<p>一般而言, $\Omega^n (Y)$ 是 $\mathbb E_n$-群. (因此 $\pi_n(Y)$ 是集合世界中的交换群.) 在 $\mathbb E_n$-群中, 两个元素乘在一起有 $S^{n-1}$ 种方式. $S^{n-1}$ 是连通的, 单连通的, …, $(n-2)$-连通的. 但它仍然不是可缩的.</p>
+<p>真正有资格称为交换群的是 $\mathbb E_{\infty}$-群. 一个空间 $A$ 是 $\mathbb E_{\infty}$-群, 虽然不能直接把它写成某个空间的 $\Omega^{\infty}$ (这到底是什么?), 但可以粗略地理解为, 对每个 $n$, $A$ 都能写成某个 $\Omega^n(Y)$.</p>
+<h3>群与带基点连通空间的对应</h3>
+<p><span class="link local"><a href="./群.html" title="群 [群]">群</a></span>就是一个东西的自同构. 一个东西视为一个模空间的点, 其自同构就是模空间在该点处的环路空间.</p>
+<p>事实上, 对于带基点连通空间, 它的同伦型完全被环路空间的同伦型决定. 用生象的话讲, 有等价
+$$
+\Omega\colon \mathsf{Ani}_{*,\geq 1} \overset{\simeq}{\longrightarrow} \mathsf{Grp}(\mathsf{Ani}).
+$$</p>
+<p>一般地, $\mathbb E_n$-群等同于带基点 $(n-1)$-连通生象. 有等价
+$$
+\Omega^n\colon \mathsf{Ani}_{*,\geq n} \overset{\simeq}{\longrightarrow} \mathsf{Grp}_{\mathbb E_n}(\mathsf{Ani}).
+$$</p>
+<p>回忆前面我们许了两个愿望:</p>
+<ul>
+<li>希望空间是任意次的纬悬;</li>
+<li>希望空间是任意次的环路.</li>
+</ul>
+<p>现在有这样两个事实:</p>
+<ul>
+<li>$n$ 阶纬悬是 $(n-1)$-连通的.</li>
+<li>能作为 $n$ 重环路空间的空间等同于 $\mathbb E_n$ 群.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="切范畴"><header><h1><span class="taxon"></span>切范畴 <a class="slug" href="./切范畴.html">[切范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设 $\mathcal C$ 为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>. 对于 $\mathcal C$ 的对象 $X$, 定义其<strong>切范畴</strong>为<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span>的<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>
