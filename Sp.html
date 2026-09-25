@@ -1084,7 +1084,8 @@ $$</p>
 <h3>令 $n\to\infty$</h3>
 <p>真正有资格称为交换群的是 $\mathbb E_{\infty}$-群.</p>
 <p>在集合的世界中, $\mathbb E_2$-群就是 $\mathbb E_\infty$-群. 因为集合之间的两个映射相等就是相等, 没有两种不同的方式相等, 这叫<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断性</a></span>. (集合范畴中的态射集是 $0$-截断的. 一般地, 如果一个范畴中的态射生象是 $n$-截断的, 那么这个范畴中的 $\mathbb E_{n+2}$-群就已经是 $\mathbb E_{\infty}$-群. 但是生象的范畴 $\mathsf{Ani}$ 的态射生象没有任何截断性.)</p>
-<p>集合范畴中的交换群 $A$ 放在 $\mathsf{Ani}$ 中仍是交换群. 这样我们得到了 $\mathsf{Ani}$ 中的一大类 $\mathbb E_{\infty}$-群. 当然 $\mathbb E_{\infty}$-群不止这些. 有一个重要的例子, 所有有限集的全体构成一个生象
+<p>集合范畴中的交换群 $A$ 放在 $\mathsf{Ani}$ 中仍是交换群. 这意味着存在一列带基点生象 $\Omega^{-n} A$. 这样我们得到了 $\mathsf{Ani}$ 中的一大类 $\mathbb E_{\infty}$-群.</p>
+<p>当然 $\mathbb E_{\infty}$-群不止这些. 有一个重要的例子, 所有有限集的全体构成一个生象
 $$
 \mathsf{Fin}^{\simeq} = \bigsqcup_{n\geq 0} (*/S_n).
 $$
@@ -1103,6 +1104,7 @@ $$</p>
 <li>$U\colon \mathsf{Grp}_{\mathbb E_{n+1}}(\mathsf{Ani}) \to \mathsf{Grp}_{\mathbb E_n}(\mathsf{Ani})$ 是遗忘.</li>
 <li>$\Omega^\infty$ 左边的范畴有点像 $\mathsf{Ani}_{*,\geq \infty}$ 但是实际上在 $\mathsf{Ani}_*$ 中不存在非平凡的 $\infty$-连通对象.</li>
 </ul>
+<p><strong>定义</strong>. 在上述等价中, 普通 Abel 群 $A$ 对应的谱称为 <span class="link local"><a href="./Eilenberg–MacLane谱.html" title="Eilenberg–MacLane 谱 [Eilenberg–MacLane谱]">Eilenberg–Maclane 谱</a></span> $HA$.</p>
 <h3>回到寓言</h3>
 <p>谱的范畴上 $\Omega$ 是可逆的, 正如整数集合中 “减一” 运算是可逆的. 对于谱 $X$, 定义
 $$
@@ -1115,9 +1117,9 @@ X = \Omega^n \Omega^{-n} X = \Omega^n Y\,(Y=\Omega^{-n} X),
 $$
 从而
 $$
-[Z,X ] = [Z,\Omega^n Y] = \Omega^n [Z,Y ]
+\operatorname{Hom}(Z,X) = \operatorname{Hom}(Z,\Omega^n Y) = \Omega^n \operatorname{Hom}(Z,Y)
 $$
-是个 $\mathbb E_n$-群. 而这对任意 $n$ 成立, 从而 $[Z,X ]$ 是个交换群.</p>
+是个 $\mathbb E_n$-群. 而这对任意 $n$ 成立, 从而 $\operatorname{Hom}(Z,X)$ 是个交换群.</p>
 <p>这种范畴称为稳定 $\infty$-范畴, 是 Abel 范畴在 $\infty$-范畴语境中的正确类比.</p>
 <h2>$\Sigma$-$\Omega$ 与自由-遗忘伴随</h2>
 <p>回忆, 带基点空间的<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span> (smash product) 是
@@ -1126,16 +1128,16 @@ X \land Y = \frac{X \times Y}{(x,*)=*=(*,y)} = \frac{X\times Y}{X\lor Y},
 $$
 它的范畴论意义来自 $\land$-Hom 伴随:
 $$
-[X \land Y , Z] \simeq [X,[Y,Z]].
+\operatorname{Hom}(X \land Y , Z) \simeq \operatorname{Hom}(X,\underline{\operatorname{Hom}}(Y,Z)).
 $$
-这里 $[Y,Z]$ 表示 $Y$ 到 $Z$ 的保基点映射空间, 其基点为 $Z$ 基点处的恒等映射.</p>
+这里 $\underline{\operatorname{Hom}}(Y,Z)$ 表示 $Y$ 到 $Z$ 的保基点映射空间, 其基点为 $Z$ 基点处的恒等映射.</p>
 <p>令 $Y = S^1$, 定义带基点空间 $X$ 的<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span> $\Sigma X$ 为
 $$
 \Sigma X = X\land S^1.
 $$
 前面的 $\land$-Hom 伴随给出一对伴随 $\Sigma \dashv \Omega$:
 $$
- [\Sigma X,Z] \simeq [X,\Omega X].
+   \operatorname{Hom}(\Sigma X,Z) \simeq \operatorname{Hom}(X,\Omega Z).
 $$</p>
 <p>在上一节的巨大交换图的每一个 $\Omega$ 旁边都可以补上一个左伴随. 下面的遗忘函子 $U$ 也有左伴随, 不妨称为自由函子. (把自由函子明确写出来是有可能的, 只是比较复杂.)</p>
 <p><figure><img src="./tutorial-stable-homotopy-2.svg" class="color-invert"/></figure></p>
@@ -1165,11 +1167,11 @@ $$
 </ul>
 <p><strong>定理</strong> (Brown). 设 $E^n$ 为上同调理论, 则存在生象 $K_n$ 使得
 $$
-E^n (X) = \pi_0 [ X,K_n ].
+E^n (X) = \pi_0 \operatorname{Hom}(X,K_n).
 $$</p>
 <p>这就是说 $X$ 的上同调就是 $X$ 上取值于特定生象的函数的集合. 上同调之所以是 Abel 群, 是因为每个 $K_n$ 都是 $\mathbb E_\infty$-群. 而这是因为由纬悬同构,
 $$
-\pi_0[X,\Omega K_{n+1}] \simeq \pi_0 [\Sigma X, K_{n+1}] \simeq \pi_0 [X,K_n ]
+\pi_0\operatorname{Hom}(X,\Omega K_{n+1}) \simeq \pi_0 \operatorname{Hom}(\Sigma X, K_{n+1}) \simeq \pi_0 \operatorname{Hom}(X,K_n)
 $$
 从而有等价 $K_n\simeq\Omega K_{n+1}$. 那么由谱的定义, $\{K_n\}$ 构成了一个谱.</p>
 <p>而长正合列则是来源于映射生象将余极限变为极限的性质: 余纤维列
@@ -1178,14 +1180,18 @@ A\to X \to X/A
 $$
 给出纤维列
 $$
-[X/A,K_n ] \to [X,K_n ] \to [A,K_n ]
+\operatorname{Hom}(X/A,K_n) \to \operatorname{Hom}(X,K_n) \to \operatorname{Hom}(A,K_n)
 $$
 而纤维列给出同伦群的长正合列
 $$
-\pi_m [X/A,K_n ] \to \pi_m [X,K_n ] \to \pi_m [A,K_n ] \to \pi_{m+1} \to \cdots,
+\pi_m \operatorname{Hom}(X/A,K_n) \to \pi_m \operatorname{Hom}(X,K_n) \to \pi_m \operatorname{Hom}(A,K_n)\to \pi_{m+1} \cdots,
 $$
 $$
-\pi_m [X,K_n ] = \pi_0 \Omega^m [X, K_n ] = \pi_0 [X, K_{n+m}] = E^{k+m} (X).
+\pi_m \operatorname{Hom}(X,K_n) = \pi_0 \Omega^m \operatorname{Hom}(X, K_n) = \pi_0 \operatorname{Hom}(X, K_{n+m}) = E^{k+m} (X).
+$$</p>
+<p>普通的以 Abel 群 $A$ 为系数的上同调是对应 <span class="link local"><a href="./Eilenberg–MacLane谱.html" title="Eilenberg–MacLane 谱 [Eilenberg–MacLane谱]">Eilenberg–Maclane 谱</a></span> $HA$ 的上同调:
+$$
+H^n(X,A) = \pi_0 \operatorname{Hom}(X, \Omega^{-n} A).
 $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="压缩积"><header><h1><span class="taxon"></span>压缩积 <a class="slug" href="./压缩积.html">[压缩积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>带基点空间 (<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>) 的压缩积是带基点空间范畴 $\mathsf{Ani}_*$ 的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半结构</a></span>, 单位为 $*$.</p>
