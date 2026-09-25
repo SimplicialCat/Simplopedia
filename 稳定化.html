@@ -1091,6 +1091,22 @@ $$</p>
 <li>$U\colon \mathsf{Grp}_{\mathbb E_{n+1}}(\mathsf{Ani}) \to \mathsf{Grp}_{\mathbb E_n}(\mathsf{Ani})$ 是遗忘.</li>
 <li>$\Omega^\infty$ 左边的范畴有点像 $\mathsf{Ani}_{*,\geq \infty}$ 但是实际上在 $\mathsf{Ani}_*$ 中不存在非平凡的 $\infty$-连通对象.</li>
 </ul>
+<h3>回到寓言</h3>
+<p>谱的范畴上 $\Omega$ 是可逆的, 正如整数集合中 “减一” 运算是可逆的. 对于谱 $X$, 定义
+$$
+(\Omega^{-1}X)_n = X_{n+1}.
+$$
+由定义, $\Omega^{-1}$ 是 $\Omega$ 的逆.</p>
+<p>在这样的范畴中, 每个对象 $X$ 都是 $n$ 阶环路空间:
+$$
+X = \Omega^n \Omega^{-n} X = \Omega^n Y\,(Y=\Omega^{-n} X),
+$$
+从而
+$$
+[Z,X ] = [Z,\Omega^n Y] = \Omega^n [Z,Y ]
+$$
+是个 $\mathbb E_n$-群. 而这对任意 $n$ 成立, 从而 $[Z,X ]$ 是个交换群.</p>
+<p>这种范畴称为稳定 $\infty$-范畴, 是 Abel 范畴在 $\infty$-范畴语境中的正确类比.</p>
 <h2>$\Sigma$-$\Omega$ 与自由-遗忘伴随</h2>
 <p>回忆, 带基点空间的<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span> (smash product) 是
 $$
@@ -1151,6 +1167,13 @@ $$
 给出纤维列
 $$
 [X/A,K_n ] \to [X,K_n ] \to [A,K_n ]
+$$
+而纤维列给出同伦群的长正合列
+$$
+\pi_m [X/A,K_n ] \to \pi_m [X,K_n ] \to \pi_m [A,K_n ] \to \pi_{m+1} \to \cdots,
+$$
+$$
+\pi_m [X,K_n ] = \pi_0 \Omega^m [X, K_n ] = \pi_0 [X, K_{n+m}] = E^{k+m} (X).
 $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="切范畴"><header><h1><span class="taxon"></span>切范畴 <a class="slug" href="./切范畴.html">[切范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
