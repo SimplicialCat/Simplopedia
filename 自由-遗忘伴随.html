@@ -1034,6 +1034,7 @@ $$
 \mathsf{Sp} = \operatorname{lim} (\mathsf{Ani}_*\overset{\Omega}{\leftarrow}\mathsf{Ani}_*\overset{\Omega}{\leftarrow}\mathsf{Ani}_*\overset{\Omega}{\leftarrow}\cdots).
 $$
 这个范畴的对象是: 选一列带基点空间, 每个都是后一个的环路空间.</p>
+<p>由 $\mathsf{Sp}$ 的定义, 其中可通过移位作 $\Omega$ 的逆运算 $\Omega^{-1}$.</p>
 <h2>环路空间与群</h2>
 <p>众所周知, 对于带基点拓扑空间 $X$, $\pi_1(X)$ 是个群. 两个保基点映射 $S^1\to X$ 的乘积由 $S^1 \to S^1\vee S^1 \to X$ 给出.</p>
 <p>事实上, $\pi_1(X)$ 是 $\Omega X$ 的连通分支集合, 它的群结构是继承自 $\Omega X$ 的群结构<sup class="footnote-reference" id="tutorial-stable-homotopy_1-back"><a href="#tutorial-stable-homotopy_1">1</a></sup>.</p>
@@ -1046,12 +1047,13 @@ $$
 <p>在集合的世界中 $\mathbb E_2$-群就是交换群. 但在生象的世界中, $\mathbb E_2$-群要称为交换群还不够格. 因为交换群是这样的一种群: 其中任意 $n$ 个元素乘在一起有<strong>唯一</strong>的方式. 唯一就是说方式构成的空间同伦等价于一个点.</p>
 <p>然而在 $\mathbb E_2$-群中, 两个元素乘在一起就有 $S^1$ 种方式. $S^1$ 是连通的 (这导致在集合的世界中它等于一个点), 但在生象的世界中 $S^1$ 不等价于一个点.</p>
 <p>一般而言, $\Omega^n (Y)$ 是 $\mathbb E_n$-群. (因此 $\pi_n(Y)$ 是集合世界中的交换群.) 在 $\mathbb E_n$-群中, 两个元素乘在一起有 $S^{n-1}$ 种方式. $S^{n-1}$ 是连通的, 单连通的, …, $(n-2)$-连通的. 但它仍然不是可缩的. 某种意义上 $\Omega^n (Y)$ 越来越接近交换群.</p>
-<h2>一个等价</h2>
+<h3>连通性等价于群结构</h3>
 <p><span class="link local"><a href="./群.html" title="群 [群]">群</a></span>就是一个东西的自同构. 一个东西视为一个模空间的点, 其自同构就是模空间在该点处的环路空间.</p>
 <p>事实上, 对于带基点连通空间, 它的同伦型完全被环路空间的群结构决定. 用生象的话讲, 有等价
 $$
 \Omega\colon \mathsf{Ani}_{*,\geq 1} \overset{\simeq}{\longrightarrow} \mathsf{Grp}(\mathsf{Ani}).
 $$</p>
+<p>回顾一下高阶连通性. 我们说一个带基点空间 $X$ 是 $n$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>的, 意思是其 $n$ 阶及以下<span class="link local"><a href="./同伦群.html" title="同伦群 [同伦群]">同伦群</a></span> $\pi_0(X),\pi_1(X),\cdots,\pi_n(X)$ 平凡. 通常的连通是 $0$-连通.</p>
 <p>一般地, $\mathbb E_n$-群等同于带基点 $(n-1)$-连通生象. 有等价
 $$
 \Omega^n\colon \mathsf{Ani}_{*,\geq n} \overset{\simeq}{\longrightarrow} \mathsf{Grp}_{\mathbb E_n}(\mathsf{Ani}).
@@ -1079,8 +1081,67 @@ $$</p>
 <li>$U\colon \mathsf{Grp}_{\mathbb E_{n+1}}(\mathsf{Ani}) \to \mathsf{Grp}_{\mathbb E_n}(\mathsf{Ani})$ 是遗忘.</li>
 <li>$\Omega^\infty$ 左边的范畴有点像 $\mathsf{Ani}_{*,\geq \infty}$ 但是实际上在 $\mathsf{Ani}_*$ 中不存在非平凡的 $\infty$-连通对象.</li>
 </ul>
+<h2>$\Sigma$-$\Omega$ 与自由-遗忘伴随</h2>
+<p>回忆, 带基点空间的<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span> (smash product) 是
+$$
+X \land Y = \frac{X \times Y}{(x,*)=*=(*,y)} = \frac{X\times Y}{X\lor Y},
+$$
+它的范畴论意义来自 $\land$-Hom 伴随:
+$$
+[X \land Y , Z] \simeq [X,[Y,Z]].
+$$
+这里 $[Y,Z]$ 表示 $Y$ 到 $Z$ 的保基点映射空间, 其基点为 $Z$ 基点处的恒等映射.</p>
+<p>令 $Y = S^1$, 定义带基点空间 $X$ 的<span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span> $\Sigma X$ 为
+$$
+\Sigma X = X\land S^1.
+$$
+前面的 $\land$-Hom 伴随给出一对伴随 $\Sigma \dashv \Omega$:
+$$
+ [\Sigma X,Z] \simeq [X,\Omega X].
+$$</p>
+<p>在上一节的巨大交换图的每一个 $\Omega$ 旁边都可以补上一个左伴随. 下面的遗忘函子 $U$ 也有左伴随, 不妨称为自由函子. (把自由函子明确写出来是有可能的, 只是比较复杂.)</p>
 <p><figure><img src="./tutorial-stable-homotopy-2.svg" class="color-invert"/></figure></p>
-<h2>左伴随与自由</h2>
+<p>带基点空间 $X$ 生成的自由 $\mathbb E_1$-群是
+$$
+\operatorname{Free}_{\mathbb E_1\text{-grp}}(X) = \Omega \Sigma X.
+$$
+或许一条直观是: $\Sigma X$ 是由若干环路拼成的, $X$ 的每个点都贡献一条环路; 而 $\Omega\Sigma X$ 的元素则可以将这些环路以任意顺序组合在一起.</p>
+<p>由此很容易相信 (虽然不太容易证明), 有一对伴随函子
+$$
+\Sigma^\infty \dashv \Omega^\infty \colon \mathsf{Ani}_* \rightleftarrows \mathsf{Sp},
+$$
+并且 $\Sigma^\infty$ 的像实际上落在 $\mathsf{Sp}_{\geq 0}$ 中.
+在下面一行这对应 $\mathbb E_\infty$-群的自由–遗忘伴随
+$$
+\operatorname{Free}_{\mathbb E_\infty\text{-grp}} \dashv U \colon \mathsf{Ani}_* \rightleftarrows \mathsf{Grp}_{\mathbb E_\infty}(\mathsf{Ani}).
+$$</p>
+<h2>上同调</h2>
+<p><span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>是生象到 Abel 群的一系列函子
+$$
+E^n \colon \mathsf{Ani}_* \to \mathsf{Ab},
+$$
+满足</p>
+<ul>
+<li>(纬悬同构) $E^{n+1}(\Sigma X) \simeq E^n(X)$,</li>
+<li>(长正合列) 对任意映射 $A\to X$, 有长正合列 $E^n(X/A) \to E^n(X) \to E^n(A) \to E^{n+1}(X/A)\to\cdots$.</li>
+</ul>
+<p><strong>定理</strong> (Brown). 设 $E^n$ 为上同调理论, 则存在生象 $K_n$ 使得
+$$
+E^n (X) = \pi_0 [ X,K_n ].
+$$</p>
+<p>这就是说 $X$ 的上同调就是 $X$ 上取值于特定生象的函数的集合. 上同调之所以是 Abel 群, 是因为每个 $K_n$ 都是 $\mathbb E_\infty$-群. 而这是因为由纬悬同构,
+$$
+\pi_0[X,\Omega K_{n+1}] \simeq \pi_0 [\Sigma X, K_{n+1}] \simeq \pi_0 [X,K_n ]
+$$
+从而有等价 $K_n\simeq\Omega K_{n+1}$. 那么由谱的定义, $\{K_n\}$ 构成了一个谱.</p>
+<p>而长正合列则是来源于映射生象将余极限变为极限的性质: 余纤维列
+$$
+A\to X \to X/A
+$$
+给出纤维列
+$$
+[X/A,K_n ] \to [X,K_n ] \to [A,K_n ]
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="代数模式"><header><h1><span class="taxon"></span>代数模式 <a class="slug" href="./代数模式.html">[代数模式]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>代数模式</strong> (algebraic pattern) 是 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">Chu–Haugseng</a></span> 对如下现象的抽象:</p>
