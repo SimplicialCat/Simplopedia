@@ -1279,6 +1279,38 @@ $$
 再限制到 $\Delta\hookrightarrow\Delta_+$, 所得的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>称为 $f$ 的 <strong>Čech 脉</strong> $\text{\v{C}}(f)\colon \Delta^{\mathrm{op}} \to \mathcal C$.</p>
 <h2>性质</h2>
 <p>Čech 脉是<span class="link local"><a href="./群胚对象.html" title="群胚对象 (∞-范畴论) [群胚对象]">群胚对象</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="Γ-空间"><header><h1><span class="taxon"></span>Γ-空间 <a class="slug" href="./Γ-空间.html">[Γ-空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Γ-空间可给出交换代数的一种定义 (见<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>). 原理在于 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">$\Gamma$</a></span> 的对象是有限集, 态射是将每个元素对应到互不相交的子集, 这样的结构恰可用于<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>一个<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span>中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span> $A$: 用有限集 $\langle n \rangle$ 探测的结果是 $A^n$, 而对于态射 $\langle n \rangle \to \langle m \rangle$, 相应的映射 $A^m \to A^n$ 是将 $m$ 个元素中的一部分相加得到的 $n$ 个元素.</p>
+<h2>定义</h2>
+<p>$\Gamma$-空间是指 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">Segal 范畴 $\Gamma$</a></span> 上的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>值<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>.</p>
+<h2>性质</h2>
+<h3>与谱的关系</h3>
+<p>设 $A$ 为 $\Gamma$-空间, 定义函子 $\underline{A}\colon \mathsf{Ani}_* \to \mathsf{Ani}_*$,
+$$
+\underline{A}(X) = \int_{\langle n \rangle\in\Gamma} A(\langle n \rangle) \times X^n.
+$$
+这里 $X^{(-)}$ 是一个保持乘积的函子 $\Gamma\to\mathsf{Ani}$ (因为 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">$\Gamma$</a></span> 是带基点对象的 Lawvere 理论).</p>
+<p>函子 $\underline{A}$ 也可视为如下的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">左 Kan 扩张</a></span>.
+$$
+\begin{array}{ccc}
+\Gamma^{\mathrm{op}} &amp; \overset{A}{\to} &amp; \mathsf{Ani}_* \\
+|\!| &amp;  &amp; \uparrow \\
+\mathsf{Fin}_* &amp; \hookrightarrow &amp; \mathsf{Ani}_*
+\end{array}
+$$</p>
+<p>$\Phi(A)$</p>
+<p>对于<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span> $E\in\mathsf{Sp}$, 相应的 $\Gamma$-空间 $\Psi(E)$ 为
+$$
+\Psi (E) (\langle n \rangle) = \operatorname{Hom}_{\mathsf{Sp}}(\mathbb S^{\times n},E).
+$$</p>
+<h2>例</h2>
+<h3>Eilenberg–Maclane 空间</h3>
+<p>对于 Abel 群 $A$, 定义 $\Gamma$-空间 $HA$:
+$$
+HA(\langle n \rangle) = A^n.
+$$</p>
+<p>这正是<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">模式</a></span>之下 $A$ 作为 $\mathsf{Ani}$ 中的交换代数的定义.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="代数模式"><header><h1><span class="taxon"></span>代数模式 <a class="slug" href="./代数模式.html">[代数模式]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>代数模式</strong> (algebraic pattern) 是 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">Chu–Haugseng</a></span> 对如下现象的抽象:</p>
@@ -1385,6 +1417,14 @@ $$
 设 $f\colon \mathcal O\to\mathcal P$ 是代数模式之间的 Segal 态射, $\mathcal C$ 为可表现范畴, 则 $f^*\colon \mathsf{Seg}_{\mathcal P}(\mathcal C) \to \mathsf{Seg}_{\mathcal O}(\mathcal C)$ 有左伴随 $L_{\mathrm{Seg}}\circ f_!$, 其中 $L_{\mathrm{Seg}}$ 是 $\mathsf{Seg}_{\mathcal O}(\mathcal C)\hookrightarrow\mathsf{Fun}(\mathcal O,\mathcal C)$ 的左伴随 (局部化), $f_!$ 是沿 $f$ <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">左 Kan 扩张</a></span>.</p>
 <p><em>证明</em>. 展开定义. $\square$</p>
 <p>在一些良好的情况下, 我们不需要这个局部化 $L_{\mathrm{Seg}}$, 甚至这个伴随是<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的.</p>
+<h3>积性模式与可充实模式</h3>
+<p><strong>定义</strong>. <strong>积性模式</strong> (Cartesian pattern) 是指一个代数模式 $\mathcal O$ 带有态射 $|\{-\}|\colon \mathcal O \to \Gamma^\flat$, 满足对任意 $X\in\mathcal O_{\mathrm{int}}$, 典范的函子
+$$
+(\mathcal O_{\mathrm{el}})_{/X} \to (\Gamma^\flat_{\mathrm{el}})_{/|X|}
+$$
+为等价. 这里 $(\mathcal O_{\mathrm{el}})_{/X}$ 指的是 $\mathcal O$ 的基本对象到 $X$ 的<strong>惰性</strong>映射的范畴. 注意到右边是一个 $|X|$ 元离散集合. 因此积性模式就是每个对象包含的基本对象都构成离散有限集的模式, 这导致它的 Segal 对象在探测对象上的取值等于其在基本对象上的取值的<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>.</p>
+<p><strong>例</strong>. Segal 态射 $\gamma\colon \Delta\to\Gamma$ 是积性模式.</p>
+<p><strong>定义</strong>. <strong>可充实模式</strong> (enrichable pattern)</p>
 <h2>性质</h2>
 <h3>与算畴的关系; 弱 Segal 纤维化</h3>
 <p>注意算畴在这个故事中有两个层级的角色: 一个算畴既可以给出一种代数模式, 同时又是 “算畴” 这种代数模式的一个模型 (Segal 对象). 本节讲的是<strong>前一种</strong>角色, 即一个 (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 中的) <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>如何给出一个代数模式.</p>

@@ -1734,7 +1734,7 @@ $$</p>
 <h3>结合代数</h3>
 <p>在所有代数结构中, <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>占有一个非常特殊的地位, 因为结合性是范畴的本性: 结合代数就等同于单对象 (<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>) 范畴. 范畴论中的许多结构如<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>, <span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>都可以视为某些高阶范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="tutorial-stable-homotopy"><header><h1><span class="taxon"></span>稳定同伦论 <a class="slug" href="./tutorial-stable-homotopy.html">[tutorial-stable-homotopy]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>本文的目的是, 以尽可能少的前置知识, 解释<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span> (<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>) 这一概念的意义和必要性, 从而使读者能够接受其抽象定义. 为此我试图解释<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>的动机. 许多科普作品从纬悬函子 $\Sigma$ 出发, 而我试图从环路空间函子 $\Omega$ 出发, 借助 $\mathbb E_n$-代数和 $n$-连通空间的关系提供一个直观.</p>
+<p>本文的目的是, 以尽可能少的前置知识, 解释<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span> (<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>) 这一概念的意义和必要性, 从而使读者能够接受其抽象定义. 为此我试图解释<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>的动机. 许多科普作品从纬悬函子 $\Sigma$ 出发, 而我试图从环路空间函子 $\Omega$ 出发, 借助 $\mathbb E_n$-代数和 $n$-连通空间的关系提供一个直观. (从纬悬函子 $\Sigma$ 出发定义的谱在传统上称为 $\Sigma$-谱, 而我做的事情意味着抛弃 $\Sigma$-谱而仅使用 $\Omega$-谱.)</p>
 <p>前置知识: 拓扑学基本概念, 以及<span class="link local"><a href="./motivation-homotopy-theory.html" title="同伦论的动机 [motivation-homotopy-theory]">同伦论的动机</a></span> (推荐读者先阅读这篇文章). 或许需要一点无穷范畴的直观.</p>
 <p>在所有前置知识中, 最重要的是明白<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的世界中<strong>何为相等</strong>. 如果不明白<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的概念, 可以用拓扑空间 (<span class="link local"><a href="./CW复形.html" title="CW 复形 [CW复形]">CW 复形</a></span>) 来思考以下提到的所有空间, 只要记住:</p>
 <ul>
@@ -1837,8 +1837,8 @@ $$</p>
 $$
 \mathsf{Fin}^{\simeq} = \bigsqcup_{n\geq 0} (*/S_n).
 $$
-它带有一个交换的运算 $+$, 也就是无交并; 无交并的单位元是空集 $\varnothing$. 虽然 $\mathsf{Fin}^{\simeq}$ 不是群, 但它是<strong>幺半群</strong> (事实上它是一个元素生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>幺半群), 并且像通常的幺半群一样, 它可以群化, 也就是自由地变成一个群.
-如果上面的讨论发生在集合的世界, 这就是大家熟悉的由 $\mathbb{N}$ 得到 $\mathbb{Z}$ 的过程. 但现在我们在生象的世界.</p>
+它带有一个交换的运算 $+$, 也就是无交并; 无交并的单位元是空集 $\varnothing$. 虽然 $\mathsf{Fin}^{\simeq}$ 不是群, 但它是<strong>幺半群</strong> (事实上它是一个元素生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>幺半群), 并且像通常的幺半群一样, 它可以群化, 也就是自由地变成一个 $\mathbb E_\infty$-群. (剧透: 这个 $\mathbb E_\infty$-群对应的谱是<span class="link local"><a href="./球谱.html" title="球谱 [球谱]">球谱</a></span> $\mathbb S = \Sigma^{\infty}S^0$.)</p>
+<p>如果上面的讨论发生在集合的世界, 这就是大家熟悉的由 $\mathbb{N}$ 得到 $\mathbb{Z}$ 的过程. 但现在我们在生象的世界. (这就是为什么人们说 $\mathbb S$ 是 $\mathbb{Z}$ 在生象世界的类比.)</p>
 <p>按照前面的经验, $\mathbb E_{\infty}$-群应该是什么东西的 $\Omega^{\infty}$. 但是 $\Omega^{\infty}$ 是什么?</p>
 <p>将函子 $\Omega^n$ 的两边取极限 (下图的下两行):</p>
 <p><figure><img src="./tutorial-stable-homotopy-1.svg" class="color-invert"/></figure></p>
@@ -1894,6 +1894,11 @@ $$
 \operatorname{Free}_{\mathbb E_1\text{-grp}}(X) = \Omega \Sigma X.
 $$
 或许一条直观是: $\Sigma X$ 是由若干环路拼成的, $X$ 的每个点都贡献一条环路; 而 $\Omega\Sigma X$ 的元素则可以将这些环路以任意顺序组合在一起.</p>
+<p>更一般地, 带基点空间 $X$ 生成的自由 $\mathbb E_n$-群是
+$$
+\operatorname{Free}_{\mathbb E_n\text{-grp}}(X) = \Omega^n \Sigma^n X.
+$$
+直观是: $\Sigma^n X$ 是由若干 $S^n$ 拼成的, $X$ 的每个点都贡献一个 $S^n$; 而 $\Omega^n \Sigma^n X$ 的元素则可以将这些 $S^n$ 以任意 “$\mathbb E_n$ 的方式” 组合在一起.</p>
 <p>由此很容易相信 (虽然不太容易证明), 有一对伴随函子
 $$
 \Sigma^\infty \dashv \Omega^\infty \colon \mathsf{Ani}_* \rightleftarrows \mathsf{Sp},
@@ -1941,6 +1946,71 @@ $$</p>
 $$
 H^n(X,A) = \pi_0 \operatorname{Hom}(X, \Omega^{-n} A).
 $$</p>
+<h2>映射谱与张量积</h2>
+<p><strong>定义</strong> (映射谱). 谱 $X$ 到 $Y$ 的<strong>映射谱</strong> $[X, Y]$ 为如下的谱:
+$$
+[X, Y]_n = \operatorname{Hom}_{\mathsf{Sp}}(X,\Omega^{-n} Y).
+$$
+容易验证这的确是一个谱:
+$$
+\Omega [X, Y]_{n+1} = \Omega\operatorname{Hom}_{\mathsf{Sp}}(X,\Omega^{-n-1} Y) = [X, Y]_n.
+$$</p>
+<p>特别地, $\operatorname{Hom}_{\mathsf{Sp}}(X,Y) = [X, Y]_0 = \Omega^{\infty} [X, Y]$.</p>
+<p><strong>命题</strong>. 谱的范畴 $\mathsf{Sp}$ 上存在一个运算 $\otimes$ (“张量积”), 使得有自然同构
+$$
+[X\otimes Y,Z] = [X,[Y, Z]].
+$$</p>
+<p><strong>命题</strong>.
+$$
+\Sigma^{\infty}(X \land Y) = \Sigma^{\infty}X \otimes \Sigma^{\infty} Y.
+$$</p>
+<p><em>证明</em>. 我们完整写出这个证明的目的, 是展示其中仅用到了 $\Sigma$ 的一个性质: 它是 $\Omega$ 的左伴随.
+$$
+\begin{aligned}
+&amp;\operatorname{Hom}_{\mathsf{Sp}}(\Sigma^{\infty}(X\land Y),Z) \\&amp;= \operatorname{Hom}_{\mathsf{Ani}_*}(X\land Y,\Omega^{\infty}Z)\\
+&amp;=\operatorname{Hom}_{\mathsf{Ani}_*}(X,\underline{\operatorname{Hom}}_{\mathsf{Ani}_*}(Y,\Omega^{\infty}Z))
+\\
+&amp;=\operatorname{Hom}_{\mathsf{Ani}_*}(X,\operatorname{Hom}_{\mathsf{Sp}}(\Sigma^{\infty}Y,Z))
+\\
+&amp;=\operatorname{Hom}_{\mathsf{Ani}_*}(X,\Omega^{\infty}[\Sigma^{\infty}Y,Z])
+\\
+&amp;=\operatorname{Hom}_{\mathsf{Sp}}(\Sigma^{\infty}X,[\Sigma^{\infty}Y,Z])
+\\
+&amp;=\operatorname{Hom}_{\mathsf{Sp}}(\Sigma^{\infty}X\otimes \Sigma^{\infty}Y,Z).
+\end{aligned}
+$$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="Γ-空间"><header><h1><span class="taxon"></span>Γ-空间 <a class="slug" href="./Γ-空间.html">[Γ-空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Γ-空间可给出交换代数的一种定义 (见<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>). 原理在于 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">$\Gamma$</a></span> 的对象是有限集, 态射是将每个元素对应到互不相交的子集, 这样的结构恰可用于<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>一个<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span>中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span> $A$: 用有限集 $\langle n \rangle$ 探测的结果是 $A^n$, 而对于态射 $\langle n \rangle \to \langle m \rangle$, 相应的映射 $A^m \to A^n$ 是将 $m$ 个元素中的一部分相加得到的 $n$ 个元素.</p>
+<h2>定义</h2>
+<p>$\Gamma$-空间是指 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">Segal 范畴 $\Gamma$</a></span> 上的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>值<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>.</p>
+<h2>性质</h2>
+<h3>与谱的关系</h3>
+<p>设 $A$ 为 $\Gamma$-空间, 定义函子 $\underline{A}\colon \mathsf{Ani}_* \to \mathsf{Ani}_*$,
+$$
+\underline{A}(X) = \int_{\langle n \rangle\in\Gamma} A(\langle n \rangle) \times X^n.
+$$
+这里 $X^{(-)}$ 是一个保持乘积的函子 $\Gamma\to\mathsf{Ani}$ (因为 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">$\Gamma$</a></span> 是带基点对象的 Lawvere 理论).</p>
+<p>函子 $\underline{A}$ 也可视为如下的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">左 Kan 扩张</a></span>.
+$$
+\begin{array}{ccc}
+\Gamma^{\mathrm{op}} &amp; \overset{A}{\to} &amp; \mathsf{Ani}_* \\
+|\!| &amp;  &amp; \uparrow \\
+\mathsf{Fin}_* &amp; \hookrightarrow &amp; \mathsf{Ani}_*
+\end{array}
+$$</p>
+<p>$\Phi(A)$</p>
+<p>对于<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span> $E\in\mathsf{Sp}$, 相应的 $\Gamma$-空间 $\Psi(E)$ 为
+$$
+\Psi (E) (\langle n \rangle) = \operatorname{Hom}_{\mathsf{Sp}}(\mathbb S^{\times n},E).
+$$</p>
+<h2>例</h2>
+<h3>Eilenberg–Maclane 空间</h3>
+<p>对于 Abel 群 $A$, 定义 $\Gamma$-空间 $HA$:
+$$
+HA(\langle n \rangle) = A^n.
+$$</p>
+<p>这正是<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">模式</a></span>之下 $A$ 作为 $\mathsf{Ani}$ 中的交换代数的定义.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Θ-n-空间"><header><h1><span class="taxon"></span>Θn-空间 <a class="slug" href="./Θ-n-空间.html">[Θ-n-空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>$\Theta_n$-空间提供了 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n)$-范畴</a></span>的一种定义, 是 <span class="link local"><a href="./Segal空间.html" title="Segal 对象 [Segal空间]">Segal 空间</a></span>的推广.</p>
@@ -1948,6 +2018,7 @@ $$</p>
 <p>$\Theta_n$-空间是指 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴</a></span> $\Theta_n$ 上满足特定条件的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>值<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>.</p>
 <h2>例</h2>
 <h3>$K(\pi,n)$</h3>
+<p>设 $\pi$ 为 Abel 群. 考虑 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">$\Gamma$-空间</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="∞-2-意象"><header><h1><span class="taxon"></span>(∞,2)-意象 <a class="slug" href="./∞-2-意象.html">[∞-2-意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>参考 <span class="link local"><a href="./AbellanMartiniInf2Topoi.html" title="(∞,2)-Topoi and descent [AbellanMartiniInf2Topoi]">Abellan–Martini</a></span>.</p>
 <h2>观念</h2>
@@ -2469,6 +2540,14 @@ $$
 设 $f\colon \mathcal O\to\mathcal P$ 是代数模式之间的 Segal 态射, $\mathcal C$ 为可表现范畴, 则 $f^*\colon \mathsf{Seg}_{\mathcal P}(\mathcal C) \to \mathsf{Seg}_{\mathcal O}(\mathcal C)$ 有左伴随 $L_{\mathrm{Seg}}\circ f_!$, 其中 $L_{\mathrm{Seg}}$ 是 $\mathsf{Seg}_{\mathcal O}(\mathcal C)\hookrightarrow\mathsf{Fun}(\mathcal O,\mathcal C)$ 的左伴随 (局部化), $f_!$ 是沿 $f$ <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">左 Kan 扩张</a></span>.</p>
 <p><em>证明</em>. 展开定义. $\square$</p>
 <p>在一些良好的情况下, 我们不需要这个局部化 $L_{\mathrm{Seg}}$, 甚至这个伴随是<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的.</p>
+<h3>积性模式与可充实模式</h3>
+<p><strong>定义</strong>. <strong>积性模式</strong> (Cartesian pattern) 是指一个代数模式 $\mathcal O$ 带有态射 $|\{-\}|\colon \mathcal O \to \Gamma^\flat$, 满足对任意 $X\in\mathcal O_{\mathrm{int}}$, 典范的函子
+$$
+(\mathcal O_{\mathrm{el}})_{/X} \to (\Gamma^\flat_{\mathrm{el}})_{/|X|}
+$$
+为等价. 这里 $(\mathcal O_{\mathrm{el}})_{/X}$ 指的是 $\mathcal O$ 的基本对象到 $X$ 的<strong>惰性</strong>映射的范畴. 注意到右边是一个 $|X|$ 元离散集合. 因此积性模式就是每个对象包含的基本对象都构成离散有限集的模式, 这导致它的 Segal 对象在探测对象上的取值等于其在基本对象上的取值的<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>.</p>
+<p><strong>例</strong>. Segal 态射 $\gamma\colon \Delta\to\Gamma$ 是积性模式.</p>
+<p><strong>定义</strong>. <strong>可充实模式</strong> (enrichable pattern)</p>
 <h2>性质</h2>
 <h3>与算畴的关系; 弱 Segal 纤维化</h3>
 <p>注意算畴在这个故事中有两个层级的角色: 一个算畴既可以给出一种代数模式, 同时又是 “算畴” 这种代数模式的一个模型 (Segal 对象). 本节讲的是<strong>前一种</strong>角色, 即一个 (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 中的) <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>如何给出一个代数模式.</p>

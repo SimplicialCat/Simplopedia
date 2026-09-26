@@ -838,7 +838,34 @@
 <h2>性质</h2>
 <p>由<span class="link local"><a href="./圈积.html" title="圈积 (范畴论) [圈积]">圈积</a></span>的性质, $\Theta_n$ 在 $n$-范畴的范畴中<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>.</p>
 <p>范畴 $\Theta_n$ 可用于定义 $n$-范畴以及 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$-代数</a></span>的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="index"><header><h1><span class="taxon"></span>单纯百科 Simplopedia <a class="slug" href="./index.html">[index]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Segal函子γ"><header><h1><span class="taxon"></span>Segal 函子 γ <a class="slug" href="./Segal函子γ.html">[Segal函子γ]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>直接定义</h3>
+<p>Segal 函子 $\gamma\colon \Delta \to \Gamma$ 是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$ 到 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">Segal 范畴 $\Gamma$</a></span> 的一个函子,</p>
+<ul>
+<li>$\gamma([n]) = \langle n\rangle$,</li>
+<li>对于态射 $\varphi\colon [n] \to [m]$, $\gamma(\varphi)\colon \langle n\rangle \to \langle m\rangle$ 为态射
+$$
+i\mapsto (\varphi(i-1),\varphi(i)].
+$$
+其中 $(a,b]$ 表示整数的左开右闭区间 $\{x\in \mathbb{Z}\mid a &lt; x \leq b\}$.</li>
+</ul>
+<p>直观上, $\gamma$ 将一个单纯形映射到其中 “基本区间” 的集合. (这件事可以写成一个严格的命题, 见<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>中的 “积性模式”.)</p>
+<p>函子 $\gamma$ 还可推广到 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">$\Theta_n$</a></span> 上给出 $\gamma_n\colon \Theta_n \to \Gamma$.</p>
+<h3>通过 $S^1$</h3>
+<p>将<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span> $\Delta^1$ 两端粘到一起, 定义
+$$
+S^1 := \operatorname{coeq}(\Delta^0 \rightrightarrows \Delta^1).
+$$
+其分量为
+$$
+(S^1)_m = \operatorname{Hom}_{\mathsf{sSet}}(\Delta^m,S^1) \simeq \underline{m}.
+$$
+可验证函子 $S^1\colon \Delta^{\mathrm{op}} \to \mathsf{Fin}_{*/}$ 在取反范畴后正是前面定义的函子
+$$
+\gamma := (S^1)^{\mathrm{op}} \colon \Delta \to (\mathsf{Fin}_{*/})^{\mathrm{op}} = \Gamma.
+$$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="index"><header><h1><span class="taxon"></span>单纯百科 Simplopedia <a class="slug" href="./index.html">[index]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <img src="/assets/simplopedia.svg" alt="Simplopedia" style="float: right; width: min(200px,30vw); margin-right: 20px; margin-top:-50px; filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));">
 <p>这里是<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>的主目录.</p>
 <p>欢迎访问<span class="link external"><a href="https://simplicialcat.github.io/index.html?lang=zh" title="我的个人主页 [https://simplicialcat.github.io/index.html?lang=zh]">我的个人主页</a></span>.</p>
@@ -912,6 +939,7 @@
 <p>$\Theta_n$-空间是指 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴</a></span> $\Theta_n$ 上满足特定条件的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>值<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>.</p>
 <h2>例</h2>
 <h3>$K(\pi,n)$</h3>
+<p>设 $\pi$ 为 Abel 群. 考虑 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">$\Gamma$-空间</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="代数模式"><header><h1><span class="taxon"></span>代数模式 <a class="slug" href="./代数模式.html">[代数模式]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>代数模式</strong> (algebraic pattern) 是 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">Chu–Haugseng</a></span> 对如下现象的抽象:</p>
@@ -1018,6 +1046,14 @@ $$
 设 $f\colon \mathcal O\to\mathcal P$ 是代数模式之间的 Segal 态射, $\mathcal C$ 为可表现范畴, 则 $f^*\colon \mathsf{Seg}_{\mathcal P}(\mathcal C) \to \mathsf{Seg}_{\mathcal O}(\mathcal C)$ 有左伴随 $L_{\mathrm{Seg}}\circ f_!$, 其中 $L_{\mathrm{Seg}}$ 是 $\mathsf{Seg}_{\mathcal O}(\mathcal C)\hookrightarrow\mathsf{Fun}(\mathcal O,\mathcal C)$ 的左伴随 (局部化), $f_!$ 是沿 $f$ <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">左 Kan 扩张</a></span>.</p>
 <p><em>证明</em>. 展开定义. $\square$</p>
 <p>在一些良好的情况下, 我们不需要这个局部化 $L_{\mathrm{Seg}}$, 甚至这个伴随是<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的.</p>
+<h3>积性模式与可充实模式</h3>
+<p><strong>定义</strong>. <strong>积性模式</strong> (Cartesian pattern) 是指一个代数模式 $\mathcal O$ 带有态射 $|\{-\}|\colon \mathcal O \to \Gamma^\flat$, 满足对任意 $X\in\mathcal O_{\mathrm{int}}$, 典范的函子
+$$
+(\mathcal O_{\mathrm{el}})_{/X} \to (\Gamma^\flat_{\mathrm{el}})_{/|X|}
+$$
+为等价. 这里 $(\mathcal O_{\mathrm{el}})_{/X}$ 指的是 $\mathcal O$ 的基本对象到 $X$ 的<strong>惰性</strong>映射的范畴. 注意到右边是一个 $|X|$ 元离散集合. 因此积性模式就是每个对象包含的基本对象都构成离散有限集的模式, 这导致它的 Segal 对象在探测对象上的取值等于其在基本对象上的取值的<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>.</p>
+<p><strong>例</strong>. Segal 态射 $\gamma\colon \Delta\to\Gamma$ 是积性模式.</p>
+<p><strong>定义</strong>. <strong>可充实模式</strong> (enrichable pattern)</p>
 <h2>性质</h2>
 <h3>与算畴的关系; 弱 Segal 纤维化</h3>
 <p>注意算畴在这个故事中有两个层级的角色: 一个算畴既可以给出一种代数模式, 同时又是 “算畴” 这种代数模式的一个模型 (Segal 对象). 本节讲的是<strong>前一种</strong>角色, 即一个 (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 中的) <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>如何给出一个代数模式.</p>

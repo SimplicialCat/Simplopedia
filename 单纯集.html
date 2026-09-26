@@ -895,13 +895,15 @@ $$
 <h3>直接定义</h3>
 <p>Segal 函子 $\gamma\colon \Delta \to \Gamma$ 是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$ 到 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">Segal 范畴 $\Gamma$</a></span> 的一个函子,</p>
 <ul>
-<li>$\gamma([n]) = \underline{n} = \{*,1,\cdots,n\}$,</li>
-<li>对于态射 $\varphi\colon [n] \to [m]$, $\gamma(\varphi)\colon \underline{n} \to \underline{m}$ 为态射
+<li>$\gamma([n]) = \langle n\rangle$,</li>
+<li>对于态射 $\varphi\colon [n] \to [m]$, $\gamma(\varphi)\colon \langle n\rangle \to \langle m\rangle$ 为态射
 $$
 i\mapsto (\varphi(i-1),\varphi(i)].
 $$
 其中 $(a,b]$ 表示整数的左开右闭区间 $\{x\in \mathbb{Z}\mid a &lt; x \leq b\}$.</li>
 </ul>
+<p>直观上, $\gamma$ 将一个单纯形映射到其中 “基本区间” 的集合. (这件事可以写成一个严格的命题, 见<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>中的 “积性模式”.)</p>
+<p>函子 $\gamma$ 还可推广到 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">$\Theta_n$</a></span> 上给出 $\gamma_n\colon \Theta_n \to \Gamma$.</p>
 <h3>通过 $S^1$</h3>
 <p>将<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span> $\Delta^1$ 两端粘到一起, 定义
 $$
