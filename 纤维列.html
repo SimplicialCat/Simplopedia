@@ -879,6 +879,16 @@ $$
 <p>另一种说法是, 由于 $X$ 是 $E$-模, $X$ 是 $X\wedge E$ 的收缩, 而对任何谱 $X$, $X\wedge E$ 都是 $E$-局部谱. (好像 $E$-模是 $E$-局部谱这个结论更基本一些.)</p>
 <p><strong>命题</strong>. $E$-局部谱的子范畴关于平移, 收缩, 积 (直和), 余纤维封闭.</p>
 <p>注意, $E$-局部谱的<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">张量积</a></span>不一定是 $E$-局部谱.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="Freudenthal纬悬定理"><header><h1><span class="taxon"></span>Freudenthal 纬悬定理 <a class="slug" href="./Freudenthal纬悬定理.html">[Freudenthal纬悬定理]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./同伦论.html" title="同伦论 [同伦论]">同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>陈述</h2>
+<p>对于带基点 $n$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>空间 $A$, <span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $\Sigma \dashv \Omega$ 的单位
+$$
+A\to\Omega\Sigma A
+$$
+是 $2n$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>映射.</p>
+<p>注意我们采用的<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通性</a></span>的约定可能与另一些文献不同. 在我们的约定中, 映射 $f\colon X\to Y$ $n$-连通等价于其每个<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维</a></span>都 $n$-连通.</p>
+<p>这是 <span class="link local"><a href="./Blakers–Massey定理.html" title="Blakers–Massey 定理 [Blakers–Massey定理]">Blakers–Massey 定理</a></span>的特例.</p>
+<h2>例</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="GrpAni"><header><h1><span class="taxon"></span>生象群 <a class="slug" href="./GrpAni.html">[GrpAni]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>如果说<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>是集合在高阶范畴语境中对应的概念, 那么生象群则是群的对应概念. 所谓群就是一个对象的对称性的抽象; 生象群就是一个 $(\infty,1)$-范畴中一个对象的自同构的抽象, 也就是一个带基点 $(\infty,0)$-范畴.</p>
 <p>同时, 生象群也可视为 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中特殊的 <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">$\mathbb E_1$-代数</a></span>, 其每个元素都有逆.</p>
@@ -1539,9 +1549,14 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="连通性"><header><h1><span class="taxon"></span>连通性 <a class="slug" href="./连通性.html">[连通性]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>用截断性定义</h3>
-<p>称一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ $n$-连通是指其 <span class="link local"><a href="./截断性.html" title="截断性 [截断性]">$n$-截断</a></span> $\tau_{\leq n} X$ 等于单点.</p>
-<p>称一个映射 $X\to Y$ $n$-连通是指其每个纤维都 $n$-连通.</p>
-<p>称一个生象或映射 $\infty$-连通是指其对任意 $n$ 都 $n$-连通.</p>
+<p>称一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> (或一般<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的对象) $X$ $n$-连通是指其 <span class="link local"><a href="./截断性.html" title="截断性 [截断性]">$n$-截断</a></span> $\tau_{\leq n} X$ 等于单点.</p>
+<p>称一个映射 $f\colon X\to Y$ $n$-连通是指其作为<span class="link local"><a href="./俯意象.html" title="俯意象 [俯意象]">俯意象</a></span>的对象是 $n$-连通的. (特别地, 一个对象 $X$ 是 $n$ 连通的等价于映射 $X\to *$ 是 $n$ 连通的.)</p>
+<p>在 $\mathsf{Ani}$ 中, 映射 $f\colon X\to Y$ $n$-连通等价于其每个<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维</a></span>都 $n$-连通, 也等价于如下两个条件:</p>
+<ul>
+<li>对于 $k\leq n$, $\pi_k(X,x) \to \pi_k(Y,f(x))$ 为同构;</li>
+<li>$\pi_{n+1}(X,x) \to \pi_{n+1}(Y,f(x))$ 为满射.</li>
+</ul>
+<p>称一个对象或映射 $\infty$-连通是指其对任意 $n$ 都 $n$-连通.</p>
 <h3>用同伦群定义</h3>
 <p>称一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $n$-连通是指其 $n$ 阶<strong>及</strong>以下<span class="link local"><a href="./同伦群.html" title="同伦群 [同伦群]">同伦群</a></span>平凡.</p>
 <p><strong>注意</strong>. 有些文献中对象的 $n$-连通性的定义与此处可能相差 $1$. 此处的定义的优点在于, 对象的 $n$-连通性与态射的 $n$-连通性相容: 一个对象 $X$ $n$-连通当且仅当唯一的态射 $X\to *$ 是 $n$-连通态射.</p>

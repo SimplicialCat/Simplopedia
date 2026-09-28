@@ -841,8 +841,66 @@ $$
 \mathsf{Ani}\to\mathcal C,\quad X\mapsto\operatorname{colim}_X *.
 $$</p>
 <p><em>证明</em>. 由<span class="link local"><a href="./伴随函子定理.html" title="伴随函子定理 [伴随函子定理]">伴随函子定理</a></span>,</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="E∞-空间"><header><h1><span class="taxon"></span>E∞-空间 <a class="slug" href="./E∞-空间.html">[E∞-空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Blakers–Massey定理"><header><h1><span class="taxon"></span>Blakers–Massey 定理 <a class="slug" href="./Blakers–Massey定理.html">[Blakers–Massey定理]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./同伦论.html" title="同伦论 [同伦论]">同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>若采取 “高连通度 = 小” 的直观 (见 <span class="link local"><a href="./Goodwillie演算.html" title="Goodwillie 演算 [Goodwillie演算]">Goodwillie 演算</a></span>), 那么 Blakers–Massey 定理说的是: 在一个小邻域内, 推出近乎于拉回.</p>
+<h2>陈述</h2>
+<p>考虑 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的如下<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>图,
+$$
+\begin{CD}
+A @&gt;{f}&gt;&gt; B \\
+@V{g}VV @VVV \\
+C @&gt;&gt;&gt; D
+\end{CD}
+$$
+若 $f$ 是 $m$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>映射, $g$ 是 $n$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>映射, 则
+$$
+A \to B\times_D C
+$$
+是 $(m+n)$-连通映射.</p>
+<h3>在模态中的推广</h3>
+<p><span class="link local"><a href="./ABFJ-BM.html" title="A generalized Blakers–Massey theorem [ABFJ-BM]">ABFJ</a></span> 的文章给出了 Blakers–Massey 定理的推广:</p>
+<p><strong>定理</strong>. 设 $(L,R)$ 是意象中的<span class="link local"><a href="./模态.html" title="模态 [模态]">模态</a></span> (即关于<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>封闭的<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">正交分解系</a></span>), 考虑<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>图
+$$
+\begin{CD}
+A @&gt;{f}&gt;&gt; B \\
+@V{g}VV @VVV \\
+C @&gt;&gt;&gt; D,
+\end{CD}
+$$
+若<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span>的<span class="link local"><a href="./推出积.html" title="推出积 [推出积]">推出积</a></span> $\Delta_f \operatorname{\square}_Z \Delta_g$ 属于 $L$, 则映射 $A \to B\times_D C$ 属于 $L$.</p>
+<h2>证明</h2>
+<h2>例</h2>
+<p>取 $B = C = *$, 则有 $D = \Sigma A$, 而拉回为 $*\times_{\Sigma A} * = \Omega \Sigma A$. 我们得到 <span class="link local"><a href="./Freudenthal纬悬定理.html" title="Freudenthal 纬悬定理 [Freudenthal纬悬定理]">Freudenthal 纬悬定理</a></span>: 对于 $n$-连通空间 $A$, $A\to\Omega\Sigma A$ 是 $2n$-连通映射.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="E∞-空间"><header><h1><span class="taxon"></span>E∞-空间 <a class="slug" href="./E∞-空间.html">[E∞-空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>$\mathbb E_\infty$-空间是 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="Goodwillie演算"><header><h1><span class="taxon"></span>Goodwillie 演算 <a class="slug" href="./Goodwillie演算.html">[Goodwillie演算]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>微积分研究一个函数在自变量经历微小改变时函数的变化. Goodwillie 提出对一类函子做类似的事情. 这类函子的自变量是空间 (<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>), 而生象 $X$ 经历的 “微小的改变” 指的是一个<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通性</a></span>较高的映射 $Y\to X$.</p>
+<p>两个连通性较高的映射的复合, 其连通性仍较高. 具体而言, $n$-连通映射复合 $m$-连通映射至少是 $\operatorname{min}(n,m)$-连通的.</p>
+<p><span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span>操作提升空间的连通性, 不断作纬悬会让空间越来越 “小”, 直至趋于可缩. 类似地, 纬悬也会提升一个映射的连通性: 对于映射 $Y\to X$, 其纬悬 $\Sigma Y\to \Sigma X$ 的连通性总是提升.</p>
+<p>相应地, 取<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>的操作会降低连通性. 如果纬悬像是微积分中乘以一个小量, 那么环路空间就像是除以这个小量.</p>
+<table><thead><tr><th>同伦论</th><th>微积分</th></tr></thead><tbody>
+<tr><td>带基点空间</td><td>形式幂级数环 $k[\![x]\!]$</td></tr>
+<tr><td>圆圈 $S^1$</td><td>$x$</td></tr>
+<tr><td>纬悬</td><td>乘以 $x$</td></tr>
+<tr><td>环路空间</td><td>除以 $x$</td></tr>
+<tr><td>带基点连通空间</td><td>理想 $x k[\![x]\!]$</td></tr>
+<tr><td>带基点 $n$-连通空间</td><td>理想 $x^n k[\![x]\!]$</td></tr>
+</tbody></table>
+<p>回忆 <span class="link local"><a href="./Blakers–Massey定理.html" title="Blakers–Massey 定理 [Blakers–Massey定理]">Blakers–Massey 定理</a></span>, 考虑 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的如下<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>图,
+$$
+\begin{CD}
+A @&gt;{f}&gt;&gt; B \\
+@V{g}VV @VVV \\
+C @&gt;&gt;&gt; D
+\end{CD}
+$$
+若 $f$ 是 $m$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>映射, $g$ 是 $n$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>映射, 则
+$$
+A \to B\times_D C
+$$
+是 $(m+n)$-连通映射. 这可以理解为在一个小邻域内, 推出近乎于<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="GrpAni"><header><h1><span class="taxon"></span>生象群 <a class="slug" href="./GrpAni.html">[GrpAni]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>如果说<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>是集合在高阶范畴语境中对应的概念, 那么生象群则是群的对应概念. 所谓群就是一个对象的对称性的抽象; 生象群就是一个 $(\infty,1)$-范畴中一个对象的自同构的抽象, 也就是一个带基点 $(\infty,0)$-范畴.</p>
 <p>同时, 生象群也可视为 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中特殊的 <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">$\mathbb E_1$-代数</a></span>, 其每个元素都有逆.</p>
@@ -1366,7 +1424,7 @@ $X$ 是 $n$-截断的, 当且仅当任意映射 $S^n \to X$ 都穿过某一个�
 <li>截断函子 $\tau_{\leq 0}\colon \mathsf{Ani} \to \mathsf{Ani}_{\leq 0} = \mathsf{Set}$ 是取生象的连通分支的集合.</li>
 </ul>
 <h2>性质</h2>
-<h3>截断函子</h3>
+<h3>截断函子与自反性</h3>
 <p>在 $\infty$-意象 $\mathcal C$ 中, $n$-截断对象构成<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> $\mathcal C_{\leq n} \hookrightarrow \mathcal C$, 其左伴随是截断函子 $\tau_{\leq n}\colon \mathcal C \to \mathcal C_{\leq n}$.</p>
 <p><strong>命题</strong>. 截断函子 $\tau_{\leq n}$ 保持有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>.</p>
 <h2>相关概念</h2>
@@ -1488,8 +1546,26 @@ $$
 \end{CD}
 $$
 最后, 由 $L$ 关于收缩封闭知 $f \in L$.</p>
-<h3>与二重范畴的关系</h3>
-<p>记 $\mathsf{OFS}$ 为 “带正交分解系的范畴” 的范畴, $\mathsf{DCat}$ 为<span class="link local"><a href="./n-重范畴.html" title="n 重范畴 [n-重范畴]">二重范畴</a></span>的范畴. 考虑函子
+<h3>自反性</h3>
+<p><strong>命题</strong>. 在正交分解
+$$
+\mathsf{Ar}(\mathcal C) \to \mathsf{Ar}(L)\times_{\mathcal C}\mathsf{Ar}(R)
+$$
+中,</p>
+<ul>
+<li>$\mathsf{Ar}(\mathcal C) \to \mathsf{Ar}(L)$ 是含入 $\mathsf{Ar}(L)\to\mathsf{Ar}(\mathcal C)$ 的右伴随, 伴随的余单位正是左分量 $L(f)\to f$.</li>
+<li>$\mathsf{Ar}(\mathcal C) \to \mathsf{Ar}(R)$ 是含入 $\mathsf{Ar}(R)\to\mathsf{Ar}(\mathcal C)$ 的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>, 伴随的单位正是右分量 $f \to R(f)$.</li>
+</ul>
+<p><strong>例</strong>. $n$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>构成 $\mathsf{Ani}$ 的<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> $\mathsf{Ani}_{\leq n} \hookrightarrow \mathsf{Ani}.$</p>
+<h3>局部性</h3>
+<p><strong>命题</strong>. 对于<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathcal C$ 中的正交分解系 $(L,R)$, 两类态射有<span class="link local"><a href="./局部类.html" title="局部类 [局部类]">局部性</a></span>. 这就是说, 对于态射 $f\colon X\to Y$, 若存在 $Y$ 的覆盖 $\{g_i \colon Y_i\to Y\}$ 使得每个 $g_i^* f$ 都属于 $R$, 那么 $f$ 属于 $R$.</p>
+<p><em>证明</em>. 由意象的性质, 覆盖 $\{g_i \colon Y_i\to Y\}$ 的<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>
+$$
+\mathcal C_{/Y} \to \prod_{i} \mathcal C_{/Y_i}
+$$
+为<span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守函子</a></span>. 考虑态射 $f$ 的 $(L,R)$-分解 $f=rl$ ($l\in L, r\in R$). 假设每个 $g_i^*f$ 属于 $R$, 那么 $g_i^* l$ 为同构, 由保守性得 $l$ 为同构, 即 $f$ 属于 $R$. 对于 $L$ 同理. $\square$</p>
+<h3>与双范畴 (二重范畴) 的关系</h3>
+<p>记 $\mathsf{OFS}$ 为 “带正交分解系的范畴” 的范畴, $\mathsf{DCat}$ 为双范畴 (或者叫<span class="link local"><a href="./n-重范畴.html" title="n 重范畴 [n-重范畴]">二重范畴</a></span>) 的范畴. 考虑函子
 $$
 \operatorname{Fact}\colon \mathsf{OFS} \to \mathsf{DCat},
 $$
@@ -1553,6 +1629,11 @@ $$
 <li><span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span></li>
 <li>拓扑空间</li>
 <li><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> (见<span class="link local"><a href="./∞-意象的形.html" title="意象的形 [∞-意象的形]">意象的形</a></span>)</li>
+</ul>
+<h3>生象的运算</h3>
+<ul>
+<li><span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span></li>
+<li><span class="link local"><a href="./联合.html" title="联合 [联合]">联合</a></span></li>
 </ul>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./生象化.html" title="生象化 [生象化]">生象化</a></span></p>

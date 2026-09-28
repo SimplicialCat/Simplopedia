@@ -978,7 +978,7 @@ $X$ 是 $n$-截断的, 当且仅当任意映射 $S^n \to X$ 都穿过某一个�
 <li>截断函子 $\tau_{\leq 0}\colon \mathsf{Ani} \to \mathsf{Ani}_{\leq 0} = \mathsf{Set}$ 是取生象的连通分支的集合.</li>
 </ul>
 <h2>性质</h2>
-<h3>截断函子</h3>
+<h3>截断函子与自反性</h3>
 <p>在 $\infty$-意象 $\mathcal C$ 中, $n$-截断对象构成<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> $\mathcal C_{\leq n} \hookrightarrow \mathcal C$, 其左伴随是截断函子 $\tau_{\leq n}\colon \mathcal C \to \mathcal C_{\leq n}$.</p>
 <p><strong>命题</strong>. 截断函子 $\tau_{\leq n}$ 保持有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>.</p>
 <h2>相关概念</h2>
@@ -1052,8 +1052,26 @@ $$
 \end{CD}
 $$
 最后, 由 $L$ 关于收缩封闭知 $f \in L$.</p>
-<h3>与二重范畴的关系</h3>
-<p>记 $\mathsf{OFS}$ 为 “带正交分解系的范畴” 的范畴, $\mathsf{DCat}$ 为<span class="link local"><a href="./n-重范畴.html" title="n 重范畴 [n-重范畴]">二重范畴</a></span>的范畴. 考虑函子
+<h3>自反性</h3>
+<p><strong>命题</strong>. 在正交分解
+$$
+\mathsf{Ar}(\mathcal C) \to \mathsf{Ar}(L)\times_{\mathcal C}\mathsf{Ar}(R)
+$$
+中,</p>
+<ul>
+<li>$\mathsf{Ar}(\mathcal C) \to \mathsf{Ar}(L)$ 是含入 $\mathsf{Ar}(L)\to\mathsf{Ar}(\mathcal C)$ 的右伴随, 伴随的余单位正是左分量 $L(f)\to f$.</li>
+<li>$\mathsf{Ar}(\mathcal C) \to \mathsf{Ar}(R)$ 是含入 $\mathsf{Ar}(R)\to\mathsf{Ar}(\mathcal C)$ 的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>, 伴随的单位正是右分量 $f \to R(f)$.</li>
+</ul>
+<p><strong>例</strong>. $n$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>构成 $\mathsf{Ani}$ 的<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> $\mathsf{Ani}_{\leq n} \hookrightarrow \mathsf{Ani}.$</p>
+<h3>局部性</h3>
+<p><strong>命题</strong>. 对于<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathcal C$ 中的正交分解系 $(L,R)$, 两类态射有<span class="link local"><a href="./局部类.html" title="局部类 [局部类]">局部性</a></span>. 这就是说, 对于态射 $f\colon X\to Y$, 若存在 $Y$ 的覆盖 $\{g_i \colon Y_i\to Y\}$ 使得每个 $g_i^* f$ 都属于 $R$, 那么 $f$ 属于 $R$.</p>
+<p><em>证明</em>. 由意象的性质, 覆盖 $\{g_i \colon Y_i\to Y\}$ 的<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>
+$$
+\mathcal C_{/Y} \to \prod_{i} \mathcal C_{/Y_i}
+$$
+为<span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守函子</a></span>. 考虑态射 $f$ 的 $(L,R)$-分解 $f=rl$ ($l\in L, r\in R$). 假设每个 $g_i^*f$ 属于 $R$, 那么 $g_i^* l$ 为同构, 由保守性得 $l$ 为同构, 即 $f$ 属于 $R$. 对于 $L$ 同理. $\square$</p>
+<h3>与双范畴 (二重范畴) 的关系</h3>
+<p>记 $\mathsf{OFS}$ 为 “带正交分解系的范畴” 的范畴, $\mathsf{DCat}$ 为双范畴 (或者叫<span class="link local"><a href="./n-重范畴.html" title="n 重范畴 [n-重范畴]">二重范畴</a></span>) 的范畴. 考虑函子
 $$
 \operatorname{Fact}\colon \mathsf{OFS} \to \mathsf{DCat},
 $$
@@ -1067,9 +1085,14 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="连通性"><header><h1><span class="taxon"></span>连通性 <a class="slug" href="./连通性.html">[连通性]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>用截断性定义</h3>
-<p>称一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ $n$-连通是指其 <span class="link local"><a href="./截断性.html" title="截断性 [截断性]">$n$-截断</a></span> $\tau_{\leq n} X$ 等于单点.</p>
-<p>称一个映射 $X\to Y$ $n$-连通是指其每个纤维都 $n$-连通.</p>
-<p>称一个生象或映射 $\infty$-连通是指其对任意 $n$ 都 $n$-连通.</p>
+<p>称一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> (或一般<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的对象) $X$ $n$-连通是指其 <span class="link local"><a href="./截断性.html" title="截断性 [截断性]">$n$-截断</a></span> $\tau_{\leq n} X$ 等于单点.</p>
+<p>称一个映射 $f\colon X\to Y$ $n$-连通是指其作为<span class="link local"><a href="./俯意象.html" title="俯意象 [俯意象]">俯意象</a></span>的对象是 $n$-连通的. (特别地, 一个对象 $X$ 是 $n$ 连通的等价于映射 $X\to *$ 是 $n$ 连通的.)</p>
+<p>在 $\mathsf{Ani}$ 中, 映射 $f\colon X\to Y$ $n$-连通等价于其每个<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维</a></span>都 $n$-连通, 也等价于如下两个条件:</p>
+<ul>
+<li>对于 $k\leq n$, $\pi_k(X,x) \to \pi_k(Y,f(x))$ 为同构;</li>
+<li>$\pi_{n+1}(X,x) \to \pi_{n+1}(Y,f(x))$ 为满射.</li>
+</ul>
+<p>称一个对象或映射 $\infty$-连通是指其对任意 $n$ 都 $n$-连通.</p>
 <h3>用同伦群定义</h3>
 <p>称一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $n$-连通是指其 $n$ 阶<strong>及</strong>以下<span class="link local"><a href="./同伦群.html" title="同伦群 [同伦群]">同伦群</a></span>平凡.</p>
 <p><strong>注意</strong>. 有些文献中对象的 $n$-连通性的定义与此处可能相差 $1$. 此处的定义的优点在于, 对象的 $n$-连通性与态射的 $n$-连通性相容: 一个对象 $X$ $n$-连通当且仅当唯一的态射 $X\to *$ 是 $n$-连通态射.</p>

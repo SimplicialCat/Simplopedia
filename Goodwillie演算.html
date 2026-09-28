@@ -826,7 +826,64 @@
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
 <article><section class="block" data-taxon=""><details open><summary id="Goodwillie演算"><header><h1><span class="taxon"></span>Goodwillie 演算 <a class="slug" href="./Goodwillie演算.html">[Goodwillie演算]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="解析函子"><header><h1><span class="taxon"></span>解析函子 (算畴理论) <a class="slug" href="./解析函子.html">[解析函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>微积分研究一个函数在自变量经历微小改变时函数的变化. Goodwillie 提出对一类函子做类似的事情. 这类函子的自变量是空间 (<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>), 而生象 $X$ 经历的 “微小的改变” 指的是一个<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通性</a></span>较高的映射 $Y\to X$.</p>
+<p>两个连通性较高的映射的复合, 其连通性仍较高. 具体而言, $n$-连通映射复合 $m$-连通映射至少是 $\operatorname{min}(n,m)$-连通的.</p>
+<p><span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span>操作提升空间的连通性, 不断作纬悬会让空间越来越 “小”, 直至趋于可缩. 类似地, 纬悬也会提升一个映射的连通性: 对于映射 $Y\to X$, 其纬悬 $\Sigma Y\to \Sigma X$ 的连通性总是提升.</p>
+<p>相应地, 取<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>的操作会降低连通性. 如果纬悬像是微积分中乘以一个小量, 那么环路空间就像是除以这个小量.</p>
+<table><thead><tr><th>同伦论</th><th>微积分</th></tr></thead><tbody>
+<tr><td>带基点空间</td><td>形式幂级数环 $k[\![x]\!]$</td></tr>
+<tr><td>圆圈 $S^1$</td><td>$x$</td></tr>
+<tr><td>纬悬</td><td>乘以 $x$</td></tr>
+<tr><td>环路空间</td><td>除以 $x$</td></tr>
+<tr><td>带基点连通空间</td><td>理想 $x k[\![x]\!]$</td></tr>
+<tr><td>带基点 $n$-连通空间</td><td>理想 $x^n k[\![x]\!]$</td></tr>
+</tbody></table>
+<p>回忆 <span class="link local"><a href="./Blakers–Massey定理.html" title="Blakers–Massey 定理 [Blakers–Massey定理]">Blakers–Massey 定理</a></span>, 考虑 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的如下<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>图,
+$$
+\begin{CD}
+A @&gt;{f}&gt;&gt; B \\
+@V{g}VV @VVV \\
+C @&gt;&gt;&gt; D
+\end{CD}
+$$
+若 $f$ 是 $m$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>映射, $g$ 是 $n$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>映射, 则
+$$
+A \to B\times_D C
+$$
+是 $(m+n)$-连通映射. 这可以理解为在一个小邻域内, 推出近乎于<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>.</p>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Blakers–Massey定理"><header><h1><span class="taxon"></span>Blakers–Massey 定理 <a class="slug" href="./Blakers–Massey定理.html">[Blakers–Massey定理]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./同伦论.html" title="同伦论 [同伦论]">同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>若采取 “高连通度 = 小” 的直观 (见 <span class="link local"><a href="./Goodwillie演算.html" title="Goodwillie 演算 [Goodwillie演算]">Goodwillie 演算</a></span>), 那么 Blakers–Massey 定理说的是: 在一个小邻域内, 推出近乎于拉回.</p>
+<h2>陈述</h2>
+<p>考虑 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的如下<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>图,
+$$
+\begin{CD}
+A @&gt;{f}&gt;&gt; B \\
+@V{g}VV @VVV \\
+C @&gt;&gt;&gt; D
+\end{CD}
+$$
+若 $f$ 是 $m$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>映射, $g$ 是 $n$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>映射, 则
+$$
+A \to B\times_D C
+$$
+是 $(m+n)$-连通映射.</p>
+<h3>在模态中的推广</h3>
+<p><span class="link local"><a href="./ABFJ-BM.html" title="A generalized Blakers–Massey theorem [ABFJ-BM]">ABFJ</a></span> 的文章给出了 Blakers–Massey 定理的推广:</p>
+<p><strong>定理</strong>. 设 $(L,R)$ 是意象中的<span class="link local"><a href="./模态.html" title="模态 [模态]">模态</a></span> (即关于<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>封闭的<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">正交分解系</a></span>), 考虑<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>图
+$$
+\begin{CD}
+A @&gt;{f}&gt;&gt; B \\
+@V{g}VV @VVV \\
+C @&gt;&gt;&gt; D,
+\end{CD}
+$$
+若<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span>的<span class="link local"><a href="./推出积.html" title="推出积 [推出积]">推出积</a></span> $\Delta_f \operatorname{\square}_Z \Delta_g$ 属于 $L$, 则映射 $A \to B\times_D C$ 属于 $L$.</p>
+<h2>证明</h2>
+<h2>例</h2>
+<p>取 $B = C = *$, 则有 $D = \Sigma A$, 而拉回为 $*\times_{\Sigma A} * = \Omega \Sigma A$. 我们得到 <span class="link local"><a href="./Freudenthal纬悬定理.html" title="Freudenthal 纬悬定理 [Freudenthal纬悬定理]">Freudenthal 纬悬定理</a></span>: 对于 $n$-连通空间 $A$, $A\to\Omega\Sigma A$ 是 $2n$-连通映射.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="解析函子"><header><h1><span class="taxon"></span>解析函子 (算畴理论) <a class="slug" href="./解析函子.html">[解析函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><strong>解析函子</strong>是解析函数 (形式幂级数) 的<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>, 有多个不同场合的相互关联的概念.</p>
 <p>注意这个概念不同于 <span class="link local"><a href="./Goodwillie演算.html" title="Goodwillie 演算 [Goodwillie演算]">Goodwillie 演算</a></span>中的<span class="link local"><a href="./解析函子(Goodwillie).html" title="解析函子 (Goodwillie 演算) [解析函子(Goodwillie)]">解析函子</a></span>.</p>
 <h2>定义</h2>

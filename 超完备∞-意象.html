@@ -897,9 +897,14 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="连通性"><header><h1><span class="taxon"></span>连通性 <a class="slug" href="./连通性.html">[连通性]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>用截断性定义</h3>
-<p>称一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ $n$-连通是指其 <span class="link local"><a href="./截断性.html" title="截断性 [截断性]">$n$-截断</a></span> $\tau_{\leq n} X$ 等于单点.</p>
-<p>称一个映射 $X\to Y$ $n$-连通是指其每个纤维都 $n$-连通.</p>
-<p>称一个生象或映射 $\infty$-连通是指其对任意 $n$ 都 $n$-连通.</p>
+<p>称一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> (或一般<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的对象) $X$ $n$-连通是指其 <span class="link local"><a href="./截断性.html" title="截断性 [截断性]">$n$-截断</a></span> $\tau_{\leq n} X$ 等于单点.</p>
+<p>称一个映射 $f\colon X\to Y$ $n$-连通是指其作为<span class="link local"><a href="./俯意象.html" title="俯意象 [俯意象]">俯意象</a></span>的对象是 $n$-连通的. (特别地, 一个对象 $X$ 是 $n$ 连通的等价于映射 $X\to *$ 是 $n$ 连通的.)</p>
+<p>在 $\mathsf{Ani}$ 中, 映射 $f\colon X\to Y$ $n$-连通等价于其每个<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维</a></span>都 $n$-连通, 也等价于如下两个条件:</p>
+<ul>
+<li>对于 $k\leq n$, $\pi_k(X,x) \to \pi_k(Y,f(x))$ 为同构;</li>
+<li>$\pi_{n+1}(X,x) \to \pi_{n+1}(Y,f(x))$ 为满射.</li>
+</ul>
+<p>称一个对象或映射 $\infty$-连通是指其对任意 $n$ 都 $n$-连通.</p>
 <h3>用同伦群定义</h3>
 <p>称一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $n$-连通是指其 $n$ 阶<strong>及</strong>以下<span class="link local"><a href="./同伦群.html" title="同伦群 [同伦群]">同伦群</a></span>平凡.</p>
 <p><strong>注意</strong>. 有些文献中对象的 $n$-连通性的定义与此处可能相差 $1$. 此处的定义的优点在于, 对象的 $n$-连通性与态射的 $n$-连通性相容: 一个对象 $X$ $n$-连通当且仅当唯一的态射 $X\to *$ 是 $n$-连通态射.</p>

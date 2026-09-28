@@ -1939,12 +1939,28 @@ $$
 <p><span class="link local"><a href="./盲人摸象.html" title="盲人摸象 [盲人摸象]">盲人摸象</a></span>第 2 章</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="俯意象"><header><h1><span class="taxon"></span>俯意象 <a class="slug" href="./俯意象.html">[俯意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span>仍是意象, 称之为俯意象.</p>
+<p><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span>仍是意象, 称之为<strong>俯意象</strong> (over-topos).</p>
 <h2>性质</h2>
 <h3>函子性</h3>
-<p>意象 $\mathcal C$ 的所有俯意象构成函子
+<p>俯意象的构造 $X\mapsto\mathcal C_{/X}$ 给出函子
 $$
-\mathcal C^{\mathrm{op}} \to \mathsf{Cat},\ X\mapsto\mathcal C_{/X}.
+\mathcal C \to \mathsf{Topos}_{/\mathcal C}.
+$$
+对于 $\mathcal C$ 中的态射 $f\colon X\to Y$, 相应的俯意象的<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span> $(f^*\dashv f_*)\colon \mathcal C_{/X} \to \mathcal C_{/Y}$ 为<span class="link local"><a href="./本质几何态射.html" title="本质几何态射 [本质几何态射]">本质几何态射</a></span>.</p>
+<h3>极限和余极限</h3>
+<p>和一般的<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span>一样,</p>
+<ul>
+<li>俯意象 $\mathcal C_{/X}$ 中的<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>等同于 $\mathcal C$ 中的原图表加上各对象到 $X$ 的态射后所得图表的极限. 例如 $\mathcal C_{/X}$ 中 $Y\to X, Z\to X$ 的<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>是 $\mathcal C$ 中 $Y \to X \leftarrow Z$ 的<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>.</li>
+<li>俯意象中的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>等同于原意象中的余极限.</li>
+</ul>
+<p>例如</p>
+<ul>
+<li>俯意象 $\mathcal C_{/X}$ 中的<span class="link local"><a href="./球面.html" title="球面 [球面]">球面</a></span> $S^n$ 为 $S^n\times X \to X$ (因为<span class="link local"><a href="./球面.html" title="球面 [球面]">球面</a></span>是由终对象出发经过 $n$ 次<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>构造的).</li>
+</ul>
+<h3>指数对象</h3>
+<p>俯意象 $\mathcal C_{/X}$ 中的<span class="link local"><a href="./指数对象.html" title="指数对象 [指数对象]">指数对象</a></span>为
+$$
+p^q = q_* q^* p.
 $$</p>
 <h3>下降</h3>
 <p>俯意象函子
@@ -1957,7 +1973,7 @@ $$
 $$
 这一事实甚至可以作为意象的定义.</p>
 <h3>与几何态射的互动</h3>
-<p>对于意象之间的几何态射 $f\colon \mathcal E \to \mathcal S$ 与 $\mathcal S$ 的对象 $X$, 有几何态射
+<p>对于意象之间的<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span> $f\colon \mathcal E \to \mathcal S$ 与 $\mathcal S$ 的对象 $X$, 有几何态射
 $$
 f_{/X} \colon \mathcal E_{/f^*X} \to \mathcal S_{/X}.
 $$</p>
@@ -2016,6 +2032,19 @@ $$
 <p>当 $Y$ 为 Hausdorff 空间时, 几何映射 $\operatorname{Sh}(X)\to\operatorname{Sh}(Y)$ 唯一确定了 $f\colon X\to Y$.</p>
 <h3>与逻辑的关系</h3>
 <p>几何态射保持<span class="link local"><a href="./几何逻辑.html" title="几何逻辑 [几何逻辑]">几何逻辑</a></span>的公式.</p>
+<h3>与俯意象的关系</h3>
+<p>对于几何态射 $f \colon \mathcal F \to \mathcal E$ 以及 $X\in \mathcal E$, 有几何态射
+$$
+f_{/X}\colon \mathcal F_{/f^*X} \to \mathcal E_{/X}
+$$
+以及意象的交换图
+$$
+\begin{CD}
+\mathcal F_{/f^*X} @&gt;{f_{/X}}&gt;&gt; \mathcal E_{/X} \\
+@VVV @VVV \\
+\mathcal F @&gt;&gt;{f}&gt; \mathcal E.
+\end{CD}
+$$</p>
 <h2>例</h2>
 <p>一个意象 $\mathcal E$ 中的箭头 $k\colon B\to A$ 给出了 “换基” (change of base) 函子
 $$
@@ -2162,6 +2191,53 @@ $$
 <p>相关讲义: <span class="link local"><a href="./notes-Gestalten-Cat.html" title="Gestalten - 在范畴上做代数 [notes-Gestalten-Cat]">Gestalten - 在范畴上做代数</a></span></p>
 <h3>高阶可表现范畴</h3>
 <p>见<span class="link local"><a href="./高阶可表现范畴.html" title="高阶可表现范畴 [高阶可表现范畴]">高阶可表现范畴</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="同伦群"><header><h1><span class="taxon"></span>同伦群 <a class="slug" href="./同伦群.html">[同伦群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本页面介绍<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的同伦群, 又称非稳定同伦群. 另见<span class="link local"><a href="./同伦群(稳定同伦论).html" title="同伦群 (稳定同伦论) [同伦群(稳定同伦论)]">同伦群 (稳定同伦论)</a></span>.</p>
+<h2>观念</h2>
+<p>同伦群是用<span class="link local"><a href="./球面.html" title="球面 [球面]">球面</a></span>到一个空间 (<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>) $X$ 的映射提取出的 $X$ 的同伦信息.</p>
+<p>注. 虽然叫做同伦 “群”, 但 $-2,-1,0$ 阶同伦信息不构成群.</p>
+<h2>定义</h2>
+<p>设 $X$ 为<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>或更一般的 <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">$\infty$-意象</a></span> $\mathcal{C}$ 的对象, $x\colon *\to X$ 为 $X$ 的点, $n\geq 0$ 为整数. 定义 $X$ 在 $x$ 处的 $n$ 阶同伦群为 $n$ 阶<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>的 $0$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>:
+$$
+\pi_n(X,x) := \tau_{\leq 0} \Omega^n(X,x).
+$$
+其中 $\Omega^n(X,x)$ 也是 $(S^n,*)$ 到 $(X,x)$ 的保基点映射空间, 从而是 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb{E}_n$</a></span>-群; 那么其截断 $\pi_n(X,x)$ 也是 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb{E}_n$</a></span>-群. 但由于其截断生活在一个 $1$-意象中, 故当 $n\geq 2$ 时它已经是 $\mathbb{E}_{\infty}$-群 (Abel 群). 当 $n=0$ 时它不是群, 只是带基点对象.</p>
+<p>还有一种 “整体” 的同伦群, 可理解为同时记录了 $X$ 在每一点处的同伦群:
+对 $n\geq 0$, 定义 $X$ 的 $n$ 阶同伦对象 $\pi_n(X)\in \mathcal{C}_{/X}$ 如下:
+$$
+\pi_n(X) := \tau_{\leq 0} (X^{S^n}\to X)\in\mathcal{C}_{/X}.
+$$
+$\pi_n(X)$ 是 $\mathcal{C}_{/X}$ 中的 $0$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span> $\mathbb{E}_n$-群.
+当然, $\pi_n(X)$ 在点 $x\colon *\to X$ 处的<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>即是 $\pi_n(X,x)$.</p>
+<h2>例</h2>
+<ul>
+<li>$(-2)$ 阶同伦信息是平凡的.</li>
+<li>$(-1)$ 阶同伦信息是<strong>空</strong>或<strong>非空</strong>.</li>
+<li>$0$ 阶同伦信息是<strong>连通分支的集合</strong>.</li>
+<li>$1$ 阶同伦信息是<span class="link local"><a href="./基本群.html" title="基本群 [基本群]">基本群</a></span>.</li>
+</ul>
+<h2>性质</h2>
+<h3>拉回稳定性</h3>
+<p><strong>命题</strong>. 设函子 $F\colon \mathcal D\to\mathcal C$ 保持<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>和<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>, 那么 $F$ 保持同伦群, 即对任意 $X\in\mathcal D$, 有 $\mathcal C_{/F(X)}$ 中的自然等价
+$$
+\pi_n(F(X)) \simeq F(\pi_n(X)).
+$$</p>
+<p>特别地, 对于<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>之间的<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span>
+$f\colon \mathcal C \to \mathcal D$ 以及 $X\in\mathcal D$, 有 $\mathcal C_{/f^*X}$ 中的自然等价
+$$
+\pi_n (f^*X) \simeq f^*(\pi_n(X)).
+$$</p>
+<h3>长正合列</h3>
+<p><strong>命题</strong>. 对<span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">意象</a></span> $\mathcal C$ 中的任意映射 $f\colon X\to Y$, 有 $(\mathcal C_{/X})_{\leq 0}$ 中的长正合列
+$$
+\begin{aligned}
+\cdots&amp;\to \pi_n(f) \to \pi_n(X) \to f^*\pi_n(Y) \\
+&amp;\to\pi_{n-1}(f) \to \cdots.
+\end{aligned}
+$$</p>
+<p>其中 $\pi_n(f)$ 是 $f\in \mathcal C_{/Y}$ 的同伦群 (<span class="link local"><a href="./相对同伦群.html" title="相对同伦群 [相对同伦群]">相对同伦群</a></span>), 是 $(\mathcal C_{/Y})_{/f} = \mathcal C_{/X}$ 的对象.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./相对同伦群.html" title="相对同伦群 [相对同伦群]">相对同伦群</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="多项式函子"><header><h1><span class="taxon"></span>多项式函子 <a class="slug" href="./多项式函子.html">[多项式函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>多项式函子</strong>是多项式函数 (形式幂级数) 的<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>. 另见<span class="link local"><a href="./解析函子.html" title="解析函子 (算畴理论) [解析函子]">解析函子</a></span>.</p>
@@ -2613,6 +2689,48 @@ $$
 <h2>定义</h2>
 <p><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>中, 对象 $X$ 称为<strong>拟紧</strong>对象是指其任意覆盖存在有限子覆盖, 对象 $X$ 称为<strong>拟分离</strong>对象是指对任意拟紧对象 $Y,Z$ 以及态射 $Y\to X$, $Z\to X$, 有 $Y\times_X Z$ 为拟紧对象.</p>
 <h2>例</h2>
+</details></section><section class="block" data-taxon=""><details ><summary id="指数对象"><header><h1><span class="taxon"></span>指数对象 <a class="slug" href="./指数对象.html">[指数对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>在<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathcal C$ 中, 对象 $X$ 的 $Y$ 次<strong>指数对象</strong> (exponential object) 是 $Y$ 上的 $X$ 常值族的<span class="link local"><a href="./依值积.html" title="依值积 [依值积]">依值积</a></span>:
+$$
+X^Y = \prod_{y\colon Y} X = Y_*Y^*X.
+$$</p>
+<h2>性质</h2>
+<p>由定义及三元<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $Y_!\dashv Y^* \dashv Y_*$,
+$$
+(Y\times -) = Y_!Y^* \dashv Y_*Y^* = (-)^Y.
+$$</p>
+<h3>取值映射</h3>
+<p>对任意对象 $X,Y$, 称伴随 $(Y\times -)\dashv (-)^Y$ 的余单位
+$$
+\operatorname{ev}\colon Y\times X^Y \to X
+$$
+为<strong>取值映射</strong> (evaluation map).</p>
+<h3>函子性</h3>
+<p>设有态射 $W\to Y$, 则有
+$$
+W\times X^Y \to Y\times X^Y\overset{\operatorname{ev}}{\to}X,
+$$
+从而得自然变换
+$$
+X^Y\to X^W.
+$$
+这说明有函子
+$$
+X^{(-)} \colon \mathcal C^{\mathrm{op}} \to \mathcal C.
+$$
+在<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>中这就是<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span> $\operatorname{Hom}(-,X)$.</p>
+<h3>内蕴复合</h3>
+<p>迭代取值映射可得
+$$
+Z\times Y^Z \times X^Y \to Y\times X^Y \to X,
+$$
+从而指数对象之间有自然变换
+$$
+(-\circ -)\colon Y^Z \times X^Y \to X^Z.
+$$
+在<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>中这就是映射的复合.</p>
+<h2>例</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="景"><header><h1><span class="taxon"></span>景 <a class="slug" href="./景.html">[景]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>景</strong>是<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的一种<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>.</p>
@@ -2657,6 +2775,12 @@ $$
 <h2>性质</h2>
 <h3>意象中的满射</h3>
 <p>在 <span class="link local"><a href="./意象.html" title="意象 [意象]">$\infty$-意象</a></span>中有效满射的概念等同于<span class="link local"><a href="./满射(范畴论).html" title="满射 [满射(范畴论)]">满射</a></span>. 见<span class="link local"><a href="./意象中的满射.html" title="意象中的满射 [意象中的满射]">意象中的满射</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="本质几何态射"><header><h1><span class="taxon"></span>本质几何态射 <a class="slug" href="./本质几何态射.html">[本质几何态射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>之间的<strong>本质几何态射</strong> (essential geometric morphism) 是满足拉回函子有进一步左伴随的<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span>
+$$
+(f_! \dashv f^* \dashv f_*)\colon \mathcal F \to \mathcal E.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="束"><header><h1><span class="taxon"></span>束 <a class="slug" href="./束.html">[束]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>束 (gerbe) 是<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>中的一种特殊的对象, 仅包含某一个阶数的非平凡同伦信息.</p>
 <h2>定义</h2>
@@ -2739,6 +2863,104 @@ $$
 <h2>例</h2>
 <h3>意象</h3>
 <p><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>上的典范拓扑正是由<span class="link local"><a href="./意象中的满射.html" title="意象中的满射 [意象中的满射]">满射</a></span>描述的拓扑: 对象 $X$ 的覆盖 $\{U_i\to X\}$ 正是满足 $\bigsqcup_i U_i \to X$ 为满射的族.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="正交分解系"><header><h1><span class="taxon"></span>正交分解系 <a class="slug" href="./正交分解系.html">[正交分解系]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><strong>命题-定义</strong>. 对于范畴 $\mathcal C$ 的<span class="link local"><a href="./宽子范畴.html" title="宽子范畴 [宽子范畴]">宽子范畴</a></span> (包含所有对象的子范畴) $L,R$, 若以下等价条件成立, 则称 $(L,R)$ 为<strong>正交分解系</strong> (orthogonal factorization system):</p>
+<p>$(1)$ 对任意对象 $x,y\in\mathcal C$, 映射
+$$
+    (-\circ -)\colon \operatorname{colim}_{z\in\mathcal C^{\simeq}}\operatorname{Hom}_L(x,z)\times\operatorname{Hom}_R(z,y) \to \operatorname{Hom}(x,y)
+   $$
+为等价, 换言之任一态射都<strong>存在唯一</strong>的先 $L$ 后 $R$ 的分解.</p>
+<p>$(2)$ 映射
+$$
+	   (-\circ -)\colon \mathsf{Ar}(L)^{\simeq} \times_{\mathcal C^{\simeq}}\mathsf{Ar}(R)^{\simeq} \to \mathsf{Ar}(\mathcal C)^{\simeq}
+   $$
+为等价, 和条件 1 基本上是同一个意思.</p>
+<p>$(3)$ $L$ 的态射<span class="link local"><a href="./提升性质.html" title="提升性质 [提升性质]">左正交</a></span>于 $R$ 的态射, 并且任一态射都<strong>存在</strong>一个先 $L$ 后 $R$ 的分解 (不要求唯一).</p>
+<p>$(4)$ 函子
+$$
+	   (-\circ -)\colon \mathsf{Ar}(L) \times_{\mathcal C}\mathsf{Ar}(R) \to \mathsf{Ar}(\mathcal C)
+$$
+为等价. 注意这表明正交分解是函子性的, 这个分解由上述函子的逆给出.</p>
+<p><em>证明</em> (概要).</p>
+<p>$(1) \Leftrightarrow (2)$. 考虑拉回图
+$$
+\begin{CD}
+\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\underset{z\in\mathcal C^{\simeq}}{\operatorname{colim}}\,\operatorname{Hom}_L(x,z)\times\operatorname{Hom}_R(z,y) @&gt;&gt;&gt; \operatorname{Hom}(x,y) @&gt;&gt;&gt; \{(x,y)\} \\
+@VVV @VVV @VVV \\
+\mathsf{Ar}(L)^{\simeq} \times_{\mathcal C^{\simeq}}\mathsf{Ar}(R)^{\simeq} @&gt;&gt;&gt; \mathsf{Ar}(\mathcal C)^{\simeq} @&gt;&gt;&gt; \mathcal C^{\simeq}\times\mathcal C^{\simeq}.
+\end{CD}
+$$</p>
+<p>$(1)\Rightarrow (3)$. 设 $f\in L,g\in R$, 我们证明 $f \perp g$.
+考虑如下交换图,
+$$
+\begin{CD}
+\bullet @&gt;{u}&gt;&gt; \bullet \\
+@V{f}VV @VV{g}V \\
+\bullet @&gt;&gt;{v}&gt; \bullet
+\end{CD}
+$$
+其中主对角线 $gu = vf$. 考虑主对角线以及 $u,v$ 三个态射的 $(L,R)$-分解, 得到 (唯一确定的) 如下分解,</p>
+<p><figure><img src="./OFS-1.svg" class="color-invert"/></figure></p>
+<p>其中 $\ell\in L$, $r\in L$. 这证明了 $f \perp g$. 上述论证可以写成更严格的形式, 使用了 $\mathsf{Ani}$ 中余极限保持拉回的性质, 此处略去.</p>
+<p>$(3) \Rightarrow (4)$. 见 <span class="link external"><a href="https://kerodon.net/tag/04QD" title="Kerodon 04QD [https://kerodon.net/tag/04QD]">Kerodon 04QD</a></span>.</p>
+<p>$(4) \Rightarrow (2)$ 明显.</p>
+<h2>性质</h2>
+<h3>收缩封闭</h3>
+<p><strong>命题</strong>. 正交分解系中的两类态射 $L,R$ 各自都关于<span class="link local"><a href="./收缩.html" title="收缩 [收缩]">收缩</a></span>封闭.</p>
+<p><em>证明</em>. 对于任一态射 $f$, 有 $f\in L$ 当且仅当 $f$ 在函子性的分解中的右边分量为同构. 而同构关于收缩封闭, 故 $L$ 关于收缩封闭. 对 $R$ 同理.</p>
+<h3>互为提升类</h3>
+<p><strong>命题</strong>. 记 $L,R$ 为正交分解系的两类态射, 则 $L$ 和 $R$ 互为<span class="link local"><a href="./提升性质.html" title="提升性质 [提升性质]">提升</a></span>类:
+$$
+L = {^\perp R},\quad R = L^\perp.
+$$</p>
+<p><em>证明</em>. 对任意 $f\in {^\perp R}$, 存在 $\ell\in L$ 与 $r\in R$ 使得 $f = r\ell$. 考虑下图,
+$$
+\begin{CD}
+\bullet @&gt;{\ell}&gt;&gt; \bullet \\
+@V{f}VV \nearrow_i @VV{r}V \\
+\bullet @= \bullet
+\end{CD}
+$$
+由 $f\in {^\perp R}$, $r\in R$ 知存在提升 $i$; 这说明 $f$ 是 $\ell$ 的收缩 (如下图).
+$$
+\begin{CD}
+\bullet @= \bullet @= \bullet \\
+@V{f}VV @V{\ell}VV @VV{f}V \\
+\bullet @&gt;&gt;{i}&gt; \bullet @&gt;&gt;{r}&gt; \bullet
+\end{CD}
+$$
+最后, 由 $L$ 关于收缩封闭知 $f \in L$.</p>
+<h3>自反性</h3>
+<p><strong>命题</strong>. 在正交分解
+$$
+\mathsf{Ar}(\mathcal C) \to \mathsf{Ar}(L)\times_{\mathcal C}\mathsf{Ar}(R)
+$$
+中,</p>
+<ul>
+<li>$\mathsf{Ar}(\mathcal C) \to \mathsf{Ar}(L)$ 是含入 $\mathsf{Ar}(L)\to\mathsf{Ar}(\mathcal C)$ 的右伴随, 伴随的余单位正是左分量 $L(f)\to f$.</li>
+<li>$\mathsf{Ar}(\mathcal C) \to \mathsf{Ar}(R)$ 是含入 $\mathsf{Ar}(R)\to\mathsf{Ar}(\mathcal C)$ 的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>, 伴随的单位正是右分量 $f \to R(f)$.</li>
+</ul>
+<p><strong>例</strong>. $n$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>构成 $\mathsf{Ani}$ 的<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> $\mathsf{Ani}_{\leq n} \hookrightarrow \mathsf{Ani}.$</p>
+<h3>局部性</h3>
+<p><strong>命题</strong>. 对于<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathcal C$ 中的正交分解系 $(L,R)$, 两类态射有<span class="link local"><a href="./局部类.html" title="局部类 [局部类]">局部性</a></span>. 这就是说, 对于态射 $f\colon X\to Y$, 若存在 $Y$ 的覆盖 $\{g_i \colon Y_i\to Y\}$ 使得每个 $g_i^* f$ 都属于 $R$, 那么 $f$ 属于 $R$.</p>
+<p><em>证明</em>. 由意象的性质, 覆盖 $\{g_i \colon Y_i\to Y\}$ 的<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>
+$$
+\mathcal C_{/Y} \to \prod_{i} \mathcal C_{/Y_i}
+$$
+为<span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守函子</a></span>. 考虑态射 $f$ 的 $(L,R)$-分解 $f=rl$ ($l\in L, r\in R$). 假设每个 $g_i^*f$ 属于 $R$, 那么 $g_i^* l$ 为同构, 由保守性得 $l$ 为同构, 即 $f$ 属于 $R$. 对于 $L$ 同理. $\square$</p>
+<h3>与双范畴 (二重范畴) 的关系</h3>
+<p>记 $\mathsf{OFS}$ 为 “带正交分解系的范畴” 的范畴, $\mathsf{DCat}$ 为双范畴 (或者叫<span class="link local"><a href="./n-重范畴.html" title="n 重范畴 [n-重范畴]">二重范畴</a></span>) 的范畴. 考虑函子
+$$
+\operatorname{Fact}\colon \mathsf{OFS} \to \mathsf{DCat},
+$$
+将每个正交分解系视为一个二重范畴, 两类态射分别就是分解系中的两类态射.</p>
+<p><strong>命题</strong>. $\operatorname{Fact}$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>.</p>
+<h2>例</h2>
+<h3>平凡分解系</h3>
+<p>在任何范畴 $\mathcal C$ 中, $(\mathcal C^{\simeq},\mathcal C)$ 与 $(\mathcal C,\mathcal C^{\simeq})$ 均为正交分解系.</p>
+<h3>满单分解</h3>
+<p>在集合范畴 $\mathsf{Set}$ 或生象的范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中, (满射, 单射) 是一个正交分解系. 这是 <span class="link local"><a href="./连通-截断分解.html" title="(n-连通, n-截断) 分解 [连通-截断分解]">$n$-连通-$n$-截断分解</a></span>的特例 $(n=-1)$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="环化意象"><header><h1><span class="taxon"></span>“环化意象” <a class="slug" href="./环化意象.html">[环化意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p><span class="link external"><a href="https://ncatlab.org/nlab/show/ringed+topos" title="nLab 页面 [https://ncatlab.org/nlab/show/ringed+topos]">nLab 页面</a></span></p>
@@ -2775,6 +2997,11 @@ $$
 <li><span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span></li>
 <li>拓扑空间</li>
 <li><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> (见<span class="link local"><a href="./∞-意象的形.html" title="意象的形 [∞-意象的形]">意象的形</a></span>)</li>
+</ul>
+<h3>生象的运算</h3>
+<ul>
+<li><span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span></li>
+<li><span class="link local"><a href="./联合.html" title="联合 [联合]">联合</a></span></li>
 </ul>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./生象化.html" title="生象化 [生象化]">生象化</a></span></p>
@@ -2865,11 +3092,11 @@ $$
 <p>相对同伦群是<span class="link local"><a href="./同伦群.html" title="同伦群 [同伦群]">同伦群</a></span>的<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>版本.</p>
 <h2>定义</h2>
 <h3>一般定义</h3>
-<p><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathcal C$ 中的映射 $A\to X$ 的相对同伦群是其作为 $X$ 的<span class="link local"><a href="./俯意象.html" title="俯意象 [俯意象]">俯意象</a></span>的对象的<span class="link local"><a href="./同伦群.html" title="同伦群 [同伦群]">同伦群</a></span>
+<p><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathcal C$ 中的映射 $A\to X$ 的<strong>相对同伦群</strong>是其作为 $X$ 上的<span class="link local"><a href="./俯意象.html" title="俯意象 [俯意象]">俯意象</a></span> $\mathcal C_{/X}$ 的对象的<span class="link local"><a href="./同伦群.html" title="同伦群 [同伦群]">同伦群</a></span>
 $$
 \pi_n(A\to X) \in \mathcal (\mathcal C_{/X})_{/A} = \mathcal C_{/A}.
 $$
-对于 $A$ 的点 $a\colon 1\to A$, 定义 $a$ 处的相对同伦群
+对于 $A$ 的点 $a\colon 1\to A$, 定义 $a$ 处的相对同伦群为
 $$
 \pi_n(A\to X, a) := a^*\pi_n(A\to X).
 $$</p>
@@ -2897,6 +3124,9 @@ $$
 \cdots\to \pi_n(A,B,x_0) \to \pi_n(X,B,x_0) \to \pi_n(X,A,x_0) \to \pi_{n-1}(A,B,x_0) \to\cdots.
 $$</p>
 <h2>例</h2>
+<p>$$
+a^*\pi_1(A \to X) = \tau_{\leq 0}(A^{S^1} \to A)
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="真值"><header><h1><span class="taxon"></span>真值 <a class="slug" href="./真值.html">[真值]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <ul>
@@ -2937,6 +3167,39 @@ $$</p>
 <h2>观念</h2>
 <p>纤维函子指的是某种空间 $X$ 上的层范畴 (作为几何对象的<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数侧对偶</a></span>) 到点上的层范畴的函子, 在<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>下对应空间 $X$ 的一个<strong>点</strong>.</p>
 <p><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的<span class="link local"><a href="./茎.html" title="茎 [茎]">茎</a></span>是最常见的纤维函子.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="纬悬"><header><h1><span class="taxon"></span>纬悬 <a class="slug" href="./纬悬.html">[纬悬]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$\infty$-范畴</a></span> $\mathcal C$ 有<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span> $*$. 定义对象 $X$ 的<strong>纬悬</strong> $\Sigma X$ 为如下推出,
+$$
+\begin{array}
+    {ccc}
+    X &amp; \to &amp; * \\
+    \downarrow &amp; &amp; \downarrow \\
+    * &amp; \to &amp; \Sigma X.
+\end{array}
+$$</p>
+<h2>例</h2>
+<h3>俯意象</h3>
+<p><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathcal C$ 的<span class="link local"><a href="./俯意象.html" title="俯意象 [俯意象]">俯意象</a></span> $\mathcal C_{/X}$ 中, 对象 $Y\to X$ 的纬悬 (记作 $\Sigma_X Y$) 是 $\mathcal C$ 中的如下推出:
+$$
+\begin{array}
+    {ccc}
+    Y &amp; \to &amp; X \\
+    \downarrow &amp; &amp; \downarrow \\
+    X &amp; \to &amp; \Sigma_X Y.
+\end{array}
+$$</p>
+<h2>性质</h2>
+<p>纬悬函子 $\Sigma\colon \mathcal C\to\mathcal C_{*/}$ 是<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>函子 $\Omega\colon \mathcal C_{*/} \to \mathcal C$ 的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>: 对任意对象 $X$ 以及<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点对象</a></span> $Y$, 交换图
+$$
+\begin{array}
+    {ccc}
+    X &amp; \to &amp; *\\
+    \downarrow &amp; &amp; \downarrow\\
+    * &amp; \to &amp; Y
+\end{array}
+$$
+等同于态射 $\Sigma X\to Y$, 也等同于态射 $X\to\Omega Y$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="组合圆盘"><header><h1><span class="taxon"></span>组合圆盘 <a class="slug" href="./组合圆盘.html">[组合圆盘]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>直接定义</h3>
@@ -3034,6 +3297,65 @@ g_*\colon \mathcal F \to \mathcal E,\quad g^*\colon \mathcal E\to\mathcal F,\qua
 $$
 且满足 $g^* 1 =1$, (特别地, <span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span> $g\colon \mathcal F\to\mathcal E$ 满足上述性质), 则 $g^*\mathbb N$ 为 $\mathcal F$ 的自然数对象.</p>
 <p>例如, 由 $\mathsf {Set}^{C^{\mathrm{op}}}$ 与 $\mathsf {Set}$ 之间的全局截面 $\Gamma$ 与常值预层 $\Delta$ 的伴随, 可得 $\mathsf {Set}^{C^{\mathrm{op}}}$ 的自然数对象是常值预层 $\Delta(\mathbb N)$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="连通性"><header><h1><span class="taxon"></span>连通性 <a class="slug" href="./连通性.html">[连通性]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>用截断性定义</h3>
+<p>称一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> (或一般<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的对象) $X$ $n$-连通是指其 <span class="link local"><a href="./截断性.html" title="截断性 [截断性]">$n$-截断</a></span> $\tau_{\leq n} X$ 等于单点.</p>
+<p>称一个映射 $f\colon X\to Y$ $n$-连通是指其作为<span class="link local"><a href="./俯意象.html" title="俯意象 [俯意象]">俯意象</a></span>的对象是 $n$-连通的. (特别地, 一个对象 $X$ 是 $n$ 连通的等价于映射 $X\to *$ 是 $n$ 连通的.)</p>
+<p>在 $\mathsf{Ani}$ 中, 映射 $f\colon X\to Y$ $n$-连通等价于其每个<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维</a></span>都 $n$-连通, 也等价于如下两个条件:</p>
+<ul>
+<li>对于 $k\leq n$, $\pi_k(X,x) \to \pi_k(Y,f(x))$ 为同构;</li>
+<li>$\pi_{n+1}(X,x) \to \pi_{n+1}(Y,f(x))$ 为满射.</li>
+</ul>
+<p>称一个对象或映射 $\infty$-连通是指其对任意 $n$ 都 $n$-连通.</p>
+<h3>用同伦群定义</h3>
+<p>称一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $n$-连通是指其 $n$ 阶<strong>及</strong>以下<span class="link local"><a href="./同伦群.html" title="同伦群 [同伦群]">同伦群</a></span>平凡.</p>
+<p><strong>注意</strong>. 有些文献中对象的 $n$-连通性的定义与此处可能相差 $1$. 此处的定义的优点在于, 对象的 $n$-连通性与态射的 $n$-连通性相容: 一个对象 $X$ $n$-连通当且仅当唯一的态射 $X\to *$ 是 $n$-连通态射.</p>
+<p>在 HoTT 中, 称一个映射 $n$-连通是指其纤维 $n$-连通. 注意传统拓扑学的 $n$-连通映射在HoTT 中称为 $(n-1)$-连通映射.</p>
+<h2>性质</h2>
+<h3>“$n$-连通覆叠” 函子</h3>
+<p>在 $\infty$-意象 $\mathcal C$ 中, <span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点</a></span> $n$-连通对象构成<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点对象</a></span>范畴 $\mathcal C_{*}$ 的<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">余自反子范畴</a></span> $\mathcal C_{*,\geq n} \hookrightarrow \mathcal C_{*}$, 其右伴随是 “$n$-连通覆叠” 函子 $\tau_{\geq n}\colon \mathcal C_{*} \to \mathcal C_{*,\geq n}$.</p>
+<p>对于带基点对象 $X$ 有<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>
+$$
+\tau_{\geq n}X \to X \to \tau_{\leq n} X.
+$$</p>
+<p>对于不带基点的对象<strong>没有</strong> $n$-连通覆叠函子. 例如 $n=1$ 时, <span class="link local"><a href="./万有覆叠.html" title="万有覆叠 [万有覆叠]">万有覆叠</a></span>函子必须对带基点空间定义.</p>
+<h2>例</h2>
+<p>$n=-2$:</p>
+<ul>
+<li>任何生象都是 $(-2)$-连通的.</li>
+<li>任何映射都是 $(-2)$-连通的.</li>
+</ul>
+<p>$n=-1$:</p>
+<ul>
+<li>$(-1)$-连通生象是<strong>非空</strong>生象.</li>
+<li>$(-1)$-连通映射是<span class="link local"><a href="./意象中的满射.html" title="意象中的满射 [意象中的满射]">满射</a></span>.</li>
+</ul>
+<p>$n=0$:</p>
+<ul>
+<li>$0$-连通生象就是通常所说的非空连通生象.</li>
+<li>函子 $\tau_{\geq 0}\colon \mathsf{Ani}_{*} \to \mathsf{Ani}_{*,\geq 0}$ 取出基点所在的<strong>连通分支</strong>.</li>
+</ul>
+<p>$n=1$:</p>
+<ul>
+<li>$1$-连通生象就是通常所说的<strong>单连通</strong>生象.</li>
+<li>函子 $\tau_{\geq 1}\colon \mathsf{Ani}_{*} \to \mathsf{Ani}_{*,\geq 1}$ 取出基点所在连通分支的<span class="link local"><a href="./万有覆叠.html" title="万有覆叠 [万有覆叠]">万有覆叠</a></span>.</li>
+</ul>
+<h3>球面</h3>
+<p><span class="link local"><a href="./球面.html" title="球面 [球面]">球面</a></span> $S^n$ 是 $(n-1)$-连通的.</p>
+<h2>性质</h2>
+<h3>用对角线刻画</h3>
+<p><strong>定理</strong>. 设 $n\geq 0$. 映射 $f\colon X\to Y$ $n$-连通当且仅当 $f$ 为<span class="link local"><a href="./意象中的满射.html" title="意象中的满射 [意象中的满射]">满射</a></span>且<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span> $\Delta_f \colon X\to X\times_Y X$ 为 $(n-1)$-连通映射.</p>
+<h3>用俯意象刻画</h3>
+<p><strong>命题</strong>. <span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">意象</a></span> $\mathcal C$ 中, 映射 $f\colon X\to Y$ $n$-连通当且仅当 $f^* \colon (\mathcal C_{/Y})_{\leq n} \to (\mathcal C_{/X})_{\leq n}$ 全忠实; 换言之, 对任意 $n$-截断映射 $Z\to Y$, $Z'\to Y$,
+$$
+\operatorname{Hom}_{Y}(Z,Z')\simeq \operatorname{Hom}_X(Z_X,Z'_X) \simeq\operatorname{Hom}_Y(Z_X,Z').
+$$
+假设 $f$ $n$-连通, 则 $Z_X \to Z$ 亦 $n$-连通, 而 $Z'\to Y$ $n$-截断, 由正交性得 $\operatorname{Hom}_{Y}(Z,Z')\simeq\operatorname{Hom}_Y(Z_X,Z')$. 另一方面, 假设有上述等价, 令 $Z=Y$, 得 $f\colon X\to Y$ 正交于所有 $n$-截断映射 $Z'\to Y$, 故 $X\to Y$ $n$-连通. $\square$</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断性</a></span></p>
+<p><span class="link local"><a href="./连通-截断分解.html" title="(n-连通, n-截断) 分解 [连通-截断分解]">($n$-连通, $n$-截断) 分解</a></span></p>
+<p><span class="link local"><a href="./超完备∞-意象.html" title="超完备 ∞-意象 [超完备∞-意象]">超完备意象</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="逆像"><header><h1><span class="taxon"></span>逆像 <a class="slug" href="./逆像.html">[逆像]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><strong>逆像</strong> (inverse image) 是指<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span>的左伴随部分.</p>
 <h2>定义</h2>

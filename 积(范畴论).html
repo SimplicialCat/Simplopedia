@@ -1130,7 +1130,7 @@ $$
 $$
 为等价. 这里 $(\mathcal O_{\mathrm{el}})_{/X}$ 指的是 $\mathcal O$ 的基本对象到 $X$ 的<strong>惰性</strong>映射的范畴. 注意到右边是一个 $|X|$ 元离散集合. 因此积性模式就是每个对象包含的基本对象都构成离散有限集的模式, 这导致它的 Segal 对象在探测对象上的取值等于其在基本对象上的取值的<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>.</p>
 <p><strong>例</strong>. Segal 态射 $\gamma\colon \Delta\to\Gamma$ 是积性模式.</p>
-<p><strong>定义</strong>. <strong>可充实模式</strong> (enrichable pattern)</p>
+<p><strong>定义</strong>. <strong>可充实模式</strong> (enrichable pattern) todo</p>
 <h2>性质</h2>
 <h3>与算畴的关系; 弱 Segal 纤维化</h3>
 <p>注意算畴在这个故事中有两个层级的角色: 一个算畴既可以给出一种代数模式, 同时又是 “算畴” 这种代数模式的一个模型 (Segal 对象). 本节讲的是<strong>前一种</strong>角色, 即一个 (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 中的) <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>如何给出一个代数模式.</p>
@@ -1379,6 +1379,46 @@ $$
 自由与遗忘的复合 $UF\colon\mathsf{Set} \to \mathsf{Set}$ 是一个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>, 而 $\mathcal T$-代数等同于该单子上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>. 换言之, 上述伴随是<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的.</p>
 <p>特别地, $\mathcal{T}$ 的始代数, 即 $\mathsf{Alg}_{\mathcal{T}}$ 的始对象, 是由空集自由生成的 $\mathcal{T}$-代数 $F(0) = \operatorname{Hom}_{\mathcal{T}}(1,x)$.</p>
 <p>值得注意的是, 考虑一个新的代数理论 $\mathcal{T}[X]$, 其语法为 $\mathcal{T}$ 的语法加上 $X$ 的每个元素作为常量; 那么集合 $X$ 上的自由代数 $F(X)$ 也可理解为 $\mathcal{T}[X]$ 的始代数, 即空集自由生成的 $\mathcal{T}[X]$-代数.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="俯意象"><header><h1><span class="taxon"></span>俯意象 <a class="slug" href="./俯意象.html">[俯意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span>仍是意象, 称之为<strong>俯意象</strong> (over-topos).</p>
+<h2>性质</h2>
+<h3>函子性</h3>
+<p>俯意象的构造 $X\mapsto\mathcal C_{/X}$ 给出函子
+$$
+\mathcal C \to \mathsf{Topos}_{/\mathcal C}.
+$$
+对于 $\mathcal C$ 中的态射 $f\colon X\to Y$, 相应的俯意象的<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span> $(f^*\dashv f_*)\colon \mathcal C_{/X} \to \mathcal C_{/Y}$ 为<span class="link local"><a href="./本质几何态射.html" title="本质几何态射 [本质几何态射]">本质几何态射</a></span>.</p>
+<h3>极限和余极限</h3>
+<p>和一般的<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span>一样,</p>
+<ul>
+<li>俯意象 $\mathcal C_{/X}$ 中的<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>等同于 $\mathcal C$ 中的原图表加上各对象到 $X$ 的态射后所得图表的极限. 例如 $\mathcal C_{/X}$ 中 $Y\to X, Z\to X$ 的<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>是 $\mathcal C$ 中 $Y \to X \leftarrow Z$ 的<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>.</li>
+<li>俯意象中的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>等同于原意象中的余极限.</li>
+</ul>
+<p>例如</p>
+<ul>
+<li>俯意象 $\mathcal C_{/X}$ 中的<span class="link local"><a href="./球面.html" title="球面 [球面]">球面</a></span> $S^n$ 为 $S^n\times X \to X$ (因为<span class="link local"><a href="./球面.html" title="球面 [球面]">球面</a></span>是由终对象出发经过 $n$ 次<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>构造的).</li>
+</ul>
+<h3>指数对象</h3>
+<p>俯意象 $\mathcal C_{/X}$ 中的<span class="link local"><a href="./指数对象.html" title="指数对象 [指数对象]">指数对象</a></span>为
+$$
+p^q = q_* q^* p.
+$$</p>
+<h3>下降</h3>
+<p>俯意象函子
+$$
+    \mathcal C^{\mathrm{op}} \to \mathsf{Cat},\, X\mapsto\mathcal C_{/X}
+$$
+保持极限. 换言之, 对于 $\mathcal C$ 中的余极限 $X=\operatorname{colim}_i X_i$, 有
+$$
+\mathcal C_{/X} \simeq \operatorname{lim}_i \mathcal C_{/X_i}.
+$$
+这一事实甚至可以作为意象的定义.</p>
+<h3>与几何态射的互动</h3>
+<p>对于意象之间的<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span> $f\colon \mathcal E \to \mathcal S$ 与 $\mathcal S$ 的对象 $X$, 有几何态射
+$$
+f_{/X} \colon \mathcal E_{/f^*X} \to \mathcal S_{/X}.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="俯范畴"><header><h1><span class="taxon"></span>俯范畴 <a class="slug" href="./俯范畴.html">[俯范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>俯范畴是表达<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对观念</a></span>的一种方式.</p>
@@ -1540,7 +1580,7 @@ $X$ 是 $n$-截断的, 当且仅当任意映射 $S^n \to X$ 都穿过某一个�
 <li>截断函子 $\tau_{\leq 0}\colon \mathsf{Ani} \to \mathsf{Ani}_{\leq 0} = \mathsf{Set}$ 是取生象的连通分支的集合.</li>
 </ul>
 <h2>性质</h2>
-<h3>截断函子</h3>
+<h3>截断函子与自反性</h3>
 <p>在 $\infty$-意象 $\mathcal C$ 中, $n$-截断对象构成<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> $\mathcal C_{\leq n} \hookrightarrow \mathcal C$, 其左伴随是截断函子 $\tau_{\leq n}\colon \mathcal C \to \mathcal C_{\leq n}$.</p>
 <p><strong>命题</strong>. 截断函子 $\tau_{\leq n}$ 保持有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>.</p>
 <h2>相关概念</h2>

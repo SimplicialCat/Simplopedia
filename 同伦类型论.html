@@ -1208,7 +1208,7 @@ $X$ 是 $n$-截断的, 当且仅当任意映射 $S^n \to X$ 都穿过某一个�
 <li>截断函子 $\tau_{\leq 0}\colon \mathsf{Ani} \to \mathsf{Ani}_{\leq 0} = \mathsf{Set}$ 是取生象的连通分支的集合.</li>
 </ul>
 <h2>性质</h2>
-<h3>截断函子</h3>
+<h3>截断函子与自反性</h3>
 <p>在 $\infty$-意象 $\mathcal C$ 中, $n$-截断对象构成<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> $\mathcal C_{\leq n} \hookrightarrow \mathcal C$, 其左伴随是截断函子 $\tau_{\leq n}\colon \mathcal C \to \mathcal C_{\leq n}$.</p>
 <p><strong>命题</strong>. 截断函子 $\tau_{\leq n}$ 保持有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>.</p>
 <h2>相关概念</h2>
@@ -1224,6 +1224,20 @@ $$
     \prod_{x,y\colon A}\mathsf{Is}\text{-}(n-1)\text{-}\mathsf{Type}(x=_A y) &amp; n&gt;-2.
 \end{cases}
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="推出"><header><h1><span class="taxon"></span>推出 (一种余极限) <a class="slug" href="./推出.html">[推出]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>推出是以
+$$
+\bullet \leftarrow \bullet \rightarrow \bullet
+$$
+为指标范畴的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>, 是<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>的对偶.</p>
+<h3>同伦类型论</h3>
+<p>在<span class="link local"><a href="./同伦类型论.html" title="同伦类型论 [同伦类型论]">同伦类型论</a></span>中, 对于类型 $X,Y$ 以及 $Q\colon X\to Y \to\mathsf{Type}$, 定义推出 $X \sqcup_Q Y$ 为如下<span class="link local"><a href="./高阶归纳类型.html" title="高阶归纳类型 [高阶归纳类型]">高阶归纳类型</a></span>:</p>
+<ul>
+<li>$\mathsf{left} \colon X \to X\sqcup_Q Y$</li>
+<li>$\mathsf{right} \colon Y \to X\sqcup_Q Y$</li>
+<li>$\mathsf{glue}\colon \prod_{x\colon X}\prod_{y\colon Y} Q(x,y) \to (\mathsf{left}\,x =\mathsf{right}\,y)$</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="生象"><header><h1><span class="taxon"></span>生象, ∞-群胚 <a class="slug" href="./生象.html">[生象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>从现代数学的观点, “<strong>生象</strong>” 的概念代替了传统的 “集合” 的概念: 对生象的最好描述就是<strong>一类数学对象的全体构成一个生象</strong>.</p>
@@ -1250,6 +1264,11 @@ $$</p>
 <li><span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span></li>
 <li>拓扑空间</li>
 <li><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> (见<span class="link local"><a href="./∞-意象的形.html" title="意象的形 [∞-意象的形]">意象的形</a></span>)</li>
+</ul>
+<h3>生象的运算</h3>
+<ul>
+<li><span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span></li>
+<li><span class="link local"><a href="./联合.html" title="联合 [联合]">联合</a></span></li>
 </ul>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./生象化.html" title="生象化 [生象化]">生象化</a></span></p>
@@ -1309,4 +1328,8 @@ $$
 <h2>例</h2>
 <p><span class="link local"><a href="./单点(同伦类型论).html" title="单点 (同伦类型论) [单点(同伦类型论)]">单点</a></span>是集合.</p>
 <p>所有<span class="link local"><a href="./命题(同伦类型论).html" title="命题 (同伦类型论) [命题(同伦类型论)]">命题</a></span>都是集合.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="高阶归纳类型"><header><h1><span class="taxon"></span>高阶归纳类型 <a class="slug" href="./高阶归纳类型.html">[高阶归纳类型]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./同伦类型论.html" title="同伦类型论 [同伦类型论]">同伦类型论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>例</h2>
+<p><span class="link local"><a href="./单点(同伦类型论).html" title="单点 (同伦类型论) [单点(同伦类型论)]">单点 (同伦类型论)</a></span></p>
+<p><span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span></p>
 </details></section></details></section></footer></article></div></body></html>

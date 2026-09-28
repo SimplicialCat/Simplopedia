@@ -847,7 +847,47 @@ S^{n-1} &amp; \to &amp; * \
 $$</li>
 </ul>
 <h2>性质</h2>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="同伦群"><header><h1><span class="taxon"></span>同伦群 <a class="slug" href="./同伦群.html">[同伦群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="俯意象"><header><h1><span class="taxon"></span>俯意象 <a class="slug" href="./俯意象.html">[俯意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span>仍是意象, 称之为<strong>俯意象</strong> (over-topos).</p>
+<h2>性质</h2>
+<h3>函子性</h3>
+<p>俯意象的构造 $X\mapsto\mathcal C_{/X}$ 给出函子
+$$
+\mathcal C \to \mathsf{Topos}_{/\mathcal C}.
+$$
+对于 $\mathcal C$ 中的态射 $f\colon X\to Y$, 相应的俯意象的<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span> $(f^*\dashv f_*)\colon \mathcal C_{/X} \to \mathcal C_{/Y}$ 为<span class="link local"><a href="./本质几何态射.html" title="本质几何态射 [本质几何态射]">本质几何态射</a></span>.</p>
+<h3>极限和余极限</h3>
+<p>和一般的<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span>一样,</p>
+<ul>
+<li>俯意象 $\mathcal C_{/X}$ 中的<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>等同于 $\mathcal C$ 中的原图表加上各对象到 $X$ 的态射后所得图表的极限. 例如 $\mathcal C_{/X}$ 中 $Y\to X, Z\to X$ 的<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>是 $\mathcal C$ 中 $Y \to X \leftarrow Z$ 的<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>.</li>
+<li>俯意象中的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>等同于原意象中的余极限.</li>
+</ul>
+<p>例如</p>
+<ul>
+<li>俯意象 $\mathcal C_{/X}$ 中的<span class="link local"><a href="./球面.html" title="球面 [球面]">球面</a></span> $S^n$ 为 $S^n\times X \to X$ (因为<span class="link local"><a href="./球面.html" title="球面 [球面]">球面</a></span>是由终对象出发经过 $n$ 次<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>构造的).</li>
+</ul>
+<h3>指数对象</h3>
+<p>俯意象 $\mathcal C_{/X}$ 中的<span class="link local"><a href="./指数对象.html" title="指数对象 [指数对象]">指数对象</a></span>为
+$$
+p^q = q_* q^* p.
+$$</p>
+<h3>下降</h3>
+<p>俯意象函子
+$$
+    \mathcal C^{\mathrm{op}} \to \mathsf{Cat},\, X\mapsto\mathcal C_{/X}
+$$
+保持极限. 换言之, 对于 $\mathcal C$ 中的余极限 $X=\operatorname{colim}_i X_i$, 有
+$$
+\mathcal C_{/X} \simeq \operatorname{lim}_i \mathcal C_{/X_i}.
+$$
+这一事实甚至可以作为意象的定义.</p>
+<h3>与几何态射的互动</h3>
+<p>对于意象之间的<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span> $f\colon \mathcal E \to \mathcal S$ 与 $\mathcal S$ 的对象 $X$, 有几何态射
+$$
+f_{/X} \colon \mathcal E_{/f^*X} \to \mathcal S_{/X}.
+$$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="同伦群"><header><h1><span class="taxon"></span>同伦群 <a class="slug" href="./同伦群.html">[同伦群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本页面介绍<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的同伦群, 又称非稳定同伦群. 另见<span class="link local"><a href="./同伦群(稳定同伦论).html" title="同伦群 (稳定同伦论) [同伦群(稳定同伦论)]">同伦群 (稳定同伦论)</a></span>.</p>
 <h2>观念</h2>
 <p>同伦群是用<span class="link local"><a href="./球面.html" title="球面 [球面]">球面</a></span>到一个空间 (<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>) $X$ 的映射提取出的 $X$ 的同伦信息.</p>
@@ -874,7 +914,15 @@ $\pi_n(X)$ 是 $\mathcal{C}_{/X}$ 中的 $0$-<span class="link local"><a href=".
 </ul>
 <h2>性质</h2>
 <h3>拉回稳定性</h3>
-<p><strong>命题</strong>. 保持余极限和有限极限的函子保持同伦群.</p>
+<p><strong>命题</strong>. 设函子 $F\colon \mathcal D\to\mathcal C$ 保持<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>和<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>, 那么 $F$ 保持同伦群, 即对任意 $X\in\mathcal D$, 有 $\mathcal C_{/F(X)}$ 中的自然等价
+$$
+\pi_n(F(X)) \simeq F(\pi_n(X)).
+$$</p>
+<p>特别地, 对于<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>之间的<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span>
+$f\colon \mathcal C \to \mathcal D$ 以及 $X\in\mathcal D$, 有 $\mathcal C_{/f^*X}$ 中的自然等价
+$$
+\pi_n (f^*X) \simeq f^*(\pi_n(X)).
+$$</p>
 <h3>长正合列</h3>
 <p><strong>命题</strong>. 对<span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">意象</a></span> $\mathcal C$ 中的任意映射 $f\colon X\to Y$, 有 $(\mathcal C_{/X})_{\leq 0}$ 中的长正合列
 $$
@@ -883,7 +931,7 @@ $$
 &amp;\to\pi_{n-1}(f) \to \cdots.
 \end{aligned}
 $$</p>
-<p>其中 $\pi_n(f)$ 是 $f\in \mathcal C_{/Y}$ 的同伦群, 是 $(\mathcal C_{/Y})_{/f} = \mathcal C_{/X}$ 的对象.</p>
+<p>其中 $\pi_n(f)$ 是 $f\in \mathcal C_{/Y}$ 的同伦群 (<span class="link local"><a href="./相对同伦群.html" title="相对同伦群 [相对同伦群]">相对同伦群</a></span>), 是 $(\mathcal C_{/Y})_{/f} = \mathcal C_{/X}$ 的对象.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./相对同伦群.html" title="相对同伦群 [相对同伦群]">相对同伦群</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="截断性"><header><h1><span class="taxon"></span>截断性 <a class="slug" href="./截断性.html">[截断性]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -943,7 +991,7 @@ $X$ 是 $n$-截断的, 当且仅当任意映射 $S^n \to X$ 都穿过某一个�
 <li>截断函子 $\tau_{\leq 0}\colon \mathsf{Ani} \to \mathsf{Ani}_{\leq 0} = \mathsf{Set}$ 是取生象的连通分支的集合.</li>
 </ul>
 <h2>性质</h2>
-<h3>截断函子</h3>
+<h3>截断函子与自反性</h3>
 <p>在 $\infty$-意象 $\mathcal C$ 中, $n$-截断对象构成<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> $\mathcal C_{\leq n} \hookrightarrow \mathcal C$, 其左伴随是截断函子 $\tau_{\leq n}\colon \mathcal C \to \mathcal C_{\leq n}$.</p>
 <p><strong>命题</strong>. 截断函子 $\tau_{\leq n}$ 保持有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>.</p>
 <h2>相关概念</h2>
@@ -952,9 +1000,14 @@ $X$ 是 $n$-截断的, 当且仅当任意映射 $S^n \to X$ 都穿过某一个�
 </details></section><section class="block" data-taxon=""><details ><summary id="连通性"><header><h1><span class="taxon"></span>连通性 <a class="slug" href="./连通性.html">[连通性]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>用截断性定义</h3>
-<p>称一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ $n$-连通是指其 <span class="link local"><a href="./截断性.html" title="截断性 [截断性]">$n$-截断</a></span> $\tau_{\leq n} X$ 等于单点.</p>
-<p>称一个映射 $X\to Y$ $n$-连通是指其每个纤维都 $n$-连通.</p>
-<p>称一个生象或映射 $\infty$-连通是指其对任意 $n$ 都 $n$-连通.</p>
+<p>称一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> (或一般<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的对象) $X$ $n$-连通是指其 <span class="link local"><a href="./截断性.html" title="截断性 [截断性]">$n$-截断</a></span> $\tau_{\leq n} X$ 等于单点.</p>
+<p>称一个映射 $f\colon X\to Y$ $n$-连通是指其作为<span class="link local"><a href="./俯意象.html" title="俯意象 [俯意象]">俯意象</a></span>的对象是 $n$-连通的. (特别地, 一个对象 $X$ 是 $n$ 连通的等价于映射 $X\to *$ 是 $n$ 连通的.)</p>
+<p>在 $\mathsf{Ani}$ 中, 映射 $f\colon X\to Y$ $n$-连通等价于其每个<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维</a></span>都 $n$-连通, 也等价于如下两个条件:</p>
+<ul>
+<li>对于 $k\leq n$, $\pi_k(X,x) \to \pi_k(Y,f(x))$ 为同构;</li>
+<li>$\pi_{n+1}(X,x) \to \pi_{n+1}(Y,f(x))$ 为满射.</li>
+</ul>
+<p>称一个对象或映射 $\infty$-连通是指其对任意 $n$ 都 $n$-连通.</p>
 <h3>用同伦群定义</h3>
 <p>称一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $n$-连通是指其 $n$ 阶<strong>及</strong>以下<span class="link local"><a href="./同伦群.html" title="同伦群 [同伦群]">同伦群</a></span>平凡.</p>
 <p><strong>注意</strong>. 有些文献中对象的 $n$-连通性的定义与此处可能相差 $1$. 此处的定义的优点在于, 对象的 $n$-连通性与态射的 $n$-连通性相容: 一个对象 $X$ $n$-连通当且仅当唯一的态射 $X\to *$ 是 $n$-连通态射.</p>

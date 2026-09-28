@@ -865,6 +865,33 @@ $$
 $$
 \alpha\cdot\beta = \beta\cdot\alpha.
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="Goodwillie演算"><header><h1><span class="taxon"></span>Goodwillie 演算 <a class="slug" href="./Goodwillie演算.html">[Goodwillie演算]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>微积分研究一个函数在自变量经历微小改变时函数的变化. Goodwillie 提出对一类函子做类似的事情. 这类函子的自变量是空间 (<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>), 而生象 $X$ 经历的 “微小的改变” 指的是一个<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通性</a></span>较高的映射 $Y\to X$.</p>
+<p>两个连通性较高的映射的复合, 其连通性仍较高. 具体而言, $n$-连通映射复合 $m$-连通映射至少是 $\operatorname{min}(n,m)$-连通的.</p>
+<p><span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span>操作提升空间的连通性, 不断作纬悬会让空间越来越 “小”, 直至趋于可缩. 类似地, 纬悬也会提升一个映射的连通性: 对于映射 $Y\to X$, 其纬悬 $\Sigma Y\to \Sigma X$ 的连通性总是提升.</p>
+<p>相应地, 取<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>的操作会降低连通性. 如果纬悬像是微积分中乘以一个小量, 那么环路空间就像是除以这个小量.</p>
+<table><thead><tr><th>同伦论</th><th>微积分</th></tr></thead><tbody>
+<tr><td>带基点空间</td><td>形式幂级数环 $k[\![x]\!]$</td></tr>
+<tr><td>圆圈 $S^1$</td><td>$x$</td></tr>
+<tr><td>纬悬</td><td>乘以 $x$</td></tr>
+<tr><td>环路空间</td><td>除以 $x$</td></tr>
+<tr><td>带基点连通空间</td><td>理想 $x k[\![x]\!]$</td></tr>
+<tr><td>带基点 $n$-连通空间</td><td>理想 $x^n k[\![x]\!]$</td></tr>
+</tbody></table>
+<p>回忆 <span class="link local"><a href="./Blakers–Massey定理.html" title="Blakers–Massey 定理 [Blakers–Massey定理]">Blakers–Massey 定理</a></span>, 考虑 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的如下<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>图,
+$$
+\begin{CD}
+A @&gt;{f}&gt;&gt; B \\
+@V{g}VV @VVV \\
+C @&gt;&gt;&gt; D
+\end{CD}
+$$
+若 $f$ 是 $m$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>映射, $g$ 是 $n$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>映射, 则
+$$
+A \to B\times_D C
+$$
+是 $(m+n)$-连通映射. 这可以理解为在一个小邻域内, 推出近乎于<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="motivation-homotopy-theory"><header><h1><span class="taxon"></span>同伦论的动机 <a class="slug" href="./motivation-homotopy-theory.html">[motivation-homotopy-theory]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文的目标是以尽可能少的前置知识解释同伦论的动机.</p>
 <p>前置知识: 拓扑学基本概念.</p>
@@ -1079,7 +1106,15 @@ $\pi_n(X)$ 是 $\mathcal{C}_{/X}$ 中的 $0$-<span class="link local"><a href=".
 </ul>
 <h2>性质</h2>
 <h3>拉回稳定性</h3>
-<p><strong>命题</strong>. 保持余极限和有限极限的函子保持同伦群.</p>
+<p><strong>命题</strong>. 设函子 $F\colon \mathcal D\to\mathcal C$ 保持<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>和<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>, 那么 $F$ 保持同伦群, 即对任意 $X\in\mathcal D$, 有 $\mathcal C_{/F(X)}$ 中的自然等价
+$$
+\pi_n(F(X)) \simeq F(\pi_n(X)).
+$$</p>
+<p>特别地, 对于<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>之间的<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span>
+$f\colon \mathcal C \to \mathcal D$ 以及 $X\in\mathcal D$, 有 $\mathcal C_{/f^*X}$ 中的自然等价
+$$
+\pi_n (f^*X) \simeq f^*(\pi_n(X)).
+$$</p>
 <h3>长正合列</h3>
 <p><strong>命题</strong>. 对<span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">意象</a></span> $\mathcal C$ 中的任意映射 $f\colon X\to Y$, 有 $(\mathcal C_{/X})_{\leq 0}$ 中的长正合列
 $$
@@ -1088,7 +1123,7 @@ $$
 &amp;\to\pi_{n-1}(f) \to \cdots.
 \end{aligned}
 $$</p>
-<p>其中 $\pi_n(f)$ 是 $f\in \mathcal C_{/Y}$ 的同伦群, 是 $(\mathcal C_{/Y})_{/f} = \mathcal C_{/X}$ 的对象.</p>
+<p>其中 $\pi_n(f)$ 是 $f\in \mathcal C_{/Y}$ 的同伦群 (<span class="link local"><a href="./相对同伦群.html" title="相对同伦群 [相对同伦群]">相对同伦群</a></span>), 是 $(\mathcal C_{/Y})_{/f} = \mathcal C_{/X}$ 的对象.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./相对同伦群.html" title="相对同伦群 [相对同伦群]">相对同伦群</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="基本群"><header><h1><span class="taxon"></span>基本群 <a class="slug" href="./基本群.html">[基本群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -1167,7 +1202,7 @@ $X$ 是 $n$-截断的, 当且仅当任意映射 $S^n \to X$ 都穿过某一个�
 <li>截断函子 $\tau_{\leq 0}\colon \mathsf{Ani} \to \mathsf{Ani}_{\leq 0} = \mathsf{Set}$ 是取生象的连通分支的集合.</li>
 </ul>
 <h2>性质</h2>
-<h3>截断函子</h3>
+<h3>截断函子与自反性</h3>
 <p>在 $\infty$-意象 $\mathcal C$ 中, $n$-截断对象构成<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> $\mathcal C_{\leq n} \hookrightarrow \mathcal C$, 其左伴随是截断函子 $\tau_{\leq n}\colon \mathcal C \to \mathcal C_{\leq n}$.</p>
 <p><strong>命题</strong>. 截断函子 $\tau_{\leq n}$ 保持有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>.</p>
 <h2>相关概念</h2>
@@ -1270,6 +1305,17 @@ $$
     X &amp; \to &amp; * \\
     \downarrow &amp; &amp; \downarrow \\
     * &amp; \to &amp; \Sigma X.
+\end{array}
+$$</p>
+<h2>例</h2>
+<h3>俯意象</h3>
+<p><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathcal C$ 的<span class="link local"><a href="./俯意象.html" title="俯意象 [俯意象]">俯意象</a></span> $\mathcal C_{/X}$ 中, 对象 $Y\to X$ 的纬悬 (记作 $\Sigma_X Y$) 是 $\mathcal C$ 中的如下推出:
+$$
+\begin{array}
+    {ccc}
+    Y &amp; \to &amp; X \\
+    \downarrow &amp; &amp; \downarrow \\
+    X &amp; \to &amp; \Sigma_X Y.
 \end{array}
 $$</p>
 <h2>性质</h2>

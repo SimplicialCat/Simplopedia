@@ -973,6 +973,16 @@ $$
 即函子 $2^{(-)}\colon \mathsf{Set}\to\mathsf{Boole}^{\mathrm{op}}$ 与 $\operatorname{Spec}\colon \mathsf{Boole}^{\mathrm{op}}\to\mathsf{Set}$ 满足<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>关系 $2^{(-)}\dashv\operatorname{Spec}$. 这对伴随<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span>为 $\mathsf{Set}$ 上的<span class="link local"><a href="./超滤.html" title="超滤 [超滤]">超滤单子</a></span>.</p>
 <h3>Stone 对偶</h3>
 <p><span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="Freudenthal纬悬定理"><header><h1><span class="taxon"></span>Freudenthal 纬悬定理 <a class="slug" href="./Freudenthal纬悬定理.html">[Freudenthal纬悬定理]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./同伦论.html" title="同伦论 [同伦论]">同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>陈述</h2>
+<p>对于带基点 $n$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>空间 $A$, <span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $\Sigma \dashv \Omega$ 的单位
+$$
+A\to\Omega\Sigma A
+$$
+是 $2n$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>映射.</p>
+<p>注意我们采用的<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通性</a></span>的约定可能与另一些文献不同. 在我们的约定中, 映射 $f\colon X\to Y$ $n$-连通等价于其每个<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维</a></span>都 $n$-连通.</p>
+<p>这是 <span class="link local"><a href="./Blakers–Massey定理.html" title="Blakers–Massey 定理 [Blakers–Massey定理]">Blakers–Massey 定理</a></span>的特例.</p>
+<h2>例</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="Galois对应"><header><h1><span class="taxon"></span>Galois 对应 <a class="slug" href="./Galois对应.html">[Galois对应]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>Galois 对应是<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span>之间的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
@@ -1485,6 +1495,19 @@ $$
 <p>当 $Y$ 为 Hausdorff 空间时, 几何映射 $\operatorname{Sh}(X)\to\operatorname{Sh}(Y)$ 唯一确定了 $f\colon X\to Y$.</p>
 <h3>与逻辑的关系</h3>
 <p>几何态射保持<span class="link local"><a href="./几何逻辑.html" title="几何逻辑 [几何逻辑]">几何逻辑</a></span>的公式.</p>
+<h3>与俯意象的关系</h3>
+<p>对于几何态射 $f \colon \mathcal F \to \mathcal E$ 以及 $X\in \mathcal E$, 有几何态射
+$$
+f_{/X}\colon \mathcal F_{/f^*X} \to \mathcal E_{/X}
+$$
+以及意象的交换图
+$$
+\begin{CD}
+\mathcal F_{/f^*X} @&gt;{f_{/X}}&gt;&gt; \mathcal E_{/X} \\
+@VVV @VVV \\
+\mathcal F @&gt;&gt;{f}&gt; \mathcal E.
+\end{CD}
+$$</p>
 <h2>例</h2>
 <p>一个意象 $\mathcal E$ 中的箭头 $k\colon B\to A$ 给出了 “换基” (change of base) 函子
 $$
@@ -2171,6 +2194,48 @@ $$</p>
 <p>函子 $(-)_+\wedge E\colon \mathsf{Ani} \to \mathsf{Sp}$ 保持余极限, 因而被它在一个点上的取值完全决定.</p>
 <h3>$\mathbb E_\infty$-代数的分解同调</h3>
 <p>设 $A$ 为 $\mathbb E_\infty$-代数, $M$ 为 $n$-流形, 那么 $A$ 作为 $\mathbb E_n$-代数在 $M$ 上的<span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>等同于 $A$ 作为 $\mathbb E_\infty$-代数沿 $M$ 的底生象的张量积.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="指数对象"><header><h1><span class="taxon"></span>指数对象 <a class="slug" href="./指数对象.html">[指数对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>在<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathcal C$ 中, 对象 $X$ 的 $Y$ 次<strong>指数对象</strong> (exponential object) 是 $Y$ 上的 $X$ 常值族的<span class="link local"><a href="./依值积.html" title="依值积 [依值积]">依值积</a></span>:
+$$
+X^Y = \prod_{y\colon Y} X = Y_*Y^*X.
+$$</p>
+<h2>性质</h2>
+<p>由定义及三元<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $Y_!\dashv Y^* \dashv Y_*$,
+$$
+(Y\times -) = Y_!Y^* \dashv Y_*Y^* = (-)^Y.
+$$</p>
+<h3>取值映射</h3>
+<p>对任意对象 $X,Y$, 称伴随 $(Y\times -)\dashv (-)^Y$ 的余单位
+$$
+\operatorname{ev}\colon Y\times X^Y \to X
+$$
+为<strong>取值映射</strong> (evaluation map).</p>
+<h3>函子性</h3>
+<p>设有态射 $W\to Y$, 则有
+$$
+W\times X^Y \to Y\times X^Y\overset{\operatorname{ev}}{\to}X,
+$$
+从而得自然变换
+$$
+X^Y\to X^W.
+$$
+这说明有函子
+$$
+X^{(-)} \colon \mathcal C^{\mathrm{op}} \to \mathcal C.
+$$
+在<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>中这就是<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span> $\operatorname{Hom}(-,X)$.</p>
+<h3>内蕴复合</h3>
+<p>迭代取值映射可得
+$$
+Z\times Y^Z \times X^Y \to Y\times X^Y \to X,
+$$
+从而指数对象之间有自然变换
+$$
+(-\circ -)\colon Y^Z \times X^Y \to X^Z.
+$$
+在<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>中这就是映射的复合.</p>
+<h2>例</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="映射谱"><header><h1><span class="taxon"></span>映射谱 <a class="slug" href="./映射谱.html">[映射谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>映射谱是 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 上的<span class="link local"><a href="./闭范畴.html" title="闭范畴 [闭范畴]">闭</a></span>对称幺半范畴结构的一部分.</p>
 <h2>定义</h2>
@@ -2224,6 +2289,104 @@ $$
 \Omega Y =\operatorname{lim}(\cdots\leftarrow^4 Y\times Y\leftarrow^3 Y\leftleftarrows *) = \operatorname{Cobar}(Y).
 $$</p>
 <h3>多项式环</h3>
+</details></section><section class="block" data-taxon=""><details ><summary id="正交分解系"><header><h1><span class="taxon"></span>正交分解系 <a class="slug" href="./正交分解系.html">[正交分解系]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><strong>命题-定义</strong>. 对于范畴 $\mathcal C$ 的<span class="link local"><a href="./宽子范畴.html" title="宽子范畴 [宽子范畴]">宽子范畴</a></span> (包含所有对象的子范畴) $L,R$, 若以下等价条件成立, 则称 $(L,R)$ 为<strong>正交分解系</strong> (orthogonal factorization system):</p>
+<p>$(1)$ 对任意对象 $x,y\in\mathcal C$, 映射
+$$
+    (-\circ -)\colon \operatorname{colim}_{z\in\mathcal C^{\simeq}}\operatorname{Hom}_L(x,z)\times\operatorname{Hom}_R(z,y) \to \operatorname{Hom}(x,y)
+   $$
+为等价, 换言之任一态射都<strong>存在唯一</strong>的先 $L$ 后 $R$ 的分解.</p>
+<p>$(2)$ 映射
+$$
+	   (-\circ -)\colon \mathsf{Ar}(L)^{\simeq} \times_{\mathcal C^{\simeq}}\mathsf{Ar}(R)^{\simeq} \to \mathsf{Ar}(\mathcal C)^{\simeq}
+   $$
+为等价, 和条件 1 基本上是同一个意思.</p>
+<p>$(3)$ $L$ 的态射<span class="link local"><a href="./提升性质.html" title="提升性质 [提升性质]">左正交</a></span>于 $R$ 的态射, 并且任一态射都<strong>存在</strong>一个先 $L$ 后 $R$ 的分解 (不要求唯一).</p>
+<p>$(4)$ 函子
+$$
+	   (-\circ -)\colon \mathsf{Ar}(L) \times_{\mathcal C}\mathsf{Ar}(R) \to \mathsf{Ar}(\mathcal C)
+$$
+为等价. 注意这表明正交分解是函子性的, 这个分解由上述函子的逆给出.</p>
+<p><em>证明</em> (概要).</p>
+<p>$(1) \Leftrightarrow (2)$. 考虑拉回图
+$$
+\begin{CD}
+\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\underset{z\in\mathcal C^{\simeq}}{\operatorname{colim}}\,\operatorname{Hom}_L(x,z)\times\operatorname{Hom}_R(z,y) @&gt;&gt;&gt; \operatorname{Hom}(x,y) @&gt;&gt;&gt; \{(x,y)\} \\
+@VVV @VVV @VVV \\
+\mathsf{Ar}(L)^{\simeq} \times_{\mathcal C^{\simeq}}\mathsf{Ar}(R)^{\simeq} @&gt;&gt;&gt; \mathsf{Ar}(\mathcal C)^{\simeq} @&gt;&gt;&gt; \mathcal C^{\simeq}\times\mathcal C^{\simeq}.
+\end{CD}
+$$</p>
+<p>$(1)\Rightarrow (3)$. 设 $f\in L,g\in R$, 我们证明 $f \perp g$.
+考虑如下交换图,
+$$
+\begin{CD}
+\bullet @&gt;{u}&gt;&gt; \bullet \\
+@V{f}VV @VV{g}V \\
+\bullet @&gt;&gt;{v}&gt; \bullet
+\end{CD}
+$$
+其中主对角线 $gu = vf$. 考虑主对角线以及 $u,v$ 三个态射的 $(L,R)$-分解, 得到 (唯一确定的) 如下分解,</p>
+<p><figure><img src="./OFS-1.svg" class="color-invert"/></figure></p>
+<p>其中 $\ell\in L$, $r\in L$. 这证明了 $f \perp g$. 上述论证可以写成更严格的形式, 使用了 $\mathsf{Ani}$ 中余极限保持拉回的性质, 此处略去.</p>
+<p>$(3) \Rightarrow (4)$. 见 <span class="link external"><a href="https://kerodon.net/tag/04QD" title="Kerodon 04QD [https://kerodon.net/tag/04QD]">Kerodon 04QD</a></span>.</p>
+<p>$(4) \Rightarrow (2)$ 明显.</p>
+<h2>性质</h2>
+<h3>收缩封闭</h3>
+<p><strong>命题</strong>. 正交分解系中的两类态射 $L,R$ 各自都关于<span class="link local"><a href="./收缩.html" title="收缩 [收缩]">收缩</a></span>封闭.</p>
+<p><em>证明</em>. 对于任一态射 $f$, 有 $f\in L$ 当且仅当 $f$ 在函子性的分解中的右边分量为同构. 而同构关于收缩封闭, 故 $L$ 关于收缩封闭. 对 $R$ 同理.</p>
+<h3>互为提升类</h3>
+<p><strong>命题</strong>. 记 $L,R$ 为正交分解系的两类态射, 则 $L$ 和 $R$ 互为<span class="link local"><a href="./提升性质.html" title="提升性质 [提升性质]">提升</a></span>类:
+$$
+L = {^\perp R},\quad R = L^\perp.
+$$</p>
+<p><em>证明</em>. 对任意 $f\in {^\perp R}$, 存在 $\ell\in L$ 与 $r\in R$ 使得 $f = r\ell$. 考虑下图,
+$$
+\begin{CD}
+\bullet @&gt;{\ell}&gt;&gt; \bullet \\
+@V{f}VV \nearrow_i @VV{r}V \\
+\bullet @= \bullet
+\end{CD}
+$$
+由 $f\in {^\perp R}$, $r\in R$ 知存在提升 $i$; 这说明 $f$ 是 $\ell$ 的收缩 (如下图).
+$$
+\begin{CD}
+\bullet @= \bullet @= \bullet \\
+@V{f}VV @V{\ell}VV @VV{f}V \\
+\bullet @&gt;&gt;{i}&gt; \bullet @&gt;&gt;{r}&gt; \bullet
+\end{CD}
+$$
+最后, 由 $L$ 关于收缩封闭知 $f \in L$.</p>
+<h3>自反性</h3>
+<p><strong>命题</strong>. 在正交分解
+$$
+\mathsf{Ar}(\mathcal C) \to \mathsf{Ar}(L)\times_{\mathcal C}\mathsf{Ar}(R)
+$$
+中,</p>
+<ul>
+<li>$\mathsf{Ar}(\mathcal C) \to \mathsf{Ar}(L)$ 是含入 $\mathsf{Ar}(L)\to\mathsf{Ar}(\mathcal C)$ 的右伴随, 伴随的余单位正是左分量 $L(f)\to f$.</li>
+<li>$\mathsf{Ar}(\mathcal C) \to \mathsf{Ar}(R)$ 是含入 $\mathsf{Ar}(R)\to\mathsf{Ar}(\mathcal C)$ 的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>, 伴随的单位正是右分量 $f \to R(f)$.</li>
+</ul>
+<p><strong>例</strong>. $n$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>构成 $\mathsf{Ani}$ 的<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> $\mathsf{Ani}_{\leq n} \hookrightarrow \mathsf{Ani}.$</p>
+<h3>局部性</h3>
+<p><strong>命题</strong>. 对于<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathcal C$ 中的正交分解系 $(L,R)$, 两类态射有<span class="link local"><a href="./局部类.html" title="局部类 [局部类]">局部性</a></span>. 这就是说, 对于态射 $f\colon X\to Y$, 若存在 $Y$ 的覆盖 $\{g_i \colon Y_i\to Y\}$ 使得每个 $g_i^* f$ 都属于 $R$, 那么 $f$ 属于 $R$.</p>
+<p><em>证明</em>. 由意象的性质, 覆盖 $\{g_i \colon Y_i\to Y\}$ 的<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>
+$$
+\mathcal C_{/Y} \to \prod_{i} \mathcal C_{/Y_i}
+$$
+为<span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守函子</a></span>. 考虑态射 $f$ 的 $(L,R)$-分解 $f=rl$ ($l\in L, r\in R$). 假设每个 $g_i^*f$ 属于 $R$, 那么 $g_i^* l$ 为同构, 由保守性得 $l$ 为同构, 即 $f$ 属于 $R$. 对于 $L$ 同理. $\square$</p>
+<h3>与双范畴 (二重范畴) 的关系</h3>
+<p>记 $\mathsf{OFS}$ 为 “带正交分解系的范畴” 的范畴, $\mathsf{DCat}$ 为双范畴 (或者叫<span class="link local"><a href="./n-重范畴.html" title="n 重范畴 [n-重范畴]">二重范畴</a></span>) 的范畴. 考虑函子
+$$
+\operatorname{Fact}\colon \mathsf{OFS} \to \mathsf{DCat},
+$$
+将每个正交分解系视为一个二重范畴, 两类态射分别就是分解系中的两类态射.</p>
+<p><strong>命题</strong>. $\operatorname{Fact}$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>.</p>
+<h2>例</h2>
+<h3>平凡分解系</h3>
+<p>在任何范畴 $\mathcal C$ 中, $(\mathcal C^{\simeq},\mathcal C)$ 与 $(\mathcal C,\mathcal C^{\simeq})$ 均为正交分解系.</p>
+<h3>满单分解</h3>
+<p>在集合范畴 $\mathsf{Set}$ 或生象的范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中, (满射, 单射) 是一个正交分解系. 这是 <span class="link local"><a href="./连通-截断分解.html" title="(n-连通, n-截断) 分解 [连通-截断分解]">$n$-连通-$n$-截断分解</a></span>的特例 $(n=-1)$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="游走"><header><h1><span class="taxon"></span>游走 <a class="slug" href="./游走.html">[游走]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><strong>游走</strong> (walking) 的结构是某种范畴上的结构中最 “自由” 的, “万有” 的一个.</p>
 <p>设 $\mathcal S$ 是某种范畴的范畴 (如<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>的范畴), $X$ 是 $\mathcal S$ 的对象上的某种结构 (如<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>), 那么 “游走的 $X$” 是一个对象 $x\in \mathcal C$ ($\mathcal C\in\mathcal S$), 使得有自然等价
@@ -2353,6 +2516,17 @@ $$
     X &amp; \to &amp; * \\
     \downarrow &amp; &amp; \downarrow \\
     * &amp; \to &amp; \Sigma X.
+\end{array}
+$$</p>
+<h2>例</h2>
+<h3>俯意象</h3>
+<p><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathcal C$ 的<span class="link local"><a href="./俯意象.html" title="俯意象 [俯意象]">俯意象</a></span> $\mathcal C_{/X}$ 中, 对象 $Y\to X$ 的纬悬 (记作 $\Sigma_X Y$) 是 $\mathcal C$ 中的如下推出:
+$$
+\begin{array}
+    {ccc}
+    Y &amp; \to &amp; X \\
+    \downarrow &amp; &amp; \downarrow \\
+    X &amp; \to &amp; \Sigma_X Y.
 \end{array}
 $$</p>
 <h2>性质</h2>

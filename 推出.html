@@ -832,7 +832,45 @@ $$
 \bullet \leftarrow \bullet \rightarrow \bullet
 $$
 为指标范畴的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>, 是<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>的对偶.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="CW复形"><header><h1><span class="taxon"></span>CW 复形 <a class="slug" href="./CW复形.html">[CW复形]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h3>同伦类型论</h3>
+<p>在<span class="link local"><a href="./同伦类型论.html" title="同伦类型论 [同伦类型论]">同伦类型论</a></span>中, 对于类型 $X,Y$ 以及 $Q\colon X\to Y \to\mathsf{Type}$, 定义推出 $X \sqcup_Q Y$ 为如下<span class="link local"><a href="./高阶归纳类型.html" title="高阶归纳类型 [高阶归纳类型]">高阶归纳类型</a></span>:</p>
+<ul>
+<li>$\mathsf{left} \colon X \to X\sqcup_Q Y$</li>
+<li>$\mathsf{right} \colon Y \to X\sqcup_Q Y$</li>
+<li>$\mathsf{glue}\colon \prod_{x\colon X}\prod_{y\colon Y} Q(x,y) \to (\mathsf{left}\,x =\mathsf{right}\,y)$</li>
+</ul>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Blakers–Massey定理"><header><h1><span class="taxon"></span>Blakers–Massey 定理 <a class="slug" href="./Blakers–Massey定理.html">[Blakers–Massey定理]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./同伦论.html" title="同伦论 [同伦论]">同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>若采取 “高连通度 = 小” 的直观 (见 <span class="link local"><a href="./Goodwillie演算.html" title="Goodwillie 演算 [Goodwillie演算]">Goodwillie 演算</a></span>), 那么 Blakers–Massey 定理说的是: 在一个小邻域内, 推出近乎于拉回.</p>
+<h2>陈述</h2>
+<p>考虑 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的如下<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>图,
+$$
+\begin{CD}
+A @&gt;{f}&gt;&gt; B \\
+@V{g}VV @VVV \\
+C @&gt;&gt;&gt; D
+\end{CD}
+$$
+若 $f$ 是 $m$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>映射, $g$ 是 $n$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>映射, 则
+$$
+A \to B\times_D C
+$$
+是 $(m+n)$-连通映射.</p>
+<h3>在模态中的推广</h3>
+<p><span class="link local"><a href="./ABFJ-BM.html" title="A generalized Blakers–Massey theorem [ABFJ-BM]">ABFJ</a></span> 的文章给出了 Blakers–Massey 定理的推广:</p>
+<p><strong>定理</strong>. 设 $(L,R)$ 是意象中的<span class="link local"><a href="./模态.html" title="模态 [模态]">模态</a></span> (即关于<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>封闭的<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">正交分解系</a></span>), 考虑<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>图
+$$
+\begin{CD}
+A @&gt;{f}&gt;&gt; B \\
+@V{g}VV @VVV \\
+C @&gt;&gt;&gt; D,
+\end{CD}
+$$
+若<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span>的<span class="link local"><a href="./推出积.html" title="推出积 [推出积]">推出积</a></span> $\Delta_f \operatorname{\square}_Z \Delta_g$ 属于 $L$, 则映射 $A \to B\times_D C$ 属于 $L$.</p>
+<h2>证明</h2>
+<h2>例</h2>
+<p>取 $B = C = *$, 则有 $D = \Sigma A$, 而拉回为 $*\times_{\Sigma A} * = \Omega \Sigma A$. 我们得到 <span class="link local"><a href="./Freudenthal纬悬定理.html" title="Freudenthal 纬悬定理 [Freudenthal纬悬定理]">Freudenthal 纬悬定理</a></span>: 对于 $n$-连通空间 $A$, $A\to\Omega\Sigma A$ 是 $2n$-连通映射.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="CW复形"><header><h1><span class="taxon"></span>CW 复形 <a class="slug" href="./CW复形.html">[CW复形]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>CW 复形是通过一系列粘贴胞腔操作得到的空间:
 $$
@@ -858,6 +896,33 @@ I\times S^n @&gt;&gt;&gt; X_n @&gt;&gt;&gt; * \\
 I @&gt;&gt;&gt; X_{n+1} @&gt;&gt;&gt; \bigvee_I S^{n+1}
 \end{CD}
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="Goodwillie演算"><header><h1><span class="taxon"></span>Goodwillie 演算 <a class="slug" href="./Goodwillie演算.html">[Goodwillie演算]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>微积分研究一个函数在自变量经历微小改变时函数的变化. Goodwillie 提出对一类函子做类似的事情. 这类函子的自变量是空间 (<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>), 而生象 $X$ 经历的 “微小的改变” 指的是一个<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通性</a></span>较高的映射 $Y\to X$.</p>
+<p>两个连通性较高的映射的复合, 其连通性仍较高. 具体而言, $n$-连通映射复合 $m$-连通映射至少是 $\operatorname{min}(n,m)$-连通的.</p>
+<p><span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span>操作提升空间的连通性, 不断作纬悬会让空间越来越 “小”, 直至趋于可缩. 类似地, 纬悬也会提升一个映射的连通性: 对于映射 $Y\to X$, 其纬悬 $\Sigma Y\to \Sigma X$ 的连通性总是提升.</p>
+<p>相应地, 取<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>的操作会降低连通性. 如果纬悬像是微积分中乘以一个小量, 那么环路空间就像是除以这个小量.</p>
+<table><thead><tr><th>同伦论</th><th>微积分</th></tr></thead><tbody>
+<tr><td>带基点空间</td><td>形式幂级数环 $k[\![x]\!]$</td></tr>
+<tr><td>圆圈 $S^1$</td><td>$x$</td></tr>
+<tr><td>纬悬</td><td>乘以 $x$</td></tr>
+<tr><td>环路空间</td><td>除以 $x$</td></tr>
+<tr><td>带基点连通空间</td><td>理想 $x k[\![x]\!]$</td></tr>
+<tr><td>带基点 $n$-连通空间</td><td>理想 $x^n k[\![x]\!]$</td></tr>
+</tbody></table>
+<p>回忆 <span class="link local"><a href="./Blakers–Massey定理.html" title="Blakers–Massey 定理 [Blakers–Massey定理]">Blakers–Massey 定理</a></span>, 考虑 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的如下<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>图,
+$$
+\begin{CD}
+A @&gt;{f}&gt;&gt; B \\
+@V{g}VV @VVV \\
+C @&gt;&gt;&gt; D
+\end{CD}
+$$
+若 $f$ 是 $m$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>映射, $g$ 是 $n$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>映射, 则
+$$
+A \to B\times_D C
+$$
+是 $(m+n)$-连通映射. 这可以理解为在一个小邻域内, 推出近乎于<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="homalg-1-tri-st"><header><h1><span class="taxon"></span>从三角范畴到稳定范畴 <a class="slug" href="./homalg-1-tri-st.html">[homalg-1-tri-st]</a></h1><div class="metadata"><ul><li class="meta-item">讲义</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><strong>定义</strong> (特殊三角)
 范畴 $\mathcal C$ 中的<strong>特殊三角</strong> (distinguished triangle) 是指下图,
@@ -1062,6 +1127,46 @@ $$
 为<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>, <span class="link local"><a href="./稳定∞-范畴.html" title=" [稳定∞-范畴]">稳定无穷范畴</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="俯意象"><header><h1><span class="taxon"></span>俯意象 <a class="slug" href="./俯意象.html">[俯意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span>仍是意象, 称之为<strong>俯意象</strong> (over-topos).</p>
+<h2>性质</h2>
+<h3>函子性</h3>
+<p>俯意象的构造 $X\mapsto\mathcal C_{/X}$ 给出函子
+$$
+\mathcal C \to \mathsf{Topos}_{/\mathcal C}.
+$$
+对于 $\mathcal C$ 中的态射 $f\colon X\to Y$, 相应的俯意象的<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span> $(f^*\dashv f_*)\colon \mathcal C_{/X} \to \mathcal C_{/Y}$ 为<span class="link local"><a href="./本质几何态射.html" title="本质几何态射 [本质几何态射]">本质几何态射</a></span>.</p>
+<h3>极限和余极限</h3>
+<p>和一般的<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span>一样,</p>
+<ul>
+<li>俯意象 $\mathcal C_{/X}$ 中的<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>等同于 $\mathcal C$ 中的原图表加上各对象到 $X$ 的态射后所得图表的极限. 例如 $\mathcal C_{/X}$ 中 $Y\to X, Z\to X$ 的<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>是 $\mathcal C$ 中 $Y \to X \leftarrow Z$ 的<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>.</li>
+<li>俯意象中的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>等同于原意象中的余极限.</li>
+</ul>
+<p>例如</p>
+<ul>
+<li>俯意象 $\mathcal C_{/X}$ 中的<span class="link local"><a href="./球面.html" title="球面 [球面]">球面</a></span> $S^n$ 为 $S^n\times X \to X$ (因为<span class="link local"><a href="./球面.html" title="球面 [球面]">球面</a></span>是由终对象出发经过 $n$ 次<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>构造的).</li>
+</ul>
+<h3>指数对象</h3>
+<p>俯意象 $\mathcal C_{/X}$ 中的<span class="link local"><a href="./指数对象.html" title="指数对象 [指数对象]">指数对象</a></span>为
+$$
+p^q = q_* q^* p.
+$$</p>
+<h3>下降</h3>
+<p>俯意象函子
+$$
+    \mathcal C^{\mathrm{op}} \to \mathsf{Cat},\, X\mapsto\mathcal C_{/X}
+$$
+保持极限. 换言之, 对于 $\mathcal C$ 中的余极限 $X=\operatorname{colim}_i X_i$, 有
+$$
+\mathcal C_{/X} \simeq \operatorname{lim}_i \mathcal C_{/X_i}.
+$$
+这一事实甚至可以作为意象的定义.</p>
+<h3>与几何态射的互动</h3>
+<p>对于意象之间的<span class="link local"><a href="./几何态射.html" title="几何态射 [几何态射]">几何态射</a></span> $f\colon \mathcal E \to \mathcal S$ 与 $\mathcal S$ 的对象 $X$, 有几何态射
+$$
+f_{/X} \colon \mathcal E_{/f^*X} \to \mathcal S_{/X}.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="刚性幺半范畴"><header><h1><span class="taxon"></span>刚性幺半范畴 <a class="slug" href="./刚性幺半范畴.html">[刚性幺半范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设 $\mathcal A$ 为<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定</a></span><span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>. 若如下条件成立, 则称其<strong>刚性</strong>:</p>
@@ -1210,4 +1315,30 @@ S^{n-1} &amp; \to &amp; * \
 $$</li>
 </ul>
 <h2>性质</h2>
+</details></section><section class="block" data-taxon=""><details ><summary id="联合"><header><h1><span class="taxon"></span>联合 <a class="slug" href="./联合.html">[联合]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>范畴中两个对象 $X,Y$ 的<strong>联合</strong> (join) $X * Y$ 是如下的<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>:
+$$
+X * Y = X \sqcup_{X\times Y} Y.
+$$</p>
+<h2>例</h2>
+<h3>纬悬</h3>
+<p><span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span>是与 $S^0 = 1 + 1$ 的联合:
+$$
+S^0 * A = (1+1) \sqcup_{A + A} A = 1 \sqcup_A 1 = \Sigma A.
+$$</p>
+<p>由此归纳得
+$$
+\underbrace{S^0 * S^0 * \cdots * S^0}_n = S^{n-1}.
+$$
+$$
+S^n * S^m = S^{n+m+1}.
+$$</p>
+<h2>性质</h2>
+<h3>连通性</h3>
+<p><strong>命题</strong>. 设 $X$ 是 $n$-连通生象, $Y$ 是 $m$-连通生象, 那么 $X*Y$ 是 $(n+m+2)$-连通生象.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="高阶归纳类型"><header><h1><span class="taxon"></span>高阶归纳类型 <a class="slug" href="./高阶归纳类型.html">[高阶归纳类型]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./同伦类型论.html" title="同伦类型论 [同伦类型论]">同伦类型论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>例</h2>
+<p><span class="link local"><a href="./单点(同伦类型论).html" title="单点 (同伦类型论) [单点(同伦类型论)]">单点 (同伦类型论)</a></span></p>
+<p><span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span></p>
 </details></section></details></section></footer></article></div></body></html>

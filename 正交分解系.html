@@ -893,8 +893,26 @@ $$
 \end{CD}
 $$
 最后, 由 $L$ 关于收缩封闭知 $f \in L$.</p>
-<h3>与二重范畴的关系</h3>
-<p>记 $\mathsf{OFS}$ 为 “带正交分解系的范畴” 的范畴, $\mathsf{DCat}$ 为<span class="link local"><a href="./n-重范畴.html" title="n 重范畴 [n-重范畴]">二重范畴</a></span>的范畴. 考虑函子
+<h3>自反性</h3>
+<p><strong>命题</strong>. 在正交分解
+$$
+\mathsf{Ar}(\mathcal C) \to \mathsf{Ar}(L)\times_{\mathcal C}\mathsf{Ar}(R)
+$$
+中,</p>
+<ul>
+<li>$\mathsf{Ar}(\mathcal C) \to \mathsf{Ar}(L)$ 是含入 $\mathsf{Ar}(L)\to\mathsf{Ar}(\mathcal C)$ 的右伴随, 伴随的余单位正是左分量 $L(f)\to f$.</li>
+<li>$\mathsf{Ar}(\mathcal C) \to \mathsf{Ar}(R)$ 是含入 $\mathsf{Ar}(R)\to\mathsf{Ar}(\mathcal C)$ 的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>, 伴随的单位正是右分量 $f \to R(f)$.</li>
+</ul>
+<p><strong>例</strong>. $n$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>构成 $\mathsf{Ani}$ 的<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> $\mathsf{Ani}_{\leq n} \hookrightarrow \mathsf{Ani}.$</p>
+<h3>局部性</h3>
+<p><strong>命题</strong>. 对于<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathcal C$ 中的正交分解系 $(L,R)$, 两类态射有<span class="link local"><a href="./局部类.html" title="局部类 [局部类]">局部性</a></span>. 这就是说, 对于态射 $f\colon X\to Y$, 若存在 $Y$ 的覆盖 $\{g_i \colon Y_i\to Y\}$ 使得每个 $g_i^* f$ 都属于 $R$, 那么 $f$ 属于 $R$.</p>
+<p><em>证明</em>. 由意象的性质, 覆盖 $\{g_i \colon Y_i\to Y\}$ 的<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>
+$$
+\mathcal C_{/Y} \to \prod_{i} \mathcal C_{/Y_i}
+$$
+为<span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守函子</a></span>. 考虑态射 $f$ 的 $(L,R)$-分解 $f=rl$ ($l\in L, r\in R$). 假设每个 $g_i^*f$ 属于 $R$, 那么 $g_i^* l$ 为同构, 由保守性得 $l$ 为同构, 即 $f$ 属于 $R$. 对于 $L$ 同理. $\square$</p>
+<h3>与双范畴 (二重范畴) 的关系</h3>
+<p>记 $\mathsf{OFS}$ 为 “带正交分解系的范畴” 的范畴, $\mathsf{DCat}$ 为双范畴 (或者叫<span class="link local"><a href="./n-重范畴.html" title="n 重范畴 [n-重范畴]">二重范畴</a></span>) 的范畴. 考虑函子
 $$
 \operatorname{Fact}\colon \mathsf{OFS} \to \mathsf{DCat},
 $$
@@ -905,7 +923,38 @@ $$
 <p>在任何范畴 $\mathcal C$ 中, $(\mathcal C^{\simeq},\mathcal C)$ 与 $(\mathcal C,\mathcal C^{\simeq})$ 均为正交分解系.</p>
 <h3>满单分解</h3>
 <p>在集合范畴 $\mathsf{Set}$ 或生象的范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中, (满射, 单射) 是一个正交分解系. 这是 <span class="link local"><a href="./连通-截断分解.html" title="(n-连通, n-截断) 分解 [连通-截断分解]">$n$-连通-$n$-截断分解</a></span>的特例 $(n=-1)$.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="geometry-DAGV"><header><h1><span class="taxon"></span>几何 (带结构的意象) <a class="slug" href="./geometry-DAGV.html">[geometry-DAGV]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Blakers–Massey定理"><header><h1><span class="taxon"></span>Blakers–Massey 定理 <a class="slug" href="./Blakers–Massey定理.html">[Blakers–Massey定理]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./同伦论.html" title="同伦论 [同伦论]">同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>若采取 “高连通度 = 小” 的直观 (见 <span class="link local"><a href="./Goodwillie演算.html" title="Goodwillie 演算 [Goodwillie演算]">Goodwillie 演算</a></span>), 那么 Blakers–Massey 定理说的是: 在一个小邻域内, 推出近乎于拉回.</p>
+<h2>陈述</h2>
+<p>考虑 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的如下<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>图,
+$$
+\begin{CD}
+A @&gt;{f}&gt;&gt; B \\
+@V{g}VV @VVV \\
+C @&gt;&gt;&gt; D
+\end{CD}
+$$
+若 $f$ 是 $m$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>映射, $g$ 是 $n$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>映射, 则
+$$
+A \to B\times_D C
+$$
+是 $(m+n)$-连通映射.</p>
+<h3>在模态中的推广</h3>
+<p><span class="link local"><a href="./ABFJ-BM.html" title="A generalized Blakers–Massey theorem [ABFJ-BM]">ABFJ</a></span> 的文章给出了 Blakers–Massey 定理的推广:</p>
+<p><strong>定理</strong>. 设 $(L,R)$ 是意象中的<span class="link local"><a href="./模态.html" title="模态 [模态]">模态</a></span> (即关于<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>封闭的<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">正交分解系</a></span>), 考虑<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>图
+$$
+\begin{CD}
+A @&gt;{f}&gt;&gt; B \\
+@V{g}VV @VVV \\
+C @&gt;&gt;&gt; D,
+\end{CD}
+$$
+若<span class="link local"><a href="./对角线.html" title="对角线 [对角线]">对角线</a></span>的<span class="link local"><a href="./推出积.html" title="推出积 [推出积]">推出积</a></span> $\Delta_f \operatorname{\square}_Z \Delta_g$ 属于 $L$, 则映射 $A \to B\times_D C$ 属于 $L$.</p>
+<h2>证明</h2>
+<h2>例</h2>
+<p>取 $B = C = *$, 则有 $D = \Sigma A$, 而拉回为 $*\times_{\Sigma A} * = \Omega \Sigma A$. 我们得到 <span class="link local"><a href="./Freudenthal纬悬定理.html" title="Freudenthal 纬悬定理 [Freudenthal纬悬定理]">Freudenthal 纬悬定理</a></span>: 对于 $n$-连通空间 $A$, $A\to\Omega\Sigma A$ 是 $2n$-连通映射.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="geometry-DAGV"><header><h1><span class="taxon"></span>几何 (带结构的意象) <a class="slug" href="./geometry-DAGV.html">[geometry-DAGV]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本页介绍 Lurie 的 <span class="link local"><a href="./LurieDAGV.html" title="Derived Algebraic Geometry V: Structured Spaces [LurieDAGV]">DAG V</a></span> 描绘的 “几何” 图景. 加入了一些个人的见解.</p>
 <p>几何学的各个分支研究的<span class="link local"><a href="./概形.html" title="概形 [概形]">经典概形</a></span>, <span class="link local"><a href="./叠.html" title="叠 [叠]">Deligne–Mumford 叠</a></span>, 流形, 复解析流形, <span class="link local"><a href="./导出概形.html" title="导出概形 [导出概形]">导出概形</a></span>等等不同几何对象, 都可以描述为某种带结构的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $(\mathcal X,\mathcal O_{\mathcal X})$, 类比于<span class="link local"><a href="./局部环化空间.html" title="局部环化空间 [局部环化空间]">局部环化空间</a></span>. 从<span class="link local"><a href="./范畴逻辑.html" title="范畴逻辑 [范畴逻辑]">范畴逻辑</a></span>的角度, 这里的结构 $\mathcal O_{\mathcal X}$ 可以理解为一种<span class="link local"><a href="./本质代数理论.html" title="本质代数理论 [本质代数理论]">本质代数结构</a></span>加上一些 “局部性” (见后文). 同时, 这些结构可用<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span>描述: 一个结构就是一个意象态射 $\mathcal X \to \mathcal K$. 每种结构就是一种<strong>几何</strong>.</p>
 <h2>结构层</h2>
@@ -1044,10 +1093,17 @@ $$
 即一个 $n$ 重<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯生象</a></span>, 满足 Segal 条件
 $$
 X(\cdots,[k],\cdots)\simeq X(\cdots,[1],\cdots)^{\times_{X(\cdots,[0],\cdots)}k}.
-$$</p>
+$$
+而 $n$ 重范畴则可定义为满足每个分量的<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备性</a></span>的 Segal 对象.</p>
 <h2>性质</h2>
 <h3>与 $n$-范畴的联系</h3>
+<p>$n$-范畴可视为某些方向退化的 $n$ 重范畴.</p>
 <h2>例</h2>
+<h3>外张量积</h3>
+<p>给定范畴 $\mathcal C_1,\cdots,\mathcal C_n$, 可构造 $n$ 重范畴 $\mathcal C_1 \boxtimes\cdots\boxtimes\mathcal C_n$,
+$$
+([k_1],\cdots,[k_n]) \mapsto \mathcal C_1 ([k_1])\times\cdots\times\mathcal C_n ([k_n]).
+$$</p>
 <h3>景的二重范畴</h3>
 <p><span class="link local"><a href="./景.html" title="景 [景]">景</a></span>构成一个二重范畴 (double category). 两类态射分别称为景的态射和余态射.</p>
 <h3>正交分解系与二重范畴</h3>
@@ -1165,7 +1221,7 @@ $$
 $$
 为等价. 这里 $(\mathcal O_{\mathrm{el}})_{/X}$ 指的是 $\mathcal O$ 的基本对象到 $X$ 的<strong>惰性</strong>映射的范畴. 注意到右边是一个 $|X|$ 元离散集合. 因此积性模式就是每个对象包含的基本对象都构成离散有限集的模式, 这导致它的 Segal 对象在探测对象上的取值等于其在基本对象上的取值的<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>.</p>
 <p><strong>例</strong>. Segal 态射 $\gamma\colon \Delta\to\Gamma$ 是积性模式.</p>
-<p><strong>定义</strong>. <strong>可充实模式</strong> (enrichable pattern)</p>
+<p><strong>定义</strong>. <strong>可充实模式</strong> (enrichable pattern) todo</p>
 <h2>性质</h2>
 <h3>与算畴的关系; 弱 Segal 纤维化</h3>
 <p>注意算畴在这个故事中有两个层级的角色: 一个算畴既可以给出一种代数模式, 同时又是 “算畴” 这种代数模式的一个模型 (Segal 对象). 本节讲的是<strong>前一种</strong>角色, 即一个 (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 中的) <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>如何给出一个代数模式.</p>

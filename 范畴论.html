@@ -1154,10 +1154,17 @@ $$
 即一个 $n$ 重<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯生象</a></span>, 满足 Segal 条件
 $$
 X(\cdots,[k],\cdots)\simeq X(\cdots,[1],\cdots)^{\times_{X(\cdots,[0],\cdots)}k}.
-$$</p>
+$$
+而 $n$ 重范畴则可定义为满足每个分量的<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备性</a></span>的 Segal 对象.</p>
 <h2>性质</h2>
 <h3>与 $n$-范畴的联系</h3>
+<p>$n$-范畴可视为某些方向退化的 $n$ 重范畴.</p>
 <h2>例</h2>
+<h3>外张量积</h3>
+<p>给定范畴 $\mathcal C_1,\cdots,\mathcal C_n$, 可构造 $n$ 重范畴 $\mathcal C_1 \boxtimes\cdots\boxtimes\mathcal C_n$,
+$$
+([k_1],\cdots,[k_n]) \mapsto \mathcal C_1 ([k_1])\times\cdots\times\mathcal C_n ([k_n]).
+$$</p>
 <h3>景的二重范畴</h3>
 <p><span class="link local"><a href="./景.html" title="景 [景]">景</a></span>构成一个二重范畴 (double category). 两类态射分别称为景的态射和余态射.</p>
 <h3>正交分解系与二重范畴</h3>
@@ -1379,7 +1386,7 @@ $$
 $$
 为等价. 这里 $(\mathcal O_{\mathrm{el}})_{/X}$ 指的是 $\mathcal O$ 的基本对象到 $X$ 的<strong>惰性</strong>映射的范畴. 注意到右边是一个 $|X|$ 元离散集合. 因此积性模式就是每个对象包含的基本对象都构成离散有限集的模式, 这导致它的 Segal 对象在探测对象上的取值等于其在基本对象上的取值的<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>.</p>
 <p><strong>例</strong>. Segal 态射 $\gamma\colon \Delta\to\Gamma$ 是积性模式.</p>
-<p><strong>定义</strong>. <strong>可充实模式</strong> (enrichable pattern)</p>
+<p><strong>定义</strong>. <strong>可充实模式</strong> (enrichable pattern) todo</p>
 <h2>性质</h2>
 <h3>与算畴的关系; 弱 Segal 纤维化</h3>
 <p>注意算畴在这个故事中有两个层级的角色: 一个算畴既可以给出一种代数模式, 同时又是 “算畴” 这种代数模式的一个模型 (Segal 对象). 本节讲的是<strong>前一种</strong>角色, 即一个 (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 中的) <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>如何给出一个代数模式.</p>
@@ -2637,6 +2644,24 @@ $$</p>
 <h2>定义</h2>
 <p><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>中, 对象 $X$ 称为<strong>拟紧</strong>对象是指其任意覆盖存在有限子覆盖, 对象 $X$ 称为<strong>拟分离</strong>对象是指对任意拟紧对象 $Y,Z$ 以及态射 $Y\to X$, $Z\to X$, 有 $Y\times_X Z$ 为拟紧对象.</p>
 <h2>例</h2>
+</details></section><section class="block" data-taxon=""><details ><summary id="推出积"><header><h1><span class="taxon"></span>推出积 <a class="slug" href="./推出积.html">[推出积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>在范畴中, 态射 $f\colon X\to Y$ 与 $g\colon Z\to W$ 的<strong>推出积</strong> $f \operatorname{\square} g$ 为
+$$
+f \operatorname{\square} g \colon (X\times W)\sqcup_{X\times Z}(Y\times Z) \to Y\times W.
+$$</p>
+<p><span class="link local"><a href="./俯意象.html" title="俯意象 [俯意象]">俯意象</a></span> $\mathcal C_{/X}$ 中的推出积记为 $\square_X$.</p>
+<h2>例</h2>
+<p>对于<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点</a></span><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X,Y$, 两个映射
+$*\to X$
+与
+$*\to Y$
+的推出积是
+$$
+X \lor Y \to X \times Y.
+$$</p>
+<h3>联合</h3>
+<p>对于两个对象 $X,Y$, 两个态射 $X\to 1$ 与 $Y\to 1$ 的推出积给出 $X,Y$ 的<span class="link local"><a href="./联合.html" title="联合 [联合]">联合</a></span> $X * Y\to 1$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="提升性质"><header><h1><span class="taxon"></span>提升性质 <a class="slug" href="./提升性质.html">[提升性质]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>对于某范畴中的态射 $u\colon A\to B$, $v\colon X\to Y$,
@@ -2670,8 +2695,16 @@ B &amp; \rightarrow &amp; Y
 $$
 若 $(1)$ 为同构, 即上图所示的提升<strong>存在且唯一</strong>, 则称 $u$ 关于 $v$ 有<strong>左提升性质</strong> (或 $u$ <strong>左正交</strong>于 $v$), $v$ 关于 $u$ 有<strong>右提升性质</strong> (或 $v$ <strong>右正交</strong>于 $u$), 记 $u \perp v$.</p>
 <h2>性质</h2>
+<h2>例</h2>
 <h3>关于自身提升</h3>
 <p>对于态射 $f$, 有 $f\perp f$ 当且仅当 $f$ 可逆.</p>
+<h3>到终对象的态射的提升</h3>
+<p>对于两个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X,Y$, 映射 $X\to 1$ 左正交于 $Y\to 1$ 当且仅当
+$$
+Y \to \operatorname{Hom}(X,Y)
+$$
+为等价, 也即每个映射 $X\to Y$ 唯一地同伦于常值映射.</p>
+<p>一个重要的例子是 $X = S^{n+1}$. 映射 $S^{n+1}\to 1$ 左正交于 $Y\to 1$ 当且仅当 $Y$ 是 $n$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>的.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="收缩"><header><h1><span class="taxon"></span>收缩 <a class="slug" href="./收缩.html">[收缩]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>朴素定义</h3>
@@ -2998,6 +3031,11 @@ $$
 <li><span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span></li>
 <li>拓扑空间</li>
 <li><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> (见<span class="link local"><a href="./∞-意象的形.html" title="意象的形 [∞-意象的形]">意象的形</a></span>)</li>
+</ul>
+<h3>生象的运算</h3>
+<ul>
+<li><span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span></li>
+<li><span class="link local"><a href="./联合.html" title="联合 [联合]">联合</a></span></li>
 </ul>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./生象化.html" title="生象化 [生象化]">生象化</a></span></p>

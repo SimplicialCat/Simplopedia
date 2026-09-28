@@ -1391,6 +1391,48 @@ $$</p>
 </ul>
 <h3>通过提升性质</h3>
 <p>意象中的满射也可定义为<span class="link local"><a href="./单射.html" title="单射 [单射]">单射</a></span> (即 $(-1)$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>态射) 的<span class="link local"><a href="./提升性质.html" title="提升性质 [提升性质]">左提升类</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="指数对象"><header><h1><span class="taxon"></span>指数对象 <a class="slug" href="./指数对象.html">[指数对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>在<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathcal C$ 中, 对象 $X$ 的 $Y$ 次<strong>指数对象</strong> (exponential object) 是 $Y$ 上的 $X$ 常值族的<span class="link local"><a href="./依值积.html" title="依值积 [依值积]">依值积</a></span>:
+$$
+X^Y = \prod_{y\colon Y} X = Y_*Y^*X.
+$$</p>
+<h2>性质</h2>
+<p>由定义及三元<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $Y_!\dashv Y^* \dashv Y_*$,
+$$
+(Y\times -) = Y_!Y^* \dashv Y_*Y^* = (-)^Y.
+$$</p>
+<h3>取值映射</h3>
+<p>对任意对象 $X,Y$, 称伴随 $(Y\times -)\dashv (-)^Y$ 的余单位
+$$
+\operatorname{ev}\colon Y\times X^Y \to X
+$$
+为<strong>取值映射</strong> (evaluation map).</p>
+<h3>函子性</h3>
+<p>设有态射 $W\to Y$, 则有
+$$
+W\times X^Y \to Y\times X^Y\overset{\operatorname{ev}}{\to}X,
+$$
+从而得自然变换
+$$
+X^Y\to X^W.
+$$
+这说明有函子
+$$
+X^{(-)} \colon \mathcal C^{\mathrm{op}} \to \mathcal C.
+$$
+在<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>中这就是<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span> $\operatorname{Hom}(-,X)$.</p>
+<h3>内蕴复合</h3>
+<p>迭代取值映射可得
+$$
+Z\times Y^Z \times X^Y \to Y\times X^Y \to X,
+$$
+从而指数对象之间有自然变换
+$$
+(-\circ -)\colon Y^Z \times X^Y \to X^Z.
+$$
+在<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>中这就是映射的复合.</p>
+<h2>例</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="既约概形"><header><h1><span class="taxon"></span>既约概形 <a class="slug" href="./既约概形.html">[既约概形]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./代数几何.html" title="代数几何 [代数几何]">代数几何</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>称满足如下等价条件的<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span> $X$ 为既约概形:</p>
