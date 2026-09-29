@@ -1175,7 +1175,7 @@ $$
 \operatorname{Tr}(F) \simeq \operatorname{End}(1_{\operatorname{HH}_* (\mathcal C,F)}).
 $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="oLKE"><header><h1><span class="taxon"></span>算畴左 Kan 扩张 <a class="slug" href="./oLKE.html">[oLKE]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>类似于左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span> 是函子范畴之间拉回的左伴随, 对于余完备<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal C$ 以及<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的态射 $f\colon \mathcal O\to\mathcal P$, 在代数范畴之间也有拉回 $f^*\colon \mathsf{Alg}_{\mathcal P}(\mathcal C)\to\mathsf{Alg}_{\mathcal O}(\mathcal C)$ 的左伴随
+<p>类似于左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>是函子范畴之间拉回的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>, 对于余完备<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal C$ 以及<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的态射 $f\colon \mathcal O\to\mathcal P$, 在代数范畴之间也有拉回 $f^*\colon \mathsf{Alg}_{\mathcal P}(\mathcal C)\to\mathsf{Alg}_{\mathcal O}(\mathcal C)$ 的左伴随
 $$
     f_! \colon \mathsf{Alg}_{\mathcal O}(\mathcal C)\to\mathsf{Alg}_{\mathcal P}(\mathcal C),
 $$
@@ -1184,9 +1184,9 @@ $$
 <h3>具体计算式</h3>
 <p>对于 $A\in\mathsf{Alg}_{\mathcal O}(\mathcal C)$, $P\in\mathcal P$,
 $$
-    (f_!A)(P) = \operatorname{colim}_{\alpha\colon f(O)\to P\text{活性}} \pi(\alpha)_! A(O),
+    (f_!A)(P) = \operatorname{colim}_{\alpha\colon f(O)\leadsto P} \pi(\alpha)_! A(O),
 $$
-其中 $O\in\mathcal O^\otimes$, $\pi\colon \mathcal P^\otimes\to\mathsf{Fin}_*$.</p>
+其中 $\leadsto$ 表示活性映射, $O\in\mathcal O^\otimes$, $\pi\colon \mathcal P^\otimes\to\mathsf{Fin}_*$.</p>
 <h2>例</h2>
 <h3>分解同调</h3>
 <p><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></p>
@@ -1516,23 +1516,30 @@ $$
 $$</li>
 </ul>
 <p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Corollary 7.13).
-设 $f\colon \mathcal O \to \mathcal P$ 为代数模式的可延拓态射, $\mathcal C$ 为 $f$-可容许范畴, 则左 Kan 扩张限制为函子
+设 $f\colon \mathcal O \to \mathcal P$ 为代数模式的可延拓态射, $\mathcal C$ 为 $f$-<strong>可容许</strong>范畴 (我们等到需要的时候再来定义这个条件), 则左 Kan 扩张限制为函子
 $$
 f_!\colon \mathsf{Seg}_{\mathcal O}(\mathcal C) \to \mathsf{Seg}_{\mathcal P}(\mathcal C).
 $$</p>
-<p>$$
+<p><em>证明</em>.
+$$
 \begin{aligned}
 f_!F(p) &amp;= \operatorname{colim}_{p\to f(o)} F(o)\\
 &amp;=\operatorname{colim}_{p\leadsto f(o)} F(o)\  (\star)\\
-&amp;=\operatorname{colim}_{p\leadsto f(o)} \operatorname{lim}_{e\rightarrowtail p}F(o')\  (\dagger)
+&amp;=\operatorname{colim}_{p\leadsto f(o)} \operatorname{lim}_{e\rightarrowtail p}F(o')\  (\heartsuit)\\
+&amp;=\operatorname{colim}_{\mathcal L_p}\operatorname{lim}_{e\rightarrowtail p}F(o')\  (\spadesuit)\\
+&amp;=\operatorname{lim}_{e\rightarrowtail p}\operatorname{colim}_{e\leadsto f(o)} F(o)\ (\dagger)\\
+&amp;=\operatorname{lim}_{e\rightarrowtail p}(f_! F)(e).
 \end{aligned}
 $$
 其中</p>
 <ul>
 <li>$(\star)$ 是因为 $\{p \leadsto f(o)\}$ 在 $\{p\to f(o)\}$ 中为<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首</a></span>子范畴, 但此处余极限的指标范畴是这两个范畴的反范畴, 共首变为共尾;</li>
-<li>$(\dagger)$ 是因为可延拓性的第三个条件;</li>
-<li></li>
+<li>$(\heartsuit)$ 是因为可延拓性的第三个条件;</li>
+<li>$(\spadesuit)$ 是因为可延拓性的第二个条件;</li>
+<li>$(\dagger)$ 就是 $\mathcal C$ 的<strong>可容许</strong>条件, 它是一种<span class="link local"><a href="./lim-colim-dist.html" title="极限对余极限分配 [lim-colim-dist]">极限对余极限分配</a></span>的条件.</li>
 </ul>
+<p>当然, 上述命题之所以有意义, 是因为实践中我们真的可以验证这一堆条件.</p>
+<p><strong>例</strong>. 对称算畴作为 $\Gamma^\flat$ 上的弱 Segal 纤维化, 任意两个对称算畴之间的态射都是可延拓的. 见<span class="link local"><a href="./oLKE.html" title="算畴左 Kan 扩张 [oLKE]">算畴左 Kan 扩张</a></span>.</p>
 <h3>拉回的右伴随</h3>
 <p><strong>定义</strong>. 对于代数模式的态射 $f\colon \mathcal O \to \mathcal P$, 称其有<strong>唯一活性提升</strong>是指如下两个等价条件成立:</p>
 <ul>
@@ -1553,11 +1560,19 @@ $$
  F_{\mathcal O}\colon \mathsf{Fun}(\mathcal O_{\mathrm{el}}^{\mathrm{op}},\mathcal C) \rightleftarrows \mathsf{Seg}_{\mathcal O}(\mathcal C) \colon U_{\mathcal O}
 $$
 是<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的.</p>
-<p><strong>定义</strong>. 称满足如下条件的代数模式 $\mathcal O$ <strong>可延拓</strong> (extendable):</p>
+<p><strong>定义</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Definition 8.5). 若代数模式的态射 $\mathcal O_{\mathrm{int}} \to \mathcal O$ 是可延拓的, 则称 $\mathcal O$ <strong>可延拓</strong> (extendable). 具体地, 这等同于如下条件:</p>
 <ol>
 <li>考虑函子 $\operatorname{Act}_{\mathcal O}\colon \mathcal O^{\mathrm{op}} \to \mathsf{Ani}$, $\operatorname{Act}_{\mathcal O}(X)$ 为 $X$ 发出的活性映射构成的生象, 则 $\operatorname{Act}_{\mathcal O}$ 为 Segal $\mathcal O$-生象;</li>
-<li>对 $\mathcal O$ 中任意活性映射 $X\to Y$, <span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">todo</a></span></li>
+<li>对 $\mathcal O$ 中任意活性映射 $o''\leadsto o$, 任意函子 $F\colon \mathcal O_{\mathrm{el}}^{\mathrm{op}}\to\mathsf{Ani}$,
+$$
+ \operatorname{lim}_{e\rightarrowtail o} F(e) \simeq \operatorname{lim}_{e\rightarrowtail o'',e'\to o'}F(e').
+  $$
+这里 $e\rightarrowtail o'' \leadsto o$ 的活性-惰性分解是 $e\leadsto o'\rightarrowtail o$.</li>
 </ol>
+<p>特别地, 第二个条件推出 “广义 Segal 条件”: 对于 Segal 对象 $\Phi\colon \mathcal O_{\mathrm{el}}^{\mathrm{op}} \to \mathsf{Ani}$ 与任意活性映射 $o''\leadsto o$,
+$$
+\Phi(o) \simeq \operatorname{lim}_{e\rightarrowtail o''} F(o').
+$$</p>
 <p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Proposition 8.8). 代数模式 $\mathcal O$ 可延拓当且仅当沿 $j_{\mathcal O}$ 的左 Kan 扩张限制为函子
 $$
 j_{\mathcal O,!}\colon \mathsf{Seg}_{\mathcal O_{\mathrm{int}}}(\mathsf{Ani}) \to \mathsf{Seg}_{\mathcal O}(\mathsf{Ani}).

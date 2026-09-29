@@ -1062,6 +1062,22 @@ $$
 \mathsf{Mod}_{2\mathsf{Pr}}(-) \colon \mathsf{CAlg}(2\mathsf{Pr}) \to \mathsf{CAlg}(\mathsf{Mod}_{\mathsf{Pr}}(2\mathsf{Pr})).
 $$
 定义 $\mathsf{Mod}_{\mathsf{Pr}}(2\mathsf{Pr})$ 为 $3\mathsf{Pr}$, 这个过程可以重复下去, 定义 “可表现 $n$-范畴的范畴” $n\mathsf{Pr} \in \mathsf{Pr}$. 可表现 $n$-范畴是 “充实于 $(n-1)\mathsf{Pr}$ 的可表现范畴”.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="oLKE"><header><h1><span class="taxon"></span>算畴左 Kan 扩张 <a class="slug" href="./oLKE.html">[oLKE]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>类似于左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>是函子范畴之间拉回的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>, 对于余完备<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal C$ 以及<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的态射 $f\colon \mathcal O\to\mathcal P$, 在代数范畴之间也有拉回 $f^*\colon \mathsf{Alg}_{\mathcal P}(\mathcal C)\to\mathsf{Alg}_{\mathcal O}(\mathcal C)$ 的左伴随
+$$
+    f_! \colon \mathsf{Alg}_{\mathcal O}(\mathcal C)\to\mathsf{Alg}_{\mathcal P}(\mathcal C),
+$$
+称为<span class="link local"><a href="./oLKE.html" title="算畴左 Kan 扩张 [oLKE]">算畴左 Kan 扩张</a></span> (operadic left Kan extension). 代数范畴之间的拉回可视为遗忘函子, 而算畴左 Kan 扩张给出<strong>自由代数</strong>.</p>
+<h2>性质</h2>
+<h3>具体计算式</h3>
+<p>对于 $A\in\mathsf{Alg}_{\mathcal O}(\mathcal C)$, $P\in\mathcal P$,
+$$
+    (f_!A)(P) = \operatorname{colim}_{\alpha\colon f(O)\leadsto P} \pi(\alpha)_! A(O),
+$$
+其中 $\leadsto$ 表示活性映射, $O\in\mathcal O^\otimes$, $\pi\colon \mathcal P^\otimes\to\mathsf{Fin}_*$.</p>
+<h2>例</h2>
+<h3>分解同调</h3>
+<p><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="six-functors"><header><h1><span class="taxon"></span>六函子 <a class="slug" href="./six-functors.html">[six-functors]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li></ul></div></header></summary>
 <p>本文是 <span class="link local"><a href="./ScholzeSixFunctors.html" title="Six-functor Formalisms [ScholzeSixFunctors]">Scholze 的六函子讲义</a></span>的阅读笔记.</p>
 <h2>引言</h2>
@@ -2380,7 +2396,7 @@ $$
 $$
 \operatorname{Fact}\colon \mathsf{OFS} \to \mathsf{DCat},
 $$
-将每个正交分解系视为一个二重范畴, 两类态射分别就是分解系中的两类态射.</p>
+将每个正交分解系视为一个二重范畴. 直观上, 二重范畴就是有两类互相独立的态射的范畴; 对于分解系 $(L,R)$, 相应的二重范畴 $\operatorname{Fact}(L,R)$ 的两类态射分别就是 $L$ 的态射 (水平态射) 和 $R$ 的态射 (竖直态射).</p>
 <p><strong>定义</strong> (分解条件). 对于二重范畴 $\mathcal C$, 视为双单纯生象 $\mathcal C \colon (\Delta\times\Delta)^{\mathrm{op}} \to \mathsf{Ani}$, 称如下等价条件为<strong>分解条件</strong>:</p>
 <p>$(1)$ 方块
 $$

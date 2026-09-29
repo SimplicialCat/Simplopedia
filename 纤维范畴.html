@@ -839,6 +839,24 @@
 <h2>观念</h2>
 <p>对于范畴 $\mathcal C$, Grothendieck 构造将函子 $F\colon \mathcal C^{\mathrm{op}} \to \mathsf{Cat}$ 等同于<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">纤维范畴</a></span> $p\colon \mathcal E \to \mathcal C$, 其在 $x\in\mathcal C$ 处的纤维为 $F(x)$.</p>
 <p>换言之, 范畴的范畴 $\mathsf{Cat}$ 上有万有的纤维范畴. 这也是一种<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">分类空间</a></span>的观念.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="lim-colim-dist"><header><h1><span class="taxon"></span>极限对余极限分配 <a class="slug" href="./lim-colim-dist.html">[lim-colim-dist]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>考虑函子
+$$
+K\colon \mathcal J \to \mathsf{Cat},
+$$
+对应<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">推前纤维化</a></span>
+$$
+\pi\colon \mathcal K \to \mathcal J.
+$$
+令
+$$
+\mathcal L = \operatorname{lim} K = \mathsf{Fun}^{\mathrm{cocart}}_{\mathcal J}(\mathcal J,\mathcal K)
+$$
+为 $K$ 的极限, 也等同于 $\pi$ 的水平截面的范畴.</p>
+<p>设 $\mathcal C$ 为范畴, 若如下条件成立, 则称 $\mathcal C$ 中的 $\mathcal J$-极限对 $K$-余极限<strong>分配</strong>: 对任意 $F\colon \mathcal K \to \mathcal C$,
+$$
+\operatorname{colim}_{\ell\in \mathcal L} \operatorname{lim}_{j\in \mathcal J} F(\ell(j)) \overset{\simeq}{\longrightarrow} \operatorname{lim}_{j\in J}\operatorname{colim}_{k\in K(j)}F(j,k).
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="tutorial-type-theory"><header><h1><span class="taxon"></span>类型论 <a class="slug" href="./tutorial-type-theory.html">[tutorial-type-theory]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是杨家同于 2026 年 1 月在求真书院形式化数学冬令营上的讲座的笔记, 加入了个人的见解. 假想的读者是有一定数学成熟度但对类型论没有了解的同学.</p>
 <h2>什么是类型论</h2>
@@ -1124,7 +1142,7 @@ $$
 $$
 \operatorname{Fact}\colon \mathsf{OFS} \to \mathsf{DCat},
 $$
-将每个正交分解系视为一个二重范畴, 两类态射分别就是分解系中的两类态射.</p>
+将每个正交分解系视为一个二重范畴. 直观上, 二重范畴就是有两类互相独立的态射的范畴; 对于分解系 $(L,R)$, 相应的二重范畴 $\operatorname{Fact}(L,R)$ 的两类态射分别就是 $L$ 的态射 (水平态射) 和 $R$ 的态射 (竖直态射).</p>
 <p><strong>定义</strong> (分解条件). 对于二重范畴 $\mathcal C$, 视为双单纯生象 $\mathcal C \colon (\Delta\times\Delta)^{\mathrm{op}} \to \mathsf{Ani}$, 称如下等价条件为<strong>分解条件</strong>:</p>
 <p>$(1)$ 方块
 $$
