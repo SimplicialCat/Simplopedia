@@ -896,8 +896,9 @@ $$
 <li>我们的 $\mathcal O$ 是 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span> 的 $\mathcal O^{\mathrm{op}}$.</li>
 </ul>
 <p>下面我们所说的惰性态射都是 $\mathcal O_{\mathrm{int}}$ 中的态射.</p>
-<p>这样约定的一个原因是我们具有如下直观: $\mathcal O$ 的对象是基本的几何对象, 惰性映射是几何对象的嵌入, 活性-惰性分解类似于满-单分解. 事实上 CH 等人也具有这一直观, 因为他们用表示单射的符号 $\rightarrowtail$ 来表示惰性映射, 用表示满射的符号 $\leadsto$ 来表示活性映射. 因此, 符合直观的分解应该是先活性映射, 再惰性映射.</p>
+<p>这样约定的一个原因是我们具有如下直观: $\mathcal O$ 的对象是基本的几何对象, 惰性映射是几何对象的嵌入, 活性-惰性分解类似于满-单分解.</p>
 <p>另一个原因是, 在 CH 的几乎所有例子中都有一个 $\mathrm{op}$, 唯一没有 $\mathrm{op}$ 的是 $\mathsf{Fin}_*$, 但其实它可以理解为 $\Gamma^{\mathrm{op}}$.</p>
+<p><strong>记号</strong>. 在整个页面中, 我们用 $\rightarrowtail$ 表示惰性映射, 用 $\leadsto$ 表示活性映射.</p>
 <h3>2. 代数结构</h3>
 <p>为了探测底层结构之上的代数结构, 我们需要一些比基本对象更多的对象, 一些能够承载 “代数运算” 的对象, 例如</p>
 <ul>
@@ -948,7 +949,11 @@ $$
 </ul>
 <h2>定义</h2>
 <h3>模型 (Segal 对象)</h3>
-<p>给定有适当<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>的范畴 $\mathcal C$, 代数模式 $\mathcal O$ 的<strong>模型</strong> (或称 <strong>Segal 对象</strong>) 是函子 $F\colon \mathcal O^{\mathrm{op}} \to \mathcal C$, 满足 $F|_{\mathcal O_{\mathrm{int}}}$ 是 $F|_{\mathcal O_{\mathrm{el}}}$ 的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">右 Kan 扩张</a></span>.</p>
+<p>给定有适当<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>的范畴 $\mathcal C$, 代数模式 $\mathcal O$ 的<strong>模型</strong> (或称 <strong>Segal 对象</strong>) 是函子 $F\colon \mathcal O^{\mathrm{op}} \to \mathcal C$, 满足 $F|_{\mathcal O_{\mathrm{int}}}$ 是 $F|_{\mathcal O_{\mathrm{el}}}$ 的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">右 Kan 扩张</a></span>, 或等价地
+$$
+j^* F \overset{\simeq}{\longrightarrow} i_* i^* j^* F.
+$$
+其中 $i\colon \mathcal O_{\mathrm{el}}\hookrightarrow\mathcal O_{\mathrm{int}}$, $j\colon \mathcal O_{\mathrm{int}}\to\mathcal O$.</p>
 <p>注意, 对于一个函子 $F\colon \mathcal O^{\mathrm{op}} \to \mathcal C$, Segal 条件是<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">性质而非结构</a></span>. 故 Segal 对象的范畴
 $$
 \mathsf{Seg}_{\mathcal O}(\mathcal C)
@@ -983,6 +988,12 @@ $$
 为等价. 这里 $(\mathcal O_{\mathrm{el}})_{/X}$ 指的是 $\mathcal O$ 的基本对象到 $X$ 的<strong>惰性</strong>映射的范畴. 注意到右边是一个 $|X|$ 元离散集合. 因此积性模式就是每个对象包含的基本对象都构成离散有限集的模式, 这导致它的 Segal 对象在探测对象上的取值等于其在基本对象上的取值的<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>.</p>
 <p><strong>例</strong>. Segal 态射 $\gamma\colon \Delta\to\Gamma$ 是积性模式.</p>
 <p><strong>定义</strong>. <strong>可充实模式</strong> (enrichable pattern) todo</p>
+<h3>$\mathcal O$-幺半范畴</h3>
+<p>积性代数模式 $\mathcal O$ 在范畴的范畴 $\mathsf{Cat}$ 中的 Segal 对象称为 $\mathcal O$-幺半范畴. 对于 $\mathcal O$-幺半范畴 $\mathcal C$, 定义 $\mathcal C$ 中的 $\mathcal O$-<strong>代数</strong>为 $\mathsf{Seg}_{\mathcal O}(\mathsf{Cat})$ 中的态射 $1 \to \mathcal C$. 记 $\mathcal C$ 中的 $\mathcal O$-代数的范畴为 $\mathsf{Alg}_{\mathcal O}(\mathcal C)$.</p>
+<p>对于积性模式的态射 $f\colon \mathcal O\to\mathcal P$ 以及 $\mathcal P$-幺半范畴 $\mathcal C$, 也可以谈论 $\mathcal C$ 中的 $\mathcal O$-代数, 方法是先将 $\mathcal C$ 沿着 $f$ 拉回为 $\mathcal O$-幺半范畴. 记
+$$
+\mathsf{Alg}_{\mathcal O / \mathcal P}(\mathcal C) = \mathsf{Alg}_{\mathcal O}(f^*\mathcal C).
+$$</p>
 <h2>性质</h2>
 <h3>与算畴的关系; 弱 Segal 纤维化</h3>
 <p>注意算畴在这个故事中有两个层级的角色: 一个算畴既可以给出一种代数模式, 同时又是 “算畴” 这种代数模式的一个模型 (Segal 对象). 本节讲的是<strong>前一种</strong>角色, 即一个 (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 中的) <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>如何给出一个代数模式.</p>
@@ -1098,6 +1109,18 @@ $$
 </ul>
 <p>当然, 上述命题之所以有意义, 是因为实践中我们真的可以验证这一堆条件.</p>
 <p><strong>例</strong>. 对称算畴作为 $\Gamma^\flat$ 上的弱 Segal 纤维化, 任意两个对称算畴之间的态射都是可延拓的. 见<span class="link local"><a href="./oLKE.html" title="算畴左 Kan 扩张 [oLKE]">算畴左 Kan 扩张</a></span>.</p>
+<p>对于 $F\in\widehat {\mathcal O_{\langle 1 \rangle}^{\simeq}}$ 以及 $X\in\mathcal O_{\langle 1 \rangle}$, 自由 $\mathcal O$-代数单子 $T_{\mathcal O}$ 给出
+$$
+\begin{aligned}
+T_{\mathcal O}F(X) &amp;=\operatorname{colim}_{X\leadsto Y} F(Y)\\
+&amp;=\bigsqcup_{n\geq 0}\operatorname{colim}_{X\leadsto (Y_1,\cdots,Y_n)} F(Y_1) \times \cdots \times F(Y_n).
+\end{aligned}
+$$
+对于单色算畴, $\mathcal O_{\langle 1 \rangle}^{\simeq} = \{*\}$, 那么我们得到经典的自由 $\mathcal O$-代数单子公式
+$$
+T_{\mathcal O}C = \bigsqcup_{n\geq 0} \operatorname{colim}_{\mathbf{B}S_n} \mathcal O (n)\times C^n = \bigsqcup_{n\geq 0} \mathcal O(n)\times_{S_n} C^n,
+$$
+其中 $\mathcal O (n)$ 是 $n$ 元运算的空间, 是 $\{*\leadsto (*,\cdots,*)\} \to \{\langle 1\rangle\leadsto \langle n \rangle\} = \mathbf{B}S_n$ 的纤维, 其上自然带有 $S_n$-作用.</p>
 <h3>拉回的右伴随</h3>
 <p><strong>定义</strong>. 对于代数模式的态射 $f\colon \mathcal O \to \mathcal P$, 称其有<strong>唯一活性提升</strong>是指如下两个等价条件成立:</p>
 <ul>
@@ -1111,7 +1134,7 @@ $$
 f_*\colon \mathsf{Seg}_{\mathcal O}(\mathcal C)
 \to \mathsf{Seg}_{\mathcal P}(\mathcal C).
 $$</p>
-<h3>与单子的关系</h3>
+<h3>代数模式给出单子</h3>
 <p>每个代数模式 $\mathcal O$ 给出底层结构 $\widehat {\mathcal O_{\mathrm{el}}}$ 上的一个<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数</a></span>的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</p>
 <p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Corollary 8.2). 设 $\mathcal O$ 为代数模式, $\mathcal C$ 为可表现范畴, 则<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由–遗忘伴随</a></span>
 $$
@@ -1146,6 +1169,32 @@ $$
 其中 $i_{\mathcal O}\colon \mathcal O_{\mathrm{el}}\hookrightarrow\mathcal O_{\mathrm{int}}$ 为基本对象的全子范畴, $j_{\mathcal O}\colon \mathcal O_{\mathrm{int}} \to \mathcal O$ 为惰性映射的宽子范畴.</p>
 <p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Proposition 10.6). 设 $\mathcal O$ 为可延拓代数模式, 则 $\widehat{\mathcal O_{\mathrm{el}}}$ 上的自由 Segal $\mathcal O$-生象单子 $T_{\mathcal O}$ 为多项式单子. 这里多项式单子的定义是 <span class="link local"><a href="./Descartes单子.html" title="Descartes 单子 [Descartes单子]">Descartes 单子</a></span>且为<span class="link local"><a href="./局部右伴随.html" title="局部右伴随 [局部右伴随]">局部右伴随</a></span>.</p>
 <p>这个结论保证了这些代数模式给出<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>.</p>
+<h3>单子给出代数模式</h3>
+<p>设 $F\colon \mathcal C \to \mathcal D$ 为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>之间的<span class="link local"><a href="./局部右伴随.html" title="局部右伴随 [局部右伴随]">局部右伴随</a></span>函子, 即 $F_{/*}\colon \mathcal C \to \mathcal D_{F(*)}$ 有左伴随 $L\colon \mathcal D_{/F(*)} \to \mathcal C$.</p>
+<p>称 $\mathcal D$ 中形如 $d \to F(L(d))$ 的态射为<strong>一般映射</strong> (generic map). 很明显, $\mathcal D$ 中的任何态射 $d\to F(c)$ 唯一地分解为 “先一个一般映射, 再一个 $F$ 的像中的映射 (称为<strong>自由映射</strong>)”:
+$$
+d \to F(L(d)) \to F(c),
+$$
+称之为<strong>一般–自由分解</strong>.</p>
+<p>设 $\mathcal J$ 为小范畴, $T$ 为 $\widehat {\mathcal J}$ 上的多项式单子. 定义</p>
+<ul>
+<li>$\mathcal U(T)$ 为 $\widehat {\mathcal J}$ 中由存在一般态射 $j \to Tx$ ($j\in \mathcal J$ 经<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span>) 的对象 $x$ 构成的全子范畴;</li>
+<li>$\mathcal W(T)$ 为 $\mathcal U(T)$ 的对象生成的自由 $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>构成的 $\mathsf{Alg}_T(\widehat {\mathcal J})$ 的全子范畴.</li>
+</ul>
+<p>事实上 $T$ 是 $\widehat {\mathcal J}$ 上以 $\mathcal U(T)$ 为<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">元数</a></span>的单子. 脉定理告诉我们
+$$
+\begin{CD}
+\mathsf{Alg}_T(\widehat {\mathcal J}) @&gt;{\nu_{\mathcal W(T)}}&gt;&gt; \widehat {\mathcal W(T)} \\
+@V{U_T}VV @VV{j_T^*}V \\
+\widehat {\mathcal J} @&gt;&gt;{\nu_{\mathcal U(T)}}&gt; \widehat {\mathcal U(T)}
+\end{CD}
+$$
+满足 <span class="link local"><a href="./基变换.html" title="基变换 [基变换]">Beck–Chevalley 条件</a></span>
+$$
+j_{T,!}\nu_{\mathcal U(T)} \overset{\simeq}{\longrightarrow} \nu_{\mathcal W(T)} F_T,
+$$
+且脉函子 $\nu_{\mathcal W(T)}$ 全忠实.</p>
+<p><span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span> 说明 $\mathcal W(T)$ 上有一个可延拓的代数模式结构,</p>
 <h3>极限和余极限</h3>
 <p><strong>命题</strong>. 代数模式的范畴具有极限和<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>. 具体地, 记
 $$
