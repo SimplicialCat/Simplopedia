@@ -1570,7 +1570,38 @@ $$
 \operatorname{Fact}\colon \mathsf{OFS} \to \mathsf{DCat},
 $$
 将每个正交分解系视为一个二重范畴, 两类态射分别就是分解系中的两类态射.</p>
-<p><strong>命题</strong>. $\operatorname{Fact}$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>.</p>
+<p><strong>定义</strong> (分解条件). 对于二重范畴 $\mathcal C$, 视为双单纯生象 $\mathcal C \colon (\Delta\times\Delta)^{\mathrm{op}} \to \mathsf{Ani}$, 称如下等价条件为<strong>分解条件</strong>:</p>
+<p>$(1)$ 方块
+$$
+\begin{array}{ccc}
+\mathcal C \Big(\begin{array}{ccc}
+*_{00} &amp; \rightarrow &amp; *_{01} \\
+\downarrow &amp;  &amp; \downarrow \\
+*_{10} &amp; \rightarrow &amp; *_{11}
+\end{array}\Big) &amp; \rightarrow &amp; \mathcal C \Big(\begin{array}{c}
+*_{00} \\
+\downarrow \\
+*_{10}
+\end{array}\Big) \\
+\downarrow &amp;  &amp; \downarrow \\
+\mathcal C(*_{10} \to *_{11}) &amp; \rightarrow &amp; \mathcal C(*_{11})
+\end{array}
+$$
+为<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>. 其中 $\begin{array}{ccc} *_{00} &amp; \rightarrow &amp; *_{01} \\ \downarrow &amp;  &amp; \downarrow \\ *_{10} &amp; \rightarrow &amp; *_{11} \end{array}$ 表示 $\Delta\times\Delta$ 的对象 $([1],[1])$,
+$\begin{array}{c} *_{00} \\ \downarrow \\ *_{10} \end{array}$ 表示 $([1],[0])$, 等等. 故直观上这个条件是说: 任给 “左下角”
+$\begin{array}{ccc} *_{00} &amp; &amp; \\ \downarrow &amp;  &amp; \\ *_{10} &amp; \rightarrow &amp; *_{11} \end{array}$, 存在唯一的 “方块”.
+这个过程就是将 “错误的分解顺序” 唯一地改变为 “正确的分解顺序” 的过程.</p>
+<p>$(2)$ 函子
+$$
+\mathcal C(-,d_0)\colon \mathcal C(-,[1]) \to \mathcal C(-,[0])
+$$
+为<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">推前纤维化</a></span>. 我们将 $\mathcal C(-,[0])$ 中的态射想象为 “底边” $X_{10} \to X_{11}$, 将 $X_{10}$ 上的 $\mathcal C(-,[1])$ 中的对象想象为 “左边” $\begin{array}{c}X_{00}\\ \downarrow \\ X_{10}\end{array}$, 那么推前纤维化的推前给出方块 $\begin{array}{ccc} X_{00} &amp; \rightarrow &amp; X_{01} \\ \downarrow &amp;  &amp; \downarrow \\ X_{10} &amp; \rightarrow &amp; X_{11} \end{array}$.</p>
+<p>$(3)$ 函子
+$$
+\mathcal C(d_1,-)\colon \mathcal C([1],-) \to \mathcal C([0],-)
+$$
+为<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">拉回纤维化</a></span>.</p>
+<p><strong>命题</strong>. $\operatorname{Fact}$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>, 其本质像正是全体满足分解条件的二重范畴.</p>
 <h2>例</h2>
 <h3>平凡分解系</h3>
 <p>在任何范畴 $\mathcal C$ 中, $(\mathcal C^{\simeq},\mathcal C)$ 与 $(\mathcal C,\mathcal C^{\simeq})$ 均为正交分解系.</p>

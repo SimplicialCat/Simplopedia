@@ -854,7 +854,7 @@
 <li>我们的 $\mathcal O$ 是 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span> 的 $\mathcal O^{\mathrm{op}}$.</li>
 </ul>
 <p>下面我们所说的惰性态射都是 $\mathcal O_{\mathrm{int}}$ 中的态射.</p>
-<p>这样约定的一个原因是我们具有如下直观: $\mathcal O$ 的对象是基本的几何对象, 惰性映射是几何对象的嵌入, 活性-惰性分解类似于满-单分解. 事实上 CH 等人也具有这一直观, 因为他们用表示单射的符号 $\rightarrowtail$ 来表示惰性映射, 用表示满射的符号 $\twoheadrightarrow$ 来表示活性映射. 因此, 符合直观的分解应该是先活性映射, 再惰性映射.</p>
+<p>这样约定的一个原因是我们具有如下直观: $\mathcal O$ 的对象是基本的几何对象, 惰性映射是几何对象的嵌入, 活性-惰性分解类似于满-单分解. 事实上 CH 等人也具有这一直观, 因为他们用表示单射的符号 $\rightarrowtail$ 来表示惰性映射, 用表示满射的符号 $\leadsto$ 来表示活性映射. 因此, 符合直观的分解应该是先活性映射, 再惰性映射.</p>
 <p>另一个原因是, 在 CH 的几乎所有例子中都有一个 $\mathrm{op}$, 唯一没有 $\mathrm{op}$ 的是 $\mathsf{Fin}_*$, 但其实它可以理解为 $\Gamma^{\mathrm{op}}$.</p>
 <h3>2. 代数结构</h3>
 <p>为了探测底层结构之上的代数结构, 我们需要一些比基本对象更多的对象, 一些能够承载 “代数运算” 的对象, 例如</p>
@@ -897,12 +897,12 @@ $$
 <li>$\mathbb A_\infty$-代数和 $\infty$-范畴的测试对象 $\Delta$ 中, 活性映射 $[n] \to [m]$ 就是保持端点的映射, 其中 $[1] \to [2], 0\mapsto 0, 1\mapsto 2$ 表达了 $\mathbb A_\infty$-代数中的乘法和 $\infty$-范畴中态射的复合;</li>
 </ul>
 <p>我们要求惰性映射和活性映射构成 $\mathcal O$ 的<span class="link local"><a href="./宽子范畴.html" title="宽子范畴 [宽子范畴]">宽子范畴</a></span>, 即包含所有对象的<span class="link local"><a href="./子范畴.html" title="子范畴 [子范畴]">子范畴</a></span>.</p>
-<p>我们将用 $\twoheadrightarrow$ 表示活性映射.</p>
+<p>我们将用 $\leadsto$ 表示活性映射.</p>
 <h3>4. 分解系统</h3>
 <p>惰性映射和活性映射构成<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">分解系统</a></span> $(\mathcal O_{\mathrm{act}},\mathcal O_{\mathrm{int}})$: 测试对象之间的任何态射唯一地分解为 “先一个活性映射, 再一个惰性映射”. 注意在 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span> 文中是先惰性, 再活性 (因为他们的取反).</p>
 <ul>
-<li>$\mathsf{Fin}_*^{\mathrm{op}}$ 中, 态射 $f\colon S\to T$ 可分解为 $S \twoheadrightarrow \bigsqcup_s f(s)\rightarrowtail T$.</li>
-<li>$\Delta$ 中, 态射 $f\colon [n] \to [m]$ 可分解为 $[n]\twoheadrightarrow \{f(0)\leq \cdots \leq f(n)\}\rightarrowtail [m]$.</li>
+<li>$\mathsf{Fin}_*^{\mathrm{op}}$ 中, 态射 $f\colon S\to T$ 可分解为 $S \leadsto \bigsqcup_s f(s)\rightarrowtail T$.</li>
+<li>$\Delta$ 中, 态射 $f\colon [n] \to [m]$ 可分解为 $[n]\leadsto \{f(0)\leq \cdots \leq f(n)\}\rightarrowtail [m]$.</li>
 </ul>
 <h2>定义</h2>
 <h3>模型 (Segal 对象)</h3>
@@ -993,11 +993,44 @@ $$
 <p><strong>定义</strong>. 对于代数模式的态射 $f\colon \mathcal O \to \mathcal P$, 称其有<strong>唯一惰性提升</strong>是指如下两个等价条件成立:</p>
 <ul>
 <li>对任意 $o\in\mathcal O$, 每个指向 $f(o)$ 的惰性映射唯一地提升为指向 $o$ 的惰性映射;</li>
-<li>对任意 $p\in\mathcal P$, 所有 $p$ 到 $f(o)$ 的活性映射的范畴 $\{p \twoheadrightarrow f(o)\}$ 在所有映射的范畴 $\{p\to f(o)\}$ 中为<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首</a></span>子范畴;</li>
+<li>对任意 $p\in\mathcal P$, 所有 $p$ 到 $f(o)$ 的活性映射的范畴 $\{p \leadsto f(o)\}$ 在所有映射的范畴 $\{p\to f(o)\}$ 中为<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首</a></span>子范畴;</li>
 <li><span class="link local"><a href="./基变换.html" title="基变换 [基变换]">Beck–Chevalley 基变换</a></span> …?</li>
 </ul>
 <p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Corollary 7.4). 若 $f\colon \mathcal O \to \mathcal P$ 有唯一惰性提升, 则有函子
-$\mathcal P^{\mathrm{op}} \to \mathsf{Cat}$, $p\mapsto\{p\twoheadrightarrow f(o)\}$.</p>
+$\mathcal P^{\mathrm{op}} \to \mathsf{Cat}$, $p\mapsto\{p\leadsto f(o)\}$.</p>
+<p><strong>注</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Remark 7.6). 设 $f\colon \mathcal O \to \mathcal P$ 有唯一惰性提升, 对任意活性映射 $\phi\colon p \leadsto f(o)$, 可定义一个函子
+$$
+\{p' \rightarrowtail p\} \to 
+  \Big\{
+    \begin{array}{ccc}
+    p' &amp; \leadsto &amp; f(o') \\
+    \downarrow &amp;  &amp; \downarrow \\
+    p &amp; \underset{\phi}{\leadsto} &amp; f(o)
+    \end{array}
+  \Big\}
+  \to
+\{o'\rightarrowtail o\}.
+$$
+其中第一步是对于 $\alpha\colon p' \rightarrowtail p$, 考虑 $\phi\alpha\colon p'\to f(o)$ 的活性-惰性分解 $p'\leadsto f(o')\rightarrowtail f(o)$. 这也是来自于上个命题中的函子 $\mathcal P^{\mathrm{op}} \to \mathsf{Cat}$. 后文中为了简明符号, 所有的 $o'$ 都表示这一过程中的对象.</p>
+<p>将上述观察应用到基本对象 $e\rightarrowtail p$, 再复合
+$$
+\{o' \rightarrowtail o\} \to \mathsf{Cat}, (o'\rightarrowtail o)\mapsto \{e'\rightarrowtail o'\},
+$$
+我们得到一个函子
+$$
+\{e\rightarrowtail p\} \to\mathsf{Cat}, (\alpha\colon e\rightarrowtail p)\mapsto\{e'\rightarrowtail o'\},
+$$
+粗略地说, 对 $\mathcal P$ 的每个对象的每个基本成分, 这个函子给出 $\mathcal O$ 中相关的基本成分的范畴.</p>
+<p>下面的定义是 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span> 的重要概念, 但其本身不提供直观, 因为这个定义只是总结了左 Kan 扩张要保持 Segal 条件所需的计算上的便利条件. 在实践中, 这些条件常常满足.</p>
+<p><strong>定义</strong>. 代数模式的<strong>可延拓态射</strong> (extendable morphism) 是满足如下条件的态射 $f\colon \mathcal O \to \mathcal P$:</p>
+<ul>
+<li>$f$ 有唯一惰性提升;</li>
+<li>对任意 $p\in \mathcal P$, 记 $\mathcal L_p = \operatorname{lim}_{e\to p}\{e\leadsto f(o)\}$, 则 $\{p\leadsto f(o)\} \to \mathcal L_p$ 为<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首函子</a></span>.</li>
+<li>对任意活性映射 $\phi\colon p\leadsto f(o)$, 任意函子 $F\colon \mathcal O_{\mathrm{el}}^{\mathrm{op}}\to\mathsf{Ani}$,
+$$
+    \operatorname{lim}_{e\to o}F(e) \simeq \operatorname{lim}_{e\rightarrowtail p, e'\to o'}F(e').
+$$</li>
+</ul>
 <p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Corollary 7.13).
 设 $f\colon \mathcal O \to \mathcal P$ 为代数模式的可延拓态射, $\mathcal C$ 为 $f$-可容许范畴, 则左 Kan 扩张限制为函子
 $$
@@ -1006,11 +1039,16 @@ $$</p>
 <p>$$
 \begin{aligned}
 f_!F(p) &amp;= \operatorname{colim}_{p\to f(o)} F(o)\\
-&amp;=\operatorname{colim}_{p\twoheadrightarrow f(o)} F(o)\  (\star)\\
-&amp;=\operatorname{colim}_{p\twoheadrightarrow f(o)} \operatorname{lim}_{e\rightarrowtail p}F(e)\  (\dagger)
+&amp;=\operatorname{colim}_{p\leadsto f(o)} F(o)\  (\star)\\
+&amp;=\operatorname{colim}_{p\leadsto f(o)} \operatorname{lim}_{e\rightarrowtail p}F(o')\  (\dagger)
 \end{aligned}
 $$
-注意 $(\star)$ 是因为 $\{p \twoheadrightarrow f(o)\}$ 在 $\{p\to f(o)\}$ 中为<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首</a></span>子范畴, 但此处余极限的指标范畴是这两个范畴的反范畴, 共首变为共尾.</p>
+其中</p>
+<ul>
+<li>$(\star)$ 是因为 $\{p \leadsto f(o)\}$ 在 $\{p\to f(o)\}$ 中为<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首</a></span>子范畴, 但此处余极限的指标范畴是这两个范畴的反范畴, 共首变为共尾;</li>
+<li>$(\dagger)$ 是因为可延拓性的第三个条件;</li>
+<li></li>
+</ul>
 <h3>拉回的右伴随</h3>
 <p><strong>定义</strong>. 对于代数模式的态射 $f\colon \mathcal O \to \mathcal P$, 称其有<strong>唯一活性提升</strong>是指如下两个等价条件成立:</p>
 <ul>
@@ -1044,7 +1082,7 @@ $$</p>
 $$
 \begin{aligned}
 F_{\mathcal O}(\Phi)(X) &amp;= (j_{\mathcal O,!}i_{\mathcal O,*}\Phi) (X) \\
-&amp;=\int_{Y\in\mathcal O_{\mathrm{int}}} \{X\twoheadrightarrow Y\} \times \int_{E\in\mathcal O_{\mathrm{el}}}^*\Phi(E)^{\{E\rightarrowtail Y\}}
+&amp;=\int_{Y\in\mathcal O_{\mathrm{int}}} \{X\leadsto Y\} \times \int_{E\in\mathcal O_{\mathrm{el}}}^*\Phi(E)^{\{E\rightarrowtail Y\}}
 \\&amp;= \operatorname{colim}_{Y\in\operatorname{Act}_{\mathcal O}(X)}\operatorname{lim}_{E\rightarrowtail Y} \Phi(E).
 \end{aligned}
 $$
@@ -1128,9 +1166,9 @@ $$
 <li>基本对象为 $\langle 1 \rangle$;</li>
 <li>惰性和活性映射都与 $\Gamma$ 一致.</li>
 </ul>
-<p>态射 $U\colon \mathsf{Assoc} \to \Gamma$ 是可延拓态射.
+<p>态射 $U\colon \mathsf{Assoc} \to \Gamma$ 是可延拓态射, 其左 Kan 扩张保持 Segal 条件. 结合代数的交换化由左 Kan 扩张的公式给出:
 $$
-U_! A(\langle n \rangle) = \operatorname{colim}_{\langle n \rangle \to \langle m \rangle}
+U_! A(\langle n \rangle) = \operatorname{colim}_{\langle n \rangle \to \langle m \rangle} A(\langle m \rangle).
 $$</p>
 <h3>交换代数中的交换代数</h3>
 <p>范畴 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">$\Gamma$</a></span> 有个乘法 $\land\colon \Gamma\times \Gamma \to \Gamma$, $\langle n\rangle \land \langle m \rangle = \langle nm \rangle$. (注意这<strong>不是</strong> $\Gamma$ 中的范畴论乘积.) 由代数模式乘积的性质, 有函子
@@ -1298,7 +1336,38 @@ $$
 \operatorname{Fact}\colon \mathsf{OFS} \to \mathsf{DCat},
 $$
 将每个正交分解系视为一个二重范畴, 两类态射分别就是分解系中的两类态射.</p>
-<p><strong>命题</strong>. $\operatorname{Fact}$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>.</p>
+<p><strong>定义</strong> (分解条件). 对于二重范畴 $\mathcal C$, 视为双单纯生象 $\mathcal C \colon (\Delta\times\Delta)^{\mathrm{op}} \to \mathsf{Ani}$, 称如下等价条件为<strong>分解条件</strong>:</p>
+<p>$(1)$ 方块
+$$
+\begin{array}{ccc}
+\mathcal C \Big(\begin{array}{ccc}
+*_{00} &amp; \rightarrow &amp; *_{01} \\
+\downarrow &amp;  &amp; \downarrow \\
+*_{10} &amp; \rightarrow &amp; *_{11}
+\end{array}\Big) &amp; \rightarrow &amp; \mathcal C \Big(\begin{array}{c}
+*_{00} \\
+\downarrow \\
+*_{10}
+\end{array}\Big) \\
+\downarrow &amp;  &amp; \downarrow \\
+\mathcal C(*_{10} \to *_{11}) &amp; \rightarrow &amp; \mathcal C(*_{11})
+\end{array}
+$$
+为<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>. 其中 $\begin{array}{ccc} *_{00} &amp; \rightarrow &amp; *_{01} \\ \downarrow &amp;  &amp; \downarrow \\ *_{10} &amp; \rightarrow &amp; *_{11} \end{array}$ 表示 $\Delta\times\Delta$ 的对象 $([1],[1])$,
+$\begin{array}{c} *_{00} \\ \downarrow \\ *_{10} \end{array}$ 表示 $([1],[0])$, 等等. 故直观上这个条件是说: 任给 “左下角”
+$\begin{array}{ccc} *_{00} &amp; &amp; \\ \downarrow &amp;  &amp; \\ *_{10} &amp; \rightarrow &amp; *_{11} \end{array}$, 存在唯一的 “方块”.
+这个过程就是将 “错误的分解顺序” 唯一地改变为 “正确的分解顺序” 的过程.</p>
+<p>$(2)$ 函子
+$$
+\mathcal C(-,d_0)\colon \mathcal C(-,[1]) \to \mathcal C(-,[0])
+$$
+为<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">推前纤维化</a></span>. 我们将 $\mathcal C(-,[0])$ 中的态射想象为 “底边” $X_{10} \to X_{11}$, 将 $X_{10}$ 上的 $\mathcal C(-,[1])$ 中的对象想象为 “左边” $\begin{array}{c}X_{00}\\ \downarrow \\ X_{10}\end{array}$, 那么推前纤维化的推前给出方块 $\begin{array}{ccc} X_{00} &amp; \rightarrow &amp; X_{01} \\ \downarrow &amp;  &amp; \downarrow \\ X_{10} &amp; \rightarrow &amp; X_{11} \end{array}$.</p>
+<p>$(3)$ 函子
+$$
+\mathcal C(d_1,-)\colon \mathcal C([1],-) \to \mathcal C([0],-)
+$$
+为<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">拉回纤维化</a></span>.</p>
+<p><strong>命题</strong>. $\operatorname{Fact}$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>, 其本质像正是全体满足分解条件的二重范畴.</p>
 <h2>例</h2>
 <h3>平凡分解系</h3>
 <p>在任何范畴 $\mathcal C$ 中, $(\mathcal C^{\simeq},\mathcal C)$ 与 $(\mathcal C,\mathcal C^{\simeq})$ 均为正交分解系.</p>

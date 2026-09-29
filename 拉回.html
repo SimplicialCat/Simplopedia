@@ -2151,6 +2151,135 @@ $$
 $$
 \Delta \hookrightarrow \Omega.
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="正交分解系"><header><h1><span class="taxon"></span>正交分解系 <a class="slug" href="./正交分解系.html">[正交分解系]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><strong>命题-定义</strong>. 对于范畴 $\mathcal C$ 的<span class="link local"><a href="./宽子范畴.html" title="宽子范畴 [宽子范畴]">宽子范畴</a></span> (包含所有对象的子范畴) $L,R$, 若以下等价条件成立, 则称 $(L,R)$ 为<strong>正交分解系</strong> (orthogonal factorization system):</p>
+<p>$(1)$ 对任意对象 $x,y\in\mathcal C$, 映射
+$$
+    (-\circ -)\colon \operatorname{colim}_{z\in\mathcal C^{\simeq}}\operatorname{Hom}_L(x,z)\times\operatorname{Hom}_R(z,y) \to \operatorname{Hom}(x,y)
+   $$
+为等价, 换言之任一态射都<strong>存在唯一</strong>的先 $L$ 后 $R$ 的分解.</p>
+<p>$(2)$ 映射
+$$
+	   (-\circ -)\colon \mathsf{Ar}(L)^{\simeq} \times_{\mathcal C^{\simeq}}\mathsf{Ar}(R)^{\simeq} \to \mathsf{Ar}(\mathcal C)^{\simeq}
+   $$
+为等价, 和条件 1 基本上是同一个意思.</p>
+<p>$(3)$ $L$ 的态射<span class="link local"><a href="./提升性质.html" title="提升性质 [提升性质]">左正交</a></span>于 $R$ 的态射, 并且任一态射都<strong>存在</strong>一个先 $L$ 后 $R$ 的分解 (不要求唯一).</p>
+<p>$(4)$ 函子
+$$
+	   (-\circ -)\colon \mathsf{Ar}(L) \times_{\mathcal C}\mathsf{Ar}(R) \to \mathsf{Ar}(\mathcal C)
+$$
+为等价. 注意这表明正交分解是函子性的, 这个分解由上述函子的逆给出.</p>
+<p><em>证明</em> (概要).</p>
+<p>$(1) \Leftrightarrow (2)$. 考虑拉回图
+$$
+\begin{CD}
+\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\underset{z\in\mathcal C^{\simeq}}{\operatorname{colim}}\,\operatorname{Hom}_L(x,z)\times\operatorname{Hom}_R(z,y) @&gt;&gt;&gt; \operatorname{Hom}(x,y) @&gt;&gt;&gt; \{(x,y)\} \\
+@VVV @VVV @VVV \\
+\mathsf{Ar}(L)^{\simeq} \times_{\mathcal C^{\simeq}}\mathsf{Ar}(R)^{\simeq} @&gt;&gt;&gt; \mathsf{Ar}(\mathcal C)^{\simeq} @&gt;&gt;&gt; \mathcal C^{\simeq}\times\mathcal C^{\simeq}.
+\end{CD}
+$$</p>
+<p>$(1)\Rightarrow (3)$. 设 $f\in L,g\in R$, 我们证明 $f \perp g$.
+考虑如下交换图,
+$$
+\begin{CD}
+\bullet @&gt;{u}&gt;&gt; \bullet \\
+@V{f}VV @VV{g}V \\
+\bullet @&gt;&gt;{v}&gt; \bullet
+\end{CD}
+$$
+其中主对角线 $gu = vf$. 考虑主对角线以及 $u,v$ 三个态射的 $(L,R)$-分解, 得到 (唯一确定的) 如下分解,</p>
+<p><figure><img src="./OFS-1.svg" class="color-invert"/></figure></p>
+<p>其中 $\ell\in L$, $r\in L$. 这证明了 $f \perp g$. 上述论证可以写成更严格的形式, 使用了 $\mathsf{Ani}$ 中余极限保持拉回的性质, 此处略去.</p>
+<p>$(3) \Rightarrow (4)$. 见 <span class="link external"><a href="https://kerodon.net/tag/04QD" title="Kerodon 04QD [https://kerodon.net/tag/04QD]">Kerodon 04QD</a></span>.</p>
+<p>$(4) \Rightarrow (2)$ 明显.</p>
+<h2>性质</h2>
+<h3>收缩封闭</h3>
+<p><strong>命题</strong>. 正交分解系中的两类态射 $L,R$ 各自都关于<span class="link local"><a href="./收缩.html" title="收缩 [收缩]">收缩</a></span>封闭.</p>
+<p><em>证明</em>. 对于任一态射 $f$, 有 $f\in L$ 当且仅当 $f$ 在函子性的分解中的右边分量为同构. 而同构关于收缩封闭, 故 $L$ 关于收缩封闭. 对 $R$ 同理.</p>
+<h3>互为提升类</h3>
+<p><strong>命题</strong>. 记 $L,R$ 为正交分解系的两类态射, 则 $L$ 和 $R$ 互为<span class="link local"><a href="./提升性质.html" title="提升性质 [提升性质]">提升</a></span>类:
+$$
+L = {^\perp R},\quad R = L^\perp.
+$$</p>
+<p><em>证明</em>. 对任意 $f\in {^\perp R}$, 存在 $\ell\in L$ 与 $r\in R$ 使得 $f = r\ell$. 考虑下图,
+$$
+\begin{CD}
+\bullet @&gt;{\ell}&gt;&gt; \bullet \\
+@V{f}VV \nearrow_i @VV{r}V \\
+\bullet @= \bullet
+\end{CD}
+$$
+由 $f\in {^\perp R}$, $r\in R$ 知存在提升 $i$; 这说明 $f$ 是 $\ell$ 的收缩 (如下图).
+$$
+\begin{CD}
+\bullet @= \bullet @= \bullet \\
+@V{f}VV @V{\ell}VV @VV{f}V \\
+\bullet @&gt;&gt;{i}&gt; \bullet @&gt;&gt;{r}&gt; \bullet
+\end{CD}
+$$
+最后, 由 $L$ 关于收缩封闭知 $f \in L$.</p>
+<h3>自反性</h3>
+<p><strong>命题</strong>. 在正交分解
+$$
+\mathsf{Ar}(\mathcal C) \to \mathsf{Ar}(L)\times_{\mathcal C}\mathsf{Ar}(R)
+$$
+中,</p>
+<ul>
+<li>$\mathsf{Ar}(\mathcal C) \to \mathsf{Ar}(L)$ 是含入 $\mathsf{Ar}(L)\to\mathsf{Ar}(\mathcal C)$ 的右伴随, 伴随的余单位正是左分量 $L(f)\to f$.</li>
+<li>$\mathsf{Ar}(\mathcal C) \to \mathsf{Ar}(R)$ 是含入 $\mathsf{Ar}(R)\to\mathsf{Ar}(\mathcal C)$ 的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>, 伴随的单位正是右分量 $f \to R(f)$.</li>
+</ul>
+<p><strong>例</strong>. $n$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>构成 $\mathsf{Ani}$ 的<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> $\mathsf{Ani}_{\leq n} \hookrightarrow \mathsf{Ani}.$</p>
+<h3>局部性</h3>
+<p><strong>命题</strong>. 对于<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathcal C$ 中的正交分解系 $(L,R)$, 两类态射有<span class="link local"><a href="./局部类.html" title="局部类 [局部类]">局部性</a></span>. 这就是说, 对于态射 $f\colon X\to Y$, 若存在 $Y$ 的覆盖 $\{g_i \colon Y_i\to Y\}$ 使得每个 $g_i^* f$ 都属于 $R$, 那么 $f$ 属于 $R$.</p>
+<p><em>证明</em>. 由意象的性质, 覆盖 $\{g_i \colon Y_i\to Y\}$ 的<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>
+$$
+\mathcal C_{/Y} \to \prod_{i} \mathcal C_{/Y_i}
+$$
+为<span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守函子</a></span>. 考虑态射 $f$ 的 $(L,R)$-分解 $f=rl$ ($l\in L, r\in R$). 假设每个 $g_i^*f$ 属于 $R$, 那么 $g_i^* l$ 为同构, 由保守性得 $l$ 为同构, 即 $f$ 属于 $R$. 对于 $L$ 同理. $\square$</p>
+<h3>与双范畴 (二重范畴) 的关系</h3>
+<p>记 $\mathsf{OFS}$ 为 “带正交分解系的范畴” 的范畴, $\mathsf{DCat}$ 为双范畴 (或者叫<span class="link local"><a href="./n-重范畴.html" title="n 重范畴 [n-重范畴]">二重范畴</a></span>) 的范畴. 考虑函子
+$$
+\operatorname{Fact}\colon \mathsf{OFS} \to \mathsf{DCat},
+$$
+将每个正交分解系视为一个二重范畴, 两类态射分别就是分解系中的两类态射.</p>
+<p><strong>定义</strong> (分解条件). 对于二重范畴 $\mathcal C$, 视为双单纯生象 $\mathcal C \colon (\Delta\times\Delta)^{\mathrm{op}} \to \mathsf{Ani}$, 称如下等价条件为<strong>分解条件</strong>:</p>
+<p>$(1)$ 方块
+$$
+\begin{array}{ccc}
+\mathcal C \Big(\begin{array}{ccc}
+*_{00} &amp; \rightarrow &amp; *_{01} \\
+\downarrow &amp;  &amp; \downarrow \\
+*_{10} &amp; \rightarrow &amp; *_{11}
+\end{array}\Big) &amp; \rightarrow &amp; \mathcal C \Big(\begin{array}{c}
+*_{00} \\
+\downarrow \\
+*_{10}
+\end{array}\Big) \\
+\downarrow &amp;  &amp; \downarrow \\
+\mathcal C(*_{10} \to *_{11}) &amp; \rightarrow &amp; \mathcal C(*_{11})
+\end{array}
+$$
+为<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>. 其中 $\begin{array}{ccc} *_{00} &amp; \rightarrow &amp; *_{01} \\ \downarrow &amp;  &amp; \downarrow \\ *_{10} &amp; \rightarrow &amp; *_{11} \end{array}$ 表示 $\Delta\times\Delta$ 的对象 $([1],[1])$,
+$\begin{array}{c} *_{00} \\ \downarrow \\ *_{10} \end{array}$ 表示 $([1],[0])$, 等等. 故直观上这个条件是说: 任给 “左下角”
+$\begin{array}{ccc} *_{00} &amp; &amp; \\ \downarrow &amp;  &amp; \\ *_{10} &amp; \rightarrow &amp; *_{11} \end{array}$, 存在唯一的 “方块”.
+这个过程就是将 “错误的分解顺序” 唯一地改变为 “正确的分解顺序” 的过程.</p>
+<p>$(2)$ 函子
+$$
+\mathcal C(-,d_0)\colon \mathcal C(-,[1]) \to \mathcal C(-,[0])
+$$
+为<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">推前纤维化</a></span>. 我们将 $\mathcal C(-,[0])$ 中的态射想象为 “底边” $X_{10} \to X_{11}$, 将 $X_{10}$ 上的 $\mathcal C(-,[1])$ 中的对象想象为 “左边” $\begin{array}{c}X_{00}\\ \downarrow \\ X_{10}\end{array}$, 那么推前纤维化的推前给出方块 $\begin{array}{ccc} X_{00} &amp; \rightarrow &amp; X_{01} \\ \downarrow &amp;  &amp; \downarrow \\ X_{10} &amp; \rightarrow &amp; X_{11} \end{array}$.</p>
+<p>$(3)$ 函子
+$$
+\mathcal C(d_1,-)\colon \mathcal C([1],-) \to \mathcal C([0],-)
+$$
+为<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">拉回纤维化</a></span>.</p>
+<p><strong>命题</strong>. $\operatorname{Fact}$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>, 其本质像正是全体满足分解条件的二重范畴.</p>
+<h2>例</h2>
+<h3>平凡分解系</h3>
+<p>在任何范畴 $\mathcal C$ 中, $(\mathcal C^{\simeq},\mathcal C)$ 与 $(\mathcal C,\mathcal C^{\simeq})$ 均为正交分解系.</p>
+<h3>满单分解</h3>
+<p>在集合范畴 $\mathsf{Set}$ 或生象的范畴 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中, (满射, 单射) 是一个正交分解系. 这是 <span class="link local"><a href="./连通-截断分解.html" title="(n-连通, n-截断) 分解 [连通-截断分解]">$n$-连通-$n$-截断分解</a></span>的特例 $(n=-1)$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="粘构形范畴"><header><h1><span class="taxon"></span>粘构形范畴 <a class="slug" href="./粘构形范畴.html">[粘构形范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><strong>粘构形范畴</strong> (category of sticky configurations) 是 <span class="link local"><a href="./AndradeMfdInvEn.html" title=" [AndradeMfdInvEn]">Ricardo Andrade 的博士论文</a></span> (以下简称 “原文”) 定义的一个范畴. 对于空间 $X$, 该文定义了一个范畴 $\mathbb M(X)$,</p>
 <ul>
