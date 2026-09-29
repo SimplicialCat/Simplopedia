@@ -1044,6 +1044,40 @@ $$
 <li>$F\colon \mathcal P^{\mathrm{op}} \to \mathcal C$ 是 Segal 对象当且仅当 $f^*F\colon \mathcal O^{\mathrm{op}}\to\mathcal C$ 是 Segal 对象;</li>
 <li>存在<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性伴随</a></span> $(L_{\mathrm{Seg}}\circ f_!)\dashv f^*\colon \mathsf{Seg}_{\mathcal O}(\mathcal C) \rightleftarrows \mathsf{Seg}_{\mathcal P}(\mathcal C)$.</li>
 </ul>
+<p><strong>定义</strong>. 对于代数模式的态射 $f\colon \mathcal O \to \mathcal P$, 称其有<strong>唯一惰性提升</strong>是指如下两个等价条件成立:</p>
+<ul>
+<li>对任意 $o\in\mathcal O$, 每个指向 $f(o)$ 的惰性映射唯一地提升为指向 $o$ 的惰性映射;</li>
+<li>对任意 $p\in\mathcal P$, 所有 $p$ 到 $f(o)$ 的活性映射的范畴 $\{p \twoheadrightarrow f(o)\}$ 在所有映射的范畴 $\{p\to f(o)\}$ 中为<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首</a></span>子范畴;</li>
+<li><span class="link local"><a href="./基变换.html" title="基变换 [基变换]">Beck–Chevalley 基变换</a></span> …?</li>
+</ul>
+<p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Corollary 7.4). 若 $f\colon \mathcal O \to \mathcal P$ 有唯一惰性提升, 则有函子
+$\mathcal P^{\mathrm{op}} \to \mathsf{Cat}$, $p\mapsto\{p\twoheadrightarrow f(o)\}$.</p>
+<p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Corollary 7.13).
+设 $f\colon \mathcal O \to \mathcal P$ 为代数模式的可延拓态射, $\mathcal C$ 为 $f$-可容许范畴, 则左 Kan 扩张限制为函子
+$$
+f_!\colon \mathsf{Seg}_{\mathcal O}(\mathcal C) \to \mathsf{Seg}_{\mathcal P}(\mathcal C).
+$$</p>
+<p>$$
+\begin{aligned}
+f_!F(p) &amp;= \operatorname{colim}_{p\to f(o)} F(o)\\
+&amp;=\operatorname{colim}_{p\twoheadrightarrow f(o)} F(o)\  (\star)\\
+&amp;=\operatorname{colim}_{p\twoheadrightarrow f(o)} \operatorname{lim}_{e\rightarrowtail p}F(e)\  (\dagger)
+\end{aligned}
+$$
+注意 $(\star)$ 是因为 $\{p \twoheadrightarrow f(o)\}$ 在 $\{p\to f(o)\}$ 中为<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首</a></span>子范畴, 但此处余极限的指标范畴是这两个范畴的反范畴, 共首变为共尾.</p>
+<h3>拉回的右伴随</h3>
+<p><strong>定义</strong>. 对于代数模式的态射 $f\colon \mathcal O \to \mathcal P$, 称其有<strong>唯一活性提升</strong>是指如下两个等价条件成立:</p>
+<ul>
+<li>对任意 $o\in\mathcal O$, 每个由 $f(o)$ 出发的活性映射唯一地提升为 $o$ 出发的活性映射;</li>
+<li>对任意 $p\in\mathcal P$, 所有 $f(o)$ 到 $p$ 的惰性映射的范畴 $\{f(o)\rightarrowtail p\}$ 在所有映射的范畴 $\{f(o)\to p\}$ 中为<span class="link local"><a href="./共尾函子.html" title="共尾函子 [共尾函子]">共尾</a></span>子范畴;</li>
+<li><span class="link local"><a href="./基变换.html" title="基变换 [基变换]">Beck–Chevalley 基变换</a></span> $j_{\mathcal P}^*f_* \to f_*j_{\mathcal O}^*$ 为等价.</li>
+</ul>
+<p>这两个条件等价是<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">分解系统</a></span>的一般性质.</p>
+<p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Proposition 6.3). 设 $f\colon \mathcal O\to \mathcal P$ 为代数模式的态射, $\mathcal C$ 为具有合适极限的范畴, 则右 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span> $f_*\colon \widehat {\mathcal O} \to \widehat {\mathcal P}$ 限制为函子
+$$
+f_*\colon \mathsf{Seg}_{\mathcal O}(\mathcal C)
+\to \mathsf{Seg}_{\mathcal P}(\mathcal C).
+$$</p>
 <h3>与单子的关系</h3>
 <p>每个代数模式 $\mathcal O$ 给出底层结构 $\widehat {\mathcal O_{\mathrm{el}}}$ 上的一个<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数</a></span>的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</p>
 <p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Corollary 8.2). 设 $\mathcal O$ 为代数模式, $\mathcal C$ 为可表现范畴, 则<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由–遗忘伴随</a></span>
@@ -1138,8 +1172,20 @@ $$
 其中</p>
 <ul>
 <li>右伴随 $\gamma^*$ 给出交换代数到结合代数的遗忘.</li>
-<li>左伴随 $\gamma_!$ 在局部化后给出结合代数的交换化. 直观上, $A([m])$ 的元素是结合代数 $A$ 的 $m$ 个有序元素. 但在 $(\gamma_! A)(\langle 1\rangle)$ 中, 这 $m$ 个元素的所有顺序的结合方式都相等, 都等于映射 $\langle 1\rangle \to \langle m \rangle$, $1\mapsto\{1,\cdots,m\}$ 诱导的 $A([m]) \to \gamma_! A(\langle 1\rangle)$ 的像.</li>
+<li>左伴随 $\gamma_!$ 在局部化后给出结合代数的交换化. 但是这样无法得到交换化的显式表达式. 如果将结合代数的模式替换为 $\mathsf{Assoc} \to \Gamma$ (下文), 就能得到一个不需要局部化的左伴随, 从而给出显式的交换化.</li>
 </ul>
+<h3>结合算畴作为代数模式</h3>
+<p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合算畴</a></span> $\mathsf{Assoc}$ 作为 $\Gamma$ 上的代数模式:</p>
+<ul>
+<li>对象为有限集 $\langle n\rangle$;</li>
+<li>态射 $S \to T$ 将每个元素 $s\in T$ 对应到一个子集 $X_s$ 并赋予 $X_s$ 一个<span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序</a></span>;</li>
+<li>基本对象为 $\langle 1 \rangle$;</li>
+<li>惰性和活性映射都与 $\Gamma$ 一致.</li>
+</ul>
+<p>态射 $U\colon \mathsf{Assoc} \to \Gamma$ 是可延拓态射.
+$$
+U_! A(\langle n \rangle) = \operatorname{colim}_{\langle n \rangle \to \langle m \rangle}
+$$</p>
 <h3>交换代数中的交换代数</h3>
 <p>范畴 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">$\Gamma$</a></span> 有个乘法 $\land\colon \Gamma\times \Gamma \to \Gamma$, $\langle n\rangle \land \langle m \rangle = \langle nm \rangle$. (注意这<strong>不是</strong> $\Gamma$ 中的范畴论乘积.) 由代数模式乘积的性质, 有函子
 $$

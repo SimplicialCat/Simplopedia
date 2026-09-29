@@ -1109,7 +1109,6 @@ $$
 &amp;= V\times_{V\oplus V} V \\&amp;= \operatorname{fib}((\mathrm{id},T)\colon V\oplus V \to V\oplus V)\\&amp;=\operatorname{fib}(T-\mathrm{id}\colon V\to V).
 \end{aligned}
 $$</p>
-<hr />
 <h2>第 2 讲</h2>
 <p>设 $X$ 具有分层 $X = \bigsqcup S_\alpha$, 且 $\mathcal F\in D^b_c(X)$ 逐层局部常值. 我们将定义 $D^b_c(X)$ 上的可构造 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">$t$-结构</a></span> (<span class="link local"><a href="./偏屈t-结构.html" title="偏屈 t-结构 [偏屈t-结构]">偏屈 $t$-结构</a></span>), 使得</p>
 <ul>
@@ -1117,6 +1116,104 @@ $$</p>
 <li>$\mathcal F\in D(X)^{\geq 0}$ 当且仅当 $r &lt; -\operatorname{dim}S_\alpha$ 时 $H^r(\mathcal F|^{!}_{S_\alpha}) =0$.</li>
 </ul>
 <p>(我们采用上同调指标.)</p>
+<p>本讲内容已经记载在 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">$t$-结构</a></span>, <span class="link local"><a href="./粘t-结构.html" title="粘 t-结构 [粘t-结构]">粘 $t$-结构</a></span>等页面.</p>
+<h2>第 3 讲</h2>
+<p>考虑两层的开闭分解
+$$
+i\colon U\subset X \hookleftarrow Z \colon j,
+$$
+伴随
+$$
+(i^*\dashv i_*\dashv i^!)\colon 
+D_c^b (Z)
+\begin{aligned}
+&amp;\overset{i^*}{\leftarrow}\\
+&amp;\overset{i_*}{\rightarrow}\\
+&amp;\overset{i^!}{\leftarrow}
+\end{aligned}\,
+D_c^b(X)
+\begin{aligned}
+&amp;\overset{j_!}{\leftarrow}\\
+&amp;\overset{j^*}{\rightarrow}\\
+&amp;\overset{j_*}{\leftarrow}
+\end{aligned}\,
+D_c^b(U) \colon (j_!\dashv j^*\dashv j_*)
+$$
+给出如下三角.
+$$
+j_! j^* F \to F\to i_* i^* F
+$$
+$$
+i_* i^! F \to F \to j_* j^* F
+$$</p>
+<p>换言之,
+$$
+F = \operatorname{fib}(j_* F_U \to i_* F_Z [1])
+$$</p>
+<p>一般地, 要定义 $X$ 上关于指定分层 $S$ 的偏屈 $t$-结构, 只需定义各层 $D^b_S(S_\alpha)$ 上的 $t$-结构 (平移通常 $t$-结构使得 $\underline{\mathbb{Q}}[\operatorname{dim}S_\alpha] \in \heartsuit$).</p>
+<p>然后老师详细解释了粘 $t$-结构. 详见<span class="link local"><a href="./粘t-结构.html" title="粘 t-结构 [粘t-结构]">粘 $t$-结构</a></span>.</p>
+<p>设 $S$ 为光滑代数簇, 配备平凡分层 $\mathcal S_{\mathrm{triv}}$ (只有一层).</p>
+<p>由定义, $D^b_{\mathcal S_{\mathrm{triv}}} (S) = D^b_{\mathrm{loc}}(S)$. 注意它不等于它的心 (普通局部系统的 Abel 范畴 $\mathsf{LS}(S)$) 的导出范畴. 例如当 $S$ 单连通时, 局部系统平凡, 但 $D^b_{\mathrm{loc}}(S)$ 包含了 $S$ 的所有<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>的信息.</p>
+<p>定义偏屈 $t$-结构满足
+$$
+D^b_{\mathcal{S}_{\mathrm{triv}}}(S)^{p,\leq 0} = D^b_{\mathcal S_{\mathrm{triv}}}(S)^{\leq 0} [\operatorname{dim}S].
+$$</p>
+<p>一般地, 设 $X$ 有分层结构 $\mathcal S \colon X = \bigcup_\alpha S_\alpha$.</p>
+<p><strong>定理</strong>. 通过<span class="link local"><a href="./粘t-结构.html" title="粘 t-结构 [粘t-结构]">粘 $t$-结构</a></span>得到的 $D^b_{\mathcal S}(X)$ 上的<span class="link local"><a href="./偏屈t-结构.html" title="偏屈 t-结构 [偏屈t-结构]">偏屈 $t$-结构</a></span>满足
+$$
+D^b_{\mathcal S}(X)^{p,\leq 0} = \{
+    F\mid H^r(S_\alpha^*F) = 0\,\forall r&gt;{-{\operatorname{dim}S_\alpha}}
+\},
+$$
+$$
+D^b_{\mathcal S}(X)^{p,\geq 0} = \{
+    F\mid H^r(S_\alpha^! F) = 0\,\forall r&lt;{-{\operatorname{dim}S_\alpha}}
+\}.
+$$
+其中 $H^r$ 是对于普通 $t$-结构的上同调.
+条件也可以对偏屈 $t$-结构的上同调表述为
+$$
+H^{p,r}(S_\alpha^* F) = 0 \,\forall r &gt; 0.
+$$</p>
+<p>记 $\mathsf{Perv}_{\mathcal S}(X) := D^b_{\mathcal S}(X)^{\heartsuit}$.</p>
+<p>若分层 $\mathcal S'$ 是 $\mathcal S$ 的细化, 则
+$$
+D_{\mathcal S}^b(X) \subset D_{\mathcal S'}^b (X),
+$$</p>
+<p><strong>习题</strong>. 证明上述包含中 $(p,\leq 0),(p,\geq 0)$ 部分均相容:
+$$
+D^b_{\mathcal S}(X)^{p,\leq 0} = D^b_{\mathcal S'}(X)^{p,\leq 0} \cap D^b_{\mathcal S}(X).
+$$
+提示: 若 $f\colon T\to S$ 为光滑代数簇的映射, 则 $f^*(\mathsf{LS}_S)\subset\mathsf{LS}_T$, $f^*(\mathsf{Perv}(S))[\operatorname{dim}_T - \operatorname{dim}_S]\subset\mathsf{Perv}(T)$.</p>
+<p><strong>习题</strong>. $\mathbb D (\mathsf{Perv}(X)) = \mathsf{Per}(X)$.</p>
+<p><strong>例</strong>. 考虑 $X=\mathbb A^1$, $Z=\mathrm{pt}$.</p>
+<ul>
+<li>$\mathrm{IC}_X = \underline{\mathbb{Q}}[1]$.</li>
+<li>$i_* i^! \underline{\mathbb{Q}}\to \underline{\mathbb{Q}}\to j_* j^*\underline{\mathbb{Q}}$</li>
+<li>$j_! j^* \underline{\mathbb{Q}} \to \underline{\mathbb{Q}} \to i_* i^* \underline{\mathbb{Q}}$ (通常 $t$-结构的心中的正合列)</li>
+<li>平移后旋转得到心中的正合列 $i_*\mathbb{Q}\to j_! \mathrm{IC}_U \to \mathrm{IC}_X$.</li>
+<li>$j_!\mathrm{IC}_U\to \mathrm{IC}_X\to j_*\mathrm{IC}_U$ 恰好是 $j_!\mathrm{IC}_U\to j_*\mathrm{IC}_U$ 的满-单分解. (一般地, 若 $F^R$ 全忠实则有自然变换 $F^L \to F^R$, 来自 $\mathrm{id} = FF^R$.)</li>
+</ul>
+<h3>IC 延拓</h3>
+<p>记
+$$
+j_!^{\heartsuit} = \tau^{\geq 0} \circ j_!,
+$$
+$$
+j_*^{\heartsuit} = \tau^{\leq 0} \circ j_*.
+$$
+自然变换 $j_! \to j_*$ 给出心中的自然变换 $j_!^{\heartsuit} \to j_*^{\heartsuit}$. (一般地, 右 $t$-正合函子到左 $t$-正合函子的自然变换自动给出心中的自然变换.) 这个自然变换的像称为<strong>中间延拓</strong> (intermediate extension) $j_{! *}$, 由 Goresky–MacPherson 定义.</p>
+<p><strong>命题</strong>. $j_{! *}$ 为全忠实函子.</p>
+<p><strong>引理</strong>. 设 $F\in\mathsf{Perv}(U)$. 则 $j_{! *}F$ 为带有如下结构的唯一对象 $K$:</p>
+<ul>
+<li>$j^* K \simeq F$;</li>
+<li>$K$ 没有非平凡的支在 $Z = X \setminus U$ 上的子对象或商对象.</li>
+</ul>
+<p><strong>命题-定义</strong>.
+$$
+\mathrm{IC}_X = j_{! *}\mathrm{IC}_U.
+$$
+这意味着上式右端不依赖于光滑开集 $U$ 的选取.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="t-结构"><header><h1><span class="taxon"></span>t-结构 <a class="slug" href="./t-结构.html">[t-结构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设 $\mathcal C$ 为<span class="link local"><a href="./三角范畴.html" title="“三角范畴” [三角范畴]">三角范畴</a></span>或<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span>, 在<strong>同调指标</strong>中, 其上的一个 $t$-结构是一对子范畴 $(\mathcal C_{\geq 0},\mathcal C_{\leq 0})$, 记 $\mathcal C_{\geq n}=\mathcal C_{\geq 0}[n]$, $\mathcal C_{\leq n}=\mathcal C_{\leq 0}[n]$, 满足</p>
@@ -1420,6 +1517,109 @@ $$</p>
 <p><span class="link local"><a href="./K-理论.html" title="“K-理论” [K-理论]">K-理论</a></span>, <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">t-结构</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="粘t-结构"><header><h1><span class="taxon"></span>粘 t-结构 <a class="slug" href="./粘t-结构.html">[粘t-结构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./term-recollement.html" title="粘合 [term-recollement]">粘合</a></span></p>
+<h2>陈述</h2>
+<p><strong>引理</strong> (“Kashiwara 引理”).
+设 $D_U,D_Z$ 为带 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">$t$-结构</a></span>的稳定 $\infty$-范畴 (下标没有含义, 只是用于辅助理解),
+$$
+D_X = \operatorname{laxlim}(D_U \overset{i^*j_* [-1]}{\longrightarrow} D_Z),
+$$
+且有伴随
+$$
+(i^*\dashv i_*\dashv i^!)\colon 
+D_Z
+\begin{aligned}
+&amp;\overset{i^*}{\leftarrow}\\
+&amp;\overset{i_*}{\rightarrow}\\
+&amp;\overset{i^!}{\leftarrow}
+\end{aligned}\,
+D_X
+\begin{aligned}
+&amp;\overset{j_!}{\leftarrow}\\
+&amp;\overset{j^*}{\rightarrow}\\
+&amp;\overset{j_*}{\leftarrow}
+\end{aligned}\,
+D_U \colon (j_!\dashv j^*\dashv j_*)
+$$</p>
+<p>则 $D_X$ 上存在唯一的 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">$t$-结构</a></span>使得 $j^*,i_*$ 均为 $t$-正合函子.</p>
+<p>此时有</p>
+<ul>
+<li>$i^*$ 右 $t$-正合,</li>
+<li>$i^!$ 左 $t$-正合.</li>
+</ul>
+<p>使用上同调指标,
+$$
+D_X^{\leq 0} = \{F\mid j^* F\leq 0, i^*F \leq 0\},
+$$
+$$
+D_X^{\geq 1} = \{F\mid j^* F \geq 1, i^! F \geq 1\}.
+$$</p>
+<h3>检验 $t$-结构的条件</h3>
+<p>我们可以检验 $t$-结构的条件. 设 $F\in D_X^{\leq 0}$, $F'\in D_X^{\geq 1}$, 我们证明 $\operatorname{Hom}(F,F')=0$. 这是因为它坐落于长正合列
+$$
+\cdots\to\operatorname{Hom}(F,i_!i^! F') \to \operatorname{Hom}(F,F') \to \operatorname{Hom}(F,j_*j^* F')\to\cdots
+$$
+但由伴随可知左右两项都是 $0$.</p>
+<p>三角 $\tau^{\leq 0}F \to F \to \tau^{\geq 1}F$ 的构造比较麻烦.</p>
+<p>先考虑三角 $i_! i^! F \to F \to j_* j^* F$, 将 $j^* F$ 截断到 $\leq 0$, 作拉回图
+$$
+\begin{CD}
+i_! i^! F @&gt;&gt;&gt; N @&gt;&gt;&gt; j_* (j^* F)^{\leq 0} \\
+@VVV @VVV @VVV \\
+i_! i^! F @&gt;&gt;&gt; F @&gt;&gt;&gt; j_* j^* F.
+\end{CD}
+$$
+作用 $i^*$ 得到
+$$
+i^! F \to i^* N \to i^* j_* (j^* F)^{\leq 0}.
+$$
+再令
+$$
+M = \operatorname{cofib}(N \to F),
+$$
+那么
+$$
+j^* M = (j^* F)^{\geq 1} \in D_U^{\geq 1}.
+$$
+另一方面, 作用 $i^!$ 得到
+$$
+i^! F\to i^! N \to 0.
+$$
+故
+$$
+i^! M = 0.
+$$
+这样我们调整了开部分.</p>
+<p>下面调整闭部分.
+考虑三角
+$$
+j_! j^! N \to N \to i_* i^* N,
+$$
+作拉回
+$$
+\begin{array}{ccccc}
+j_! j^! N &amp; \rightarrow &amp; N' &amp; \rightarrow &amp; i_* (i^* N)^{\leq 0} \\
+\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
+j_! j^! N &amp; \rightarrow &amp; N &amp; \rightarrow &amp; i_* i^* N.
+\end{array}
+$$
+作用 $j^*$ 得到
+$$
+j^! N \to j^* N'\to 0
+$$
+故这一步不改变开部分.
+作用 $i^*$ 得到
+$$
+0= i^* N' \to (i^*N)^{\leq 0}
+$$
+故 $i^* N'\in D_Z^{\leq 0}$.</p>
+<p>容易得到
+$$
+\operatorname{cofib}(N'\to N)\geq 1
+$$
+进而
+$$
+M' = \operatorname{cofib}(N' \to F) \geq 1.
+$$</p>
 <h2>例</h2>
 <p>设 $i\colon Z\to X$ 为闭子簇, $j\colon U\to X$ 为相补的开子簇, 那么
 $$

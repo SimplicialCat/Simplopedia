@@ -10945,7 +10945,6 @@ $$
 &amp;= V\times_{V\oplus V} V \\&amp;= \operatorname{fib}((\mathrm{id},T)\colon V\oplus V \to V\oplus V)\\&amp;=\operatorname{fib}(T-\mathrm{id}\colon V\to V).
 \end{aligned}
 $$</p>
-<hr />
 <h2>第 2 讲</h2>
 <p>设 $X$ 具有分层 $X = \bigsqcup S_\alpha$, 且 $\mathcal F\in D^b_c(X)$ 逐层局部常值. 我们将定义 $D^b_c(X)$ 上的可构造 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">$t$-结构</a></span> (<span class="link local"><a href="./偏屈t-结构.html" title="偏屈 t-结构 [偏屈t-结构]">偏屈 $t$-结构</a></span>), 使得</p>
 <ul>
@@ -10953,6 +10952,104 @@ $$</p>
 <li>$\mathcal F\in D(X)^{\geq 0}$ 当且仅当 $r &lt; -\operatorname{dim}S_\alpha$ 时 $H^r(\mathcal F|^{!}_{S_\alpha}) =0$.</li>
 </ul>
 <p>(我们采用上同调指标.)</p>
+<p>本讲内容已经记载在 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">$t$-结构</a></span>, <span class="link local"><a href="./粘t-结构.html" title="粘 t-结构 [粘t-结构]">粘 $t$-结构</a></span>等页面.</p>
+<h2>第 3 讲</h2>
+<p>考虑两层的开闭分解
+$$
+i\colon U\subset X \hookleftarrow Z \colon j,
+$$
+伴随
+$$
+(i^*\dashv i_*\dashv i^!)\colon 
+D_c^b (Z)
+\begin{aligned}
+&amp;\overset{i^*}{\leftarrow}\\
+&amp;\overset{i_*}{\rightarrow}\\
+&amp;\overset{i^!}{\leftarrow}
+\end{aligned}\,
+D_c^b(X)
+\begin{aligned}
+&amp;\overset{j_!}{\leftarrow}\\
+&amp;\overset{j^*}{\rightarrow}\\
+&amp;\overset{j_*}{\leftarrow}
+\end{aligned}\,
+D_c^b(U) \colon (j_!\dashv j^*\dashv j_*)
+$$
+给出如下三角.
+$$
+j_! j^* F \to F\to i_* i^* F
+$$
+$$
+i_* i^! F \to F \to j_* j^* F
+$$</p>
+<p>换言之,
+$$
+F = \operatorname{fib}(j_* F_U \to i_* F_Z [1])
+$$</p>
+<p>一般地, 要定义 $X$ 上关于指定分层 $S$ 的偏屈 $t$-结构, 只需定义各层 $D^b_S(S_\alpha)$ 上的 $t$-结构 (平移通常 $t$-结构使得 $\underline{\mathbb{Q}}[\operatorname{dim}S_\alpha] \in \heartsuit$).</p>
+<p>然后老师详细解释了粘 $t$-结构. 详见<span class="link local"><a href="./粘t-结构.html" title="粘 t-结构 [粘t-结构]">粘 $t$-结构</a></span>.</p>
+<p>设 $S$ 为光滑代数簇, 配备平凡分层 $\mathcal S_{\mathrm{triv}}$ (只有一层).</p>
+<p>由定义, $D^b_{\mathcal S_{\mathrm{triv}}} (S) = D^b_{\mathrm{loc}}(S)$. 注意它不等于它的心 (普通局部系统的 Abel 范畴 $\mathsf{LS}(S)$) 的导出范畴. 例如当 $S$ 单连通时, 局部系统平凡, 但 $D^b_{\mathrm{loc}}(S)$ 包含了 $S$ 的所有<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>的信息.</p>
+<p>定义偏屈 $t$-结构满足
+$$
+D^b_{\mathcal{S}_{\mathrm{triv}}}(S)^{p,\leq 0} = D^b_{\mathcal S_{\mathrm{triv}}}(S)^{\leq 0} [\operatorname{dim}S].
+$$</p>
+<p>一般地, 设 $X$ 有分层结构 $\mathcal S \colon X = \bigcup_\alpha S_\alpha$.</p>
+<p><strong>定理</strong>. 通过<span class="link local"><a href="./粘t-结构.html" title="粘 t-结构 [粘t-结构]">粘 $t$-结构</a></span>得到的 $D^b_{\mathcal S}(X)$ 上的<span class="link local"><a href="./偏屈t-结构.html" title="偏屈 t-结构 [偏屈t-结构]">偏屈 $t$-结构</a></span>满足
+$$
+D^b_{\mathcal S}(X)^{p,\leq 0} = \{
+    F\mid H^r(S_\alpha^*F) = 0\,\forall r&gt;{-{\operatorname{dim}S_\alpha}}
+\},
+$$
+$$
+D^b_{\mathcal S}(X)^{p,\geq 0} = \{
+    F\mid H^r(S_\alpha^! F) = 0\,\forall r&lt;{-{\operatorname{dim}S_\alpha}}
+\}.
+$$
+其中 $H^r$ 是对于普通 $t$-结构的上同调.
+条件也可以对偏屈 $t$-结构的上同调表述为
+$$
+H^{p,r}(S_\alpha^* F) = 0 \,\forall r &gt; 0.
+$$</p>
+<p>记 $\mathsf{Perv}_{\mathcal S}(X) := D^b_{\mathcal S}(X)^{\heartsuit}$.</p>
+<p>若分层 $\mathcal S'$ 是 $\mathcal S$ 的细化, 则
+$$
+D_{\mathcal S}^b(X) \subset D_{\mathcal S'}^b (X),
+$$</p>
+<p><strong>习题</strong>. 证明上述包含中 $(p,\leq 0),(p,\geq 0)$ 部分均相容:
+$$
+D^b_{\mathcal S}(X)^{p,\leq 0} = D^b_{\mathcal S'}(X)^{p,\leq 0} \cap D^b_{\mathcal S}(X).
+$$
+提示: 若 $f\colon T\to S$ 为光滑代数簇的映射, 则 $f^*(\mathsf{LS}_S)\subset\mathsf{LS}_T$, $f^*(\mathsf{Perv}(S))[\operatorname{dim}_T - \operatorname{dim}_S]\subset\mathsf{Perv}(T)$.</p>
+<p><strong>习题</strong>. $\mathbb D (\mathsf{Perv}(X)) = \mathsf{Per}(X)$.</p>
+<p><strong>例</strong>. 考虑 $X=\mathbb A^1$, $Z=\mathrm{pt}$.</p>
+<ul>
+<li>$\mathrm{IC}_X = \underline{\mathbb{Q}}[1]$.</li>
+<li>$i_* i^! \underline{\mathbb{Q}}\to \underline{\mathbb{Q}}\to j_* j^*\underline{\mathbb{Q}}$</li>
+<li>$j_! j^* \underline{\mathbb{Q}} \to \underline{\mathbb{Q}} \to i_* i^* \underline{\mathbb{Q}}$ (通常 $t$-结构的心中的正合列)</li>
+<li>平移后旋转得到心中的正合列 $i_*\mathbb{Q}\to j_! \mathrm{IC}_U \to \mathrm{IC}_X$.</li>
+<li>$j_!\mathrm{IC}_U\to \mathrm{IC}_X\to j_*\mathrm{IC}_U$ 恰好是 $j_!\mathrm{IC}_U\to j_*\mathrm{IC}_U$ 的满-单分解. (一般地, 若 $F^R$ 全忠实则有自然变换 $F^L \to F^R$, 来自 $\mathrm{id} = FF^R$.)</li>
+</ul>
+<h3>IC 延拓</h3>
+<p>记
+$$
+j_!^{\heartsuit} = \tau^{\geq 0} \circ j_!,
+$$
+$$
+j_*^{\heartsuit} = \tau^{\leq 0} \circ j_*.
+$$
+自然变换 $j_! \to j_*$ 给出心中的自然变换 $j_!^{\heartsuit} \to j_*^{\heartsuit}$. (一般地, 右 $t$-正合函子到左 $t$-正合函子的自然变换自动给出心中的自然变换.) 这个自然变换的像称为<strong>中间延拓</strong> (intermediate extension) $j_{! *}$, 由 Goresky–MacPherson 定义.</p>
+<p><strong>命题</strong>. $j_{! *}$ 为全忠实函子.</p>
+<p><strong>引理</strong>. 设 $F\in\mathsf{Perv}(U)$. 则 $j_{! *}F$ 为带有如下结构的唯一对象 $K$:</p>
+<ul>
+<li>$j^* K \simeq F$;</li>
+<li>$K$ 没有非平凡的支在 $Z = X \setminus U$ 上的子对象或商对象.</li>
+</ul>
+<p><strong>命题-定义</strong>.
+$$
+\mathrm{IC}_X = j_{! *}\mathrm{IC}_U.
+$$
+这意味着上式右端不依赖于光滑开集 $U$ 的选取.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="notes-stable-center"><header><h1><span class="taxon"></span>稳定中心猜想 <a class="slug" href="./notes-stable-center.html">[notes-stable-center]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是为准备 2026 年春季学期徐斌老师 “朗兰兹纲领选讲” 课程报告而记的笔记. 主要参考 <span class="link local"><a href="./BKV-SCC.html" title="A categorical approach to the stable center conjecture [BKV-SCC]">BKV</a></span>.</p>
 <h2>引言</h2>
@@ -14519,6 +14616,40 @@ $$
 <li>$F\colon \mathcal P^{\mathrm{op}} \to \mathcal C$ 是 Segal 对象当且仅当 $f^*F\colon \mathcal O^{\mathrm{op}}\to\mathcal C$ 是 Segal 对象;</li>
 <li>存在<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性伴随</a></span> $(L_{\mathrm{Seg}}\circ f_!)\dashv f^*\colon \mathsf{Seg}_{\mathcal O}(\mathcal C) \rightleftarrows \mathsf{Seg}_{\mathcal P}(\mathcal C)$.</li>
 </ul>
+<p><strong>定义</strong>. 对于代数模式的态射 $f\colon \mathcal O \to \mathcal P$, 称其有<strong>唯一惰性提升</strong>是指如下两个等价条件成立:</p>
+<ul>
+<li>对任意 $o\in\mathcal O$, 每个指向 $f(o)$ 的惰性映射唯一地提升为指向 $o$ 的惰性映射;</li>
+<li>对任意 $p\in\mathcal P$, 所有 $p$ 到 $f(o)$ 的活性映射的范畴 $\{p \twoheadrightarrow f(o)\}$ 在所有映射的范畴 $\{p\to f(o)\}$ 中为<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首</a></span>子范畴;</li>
+<li><span class="link local"><a href="./基变换.html" title="基变换 [基变换]">Beck–Chevalley 基变换</a></span> …?</li>
+</ul>
+<p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Corollary 7.4). 若 $f\colon \mathcal O \to \mathcal P$ 有唯一惰性提升, 则有函子
+$\mathcal P^{\mathrm{op}} \to \mathsf{Cat}$, $p\mapsto\{p\twoheadrightarrow f(o)\}$.</p>
+<p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Corollary 7.13).
+设 $f\colon \mathcal O \to \mathcal P$ 为代数模式的可延拓态射, $\mathcal C$ 为 $f$-可容许范畴, 则左 Kan 扩张限制为函子
+$$
+f_!\colon \mathsf{Seg}_{\mathcal O}(\mathcal C) \to \mathsf{Seg}_{\mathcal P}(\mathcal C).
+$$</p>
+<p>$$
+\begin{aligned}
+f_!F(p) &amp;= \operatorname{colim}_{p\to f(o)} F(o)\\
+&amp;=\operatorname{colim}_{p\twoheadrightarrow f(o)} F(o)\  (\star)\\
+&amp;=\operatorname{colim}_{p\twoheadrightarrow f(o)} \operatorname{lim}_{e\rightarrowtail p}F(e)\  (\dagger)
+\end{aligned}
+$$
+注意 $(\star)$ 是因为 $\{p \twoheadrightarrow f(o)\}$ 在 $\{p\to f(o)\}$ 中为<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首</a></span>子范畴, 但此处余极限的指标范畴是这两个范畴的反范畴, 共首变为共尾.</p>
+<h3>拉回的右伴随</h3>
+<p><strong>定义</strong>. 对于代数模式的态射 $f\colon \mathcal O \to \mathcal P$, 称其有<strong>唯一活性提升</strong>是指如下两个等价条件成立:</p>
+<ul>
+<li>对任意 $o\in\mathcal O$, 每个由 $f(o)$ 出发的活性映射唯一地提升为 $o$ 出发的活性映射;</li>
+<li>对任意 $p\in\mathcal P$, 所有 $f(o)$ 到 $p$ 的惰性映射的范畴 $\{f(o)\rightarrowtail p\}$ 在所有映射的范畴 $\{f(o)\to p\}$ 中为<span class="link local"><a href="./共尾函子.html" title="共尾函子 [共尾函子]">共尾</a></span>子范畴;</li>
+<li><span class="link local"><a href="./基变换.html" title="基变换 [基变换]">Beck–Chevalley 基变换</a></span> $j_{\mathcal P}^*f_* \to f_*j_{\mathcal O}^*$ 为等价.</li>
+</ul>
+<p>这两个条件等价是<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">分解系统</a></span>的一般性质.</p>
+<p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Proposition 6.3). 设 $f\colon \mathcal O\to \mathcal P$ 为代数模式的态射, $\mathcal C$ 为具有合适极限的范畴, 则右 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span> $f_*\colon \widehat {\mathcal O} \to \widehat {\mathcal P}$ 限制为函子
+$$
+f_*\colon \mathsf{Seg}_{\mathcal O}(\mathcal C)
+\to \mathsf{Seg}_{\mathcal P}(\mathcal C).
+$$</p>
 <h3>与单子的关系</h3>
 <p>每个代数模式 $\mathcal O$ 给出底层结构 $\widehat {\mathcal O_{\mathrm{el}}}$ 上的一个<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数</a></span>的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</p>
 <p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Corollary 8.2). 设 $\mathcal O$ 为代数模式, $\mathcal C$ 为可表现范畴, 则<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由–遗忘伴随</a></span>
@@ -14613,8 +14744,20 @@ $$
 其中</p>
 <ul>
 <li>右伴随 $\gamma^*$ 给出交换代数到结合代数的遗忘.</li>
-<li>左伴随 $\gamma_!$ 在局部化后给出结合代数的交换化. 直观上, $A([m])$ 的元素是结合代数 $A$ 的 $m$ 个有序元素. 但在 $(\gamma_! A)(\langle 1\rangle)$ 中, 这 $m$ 个元素的所有顺序的结合方式都相等, 都等于映射 $\langle 1\rangle \to \langle m \rangle$, $1\mapsto\{1,\cdots,m\}$ 诱导的 $A([m]) \to \gamma_! A(\langle 1\rangle)$ 的像.</li>
+<li>左伴随 $\gamma_!$ 在局部化后给出结合代数的交换化. 但是这样无法得到交换化的显式表达式. 如果将结合代数的模式替换为 $\mathsf{Assoc} \to \Gamma$ (下文), 就能得到一个不需要局部化的左伴随, 从而给出显式的交换化.</li>
 </ul>
+<h3>结合算畴作为代数模式</h3>
+<p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合算畴</a></span> $\mathsf{Assoc}$ 作为 $\Gamma$ 上的代数模式:</p>
+<ul>
+<li>对象为有限集 $\langle n\rangle$;</li>
+<li>态射 $S \to T$ 将每个元素 $s\in T$ 对应到一个子集 $X_s$ 并赋予 $X_s$ 一个<span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序</a></span>;</li>
+<li>基本对象为 $\langle 1 \rangle$;</li>
+<li>惰性和活性映射都与 $\Gamma$ 一致.</li>
+</ul>
+<p>态射 $U\colon \mathsf{Assoc} \to \Gamma$ 是可延拓态射.
+$$
+U_! A(\langle n \rangle) = \operatorname{colim}_{\langle n \rangle \to \langle m \rangle}
+$$</p>
 <h3>交换代数中的交换代数</h3>
 <p>范畴 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">$\Gamma$</a></span> 有个乘法 $\land\colon \Gamma\times \Gamma \to \Gamma$, $\langle n\rangle \land \langle m \rangle = \langle nm \rangle$. (注意这<strong>不是</strong> $\Gamma$ 中的范畴论乘积.) 由代数模式乘积的性质, 有函子
 $$
@@ -25757,6 +25900,109 @@ $$</p>
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="粘t-结构"><header><h1><span class="taxon"></span>粘 t-结构 <a class="slug" href="./粘t-结构.html">[粘t-结构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./term-recollement.html" title="粘合 [term-recollement]">粘合</a></span></p>
+<h2>陈述</h2>
+<p><strong>引理</strong> (“Kashiwara 引理”).
+设 $D_U,D_Z$ 为带 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">$t$-结构</a></span>的稳定 $\infty$-范畴 (下标没有含义, 只是用于辅助理解),
+$$
+D_X = \operatorname{laxlim}(D_U \overset{i^*j_* [-1]}{\longrightarrow} D_Z),
+$$
+且有伴随
+$$
+(i^*\dashv i_*\dashv i^!)\colon 
+D_Z
+\begin{aligned}
+&amp;\overset{i^*}{\leftarrow}\\
+&amp;\overset{i_*}{\rightarrow}\\
+&amp;\overset{i^!}{\leftarrow}
+\end{aligned}\,
+D_X
+\begin{aligned}
+&amp;\overset{j_!}{\leftarrow}\\
+&amp;\overset{j^*}{\rightarrow}\\
+&amp;\overset{j_*}{\leftarrow}
+\end{aligned}\,
+D_U \colon (j_!\dashv j^*\dashv j_*)
+$$</p>
+<p>则 $D_X$ 上存在唯一的 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">$t$-结构</a></span>使得 $j^*,i_*$ 均为 $t$-正合函子.</p>
+<p>此时有</p>
+<ul>
+<li>$i^*$ 右 $t$-正合,</li>
+<li>$i^!$ 左 $t$-正合.</li>
+</ul>
+<p>使用上同调指标,
+$$
+D_X^{\leq 0} = \{F\mid j^* F\leq 0, i^*F \leq 0\},
+$$
+$$
+D_X^{\geq 1} = \{F\mid j^* F \geq 1, i^! F \geq 1\}.
+$$</p>
+<h3>检验 $t$-结构的条件</h3>
+<p>我们可以检验 $t$-结构的条件. 设 $F\in D_X^{\leq 0}$, $F'\in D_X^{\geq 1}$, 我们证明 $\operatorname{Hom}(F,F')=0$. 这是因为它坐落于长正合列
+$$
+\cdots\to\operatorname{Hom}(F,i_!i^! F') \to \operatorname{Hom}(F,F') \to \operatorname{Hom}(F,j_*j^* F')\to\cdots
+$$
+但由伴随可知左右两项都是 $0$.</p>
+<p>三角 $\tau^{\leq 0}F \to F \to \tau^{\geq 1}F$ 的构造比较麻烦.</p>
+<p>先考虑三角 $i_! i^! F \to F \to j_* j^* F$, 将 $j^* F$ 截断到 $\leq 0$, 作拉回图
+$$
+\begin{CD}
+i_! i^! F @&gt;&gt;&gt; N @&gt;&gt;&gt; j_* (j^* F)^{\leq 0} \\
+@VVV @VVV @VVV \\
+i_! i^! F @&gt;&gt;&gt; F @&gt;&gt;&gt; j_* j^* F.
+\end{CD}
+$$
+作用 $i^*$ 得到
+$$
+i^! F \to i^* N \to i^* j_* (j^* F)^{\leq 0}.
+$$
+再令
+$$
+M = \operatorname{cofib}(N \to F),
+$$
+那么
+$$
+j^* M = (j^* F)^{\geq 1} \in D_U^{\geq 1}.
+$$
+另一方面, 作用 $i^!$ 得到
+$$
+i^! F\to i^! N \to 0.
+$$
+故
+$$
+i^! M = 0.
+$$
+这样我们调整了开部分.</p>
+<p>下面调整闭部分.
+考虑三角
+$$
+j_! j^! N \to N \to i_* i^* N,
+$$
+作拉回
+$$
+\begin{array}{ccccc}
+j_! j^! N &amp; \rightarrow &amp; N' &amp; \rightarrow &amp; i_* (i^* N)^{\leq 0} \\
+\downarrow &amp;  &amp; \downarrow &amp;  &amp; \downarrow \\
+j_! j^! N &amp; \rightarrow &amp; N &amp; \rightarrow &amp; i_* i^* N.
+\end{array}
+$$
+作用 $j^*$ 得到
+$$
+j^! N \to j^* N'\to 0
+$$
+故这一步不改变开部分.
+作用 $i^*$ 得到
+$$
+0= i^* N' \to (i^*N)^{\leq 0}
+$$
+故 $i^* N'\in D_Z^{\leq 0}$.</p>
+<p>容易得到
+$$
+\operatorname{cofib}(N'\to N)\geq 1
+$$
+进而
+$$
+M' = \operatorname{cofib}(N' \to F) \geq 1.
+$$</p>
 <h2>例</h2>
 <p>设 $i\colon Z\to X$ 为闭子簇, $j\colon U\to X$ 为相补的开子簇, 那么
 $$
