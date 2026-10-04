@@ -847,7 +847,60 @@ S^{n-1} &amp; \to &amp; * \
 $$</li>
 </ul>
 <h2>性质</h2>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="俯意象"><header><h1><span class="taxon"></span>俯意象 <a class="slug" href="./俯意象.html">[俯意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="AT"><header><h1><span class="taxon"></span>代数拓扑的现代语言 <a class="slug" href="./AT.html">[AT]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>按照 <span class="link local"><a href="./HatcherAT.html" title="Algebraic Topology [HatcherAT]">Hatcher</a></span> 的目录用现代语言讲述的代数拓扑. 注意:</p>
+<ul>
+<li>这不是针对初学者的教程, 仅供熟悉<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>语言的读者查阅.</li>
+<li>生象语言在本书中并非全能. 有些内容 “本质” 属于拓扑空间范畴, 而不能直接用生象语言解释.</li>
+</ul>
+<h2>第 0 章. 基本概念</h2>
+<h4>同伦与同伦型</h4>
+<p>所谓<strong>同伦</strong>就是<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>中的等式. 一个拓扑空间的<strong>同伦型</strong>就是其表现的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</p>
+<h4>胞腔复形</h4>
+<p>胞腔复形又叫 <span class="link local"><a href="./CW复形.html" title="CW 复形 [CW复形]">CW 复形</a></span>, 是带有一个<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤过</a></span>
+$$
+X_0 \to X_1 \to X_2\to \cdots
+$$
+的生象, 其逐项<span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">余纤维</a></span>为球面束 (<span class="link local"><a href="./球面.html" title="球面 [球面]">球面</a></span>的一点并).</p>
+<h4>生象的操作</h4>
+<ul>
+<li><span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span></li>
+<li>商, 也就是<span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">余纤维</a></span></li>
+<li><span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span> (suspension)</li>
+<li><span class="link local"><a href="./联合.html" title="联合 [联合]">联合</a></span> (join)</li>
+<li><span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span></li>
+</ul>
+<h2>第 1 章. 基本群</h2>
+<p>带基点生象 $(X,x_0)$ 的<span class="link local"><a href="./基本群.html" title="基本群 [基本群]">基本群</a></span> $\pi_1(X,x_0)$ 是<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> $\Omega(X,x_0)$ 的 $0$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>.</p>
+<h3>1.1 基本构造</h3>
+<p>对于等式 $h\colon x_0 = x_1$, 有换基点同态
+$$
+\pi_1 (X,x_0) \overset{\simeq}{\to}\pi_1(X,x_1),\,[f]\mapsto [h \cdot f \cdot \bar h].
+$$</p>
+<h4>圆圈的基本群</h4>
+<p><span class="link local"><a href="./球面.html" title="球面 [球面]">$S^1$</a></span> 的基本群是无限循环群 $\mathbb{Z}$.</p>
+<p>这里原书讲了基本群的应用, Brouwer 不动点定理和 Borsuk–Ulam 定理. 这两个定理不能直接用生象语言解释.</p>
+<h4>诱导同态</h4>
+<p>带基点生象的映射 $\varphi\colon (X,x_0)\to (Y,y_0)$ 诱导基本群的同态 $\pi_1(X,x_0) \to \pi_1(Y,y_0)$. 这说的是基本群的函子性.</p>
+<p>这里原书证明了 $\pi_1(S^n) = 0$ ($n\geq 2$). 这个命题对生象成立, 但这个证明不能用生象语言解释.</p>
+<h3>1.2 Van Kampen 定理</h3>
+<p><span class="link local"><a href="./VanKampen定理.html" title="Van Kampen 定理 [VanKampen定理]">Van Kampen 定理</a></span></p>
+<h3>1.3 覆叠空间</h3>
+<p><span class="link local"><a href="./覆叠.html" title="覆叠 [覆叠]">覆叠空间</a></span></p>
+<h3>1.A 图与自由群</h3>
+<h2>第 2 章. 同调</h2>
+<h3>单纯同调与奇异同调</h3>
+<p>拓扑空间 $X$ 的奇异同调是其<span class="link local"><a href="./奇异单纯集.html" title="奇异单纯集 [奇异单纯集]">奇异单纯集</a></span> $\operatorname{Sing}X$ 的单纯同调.</p>
+<p>单纯集的单纯同调是如下复合:
+$$
+\mathsf{sSet} \overset{\mathbb{Z}[-]}{\longrightarrow} \mathsf{sAb} \overset{\mathrm{DK}}{\longrightarrow} \mathsf{Ch}_{\geq 0}(\mathbb{Z}) \overset{H_n}{\longrightarrow}\mathsf{Ab},
+$$
+它<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>了如下函子:
+$$
+\mathsf{Ani} \overset{\mathbb{Z}[-]}{\longrightarrow}\mathsf{Mod}(H\mathbb{Z})_{\geq 0} \overset{H_n}{\longrightarrow} \mathsf{Ab}.
+$$</p>
+<h3>正合列与切除</h3>
+</details></section><section class="block" data-taxon=""><details ><summary id="俯意象"><header><h1><span class="taxon"></span>俯意象 <a class="slug" href="./俯意象.html">[俯意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p><span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>的<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span>仍是意象, 称之为<strong>俯意象</strong> (over-topos).</p>
 <h2>性质</h2>

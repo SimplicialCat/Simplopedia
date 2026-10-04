@@ -1432,7 +1432,7 @@ $$
 从而说明算畴的所有定义等价.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="代数理论"><header><h1><span class="taxon"></span>代数理论 <a class="slug" href="./代数理论.html">[代数理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./逻辑.html" title="逻辑 [逻辑]">逻辑</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p><strong>代数</strong>的最初意义是对运算与等式的研究. 一个<strong>代数理论</strong>就是若干种运算和这些运算之间的若干条等式. 代数理论的<strong>模型</strong>就是一个集合 (或一般范畴的对象) 上带有指定的运算, 满足指定的等式.</p>
+<p><strong></strong><span class="link local"><a href="./代数.html" title="代数 [代数]">代数</a></span>的最初意义是对运算与等式的研究. 一个<strong>代数理论</strong>就是若干种运算和这些运算之间的若干条等式. 代数理论的<strong>模型</strong>就是一个集合 (或一般范畴的对象) 上带有指定的运算, 满足指定的等式.</p>
 <p>一种更抽象的视角是, 运算和等式不过是一个具有有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">乘积</a></span> (<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>) 的范畴的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 故代数理论可 “无坐标” 式地定义为这样的一个范畴, 这个范畴就是它的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>. 而该理论的模型则是语法范畴到 $\mathsf{Set}$ (或一般范畴) 的保持结构的函子.</p>
 <p>还有另一个方向的抽象. 代数理论 $\mathcal T$ 给出一个记录了所有运算与等式的 “自由代数” 函子 $F\colon \mathsf{Set}\to\mathsf{Set}$, 而 $\mathcal T$ 的模型可视为映射 $FX\to X$, 表达了所有运算在 $X$ 上这一具体结构中的求值. 沿这一思路可以继续推广得到<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>的概念.</p>
 <h2>定义</h2>
@@ -1473,6 +1473,30 @@ $$
 自由与遗忘的复合 $UF\colon\mathsf{Set} \to \mathsf{Set}$ 是一个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>, 而 $\mathcal T$-代数等同于该单子上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>. 换言之, 上述伴随是<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的.</p>
 <p>特别地, $\mathcal{T}$ 的始代数, 即 $\mathsf{Alg}_{\mathcal{T}}$ 的始对象, 是由空集自由生成的 $\mathcal{T}$-代数 $F(0) = \operatorname{Hom}_{\mathcal{T}}(1,x)$.</p>
 <p>值得注意的是, 考虑一个新的代数理论 $\mathcal{T}[X]$, 其语法为 $\mathcal{T}$ 的语法加上 $X$ 的每个元素作为常量; 那么集合 $X$ 上的自由代数 $F(X)$ 也可理解为 $\mathcal{T}[X]$ 的始代数, 即空集自由生成的 $\mathcal{T}[X]$-代数.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="余密度单子"><header><h1><span class="taxon"></span>余密度单子 <a class="slug" href="./余密度单子.html">[余密度单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>函子 $f\colon \mathcal C \to \mathcal D$ 的余密度单子是 $f$ 沿着 $f$ 自身的右 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span> $f_* f \colon \mathcal D \to \mathcal D$,
+$$
+f_* f (d) = \operatorname{lim}_{d \to f(c)} f(c).
+$$</p>
+<h2>例</h2>
+<h3>超滤单子</h3>
+<p><span class="link local"><a href="./超滤.html" title="超滤 [超滤]">超滤单子</a></span> $\beta\colon \mathsf{Set} \to \mathsf{Set}$ 是 $\mathsf{Fin} \hookrightarrow \mathsf{Set}$ 的余密度单子,
+$$
+\beta X = \operatorname{lim}_{S\to X,S\in\mathsf{Fin}}S.
+$$</p>
+<h3>自同态单子</h3>
+<p>对象 $c\in\mathcal C$ 的<strong>自同态单子</strong> $\operatorname{End}(c)$ 是 $c\colon 1 \to\mathcal C$ 的余密度单子.</p>
+<p>$$
+\operatorname{End}(c)(x) = \operatorname{lim}_{x\to c} c = c^{\operatorname{Hom}(x,c)}.
+$$</p>
+<p>自同态单子可以用来定义<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>: 对任意<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$, 对象 $c$ 上的 $T$-代数结构等同于单子同态 (即 $\mathsf{End}(\mathcal C)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>同态)
+$$
+T \to \operatorname{End}(c).
+$$</p>
+<p>自同态单子在<span class="link local"><a href="./单子(CS).html" title="单子 (计算机科学) [单子(CS)]">计算机科学</a></span>中又叫接续单子 (continuation monad) $\operatorname{Cont}(c)$, 因为
+$\operatorname{Cont}(c)(x)$
+的元素相当于输入 “后续” $x\to c$, 输出结果 $c$ 的过程.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单子"><header><h1><span class="taxon"></span>单子 <a class="slug" href="./单子.html">[单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>单子 (monad) 是一种具有许多理解方式的对象, 很难说哪种理解最为基本:</p>
@@ -1509,6 +1533,13 @@ $$
 </ul>
 <p>在上述每个例子中, “自由代数” 单子都不仅仅是单子, 而是所谓<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>. 元数 (arity) 的本义是一个函数的自变量的个数, 例如加法的元数是 $2$, 取逆的元数是 $1$, 而常数的元数是 $0$.</p>
 <p>如果定义一种代数结构的每种运算只涉及了一个集合里有限个元素, 那么一个代数 $X$ 就可以被全体有限集 $A$ 生成的自由代数 $TA$ <span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>. 所谓探测就是说用全体态射 $TA\to X$ 的信息可以完全恢复出 $X$ 的信息. 这就是<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>的直观.</p>
+<h3>计算机科学</h3>
+<p>单子也是计算机科学中的重要概念, 因为它表达了许多计算过程中的现象: 一个计算 “本该” 输出类型 $X$ 的数据, 而实际上输出的是与 $X$ 有关的一个类型 $TX$ 的数据. 例如</p>
+<ul>
+<li>除法运算 “本该” 输出一个类型为 $\mathbb{R}$ 的数据, 但实际上输出的是一个数或者一个异常 NaN (比如除以 $0$). 实际上的输出类型是 $\mathsf{Maybe}(\mathbb{R}) := \mathbb{R} \sqcup \{\text{NaN}\}$. 这就是可能单子 (maybe monad).</li>
+<li>计算机语言中的一个 “函数” $A\to B$ 不一定是数学意义上的函数, 因为它可能在运行中改变了环境. 以 $S$ 表示环境可能处于的状态的全体, 那么这个 “函数” 实际上的输出类型是 $S\to (B\times S)$, 也就是 “从旧环境得到一个类型 $B$ 的数据, 并给出新环境”. 这就是状态单子 (state monad).</li>
+</ul>
+<p>详见<span class="link local"><a href="./单子(CS).html" title="单子 (计算机科学) [单子(CS)]">单子 (计算机科学)</a></span></p>
 <h2>定义</h2>
 <h3>自函子范畴中的结合代数</h3>
 <p>一个范畴 $\mathcal C$ <strong>上</strong>的单子是其自函子范畴 $\operatorname{End}(\mathcal C)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 对偶范畴 $\mathcal C^{\mathrm{op}}$ 上的单子称为 $\mathcal C$ 上的<span class="link local"><a href="./余单子.html" title="余单子 [余单子]">余单子</a></span>.</p>
@@ -1938,6 +1969,7 @@ $$
 $$
 另一种看法: 回忆 $\beta X = \operatorname{Hom}_{\mathsf{Boole}}(2^X,2)$, 则有求值映射 $\mathrm{ev}\colon 2^X\times\beta X \to 2$, 进一步给出 Boole 环同态 $2^X \to 2^{\beta X}$. 用它来预复合同态 $2^{\beta X}\to 2$, 就得到映射 $\beta\beta X\to \beta X$.
 这里 $2^X \to 2^{\beta X}$ 就是 $2^X$ 的 <span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span>的单位.</p>
+<p>超滤单子还可以理解为 $\mathsf{Fin} \hookrightarrow \mathsf{Set}$ 的<span class="link local"><a href="./余密度单子.html" title="余密度单子 [余密度单子]">余密度单子</a></span>.</p>
 <p><strong>命题</strong>. 超滤单子上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>等同于<span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>.</p>
 <h3>有限集的情形</h3>
 <p><strong>命题</strong>. 有限集上的超滤均为主超滤.</p>

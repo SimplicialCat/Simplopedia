@@ -894,7 +894,7 @@ $$
 那么 $L$-树就是每个结点的入边带有一个<span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序</a></span>的树, 又称<strong>平面树</strong> (planar tree).</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="代数理论"><header><h1><span class="taxon"></span>代数理论 <a class="slug" href="./代数理论.html">[代数理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./逻辑.html" title="逻辑 [逻辑]">逻辑</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p><strong>代数</strong>的最初意义是对运算与等式的研究. 一个<strong>代数理论</strong>就是若干种运算和这些运算之间的若干条等式. 代数理论的<strong>模型</strong>就是一个集合 (或一般范畴的对象) 上带有指定的运算, 满足指定的等式.</p>
+<p><strong></strong><span class="link local"><a href="./代数.html" title="代数 [代数]">代数</a></span>的最初意义是对运算与等式的研究. 一个<strong>代数理论</strong>就是若干种运算和这些运算之间的若干条等式. 代数理论的<strong>模型</strong>就是一个集合 (或一般范畴的对象) 上带有指定的运算, 满足指定的等式.</p>
 <p>一种更抽象的视角是, 运算和等式不过是一个具有有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">乘积</a></span> (<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>) 的范畴的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 故代数理论可 “无坐标” 式地定义为这样的一个范畴, 这个范畴就是它的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>. 而该理论的模型则是语法范畴到 $\mathsf{Set}$ (或一般范畴) 的保持结构的函子.</p>
 <p>还有另一个方向的抽象. 代数理论 $\mathcal T$ 给出一个记录了所有运算与等式的 “自由代数” 函子 $F\colon \mathsf{Set}\to\mathsf{Set}$, 而 $\mathcal T$ 的模型可视为映射 $FX\to X$, 表达了所有运算在 $X$ 上这一具体结构中的求值. 沿这一思路可以继续推广得到<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>的概念.</p>
 <h2>定义</h2>
@@ -935,6 +935,54 @@ $$
 自由与遗忘的复合 $UF\colon\mathsf{Set} \to \mathsf{Set}$ 是一个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>, 而 $\mathcal T$-代数等同于该单子上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>. 换言之, 上述伴随是<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的.</p>
 <p>特别地, $\mathcal{T}$ 的始代数, 即 $\mathsf{Alg}_{\mathcal{T}}$ 的始对象, 是由空集自由生成的 $\mathcal{T}$-代数 $F(0) = \operatorname{Hom}_{\mathcal{T}}(1,x)$.</p>
 <p>值得注意的是, 考虑一个新的代数理论 $\mathcal{T}[X]$, 其语法为 $\mathcal{T}$ 的语法加上 $X$ 的每个元素作为常量; 那么集合 $X$ 上的自由代数 $F(X)$ 也可理解为 $\mathcal{T}[X]$ 的始代数, 即空集自由生成的 $\mathcal{T}[X]$-代数.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="单子(CS)"><header><h1><span class="taxon"></span>单子 (计算机科学) <a class="slug" href="./单子(CS).html">[单子(CS)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>在计算机科学中, 一个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>包含</p>
+<ul>
+<li>类型构造器 <code>m</code>,</li>
+<li>函数 <code>return :: a → m a</code>,</li>
+<li>函数 <code>&gt;&gt;= :: m a → (a → m b) → m b</code> (又叫 <code>bind</code>);</li>
+</ul>
+<p>满足如下条件,</p>
+<ul>
+<li>左单位律 <code>(return x) &gt;&gt;= f = f x</code>,</li>
+<li>右单位律 <code>ma &gt;&gt;= return = ma</code>,</li>
+<li>结合律 <code>(ma &gt;&gt;= f) &gt;&gt;= g  =  ma &gt;&gt;= (\x -&gt; f x &gt;&gt;= g)</code>.</li>
+</ul>
+<p>等价地, 单子中的 <code>&gt;&gt;=</code> 也可以换成如下的 <code>&gt;=&gt;</code>,</p>
+<ul>
+<li><code>&gt;=&gt; :: (a → m b) → (b → m c) → (a → m c)</code>,</li>
+</ul>
+<p>满足</p>
+<ul>
+<li>左单位律 <code>return &gt;=&gt; f = f</code>,</li>
+<li>右单位律 <code>f &gt;=&gt; return = f</code>,</li>
+<li>结合律 <code>(f &gt;=&gt; g) &gt;=&gt; h  = f &gt;=&gt; (g &gt;=&gt; h)</code>.</li>
+</ul>
+<h2>例</h2>
+<h3>列表单子</h3>
+<p><span class="link local"><a href="./列表.html" title="列表 [列表]">列表</a></span>单子的定义是</p>
+<ul>
+<li><code>return x = [x]</code> (一个元素构成一个列表),</li>
+<li><code>xs &gt;&gt;= f = concat (map f xs)</code> (一个列表每项分别作用后拼接).</li>
+</ul>
+<h3>可能单子</h3>
+<p>可能单子的定义是</p>
+<ul>
+<li><code>return x = Just x</code> (一个元素本身是一个可能元素),</li>
+<li><code>m &gt;&gt;= f = case m of { Nothing → Nothing; Just x → f x }</code> (若没有元素则输出无, 若有一个元素则继续计算).</li>
+</ul>
+<h3>状态单子</h3>
+<p>状态单子的定义是</p>
+<ul>
+<li><code>return x = \s -&gt; (x, s)</code> (不修改状态, 直接输出),</li>
+<li><code>st &gt;&gt;= f = \s -&gt; let (x, s') = st s in f x s'</code> (执行当前计算获取新状态, 再将其传给下一个计算).</li>
+</ul>
+<p>其中</p>
+<ul>
+<li><code>st :: s → (a, s)</code>,</li>
+<li><code>f :: a → s → (b, s)</code>.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="多项式函子"><header><h1><span class="taxon"></span>多项式函子 <a class="slug" href="./多项式函子.html">[多项式函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>多项式函子</strong>是多项式函数 (形式幂级数) 的<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">范畴化</a></span>. 另见<span class="link local"><a href="./解析函子.html" title="解析函子 (算畴理论) [解析函子]">解析函子</a></span>.</p>

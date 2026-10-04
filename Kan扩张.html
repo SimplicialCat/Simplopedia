@@ -1334,6 +1334,52 @@ $$
 HA(\langle n \rangle) = A^n.
 $$</p>
 <p>这正是<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">模式</a></span>之下 $A$ 作为 $\mathsf{Ani}$ 中的交换代数的定义.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="代入幺半结构"><header><h1><span class="taxon"></span>代入幺半结构 <a class="slug" href="./代入幺半结构.html">[代入幺半结构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>代入幺半结构</strong> (substitution monoidal structure) 是某些自函子范畴 $\operatorname{End}(\mathcal C)$ 的复合幺半结构的模拟.</p>
+<p>一类常见的自函子是形如 “<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>” 的函子
+$$
+X\mapsto\int_{n} F_n \otimes X^{\otimes n},
+$$
+其中 $n$ 的取值范围为 $\mathsf{Fin}$ 或 $\mathsf{Fin}^{\simeq}$, $\int_n$ 是<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>记号.</p>
+<p>当背景范畴为 $\mathsf{Ani}$ 时, 这种 “多项式” 函子可视为 “系数” 函子 $n\mapsto F_n$ 的左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span> (见后面的例). 因此一个自然的推广是: 对于子范畴
+$$
+j\colon \mathcal A \to \mathcal C,
+$$
+(想象为<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">元数</a></span>) 对函子 $F\colon \mathcal A \to \mathcal C$ 作左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>得到 $\mathcal C$ 的自函子
+$$
+j_! F \colon  X \mapsto \int_{N\in\mathcal A} F(N) \times \operatorname{Hom}(N,X)
+$$
+得到. 注意这个表达式也具有类似于<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>的形式. 从而函子范畴 $\mathsf{Fun}(\mathcal A,\mathcal C)$ 呈现幺半结构.</p>
+<h2>例</h2>
+<h3>“有限元” 函子</h3>
+<p>考虑全子范畴 $j\colon \mathsf{Fin}\hookrightarrow \mathsf{Ani}$,
+函子 $F\colon \mathsf{Fin} \to \mathsf{Ani}$ 沿 $j$ 的左 Kan 扩张为
+$$
+j_! F \colon X \mapsto \int_{N\in\mathsf{Fin}} F(N)\times X^N.
+$$
+注意到函子范畴 $\mathsf{Fun}(\mathsf{Fin},\mathsf{Ani})$ 等价于保持<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>的自函子范畴 $\mathsf{Fun}_{\Sigma}(\mathsf{Ani},\mathsf{Ani})$, 因此它可以继承自函子范畴的复合幺半结构.
+定义两个函子 $F,G\colon \mathsf{Fin}\to\mathsf{Ani}$ 的代入积 $F \star G$ 满足
+$$
+j_!(F \star G) = (j_!F) \circ (j_!G)\colon \mathsf{Ani} \to \mathsf{Ani},
+$$
+具体计算得到
+$$
+\begin{aligned}
+&amp;(j_!F) \circ (j_!G)(X)\\
+&amp;=
+\int_{N\in\mathsf{Fin}}F(N)\times\Big(\int_{K\in\mathsf{Fin}}G(K)\times X^K\Big)^N\\
+&amp;=\int_{N\in\mathsf{Fin}}\int_{K_1,\cdots,K_N\in\mathsf{Fin}}\\
+&amp;\quad\ F(N)\times G(K_1)\times\cdots\times G(K_N)\times X^{K_1+\cdots + K_N}\\
+&amp;=\int_{M\in\mathsf{Fin}} H(M)\times X^M,
+\end{aligned}
+$$
+其中
+$$
+H(M) = \int_{K_1 + \cdots + K_N = M} F(N)\times G(K_1)\times\cdots\times G(K_N).
+$$</p>
+<h3>对称序列</h3>
+<p><span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span> $\mathsf{Fun}(\mathsf{Fin}^{\simeq},\mathsf{Ani})$ (或一般的 $\mathsf{Fun}(\mathsf{Fin}^{\simeq},\mathcal C)$) 的代入幺半结构给出<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的一种定义: 算畴是代入幺半结构中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="代数模式"><header><h1><span class="taxon"></span>代数模式 <a class="slug" href="./代数模式.html">[代数模式]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>代数模式</strong> (algebraic pattern) 是 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">Chu–Haugseng</a></span> 对如下现象的抽象:</p>
@@ -1930,6 +1976,30 @@ $$
 <h3>米田嵌入的伴随</h3>
 <p><strong>命题</strong>. 范畴 $\mathcal C$ 余完备当且仅当<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span> $\mathrm{y}\colon \mathcal C\to\mathsf{Psh}(\mathcal C)$ 有左伴随.</p>
 <p>证明. 若 $\mathcal C$ 余完备, 则可定义 $\mathrm{y}$ 的左伴随 $L\colon \mathsf{Psh}(\mathcal C)\to\mathcal C$ 为 $\mathrm{id}_{\mathcal C}$ 的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">米田扩张</a></span>. 另一方面, 假设左伴随 $L$ 存在, 那么由于 $L$ 保持余极限, $\mathcal C$ 中必须具有所有的余极限.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="余密度单子"><header><h1><span class="taxon"></span>余密度单子 <a class="slug" href="./余密度单子.html">[余密度单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>函子 $f\colon \mathcal C \to \mathcal D$ 的余密度单子是 $f$ 沿着 $f$ 自身的右 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span> $f_* f \colon \mathcal D \to \mathcal D$,
+$$
+f_* f (d) = \operatorname{lim}_{d \to f(c)} f(c).
+$$</p>
+<h2>例</h2>
+<h3>超滤单子</h3>
+<p><span class="link local"><a href="./超滤.html" title="超滤 [超滤]">超滤单子</a></span> $\beta\colon \mathsf{Set} \to \mathsf{Set}$ 是 $\mathsf{Fin} \hookrightarrow \mathsf{Set}$ 的余密度单子,
+$$
+\beta X = \operatorname{lim}_{S\to X,S\in\mathsf{Fin}}S.
+$$</p>
+<h3>自同态单子</h3>
+<p>对象 $c\in\mathcal C$ 的<strong>自同态单子</strong> $\operatorname{End}(c)$ 是 $c\colon 1 \to\mathcal C$ 的余密度单子.</p>
+<p>$$
+\operatorname{End}(c)(x) = \operatorname{lim}_{x\to c} c = c^{\operatorname{Hom}(x,c)}.
+$$</p>
+<p>自同态单子可以用来定义<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>: 对任意<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$, 对象 $c$ 上的 $T$-代数结构等同于单子同态 (即 $\mathsf{End}(\mathcal C)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>同态)
+$$
+T \to \operatorname{End}(c).
+$$</p>
+<p>自同态单子在<span class="link local"><a href="./单子(CS).html" title="单子 (计算机科学) [单子(CS)]">计算机科学</a></span>中又叫接续单子 (continuation monad) $\operatorname{Cont}(c)$, 因为
+$\operatorname{Cont}(c)(x)$
+的元素相当于输入 “后续” $x\to c$, 输出结果 $c$ 的过程.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="充实范畴上的模"><header><h1><span class="taxon"></span>充实范畴上的模 <a class="slug" href="./充实范畴上的模.html">[充实范畴上的模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>可视为单对象<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>. <strong>充实范畴上的模</strong>是结合代数上的模和<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>的共同的推广.</p>

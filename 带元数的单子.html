@@ -994,7 +994,53 @@ $$
 <h3>$\infty$-范畴</h3>
 <h3>$(\infty,n)$-范畴</h3>
 <p>$\Theta_T$ 就是 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴 $\Theta_n$</a></span>.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="代数模式"><header><h1><span class="taxon"></span>代数模式 <a class="slug" href="./代数模式.html">[代数模式]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="代入幺半结构"><header><h1><span class="taxon"></span>代入幺半结构 <a class="slug" href="./代入幺半结构.html">[代入幺半结构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>代入幺半结构</strong> (substitution monoidal structure) 是某些自函子范畴 $\operatorname{End}(\mathcal C)$ 的复合幺半结构的模拟.</p>
+<p>一类常见的自函子是形如 “<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>” 的函子
+$$
+X\mapsto\int_{n} F_n \otimes X^{\otimes n},
+$$
+其中 $n$ 的取值范围为 $\mathsf{Fin}$ 或 $\mathsf{Fin}^{\simeq}$, $\int_n$ 是<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>记号.</p>
+<p>当背景范畴为 $\mathsf{Ani}$ 时, 这种 “多项式” 函子可视为 “系数” 函子 $n\mapsto F_n$ 的左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span> (见后面的例). 因此一个自然的推广是: 对于子范畴
+$$
+j\colon \mathcal A \to \mathcal C,
+$$
+(想象为<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">元数</a></span>) 对函子 $F\colon \mathcal A \to \mathcal C$ 作左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>得到 $\mathcal C$ 的自函子
+$$
+j_! F \colon  X \mapsto \int_{N\in\mathcal A} F(N) \times \operatorname{Hom}(N,X)
+$$
+得到. 注意这个表达式也具有类似于<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>的形式. 从而函子范畴 $\mathsf{Fun}(\mathcal A,\mathcal C)$ 呈现幺半结构.</p>
+<h2>例</h2>
+<h3>“有限元” 函子</h3>
+<p>考虑全子范畴 $j\colon \mathsf{Fin}\hookrightarrow \mathsf{Ani}$,
+函子 $F\colon \mathsf{Fin} \to \mathsf{Ani}$ 沿 $j$ 的左 Kan 扩张为
+$$
+j_! F \colon X \mapsto \int_{N\in\mathsf{Fin}} F(N)\times X^N.
+$$
+注意到函子范畴 $\mathsf{Fun}(\mathsf{Fin},\mathsf{Ani})$ 等价于保持<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>的自函子范畴 $\mathsf{Fun}_{\Sigma}(\mathsf{Ani},\mathsf{Ani})$, 因此它可以继承自函子范畴的复合幺半结构.
+定义两个函子 $F,G\colon \mathsf{Fin}\to\mathsf{Ani}$ 的代入积 $F \star G$ 满足
+$$
+j_!(F \star G) = (j_!F) \circ (j_!G)\colon \mathsf{Ani} \to \mathsf{Ani},
+$$
+具体计算得到
+$$
+\begin{aligned}
+&amp;(j_!F) \circ (j_!G)(X)\\
+&amp;=
+\int_{N\in\mathsf{Fin}}F(N)\times\Big(\int_{K\in\mathsf{Fin}}G(K)\times X^K\Big)^N\\
+&amp;=\int_{N\in\mathsf{Fin}}\int_{K_1,\cdots,K_N\in\mathsf{Fin}}\\
+&amp;\quad\ F(N)\times G(K_1)\times\cdots\times G(K_N)\times X^{K_1+\cdots + K_N}\\
+&amp;=\int_{M\in\mathsf{Fin}} H(M)\times X^M,
+\end{aligned}
+$$
+其中
+$$
+H(M) = \int_{K_1 + \cdots + K_N = M} F(N)\times G(K_1)\times\cdots\times G(K_N).
+$$</p>
+<h3>对称序列</h3>
+<p><span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span> $\mathsf{Fun}(\mathsf{Fin}^{\simeq},\mathsf{Ani})$ (或一般的 $\mathsf{Fun}(\mathsf{Fin}^{\simeq},\mathcal C)$) 的代入幺半结构给出<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的一种定义: 算畴是代入幺半结构中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="代数模式"><header><h1><span class="taxon"></span>代数模式 <a class="slug" href="./代数模式.html">[代数模式]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>代数模式</strong> (algebraic pattern) 是 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">Chu–Haugseng</a></span> 对如下现象的抽象:</p>
 <ul>
@@ -1497,6 +1543,13 @@ $$
 </ul>
 <p>在上述每个例子中, “自由代数” 单子都不仅仅是单子, 而是所谓<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>. 元数 (arity) 的本义是一个函数的自变量的个数, 例如加法的元数是 $2$, 取逆的元数是 $1$, 而常数的元数是 $0$.</p>
 <p>如果定义一种代数结构的每种运算只涉及了一个集合里有限个元素, 那么一个代数 $X$ 就可以被全体有限集 $A$ 生成的自由代数 $TA$ <span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>. 所谓探测就是说用全体态射 $TA\to X$ 的信息可以完全恢复出 $X$ 的信息. 这就是<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>的直观.</p>
+<h3>计算机科学</h3>
+<p>单子也是计算机科学中的重要概念, 因为它表达了许多计算过程中的现象: 一个计算 “本该” 输出类型 $X$ 的数据, 而实际上输出的是与 $X$ 有关的一个类型 $TX$ 的数据. 例如</p>
+<ul>
+<li>除法运算 “本该” 输出一个类型为 $\mathbb{R}$ 的数据, 但实际上输出的是一个数或者一个异常 NaN (比如除以 $0$). 实际上的输出类型是 $\mathsf{Maybe}(\mathbb{R}) := \mathbb{R} \sqcup \{\text{NaN}\}$. 这就是可能单子 (maybe monad).</li>
+<li>计算机语言中的一个 “函数” $A\to B$ 不一定是数学意义上的函数, 因为它可能在运行中改变了环境. 以 $S$ 表示环境可能处于的状态的全体, 那么这个 “函数” 实际上的输出类型是 $S\to (B\times S)$, 也就是 “从旧环境得到一个类型 $B$ 的数据, 并给出新环境”. 这就是状态单子 (state monad).</li>
+</ul>
+<p>详见<span class="link local"><a href="./单子(CS).html" title="单子 (计算机科学) [单子(CS)]">单子 (计算机科学)</a></span></p>
 <h2>定义</h2>
 <h3>自函子范畴中的结合代数</h3>
 <p>一个范畴 $\mathcal C$ <strong>上</strong>的单子是其自函子范畴 $\operatorname{End}(\mathcal C)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 对偶范畴 $\mathcal C^{\mathrm{op}}$ 上的单子称为 $\mathcal C$ 上的<span class="link local"><a href="./余单子.html" title="余单子 [余单子]">余单子</a></span>.</p>

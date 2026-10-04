@@ -855,6 +855,59 @@ $$
 </ul>
 <h3>与滤的关系</h3>
 <p>见<span class="link local"><a href="./fil-gr.html" title="滤与分次的叠观点 [fil-gr]">滤与分次的叠观点</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="AT"><header><h1><span class="taxon"></span>代数拓扑的现代语言 <a class="slug" href="./AT.html">[AT]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>按照 <span class="link local"><a href="./HatcherAT.html" title="Algebraic Topology [HatcherAT]">Hatcher</a></span> 的目录用现代语言讲述的代数拓扑. 注意:</p>
+<ul>
+<li>这不是针对初学者的教程, 仅供熟悉<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>语言的读者查阅.</li>
+<li>生象语言在本书中并非全能. 有些内容 “本质” 属于拓扑空间范畴, 而不能直接用生象语言解释.</li>
+</ul>
+<h2>第 0 章. 基本概念</h2>
+<h4>同伦与同伦型</h4>
+<p>所谓<strong>同伦</strong>就是<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>中的等式. 一个拓扑空间的<strong>同伦型</strong>就是其表现的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</p>
+<h4>胞腔复形</h4>
+<p>胞腔复形又叫 <span class="link local"><a href="./CW复形.html" title="CW 复形 [CW复形]">CW 复形</a></span>, 是带有一个<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤过</a></span>
+$$
+X_0 \to X_1 \to X_2\to \cdots
+$$
+的生象, 其逐项<span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">余纤维</a></span>为球面束 (<span class="link local"><a href="./球面.html" title="球面 [球面]">球面</a></span>的一点并).</p>
+<h4>生象的操作</h4>
+<ul>
+<li><span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span></li>
+<li>商, 也就是<span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">余纤维</a></span></li>
+<li><span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span> (suspension)</li>
+<li><span class="link local"><a href="./联合.html" title="联合 [联合]">联合</a></span> (join)</li>
+<li><span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span></li>
+</ul>
+<h2>第 1 章. 基本群</h2>
+<p>带基点生象 $(X,x_0)$ 的<span class="link local"><a href="./基本群.html" title="基本群 [基本群]">基本群</a></span> $\pi_1(X,x_0)$ 是<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> $\Omega(X,x_0)$ 的 $0$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>.</p>
+<h3>1.1 基本构造</h3>
+<p>对于等式 $h\colon x_0 = x_1$, 有换基点同态
+$$
+\pi_1 (X,x_0) \overset{\simeq}{\to}\pi_1(X,x_1),\,[f]\mapsto [h \cdot f \cdot \bar h].
+$$</p>
+<h4>圆圈的基本群</h4>
+<p><span class="link local"><a href="./球面.html" title="球面 [球面]">$S^1$</a></span> 的基本群是无限循环群 $\mathbb{Z}$.</p>
+<p>这里原书讲了基本群的应用, Brouwer 不动点定理和 Borsuk–Ulam 定理. 这两个定理不能直接用生象语言解释.</p>
+<h4>诱导同态</h4>
+<p>带基点生象的映射 $\varphi\colon (X,x_0)\to (Y,y_0)$ 诱导基本群的同态 $\pi_1(X,x_0) \to \pi_1(Y,y_0)$. 这说的是基本群的函子性.</p>
+<p>这里原书证明了 $\pi_1(S^n) = 0$ ($n\geq 2$). 这个命题对生象成立, 但这个证明不能用生象语言解释.</p>
+<h3>1.2 Van Kampen 定理</h3>
+<p><span class="link local"><a href="./VanKampen定理.html" title="Van Kampen 定理 [VanKampen定理]">Van Kampen 定理</a></span></p>
+<h3>1.3 覆叠空间</h3>
+<p><span class="link local"><a href="./覆叠.html" title="覆叠 [覆叠]">覆叠空间</a></span></p>
+<h3>1.A 图与自由群</h3>
+<h2>第 2 章. 同调</h2>
+<h3>单纯同调与奇异同调</h3>
+<p>拓扑空间 $X$ 的奇异同调是其<span class="link local"><a href="./奇异单纯集.html" title="奇异单纯集 [奇异单纯集]">奇异单纯集</a></span> $\operatorname{Sing}X$ 的单纯同调.</p>
+<p>单纯集的单纯同调是如下复合:
+$$
+\mathsf{sSet} \overset{\mathbb{Z}[-]}{\longrightarrow} \mathsf{sAb} \overset{\mathrm{DK}}{\longrightarrow} \mathsf{Ch}_{\geq 0}(\mathbb{Z}) \overset{H_n}{\longrightarrow}\mathsf{Ab},
+$$
+它<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>了如下函子:
+$$
+\mathsf{Ani} \overset{\mathbb{Z}[-]}{\longrightarrow}\mathsf{Mod}(H\mathbb{Z})_{\geq 0} \overset{H_n}{\longrightarrow} \mathsf{Ab}.
+$$</p>
+<h3>正合列与切除</h3>
 </details></section><section class="block" data-taxon=""><details ><summary id="A∞-代数"><header><h1><span class="taxon"></span>A∞-代数 <a class="slug" href="./A∞-代数.html">[A∞-代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>$A_\infty$-代数就是<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 不过这个名字的出现往往意味着人们要用 <span class="link local"><a href="./A∞-算畴.html" title="结合算畴 [A∞-算畴]">$A_\infty$-算畴</a></span>的一些具体<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>来谈论结合代数, 即所谓 “<span class="link local"><a href="./融贯.html" title="融贯 [融贯]">融贯</a></span>” <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
@@ -1457,7 +1510,7 @@ $$</p>
 <p>$0$-截断群 (即连通 $1$-截断生象) 构成一个 $2$-范畴, 其中态射为群同态, $2$-态射为群同态之间的同伦, 即共轭. 这个 $2$-范畴中的对象 $H$ 给出一个交叉模. 首先 $H$ 可视为一个群, $G = \operatorname{Aut}(H)$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="代数理论"><header><h1><span class="taxon"></span>代数理论 <a class="slug" href="./代数理论.html">[代数理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./逻辑.html" title="逻辑 [逻辑]">逻辑</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p><strong>代数</strong>的最初意义是对运算与等式的研究. 一个<strong>代数理论</strong>就是若干种运算和这些运算之间的若干条等式. 代数理论的<strong>模型</strong>就是一个集合 (或一般范畴的对象) 上带有指定的运算, 满足指定的等式.</p>
+<p><strong></strong><span class="link local"><a href="./代数.html" title="代数 [代数]">代数</a></span>的最初意义是对运算与等式的研究. 一个<strong>代数理论</strong>就是若干种运算和这些运算之间的若干条等式. 代数理论的<strong>模型</strong>就是一个集合 (或一般范畴的对象) 上带有指定的运算, 满足指定的等式.</p>
 <p>一种更抽象的视角是, 运算和等式不过是一个具有有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">乘积</a></span> (<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>) 的范畴的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 故代数理论可 “无坐标” 式地定义为这样的一个范畴, 这个范畴就是它的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>. 而该理论的模型则是语法范畴到 $\mathsf{Set}$ (或一般范畴) 的保持结构的函子.</p>
 <p>还有另一个方向的抽象. 代数理论 $\mathcal T$ 给出一个记录了所有运算与等式的 “自由代数” 函子 $F\colon \mathsf{Set}\to\mathsf{Set}$, 而 $\mathcal T$ 的模型可视为映射 $FX\to X$, 表达了所有运算在 $X$ 上这一具体结构中的求值. 沿这一思路可以继续推广得到<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>的概念.</p>
 <h2>定义</h2>

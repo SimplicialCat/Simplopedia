@@ -850,6 +850,7 @@ $$
 $$
 另一种看法: 回忆 $\beta X = \operatorname{Hom}_{\mathsf{Boole}}(2^X,2)$, 则有求值映射 $\mathrm{ev}\colon 2^X\times\beta X \to 2$, 进一步给出 Boole 环同态 $2^X \to 2^{\beta X}$. 用它来预复合同态 $2^{\beta X}\to 2$, 就得到映射 $\beta\beta X\to \beta X$.
 这里 $2^X \to 2^{\beta X}$ 就是 $2^X$ 的 <span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span>的单位.</p>
+<p>超滤单子还可以理解为 $\mathsf{Fin} \hookrightarrow \mathsf{Set}$ 的<span class="link local"><a href="./余密度单子.html" title="余密度单子 [余密度单子]">余密度单子</a></span>.</p>
 <p><strong>命题</strong>. 超滤单子上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>等同于<span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>.</p>
 <h3>有限集的情形</h3>
 <p><strong>命题</strong>. 有限集上的超滤均为主超滤.</p>
@@ -943,6 +944,30 @@ $$
 <p><span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span></p>
 <p><span class="link local"><a href="./非交换Čech上同调.html" title="非交换 Čech 上同调 [非交换Čech上同调]">非交换 Čech 上同调</a></span></p>
 <p><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="余密度单子"><header><h1><span class="taxon"></span>余密度单子 <a class="slug" href="./余密度单子.html">[余密度单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>函子 $f\colon \mathcal C \to \mathcal D$ 的余密度单子是 $f$ 沿着 $f$ 自身的右 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span> $f_* f \colon \mathcal D \to \mathcal D$,
+$$
+f_* f (d) = \operatorname{lim}_{d \to f(c)} f(c).
+$$</p>
+<h2>例</h2>
+<h3>超滤单子</h3>
+<p><span class="link local"><a href="./超滤.html" title="超滤 [超滤]">超滤单子</a></span> $\beta\colon \mathsf{Set} \to \mathsf{Set}$ 是 $\mathsf{Fin} \hookrightarrow \mathsf{Set}$ 的余密度单子,
+$$
+\beta X = \operatorname{lim}_{S\to X,S\in\mathsf{Fin}}S.
+$$</p>
+<h3>自同态单子</h3>
+<p>对象 $c\in\mathcal C$ 的<strong>自同态单子</strong> $\operatorname{End}(c)$ 是 $c\colon 1 \to\mathcal C$ 的余密度单子.</p>
+<p>$$
+\operatorname{End}(c)(x) = \operatorname{lim}_{x\to c} c = c^{\operatorname{Hom}(x,c)}.
+$$</p>
+<p>自同态单子可以用来定义<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>: 对任意<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$, 对象 $c$ 上的 $T$-代数结构等同于单子同态 (即 $\mathsf{End}(\mathcal C)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>同态)
+$$
+T \to \operatorname{End}(c).
+$$</p>
+<p>自同态单子在<span class="link local"><a href="./单子(CS).html" title="单子 (计算机科学) [单子(CS)]">计算机科学</a></span>中又叫接续单子 (continuation monad) $\operatorname{Cont}(c)$, 因为
+$\operatorname{Cont}(c)(x)$
+的元素相当于输入 “后续” $x\to c$, 输出结果 $c$ 的过程.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="紧Hausdorff空间"><header><h1><span class="taxon"></span>紧 Hausdorff 空间 <a class="slug" href="./紧Hausdorff空间.html">[紧Hausdorff空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>紧 Hausdorff 空间是一种非常特殊的拓扑空间, 特殊性在于这种空间构成的范畴 $\mathsf{CHaus}$ 是 “代数的”, 大约意思是这个范畴的定义可以完全不提到拓扑两个字.</p>

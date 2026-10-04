@@ -965,6 +965,38 @@ $N(0\overset{\simeq}{\to} 1) \to {*}$
 <p>对于每个高阶范畴 $\mathcal C$, 都可以去掉其中所有不可逆的态射, 仅保留对象与对象之间的同构, 得到一个生象 $\mathcal C^{\simeq}$, 称为 $\mathcal C$ 的<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>. 一般地, $(n,r)$-范畴也可遗忘为 $(n,r')$-范畴 ($r' &lt; r$).</p>
 <h3>$(\infty,n)$-范畴</h3>
 <p>见 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n)$-范畴</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="代数"><header><h1><span class="taxon"></span>代数 <a class="slug" href="./代数.html">[代数]</a></h1><div class="metadata"><ul><li class="meta-item">学科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>代数结构是数学中一类最基本和重要的<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构</a></span>.</p>
+<p>在传统中, 一种代数由<strong>运算</strong>和<strong>等式</strong>定义.</p>
+<p>在<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span> (<span class="link local"><a href="./范畴逻辑.html" title="范畴逻辑 [范畴逻辑]">范畴逻辑学</a></span>) 中, 有许多精神相通而不尽相同的 “元理论”, 刻画何为 “一种代数”:</p>
+<ul>
+<li><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>;</li>
+<li><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>;</li>
+<li><span class="link local"><a href="./PROP.html" title="PROP [PROP]">PROP</a></span>;</li>
+<li><span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</li>
+</ul>
+<p>它们能表达的理论类型, 以及模型所能取值的范畴都各有不同.</p>
+<p>而上述每种 “元理论” 又可以放入如下的统一框架中 (参考<span class="link local"><a href="./FujiiFoundationsAlgTh.html" title="Foundations of Algebraic Theories and Higher Dimensional Categories [FujiiFoundationsAlgTh]">藤井宗一郎</a></span>):</p>
+<p><strong>定义</strong> (元理论).</p>
+<ul>
+<li>一个<strong>元理论</strong> (metatheory) 是一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $\mathcal M$.</li>
+<li>元理论 $\mathcal M$ 中的一个<strong>理论</strong> (theory) 是其中的一个<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $T$.</li>
+</ul>
+<p><strong>例</strong>.</p>
+<ul>
+<li><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>是幺半范畴 $\mathsf{Fun}(\mathsf{Fin},\mathsf{Set})$ (见<span class="link local"><a href="./代入幺半结构.html" title="代入幺半结构 [代入幺半结构]">代入幺半结构</a></span>) 中的结合代数.</li>
+<li></li>
+</ul>
+<p><strong>定义</strong> (模型).</p>
+<p>对于元理论 $\mathcal M$, 理论 $T\in\mathsf{Alg}(\mathcal M)$ 与范畴 $\mathcal C$,</p>
+<ul>
+<li>固定 $\mathcal C$ 在 $\mathcal M$ 中的一个 “充实” 结构, 严格地说是一个 $\mathcal M$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span> $\mathcal D$ 以及一个在<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>层面为等价函子 $\mathcal C \to \mathcal D_0$, 其中 $\mathcal D_0$ 代表 $\mathcal D$ 的底层范畴, 其态射生象为 $\operatorname{Hom}_{\mathcal D_0}(A,B) = \operatorname{Hom}_{\mathcal M}(1,\underline{\operatorname{Hom}}(A,B))$.</li>
+<li>那么对于 $c\in\mathcal C$, 有 $\underline{\operatorname{End}}(c)\in\mathsf{Alg}(\mathcal M)$ 为结合代数.</li>
+<li>此时定义范畴 $\mathcal C$ 中的一个 $T$-<strong>模型</strong>是 $\mathcal M$ 中的一个<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>同态 $T \to \operatorname{End}(c)$. $T$-模型的范畴为
+$$
+    \mathsf{Mod}_{\mathcal C}(T) :=
+$$</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="全忠实函子"><header><h1><span class="taxon"></span>全忠实函子 <a class="slug" href="./全忠实函子.html">[全忠实函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><strong>全忠实函子</strong> (fully faithful functor) 又称<strong>全子范畴</strong> (full subcategory), 是满足如下条件的函子 $F\colon \mathcal C\to\mathcal D$: 对任意对象 $X,Y\in\mathcal C$, 映射 $\mathcal C(X,Y) \to \mathcal D(F(X),F(Y))$ 为等价.</p>
 <p><strong>命题</strong>. 全忠实函子 $F\colon \mathcal C \to \mathcal D$ 必为<span class="link local"><a href="./子范畴.html" title="子范畴 [子范畴]">子范畴</a></span>, 即 $F$ 给出<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>的<span class="link local"><a href="./单射.html" title="单射 [单射]">单射</a></span> $\mathcal C^{\simeq} \to \mathcal D^{\simeq}$.</p>
@@ -1006,6 +1038,13 @@ $$
 </ul>
 <p>在上述每个例子中, “自由代数” 单子都不仅仅是单子, 而是所谓<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>. 元数 (arity) 的本义是一个函数的自变量的个数, 例如加法的元数是 $2$, 取逆的元数是 $1$, 而常数的元数是 $0$.</p>
 <p>如果定义一种代数结构的每种运算只涉及了一个集合里有限个元素, 那么一个代数 $X$ 就可以被全体有限集 $A$ 生成的自由代数 $TA$ <span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>. 所谓探测就是说用全体态射 $TA\to X$ 的信息可以完全恢复出 $X$ 的信息. 这就是<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>的直观.</p>
+<h3>计算机科学</h3>
+<p>单子也是计算机科学中的重要概念, 因为它表达了许多计算过程中的现象: 一个计算 “本该” 输出类型 $X$ 的数据, 而实际上输出的是与 $X$ 有关的一个类型 $TX$ 的数据. 例如</p>
+<ul>
+<li>除法运算 “本该” 输出一个类型为 $\mathbb{R}$ 的数据, 但实际上输出的是一个数或者一个异常 NaN (比如除以 $0$). 实际上的输出类型是 $\mathsf{Maybe}(\mathbb{R}) := \mathbb{R} \sqcup \{\text{NaN}\}$. 这就是可能单子 (maybe monad).</li>
+<li>计算机语言中的一个 “函数” $A\to B$ 不一定是数学意义上的函数, 因为它可能在运行中改变了环境. 以 $S$ 表示环境可能处于的状态的全体, 那么这个 “函数” 实际上的输出类型是 $S\to (B\times S)$, 也就是 “从旧环境得到一个类型 $B$ 的数据, 并给出新环境”. 这就是状态单子 (state monad).</li>
+</ul>
+<p>详见<span class="link local"><a href="./单子(CS).html" title="单子 (计算机科学) [单子(CS)]">单子 (计算机科学)</a></span></p>
 <h2>定义</h2>
 <h3>自函子范畴中的结合代数</h3>
 <p>一个范畴 $\mathcal C$ <strong>上</strong>的单子是其自函子范畴 $\operatorname{End}(\mathcal C)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 对偶范畴 $\mathcal C^{\mathrm{op}}$ 上的单子称为 $\mathcal C$ 上的<span class="link local"><a href="./余单子.html" title="余单子 [余单子]">余单子</a></span>.</p>

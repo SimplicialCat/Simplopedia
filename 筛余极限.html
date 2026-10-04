@@ -1165,6 +1165,52 @@ $$</p>
 $$
 \operatorname{Tr}(F) \simeq \operatorname{End}(1_{\operatorname{HH}_* (\mathcal C,F)}).
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="代入幺半结构"><header><h1><span class="taxon"></span>代入幺半结构 <a class="slug" href="./代入幺半结构.html">[代入幺半结构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>代入幺半结构</strong> (substitution monoidal structure) 是某些自函子范畴 $\operatorname{End}(\mathcal C)$ 的复合幺半结构的模拟.</p>
+<p>一类常见的自函子是形如 “<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>” 的函子
+$$
+X\mapsto\int_{n} F_n \otimes X^{\otimes n},
+$$
+其中 $n$ 的取值范围为 $\mathsf{Fin}$ 或 $\mathsf{Fin}^{\simeq}$, $\int_n$ 是<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>记号.</p>
+<p>当背景范畴为 $\mathsf{Ani}$ 时, 这种 “多项式” 函子可视为 “系数” 函子 $n\mapsto F_n$ 的左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span> (见后面的例). 因此一个自然的推广是: 对于子范畴
+$$
+j\colon \mathcal A \to \mathcal C,
+$$
+(想象为<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">元数</a></span>) 对函子 $F\colon \mathcal A \to \mathcal C$ 作左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>得到 $\mathcal C$ 的自函子
+$$
+j_! F \colon  X \mapsto \int_{N\in\mathcal A} F(N) \times \operatorname{Hom}(N,X)
+$$
+得到. 注意这个表达式也具有类似于<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>的形式. 从而函子范畴 $\mathsf{Fun}(\mathcal A,\mathcal C)$ 呈现幺半结构.</p>
+<h2>例</h2>
+<h3>“有限元” 函子</h3>
+<p>考虑全子范畴 $j\colon \mathsf{Fin}\hookrightarrow \mathsf{Ani}$,
+函子 $F\colon \mathsf{Fin} \to \mathsf{Ani}$ 沿 $j$ 的左 Kan 扩张为
+$$
+j_! F \colon X \mapsto \int_{N\in\mathsf{Fin}} F(N)\times X^N.
+$$
+注意到函子范畴 $\mathsf{Fun}(\mathsf{Fin},\mathsf{Ani})$ 等价于保持<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>的自函子范畴 $\mathsf{Fun}_{\Sigma}(\mathsf{Ani},\mathsf{Ani})$, 因此它可以继承自函子范畴的复合幺半结构.
+定义两个函子 $F,G\colon \mathsf{Fin}\to\mathsf{Ani}$ 的代入积 $F \star G$ 满足
+$$
+j_!(F \star G) = (j_!F) \circ (j_!G)\colon \mathsf{Ani} \to \mathsf{Ani},
+$$
+具体计算得到
+$$
+\begin{aligned}
+&amp;(j_!F) \circ (j_!G)(X)\\
+&amp;=
+\int_{N\in\mathsf{Fin}}F(N)\times\Big(\int_{K\in\mathsf{Fin}}G(K)\times X^K\Big)^N\\
+&amp;=\int_{N\in\mathsf{Fin}}\int_{K_1,\cdots,K_N\in\mathsf{Fin}}\\
+&amp;\quad\ F(N)\times G(K_1)\times\cdots\times G(K_N)\times X^{K_1+\cdots + K_N}\\
+&amp;=\int_{M\in\mathsf{Fin}} H(M)\times X^M,
+\end{aligned}
+$$
+其中
+$$
+H(M) = \int_{K_1 + \cdots + K_N = M} F(N)\times G(K_1)\times\cdots\times G(K_N).
+$$</p>
+<h3>对称序列</h3>
+<p><span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span> $\mathsf{Fun}(\mathsf{Fin}^{\simeq},\mathsf{Ani})$ (或一般的 $\mathsf{Fun}(\mathsf{Fin}^{\simeq},\mathcal C)$) 的代入幺半结构给出<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的一种定义: 算畴是代入幺半结构中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="分解同调"><header><h1><span class="taxon"></span>分解同调 <a class="slug" href="./分解同调.html">[分解同调]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>分解同调</strong> (factorization homology), 又叫<strong>手性同调</strong> (chiral homology), 是将 $\mathbb E_n$-代数 “沿 $n$ 维流形作张量积”, 或更一般地将 <span class="link local"><a href="./E_M-算畴.html" title="E_M-算畴 [E_M-算畴]">$\mathbb E_M$-算畴</a></span>的代数在流形 $M$ 上作 “张量积”.</p>

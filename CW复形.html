@@ -851,7 +851,60 @@ I\times S^n @&gt;&gt;&gt; X_n @&gt;&gt;&gt; * \\
 I @&gt;&gt;&gt; X_{n+1} @&gt;&gt;&gt; \bigvee_I S^{n+1}
 \end{CD}
 $$</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="tutorial-stable-homotopy"><header><h1><span class="taxon"></span>稳定同伦论 <a class="slug" href="./tutorial-stable-homotopy.html">[tutorial-stable-homotopy]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="AT"><header><h1><span class="taxon"></span>代数拓扑的现代语言 <a class="slug" href="./AT.html">[AT]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>按照 <span class="link local"><a href="./HatcherAT.html" title="Algebraic Topology [HatcherAT]">Hatcher</a></span> 的目录用现代语言讲述的代数拓扑. 注意:</p>
+<ul>
+<li>这不是针对初学者的教程, 仅供熟悉<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>语言的读者查阅.</li>
+<li>生象语言在本书中并非全能. 有些内容 “本质” 属于拓扑空间范畴, 而不能直接用生象语言解释.</li>
+</ul>
+<h2>第 0 章. 基本概念</h2>
+<h4>同伦与同伦型</h4>
+<p>所谓<strong>同伦</strong>就是<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>中的等式. 一个拓扑空间的<strong>同伦型</strong>就是其表现的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</p>
+<h4>胞腔复形</h4>
+<p>胞腔复形又叫 <span class="link local"><a href="./CW复形.html" title="CW 复形 [CW复形]">CW 复形</a></span>, 是带有一个<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤过</a></span>
+$$
+X_0 \to X_1 \to X_2\to \cdots
+$$
+的生象, 其逐项<span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">余纤维</a></span>为球面束 (<span class="link local"><a href="./球面.html" title="球面 [球面]">球面</a></span>的一点并).</p>
+<h4>生象的操作</h4>
+<ul>
+<li><span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span></li>
+<li>商, 也就是<span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">余纤维</a></span></li>
+<li><span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span> (suspension)</li>
+<li><span class="link local"><a href="./联合.html" title="联合 [联合]">联合</a></span> (join)</li>
+<li><span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span></li>
+</ul>
+<h2>第 1 章. 基本群</h2>
+<p>带基点生象 $(X,x_0)$ 的<span class="link local"><a href="./基本群.html" title="基本群 [基本群]">基本群</a></span> $\pi_1(X,x_0)$ 是<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> $\Omega(X,x_0)$ 的 $0$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>.</p>
+<h3>1.1 基本构造</h3>
+<p>对于等式 $h\colon x_0 = x_1$, 有换基点同态
+$$
+\pi_1 (X,x_0) \overset{\simeq}{\to}\pi_1(X,x_1),\,[f]\mapsto [h \cdot f \cdot \bar h].
+$$</p>
+<h4>圆圈的基本群</h4>
+<p><span class="link local"><a href="./球面.html" title="球面 [球面]">$S^1$</a></span> 的基本群是无限循环群 $\mathbb{Z}$.</p>
+<p>这里原书讲了基本群的应用, Brouwer 不动点定理和 Borsuk–Ulam 定理. 这两个定理不能直接用生象语言解释.</p>
+<h4>诱导同态</h4>
+<p>带基点生象的映射 $\varphi\colon (X,x_0)\to (Y,y_0)$ 诱导基本群的同态 $\pi_1(X,x_0) \to \pi_1(Y,y_0)$. 这说的是基本群的函子性.</p>
+<p>这里原书证明了 $\pi_1(S^n) = 0$ ($n\geq 2$). 这个命题对生象成立, 但这个证明不能用生象语言解释.</p>
+<h3>1.2 Van Kampen 定理</h3>
+<p><span class="link local"><a href="./VanKampen定理.html" title="Van Kampen 定理 [VanKampen定理]">Van Kampen 定理</a></span></p>
+<h3>1.3 覆叠空间</h3>
+<p><span class="link local"><a href="./覆叠.html" title="覆叠 [覆叠]">覆叠空间</a></span></p>
+<h3>1.A 图与自由群</h3>
+<h2>第 2 章. 同调</h2>
+<h3>单纯同调与奇异同调</h3>
+<p>拓扑空间 $X$ 的奇异同调是其<span class="link local"><a href="./奇异单纯集.html" title="奇异单纯集 [奇异单纯集]">奇异单纯集</a></span> $\operatorname{Sing}X$ 的单纯同调.</p>
+<p>单纯集的单纯同调是如下复合:
+$$
+\mathsf{sSet} \overset{\mathbb{Z}[-]}{\longrightarrow} \mathsf{sAb} \overset{\mathrm{DK}}{\longrightarrow} \mathsf{Ch}_{\geq 0}(\mathbb{Z}) \overset{H_n}{\longrightarrow}\mathsf{Ab},
+$$
+它<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>了如下函子:
+$$
+\mathsf{Ani} \overset{\mathbb{Z}[-]}{\longrightarrow}\mathsf{Mod}(H\mathbb{Z})_{\geq 0} \overset{H_n}{\longrightarrow} \mathsf{Ab}.
+$$</p>
+<h3>正合列与切除</h3>
+</details></section><section class="block" data-taxon=""><details ><summary id="tutorial-stable-homotopy"><header><h1><span class="taxon"></span>稳定同伦论 <a class="slug" href="./tutorial-stable-homotopy.html">[tutorial-stable-homotopy]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文的目的是, 以尽可能少的前置知识, 解释<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span> (<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>) 这一概念的意义和必要性, 从而使读者能够接受其抽象定义. 为此我试图解释<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>的动机. 许多科普作品从纬悬函子 $\Sigma$ 出发, 而我试图从环路空间函子 $\Omega$ 出发, 借助 $\mathbb E_n$-代数和 $n$-连通空间的关系提供一个直观. (从纬悬函子 $\Sigma$ 出发定义的谱在传统上称为 $\Sigma$-谱, 而我做的事情意味着抛弃 $\Sigma$-谱而仅使用 $\Omega$-谱.)</p>
 <p>前置知识: 拓扑学基本概念, 以及<span class="link local"><a href="./motivation-homotopy-theory.html" title="同伦论的动机 [motivation-homotopy-theory]">同伦论的动机</a></span> (推荐读者先阅读这篇文章). 或许需要一点无穷范畴的直观.</p>
 <p>在所有前置知识中, 最重要的是明白<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的世界中<strong>何为相等</strong>. 如果不明白<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的概念, 可以用拓扑空间 (<span class="link local"><a href="./CW复形.html" title="CW 复形 [CW复形]">CW 复形</a></span>) 来思考以下提到的所有空间, 只要记住:</p>

@@ -1678,7 +1678,7 @@ $$
 从而说明算畴的所有定义等价.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="代数理论"><header><h1><span class="taxon"></span>代数理论 <a class="slug" href="./代数理论.html">[代数理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./逻辑.html" title="逻辑 [逻辑]">逻辑</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p><strong>代数</strong>的最初意义是对运算与等式的研究. 一个<strong>代数理论</strong>就是若干种运算和这些运算之间的若干条等式. 代数理论的<strong>模型</strong>就是一个集合 (或一般范畴的对象) 上带有指定的运算, 满足指定的等式.</p>
+<p><strong></strong><span class="link local"><a href="./代数.html" title="代数 [代数]">代数</a></span>的最初意义是对运算与等式的研究. 一个<strong>代数理论</strong>就是若干种运算和这些运算之间的若干条等式. 代数理论的<strong>模型</strong>就是一个集合 (或一般范畴的对象) 上带有指定的运算, 满足指定的等式.</p>
 <p>一种更抽象的视角是, 运算和等式不过是一个具有有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">乘积</a></span> (<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>) 的范畴的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 故代数理论可 “无坐标” 式地定义为这样的一个范畴, 这个范畴就是它的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>. 而该理论的模型则是语法范畴到 $\mathsf{Set}$ (或一般范畴) 的保持结构的函子.</p>
 <p>还有另一个方向的抽象. 代数理论 $\mathcal T$ 给出一个记录了所有运算与等式的 “自由代数” 函子 $F\colon \mathsf{Set}\to\mathsf{Set}$, 而 $\mathcal T$ 的模型可视为映射 $FX\to X$, 表达了所有运算在 $X$ 上这一具体结构中的求值. 沿这一思路可以继续推广得到<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>的概念.</p>
 <h2>定义</h2>
@@ -1937,6 +1937,13 @@ $$
 </ul>
 <p>在上述每个例子中, “自由代数” 单子都不仅仅是单子, 而是所谓<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>. 元数 (arity) 的本义是一个函数的自变量的个数, 例如加法的元数是 $2$, 取逆的元数是 $1$, 而常数的元数是 $0$.</p>
 <p>如果定义一种代数结构的每种运算只涉及了一个集合里有限个元素, 那么一个代数 $X$ 就可以被全体有限集 $A$ 生成的自由代数 $TA$ <span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>. 所谓探测就是说用全体态射 $TA\to X$ 的信息可以完全恢复出 $X$ 的信息. 这就是<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>的直观.</p>
+<h3>计算机科学</h3>
+<p>单子也是计算机科学中的重要概念, 因为它表达了许多计算过程中的现象: 一个计算 “本该” 输出类型 $X$ 的数据, 而实际上输出的是与 $X$ 有关的一个类型 $TX$ 的数据. 例如</p>
+<ul>
+<li>除法运算 “本该” 输出一个类型为 $\mathbb{R}$ 的数据, 但实际上输出的是一个数或者一个异常 NaN (比如除以 $0$). 实际上的输出类型是 $\mathsf{Maybe}(\mathbb{R}) := \mathbb{R} \sqcup \{\text{NaN}\}$. 这就是可能单子 (maybe monad).</li>
+<li>计算机语言中的一个 “函数” $A\to B$ 不一定是数学意义上的函数, 因为它可能在运行中改变了环境. 以 $S$ 表示环境可能处于的状态的全体, 那么这个 “函数” 实际上的输出类型是 $S\to (B\times S)$, 也就是 “从旧环境得到一个类型 $B$ 的数据, 并给出新环境”. 这就是状态单子 (state monad).</li>
+</ul>
+<p>详见<span class="link local"><a href="./单子(CS).html" title="单子 (计算机科学) [单子(CS)]">单子 (计算机科学)</a></span></p>
 <h2>定义</h2>
 <h3>自函子范畴中的结合代数</h3>
 <p>一个范畴 $\mathcal C$ <strong>上</strong>的单子是其自函子范畴 $\operatorname{End}(\mathcal C)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 对偶范畴 $\mathcal C^{\mathrm{op}}$ 上的单子称为 $\mathcal C$ 上的<span class="link local"><a href="./余单子.html" title="余单子 [余单子]">余单子</a></span>.</p>
@@ -2399,7 +2406,7 @@ X^{\otimes m}
     \int_{n}\int_{m_1+\cdots + m_n = \ell}\Big(F(n)\otimes\bigotimes_{i=1}^n G(m_i)\Big)\Big]\otimes X^{\otimes\ell}.
 \end{aligned}
 $$
-可以看到这仍是一个对称序列给出的自函子.</p>
+可以看到这仍是一个对称序列给出的自函子. 于是对称序列的范畴具有一个非对称的幺半结构, 称作<span class="link local"><a href="./代入幺半结构.html" title="代入幺半结构 [代入幺半结构]">代入幺半结构</a></span>.</p>
 <p>对称幺半范畴 $\mathcal C$ 本身的对象可视为 “集中在一次项” 的对称序列, 即有幺半函子
 $$
 \mathcal C \to\mathsf{SSeq}(\mathcal C),\, X\mapsto (0,X,0,0,\cdots).

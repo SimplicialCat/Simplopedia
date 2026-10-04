@@ -968,6 +968,59 @@ $$
 H_{\text{AKLT}} = \sum \frac{1}{2} S_i \cdot S_j + \frac{1}{6} (S_i \cdot S_j)^2,
 $$
 其中 $S_i$ 为<span class="link local"><a href="./自旋.html" title="“自旋” [自旋]">自旋</a></span> $1$ 的算子.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="AT"><header><h1><span class="taxon"></span>代数拓扑的现代语言 <a class="slug" href="./AT.html">[AT]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>按照 <span class="link local"><a href="./HatcherAT.html" title="Algebraic Topology [HatcherAT]">Hatcher</a></span> 的目录用现代语言讲述的代数拓扑. 注意:</p>
+<ul>
+<li>这不是针对初学者的教程, 仅供熟悉<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>语言的读者查阅.</li>
+<li>生象语言在本书中并非全能. 有些内容 “本质” 属于拓扑空间范畴, 而不能直接用生象语言解释.</li>
+</ul>
+<h2>第 0 章. 基本概念</h2>
+<h4>同伦与同伦型</h4>
+<p>所谓<strong>同伦</strong>就是<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>中的等式. 一个拓扑空间的<strong>同伦型</strong>就是其表现的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</p>
+<h4>胞腔复形</h4>
+<p>胞腔复形又叫 <span class="link local"><a href="./CW复形.html" title="CW 复形 [CW复形]">CW 复形</a></span>, 是带有一个<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤过</a></span>
+$$
+X_0 \to X_1 \to X_2\to \cdots
+$$
+的生象, 其逐项<span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">余纤维</a></span>为球面束 (<span class="link local"><a href="./球面.html" title="球面 [球面]">球面</a></span>的一点并).</p>
+<h4>生象的操作</h4>
+<ul>
+<li><span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span></li>
+<li>商, 也就是<span class="link local"><a href="./余纤维列.html" title="余纤维列 [余纤维列]">余纤维</a></span></li>
+<li><span class="link local"><a href="./纬悬.html" title="纬悬 [纬悬]">纬悬</a></span> (suspension)</li>
+<li><span class="link local"><a href="./联合.html" title="联合 [联合]">联合</a></span> (join)</li>
+<li><span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span></li>
+</ul>
+<h2>第 1 章. 基本群</h2>
+<p>带基点生象 $(X,x_0)$ 的<span class="link local"><a href="./基本群.html" title="基本群 [基本群]">基本群</a></span> $\pi_1(X,x_0)$ 是<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> $\Omega(X,x_0)$ 的 $0$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>.</p>
+<h3>1.1 基本构造</h3>
+<p>对于等式 $h\colon x_0 = x_1$, 有换基点同态
+$$
+\pi_1 (X,x_0) \overset{\simeq}{\to}\pi_1(X,x_1),\,[f]\mapsto [h \cdot f \cdot \bar h].
+$$</p>
+<h4>圆圈的基本群</h4>
+<p><span class="link local"><a href="./球面.html" title="球面 [球面]">$S^1$</a></span> 的基本群是无限循环群 $\mathbb{Z}$.</p>
+<p>这里原书讲了基本群的应用, Brouwer 不动点定理和 Borsuk–Ulam 定理. 这两个定理不能直接用生象语言解释.</p>
+<h4>诱导同态</h4>
+<p>带基点生象的映射 $\varphi\colon (X,x_0)\to (Y,y_0)$ 诱导基本群的同态 $\pi_1(X,x_0) \to \pi_1(Y,y_0)$. 这说的是基本群的函子性.</p>
+<p>这里原书证明了 $\pi_1(S^n) = 0$ ($n\geq 2$). 这个命题对生象成立, 但这个证明不能用生象语言解释.</p>
+<h3>1.2 Van Kampen 定理</h3>
+<p><span class="link local"><a href="./VanKampen定理.html" title="Van Kampen 定理 [VanKampen定理]">Van Kampen 定理</a></span></p>
+<h3>1.3 覆叠空间</h3>
+<p><span class="link local"><a href="./覆叠.html" title="覆叠 [覆叠]">覆叠空间</a></span></p>
+<h3>1.A 图与自由群</h3>
+<h2>第 2 章. 同调</h2>
+<h3>单纯同调与奇异同调</h3>
+<p>拓扑空间 $X$ 的奇异同调是其<span class="link local"><a href="./奇异单纯集.html" title="奇异单纯集 [奇异单纯集]">奇异单纯集</a></span> $\operatorname{Sing}X$ 的单纯同调.</p>
+<p>单纯集的单纯同调是如下复合:
+$$
+\mathsf{sSet} \overset{\mathbb{Z}[-]}{\longrightarrow} \mathsf{sAb} \overset{\mathrm{DK}}{\longrightarrow} \mathsf{Ch}_{\geq 0}(\mathbb{Z}) \overset{H_n}{\longrightarrow}\mathsf{Ab},
+$$
+它<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>了如下函子:
+$$
+\mathsf{Ani} \overset{\mathbb{Z}[-]}{\longrightarrow}\mathsf{Mod}(H\mathbb{Z})_{\geq 0} \overset{H_n}{\longrightarrow} \mathsf{Ab}.
+$$</p>
+<h3>正合列与切除</h3>
 </details></section><section class="block" data-taxon=""><details ><summary id="Ab-范畴"><header><h1><span class="taxon"></span>Ab-范畴 <a class="slug" href="./Ab-范畴.html">[Ab-范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>$\mathsf {Ab}$-范畴是指充实于 $\mathsf{Ab}$ 的<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>.</p>
 <p>另见<span class="link local"><a href="./加性范畴.html" title="加性范畴 [加性范畴]">加性范畴</a></span>, <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>.</p>
@@ -8479,6 +8532,7 @@ $$</p>
 <blockquote>
 </blockquote>
 </details></section><section class="block" data-taxon=""><details ><summary id="Untitled"><header><h1><span class="taxon"></span>“Untitled” <a class="slug" href="./Untitled.html">[Untitled]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="VanKampen定理"><header><h1><span class="taxon"></span>Van Kampen 定理 <a class="slug" href="./VanKampen定理.html">[VanKampen定理]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./拓扑学.html" title="拓扑学 [拓扑学]">拓扑学</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon=""><details ><summary id="Verma模"><header><h1><span class="taxon"></span>“Verma 模” <a class="slug" href="./Verma模.html">[Verma模]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>#几何表示论</p>
 <p>Verma 模 $M_\lambda$ 是最大的以 $\lambda\in\mathfrak h^*$ 为最高权的<span class="link local"><a href="./最高权模.html" title=" [最高权模]">极大权模</a></span>.</p>
@@ -9986,6 +10040,7 @@ $$</p>
 </ul>
 <p>计划中的讲稿 / 笔记:</p>
 <ul>
+<li><span class="link local"><a href="./AT.html" title="代数拓扑的现代语言 [AT]">代数拓扑的现代语言</a></span></li>
 <li><span class="link local"><a href="./notes-perverse.html" title="偏屈层笔记 [notes-perverse]">偏屈层笔记</a></span></li>
 <li><span class="link local"><a href="./opecat.html" title="Barwick 算子范畴 [opecat]">Barwick 算子范畴</a></span></li>
 <li><span class="link local"><a href="./HADR.html" title="Higher Algebra Done Right [HADR]">Higher Algebra Done Right</a></span></li>
@@ -11475,6 +11530,7 @@ $$</p>
 <p><span class="link local"><a href="./VLafforgueCht.html" title="Chtoucas pour les groupes réductifs et paramétrisation de Langlands globale [VLafforgueCht]">Vincent Lafforgue</a></span> 使用某些 Hecke 函子定义了<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span>, 以给出 <span class="link local"><a href="./Langlands纲领.html" title="Langlands 纲领 [Langlands纲领]">Langlands</a></span> 预言的自守函数空间的谱分解.</p>
 <p>这一思路在<span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 纲领</a></span>中得到延续. 人们发现<span class="link local"><a href="./远足代数.html" title="远足代数 [远足代数]">远足代数</a></span>等同于某种局部系统模叠上的函数代数. 而提升一个范畴层级后 (见<span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span>—但这里实际上只需要提升一阶), 该种局部系统模叠上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>范畴在<span class="link local"><a href="./自守层.html" title="自守层 [自守层]">自守层</a></span>范畴上的 <span class="link local"><a href="./Hecke作用.html" title="Hecke 作用 [Hecke作用]">Hecke 作用</a></span>可给出自守层沿局部系统模叠的谱分解, 见 <span class="link local"><a href="./AGKRRV1.html" title="The stack of local systems with restricted variation and geometric Langlands theory with nilpotent singular support [AGKRRV1]">AGKRRV</a></span>.</p>
 </details></section></p>
+<p><span class="link local"><a href="./代数.html" title="代数 [代数]">-</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="oLKE"><header><h1><span class="taxon"></span>算畴左 Kan 扩张 <a class="slug" href="./oLKE.html">[oLKE]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>类似于左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>是函子范畴之间拉回的左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>, 对于余完备<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $\mathcal C$ 以及<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的态射 $f\colon \mathcal O\to\mathcal P$, 在代数范畴之间也有拉回 $f^*\colon \mathsf{Alg}_{\mathcal P}(\mathcal C)\to\mathsf{Alg}_{\mathcal O}(\mathcal C)$ 的左伴随
 $$
@@ -11821,7 +11877,6 @@ $$
 <li>考虑 $\mathbb R^i \times C(Y)$ 的锥点, 注意锥点未必打到锥点, 但是若不打到锥点则光滑性可由上一款定义, 故在此假设锥点打到锥点.</li>
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="subject"><header><h1><span class="taxon"></span>学科 <a class="slug" href="./subject.html">[subject]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>偏分析的数学:</p>
 <ul>
 <li><span class="link local"><a href="./数学分析.html" title="数学分析 [数学分析]">数学分析</a></span></li>
 <li><span class="link local"><a href="./代数分析.html" title="代数分析 [代数分析]">代数分析</a></span>
@@ -11845,17 +11900,23 @@ $$
 <li><span class="link local"><a href="./无点拓扑学.html" title="无点拓扑学 [无点拓扑学]">无点拓扑学</a></span></li>
 </ul>
 </li>
-</ul>
-<p>偏<span class="link local"><a href="./综合数学.html" title="综合数学 [综合数学]">综合</a></span>的数学:</p>
+<li><span class="link local"><a href="./综合数学.html" title="综合数学 [综合数学]">综合数学</a></span>
 <ul>
 <li><span class="link local"><a href="./综合微分几何.html" title="综合微分几何 [综合微分几何]">综合微分几何</a></span></li>
 <li><span class="link local"><a href="./综合同伦论.html" title="综合同伦论 [综合同伦论]">综合同伦论</a></span></li>
+</ul>
+</li>
+<li><span class="link local"><a href="./逻辑.html" title="逻辑 [逻辑]">逻辑</a></span>
+<ul>
+<li><span class="link local"><a href="./范畴逻辑.html" title="范畴逻辑 [范畴逻辑]">范畴逻辑</a></span>
+<ul>
+<li><span class="link local"><a href="./代数.html" title="代数 [代数]">代数</a></span></li>
+</ul>
+</li>
+<li><span class="link local"><a href="./类型论.html" title="类型论 [类型论]">类型论</a></span></li>
 <li><span class="link local"><a href="./同伦类型论.html" title="同伦类型论 [同伦类型论]">同伦类型论</a></span></li>
 </ul>
-<p>数学基础:</p>
-<ul>
-<li><span class="link local"><a href="./类型论.html" title="类型论 [类型论]">类型论</a></span></li>
-<li><span class="link local"><a href="./逻辑.html" title="逻辑 [逻辑]">逻辑</a></span></li>
+</li>
 <li><span class="link local"><a href="./形式化数学.html" title="形式化数学 [形式化数学]">形式化数学</a></span></li>
 <li><span class="link local"><a href="./数学基础.html" title="数学基础 [数学基础]">数学基础</a></span></li>
 </ul>
@@ -14446,6 +14507,52 @@ $$
 $$
 \mathsf{CAlg}(\mathsf{Mod}_{\mathcal C}(A)) \simeq \mathsf{CAlg}(\mathcal C)_{A/}.
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="代入幺半结构"><header><h1><span class="taxon"></span>代入幺半结构 <a class="slug" href="./代入幺半结构.html">[代入幺半结构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>代入幺半结构</strong> (substitution monoidal structure) 是某些自函子范畴 $\operatorname{End}(\mathcal C)$ 的复合幺半结构的模拟.</p>
+<p>一类常见的自函子是形如 “<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>” 的函子
+$$
+X\mapsto\int_{n} F_n \otimes X^{\otimes n},
+$$
+其中 $n$ 的取值范围为 $\mathsf{Fin}$ 或 $\mathsf{Fin}^{\simeq}$, $\int_n$ 是<span class="link local"><a href="./余端.html" title="余端 [余端]">余端</a></span>记号.</p>
+<p>当背景范畴为 $\mathsf{Ani}$ 时, 这种 “多项式” 函子可视为 “系数” 函子 $n\mapsto F_n$ 的左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span> (见后面的例). 因此一个自然的推广是: 对于子范畴
+$$
+j\colon \mathcal A \to \mathcal C,
+$$
+(想象为<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">元数</a></span>) 对函子 $F\colon \mathcal A \to \mathcal C$ 作左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>得到 $\mathcal C$ 的自函子
+$$
+j_! F \colon  X \mapsto \int_{N\in\mathcal A} F(N) \times \operatorname{Hom}(N,X)
+$$
+得到. 注意这个表达式也具有类似于<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>的形式. 从而函子范畴 $\mathsf{Fun}(\mathcal A,\mathcal C)$ 呈现幺半结构.</p>
+<h2>例</h2>
+<h3>“有限元” 函子</h3>
+<p>考虑全子范畴 $j\colon \mathsf{Fin}\hookrightarrow \mathsf{Ani}$,
+函子 $F\colon \mathsf{Fin} \to \mathsf{Ani}$ 沿 $j$ 的左 Kan 扩张为
+$$
+j_! F \colon X \mapsto \int_{N\in\mathsf{Fin}} F(N)\times X^N.
+$$
+注意到函子范畴 $\mathsf{Fun}(\mathsf{Fin},\mathsf{Ani})$ 等价于保持<span class="link local"><a href="./筛余极限.html" title="筛余极限 [筛余极限]">筛余极限</a></span>的自函子范畴 $\mathsf{Fun}_{\Sigma}(\mathsf{Ani},\mathsf{Ani})$, 因此它可以继承自函子范畴的复合幺半结构.
+定义两个函子 $F,G\colon \mathsf{Fin}\to\mathsf{Ani}$ 的代入积 $F \star G$ 满足
+$$
+j_!(F \star G) = (j_!F) \circ (j_!G)\colon \mathsf{Ani} \to \mathsf{Ani},
+$$
+具体计算得到
+$$
+\begin{aligned}
+&amp;(j_!F) \circ (j_!G)(X)\\
+&amp;=
+\int_{N\in\mathsf{Fin}}F(N)\times\Big(\int_{K\in\mathsf{Fin}}G(K)\times X^K\Big)^N\\
+&amp;=\int_{N\in\mathsf{Fin}}\int_{K_1,\cdots,K_N\in\mathsf{Fin}}\\
+&amp;\quad\ F(N)\times G(K_1)\times\cdots\times G(K_N)\times X^{K_1+\cdots + K_N}\\
+&amp;=\int_{M\in\mathsf{Fin}} H(M)\times X^M,
+\end{aligned}
+$$
+其中
+$$
+H(M) = \int_{K_1 + \cdots + K_N = M} F(N)\times G(K_1)\times\cdots\times G(K_N).
+$$</p>
+<h3>对称序列</h3>
+<p><span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span> $\mathsf{Fun}(\mathsf{Fin}^{\simeq},\mathsf{Ani})$ (或一般的 $\mathsf{Fun}(\mathsf{Fin}^{\simeq},\mathcal C)$) 的代入幺半结构给出<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的一种定义: 算畴是代入幺半结构中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="代函子"><header><h1><span class="taxon"></span>代函子 <a class="slug" href="./代函子.html">[代函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>代函子</strong> (profunctor) 是函子的推广, 类似于关系是函数的推广.</p>
@@ -14473,6 +14580,38 @@ $$</p>
 <ul>
 <li>$\operatorname{Hom}_{\mathcal D}(f(-),-) \colon \mathcal D \otimes\mathcal C^{\mathrm{op}} \to \mathsf{Set}$;</li>
 <li>$\operatorname{Hom}_{\mathcal D}(-,f(-)) \colon \mathcal C \otimes\mathcal D^{\mathrm{op}} \to \mathsf{Set}$.</li>
+</ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="代数"><header><h1><span class="taxon"></span>代数 <a class="slug" href="./代数.html">[代数]</a></h1><div class="metadata"><ul><li class="meta-item">学科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>代数结构是数学中一类最基本和重要的<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构</a></span>.</p>
+<p>在传统中, 一种代数由<strong>运算</strong>和<strong>等式</strong>定义.</p>
+<p>在<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span> (<span class="link local"><a href="./范畴逻辑.html" title="范畴逻辑 [范畴逻辑]">范畴逻辑学</a></span>) 中, 有许多精神相通而不尽相同的 “元理论”, 刻画何为 “一种代数”:</p>
+<ul>
+<li><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>;</li>
+<li><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>;</li>
+<li><span class="link local"><a href="./PROP.html" title="PROP [PROP]">PROP</a></span>;</li>
+<li><span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</li>
+</ul>
+<p>它们能表达的理论类型, 以及模型所能取值的范畴都各有不同.</p>
+<p>而上述每种 “元理论” 又可以放入如下的统一框架中 (参考<span class="link local"><a href="./FujiiFoundationsAlgTh.html" title="Foundations of Algebraic Theories and Higher Dimensional Categories [FujiiFoundationsAlgTh]">藤井宗一郎</a></span>):</p>
+<p><strong>定义</strong> (元理论).</p>
+<ul>
+<li>一个<strong>元理论</strong> (metatheory) 是一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $\mathcal M$.</li>
+<li>元理论 $\mathcal M$ 中的一个<strong>理论</strong> (theory) 是其中的一个<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $T$.</li>
+</ul>
+<p><strong>例</strong>.</p>
+<ul>
+<li><span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>是幺半范畴 $\mathsf{Fun}(\mathsf{Fin},\mathsf{Set})$ (见<span class="link local"><a href="./代入幺半结构.html" title="代入幺半结构 [代入幺半结构]">代入幺半结构</a></span>) 中的结合代数.</li>
+<li></li>
+</ul>
+<p><strong>定义</strong> (模型).</p>
+<p>对于元理论 $\mathcal M$, 理论 $T\in\mathsf{Alg}(\mathcal M)$ 与范畴 $\mathcal C$,</p>
+<ul>
+<li>固定 $\mathcal C$ 在 $\mathcal M$ 中的一个 “充实” 结构, 严格地说是一个 $\mathcal M$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span> $\mathcal D$ 以及一个在<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>层面为等价函子 $\mathcal C \to \mathcal D_0$, 其中 $\mathcal D_0$ 代表 $\mathcal D$ 的底层范畴, 其态射生象为 $\operatorname{Hom}_{\mathcal D_0}(A,B) = \operatorname{Hom}_{\mathcal M}(1,\underline{\operatorname{Hom}}(A,B))$.</li>
+<li>那么对于 $c\in\mathcal C$, 有 $\underline{\operatorname{End}}(c)\in\mathsf{Alg}(\mathcal M)$ 为结合代数.</li>
+<li>此时定义范畴 $\mathcal C$ 中的一个 $T$-<strong>模型</strong>是 $\mathcal M$ 中的一个<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>同态 $T \to \operatorname{End}(c)$. $T$-模型的范畴为
+$$
+    \mathsf{Mod}_{\mathcal C}(T) :=
+$$</li>
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="代数-几何对偶"><header><h1><span class="taxon"></span>代数–几何对偶 <a class="slug" href="./代数-几何对偶.html">[代数-几何对偶]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>代数–几何对偶是数学上的一大类现象, 某种几何对象与某种代数对象之间有对偶的关系 (即两个范畴互为<span class="link local"><a href="./反范畴.html" title="反范畴 [反范畴]">反范畴</a></span>):</p>
@@ -15013,7 +15152,7 @@ $$
 从而说明算畴的所有定义等价.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="代数理论"><header><h1><span class="taxon"></span>代数理论 <a class="slug" href="./代数理论.html">[代数理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./逻辑.html" title="逻辑 [逻辑]">逻辑</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p><strong>代数</strong>的最初意义是对运算与等式的研究. 一个<strong>代数理论</strong>就是若干种运算和这些运算之间的若干条等式. 代数理论的<strong>模型</strong>就是一个集合 (或一般范畴的对象) 上带有指定的运算, 满足指定的等式.</p>
+<p><strong></strong><span class="link local"><a href="./代数.html" title="代数 [代数]">代数</a></span>的最初意义是对运算与等式的研究. 一个<strong>代数理论</strong>就是若干种运算和这些运算之间的若干条等式. 代数理论的<strong>模型</strong>就是一个集合 (或一般范畴的对象) 上带有指定的运算, 满足指定的等式.</p>
 <p>一种更抽象的视角是, 运算和等式不过是一个具有有限<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">乘积</a></span> (<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>) 的范畴的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>. 故代数理论可 “无坐标” 式地定义为这样的一个范畴, 这个范畴就是它的<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>. 而该理论的模型则是语法范畴到 $\mathsf{Set}$ (或一般范畴) 的保持结构的函子.</p>
 <p>还有另一个方向的抽象. 代数理论 $\mathcal T$ 给出一个记录了所有运算与等式的 “自由代数” 函子 $F\colon \mathsf{Set}\to\mathsf{Set}$, 而 $\mathcal T$ 的模型可视为映射 $FX\to X$, 表达了所有运算在 $X$ 上这一具体结构中的求值. 沿这一思路可以继续推广得到<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>的概念.</p>
 <h2>定义</h2>
@@ -15575,6 +15714,30 @@ $$</p>
 $$
 \mathsf{Mod}(\mathcal T) = \mathsf{P}_R^K(\mathcal T^{\mathrm{op}}).
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="余密度单子"><header><h1><span class="taxon"></span>余密度单子 <a class="slug" href="./余密度单子.html">[余密度单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>函子 $f\colon \mathcal C \to \mathcal D$ 的余密度单子是 $f$ 沿着 $f$ 自身的右 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span> $f_* f \colon \mathcal D \to \mathcal D$,
+$$
+f_* f (d) = \operatorname{lim}_{d \to f(c)} f(c).
+$$</p>
+<h2>例</h2>
+<h3>超滤单子</h3>
+<p><span class="link local"><a href="./超滤.html" title="超滤 [超滤]">超滤单子</a></span> $\beta\colon \mathsf{Set} \to \mathsf{Set}$ 是 $\mathsf{Fin} \hookrightarrow \mathsf{Set}$ 的余密度单子,
+$$
+\beta X = \operatorname{lim}_{S\to X,S\in\mathsf{Fin}}S.
+$$</p>
+<h3>自同态单子</h3>
+<p>对象 $c\in\mathcal C$ 的<strong>自同态单子</strong> $\operatorname{End}(c)$ 是 $c\colon 1 \to\mathcal C$ 的余密度单子.</p>
+<p>$$
+\operatorname{End}(c)(x) = \operatorname{lim}_{x\to c} c = c^{\operatorname{Hom}(x,c)}.
+$$</p>
+<p>自同态单子可以用来定义<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>: 对任意<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$, 对象 $c$ 上的 $T$-代数结构等同于单子同态 (即 $\mathsf{End}(\mathcal C)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>同态)
+$$
+T \to \operatorname{End}(c).
+$$</p>
+<p>自同态单子在<span class="link local"><a href="./单子(CS).html" title="单子 (计算机科学) [单子(CS)]">计算机科学</a></span>中又叫接续单子 (continuation monad) $\operatorname{Cont}(c)$, 因为
+$\operatorname{Cont}(c)(x)$
+的元素相当于输入 “后续” $x\to c$, 输出结果 $c$ 的过程.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="余极限"><header><h1><span class="taxon"></span>余极限 <a class="slug" href="./余极限.html">[余极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./余完备化.html" title="余完备化 [余完备化]">余完备化</a></span></p>
@@ -17617,6 +17780,13 @@ $$
 </ul>
 <p>在上述每个例子中, “自由代数” 单子都不仅仅是单子, 而是所谓<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>. 元数 (arity) 的本义是一个函数的自变量的个数, 例如加法的元数是 $2$, 取逆的元数是 $1$, 而常数的元数是 $0$.</p>
 <p>如果定义一种代数结构的每种运算只涉及了一个集合里有限个元素, 那么一个代数 $X$ 就可以被全体有限集 $A$ 生成的自由代数 $TA$ <span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>. 所谓探测就是说用全体态射 $TA\to X$ 的信息可以完全恢复出 $X$ 的信息. 这就是<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>的直观.</p>
+<h3>计算机科学</h3>
+<p>单子也是计算机科学中的重要概念, 因为它表达了许多计算过程中的现象: 一个计算 “本该” 输出类型 $X$ 的数据, 而实际上输出的是与 $X$ 有关的一个类型 $TX$ 的数据. 例如</p>
+<ul>
+<li>除法运算 “本该” 输出一个类型为 $\mathbb{R}$ 的数据, 但实际上输出的是一个数或者一个异常 NaN (比如除以 $0$). 实际上的输出类型是 $\mathsf{Maybe}(\mathbb{R}) := \mathbb{R} \sqcup \{\text{NaN}\}$. 这就是可能单子 (maybe monad).</li>
+<li>计算机语言中的一个 “函数” $A\to B$ 不一定是数学意义上的函数, 因为它可能在运行中改变了环境. 以 $S$ 表示环境可能处于的状态的全体, 那么这个 “函数” 实际上的输出类型是 $S\to (B\times S)$, 也就是 “从旧环境得到一个类型 $B$ 的数据, 并给出新环境”. 这就是状态单子 (state monad).</li>
+</ul>
+<p>详见<span class="link local"><a href="./单子(CS).html" title="单子 (计算机科学) [单子(CS)]">单子 (计算机科学)</a></span></p>
 <h2>定义</h2>
 <h3>自函子范畴中的结合代数</h3>
 <p>一个范畴 $\mathcal C$ <strong>上</strong>的单子是其自函子范畴 $\operatorname{End}(\mathcal C)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 对偶范畴 $\mathcal C^{\mathrm{op}}$ 上的单子称为 $\mathcal C$ 上的<span class="link local"><a href="./余单子.html" title="余单子 [余单子]">余单子</a></span>.</p>
@@ -17658,6 +17828,54 @@ $$
 <p>另见 <span class="link local"><a href="./Lawvere--Tierney拓扑.html" title="Lawvere–Tierney 拓扑 [Lawvere--Tierney拓扑]">Lawvere–Tierney 拓扑</a></span>.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>, <span class="link local"><a href="./杠构造.html" title="杠构造 [杠构造]">杠构造</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="单子(CS)"><header><h1><span class="taxon"></span>单子 (计算机科学) <a class="slug" href="./单子(CS).html">[单子(CS)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>在计算机科学中, 一个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>包含</p>
+<ul>
+<li>类型构造器 <code>m</code>,</li>
+<li>函数 <code>return :: a → m a</code>,</li>
+<li>函数 <code>&gt;&gt;= :: m a → (a → m b) → m b</code> (又叫 <code>bind</code>);</li>
+</ul>
+<p>满足如下条件,</p>
+<ul>
+<li>左单位律 <code>(return x) &gt;&gt;= f = f x</code>,</li>
+<li>右单位律 <code>ma &gt;&gt;= return = ma</code>,</li>
+<li>结合律 <code>(ma &gt;&gt;= f) &gt;&gt;= g  =  ma &gt;&gt;= (\x -&gt; f x &gt;&gt;= g)</code>.</li>
+</ul>
+<p>等价地, 单子中的 <code>&gt;&gt;=</code> 也可以换成如下的 <code>&gt;=&gt;</code>,</p>
+<ul>
+<li><code>&gt;=&gt; :: (a → m b) → (b → m c) → (a → m c)</code>,</li>
+</ul>
+<p>满足</p>
+<ul>
+<li>左单位律 <code>return &gt;=&gt; f = f</code>,</li>
+<li>右单位律 <code>f &gt;=&gt; return = f</code>,</li>
+<li>结合律 <code>(f &gt;=&gt; g) &gt;=&gt; h  = f &gt;=&gt; (g &gt;=&gt; h)</code>.</li>
+</ul>
+<h2>例</h2>
+<h3>列表单子</h3>
+<p><span class="link local"><a href="./列表.html" title="列表 [列表]">列表</a></span>单子的定义是</p>
+<ul>
+<li><code>return x = [x]</code> (一个元素构成一个列表),</li>
+<li><code>xs &gt;&gt;= f = concat (map f xs)</code> (一个列表每项分别作用后拼接).</li>
+</ul>
+<h3>可能单子</h3>
+<p>可能单子的定义是</p>
+<ul>
+<li><code>return x = Just x</code> (一个元素本身是一个可能元素),</li>
+<li><code>m &gt;&gt;= f = case m of { Nothing → Nothing; Just x → f x }</code> (若没有元素则输出无, 若有一个元素则继续计算).</li>
+</ul>
+<h3>状态单子</h3>
+<p>状态单子的定义是</p>
+<ul>
+<li><code>return x = \s -&gt; (x, s)</code> (不修改状态, 直接输出),</li>
+<li><code>st &gt;&gt;= f = \s -&gt; let (x, s') = st s in f x s'</code> (执行当前计算获取新状态, 再将其传给下一个计算).</li>
+</ul>
+<p>其中</p>
+<ul>
+<li><code>st :: s → (a, s)</code>,</li>
+<li><code>f :: a → s → (b, s)</code>.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="单子上的代数"><header><h1><span class="taxon"></span>单子上的代数 <a class="slug" href="./单子上的代数.html">[单子上的代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>范畴 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 上的<strong>代数</strong>是一个对象 $1\to\mathcal C$, 带有单子 $T$ 上的<strong>左模</strong>结构.</p>
@@ -19905,7 +20123,7 @@ X^{\otimes m}
     \int_{n}\int_{m_1+\cdots + m_n = \ell}\Big(F(n)\otimes\bigotimes_{i=1}^n G(m_i)\Big)\Big]\otimes X^{\otimes\ell}.
 \end{aligned}
 $$
-可以看到这仍是一个对称序列给出的自函子.</p>
+可以看到这仍是一个对称序列给出的自函子. 于是对称序列的范畴具有一个非对称的幺半结构, 称作<span class="link local"><a href="./代入幺半结构.html" title="代入幺半结构 [代入幺半结构]">代入幺半结构</a></span>.</p>
 <p>对称幺半范畴 $\mathcal C$ 本身的对象可视为 “集中在一次项” 的对称序列, 即有幺半函子
 $$
 \mathcal C \to\mathsf{SSeq}(\mathcal C),\, X\mapsto (0,X,0,0,\cdots).
@@ -25426,6 +25644,7 @@ $$</p>
 <p>对于 Lie 群 $G$ 的 Borel 子群 $B$, 陪集空间 $G/B$ 又称<span class="link local"><a href="./旗流形.html" title="旗流形 [旗流形]">旗流形</a></span> $\mathrm{Fl}$. 两个旗的相对位置是 $G$ 的 <span class="link local"><a href="./Weyl群.html" title="Weyl 群 (极大环面) [Weyl群]">Weyl 群</a></span> $B \backslash G / B \simeq W$ 的元素.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="相对单子"><header><h1><span class="taxon"></span>相对单子 <a class="slug" href="./相对单子.html">[相对单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
+<p>在良好的情形中, 相对单子是 $\mathsf{Fun}(\mathcal J,\mathcal C)$ 上的<span class="link local"><a href="./代入幺半结构.html" title="代入幺半结构 [代入幺半结构]">代入幺半结构</a></span>的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="相对同伦群"><header><h1><span class="taxon"></span>相对同伦群 <a class="slug" href="./相对同伦群.html">[相对同伦群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>相对同伦群是<span class="link local"><a href="./同伦群.html" title="同伦群 [同伦群]">同伦群</a></span>的<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对</a></span>版本.</p>
@@ -28257,6 +28476,7 @@ $$
 $$
 另一种看法: 回忆 $\beta X = \operatorname{Hom}_{\mathsf{Boole}}(2^X,2)$, 则有求值映射 $\mathrm{ev}\colon 2^X\times\beta X \to 2$, 进一步给出 Boole 环同态 $2^X \to 2^{\beta X}$. 用它来预复合同态 $2^{\beta X}\to 2$, 就得到映射 $\beta\beta X\to \beta X$.
 这里 $2^X \to 2^{\beta X}$ 就是 $2^X$ 的 <span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span>的单位.</p>
+<p>超滤单子还可以理解为 $\mathsf{Fin} \hookrightarrow \mathsf{Set}$ 的<span class="link local"><a href="./余密度单子.html" title="余密度单子 [余密度单子]">余密度单子</a></span>.</p>
 <p><strong>命题</strong>. 超滤单子上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>等同于<span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>.</p>
 <h3>有限集的情形</h3>
 <p><strong>命题</strong>. 有限集上的超滤均为主超滤.</p>
