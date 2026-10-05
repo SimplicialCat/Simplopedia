@@ -911,10 +911,15 @@ $$
 <p><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>, <span class="link local"><a href="./杠构造.html" title="杠构造 [杠构造]">杠构造</a></span></p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Kleisli范畴"><header><h1><span class="taxon"></span>Kleisli 范畴 <a class="slug" href="./Kleisli范畴.html">[Kleisli范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>Kleisli 范畴是<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span><span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>的范畴.</p>
+<p>Kleisli 范畴是<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span><span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>的范畴. 两个对象 $X,Y$ 之间的 Kleisli 映射相当于原范畴中的态射
+$$
+X \to TY,
+$$
+可理解为单子 $T$ 刻画的<span class="link local"><a href="./代数.html" title="代数 [代数]">代数</a></span>结构中由 $Y$ 个变元到 $X$ 个变元的变量代换.</p>
 <p>Kleisli 范畴是<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>上万有的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">右模</a></span>, 因而 Kleisli 范畴与单子上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>范畴 (Eilenberg–Moore 范畴, 即万有的 $T$-左模) 具有<span class="link local"><a href="./对偶(范畴论).html" title="对偶 [对偶(范畴论)]">对偶</a></span>的地位..</p>
 <h2>定义</h2>
-<p>对范畴 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$, 有一个范畴, 称为 <strong></strong><span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span> $\mathsf{Kl}$,</p>
+<h3>朴素定义</h3>
+<p>对 $(1,1)$-范畴 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$, 定义一个  $(1,1)$-范畴, 称为 <strong></strong><span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span> $\mathsf{Kl}$,</p>
 <ul>
 <li>其对象为 $\mathcal C$ 的对象,</li>
 <li>$\mathsf{Kl}$ 中的态射 $X\to Y$ 为 $\mathcal C$ 中的态射 $X\to TY$ (注意到由 $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由–遗忘伴随</a></span>, $\mathcal C$ 中的态射 $X\to TY$ 等同于自由 $T$-代数的同态 $TX\to TY$),</li>
@@ -923,11 +928,25 @@ $$
 X \to TY \to TTZ \overset{\mu}{\to} TZ.
 $$</li>
 </ul>
-<h2>性质</h2>
-<h3>右模</h3>
-<p>固定 $\mathcal C$ 上的一个单子 $T$. 考虑函子 $F\colon \mathcal C \to \mathsf{Kl}$, 对象 $X$ 映射到 $X$, 态射 $X\to Y$ 映射到 $\mathcal C$ 中的态射 $X\to Y\to TY$. 那么 $F$ 具有 $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">右模</a></span>结构:
-自然变换 $FT \to F$ 在对象 $X$ 上即为 $\mathcal C$ 中的态射 $\mathrm{id}\colon TX\to TX$.</p>
-<p>进一步, 该右模结构是万有的 $T$-右模, 即任意 $T$-右模 $G\colon \mathcal C\to\mathcal D$ 唯一地穿过 $F\colon \mathcal C\to\mathsf{Kl}$. 换言之, 右模结构 $G\colon \mathcal C\to\mathcal D$ 等同于 $\mathsf{Kl}$ 出发的函子 $\mathsf{Kl}\to\mathcal D$.</p>
+<h3>泛性质</h3>
+<p>Kleisli 范畴
+$$
+F\colon \mathcal C \to \mathsf{Kl}
+$$
+是<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>上万有的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">右模</a></span>, 即任何 $T$-右模结构 $G\colon \mathcal C\to\mathcal D$ 唯一地穿过 $\mathsf{Kl}$ 出发的函子 $\mathsf{Kl}\to\mathcal D$.</p>
+<p>回忆, 函子 $G\colon \mathcal C\to\mathcal D$ 的 $T$-右模结构等同于函子范畴 $\mathsf{Fun}(\mathcal C,\mathcal D)$ 上的单子 $T^*$ 的<span class="link local"><a href="./代数.html" title="代数 [代数]">代数</a></span>结构.
+因此 Kleisli 范畴的泛性质也可写为
+$$
+\mathsf{Fun}(\mathsf{Kl},\mathcal D) \simeq \mathsf{Alg}_{T^*}(\mathsf{Fun}(\mathcal C,\mathcal D)).
+$$</p>
+<h3>不依赖单子而定义</h3>
+<p>抛开单子来看, Kleisli 范畴 $\mathsf{Kl}$ 就是如下结构:</p>
+<ul>
+<li><span class="link local"><a href="./本质满函子.html" title="本质满函子 [本质满函子]">本质满函子</a></span> $j\colon \mathcal C \to \mathsf{Kl}$,</li>
+<li>函子 $u\colon \mathsf{Kl} \to \mathcal C$,</li>
+<li>以及一对伴随 $j \dashv u$.</li>
+</ul>
+<p>相应的单子则是 $T = uj \colon \mathcal C \to \mathcal C$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="index"><header><h1><span class="taxon"></span>单纯百科 Simplopedia <a class="slug" href="./index.html">[index]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <img src="/assets/simplopedia.svg" alt="Simplopedia" style="float: right; width: min(200px,30vw); margin-right: 20px; margin-top:-50px; filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));">
 <p>这里是<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>的主目录.</p>
@@ -1751,7 +1770,7 @@ $$</p>
 <h2>定义</h2>
 <h3>左模</h3>
 <p>范畴 $\mathcal C$ 是自函子范畴 $\operatorname{End}(\mathcal C)$ (作为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 即 $\mathsf{Cat}$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>) 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>, 因此对于 $\mathcal C$ 上的单子 $T$, 即 $\operatorname{End}(\mathcal C)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 可以谈论 $T$ 在 $\mathcal C$ 中的左<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span> (代数).</p>
-<p>具体地, 范畴 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 上的代数 $X$ 包含一个态射 $TX \to X$, 以及交换图
+<p>朴素地, 范畴 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 上的代数 $X$ 包含一个态射 $TX \to X$, 以及交换图
 $$
 \begin{array}
 {ccc}
@@ -1762,6 +1781,7 @@ TX &amp; \to &amp; X.
 $$
 其中两个映射 $TTX \to TX$ 分别来自 $T$ 带有的自然变换 $T^2\to T$ 以及 $X$ 带有的态射 $TX\to X$.</p>
 <p>更一般地, 对范畴 $I$, 函子范畴 $\mathsf{Fun}(I,\mathcal C)$ 也是 $\operatorname{End}(\mathcal C)$ 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>, 从而可以定义 $X\colon I\to\mathcal C$ 上的 $T$-<strong>左模</strong> (或称 $T$-代数) 结构. 它包含一个自然变换 $TX \to X$ 以及左模的条件.</p>
+<p>另一种理解是, $\mathcal C$ 上的单子 $T$ 诱导了函子范畴 $\mathsf{Fun}(I,\mathcal C)$ 上的单子 $T$; 函子 $I\to\mathcal C$ 的 $T$-左模结构就是这个单子上的代数结构.</p>
 <h3>作为松极限</h3>
 <p>对象 $\mathcal C^{T}$ 可以更加简练地写成<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 对应的<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span> $1\to\mathsf{Cat}$ 的<span class="link local"><a href="./松极限.html" title="松极限 [松极限]">松极限</a></span>. 换言之, 考虑所有范畴上所有单子构成的 $2$-范畴
 $$
@@ -1782,6 +1802,7 @@ $$</p>
 <p>这种观点的一个应用如下. 设 $\mathfrak C$ 为 $2$-范畴, 那么可表函子 $h^X:=\operatorname{Hom}(X,-)\colon \mathfrak C\to\mathsf{Cat}$ 保持松极限; 于是对于 $Y\in\mathcal C$ 上的单子 $T$, 有 $h^X(Y^T)=h^X(Y)^{h^X(T)}$.</p>
 <h3>右模, 双模</h3>
 <p>另一个概念是单子上的<strong>右模</strong>. 对范畴 $J$, 函子范畴 $\mathsf{Fun}(\mathcal C,J)$ 是 $\operatorname{End}(\mathcal C)$ 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">右模</a></span>, 从而可以定义 $Y\colon \mathcal C\to J$ 上的 $T$-<strong>右模</strong>结构. 它包含一个自然变换 $YT \to Y$, 以及右模的条件.</p>
+<p>另一种理解是, $\mathcal C$ 上的单子 $T$ 诱导了函子范畴 $\mathsf{Fun}(\mathcal C,J)$ 上的单子 $T^*$; 函子 $\mathcal C\to J$ 的 $T$-右模结构就是这个单子上的代数结构.</p>
 <p>进一步, 对于两个范畴 $\mathcal C,\mathcal D$, $\mathcal C$ 上的单子 $T$ 与 $\mathcal D$ 上的单子 $S$, 定义 $(T,S)$-<strong>双模</strong>为函子 $X\colon \mathcal D\to\mathcal C$, 同时具有相容的 $T$-左模和 $S$-右模结构, 即有如下交换图.
 $$
 \begin{array}

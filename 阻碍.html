@@ -826,7 +826,55 @@
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
 <article><section class="block" data-taxon=""><details open><summary id="阻碍"><header><h1><span class="taxon"></span>阻碍 <a class="slug" href="./阻碍.html">[阻碍]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Stiefel--Whitney类"><header><h1><span class="taxon"></span>Stiefel–Whitney 类 <a class="slug" href="./Stiefel--Whitney类.html">[Stiefel--Whitney类]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="An-代数"><header><h1><span class="taxon"></span>A_n-代数 <a class="slug" href="./An-代数.html">[An-代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>$\mathbb A_n$-代数是比<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>弱一些的结构, 只要求 $n$ 个元素可以<span class="link local"><a href="./融贯.html" title="融贯 [融贯]">融贯</a></span>地结合.</p>
+<h2>定义</h2>
+<h3>通过代数模式</h3>
+<p>考虑<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span> $\Delta_{\leq n} = \{[0],[1],\cdots,[n]\}$, 其中惰性映射为区间含入, 活性映射为保端点映射, 初等对象是 $[1]$. 该模式的 Segal 对象即为 $\mathbb A_n$-代数.</p>
+<p>具体地, 对于<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span> $\mathcal C$, 其中的 $\mathbb A_n$-代数就是函子
+$$
+X\colon \Delta_{\leq n}^{\mathrm{op}} \to \mathcal C,
+$$
+满足
+$$
+X([k]) \overset{\simeq}{\to} X([1])^k\, (k\leq n).
+$$</p>
+<p>对于 $\mathbb A_n$-<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $\mathcal C$, 视为函子 $\Delta_{\leq n}^{\mathrm{op}} \to \mathsf{Cat}$, 其中的 $\mathbb A_n$-代数可定义为自然变换
+$$
+\begin{array}{ccc}
+\Delta_{\leq n}^{\mathrm{op}} &amp; \rightarrow &amp; \mathsf{Cat} \\
+|\!| &amp; \Uparrow &amp; \uparrow \\
+\Delta_{\leq n}^{\mathrm{op}} &amp; \rightarrow &amp; 1.
+\end{array}
+$$</p>
+<h2>例</h2>
+<p>$n=1$: $\mathbb A_1$-代数 $A$ 就是<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点对象</a></span> $1\to A$.</p>
+<p>$n=2$: $\mathbb A_2$-代数是 $\mathbb A_1$-代数 $A$ 加上一个运算 $m_2\colon A\otimes A \to A$, 没有任何条件.</p>
+<p>$n=3$: $\mathbb A_3$-代数是 $\mathbb A_2$-代数 $A$ 加上一个运算 $m_3\colon A\otimes A\otimes A \to A$, 以及交换图
+$$
+\begin{array}{ccc}
+A\otimes A\otimes A &amp; \rightarrow &amp; A\otimes A \\
+\downarrow &amp; \searrow &amp; \downarrow \\
+A\otimes A &amp; \rightarrow &amp; A,
+\end{array}
+$$
+其中对角线的箭头是 $m_3$, 上边和左边分别是 1,2 分量和 2,3 分量的 $m_2$ 运算. 没有更多条件. 用<span class="link local"><a href="./阻碍.html" title="阻碍 [阻碍]">阻碍</a></span>的语言讲, $\mathbb A_2$-代数提升为 $\mathbb A_3$-代数的阻碍是 $S^0 \to \operatorname{Hom}(A\otimes A\otimes A, A)$ 沿 $S^0 \to *$ 延拓的阻碍.</p>
+<p>$n=4$: $\mathbb A_4$-代数是 $\mathbb A_3$-代数加上一个运算 $m_4\colon A\otimes A\otimes A\otimes A \to A$, 以及 $\operatorname{Hom}(A\otimes A\otimes A\otimes A, A)$ 中的交换图
+$$
+\begin{array}{ccccc}
+((xy)z)w &amp; \rightarrow &amp; (x(yz))w &amp; \rightarrow &amp; x((yz)w) \\
+ &amp; \searrow &amp;  &amp;  &amp; \downarrow \\
+ &amp;  &amp; (xy)(zw) &amp; \rightarrow &amp; x(y(zw)),
+\end{array}
+$$
+可见这相当于一个映射
+$S^1 \to \operatorname{Hom}(A\otimes A\otimes A\otimes A, A)$ 沿 $S^1 \to *$ 延拓的阻碍.</p>
+<p>一般地, $\mathbb A_n$-代数提升为 $\mathbb A_{n+1}$-代数的阻碍是某个映射 $S^{n-2} \to \operatorname{Hom}(A\otimes A\otimes A, A)$ 沿 $S^{n-2} \to *$ 延拓的阻碍.</p>
+<h2>性质</h2>
+<h3>截断情形</h3>
+<p>在 $(n,1)$-范畴中, $\mathbb A_{n+2}$-代数就已经是 $\mathbb A_{\infty}$-代数, 即<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="Stiefel--Whitney类"><header><h1><span class="taxon"></span>Stiefel–Whitney 类 <a class="slug" href="./Stiefel--Whitney类.html">[Stiefel--Whitney类]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>Stiefel–Whitney 类是实向量丛的一系列 $\mathbb{Z}/2$-系数<span class="link local"><a href="./示性类.html" title="“示性类” [示性类]">示性类</a></span>.</p>
 <p>第 $i$ Stiefel–Whitney 类 $w_i$ 可视为 $H^i(\mathbf{B}O(n),\mathbb{Z}/2)$ 的元素.</p>
 <p>对于向量丛 $E$, 记 $w(E)$ 为所有 $w_i(E)$ 之和, 则有

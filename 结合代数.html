@@ -846,6 +846,7 @@ A\colon \Delta^{\mathrm{op}} \to \mathcal C,
 $$
 满足 $A([n])\simeq A([1])^{\otimes n}$ ($n\geq 0$).
 这里 $[n]\in\Delta^{\mathrm{op}}$ 的直观为连续的 $n$ 条线段 (详见<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>), 而乘法 $A\times A\to A$ 来自 $\Delta$ 中的态射 $[1] \to [2]$, $0\mapsto 0$, $1\mapsto 2$.</p>
+<p>上面的事实可理解为范畴 $\Delta^{\mathrm{op}}$ 上具有结合代数的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>结构.</p>
 <h4>一般幺半范畴</h4>
 <p>在一般的<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>中, 结合代数可由如下<span class="link local"><a href="./语法范畴.html" title="语法范畴 [语法范畴]">语法范畴</a></span>定义:</p>
 <ul>
@@ -887,7 +888,56 @@ $$</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./代数充实于余代数.html" title="代数充实于余代数 [代数充实于余代数]">代数充实于余代数</a></span></p>
 <p><span class="link local"><a href="./增广结合代数.html" title="增广结合代数 [增广结合代数]">增广结合代数</a></span></p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Azumaya代数"><header><h1><span class="taxon"></span>Azumaya 代数 <a class="slug" href="./Azumaya代数.html">[Azumaya代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./An-代数.html" title="A_n-代数 [An-代数]">$\mathbb A_n$-代数</a></span></p>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="An-代数"><header><h1><span class="taxon"></span>A_n-代数 <a class="slug" href="./An-代数.html">[An-代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>$\mathbb A_n$-代数是比<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>弱一些的结构, 只要求 $n$ 个元素可以<span class="link local"><a href="./融贯.html" title="融贯 [融贯]">融贯</a></span>地结合.</p>
+<h2>定义</h2>
+<h3>通过代数模式</h3>
+<p>考虑<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span> $\Delta_{\leq n} = \{[0],[1],\cdots,[n]\}$, 其中惰性映射为区间含入, 活性映射为保端点映射, 初等对象是 $[1]$. 该模式的 Segal 对象即为 $\mathbb A_n$-代数.</p>
+<p>具体地, 对于<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span> $\mathcal C$, 其中的 $\mathbb A_n$-代数就是函子
+$$
+X\colon \Delta_{\leq n}^{\mathrm{op}} \to \mathcal C,
+$$
+满足
+$$
+X([k]) \overset{\simeq}{\to} X([1])^k\, (k\leq n).
+$$</p>
+<p>对于 $\mathbb A_n$-<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $\mathcal C$, 视为函子 $\Delta_{\leq n}^{\mathrm{op}} \to \mathsf{Cat}$, 其中的 $\mathbb A_n$-代数可定义为自然变换
+$$
+\begin{array}{ccc}
+\Delta_{\leq n}^{\mathrm{op}} &amp; \rightarrow &amp; \mathsf{Cat} \\
+|\!| &amp; \Uparrow &amp; \uparrow \\
+\Delta_{\leq n}^{\mathrm{op}} &amp; \rightarrow &amp; 1.
+\end{array}
+$$</p>
+<h2>例</h2>
+<p>$n=1$: $\mathbb A_1$-代数 $A$ 就是<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点对象</a></span> $1\to A$.</p>
+<p>$n=2$: $\mathbb A_2$-代数是 $\mathbb A_1$-代数 $A$ 加上一个运算 $m_2\colon A\otimes A \to A$, 没有任何条件.</p>
+<p>$n=3$: $\mathbb A_3$-代数是 $\mathbb A_2$-代数 $A$ 加上一个运算 $m_3\colon A\otimes A\otimes A \to A$, 以及交换图
+$$
+\begin{array}{ccc}
+A\otimes A\otimes A &amp; \rightarrow &amp; A\otimes A \\
+\downarrow &amp; \searrow &amp; \downarrow \\
+A\otimes A &amp; \rightarrow &amp; A,
+\end{array}
+$$
+其中对角线的箭头是 $m_3$, 上边和左边分别是 1,2 分量和 2,3 分量的 $m_2$ 运算. 没有更多条件. 用<span class="link local"><a href="./阻碍.html" title="阻碍 [阻碍]">阻碍</a></span>的语言讲, $\mathbb A_2$-代数提升为 $\mathbb A_3$-代数的阻碍是 $S^0 \to \operatorname{Hom}(A\otimes A\otimes A, A)$ 沿 $S^0 \to *$ 延拓的阻碍.</p>
+<p>$n=4$: $\mathbb A_4$-代数是 $\mathbb A_3$-代数加上一个运算 $m_4\colon A\otimes A\otimes A\otimes A \to A$, 以及 $\operatorname{Hom}(A\otimes A\otimes A\otimes A, A)$ 中的交换图
+$$
+\begin{array}{ccccc}
+((xy)z)w &amp; \rightarrow &amp; (x(yz))w &amp; \rightarrow &amp; x((yz)w) \\
+ &amp; \searrow &amp;  &amp;  &amp; \downarrow \\
+ &amp;  &amp; (xy)(zw) &amp; \rightarrow &amp; x(y(zw)),
+\end{array}
+$$
+可见这相当于一个映射
+$S^1 \to \operatorname{Hom}(A\otimes A\otimes A\otimes A, A)$ 沿 $S^1 \to *$ 延拓的阻碍.</p>
+<p>一般地, $\mathbb A_n$-代数提升为 $\mathbb A_{n+1}$-代数的阻碍是某个映射 $S^{n-2} \to \operatorname{Hom}(A\otimes A\otimes A, A)$ 沿 $S^{n-2} \to *$ 延拓的阻碍.</p>
+<h2>性质</h2>
+<h3>截断情形</h3>
+<p>在 $(n,1)$-范畴中, $\mathbb A_{n+2}$-代数就已经是 $\mathbb A_{\infty}$-代数, 即<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="Azumaya代数"><header><h1><span class="taxon"></span>Azumaya 代数 <a class="slug" href="./Azumaya代数.html">[Azumaya代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>环或<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span>上的 <strong>Azumaya 代数</strong><sup class="footnote-reference" id="Azumaya代数_az-back"><a href="#Azumaya代数_az">1</a></sup>是域上的<span class="link local"><a href="./中心单代数.html" title="中心单代数 [中心单代数]">中心单代数</a></span>的推广, 是 <span class="link local"><a href="./Morita等价.html" title="Morita 等价 [Morita等价]">Morita 等价</a></span>下可逆的代数, 给出 <span class="link local"><a href="./Brauer群.html" title="Brauer 群 [Brauer群]">Brauer 群</a></span>的元素.</p>
 <div class="footnote-definition" id="Azumaya代数_az">
@@ -2876,7 +2926,7 @@ $$
 <h2>定义</h2>
 <h3>左模</h3>
 <p>范畴 $\mathcal C$ 是自函子范畴 $\operatorname{End}(\mathcal C)$ (作为<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>, 即 $\mathsf{Cat}$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>) 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>, 因此对于 $\mathcal C$ 上的单子 $T$, 即 $\operatorname{End}(\mathcal C)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 可以谈论 $T$ 在 $\mathcal C$ 中的左<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span> (代数).</p>
-<p>具体地, 范畴 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 上的代数 $X$ 包含一个态射 $TX \to X$, 以及交换图
+<p>朴素地, 范畴 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 上的代数 $X$ 包含一个态射 $TX \to X$, 以及交换图
 $$
 \begin{array}
 {ccc}
@@ -2887,6 +2937,7 @@ TX &amp; \to &amp; X.
 $$
 其中两个映射 $TTX \to TX$ 分别来自 $T$ 带有的自然变换 $T^2\to T$ 以及 $X$ 带有的态射 $TX\to X$.</p>
 <p>更一般地, 对范畴 $I$, 函子范畴 $\mathsf{Fun}(I,\mathcal C)$ 也是 $\operatorname{End}(\mathcal C)$ 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>, 从而可以定义 $X\colon I\to\mathcal C$ 上的 $T$-<strong>左模</strong> (或称 $T$-代数) 结构. 它包含一个自然变换 $TX \to X$ 以及左模的条件.</p>
+<p>另一种理解是, $\mathcal C$ 上的单子 $T$ 诱导了函子范畴 $\mathsf{Fun}(I,\mathcal C)$ 上的单子 $T$; 函子 $I\to\mathcal C$ 的 $T$-左模结构就是这个单子上的代数结构.</p>
 <h3>作为松极限</h3>
 <p>对象 $\mathcal C^{T}$ 可以更加简练地写成<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 对应的<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span> $1\to\mathsf{Cat}$ 的<span class="link local"><a href="./松极限.html" title="松极限 [松极限]">松极限</a></span>. 换言之, 考虑所有范畴上所有单子构成的 $2$-范畴
 $$
@@ -2907,6 +2958,7 @@ $$</p>
 <p>这种观点的一个应用如下. 设 $\mathfrak C$ 为 $2$-范畴, 那么可表函子 $h^X:=\operatorname{Hom}(X,-)\colon \mathfrak C\to\mathsf{Cat}$ 保持松极限; 于是对于 $Y\in\mathcal C$ 上的单子 $T$, 有 $h^X(Y^T)=h^X(Y)^{h^X(T)}$.</p>
 <h3>右模, 双模</h3>
 <p>另一个概念是单子上的<strong>右模</strong>. 对范畴 $J$, 函子范畴 $\mathsf{Fun}(\mathcal C,J)$ 是 $\operatorname{End}(\mathcal C)$ 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">右模</a></span>, 从而可以定义 $Y\colon \mathcal C\to J$ 上的 $T$-<strong>右模</strong>结构. 它包含一个自然变换 $YT \to Y$, 以及右模的条件.</p>
+<p>另一种理解是, $\mathcal C$ 上的单子 $T$ 诱导了函子范畴 $\mathsf{Fun}(\mathcal C,J)$ 上的单子 $T^*$; 函子 $\mathcal C\to J$ 的 $T$-右模结构就是这个单子上的代数结构.</p>
 <p>进一步, 对于两个范畴 $\mathcal C,\mathcal D$, $\mathcal C$ 上的单子 $T$ 与 $\mathcal D$ 上的单子 $S$, 定义 $(T,S)$-<strong>双模</strong>为函子 $X\colon \mathcal D\to\mathcal C$, 同时具有相容的 $T$-左模和 $S$-右模结构, 即有如下交换图.
 $$
 \begin{array}
@@ -3745,6 +3797,17 @@ $A = \operatorname{Rep}(\check{G})$ 作用在 $V= D(D\text{-}\mathsf{Mod}(\mathr
 </details></section><section class="block" data-taxon=""><details ><summary id="相对单子"><header><h1><span class="taxon"></span>相对单子 <a class="slug" href="./相对单子.html">[相对单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>在良好的情形中, 相对单子是 $\mathsf{Fun}(\mathcal J,\mathcal C)$ 上的<span class="link local"><a href="./代入幺半结构.html" title="代入幺半结构 [代入幺半结构]">代入幺半结构</a></span>的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
+<h2>定义</h2>
+<h3>通过 Kleisli 范畴</h3>
+<p>相对单子可通过其 <span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>定义:</p>
+<p>todo</p>
+<h2>例</h2>
+<h3>自由模</h3>
+<p>给定交换环 $R$, 自由模函子
+$$
+-\otimes R\colon \mathsf{Fin}\to\mathsf{Set}
+$$
+是相对于 $\mathsf{Fin}\hookrightarrow\mathsf{Set}$ 的单子.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="相对张量积"><header><h1><span class="taxon"></span>相对张量积 <a class="slug" href="./相对张量积.html">[相对张量积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>在具有<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">单纯余极限</a></span>的范畴 $\mathcal C$ 中, 对于<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$ 上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">右模</a></span> $M$ 与左模 $N$, 可作<strong>相对张量积</strong>

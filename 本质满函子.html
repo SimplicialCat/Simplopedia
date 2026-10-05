@@ -844,7 +844,45 @@ $$
 K\colon \widehat {\mathcal D} \to \mathsf{Alg}(F^*F_!),
 \ X\mapsto F^*X.
 $$</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="带元数的单子"><header><h1><span class="taxon"></span>带元数的单子 <a class="slug" href="./带元数的单子.html">[带元数的单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Kleisli范畴"><header><h1><span class="taxon"></span>Kleisli 范畴 <a class="slug" href="./Kleisli范畴.html">[Kleisli范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Kleisli 范畴是<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span><span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>的范畴. 两个对象 $X,Y$ 之间的 Kleisli 映射相当于原范畴中的态射
+$$
+X \to TY,
+$$
+可理解为单子 $T$ 刻画的<span class="link local"><a href="./代数.html" title="代数 [代数]">代数</a></span>结构中由 $Y$ 个变元到 $X$ 个变元的变量代换.</p>
+<p>Kleisli 范畴是<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>上万有的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">右模</a></span>, 因而 Kleisli 范畴与单子上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>范畴 (Eilenberg–Moore 范畴, 即万有的 $T$-左模) 具有<span class="link local"><a href="./对偶(范畴论).html" title="对偶 [对偶(范畴论)]">对偶</a></span>的地位..</p>
+<h2>定义</h2>
+<h3>朴素定义</h3>
+<p>对 $(1,1)$-范畴 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$, 定义一个  $(1,1)$-范畴, 称为 <strong></strong><span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span> $\mathsf{Kl}$,</p>
+<ul>
+<li>其对象为 $\mathcal C$ 的对象,</li>
+<li>$\mathsf{Kl}$ 中的态射 $X\to Y$ 为 $\mathcal C$ 中的态射 $X\to TY$ (注意到由 $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由–遗忘伴随</a></span>, $\mathcal C$ 中的态射 $X\to TY$ 等同于自由 $T$-代数的同态 $TX\to TY$),</li>
+<li>$\mathsf{Kl}$ 中的态射 $X\to Y$, $Y\to Z$ 的复合为 $\mathcal C$ 中的如下复合:
+$$
+X \to TY \to TTZ \overset{\mu}{\to} TZ.
+$$</li>
+</ul>
+<h3>泛性质</h3>
+<p>Kleisli 范畴
+$$
+F\colon \mathcal C \to \mathsf{Kl}
+$$
+是<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>上万有的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">右模</a></span>, 即任何 $T$-右模结构 $G\colon \mathcal C\to\mathcal D$ 唯一地穿过 $\mathsf{Kl}$ 出发的函子 $\mathsf{Kl}\to\mathcal D$.</p>
+<p>回忆, 函子 $G\colon \mathcal C\to\mathcal D$ 的 $T$-右模结构等同于函子范畴 $\mathsf{Fun}(\mathcal C,\mathcal D)$ 上的单子 $T^*$ 的<span class="link local"><a href="./代数.html" title="代数 [代数]">代数</a></span>结构.
+因此 Kleisli 范畴的泛性质也可写为
+$$
+\mathsf{Fun}(\mathsf{Kl},\mathcal D) \simeq \mathsf{Alg}_{T^*}(\mathsf{Fun}(\mathcal C,\mathcal D)).
+$$</p>
+<h3>不依赖单子而定义</h3>
+<p>抛开单子来看, Kleisli 范畴 $\mathsf{Kl}$ 就是如下结构:</p>
+<ul>
+<li><span class="link local"><a href="./本质满函子.html" title="本质满函子 [本质满函子]">本质满函子</a></span> $j\colon \mathcal C \to \mathsf{Kl}$,</li>
+<li>函子 $u\colon \mathsf{Kl} \to \mathcal C$,</li>
+<li>以及一对伴随 $j \dashv u$.</li>
+</ul>
+<p>相应的单子则是 $T = uj \colon \mathcal C \to \mathcal C$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="带元数的单子"><header><h1><span class="taxon"></span>带元数的单子 <a class="slug" href="./带元数的单子.html">[带元数的单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>带元数的单子</strong> (monad with arities) 是 <span class="link local"><a href="./BergerMelliesWeberMonAr.html" title="Monads with arities and their associated theories [BergerMelliesWeberMonAr]">Berger–Melliès–Weber</a></span> 引入的概念, 能够表达以下结构:</p>
 <ul>
