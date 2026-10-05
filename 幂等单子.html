@@ -827,8 +827,56 @@
 
 <article><section class="block" data-taxon=""><details open><summary id="幂等单子"><header><h1><span class="taxon"></span>幂等单子 <a class="slug" href="./幂等单子.html">[幂等单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>幂等单子是乘法映射为同构的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="模态"><header><h1><span class="taxon"></span>模态 <a class="slug" href="./模态.html">[模态]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>幂等单子是满足如下等价条件的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T\colon \mathcal C \to \mathcal C$:</p>
+<ul>
+<li>乘法映射 $T^2 \to T$ 为同构;</li>
+<li>$T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>范畴的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>函子 $\mathcal C^T \to \mathcal C$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>;</li>
+<li>对任意 $T$-代数 $A$, 其结构映射 $TA\to A$ 为同构 (换言之, $T$-代数等同于 $T$-<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>);</li>
+<li>$T$ 是由一个<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> $\mathcal D\hookrightarrow\mathcal C$ 所<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span>.</li>
+</ul>
+<h2>性质</h2>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="幂等伴随"><header><h1><span class="taxon"></span>幂等伴随 <a class="slug" href="./幂等伴随.html">[幂等伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>
+$$
+\mathcal C\ 
+\begin{aligned}
+\overset{F}{\rightarrow}\\
+\bot\\
+\underset{G}{\leftarrow}
+\end{aligned}\ 
+\mathcal D
+$$
+的单位为 $\eta\colon 1\to GF$, 余单位为 $\varepsilon\colon FG\to 1$. 若以下等价条件成立, 则称之为<strong>幂等伴随</strong> (idempotent adjunction):</p>
+<ul>
+<li>$\varepsilon F\colon FGF \to F$ 为等价;</li>
+<li>$G\varepsilon\colon GFG\to G$ 为等价;</li>
+<li>$G\varepsilon F\colon GFGF \to GF$ 为等价, 即<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">伴随给出的单子</a></span> $GF$ 为<span class="link local"><a href="./幂等单子.html" title="幂等单子 [幂等单子]">幂等单子</a></span>;</li>
+<li>$F\eta\colon F\to FGF$ 为等价;</li>
+<li>$\eta G\colon G\to GFG$ 为等价;</li>
+<li>$F\eta G\colon FG \to FGFG$ 为等价, 即伴随给出的余单子 $FG$ 为幂等余单子;</li>
+<li>伴随 $F\dashv G$ 有如下分解, 其中 $\mathcal E$ 为 $GF,FG$ 的<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>, $F_2$, $G_1$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>:</li>
+</ul>
+<p>$$
+\mathcal C\ 
+\begin{aligned}
+\overset{F_1}{\rightarrow}\\
+\bot\\
+\underset{G_1}{\hookleftarrow}
+\end{aligned}\ 
+\mathcal E\ 
+\begin{aligned}
+\overset{F_2}{\hookrightarrow}\\
+\bot\\
+\underset{G_2}{\leftarrow}
+\end{aligned}\ 
+\mathcal D
+$$</p>
+<h2>例</h2>
+<h3>拓扑空间与位象</h3>
+<p><span class="link local"><a href="./清醒空间.html" title="清醒空间 [清醒空间]">清醒空间</a></span> (sober space) 的范畴是<span class="link local"><a href="./拓扑学.html" title="拓扑学 [拓扑学]">拓扑空间</a></span>与<span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span>之间的伴随的不动点.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="模态"><header><h1><span class="taxon"></span>模态 <a class="slug" href="./模态.html">[模态]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>在形式逻辑中, 模态体现为<span class="link local"><a href="./模态算子.html" title="“模态算子” [模态算子]">模态算子</a></span>, 将命题/类型对应到新的命题/类型.</p>
 <p>在<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中, 模态通常定义为<span class="link local"><a href="./幂等单子.html" title="幂等单子 [幂等单子]">幂等单子</a></span>.</p>
 </details></section></details></section></footer></article></div></body></html>

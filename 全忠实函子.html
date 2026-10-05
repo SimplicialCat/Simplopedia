@@ -1528,6 +1528,10 @@ $$
 <h3>米田嵌入的伴随</h3>
 <p><strong>命题</strong>. 范畴 $\mathcal C$ 余完备当且仅当<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span> $\mathrm{y}\colon \mathcal C\to\mathsf{Psh}(\mathcal C)$ 有左伴随.</p>
 <p>证明. 若 $\mathcal C$ 余完备, 则可定义 $\mathrm{y}$ 的左伴随 $L\colon \mathsf{Psh}(\mathcal C)\to\mathcal C$ 为 $\mathrm{id}_{\mathcal C}$ 的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">米田扩张</a></span>. 另一方面, 假设左伴随 $L$ 存在, 那么由于 $L$ 保持余极限, $\mathcal C$ 中必须具有所有的余极限.</p>
+<h2>相关概念</h2>
+<ul>
+<li><span class="link local"><a href="./幂等伴随.html" title="幂等伴随 [幂等伴随]">幂等伴随</a></span></li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="保守函子"><header><h1><span class="taxon"></span>保守函子 <a class="slug" href="./保守函子.html">[保守函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p><strong>保守函子</strong> (conservative functor) 是<span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映同构</a></span>的函子. 换言之, 保守函子 $F\colon \mathcal C\to\mathcal D$ 满足任意如下的方块都有提升:
@@ -1900,6 +1904,57 @@ $$
 <h3>$\infty$-范畴</h3>
 <h3>$(\infty,n)$-范畴</h3>
 <p>$\Theta_T$ 就是 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴 $\Theta_n$</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="幂等伴随"><header><h1><span class="taxon"></span>幂等伴随 <a class="slug" href="./幂等伴随.html">[幂等伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>
+$$
+\mathcal C\ 
+\begin{aligned}
+\overset{F}{\rightarrow}\\
+\bot\\
+\underset{G}{\leftarrow}
+\end{aligned}\ 
+\mathcal D
+$$
+的单位为 $\eta\colon 1\to GF$, 余单位为 $\varepsilon\colon FG\to 1$. 若以下等价条件成立, 则称之为<strong>幂等伴随</strong> (idempotent adjunction):</p>
+<ul>
+<li>$\varepsilon F\colon FGF \to F$ 为等价;</li>
+<li>$G\varepsilon\colon GFG\to G$ 为等价;</li>
+<li>$G\varepsilon F\colon GFGF \to GF$ 为等价, 即<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">伴随给出的单子</a></span> $GF$ 为<span class="link local"><a href="./幂等单子.html" title="幂等单子 [幂等单子]">幂等单子</a></span>;</li>
+<li>$F\eta\colon F\to FGF$ 为等价;</li>
+<li>$\eta G\colon G\to GFG$ 为等价;</li>
+<li>$F\eta G\colon FG \to FGFG$ 为等价, 即伴随给出的余单子 $FG$ 为幂等余单子;</li>
+<li>伴随 $F\dashv G$ 有如下分解, 其中 $\mathcal E$ 为 $GF,FG$ 的<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>, $F_2$, $G_1$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>:</li>
+</ul>
+<p>$$
+\mathcal C\ 
+\begin{aligned}
+\overset{F_1}{\rightarrow}\\
+\bot\\
+\underset{G_1}{\hookleftarrow}
+\end{aligned}\ 
+\mathcal E\ 
+\begin{aligned}
+\overset{F_2}{\hookrightarrow}\\
+\bot\\
+\underset{G_2}{\leftarrow}
+\end{aligned}\ 
+\mathcal D
+$$</p>
+<h2>例</h2>
+<h3>拓扑空间与位象</h3>
+<p><span class="link local"><a href="./清醒空间.html" title="清醒空间 [清醒空间]">清醒空间</a></span> (sober space) 的范畴是<span class="link local"><a href="./拓扑学.html" title="拓扑学 [拓扑学]">拓扑空间</a></span>与<span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span>之间的伴随的不动点.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="幂等单子"><header><h1><span class="taxon"></span>幂等单子 <a class="slug" href="./幂等单子.html">[幂等单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<h2>定义</h2>
+<p>幂等单子是满足如下等价条件的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T\colon \mathcal C \to \mathcal C$:</p>
+<ul>
+<li>乘法映射 $T^2 \to T$ 为同构;</li>
+<li>$T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>范畴的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>函子 $\mathcal C^T \to \mathcal C$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>;</li>
+<li>对任意 $T$-代数 $A$, 其结构映射 $TA\to A$ 为同构 (换言之, $T$-代数等同于 $T$-<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>);</li>
+<li>$T$ 是由一个<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> $\mathcal D\hookrightarrow\mathcal C$ 所<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span>.</li>
+</ul>
+<h2>性质</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="幂等完备化"><header><h1><span class="taxon"></span>幂等完备化 <a class="slug" href="./幂等完备化.html">[幂等完备化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>对于范畴 $\mathcal C$, 若存在<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span> $i\colon \mathcal C\to \widetilde {\mathcal C}$ 满足</p>

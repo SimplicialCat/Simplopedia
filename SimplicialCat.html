@@ -5013,6 +5013,7 @@ X \to TY,
 $$
 可理解为单子 $T$ 刻画的<span class="link local"><a href="./代数.html" title="代数 [代数]">代数</a></span>结构中由 $Y$ 个变元到 $X$ 个变元的变量代换.</p>
 <p>Kleisli 范畴是<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>上万有的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">右模</a></span>, 因而 Kleisli 范畴与单子上的<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>范畴 (Eilenberg–Moore 范畴, 即万有的 $T$-左模) 具有<span class="link local"><a href="./对偶(范畴论).html" title="对偶 [对偶(范畴论)]">对偶</a></span>的地位..</p>
+<p>另外, Kleisli 范畴本身也可作为<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>的替代概念, 即我们可以从头到尾不说单子, 只说一个本质满且有右伴随的函子 $\mathcal C \to \mathsf{Kl}$.</p>
 <h2>定义</h2>
 <h3>朴素定义</h3>
 <p>对 $(1,1)$-范畴 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$, 定义一个  $(1,1)$-范畴, 称为 <strong></strong><span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span> $\mathsf{Kl}$,</p>
@@ -9421,6 +9422,7 @@ $$</p>
 <p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">亟需施工处</a></span>列表 (“TODO list”)</p>
 <p><span class="link local"><a href="./terminologies.html" title="单纯百科 - 术语翻译表 [terminologies]">术语翻译表</a></span></p>
 <h2>最近</h2>
+<p><span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>, <span class="link local"><a href="./相对单子.html" title="相对单子 [相对单子]">相对单子</a></span></p>
 <p><span class="link local"><a href="./Blakers–Massey定理.html" title="Blakers–Massey 定理 [Blakers–Massey定理]">Blakers–Massey 定理</a></span></p>
 <p><span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>, <span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">正交分解系</a></span></p>
 <p><span class="link local"><a href="./始代数.html" title="始代数 (自函子) [始代数]">始代数 (自函子)</a></span>, <span class="link local"><a href="./P-树.html" title="P-树 (多项式函子标记的树) [P-树]">P-树 (多项式函子标记的树)</a></span>, <span class="link local"><a href="./自由单子.html" title="自由单子 [自由单子]">自由单子</a></span></p>
@@ -15599,6 +15601,10 @@ $$
 <h3>米田嵌入的伴随</h3>
 <p><strong>命题</strong>. 范畴 $\mathcal C$ 余完备当且仅当<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span> $\mathrm{y}\colon \mathcal C\to\mathsf{Psh}(\mathcal C)$ 有左伴随.</p>
 <p>证明. 若 $\mathcal C$ 余完备, 则可定义 $\mathrm{y}$ 的左伴随 $L\colon \mathsf{Psh}(\mathcal C)\to\mathcal C$ 为 $\mathrm{id}_{\mathcal C}$ 的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">米田扩张</a></span>. 另一方面, 假设左伴随 $L$ 存在, 那么由于 $L$ 保持余极限, $\mathcal C$ 中必须具有所有的余极限.</p>
+<h2>相关概念</h2>
+<ul>
+<li><span class="link local"><a href="./幂等伴随.html" title="幂等伴随 [幂等伴随]">幂等伴随</a></span></li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="伴随函子定理"><header><h1><span class="taxon"></span>伴随函子定理 <a class="slug" href="./伴随函子定理.html">[伴随函子定理]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>陈述</h2>
 <p><strong>定理</strong>. 设 $\mathcal C$ 为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>, $\mathcal D$ 为局部小范畴. 函子 $F\colon \mathcal C \to \mathcal D$ 有右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>当且仅当它保持<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>
@@ -15685,6 +15691,7 @@ $$
 \mathsf{Top} \to \mathsf{Loc}.
 $$
 当然, 这个函子不是全忠实的, 因为有的拓扑空间的开集很少, 不足以区分各个点. 这个函子在分离性较好的空间 (所谓<span class="link local"><a href="./清醒空间.html" title="清醒空间 [清醒空间]">清醒空间</a></span>) 上是全忠实的.</p>
+<p>反过来, 每个位象 $X$ 都给出一个拓扑空间, 其点就是位象的点. 这一对操作构成<span class="link local"><a href="./幂等伴随.html" title="幂等伴随 [幂等伴随]">幂等伴随</a></span>.</p>
 <h3>指数对象与蕴涵运算</h3>
 <p>对于位象 $X$, 任取 $a\in \mathcal O(X)$, 由于 $\mathcal O(X)$ 到自身的映射 $a\land -$ 保持余极限, 由<span class="link local"><a href="./伴随函子定理.html" title="伴随函子定理 [伴随函子定理]">伴随函子定理</a></span>其有右伴随, 记作 $a\Rightarrow -$, 即
 $$
@@ -17845,7 +17852,7 @@ $$
 <li>考虑有向图的范畴 $\mathsf{Graph}$, 其对象为两个生象带有两个映射 $E\rightrightarrows V$, 其上有一个自由范畴单子 $T_{\mathsf{Cat}}\colon \mathsf{Graph}\to\mathsf{Graph}$, 这个单子上的代数就是<strong>范畴</strong>.</li>
 <li><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 也可以类似定义, 底层的结构是<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>. 树与图的区别在于它能记录 “多个对象到一个对象的态射”. 这是本讲的第二个主要目标. 注意在本讲中, 算畴 (多重范畴) 有了两个不同层次的角色: 先是一个算畴定义一种结构, 然后算畴这种结构本身也可以用单子来定义.</li>
 </ul>
-<p>在上述每个例子中, “自由代数” 单子都不仅仅是单子, 而是所谓<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>. 元数 (arity) 的本义是一个函数的自变量的个数, 例如加法的元数是 $2$, 取逆的元数是 $1$, 而常数的元数是 $0$.</p>
+<p>在上述每个例子中, “自由代数” 单子都不仅仅是单子, 而是所谓<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span> (或<span class="link local"><a href="./脉性单子.html" title="脉性单子 [脉性单子]">脉性单子</a></span>). 元数 (arity) 的本义是一个函数的自变量的个数, 例如加法的元数是 $2$, 取逆的元数是 $1$, 而常数的元数是 $0$.</p>
 <p>如果定义一种代数结构的每种运算只涉及了一个集合里有限个元素, 那么一个代数 $X$ 就可以被全体有限集 $A$ 生成的自由代数 $TA$ <span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>. 所谓探测就是说用全体态射 $TA\to X$ 的信息可以完全恢复出 $X$ 的信息. 这就是<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>的直观.</p>
 <h3>计算机科学</h3>
 <p>单子也是计算机科学中的重要概念, 因为它表达了许多计算过程中的现象: 一个计算 “本该” 输出类型 $X$ 的数据, 而实际上输出的是与 $X$ 有关的一个类型 $TX$ 的数据. 例如</p>
@@ -17853,7 +17860,7 @@ $$
 <li>除法运算 “本该” 输出一个类型为 $\mathbb{R}$ 的数据, 但实际上输出的是一个数或者一个异常 NaN (比如除以 $0$). 实际上的输出类型是 $\mathsf{Maybe}(\mathbb{R}) := \mathbb{R} \sqcup \{\text{NaN}\}$. 这就是可能单子 (maybe monad).</li>
 <li>计算机语言中的一个 “函数” $A\to B$ 不一定是数学意义上的函数, 因为它可能在运行中改变了环境. 以 $S$ 表示环境可能处于的状态的全体, 那么这个 “函数” 实际上的输出类型是 $S\to (B\times S)$, 也就是 “从旧环境得到一个类型 $B$ 的数据, 并给出新环境”. 这就是状态单子 (state monad).</li>
 </ul>
-<p>详见<span class="link local"><a href="./单子(CS).html" title="单子 (计算机科学) [单子(CS)]">单子 (计算机科学)</a></span></p>
+<p>详见<span class="link local"><a href="./单子(CS).html" title="单子 (计算机科学) [单子(CS)]">单子 (计算机科学)</a></span>.</p>
 <h2>定义</h2>
 <h3>自函子范畴中的结合代数</h3>
 <p>一个范畴 $\mathcal C$ <strong>上</strong>的单子是其自函子范畴 $\operatorname{End}(\mathcal C)$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>. 对偶范畴 $\mathcal C^{\mathrm{op}}$ 上的单子称为 $\mathcal C$ 上的<span class="link local"><a href="./余单子.html" title="余单子 [余单子]">余单子</a></span>.</p>
@@ -21335,9 +21342,57 @@ $$
 $$</p>
 <p>当然, <span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>的对象也有类似的幂的概念.</p>
 <p>幂又称余张量积 (cotensor), 对偶的概念是<span class="link local"><a href="./张量积.html" title="张量积, 余幂 [张量积]">张量积</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="幂等伴随"><header><h1><span class="taxon"></span>幂等伴随 <a class="slug" href="./幂等伴随.html">[幂等伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>设<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>
+$$
+\mathcal C\ 
+\begin{aligned}
+\overset{F}{\rightarrow}\\
+\bot\\
+\underset{G}{\leftarrow}
+\end{aligned}\ 
+\mathcal D
+$$
+的单位为 $\eta\colon 1\to GF$, 余单位为 $\varepsilon\colon FG\to 1$. 若以下等价条件成立, 则称之为<strong>幂等伴随</strong> (idempotent adjunction):</p>
+<ul>
+<li>$\varepsilon F\colon FGF \to F$ 为等价;</li>
+<li>$G\varepsilon\colon GFG\to G$ 为等价;</li>
+<li>$G\varepsilon F\colon GFGF \to GF$ 为等价, 即<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">伴随给出的单子</a></span> $GF$ 为<span class="link local"><a href="./幂等单子.html" title="幂等单子 [幂等单子]">幂等单子</a></span>;</li>
+<li>$F\eta\colon F\to FGF$ 为等价;</li>
+<li>$\eta G\colon G\to GFG$ 为等价;</li>
+<li>$F\eta G\colon FG \to FGFG$ 为等价, 即伴随给出的余单子 $FG$ 为幂等余单子;</li>
+<li>伴随 $F\dashv G$ 有如下分解, 其中 $\mathcal E$ 为 $GF,FG$ 的<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>, $F_2$, $G_1$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>:</li>
+</ul>
+<p>$$
+\mathcal C\ 
+\begin{aligned}
+\overset{F_1}{\rightarrow}\\
+\bot\\
+\underset{G_1}{\hookleftarrow}
+\end{aligned}\ 
+\mathcal E\ 
+\begin{aligned}
+\overset{F_2}{\hookrightarrow}\\
+\bot\\
+\underset{G_2}{\leftarrow}
+\end{aligned}\ 
+\mathcal D
+$$</p>
+<h2>例</h2>
+<h3>拓扑空间与位象</h3>
+<p><span class="link local"><a href="./清醒空间.html" title="清醒空间 [清醒空间]">清醒空间</a></span> (sober space) 的范畴是<span class="link local"><a href="./拓扑学.html" title="拓扑学 [拓扑学]">拓扑空间</a></span>与<span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span>之间的伴随的不动点.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="幂等单子"><header><h1><span class="taxon"></span>幂等单子 <a class="slug" href="./幂等单子.html">[幂等单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>幂等单子是乘法映射为同构的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</p>
+<h2>定义</h2>
+<p>幂等单子是满足如下等价条件的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T\colon \mathcal C \to \mathcal C$:</p>
+<ul>
+<li>乘法映射 $T^2 \to T$ 为同构;</li>
+<li>$T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>范畴的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>函子 $\mathcal C^T \to \mathcal C$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>;</li>
+<li>对任意 $T$-代数 $A$, 其结构映射 $TA\to A$ 为同构 (换言之, $T$-代数等同于 $T$-<span class="link local"><a href="./不动点.html" title="不动点 [不动点]">不动点</a></span>);</li>
+<li>$T$ 是由一个<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> $\mathcal D\hookrightarrow\mathcal C$ 所<span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出的单子</a></span>.</li>
+</ul>
+<h2>性质</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="幂等完备化"><header><h1><span class="taxon"></span>幂等完备化 <a class="slug" href="./幂等完备化.html">[幂等完备化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>对于范畴 $\mathcal C$, 若存在<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span> $i\colon \mathcal C\to \widetilde {\mathcal C}$ 满足</p>
@@ -27569,6 +27624,9 @@ $$
 $$
 \mathsf{Sh}(X)\to\mathsf{Et}_{/X}.
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="脉性单子"><header><h1><span class="taxon"></span>脉性单子 <a class="slug" href="./脉性单子.html">[脉性单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>脉性单子 (nervous monad) 是一个类似于<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>的概念, 比它稍弱一些. 大致上, 对于给定的子范畴 $\mathcal A\subset\mathcal E$, 称单子 $T\colon \mathcal E\to\mathcal E$ 具有 “脉性”, 说的是 $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>可以用 $\mathcal A$ 的对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>代数来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>, 从而给出一个<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>的刻画.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="自函子的迹"><header><h1><span class="taxon"></span>自函子的迹 <a class="slug" href="./自函子的迹.html">[自函子的迹]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>设 $\mathcal{C}$ 是<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶</a></span> <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>, 则可定义 $\mathcal C$ 的自函子 $F\colon \mathcal C\to\mathcal C$ 的<span class="link local"><a href="./迹.html" title="迹 [迹]">迹</a></span> $\operatorname{Tr}(F) \in \mathsf{Vect}$. 迹来自如下的复合:
 $$
