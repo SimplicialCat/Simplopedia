@@ -1541,6 +1541,7 @@ $$
 <p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">亟需施工处</a></span>列表 (“TODO list”)</p>
 <p><span class="link local"><a href="./terminologies.html" title="单纯百科 - 术语翻译表 [terminologies]">术语翻译表</a></span></p>
 <h2>最近</h2>
+<p><span class="link local"><a href="./融贯子.html" title="融贯子 [融贯子]">融贯子</a></span></p>
 <p><span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>, <span class="link local"><a href="./脉性单子.html" title="脉性单子 [脉性单子]">脉性单子</a></span>, <span class="link local"><a href="./相对单子.html" title="相对单子 [相对单子]">相对单子</a></span></p>
 <p><span class="link local"><a href="./Blakers–Massey定理.html" title="Blakers–Massey 定理 [Blakers–Massey定理]">Blakers–Massey 定理</a></span></p>
 <p><span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>, <span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">正交分解系</a></span></p>
@@ -2060,7 +2061,7 @@ S = (D_3 \sqcup_{D_1} D_2) \sqcup_{D_0} D_1 \sqcup_{D_0} D_2.
 $$</p>
 <p>(如果读者认为上述定义不够直观或不够严格, 可采用 Joyal 的等价定义, 见 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴</a></span>.)</p>
 <p>记 $\Theta$ 中<span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状</a></span>映射构成的<span class="link local"><a href="./宽子范畴.html" title="宽子范畴 [宽子范畴]">宽子范畴</a></span>为 $\Theta_0$ (换言之必须将每个胞腔映射到一个同维数的胞腔; 注意<span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状集</a></span>没有 “退化” 部分); 在 $\Theta$ 上的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>结构中, 这个子范畴恰为<strong>惰性映射</strong>的范畴 $\Theta_{\mathrm{int}}$.</p>
-<p><strong>融贯子</strong>是向 $\Theta_0$ 中加入满足特定要求的<strong>活性映射</strong>所得的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>. 具体要求如下.</p>
+<p>一个<strong>融贯子</strong>是向 $\Theta_0$ 中加入一些满足特定要求的<strong>活性映射</strong>所得的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>. 具体要求如下.</p>
 <p><strong>定义</strong>. 一个 Grothendieck <strong>融贯子</strong> (coherator) $\mathcal C$ 是以 $\Theta_0$ 为惰性部分, 各维数胞腔为基本对象的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>, 满足</p>
 <ul>
 <li>嵌入 $\Theta_0 \to \mathcal C$ 保持形如 $(\star)$ 的余极限;</li>
@@ -2075,6 +2076,15 @@ $$</p>
 <ul>
 <li>首先, $\mathcal C_0 = \Theta_0$ 是没有任何活性映射的部分, 不给出 $X$ 上的任何运算.</li>
 <li>对于 $D_0\rightrightarrows D_0$ 加入一个填充 $D_1 \to D_0$, 这是一个活性映射, 作用是给出 $X$ 上的 “对象” 的 “恒等态射” $X(D_0) \to X(D_1)$.</li>
-<li>对于 $D_0 \rightrightarrows D_1 \sqcup_{D_0} D_1$ 加入一个填充 $D_1 \to D_1 \sqcup_{D_0} D_1$, 给出 “态射的复合” $X(D_1)\times_{X(D_0)}X(D_1) \to X(D_1)$.</li>
+<li>对于 $D_0 \rightrightarrows D_1 \sqcup_{D_0} D_1$ 加入一个填充 $\mathrm{comp}\colon D_1 \to D_1 \sqcup_{D_0} D_1$, 给出 “态射的复合” $X(D_1)\times_{X(D_0)}X(D_1) \to X(D_1)$.</li>
+<li>考虑交换图
+$$
+      \begin{CD}
+      D_1 @&gt;&gt;&gt; D_1\sqcup_{D_0} D_1 \\
+      @VVV @VV{D_1\sqcup_{D_0} \mathrm{comp}}V \\
+      D_1\sqcup_{D_0} D_1 @&gt;&gt;{\mathrm{comp}\sqcup_{D_0} D_1}&gt; D_1\sqcup_{D_0} D_1\sqcup_{D_0} D_1,
+      \end{CD}
+  $$
+我们有了两个映射 $D_1 \rightrightarrows D_1 \sqcup_{D_0}D_1 \sqcup_{D_0}D_1$, 分别给出两种复合 $X(D_1)\times_{X(D_0)}X(D_1)\times_{X(D_0)}X(D_1) \to X(D_1)$. 加入一个填充 $D_2 \to D_1 \sqcup_{D_0}D_1 \sqcup_{D_0}D_1$, 给出三个态射复合的 “结合子” $X(D_1)\times_{X(D_0)}X(D_1)\times_{X(D_0)}X(D_1) \to X(D_2)$.</li>
 </ul>
 </details></section></details></section></footer></article></div></body></html>
