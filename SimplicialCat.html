@@ -5044,6 +5044,23 @@ $$</p>
 <li>以及一对伴随 $j \dashv u$.</li>
 </ul>
 <p>相应的单子则是 $T = uj \colon \mathcal C \to \mathcal C$.</p>
+<h3>函子性</h3>
+<p>Kleisli 范畴具有函子性: 单子同态 $f\colon S \to T$ 给出函子 $f_!\colon \mathsf{Kl}(S) \to \mathsf{Kl}(T)$. 直观上, $f_!$ 将自由代数 $SX$ 对应到自由代数 $TX$.
+$$
+\begin{array}{ccc}
+ &amp;  &amp; \mathsf{Kl}(S) \\
+ &amp; \nearrow &amp; \downarrow \\
+\mathcal C &amp; \rightarrow &amp; \mathsf{Kl}(T)
+\end{array}
+$$</p>
+<p>我们更仔细地解释一下这个函子的来由. 对于 $S$ 的自由代数 $SX$ 与任意 $T$-代数 $Y$, 有同构
+$$
+\begin{aligned}
+\operatorname{Hom}_{\mathcal C^S} (SX,f^*Y) &amp;= \operatorname{Hom}_{\mathcal C}(X,Y)\\
+&amp;=\operatorname{Hom}_{\mathcal C^T}(TX,Y).
+\end{aligned}
+$$
+这就是说 $f^*\colon \mathcal C^T\to\mathcal C^S$ 在全子范畴 $\mathsf{Kl}(T)\subset\mathcal C^T$, $\mathsf{Kl}(S)\subset\mathcal C^S$ 上有一个 “部分左伴随” $f_!$, 而范畴论的一般道理告诉我们, 当有一族范畴 $\mathcal C^{\mathrm{op}}\to\mathsf{Cat}$ 且其间每个函子有这样的部分左伴随, 就有相应的一族范畴 $\mathcal C \to \mathsf{Cat}$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Kodaira--Serre对偶"><header><h1><span class="taxon"></span>“Kodaira–Serre 对偶” <a class="slug" href="./Kodaira--Serre对偶.html">[Kodaira--Serre对偶]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>设 $M$ 是 $m$ 维复流形, $E\to M$ 为<span class="link local"><a href="./全纯向量丛.html" title="“全纯向量丛” [全纯向量丛]">全纯向量丛</a></span>, 其对偶 $E^*$ 也是全纯向量丛.</p>
 <p>设 $\alpha\in\wedge^{p,q}(E)$ 是光滑 $(p,q)$-形式, $\beta \in \wedge^{m-p,m-q}(E^*)$, 取其外积, 求值得 $\langle\alpha\wedge\beta\rangle \in \wedge^{m,m}(M)$, 再积分得
@@ -9422,7 +9439,7 @@ $$</p>
 <p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">亟需施工处</a></span>列表 (“TODO list”)</p>
 <p><span class="link local"><a href="./terminologies.html" title="单纯百科 - 术语翻译表 [terminologies]">术语翻译表</a></span></p>
 <h2>最近</h2>
-<p><span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>, <span class="link local"><a href="./相对单子.html" title="相对单子 [相对单子]">相对单子</a></span></p>
+<p><span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>, <span class="link local"><a href="./脉性单子.html" title="脉性单子 [脉性单子]">脉性单子</a></span>, <span class="link local"><a href="./相对单子.html" title="相对单子 [相对单子]">相对单子</a></span></p>
 <p><span class="link local"><a href="./Blakers–Massey定理.html" title="Blakers–Massey 定理 [Blakers–Massey定理]">Blakers–Massey 定理</a></span></p>
 <p><span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>, <span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">正交分解系</a></span></p>
 <p><span class="link local"><a href="./始代数.html" title="始代数 (自函子) [始代数]">始代数 (自函子)</a></span>, <span class="link local"><a href="./P-树.html" title="P-树 (多项式函子标记的树) [P-树]">P-树 (多项式函子标记的树)</a></span>, <span class="link local"><a href="./自由单子.html" title="自由单子 [自由单子]">自由单子</a></span></p>
@@ -15790,10 +15807,11 @@ $$
 $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="余密度单子"><header><h1><span class="taxon"></span>余密度单子 <a class="slug" href="./余密度单子.html">[余密度单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>函子 $f\colon \mathcal C \to \mathcal D$ 的余密度单子是 $f$ 沿着 $f$ 自身的右 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span> $f_* f \colon \mathcal D \to \mathcal D$,
+<p>函子 $f\colon \mathcal C \to \mathcal D$ 的<strong>余密度单子</strong> (codensity monad) 是 $f$ 沿着 $f$ 自身的右 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span> $f_* f \colon \mathcal D \to \mathcal D$,
 $$
 f_* f (d) = \operatorname{lim}_{d \to f(c)} f(c).
 $$</p>
+<p>由 Kan 扩张的万有性质, 对 $\mathcal C$ 的任意自函子 $F$, 自然变换 $F \to f_* f$ 等同于自然变换 $F\circ f \to f$. 故余密度单子又叫<span class="link local"><a href="./自同态单子.html" title="自同态单子 [自同态单子]">自同态单子</a></span>, 是万有的作用于 $f$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</p>
 <h2>例</h2>
 <h3>超滤单子</h3>
 <p><span class="link local"><a href="./超滤.html" title="超滤 [超滤]">超滤单子</a></span> $\beta\colon \mathsf{Set} \to \mathsf{Set}$ 是 $\mathsf{Fin} \hookrightarrow \mathsf{Set}$ 的余密度单子,
@@ -15801,7 +15819,7 @@ $$
 \beta X = \operatorname{lim}_{S\to X,S\in\mathsf{Fin}}S.
 $$</p>
 <h3>自同态单子</h3>
-<p>对象 $c\in\mathcal C$ 的<strong>自同态单子</strong> $\operatorname{End}(c)$ 是 $c\colon 1 \to\mathcal C$ 的余密度单子.</p>
+<p>对象 $c\in\mathcal C$ 的<strong></strong><span class="link local"><a href="./自同态单子.html" title="自同态单子 [自同态单子]">自同态单子</a></span> $\operatorname{End}(c)$ 是 $c\colon 1 \to\mathcal C$ 的余密度单子.</p>
 <p>$$
 \operatorname{End}(c)(x) = \operatorname{lim}_{x\to c} c = c^{\operatorname{Hom}(x,c)}.
 $$</p>
@@ -16870,7 +16888,6 @@ $$</p>
 <h3>几何实现保持纤维化</h3>
 <p><strong>定理</strong>. <span class="link local"><a href="./Kan纤维化.html" title=" [Kan纤维化]">Kan 纤维化</a></span>的几何实现是 <span class="link local"><a href="./Serre纤维化.html" title=" [Serre纤维化]">Serre 纤维化</a></span>.</p>
 <h2>例</h2>
-<p>考虑终范畴 $1$, 其上的预层范畴即为生象的范畴 $\mathsf{Ani}$. 沿米田嵌入 $1\to\mathsf{Ani}$ 的左 Kan 扩张给出的是</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, <span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="几何实现(单纯图表的余极限)"><header><h1><span class="taxon"></span>几何实现 (作为单纯图表的余极限) <a class="slug" href="./几何实现(单纯图表的余极限).html">[几何实现(单纯图表的余极限)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -17971,6 +17988,11 @@ $$
 其中两个映射 $TTX \to TX$ 分别来自 $T$ 带有的自然变换 $T^2\to T$ 以及 $X$ 带有的态射 $TX\to X$.</p>
 <p>更一般地, 对范畴 $I$, 函子范畴 $\mathsf{Fun}(I,\mathcal C)$ 也是 $\operatorname{End}(\mathcal C)$ 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>, 从而可以定义 $X\colon I\to\mathcal C$ 上的 $T$-<strong>左模</strong> (或称 $T$-代数) 结构. 它包含一个自然变换 $TX \to X$ 以及左模的条件.</p>
 <p>另一种理解是, $\mathcal C$ 上的单子 $T$ 诱导了函子范畴 $\mathsf{Fun}(I,\mathcal C)$ 上的单子 $T$; 函子 $I\to\mathcal C$ 的 $T$-左模结构就是这个单子上的代数结构.</p>
+<h4>自同态单子</h4>
+<p>对于函子 $U\colon \mathcal D \to \mathcal C$ 以及 $\mathcal C$ 上的单子 $T$, 我们也可定义 $U$ 上的 $T$-左模结构为 $T$ 到<span class="link local"><a href="./自同态单子.html" title="自同态单子 [自同态单子]">自同态单子</a></span>的单子同态
+$$
+T \to \underline{\operatorname{End}}(U).
+$$</p>
 <h3>作为松极限</h3>
 <p>对象 $\mathcal C^{T}$ 可以更加简练地写成<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 对应的<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span> $1\to\mathsf{Cat}$ 的<span class="link local"><a href="./松极限.html" title="松极限 [松极限]">松极限</a></span>. 换言之, 考虑所有范畴上所有单子构成的 $2$-范畴
 $$
@@ -18018,9 +18040,17 @@ $$</p>
 <h2>观念</h2>
 <p>许多<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数结构</a></span>可理解为某个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>上的代数. 这种结构构成的范畴到基础范畴有一个<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘函子</a></span>, 我们称这个函子为<strong>单子性函子</strong> (monadic functor).</p>
 <h2>定义</h2>
-<p>设 $G \colon \mathcal D \to \mathcal C$ 为函子, 若有 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $A$, 使得 $G$ 等价于遗忘函子 $\mathsf{Alg}_A(\mathcal C) \to \mathcal C$, 则称之为<strong>单子性函子</strong>.</p>
+<p>设 $G \colon \mathcal D \to \mathcal C$ 为函子, 若有 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $A$, 使得 $G$ 等价于<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>函子 $\mathsf{Alg}_A(\mathcal C) \to \mathcal C$, 则称之为<strong>单子性函子</strong>.</p>
+<h3>通过自同态单子</h3>
+<p>单子性函子背后的单子可以显式地确定, 它就是<span class="link local"><a href="./自同态单子.html" title="自同态单子 [自同态单子]">自同态单子</a></span>.</p>
+<p>对于函子 $U \colon \mathcal D\to\mathcal C$, 记 $\underline{\operatorname{End}}(U)\in\mathsf{End}(\mathcal C)$ 为其<span class="link local"><a href="./自同态单子.html" title="自同态单子 [自同态单子]">自同态单子</a></span>, 那么单子性也可等价地定义如下.</p>
+<p><strong>定义</strong>. 满足如下条件的函子 $U\colon \mathcal D\to\mathcal C$ 称作单子性函子:</p>
+<ul>
+<li>$U$ 有左伴随;</li>
+<li>典范的函子 $\mathcal D \to \mathcal C^{\underline{\operatorname{End}}(U)}$ 为等价.</li>
+</ul>
 <h2>性质</h2>
-<p>单子性函子 $G$ 有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $F$, 即单子 $A$ 的 “自由代数” 函子 $X\mapsto AX$.</p>
+<p>单子性函子 $G$ 有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $F$, 即单子 $A$ 的 “<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>代数” 函子 $X\mapsto AX$.</p>
 <h3>判定</h3>
 <p>判定单子性函子的常用方法是 <span class="link local"><a href="./Barr–Beck–Lurie定理.html" title="Barr–Beck–Lurie 定理 [Barr–Beck–Lurie定理]">Barr–Beck–Lurie 定理</a></span>.</p>
 <p><strong>定理</strong>. $G\colon \mathcal D\to\mathcal C$ 为单子性函子当且仅当 $G$ <span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守</a></span>, 且<span class="link local"><a href="./创生(范畴论).html" title="创生 (范畴论) [创生(范畴论)]">创生</a></span> $G$-<span class="link local"><a href="./单纯对象的分裂.html" title="分裂单纯对象 [单纯对象的分裂]">分裂</a></span><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>.</p>
@@ -18030,7 +18060,7 @@ $$</p>
 <p><strong>定理</strong>. 对于函子 $G\colon \mathcal D\to\mathcal C$, 若 $G$ 有左伴随, $G$ <span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映同构</a></span>, $\mathcal D$ 具有<span class="link local"><a href="./余等化子.html" title="余等化子 [余等化子]">余等化子</a></span>, 且 $G$ 保持余等化子,
 则 $G$ 为单子性函子.</p>
 <h2>例</h2>
-<p>一个出人意料的例子: 紧 Hausdorff 空间的范畴 $\mathsf{CHaus}$ 在集合范畴 $\mathsf{Set}$ 上是单子性的.</p>
+<p>一个出人意料的例子: <span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>的范畴 $\mathsf{CHaus}$ 在集合范畴 $\mathsf{Set}$ 上是单子性的.</p>
 <h3>自反子范畴</h3>
 <p><span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span>的嵌入 $\mathcal D\hookrightarrow\mathcal C$ 是单子性的.</p>
 <h3>下降</h3>
@@ -18424,9 +18454,10 @@ $$</p>
 <p>单纯集是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$ 上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>, 即集合范畴中的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>.</p>
 <h2>例</h2>
 <h3>脉</h3>
-<p>构造单纯集 (或任何范畴上的预层) 的一种重要手段是脉. 给定任意函子 $\Delta\to\mathcal C$, 将其想象为抽象的单形对应的具体的几何对象, 都可由 $\mathcal C$ 的对象造出单纯集; 当 $\mathcal C$ 具有余极限时还可构造相伴随的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>. 参见<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>.</p>
+<p>构造单纯集 (或任何范畴上的预层) 的一种重要手段是<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>. 给定任意函子 $\Delta\to\mathcal C$, 将其想象为抽象的单形对应的具体的几何对象, 都可由 $\mathcal C$ 的对象造出单纯集; 当 $\mathcal C$ 具有余极限时还可构造相伴随的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>, <span class="link local"><a href="./双单纯集.html" title="“双单纯集” [双单纯集]">双单纯集</a></span>.</p>
+<p><span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状集</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单群"><header><h1><span class="taxon"></span>单群 <a class="slug" href="./单群.html">[单群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>在 $\mathsf{Set}$ 中, 单群是没有非平凡<span class="link local"><a href="./正规子群.html" title="正规子群, 正规同态 [正规子群]">正规子群</a></span>的群.</p>
@@ -25521,6 +25552,17 @@ $$
 <p>考虑 $N$ 为 $e_1,e_2$ 生成的格, 记 $M$ 的对偶基为 $x_1,x_2$. 设 $\sigma$ 为 $N_{\mathbb R}$ 中 $e_2,2e_1-e_2$ 生成的锥, 则 $\sigma^\vee\cap M$ 为 $x_1,x_1+x_2,x_1+2x_2$ 生成的幺半群, $X_\sigma=\operatorname{Spec}\mathbb Z[x,xy,xy^2]$.</p>
 <p>设 $\Sigma$ 为 $e_1$ 生成的锥与 $-e_1$ 生成的锥构成的扇, 则 $X_\Sigma$ 为 $\operatorname{Spec}\mathbb {Z}[x]$ 与 $\operatorname{Spec}\mathbb {Z}[x^{-1}]$ 沿 $\operatorname{Spec}\mathbb {Z}[x,x^{-1}]$ 的粘合, 即 $\mathbb P^1$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="球极投影"><header><h1><span class="taxon"></span>球极投影 <a class="slug" href="./球极投影.html">[球极投影]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="球状集"><header><h1><span class="taxon"></span>球状集 <a class="slug" href="./球状集.html">[球状集]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>球状集</strong> (globular set) 是可由如下对象<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>的结构:</p>
+<ul>
+<li>点;</li>
+<li>线段;</li>
+<li>两个线段 $\bullet \rightrightarrows \bullet$ 围成的 $2$-胞腔;</li>
+<li>…</li>
+</ul>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="球谱"><header><h1><span class="taxon"></span>球谱 <a class="slug" href="./球谱.html">[球谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <h3>作为一个元素生成的自由 $\mathbb E_\infty$-群</h3>
@@ -25970,9 +26012,18 @@ $$</li>
 $$
 X = \operatorname{colim}_{c\to X,c\in\mathcal C} c.
 $$</p>
+<h3>通过余连续函子</h3>
+<p>Hausdorff 空间的稠密映射 $X\to Y$ 能决定 $Y$ 出发的任意连续函数. 在类似的精神下, 稠密性的另一种等价表述是: 函子 $f\colon \mathcal C\to\mathcal D$ 稠密当且仅当对任意范畴 $\mathcal E$,
+$$
+f^*\colon \mathsf{Fun}^{\mathrm{cocts}}(\mathcal D,\mathcal E) \to \mathsf{Fun}^{\mathrm{cocts}}(\mathcal C,\mathcal E)
+$$
+全忠实. 这里 $\mathsf{Fun}^{\mathrm{cocts}}$ 指的是保持任意权在 $\widehat {\mathcal C}$ 中的<span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span>的函子.</p>
 <h2>例</h2>
 <h3>代数范畴</h3>
 <p>对于<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span> (<span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>) $\mathbb T$, 考虑其在集合范畴中的模型 $\mathsf{Mod}_{\mathsf{Set}}(\mathbb T)$, 那么有限生成自由代数构成稠密子范畴.</p>
+<h3>几何对象的范畴</h3>
+<p>(光滑) 流形范畴 $\mathsf{Mfd}$ 中, 由 $\mathbb{R}^0,\mathbb{R}^1,\cdots,\mathbb{R}^n,\cdots$ 构成的全子范畴是稠密子范畴.</p>
+<p>概形范畴中, <span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>构成全子范畴.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="稳定Dold–Kan对应"><header><h1><span class="taxon"></span>稳定 Dold–Kan 对应 <a class="slug" href="./稳定Dold–Kan对应.html">[稳定Dold–Kan对应]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>对于环 $R$, 有等价
 $$
@@ -27587,22 +27638,25 @@ $$</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./相变.html" title="“相变” [相变]">相变</a></span>, <span class="link local"><a href="./对称保护拓扑物态.html" title="“对称保护拓扑物态” [对称保护拓扑物态]">对称保护拓扑物态</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="脉"><header><h1><span class="taxon"></span>脉 <a class="slug" href="./脉.html">[脉]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>观念</h2>
-<h3>从几何对象中提取单纯集</h3>
-<p>脉的构造常用于提取出几何对象的 “形状”, 产生一个<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>, 而后人们往往关注这个单纯集<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</p>
-<h3>形式右伴随</h3>
-<p>脉函子还可以更抽象地理解为函子 $\Delta \to \mathcal C$ 的<span class="link local"><a href="./形式伴随.html" title="形式伴随 [形式伴随]">形式右伴随</a></span> $\mathcal C \to \widehat {\Delta}=\mathsf{Fun}(\Delta^{\mathrm{op}},\mathsf{Set})$.</p>
-<h3>脉与几何实现</h3>
-<p>脉的构造往往<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>着<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>.</p>
-<h2>定义</h2>
-<p>给定<span class="link local"><a href="./余单纯对象.html" title=" [余单纯对象]">单纯形范畴</a></span>到另一个范畴 $\mathcal C$ 的函子
+<p>给定<span class="link local"><a href="./余单纯对象.html" title=" [余单纯对象]">单纯形范畴</a></span>到另一个范畴 $\mathcal C$ (其对象通常是某种几何对象) 的函子
 $$
     \Delta_{\mathcal C}\colon \Delta\to \mathcal C,
 $$
 设想 $\Delta_{\mathcal C}([n])$ 为标准单纯形 $[n]\in\Delta$ 的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>. 那么 $\mathcal C$ 中一般的对象 $X$ 可用单纯形来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>: 定义 $X$ 的<strong>脉</strong> (nerve) 为如下<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span> $N(X)$,
 $$
 N(X)_n := \operatorname{Hom}_{\mathcal C}(\Delta_{\mathcal C}[n], X).
-$$</p>
+$$
+常常人们进而考虑这个单纯集<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</p>
 <p>当然, 上述构造没有用到范畴 $\Delta$ 的任何具体性质.</p>
+<h3>形式右伴随</h3>
+<p>脉函子还可以更抽象地理解为<span class="link local"><a href="./形式伴随.html" title="形式伴随 [形式伴随]">形式右伴随</a></span>.</p>
+<h3>脉与几何实现</h3>
+<p>脉的构造往往<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>着<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>.</p>
+<h2>定义</h2>
+<p>给定函子 $i\colon \mathcal D \to \mathcal C$, 定义相应的<strong>脉</strong>函子为<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span>的限制
+$$
+\nu\colon \mathcal C \overset{\mathbf{y}}{\to} \widehat {\mathcal C} \overset{i^*}{\to} \widehat {\mathcal D}.
+$$</p>
 <h2>例</h2>
 <h3>奇异单纯集</h3>
 <p>拓扑空间 $X$ 的<span class="link local"><a href="./奇异单纯集.html" title="奇异单纯集 [奇异单纯集]">奇异单纯集</a></span> $\operatorname{Sing}X$ 是对应于如下函子 $\Delta \to \mathsf{Top}$ 的脉:
@@ -27624,9 +27678,87 @@ $$
 $$
 \mathsf{Sh}(X)\to\mathsf{Et}_{/X}.
 $$</p>
+<h2>性质</h2>
+<h3>脉的脉</h3>
+<p>函子 $i\colon \mathcal D \to \mathcal C$ 的脉函子 $\nu_i\colon \mathcal C \to \widehat {\mathcal D}$ 的脉函子 $\nu_{\nu_i}\colon \widehat {\mathcal D} \to \widehat {\mathcal C}$ 恰好等于沿 $i$ 的右 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>, 也即 $i^*$ 的<span class="link local"><a href="./预层范畴之间的伴随.html" title="预层范畴之间的伴随 [预层范畴之间的伴随]">右伴随 $i_*$</a></span>.</p>
+<p>证明:
+$$
+\begin{aligned}
+(\nu_{\nu_i} X) (c) &amp;= \operatorname{Hom}_{\widehat {\mathcal D}}(\nu_i (c), X)\\
+&amp;=\operatorname{Hom}_{\widehat {\mathcal D}}(i^* \mathbf{y}(c), X)\\
+&amp;=\operatorname{Hom}_{\widehat {\mathcal C}}(\mathbf{y}(c), i_*X)\\
+&amp;=(i_*X)(c).
+\end{aligned}
+$$</p>
+<h3>稠密性</h3>
+<p><strong>命题</strong>.</p>
+<ul>
+<li>函子 $i\colon \mathcal D \to \mathcal C$ <span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>当且仅当脉函子 $\nu_i\colon \mathcal C \to \widehat {\mathcal D}$ <span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实</a></span>;</li>
+<li>函子 $i\colon \mathcal D \to \mathcal C$ <span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实</a></span>当且仅当脉函子 $\nu_i\colon \mathcal C \to \widehat {\mathcal D}$ <span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>.</li>
+</ul>
+<p><em>证明</em>.</p>
+<ul>
+<li>第一个命题是<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密性</a></span>的定义.</li>
+<li>由定义以及前面的命题 $\nu_{\nu_i} = i_*$, 我们要证明函子 $i\colon \mathcal D \to \mathcal C$ <span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实</a></span>当且仅当 $i_*\colon \widehat {\mathcal D} \to \widehat {\mathcal C}$ <span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实</a></span>. 注意到 $i_*$ 全忠实等价于 $i^*\dashv i_*$ 的余单位 $i^*i_*\to\mathrm{id}_{\widehat {\mathcal D}}$ 为等价. 显式计算:
+$$
+\begin{aligned}
+i^*i_* X (d) &amp;= i_*X (i(d))\\
+&amp;=\operatorname{Hom}_{\widehat {\mathcal D}}(\mathbf{y}(i(d)),i_*X)\\
+&amp;=\operatorname{Hom}_{\widehat {\mathcal C}}(\nu_i (i(d)),X) \to X(d),
+\end{aligned}
+$$
+那么这等价于 $\nu_i (i(d)) = \mathbf{y}(d)$. 展开定义, 这就是说对任意对象 $d'\in\mathcal D$, $\operatorname{Hom}(i(d'),i(d))=\operatorname{Hom}(d',d)$, 即 $i$ 全忠实.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="脉性单子"><header><h1><span class="taxon"></span>脉性单子 <a class="slug" href="./脉性单子.html">[脉性单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>脉性单子 (nervous monad) 是一个类似于<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>的概念, 比它稍弱一些. 大致上, 对于给定的子范畴 $\mathcal A\subset\mathcal E$, 称单子 $T\colon \mathcal E\to\mathcal E$ 具有 “脉性”, 说的是 $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>可以用 $\mathcal A$ 的对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>代数来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>, 从而给出一个<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>的刻画.</p>
+<h2>定义</h2>
+<h3>预理论与单子</h3>
+<p>固定<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span><span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全子范畴</a></span> $\mathcal A\subset\mathcal E$, 定义 $\mathcal A$-<strong>预理论</strong> (pretheory) 为<span class="link local"><a href="./本质满函子.html" title="本质满函子 [本质满函子]">本质满函子</a></span>
+$$
+j\colon \mathcal A \to \mathcal K.
+$$
+这里的直观是 $\mathcal K$ 就像一个 <span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>, 其中的对象是元数, 态射是一个代数理论中的变量代换. 记预理论的范畴为 $\mathsf{Pth}(\mathcal A)$. 定义预理论 $\mathcal K$ 的<strong>模型</strong>的范畴为如下拉回,
+$$
+\begin{CD}
+\mathsf{Mod}_{\mathcal E}(\mathcal K) @&gt;&gt;&gt; \widehat {\mathcal K}  \\
+@VVV @VV{j^*}V \\
+\mathcal E @&gt;&gt;{\nu_{\mathcal A}}&gt; \widehat {\mathcal A}
+\end{CD}
+$$
+其中 $\nu_{\mathcal A}\colon \mathcal E \to \widehat {\mathcal A}$ 为<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子; 由于 $\mathcal A$ 的稠密性, $\nu_{\mathcal A}$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>.</p>
+<p>由于 $j\colon \mathcal A\to\mathcal K$ 本质满, 可知 $j^*\colon \widehat {\mathcal K} \to \widehat {\mathcal A}$ <span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>, 进而 (由<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>的性质) 其拉回 $\mathsf{Mod}(\mathcal E)(\mathcal K)\to\mathcal E$ 单子性, 即存在单子 $\mu^{\mathcal K}$ 使得 $\mathsf{Mod}_{\mathcal E}(\mathcal K) \simeq \mathcal E^{\mu^{\mathcal K}}$.</p>
+<p>这给出 $\mathcal A$-预理论到 $\mathcal E$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>的一个对应
+$$
+\mu\colon \mathsf{Pth}(\mathcal A) \to \mathsf{Mnd}(\mathcal E).
+$$</p>
+<p>另一方面, 对 $\mathcal E$ 上任何单子 $T$, 考虑其 <span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span> $\mathcal E \to \mathsf{Kl}(T)$ 中 $\mathcal A$ 的本质像, 都给出一个 $\mathcal A$-预理论, 记作 $\mathcal A \to \operatorname{Th}(T)$. 事实上这两个过程构成一对<span class="link local"><a href="./幂等伴随.html" title="幂等伴随 [幂等伴随]">幂等伴随</a></span>
+$$
+(\mu \dashv \operatorname{Th})\colon \mathsf{Pth}(\mathcal A) \rightleftarrows \mathsf{Mnd}(\mathcal E).
+$$</p>
+<p><strong>定义</strong>. 上述幂等伴随的不动点称为 $\mathcal A$-<strong>脉性单子</strong>.</p>
+<h2>例</h2>
+<h3>代数模式</h3>
+<p>设 $\mathcal O$ 为<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>, 即一个范畴 $\mathcal O$ 带有<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">正交分解系</a></span> $(\mathcal O_{\mathrm{act}},\mathcal O_{\mathrm{int}})$ 以及<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全子范畴</a></span> $i\colon \mathcal O_{\mathrm{el}} \subset \mathcal O_{\mathrm{int}}$.
+考虑脉函子
+$$
+\nu_i \colon \mathcal O_{\mathrm{int}} \to \widehat {\mathcal O_{\mathrm{el}}}
+$$
+的脉函子
+$$
+\nu_{\nu_i} \colon \widehat {\mathcal O_{\mathrm{el}}} \to \widehat {\mathcal O_{\mathrm{int}}};
+$$
+它等同于沿 $i\colon \mathcal O_{\mathrm{el}}\hookrightarrow\mathcal O_{\mathrm{int}}$ 的右 Kan 扩张 $i_*$, 因此 Segal 对象的范畴为如下的拉回:
+$$
+\begin{array}{ccc}
+\mathsf{Seg}_{\mathcal O} &amp; \rightarrow &amp; \widehat {\mathcal O} \\
+\downarrow &amp;  &amp; \downarrow \\
+\widehat {\mathcal O_{\mathrm{el}}} &amp; \rightarrow &amp; \widehat {\mathcal O_{\mathrm{int}}}.
+\end{array}
+$$</p>
+<p>注意 $i$ 全忠实蕴涵 $\nu_i$ 稠密, 且 $\nu_{\nu_i} = i_*$ 全忠实. 因此 Segal 对象的范畴 $\mathsf{Seg}_{\mathcal O}$ 正是
+$\mathcal O_{\mathrm{int}}$-预理论
+$\mathcal O_{\mathrm{int}}\to \mathcal O$ (注意这是个本质满函子) 的模型的范畴.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="自函子的迹"><header><h1><span class="taxon"></span>自函子的迹 <a class="slug" href="./自函子的迹.html">[自函子的迹]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>设 $\mathcal{C}$ 是<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶</a></span> <span class="link local"><a href="./微分分次范畴.html" title="微分分次范畴 [微分分次范畴]">DG 范畴</a></span>, 则可定义 $\mathcal C$ 的自函子 $F\colon \mathcal C\to\mathcal C$ 的<span class="link local"><a href="./迹.html" title="迹 [迹]">迹</a></span> $\operatorname{Tr}(F) \in \mathsf{Vect}$. 迹来自如下的复合:
 $$
@@ -27654,6 +27786,26 @@ $$</p>
 <p>由对偶性, 只需证明第一个命题. $G$ 为全忠实函子, 当且仅当 $\operatorname{Hom}_{\mathcal D}(-,-)\to \operatorname{Hom}_{\mathcal C}(G-,G-)$ 为同构; 由伴随, 这等价于 $\operatorname{Hom}_{\mathcal D}(-,-)\to \operatorname{Hom}_{\mathcal D}(FG-,-)$ 为同构. 由<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>, 这等价于余单位 $FG \to\mathrm{id}_{\mathcal D}$ 为同构.</p>
 <h3>局部化</h3>
 <p>对于自反子范畴 $g\colon \mathcal D\to\mathcal C$, 设其左伴随为 $f$, 记 $W$ 为 $\mathcal C$ 中所有被 $f$ 变为同构的态射构成的类, 则 $f$ 等同于<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span> $\mathcal C \to \mathcal C[W^{-1}]$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="自同态单子"><header><h1><span class="taxon"></span>自同态单子 <a class="slug" href="./自同态单子.html">[自同态单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>作为万有作用</h3>
+<p>一般地, 设<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $\mathcal M$ <span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">作用</a></span>于范畴 $\mathcal C$, 那么我们可以谈论 $\mathcal M$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>在 $\mathcal C$ 上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">作用</a></span>; 对于一个对象 $c\in\mathcal C$, 常常有一个 “万有” 的作用, 称为<strong>自同态对象</strong> $\underline{\operatorname{End}}(c)\in\mathsf{Alg}(\mathcal M)$, 使得结合代数 $A\in\mathsf{Alg}(\mathcal M)$ 在 $c$ 上的作用等同于其到 $\underline{\operatorname{End}}(c)$ 的同态.</p>
+<p>考虑如下特殊情况, 幺半范畴 $\mathsf{End}(\mathcal C)$ 作用于函子范畴 $\mathsf{Fun}(\mathcal D,\mathcal C)$, 若函子 $U\in\mathsf{Fun}(\mathcal D,\mathcal C)$ 的自同态对象 $\underline{\operatorname{End}}(c)\in\mathsf{Alg}(\mathsf{End}(\mathcal C))$ 存在, 则称之为 $U$ 的<strong>自同态单子</strong>.</p>
+<h3>通过余密度单子</h3>
+<p>函子 $U\colon \mathcal D \to \mathcal C$ 的自同态单子也可定义为其<span class="link local"><a href="./余密度单子.html" title="余密度单子 [余密度单子]">余密度单子</a></span>.</p>
+<h2>性质</h2>
+<p>注意到 $\mathsf{End}(\mathcal C)$ 在 $\mathsf{Fun}(\mathcal D,\mathcal C)$ 上的作用是逐对象的; 对任意单子 $M$, 其在函子 $U\colon \mathcal D\to\mathcal C$ 上的作用等同于提升
+$$
+\begin{array}{ccc}
+ &amp;  &amp; \mathcal C^M \\
+ &amp; \nearrow &amp; \downarrow \\
+\mathcal D &amp; \underset{U}{\rightarrow} &amp; \mathcal C.
+\end{array}
+$$</p>
+<p>特别地, 当自同态单子存在时有一个典范的函子
+$$
+\mathcal D \to \mathcal C^{\underline{\operatorname{End}}(U)}.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="自守函数"><header><h1><span class="taxon"></span>自守函数 <a class="slug" href="./自守函数.html">[自守函数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>见<span class="link local"><a href="./自守形式.html" title="自守形式 [自守形式]">自守形式</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="自守层"><header><h1><span class="taxon"></span>自守层 <a class="slug" href="./自守层.html">[自守层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -28017,6 +28169,11 @@ $$
 注意这是一个<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="融贯"><header><h1><span class="taxon"></span>融贯 <a class="slug" href="./融贯.html">[融贯]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><strong>同伦融贯数据</strong> (homotopy-coherent data) 是<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span><span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">高阶范畴</a></span>中的结构时需要提供的越来越高阶的同伦.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./融贯子.html" title="融贯子 [融贯子]">融贯子</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="融贯子"><header><h1><span class="taxon"></span>融贯子 <a class="slug" href="./融贯子.html">[融贯子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>一个 Grothendieck <strong>融贯子</strong> (coherator) 给出<span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状集</a></span>上的一种<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数结构</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="表示论"><header><h1><span class="taxon"></span>表示论 <a class="slug" href="./表示论.html">[表示论]</a></h1><div class="metadata"><ul><li class="meta-item">学科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>表示论是通过代数结构在其它对象上的作用研究代数结构的学科. 其中最常见的研究对象是群的表示, 即<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 在线性空间上的<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>, 也即 <span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">$\mathbf{B}G$</a></span> 上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="覆叠"><header><h1><span class="taxon"></span>覆叠 <a class="slug" href="./覆叠.html">[覆叠]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>

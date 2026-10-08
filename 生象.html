@@ -5083,22 +5083,25 @@ $$</p>
 <li>(单位的性质) $m\circ (e\circ t\times \operatorname{id}_{G_1})=m\circ (\operatorname{id}_{G_1}\times e\circ s)=\operatorname{id}_{G_1}$.</li>
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="脉"><header><h1><span class="taxon"></span>脉 <a class="slug" href="./脉.html">[脉]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>观念</h2>
-<h3>从几何对象中提取单纯集</h3>
-<p>脉的构造常用于提取出几何对象的 “形状”, 产生一个<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>, 而后人们往往关注这个单纯集<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</p>
-<h3>形式右伴随</h3>
-<p>脉函子还可以更抽象地理解为函子 $\Delta \to \mathcal C$ 的<span class="link local"><a href="./形式伴随.html" title="形式伴随 [形式伴随]">形式右伴随</a></span> $\mathcal C \to \widehat {\Delta}=\mathsf{Fun}(\Delta^{\mathrm{op}},\mathsf{Set})$.</p>
-<h3>脉与几何实现</h3>
-<p>脉的构造往往<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>着<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>.</p>
-<h2>定义</h2>
-<p>给定<span class="link local"><a href="./余单纯对象.html" title=" [余单纯对象]">单纯形范畴</a></span>到另一个范畴 $\mathcal C$ 的函子
+<p>给定<span class="link local"><a href="./余单纯对象.html" title=" [余单纯对象]">单纯形范畴</a></span>到另一个范畴 $\mathcal C$ (其对象通常是某种几何对象) 的函子
 $$
     \Delta_{\mathcal C}\colon \Delta\to \mathcal C,
 $$
 设想 $\Delta_{\mathcal C}([n])$ 为标准单纯形 $[n]\in\Delta$ 的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>. 那么 $\mathcal C$ 中一般的对象 $X$ 可用单纯形来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>: 定义 $X$ 的<strong>脉</strong> (nerve) 为如下<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span> $N(X)$,
 $$
 N(X)_n := \operatorname{Hom}_{\mathcal C}(\Delta_{\mathcal C}[n], X).
-$$</p>
+$$
+常常人们进而考虑这个单纯集<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</p>
 <p>当然, 上述构造没有用到范畴 $\Delta$ 的任何具体性质.</p>
+<h3>形式右伴随</h3>
+<p>脉函子还可以更抽象地理解为<span class="link local"><a href="./形式伴随.html" title="形式伴随 [形式伴随]">形式右伴随</a></span>.</p>
+<h3>脉与几何实现</h3>
+<p>脉的构造往往<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>着<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>.</p>
+<h2>定义</h2>
+<p>给定函子 $i\colon \mathcal D \to \mathcal C$, 定义相应的<strong>脉</strong>函子为<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span>的限制
+$$
+\nu\colon \mathcal C \overset{\mathbf{y}}{\to} \widehat {\mathcal C} \overset{i^*}{\to} \widehat {\mathcal D}.
+$$</p>
 <h2>例</h2>
 <h3>奇异单纯集</h3>
 <p>拓扑空间 $X$ 的<span class="link local"><a href="./奇异单纯集.html" title="奇异单纯集 [奇异单纯集]">奇异单纯集</a></span> $\operatorname{Sing}X$ 是对应于如下函子 $\Delta \to \mathsf{Top}$ 的脉:
@@ -5120,6 +5123,37 @@ $$
 $$
 \mathsf{Sh}(X)\to\mathsf{Et}_{/X}.
 $$</p>
+<h2>性质</h2>
+<h3>脉的脉</h3>
+<p>函子 $i\colon \mathcal D \to \mathcal C$ 的脉函子 $\nu_i\colon \mathcal C \to \widehat {\mathcal D}$ 的脉函子 $\nu_{\nu_i}\colon \widehat {\mathcal D} \to \widehat {\mathcal C}$ 恰好等于沿 $i$ 的右 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>, 也即 $i^*$ 的<span class="link local"><a href="./预层范畴之间的伴随.html" title="预层范畴之间的伴随 [预层范畴之间的伴随]">右伴随 $i_*$</a></span>.</p>
+<p>证明:
+$$
+\begin{aligned}
+(\nu_{\nu_i} X) (c) &amp;= \operatorname{Hom}_{\widehat {\mathcal D}}(\nu_i (c), X)\\
+&amp;=\operatorname{Hom}_{\widehat {\mathcal D}}(i^* \mathbf{y}(c), X)\\
+&amp;=\operatorname{Hom}_{\widehat {\mathcal C}}(\mathbf{y}(c), i_*X)\\
+&amp;=(i_*X)(c).
+\end{aligned}
+$$</p>
+<h3>稠密性</h3>
+<p><strong>命题</strong>.</p>
+<ul>
+<li>函子 $i\colon \mathcal D \to \mathcal C$ <span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>当且仅当脉函子 $\nu_i\colon \mathcal C \to \widehat {\mathcal D}$ <span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实</a></span>;</li>
+<li>函子 $i\colon \mathcal D \to \mathcal C$ <span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实</a></span>当且仅当脉函子 $\nu_i\colon \mathcal C \to \widehat {\mathcal D}$ <span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>.</li>
+</ul>
+<p><em>证明</em>.</p>
+<ul>
+<li>第一个命题是<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密性</a></span>的定义.</li>
+<li>由定义以及前面的命题 $\nu_{\nu_i} = i_*$, 我们要证明函子 $i\colon \mathcal D \to \mathcal C$ <span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实</a></span>当且仅当 $i_*\colon \widehat {\mathcal D} \to \widehat {\mathcal C}$ <span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实</a></span>. 注意到 $i_*$ 全忠实等价于 $i^*\dashv i_*$ 的余单位 $i^*i_*\to\mathrm{id}_{\widehat {\mathcal D}}$ 为等价. 显式计算:
+$$
+\begin{aligned}
+i^*i_* X (d) &amp;= i_*X (i(d))\\
+&amp;=\operatorname{Hom}_{\widehat {\mathcal D}}(\mathbf{y}(i(d)),i_*X)\\
+&amp;=\operatorname{Hom}_{\widehat {\mathcal C}}(\nu_i (i(d)),X) \to X(d),
+\end{aligned}
+$$
+那么这等价于 $\nu_i (i(d)) = \mathbf{y}(d)$. 展开定义, 这就是说对任意对象 $d'\in\mathcal D$, $\operatorname{Hom}(i(d'),i(d))=\operatorname{Hom}(d',d)$, 即 $i$ 全忠实.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="自由单子"><header><h1><span class="taxon"></span>自由单子 <a class="slug" href="./自由单子.html">[自由单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p><span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>是自函子范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>; 自由单子就是这种代数中的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>代数.</p>

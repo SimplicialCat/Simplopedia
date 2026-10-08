@@ -893,6 +893,23 @@ $$</p>
 <li>以及一对伴随 $j \dashv u$.</li>
 </ul>
 <p>相应的单子则是 $T = uj \colon \mathcal C \to \mathcal C$.</p>
+<h3>函子性</h3>
+<p>Kleisli 范畴具有函子性: 单子同态 $f\colon S \to T$ 给出函子 $f_!\colon \mathsf{Kl}(S) \to \mathsf{Kl}(T)$. 直观上, $f_!$ 将自由代数 $SX$ 对应到自由代数 $TX$.
+$$
+\begin{array}{ccc}
+ &amp;  &amp; \mathsf{Kl}(S) \\
+ &amp; \nearrow &amp; \downarrow \\
+\mathcal C &amp; \rightarrow &amp; \mathsf{Kl}(T)
+\end{array}
+$$</p>
+<p>我们更仔细地解释一下这个函子的来由. 对于 $S$ 的自由代数 $SX$ 与任意 $T$-代数 $Y$, 有同构
+$$
+\begin{aligned}
+\operatorname{Hom}_{\mathcal C^S} (SX,f^*Y) &amp;= \operatorname{Hom}_{\mathcal C}(X,Y)\\
+&amp;=\operatorname{Hom}_{\mathcal C^T}(TX,Y).
+\end{aligned}
+$$
+这就是说 $f^*\colon \mathcal C^T\to\mathcal C^S$ 在全子范畴 $\mathsf{Kl}(T)\subset\mathcal C^T$, $\mathsf{Kl}(S)\subset\mathcal C^S$ 上有一个 “部分左伴随” $f_!$, 而范畴论的一般道理告诉我们, 当有一族范畴 $\mathcal C^{\mathrm{op}}\to\mathsf{Cat}$ 且其间每个函子有这样的部分左伴随, 就有相应的一族范畴 $\mathcal C \to \mathsf{Cat}$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Lambek代数"><header><h1><span class="taxon"></span>Lambek 代数 <a class="slug" href="./Lambek代数.html">[Lambek代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>范畴 $\mathcal C$ 的自函子 $F$ 的 <strong>Lambek 代数</strong>就是对象 $X\in\mathcal C$ 配备一个态射 $F(X)\to X$. 记 $\mathsf{alg}_F(\mathcal C)$ 为 $F$-Lambek 代数的范畴.</p>
@@ -2013,9 +2030,17 @@ $$
 <h2>观念</h2>
 <p>许多<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数结构</a></span>可理解为某个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>上的代数. 这种结构构成的范畴到基础范畴有一个<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘函子</a></span>, 我们称这个函子为<strong>单子性函子</strong> (monadic functor).</p>
 <h2>定义</h2>
-<p>设 $G \colon \mathcal D \to \mathcal C$ 为函子, 若有 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $A$, 使得 $G$ 等价于遗忘函子 $\mathsf{Alg}_A(\mathcal C) \to \mathcal C$, 则称之为<strong>单子性函子</strong>.</p>
+<p>设 $G \colon \mathcal D \to \mathcal C$ 为函子, 若有 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $A$, 使得 $G$ 等价于<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>函子 $\mathsf{Alg}_A(\mathcal C) \to \mathcal C$, 则称之为<strong>单子性函子</strong>.</p>
+<h3>通过自同态单子</h3>
+<p>单子性函子背后的单子可以显式地确定, 它就是<span class="link local"><a href="./自同态单子.html" title="自同态单子 [自同态单子]">自同态单子</a></span>.</p>
+<p>对于函子 $U \colon \mathcal D\to\mathcal C$, 记 $\underline{\operatorname{End}}(U)\in\mathsf{End}(\mathcal C)$ 为其<span class="link local"><a href="./自同态单子.html" title="自同态单子 [自同态单子]">自同态单子</a></span>, 那么单子性也可等价地定义如下.</p>
+<p><strong>定义</strong>. 满足如下条件的函子 $U\colon \mathcal D\to\mathcal C$ 称作单子性函子:</p>
+<ul>
+<li>$U$ 有左伴随;</li>
+<li>典范的函子 $\mathcal D \to \mathcal C^{\underline{\operatorname{End}}(U)}$ 为等价.</li>
+</ul>
 <h2>性质</h2>
-<p>单子性函子 $G$ 有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $F$, 即单子 $A$ 的 “自由代数” 函子 $X\mapsto AX$.</p>
+<p>单子性函子 $G$ 有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $F$, 即单子 $A$ 的 “<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>代数” 函子 $X\mapsto AX$.</p>
 <h3>判定</h3>
 <p>判定单子性函子的常用方法是 <span class="link local"><a href="./Barr–Beck–Lurie定理.html" title="Barr–Beck–Lurie 定理 [Barr–Beck–Lurie定理]">Barr–Beck–Lurie 定理</a></span>.</p>
 <p><strong>定理</strong>. $G\colon \mathcal D\to\mathcal C$ 为单子性函子当且仅当 $G$ <span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守</a></span>, 且<span class="link local"><a href="./创生(范畴论).html" title="创生 (范畴论) [创生(范畴论)]">创生</a></span> $G$-<span class="link local"><a href="./单纯对象的分裂.html" title="分裂单纯对象 [单纯对象的分裂]">分裂</a></span><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>.</p>
@@ -2025,7 +2050,7 @@ $$
 <p><strong>定理</strong>. 对于函子 $G\colon \mathcal D\to\mathcal C$, 若 $G$ 有左伴随, $G$ <span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映同构</a></span>, $\mathcal D$ 具有<span class="link local"><a href="./余等化子.html" title="余等化子 [余等化子]">余等化子</a></span>, 且 $G$ 保持余等化子,
 则 $G$ 为单子性函子.</p>
 <h2>例</h2>
-<p>一个出人意料的例子: 紧 Hausdorff 空间的范畴 $\mathsf{CHaus}$ 在集合范畴 $\mathsf{Set}$ 上是单子性的.</p>
+<p>一个出人意料的例子: <span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>的范畴 $\mathsf{CHaus}$ 在集合范畴 $\mathsf{Set}$ 上是单子性的.</p>
 <h3>自反子范畴</h3>
 <p><span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span>的嵌入 $\mathcal D\hookrightarrow\mathcal C$ 是单子性的.</p>
 <h3>下降</h3>
@@ -2958,6 +2983,53 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="脉性单子"><header><h1><span class="taxon"></span>脉性单子 <a class="slug" href="./脉性单子.html">[脉性单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>脉性单子 (nervous monad) 是一个类似于<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>的概念, 比它稍弱一些. 大致上, 对于给定的子范畴 $\mathcal A\subset\mathcal E$, 称单子 $T\colon \mathcal E\to\mathcal E$ 具有 “脉性”, 说的是 $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>可以用 $\mathcal A$ 的对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>代数来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>, 从而给出一个<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>的刻画.</p>
+<h2>定义</h2>
+<h3>预理论与单子</h3>
+<p>固定<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span><span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全子范畴</a></span> $\mathcal A\subset\mathcal E$, 定义 $\mathcal A$-<strong>预理论</strong> (pretheory) 为<span class="link local"><a href="./本质满函子.html" title="本质满函子 [本质满函子]">本质满函子</a></span>
+$$
+j\colon \mathcal A \to \mathcal K.
+$$
+这里的直观是 $\mathcal K$ 就像一个 <span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>, 其中的对象是元数, 态射是一个代数理论中的变量代换. 记预理论的范畴为 $\mathsf{Pth}(\mathcal A)$. 定义预理论 $\mathcal K$ 的<strong>模型</strong>的范畴为如下拉回,
+$$
+\begin{CD}
+\mathsf{Mod}_{\mathcal E}(\mathcal K) @&gt;&gt;&gt; \widehat {\mathcal K}  \\
+@VVV @VV{j^*}V \\
+\mathcal E @&gt;&gt;{\nu_{\mathcal A}}&gt; \widehat {\mathcal A}
+\end{CD}
+$$
+其中 $\nu_{\mathcal A}\colon \mathcal E \to \widehat {\mathcal A}$ 为<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子; 由于 $\mathcal A$ 的稠密性, $\nu_{\mathcal A}$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>.</p>
+<p>由于 $j\colon \mathcal A\to\mathcal K$ 本质满, 可知 $j^*\colon \widehat {\mathcal K} \to \widehat {\mathcal A}$ <span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>, 进而 (由<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>的性质) 其拉回 $\mathsf{Mod}(\mathcal E)(\mathcal K)\to\mathcal E$ 单子性, 即存在单子 $\mu^{\mathcal K}$ 使得 $\mathsf{Mod}_{\mathcal E}(\mathcal K) \simeq \mathcal E^{\mu^{\mathcal K}}$.</p>
+<p>这给出 $\mathcal A$-预理论到 $\mathcal E$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>的一个对应
+$$
+\mu\colon \mathsf{Pth}(\mathcal A) \to \mathsf{Mnd}(\mathcal E).
+$$</p>
+<p>另一方面, 对 $\mathcal E$ 上任何单子 $T$, 考虑其 <span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span> $\mathcal E \to \mathsf{Kl}(T)$ 中 $\mathcal A$ 的本质像, 都给出一个 $\mathcal A$-预理论, 记作 $\mathcal A \to \operatorname{Th}(T)$. 事实上这两个过程构成一对<span class="link local"><a href="./幂等伴随.html" title="幂等伴随 [幂等伴随]">幂等伴随</a></span>
+$$
+(\mu \dashv \operatorname{Th})\colon \mathsf{Pth}(\mathcal A) \rightleftarrows \mathsf{Mnd}(\mathcal E).
+$$</p>
+<p><strong>定义</strong>. 上述幂等伴随的不动点称为 $\mathcal A$-<strong>脉性单子</strong>.</p>
+<h2>例</h2>
+<h3>代数模式</h3>
+<p>设 $\mathcal O$ 为<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>, 即一个范畴 $\mathcal O$ 带有<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">正交分解系</a></span> $(\mathcal O_{\mathrm{act}},\mathcal O_{\mathrm{int}})$ 以及<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全子范畴</a></span> $i\colon \mathcal O_{\mathrm{el}} \subset \mathcal O_{\mathrm{int}}$.
+考虑脉函子
+$$
+\nu_i \colon \mathcal O_{\mathrm{int}} \to \widehat {\mathcal O_{\mathrm{el}}}
+$$
+的脉函子
+$$
+\nu_{\nu_i} \colon \widehat {\mathcal O_{\mathrm{el}}} \to \widehat {\mathcal O_{\mathrm{int}}};
+$$
+它等同于沿 $i\colon \mathcal O_{\mathrm{el}}\hookrightarrow\mathcal O_{\mathrm{int}}$ 的右 Kan 扩张 $i_*$, 因此 Segal 对象的范畴为如下的拉回:
+$$
+\begin{array}{ccc}
+\mathsf{Seg}_{\mathcal O} &amp; \rightarrow &amp; \widehat {\mathcal O} \\
+\downarrow &amp;  &amp; \downarrow \\
+\widehat {\mathcal O_{\mathrm{el}}} &amp; \rightarrow &amp; \widehat {\mathcal O_{\mathrm{int}}}.
+\end{array}
+$$</p>
+<p>注意 $i$ 全忠实蕴涵 $\nu_i$ 稠密, 且 $\nu_{\nu_i} = i_*$ 全忠实. 因此 Segal 对象的范畴 $\mathsf{Seg}_{\mathcal O}$ 正是
+$\mathcal O_{\mathrm{int}}$-预理论
+$\mathcal O_{\mathrm{int}}\to \mathcal O$ (注意这是个本质满函子) 的模型的范畴.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="自由单子"><header><h1><span class="taxon"></span>自由单子 <a class="slug" href="./自由单子.html">[自由单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p><span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>是自函子范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>; 自由单子就是这种代数中的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>代数.</p>

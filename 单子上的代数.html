@@ -846,6 +846,11 @@ $$
 其中两个映射 $TTX \to TX$ 分别来自 $T$ 带有的自然变换 $T^2\to T$ 以及 $X$ 带有的态射 $TX\to X$.</p>
 <p>更一般地, 对范畴 $I$, 函子范畴 $\mathsf{Fun}(I,\mathcal C)$ 也是 $\operatorname{End}(\mathcal C)$ 的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>, 从而可以定义 $X\colon I\to\mathcal C$ 上的 $T$-<strong>左模</strong> (或称 $T$-代数) 结构. 它包含一个自然变换 $TX \to X$ 以及左模的条件.</p>
 <p>另一种理解是, $\mathcal C$ 上的单子 $T$ 诱导了函子范畴 $\mathsf{Fun}(I,\mathcal C)$ 上的单子 $T$; 函子 $I\to\mathcal C$ 的 $T$-左模结构就是这个单子上的代数结构.</p>
+<h4>自同态单子</h4>
+<p>对于函子 $U\colon \mathcal D \to \mathcal C$ 以及 $\mathcal C$ 上的单子 $T$, 我们也可定义 $U$ 上的 $T$-左模结构为 $T$ 到<span class="link local"><a href="./自同态单子.html" title="自同态单子 [自同态单子]">自同态单子</a></span>的单子同态
+$$
+T \to \underline{\operatorname{End}}(U).
+$$</p>
 <h3>作为松极限</h3>
 <p>对象 $\mathcal C^{T}$ 可以更加简练地写成<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $T$ 对应的<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span> $1\to\mathsf{Cat}$ 的<span class="link local"><a href="./松极限.html" title="松极限 [松极限]">松极限</a></span>. 换言之, 考虑所有范畴上所有单子构成的 $2$-范畴
 $$
@@ -928,6 +933,23 @@ $$</p>
 <li>以及一对伴随 $j \dashv u$.</li>
 </ul>
 <p>相应的单子则是 $T = uj \colon \mathcal C \to \mathcal C$.</p>
+<h3>函子性</h3>
+<p>Kleisli 范畴具有函子性: 单子同态 $f\colon S \to T$ 给出函子 $f_!\colon \mathsf{Kl}(S) \to \mathsf{Kl}(T)$. 直观上, $f_!$ 将自由代数 $SX$ 对应到自由代数 $TX$.
+$$
+\begin{array}{ccc}
+ &amp;  &amp; \mathsf{Kl}(S) \\
+ &amp; \nearrow &amp; \downarrow \\
+\mathcal C &amp; \rightarrow &amp; \mathsf{Kl}(T)
+\end{array}
+$$</p>
+<p>我们更仔细地解释一下这个函子的来由. 对于 $S$ 的自由代数 $SX$ 与任意 $T$-代数 $Y$, 有同构
+$$
+\begin{aligned}
+\operatorname{Hom}_{\mathcal C^S} (SX,f^*Y) &amp;= \operatorname{Hom}_{\mathcal C}(X,Y)\\
+&amp;=\operatorname{Hom}_{\mathcal C^T}(TX,Y).
+\end{aligned}
+$$
+这就是说 $f^*\colon \mathcal C^T\to\mathcal C^S$ 在全子范畴 $\mathsf{Kl}(T)\subset\mathcal C^T$, $\mathsf{Kl}(S)\subset\mathcal C^S$ 上有一个 “部分左伴随” $f_!$, 而范畴论的一般道理告诉我们, 当有一族范畴 $\mathcal C^{\mathrm{op}}\to\mathsf{Cat}$ 且其间每个函子有这样的部分左伴随, 就有相应的一族范畴 $\mathcal C \to \mathsf{Cat}$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="下降"><header><h1><span class="taxon"></span>下降 <a class="slug" href="./下降.html">[下降]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>基本设定</h2>
 <p>下降的概念来自几何学中各种结构沿覆盖映射的 “粘合”.</p>
@@ -1497,10 +1519,11 @@ $$
 <p>值得注意的是, 考虑一个新的代数理论 $\mathcal{T}[X]$, 其语法为 $\mathcal{T}$ 的语法加上 $X$ 的每个元素作为常量; 那么集合 $X$ 上的自由代数 $F(X)$ 也可理解为 $\mathcal{T}[X]$ 的始代数, 即空集自由生成的 $\mathcal{T}[X]$-代数.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="余密度单子"><header><h1><span class="taxon"></span>余密度单子 <a class="slug" href="./余密度单子.html">[余密度单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>函子 $f\colon \mathcal C \to \mathcal D$ 的余密度单子是 $f$ 沿着 $f$ 自身的右 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span> $f_* f \colon \mathcal D \to \mathcal D$,
+<p>函子 $f\colon \mathcal C \to \mathcal D$ 的<strong>余密度单子</strong> (codensity monad) 是 $f$ 沿着 $f$ 自身的右 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span> $f_* f \colon \mathcal D \to \mathcal D$,
 $$
 f_* f (d) = \operatorname{lim}_{d \to f(c)} f(c).
 $$</p>
+<p>由 Kan 扩张的万有性质, 对 $\mathcal C$ 的任意自函子 $F$, 自然变换 $F \to f_* f$ 等同于自然变换 $F\circ f \to f$. 故余密度单子又叫<span class="link local"><a href="./自同态单子.html" title="自同态单子 [自同态单子]">自同态单子</a></span>, 是万有的作用于 $f$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</p>
 <h2>例</h2>
 <h3>超滤单子</h3>
 <p><span class="link local"><a href="./超滤.html" title="超滤 [超滤]">超滤单子</a></span> $\beta\colon \mathsf{Set} \to \mathsf{Set}$ 是 $\mathsf{Fin} \hookrightarrow \mathsf{Set}$ 的余密度单子,
@@ -1508,7 +1531,7 @@ $$
 \beta X = \operatorname{lim}_{S\to X,S\in\mathsf{Fin}}S.
 $$</p>
 <h3>自同态单子</h3>
-<p>对象 $c\in\mathcal C$ 的<strong>自同态单子</strong> $\operatorname{End}(c)$ 是 $c\colon 1 \to\mathcal C$ 的余密度单子.</p>
+<p>对象 $c\in\mathcal C$ 的<strong></strong><span class="link local"><a href="./自同态单子.html" title="自同态单子 [自同态单子]">自同态单子</a></span> $\operatorname{End}(c)$ 是 $c\colon 1 \to\mathcal C$ 的余密度单子.</p>
 <p>$$
 \operatorname{End}(c)(x) = \operatorname{lim}_{x\to c} c = c^{\operatorname{Hom}(x,c)}.
 $$</p>
@@ -1951,6 +1974,53 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="脉性单子"><header><h1><span class="taxon"></span>脉性单子 <a class="slug" href="./脉性单子.html">[脉性单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>脉性单子 (nervous monad) 是一个类似于<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>的概念, 比它稍弱一些. 大致上, 对于给定的子范畴 $\mathcal A\subset\mathcal E$, 称单子 $T\colon \mathcal E\to\mathcal E$ 具有 “脉性”, 说的是 $T$-<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">代数</a></span>可以用 $\mathcal A$ 的对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>代数来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>, 从而给出一个<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>的刻画.</p>
+<h2>定义</h2>
+<h3>预理论与单子</h3>
+<p>固定<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span><span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全子范畴</a></span> $\mathcal A\subset\mathcal E$, 定义 $\mathcal A$-<strong>预理论</strong> (pretheory) 为<span class="link local"><a href="./本质满函子.html" title="本质满函子 [本质满函子]">本质满函子</a></span>
+$$
+j\colon \mathcal A \to \mathcal K.
+$$
+这里的直观是 $\mathcal K$ 就像一个 <span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>, 其中的对象是元数, 态射是一个代数理论中的变量代换. 记预理论的范畴为 $\mathsf{Pth}(\mathcal A)$. 定义预理论 $\mathcal K$ 的<strong>模型</strong>的范畴为如下拉回,
+$$
+\begin{CD}
+\mathsf{Mod}_{\mathcal E}(\mathcal K) @&gt;&gt;&gt; \widehat {\mathcal K}  \\
+@VVV @VV{j^*}V \\
+\mathcal E @&gt;&gt;{\nu_{\mathcal A}}&gt; \widehat {\mathcal A}
+\end{CD}
+$$
+其中 $\nu_{\mathcal A}\colon \mathcal E \to \widehat {\mathcal A}$ 为<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子; 由于 $\mathcal A$ 的稠密性, $\nu_{\mathcal A}$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>.</p>
+<p>由于 $j\colon \mathcal A\to\mathcal K$ 本质满, 可知 $j^*\colon \widehat {\mathcal K} \to \widehat {\mathcal A}$ <span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>, 进而 (由<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>的性质) 其拉回 $\mathsf{Mod}(\mathcal E)(\mathcal K)\to\mathcal E$ 单子性, 即存在单子 $\mu^{\mathcal K}$ 使得 $\mathsf{Mod}_{\mathcal E}(\mathcal K) \simeq \mathcal E^{\mu^{\mathcal K}}$.</p>
+<p>这给出 $\mathcal A$-预理论到 $\mathcal E$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>的一个对应
+$$
+\mu\colon \mathsf{Pth}(\mathcal A) \to \mathsf{Mnd}(\mathcal E).
+$$</p>
+<p>另一方面, 对 $\mathcal E$ 上任何单子 $T$, 考虑其 <span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span> $\mathcal E \to \mathsf{Kl}(T)$ 中 $\mathcal A$ 的本质像, 都给出一个 $\mathcal A$-预理论, 记作 $\mathcal A \to \operatorname{Th}(T)$. 事实上这两个过程构成一对<span class="link local"><a href="./幂等伴随.html" title="幂等伴随 [幂等伴随]">幂等伴随</a></span>
+$$
+(\mu \dashv \operatorname{Th})\colon \mathsf{Pth}(\mathcal A) \rightleftarrows \mathsf{Mnd}(\mathcal E).
+$$</p>
+<p><strong>定义</strong>. 上述幂等伴随的不动点称为 $\mathcal A$-<strong>脉性单子</strong>.</p>
+<h2>例</h2>
+<h3>代数模式</h3>
+<p>设 $\mathcal O$ 为<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>, 即一个范畴 $\mathcal O$ 带有<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">正交分解系</a></span> $(\mathcal O_{\mathrm{act}},\mathcal O_{\mathrm{int}})$ 以及<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全子范畴</a></span> $i\colon \mathcal O_{\mathrm{el}} \subset \mathcal O_{\mathrm{int}}$.
+考虑脉函子
+$$
+\nu_i \colon \mathcal O_{\mathrm{int}} \to \widehat {\mathcal O_{\mathrm{el}}}
+$$
+的脉函子
+$$
+\nu_{\nu_i} \colon \widehat {\mathcal O_{\mathrm{el}}} \to \widehat {\mathcal O_{\mathrm{int}}};
+$$
+它等同于沿 $i\colon \mathcal O_{\mathrm{el}}\hookrightarrow\mathcal O_{\mathrm{int}}$ 的右 Kan 扩张 $i_*$, 因此 Segal 对象的范畴为如下的拉回:
+$$
+\begin{array}{ccc}
+\mathsf{Seg}_{\mathcal O} &amp; \rightarrow &amp; \widehat {\mathcal O} \\
+\downarrow &amp;  &amp; \downarrow \\
+\widehat {\mathcal O_{\mathrm{el}}} &amp; \rightarrow &amp; \widehat {\mathcal O_{\mathrm{int}}}.
+\end{array}
+$$</p>
+<p>注意 $i$ 全忠实蕴涵 $\nu_i$ 稠密, 且 $\nu_{\nu_i} = i_*$ 全忠实. 因此 Segal 对象的范畴 $\mathsf{Seg}_{\mathcal O}$ 正是
+$\mathcal O_{\mathrm{int}}$-预理论
+$\mathcal O_{\mathrm{int}}\to \mathcal O$ (注意这是个本质满函子) 的模型的范畴.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="自由-遗忘伴随"><header><h1><span class="taxon"></span>自由–遗忘伴随 <a class="slug" href="./自由-遗忘伴随.html">[自由-遗忘伴随]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>自由–遗忘伴随形容的是如下的现象: 两种数学结构 $A,B$ 的<span class="link local"><a href="./语法–语义对偶.html" title="语法–语义对偶 [语法–语义对偶]">语法</a></span>之间有一态射 $A \to B$, 使得 $B$-结构总是可以 “遗忘” 为 $A$-结构 (称之为<strong>遗忘</strong>是因为常常 $A$-结构是比较简单的结构, 甚至是没有结构; 但理论上不一定如此); 进一步, 遗忘函子有一左伴随, 称之为<strong>自由</strong>函子, 常常可以通过<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">左 Kan 扩张</a></span>构造. 这一现象发生在许多场合:</p>
 <ul>

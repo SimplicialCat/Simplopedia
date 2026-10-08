@@ -875,10 +875,11 @@
 </ul>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="余密度单子"><header><h1><span class="taxon"></span>余密度单子 <a class="slug" href="./余密度单子.html">[余密度单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>函子 $f\colon \mathcal C \to \mathcal D$ 的余密度单子是 $f$ 沿着 $f$ 自身的右 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span> $f_* f \colon \mathcal D \to \mathcal D$,
+<p>函子 $f\colon \mathcal C \to \mathcal D$ 的<strong>余密度单子</strong> (codensity monad) 是 $f$ 沿着 $f$ 自身的右 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span> $f_* f \colon \mathcal D \to \mathcal D$,
 $$
 f_* f (d) = \operatorname{lim}_{d \to f(c)} f(c).
 $$</p>
+<p>由 Kan 扩张的万有性质, 对 $\mathcal C$ 的任意自函子 $F$, 自然变换 $F \to f_* f$ 等同于自然变换 $F\circ f \to f$. 故余密度单子又叫<span class="link local"><a href="./自同态单子.html" title="自同态单子 [自同态单子]">自同态单子</a></span>, 是万有的作用于 $f$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</p>
 <h2>例</h2>
 <h3>超滤单子</h3>
 <p><span class="link local"><a href="./超滤.html" title="超滤 [超滤]">超滤单子</a></span> $\beta\colon \mathsf{Set} \to \mathsf{Set}$ 是 $\mathsf{Fin} \hookrightarrow \mathsf{Set}$ 的余密度单子,
@@ -886,7 +887,7 @@ $$
 \beta X = \operatorname{lim}_{S\to X,S\in\mathsf{Fin}}S.
 $$</p>
 <h3>自同态单子</h3>
-<p>对象 $c\in\mathcal C$ 的<strong>自同态单子</strong> $\operatorname{End}(c)$ 是 $c\colon 1 \to\mathcal C$ 的余密度单子.</p>
+<p>对象 $c\in\mathcal C$ 的<strong></strong><span class="link local"><a href="./自同态单子.html" title="自同态单子 [自同态单子]">自同态单子</a></span> $\operatorname{End}(c)$ 是 $c\colon 1 \to\mathcal C$ 的余密度单子.</p>
 <p>$$
 \operatorname{End}(c)(x) = \operatorname{lim}_{x\to c} c = c^{\operatorname{Hom}(x,c)}.
 $$</p>

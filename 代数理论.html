@@ -1063,9 +1063,17 @@ $$
 <h2>观念</h2>
 <p>许多<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数结构</a></span>可理解为某个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>上的代数. 这种结构构成的范畴到基础范畴有一个<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘函子</a></span>, 我们称这个函子为<strong>单子性函子</strong> (monadic functor).</p>
 <h2>定义</h2>
-<p>设 $G \colon \mathcal D \to \mathcal C$ 为函子, 若有 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $A$, 使得 $G$ 等价于遗忘函子 $\mathsf{Alg}_A(\mathcal C) \to \mathcal C$, 则称之为<strong>单子性函子</strong>.</p>
+<p>设 $G \colon \mathcal D \to \mathcal C$ 为函子, 若有 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $A$, 使得 $G$ 等价于<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>函子 $\mathsf{Alg}_A(\mathcal C) \to \mathcal C$, 则称之为<strong>单子性函子</strong>.</p>
+<h3>通过自同态单子</h3>
+<p>单子性函子背后的单子可以显式地确定, 它就是<span class="link local"><a href="./自同态单子.html" title="自同态单子 [自同态单子]">自同态单子</a></span>.</p>
+<p>对于函子 $U \colon \mathcal D\to\mathcal C$, 记 $\underline{\operatorname{End}}(U)\in\mathsf{End}(\mathcal C)$ 为其<span class="link local"><a href="./自同态单子.html" title="自同态单子 [自同态单子]">自同态单子</a></span>, 那么单子性也可等价地定义如下.</p>
+<p><strong>定义</strong>. 满足如下条件的函子 $U\colon \mathcal D\to\mathcal C$ 称作单子性函子:</p>
+<ul>
+<li>$U$ 有左伴随;</li>
+<li>典范的函子 $\mathcal D \to \mathcal C^{\underline{\operatorname{End}}(U)}$ 为等价.</li>
+</ul>
 <h2>性质</h2>
-<p>单子性函子 $G$ 有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $F$, 即单子 $A$ 的 “自由代数” 函子 $X\mapsto AX$.</p>
+<p>单子性函子 $G$ 有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $F$, 即单子 $A$ 的 “<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>代数” 函子 $X\mapsto AX$.</p>
 <h3>判定</h3>
 <p>判定单子性函子的常用方法是 <span class="link local"><a href="./Barr–Beck–Lurie定理.html" title="Barr–Beck–Lurie 定理 [Barr–Beck–Lurie定理]">Barr–Beck–Lurie 定理</a></span>.</p>
 <p><strong>定理</strong>. $G\colon \mathcal D\to\mathcal C$ 为单子性函子当且仅当 $G$ <span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守</a></span>, 且<span class="link local"><a href="./创生(范畴论).html" title="创生 (范畴论) [创生(范畴论)]">创生</a></span> $G$-<span class="link local"><a href="./单纯对象的分裂.html" title="分裂单纯对象 [单纯对象的分裂]">分裂</a></span><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>.</p>
@@ -1075,7 +1083,7 @@ $$
 <p><strong>定理</strong>. 对于函子 $G\colon \mathcal D\to\mathcal C$, 若 $G$ 有左伴随, $G$ <span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映同构</a></span>, $\mathcal D$ 具有<span class="link local"><a href="./余等化子.html" title="余等化子 [余等化子]">余等化子</a></span>, 且 $G$ 保持余等化子,
 则 $G$ 为单子性函子.</p>
 <h2>例</h2>
-<p>一个出人意料的例子: 紧 Hausdorff 空间的范畴 $\mathsf{CHaus}$ 在集合范畴 $\mathsf{Set}$ 上是单子性的.</p>
+<p>一个出人意料的例子: <span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>的范畴 $\mathsf{CHaus}$ 在集合范畴 $\mathsf{Set}$ 上是单子性的.</p>
 <h3>自反子范畴</h3>
 <p><span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span>的嵌入 $\mathcal D\hookrightarrow\mathcal C$ 是单子性的.</p>
 <h3>下降</h3>
@@ -1133,9 +1141,18 @@ $$
 $$
 X = \operatorname{colim}_{c\to X,c\in\mathcal C} c.
 $$</p>
+<h3>通过余连续函子</h3>
+<p>Hausdorff 空间的稠密映射 $X\to Y$ 能决定 $Y$ 出发的任意连续函数. 在类似的精神下, 稠密性的另一种等价表述是: 函子 $f\colon \mathcal C\to\mathcal D$ 稠密当且仅当对任意范畴 $\mathcal E$,
+$$
+f^*\colon \mathsf{Fun}^{\mathrm{cocts}}(\mathcal D,\mathcal E) \to \mathsf{Fun}^{\mathrm{cocts}}(\mathcal C,\mathcal E)
+$$
+全忠实. 这里 $\mathsf{Fun}^{\mathrm{cocts}}$ 指的是保持任意权在 $\widehat {\mathcal C}$ 中的<span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span>的函子.</p>
 <h2>例</h2>
 <h3>代数范畴</h3>
 <p>对于<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span> (<span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>) $\mathbb T$, 考虑其在集合范畴中的模型 $\mathsf{Mod}_{\mathsf{Set}}(\mathbb T)$, 那么有限生成自由代数构成稠密子范畴.</p>
+<h3>几何对象的范畴</h3>
+<p>(光滑) 流形范畴 $\mathsf{Mfd}$ 中, 由 $\mathbb{R}^0,\mathbb{R}^1,\cdots,\mathbb{R}^n,\cdots$ 构成的全子范畴是稠密子范畴.</p>
+<p>概形范畴中, <span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>构成全子范畴.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="紧生成范畴"><header><h1><span class="taxon"></span>紧生成范畴 <a class="slug" href="./紧生成范畴.html">[紧生成范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>紧生成范畴通常是指 <span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">$\aleph_0$-可表现范畴</a></span>.</p>
 <h2>性质</h2>

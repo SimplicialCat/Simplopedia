@@ -904,7 +904,7 @@ $$</p>
 <p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">亟需施工处</a></span>列表 (“TODO list”)</p>
 <p><span class="link local"><a href="./terminologies.html" title="单纯百科 - 术语翻译表 [terminologies]">术语翻译表</a></span></p>
 <h2>最近</h2>
-<p><span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>, <span class="link local"><a href="./相对单子.html" title="相对单子 [相对单子]">相对单子</a></span></p>
+<p><span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>, <span class="link local"><a href="./脉性单子.html" title="脉性单子 [脉性单子]">脉性单子</a></span>, <span class="link local"><a href="./相对单子.html" title="相对单子 [相对单子]">相对单子</a></span></p>
 <p><span class="link local"><a href="./Blakers–Massey定理.html" title="Blakers–Massey 定理 [Blakers–Massey定理]">Blakers–Massey 定理</a></span></p>
 <p><span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>, <span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">正交分解系</a></span></p>
 <p><span class="link local"><a href="./始代数.html" title="始代数 (自函子) [始代数]">始代数 (自函子)</a></span>, <span class="link local"><a href="./P-树.html" title="P-树 (多项式函子标记的树) [P-树]">P-树 (多项式函子标记的树)</a></span>, <span class="link local"><a href="./自由单子.html" title="自由单子 [自由单子]">自由单子</a></span></p>
@@ -1102,4 +1102,26 @@ $$
    c, \int^*_{i\in I}[W_i, X_i]\Big).
 \end{aligned}
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="稠密子范畴"><header><h1><span class="taxon"></span>稠密子范畴 <a class="slug" href="./稠密子范畴.html">[稠密子范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>稠密子范畴</strong>是可用于忠实地<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>整个范畴的一族 “足够有代表性” 的对象构成的子范畴.</p>
+<h2>定义</h2>
+<p>称函子 $\mathcal C \to \mathcal D$ <strong>稠密</strong>是指其对应的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子 $\mathcal D \to\widehat {\mathcal C}$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>.</p>
+<h3>通过余极限</h3>
+<p>函子 $\mathcal C \to \mathcal D$ 稠密当且仅当 $\mathcal D$ 的每个对象 $X$ 都是 $\mathcal C$ 的对象的如下<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>:
+$$
+X = \operatorname{colim}_{c\to X,c\in\mathcal C} c.
+$$</p>
+<h3>通过余连续函子</h3>
+<p>Hausdorff 空间的稠密映射 $X\to Y$ 能决定 $Y$ 出发的任意连续函数. 在类似的精神下, 稠密性的另一种等价表述是: 函子 $f\colon \mathcal C\to\mathcal D$ 稠密当且仅当对任意范畴 $\mathcal E$,
+$$
+f^*\colon \mathsf{Fun}^{\mathrm{cocts}}(\mathcal D,\mathcal E) \to \mathsf{Fun}^{\mathrm{cocts}}(\mathcal C,\mathcal E)
+$$
+全忠实. 这里 $\mathsf{Fun}^{\mathrm{cocts}}$ 指的是保持任意权在 $\widehat {\mathcal C}$ 中的<span class="link local"><a href="./加权余极限.html" title="加权余极限 [加权余极限]">加权余极限</a></span>的函子.</p>
+<h2>例</h2>
+<h3>代数范畴</h3>
+<p>对于<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span> (<span class="link local"><a href="./Lawvere理论.html" title="Lawvere 理论 [Lawvere理论]">Lawvere 理论</a></span>) $\mathbb T$, 考虑其在集合范畴中的模型 $\mathsf{Mod}_{\mathsf{Set}}(\mathbb T)$, 那么有限生成自由代数构成稠密子范畴.</p>
+<h3>几何对象的范畴</h3>
+<p>(光滑) 流形范畴 $\mathsf{Mfd}$ 中, 由 $\mathbb{R}^0,\mathbb{R}^1,\cdots,\mathbb{R}^n,\cdots$ 构成的全子范畴是稠密子范畴.</p>
+<p>概形范畴中, <span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>构成全子范畴.</p>
 </details></section></details></section></footer></article></div></body></html>

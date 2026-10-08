@@ -1871,10 +1871,11 @@ $$
 $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="余密度单子"><header><h1><span class="taxon"></span>余密度单子 <a class="slug" href="./余密度单子.html">[余密度单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>函子 $f\colon \mathcal C \to \mathcal D$ 的余密度单子是 $f$ 沿着 $f$ 自身的右 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span> $f_* f \colon \mathcal D \to \mathcal D$,
+<p>函子 $f\colon \mathcal C \to \mathcal D$ 的<strong>余密度单子</strong> (codensity monad) 是 $f$ 沿着 $f$ 自身的右 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span> $f_* f \colon \mathcal D \to \mathcal D$,
 $$
 f_* f (d) = \operatorname{lim}_{d \to f(c)} f(c).
 $$</p>
+<p>由 Kan 扩张的万有性质, 对 $\mathcal C$ 的任意自函子 $F$, 自然变换 $F \to f_* f$ 等同于自然变换 $F\circ f \to f$. 故余密度单子又叫<span class="link local"><a href="./自同态单子.html" title="自同态单子 [自同态单子]">自同态单子</a></span>, 是万有的作用于 $f$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</p>
 <h2>例</h2>
 <h3>超滤单子</h3>
 <p><span class="link local"><a href="./超滤.html" title="超滤 [超滤]">超滤单子</a></span> $\beta\colon \mathsf{Set} \to \mathsf{Set}$ 是 $\mathsf{Fin} \hookrightarrow \mathsf{Set}$ 的余密度单子,
@@ -1882,7 +1883,7 @@ $$
 \beta X = \operatorname{lim}_{S\to X,S\in\mathsf{Fin}}S.
 $$</p>
 <h3>自同态单子</h3>
-<p>对象 $c\in\mathcal C$ 的<strong>自同态单子</strong> $\operatorname{End}(c)$ 是 $c\colon 1 \to\mathcal C$ 的余密度单子.</p>
+<p>对象 $c\in\mathcal C$ 的<strong></strong><span class="link local"><a href="./自同态单子.html" title="自同态单子 [自同态单子]">自同态单子</a></span> $\operatorname{End}(c)$ 是 $c\colon 1 \to\mathcal C$ 的余密度单子.</p>
 <p>$$
 \operatorname{End}(c)(x) = \operatorname{lim}_{x\to c} c = c^{\operatorname{Hom}(x,c)}.
 $$</p>
@@ -3465,6 +3466,26 @@ $$</p>
 <h2>例</h2>
 <h3>共尾函子</h3>
 <p>设</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="自同态单子"><header><h1><span class="taxon"></span>自同态单子 <a class="slug" href="./自同态单子.html">[自同态单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>作为万有作用</h3>
+<p>一般地, 设<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $\mathcal M$ <span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">作用</a></span>于范畴 $\mathcal C$, 那么我们可以谈论 $\mathcal M$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>在 $\mathcal C$ 上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">作用</a></span>; 对于一个对象 $c\in\mathcal C$, 常常有一个 “万有” 的作用, 称为<strong>自同态对象</strong> $\underline{\operatorname{End}}(c)\in\mathsf{Alg}(\mathcal M)$, 使得结合代数 $A\in\mathsf{Alg}(\mathcal M)$ 在 $c$ 上的作用等同于其到 $\underline{\operatorname{End}}(c)$ 的同态.</p>
+<p>考虑如下特殊情况, 幺半范畴 $\mathsf{End}(\mathcal C)$ 作用于函子范畴 $\mathsf{Fun}(\mathcal D,\mathcal C)$, 若函子 $U\in\mathsf{Fun}(\mathcal D,\mathcal C)$ 的自同态对象 $\underline{\operatorname{End}}(c)\in\mathsf{Alg}(\mathsf{End}(\mathcal C))$ 存在, 则称之为 $U$ 的<strong>自同态单子</strong>.</p>
+<h3>通过余密度单子</h3>
+<p>函子 $U\colon \mathcal D \to \mathcal C$ 的自同态单子也可定义为其<span class="link local"><a href="./余密度单子.html" title="余密度单子 [余密度单子]">余密度单子</a></span>.</p>
+<h2>性质</h2>
+<p>注意到 $\mathsf{End}(\mathcal C)$ 在 $\mathsf{Fun}(\mathcal D,\mathcal C)$ 上的作用是逐对象的; 对任意单子 $M$, 其在函子 $U\colon \mathcal D\to\mathcal C$ 上的作用等同于提升
+$$
+\begin{array}{ccc}
+ &amp;  &amp; \mathcal C^M \\
+ &amp; \nearrow &amp; \downarrow \\
+\mathcal D &amp; \underset{U}{\rightarrow} &amp; \mathcal C.
+\end{array}
+$$</p>
+<p>特别地, 当自同态单子存在时有一个典范的函子
+$$
+\mathcal D \to \mathcal C^{\underline{\operatorname{End}}(U)}.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="自由单子"><header><h1><span class="taxon"></span>自由单子 <a class="slug" href="./自由单子.html">[自由单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p><span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>是自函子范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>; 自由单子就是这种代数中的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>代数.</p>
@@ -3563,6 +3584,9 @@ $$
 \mathsf{Fun}(\mathsf{Fin}_*\times\Delta^{\mathrm{op}},\mathsf{Ani})
 $$
 的全子范畴. 又由于函子范畴中的极限是逐点的, 可验证两个子范畴相同.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="融贯子"><header><h1><span class="taxon"></span>融贯子 <a class="slug" href="./融贯子.html">[融贯子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>一个 Grothendieck <strong>融贯子</strong> (coherator) 给出<span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状集</a></span>上的一种<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数结构</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="迹"><header><h1><span class="taxon"></span>迹 <a class="slug" href="./迹.html">[迹]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>自映射的迹</h3>

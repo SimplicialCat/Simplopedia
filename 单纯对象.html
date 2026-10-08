@@ -1152,7 +1152,6 @@ $$</p>
 <h3>几何实现保持纤维化</h3>
 <p><strong>定理</strong>. <span class="link local"><a href="./Kan纤维化.html" title=" [Kan纤维化]">Kan 纤维化</a></span>的几何实现是 <span class="link local"><a href="./Serre纤维化.html" title=" [Serre纤维化]">Serre 纤维化</a></span>.</p>
 <h2>例</h2>
-<p>考虑终范畴 $1$, 其上的预层范畴即为生象的范畴 $\mathsf{Ani}$. 沿米田嵌入 $1\to\mathsf{Ani}$ 的左 Kan 扩张给出的是</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, <span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="几何实现(单纯图表的余极限)"><header><h1><span class="taxon"></span>几何实现 (作为单纯图表的余极限) <a class="slug" href="./几何实现(单纯图表的余极限).html">[几何实现(单纯图表的余极限)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -1173,9 +1172,17 @@ $$
 <h2>观念</h2>
 <p>许多<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数结构</a></span>可理解为某个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>上的代数. 这种结构构成的范畴到基础范畴有一个<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘函子</a></span>, 我们称这个函子为<strong>单子性函子</strong> (monadic functor).</p>
 <h2>定义</h2>
-<p>设 $G \colon \mathcal D \to \mathcal C$ 为函子, 若有 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $A$, 使得 $G$ 等价于遗忘函子 $\mathsf{Alg}_A(\mathcal C) \to \mathcal C$, 则称之为<strong>单子性函子</strong>.</p>
+<p>设 $G \colon \mathcal D \to \mathcal C$ 为函子, 若有 $\mathcal C$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $A$, 使得 $G$ 等价于<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>函子 $\mathsf{Alg}_A(\mathcal C) \to \mathcal C$, 则称之为<strong>单子性函子</strong>.</p>
+<h3>通过自同态单子</h3>
+<p>单子性函子背后的单子可以显式地确定, 它就是<span class="link local"><a href="./自同态单子.html" title="自同态单子 [自同态单子]">自同态单子</a></span>.</p>
+<p>对于函子 $U \colon \mathcal D\to\mathcal C$, 记 $\underline{\operatorname{End}}(U)\in\mathsf{End}(\mathcal C)$ 为其<span class="link local"><a href="./自同态单子.html" title="自同态单子 [自同态单子]">自同态单子</a></span>, 那么单子性也可等价地定义如下.</p>
+<p><strong>定义</strong>. 满足如下条件的函子 $U\colon \mathcal D\to\mathcal C$ 称作单子性函子:</p>
+<ul>
+<li>$U$ 有左伴随;</li>
+<li>典范的函子 $\mathcal D \to \mathcal C^{\underline{\operatorname{End}}(U)}$ 为等价.</li>
+</ul>
 <h2>性质</h2>
-<p>单子性函子 $G$ 有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $F$, 即单子 $A$ 的 “自由代数” 函子 $X\mapsto AX$.</p>
+<p>单子性函子 $G$ 有左<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span> $F$, 即单子 $A$ 的 “<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>代数” 函子 $X\mapsto AX$.</p>
 <h3>判定</h3>
 <p>判定单子性函子的常用方法是 <span class="link local"><a href="./Barr–Beck–Lurie定理.html" title="Barr–Beck–Lurie 定理 [Barr–Beck–Lurie定理]">Barr–Beck–Lurie 定理</a></span>.</p>
 <p><strong>定理</strong>. $G\colon \mathcal D\to\mathcal C$ 为单子性函子当且仅当 $G$ <span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守</a></span>, 且<span class="link local"><a href="./创生(范畴论).html" title="创生 (范畴论) [创生(范畴论)]">创生</a></span> $G$-<span class="link local"><a href="./单纯对象的分裂.html" title="分裂单纯对象 [单纯对象的分裂]">分裂</a></span><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>.</p>
@@ -1185,7 +1192,7 @@ $$
 <p><strong>定理</strong>. 对于函子 $G\colon \mathcal D\to\mathcal C$, 若 $G$ 有左伴随, $G$ <span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映同构</a></span>, $\mathcal D$ 具有<span class="link local"><a href="./余等化子.html" title="余等化子 [余等化子]">余等化子</a></span>, 且 $G$ 保持余等化子,
 则 $G$ 为单子性函子.</p>
 <h2>例</h2>
-<p>一个出人意料的例子: 紧 Hausdorff 空间的范畴 $\mathsf{CHaus}$ 在集合范畴 $\mathsf{Set}$ 上是单子性的.</p>
+<p>一个出人意料的例子: <span class="link local"><a href="./紧Hausdorff空间.html" title="紧 Hausdorff 空间 [紧Hausdorff空间]">紧 Hausdorff 空间</a></span>的范畴 $\mathsf{CHaus}$ 在集合范畴 $\mathsf{Set}$ 上是单子性的.</p>
 <h3>自反子范畴</h3>
 <p><span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span>的嵌入 $\mathcal D\hookrightarrow\mathcal C$ 是单子性的.</p>
 <h3>下降</h3>
@@ -1313,9 +1320,10 @@ $$</p>
 <p>单纯集是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$ 上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>, 即集合范畴中的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>.</p>
 <h2>例</h2>
 <h3>脉</h3>
-<p>构造单纯集 (或任何范畴上的预层) 的一种重要手段是脉. 给定任意函子 $\Delta\to\mathcal C$, 将其想象为抽象的单形对应的具体的几何对象, 都可由 $\mathcal C$ 的对象造出单纯集; 当 $\mathcal C$ 具有余极限时还可构造相伴随的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>. 参见<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>.</p>
+<p>构造单纯集 (或任何范畴上的预层) 的一种重要手段是<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>. 给定任意函子 $\Delta\to\mathcal C$, 将其想象为抽象的单形对应的具体的几何对象, 都可由 $\mathcal C$ 的对象造出单纯集; 当 $\mathcal C$ 具有余极限时还可构造相伴随的<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>, <span class="link local"><a href="./双单纯集.html" title="“双单纯集” [双单纯集]">双单纯集</a></span>.</p>
+<p><span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状集</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="双单纯集"><header><h1><span class="taxon"></span>“双单纯集” <a class="slug" href="./双单纯集.html">[双单纯集]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>双单纯集是<span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span>范畴中的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, 也即函子 $\Delta^{\text{op}}\times\Delta^{\text{op}} \to\mathsf {Set}$. 双单纯集又称单纯空间 (simplicial space).</p>
