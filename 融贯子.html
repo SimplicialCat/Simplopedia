@@ -828,6 +828,36 @@
 <article><section class="block" data-taxon=""><details open><summary id="融贯子"><header><h1><span class="taxon"></span>融贯子 <a class="slug" href="./融贯子.html">[融贯子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>一个 Grothendieck <strong>融贯子</strong> (coherator) 给出<span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状集</a></span>上的一种<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数结构</a></span>.</p>
+<h2>定义</h2>
+<p>回忆 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴</a></span> $\Theta = \operatorname{colim}_n \Theta_n$ 的对象可视为<span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状集</a></span>, 它是若干不同维数胞腔 $D_n$ 的粘合
+$$
+S = D_{h_1} \sqcup_{D_{b_1}} D_{h_2} \cdots \sqcup_{D_{b_{m-1}}} D_{h_m},\ (\star)
+$$
+其中每个 $D_{b_i}$
+同时是 $D_{h_i}$ 和 $D_{h_{i+1}}$ 的某个较低维面, 并且只允许将一个 “出发” 面粘到一个 “到达” 面上. 如下是 $\Theta$ 的一个对象的示意.</p>
+<img src="/assets/globular.svg" alt="basic globular shape" width="300" style="display:block; margin:auto;">
+<p>$$
+S = (D_3 \sqcup_{D_1} D_2) \sqcup_{D_0} D_1 \sqcup_{D_0} D_2.
+$$</p>
+<p>(如果读者认为上述定义不够直观或不够严格, 可采用 Joyal 的等价定义, 见 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴</a></span>.)</p>
+<p>记 $\Theta$ 中<span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状</a></span>映射构成的<span class="link local"><a href="./宽子范畴.html" title="宽子范畴 [宽子范畴]">宽子范畴</a></span>为 $\Theta_0$ (换言之必须将每个胞腔映射到一个同维数的胞腔; 注意<span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状集</a></span>没有 “退化” 部分); 在 $\Theta$ 上的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>结构中, 这个子范畴恰为<strong>惰性映射</strong>的范畴 $\Theta_{\mathrm{int}}$.</p>
+<p><strong>融贯子</strong>是向 $\Theta_0$ 中加入满足特定要求的<strong>活性映射</strong>所得的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>. 具体要求如下.</p>
+<p><strong>定义</strong>. 一个 Grothendieck <strong>融贯子</strong> (coherator) $\mathcal C$ 是以 $\Theta_0$ 为惰性部分, 各维数胞腔为基本对象的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>, 满足</p>
+<ul>
+<li>嵌入 $\Theta_0 \to \mathcal C$ 保持形如 $(\star)$ 的余极限;</li>
+<li>嵌入 $\Theta_0 \to \mathcal C$ 分解为一座塔 $\Theta_0 = \mathcal C_0 \to \mathcal C_1 \to\cdots$, $\mathcal C = \operatorname{colim}_r \mathcal C_r$, 且每个函子 $\mathcal C_r \to \mathcal C_{r+1}$ 都是这样的操作: 对特定的<strong>平行胞腔</strong> $f,g\colon D_{h-1} \rightrightarrows S$ (即 “出发面”, “到达面” 都相等的两个胞腔) 自由地加入一个态射 $D_h \to S$, 称为<strong>填充</strong>, 使得其 “出发面”, “到达面” 分别为 $f,g$.</li>
+<li>任何两个平行胞腔最终都存在填充.</li>
+</ul>
+<p>融贯子 $\mathcal C$ 的<strong>模型</strong>就是指其 $\mathsf{Set}$-值 <span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">Segal 对象</a></span> $X\colon \mathcal C^{\mathrm{op}} \to \mathsf{Set}$, 也就是满足如下条件的预层:
+$$
+X(S) = \operatorname{lim}_{D_n\rightarrowtail S} X(D_n).
+$$</p>
+<p>为了帮助理解, 我们写出一个可能的融贯子的前几项, 同时写出相应的在一个模型 $X$ 上的运算.</p>
+<ul>
+<li>首先, $\mathcal C_0 = \Theta_0$ 是没有任何活性映射的部分, 不给出 $X$ 上的任何运算.</li>
+<li>对于 $D_0\rightrightarrows D_0$ 加入一个填充 $D_1 \to D_0$, 这是一个活性映射, 作用是给出 $X$ 上的 “对象” 的 “恒等态射” $X(D_0) \to X(D_1)$.</li>
+<li>对于 $D_0 \rightrightarrows D_1 \sqcup_{D_0} D_1$ 加入一个填充 $D_1 \to D_1 \sqcup_{D_0} D_1$, 给出 “态射的复合” $X(D_1)\times_{X(D_0)}X(D_1) \to X(D_1)$.</li>
+</ul>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="融贯"><header><h1><span class="taxon"></span>融贯 <a class="slug" href="./融贯.html">[融贯]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><strong>同伦融贯数据</strong> (homotopy-coherent data) 是<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span><span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">高阶范畴</a></span>中的结构时需要提供的越来越高阶的同伦.</p>
 <h2>相关概念</h2>

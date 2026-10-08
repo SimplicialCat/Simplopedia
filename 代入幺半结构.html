@@ -903,6 +903,66 @@ $$
     \mathsf{Mod}_{\mathcal C}(T) :=
 $$</li>
 </ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="圈积"><header><h1><span class="taxon"></span>圈积 (范畴论) <a class="slug" href="./圈积.html">[圈积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>圈积是 $\mathsf{Cat}_{/\Gamma}$ 上的一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半</a></span>结构, 表现的是 $\mathsf{Cat}$ 上某种<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>的复合, 类似于<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>的<span class="link local"><a href="./代入幺半结构.html" title="代入幺半结构 [代入幺半结构]">复合积</a></span>.</p>
+<p>类似于<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>中的结合代数即为<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>, 圈积下的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>也可给出 $\mathsf{Cat}$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</p>
+<h2>定义</h2>
+<p>记 $\Gamma$ 为 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">Segal 范畴</a></span>.</p>
+<h3>直接定义</h3>
+<p>设范畴 $\mathcal A,\mathcal B$ 带有到 $\Gamma$ 的函子 $F\colon \mathcal A\to\Gamma$, $G\colon \mathcal B\to\Gamma$.</p>
+<p>我们定义范畴 $\mathcal A \wr \mathcal B$ 以及函子 $\mathcal A \wr \mathcal B \to \Gamma$. 范畴 $\mathcal A \wr \mathcal B$ 的对象为
+$$
+(a,\{b_i\}_{i\in F(a)}),
+$$
+态射 $(a,\{b_i\}) \to (a',\{b'_i\})$ 为 $\mathcal A$ 中的态射 $f\colon a\to a'$ 以及对每个 $j\in F(f)(i)$ 一个态射 $\eta_{ij}\colon a_i\to a'_j$.</p>
+<p><strong>命题</strong>. 当范畴 $\mathcal B$ 有<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>时,
+$$
+\mathcal A \wr \mathcal B = \int_{a\in \mathcal A}\mathcal B^{F(a)}.
+$$</p>
+<h3>通过自由半加性范畴</h3>
+<p>首先, 对任意范畴 $\mathcal C$ 定义 $\Gamma \wr \mathcal C$ 为 $\mathcal C$ 生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>的 “具有<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>和<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">有限积</a></span>的范畴”. (<span class="link local"><a href="./BergerWr.html" title="Iterated wreath product of the simplex category and iterated loop spaces [BergerWr]">Berger</a></span> 称之为 “半加性范畴”, 但一般人们说的半加性范畴还要求余积与积等价.)</p>
+<p>具体地,</p>
+<ul>
+<li>$\Gamma \wr \mathcal C$ 的对象形如 $\langle n \rangle (X_1,\cdots,X_n)$;</li>
+<li>态射 $\langle n \rangle (X_1,\cdots,X_n) \to \langle m \rangle (Y_1,\cdots,Y_m)$ 包含一个 $\Gamma$ 中的态射 $\phi\colon \langle n\rangle \to \langle m \rangle$ 以及 $\mathcal C$ 中的一族态射 $X_i \to Y_j$, $j\in \phi(i)$;</li>
+<li>函子 $|{-}|\colon \Gamma \wr \mathcal C \to \Gamma$ 定义为 $|\langle n \rangle (X_1,\cdots,X_n)| = \prod_{i=1}^n |X_i|$ (注意 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">$\Gamma$</a></span> 中的积为 $\langle n\rangle\times \langle m\rangle = \langle n+m\rangle$).</li>
+</ul>
+<p>该范畴的零对象为 $\langle 0 \rangle ()$ (空列表), 两个对象 $\langle n \rangle (X_1,\cdots,X_n), \langle m \rangle (Y_1,\cdots,Y_m)$ 的积为 $\langle n+m \rangle (X_1,\cdots,X_m,Y_1,\cdots,Y_m)$.</p>
+<p>注意 $\Gamma$ 本身也可视为 $\Gamma \wr 1$, 即一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>的 “具有<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>和<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">有限积</a></span>的范畴”..</p>
+<p>然后定义一般的圈积: 对于 $\mathcal A\in\mathsf{Cat}_{/\Gamma}$ 以及 $\mathcal B\in\mathsf{Cat}$ (或 $\mathcal B\in\mathsf{Cat}_{/\Gamma}$), 定义
+$$
+\mathcal A \wr \mathcal B = \mathcal A \times_{\Gamma} (\Gamma \wr \mathcal B).
+$$</p>
+<h2>性质</h2>
+<h3>单位</h3>
+<p>圈积的单位为 $\{\langle 1 \rangle\}\to\Gamma$.</p>
+<h2>例</h2>
+<h3>与 Segal 范畴 $\Gamma$ 圈积</h3>
+<h3>与单纯形范畴圈积</h3>
+<p>对范畴 $\mathcal A$, 范畴 $\Delta \wr \mathcal A$ 的对象 $([n],(A_1,\cdots,A_n))$ 可视为某种链条状的 “<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>”, 其对象为 $0,1,\cdots,n$, 态射对象为
+$$
+\operatorname{Hom}(i-1,i) = A_i;
+$$
+一般地,
+$$
+\operatorname{Hom}(i,j) = A_{i+1}\times\cdots\times A_{j}.
+$$</p>
+<p>为了使这一陈述有意义, 设 $\mathcal V$ 为余完备<span class="link local"><a href="./积闭范畴.html" title="积闭范畴 [积闭范畴]">积闭范畴</a></span>, $\mathcal A\subset\mathcal V$ 为全子范畴, 则 $\Delta\wr\mathcal A$ 嵌入到 $\mathcal V$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>的范畴 $\mathcal V\text{-}\mathsf{Cat}$:
+$$
+\Delta\wr\mathcal A \hookrightarrow \mathcal V\text{-}\mathsf{Cat}.
+$$</p>
+<p><strong>命题</strong>. 若 $\mathcal A\subset\mathcal V$ <span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>, 则 $\Delta\wr\mathcal A \hookrightarrow \mathcal V\text{-}\mathsf{Cat}$ 也稠密.</p>
+<p><em>证明</em>. 约化到 $\mathcal V = \widehat {\mathcal A}$ 的情形. $\square$</p>
+<p>迭代上述命题会给出一系列稠密性:</p>
+<ul>
+<li>开始, 我们有 $1$ 在 $\mathsf{Ani}$ 中稠密;</li>
+<li>使用上述命题 (或使用常识), 我们有 $\Delta$ 在 $\mathsf{Cat}$ 中稠密;</li>
+<li>使用上述命题, 我们有 $\Delta \wr \Delta$ 在 $\mathsf{Cat}\text{-}\mathsf{Cat} = 2\mathsf{Cat}$ 中稠密;</li>
+<li>…</li>
+<li>使用上述命题, 我们有 $\Delta \wr \cdots \wr \Delta$ 在 $\mathsf{Cat}\text{-}\cdots\text{-}\mathsf{Cat} = n\mathsf{Cat}$ 中稠密.</li>
+</ul>
+<p>范畴 $\Delta \wr \cdots \wr \Delta$ 就是 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴 $\Theta_n$</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="对称序列"><header><h1><span class="taxon"></span>对称序列 <a class="slug" href="./对称序列.html">[对称序列]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>对称序列是一种可用于定义<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的结构.</p>

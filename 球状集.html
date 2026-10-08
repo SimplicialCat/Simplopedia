@@ -836,7 +836,49 @@
 </ul>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span></p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="单纯集"><header><h1><span class="taxon"></span>单纯集 <a class="slug" href="./单纯集.html">[单纯集]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Joyal范畴"><header><h1><span class="taxon"></span>Joyal 范畴 Θn <a class="slug" href="./Joyal范畴.html">[Joyal范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Joyal 范畴 $\Theta_n$ 的对象是<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span> $(\infty,n)$-范畴的基本单元, 是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形</a></span>在 $(\infty,n)$-范畴理论中的推广.</p>
+<h2>定义</h2>
+<h3>归纳定义</h3>
+<p>记 $\Delta$ 为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>, $\Gamma$ 为 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">Segal 范畴 $\Gamma$</a></span>, 有典范的函子 $\gamma\colon \Delta\to\Gamma$; 详见 <span class="link local"><a href="./Segal函子γ.html" title="Segal 函子 γ [Segal函子γ]">Segal 函子 $\gamma$</a></span>.</p>
+<p><strong>定义</strong>. Joyal 范畴 $\Theta_n$ 是 $n$ 个 $\Delta$ 的<span class="link local"><a href="./圈积.html" title="圈积 (范畴论) [圈积]">圈积</a></span>, 带有典范函子 $|{-}|\colon \Theta_n \to \Gamma$.</p>
+<p>该定义出自 <span class="link local"><a href="./BergerWr.html" title="Iterated wreath product of the simplex category and iterated loop spaces [BergerWr]">Berger</a></span>.</p>
+<p>具体展开<span class="link local"><a href="./圈积.html" title="圈积 (范畴论) [圈积]">圈积</a></span> $\Theta_n = \Delta \wr \Theta_{n-1}$ 的定义, $\Theta_n$ 的归纳定义如下:</p>
+<ul>
+<li>其对象形如 $[k] (X_1,\cdots,X_k)$, 其中 $[k]\in\Delta$, $X_i\in\Theta_{n-1}$;</li>
+<li>态射 $[k] (X_1,\cdots,X_k) \to [\ell] (Y_1,\cdots,Y_\ell)$ 包括单纯形的态射 $\phi\colon [k] \to [\ell]$ 以及 $\Theta_{n-1}$ 中的态射 $X_i \to Y_j$ ($\phi(i-1) &lt; j \leq \phi(i)$);</li>
+<li>函子 $|{-}|\colon \Theta_n\to\Gamma$ 定义为 $|[k] (X_1,\cdots,X_k)| = \prod_{i=1}^k |X_i|$ (注意 $\Gamma$ 中的积为 $\langle n \rangle \times \langle m \rangle = \langle n+m \rangle$).</li>
+</ul>
+<p>直观上, $\Theta_n$ 的对象 $[k] (X_1,\cdots,X_k)$ 是一个<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于 $\widehat {\Theta_{n-1}}$, 以 $0,1,\cdots,k$ 为对象的范畴, 态射对象为 $\operatorname{Hom}(i-1,i)= X_i$.</p>
+<h4>嵌入</h4>
+<p>范畴 $\Theta_{n-1}$ 到 $\Theta_n$ 有不止一个合理的嵌入.</p>
+<p>最符合直观的含入函子 $i_{n-1}\colon \Theta_{n-1} \to\Theta_n$ 是:</p>
+<ul>
+<li>$i_0\colon \Theta_0 = \{[0]\} \hookrightarrow \Theta_1 = \Delta$;</li>
+<li>$i_n ([k] (X_1,\cdots,X_k)) = [k] (i_{n-1}(X_1),\cdots,i_{n-1}(X_k))$.</li>
+</ul>
+<p>直观上, $\Theta_{n-1}$ 的对象作为 $(n-1)$-范畴, 当然也可以视为 $n$-范畴, 只不过没有非平凡的 $n$-态射. 余极限 $\Theta = \operatorname{colim}_n \Theta_n$ 用的是这种嵌入.</p>
+<p>另一个函子 $\sigma\colon \Theta_{n-1} \to \Theta_n$ (有时称为<strong>纬悬</strong>) 是
+$$
+\sigma (X) = [1] (X).
+$$
+直观上, 它有两个对象 $0,1$, 并且把 $X$ 的每个对象变为 $\sigma (X)$ 中的态射 $0\to 1$, 每个 $k$-态射提升为 $(k+1)$-态射.</p>
+<h3>作为球状集</h3>
+<p>范畴 $\Theta_n$ 的对象可视为<span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状集</a></span>, 不过态射不仅有球状集映射. (事实上球状集映射恰为 $\Theta_n$ 上<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>结构中的<strong>惰性映射</strong>.)</p>
+<h3>通过组合 $n$-圆盘</h3>
+<p>范畴 $\Theta_n$ 可通过 Joyal 的 “<span class="link local"><a href="./组合圆盘.html" title="组合圆盘 [组合圆盘]">组合 $n$-圆盘</a></span>” 直接定义.</p>
+<h2>性质</h2>
+<h3>稠密性</h3>
+<p>我们知道</p>
+<ul>
+<li>$n$-范畴等同于 $\mathsf{Cat}_{n-1}$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>: $\mathsf{Cat}_n \simeq \mathsf{Cat}_{n-1}\text{-}\mathsf{Cat}$;</li>
+<li><span class="link local"><a href="./圈积.html" title="圈积 (范畴论) [圈积]">圈积</a></span>有这样的性质, 若 $\mathcal A\subset \mathcal V$ <span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>, 则 $\Delta\wr \mathcal A \subset \mathcal V\text{-}\mathsf{Cat}$ 稠密;</li>
+</ul>
+<p>于是归纳可以证明 $\Theta_n\subset\mathsf{Cat}_n$ 稠密.</p>
+<h3>代数模式</h3>
+<p>范畴 $\Theta_n$ 可用于定义 $n$-范畴以及 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$-代数</a></span>的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="单纯集"><header><h1><span class="taxon"></span>单纯集 <a class="slug" href="./单纯集.html">[单纯集]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>单纯集是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$ 上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>, 即集合范畴中的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>.</p>
 <h2>例</h2>
@@ -848,4 +890,34 @@
 </details></section><section class="block" data-taxon=""><details ><summary id="融贯子"><header><h1><span class="taxon"></span>融贯子 <a class="slug" href="./融贯子.html">[融贯子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>一个 Grothendieck <strong>融贯子</strong> (coherator) 给出<span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状集</a></span>上的一种<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数结构</a></span>.</p>
+<h2>定义</h2>
+<p>回忆 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴</a></span> $\Theta = \operatorname{colim}_n \Theta_n$ 的对象可视为<span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状集</a></span>, 它是若干不同维数胞腔 $D_n$ 的粘合
+$$
+S = D_{h_1} \sqcup_{D_{b_1}} D_{h_2} \cdots \sqcup_{D_{b_{m-1}}} D_{h_m},\ (\star)
+$$
+其中每个 $D_{b_i}$
+同时是 $D_{h_i}$ 和 $D_{h_{i+1}}$ 的某个较低维面, 并且只允许将一个 “出发” 面粘到一个 “到达” 面上. 如下是 $\Theta$ 的一个对象的示意.</p>
+<img src="/assets/globular.svg" alt="basic globular shape" width="300" style="display:block; margin:auto;">
+<p>$$
+S = (D_3 \sqcup_{D_1} D_2) \sqcup_{D_0} D_1 \sqcup_{D_0} D_2.
+$$</p>
+<p>(如果读者认为上述定义不够直观或不够严格, 可采用 Joyal 的等价定义, 见 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴</a></span>.)</p>
+<p>记 $\Theta$ 中<span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状</a></span>映射构成的<span class="link local"><a href="./宽子范畴.html" title="宽子范畴 [宽子范畴]">宽子范畴</a></span>为 $\Theta_0$ (换言之必须将每个胞腔映射到一个同维数的胞腔; 注意<span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状集</a></span>没有 “退化” 部分); 在 $\Theta$ 上的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>结构中, 这个子范畴恰为<strong>惰性映射</strong>的范畴 $\Theta_{\mathrm{int}}$.</p>
+<p><strong>融贯子</strong>是向 $\Theta_0$ 中加入满足特定要求的<strong>活性映射</strong>所得的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>. 具体要求如下.</p>
+<p><strong>定义</strong>. 一个 Grothendieck <strong>融贯子</strong> (coherator) $\mathcal C$ 是以 $\Theta_0$ 为惰性部分, 各维数胞腔为基本对象的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>, 满足</p>
+<ul>
+<li>嵌入 $\Theta_0 \to \mathcal C$ 保持形如 $(\star)$ 的余极限;</li>
+<li>嵌入 $\Theta_0 \to \mathcal C$ 分解为一座塔 $\Theta_0 = \mathcal C_0 \to \mathcal C_1 \to\cdots$, $\mathcal C = \operatorname{colim}_r \mathcal C_r$, 且每个函子 $\mathcal C_r \to \mathcal C_{r+1}$ 都是这样的操作: 对特定的<strong>平行胞腔</strong> $f,g\colon D_{h-1} \rightrightarrows S$ (即 “出发面”, “到达面” 都相等的两个胞腔) 自由地加入一个态射 $D_h \to S$, 称为<strong>填充</strong>, 使得其 “出发面”, “到达面” 分别为 $f,g$.</li>
+<li>任何两个平行胞腔最终都存在填充.</li>
+</ul>
+<p>融贯子 $\mathcal C$ 的<strong>模型</strong>就是指其 $\mathsf{Set}$-值 <span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">Segal 对象</a></span> $X\colon \mathcal C^{\mathrm{op}} \to \mathsf{Set}$, 也就是满足如下条件的预层:
+$$
+X(S) = \operatorname{lim}_{D_n\rightarrowtail S} X(D_n).
+$$</p>
+<p>为了帮助理解, 我们写出一个可能的融贯子的前几项, 同时写出相应的在一个模型 $X$ 上的运算.</p>
+<ul>
+<li>首先, $\mathcal C_0 = \Theta_0$ 是没有任何活性映射的部分, 不给出 $X$ 上的任何运算.</li>
+<li>对于 $D_0\rightrightarrows D_0$ 加入一个填充 $D_1 \to D_0$, 这是一个活性映射, 作用是给出 $X$ 上的 “对象” 的 “恒等态射” $X(D_0) \to X(D_1)$.</li>
+<li>对于 $D_0 \rightrightarrows D_1 \sqcup_{D_0} D_1$ 加入一个填充 $D_1 \to D_1 \sqcup_{D_0} D_1$, 给出 “态射的复合” $X(D_1)\times_{X(D_0)}X(D_1) \to X(D_1)$.</li>
+</ul>
 </details></section></details></section></footer></article></div></body></html>

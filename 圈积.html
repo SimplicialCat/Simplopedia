@@ -827,7 +827,7 @@
 
 <article><section class="block" data-taxon=""><details open><summary id="圈积"><header><h1><span class="taxon"></span>圈积 (范畴论) <a class="slug" href="./圈积.html">[圈积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>圈积是 $\mathsf{Cat}_{/\Gamma}$ 上的一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半</a></span>结构, 表现的是 $\mathsf{Cat}$ 上某种<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>的复合, 类似于<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>的复合积.</p>
+<p>圈积是 $\mathsf{Cat}_{/\Gamma}$ 上的一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半</a></span>结构, 表现的是 $\mathsf{Cat}$ 上某种<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>的复合, 类似于<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>的<span class="link local"><a href="./代入幺半结构.html" title="代入幺半结构 [代入幺半结构]">复合积</a></span>.</p>
 <p>类似于<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>中的结合代数即为<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>, 圈积下的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>也可给出 $\mathsf{Cat}$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</p>
 <h2>定义</h2>
 <p>记 $\Gamma$ 为 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">Segal 范畴</a></span>.</p>
@@ -844,7 +844,12 @@ $$
 $$</p>
 <h3>通过自由半加性范畴</h3>
 <p>首先, 对任意范畴 $\mathcal C$ 定义 $\Gamma \wr \mathcal C$ 为 $\mathcal C$ 生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>的 “具有<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>和<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">有限积</a></span>的范畴”. (<span class="link local"><a href="./BergerWr.html" title="Iterated wreath product of the simplex category and iterated loop spaces [BergerWr]">Berger</a></span> 称之为 “半加性范畴”, 但一般人们说的半加性范畴还要求余积与积等价.)</p>
-<p>具体地, $\Gamma \wr \mathcal C$ 的对象形如 $\langle n \rangle (X_1,\cdots,X_n)$, 态射 $\langle n \rangle (X_1,\cdots,X_n) \to \langle m \rangle (Y_1,\cdots,Y_m)$ 包含一个 $\Gamma$ 中的态射 $\phi\colon \langle n\rangle \to \langle m \rangle$ 以及 $\mathcal C$ 中的一族态射 $X_i \to Y_j$, $j\in \phi(i)$.</p>
+<p>具体地,</p>
+<ul>
+<li>$\Gamma \wr \mathcal C$ 的对象形如 $\langle n \rangle (X_1,\cdots,X_n)$;</li>
+<li>态射 $\langle n \rangle (X_1,\cdots,X_n) \to \langle m \rangle (Y_1,\cdots,Y_m)$ 包含一个 $\Gamma$ 中的态射 $\phi\colon \langle n\rangle \to \langle m \rangle$ 以及 $\mathcal C$ 中的一族态射 $X_i \to Y_j$, $j\in \phi(i)$;</li>
+<li>函子 $|{-}|\colon \Gamma \wr \mathcal C \to \Gamma$ 定义为 $|\langle n \rangle (X_1,\cdots,X_n)| = \prod_{i=1}^n |X_i|$ (注意 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">$\Gamma$</a></span> 中的积为 $\langle n\rangle\times \langle m\rangle = \langle n+m\rangle$).</li>
+</ul>
 <p>该范畴的零对象为 $\langle 0 \rangle ()$ (空列表), 两个对象 $\langle n \rangle (X_1,\cdots,X_n), \langle m \rangle (Y_1,\cdots,Y_m)$ 的积为 $\langle n+m \rangle (X_1,\cdots,X_m,Y_1,\cdots,Y_m)$.</p>
 <p>注意 $\Gamma$ 本身也可视为 $\Gamma \wr 1$, 即一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>的 “具有<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>和<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">有限积</a></span>的范畴”..</p>
 <p>然后定义一般的圈积: 对于 $\mathcal A\in\mathsf{Cat}_{/\Gamma}$ 以及 $\mathcal B\in\mathsf{Cat}$ (或 $\mathcal B\in\mathsf{Cat}_{/\Gamma}$), 定义
@@ -852,7 +857,8 @@ $$
 \mathcal A \wr \mathcal B = \mathcal A \times_{\Gamma} (\Gamma \wr \mathcal B).
 $$</p>
 <h2>性质</h2>
-<h3></h3>
+<h3>单位</h3>
+<p>圈积的单位为 $\{\langle 1 \rangle\}\to\Gamma$.</p>
 <h2>例</h2>
 <h3>与 Segal 范畴 $\Gamma$ 圈积</h3>
 <h3>与单纯形范畴圈积</h3>
@@ -881,16 +887,45 @@ $$</p>
 <p>范畴 $\Delta \wr \cdots \wr \Delta$ 就是 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴 $\Theta_n$</a></span>.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Joyal范畴"><header><h1><span class="taxon"></span>Joyal 范畴 Θn <a class="slug" href="./Joyal范畴.html">[Joyal范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>Joyal 范畴 $\Theta_n$ 的对象是<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span> $(\infty,n)$-范畴的基本单元, 是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形</a></span>的推广.</p>
+<p>Joyal 范畴 $\Theta_n$ 的对象是<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span> $(\infty,n)$-范畴的基本单元, 是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形</a></span>在 $(\infty,n)$-范畴理论中的推广.</p>
 <h2>定义</h2>
 <h3>归纳定义</h3>
 <p>记 $\Delta$ 为<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>, $\Gamma$ 为 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">Segal 范畴 $\Gamma$</a></span>, 有典范的函子 $\gamma\colon \Delta\to\Gamma$; 详见 <span class="link local"><a href="./Segal函子γ.html" title="Segal 函子 γ [Segal函子γ]">Segal 函子 $\gamma$</a></span>.</p>
-<p><strong>定义</strong>. Joyal 范畴 $\Theta_n$ 是 $n$ 个 $\Delta$ 的<span class="link local"><a href="./圈积.html" title="圈积 (范畴论) [圈积]">圈积</a></span>, 带有典范函子 $\Theta_n \to \Gamma$.</p>
+<p><strong>定义</strong>. Joyal 范畴 $\Theta_n$ 是 $n$ 个 $\Delta$ 的<span class="link local"><a href="./圈积.html" title="圈积 (范畴论) [圈积]">圈积</a></span>, 带有典范函子 $|{-}|\colon \Theta_n \to \Gamma$.</p>
 <p>该定义出自 <span class="link local"><a href="./BergerWr.html" title="Iterated wreath product of the simplex category and iterated loop spaces [BergerWr]">Berger</a></span>.</p>
+<p>具体展开<span class="link local"><a href="./圈积.html" title="圈积 (范畴论) [圈积]">圈积</a></span> $\Theta_n = \Delta \wr \Theta_{n-1}$ 的定义, $\Theta_n$ 的归纳定义如下:</p>
+<ul>
+<li>其对象形如 $[k] (X_1,\cdots,X_k)$, 其中 $[k]\in\Delta$, $X_i\in\Theta_{n-1}$;</li>
+<li>态射 $[k] (X_1,\cdots,X_k) \to [\ell] (Y_1,\cdots,Y_\ell)$ 包括单纯形的态射 $\phi\colon [k] \to [\ell]$ 以及 $\Theta_{n-1}$ 中的态射 $X_i \to Y_j$ ($\phi(i-1) &lt; j \leq \phi(i)$);</li>
+<li>函子 $|{-}|\colon \Theta_n\to\Gamma$ 定义为 $|[k] (X_1,\cdots,X_k)| = \prod_{i=1}^k |X_i|$ (注意 $\Gamma$ 中的积为 $\langle n \rangle \times \langle m \rangle = \langle n+m \rangle$).</li>
+</ul>
+<p>直观上, $\Theta_n$ 的对象 $[k] (X_1,\cdots,X_k)$ 是一个<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于 $\widehat {\Theta_{n-1}}$, 以 $0,1,\cdots,k$ 为对象的范畴, 态射对象为 $\operatorname{Hom}(i-1,i)= X_i$.</p>
+<h4>嵌入</h4>
+<p>范畴 $\Theta_{n-1}$ 到 $\Theta_n$ 有不止一个合理的嵌入.</p>
+<p>最符合直观的含入函子 $i_{n-1}\colon \Theta_{n-1} \to\Theta_n$ 是:</p>
+<ul>
+<li>$i_0\colon \Theta_0 = \{[0]\} \hookrightarrow \Theta_1 = \Delta$;</li>
+<li>$i_n ([k] (X_1,\cdots,X_k)) = [k] (i_{n-1}(X_1),\cdots,i_{n-1}(X_k))$.</li>
+</ul>
+<p>直观上, $\Theta_{n-1}$ 的对象作为 $(n-1)$-范畴, 当然也可以视为 $n$-范畴, 只不过没有非平凡的 $n$-态射. 余极限 $\Theta = \operatorname{colim}_n \Theta_n$ 用的是这种嵌入.</p>
+<p>另一个函子 $\sigma\colon \Theta_{n-1} \to \Theta_n$ (有时称为<strong>纬悬</strong>) 是
+$$
+\sigma (X) = [1] (X).
+$$
+直观上, 它有两个对象 $0,1$, 并且把 $X$ 的每个对象变为 $\sigma (X)$ 中的态射 $0\to 1$, 每个 $k$-态射提升为 $(k+1)$-态射.</p>
+<h3>作为球状集</h3>
+<p>范畴 $\Theta_n$ 的对象可视为<span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状集</a></span>, 不过态射不仅有球状集映射. (事实上球状集映射恰为 $\Theta_n$ 上<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>结构中的<strong>惰性映射</strong>.)</p>
 <h3>通过组合 $n$-圆盘</h3>
 <p>范畴 $\Theta_n$ 可通过 Joyal 的 “<span class="link local"><a href="./组合圆盘.html" title="组合圆盘 [组合圆盘]">组合 $n$-圆盘</a></span>” 直接定义.</p>
 <h2>性质</h2>
-<p>由<span class="link local"><a href="./圈积.html" title="圈积 (范畴论) [圈积]">圈积</a></span>的性质, $\Theta_n$ 在 $n$-范畴的范畴中<span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>.</p>
+<h3>稠密性</h3>
+<p>我们知道</p>
+<ul>
+<li>$n$-范畴等同于 $\mathsf{Cat}_{n-1}$-<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>: $\mathsf{Cat}_n \simeq \mathsf{Cat}_{n-1}\text{-}\mathsf{Cat}$;</li>
+<li><span class="link local"><a href="./圈积.html" title="圈积 (范畴论) [圈积]">圈积</a></span>有这样的性质, 若 $\mathcal A\subset \mathcal V$ <span class="link local"><a href="./稠密子范畴.html" title="稠密子范畴 [稠密子范畴]">稠密</a></span>, 则 $\Delta\wr \mathcal A \subset \mathcal V\text{-}\mathsf{Cat}$ 稠密;</li>
+</ul>
+<p>于是归纳可以证明 $\Theta_n\subset\mathsf{Cat}_n$ 稠密.</p>
+<h3>代数模式</h3>
 <p>范畴 $\Theta_n$ 可用于定义 $n$-范畴以及 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$-代数</a></span>的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="opecat"><header><h1><span class="taxon"></span>Barwick 算子范畴 <a class="slug" href="./opecat.html">[opecat]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./BarwickOpeCat.html" title="From operator categories to higher operads [BarwickOpeCat]">Clark Barwick 文章</a></span>的笔记. 将原文转写为模型无关语言.</p>

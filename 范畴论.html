@@ -2420,7 +2420,7 @@ $$
 <p>范畴 $\mathcal C$ 是 $\kappa$-可达范畴等价于 $\mathcal C = \mathsf{Ind}_\kappa(\mathcal S)$ 是小范畴的 $\kappa$-<span class="link local"><a href="./ind-对象.html" title="ind-对象 [ind-对象]">Ind 完备化</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="圈积"><header><h1><span class="taxon"></span>圈积 (范畴论) <a class="slug" href="./圈积.html">[圈积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>圈积是 $\mathsf{Cat}_{/\Gamma}$ 上的一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半</a></span>结构, 表现的是 $\mathsf{Cat}$ 上某种<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>的复合, 类似于<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>的复合积.</p>
+<p>圈积是 $\mathsf{Cat}_{/\Gamma}$ 上的一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半</a></span>结构, 表现的是 $\mathsf{Cat}$ 上某种<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>的复合, 类似于<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>的<span class="link local"><a href="./代入幺半结构.html" title="代入幺半结构 [代入幺半结构]">复合积</a></span>.</p>
 <p>类似于<span class="link local"><a href="./对称序列.html" title="对称序列 [对称序列]">对称序列</a></span>中的结合代数即为<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>, 圈积下的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>也可给出 $\mathsf{Cat}$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>.</p>
 <h2>定义</h2>
 <p>记 $\Gamma$ 为 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">Segal 范畴</a></span>.</p>
@@ -2437,7 +2437,12 @@ $$
 $$</p>
 <h3>通过自由半加性范畴</h3>
 <p>首先, 对任意范畴 $\mathcal C$ 定义 $\Gamma \wr \mathcal C$ 为 $\mathcal C$ 生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>的 “具有<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>和<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">有限积</a></span>的范畴”. (<span class="link local"><a href="./BergerWr.html" title="Iterated wreath product of the simplex category and iterated loop spaces [BergerWr]">Berger</a></span> 称之为 “半加性范畴”, 但一般人们说的半加性范畴还要求余积与积等价.)</p>
-<p>具体地, $\Gamma \wr \mathcal C$ 的对象形如 $\langle n \rangle (X_1,\cdots,X_n)$, 态射 $\langle n \rangle (X_1,\cdots,X_n) \to \langle m \rangle (Y_1,\cdots,Y_m)$ 包含一个 $\Gamma$ 中的态射 $\phi\colon \langle n\rangle \to \langle m \rangle$ 以及 $\mathcal C$ 中的一族态射 $X_i \to Y_j$, $j\in \phi(i)$.</p>
+<p>具体地,</p>
+<ul>
+<li>$\Gamma \wr \mathcal C$ 的对象形如 $\langle n \rangle (X_1,\cdots,X_n)$;</li>
+<li>态射 $\langle n \rangle (X_1,\cdots,X_n) \to \langle m \rangle (Y_1,\cdots,Y_m)$ 包含一个 $\Gamma$ 中的态射 $\phi\colon \langle n\rangle \to \langle m \rangle$ 以及 $\mathcal C$ 中的一族态射 $X_i \to Y_j$, $j\in \phi(i)$;</li>
+<li>函子 $|{-}|\colon \Gamma \wr \mathcal C \to \Gamma$ 定义为 $|\langle n \rangle (X_1,\cdots,X_n)| = \prod_{i=1}^n |X_i|$ (注意 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">$\Gamma$</a></span> 中的积为 $\langle n\rangle\times \langle m\rangle = \langle n+m\rangle$).</li>
+</ul>
 <p>该范畴的零对象为 $\langle 0 \rangle ()$ (空列表), 两个对象 $\langle n \rangle (X_1,\cdots,X_n), \langle m \rangle (Y_1,\cdots,Y_m)$ 的积为 $\langle n+m \rangle (X_1,\cdots,X_m,Y_1,\cdots,Y_m)$.</p>
 <p>注意 $\Gamma$ 本身也可视为 $\Gamma \wr 1$, 即一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>的 “具有<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>和<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">有限积</a></span>的范畴”..</p>
 <p>然后定义一般的圈积: 对于 $\mathcal A\in\mathsf{Cat}_{/\Gamma}$ 以及 $\mathcal B\in\mathsf{Cat}$ (或 $\mathcal B\in\mathsf{Cat}_{/\Gamma}$), 定义
@@ -2445,7 +2450,8 @@ $$
 \mathcal A \wr \mathcal B = \mathcal A \times_{\Gamma} (\Gamma \wr \mathcal B).
 $$</p>
 <h2>性质</h2>
-<h3></h3>
+<h3>单位</h3>
+<p>圈积的单位为 $\{\langle 1 \rangle\}\to\Gamma$.</p>
 <h2>例</h2>
 <h3>与 Segal 范畴 $\Gamma$ 圈积</h3>
 <h3>与单纯形范畴圈积</h3>
@@ -3596,6 +3602,36 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="融贯子"><header><h1><span class="taxon"></span>融贯子 <a class="slug" href="./融贯子.html">[融贯子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>一个 Grothendieck <strong>融贯子</strong> (coherator) 给出<span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状集</a></span>上的一种<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数结构</a></span>.</p>
+<h2>定义</h2>
+<p>回忆 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴</a></span> $\Theta = \operatorname{colim}_n \Theta_n$ 的对象可视为<span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状集</a></span>, 它是若干不同维数胞腔 $D_n$ 的粘合
+$$
+S = D_{h_1} \sqcup_{D_{b_1}} D_{h_2} \cdots \sqcup_{D_{b_{m-1}}} D_{h_m},\ (\star)
+$$
+其中每个 $D_{b_i}$
+同时是 $D_{h_i}$ 和 $D_{h_{i+1}}$ 的某个较低维面, 并且只允许将一个 “出发” 面粘到一个 “到达” 面上. 如下是 $\Theta$ 的一个对象的示意.</p>
+<img src="/assets/globular.svg" alt="basic globular shape" width="300" style="display:block; margin:auto;">
+<p>$$
+S = (D_3 \sqcup_{D_1} D_2) \sqcup_{D_0} D_1 \sqcup_{D_0} D_2.
+$$</p>
+<p>(如果读者认为上述定义不够直观或不够严格, 可采用 Joyal 的等价定义, 见 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴</a></span>.)</p>
+<p>记 $\Theta$ 中<span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状</a></span>映射构成的<span class="link local"><a href="./宽子范畴.html" title="宽子范畴 [宽子范畴]">宽子范畴</a></span>为 $\Theta_0$ (换言之必须将每个胞腔映射到一个同维数的胞腔; 注意<span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状集</a></span>没有 “退化” 部分); 在 $\Theta$ 上的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>结构中, 这个子范畴恰为<strong>惰性映射</strong>的范畴 $\Theta_{\mathrm{int}}$.</p>
+<p><strong>融贯子</strong>是向 $\Theta_0$ 中加入满足特定要求的<strong>活性映射</strong>所得的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>. 具体要求如下.</p>
+<p><strong>定义</strong>. 一个 Grothendieck <strong>融贯子</strong> (coherator) $\mathcal C$ 是以 $\Theta_0$ 为惰性部分, 各维数胞腔为基本对象的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>, 满足</p>
+<ul>
+<li>嵌入 $\Theta_0 \to \mathcal C$ 保持形如 $(\star)$ 的余极限;</li>
+<li>嵌入 $\Theta_0 \to \mathcal C$ 分解为一座塔 $\Theta_0 = \mathcal C_0 \to \mathcal C_1 \to\cdots$, $\mathcal C = \operatorname{colim}_r \mathcal C_r$, 且每个函子 $\mathcal C_r \to \mathcal C_{r+1}$ 都是这样的操作: 对特定的<strong>平行胞腔</strong> $f,g\colon D_{h-1} \rightrightarrows S$ (即 “出发面”, “到达面” 都相等的两个胞腔) 自由地加入一个态射 $D_h \to S$, 称为<strong>填充</strong>, 使得其 “出发面”, “到达面” 分别为 $f,g$.</li>
+<li>任何两个平行胞腔最终都存在填充.</li>
+</ul>
+<p>融贯子 $\mathcal C$ 的<strong>模型</strong>就是指其 $\mathsf{Set}$-值 <span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">Segal 对象</a></span> $X\colon \mathcal C^{\mathrm{op}} \to \mathsf{Set}$, 也就是满足如下条件的预层:
+$$
+X(S) = \operatorname{lim}_{D_n\rightarrowtail S} X(D_n).
+$$</p>
+<p>为了帮助理解, 我们写出一个可能的融贯子的前几项, 同时写出相应的在一个模型 $X$ 上的运算.</p>
+<ul>
+<li>首先, $\mathcal C_0 = \Theta_0$ 是没有任何活性映射的部分, 不给出 $X$ 上的任何运算.</li>
+<li>对于 $D_0\rightrightarrows D_0$ 加入一个填充 $D_1 \to D_0$, 这是一个活性映射, 作用是给出 $X$ 上的 “对象” 的 “恒等态射” $X(D_0) \to X(D_1)$.</li>
+<li>对于 $D_0 \rightrightarrows D_1 \sqcup_{D_0} D_1$ 加入一个填充 $D_1 \to D_1 \sqcup_{D_0} D_1$, 给出 “态射的复合” $X(D_1)\times_{X(D_0)}X(D_1) \to X(D_1)$.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="迹"><header><h1><span class="taxon"></span>迹 <a class="slug" href="./迹.html">[迹]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>自映射的迹</h3>
