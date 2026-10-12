@@ -11278,7 +11278,7 @@ $$</p>
 <p><span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴 $\Theta$</a></span> 由用于<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span> $(\infty,n)$-范畴的基本对象构成, 如下是其一个对象的示意.</p>
 <img src="/assets/globular.svg" alt="" width="200" style="display:block; margin:auto;">
 <p>记 $\Theta_0$ 为 $\Theta$ 中惰性映射构成的<span class="link local"><a href="./宽子范畴.html" title="宽子范畴 [宽子范畴]">宽子范畴</a></span>. 所谓<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">惰性映射</a></span>是不承载代数运算的映射, 在这里就是指 $\Theta$ 的对象作为<span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状集</a></span>的含入映射.</p>
-<p>一个<span class="link local"><a href="./融贯子.html" title="融贯子 [融贯子]">融贯子</a></span> $\Theta_0 \to \mathcal C$ 是向 $\Theta_0$ 添加一些活性映射所得的一种<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>, 直观上是指定球状结构中 “态射” 如何 “复合”, 满足何种 “结合律” 的方式.</p>
+<p>一个<span class="link local"><a href="./融贯子.html" title="融贯子 [融贯子]">融贯子</a></span> $\Theta_0 \to \mathcal C$ 是向 $\Theta_0$ 添加一些活性映射所得的一种<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>, 直观上是指定球状结构中 “态射” 如何 “复合”, 满足何种 “结合律” 的方式. 代数模式的基本对象为胞腔 $D_0, D_1, D_2,\cdots$. 基本对象与惰性映射构成范畴 $\Theta_{\mathrm{el}}$, <span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状集</a></span>正是 $\Theta_{\mathrm{el}}$ 上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>.</p>
 <p>定义一个<span class="link local"><a href="./融贯子.html" title="融贯子 [融贯子]">融贯子</a></span> $\mathcal C$ 的<strong>模型</strong>为其 $\mathsf{Set}$-值 Segal 对象:
 $$
 \mathsf{Mod}(\mathcal C) := \mathsf{Seg}_{\mathcal C} (\mathsf{Set}).
@@ -11306,14 +11306,20 @@ $$
 </ul>
 </li>
 </ul>
-<h2>表现函子</h2>
+<hr />
 <p>考虑沿<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span> $\mathcal C$ 到终模式 $1$ 的态射的左 Kan 扩张, 即余极限函子
 $$
 L := \operatorname{colim}_{\mathcal C^{\mathrm{op}}}
 \colon \mathsf{Seg}_{\mathcal C}(\mathsf{Ani}) \to \mathsf{Seg}_1(\mathsf{Ani}) = \mathsf{Ani}.
 $$</p>
-<h2>弱等价</h2>
-<p>对于融贯子 $\mathcal C$, 我们可以手动定义 $\mathsf{Set}$-值模型的范畴 $\mathsf{Mod}(\mathcal C) := \mathsf{Seg}_{\mathcal C} (\mathsf{Set})$ 上的<span class="link local"><a href="./带弱等价的范畴.html" title="带弱等价的范畴 [带弱等价的范畴]">弱等价</a></span> $\mathcal W$.</p>
+<p>限制在 $\mathsf{Set}$-值 Segal 对象的全子范畴, 有函子
+$$
+\mathsf{Mod}(\mathcal C) \to \mathsf{Ani}.\,(\star)
+$$
+要证明同伦假设, 我们手动定义 $\mathsf{Mod}(\mathcal C)$ 上的<span class="link local"><a href="./带弱等价的范畴.html" title="带弱等价的范畴 [带弱等价的范畴]">弱等价</a></span> $\mathcal W$, 然后证明 $(\star)$ 是关于 $\mathcal W$ 的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>:
+$$
+\mathsf{Mod}(\mathcal C)[\mathcal W^{-1}] \overset{\simeq}{\to} \mathsf{Ani}.
+$$</p>
 <h3>同伦群</h3>
 <p>设 $X$ 为融贯子 $\mathcal C$ 的模型, 定义其同伦集 $\pi_r$:</p>
 <p>对于平行 $(r-1)$-胞腔 $u,v$ 以及 $\alpha,\beta\colon u\to v$, 定义 $\alpha \sim \beta$ 表示<strong>存在</strong> $(r+1)$-胞腔 $\gamma\colon \alpha\to\beta$.
@@ -11328,8 +11334,30 @@ $$
 $$
 \pi_r (X,x) := \pi_r (X;e_0^{r-1}(x),e_0^{r-1}(x)).
 $$</p>
+<p>容易相信, $\pi_r (X,x)$ 在 $r\geq 1$ 时有群结构.</p>
 <p>注意, 同伦集以及其间的映射不依赖于 $\mathcal C$ 中活性运算的具体填充的选取.</p>
 <p><strong>定义</strong>. 令 $\mathcal W$ 为 $\mathsf{Mod}(\mathcal C)$ 中诱导所有 $\pi_0$ 与 $\pi_r (X,x)$ 双射的态射构成的类.</p>
+<p><strong>引理</strong>. 胞腔 $\alpha\colon u\to v$ 给出同伦集的双射
+$$
+\alpha * (-) \colon \pi_r (X;v,w) \to \pi_r (X; u,w).
+$$</p>
+<p><strong>引理</strong>. 对胞腔 $u$ 的顶点 $x$, 有双射 $\pi_r(X;u,u) \simeq\pi_r(X,x)$.</p>
+<p>这两个引理的证明对于熟悉拓扑学的人都是直观的. 关键在于为了构造 “除法” 即 $\alpha * (-)$ 的逆运算, 需要</p>
+<p><strong>命题</strong> (弱等价检验). 对于 $\mathsf{Mod}(\mathcal C)$ 中的态射 $f\colon X\to Y$, 如下条件等价.</p>
+<ol>
+<li>$f\in\mathcal W$.</li>
+<li>$f$ 在 $\pi_0$ 上为单射, 且对 $r\geq 1$ 与每对平行胞腔 $u,v$, 给出双射 $\pi_r (X;u,v) \to \pi_r (Y;fu,fv)$.</li>
+<li>对任意 $r\geq 0$, $b\colon \partial D_r \to X$, 以及 $Y$ 中以 $fb$ 为边界的 $r$ 维胞腔 $y$, 都存在 $X$ 中以 $b$ 为边界的 $r$ 维胞腔 $x$ 以及 $Y$ 中的 $(r+1)$ 维胞腔 $fx \to y$.</li>
+</ol>
+<p><em>证明</em>. 使用前面两个引理, 证明不难.</p>
+<p>称 $X\in\mathsf{Mod}(\mathcal C)$ 可缩是指 $(X\to 1)\in\mathcal W$.</p>
+<p>由弱等价检验的第 3 个条件, $X$ 弱可缩当且仅当 $X$ 中任意两个平行胞腔之间都有填充.</p>
+<p><strong>命题</strong>. $\mathcal W$ 满足 “三中之二” 性质, 关于箭头范畴中的<span class="link local"><a href="./收缩.html" title="收缩 [收缩]">收缩</a></span>和<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>封闭. 这使 $(\mathsf{Mod}(\mathcal C),\mathcal W)$ 构成了一个<span class="link local"><a href="./带弱等价的范畴.html" title="带弱等价的范畴 [带弱等价的范畴]">带弱等价的范畴</a></span>.</p>
+<p>注意, “带弱等价的范畴” 这个概念与<span class="link local"><a href="./模型范畴.html" title="“模型范畴” [模型范畴]">模型范畴</a></span><strong>没有</strong>必然联系.</p>
+<h3>基本扩张</h3>
+<p>考虑模型 $X\in\mathsf{Mod}(\mathcal C)$ 的 $n$ 维胞腔 $D_n \to X$. 定义其<strong>基本扩张</strong>为 $\mathsf{Mod}(\mathcal C)$ 中沿 $s \colon D_n \to D_{n+1}$ 的推出 $X \to X^+$, 也即自由地添加一个平行于 $\alpha$ 的 $n$ 维胞腔 $\beta$, 以一个 $(n+1)$ 维胞腔 $\gamma\colon \alpha\to\beta$ 相连. 当然, 由于模型的代数结构, 还会生成出许许多多的胞腔, 这正是这个概念的复杂所在.</p>
+<p><span class="link local"><a href="./OAIGHH.html" title="The Grothendieck homotopy hypothesis via elementary expansions [OAIGHH]">OpenAI 文章</a></span>证明的主定理, 也即 <span class="link local"><a href="./HenryAlgModHomTyp.html" title="Algebraic models of homotopy types and the homotopy hypothesis [HenryAlgModHomTyp]">Simon Henry</a></span> 遗留的关键引理是如下定理.</p>
+<p><strong>定理</strong>. 基本扩张是弱等价.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="notes-perverse"><header><h1><span class="taxon"></span>偏屈层笔记 <a class="slug" href="./notes-perverse.html">[notes-perverse]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>偏屈层始于奇性的代数簇的几何. 常值层的上同调不能正确描述这种几何对象; 人们最初发明<span class="link local"><a href="./相交上同调.html" title=" [相交上同调]">相交上同调</a></span>描述它们.</p>
 <h2>第 1 讲</h2>
@@ -17541,7 +17569,7 @@ $$
 <p>分裂余等化子是<span class="link local"><a href="./绝对余极限.html" title="绝对余极限 [绝对余极限]">绝对余极限</a></span>.</p>
 <h2>例</h2>
 <h3>有向图</h3>
-<p>考虑有向图 $(V,E)$, 映射 $s,t\colon E\rightrightarrows V$ 给出有向边的起点和终点. 余等化子
+<p>考虑<span class="link local"><a href="./有向图.html" title="有向图 [有向图]">有向图</a></span> $(V,E)$, 映射 $s,t\colon E\rightrightarrows V$ 给出有向边的起点和终点. 余等化子
 $$
 E \rightrightarrows V \to \operatorname{coeq}(s,t)
 $$
@@ -18223,7 +18251,7 @@ $$
 </ul>
 <p>有一些看起来不那么 “代数” 的结构也可以用单子来记录. 关键在于, “不那么代数” 的信息被储存在了一个基范畴中, 而单子本身只负责记录 “代数” 运算.</p>
 <ul>
-<li>考虑有向图的范畴 $\mathsf{Graph}$, 其对象为两个生象带有两个映射 $E\rightrightarrows V$, 其上有一个自由范畴单子 $T_{\mathsf{Cat}}\colon \mathsf{Graph}\to\mathsf{Graph}$, 这个单子上的代数就是<strong>范畴</strong>.</li>
+<li>考虑<span class="link local"><a href="./有向图.html" title="有向图 [有向图]">有向图</a></span>的范畴 $\mathsf{Graph}$, 其对象为两个生象带有两个映射 $E\rightrightarrows V$, 其上有一个自由范畴单子 $T_{\mathsf{Cat}}\colon \mathsf{Graph}\to\mathsf{Graph}$, 这个单子上的代数就是<strong>范畴</strong>.</li>
 <li><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 也可以类似定义, 底层的结构是<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>. 树与图的区别在于它能记录 “多个对象到一个对象的态射”. 这是本讲的第二个主要目标. 注意在本讲中, 算畴 (多重范畴) 有了两个不同层次的角色: 先是一个算畴定义一种结构, 然后算畴这种结构本身也可以用单子来定义.</li>
 </ul>
 <p>在上述每个例子中, “自由代数” 单子都不仅仅是单子, 而是所谓<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span> (或<span class="link local"><a href="./脉性单子.html" title="脉性单子 [脉性单子]">脉性单子</a></span>). 元数 (arity) 的本义是一个函数的自变量的个数, 例如加法的元数是 $2$, 取逆的元数是 $1$, 而常数的元数是 $0$.</p>
@@ -19837,7 +19865,7 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="固有时"><header><h1><span class="taxon"></span>“固有时” <a class="slug" href="./固有时.html">[固有时]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>固有时是<span class="link local"><a href="./世界线.html" title="“世界线” [世界线]">世界线</a></span>的长度参数.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="图复形"><header><h1><span class="taxon"></span>“图复形” <a class="slug" href="./图复形.html">[图复形]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>定义 $G_{k,l}$ 为 $k$ 个顶点, $l$ 条边, 每个顶点度大于等于 $3$, 无自环的有向图生成的向量空间, 边界算子 $d\colon G_{k,l} \to G_{k+1,l+1}$ 将一个有向图映射到所有在其一个顶点处插入一条边得到的图的和.</p>
+<p>定义 $G_{k,l}$ 为 $k$ 个顶点, $l$ 条边, 每个顶点度大于等于 $3$, 无自环的<span class="link local"><a href="./有向图.html" title="有向图 [有向图]">有向图</a></span>生成的向量空间, 边界算子 $d\colon G_{k,l} \to G_{k+1,l+1}$ 将一个有向图映射到所有在其一个顶点处插入一条边得到的图的和.</p>
 <h3>IHX 关系</h3>
 <p>考虑一个图, 除一个顶点外均为 3 度, 一个顶点 4 度, 有三种方式插入一条边使得所有顶点变为 3 度, 分别称为 I, H, X.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="圆"><header><h1><span class="taxon"></span>“圆” <a class="slug" href="./圆.html">[圆]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -21217,7 +21245,7 @@ X \overset{s}{\leftarrow} E \overset{p}{\rightarrow} B \overset{t}{\rightarrow} 
 $$
 对应的多项式函子 $f=t_!p_*s^*\colon \mathcal C_{/X}\to\mathcal C_{/Y}$, 则有 $f_{/X} = p_*s^*\colon \mathcal C_{/X} \to\mathcal C_{/B}$ 的左伴随为 $s_! p^*\colon \mathcal C_{/B} \to \mathcal C_{/X}$.</p>
 <h3>图的自由范畴单子</h3>
-<p>参考 <span class="link local"><a href="./WeberFamParRAdj.html" title="Familial 2-functors and parametric right adjoints [WeberFamParRAdj]">Weber</a></span> 例 2.5. 记 $\mathsf{Graph}$ 为有向图的范畴, 其终对象 $1$ 是一个顶点和一条边构成的图. 考虑其上的自由范畴单子 $T$. 函子在终对象上的值 $T1 = \mathbf{B}\mathbb{N}$ 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的自同态. 于是有函子
+<p>参考 <span class="link local"><a href="./WeberFamParRAdj.html" title="Familial 2-functors and parametric right adjoints [WeberFamParRAdj]">Weber</a></span> 例 2.5. 记 $\mathsf{Graph}$ 为<span class="link local"><a href="./有向图.html" title="有向图 [有向图]">有向图</a></span>的范畴, 其终对象 $1$ 是一个顶点和一条边构成的图. 考虑其上的自由范畴单子 $T$. 函子在终对象上的值 $T1 = \mathbf{B}\mathbb{N}$ 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的自同态. 于是有函子
 $$
 T_{/1}\colon \mathsf{Graph} \to \mathsf{Graph}_{/\mathbf{B}\mathbb{N}}.
 $$
@@ -23945,6 +23973,11 @@ $$
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./椭圆曲线的模叠.html" title="椭圆曲线的模叠 [椭圆曲线的模叠]">椭圆曲线的模叠</a></span></p>
 <p><span class="link local"><a href="./Hitchin联络.html" title="“Hitchin 联络” [Hitchin联络]">Hitchin 联络</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="有向图"><header><h1><span class="taxon"></span>有向图 <a class="slug" href="./有向图.html">[有向图]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>例</h2>
+<ul>
+<li><span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>就是一个有向图.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="有效满射"><header><h1><span class="taxon"></span>有效满射 <a class="slug" href="./有效满射.html">[有效满射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设范畴 $\mathcal C$ 具有<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>以及<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">单纯余极限</a></span>.</p>
@@ -26010,6 +26043,10 @@ $$
 <li>…</li>
 </ul>
 <p>一般范畴中的这种结构称为<span class="link local"><a href="./球状对象.html" title="球状对象 [球状对象]">球状对象</a></span>.</p>
+<p>球状集可视为<span class="link local"><a href="./有向图.html" title="有向图 [有向图]">有向图</a></span>在高维的推广.</p>
+<h2>例</h2>
+<h3>球状脉</h3>
+<p>类似于<span class="link local"><a href="./奇异单纯集.html" title="奇异单纯集 [奇异单纯集]">奇异单纯集</a></span>, 拓扑空间 $X$ 也给出一个球状集 $\Pi X$, 其 $n$-胞腔就是 $n$ 维球面到 $X$ 的连续映射.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./单纯集.html" title="单纯集 [单纯集]">单纯集</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="球谱"><header><h1><span class="taxon"></span>球谱 <a class="slug" href="./球谱.html">[球谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -26893,7 +26930,7 @@ $$
 <h3>Schur 单子</h3>
 </details></section><section class="block" data-taxon=""><details ><summary id="箭图"><header><h1><span class="taxon"></span>箭图 <a class="slug" href="./箭图.html">[箭图]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p><strong>箭图</strong> (quiver) $Q$ 是允许有多箭头或圈的有向图.</p>
+<p><strong>箭图</strong> (quiver) $Q$ 是允许有多箭头或圈的<span class="link local"><a href="./有向图.html" title="有向图 [有向图]">有向图</a></span>.</p>
 <p>箭图也可理解为如下范畴上的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层</a></span>:</p>
 <ul>
 <li>对象: $e,v$;</li>
@@ -28665,7 +28702,16 @@ $$
 <li>…</li>
 </ul>
 <p>注意这样给出的 “运算律” 永远不是等式, 而是更高阶的胞腔.</p>
+<p><strong>命题</strong>. 每个融贯子 $\mathcal C$ 都可视为<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>, 其惰性映射的宽子范畴为 $\Theta_0$, 基本对象为各维数胞腔.</p>
+<p><strong>定义</strong>. 融贯子 $\mathcal C$ 的<strong>模型</strong>是其 $\mathsf{Set}$-值 <span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">Segal 对象</a></span>, 也即函子 $X\colon \mathcal C^{\mathrm{op}} \to \mathsf{Set}$, 满足对任意 $S\in\mathcal C$,
+$$
+X(S) = \operatorname{lim}_{E\rightarrowtail S} X(E),
+$$
+其中 $E\rightarrowtail S$ 取遍 $S$ 的胞腔.</p>
+<p>这个条件看起来就是<span class="link local"><a href="./层.html" title="拓扑空间上的层 [层]">层</a></span>条件, 这使人思考范畴 $\mathsf{Mod}(\mathcal C)$ 是否为<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>. 但需要注意的一点是, “所有从胞腔到形状 $S$ 的惰性映射” 可能不满足 <span class="link local"><a href="./Grothendieck拓扑.html" title="Grothendieck 拓扑 [Grothendieck拓扑]">Grothendieck 覆盖</a></span>的条件 (如拉回稳定性), 故 $\mathsf{Mod}(\mathcal C)$ 不一定是<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>.</p>
 <h2>性质</h2>
+<h3>可表函子为模型</h3>
+<p>对于融贯子 $\mathcal C$, <span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span> $\mathbf{y}(S)\colon \mathcal C^{\mathrm{op}}\to\mathsf{Set}$ 总是构成 $\mathcal C$ 的模型. 这是因为所有胞腔 $E\rightarrowtail S$ 构成 $\mathcal C$ 中的<span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="表示论"><header><h1><span class="taxon"></span>表示论 <a class="slug" href="./表示论.html">[表示论]</a></h1><div class="metadata"><ul><li class="meta-item">学科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>表示论是通过代数结构在其它对象上的作用研究代数结构的学科. 其中最常见的研究对象是群的表示, 即<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 在线性空间上的<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>, 也即 <span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">$\mathbf{B}G$</a></span> 上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="覆叠"><header><h1><span class="taxon"></span>覆叠 <a class="slug" href="./覆叠.html">[覆叠]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>

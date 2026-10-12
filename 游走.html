@@ -906,7 +906,7 @@ $$
 </ul>
 <p>有一些看起来不那么 “代数” 的结构也可以用单子来记录. 关键在于, “不那么代数” 的信息被储存在了一个基范畴中, 而单子本身只负责记录 “代数” 运算.</p>
 <ul>
-<li>考虑有向图的范畴 $\mathsf{Graph}$, 其对象为两个生象带有两个映射 $E\rightrightarrows V$, 其上有一个自由范畴单子 $T_{\mathsf{Cat}}\colon \mathsf{Graph}\to\mathsf{Graph}$, 这个单子上的代数就是<strong>范畴</strong>.</li>
+<li>考虑<span class="link local"><a href="./有向图.html" title="有向图 [有向图]">有向图</a></span>的范畴 $\mathsf{Graph}$, 其对象为两个生象带有两个映射 $E\rightrightarrows V$, 其上有一个自由范畴单子 $T_{\mathsf{Cat}}\colon \mathsf{Graph}\to\mathsf{Graph}$, 这个单子上的代数就是<strong>范畴</strong>.</li>
 <li><span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 也可以类似定义, 底层的结构是<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>. 树与图的区别在于它能记录 “多个对象到一个对象的态射”. 这是本讲的第二个主要目标. 注意在本讲中, 算畴 (多重范畴) 有了两个不同层次的角色: 先是一个算畴定义一种结构, 然后算畴这种结构本身也可以用单子来定义.</li>
 </ul>
 <p>在上述每个例子中, “自由代数” 单子都不仅仅是单子, 而是所谓<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span> (或<span class="link local"><a href="./脉性单子.html" title="脉性单子 [脉性单子]">脉性单子</a></span>). 元数 (arity) 的本义是一个函数的自变量的个数, 例如加法的元数是 $2$, 取逆的元数是 $1$, 而常数的元数是 $0$.</p>
@@ -1156,7 +1156,7 @@ X \overset{s}{\leftarrow} E \overset{p}{\rightarrow} B \overset{t}{\rightarrow} 
 $$
 对应的多项式函子 $f=t_!p_*s^*\colon \mathcal C_{/X}\to\mathcal C_{/Y}$, 则有 $f_{/X} = p_*s^*\colon \mathcal C_{/X} \to\mathcal C_{/B}$ 的左伴随为 $s_! p^*\colon \mathcal C_{/B} \to \mathcal C_{/X}$.</p>
 <h3>图的自由范畴单子</h3>
-<p>参考 <span class="link local"><a href="./WeberFamParRAdj.html" title="Familial 2-functors and parametric right adjoints [WeberFamParRAdj]">Weber</a></span> 例 2.5. 记 $\mathsf{Graph}$ 为有向图的范畴, 其终对象 $1$ 是一个顶点和一条边构成的图. 考虑其上的自由范畴单子 $T$. 函子在终对象上的值 $T1 = \mathbf{B}\mathbb{N}$ 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的自同态. 于是有函子
+<p>参考 <span class="link local"><a href="./WeberFamParRAdj.html" title="Familial 2-functors and parametric right adjoints [WeberFamParRAdj]">Weber</a></span> 例 2.5. 记 $\mathsf{Graph}$ 为<span class="link local"><a href="./有向图.html" title="有向图 [有向图]">有向图</a></span>的范畴, 其终对象 $1$ 是一个顶点和一条边构成的图. 考虑其上的自由范畴单子 $T$. 函子在终对象上的值 $T1 = \mathbf{B}\mathbb{N}$ 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的自同态. 于是有函子
 $$
 T_{/1}\colon \mathsf{Graph} \to \mathsf{Graph}_{/\mathbf{B}\mathbb{N}}.
 $$
