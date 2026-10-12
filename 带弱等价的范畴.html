@@ -856,7 +856,7 @@ $$
 \mathsf{Mod}(\mathcal C) := \mathsf{Seg}_{\mathcal C} (\mathsf{Set}).
 $$
 不同的融贯子会给出不同的模型的范畴 (作为 $(1,1)$-范畴), 而同伦假设告诉我们在适当的 “<span class="link local"><a href="./带弱等价的范畴.html" title="带弱等价的范畴 [带弱等价的范畴]">弱等价</a></span>” 概念的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>之下, 这些范畴<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>同一个 $(\infty,1)$-范畴, 也就是 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span>.</p>
-<h3>记号</h3>
+<h2>记号</h2>
 <p>对于融贯子的模型 $X$, 它首先是一个球状集; 对任何球状集有如下运算 (实际上是 “惰性” 运算):</p>
 <ul>
 <li>以 $\alpha\colon u \to v$ 表示胞腔 $\alpha$ 以 $u,v$ 为起点和终点;</li>
@@ -887,19 +887,21 @@ $$</p>
 <h2>弱等价</h2>
 <p>对于融贯子 $\mathcal C$, 我们可以手动定义 $\mathsf{Set}$-值模型的范畴 $\mathsf{Mod}(\mathcal C) := \mathsf{Seg}_{\mathcal C} (\mathsf{Set})$ 上的<span class="link local"><a href="./带弱等价的范畴.html" title="带弱等价的范畴 [带弱等价的范畴]">弱等价</a></span> $\mathcal W$.</p>
 <h3>同伦群</h3>
-<p>设 $X$ 为融贯子 $\mathcal C$ 的模型, 定义其同伦群 $\pi_r$:</p>
-<p>对于平行 $(r-1)$-胞腔 $u,v$ 以及 $\alpha,\beta\colon u\to v$, 定义 $\alpha \sim \beta$ 表示存在 $(r+1)$-胞腔 $\gamma\colon \alpha\to\beta$.
+<p>设 $X$ 为融贯子 $\mathcal C$ 的模型, 定义其同伦集 $\pi_r$:</p>
+<p>对于平行 $(r-1)$-胞腔 $u,v$ 以及 $\alpha,\beta\colon u\to v$, 定义 $\alpha \sim \beta$ 表示<strong>存在</strong> $(r+1)$-胞腔 $\gamma\colon \alpha\to\beta$.
 定义
 $$
 \pi_r(X;u,v) := \{\alpha\colon u\to v\}/\sim\,(r\geq 1),
 $$
 $$
 \pi_0 (X) := X_0 / \sim.
-$$</p>
-<p>$$
+$$
+对 $x\in X_0$ 定义
+$$
 \pi_r (X,x) := \pi_r (X;e_0^{r-1}(x),e_0^{r-1}(x)).
 $$</p>
-<p><strong>定义</strong>. 令 $\mathcal W$ 为诱导所有 $\pi_r$ 同构的态射构成的类.</p>
+<p>注意, 同伦集以及其间的映射不依赖于 $\mathcal C$ 中活性运算的具体填充的选取.</p>
+<p><strong>定义</strong>. 令 $\mathcal W$ 为 $\mathsf{Mod}(\mathcal C)$ 中诱导所有 $\pi_0$ 与 $\pi_r (X,x)$ 双射的态射构成的类.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="导出函子"><header><h1><span class="taxon"></span>导出函子 <a class="slug" href="./导出函子.html">[导出函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>对于 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>之间的左正合或右正合函子 $f\colon \mathcal A\to\mathcal B$, 其<strong>导出函子</strong>是根据<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>的泛性质诱导的<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>之间的函子 $\mathsf{D}(\mathcal A) \to \mathsf{D}(\mathcal B)$.</p>

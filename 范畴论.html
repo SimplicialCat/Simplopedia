@@ -3660,8 +3660,9 @@ $$</p>
 <p>为了帮助理解, 我们写出一个可能的融贯子的前几项, 同时写出相应的在一个模型 $X$ 上的运算.</p>
 <ul>
 <li>首先, $\mathcal C_0 = \Theta_0$ 是没有任何活性映射的部分, 不给出 $X$ 上的任何运算.</li>
-<li>对于 $D_0\rightrightarrows D_0$ 加入一个填充 $D_1 \to D_0$, 这是一个活性映射, 作用是给出 $X$ 上的 “对象” 的 “恒等态射” $X(D_0) \to X(D_1)$.</li>
+<li>对于 $D_0\rightrightarrows D_0$ 加入一个填充 $\mathrm{id}\colon D_1 \to D_0$, 这是一个活性映射, 作用是给出 $X$ 上的 “对象” 的 “恒等态射” $X(D_0) \to X(D_1)$.</li>
 <li>对于 $D_0 \rightrightarrows D_1 \sqcup_{D_0} D_1$ 加入一个填充 $\mathrm{comp}\colon D_1 \to D_1 \sqcup_{D_0} D_1$, 给出 “态射的复合” $X(D_1)\times_{X(D_0)}X(D_1) \to X(D_1)$.</li>
+<li>对于 $D_0 \rightrightarrows D_1$ (两个点顺序与通常相反) 加入一个填充 $\mathrm{inv}\colon D_1\to D_1$, 给出 “态射的逆” $X(D_1) \to X(D_1)$; 接着考虑两个映射 $D_1\rightrightarrows D_1$, 一个是 $D_1\overset{\mathrm{id}}{\to} D_0\to D_1$, 另一个是 $D_1 \overset{\mathrm{comp}}{\longrightarrow} D_1 \sqcup_{D_0} D_1 \overset{(\mathrm{id},\mathrm{inv})}{\longrightarrow} D_1$, 加入一个填充 $D_2 \to D_1$, 给出逆的一个运算律 $X(D_1)\to X(D_2)$, $\alpha\mapsto (\alpha\circ\alpha^{-1} \to \mathrm{id})$.</li>
 <li>考虑交换图
 $$
       \begin{CD}
@@ -3673,6 +3674,7 @@ $$
 我们有了两个映射 $D_1 \rightrightarrows D_1 \sqcup_{D_0}D_1 \sqcup_{D_0}D_1$, 分别给出两种复合 $X(D_1)\times_{X(D_0)}X(D_1)\times_{X(D_0)}X(D_1) \to X(D_1)$. 加入一个填充 $D_2 \to D_1 \sqcup_{D_0}D_1 \sqcup_{D_0}D_1$, 给出三个态射复合的 “结合子” $X(D_1)\times_{X(D_0)}X(D_1)\times_{X(D_0)}X(D_1) \to X(D_2)$.</li>
 <li>…</li>
 </ul>
+<p>注意这样给出的 “运算律” 永远不是等式, 而是更高阶的胞腔.</p>
 <h2>性质</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="迹"><header><h1><span class="taxon"></span>迹 <a class="slug" href="./迹.html">[迹]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
