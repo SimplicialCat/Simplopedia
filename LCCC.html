@@ -1076,4 +1076,25 @@ T_{/1}\colon \mathsf{Graph} \to \mathsf{Graph}_{/\mathbf{B}\mathbb{N}}.
 $$
 范畴 $\mathsf{Graph}_{/\mathbf{B}\mathbb{N}}$ 可理解为 “每条边带有一个自然数标记” 的图的范畴.
 函子 $T_{/1}$ 的左伴随 $L$ 可描述为: 对一个带自然数标记的图, 将每个标记为 $n$ 的边替换为 $n$ 条串联的边.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="拉回"><header><h1><span class="taxon"></span>拉回 (范畴论) <a class="slug" href="./拉回.html">[拉回]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>在一个范畴中, <strong>拉回</strong> (pullback) 一般是指以如下范畴为指标范畴的<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>:
+$$
+\begin{array}
+{ccc}
+&amp;&amp;\bullet\\
+&amp;&amp;\downarrow\\
+\bullet &amp; \to &amp;\bullet
+\end{array}
+$$
+“多个对象指向一个对象” 的指标范畴的极限也可称为拉回. 对偶的操作称为<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>.</p>
+<p>另见<span class="link local"><a href="./推前.html" title="推前, 拉回 (纤维范畴) [推前]">拉回 (纤维范畴)</a></span>.</p>
+<h2>性质</h2>
+<p>在具有<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>的范畴 $\mathcal C$ 中, 沿态射 $f\colon X\to Y$ 拉回给出<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span>之间的函子
+$$
+f^*\colon \mathcal C_{/Y} \to \mathcal C_{/X};
+$$
+这个函子总有<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">左伴随</a></span> $f_!\colon \mathcal C_{/X} \to \mathcal C_{/Y}$, $(W\to X) \mapsto (W\to X\overset{f}{\to} Y)$.</p>
+<p>在<span class="link local"><a href="./LCCC.html" title="局部积闭范畴 [LCCC]">局部积闭范畴</a></span>中, 拉回还有右伴随 $f_*\colon \mathcal C_{/X} \to \mathcal C_{/Y}$, 见<span class="link local"><a href="./依值积.html" title="依值积 [依值积]">依值积</a></span>.</p>
+<h2>例</h2>
 </details></section></details></section></footer></article></div></body></html>

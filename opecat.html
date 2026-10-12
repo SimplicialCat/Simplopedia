@@ -868,6 +868,7 @@ $$</li>
 </ul>
 <p>计划中的讲稿 / 笔记:</p>
 <ul>
+<li><span class="link local"><a href="./notes-HH.html" title="同伦假设 [notes-HH]">同伦假设</a></span></li>
 <li><span class="link local"><a href="./AT.html" title="代数拓扑的现代语言 [AT]">代数拓扑的现代语言</a></span></li>
 <li><span class="link local"><a href="./notes-perverse.html" title="偏屈层笔记 [notes-perverse]">偏屈层笔记</a></span></li>
 <li><span class="link local"><a href="./opecat.html" title="Barwick 算子范畴 [opecat]">Barwick 算子范畴</a></span></li>
@@ -1241,6 +1242,13 @@ $$
 $$
 (以上 $\hookrightarrow$ 均表示全忠实函子.) 那么 $\mathsf{AlgPatt}$ 关于 $\mathsf{OFS}\times_{\mathsf{Cat}}\mathsf{Ar}(\mathsf{Cat})$ 中的极限和滤余极限封闭.</p>
 <p>下面我们给出一些代数模式的极限和滤余极限的例子.</p>
+<h4>终模式</h4>
+<p>代数模式范畴的终对象 $1$ 是由终范畴 $1$, 其上唯一的分解系统 (平凡分解系统) 与全子范畴 $\mathrm{id}\colon 1_{\mathrm{el}}=1\to 1$ 构成的. Segal 条件平凡; 对任意积幺半范畴 $\mathcal C$, $\mathsf{Seg}_1(\mathcal C) \simeq \mathcal C$.</p>
+<p>对任意代数模式 $\mathcal O$, 有唯一的态射 $p\colon \mathcal O \to 1$. 拉回 $p^* \colon \mathcal C \to \mathsf{Fun}(\mathcal O,\mathcal C)$ 给出常值函子; 它落在 $\mathsf{Seg}_{\mathcal O}(\mathcal C)$ 中当且仅当如下条件成立:</p>
+<ul>
+<li>对任意 $o\in\mathcal O$, 范畴 $\{e \rightarrowtail o\}$ <span class="link local"><a href="./弱可缩范畴.html" title="弱可缩范畴 [弱可缩范畴]">弱可缩</a></span>.</li>
+</ul>
+<p>这个条件成立的一个重要例子是 $\mathcal O = \Delta^{\natural}$. 对单纯形 $[n]\in\Delta$, 其基本对象的范畴为 “之字形” $0 \to \{0\to 1\} \leftarrow 1 \to \{1\to 2\} \cdots\leftarrow n$, 显然为弱可缩范畴.</p>
 <h4>代数模式的乘积</h4>
 <p>代数模式具有有限积 $\mathcal O\times\mathcal P$, 其中基本对象的子范畴为 $\mathcal O_{\mathrm{el}}\times\mathcal P_{\mathrm{el}}$, 惰性映射构成的子范畴为 $\mathcal O_{\mathrm{int}}\times\mathcal P_{\mathrm{int}}$, 且满足
 $$

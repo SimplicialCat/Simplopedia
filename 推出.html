@@ -1219,7 +1219,7 @@ $$
 <p>在<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中, <strong>局部化</strong>是一种万有的使一些态射变得可逆的方法.</p>
 <p>另见<span class="link local"><a href="./局部化.html" title="局部化 (环, 模) [局部化]">局部化 (环)</a></span>, <span class="link local"><a href="./Bousfield局部化.html" title="Bousfield 局部化 (稳定同伦论) [Bousfield局部化]">Bousfield 局部化 (稳定同伦论)</a></span>, <span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> (又叫自反局部化).</p>
 <h2>定义</h2>
-<p>设 $\mathcal{C}$ 为范畴, $S$ 为 $\mathcal{C}$ 中的一族态射. 定义 $\mathcal C$ 关于 $S$ 的<strong>局部化</strong>为满足如下条件的范畴 $\mathcal C[S^{-1}]$ 配备函子 $\mathcal C \to \mathcal C[S^{-1}]$:</p>
+<p>设 $\mathcal{C}$ 为范畴, $S$ 为 $\mathcal{C}$ 中的一族态射 ($S$ 往往是一个<span class="link local"><a href="./宽子范畴.html" title="宽子范畴 [宽子范畴]">宽子范畴</a></span>). 定义 $\mathcal C$ 关于 $S$ 的<strong>局部化</strong>为满足如下条件的范畴 $\mathcal C[S^{-1}]$ 配备函子 $\mathcal C \to \mathcal C[S^{-1}]$:</p>
 <ul>
 <li>对任意函子 $F\colon \mathcal C\to\mathcal D$, 若 $F$ 将 $S$ 中的每个态射变为同构, 则 $F$ 唯一地穿过 $\mathcal C \to \mathcal C[S^{-1}]$, 即存在唯一的 $\mathcal C[S^{-1}] \to \mathcal D$ 以及交换图
 $$
@@ -1228,6 +1228,13 @@ $$
  &amp; \searrow &amp; \downarrow \\
  &amp;  &amp; \mathcal D.
 \end{array}
+$$</li>
+</ul>
+<p>换言之,</p>
+<ul>
+<li>对任意范畴 $\mathcal D$, 记 $\mathsf{Fun}^S(\mathcal C,\mathcal D)$ 为将 $S$ 的态射全变为同构的函子构成的全子范畴, 则
+$$
+\mathsf{Fun}^S(\mathcal C,\mathcal D) \simeq \mathsf{Fun}(\mathcal C [S^{-1}],\mathcal D).
 $$</li>
 </ul>
 <p>等价地, 可定义 $\mathcal C[S^{-1}]$ 为<span class="link local"><a href="./Cat.html" title="范畴的范畴 [Cat]">范畴的范畴 $\mathsf{Cat}$</a></span> 中的如下<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>,
@@ -1240,7 +1247,17 @@ $$
 $$
 其中 $\{\cdot\to\cdot\}$ 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的箭头.</p>
 <h2>例</h2>
+<h3>自反子范畴</h3>
 <p><span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> $\mathcal D\hookrightarrow\mathcal C$ 是一个局部化: 记其左伴随为 $L\colon \mathcal C\to\mathcal D$, 取 $S$ 为所有被 $L$ 变为同构的态射构成的类.</p>
+<h3>对全体态射局部化</h3>
+<p>范畴 $\mathcal C$ 对全体态射作局部化, 会得到一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>
+$$
+|\mathcal C| := \mathcal C [\mathcal C^{-1}],
+$$
+这个操作是嵌入 $\mathsf{Ani} \to \mathsf{Cat}$ 的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">左伴随</a></span>: 对任意生象 $A$,
+$$
+\mathsf{Fun}(\mathcal C,A)\simeq\operatorname{Hom}_{\mathsf{Ani}}(|\mathcal C|,A).
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="带基点对象"><header><h1><span class="taxon"></span>带基点对象 <a class="slug" href="./带基点对象.html">[带基点对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>范畴 $\mathcal C$ 中带基点对象的范畴是其<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>下的<span class="link local"><a href="./仰范畴.html" title="仰范畴 [仰范畴]">仰范畴</a></span> $\mathcal C_{*/}$.</p>
@@ -1256,6 +1273,7 @@ $$
 <h2>例</h2>
 <p><span class="link local"><a href="./Ani_pt.html" title="带基点生象的范畴 [Ani_pt]">$\mathsf{Ani}_*$</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="拉回"><header><h1><span class="taxon"></span>拉回 (范畴论) <a class="slug" href="./拉回.html">[拉回]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
 <p>在一个范畴中, <strong>拉回</strong> (pullback) 一般是指以如下范畴为指标范畴的<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>:
 $$
 \begin{array}
@@ -1267,6 +1285,14 @@ $$
 $$
 “多个对象指向一个对象” 的指标范畴的极限也可称为拉回. 对偶的操作称为<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>.</p>
 <p>另见<span class="link local"><a href="./推前.html" title="推前, 拉回 (纤维范畴) [推前]">拉回 (纤维范畴)</a></span>.</p>
+<h2>性质</h2>
+<p>在具有<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>的范畴 $\mathcal C$ 中, 沿态射 $f\colon X\to Y$ 拉回给出<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span>之间的函子
+$$
+f^*\colon \mathcal C_{/Y} \to \mathcal C_{/X};
+$$
+这个函子总有<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">左伴随</a></span> $f_!\colon \mathcal C_{/X} \to \mathcal C_{/Y}$, $(W\to X) \mapsto (W\to X\overset{f}{\to} Y)$.</p>
+<p>在<span class="link local"><a href="./LCCC.html" title="局部积闭范畴 [LCCC]">局部积闭范畴</a></span>中, 拉回还有右伴随 $f_*\colon \mathcal C_{/X} \to \mathcal C_{/Y}$, 见<span class="link local"><a href="./依值积.html" title="依值积 [依值积]">依值积</a></span>.</p>
+<h2>例</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="有限生象"><header><h1><span class="taxon"></span>有限生象 <a class="slug" href="./有限生象.html">[有限生象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>关于生象的 “有限性” 有多种互不包含的概念.</p>

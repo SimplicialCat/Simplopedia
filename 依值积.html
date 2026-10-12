@@ -966,7 +966,7 @@ $$
 <h2>类型的类型: 宇宙</h2>
 <p>一个类型也有它的类型. 粗略地说, 所有类型都是某个类型 $\mathcal U$ 的元素, 称之为<strong></strong><span class="link local"><a href="./宇宙.html" title="宇宙 [宇宙]">宇宙</a></span> (universe). 但假若 $\mathcal U$ 也是 $\mathcal U$ 的元素会导致矛盾; 实践上人们的做法是规定一串宇宙 $\mathcal U_1,\mathcal U_2,\cdots$, “普通” 的类型是宇宙 $\mathcal U_1$ 的元素, 而 $\mathcal U_1$ 是 $\mathcal U_2$ 的元素, 以至于无穷.</p>
 <p>但在多数情况下, 我们不需要明确所处的宇宙层级, 而是以笼统的 $\mathcal U$ 代替.</p>
-<p>比通常宇宙低一个层级的宇宙是<strong>命题</strong>的类型 $\mathsf{Prop}=\mathcal U_0$. 所谓<strong>命题</strong>是满足如下条件的类型 $P$: 对任意 $x,y : P$ 有 $x=y$. 在 Curry–Howard 对应之下, 这意味着一个命题的任意两个证明都视为相等.</p>
+<p>比通常宇宙低一个层级的宇宙是<strong>命题</strong>的类型 $\mathsf{Prop}=\mathcal U_0$. 所谓<strong>命题</strong>是满足如下条件的类型 $P$: 对任意 $x,y : P$ 有 $x=y$. 在 <span class="link local"><a href="./CurryHowardLambek对应.html" title="Curry–Howard–Lambek对应 [CurryHowardLambek对应]">Curry–Howard 对应</a></span>之下, 这意味着一个命题的任意两个证明都视为相等.</p>
 <h2>依值类型: 到宇宙的函数</h2>
 <p>宇宙 $\mathcal U$ 也是 (某个更大的宇宙的) 类型, 从而我们可以谈论类型 $A$ 到 $\mathcal U$ 的函数 $B\colon A \to \mathcal U$, 称为<strong></strong><span class="link local"><a href="./依值类型.html" title="依值类型 [依值类型]">依值类型</a></span> (dependent type). 它对每个 $a : A$ 都指定了一个类型 $B(a)$.</p>
 <p>例如, 固定 $A : \mathcal U$, 对每个自然数 $n : \mathbb{N}$ 有一个类型 $A^n$, 那么这些类型合起来构成了一个依值类型 $V_A \colon \mathbb{N} \to \mathcal U$.
@@ -1332,12 +1332,45 @@ $$</p>
 <p>局部连通意象是<span class="link local"><a href="./拓扑学.html" title="拓扑学 [拓扑学]">拓扑学</a></span>中<span class="link local"><a href="./局部连通空间.html" title=" [局部连通空间]">局部连通空间</a></span>的类比.</p>
 <h2>定义</h2>
 <p>固定一个基意象 $\mathcal S$.</p>
-<p>对于意象 $f\colon \mathcal E \to \mathcal S$, 若如下等价条件成立, 则称之为<strong>局部连通意象</strong>:</p>
+<p><strong>定义</strong>. 对于 $\mathcal S$-意象 $f\colon \mathcal E \to \mathcal S$, 若如下等价条件成立, 则称之为<strong>局部连通意象</strong> (在 $\infty$-意象语境中称为<strong>局部 $\infty$-连通意象</strong>):</p>
 <ul>
 <li>$f^*$ 有左伴随 $f_!\colon \mathcal E\to\mathcal S$;</li>
 <li>$f^*$ 保持<span class="link local"><a href="./依值积.html" title="依值积 [依值积]">依值积</a></span>: 对 $\mathcal S$ 中任意态射 $h\colon A\to B$, 有 ${f_{/B}}^*\Pi_h = \Pi_{f^*h} {f_{/A}}^*$ (这是一个 <span class="link local"><a href="./基变换.html" title="基变换 [基变换]">Beck–Chevalley 条件</a></span>).</li>
 </ul>
-<p>此时 $f_!$ 的直观是取 “连通分支的集合” $\pi_0$, 或者在 $\infty$-意象语境中是取 “基本 $\infty$-群胚” (同伦型).</p>
+<p>此时 $f_!$ 的直观是取 “连通分支的集合” $\pi_0$, 或者在 $\infty$-意象语境中是取 “基本 $\infty$-群胚” (同伦型) $\Pi$.</p>
+<p><strong>命题</strong>. 一个局部 $\infty$-连通意象的<span class="link local"><a href="./∞-意象的形.html" title="意象的形 [∞-意象的形]">形</a></span>正是 $\Pi (1)$.</p>
+<p><em>证明</em>. 由<span class="link local"><a href="./∞-意象的形.html" title="意象的形 [∞-意象的形]">形</a></span>的定义立得.</p>
+<p><strong>定义</strong>. 若进一步有意象的形为一个点:
+$$
+\Pi (1) = 1,
+$$
+这等价于 $f_! f^*\to\mathrm{id}_{\mathcal S}$ 为等价,
+也即 $f^*$ <span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实</a></span>;
+则称 $f$ 为<strong>整体 $\infty$-连通 $\mathcal S$-意象</strong>.</p>
+<h2>例</h2>
+<h3>局部可缩空间</h3>
+<p>设 $X$ 为局部可缩拓扑空间, 则 $\mathsf{Ani}$-值层范畴 $\operatorname{Sh}(X,\mathsf{Ani})$ 是局部 $\infty$-连通意象.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="拉回"><header><h1><span class="taxon"></span>拉回 (范畴论) <a class="slug" href="./拉回.html">[拉回]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>在一个范畴中, <strong>拉回</strong> (pullback) 一般是指以如下范畴为指标范畴的<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>:
+$$
+\begin{array}
+{ccc}
+&amp;&amp;\bullet\\
+&amp;&amp;\downarrow\\
+\bullet &amp; \to &amp;\bullet
+\end{array}
+$$
+“多个对象指向一个对象” 的指标范畴的极限也可称为拉回. 对偶的操作称为<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>.</p>
+<p>另见<span class="link local"><a href="./推前.html" title="推前, 拉回 (纤维范畴) [推前]">拉回 (纤维范畴)</a></span>.</p>
+<h2>性质</h2>
+<p>在具有<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>的范畴 $\mathcal C$ 中, 沿态射 $f\colon X\to Y$ 拉回给出<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span>之间的函子
+$$
+f^*\colon \mathcal C_{/Y} \to \mathcal C_{/X};
+$$
+这个函子总有<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">左伴随</a></span> $f_!\colon \mathcal C_{/X} \to \mathcal C_{/Y}$, $(W\to X) \mapsto (W\to X\overset{f}{\to} Y)$.</p>
+<p>在<span class="link local"><a href="./LCCC.html" title="局部积闭范畴 [LCCC]">局部积闭范畴</a></span>中, 拉回还有右伴随 $f_*\colon \mathcal C_{/X} \to \mathcal C_{/Y}$, 见<span class="link local"><a href="./依值积.html" title="依值积 [依值积]">依值积</a></span>.</p>
+<h2>例</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="指数对象"><header><h1><span class="taxon"></span>指数对象 <a class="slug" href="./指数对象.html">[指数对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>在<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathcal C$ 中, 对象 $X$ 的 $Y$ 次<strong>指数对象</strong> (exponential object) 是 $Y$ 上的 $X$ 常值族的<span class="link local"><a href="./依值积.html" title="依值积 [依值积]">依值积</a></span>:

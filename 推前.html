@@ -916,6 +916,7 @@ $$</p>
 <h3>高阶直像消失</h3>
 <p><strong>定理</strong>. 对于 $i&gt;\dim X$, $R^i f_* \mathcal F = 0$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="拉回"><header><h1><span class="taxon"></span>拉回 (范畴论) <a class="slug" href="./拉回.html">[拉回]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
 <p>在一个范畴中, <strong>拉回</strong> (pullback) 一般是指以如下范畴为指标范畴的<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>:
 $$
 \begin{array}
@@ -927,6 +928,14 @@ $$
 $$
 “多个对象指向一个对象” 的指标范畴的极限也可称为拉回. 对偶的操作称为<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>.</p>
 <p>另见<span class="link local"><a href="./推前.html" title="推前, 拉回 (纤维范畴) [推前]">拉回 (纤维范畴)</a></span>.</p>
+<h2>性质</h2>
+<p>在具有<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>的范畴 $\mathcal C$ 中, 沿态射 $f\colon X\to Y$ 拉回给出<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span>之间的函子
+$$
+f^*\colon \mathcal C_{/Y} \to \mathcal C_{/X};
+$$
+这个函子总有<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">左伴随</a></span> $f_!\colon \mathcal C_{/X} \to \mathcal C_{/Y}$, $(W\to X) \mapsto (W\to X\overset{f}{\to} Y)$.</p>
+<p>在<span class="link local"><a href="./LCCC.html" title="局部积闭范畴 [LCCC]">局部积闭范畴</a></span>中, 拉回还有右伴随 $f_*\colon \mathcal C_{/X} \to \mathcal C_{/Y}$, 见<span class="link local"><a href="./依值积.html" title="依值积 [依值积]">依值积</a></span>.</p>
+<h2>例</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="摩天大楼层"><header><h1><span class="taxon"></span>摩天大楼层 <a class="slug" href="./摩天大楼层.html">[摩天大楼层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>摩天大楼层是一点上的<span class="link local"><a href="./常值层.html" title="常值层 [常值层]">常值层</a></span>沿<span class="link local"><a href="./意象的点.html" title="意象的点 [意象的点]">点</a></span>的<span class="link local"><a href="./推前.html" title="推前, 拉回 (纤维范畴) [推前]">推前</a></span>.</p>

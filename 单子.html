@@ -1494,6 +1494,13 @@ $$
 $$
 (以上 $\hookrightarrow$ 均表示全忠实函子.) 那么 $\mathsf{AlgPatt}$ 关于 $\mathsf{OFS}\times_{\mathsf{Cat}}\mathsf{Ar}(\mathsf{Cat})$ 中的极限和滤余极限封闭.</p>
 <p>下面我们给出一些代数模式的极限和滤余极限的例子.</p>
+<h4>终模式</h4>
+<p>代数模式范畴的终对象 $1$ 是由终范畴 $1$, 其上唯一的分解系统 (平凡分解系统) 与全子范畴 $\mathrm{id}\colon 1_{\mathrm{el}}=1\to 1$ 构成的. Segal 条件平凡; 对任意积幺半范畴 $\mathcal C$, $\mathsf{Seg}_1(\mathcal C) \simeq \mathcal C$.</p>
+<p>对任意代数模式 $\mathcal O$, 有唯一的态射 $p\colon \mathcal O \to 1$. 拉回 $p^* \colon \mathcal C \to \mathsf{Fun}(\mathcal O,\mathcal C)$ 给出常值函子; 它落在 $\mathsf{Seg}_{\mathcal O}(\mathcal C)$ 中当且仅当如下条件成立:</p>
+<ul>
+<li>对任意 $o\in\mathcal O$, 范畴 $\{e \rightarrowtail o\}$ <span class="link local"><a href="./弱可缩范畴.html" title="弱可缩范畴 [弱可缩范畴]">弱可缩</a></span>.</li>
+</ul>
+<p>这个条件成立的一个重要例子是 $\mathcal O = \Delta^{\natural}$. 对单纯形 $[n]\in\Delta$, 其基本对象的范畴为 “之字形” $0 \to \{0\to 1\} \leftarrow 1 \to \{1\to 2\} \cdots\leftarrow n$, 显然为弱可缩范畴.</p>
 <h4>代数模式的乘积</h4>
 <p>代数模式具有有限积 $\mathcal O\times\mathcal P$, 其中基本对象的子范畴为 $\mathcal O_{\mathrm{el}}\times\mathcal P_{\mathrm{el}}$, 惰性映射构成的子范畴为 $\mathcal O_{\mathrm{int}}\times\mathcal P_{\mathrm{int}}$, 且满足
 $$
@@ -1745,7 +1752,7 @@ $$</p>
 <p><span class="link local"><a href="./反映(范畴论).html" title="反映 (范畴论) [反映(范畴论)]">反映</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单子(CS)"><header><h1><span class="taxon"></span>单子 (计算机科学) <a class="slug" href="./单子(CS).html">[单子(CS)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>在计算机科学中, 一个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>包含</p>
+<p>在<span class="link local"><a href="./计算机科学.html" title="计算机科学 [计算机科学]">计算机科学</a></span>中, 一个<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>包含</p>
 <ul>
 <li>类型构造器 <code>m</code>,</li>
 <li>函数 <code>return :: a → m a</code>,</li>

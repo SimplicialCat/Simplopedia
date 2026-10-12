@@ -872,6 +872,7 @@ $$
 <p>见 <span class="link local"><a href="./Segal空间.html" title="Segal 对象 [Segal空间]">Segal 空间</a></span>.</p>
 <h2>性质</h2>
 <h3>余极限</h3>
+</details></section><section class="block" data-taxon=""><details ><summary id="CurryHowardLambek对应"><header><h1><span class="taxon"></span>Curry–Howard–Lambek对应 <a class="slug" href="./CurryHowardLambek对应.html">[CurryHowardLambek对应]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>, <span class="link local"><a href="./类型论.html" title="类型论 [类型论]">类型论</a></span>, <span class="link local"><a href="./计算机科学.html" title="计算机科学 [计算机科学]">计算机科学</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon=""><details ><summary id="Descartes单子"><header><h1><span class="taxon"></span>Descartes 单子 <a class="slug" href="./Descartes单子.html">[Descartes单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon=""><details ><summary id="Descartes自然变换"><header><h1><span class="taxon"></span>Descartes 自然变换 <a class="slug" href="./Descartes自然变换.html">[Descartes自然变换]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
@@ -1293,6 +1294,7 @@ $$</p>
 <li><span class="link local"><a href="./同伦类型论.html" title="同伦类型论 [同伦类型论]">同伦类型论</a></span></li>
 </ul>
 </li>
+<li><span class="link local"><a href="./计算机科学.html" title="计算机科学 [计算机科学]">计算机科学</a></span></li>
 <li><span class="link local"><a href="./形式化数学.html" title="形式化数学 [形式化数学]">形式化数学</a></span></li>
 <li><span class="link local"><a href="./数学基础.html" title="数学基础 [数学基础]">数学基础</a></span></li>
 </ul>
@@ -1723,6 +1725,13 @@ $$
 $$
 (以上 $\hookrightarrow$ 均表示全忠实函子.) 那么 $\mathsf{AlgPatt}$ 关于 $\mathsf{OFS}\times_{\mathsf{Cat}}\mathsf{Ar}(\mathsf{Cat})$ 中的极限和滤余极限封闭.</p>
 <p>下面我们给出一些代数模式的极限和滤余极限的例子.</p>
+<h4>终模式</h4>
+<p>代数模式范畴的终对象 $1$ 是由终范畴 $1$, 其上唯一的分解系统 (平凡分解系统) 与全子范畴 $\mathrm{id}\colon 1_{\mathrm{el}}=1\to 1$ 构成的. Segal 条件平凡; 对任意积幺半范畴 $\mathcal C$, $\mathsf{Seg}_1(\mathcal C) \simeq \mathcal C$.</p>
+<p>对任意代数模式 $\mathcal O$, 有唯一的态射 $p\colon \mathcal O \to 1$. 拉回 $p^* \colon \mathcal C \to \mathsf{Fun}(\mathcal O,\mathcal C)$ 给出常值函子; 它落在 $\mathsf{Seg}_{\mathcal O}(\mathcal C)$ 中当且仅当如下条件成立:</p>
+<ul>
+<li>对任意 $o\in\mathcal O$, 范畴 $\{e \rightarrowtail o\}$ <span class="link local"><a href="./弱可缩范畴.html" title="弱可缩范畴 [弱可缩范畴]">弱可缩</a></span>.</li>
+</ul>
+<p>这个条件成立的一个重要例子是 $\mathcal O = \Delta^{\natural}$. 对单纯形 $[n]\in\Delta$, 其基本对象的范畴为 “之字形” $0 \to \{0\to 1\} \leftarrow 1 \to \{1\to 2\} \cdots\leftarrow n$, 显然为弱可缩范畴.</p>
 <h4>代数模式的乘积</h4>
 <p>代数模式具有有限积 $\mathcal O\times\mathcal P$, 其中基本对象的子范畴为 $\mathcal O_{\mathrm{el}}\times\mathcal P_{\mathrm{el}}$, 惰性映射构成的子范畴为 $\mathcal O_{\mathrm{int}}\times\mathcal P_{\mathrm{int}}$, 且满足
 $$
@@ -2591,7 +2600,12 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="对象的生象"><header><h1><span class="taxon"></span>对象的生象 <a class="slug" href="./对象的生象.html">[对象的生象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>在<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>语境中, 对于一个<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴</a></span> $\mathcal C$, 我们不能谈论它的 “对象的集合”, 因为两个对象之间的 “相等” 未必是一个<span class="link local"><a href="./命题(同伦类型论).html" title="命题 (同伦类型论) [命题(同伦类型论)]">命题</a></span>. 但我们总可以谈论对象的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $\mathcal C^{\simeq}$.</p>
-<p>如果一定要谈论 “对象的集合”, 可以取对象的生象的<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span> $\pi_0\mathcal C^{\simeq}$.</p>
+<p>如果一定要谈论 “对象的集合”, 可以取对象的生象的<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span> $\pi_0\mathcal C^{\simeq}$. 但这通常没有什么意义.</p>
+<p>取对象的生象 $\mathcal C \mapsto \mathcal C^{\simeq}$ 是嵌入 $\mathsf{Ani} \to \mathsf{Cat}$ 的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">右伴随</a></span>: 对任意生象 $A$,
+$$
+\mathsf{Fun}(A,\mathcal C)\simeq\operatorname{Hom}_{\mathsf{Ani}}(A,\mathcal C^{\simeq}).
+$$</p>
+<p>注意从一个范畴还有另一种不同的方式得到一个生象, 即对全体态射作<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span> $|\mathcal C| := \mathcal C [\mathcal C^{-1}]$, 这是嵌入 $\mathsf{Ani} \to \mathsf{Cat}$ 的左伴随.</p>
 <h2>定义</h2>
 <p>将一个范畴中的不可逆态射去除, 仅保留可逆态射, 得到一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>, 称为其对象的生象, 又叫<strong>核</strong> (core), <strong>极大子群胚</strong> (maximal subgroupoid).</p>
 <p>这一操作为嵌入
@@ -2604,7 +2618,7 @@ $$
 <p>在<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中, <strong>局部化</strong>是一种万有的使一些态射变得可逆的方法.</p>
 <p>另见<span class="link local"><a href="./局部化.html" title="局部化 (环, 模) [局部化]">局部化 (环)</a></span>, <span class="link local"><a href="./Bousfield局部化.html" title="Bousfield 局部化 (稳定同伦论) [Bousfield局部化]">Bousfield 局部化 (稳定同伦论)</a></span>, <span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> (又叫自反局部化).</p>
 <h2>定义</h2>
-<p>设 $\mathcal{C}$ 为范畴, $S$ 为 $\mathcal{C}$ 中的一族态射. 定义 $\mathcal C$ 关于 $S$ 的<strong>局部化</strong>为满足如下条件的范畴 $\mathcal C[S^{-1}]$ 配备函子 $\mathcal C \to \mathcal C[S^{-1}]$:</p>
+<p>设 $\mathcal{C}$ 为范畴, $S$ 为 $\mathcal{C}$ 中的一族态射 ($S$ 往往是一个<span class="link local"><a href="./宽子范畴.html" title="宽子范畴 [宽子范畴]">宽子范畴</a></span>). 定义 $\mathcal C$ 关于 $S$ 的<strong>局部化</strong>为满足如下条件的范畴 $\mathcal C[S^{-1}]$ 配备函子 $\mathcal C \to \mathcal C[S^{-1}]$:</p>
 <ul>
 <li>对任意函子 $F\colon \mathcal C\to\mathcal D$, 若 $F$ 将 $S$ 中的每个态射变为同构, 则 $F$ 唯一地穿过 $\mathcal C \to \mathcal C[S^{-1}]$, 即存在唯一的 $\mathcal C[S^{-1}] \to \mathcal D$ 以及交换图
 $$
@@ -2613,6 +2627,13 @@ $$
  &amp; \searrow &amp; \downarrow \\
  &amp;  &amp; \mathcal D.
 \end{array}
+$$</li>
+</ul>
+<p>换言之,</p>
+<ul>
+<li>对任意范畴 $\mathcal D$, 记 $\mathsf{Fun}^S(\mathcal C,\mathcal D)$ 为将 $S$ 的态射全变为同构的函子构成的全子范畴, 则
+$$
+\mathsf{Fun}^S(\mathcal C,\mathcal D) \simeq \mathsf{Fun}(\mathcal C [S^{-1}],\mathcal D).
 $$</li>
 </ul>
 <p>等价地, 可定义 $\mathcal C[S^{-1}]$ 为<span class="link local"><a href="./Cat.html" title="范畴的范畴 [Cat]">范畴的范畴 $\mathsf{Cat}$</a></span> 中的如下<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>,
@@ -2625,7 +2646,17 @@ $$
 $$
 其中 $\{\cdot\to\cdot\}$ 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的箭头.</p>
 <h2>例</h2>
+<h3>自反子范畴</h3>
 <p><span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> $\mathcal D\hookrightarrow\mathcal C$ 是一个局部化: 记其左伴随为 $L\colon \mathcal C\to\mathcal D$, 取 $S$ 为所有被 $L$ 变为同构的态射构成的类.</p>
+<h3>对全体态射局部化</h3>
+<p>范畴 $\mathcal C$ 对全体态射作局部化, 会得到一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>
+$$
+|\mathcal C| := \mathcal C [\mathcal C^{-1}],
+$$
+这个操作是嵌入 $\mathsf{Ani} \to \mathsf{Cat}$ 的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">左伴随</a></span>: 对任意生象 $A$,
+$$
+\mathsf{Fun}(\mathcal C,A)\simeq\operatorname{Hom}_{\mathsf{Ani}}(|\mathcal C|,A).
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="局部右伴随"><header><h1><span class="taxon"></span>局部右伴随 <a class="slug" href="./局部右伴随.html">[局部右伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <h2>定义</h2>
@@ -3601,7 +3632,7 @@ $$
 的全子范畴. 又由于函子范畴中的极限是逐点的, 可验证两个子范畴相同.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="融贯子"><header><h1><span class="taxon"></span>融贯子 <a class="slug" href="./融贯子.html">[融贯子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>一个 Grothendieck <strong>融贯子</strong> (coherator) 给出<span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状集</a></span>上的一种<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数结构</a></span>.</p>
+<p>一个 Grothendieck <strong>融贯子</strong> (coherator) 给出<span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状集</a></span>上的一种<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数结构</a></span>, 使得其 ($\mathsf{Set}$-值) 模型可以给出<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>.</p>
 <h2>定义</h2>
 <p>回忆 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴</a></span> $\Theta = \operatorname{colim}_n \Theta_n$ 的对象可视为<span class="link local"><a href="./球状集.html" title="球状集 [球状集]">球状集</a></span>, 它是若干不同维数胞腔 $D_n$ 的粘合
 $$
@@ -3619,8 +3650,8 @@ $$</p>
 <p><strong>定义</strong>. 一个 Grothendieck <strong>融贯子</strong> (coherator) $\mathcal C$ 是以 $\Theta_0$ 为惰性部分, 各维数胞腔为基本对象的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>, 满足</p>
 <ul>
 <li>嵌入 $\Theta_0 \to \mathcal C$ 保持形如 $(\star)$ 的余极限;</li>
-<li>嵌入 $\Theta_0 \to \mathcal C$ 分解为一座塔 $\Theta_0 = \mathcal C_0 \to \mathcal C_1 \to\cdots$, $\mathcal C = \operatorname{colim}_r \mathcal C_r$, 且每个函子 $\mathcal C_r \to \mathcal C_{r+1}$ 都是这样的操作: 对特定的<strong>平行胞腔</strong> $f,g\colon D_{h-1} \rightrightarrows S$ (即 “出发面”, “到达面” 都相等的两个胞腔) 自由地加入一个态射 $D_h \to S$, 称为<strong>填充</strong>, 使得其 “出发面”, “到达面” 分别为 $f,g$.</li>
-<li>任何两个平行胞腔最终都存在填充.</li>
+<li>嵌入 $\Theta_0 \to \mathcal C$ 分解为一座塔 $\Theta_0 = \mathcal C_0 \to \mathcal C_1 \to\cdots$, $\mathcal C = \operatorname{colim}_r \mathcal C_r$, 且每个函子 $\mathcal C_r \to \mathcal C_{r+1}$ 都是这样的操作: 对特定的<strong>平行胞腔</strong> $f,g\colon D_{h-1} \rightrightarrows S$ (即 “出发面”, “到达面” 都相等的两个胞腔) 自由地加入一个态射 $D_h \to S$, 称为<strong>填充</strong>, 使得其 “出发面”, “到达面” 分别为 $f,g$. 我们额外要求 $\dim S \leq h$.</li>
+<li>(<strong>可缩性</strong>) 任何两个平行胞腔最终都存在填充.</li>
 </ul>
 <p>融贯子 $\mathcal C$ 的<strong>模型</strong>就是指其 $\mathsf{Set}$-值 <span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">Segal 对象</a></span> $X\colon \mathcal C^{\mathrm{op}} \to \mathsf{Set}$, 也就是满足如下条件的预层:
 $$
@@ -3640,7 +3671,9 @@ $$
       \end{CD}
   $$
 我们有了两个映射 $D_1 \rightrightarrows D_1 \sqcup_{D_0}D_1 \sqcup_{D_0}D_1$, 分别给出两种复合 $X(D_1)\times_{X(D_0)}X(D_1)\times_{X(D_0)}X(D_1) \to X(D_1)$. 加入一个填充 $D_2 \to D_1 \sqcup_{D_0}D_1 \sqcup_{D_0}D_1$, 给出三个态射复合的 “结合子” $X(D_1)\times_{X(D_0)}X(D_1)\times_{X(D_0)}X(D_1) \to X(D_2)$.</li>
+<li>…</li>
 </ul>
+<h2>性质</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="迹"><header><h1><span class="taxon"></span>迹 <a class="slug" href="./迹.html">[迹]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>自映射的迹</h3>

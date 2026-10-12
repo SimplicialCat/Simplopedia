@@ -1983,7 +1983,12 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="对象的生象"><header><h1><span class="taxon"></span>对象的生象 <a class="slug" href="./对象的生象.html">[对象的生象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>在<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>语境中, 对于一个<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴</a></span> $\mathcal C$, 我们不能谈论它的 “对象的集合”, 因为两个对象之间的 “相等” 未必是一个<span class="link local"><a href="./命题(同伦类型论).html" title="命题 (同伦类型论) [命题(同伦类型论)]">命题</a></span>. 但我们总可以谈论对象的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $\mathcal C^{\simeq}$.</p>
-<p>如果一定要谈论 “对象的集合”, 可以取对象的生象的<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span> $\pi_0\mathcal C^{\simeq}$.</p>
+<p>如果一定要谈论 “对象的集合”, 可以取对象的生象的<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span> $\pi_0\mathcal C^{\simeq}$. 但这通常没有什么意义.</p>
+<p>取对象的生象 $\mathcal C \mapsto \mathcal C^{\simeq}$ 是嵌入 $\mathsf{Ani} \to \mathsf{Cat}$ 的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">右伴随</a></span>: 对任意生象 $A$,
+$$
+\mathsf{Fun}(A,\mathcal C)\simeq\operatorname{Hom}_{\mathsf{Ani}}(A,\mathcal C^{\simeq}).
+$$</p>
+<p>注意从一个范畴还有另一种不同的方式得到一个生象, 即对全体态射作<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span> $|\mathcal C| := \mathcal C [\mathcal C^{-1}]$, 这是嵌入 $\mathsf{Ani} \to \mathsf{Cat}$ 的左伴随.</p>
 <h2>定义</h2>
 <p>将一个范畴中的不可逆态射去除, 仅保留可逆态射, 得到一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>, 称为其对象的生象, 又叫<strong>核</strong> (core), <strong>极大子群胚</strong> (maximal subgroupoid).</p>
 <p>这一操作为嵌入

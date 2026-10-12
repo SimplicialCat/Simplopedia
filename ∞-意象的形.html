@@ -829,7 +829,7 @@
 <h2>观念</h2>
 <p>意象的<strong>形</strong> (shape) 是一个 (<span class="link local"><a href="./pro-对象.html" title="pro-对象 [pro-对象]">pro</a></span>) <span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>; 对此有两种看法.</p>
 <ul>
-<li>我们知道<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>可视为<span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">意象</a></span>. 反过来, 对于一个<span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">意象</a></span>, 我们想找一个与它 “尽可能接近” 的生象, 这就是它的<strong>形</strong>.</li>
+<li>我们知道<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $A$ 可视为<span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">意象</a></span> $\mathsf{Ani}^A = \mathsf{Ani}_{A/}$. 反过来, 对于一个<span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">意象</a></span>, 我们想找一个与它 “尽可能接近” 的生象, 这就是它的<strong>形</strong>.</li>
 <li><span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">意象</a></span>的形是其<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>的 “同伦型”.</li>
 </ul>
 <h2>定义</h2>
@@ -837,7 +837,7 @@
 $$
     \pi=(\pi^*\dashv \pi_*)\colon \mathcal X\to\mathsf{Ani}.
 $$
-由于<span class="link local"><a href="./常值层.html" title="常值层 [常值层]">常值层</a></span>函子 $\pi^*\colon \mathsf{Ani}\to\mathcal X$ 保持有限极限, 其有<span class="link local"><a href="./形式伴随.html" title="形式伴随 [形式伴随]">形式左伴随</a></span>
+由于<span class="link local"><a href="./常值层.html" title="常值层 [常值层]">常值层</a></span>函子 $\pi^*\colon \mathsf{Ani}\to\mathcal X$ 保持有限极限, 其有<span class="link local"><a href="./形式伴随.html" title="形式伴随 [形式伴随]">形式左伴随</a></span> (落在 <span class="link local"><a href="./pro-生象.html" title="pro-生象 [pro-生象]">pro-生象</a></span>中)
 $$
 \pi_!\colon \mathcal X \to \mathsf{Pro}\mathsf{Ani} = \mathsf{Fun}^{\mathrm{lex}}(\mathsf{Ani},\mathsf{Ani})^{\mathrm{op}}.
 $$
@@ -856,6 +856,7 @@ $$
 \operatorname{Hom}_{\mathsf{Ani}}(\Pi\mathcal X,A)\simeq\operatorname{Hom}_{\mathcal X}(1,\pi^* A)\simeq\operatorname{Hom}_{\mathsf{Ani}}(1,\pi_*\pi^* A)\simeq\pi_*\pi^* A.
 $$</p>
 <p><strong>命题</strong>. 对于<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $A$, 有 $\Pi (\mathsf{Ani}_{/A}) = A$.</p>
+<p>意象 $\mathsf{Ani}_{/A}$ 正是生象 $A$ 在意象世界中的化身, 所以这个结论是意料之中的.</p>
 <p><strong>命题</strong>. 形函子 $\Pi \colon \mathsf{Topos}\to\mathsf{ProAni}$ 是嵌入 $\mathsf{Ani}_{/-} \colon \mathsf{Ani}\to\mathsf{Topos}$ 的形式左伴随:
 $$
 \operatorname{Hom}_{\mathsf{Topos}}(\mathcal X,\mathsf{Ani}_{/A})\simeq\operatorname{Hom}_{\mathcal X}(1,\pi^* A) \simeq \pi_*\pi^* A.
@@ -977,6 +978,29 @@ $$</p>
 <li>它很酷.</li>
 </ul>
 <p>一个伟大的概念应该配上一个伟大的译名. 读者们, 未来的中国数学学者们, 这个名字的决定权在你们手上. 就这样吧!</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="局部连通意象"><header><h1><span class="taxon"></span>局部连通意象 <a class="slug" href="./局部连通意象.html">[局部连通意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>局部连通意象是<span class="link local"><a href="./拓扑学.html" title="拓扑学 [拓扑学]">拓扑学</a></span>中<span class="link local"><a href="./局部连通空间.html" title=" [局部连通空间]">局部连通空间</a></span>的类比.</p>
+<h2>定义</h2>
+<p>固定一个基意象 $\mathcal S$.</p>
+<p><strong>定义</strong>. 对于 $\mathcal S$-意象 $f\colon \mathcal E \to \mathcal S$, 若如下等价条件成立, 则称之为<strong>局部连通意象</strong> (在 $\infty$-意象语境中称为<strong>局部 $\infty$-连通意象</strong>):</p>
+<ul>
+<li>$f^*$ 有左伴随 $f_!\colon \mathcal E\to\mathcal S$;</li>
+<li>$f^*$ 保持<span class="link local"><a href="./依值积.html" title="依值积 [依值积]">依值积</a></span>: 对 $\mathcal S$ 中任意态射 $h\colon A\to B$, 有 ${f_{/B}}^*\Pi_h = \Pi_{f^*h} {f_{/A}}^*$ (这是一个 <span class="link local"><a href="./基变换.html" title="基变换 [基变换]">Beck–Chevalley 条件</a></span>).</li>
+</ul>
+<p>此时 $f_!$ 的直观是取 “连通分支的集合” $\pi_0$, 或者在 $\infty$-意象语境中是取 “基本 $\infty$-群胚” (同伦型) $\Pi$.</p>
+<p><strong>命题</strong>. 一个局部 $\infty$-连通意象的<span class="link local"><a href="./∞-意象的形.html" title="意象的形 [∞-意象的形]">形</a></span>正是 $\Pi (1)$.</p>
+<p><em>证明</em>. 由<span class="link local"><a href="./∞-意象的形.html" title="意象的形 [∞-意象的形]">形</a></span>的定义立得.</p>
+<p><strong>定义</strong>. 若进一步有意象的形为一个点:
+$$
+\Pi (1) = 1,
+$$
+这等价于 $f_! f^*\to\mathrm{id}_{\mathcal S}$ 为等价,
+也即 $f^*$ <span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实</a></span>;
+则称 $f$ 为<strong>整体 $\infty$-连通 $\mathcal S$-意象</strong>.</p>
+<h2>例</h2>
+<h3>局部可缩空间</h3>
+<p>设 $X$ 为局部可缩拓扑空间, 则 $\mathsf{Ani}$-值层范畴 $\operatorname{Sh}(X,\mathsf{Ani})$ 是局部 $\infty$-连通意象.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="平展同伦论"><header><h1><span class="taxon"></span>平展同伦论 <a class="slug" href="./平展同伦论.html">[平展同伦论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>todo: 重新整理资料</p>
 <blockquote>

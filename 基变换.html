@@ -2128,6 +2128,13 @@ $$
 $$
 (以上 $\hookrightarrow$ 均表示全忠实函子.) 那么 $\mathsf{AlgPatt}$ 关于 $\mathsf{OFS}\times_{\mathsf{Cat}}\mathsf{Ar}(\mathsf{Cat})$ 中的极限和滤余极限封闭.</p>
 <p>下面我们给出一些代数模式的极限和滤余极限的例子.</p>
+<h4>终模式</h4>
+<p>代数模式范畴的终对象 $1$ 是由终范畴 $1$, 其上唯一的分解系统 (平凡分解系统) 与全子范畴 $\mathrm{id}\colon 1_{\mathrm{el}}=1\to 1$ 构成的. Segal 条件平凡; 对任意积幺半范畴 $\mathcal C$, $\mathsf{Seg}_1(\mathcal C) \simeq \mathcal C$.</p>
+<p>对任意代数模式 $\mathcal O$, 有唯一的态射 $p\colon \mathcal O \to 1$. 拉回 $p^* \colon \mathcal C \to \mathsf{Fun}(\mathcal O,\mathcal C)$ 给出常值函子; 它落在 $\mathsf{Seg}_{\mathcal O}(\mathcal C)$ 中当且仅当如下条件成立:</p>
+<ul>
+<li>对任意 $o\in\mathcal O$, 范畴 $\{e \rightarrowtail o\}$ <span class="link local"><a href="./弱可缩范畴.html" title="弱可缩范畴 [弱可缩范畴]">弱可缩</a></span>.</li>
+</ul>
+<p>这个条件成立的一个重要例子是 $\mathcal O = \Delta^{\natural}$. 对单纯形 $[n]\in\Delta$, 其基本对象的范畴为 “之字形” $0 \to \{0\to 1\} \leftarrow 1 \to \{1\to 2\} \cdots\leftarrow n$, 显然为弱可缩范畴.</p>
 <h4>代数模式的乘积</h4>
 <p>代数模式具有有限积 $\mathcal O\times\mathcal P$, 其中基本对象的子范畴为 $\mathcal O_{\mathrm{el}}\times\mathcal P_{\mathrm{el}}$, 惰性映射构成的子范畴为 $\mathcal O_{\mathrm{int}}\times\mathcal P_{\mathrm{int}}$, 且满足
 $$
@@ -2529,12 +2536,24 @@ $$
 <p>局部连通意象是<span class="link local"><a href="./拓扑学.html" title="拓扑学 [拓扑学]">拓扑学</a></span>中<span class="link local"><a href="./局部连通空间.html" title=" [局部连通空间]">局部连通空间</a></span>的类比.</p>
 <h2>定义</h2>
 <p>固定一个基意象 $\mathcal S$.</p>
-<p>对于意象 $f\colon \mathcal E \to \mathcal S$, 若如下等价条件成立, 则称之为<strong>局部连通意象</strong>:</p>
+<p><strong>定义</strong>. 对于 $\mathcal S$-意象 $f\colon \mathcal E \to \mathcal S$, 若如下等价条件成立, 则称之为<strong>局部连通意象</strong> (在 $\infty$-意象语境中称为<strong>局部 $\infty$-连通意象</strong>):</p>
 <ul>
 <li>$f^*$ 有左伴随 $f_!\colon \mathcal E\to\mathcal S$;</li>
 <li>$f^*$ 保持<span class="link local"><a href="./依值积.html" title="依值积 [依值积]">依值积</a></span>: 对 $\mathcal S$ 中任意态射 $h\colon A\to B$, 有 ${f_{/B}}^*\Pi_h = \Pi_{f^*h} {f_{/A}}^*$ (这是一个 <span class="link local"><a href="./基变换.html" title="基变换 [基变换]">Beck–Chevalley 条件</a></span>).</li>
 </ul>
-<p>此时 $f_!$ 的直观是取 “连通分支的集合” $\pi_0$, 或者在 $\infty$-意象语境中是取 “基本 $\infty$-群胚” (同伦型).</p>
+<p>此时 $f_!$ 的直观是取 “连通分支的集合” $\pi_0$, 或者在 $\infty$-意象语境中是取 “基本 $\infty$-群胚” (同伦型) $\Pi$.</p>
+<p><strong>命题</strong>. 一个局部 $\infty$-连通意象的<span class="link local"><a href="./∞-意象的形.html" title="意象的形 [∞-意象的形]">形</a></span>正是 $\Pi (1)$.</p>
+<p><em>证明</em>. 由<span class="link local"><a href="./∞-意象的形.html" title="意象的形 [∞-意象的形]">形</a></span>的定义立得.</p>
+<p><strong>定义</strong>. 若进一步有意象的形为一个点:
+$$
+\Pi (1) = 1,
+$$
+这等价于 $f_! f^*\to\mathrm{id}_{\mathcal S}$ 为等价,
+也即 $f^*$ <span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实</a></span>;
+则称 $f$ 为<strong>整体 $\infty$-连通 $\mathcal S$-意象</strong>.</p>
+<h2>例</h2>
+<h3>局部可缩空间</h3>
+<p>设 $X$ 为局部可缩拓扑空间, 则 $\mathsf{Ani}$-值层范畴 $\operatorname{Sh}(X,\mathsf{Ani})$ 是局部 $\infty$-连通意象.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="带元数的单子"><header><h1><span class="taxon"></span>带元数的单子 <a class="slug" href="./带元数的单子.html">[带元数的单子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>带元数的单子</strong> (monad with arities) 是 <span class="link local"><a href="./BergerMelliesWeberMonAr.html" title="Monads with arities and their associated theories [BergerMelliesWeberMonAr]">Berger–Melliès–Weber</a></span> 引入的概念, 能够表达以下结构:</p>

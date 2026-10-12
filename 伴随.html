@@ -1976,7 +1976,7 @@ $$</p>
 <p>对称幺半范畴 $\mathcal C$ 的 <span class="link local"><a href="./Morita范畴.html" title="Morita 范畴 [Morita范畴]">Morita 范畴</a></span>中, 对象为 $\mathcal C$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$, 其对偶为相反的结合代数 $A^{\mathrm{op}}$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="合聚意象"><header><h1><span class="taxon"></span>合聚意象 <a class="slug" href="./合聚意象.html">[合聚意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>动机</h2>
-<p>一类空间 $H$ 中的所谓<strong>合聚</strong> (cohesion) 的概念是描述空间 $X\in H$ 的<strong>点</strong>如何聚集在一起的方法, 如同液体聚成小滴.</p>
+<p>一类空间 $H$ 中的所谓<strong>合聚</strong> (cohesion) 的概念是描述空间 $X\in H$ 的点如何<strong>聚集</strong>在一起的方法, 如同液体聚成小滴.</p>
 <p>William Lawvere 指出了如下公理.</p>
 <ul>
 <li>对 $H$ 中的每个空间 $X$ 指定了<strong>合聚连通分支</strong> (cohesively connected components) 的集合 (或<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>) $\Pi(X)$;</li>
@@ -2069,6 +2069,9 @@ $$
 \operatorname{Flat}(X,A):=\operatorname{Hom}(ʃ X,A) = \operatorname{Hom}(X,\flat A).
 $$</p>
 <h2>例</h2>
+<h2>性质</h2>
+<h3>切意象</h3>
+<p>合聚意象 $\mathcal X \to \mathcal S$ 的<span class="link local"><a href="./切意象.html" title="切意象 [切意象]">切意象</a></span> $T\mathcal X$ 是 $T\mathcal S$ 上的合聚意象.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="完全可对偶对象"><header><h1><span class="taxon"></span>完全可对偶对象 <a class="slug" href="./完全可对偶对象.html">[完全可对偶对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>幺半 $(\infty,n)$-范畴中的<strong>完全可对偶对象</strong>直观上是满足如下一系列条件的对象 $X$:</p>
@@ -2099,7 +2102,12 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="对象的生象"><header><h1><span class="taxon"></span>对象的生象 <a class="slug" href="./对象的生象.html">[对象的生象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>在<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>语境中, 对于一个<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴</a></span> $\mathcal C$, 我们不能谈论它的 “对象的集合”, 因为两个对象之间的 “相等” 未必是一个<span class="link local"><a href="./命题(同伦类型论).html" title="命题 (同伦类型论) [命题(同伦类型论)]">命题</a></span>. 但我们总可以谈论对象的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $\mathcal C^{\simeq}$.</p>
-<p>如果一定要谈论 “对象的集合”, 可以取对象的生象的<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span> $\pi_0\mathcal C^{\simeq}$.</p>
+<p>如果一定要谈论 “对象的集合”, 可以取对象的生象的<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span> $\pi_0\mathcal C^{\simeq}$. 但这通常没有什么意义.</p>
+<p>取对象的生象 $\mathcal C \mapsto \mathcal C^{\simeq}$ 是嵌入 $\mathsf{Ani} \to \mathsf{Cat}$ 的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">右伴随</a></span>: 对任意生象 $A$,
+$$
+\mathsf{Fun}(A,\mathcal C)\simeq\operatorname{Hom}_{\mathsf{Ani}}(A,\mathcal C^{\simeq}).
+$$</p>
+<p>注意从一个范畴还有另一种不同的方式得到一个生象, 即对全体态射作<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span> $|\mathcal C| := \mathcal C [\mathcal C^{-1}]$, 这是嵌入 $\mathsf{Ani} \to \mathsf{Cat}$ 的左伴随.</p>
 <h2>定义</h2>
 <p>将一个范畴中的不可逆态射去除, 仅保留可逆态射, 得到一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>, 称为其对象的生象, 又叫<strong>核</strong> (core), <strong>极大子群胚</strong> (maximal subgroupoid).</p>
 <p>这一操作为嵌入
@@ -2107,6 +2115,50 @@ $$
 \mathsf{Ani} \to \mathsf{Cat}
 $$
 的右<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="局部化(范畴论)"><header><h1><span class="taxon"></span>局部化 (范畴论) <a class="slug" href="./局部化(范畴论).html">[局部化(范畴论)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>在<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中, <strong>局部化</strong>是一种万有的使一些态射变得可逆的方法.</p>
+<p>另见<span class="link local"><a href="./局部化.html" title="局部化 (环, 模) [局部化]">局部化 (环)</a></span>, <span class="link local"><a href="./Bousfield局部化.html" title="Bousfield 局部化 (稳定同伦论) [Bousfield局部化]">Bousfield 局部化 (稳定同伦论)</a></span>, <span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> (又叫自反局部化).</p>
+<h2>定义</h2>
+<p>设 $\mathcal{C}$ 为范畴, $S$ 为 $\mathcal{C}$ 中的一族态射 ($S$ 往往是一个<span class="link local"><a href="./宽子范畴.html" title="宽子范畴 [宽子范畴]">宽子范畴</a></span>). 定义 $\mathcal C$ 关于 $S$ 的<strong>局部化</strong>为满足如下条件的范畴 $\mathcal C[S^{-1}]$ 配备函子 $\mathcal C \to \mathcal C[S^{-1}]$:</p>
+<ul>
+<li>对任意函子 $F\colon \mathcal C\to\mathcal D$, 若 $F$ 将 $S$ 中的每个态射变为同构, 则 $F$ 唯一地穿过 $\mathcal C \to \mathcal C[S^{-1}]$, 即存在唯一的 $\mathcal C[S^{-1}] \to \mathcal D$ 以及交换图
+$$
+\begin{array}{ccc}
+\mathcal C &amp; \rightarrow &amp; \mathcal C[S^{-1}] \\
+ &amp; \searrow &amp; \downarrow \\
+ &amp;  &amp; \mathcal D.
+\end{array}
+$$</li>
+</ul>
+<p>换言之,</p>
+<ul>
+<li>对任意范畴 $\mathcal D$, 记 $\mathsf{Fun}^S(\mathcal C,\mathcal D)$ 为将 $S$ 的态射全变为同构的函子构成的全子范畴, 则
+$$
+\mathsf{Fun}^S(\mathcal C,\mathcal D) \simeq \mathsf{Fun}(\mathcal C [S^{-1}],\mathcal D).
+$$</li>
+</ul>
+<p>等价地, 可定义 $\mathcal C[S^{-1}]$ 为<span class="link local"><a href="./Cat.html" title="范畴的范畴 [Cat]">范畴的范畴 $\mathsf{Cat}$</a></span> 中的如下<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>,
+$$
+\begin{array}{ccc}
+\bigsqcup_S \{\cdot\to\cdot\} &amp; \rightarrow &amp; \bigsqcup_S \{\cdot\leftrightarrow\cdot\} \\
+\downarrow &amp;  &amp; \downarrow \\
+\mathcal C &amp; \rightarrow &amp; \mathcal C[S^{-1}]
+\end{array}
+$$
+其中 $\{\cdot\to\cdot\}$ 是<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的箭头.</p>
+<h2>例</h2>
+<h3>自反子范畴</h3>
+<p><span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span> $\mathcal D\hookrightarrow\mathcal C$ 是一个局部化: 记其左伴随为 $L\colon \mathcal C\to\mathcal D$, 取 $S$ 为所有被 $L$ 变为同构的态射构成的类.</p>
+<h3>对全体态射局部化</h3>
+<p>范畴 $\mathcal C$ 对全体态射作局部化, 会得到一个<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>
+$$
+|\mathcal C| := \mathcal C [\mathcal C^{-1}],
+$$
+这个操作是嵌入 $\mathsf{Ani} \to \mathsf{Cat}$ 的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">左伴随</a></span>: 对任意生象 $A$,
+$$
+\mathsf{Fun}(\mathcal C,A)\simeq\operatorname{Hom}_{\mathsf{Ani}}(|\mathcal C|,A).
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="局部右伴随"><header><h1><span class="taxon"></span>局部右伴随 <a class="slug" href="./局部右伴随.html">[局部右伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <h2>定义</h2>
@@ -2276,6 +2328,27 @@ $$</p>
 <p>函子 $(-)_+\wedge E\colon \mathsf{Ani} \to \mathsf{Sp}$ 保持余极限, 因而被它在一个点上的取值完全决定.</p>
 <h3>$\mathbb E_\infty$-代数的分解同调</h3>
 <p>设 $A$ 为 $\mathbb E_\infty$-代数, $M$ 为 $n$-流形, 那么 $A$ 作为 $\mathbb E_n$-代数在 $M$ 上的<span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>等同于 $A$ 作为 $\mathbb E_\infty$-代数沿 $M$ 的底生象的张量积.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="拉回"><header><h1><span class="taxon"></span>拉回 (范畴论) <a class="slug" href="./拉回.html">[拉回]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>在一个范畴中, <strong>拉回</strong> (pullback) 一般是指以如下范畴为指标范畴的<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>:
+$$
+\begin{array}
+{ccc}
+&amp;&amp;\bullet\\
+&amp;&amp;\downarrow\\
+\bullet &amp; \to &amp;\bullet
+\end{array}
+$$
+“多个对象指向一个对象” 的指标范畴的极限也可称为拉回. 对偶的操作称为<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>.</p>
+<p>另见<span class="link local"><a href="./推前.html" title="推前, 拉回 (纤维范畴) [推前]">拉回 (纤维范畴)</a></span>.</p>
+<h2>性质</h2>
+<p>在具有<span class="link local"><a href="./有限极限.html" title="有限极限 [有限极限]">有限极限</a></span>的范畴 $\mathcal C$ 中, 沿态射 $f\colon X\to Y$ 拉回给出<span class="link local"><a href="./俯范畴.html" title="俯范畴 [俯范畴]">俯范畴</a></span>之间的函子
+$$
+f^*\colon \mathcal C_{/Y} \to \mathcal C_{/X};
+$$
+这个函子总有<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">左伴随</a></span> $f_!\colon \mathcal C_{/X} \to \mathcal C_{/Y}$, $(W\to X) \mapsto (W\to X\overset{f}{\to} Y)$.</p>
+<p>在<span class="link local"><a href="./LCCC.html" title="局部积闭范畴 [LCCC]">局部积闭范畴</a></span>中, 拉回还有右伴随 $f_*\colon \mathcal C_{/X} \to \mathcal C_{/Y}$, 见<span class="link local"><a href="./依值积.html" title="依值积 [依值积]">依值积</a></span>.</p>
+<h2>例</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="指数对象"><header><h1><span class="taxon"></span>指数对象 <a class="slug" href="./指数对象.html">[指数对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>在<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathcal C$ 中, 对象 $X$ 的 $Y$ 次<strong>指数对象</strong> (exponential object) 是 $Y$ 上的 $X$ 常值族的<span class="link local"><a href="./依值积.html" title="依值积 [依值积]">依值积</a></span>:
