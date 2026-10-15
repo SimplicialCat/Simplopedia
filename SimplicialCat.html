@@ -1147,7 +1147,7 @@ In general, notably for $E=H\mathbb F_p$, the 1-image of $\operatorname{Spec
 </details></section><section class="block" data-taxon=""><details ><summary id="Alexander对偶"><header><h1><span class="taxon"></span>Alexander 对偶 <a class="slug" href="./Alexander对偶.html">[Alexander对偶]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon=""><details ><summary id="Alexandroff拓扑"><header><h1><span class="taxon"></span>Alexandroff 拓扑 <a class="slug" href="./Alexandroff拓扑.html">[Alexandroff拓扑]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>预序集上的 <strong>Alexandroff 拓扑</strong>是以其向上封闭子集为开集的拓扑.</p>
+<p>预序集上的 <strong>Alexandroff 拓扑</strong> (又叫<strong>特化拓扑</strong> specialization topology) 是以其向上封闭子集为开集的拓扑.</p>
 <p>一个<span class="link local"><a href="./拓扑学.html" title="拓扑学 [拓扑学]">拓扑空间</a></span>是 Alexandroff 的当且仅当开集的任意交是开集; 此时其上对应的预序是<strong>特化</strong> (specialization): $x\leq y$ 当且仅当 $x$ 的每个邻域都包含 $y$, 也即 $x\in\overline{\{y\}}$, 此时我们称 $x$ 是 $y$ 的一个特化.</p>
 <h2>性质</h2>
 <h3>与有限空间的关系</h3>
@@ -5108,7 +5108,7 @@ $$
 $$
 f(d) = a + d \cdot b.
 $$</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="KO"><header><h1><span class="taxon"></span>“KO” <a class="slug" href="./KO.html">[KO]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="KO"><header><h1><span class="taxon"></span>KO <a class="slug" href="./KO.html">[KO]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>$\mathrm {KO}$ 是来自实向量丛 K-理论的<span class="link local"><a href="./环谱.html" title="环谱 [环谱]">环谱</a></span>.</p>
 <p>对于空间 $X$, 定义 Abel 群 $\mathrm {KO}(X)$ 为 $X$ 上实向量丛关于直和构成的幺半群的群化, $\widetilde {\mathrm {KO}}(X):=\ker(\mathrm {KO}(X) \to \mathrm {KO}(*))$. $\widetilde {\mathrm {KO}}$ 被 $\mathbb{Z}\times\mathrm {BO}$ 表示. 由于 $\mathbb{Z}\times\mathrm {BO}\simeq\Omega^8 (\mathbb{Z}\times\mathrm {BO})$, 这定义了一个谱 $\mathrm {KO}$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Kan复形"><header><h1><span class="taxon"></span>“Kan 复形” <a class="slug" href="./Kan复形.html">[Kan复形]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -8676,6 +8676,13 @@ $$
 <li>$X$ 是<span class="link local"><a href="./凝聚位象.html" title="凝聚位象 [凝聚位象]">凝聚</a></span>的 Hausdorff 空间;</li>
 <li>$X$ 落在函子 $\operatorname{Hom}_{\mathsf{Boole}}(-,2)\colon \mathsf{Boole}^{\mathrm{op}} \to \mathsf{CHaus}$ 的像中 (见 <span class="link local"><a href="./Stone对偶.html" title="Stone 对偶 [Stone对偶]">Stone 对偶</a></span>).</li>
 </ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="T0空间"><header><h1><span class="taxon"></span>T0 空间 <a class="slug" href="./T0空间.html">[T0空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./拓扑学.html" title="拓扑学 [拓扑学]">拓扑学</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>$T_0$ 空间是满足如下等价条件的拓扑空间 $X$:</p>
+<ul>
+<li>对任意 $x,y\in X$, 若 $x\neq y$, 则要么存在 $x$ 的开邻域 $U$ 不包含 $y$, 要么存在 $y$ 的开邻域 $U$ 不包含 $x$.</li>
+<li>其<span class="link local"><a href="./Alexandroff拓扑.html" title="Alexandroff 拓扑 [Alexandroff拓扑]">特化预序</a></span>为<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序</a></span>.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="T1空间"><header><h1><span class="taxon"></span>T1 空间 <a class="slug" href="./T1空间.html">[T1空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./拓扑学.html" title="拓扑学 [拓扑学]">拓扑学</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>$T_1$ 空间是满足如下等价条件的拓扑空间 $X$:</p>
@@ -9693,6 +9700,7 @@ $$</p>
 <p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">亟需施工处</a></span>列表 (“TODO list”)</p>
 <p><span class="link local"><a href="./terminologies.html" title="单纯百科 - 术语翻译表 [terminologies]">术语翻译表</a></span></p>
 <h2>最近</h2>
+<p><span class="link local"><a href="./缠结假设.html" title="缠结假设 [缠结假设]">缠结假设</a></span></p>
 <p><span class="link local"><a href="./融贯子.html" title="融贯子 [融贯子]">融贯子</a></span></p>
 <p><span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>, <span class="link local"><a href="./脉性单子.html" title="脉性单子 [脉性单子]">脉性单子</a></span>, <span class="link local"><a href="./相对单子.html" title="相对单子 [相对单子]">相对单子</a></span></p>
 <p><span class="link local"><a href="./Blakers–Massey定理.html" title="Blakers–Massey 定理 [Blakers–Massey定理]">Blakers–Massey 定理</a></span></p>
@@ -10381,6 +10389,7 @@ $$</p>
 </ul>
 <p>计划中的讲稿 / 笔记:</p>
 <ul>
+<li><span class="link local"><a href="./notes-topology.html" title="拓扑学 2026 秋助教讲稿 [notes-topology]">拓扑学 2026 秋助教讲稿</a></span></li>
 <li><span class="link local"><a href="./notes-HH.html" title="同伦假设 [notes-HH]">同伦假设</a></span></li>
 <li><span class="link local"><a href="./AT.html" title="代数拓扑的现代语言 [AT]">代数拓扑的现代语言</a></span></li>
 <li><span class="link local"><a href="./notes-perverse.html" title="偏屈层笔记 [notes-perverse]">偏屈层笔记</a></span></li>
@@ -11633,6 +11642,62 @@ $$
 \mathrm{IC}_X = j_{! *}\mathrm{IC}_U.
 $$
 这意味着上式右端不依赖于光滑开集 $U$ 的选取.</p>
+<h2>第 4 讲 (2026-10-13)</h2>
+<p>上回定义了 $D^b_c(X)$ 上的偏屈 $t$-结构, 约化到开闭分解 $j\colon U\subset X \hookleftarrow Y\colon i$ 的情形, 使得 $j^* = j^!$ 与 $i_! = i_*$ 都是 $t$-正合函子.</p>
+<p>我们还定义了 $!*$-延拓 $j_{! *}\colon \mathsf{Perv}(U) \to \mathsf{Perv}(X)$, $j_{! *} \mathcal F$ 是 $\mathcal F$ 唯一的没有支在 $Y$ 上的子/商的偏屈延拓.</p>
+<p><strong>命题</strong>. 对于 $\mathcal M \in\mathsf{Perv}(X)$, 如下条件等价:</p>
+<ul>
+<li>$M \simeq j_{! *} (j^* M)$;</li>
+<li>对任意 $\mathcal N\in\mathsf{Perv}(Y)$, $\operatorname{Hom}(\mathcal M,\mathcal N) = 0$;</li>
+<li>$H^{p,=0}(i^*\mathcal M)$, $H^{p,=0}(i^!\mathcal M)$ 平凡;</li>
+<li>$i^* \mathcal M \in D^b_c (Y) ^{p,\leq -1}$, $i^!\mathcal M \in D^b_c (Y)^{p,\geq 1}$.</li>
+</ul>
+<p><strong>推论</strong>. $\mathbb D j_{! *} \simeq j_{! *} \mathbb D$.</p>
+<p><strong>命题</strong>. 对于一连串包含 $j_1\colon V\subset U$, $j_2\colon U\subset X$, $! *$-延拓与复合相容: $(j_2)_{! *} (j_1)_{! *} = (j_2 j_1)_{! *}$.</p>
+<p>思路是证明 $(j_2)_{! *} (j_1)_{! *} \mathcal M$ 没有支在 $X\setminus V$ 上的非平凡子/商.</p>
+<p><strong>命题</strong>. $j_{! *}$ 保持单射和满射.</p>
+<p><em>证明</em>. 设 $\mathcal M_1 \to \mathcal M_2$ 是 $\mathsf{Perv}(U)$ 中的单射. 令 $K = \ker (j_{! *}\mathcal M_1 \to j_{! *} \mathcal M_2)$.
+对正合列 $K \to j_{! *}\mathcal M_1 \to j_{! *} \mathcal M_2$
+作用正合函子 $j^*$,
+得到 $j^* K = 0$.
+这意味着 $K$ 支于闭部分 $Y$. 由 $j_{! *}$ 的性质, $K = 0$.
+满射的证明是对偶的.</p>
+<p><strong>注</strong>. $j_{! *}$ 不是正合函子 (不保持短正合列的中间项).</p>
+<p>我们来仔细讨论一个反例. 令 $X = \mathbb A^1$, $U = \mathbb A^1 \setminus 0$, $Y = \{0\}$.</p>
+<p>回忆之前的习题, $U$ 上的局部系统 $\mathcal L$ 等同于一个线性空间 $V$ 带有一个自同态 (单值算子) $T$; 偏屈层 $\mathcal L [1]$ 满足 $i^* j_*^{\heartsuit} (\mathcal L [1]) = \ker (T-1) [1]$; 对偶地 $i^! j_!^{\heartsuit} (\mathcal L [1]) = \operatorname{coker} (T-1) [-1]$.</p>
+<p>$j_{! *} (\mathcal L [1])$
+是 $j_* \mathcal L$ 的截断:
+$j_{! *} (\mathcal L [1]) \simeq (j_*^{\heartsuit}) [1]$.</p>
+<p>考虑常值局部系统 $\underline{\mathbb{Q}}$ 之间的非平凡扩张 (Jordan 块 $\begin{pmatrix}1 &amp; 1 \\ 0 &amp; 1\end{pmatrix}$), 正合列 $\underline{\mathbb{Q}} \to \mathcal L \to \underline{\mathbb{Q}}$ 不被 $j_*^{\heartsuit}$ 保持 ($\mathcal L$ 的整体截面是一维的).</p>
+<p><strong>定义</strong>. 对于局部闭嵌入 $Y \overset{j}{\subset} \overline{Y} \overset{i}{\hookrightarrow} X$ (其中 $Y$ 光滑), 定义
+$$
+\mathrm{IC}_X(\mathcal L) = i_* j_{! *} (\mathcal L [\dim Y]).
+$$</p>
+<p><strong>命题</strong>. 对于稠密开集 $f\colon U\subset Y$,
+$f_{! *} (\mathcal L|_U) [\dim Y] = \mathcal L [\dim Y]$;
+进而 $\mathrm{IC}_X (\mathcal L) = \mathrm{IC}_X (\mathcal L|_{U})$. (上同调振幅估计, 使用 $\dim (Y\setminus U) &lt; \dim Y$)</p>
+<p>对于稠密开集 $U\subset X$,
+$$
+\mathrm{IC}_X = \mathrm{IC}_X (\underline{\mathbb{Q}}_U).
+$$</p>
+<p><strong>习题</strong>. 对结曲线的正规化 $\pi\colon \widetilde C \to C$,
+$$
+\mathrm{IC}_C = \pi_* \mathrm{IC}_{\widetilde C}.
+$$</p>
+<p>下面我们说明 $\mathsf{Perv}(X)$ 的所有对象都可由 $\mathrm{IC}_X(\mathcal L)$ 经过有限次扩张得到.</p>
+<p><strong>引理</strong>. 设 $X$ 光滑, 连通, $\mathcal M \in \mathsf{Perv}(X)$ 局部常值 (即所有上同调局部常值), 则 $\mathcal M = \mathcal L [\dim X]$.</p>
+<p><strong>引理</strong>. 设 $X$ 光滑, 连通, $U\subset X$ 为稠密开集, $\mathcal L$ 为 $X$ 上的不可约局部系统 (意指无真子局部系统, 在 Betti 世界即基本群的不可约表示), 则 $\mathcal L |_U$ 也为不可约局部系统. 这是因为复代数簇的子簇的实余维数至少为 $2$, 从而基本群上为满射.</p>
+<p>(平展世界如何呢?)</p>
+<p><strong>命题</strong>. 设 $X$ 光滑, 连通, 则局部系统 $\mathcal L$ 的不可约性等价于其作为可构造层的单性, 也等价于 $\mathcal L [\dim X]$ 在 $\mathsf{Perv}(X)$ 中的单性.</p>
+<p><em>证明</em>. 设 $\mathcal L$ 为不可约局部系统. 假设有可构造层 $\mathcal M \subset \mathcal L$. 取稠密开集 $U$ 使得 $\mathcal M |_U$ 和 $(\mathcal L / \mathcal M) |_U$ 局部常值. 但 $\mathcal L |_U$ 不可约, 故 $\mathcal M |_U$ 和 $(\mathcal L / \mathcal M) |_U$ 之一为零.</p>
+<p><strong>引理</strong>. $j\colon U\subset X$ 开, $\mathcal M\in\mathsf{Perv}(U)$, 那么 $j_{! *}\mathcal M$ 单当且仅当 $\mathcal M$ 单.</p>
+<p><strong>定理</strong> (单偏屈层分类). $\mathsf{Perv}(X)$ 的单对象恰为 $\mathrm{IC}_X (\mathcal L)$, 其中 $\mathcal L$ 为光滑连通子簇上的不可约局部系统.</p>
+<p>设 $\mathcal P\in\mathsf{Perv}(X)$ 为单对象. 考虑支集的闭包 $Z = \overline{\operatorname{supp}\mathcal P}$, $\mathcal P = i_{Z,*} i^! \mathcal P$, 则 $i^!\mathcal P$ 单. 故不妨设 $Z = X$.</p>
+<p>设 $X$ 为不可约分支 $X_\alpha$ 的并. 取稠密开集 $U_\alpha\subset X_\alpha$, $\mathcal P|_{U_\alpha}$ 局部常值且非零 (因为 $\mathcal P$ 的支集为全空间).
+记 $U = \bigsqcup U_\alpha$.</p>
+<p>$\mathcal P|_U = \bigoplus \mathcal L_\alpha [\dim U_\alpha]$, 故 $X$ 实际上只有一个不可约分支.</p>
+<p>我们断言 $\mathcal P|_U$ 单. …</p>
+<p><strong>定理</strong>. $\mathsf{Perv}(X)$ 满足 Artin 条件 (降链稳定) 和 Noether 条件 (升链稳定), 即每个对象都有有限长度.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="notes-stable-center"><header><h1><span class="taxon"></span>稳定中心猜想 <a class="slug" href="./notes-stable-center.html">[notes-stable-center]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是为准备 2026 年春季学期徐斌老师 “朗兰兹纲领选讲” 课程报告而记的笔记. 主要参考 <span class="link local"><a href="./BKV-SCC.html" title="A categorical approach to the stable center conjecture [BKV-SCC]">BKV</a></span>.</p>
 <h2>引言</h2>
@@ -11803,6 +11868,98 @@ $$</p>
 <h2>5. 应用到经典 Bernstein 投影 $z^0$</h2>
 <p>在 3.4 节的情形,</p>
 <h2>6. 定理 5.1.8 的证明</h2>
+</details></section><section class="block" data-taxon=""><details ><summary id="notes-topology"><header><h1><span class="taxon"></span>拓扑学 2026 秋助教讲稿 <a class="slug" href="./notes-topology.html">[notes-topology]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./notes-topology-1.html" title="拓扑学 2026 秋助教讲稿 (1) [notes-topology-1]">拓扑学 2026 秋助教讲稿 (1)</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="notes-topology-1"><header><h1><span class="taxon"></span>拓扑学 2026 秋助教讲稿 (1) <a class="slug" href="./notes-topology-1.html">[notes-topology-1]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>Finite topological spaces</h2>
+<p><strong>Problem</strong>. Classify topologies on $\{a,b,c,d\}$ up to homeomorphism.</p>
+<p><em>Solution</em>. <span class="link local"><a href="./有限拓扑空间.html" title="有限拓扑空间 [有限拓扑空间]">Finite topological spaces</a></span> are equivalent to finite <strong>preorders</strong>. A topology on a finite set $X$ corresponds to the preorder $\leq$ defined as follows:</p>
+<ul>
+<li>$x\leq y$ if and only if every neighborhood of $x$ contains $y$, or equivalently, $x$ lies in the closure of $\{y\}$.</li>
+</ul>
+<p>Conversely, a preorder $\leq$ on $X$ defines a topology by specifying a basis</p>
+<ul>
+<li>$\{\uparrow x\mid x\in X\}$, where $\uparrow x$ is the subset $\{y\in X\mid y\geq x\}$.</li>
+</ul>
+<p>Remark. When $x\leq y$ we sometimes say that $x$ is a <strong>specialization</strong> of $y$ and that $y$ is a <strong>generalization</strong> of $x$, two terms from algebraic geometry. In algebraic geometry, one often consider <span class="link local"><a href="./一般点.html" title="一般点 [一般点]">generic points</a></span> on varieties (e.g. an affine line) and talk about their specializations. The closure of a generic point contains all its specializations.</p>
+<p>Moreover, under the above correspondence, finite <span class="link local"><a href="./T0空间.html" title="T0 空间 [T0空间]">$T_0$ spaces</a></span> are equivalent to finite <span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">partial orders</a></span>. Non-$T_0$ spaces (preorders) can be made into $T_0$ spaces (partial orders) by identifying indistinguishable pairs, reducing the classification problem.</p>
+<p>To classify topologies on $\{a,b,c,d\}$, we first classify <em>connected</em> $T_0$ space, which correspond to connected partial orders.</p>
+<p>We list all connected partial orders on finite sets of cardinality at most $4$ (which are relatively easy to enumerate):</p>
+<p>Cardinality $0$</p>
+<ul>
+<li>$\varnothing$</li>
+</ul>
+<p>Cardinality $1$</p>
+<ul>
+<li>$\{a\}$</li>
+</ul>
+<p>Cardinality $2$</p>
+<ul>
+<li>$\{a &lt; b\}$</li>
+</ul>
+<p>Cardinality $3$</p>
+<ul>
+<li>$\{a &lt; b &lt; c\}$</li>
+<li>$\{a &lt; b, a &lt; c\}$</li>
+<li>$\{a &lt; c, b &lt; c\}$</li>
+</ul>
+<p>Cardinality $4$ (count: $10$)</p>
+<ul>
+<li>$\{a &lt; b &lt; c &lt; d\}$</li>
+<li>$\{a &lt; b &lt; c, b &lt; d\}$</li>
+<li>$\{a &lt; b, a &lt; c, a &lt; d\}$</li>
+<li>$\{a &lt; b, a &lt; c &lt; d\}$</li>
+<li>$\{a &lt; b &lt; d, c &lt; d\}$</li>
+<li>$\{a &lt; c, b &lt; c &lt; d\}$</li>
+<li>$\{a &lt; c, b &lt; c, b &lt; d\}$</li>
+<li>$\{a &lt; d, b &lt; d , c &lt; d\}$</li>
+<li>$\{a &lt; b, a &lt; c, b &lt; d, c &lt; d\}$</li>
+<li>$\{a &lt; c, a &lt; d, b &lt; c, b &lt; d\}$</li>
+</ul>
+<p>Based on this result, we may add indistinguishable points to existing ones to obtain a classification of connected <em>preorders</em> on finite sets of cardinality at most $4$ (write $a \sim b$ for $a\leq b \land b\leq a$):</p>
+<p>Cardinality $0$</p>
+<ul>
+<li>$\varnothing$</li>
+</ul>
+<p>Cardinality $1$</p>
+<ul>
+<li>$\{a\}$</li>
+</ul>
+<p>Cardinality $2$</p>
+<ul>
+<li>$\{a &lt; b\}$</li>
+<li>$\{a \sim b\}$</li>
+</ul>
+<p>Cardinality $3$ (count: $6$)</p>
+<ul>
+<li>($3$ listed above)</li>
+<li>$\{a &lt; b \sim c\}$</li>
+<li>$\{a \sim b &lt; c\}$</li>
+<li>$\{a \sim b \sim c\}$</li>
+</ul>
+<p>Cardinality $4$ (count: $21$)</p>
+<ul>
+<li>($10$ listed above)</li>
+<li>$\{a &lt; b &lt; c \sim d\}$</li>
+<li>$\{a &lt; b, a &lt; c \sim d\}$</li>
+<li>$\{a &lt; c, b &lt; c \sim d\}$</li>
+<li>$\{a &lt; b \sim c &lt; d\}$</li>
+<li>$\{a \sim b &lt; c, a &lt; d\}$</li>
+<li>$\{a \sim b &lt; d, c &lt; d\}$</li>
+<li>$\{a \sim b &lt; c &lt; d\}$</li>
+<li>$\{a &lt; b \sim c \sim d\}$</li>
+<li>$\{a \sim b &lt; c \sim d\}$</li>
+<li>$\{a \sim b \sim c &lt; d\}$</li>
+<li>$\{a \sim b \sim c \sim d\}$</li>
+</ul>
+<p>A general topological space is the union of its connected components. Therefore the number of topologies on $\{a,b,c,d\}$ is</p>
+<p>$$
+\underbrace{21}_{4} +
+\underbrace{6}_{3+1} +
+\underbrace{3}_{2+2} +
+\underbrace{2}_{2+1+1} +
+\underbrace{1}_{1+1+1+1} = 33.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="notion"><header><h1><span class="taxon"></span>观念 <a class="slug" href="./notion.html">[notion]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>数学不只是公式和推理法则的游戏, 原因在于数学概念之上附加了人的<strong>观念</strong>. 它不属于任何一种固定的推理系统, 但深刻地影响着人们做数学的方式.</p>
 <p><section class="block" data-taxon=""><details ><summary id="数学对象的表现"><header><h1><span class="taxon"></span>数学对象的表现 <a class="slug" href="./数学对象的表现.html">[数学对象的表现]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -14059,7 +14216,13 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="∞-群"><header><h1><span class="taxon"></span>∞-群 <a class="slug" href="./∞-群.html">[∞-群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><p>$\infty$-群是指 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的 <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">$\mathbb E_1$</a></span>-群, 也等同于只有一个对象的 $\infty$-群胚, 也即 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 中的<span class="link local"><a href="./群胚对象.html" title="群胚对象 (∞-范畴论) [群胚对象]">群胚对象</a></span> $X\colon \Delta^{\mathrm{op}}\to\mathsf{Ani}$, 满足 $X_0=1$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="∞-群胚"><header><h1><span class="taxon"></span>∞-群胚 <a class="slug" href="./∞-群胚.html">[∞-群胚]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><p>$\infty$-群胚即 $(\infty,0)$-范畴, 又称<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.
 另见 <span class="link local"><a href="./n-r-范畴.html" title="(n,r)-范畴 [n-r-范畴]">$(n,r)$-范畴</a></span>.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="一般点"><header><h1><span class="taxon"></span>“一般点” <a class="slug" href="./一般点.html">[一般点]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="一般点"><header><h1><span class="taxon"></span>一般点 <a class="slug" href="./一般点.html">[一般点]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>拓扑空间</h3>
+<p>拓扑空间 $X$ 中, 一个点 $x$ 称为<strong>一般点</strong> (generic point) 是指 $\{x\}$ 的闭包是整个空间 $X$.</p>
+<h2>性质</h2>
+<h3>整概形</h3>
+<p><span class="link local"><a href="./整概形.html" title="整概形 [整概形]">整概形</a></span>有唯一的一般点.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="一阶无穷小线段"><header><h1><span class="taxon"></span>一阶无穷小线段 <a class="slug" href="./一阶无穷小线段.html">[一阶无穷小线段]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>在<span class="link local"><a href="./综合微分几何.html" title="综合微分几何 [综合微分几何]">综合微分几何</a></span>中, <strong>一阶无穷小线段</strong>是<span class="link local"><a href="./直线(SDG).html" title="直线 (综合微分几何) [直线(SDG)]">直线</a></span> $R$ 上平方为零的元素的集合:
@@ -17970,7 +18133,7 @@ $$
 <h3>非 Archimedes 赋值域</h3>
 <p>设 $(K,\|{-}\|)$ 为<span class="link local"><a href="./非Archimedes赋值域.html" title="非 Archimedes 赋值域 [非Archimedes赋值域]">非 Archimedes 赋值域</a></span>, $\mathcal O_K=\{x\in K\mid \|x\|\leq 1\}$ 为其<span class="link local"><a href="./赋值环.html" title="赋值环 [赋值环]">赋值环</a></span>, 其唯一的极大理想为 $\mathfrak m=\{x\in K\mid\|x\|&lt;1\}$. 此时称 $\mathcal O_K/\mathfrak m$ 为 $K$ 的剩余域.</p>
 <h2>例</h2>
-<p><strong>例</strong>. <span class="link local"><a href="./整概形.html" title="“整概形” [整概形]">整概形</a></span> $X$ 的<span class="link local"><a href="./一般点.html" title="“一般点” [一般点]">一般点</a></span> $\eta$ 处的剩余域同构于茎 $\mathcal O_{X,\eta}$ 的分式域. 特别地, 设 $A$ 为整环, $\operatorname{Spec}A$ 的一般点的剩余域为 $A$ 的<span class="link local"><a href="./分式域.html" title="分式域 [分式域]">分式域</a></span>.</p>
+<p><strong>例</strong>. <span class="link local"><a href="./整概形.html" title="整概形 [整概形]">整概形</a></span> $X$ 的<span class="link local"><a href="./一般点.html" title="一般点 [一般点]">一般点</a></span> $\eta$ 处的剩余域同构于茎 $\mathcal O_{X,\eta}$ 的分式域. 特别地, 设 $A$ 为整环, $\operatorname{Spec}A$ 的一般点的剩余域为 $A$ 的<span class="link local"><a href="./分式域.html" title="分式域 [分式域]">分式域</a></span>.</p>
 <p><strong>例</strong> (仿射直线). 设 $f\in \mathbb F_p[t]$ 为 $d$ 次不可约多项式, 那么 $\mathbb A^1_{\mathbb F_p}$ 的闭点 $(f)$ 处的剩余域为 $\mathbb F_{q}$, $q=p^d$.</p>
 <p><strong>例</strong> (椭圆曲线). 考虑 $\mathbb F_3$ 上的曲线 $y^2=x^3+x$. 其有一个 $\mathbb F_9$-点 $(1,\sqrt{2})$ (因为 $2$ 不是 $\mathbb F_3$ 中的平方数). 其对应的闭点 (Galois 轨道 $\{(1,\pm\sqrt{2})\}$) 的剩余域为 $\mathbb F_9$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="加性范畴"><header><h1><span class="taxon"></span>加性范畴 <a class="slug" href="./加性范畴.html">[加性范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -20099,21 +20262,30 @@ $$
 <p>$\wedge^k V_{\mathbb{C}}$ 上的复<span class="link local"><a href="./共轭.html" title="共轭 [共轭]">共轭</a></span>将 $\wedge^{p,q}V$ 与 $\wedge^{q,p}V$ 交换. 因此, 说一个元素 $x\in \wedge^k V_{\mathbb{C}}$ 是<strong>实</strong>的, 就是指 $x\in$ (待补充)</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./复向量丛.html" title="“复向量丛” [复向量丛]">复向量丛</a></span>, <span class="link local"><a href="./Hermite向量空间.html" title="“Hermite 向量空间” [Hermite向量空间]">Hermite 向量空间</a></span></p>
-</details></section><section class="block" data-taxon=""><details ><summary id="复定向上同调理论"><header><h1><span class="taxon"></span>“复定向上同调理论” <a class="slug" href="./复定向上同调理论.html">[复定向上同调理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="复定向上同调理论"><header><h1><span class="taxon"></span>复定向上同调理论 <a class="slug" href="./复定向上同调理论.html">[复定向上同调理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./广义上同调中的定向.html" title="广义上同调中的定向 [广义上同调中的定向]">广义上同调中的定向</a></span></p>
-<p>对于环谱 $E$, 称其复可定向是指 $E^2(\mathbb{C}P^\infty)\to E^2(S^2)$ 为满射; 其定向是 $E^2(\mathbb{C}P^\infty)$ 的元素.</p>
+<h2>定义</h2>
+<p>对于<span class="link local"><a href="./环谱.html" title="环谱 [环谱]">环谱</a></span> $E$, 称其<strong>复可定向</strong>是指 $E^2(\mathbb{C}P^\infty)\to E^2(S^2)$ 为满射; 其<strong>复定向</strong>是 $E^2(\mathbb{C}P^\infty)$ 的元素.</p>
+<h2>性质</h2>
+<h3>陈类</h3>
 <p><span class="link local"><a href="./环谱.html" title="环谱 [环谱]">环谱</a></span>的定向是第一<span class="link local"><a href="./陈类.html" title="“陈类” [陈类]">陈类</a></span>的推广: 环谱 $E$ 的定向给出一个同构 $E^*(\mathbb CP^\infty)\simeq E^*(*)[t](t.md)$. 由此可以定义 $E$-值第一陈类 $c_1^E=t$. $E$-值第一陈类与线丛的张量积满足
 $$
 c_1^E(L\otimes L') \simeq f(c_1^EL,c_1^E L'),
 $$
 其中 $f$ 为交换环 $R=E^{\text{even}}(*)$ 上的<span class="link local"><a href="./形式群律.html" title="“形式群律” [形式群律]">形式群律</a></span>. 另外, 此时 $t$ 是 $\mathbb{C}P^\infty$ 上万有线丛的 <span class="link local"><a href="./Thom类.html" title="“Thom 类” [Thom类]">Thom 类</a></span>.</p>
+<h3>形式群律</h3>
 <p>$R$ 上的形式群律等同于 $\operatorname{Spec}R$ 到形式群律模叠 $\operatorname{Spec}L/G$ 的映射.</p>
 <table><thead><tr><th>谱 (上同调理论)</th><th>$\operatorname{Spec}L/G$ 上的拟凝聚层</th><th></th></tr></thead><tbody>
 <tr><td>环谱 (乘性上同调理论)</td><td>$\operatorname{Spec}L/G$ 上的仿射概形</td><td></td></tr>
 <tr><td></td><td></td><td></td></tr>
 </tbody></table>
+<h3>阻碍理论</h3>
+<p>复定向可视为 $\mathbb{C}P^1 \to \Sigma^{2} E$ 到 $\mathbb{C}P^\infty$ 的提升; 而每一步 $\mathbb{C}P^n$ 到 $\mathbb{C}P^{n+1}$ 的<span class="link local"><a href="./阻碍.html" title="阻碍 [阻碍]">阻碍</a></span>落在 $\pi_{2n+1}E$ 中.</p>
+<p>特别地, 若 $E$ 是偶环谱, 则 $E$ 有复定向.</p>
 <h2>例</h2>
-<p><span class="link local"><a href="./KO.html" title="“KO” [KO]">KO</a></span> 不是复定向上同调理论.</p>
+<p>普通交换环对应的 <span class="link local"><a href="./Eilenberg–MacLane谱.html" title="Eilenberg–MacLane 谱 [Eilenberg–MacLane谱]">Eilenberg–MacLane 谱</a></span>都有复定向结构.</p>
+<p><span class="link local"><a href="./KU.html" title=" [KU]">KU</a></span> 带有典范的复定向, 称为 Bott 元素 $\beta = [\mathcal O (-1)] - 1$.</p>
+<p><span class="link local"><a href="./KO.html" title="KO [KO]">KO</a></span> 不是复定向上同调理论.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="复流形"><header><h1><span class="taxon"></span>“复流形” <a class="slug" href="./复流形.html">[复流形]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>复流形是以 $\mathbb{C}^n$ 中的开圆盘为局部坐标卡, 以全纯函数为转移函数的流形.</p>
 <h2>复结构的性质</h2>
@@ -22558,7 +22730,7 @@ $$
 <p>$\pi_\bullet MU \simeq MU_*(\text{pt}) \simeq\mathbb{Z}[x_1,x_2,\cdots]$, 其中 $x_i$ 的阶数为 $2i$.</p>
 <p><strong>定理</strong> (Quillen). 典范的同态 $L \to \pi_\bullet MU$ 是同构.</p>
 <h2>相关概念</h2>
-<p><span class="link local"><a href="./复定向上同调理论.html" title="“复定向上同调理论” [复定向上同调理论]">复定向上同调理论</a></span>, <span class="link local"><a href="./形式谱.html" title="形式谱 [形式谱]">形式谱</a></span>, <span class="link local"><a href="./形式概形.html" title="形式概形 [形式概形]">形式概形</a></span></p>
+<p><span class="link local"><a href="./复定向上同调理论.html" title="复定向上同调理论 [复定向上同调理论]">复定向上同调理论</a></span>, <span class="link local"><a href="./形式谱.html" title="形式谱 [形式谱]">形式谱</a></span>, <span class="link local"><a href="./形式概形.html" title="形式概形 [形式概形]">形式概形</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="形式谱"><header><h1><span class="taxon"></span>形式谱 <a class="slug" href="./形式谱.html">[形式谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>形式谱是某种带有拓扑的环对应的几何对象, 是一个<span class="link local"><a href="./形式概形.html" title="形式概形 [形式概形]">形式概形</a></span>.</p>
@@ -23680,14 +23852,15 @@ $$</p>
 $$
 \widehat {\mathbb{Z}}\simeq \prod_{p}\mathbb{Z}_p
 $$</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="整概形"><header><h1><span class="taxon"></span>“整概形” <a class="slug" href="./整概形.html">[整概形]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="整概形"><header><h1><span class="taxon"></span>整概形 <a class="slug" href="./整概形.html">[整概形]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
 <p>称满足如下等价条件的<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span> $X$ 为整概形:</p>
 <ul>
 <li>对任意 Zariski 开集 $U\subset X$, $\Gamma(\mathcal O_X,U)$ 为整环;</li>
 <li>$X$ 为<span class="link local"><a href="./既约概形.html" title="既约概形 [既约概形]">既约概形</a></span>, 且 $X$ 的底层拓扑空间不可约.</li>
 </ul>
 <h2>性质</h2>
-<p>整概形 $X$ 有<span class="link local"><a href="./一般点.html" title="“一般点” [一般点]">一般点</a></span> (generic point) $\eta$, 且茎 $\mathcal O_{X,\eta}$ 是域, 称为 $X$ 的有理函数域.</p>
+<p>整概形 $X$ 有<span class="link local"><a href="./一般点.html" title="一般点 [一般点]">一般点</a></span> (generic point) $\eta$, 且茎 $\mathcal O_{X,\eta}$ 是域, 称为 $X$ 的有理函数域.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="旋量"><header><h1><span class="taxon"></span>“旋量” <a class="slug" href="./旋量.html">[旋量]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>旋量即是<span class="link local"><a href="./自旋群.html" title="自旋群 [自旋群]">自旋群</a></span> (或其 Lie 代数) 的表示空间中的元素. 见<span class="link local"><a href="./自旋表示.html" title="“自旋表示” [自旋表示]">自旋表示</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="旋量丛"><header><h1><span class="taxon"></span>“旋量丛” <a class="slug" href="./旋量丛.html">[旋量丛]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -23855,7 +24028,7 @@ $$
 \operatorname{Spec}\mathbb F_p \times \operatorname{Spec}\mathbb{Z}[t]/(t^2-p) = \operatorname{Spec}\mathbb F_p [t]/(t^2).
 $$</p>
 <h2>相关概念</h2>
-<p><span class="link local"><a href="./整概形.html" title="“整概形” [整概形]">整概形</a></span></p>
+<p><span class="link local"><a href="./整概形.html" title="整概形 [整概形]">整概形</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="既约环"><header><h1><span class="taxon"></span>既约环 <a class="slug" href="./既约环.html">[既约环]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>既约环是满足如下等价条件的环 $R$:</p>
@@ -27788,9 +27961,35 @@ $$
 </ul>
 <h3>综合数学</h3>
 <p>通常, 一种综合数学的理论可视为对一个具有较丰富性质的范畴, 如<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>, 以<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>的方式强加的要求; 正如一个代数方程是对一个环强加的要求. 见<span class="link local"><a href="./synthetic.html" title="综合数学是抽象代数的范畴化 [synthetic]">综合数学是抽象代数的范畴化</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="缠结"><header><h1><span class="taxon"></span>缠结 <a class="slug" href="./缠结.html">[缠结]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>缠结</strong> (tangle) 是<span class="link local"><a href="./扭结.html" title="扭结 [扭结]">扭结</a></span>的带边界推广.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="缠结假设"><header><h1><span class="taxon"></span>缠结假设 <a class="slug" href="./缠结假设.html">[缠结假设]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>陈述</h2>
-<p><strong>缠结假设</strong> (tangle hypothesis) 是说范畴 $\operatorname{Bord}_1^{\mathrm{fr}}(\mathbb{R}^n)$ 是一个对象自由生成的<span class="link local"><a href="./刚性幺半范畴.html" title="刚性幺半范畴 [刚性幺半范畴]">刚性</a></span> <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半范畴.</p>
+<p><strong>缠结假设</strong> (tangle hypothesis) 是一系列关于各维数的<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span>构成的<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>的万有性质的命题.</p>
+<p><strong>注</strong>. 由于文献 (<span class="link local"><a href="./LurieCob.html" title="On the Classification of Topological Field Theories [LurieCob]">Lurie</a></span>, <span class="link local"><a href="./AyalaFrancisCob.html" title="The cobordism hypothesis [AyalaFrancisCob]">Ayala–Francis</a></span> 等) 记号不一, 此处使用的是一个和他们都不相同, 但看上去比较合理的记号.</p>
+<p>我们用 $\operatorname{Tang}_{k}^{\mathbb E_n}$ 表示如下的 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>:</p>
+<ul>
+<li>其对象为 $\mathbb{R}^n$ (或 $n$ 维圆盘 $D^n$) 中的带标架 $0$ 维子流形, 其上 $\mathbb E_n$-结构是直观的;</li>
+<li>其 $i\leq k$ 阶态射为 $\mathbb{R}^{i+n}$ 中的 $i$ 维带标架<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span>;</li>
+<li>其高于 $k$ 阶态射为<span class="link local"><a href="./同痕.html" title="同痕 [同痕]">同痕</a></span>.</li>
+</ul>
+<p>如下是 $\mathsf{Tang}_1^{\mathbb E_2}$ 中的一个 $1$-态射的示意.</p>
+<img src="/assets/tangle-Tang-1-E2.svg" alt="" width="250" style="display:block; margin:auto;">
+<p><strong>命题</strong>. 范畴 $\operatorname{Tang}_{k}^{\mathbb E_n}$ 是一个<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>.</p>
+<p>等价的陈述是: 范畴 $\operatorname{Tang}_{k}^{\mathbb E_n}$ 是一个对象自由生成的<span class="link local"><a href="./刚性幺半范畴.html" title="刚性幺半范畴 [刚性幺半范畴]">刚性</a></span> <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>.</p>
+<p>由于<span class="link local"><a href="./逆环假设.html" title="逆环假设 [逆环假设]">逆环假设</a></span>, 上述命题还有一个用 $(\infty,n+k)$-范畴陈述的版本.</p>
+<p>我们用 $\operatorname{Tang}_{k}^{(n)}$ 表示如下的 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n+k)$-范畴</a></span>:</p>
+<ul>
+<li>其 $i$ 阶态射为 $\mathbb{R}^{i}$ 中的余 $n$ 维带标架<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span>;</li>
+<li>其高于 $n+k$ 阶态射为<span class="link local"><a href="./同痕.html" title="同痕 [同痕]">同痕</a></span>.</li>
+</ul>
+<p>换言之, $\operatorname{Tang}_{k}^{(n)} = \mathrm{B}^n \operatorname{Tang}_{k}^{\mathbb E_n}$.</p>
+<p><strong>命题</strong>. 范畴 $\operatorname{Tang}_{k}^{(n)}$ 是一个基点的<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可伴随</a></span> $n$ 阶自同态所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n+k)$-范畴</a></span>.</p>
+<h3>与配边假设的关系</h3>
+<p><span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span> $\mathsf{Bord}_k$ 是
+$\operatorname{Tang}_{k}^{\mathbb E_n}$
+“在 $n \geq \infty$ 的极限”; 人们也称其为<strong>稳定</strong>情形. 此时 (至少直观上) 缠结假设趋向于<span class="link local"><a href="./配边假设.html" title="配边假设 [配边假设]">配边假设</a></span>: $\mathsf{Bord}_k$ 是一个<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span> <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="缠绕数"><header><h1><span class="taxon"></span>缠绕数 <a class="slug" href="./缠绕数.html">[缠绕数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon=""><details ><summary id="置换范畴"><header><h1><span class="taxon"></span>置换范畴 <a class="slug" href="./置换范畴.html">[置换范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
@@ -29697,6 +29896,38 @@ $$
 也即沿 $f$ 的左 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./直像-逆像伴随.html" title="拓扑空间上的直像-逆像伴随 [直像-逆像伴随]">拓扑空间上的直像-逆像伴随</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="逆环假设"><header><h1><span class="taxon"></span>逆环假设 <a class="slug" href="./逆环假设.html">[逆环假设]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>逆环假设</strong> (delooping hypothesis) 是一系列关于高连通性的<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>与带 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span> 结构的<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>之间的对应的命题.</p>
+<h2>陈述</h2>
+<p><strong>命题</strong>. 一个 $(\infty,n+k)$-范畴, 小于 $n$ 阶的态射都唯一, 那么它等同于 $\mathbb E_n$-幺半 $(\infty,k)$-范畴:
+$$
+\mathsf{Cat}_{(\infty,n+k)}^{*,\geq n}
+\ \begin{aligned}
+\overset{\Omega^n}{\longrightarrow}\\
+\underset{\mathrm{B}^n}{\longleftarrow}
+\end{aligned}\ 
+\mathsf{Alg}_{\mathbb E_n}
+(\mathsf{Cat}_{(\infty,k)}).
+$$</p>
+<p><strong>注</strong>.</p>
+<ul>
+<li>等价的两边是 $(\infty,1)$-范畴, 即我们不考虑更高阶不可逆态射.</li>
+<li>$\mathsf{Cat}_{(\infty,n+k)}^{*,\geq n}$ 是<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点</a></span> $(n-1)$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span> $(\infty,n+k)$-范畴的范畴, 这里的基点很重要.</li>
+<li>$\Omega := \operatorname{End}(*)$ 是取基点对象的自同态; 对于带基点 $\mathbb E_{n}$-幺半 $(\infty,k)$-范畴 $\mathcal C$, 有 $\Omega\mathcal C$ 为带基点 $\mathbb E_{n+1}$-幺半 $(\infty,k-1)$-范畴.</li>
+<li>对于 $\mathbb E_n$-幺半 $(\infty,k)$-范畴 $\mathcal C$, 其 “<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环</a></span>” $\mathrm{B}\mathcal C$ 是 $\mathbb E_{n-1}$-幺半 $(\infty,k+1)$-范畴; $\mathrm{B}$ 就是 $\Omega$ 的逆运算.</li>
+</ul>
+<h2>例</h2>
+<p>$n=1,k=0$ - 仅有一个对象的范畴等同于幺半群:</p>
+<p>$$
+\mathsf{Cat}_{(\infty,1)}^{*,\geq 1}
+\ \begin{aligned}
+\overset{\Omega}{\longrightarrow}\\
+\underset{\mathrm{B}}{\longleftarrow}
+\end{aligned}\ 
+\mathsf{Alg}_{\mathbb E_1}
+(\mathsf{Ani}).
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="逆环路空间"><header><h1><span class="taxon"></span>逆环路空间 <a class="slug" href="./逆环路空间.html">[逆环路空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>群 $G$ 的<strong>逆环路空间</strong> (delooping) 是 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主齐性空间</a></span>的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>, 也即 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>的<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">分类空间</a></span>.</p>

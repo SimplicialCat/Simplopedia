@@ -2111,6 +2111,38 @@ $$
 $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="表示论"><header><h1><span class="taxon"></span>表示论 <a class="slug" href="./表示论.html">[表示论]</a></h1><div class="metadata"><ul><li class="meta-item">学科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>表示论是通过代数结构在其它对象上的作用研究代数结构的学科. 其中最常见的研究对象是群的表示, 即<span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 在线性空间上的<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>, 也即 <span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">$\mathbf{B}G$</a></span> 上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="逆环假设"><header><h1><span class="taxon"></span>逆环假设 <a class="slug" href="./逆环假设.html">[逆环假设]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>逆环假设</strong> (delooping hypothesis) 是一系列关于高连通性的<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>与带 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span> 结构的<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>之间的对应的命题.</p>
+<h2>陈述</h2>
+<p><strong>命题</strong>. 一个 $(\infty,n+k)$-范畴, 小于 $n$ 阶的态射都唯一, 那么它等同于 $\mathbb E_n$-幺半 $(\infty,k)$-范畴:
+$$
+\mathsf{Cat}_{(\infty,n+k)}^{*,\geq n}
+\ \begin{aligned}
+\overset{\Omega^n}{\longrightarrow}\\
+\underset{\mathrm{B}^n}{\longleftarrow}
+\end{aligned}\ 
+\mathsf{Alg}_{\mathbb E_n}
+(\mathsf{Cat}_{(\infty,k)}).
+$$</p>
+<p><strong>注</strong>.</p>
+<ul>
+<li>等价的两边是 $(\infty,1)$-范畴, 即我们不考虑更高阶不可逆态射.</li>
+<li>$\mathsf{Cat}_{(\infty,n+k)}^{*,\geq n}$ 是<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点</a></span> $(n-1)$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span> $(\infty,n+k)$-范畴的范畴, 这里的基点很重要.</li>
+<li>$\Omega := \operatorname{End}(*)$ 是取基点对象的自同态; 对于带基点 $\mathbb E_{n}$-幺半 $(\infty,k)$-范畴 $\mathcal C$, 有 $\Omega\mathcal C$ 为带基点 $\mathbb E_{n+1}$-幺半 $(\infty,k-1)$-范畴.</li>
+<li>对于 $\mathbb E_n$-幺半 $(\infty,k)$-范畴 $\mathcal C$, 其 “<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环</a></span>” $\mathrm{B}\mathcal C$ 是 $\mathbb E_{n-1}$-幺半 $(\infty,k+1)$-范畴; $\mathrm{B}$ 就是 $\Omega$ 的逆运算.</li>
+</ul>
+<h2>例</h2>
+<p>$n=1,k=0$ - 仅有一个对象的范畴等同于幺半群:</p>
+<p>$$
+\mathsf{Cat}_{(\infty,1)}^{*,\geq 1}
+\ \begin{aligned}
+\overset{\Omega}{\longrightarrow}\\
+\underset{\mathrm{B}}{\longleftarrow}
+\end{aligned}\ 
+\mathsf{Alg}_{\mathbb E_1}
+(\mathsf{Ani}).
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="高阶仿射性"><header><h1><span class="taxon"></span>高阶仿射性 <a class="slug" href="./高阶仿射性.html">[高阶仿射性]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>高阶仿射性是<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射性</a></span>的推广, $n$-仿射性大致是说一个几何对象 (<span class="link local"><a href="./Gestalt.html" title="Gestalt [Gestalt]">Gestalt</a></span>) 被其上某种 $n$-范畴值的层 (例如 <span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">$n$ 阶拟凝聚层</a></span>) 决定.</p>

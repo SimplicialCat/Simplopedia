@@ -879,6 +879,13 @@ $$
 <p>每个<span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span> $X$ 都给出一个 Heyting 代数 $\mathcal O(X)$. 由此容易给出不满足 Boole 性质的例子. 例如拓扑空间 $X$ 对应的 Heyting 代数中, 开集 $U$ 的<span class="link local"><a href="./否定.html" title="“否定” [否定]">否定</a></span> $U\Rightarrow \bot$ 实际上是 $X\setminus U$ 的内部, 除非 $U$ 既开又闭, 否则不会有 $\neg\neg U = U$.</p>
 <h2>参考资料</h2>
 <p><span class="link local"><a href="./盲人摸象.html" title="盲人摸象 [盲人摸象]">盲人摸象</a></span> 1.3 节</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="T0空间"><header><h1><span class="taxon"></span>T0 空间 <a class="slug" href="./T0空间.html">[T0空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./拓扑学.html" title="拓扑学 [拓扑学]">拓扑学</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>$T_0$ 空间是满足如下等价条件的拓扑空间 $X$:</p>
+<ul>
+<li>对任意 $x,y\in X$, 若 $x\neq y$, 则要么存在 $x$ 的开邻域 $U$ 不包含 $y$, 要么存在 $y$ 的开邻域 $U$ 不包含 $x$.</li>
+<li>其<span class="link local"><a href="./Alexandroff拓扑.html" title="Alexandroff 拓扑 [Alexandroff拓扑]">特化预序</a></span>为<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序</a></span>.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="higherZar"><header><h1><span class="taxon"></span>高阶 Zariski 几何 <a class="slug" href="./higherZar.html">[higherZar]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是 <span class="link local"><a href="./ABCSS25.html" title="Higher Zariski Geometry [ABCSS25]">ABCSS25</a></span> 的阅读笔记. 在 <span class="link local"><a href="./LurieDAGV.html" title="Derived Algebraic Geometry V: Structured Spaces [LurieDAGV]">Lurie DAG V</a></span> 的基础上, 建立局部 $2$-环化意象以及相应的 Zariski 谱等概念.</p>
 <p>用 “$2$-环” 来指代<span class="link local"><a href="./幂等完备范畴.html" title="幂等完备范畴 [幂等完备范畴]">幂等完备</a></span>的<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 记 $2$-环的范畴为 $2\mathsf{CAlg}$. 这是一个非常广泛的范畴, 包括了代数几何中许多对象:</p>
@@ -973,6 +980,96 @@ $$
 <p>对于每个高阶范畴 $\mathcal C$, 都可以去掉其中所有不可逆的态射, 仅保留对象与对象之间的同构, 得到一个生象 $\mathcal C^{\simeq}$, 称为 $\mathcal C$ 的<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>. 一般地, $(n,r)$-范畴也可遗忘为 $(n,r')$-范畴 ($r' &lt; r$).</p>
 <h3>$(\infty,n)$-范畴</h3>
 <p>见 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n)$-范畴</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="notes-topology-1"><header><h1><span class="taxon"></span>拓扑学 2026 秋助教讲稿 (1) <a class="slug" href="./notes-topology-1.html">[notes-topology-1]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>Finite topological spaces</h2>
+<p><strong>Problem</strong>. Classify topologies on $\{a,b,c,d\}$ up to homeomorphism.</p>
+<p><em>Solution</em>. <span class="link local"><a href="./有限拓扑空间.html" title="有限拓扑空间 [有限拓扑空间]">Finite topological spaces</a></span> are equivalent to finite <strong>preorders</strong>. A topology on a finite set $X$ corresponds to the preorder $\leq$ defined as follows:</p>
+<ul>
+<li>$x\leq y$ if and only if every neighborhood of $x$ contains $y$, or equivalently, $x$ lies in the closure of $\{y\}$.</li>
+</ul>
+<p>Conversely, a preorder $\leq$ on $X$ defines a topology by specifying a basis</p>
+<ul>
+<li>$\{\uparrow x\mid x\in X\}$, where $\uparrow x$ is the subset $\{y\in X\mid y\geq x\}$.</li>
+</ul>
+<p>Remark. When $x\leq y$ we sometimes say that $x$ is a <strong>specialization</strong> of $y$ and that $y$ is a <strong>generalization</strong> of $x$, two terms from algebraic geometry. In algebraic geometry, one often consider <span class="link local"><a href="./一般点.html" title="一般点 [一般点]">generic points</a></span> on varieties (e.g. an affine line) and talk about their specializations. The closure of a generic point contains all its specializations.</p>
+<p>Moreover, under the above correspondence, finite <span class="link local"><a href="./T0空间.html" title="T0 空间 [T0空间]">$T_0$ spaces</a></span> are equivalent to finite <span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">partial orders</a></span>. Non-$T_0$ spaces (preorders) can be made into $T_0$ spaces (partial orders) by identifying indistinguishable pairs, reducing the classification problem.</p>
+<p>To classify topologies on $\{a,b,c,d\}$, we first classify <em>connected</em> $T_0$ space, which correspond to connected partial orders.</p>
+<p>We list all connected partial orders on finite sets of cardinality at most $4$ (which are relatively easy to enumerate):</p>
+<p>Cardinality $0$</p>
+<ul>
+<li>$\varnothing$</li>
+</ul>
+<p>Cardinality $1$</p>
+<ul>
+<li>$\{a\}$</li>
+</ul>
+<p>Cardinality $2$</p>
+<ul>
+<li>$\{a &lt; b\}$</li>
+</ul>
+<p>Cardinality $3$</p>
+<ul>
+<li>$\{a &lt; b &lt; c\}$</li>
+<li>$\{a &lt; b, a &lt; c\}$</li>
+<li>$\{a &lt; c, b &lt; c\}$</li>
+</ul>
+<p>Cardinality $4$ (count: $10$)</p>
+<ul>
+<li>$\{a &lt; b &lt; c &lt; d\}$</li>
+<li>$\{a &lt; b &lt; c, b &lt; d\}$</li>
+<li>$\{a &lt; b, a &lt; c, a &lt; d\}$</li>
+<li>$\{a &lt; b, a &lt; c &lt; d\}$</li>
+<li>$\{a &lt; b &lt; d, c &lt; d\}$</li>
+<li>$\{a &lt; c, b &lt; c &lt; d\}$</li>
+<li>$\{a &lt; c, b &lt; c, b &lt; d\}$</li>
+<li>$\{a &lt; d, b &lt; d , c &lt; d\}$</li>
+<li>$\{a &lt; b, a &lt; c, b &lt; d, c &lt; d\}$</li>
+<li>$\{a &lt; c, a &lt; d, b &lt; c, b &lt; d\}$</li>
+</ul>
+<p>Based on this result, we may add indistinguishable points to existing ones to obtain a classification of connected <em>preorders</em> on finite sets of cardinality at most $4$ (write $a \sim b$ for $a\leq b \land b\leq a$):</p>
+<p>Cardinality $0$</p>
+<ul>
+<li>$\varnothing$</li>
+</ul>
+<p>Cardinality $1$</p>
+<ul>
+<li>$\{a\}$</li>
+</ul>
+<p>Cardinality $2$</p>
+<ul>
+<li>$\{a &lt; b\}$</li>
+<li>$\{a \sim b\}$</li>
+</ul>
+<p>Cardinality $3$ (count: $6$)</p>
+<ul>
+<li>($3$ listed above)</li>
+<li>$\{a &lt; b \sim c\}$</li>
+<li>$\{a \sim b &lt; c\}$</li>
+<li>$\{a \sim b \sim c\}$</li>
+</ul>
+<p>Cardinality $4$ (count: $21$)</p>
+<ul>
+<li>($10$ listed above)</li>
+<li>$\{a &lt; b &lt; c \sim d\}$</li>
+<li>$\{a &lt; b, a &lt; c \sim d\}$</li>
+<li>$\{a &lt; c, b &lt; c \sim d\}$</li>
+<li>$\{a &lt; b \sim c &lt; d\}$</li>
+<li>$\{a \sim b &lt; c, a &lt; d\}$</li>
+<li>$\{a \sim b &lt; d, c &lt; d\}$</li>
+<li>$\{a \sim b &lt; c &lt; d\}$</li>
+<li>$\{a &lt; b \sim c \sim d\}$</li>
+<li>$\{a \sim b &lt; c \sim d\}$</li>
+<li>$\{a \sim b \sim c &lt; d\}$</li>
+<li>$\{a \sim b \sim c \sim d\}$</li>
+</ul>
+<p>A general topological space is the union of its connected components. Therefore the number of topologies on $\{a,b,c,d\}$ is</p>
+<p>$$
+\underbrace{21}_{4} +
+\underbrace{6}_{3+1} +
+\underbrace{3}_{2+2} +
+\underbrace{2}_{2+1+1} +
+\underbrace{1}_{1+1+1+1} = 33.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="位象"><header><h1><span class="taxon"></span>位象 <a class="slug" href="./位象.html">[位象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>位象是<span class="link local"><a href="./无点拓扑学.html" title="无点拓扑学 [无点拓扑学]">无点拓扑学</a></span>的最基本概念. 一个位象是一个偏序集, 满足与拓扑空间中的开集构成的偏序集类似的性质. 但是位象不像拓扑空间那样是由点构成的: 事实上, 一个非平凡的位象可以没有任何点.</p>

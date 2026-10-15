@@ -877,7 +877,7 @@ $$
 </ul>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Alexandroff拓扑"><header><h1><span class="taxon"></span>Alexandroff 拓扑 <a class="slug" href="./Alexandroff拓扑.html">[Alexandroff拓扑]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p>预序集上的 <strong>Alexandroff 拓扑</strong>是以其向上封闭子集为开集的拓扑.</p>
+<p>预序集上的 <strong>Alexandroff 拓扑</strong> (又叫<strong>特化拓扑</strong> specialization topology) 是以其向上封闭子集为开集的拓扑.</p>
 <p>一个<span class="link local"><a href="./拓扑学.html" title="拓扑学 [拓扑学]">拓扑空间</a></span>是 Alexandroff 的当且仅当开集的任意交是开集; 此时其上对应的预序是<strong>特化</strong> (specialization): $x\leq y$ 当且仅当 $x$ 的每个邻域都包含 $y$, 也即 $x\in\overline{\{y\}}$, 此时我们称 $x$ 是 $y$ 的一个特化.</p>
 <h2>性质</h2>
 <h3>与有限空间的关系</h3>
@@ -886,4 +886,94 @@ $$
 <ul>
 <li><span class="link local"><a href="./Sierpiński空间.html" title="Sierpiński 空间 [Sierpiński空间]">Sierpiński 空间</a></span> (作为拓扑空间) 是<span class="link local"><a href="./真值.html" title="真值 [真值]">真值</a></span>的偏序集上的 Alexandroff 拓扑.</li>
 </ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="notes-topology-1"><header><h1><span class="taxon"></span>拓扑学 2026 秋助教讲稿 (1) <a class="slug" href="./notes-topology-1.html">[notes-topology-1]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>Finite topological spaces</h2>
+<p><strong>Problem</strong>. Classify topologies on $\{a,b,c,d\}$ up to homeomorphism.</p>
+<p><em>Solution</em>. <span class="link local"><a href="./有限拓扑空间.html" title="有限拓扑空间 [有限拓扑空间]">Finite topological spaces</a></span> are equivalent to finite <strong>preorders</strong>. A topology on a finite set $X$ corresponds to the preorder $\leq$ defined as follows:</p>
+<ul>
+<li>$x\leq y$ if and only if every neighborhood of $x$ contains $y$, or equivalently, $x$ lies in the closure of $\{y\}$.</li>
+</ul>
+<p>Conversely, a preorder $\leq$ on $X$ defines a topology by specifying a basis</p>
+<ul>
+<li>$\{\uparrow x\mid x\in X\}$, where $\uparrow x$ is the subset $\{y\in X\mid y\geq x\}$.</li>
+</ul>
+<p>Remark. When $x\leq y$ we sometimes say that $x$ is a <strong>specialization</strong> of $y$ and that $y$ is a <strong>generalization</strong> of $x$, two terms from algebraic geometry. In algebraic geometry, one often consider <span class="link local"><a href="./一般点.html" title="一般点 [一般点]">generic points</a></span> on varieties (e.g. an affine line) and talk about their specializations. The closure of a generic point contains all its specializations.</p>
+<p>Moreover, under the above correspondence, finite <span class="link local"><a href="./T0空间.html" title="T0 空间 [T0空间]">$T_0$ spaces</a></span> are equivalent to finite <span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">partial orders</a></span>. Non-$T_0$ spaces (preorders) can be made into $T_0$ spaces (partial orders) by identifying indistinguishable pairs, reducing the classification problem.</p>
+<p>To classify topologies on $\{a,b,c,d\}$, we first classify <em>connected</em> $T_0$ space, which correspond to connected partial orders.</p>
+<p>We list all connected partial orders on finite sets of cardinality at most $4$ (which are relatively easy to enumerate):</p>
+<p>Cardinality $0$</p>
+<ul>
+<li>$\varnothing$</li>
+</ul>
+<p>Cardinality $1$</p>
+<ul>
+<li>$\{a\}$</li>
+</ul>
+<p>Cardinality $2$</p>
+<ul>
+<li>$\{a &lt; b\}$</li>
+</ul>
+<p>Cardinality $3$</p>
+<ul>
+<li>$\{a &lt; b &lt; c\}$</li>
+<li>$\{a &lt; b, a &lt; c\}$</li>
+<li>$\{a &lt; c, b &lt; c\}$</li>
+</ul>
+<p>Cardinality $4$ (count: $10$)</p>
+<ul>
+<li>$\{a &lt; b &lt; c &lt; d\}$</li>
+<li>$\{a &lt; b &lt; c, b &lt; d\}$</li>
+<li>$\{a &lt; b, a &lt; c, a &lt; d\}$</li>
+<li>$\{a &lt; b, a &lt; c &lt; d\}$</li>
+<li>$\{a &lt; b &lt; d, c &lt; d\}$</li>
+<li>$\{a &lt; c, b &lt; c &lt; d\}$</li>
+<li>$\{a &lt; c, b &lt; c, b &lt; d\}$</li>
+<li>$\{a &lt; d, b &lt; d , c &lt; d\}$</li>
+<li>$\{a &lt; b, a &lt; c, b &lt; d, c &lt; d\}$</li>
+<li>$\{a &lt; c, a &lt; d, b &lt; c, b &lt; d\}$</li>
+</ul>
+<p>Based on this result, we may add indistinguishable points to existing ones to obtain a classification of connected <em>preorders</em> on finite sets of cardinality at most $4$ (write $a \sim b$ for $a\leq b \land b\leq a$):</p>
+<p>Cardinality $0$</p>
+<ul>
+<li>$\varnothing$</li>
+</ul>
+<p>Cardinality $1$</p>
+<ul>
+<li>$\{a\}$</li>
+</ul>
+<p>Cardinality $2$</p>
+<ul>
+<li>$\{a &lt; b\}$</li>
+<li>$\{a \sim b\}$</li>
+</ul>
+<p>Cardinality $3$ (count: $6$)</p>
+<ul>
+<li>($3$ listed above)</li>
+<li>$\{a &lt; b \sim c\}$</li>
+<li>$\{a \sim b &lt; c\}$</li>
+<li>$\{a \sim b \sim c\}$</li>
+</ul>
+<p>Cardinality $4$ (count: $21$)</p>
+<ul>
+<li>($10$ listed above)</li>
+<li>$\{a &lt; b &lt; c \sim d\}$</li>
+<li>$\{a &lt; b, a &lt; c \sim d\}$</li>
+<li>$\{a &lt; c, b &lt; c \sim d\}$</li>
+<li>$\{a &lt; b \sim c &lt; d\}$</li>
+<li>$\{a \sim b &lt; c, a &lt; d\}$</li>
+<li>$\{a \sim b &lt; d, c &lt; d\}$</li>
+<li>$\{a \sim b &lt; c &lt; d\}$</li>
+<li>$\{a &lt; b \sim c \sim d\}$</li>
+<li>$\{a \sim b &lt; c \sim d\}$</li>
+<li>$\{a \sim b \sim c &lt; d\}$</li>
+<li>$\{a \sim b \sim c \sim d\}$</li>
+</ul>
+<p>A general topological space is the union of its connected components. Therefore the number of topologies on $\{a,b,c,d\}$ is</p>
+<p>$$
+\underbrace{21}_{4} +
+\underbrace{6}_{3+1} +
+\underbrace{3}_{2+2} +
+\underbrace{2}_{2+1+1} +
+\underbrace{1}_{1+1+1+1} = 33.
+$$</p>
 </details></section></details></section></footer></article></div></body></html>

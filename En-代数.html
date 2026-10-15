@@ -1206,7 +1206,62 @@ $$</p>
 <p><span class="link local"><a href="./相对同伦群.html" title="相对同伦群 [相对同伦群]">相对同伦群</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="缠结假设"><header><h1><span class="taxon"></span>缠结假设 <a class="slug" href="./缠结假设.html">[缠结假设]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>陈述</h2>
-<p><strong>缠结假设</strong> (tangle hypothesis) 是说范畴 $\operatorname{Bord}_1^{\mathrm{fr}}(\mathbb{R}^n)$ 是一个对象自由生成的<span class="link local"><a href="./刚性幺半范畴.html" title="刚性幺半范畴 [刚性幺半范畴]">刚性</a></span> <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半范畴.</p>
+<p><strong>缠结假设</strong> (tangle hypothesis) 是一系列关于各维数的<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span>构成的<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>的万有性质的命题.</p>
+<p><strong>注</strong>. 由于文献 (<span class="link local"><a href="./LurieCob.html" title="On the Classification of Topological Field Theories [LurieCob]">Lurie</a></span>, <span class="link local"><a href="./AyalaFrancisCob.html" title="The cobordism hypothesis [AyalaFrancisCob]">Ayala–Francis</a></span> 等) 记号不一, 此处使用的是一个和他们都不相同, 但看上去比较合理的记号.</p>
+<p>我们用 $\operatorname{Tang}_{k}^{\mathbb E_n}$ 表示如下的 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>:</p>
+<ul>
+<li>其对象为 $\mathbb{R}^n$ (或 $n$ 维圆盘 $D^n$) 中的带标架 $0$ 维子流形, 其上 $\mathbb E_n$-结构是直观的;</li>
+<li>其 $i\leq k$ 阶态射为 $\mathbb{R}^{i+n}$ 中的 $i$ 维带标架<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span>;</li>
+<li>其高于 $k$ 阶态射为<span class="link local"><a href="./同痕.html" title="同痕 [同痕]">同痕</a></span>.</li>
+</ul>
+<p>如下是 $\mathsf{Tang}_1^{\mathbb E_2}$ 中的一个 $1$-态射的示意.</p>
+<img src="/assets/tangle-Tang-1-E2.svg" alt="" width="250" style="display:block; margin:auto;">
+<p><strong>命题</strong>. 范畴 $\operatorname{Tang}_{k}^{\mathbb E_n}$ 是一个<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>.</p>
+<p>等价的陈述是: 范畴 $\operatorname{Tang}_{k}^{\mathbb E_n}$ 是一个对象自由生成的<span class="link local"><a href="./刚性幺半范畴.html" title="刚性幺半范畴 [刚性幺半范畴]">刚性</a></span> <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>.</p>
+<p>由于<span class="link local"><a href="./逆环假设.html" title="逆环假设 [逆环假设]">逆环假设</a></span>, 上述命题还有一个用 $(\infty,n+k)$-范畴陈述的版本.</p>
+<p>我们用 $\operatorname{Tang}_{k}^{(n)}$ 表示如下的 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n+k)$-范畴</a></span>:</p>
+<ul>
+<li>其 $i$ 阶态射为 $\mathbb{R}^{i}$ 中的余 $n$ 维带标架<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span>;</li>
+<li>其高于 $n+k$ 阶态射为<span class="link local"><a href="./同痕.html" title="同痕 [同痕]">同痕</a></span>.</li>
+</ul>
+<p>换言之, $\operatorname{Tang}_{k}^{(n)} = \mathrm{B}^n \operatorname{Tang}_{k}^{\mathbb E_n}$.</p>
+<p><strong>命题</strong>. 范畴 $\operatorname{Tang}_{k}^{(n)}$ 是一个基点的<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可伴随</a></span> $n$ 阶自同态所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n+k)$-范畴</a></span>.</p>
+<h3>与配边假设的关系</h3>
+<p><span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span> $\mathsf{Bord}_k$ 是
+$\operatorname{Tang}_{k}^{\mathbb E_n}$
+“在 $n \geq \infty$ 的极限”; 人们也称其为<strong>稳定</strong>情形. 此时 (至少直观上) 缠结假设趋向于<span class="link local"><a href="./配边假设.html" title="配边假设 [配边假设]">配边假设</a></span>: $\mathsf{Bord}_k$ 是一个<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span> <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="逆环假设"><header><h1><span class="taxon"></span>逆环假设 <a class="slug" href="./逆环假设.html">[逆环假设]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>逆环假设</strong> (delooping hypothesis) 是一系列关于高连通性的<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>与带 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span> 结构的<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>之间的对应的命题.</p>
+<h2>陈述</h2>
+<p><strong>命题</strong>. 一个 $(\infty,n+k)$-范畴, 小于 $n$ 阶的态射都唯一, 那么它等同于 $\mathbb E_n$-幺半 $(\infty,k)$-范畴:
+$$
+\mathsf{Cat}_{(\infty,n+k)}^{*,\geq n}
+\ \begin{aligned}
+\overset{\Omega^n}{\longrightarrow}\\
+\underset{\mathrm{B}^n}{\longleftarrow}
+\end{aligned}\ 
+\mathsf{Alg}_{\mathbb E_n}
+(\mathsf{Cat}_{(\infty,k)}).
+$$</p>
+<p><strong>注</strong>.</p>
+<ul>
+<li>等价的两边是 $(\infty,1)$-范畴, 即我们不考虑更高阶不可逆态射.</li>
+<li>$\mathsf{Cat}_{(\infty,n+k)}^{*,\geq n}$ 是<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点</a></span> $(n-1)$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span> $(\infty,n+k)$-范畴的范畴, 这里的基点很重要.</li>
+<li>$\Omega := \operatorname{End}(*)$ 是取基点对象的自同态; 对于带基点 $\mathbb E_{n}$-幺半 $(\infty,k)$-范畴 $\mathcal C$, 有 $\Omega\mathcal C$ 为带基点 $\mathbb E_{n+1}$-幺半 $(\infty,k-1)$-范畴.</li>
+<li>对于 $\mathbb E_n$-幺半 $(\infty,k)$-范畴 $\mathcal C$, 其 “<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环</a></span>” $\mathrm{B}\mathcal C$ 是 $\mathbb E_{n-1}$-幺半 $(\infty,k+1)$-范畴; $\mathrm{B}$ 就是 $\Omega$ 的逆运算.</li>
+</ul>
+<h2>例</h2>
+<p>$n=1,k=0$ - 仅有一个对象的范畴等同于幺半群:</p>
+<p>$$
+\mathsf{Cat}_{(\infty,1)}^{*,\geq 1}
+\ \begin{aligned}
+\overset{\Omega}{\longrightarrow}\\
+\underset{\mathrm{B}}{\longleftarrow}
+\end{aligned}\ 
+\mathsf{Alg}_{\mathbb E_1}
+(\mathsf{Ani}).
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="逆环路空间"><header><h1><span class="taxon"></span>逆环路空间 <a class="slug" href="./逆环路空间.html">[逆环路空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>群 $G$ 的<strong>逆环路空间</strong> (delooping) 是 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主齐性空间</a></span>的<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>, 也即 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>的<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">分类空间</a></span>.</p>
