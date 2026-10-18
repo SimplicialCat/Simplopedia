@@ -1177,7 +1177,7 @@ $$
 而 $n$ 重范畴则可定义为满足每个分量的<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备性</a></span>的 Segal 对象.</p>
 <h2>性质</h2>
 <h3>与 $n$-范畴的联系</h3>
-<p>$n$-范畴可视为某些方向退化的 $n$ 重范畴.</p>
+<p><span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$n$-范畴</a></span>可视为某些方向退化的 $n$ 重范畴.</p>
 <h2>例</h2>
 <h3>外张量积</h3>
 <p>给定范畴 $\mathcal C_1,\cdots,\mathcal C_n$, 可构造 $n$ 重范畴 $\mathcal C_1 \boxtimes\cdots\boxtimes\mathcal C_n$,
@@ -1187,7 +1187,24 @@ $$</p>
 <h3>景的二重范畴</h3>
 <p><span class="link local"><a href="./景.html" title="景 [景]">景</a></span>构成一个二重范畴 (double category). 两类态射分别称为景的态射和余态射.</p>
 <h3>正交分解系与二重范畴</h3>
-<p>每个<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">正交分解系</a></span>都可视为一个二重范畴, 两类态射分别就是分解系中的两类态射.</p>
+<p><span class="link local"><a href="./JuranFactDCat.html" title="On orthogonal factorization systems and double categories [JuranFactDCat]">Branko Juran</a></span> 证明每个<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">正交分解系</a></span>都可视为一个二重范畴, 两类态射分别就是分解系中的两类态射.</p>
+<p>来自正交分解系的二重范畴称为<strong>分解二重范畴</strong>.</p>
+<p>不妨采取如下约定 (参考 <span class="link local"><a href="./BlomLoubatonRuitAlgd.html" title="Day convolution for algebraic patterns [BlomLoubatonRuitAlgd]">Blom–Loubaton–Ruit</a></span>, 其与 <span class="link local"><a href="./JuranFactDCat.html" title="On orthogonal factorization systems and double categories [JuranFactDCat]">Juran</a></span> 约定相反): 正交分解系中的<strong>左类</strong>在二重范畴中为<strong>纵向</strong>态射, <strong>右类</strong>为<strong>横向</strong>态射. (相反的约定当然也可以.)</p>
+<p>若将二重范畴视为 $\mathsf{Cat}$ 中的<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 对象</a></span> $\mathcal C \colon \Delta^{\mathrm{op}}\to \mathsf{Cat}$, 其中</p>
+<ul>
+<li>$\mathcal C_0$ 的<strong>态射</strong>视为<strong>纵向</strong>态射,</li>
+<li>$\mathcal C_1$ 的<strong>对象</strong>视为<strong>横向</strong>态射,</li>
+<li>$\mathcal C_1$ 的<strong>态射</strong>视为方块 (即 $\mathcal C$ 作为双单纯对象时在 $([1],[1])$ 上的元素),</li>
+</ul>
+<p>则 $\mathcal C$ 为分解二重范畴当且仅当 “取横向态射的终点” 函子 $t\colon \mathcal C_1 \to \mathcal C_0$ 为<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">推前纤维化</a></span>. 这个条件是直观的: 每个图
+$$
+\begin{array}{ccc}
+\bullet &amp; \rightarrow &amp; \bullet \\
+ &amp;  &amp; \downarrow \\
+ &amp;  &amp; \bullet
+\end{array}
+$$
+都能唯一地填充为方块. 这对应着分解系统中 “将错误顺序的复合变为正确顺序的复合” 的操作.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="pro-对象"><header><h1><span class="taxon"></span>pro-对象 <a class="slug" href="./pro-对象.html">[pro-对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>范畴 $\mathcal C$ 的 pro-对象是其对象的形式<span class="link local"><a href="./余滤极限.html" title="余滤极限 [余滤极限]">余滤极限</a></span>.</p>
@@ -3195,7 +3212,7 @@ $$
 <p>回忆, $2$-范畴 $\mathcal C$ 的对象 $c$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $t$ 等同于松函子 $*\to \mathcal C$, 将对象 $*$ 对应到 $c$, 自同态 $\mathrm{id}_c$ 对应到单子 $t\colon c\to c$. 这个图 $*\to \mathcal C$ 的松极限即为单子 $t$ 的 <span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">Eilenberg–Moore 对象</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="树"><header><h1><span class="taxon"></span>树 (范畴论) <a class="slug" href="./树.html">[树]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>树是表达 “多个对象到一个对象的态射” 所需的基本结构. 因此, 可被树<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>的对象 (即<span class="link local"><a href="./树形对象.html" title="树形对象 [树形对象]">树形对象</a></span>) 给出<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 的一种定义.</p>
+<p>树是表达 “多个对象到一个对象的态射” 以及这种态射的复合所需的基本结构. 因此, 可被树<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>的对象 (即<span class="link local"><a href="./树形对象.html" title="树形对象 [树形对象]">树形对象</a></span>) 给出<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 的一种定义.</p>
 <p>这里所说的树特指有限, 有根 (rooted), 对称 (即一个节点上的边不计顺序) 的树.</p>
 <h2>定义</h2>
 <h3>通过结点和边</h3>
@@ -3302,6 +3319,8 @@ $$
 $$
 \Delta \hookrightarrow \Omega.
 $$</p>
+<h2>相关概念</h2>
+<p>文献中还常见另一种相似但不同的树, 称为<span class="link local"><a href="./分层树.html" title="分层树 [分层树]">分层树</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="模态"><header><h1><span class="taxon"></span>模态 <a class="slug" href="./模态.html">[模态]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>在形式逻辑中, 模态体现为<span class="link local"><a href="./模态算子.html" title="“模态算子” [模态算子]">模态算子</a></span>, 将命题/类型对应到新的命题/类型.</p>
 <p>在<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中, 模态通常定义为<span class="link local"><a href="./幂等单子.html" title="幂等单子 [幂等单子]">幂等单子</a></span>.</p>
@@ -3622,6 +3641,18 @@ $$
 X_0 \to \operatorname{Hom}(J,X)
 $$
 为等价的 Segal 对象 $X$.</p>
+<p>由于 $J$ 还可写成<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>
+$$
+\begin{array}{ccc}
+\Delta^1 + \Delta^1 &amp; \rightarrow &amp; \Delta^3 \\
+\downarrow &amp;  &amp; \downarrow \\
+\Delta^0 + \Delta^0 &amp; \rightarrow &amp; J,
+\end{array}
+$$
+上述完备性条件也可表述为
+$$
+X_0 \overset{\simeq}{\to} X_3\times_{X_1\times X_1}(X_0\times X_0).
+$$</p>
 <p><strong>定理</strong> (Rezk). 记 $\mathrm{ff.es.}$ 为全忠实本质满态射的类; 那么 Segal 生象的<strong>完备化</strong> (即完备 Segal 生象范畴到 Segal 生象范畴的含入的左伴随) 正是关于 $\mathrm{ff.es.}$ 的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>.</p>
 <h2>例</h2>
 <h3>对称幺半范畴</h3>

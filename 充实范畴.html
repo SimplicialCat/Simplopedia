@@ -3032,4 +3032,25 @@ $$
 <p>按上述方法定义的范畴 $n\mathsf{Pr}$ 是 $(\infty ,1)$-范畴, 但可以升级为 $(\infty ,n+1)$-范畴. (在许多场合, 我们只需要 $n\mathsf{Pr}$ 的 $(\infty ,1)$-范畴结构, 即不需要函子之间的不可逆自然变换.)</p>
 <h2>相关内容</h2>
 <p>相关讲义: <span class="link local"><a href="./notes-Gestalten-Cat.html" title="Gestalten - 在范畴上做代数 [notes-Gestalten-Cat]">Gestalten - 在范畴上做代数</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="高阶范畴"><header><h1><span class="taxon"></span>高阶范畴 <a class="slug" href="./高阶范畴.html">[高阶范畴]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./tutorial-highercat.html" title="高阶范畴论 [tutorial-highercat]">教程 : 高阶范畴论</a></span></p>
+<p>一个高阶范畴是一类<strong>对象</strong>和对象之间的<strong>态射</strong>构成的全体; 不同于普通范畴的是, 高阶范畴两个对象 $X,Y$ 之间的态射全体 $\operatorname{Hom}(X,Y)$ 本身也构成高阶范畴, 从而可以谈论态射之间的态射 ($2$-态射), 态射之间的态射之间的态射 ($3$-态射), …, 以至于无穷.</p>
+<p>根据同伦信息的层级, 可将高阶范畴用两个整数 $n,r$ 分类. 见 <span class="link local"><a href="./n-r-范畴.html" title="(n,r)-范畴 [n-r-范畴]">$(n,r)$-范畴</a></span>.</p>
+<ul>
+<li>第一个数 $n$ 表示有之多 $n$ 阶非平凡态射 (这是个粗略的说法, 详见 <span class="link local"><a href="./n-r-范畴.html" title="(n,r)-范畴 [n-r-范畴]">$(n,r)$-范畴</a></span>),</li>
+<li>第二个数 $r$ 表示有至多 $r$ 阶不可逆态射.</li>
+</ul>
+<p>高阶范畴常常是用基本形状定义的. 例如 $(\infty,1)$-范畴可用<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形</a></span>定义, $(\infty,n)$-范畴可用 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴 $\Theta$</a></span> 的对象定义. 然而不必困于特定的一组基本形状, 我们可以用许多不同形状的胞腔粘成图形. 参见<span class="link local"><a href="./线图.html" title="线图 [线图]">线图</a></span>, <span class="link local"><a href="./notes-manifold-diagrams.html" title="高阶范畴的流形图示 [notes-manifold-diagrams]">流形图</a></span>.</p>
+<p>高阶范畴也可以通过<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>理论来归纳地定义; 如 $(n,r)$-范畴就是<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于 $\mathsf{Cat}_{(n-1,r-1)}$ 的范畴.</p>
+<h2>性质</h2>
+<h3>范畴的范畴</h3>
+<p>高阶范畴之间也有态射, 称为<strong>函子</strong>. 函子不仅将对象映射到对象, 而且将态射范畴映射到态射范畴. 最重要的函子是 “态射” 函子
+$$
+\operatorname{Hom}_{\mathcal C}(-,-) \colon \mathcal C^{\mathrm{op}}\times\mathcal C \to \mathsf{Cat}.
+$$
+由此可以给出态射的复合, 以及复合的结合律等.</p>
+<p>因此, 高阶范畴的全体也构成一个高阶范畴.
+<span class="link local"><a href="./n-r-范畴.html" title="(n,r)-范畴 [n-r-范畴]">$(n,r)$-范畴</a></span>的全体构成一个 $(n+1,r+1)$-范畴.</p>
+<h2>相关页面</h2>
+<p><span class="link local"><a href="./naive-highercat.html" title="一种朴素的建立高阶范畴的尝试 [naive-highercat]">一种朴素的建立高阶范畴的尝试</a></span></p>
 </details></section></details></section></footer></article></div></body></html>

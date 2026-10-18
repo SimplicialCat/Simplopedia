@@ -850,7 +850,7 @@
 u_! A = \operatorname{colim}_{\langle 1\rangle\leadsto\langle m \rangle} A^m.
 $$
 (这里左 Kan 扩张公式中的指标范畴可以只取活性映射.) 注意到指标范畴的对象 $\langle 1\rangle\leadsto\langle m \rangle$ 上有<span class="link local"><a href="./对称群.html" title="对称群 [对称群]">对称群</a></span>的<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>, 我们看到任意 $m$ 个元素的不同顺序的乘法在 $u_! A$ 中都等同起来了.</p>
-<h2>Lurie 的算畴</h2>
+<h2>Lurie 的算畴 (对称算畴)</h2>
 <p>上面介绍的 $\mathrm{Assoc}$ 是 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 定义的<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的一例. 其实 Lurie 的每个算畴都可视为代数模式.</p>
 <p>在我们使用的约定中 (参见<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>; 注意我们与 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie</a></span> 相差一个<span class="link local"><a href="./反范畴.html" title="反范畴 [反范畴]">反范畴</a></span>), 一个<strong>算畴</strong>是一个函子
 $$
@@ -872,8 +872,22 @@ $$
 <li>惰性映射就是定义中的惰性提升;</li>
 <li>活性映射就是居于 $\Gamma$ 中的活性映射之上的映射.</li>
 </ul>
-<p>上述结构的底不必为 $\Gamma$, 而是可以推广到任意代数模式上.</p>
-<p>称为<strong>弱 Segal 纤维化</strong>.</p>
+<p>上述结构的底不必为 $\Gamma$, 而是可以推广到任意代数模式上. 若代数模式的态射 $\mathcal O \to \mathcal P$ 满足上述条件, 则称之为<strong>弱 Segal 纤维化</strong>.</p>
+<h3>对称算畴的基本例子</h3>
+<p><strong>例</strong>. 记 $\mathsf{Triv} := \Gamma_{\mathrm{int}} \to \Gamma$, 称之为平凡算畴. 平凡算畴的代数就是没有任何结构的对象.</p>
+<p><strong>例</strong>. 记 $\mathbb E_0 \to \Gamma$ 为 $\Gamma$ 中 “将每个元素对应到一个至多一元子集” 的映射构成的宽子范畴, $\mathbb E_0$-代数就是<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点对象</a></span>.</p>
+<p><strong>例</strong>. $\Gamma$ 上的 Segal 纤维化 $\mathcal C \to \Gamma$, 对应于 Segal 对象 $\Gamma^{\mathrm{op}} \to \mathsf{Cat}$, 即<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> (其底层范畴为 $\mathcal C_{\langle 1\rangle}$); 它也构成对称算畴.</p>
+<h2>非对称算畴</h2>
+<p>称 $\Delta$ 上的弱 Segal 纤维化为<strong>非对称算畴</strong>. 直观上, 一个算畴给出一族无序 $n$ 元运算, 而一个非对称算畴给出一族有序 $n$ 元运算.</p>
+<p><strong>例</strong>. 记 $\Delta_{\leq n} \hookrightarrow \Delta$ 为对象 $[0],[1],\cdots,[n]$ 构成的全子范畴, 则 $\Delta_{\leq n}$ 继承 $\Delta$ 的代数模式结构, 构成一个非对称算畴; 称该模式为 <span class="link local"><a href="./An-代数.html" title="A_n-代数 [An-代数]">$\mathbb A_n$</a></span>.</p>
+<h2>算畴的操作</h2>
+<h3>余积</h3>
+<p>对称算畴 $\mathcal C \to \Gamma$, $\mathcal D \to \Gamma$ 的余积为
+$$
+\mathcal C \times\mathcal D \to \Gamma\times\Gamma\overset{\times}{\to}\Gamma.
+$$
+其中 $\times\colon \Gamma\times\Gamma\to\Gamma$ 是 $\Gamma$ 中的范畴论积 $\langle n \rangle \times \langle m \rangle = \langle n + m \rangle$.</p>
+<h3>对称幺半包络</h3>
 </details></section><section class="block" data-taxon=""><details ><summary id="P-树"><header><h1><span class="taxon"></span>P-树 (多项式函子标记的树) <a class="slug" href="./P-树.html">[P-树]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设
@@ -1517,7 +1531,7 @@ $$</p>
 <p><span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>, <span class="link local"><a href="./单纯范畴.html" title="“单纯范畴” [单纯范畴]">单纯范畴</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="树"><header><h1><span class="taxon"></span>树 (范畴论) <a class="slug" href="./树.html">[树]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>树是表达 “多个对象到一个对象的态射” 所需的基本结构. 因此, 可被树<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>的对象 (即<span class="link local"><a href="./树形对象.html" title="树形对象 [树形对象]">树形对象</a></span>) 给出<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 的一种定义.</p>
+<p>树是表达 “多个对象到一个对象的态射” 以及这种态射的复合所需的基本结构. 因此, 可被树<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>的对象 (即<span class="link local"><a href="./树形对象.html" title="树形对象 [树形对象]">树形对象</a></span>) 给出<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 的一种定义.</p>
 <p>这里所说的树特指有限, 有根 (rooted), 对称 (即一个节点上的边不计顺序) 的树.</p>
 <h2>定义</h2>
 <h3>通过结点和边</h3>
@@ -1624,6 +1638,8 @@ $$
 $$
 \Delta \hookrightarrow \Omega.
 $$</p>
+<h2>相关概念</h2>
+<p>文献中还常见另一种相似但不同的树, 称为<span class="link local"><a href="./分层树.html" title="分层树 [分层树]">分层树</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="组合圆盘"><header><h1><span class="taxon"></span>组合圆盘 <a class="slug" href="./组合圆盘.html">[组合圆盘]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>直接定义</h3>

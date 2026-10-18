@@ -1299,6 +1299,95 @@ $$</p>
 <h2>5. 应用到经典 Bernstein 投影 $z^0$</h2>
 <p>在 3.4 节的情形,</p>
 <h2>6. 定理 5.1.8 的证明</h2>
+</details></section><section class="block" data-taxon=""><details ><summary id="opecat"><header><h1><span class="taxon"></span>Barwick 算子范畴 <a class="slug" href="./opecat.html">[opecat]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><span class="link local"><a href="./BarwickOpeCat.html" title="From operator categories to higher operads [BarwickOpeCat]">Clark Barwick 文章</a></span>的笔记. 将原文转写为模型无关语言.</p>
+<hr />
+<p>回忆 $\infty$-范畴可由<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形</a></span> (即一串连续的箭头) <span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>, 给出<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯生象</a></span>. 类似地, <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 可由类似于<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>的对象探测. 本文建立了一个统一的框架, 由算子范畴 $\Phi$ 出发构造探测用的 “$\Phi$-序列”, 分别在 $\Phi = 1$ 和 $\Phi = \mathsf{Fin}$ 的情形恢复出 $\infty$-范畴与算畴的概念.</p>
+<hr />
+<p><strong>定义</strong>. 一个<strong>算子范畴</strong> (operator category) $\Phi$ 是满足如下条件的范畴:</p>
+<ul>
+<li>$\Phi$ 具有<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span> $1$; 记 $|I|=\operatorname{Hom}(1,I)$, 称之为 $I$ 的<strong>点</strong>的集合;</li>
+<li>态射集 $\operatorname{Hom}(I,J)$ 均为有限集;</li>
+<li>对任意态射 $I\to J$ 以及 $j\in |J|$, 有<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维</a></span> $\{j\}\times_J I$.</li>
+</ul>
+<p>定义算子范畴之间的态射为满足如下条件的函子 $G\colon \Psi\to\Phi$:</p>
+<ul>
+<li>$G$ 保持终对象以及纤维操作;</li>
+<li>对任意 $I\in\Psi$, $|I|\to |GI|$ 为满射.</li>
+</ul>
+<p>记算子范畴的 $2$-范畴为 $\mathsf{Op}$.</p>
+<p><strong>例</strong>. 终范畴 $1$, 有限全序集范畴 $\mathsf{Ord}$, 有限集范畴 $\mathsf{Fin}$ 均为算子范畴.</p>
+<p><strong>注</strong>. 范畴 $\mathsf{Ord}$ 就是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span> $\Delta_+$, 但在这里我们有意避免使用这个称呼, 因为单纯形范畴 $\Delta$ 将以另一种身份出现, 我们想要避免混淆.</p>
+<p><strong>命题</strong>.</p>
+<ul>
+<li>$1$ 是 $\mathsf{Op}$ 的始对象.</li>
+<li>$\mathsf{Fin}$ 是 $\mathsf{Op}$ 的<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>: 对任意算子范畴 $\Phi$, 有态射 $\Phi\to\mathsf{Fin}$, $I\mapsto |I|$.</li>
+</ul>
+<p><strong>定义</strong>. 对于算子范畴 $\Phi$ 与自然数 $n$, 记 $\Phi_{\leq n}$ 为其中具有不超过 $n$ 个点的对象构成的全子范畴. 这也是一个算子范畴.</p>
+<p><strong>定义</strong>. 对于算子范畴 $\Psi,\Phi$, 定义其<span class="link local"><a href="./圈积.html" title="圈积 (范畴论) [圈积]">圈积</a></span> $\Psi\wr\Phi$ 为如下范畴:</p>
+<ul>
+<li>其对象为
+$$
+  (I\in\Phi,(M_i\in\Psi)_{i\in |I|}),
+$$</li>
+<li>态射 $(I,(M_i)) \to (J,(N_j))$ 为
+$$
+  (\eta\colon I\to J,(\omega_j\colon M_i\to N_{\eta(i)})_{i\in |I|}).
+$$</li>
+</ul>
+<p><strong>定理</strong>. 圈积是 $\mathsf{Op}$ 上的一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半</a></span>结构.</p>
+<h2>一类重要的态射: 区间含入</h2>
+<p><strong>定义</strong> (区间含入). 设 $\Phi$ 为算子范畴, 称如下<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>图中的态射 $K\to J$ 为纤维含入,
+$$
+\begin{array}{ccc}
+K &amp; \rightarrow &amp; J \\
+\downarrow &amp;  &amp; \downarrow \\
+\{i\} &amp; \rightarrow &amp; I
+\end{array}
+$$
+称一串纤维含入的复合为<strong>区间含入</strong>.</p>
+<p><strong>例</strong>.</p>
+<ul>
+<li>$\mathsf{Ord}$ 中的区间含入是 $\{k &lt; k+1 &lt; \cdots &lt; \ell\} \subset \{1 &lt; \cdots &lt; n\}$.</li>
+<li>$\mathsf{Fin}$ 中的区间含入即为单射.</li>
+</ul>
+<p>区间含入的性质:</p>
+<ul>
+<li>区间含入为单射, 且关于拉回与复合封闭.</li>
+<li>若 $\phi\colon K\to J$ 为区间含入, $\psi\colon L\to K$ 为任意态射, 则 $\psi$ 为区间含入当且仅当 $\phi\psi$ 为区间含入.</li>
+<li>若 $\phi\colon K\to J$ 为区间含入,</li>
+</ul>
+<h2>算子范畴中的序列</h2>
+<p><strong>定义</strong>.
+设 $\Phi$ 为算子范畴, 定义范畴 $\Delta_{\Phi}$ 如下:</p>
+<ul>
+<li>$\Delta_{\Phi}$ 的对象为 $\Phi$ 中的序列 $I_0\to I_1 \to \cdots \to I_n$, 即有限全序集 $[n]$ 到 $\Phi$ 的函子, 简记为 $([n],I)$;</li>
+<li>态射 $([n],I) \to ([m], J)$ 为态射 $\eta\colon [n]\to [m]$ 以及自然变换 $\phi\colon J\to I\eta$, 使得 $J_k \to I_{\eta(k)}$ 均为区间含入, 且自然性方块均为<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>.</li>
+</ul>
+<p><strong>例</strong>.</p>
+<ul>
+<li>$\Delta_1 = \Delta$ 就是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>.</li>
+<li>$\Delta_{\mathsf{Fin}}$ 是<span class="link local"><a href="./分层树.html" title="分层树 [分层树]">分层森林</a></span>的范畴.</li>
+</ul>
+<p>注意到 $\Delta_{\Phi}$ 关于 $\Phi$ 有函子性; 特别地, 对任何 $\Phi$ 都有函子 $\Delta \to \Delta_{\Phi}$.</p>
+<p><strong>定义</strong> (完备 Segal $\Phi$-算畴). 设 $\Phi$ 为算子范畴, 定义<strong>完备 Segal $\Phi$-算畴</strong>为满足如下条件的函子 $X\colon \Delta_{\Phi}^{\mathrm{op}} \to \mathsf{Ani}$:</p>
+<ul>
+<li>$X([n],I) \overset{\simeq}{\to} \prod_{i\in |I_m|} X(I_{0,i}\to I_{1,i}\to\cdots\to \{i\})$;</li>
+<li>$X([n],I) \overset{\simeq}{\to} X(I_0\to I_1)\times_{X(I_1)}\cdots\times_{X(I_{m-1})}X(I_{m-1}\to I_m)$;</li>
+<li>$X|_\Delta$ 为<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 生象</a></span>.</li>
+</ul>
+<p>记这样的函子构成的全子范畴为 $\mathsf{Operad}_\Phi$.</p>
+<p><strong>例</strong>.</p>
+<ul>
+<li>完备 Segal $1$-算畴就是<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 生象</a></span>.</li>
+<li>完备 Segal $\mathsf{Fin}$-算畴就是 (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie</a></span> 意义下的) <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">对称算畴</a></span>.</li>
+</ul>
+<p><strong>命题</strong>. 对于算子范畴的态射 $G\colon \Psi \to \Phi$ 有伴随
+$$
+G_! \dashv G^*\colon \mathsf{Operad}_\Psi
+\rightleftarrows \mathsf{Operad}_\Phi.
+$$</p>
+<p><strong>例</strong>. 考虑态射 $u\colon \mathsf{Ord}\to\mathsf{Fin}$, 称 $u_!\colon \mathsf{Operad}_{\mathsf{Ord}}\to \mathsf{Operad}_{\mathsf{Fin}}$ 为非对称算畴的<strong>对称化</strong>. $\mathsf{Operad}_{\mathsf{Ord}}$ 的终对象的对称化即为算畴 $\mathbb E_1$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="six-functors"><header><h1><span class="taxon"></span>六函子 <a class="slug" href="./six-functors.html">[six-functors]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li></ul></div></header></summary>
 <p>本文是 <span class="link local"><a href="./ScholzeSixFunctors.html" title="Six-functor Formalisms [ScholzeSixFunctors]">Scholze 的六函子讲义</a></span>的阅读笔记.</p>
 <h2>引言</h2>
@@ -1794,6 +1883,72 @@ $$</p>
 其中方块为拉回.</li>
 </ul>
 <p><strong>例</strong>. $\mathsf{Corr}(\mathcal C,\mathrm{Isom}) \simeq \mathcal C^{\mathrm{op}}$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="分层"><header><h1><span class="taxon"></span>分层 <a class="slug" href="./分层.html">[分层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>空间上的分层 (stratification) 是将其分解为一个偏序集参数化的若干子空间的方法.</p>
+<p>分层空间常用于描述带有 “奇点” 的空间, 如奇性代数簇.</p>
+<p>分层空间可用于<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>范畴. 见<span class="link local"><a href="./strat-cat.html" title="分层空间与范畴 [strat-cat]">分层空间与范畴</a></span>.</p>
+<h2>定义</h2>
+<p>分层空间是拓扑空间 $X$ 带有到某个<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span> $P$ 的连续映射, 其中 $P$ 带有 <span class="link local"><a href="./Alexandroff拓扑.html" title="Alexandroff 拓扑 [Alexandroff拓扑]">Alexandroff 拓扑</a></span>, 即开集为向上封闭集, 闭集为向下封闭集. 分层空间的范畴为
+$$
+\mathsf{Strat} := \mathsf{Top}/\mathsf{Alex}.
+$$</p>
+<p>有些作者 (如 <span class="link local"><a href="./HeidemannMfdDiag.html" title="Manifold Diagrams for Higher Categories [HeidemannMfdDiag]">Heidemann</a></span>) 的定义还对分层有更多要求:</p>
+<ul>
+<li>$X\to P$ 为满射;</li>
+<li>$X$ 带有所有分层单形到它的映射的终拓扑, 这意味着<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">脉–实现伴随</a></span> (见后文) 的余单位 $|{\operatorname{Exit}(X)}|\to X$ 是同构, 即 $X$ 的拓扑能被出路单纯集重构.</li>
+</ul>
+<p>分层空间之间的映射为交换方块
+$$
+\begin{array}{ccc}
+X &amp; \rightarrow &amp; Y \\
+\downarrow &amp;  &amp; \downarrow \\
+P_X &amp; \rightarrow &amp; P_Y.
+\end{array}
+$$</p>
+<ul>
+<li>若 $X\to Y$ 为同构而 $P_X \to P_Y$ 为满射, 则称 $X$ 为 $Y$ 的<strong>细化</strong> (refinement);</li>
+<li>若该方块为<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>且 $P_X\to P_Y$ 为单射, 则称 $X$ 为 $Y$ 的<strong>可构造子空间</strong> (constructible subspace).</li>
+</ul>
+<p>定义一个分层空间 $X\to P$ 的<strong>深度</strong>为偏序集 $P$ 中最长严格递增链的长度.</p>
+<h2>性质</h2>
+<ul>
+<li>分层空间的任何开子空间继承分层结构.</li>
+</ul>
+<h2>例</h2>
+<h3>区间</h3>
+<p>区间 $[0,1]$ (或左闭右开区间 $[0,1)$) 是个分层空间, 点 $0$ 是一层, 剩下的部分是一层. 这个分层对应映射 $[0,1] \to \{\bot,\top\}$, $0\mapsto\bot$, $x\mapsto\top\,(x&gt;0)$.</p>
+<p>分层空间的映射 $[0,1]\to X$ 称为分层空间 $X$ 的<strong>出路</strong> (exit path). 见<span class="link local"><a href="./出路范畴.html" title="出路范畴 [出路范畴]">出路范畴</a></span>.</p>
+<h3>锥</h3>
+<p>对任意分层空间 $X\to P$, 定义其<strong>闭锥</strong>为分层空间
+$$
+\frac{X\times [0,1]}{X\times \{0\}}\to P^{\triangleleft}
+$$
+(若将 $[0,1]$ 替换为 $[0,1)$, 则称为<strong>开锥</strong>),
+其中 $P^{\triangleleft}$ 表示 $P$ 上的<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">左锥</a></span>.</p>
+<p>注意空集的锥为单点.</p>
+<h3>单形</h3>
+<p>对于自然数 $n$, 拓扑 $n$ 维<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单形</a></span> $|\Delta^n|$ 上的锥为 $|\Delta^{n+1}|$, 这归纳地给出了拓扑单形上的分层结构
+$$
+(|\Delta^n| \to [n]) \in \mathsf{Strat},
+$$
+进而有<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>到分层空间范畴的嵌入
+$$
+\Delta \to \mathsf{Strat},\,[n]\mapsto (|\Delta^n|\to [n]).
+$$</p>
+<p>该嵌入的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子称为<strong></strong><span class="link local"><a href="./出路范畴.html" title="出路范畴 [出路范畴]">出路单纯集</a></span>函子
+$$
+\operatorname{Exit}\colon \mathsf{Strat} \to \mathsf{sSet},
+$$
+其左伴随为<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>
+$$
+|{-}| \colon \mathsf{sSet} \to \mathsf{Strat}.
+$$</p>
+<h3>群作用</h3>
+<p>对于拓扑空间 $X$ 上的有限群作用, 根据各点 $x\in X$ 的稳定子可给出 $X$ 上的分层.</p>
+<h3>碰撞与构形空间</h3>
+<p>对于拓扑空间 $X$ 与有限集 $I$, 空间 $X^I$ 可以根据点的碰撞来分层, 最上层为 $I$ 个点的 <span class="link local"><a href="./构形空间.html" title="构形空间 [构形空间]">(有序) 构形空间</a></span>.</p>
+<p>另见 <span class="link local"><a href="./Ran空间.html" title="Ran 空间 [Ran空间]">Ran 空间</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="可扩展性"><header><h1><span class="taxon"></span>可扩展性 <a class="slug" href="./可扩展性.html">[可扩展性]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设范畴 $\mathcal C$ 具有有限<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span> (包括<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>).</p>
@@ -2053,7 +2208,7 @@ $$
 <h2>定义</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="树"><header><h1><span class="taxon"></span>树 (范畴论) <a class="slug" href="./树.html">[树]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>树是表达 “多个对象到一个对象的态射” 所需的基本结构. 因此, 可被树<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>的对象 (即<span class="link local"><a href="./树形对象.html" title="树形对象 [树形对象]">树形对象</a></span>) 给出<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 的一种定义.</p>
+<p>树是表达 “多个对象到一个对象的态射” 以及这种态射的复合所需的基本结构. 因此, 可被树<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>的对象 (即<span class="link local"><a href="./树形对象.html" title="树形对象 [树形对象]">树形对象</a></span>) 给出<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 的一种定义.</p>
 <p>这里所说的树特指有限, 有根 (rooted), 对称 (即一个节点上的边不计顺序) 的树.</p>
 <h2>定义</h2>
 <h3>通过结点和边</h3>
@@ -2160,6 +2315,8 @@ $$
 $$
 \Delta \hookrightarrow \Omega.
 $$</p>
+<h2>相关概念</h2>
+<p>文献中还常见另一种相似但不同的树, 称为<span class="link local"><a href="./分层树.html" title="分层树 [分层树]">分层树</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="正交分解系"><header><h1><span class="taxon"></span>正交分解系 <a class="slug" href="./正交分解系.html">[正交分解系]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p><strong>命题-定义</strong>. 对于范畴 $\mathcal C$ 的<span class="link local"><a href="./宽子范畴.html" title="宽子范畴 [宽子范畴]">宽子范畴</a></span> (包含所有对象的子范畴) $L,R$, 若以下等价条件成立, 则称 $(L,R)$ 为<strong>正交分解系</strong> (orthogonal factorization system):</p>
@@ -2252,7 +2409,7 @@ $$
 \operatorname{Fact}\colon \mathsf{OFS} \to \mathsf{DCat},
 $$
 将每个正交分解系视为一个二重范畴. 直观上, 二重范畴就是有两类互相独立的态射的范畴; 对于分解系 $(L,R)$, 相应的二重范畴 $\operatorname{Fact}(L,R)$ 的两类态射分别就是 $L$ 的态射 (水平态射) 和 $R$ 的态射 (竖直态射).</p>
-<p><strong>定义</strong> (分解条件). 对于二重范畴 $\mathcal C$, 视为双单纯生象 $\mathcal C \colon (\Delta\times\Delta)^{\mathrm{op}} \to \mathsf{Ani}$, 称如下等价条件为<strong>分解条件</strong>:</p>
+<p><strong>定义</strong> (分解条件, 参考 <span class="link local"><a href="./JuranFactDCat.html" title="On orthogonal factorization systems and double categories [JuranFactDCat]">Juran</a></span>). 对于二重范畴 $\mathcal C$, 视为双单纯生象 $\mathcal C \colon (\Delta\times\Delta)^{\mathrm{op}} \to \mathsf{Ani}$, 称如下等价条件为<strong>分解条件</strong>:</p>
 <p>$(1)$ 方块
 $$
 \begin{array}{ccc}

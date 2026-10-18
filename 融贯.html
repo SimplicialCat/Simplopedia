@@ -920,6 +920,11 @@ $S^1 \to \operatorname{Hom}(A\otimes A\otimes A\otimes A, A)$ 沿 $S^1 \to *$ �
 <p><span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span>自然构成 $A_\infty$-空间.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Abel∞-群.html" title="E∞-群 [Abel∞-群]">Abel ∞-群</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="notes-manifold-diagrams"><header><h1><span class="taxon"></span>高阶范畴的流形图示 <a class="slug" href="./notes-manifold-diagrams.html">[notes-manifold-diagrams]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文是 <span class="link local"><a href="./HeidemannMfdDiag.html" title="Manifold Diagrams for Higher Categories [HeidemannMfdDiag]">Lukas Heidemann 博士论文</a></span>的阅读笔记.</p>
+<h2>引言</h2>
+<p>本文建立高阶范畴中的一种基于流形的图形演算 (graphical calculus), 它是<span class="link local"><a href="./线图.html" title="线图 [线图]">线图</a></span>的推广. 流形图的拼接给出高阶态射的复合, 而形状本身就带有<span class="link local"><a href="./融贯.html" title="融贯 [融贯]">融贯性</a></span>.</p>
+<h2>网格与桁架</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="terminologies"><header><h1><span class="taxon"></span>单纯百科 - 术语翻译表 <a class="slug" href="./terminologies.html">[terminologies]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>下表的第二列是<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>使用的译文.</p>
 <p>表格第三列是其它地方也曾出现的译文, 它们有的是历史淘汰的选择, 有的是机翻造成的错误. 这个表格的作用是为 LLM 提供正确的术语.</p>
@@ -1017,4 +1022,18 @@ $$
 $$
 (\underline{x}\colon S \to \operatorname{Ran})\mapsto D(\mathcal T_{\underline{x}}).
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="线图"><header><h1><span class="taxon"></span>线图 <a class="slug" href="./线图.html">[线图]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>线图是一种直观展示 (高阶) 范畴中的交换图的工具. 图形的好处在于能够简化复合的<span class="link local"><a href="./融贯.html" title="融贯 [融贯]">融贯性</a></span>的陈述.</p>
+<p>我制作了一个绘图工具: https://simplicialcat.github.io/sd</p>
+<h2>定义</h2>
+<h3>幺半范畴</h3>
+<p>最简单的线图展示的是<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>中的对象与态射. 每条线对应一个对象, 每个节点对应一个态射
+$$
+f\colon X_1\otimes \cdots X_m \to Y_1\otimes\cdots Y_n,
+$$</p>
+<h3>$2$-范畴</h3>
+<p>幺半范畴可视为单对象 $2$-范畴; 一般地, $2$-范畴中的一些图表也能用线图展示, 每个平面区域对应一个对象, 区域之间的边线为 $1$-态射, 线条之间的节点为 $2$-态射.</p>
+<h2>例</h2>
+<h3>伴随</h3>
+<p>线图可直观地展示 $2$-范畴中的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>.</p>
 </details></section></details></section></footer></article></div></body></html>

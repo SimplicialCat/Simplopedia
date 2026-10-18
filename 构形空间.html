@@ -853,19 +853,41 @@ $$
 \mathbb E_n = \mathbb E_1^{\otimes n}.
 $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="分层"><header><h1><span class="taxon"></span>分层 <a class="slug" href="./分层.html">[分层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
 <p>空间上的分层 (stratification) 是将其分解为一个偏序集参数化的若干子空间的方法.</p>
-<p><span class="link local"><a href="./strat-cat.html" title="分层空间与范畴 [strat-cat]">分层空间与范畴</a></span></p>
+<p>分层空间常用于描述带有 “奇点” 的空间, 如奇性代数簇.</p>
+<p>分层空间可用于<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>范畴. 见<span class="link local"><a href="./strat-cat.html" title="分层空间与范畴 [strat-cat]">分层空间与范畴</a></span>.</p>
 <h2>定义</h2>
-<p>分层空间是拓扑空间 $X$ 带有到某个<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span> $P$ 的连续映射, 其中 $P$ 带有 <span class="link local"><a href="./Alexandroff拓扑.html" title="Alexandroff 拓扑 [Alexandroff拓扑]">Alexandroff 拓扑</a></span>, 即开集为向上封闭集, 闭集为向下封闭集.</p>
-<p>分层空间之间的映射为交换方块.</p>
-<p>定义一个分层空间的<strong>深度</strong>为其中偏序集中最长严格递增链的长度.</p>
+<p>分层空间是拓扑空间 $X$ 带有到某个<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span> $P$ 的连续映射, 其中 $P$ 带有 <span class="link local"><a href="./Alexandroff拓扑.html" title="Alexandroff 拓扑 [Alexandroff拓扑]">Alexandroff 拓扑</a></span>, 即开集为向上封闭集, 闭集为向下封闭集. 分层空间的范畴为
+$$
+\mathsf{Strat} := \mathsf{Top}/\mathsf{Alex}.
+$$</p>
+<p>有些作者 (如 <span class="link local"><a href="./HeidemannMfdDiag.html" title="Manifold Diagrams for Higher Categories [HeidemannMfdDiag]">Heidemann</a></span>) 的定义还对分层有更多要求:</p>
+<ul>
+<li>$X\to P$ 为满射;</li>
+<li>$X$ 带有所有分层单形到它的映射的终拓扑, 这意味着<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">脉–实现伴随</a></span> (见后文) 的余单位 $|{\operatorname{Exit}(X)}|\to X$ 是同构, 即 $X$ 的拓扑能被出路单纯集重构.</li>
+</ul>
+<p>分层空间之间的映射为交换方块
+$$
+\begin{array}{ccc}
+X &amp; \rightarrow &amp; Y \\
+\downarrow &amp;  &amp; \downarrow \\
+P_X &amp; \rightarrow &amp; P_Y.
+\end{array}
+$$</p>
+<ul>
+<li>若 $X\to Y$ 为同构而 $P_X \to P_Y$ 为满射, 则称 $X$ 为 $Y$ 的<strong>细化</strong> (refinement);</li>
+<li>若该方块为<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>且 $P_X\to P_Y$ 为单射, 则称 $X$ 为 $Y$ 的<strong>可构造子空间</strong> (constructible subspace).</li>
+</ul>
+<p>定义一个分层空间 $X\to P$ 的<strong>深度</strong>为偏序集 $P$ 中最长严格递增链的长度.</p>
 <h2>性质</h2>
 <ul>
 <li>分层空间的任何开子空间继承分层结构.</li>
 </ul>
 <h2>例</h2>
-<h3>半开半闭区间</h3>
-<p>半开半闭区间 $[0,1)$ 是个分层空间, 点 $0$ 是一层, 剩下的开区间 $(0,1)$ 是一层. 这个分层对应映射 $[0,1) \to \{\bot,\top\}$, $0\mapsto\bot$, $x\mapsto\top\,(x&gt;0)$.</p>
+<h3>区间</h3>
+<p>区间 $[0,1]$ (或左闭右开区间 $[0,1)$) 是个分层空间, 点 $0$ 是一层, 剩下的部分是一层. 这个分层对应映射 $[0,1] \to \{\bot,\top\}$, $0\mapsto\bot$, $x\mapsto\top\,(x&gt;0)$.</p>
+<p>分层空间的映射 $[0,1]\to X$ 称为分层空间 $X$ 的<strong>出路</strong> (exit path). 见<span class="link local"><a href="./出路范畴.html" title="出路范畴 [出路范畴]">出路范畴</a></span>.</p>
 <h3>锥</h3>
 <p>对任意分层空间 $X\to P$, 定义其<strong>闭锥</strong>为分层空间
 $$
@@ -882,6 +904,14 @@ $$
 进而有<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>到分层空间范畴的嵌入
 $$
 \Delta \to \mathsf{Strat},\,[n]\mapsto (|\Delta^n|\to [n]).
+$$</p>
+<p>该嵌入的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子称为<strong></strong><span class="link local"><a href="./出路范畴.html" title="出路范畴 [出路范畴]">出路单纯集</a></span>函子
+$$
+\operatorname{Exit}\colon \mathsf{Strat} \to \mathsf{sSet},
+$$
+其左伴随为<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>
+$$
+|{-}| \colon \mathsf{sSet} \to \mathsf{Strat}.
 $$</p>
 <h3>群作用</h3>
 <p>对于拓扑空间 $X$ 上的有限群作用, 根据各点 $x\in X$ 的稳定子可给出 $X$ 上的分层.</p>

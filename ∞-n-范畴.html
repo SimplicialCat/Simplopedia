@@ -896,6 +896,56 @@
 <p>对于每个高阶范畴 $\mathcal C$, 都可以去掉其中所有不可逆的态射, 仅保留对象与对象之间的同构, 得到一个生象 $\mathcal C^{\simeq}$, 称为 $\mathcal C$ 的<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>. 一般地, $(n,r)$-范畴也可遗忘为 $(n,r')$-范畴 ($r' &lt; r$).</p>
 <h3>$(\infty,n)$-范畴</h3>
 <p>见 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n)$-范畴</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="n-重范畴"><header><h1><span class="taxon"></span>n 重范畴 <a class="slug" href="./n-重范畴.html">[n-重范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>$n$ 重范畴 ($n$-fold category) 是有 $n$ 类互相独立的态射的范畴. 可以归纳地定义 $n$ 重范畴为 $(n-1)$ 重范畴之中的<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">范畴对象</a></span>.</p>
+<h2>定义</h2>
+<h3>归纳定义</h3>
+<p>归纳地定义 $n$ 重范畴:</p>
+<ul>
+<li>$0$ 重范畴就是<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</li>
+<li>对于 $n\geq 1$, $n$ 重范畴是 $(n-1)$ 重范畴的范畴中的<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">范畴对象</a></span> (即完备 <span class="link local"><a href="./Segal空间.html" title="Segal 对象 [Segal空间]">Segal 对象</a></span>).</li>
+</ul>
+<h3>通过代数模式定义</h3>
+<p>$n$ 重范畴可用<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span> $\Delta^n$ 的 Segal 对象附加完备性条件来定义. 具体地, $\Delta^n$ 的一个 Segal 对象是一个函子
+$$
+X\colon (\Delta^n)^{\mathrm{op}} \to \mathsf{Ani},
+$$
+即一个 $n$ 重<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯生象</a></span>, 满足 Segal 条件
+$$
+X(\cdots,[k],\cdots)\simeq X(\cdots,[1],\cdots)^{\times_{X(\cdots,[0],\cdots)}k}.
+$$
+而 $n$ 重范畴则可定义为满足每个分量的<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备性</a></span>的 Segal 对象.</p>
+<h2>性质</h2>
+<h3>与 $n$-范畴的联系</h3>
+<p><span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$n$-范畴</a></span>可视为某些方向退化的 $n$ 重范畴.</p>
+<h2>例</h2>
+<h3>外张量积</h3>
+<p>给定范畴 $\mathcal C_1,\cdots,\mathcal C_n$, 可构造 $n$ 重范畴 $\mathcal C_1 \boxtimes\cdots\boxtimes\mathcal C_n$,
+$$
+([k_1],\cdots,[k_n]) \mapsto \mathcal C_1 ([k_1])\times\cdots\times\mathcal C_n ([k_n]).
+$$</p>
+<h3>景的二重范畴</h3>
+<p><span class="link local"><a href="./景.html" title="景 [景]">景</a></span>构成一个二重范畴 (double category). 两类态射分别称为景的态射和余态射.</p>
+<h3>正交分解系与二重范畴</h3>
+<p><span class="link local"><a href="./JuranFactDCat.html" title="On orthogonal factorization systems and double categories [JuranFactDCat]">Branko Juran</a></span> 证明每个<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">正交分解系</a></span>都可视为一个二重范畴, 两类态射分别就是分解系中的两类态射.</p>
+<p>来自正交分解系的二重范畴称为<strong>分解二重范畴</strong>.</p>
+<p>不妨采取如下约定 (参考 <span class="link local"><a href="./BlomLoubatonRuitAlgd.html" title="Day convolution for algebraic patterns [BlomLoubatonRuitAlgd]">Blom–Loubaton–Ruit</a></span>, 其与 <span class="link local"><a href="./JuranFactDCat.html" title="On orthogonal factorization systems and double categories [JuranFactDCat]">Juran</a></span> 约定相反): 正交分解系中的<strong>左类</strong>在二重范畴中为<strong>纵向</strong>态射, <strong>右类</strong>为<strong>横向</strong>态射. (相反的约定当然也可以.)</p>
+<p>若将二重范畴视为 $\mathsf{Cat}$ 中的<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 对象</a></span> $\mathcal C \colon \Delta^{\mathrm{op}}\to \mathsf{Cat}$, 其中</p>
+<ul>
+<li>$\mathcal C_0$ 的<strong>态射</strong>视为<strong>纵向</strong>态射,</li>
+<li>$\mathcal C_1$ 的<strong>对象</strong>视为<strong>横向</strong>态射,</li>
+<li>$\mathcal C_1$ 的<strong>态射</strong>视为方块 (即 $\mathcal C$ 作为双单纯对象时在 $([1],[1])$ 上的元素),</li>
+</ul>
+<p>则 $\mathcal C$ 为分解二重范畴当且仅当 “取横向态射的终点” 函子 $t\colon \mathcal C_1 \to \mathcal C_0$ 为<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">推前纤维化</a></span>. 这个条件是直观的: 每个图
+$$
+\begin{array}{ccc}
+\bullet &amp; \rightarrow &amp; \bullet \\
+ &amp;  &amp; \downarrow \\
+ &amp;  &amp; \bullet
+\end{array}
+$$
+都能唯一地填充为方块. 这对应着分解系统中 “将错误顺序的复合变为正确顺序的复合” 的操作.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Θ-n-空间"><header><h1><span class="taxon"></span>Θn-空间 <a class="slug" href="./Θ-n-空间.html">[Θ-n-空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>$\Theta_n$-空间提供了 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n)$-范畴</a></span>的一种定义, 是 <span class="link local"><a href="./Segal空间.html" title="Segal 对象 [Segal空间]">Segal 空间</a></span>的推广.</p>
@@ -967,6 +1017,18 @@ $$
 X_0 \to \operatorname{Hom}(J,X)
 $$
 为等价的 Segal 对象 $X$.</p>
+<p>由于 $J$ 还可写成<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>
+$$
+\begin{array}{ccc}
+\Delta^1 + \Delta^1 &amp; \rightarrow &amp; \Delta^3 \\
+\downarrow &amp;  &amp; \downarrow \\
+\Delta^0 + \Delta^0 &amp; \rightarrow &amp; J,
+\end{array}
+$$
+上述完备性条件也可表述为
+$$
+X_0 \overset{\simeq}{\to} X_3\times_{X_1\times X_1}(X_0\times X_0).
+$$</p>
 <p><strong>定理</strong> (Rezk). 记 $\mathrm{ff.es.}$ 为全忠实本质满态射的类; 那么 Segal 生象的<strong>完备化</strong> (即完备 Segal 生象范畴到 Segal 生象范畴的含入的左伴随) 正是关于 $\mathrm{ff.es.}$ 的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>.</p>
 <h2>例</h2>
 <h3>对称幺半范畴</h3>

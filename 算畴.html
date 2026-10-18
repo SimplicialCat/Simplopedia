@@ -1153,7 +1153,7 @@ $$</p>
 u_! A = \operatorname{colim}_{\langle 1\rangle\leadsto\langle m \rangle} A^m.
 $$
 (这里左 Kan 扩张公式中的指标范畴可以只取活性映射.) 注意到指标范畴的对象 $\langle 1\rangle\leadsto\langle m \rangle$ 上有<span class="link local"><a href="./对称群.html" title="对称群 [对称群]">对称群</a></span>的<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>, 我们看到任意 $m$ 个元素的不同顺序的乘法在 $u_! A$ 中都等同起来了.</p>
-<h2>Lurie 的算畴</h2>
+<h2>Lurie 的算畴 (对称算畴)</h2>
 <p>上面介绍的 $\mathrm{Assoc}$ 是 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 定义的<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的一例. 其实 Lurie 的每个算畴都可视为代数模式.</p>
 <p>在我们使用的约定中 (参见<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>; 注意我们与 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie</a></span> 相差一个<span class="link local"><a href="./反范畴.html" title="反范畴 [反范畴]">反范畴</a></span>), 一个<strong>算畴</strong>是一个函子
 $$
@@ -1175,8 +1175,22 @@ $$
 <li>惰性映射就是定义中的惰性提升;</li>
 <li>活性映射就是居于 $\Gamma$ 中的活性映射之上的映射.</li>
 </ul>
-<p>上述结构的底不必为 $\Gamma$, 而是可以推广到任意代数模式上.</p>
-<p>称为<strong>弱 Segal 纤维化</strong>.</p>
+<p>上述结构的底不必为 $\Gamma$, 而是可以推广到任意代数模式上. 若代数模式的态射 $\mathcal O \to \mathcal P$ 满足上述条件, 则称之为<strong>弱 Segal 纤维化</strong>.</p>
+<h3>对称算畴的基本例子</h3>
+<p><strong>例</strong>. 记 $\mathsf{Triv} := \Gamma_{\mathrm{int}} \to \Gamma$, 称之为平凡算畴. 平凡算畴的代数就是没有任何结构的对象.</p>
+<p><strong>例</strong>. 记 $\mathbb E_0 \to \Gamma$ 为 $\Gamma$ 中 “将每个元素对应到一个至多一元子集” 的映射构成的宽子范畴, $\mathbb E_0$-代数就是<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点对象</a></span>.</p>
+<p><strong>例</strong>. $\Gamma$ 上的 Segal 纤维化 $\mathcal C \to \Gamma$, 对应于 Segal 对象 $\Gamma^{\mathrm{op}} \to \mathsf{Cat}$, 即<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> (其底层范畴为 $\mathcal C_{\langle 1\rangle}$); 它也构成对称算畴.</p>
+<h2>非对称算畴</h2>
+<p>称 $\Delta$ 上的弱 Segal 纤维化为<strong>非对称算畴</strong>. 直观上, 一个算畴给出一族无序 $n$ 元运算, 而一个非对称算畴给出一族有序 $n$ 元运算.</p>
+<p><strong>例</strong>. 记 $\Delta_{\leq n} \hookrightarrow \Delta$ 为对象 $[0],[1],\cdots,[n]$ 构成的全子范畴, 则 $\Delta_{\leq n}$ 继承 $\Delta$ 的代数模式结构, 构成一个非对称算畴; 称该模式为 <span class="link local"><a href="./An-代数.html" title="A_n-代数 [An-代数]">$\mathbb A_n$</a></span>.</p>
+<h2>算畴的操作</h2>
+<h3>余积</h3>
+<p>对称算畴 $\mathcal C \to \Gamma$, $\mathcal D \to \Gamma$ 的余积为
+$$
+\mathcal C \times\mathcal D \to \Gamma\times\Gamma\overset{\times}{\to}\Gamma.
+$$
+其中 $\times\colon \Gamma\times\Gamma\to\Gamma$ 是 $\Gamma$ 中的范畴论积 $\langle n \rangle \times \langle m \rangle = \langle n + m \rangle$.</p>
+<h3>对称幺半包络</h3>
 </details></section><section class="block" data-taxon=""><details ><summary id="OpAlgMod"><header><h1><span class="taxon"></span>算畴上的代数上的模 <a class="slug" href="./OpAlgMod.html">[OpAlgMod]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>对于单色<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathcal O$ 上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span> $A$, 可以谈论 $A$ 上的 ($\mathcal O$-)模. 这种模是如下的一个新的算畴 $\widetilde{\mathcal O}$ 上的代数:</p>
@@ -1245,7 +1259,7 @@ $$
 <ul>
 <li>$\Phi$ 具有<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span> $1$; 记 $|I|=\operatorname{Hom}(1,I)$, 称之为 $I$ 的<strong>点</strong>的集合;</li>
 <li>态射集 $\operatorname{Hom}(I,J)$ 均为有限集;</li>
-<li>对任意态射 $I\to J$ 以及 $j\in |J|$, 有纤维 $\{j\}\times_J I$.</li>
+<li>对任意态射 $I\to J$ 以及 $j\in |J|$, 有<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维</a></span> $\{j\}\times_J I$.</li>
 </ul>
 <p>定义算子范畴之间的态射为满足如下条件的函子 $G\colon \Psi\to\Phi$:</p>
 <ul>
@@ -1253,7 +1267,13 @@ $$
 <li>对任意 $I\in\Psi$, $|I|\to |GI|$ 为满射.</li>
 </ul>
 <p>记算子范畴的 $2$-范畴为 $\mathsf{Op}$.</p>
-<p><strong>例</strong>. 终范畴 $1$, <span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$, 有限集范畴 $\mathsf{Fin}$ 均为算子范畴. $\mathsf{Fin}$ 是 $\mathsf{Op}$ 的终对象: 对任意算子范畴 $\Phi$, 有态射 $\Phi\to\mathsf{Fin}$, $I\mapsto |I|$.</p>
+<p><strong>例</strong>. 终范畴 $1$, 有限全序集范畴 $\mathsf{Ord}$, 有限集范畴 $\mathsf{Fin}$ 均为算子范畴.</p>
+<p><strong>注</strong>. 范畴 $\mathsf{Ord}$ 就是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span> $\Delta_+$, 但在这里我们有意避免使用这个称呼, 因为单纯形范畴 $\Delta$ 将以另一种身份出现, 我们想要避免混淆.</p>
+<p><strong>命题</strong>.</p>
+<ul>
+<li>$1$ 是 $\mathsf{Op}$ 的始对象.</li>
+<li>$\mathsf{Fin}$ 是 $\mathsf{Op}$ 的<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>: 对任意算子范畴 $\Phi$, 有态射 $\Phi\to\mathsf{Fin}$, $I\mapsto |I|$.</li>
+</ul>
 <p><strong>定义</strong>. 对于算子范畴 $\Phi$ 与自然数 $n$, 记 $\Phi_{\leq n}$ 为其中具有不超过 $n$ 个点的对象构成的全子范畴. 这也是一个算子范畴.</p>
 <p><strong>定义</strong>. 对于算子范畴 $\Psi,\Phi$, 定义其<span class="link local"><a href="./圈积.html" title="圈积 (范畴论) [圈积]">圈积</a></span> $\Psi\wr\Phi$ 为如下范畴:</p>
 <ul>
@@ -1267,6 +1287,58 @@ $$
 $$</li>
 </ul>
 <p><strong>定理</strong>. 圈积是 $\mathsf{Op}$ 上的一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半</a></span>结构.</p>
+<h2>一类重要的态射: 区间含入</h2>
+<p><strong>定义</strong> (区间含入). 设 $\Phi$ 为算子范畴, 称如下<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>图中的态射 $K\to J$ 为纤维含入,
+$$
+\begin{array}{ccc}
+K &amp; \rightarrow &amp; J \\
+\downarrow &amp;  &amp; \downarrow \\
+\{i\} &amp; \rightarrow &amp; I
+\end{array}
+$$
+称一串纤维含入的复合为<strong>区间含入</strong>.</p>
+<p><strong>例</strong>.</p>
+<ul>
+<li>$\mathsf{Ord}$ 中的区间含入是 $\{k &lt; k+1 &lt; \cdots &lt; \ell\} \subset \{1 &lt; \cdots &lt; n\}$.</li>
+<li>$\mathsf{Fin}$ 中的区间含入即为单射.</li>
+</ul>
+<p>区间含入的性质:</p>
+<ul>
+<li>区间含入为单射, 且关于拉回与复合封闭.</li>
+<li>若 $\phi\colon K\to J$ 为区间含入, $\psi\colon L\to K$ 为任意态射, 则 $\psi$ 为区间含入当且仅当 $\phi\psi$ 为区间含入.</li>
+<li>若 $\phi\colon K\to J$ 为区间含入,</li>
+</ul>
+<h2>算子范畴中的序列</h2>
+<p><strong>定义</strong>.
+设 $\Phi$ 为算子范畴, 定义范畴 $\Delta_{\Phi}$ 如下:</p>
+<ul>
+<li>$\Delta_{\Phi}$ 的对象为 $\Phi$ 中的序列 $I_0\to I_1 \to \cdots \to I_n$, 即有限全序集 $[n]$ 到 $\Phi$ 的函子, 简记为 $([n],I)$;</li>
+<li>态射 $([n],I) \to ([m], J)$ 为态射 $\eta\colon [n]\to [m]$ 以及自然变换 $\phi\colon J\to I\eta$, 使得 $J_k \to I_{\eta(k)}$ 均为区间含入, 且自然性方块均为<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>.</li>
+</ul>
+<p><strong>例</strong>.</p>
+<ul>
+<li>$\Delta_1 = \Delta$ 就是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>.</li>
+<li>$\Delta_{\mathsf{Fin}}$ 是<span class="link local"><a href="./分层树.html" title="分层树 [分层树]">分层森林</a></span>的范畴.</li>
+</ul>
+<p>注意到 $\Delta_{\Phi}$ 关于 $\Phi$ 有函子性; 特别地, 对任何 $\Phi$ 都有函子 $\Delta \to \Delta_{\Phi}$.</p>
+<p><strong>定义</strong> (完备 Segal $\Phi$-算畴). 设 $\Phi$ 为算子范畴, 定义<strong>完备 Segal $\Phi$-算畴</strong>为满足如下条件的函子 $X\colon \Delta_{\Phi}^{\mathrm{op}} \to \mathsf{Ani}$:</p>
+<ul>
+<li>$X([n],I) \overset{\simeq}{\to} \prod_{i\in |I_m|} X(I_{0,i}\to I_{1,i}\to\cdots\to \{i\})$;</li>
+<li>$X([n],I) \overset{\simeq}{\to} X(I_0\to I_1)\times_{X(I_1)}\cdots\times_{X(I_{m-1})}X(I_{m-1}\to I_m)$;</li>
+<li>$X|_\Delta$ 为<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 生象</a></span>.</li>
+</ul>
+<p>记这样的函子构成的全子范畴为 $\mathsf{Operad}_\Phi$.</p>
+<p><strong>例</strong>.</p>
+<ul>
+<li>完备 Segal $1$-算畴就是<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 生象</a></span>.</li>
+<li>完备 Segal $\mathsf{Fin}$-算畴就是 (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie</a></span> 意义下的) <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">对称算畴</a></span>.</li>
+</ul>
+<p><strong>命题</strong>. 对于算子范畴的态射 $G\colon \Psi \to \Phi$ 有伴随
+$$
+G_! \dashv G^*\colon \mathsf{Operad}_\Psi
+\rightleftarrows \mathsf{Operad}_\Phi.
+$$</p>
+<p><strong>例</strong>. 考虑态射 $u\colon \mathsf{Ord}\to\mathsf{Fin}$, 称 $u_!\colon \mathsf{Operad}_{\mathsf{Ord}}\to \mathsf{Operad}_{\mathsf{Fin}}$ 为非对称算畴的<strong>对称化</strong>. $\mathsf{Operad}_{\mathsf{Ord}}$ 的终对象的对称化即为算畴 $\mathbb E_1$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="terminologies"><header><h1><span class="taxon"></span>单纯百科 - 术语翻译表 <a class="slug" href="./terminologies.html">[terminologies]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>下表的第二列是<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>使用的译文.</p>
 <p>表格第三列是其它地方也曾出现的译文, 它们有的是历史淘汰的选择, 有的是机翻造成的错误. 这个表格的作用是为 LLM 提供正确的术语.</p>
@@ -2330,7 +2402,7 @@ $$
 <p>$\Theta_T$ 就是 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴 $\Theta_n$</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="树"><header><h1><span class="taxon"></span>树 (范畴论) <a class="slug" href="./树.html">[树]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>树是表达 “多个对象到一个对象的态射” 所需的基本结构. 因此, 可被树<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>的对象 (即<span class="link local"><a href="./树形对象.html" title="树形对象 [树形对象]">树形对象</a></span>) 给出<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 的一种定义.</p>
+<p>树是表达 “多个对象到一个对象的态射” 以及这种态射的复合所需的基本结构. 因此, 可被树<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>的对象 (即<span class="link local"><a href="./树形对象.html" title="树形对象 [树形对象]">树形对象</a></span>) 给出<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 的一种定义.</p>
 <p>这里所说的树特指有限, 有根 (rooted), 对称 (即一个节点上的边不计顺序) 的树.</p>
 <h2>定义</h2>
 <h3>通过结点和边</h3>
@@ -2437,6 +2509,8 @@ $$
 $$
 \Delta \hookrightarrow \Omega.
 $$</p>
+<h2>相关概念</h2>
+<p>文献中还常见另一种相似但不同的树, 称为<span class="link local"><a href="./分层树.html" title="分层树 [分层树]">分层树</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="泛包络代数(算畴)"><header><h1><span class="taxon"></span>泛包络代数 (算畴上的代数) <a class="slug" href="./泛包络代数(算畴).html">[泛包络代数(算畴)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>(单色, 对称) <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>上的<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">代数</a></span> $A$ 的<strong>泛包络代数</strong> $\mathcal U A$ 是一个<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>, 满足 $A$-<span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">模</a></span>等同于 $\mathcal UA$-<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>. (前者是算畴上的代数上的模, 后者是结合代数上的模, 两个概念不太一样.)</p>

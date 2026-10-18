@@ -3986,7 +3986,7 @@ $$
 <p>Higher Algebra Done Right 是<span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">我</a></span>和一些朋友 2023 年建立的群组, 以及 2026 年秋季学期组织的讨论班的名称.</p>
 <p>讨论班主页: https://simplicialcat.github.io/HADR</p>
 <p>高阶代数就是在<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>中做的代数. 稍有高阶范畴经验的人就会明白, 高阶范畴的所有本质困难, 或者说特色, 都来源于对 “相等” 这件事情的重新理解. 在传统数学中, 两个东西的相等是个<span class="link local"><a href="./命题(同伦类型论).html" title="命题 (同伦类型论) [命题(同伦类型论)]">命题</a></span>, 要么真要么假. 在高阶范畴中, 两个东西的相等是一种新的东西, 而这种新的东西之间又可以谈论相等, 以至于无穷. 这是<span class="link local"><a href="./同伦类型论.html" title="同伦类型论 [同伦类型论]">同伦类型论</a></span>居于高阶范畴语言的核心的原因. 代数就是处理运算与等式的学问. 在高阶代数中, 我们永远不应该手动制造相等, 而是要用范畴论机器自动地生产出所有的相等. 这就是高阶代数的总纲领.</p>
-<p><section class="block" data-taxon=""><details ><summary id="HADR-1-ope"><header><h1><span class="taxon"></span>HADR (1) 算畴 <a class="slug" href="./HADR-1-ope.html">[HADR-1-ope]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><section class="block" data-taxon=""><details ><summary id="HADR-1-ope"><header><h1><span class="taxon"></span>HADR (1) 代数模式与算畴 <a class="slug" href="./HADR-1-ope.html">[HADR-1-ope]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><section class="block" data-taxon=""><details ><summary id="HADR-alg-patt"><header><h1><span class="taxon"></span>HADR - 代数模式 <a class="slug" href="./HADR-alg-patt.html">[HADR-alg-patt]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>详见<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>, 这里仅列举要点:</p>
 <p>一个<strong>代数模式</strong>是一个范畴 $\mathcal O$ 配备<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">分解系统</a></span> $(\mathcal O_{\mathrm{act}},\mathcal O_{\mathrm{int}})$, 分别称为<strong>活性映射</strong>与<strong>惰性映射</strong>, 以及<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全子范畴</a></span> $\mathcal O_{\mathrm{el}}\hookrightarrow\mathcal O_{\mathrm{int}}$, 称为<strong>基本对象</strong>的范畴.</p>
@@ -4033,7 +4033,7 @@ $$
 u_! A = \operatorname{colim}_{\langle 1\rangle\leadsto\langle m \rangle} A^m.
 $$
 (这里左 Kan 扩张公式中的指标范畴可以只取活性映射.) 注意到指标范畴的对象 $\langle 1\rangle\leadsto\langle m \rangle$ 上有<span class="link local"><a href="./对称群.html" title="对称群 [对称群]">对称群</a></span>的<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>, 我们看到任意 $m$ 个元素的不同顺序的乘法在 $u_! A$ 中都等同起来了.</p>
-<h2>Lurie 的算畴</h2>
+<h2>Lurie 的算畴 (对称算畴)</h2>
 <p>上面介绍的 $\mathrm{Assoc}$ 是 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 定义的<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的一例. 其实 Lurie 的每个算畴都可视为代数模式.</p>
 <p>在我们使用的约定中 (参见<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>; 注意我们与 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie</a></span> 相差一个<span class="link local"><a href="./反范畴.html" title="反范畴 [反范畴]">反范畴</a></span>), 一个<strong>算畴</strong>是一个函子
 $$
@@ -4055,13 +4055,36 @@ $$
 <li>惰性映射就是定义中的惰性提升;</li>
 <li>活性映射就是居于 $\Gamma$ 中的活性映射之上的映射.</li>
 </ul>
-<p>上述结构的底不必为 $\Gamma$, 而是可以推广到任意代数模式上.</p>
-<p>称为<strong>弱 Segal 纤维化</strong>.</p>
+<p>上述结构的底不必为 $\Gamma$, 而是可以推广到任意代数模式上. 若代数模式的态射 $\mathcal O \to \mathcal P$ 满足上述条件, 则称之为<strong>弱 Segal 纤维化</strong>.</p>
+<h3>对称算畴的基本例子</h3>
+<p><strong>例</strong>. 记 $\mathsf{Triv} := \Gamma_{\mathrm{int}} \to \Gamma$, 称之为平凡算畴. 平凡算畴的代数就是没有任何结构的对象.</p>
+<p><strong>例</strong>. 记 $\mathbb E_0 \to \Gamma$ 为 $\Gamma$ 中 “将每个元素对应到一个至多一元子集” 的映射构成的宽子范畴, $\mathbb E_0$-代数就是<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点对象</a></span>.</p>
+<p><strong>例</strong>. $\Gamma$ 上的 Segal 纤维化 $\mathcal C \to \Gamma$, 对应于 Segal 对象 $\Gamma^{\mathrm{op}} \to \mathsf{Cat}$, 即<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> (其底层范畴为 $\mathcal C_{\langle 1\rangle}$); 它也构成对称算畴.</p>
+<h2>非对称算畴</h2>
+<p>称 $\Delta$ 上的弱 Segal 纤维化为<strong>非对称算畴</strong>. 直观上, 一个算畴给出一族无序 $n$ 元运算, 而一个非对称算畴给出一族有序 $n$ 元运算.</p>
+<p><strong>例</strong>. 记 $\Delta_{\leq n} \hookrightarrow \Delta$ 为对象 $[0],[1],\cdots,[n]$ 构成的全子范畴, 则 $\Delta_{\leq n}$ 继承 $\Delta$ 的代数模式结构, 构成一个非对称算畴; 称该模式为 <span class="link local"><a href="./An-代数.html" title="A_n-代数 [An-代数]">$\mathbb A_n$</a></span>.</p>
+<h2>算畴的操作</h2>
+<h3>余积</h3>
+<p>对称算畴 $\mathcal C \to \Gamma$, $\mathcal D \to \Gamma$ 的余积为
+$$
+\mathcal C \times\mathcal D \to \Gamma\times\Gamma\overset{\times}{\to}\Gamma.
+$$
+其中 $\times\colon \Gamma\times\Gamma\to\Gamma$ 是 $\Gamma$ 中的范畴论积 $\langle n \rangle \times \langle m \rangle = \langle n + m \rangle$.</p>
+<h3>对称幺半包络</h3>
 </details></section></p>
 <p><section class="block" data-taxon=""><details ><summary id="HADR-disint-assem"><header><h1><span class="taxon"></span>HADR - 拆解与汇编 <a class="slug" href="./HADR-disint-assem.html">[HADR-disint-assem]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h3>含幺算畴</h3>
+<p>设 $p\colon \mathcal O \to \Gamma$ 为算畴, 即代数模式的弱 Segal 纤维化. 考虑唯一的活性映射 $f\colon \langle 1\rangle \to \langle n \rangle$, $\mathcal O$ 中居于 $f$ 上的态射可理解为 $n$ 元运算. 特别地, $n=1$ 时, 颜色范畴 $\mathcal O_{\langle 1 \rangle}$ 中的活性态射即是 $1$ 元运算.</p>
+<p>现在我们考虑一个更基本的对象, 即 $0$ 元运算. 它是 $\mathcal O$ 中居于 $\langle 1 \rangle \to \langle 0 \rangle$ 上的态射. 注意 $\mathcal O_{\langle 0 \rangle} = 1$, 我们记 $\mathcal O_{\langle 0 \rangle}$ 中唯一的对象为 $\varnothing$, 因为它的直观确实是 “$0$ 个颜色放在一起”.</p>
+<p><strong>定义</strong>. 若对任意 $X \in \mathcal O_{\langle 1 \rangle}$, $\operatorname{Hom}_{\mathcal O}(X,\varnothing) = 1$, 换言之 $\varnothing$ 是 $\mathcal O$ 的<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>, 则称 $\mathcal O$ 为<strong>含幺算畴</strong> (unital operad).</p>
+<p><strong>例</strong>.</p>
+<ul>
+<li>$\Gamma$ 自身是含幺算畴, 因为 $\langle 0\rangle = \varnothing$ 是零对象.</li>
+<li>$\mathbb E_0$ 是含幺算畴, 但 $\mathsf{Triv}$ 不是含幺算畴. 注意 $\mathbb E_0$ 中存在唯一的态射 $\langle 1\rangle\to\langle 0 \rangle = \varnothing$, 代表 $0$ 元运算 “取基点”, 而平凡算畴 $\mathsf{Triv}$ 中不存在这个态射.</li>
+</ul>
 </details></section></p>
 </details></section></p>
-</details></section><section class="block" data-taxon=""><details ><summary id="HADR-1-ope"><header><h1><span class="taxon"></span>HADR (1) 算畴 <a class="slug" href="./HADR-1-ope.html">[HADR-1-ope]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="HADR-1-ope"><header><h1><span class="taxon"></span>HADR (1) 代数模式与算畴 <a class="slug" href="./HADR-1-ope.html">[HADR-1-ope]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><section class="block" data-taxon=""><details ><summary id="HADR-alg-patt"><header><h1><span class="taxon"></span>HADR - 代数模式 <a class="slug" href="./HADR-alg-patt.html">[HADR-alg-patt]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>详见<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>, 这里仅列举要点:</p>
 <p>一个<strong>代数模式</strong>是一个范畴 $\mathcal O$ 配备<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">分解系统</a></span> $(\mathcal O_{\mathrm{act}},\mathcal O_{\mathrm{int}})$, 分别称为<strong>活性映射</strong>与<strong>惰性映射</strong>, 以及<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全子范畴</a></span> $\mathcal O_{\mathrm{el}}\hookrightarrow\mathcal O_{\mathrm{int}}$, 称为<strong>基本对象</strong>的范畴.</p>
@@ -4108,7 +4131,7 @@ $$
 u_! A = \operatorname{colim}_{\langle 1\rangle\leadsto\langle m \rangle} A^m.
 $$
 (这里左 Kan 扩张公式中的指标范畴可以只取活性映射.) 注意到指标范畴的对象 $\langle 1\rangle\leadsto\langle m \rangle$ 上有<span class="link local"><a href="./对称群.html" title="对称群 [对称群]">对称群</a></span>的<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>, 我们看到任意 $m$ 个元素的不同顺序的乘法在 $u_! A$ 中都等同起来了.</p>
-<h2>Lurie 的算畴</h2>
+<h2>Lurie 的算畴 (对称算畴)</h2>
 <p>上面介绍的 $\mathrm{Assoc}$ 是 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 定义的<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的一例. 其实 Lurie 的每个算畴都可视为代数模式.</p>
 <p>在我们使用的约定中 (参见<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>; 注意我们与 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie</a></span> 相差一个<span class="link local"><a href="./反范畴.html" title="反范畴 [反范畴]">反范畴</a></span>), 一个<strong>算畴</strong>是一个函子
 $$
@@ -4130,10 +4153,33 @@ $$
 <li>惰性映射就是定义中的惰性提升;</li>
 <li>活性映射就是居于 $\Gamma$ 中的活性映射之上的映射.</li>
 </ul>
-<p>上述结构的底不必为 $\Gamma$, 而是可以推广到任意代数模式上.</p>
-<p>称为<strong>弱 Segal 纤维化</strong>.</p>
+<p>上述结构的底不必为 $\Gamma$, 而是可以推广到任意代数模式上. 若代数模式的态射 $\mathcal O \to \mathcal P$ 满足上述条件, 则称之为<strong>弱 Segal 纤维化</strong>.</p>
+<h3>对称算畴的基本例子</h3>
+<p><strong>例</strong>. 记 $\mathsf{Triv} := \Gamma_{\mathrm{int}} \to \Gamma$, 称之为平凡算畴. 平凡算畴的代数就是没有任何结构的对象.</p>
+<p><strong>例</strong>. 记 $\mathbb E_0 \to \Gamma$ 为 $\Gamma$ 中 “将每个元素对应到一个至多一元子集” 的映射构成的宽子范畴, $\mathbb E_0$-代数就是<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点对象</a></span>.</p>
+<p><strong>例</strong>. $\Gamma$ 上的 Segal 纤维化 $\mathcal C \to \Gamma$, 对应于 Segal 对象 $\Gamma^{\mathrm{op}} \to \mathsf{Cat}$, 即<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> (其底层范畴为 $\mathcal C_{\langle 1\rangle}$); 它也构成对称算畴.</p>
+<h2>非对称算畴</h2>
+<p>称 $\Delta$ 上的弱 Segal 纤维化为<strong>非对称算畴</strong>. 直观上, 一个算畴给出一族无序 $n$ 元运算, 而一个非对称算畴给出一族有序 $n$ 元运算.</p>
+<p><strong>例</strong>. 记 $\Delta_{\leq n} \hookrightarrow \Delta$ 为对象 $[0],[1],\cdots,[n]$ 构成的全子范畴, 则 $\Delta_{\leq n}$ 继承 $\Delta$ 的代数模式结构, 构成一个非对称算畴; 称该模式为 <span class="link local"><a href="./An-代数.html" title="A_n-代数 [An-代数]">$\mathbb A_n$</a></span>.</p>
+<h2>算畴的操作</h2>
+<h3>余积</h3>
+<p>对称算畴 $\mathcal C \to \Gamma$, $\mathcal D \to \Gamma$ 的余积为
+$$
+\mathcal C \times\mathcal D \to \Gamma\times\Gamma\overset{\times}{\to}\Gamma.
+$$
+其中 $\times\colon \Gamma\times\Gamma\to\Gamma$ 是 $\Gamma$ 中的范畴论积 $\langle n \rangle \times \langle m \rangle = \langle n + m \rangle$.</p>
+<h3>对称幺半包络</h3>
 </details></section></p>
 <p><section class="block" data-taxon=""><details ><summary id="HADR-disint-assem"><header><h1><span class="taxon"></span>HADR - 拆解与汇编 <a class="slug" href="./HADR-disint-assem.html">[HADR-disint-assem]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h3>含幺算畴</h3>
+<p>设 $p\colon \mathcal O \to \Gamma$ 为算畴, 即代数模式的弱 Segal 纤维化. 考虑唯一的活性映射 $f\colon \langle 1\rangle \to \langle n \rangle$, $\mathcal O$ 中居于 $f$ 上的态射可理解为 $n$ 元运算. 特别地, $n=1$ 时, 颜色范畴 $\mathcal O_{\langle 1 \rangle}$ 中的活性态射即是 $1$ 元运算.</p>
+<p>现在我们考虑一个更基本的对象, 即 $0$ 元运算. 它是 $\mathcal O$ 中居于 $\langle 1 \rangle \to \langle 0 \rangle$ 上的态射. 注意 $\mathcal O_{\langle 0 \rangle} = 1$, 我们记 $\mathcal O_{\langle 0 \rangle}$ 中唯一的对象为 $\varnothing$, 因为它的直观确实是 “$0$ 个颜色放在一起”.</p>
+<p><strong>定义</strong>. 若对任意 $X \in \mathcal O_{\langle 1 \rangle}$, $\operatorname{Hom}_{\mathcal O}(X,\varnothing) = 1$, 换言之 $\varnothing$ 是 $\mathcal O$ 的<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>, 则称 $\mathcal O$ 为<strong>含幺算畴</strong> (unital operad).</p>
+<p><strong>例</strong>.</p>
+<ul>
+<li>$\Gamma$ 自身是含幺算畴, 因为 $\langle 0\rangle = \varnothing$ 是零对象.</li>
+<li>$\mathbb E_0$ 是含幺算畴, 但 $\mathsf{Triv}$ 不是含幺算畴. 注意 $\mathbb E_0$ 中存在唯一的态射 $\langle 1\rangle\to\langle 0 \rangle = \varnothing$, 代表 $0$ 元运算 “取基点”, 而平凡算畴 $\mathsf{Triv}$ 中不存在这个态射.</li>
+</ul>
 </details></section></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="HADR-alg-patt"><header><h1><span class="taxon"></span>HADR - 代数模式 <a class="slug" href="./HADR-alg-patt.html">[HADR-alg-patt]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>详见<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>, 这里仅列举要点:</p>
@@ -4159,6 +4205,15 @@ $$
 <li>而 Chu–Haugseng 与 Lurie 约定中的范畴 $\mathcal O$ ($\mathcal O^{\otimes}$) 可视为<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">对偶</a></span>的 “几何侧”, 态射可视为<strong>运算</strong>, 例如 $\mathbb A^2 \to \mathbb A^1$, $(x,y)\mapsto x+y$.</li>
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="HADR-disint-assem"><header><h1><span class="taxon"></span>HADR - 拆解与汇编 <a class="slug" href="./HADR-disint-assem.html">[HADR-disint-assem]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h3>含幺算畴</h3>
+<p>设 $p\colon \mathcal O \to \Gamma$ 为算畴, 即代数模式的弱 Segal 纤维化. 考虑唯一的活性映射 $f\colon \langle 1\rangle \to \langle n \rangle$, $\mathcal O$ 中居于 $f$ 上的态射可理解为 $n$ 元运算. 特别地, $n=1$ 时, 颜色范畴 $\mathcal O_{\langle 1 \rangle}$ 中的活性态射即是 $1$ 元运算.</p>
+<p>现在我们考虑一个更基本的对象, 即 $0$ 元运算. 它是 $\mathcal O$ 中居于 $\langle 1 \rangle \to \langle 0 \rangle$ 上的态射. 注意 $\mathcal O_{\langle 0 \rangle} = 1$, 我们记 $\mathcal O_{\langle 0 \rangle}$ 中唯一的对象为 $\varnothing$, 因为它的直观确实是 “$0$ 个颜色放在一起”.</p>
+<p><strong>定义</strong>. 若对任意 $X \in \mathcal O_{\langle 1 \rangle}$, $\operatorname{Hom}_{\mathcal O}(X,\varnothing) = 1$, 换言之 $\varnothing$ 是 $\mathcal O$ 的<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>, 则称 $\mathcal O$ 为<strong>含幺算畴</strong> (unital operad).</p>
+<p><strong>例</strong>.</p>
+<ul>
+<li>$\Gamma$ 自身是含幺算畴, 因为 $\langle 0\rangle = \varnothing$ 是零对象.</li>
+<li>$\mathbb E_0$ 是含幺算畴, 但 $\mathsf{Triv}$ 不是含幺算畴. 注意 $\mathbb E_0$ 中存在唯一的态射 $\langle 1\rangle\to\langle 0 \rangle = \varnothing$, 代表 $0$ 元运算 “取基点”, 而平凡算畴 $\mathsf{Triv}$ 中不存在这个态射.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="HADR-ope"><header><h1><span class="taxon"></span>HADR - 算畴 <a class="slug" href="./HADR-ope.html">[HADR-ope]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>代数模式 $\mathrm{Assoc}$</h2>
 <p>前面介绍的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>的态射 $\gamma\colon \Delta \to \Gamma$ (另见 <span class="link local"><a href="./Segal函子γ.html" title="Segal 函子 γ [Segal函子γ]">Segal 函子 $\gamma$</a></span>) 未能通过左 Kan 扩张给出结合代数的交换化, 因为左 Kan 扩张不保持 Segal 条件. 事实上, 我们可以将 $\Delta$ 替换为 (或者说是<strong>补全</strong>为) $\Gamma$ 上的另一个代数模式 $\mathrm{Assoc} \to \Gamma$, 不改变其 Segal 对象, 同时又能通过左 Kan 扩张直接给出结合代数的交换化.</p>
@@ -4181,7 +4236,7 @@ $$
 u_! A = \operatorname{colim}_{\langle 1\rangle\leadsto\langle m \rangle} A^m.
 $$
 (这里左 Kan 扩张公式中的指标范畴可以只取活性映射.) 注意到指标范畴的对象 $\langle 1\rangle\leadsto\langle m \rangle$ 上有<span class="link local"><a href="./对称群.html" title="对称群 [对称群]">对称群</a></span>的<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>, 我们看到任意 $m$ 个元素的不同顺序的乘法在 $u_! A$ 中都等同起来了.</p>
-<h2>Lurie 的算畴</h2>
+<h2>Lurie 的算畴 (对称算畴)</h2>
 <p>上面介绍的 $\mathrm{Assoc}$ 是 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 定义的<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的一例. 其实 Lurie 的每个算畴都可视为代数模式.</p>
 <p>在我们使用的约定中 (参见<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>; 注意我们与 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie</a></span> 相差一个<span class="link local"><a href="./反范畴.html" title="反范畴 [反范畴]">反范畴</a></span>), 一个<strong>算畴</strong>是一个函子
 $$
@@ -4203,8 +4258,22 @@ $$
 <li>惰性映射就是定义中的惰性提升;</li>
 <li>活性映射就是居于 $\Gamma$ 中的活性映射之上的映射.</li>
 </ul>
-<p>上述结构的底不必为 $\Gamma$, 而是可以推广到任意代数模式上.</p>
-<p>称为<strong>弱 Segal 纤维化</strong>.</p>
+<p>上述结构的底不必为 $\Gamma$, 而是可以推广到任意代数模式上. 若代数模式的态射 $\mathcal O \to \mathcal P$ 满足上述条件, 则称之为<strong>弱 Segal 纤维化</strong>.</p>
+<h3>对称算畴的基本例子</h3>
+<p><strong>例</strong>. 记 $\mathsf{Triv} := \Gamma_{\mathrm{int}} \to \Gamma$, 称之为平凡算畴. 平凡算畴的代数就是没有任何结构的对象.</p>
+<p><strong>例</strong>. 记 $\mathbb E_0 \to \Gamma$ 为 $\Gamma$ 中 “将每个元素对应到一个至多一元子集” 的映射构成的宽子范畴, $\mathbb E_0$-代数就是<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点对象</a></span>.</p>
+<p><strong>例</strong>. $\Gamma$ 上的 Segal 纤维化 $\mathcal C \to \Gamma$, 对应于 Segal 对象 $\Gamma^{\mathrm{op}} \to \mathsf{Cat}$, 即<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> (其底层范畴为 $\mathcal C_{\langle 1\rangle}$); 它也构成对称算畴.</p>
+<h2>非对称算畴</h2>
+<p>称 $\Delta$ 上的弱 Segal 纤维化为<strong>非对称算畴</strong>. 直观上, 一个算畴给出一族无序 $n$ 元运算, 而一个非对称算畴给出一族有序 $n$ 元运算.</p>
+<p><strong>例</strong>. 记 $\Delta_{\leq n} \hookrightarrow \Delta$ 为对象 $[0],[1],\cdots,[n]$ 构成的全子范畴, 则 $\Delta_{\leq n}$ 继承 $\Delta$ 的代数模式结构, 构成一个非对称算畴; 称该模式为 <span class="link local"><a href="./An-代数.html" title="A_n-代数 [An-代数]">$\mathbb A_n$</a></span>.</p>
+<h2>算畴的操作</h2>
+<h3>余积</h3>
+<p>对称算畴 $\mathcal C \to \Gamma$, $\mathcal D \to \Gamma$ 的余积为
+$$
+\mathcal C \times\mathcal D \to \Gamma\times\Gamma\overset{\times}{\to}\Gamma.
+$$
+其中 $\times\colon \Gamma\times\Gamma\to\Gamma$ 是 $\Gamma$ 中的范畴论积 $\langle n \rangle \times \langle m \rangle = \langle n + m \rangle$.</p>
+<h3>对称幺半包络</h3>
 </details></section><section class="block" data-taxon=""><details ><summary id="Haar测度"><header><h1><span class="taxon"></span>“Haar 测度” <a class="slug" href="./Haar测度.html">[Haar测度]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>在任何 Lie 群上存在一个左不变的体积形式 (处处非零的最高形式), 且在差一个常数的意义下唯一. 它对应的测度称为<strong>左 Haar 测度</strong>. 在紧 Lie 群上, 我们可进一步要求全空间的测度为 $1$, 称之为<strong>归一化左 Haar 测度</strong>. 类似地可定义右 Haar 测度. 当左右两者相等时, 我们称之为 <strong>Haar 测度</strong>.</p>
 <p>一般, 左 Haar 测度与右 Haar 测度未必相同. 例如 $\displaystyle G= \Big\{ \begin{pmatrix} y &amp; x \\ 0 &amp; 1 \end{pmatrix}\colon x,y\in\mathbb{R},y&gt;0\Big\}$ 的左 Haar 测度是 $y^{-2}\,dxdy$, 而右 Haar 测度是 $y^{-1}\,dxdy$. 两者通过取逆映射相联系.</p>
@@ -10181,7 +10250,7 @@ $$
 而 $n$ 重范畴则可定义为满足每个分量的<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备性</a></span>的 Segal 对象.</p>
 <h2>性质</h2>
 <h3>与 $n$-范畴的联系</h3>
-<p>$n$-范畴可视为某些方向退化的 $n$ 重范畴.</p>
+<p><span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$n$-范畴</a></span>可视为某些方向退化的 $n$ 重范畴.</p>
 <h2>例</h2>
 <h3>外张量积</h3>
 <p>给定范畴 $\mathcal C_1,\cdots,\mathcal C_n$, 可构造 $n$ 重范畴 $\mathcal C_1 \boxtimes\cdots\boxtimes\mathcal C_n$,
@@ -10191,7 +10260,24 @@ $$</p>
 <h3>景的二重范畴</h3>
 <p><span class="link local"><a href="./景.html" title="景 [景]">景</a></span>构成一个二重范畴 (double category). 两类态射分别称为景的态射和余态射.</p>
 <h3>正交分解系与二重范畴</h3>
-<p>每个<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">正交分解系</a></span>都可视为一个二重范畴, 两类态射分别就是分解系中的两类态射.</p>
+<p><span class="link local"><a href="./JuranFactDCat.html" title="On orthogonal factorization systems and double categories [JuranFactDCat]">Branko Juran</a></span> 证明每个<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">正交分解系</a></span>都可视为一个二重范畴, 两类态射分别就是分解系中的两类态射.</p>
+<p>来自正交分解系的二重范畴称为<strong>分解二重范畴</strong>.</p>
+<p>不妨采取如下约定 (参考 <span class="link local"><a href="./BlomLoubatonRuitAlgd.html" title="Day convolution for algebraic patterns [BlomLoubatonRuitAlgd]">Blom–Loubaton–Ruit</a></span>, 其与 <span class="link local"><a href="./JuranFactDCat.html" title="On orthogonal factorization systems and double categories [JuranFactDCat]">Juran</a></span> 约定相反): 正交分解系中的<strong>左类</strong>在二重范畴中为<strong>纵向</strong>态射, <strong>右类</strong>为<strong>横向</strong>态射. (相反的约定当然也可以.)</p>
+<p>若将二重范畴视为 $\mathsf{Cat}$ 中的<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 对象</a></span> $\mathcal C \colon \Delta^{\mathrm{op}}\to \mathsf{Cat}$, 其中</p>
+<ul>
+<li>$\mathcal C_0$ 的<strong>态射</strong>视为<strong>纵向</strong>态射,</li>
+<li>$\mathcal C_1$ 的<strong>对象</strong>视为<strong>横向</strong>态射,</li>
+<li>$\mathcal C_1$ 的<strong>态射</strong>视为方块 (即 $\mathcal C$ 作为双单纯对象时在 $([1],[1])$ 上的元素),</li>
+</ul>
+<p>则 $\mathcal C$ 为分解二重范畴当且仅当 “取横向态射的终点” 函子 $t\colon \mathcal C_1 \to \mathcal C_0$ 为<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">推前纤维化</a></span>. 这个条件是直观的: 每个图
+$$
+\begin{array}{ccc}
+\bullet &amp; \rightarrow &amp; \bullet \\
+ &amp;  &amp; \downarrow \\
+ &amp;  &amp; \bullet
+\end{array}
+$$
+都能唯一地填充为方块. 这对应着分解系统中 “将错误顺序的复合变为正确顺序的复合” 的操作.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="naive-highercat"><header><h1><span class="taxon"></span>一种朴素的建立高阶范畴的尝试 <a class="slug" href="./naive-highercat.html">[naive-highercat]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>的概念长久以来缺乏实用的数学基础. 这里实用的意思是, 在严格性的前提下, 贴合实际应用中人们的直觉.</p>
 <p>所以我尝试根据所学为高阶范畴写出一套自洽的基础, 争取让每一条规则都 “理所当然”, 即在任何人设计的理论中都不可能错误; 然后用这些事实搭建出尽量多熟悉的理论.</p>
@@ -10389,6 +10475,7 @@ $$</p>
 </ul>
 <p>计划中的讲稿 / 笔记:</p>
 <ul>
+<li><span class="link local"><a href="./notes-manifold-diagrams.html" title="高阶范畴的流形图示 [notes-manifold-diagrams]">高阶范畴的流形图示</a></span></li>
 <li><span class="link local"><a href="./notes-topology.html" title="拓扑学 2026 秋助教讲稿 [notes-topology]">拓扑学 2026 秋助教讲稿</a></span></li>
 <li><span class="link local"><a href="./notes-HH.html" title="同伦假设 [notes-HH]">同伦假设</a></span></li>
 <li><span class="link local"><a href="./AT.html" title="代数拓扑的现代语言 [AT]">代数拓扑的现代语言</a></span></li>
@@ -11367,6 +11454,11 @@ $$</p>
 <p>考虑模型 $X\in\mathsf{Mod}(\mathcal C)$ 的 $n$ 维胞腔 $D_n \to X$. 定义其<strong>基本扩张</strong>为 $\mathsf{Mod}(\mathcal C)$ 中沿 $s \colon D_n \to D_{n+1}$ 的推出 $X \to X^+$, 也即自由地添加一个平行于 $\alpha$ 的 $n$ 维胞腔 $\beta$, 以一个 $(n+1)$ 维胞腔 $\gamma\colon \alpha\to\beta$ 相连. 当然, 由于模型的代数结构, 还会生成出许许多多的胞腔, 这正是这个概念的复杂所在.</p>
 <p><span class="link local"><a href="./OAIGHH.html" title="The Grothendieck homotopy hypothesis via elementary expansions [OAIGHH]">OpenAI 文章</a></span>证明的主定理, 也即 <span class="link local"><a href="./HenryAlgModHomTyp.html" title="Algebraic models of homotopy types and the homotopy hypothesis [HenryAlgModHomTyp]">Simon Henry</a></span> 遗留的关键引理是如下定理.</p>
 <p><strong>定理</strong>. 基本扩张是弱等价.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="notes-manifold-diagrams"><header><h1><span class="taxon"></span>高阶范畴的流形图示 <a class="slug" href="./notes-manifold-diagrams.html">[notes-manifold-diagrams]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文是 <span class="link local"><a href="./HeidemannMfdDiag.html" title="Manifold Diagrams for Higher Categories [HeidemannMfdDiag]">Lukas Heidemann 博士论文</a></span>的阅读笔记.</p>
+<h2>引言</h2>
+<p>本文建立高阶范畴中的一种基于流形的图形演算 (graphical calculus), 它是<span class="link local"><a href="./线图.html" title="线图 [线图]">线图</a></span>的推广. 流形图的拼接给出高阶态射的复合, 而形状本身就带有<span class="link local"><a href="./融贯.html" title="融贯 [融贯]">融贯性</a></span>.</p>
+<h2>网格与桁架</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="notes-perverse"><header><h1><span class="taxon"></span>偏屈层笔记 <a class="slug" href="./notes-perverse.html">[notes-perverse]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>偏屈层始于奇性的代数簇的几何. 常值层的上同调不能正确描述这种几何对象; 人们最初发明<span class="link local"><a href="./相交上同调.html" title=" [相交上同调]">相交上同调</a></span>描述它们.</p>
 <h2>第 1 讲</h2>
@@ -12148,7 +12240,7 @@ $$
 <ul>
 <li>$\Phi$ 具有<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span> $1$; 记 $|I|=\operatorname{Hom}(1,I)$, 称之为 $I$ 的<strong>点</strong>的集合;</li>
 <li>态射集 $\operatorname{Hom}(I,J)$ 均为有限集;</li>
-<li>对任意态射 $I\to J$ 以及 $j\in |J|$, 有纤维 $\{j\}\times_J I$.</li>
+<li>对任意态射 $I\to J$ 以及 $j\in |J|$, 有<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维</a></span> $\{j\}\times_J I$.</li>
 </ul>
 <p>定义算子范畴之间的态射为满足如下条件的函子 $G\colon \Psi\to\Phi$:</p>
 <ul>
@@ -12156,7 +12248,13 @@ $$
 <li>对任意 $I\in\Psi$, $|I|\to |GI|$ 为满射.</li>
 </ul>
 <p>记算子范畴的 $2$-范畴为 $\mathsf{Op}$.</p>
-<p><strong>例</strong>. 终范畴 $1$, <span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span> $\Delta$, 有限集范畴 $\mathsf{Fin}$ 均为算子范畴. $\mathsf{Fin}$ 是 $\mathsf{Op}$ 的终对象: 对任意算子范畴 $\Phi$, 有态射 $\Phi\to\mathsf{Fin}$, $I\mapsto |I|$.</p>
+<p><strong>例</strong>. 终范畴 $1$, 有限全序集范畴 $\mathsf{Ord}$, 有限集范畴 $\mathsf{Fin}$ 均为算子范畴.</p>
+<p><strong>注</strong>. 范畴 $\mathsf{Ord}$ 就是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span> $\Delta_+$, 但在这里我们有意避免使用这个称呼, 因为单纯形范畴 $\Delta$ 将以另一种身份出现, 我们想要避免混淆.</p>
+<p><strong>命题</strong>.</p>
+<ul>
+<li>$1$ 是 $\mathsf{Op}$ 的始对象.</li>
+<li>$\mathsf{Fin}$ 是 $\mathsf{Op}$ 的<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>: 对任意算子范畴 $\Phi$, 有态射 $\Phi\to\mathsf{Fin}$, $I\mapsto |I|$.</li>
+</ul>
 <p><strong>定义</strong>. 对于算子范畴 $\Phi$ 与自然数 $n$, 记 $\Phi_{\leq n}$ 为其中具有不超过 $n$ 个点的对象构成的全子范畴. 这也是一个算子范畴.</p>
 <p><strong>定义</strong>. 对于算子范畴 $\Psi,\Phi$, 定义其<span class="link local"><a href="./圈积.html" title="圈积 (范畴论) [圈积]">圈积</a></span> $\Psi\wr\Phi$ 为如下范畴:</p>
 <ul>
@@ -12170,6 +12268,58 @@ $$
 $$</li>
 </ul>
 <p><strong>定理</strong>. 圈积是 $\mathsf{Op}$ 上的一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半</a></span>结构.</p>
+<h2>一类重要的态射: 区间含入</h2>
+<p><strong>定义</strong> (区间含入). 设 $\Phi$ 为算子范畴, 称如下<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>图中的态射 $K\to J$ 为纤维含入,
+$$
+\begin{array}{ccc}
+K &amp; \rightarrow &amp; J \\
+\downarrow &amp;  &amp; \downarrow \\
+\{i\} &amp; \rightarrow &amp; I
+\end{array}
+$$
+称一串纤维含入的复合为<strong>区间含入</strong>.</p>
+<p><strong>例</strong>.</p>
+<ul>
+<li>$\mathsf{Ord}$ 中的区间含入是 $\{k &lt; k+1 &lt; \cdots &lt; \ell\} \subset \{1 &lt; \cdots &lt; n\}$.</li>
+<li>$\mathsf{Fin}$ 中的区间含入即为单射.</li>
+</ul>
+<p>区间含入的性质:</p>
+<ul>
+<li>区间含入为单射, 且关于拉回与复合封闭.</li>
+<li>若 $\phi\colon K\to J$ 为区间含入, $\psi\colon L\to K$ 为任意态射, 则 $\psi$ 为区间含入当且仅当 $\phi\psi$ 为区间含入.</li>
+<li>若 $\phi\colon K\to J$ 为区间含入,</li>
+</ul>
+<h2>算子范畴中的序列</h2>
+<p><strong>定义</strong>.
+设 $\Phi$ 为算子范畴, 定义范畴 $\Delta_{\Phi}$ 如下:</p>
+<ul>
+<li>$\Delta_{\Phi}$ 的对象为 $\Phi$ 中的序列 $I_0\to I_1 \to \cdots \to I_n$, 即有限全序集 $[n]$ 到 $\Phi$ 的函子, 简记为 $([n],I)$;</li>
+<li>态射 $([n],I) \to ([m], J)$ 为态射 $\eta\colon [n]\to [m]$ 以及自然变换 $\phi\colon J\to I\eta$, 使得 $J_k \to I_{\eta(k)}$ 均为区间含入, 且自然性方块均为<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>.</li>
+</ul>
+<p><strong>例</strong>.</p>
+<ul>
+<li>$\Delta_1 = \Delta$ 就是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>.</li>
+<li>$\Delta_{\mathsf{Fin}}$ 是<span class="link local"><a href="./分层树.html" title="分层树 [分层树]">分层森林</a></span>的范畴.</li>
+</ul>
+<p>注意到 $\Delta_{\Phi}$ 关于 $\Phi$ 有函子性; 特别地, 对任何 $\Phi$ 都有函子 $\Delta \to \Delta_{\Phi}$.</p>
+<p><strong>定义</strong> (完备 Segal $\Phi$-算畴). 设 $\Phi$ 为算子范畴, 定义<strong>完备 Segal $\Phi$-算畴</strong>为满足如下条件的函子 $X\colon \Delta_{\Phi}^{\mathrm{op}} \to \mathsf{Ani}$:</p>
+<ul>
+<li>$X([n],I) \overset{\simeq}{\to} \prod_{i\in |I_m|} X(I_{0,i}\to I_{1,i}\to\cdots\to \{i\})$;</li>
+<li>$X([n],I) \overset{\simeq}{\to} X(I_0\to I_1)\times_{X(I_1)}\cdots\times_{X(I_{m-1})}X(I_{m-1}\to I_m)$;</li>
+<li>$X|_\Delta$ 为<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 生象</a></span>.</li>
+</ul>
+<p>记这样的函子构成的全子范畴为 $\mathsf{Operad}_\Phi$.</p>
+<p><strong>例</strong>.</p>
+<ul>
+<li>完备 Segal $1$-算畴就是<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 生象</a></span>.</li>
+<li>完备 Segal $\mathsf{Fin}$-算畴就是 (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie</a></span> 意义下的) <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">对称算畴</a></span>.</li>
+</ul>
+<p><strong>命题</strong>. 对于算子范畴的态射 $G\colon \Psi \to \Phi$ 有伴随
+$$
+G_! \dashv G^*\colon \mathsf{Operad}_\Psi
+\rightleftarrows \mathsf{Operad}_\Phi.
+$$</p>
+<p><strong>例</strong>. 考虑态射 $u\colon \mathsf{Ord}\to\mathsf{Fin}$, 称 $u_!\colon \mathsf{Operad}_{\mathsf{Ord}}\to \mathsf{Operad}_{\mathsf{Fin}}$ 为非对称算畴的<strong>对称化</strong>. $\mathsf{Operad}_{\mathsf{Ord}}$ 的终对象的对称化即为算畴 $\mathbb E_1$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="p-进Hodge理论"><header><h1><span class="taxon"></span>“p-进 Hodge 理论” <a class="slug" href="./p-进Hodge理论.html">[p-进Hodge理论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>记号. $K$ 为 $p$-进域, 有完美<span class="link local"><a href="./剩余域.html" title="剩余域 [剩余域]">剩余域</a></span> $k$</p>
 <p>比较 $p$-进上同调理论</p>
@@ -17497,7 +17647,7 @@ $$
 <p><span class="link external"><a href="https://math.ucr.edu/home/baez/quantization.html" title="John Baez 的介绍 [https://math.ucr.edu/home/baez/quantization.html]">John Baez 的介绍</a></span></p>
 <p>由<span class="link local"><a href="./辛流形.html" title="辛流形 [辛流形]">辛流形</a></span> $(M,\omega)$ 开始, 先作预量子化, 即选取 <span class="link local"><a href="./Hermite线丛.html" title=" [Hermite线丛]">Hermite 向量丛</a></span> $L$, 带有 $U(1)$-<span class="link local"><a href="./联络.html" title="联络 [联络]">联络</a></span> $\nabla$, 使得其曲率等于 $i\omega$. 这要求 $\omega / 2\pi$ 属于整数上同调类.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="出路范畴"><header><h1><span class="taxon"></span>出路范畴 <a class="slug" href="./出路范畴.html">[出路范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>对于<span class="link local"><a href="./分层.html" title="分层 [分层]">分层空间</a></span> $X$,</p>
+<p>对于<span class="link local"><a href="./分层.html" title="分层 [分层]">分层空间</a></span> $X$, 用分层单纯形<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>得到的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>给出一个单纯集, 称为<strong>出路单纯集</strong>; 在良好条件下, 该单纯集表现了一个范畴, 称为其<strong>出路范畴</strong> (exit path category). 直观上, 出路范畴就是以点为对象, <strong>出路</strong>为态射的范畴. 出路大致上是从低层走向高层的道路.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="函子式代数几何"><header><h1><span class="taxon"></span>函子式代数几何 <a class="slug" href="./函子式代数几何.html">[函子式代数几何]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>函子式代数几何是一种做<span class="link local"><a href="./代数几何.html" title="代数几何 [代数几何]">代数几何</a></span>的思路, 将概形等几何对象视为 <span class="link local"><a href="./Zariski景.html" title="Zariski 景 [Zariski景]">Zariski 景</a></span>, <span class="link local"><a href="./平展景.html" title="平展景 [平展景]">平展景</a></span>等等基本几何对象构成的<span class="link local"><a href="./景.html" title="景 [景]">景</a></span>上的满足某种局部可表性的<span class="link local"><a href="./景上的层.html" title="景上的层 [景上的层]">层</a></span>.</p>
 <p><span class="link local"><a href="./tutorial-funAG.html" title="函子式代数几何 [tutorial-funAG]">教程 : 函子式代数几何</a></span></p>
@@ -17565,19 +17715,41 @@ $$
 </blockquote>
 <p><span class="link local"><a href="./Haskell.html" title="“Haskell” [Haskell]">Haskell</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="分层"><header><h1><span class="taxon"></span>分层 <a class="slug" href="./分层.html">[分层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
 <p>空间上的分层 (stratification) 是将其分解为一个偏序集参数化的若干子空间的方法.</p>
-<p><span class="link local"><a href="./strat-cat.html" title="分层空间与范畴 [strat-cat]">分层空间与范畴</a></span></p>
+<p>分层空间常用于描述带有 “奇点” 的空间, 如奇性代数簇.</p>
+<p>分层空间可用于<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>范畴. 见<span class="link local"><a href="./strat-cat.html" title="分层空间与范畴 [strat-cat]">分层空间与范畴</a></span>.</p>
 <h2>定义</h2>
-<p>分层空间是拓扑空间 $X$ 带有到某个<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span> $P$ 的连续映射, 其中 $P$ 带有 <span class="link local"><a href="./Alexandroff拓扑.html" title="Alexandroff 拓扑 [Alexandroff拓扑]">Alexandroff 拓扑</a></span>, 即开集为向上封闭集, 闭集为向下封闭集.</p>
-<p>分层空间之间的映射为交换方块.</p>
-<p>定义一个分层空间的<strong>深度</strong>为其中偏序集中最长严格递增链的长度.</p>
+<p>分层空间是拓扑空间 $X$ 带有到某个<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span> $P$ 的连续映射, 其中 $P$ 带有 <span class="link local"><a href="./Alexandroff拓扑.html" title="Alexandroff 拓扑 [Alexandroff拓扑]">Alexandroff 拓扑</a></span>, 即开集为向上封闭集, 闭集为向下封闭集. 分层空间的范畴为
+$$
+\mathsf{Strat} := \mathsf{Top}/\mathsf{Alex}.
+$$</p>
+<p>有些作者 (如 <span class="link local"><a href="./HeidemannMfdDiag.html" title="Manifold Diagrams for Higher Categories [HeidemannMfdDiag]">Heidemann</a></span>) 的定义还对分层有更多要求:</p>
+<ul>
+<li>$X\to P$ 为满射;</li>
+<li>$X$ 带有所有分层单形到它的映射的终拓扑, 这意味着<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">脉–实现伴随</a></span> (见后文) 的余单位 $|{\operatorname{Exit}(X)}|\to X$ 是同构, 即 $X$ 的拓扑能被出路单纯集重构.</li>
+</ul>
+<p>分层空间之间的映射为交换方块
+$$
+\begin{array}{ccc}
+X &amp; \rightarrow &amp; Y \\
+\downarrow &amp;  &amp; \downarrow \\
+P_X &amp; \rightarrow &amp; P_Y.
+\end{array}
+$$</p>
+<ul>
+<li>若 $X\to Y$ 为同构而 $P_X \to P_Y$ 为满射, 则称 $X$ 为 $Y$ 的<strong>细化</strong> (refinement);</li>
+<li>若该方块为<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>且 $P_X\to P_Y$ 为单射, 则称 $X$ 为 $Y$ 的<strong>可构造子空间</strong> (constructible subspace).</li>
+</ul>
+<p>定义一个分层空间 $X\to P$ 的<strong>深度</strong>为偏序集 $P$ 中最长严格递增链的长度.</p>
 <h2>性质</h2>
 <ul>
 <li>分层空间的任何开子空间继承分层结构.</li>
 </ul>
 <h2>例</h2>
-<h3>半开半闭区间</h3>
-<p>半开半闭区间 $[0,1)$ 是个分层空间, 点 $0$ 是一层, 剩下的开区间 $(0,1)$ 是一层. 这个分层对应映射 $[0,1) \to \{\bot,\top\}$, $0\mapsto\bot$, $x\mapsto\top\,(x&gt;0)$.</p>
+<h3>区间</h3>
+<p>区间 $[0,1]$ (或左闭右开区间 $[0,1)$) 是个分层空间, 点 $0$ 是一层, 剩下的部分是一层. 这个分层对应映射 $[0,1] \to \{\bot,\top\}$, $0\mapsto\bot$, $x\mapsto\top\,(x&gt;0)$.</p>
+<p>分层空间的映射 $[0,1]\to X$ 称为分层空间 $X$ 的<strong>出路</strong> (exit path). 见<span class="link local"><a href="./出路范畴.html" title="出路范畴 [出路范畴]">出路范畴</a></span>.</p>
 <h3>锥</h3>
 <p>对任意分层空间 $X\to P$, 定义其<strong>闭锥</strong>为分层空间
 $$
@@ -17595,11 +17767,21 @@ $$
 $$
 \Delta \to \mathsf{Strat},\,[n]\mapsto (|\Delta^n|\to [n]).
 $$</p>
+<p>该嵌入的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子称为<strong></strong><span class="link local"><a href="./出路范畴.html" title="出路范畴 [出路范畴]">出路单纯集</a></span>函子
+$$
+\operatorname{Exit}\colon \mathsf{Strat} \to \mathsf{sSet},
+$$
+其左伴随为<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>
+$$
+|{-}| \colon \mathsf{sSet} \to \mathsf{Strat}.
+$$</p>
 <h3>群作用</h3>
 <p>对于拓扑空间 $X$ 上的有限群作用, 根据各点 $x\in X$ 的稳定子可给出 $X$ 上的分层.</p>
 <h3>碰撞与构形空间</h3>
 <p>对于拓扑空间 $X$ 与有限集 $I$, 空间 $X^I$ 可以根据点的碰撞来分层, 最上层为 $I$ 个点的 <span class="link local"><a href="./构形空间.html" title="构形空间 [构形空间]">(有序) 构形空间</a></span>.</p>
 <p>另见 <span class="link local"><a href="./Ran空间.html" title="Ran 空间 [Ran空间]">Ran 空间</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="分层树"><header><h1><span class="taxon"></span>分层树 <a class="slug" href="./分层树.html">[分层树]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="分布"><header><h1><span class="taxon"></span>分布 <a class="slug" href="./分布.html">[分布]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>分布是一种广义函数, 可与测试函数配对得到一个数.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="分式域"><header><h1><span class="taxon"></span>分式域 <a class="slug" href="./分式域.html">[分式域]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -24759,7 +24941,7 @@ $$
 <p>考虑 $f\colon R\to S$ 对应的<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>的映射 $\varphi\colon \operatorname{Spec}S\to\operatorname{Spec}R$, 则标量限制对应于<span class="link local"><a href="./六函子.html" title="六函子 [六函子]">六函子</a></span>中的<span class="link local"><a href="./直像.html" title="“直像” [直像]">直像</a></span> $\varphi_*\colon \operatorname{QCoh}(\operatorname{Spec}S) \to \operatorname{QCoh}(\operatorname{Spec}R)$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="树"><header><h1><span class="taxon"></span>树 (范畴论) <a class="slug" href="./树.html">[树]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>树是表达 “多个对象到一个对象的态射” 所需的基本结构. 因此, 可被树<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>的对象 (即<span class="link local"><a href="./树形对象.html" title="树形对象 [树形对象]">树形对象</a></span>) 给出<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 的一种定义.</p>
+<p>树是表达 “多个对象到一个对象的态射” 以及这种态射的复合所需的基本结构. 因此, 可被树<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>的对象 (即<span class="link local"><a href="./树形对象.html" title="树形对象 [树形对象]">树形对象</a></span>) 给出<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 的一种定义.</p>
 <p>这里所说的树特指有限, 有根 (rooted), 对称 (即一个节点上的边不计顺序) 的树.</p>
 <h2>定义</h2>
 <h3>通过结点和边</h3>
@@ -24866,6 +25048,8 @@ $$
 $$
 \Delta \hookrightarrow \Omega.
 $$</p>
+<h2>相关概念</h2>
+<p>文献中还常见另一种相似但不同的树, 称为<span class="link local"><a href="./分层树.html" title="分层树 [分层树]">分层树</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="树形对象"><header><h1><span class="taxon"></span>树形对象 <a class="slug" href="./树形对象.html">[树形对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>树形对象是能用<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>的结构.</p>
@@ -25301,7 +25485,7 @@ $$
 \operatorname{Fact}\colon \mathsf{OFS} \to \mathsf{DCat},
 $$
 将每个正交分解系视为一个二重范畴. 直观上, 二重范畴就是有两类互相独立的态射的范畴; 对于分解系 $(L,R)$, 相应的二重范畴 $\operatorname{Fact}(L,R)$ 的两类态射分别就是 $L$ 的态射 (水平态射) 和 $R$ 的态射 (竖直态射).</p>
-<p><strong>定义</strong> (分解条件). 对于二重范畴 $\mathcal C$, 视为双单纯生象 $\mathcal C \colon (\Delta\times\Delta)^{\mathrm{op}} \to \mathsf{Ani}$, 称如下等价条件为<strong>分解条件</strong>:</p>
+<p><strong>定义</strong> (分解条件, 参考 <span class="link local"><a href="./JuranFactDCat.html" title="On orthogonal factorization systems and double categories [JuranFactDCat]">Juran</a></span>). 对于二重范畴 $\mathcal C$, 视为双单纯生象 $\mathcal C \colon (\Delta\times\Delta)^{\mathrm{op}} \to \mathsf{Ani}$, 称如下等价条件为<strong>分解条件</strong>:</p>
 <p>$(1)$ 方块
 $$
 \begin{array}{ccc}
@@ -27554,7 +27738,7 @@ $$
 <h3>陈类</h3>
 <p>第一<span class="link local"><a href="./陈类.html" title="“陈类” [陈类]">陈类</a></span>给出了 $X$ 上的复线丛与 $H^2(X,\mathbb{Z})$ 的元素的一一对应, 且将张量积对应到上同调类的和. 见<span class="link local"><a href="./陈类.html" title="“陈类” [陈类]">陈类</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="线图"><header><h1><span class="taxon"></span>线图 <a class="slug" href="./线图.html">[线图]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>线图是一种直观展示高阶范畴中的交换图的工具.</p>
+<p>线图是一种直观展示 (高阶) 范畴中的交换图的工具. 图形的好处在于能够简化复合的<span class="link local"><a href="./融贯.html" title="融贯 [融贯]">融贯性</a></span>的陈述.</p>
 <p>我制作了一个绘图工具: https://simplicialcat.github.io/sd</p>
 <h2>定义</h2>
 <h3>幺半范畴</h3>
@@ -28807,6 +28991,18 @@ $$
 X_0 \to \operatorname{Hom}(J,X)
 $$
 为等价的 Segal 对象 $X$.</p>
+<p>由于 $J$ 还可写成<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>
+$$
+\begin{array}{ccc}
+\Delta^1 + \Delta^1 &amp; \rightarrow &amp; \Delta^3 \\
+\downarrow &amp;  &amp; \downarrow \\
+\Delta^0 + \Delta^0 &amp; \rightarrow &amp; J,
+\end{array}
+$$
+上述完备性条件也可表述为
+$$
+X_0 \overset{\simeq}{\to} X_3\times_{X_1\times X_1}(X_0\times X_0).
+$$</p>
 <p><strong>定理</strong> (Rezk). 记 $\mathrm{ff.es.}$ 为全忠实本质满态射的类; 那么 Segal 生象的<strong>完备化</strong> (即完备 Segal 生象范畴到 Segal 生象范畴的含入的左伴随) 正是关于 $\mathrm{ff.es.}$ 的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>.</p>
 <h2>例</h2>
 <h3>对称幺半范畴</h3>
@@ -31272,6 +31468,8 @@ $$</p>
 <li>第一个数 $n$ 表示有之多 $n$ 阶非平凡态射 (这是个粗略的说法, 详见 <span class="link local"><a href="./n-r-范畴.html" title="(n,r)-范畴 [n-r-范畴]">$(n,r)$-范畴</a></span>),</li>
 <li>第二个数 $r$ 表示有至多 $r$ 阶不可逆态射.</li>
 </ul>
+<p>高阶范畴常常是用基本形状定义的. 例如 $(\infty,1)$-范畴可用<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形</a></span>定义, $(\infty,n)$-范畴可用 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴 $\Theta$</a></span> 的对象定义. 然而不必困于特定的一组基本形状, 我们可以用许多不同形状的胞腔粘成图形. 参见<span class="link local"><a href="./线图.html" title="线图 [线图]">线图</a></span>, <span class="link local"><a href="./notes-manifold-diagrams.html" title="高阶范畴的流形图示 [notes-manifold-diagrams]">流形图</a></span>.</p>
+<p>高阶范畴也可以通过<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>理论来归纳地定义; 如 $(n,r)$-范畴就是<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于 $\mathsf{Cat}_{(n-1,r-1)}$ 的范畴.</p>
 <h2>性质</h2>
 <h3>范畴的范畴</h3>
 <p>高阶范畴之间也有态射, 称为<strong>函子</strong>. 函子不仅将对象映射到对象, 而且将态射范畴映射到态射范畴. 最重要的函子是 “态射” 函子

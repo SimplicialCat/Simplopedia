@@ -861,7 +861,7 @@
 u_! A = \operatorname{colim}_{\langle 1\rangle\leadsto\langle m \rangle} A^m.
 $$
 (这里左 Kan 扩张公式中的指标范畴可以只取活性映射.) 注意到指标范畴的对象 $\langle 1\rangle\leadsto\langle m \rangle$ 上有<span class="link local"><a href="./对称群.html" title="对称群 [对称群]">对称群</a></span>的<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>, 我们看到任意 $m$ 个元素的不同顺序的乘法在 $u_! A$ 中都等同起来了.</p>
-<h2>Lurie 的算畴</h2>
+<h2>Lurie 的算畴 (对称算畴)</h2>
 <p>上面介绍的 $\mathrm{Assoc}$ 是 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 定义的<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>的一例. 其实 Lurie 的每个算畴都可视为代数模式.</p>
 <p>在我们使用的约定中 (参见<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>; 注意我们与 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie</a></span> 相差一个<span class="link local"><a href="./反范畴.html" title="反范畴 [反范畴]">反范畴</a></span>), 一个<strong>算畴</strong>是一个函子
 $$
@@ -883,8 +883,22 @@ $$
 <li>惰性映射就是定义中的惰性提升;</li>
 <li>活性映射就是居于 $\Gamma$ 中的活性映射之上的映射.</li>
 </ul>
-<p>上述结构的底不必为 $\Gamma$, 而是可以推广到任意代数模式上.</p>
-<p>称为<strong>弱 Segal 纤维化</strong>.</p>
+<p>上述结构的底不必为 $\Gamma$, 而是可以推广到任意代数模式上. 若代数模式的态射 $\mathcal O \to \mathcal P$ 满足上述条件, 则称之为<strong>弱 Segal 纤维化</strong>.</p>
+<h3>对称算畴的基本例子</h3>
+<p><strong>例</strong>. 记 $\mathsf{Triv} := \Gamma_{\mathrm{int}} \to \Gamma$, 称之为平凡算畴. 平凡算畴的代数就是没有任何结构的对象.</p>
+<p><strong>例</strong>. 记 $\mathbb E_0 \to \Gamma$ 为 $\Gamma$ 中 “将每个元素对应到一个至多一元子集” 的映射构成的宽子范畴, $\mathbb E_0$-代数就是<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点对象</a></span>.</p>
+<p><strong>例</strong>. $\Gamma$ 上的 Segal 纤维化 $\mathcal C \to \Gamma$, 对应于 Segal 对象 $\Gamma^{\mathrm{op}} \to \mathsf{Cat}$, 即<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> (其底层范畴为 $\mathcal C_{\langle 1\rangle}$); 它也构成对称算畴.</p>
+<h2>非对称算畴</h2>
+<p>称 $\Delta$ 上的弱 Segal 纤维化为<strong>非对称算畴</strong>. 直观上, 一个算畴给出一族无序 $n$ 元运算, 而一个非对称算畴给出一族有序 $n$ 元运算.</p>
+<p><strong>例</strong>. 记 $\Delta_{\leq n} \hookrightarrow \Delta$ 为对象 $[0],[1],\cdots,[n]$ 构成的全子范畴, 则 $\Delta_{\leq n}$ 继承 $\Delta$ 的代数模式结构, 构成一个非对称算畴; 称该模式为 <span class="link local"><a href="./An-代数.html" title="A_n-代数 [An-代数]">$\mathbb A_n$</a></span>.</p>
+<h2>算畴的操作</h2>
+<h3>余积</h3>
+<p>对称算畴 $\mathcal C \to \Gamma$, $\mathcal D \to \Gamma$ 的余积为
+$$
+\mathcal C \times\mathcal D \to \Gamma\times\Gamma\overset{\times}{\to}\Gamma.
+$$
+其中 $\times\colon \Gamma\times\Gamma\to\Gamma$ 是 $\Gamma$ 中的范畴论积 $\langle n \rangle \times \langle m \rangle = \langle n + m \rangle$.</p>
+<h3>对称幺半包络</h3>
 </details></section><section class="block" data-taxon=""><details ><summary id="lim-colim-dist"><header><h1><span class="taxon"></span>极限对余极限分配 <a class="slug" href="./lim-colim-dist.html">[lim-colim-dist]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>考虑函子
 $$
@@ -903,6 +917,56 @@ $$
 $$
 \operatorname{colim}_{\ell\in \mathcal L} \operatorname{lim}_{j\in \mathcal J} F(\ell(j)) \overset{\simeq}{\longrightarrow} \operatorname{lim}_{j\in J}\operatorname{colim}_{k\in K(j)}F(j,k).
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="n-重范畴"><header><h1><span class="taxon"></span>n 重范畴 <a class="slug" href="./n-重范畴.html">[n-重范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>$n$ 重范畴 ($n$-fold category) 是有 $n$ 类互相独立的态射的范畴. 可以归纳地定义 $n$ 重范畴为 $(n-1)$ 重范畴之中的<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">范畴对象</a></span>.</p>
+<h2>定义</h2>
+<h3>归纳定义</h3>
+<p>归纳地定义 $n$ 重范畴:</p>
+<ul>
+<li>$0$ 重范畴就是<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</li>
+<li>对于 $n\geq 1$, $n$ 重范畴是 $(n-1)$ 重范畴的范畴中的<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">范畴对象</a></span> (即完备 <span class="link local"><a href="./Segal空间.html" title="Segal 对象 [Segal空间]">Segal 对象</a></span>).</li>
+</ul>
+<h3>通过代数模式定义</h3>
+<p>$n$ 重范畴可用<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span> $\Delta^n$ 的 Segal 对象附加完备性条件来定义. 具体地, $\Delta^n$ 的一个 Segal 对象是一个函子
+$$
+X\colon (\Delta^n)^{\mathrm{op}} \to \mathsf{Ani},
+$$
+即一个 $n$ 重<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯生象</a></span>, 满足 Segal 条件
+$$
+X(\cdots,[k],\cdots)\simeq X(\cdots,[1],\cdots)^{\times_{X(\cdots,[0],\cdots)}k}.
+$$
+而 $n$ 重范畴则可定义为满足每个分量的<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备性</a></span>的 Segal 对象.</p>
+<h2>性质</h2>
+<h3>与 $n$-范畴的联系</h3>
+<p><span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$n$-范畴</a></span>可视为某些方向退化的 $n$ 重范畴.</p>
+<h2>例</h2>
+<h3>外张量积</h3>
+<p>给定范畴 $\mathcal C_1,\cdots,\mathcal C_n$, 可构造 $n$ 重范畴 $\mathcal C_1 \boxtimes\cdots\boxtimes\mathcal C_n$,
+$$
+([k_1],\cdots,[k_n]) \mapsto \mathcal C_1 ([k_1])\times\cdots\times\mathcal C_n ([k_n]).
+$$</p>
+<h3>景的二重范畴</h3>
+<p><span class="link local"><a href="./景.html" title="景 [景]">景</a></span>构成一个二重范畴 (double category). 两类态射分别称为景的态射和余态射.</p>
+<h3>正交分解系与二重范畴</h3>
+<p><span class="link local"><a href="./JuranFactDCat.html" title="On orthogonal factorization systems and double categories [JuranFactDCat]">Branko Juran</a></span> 证明每个<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">正交分解系</a></span>都可视为一个二重范畴, 两类态射分别就是分解系中的两类态射.</p>
+<p>来自正交分解系的二重范畴称为<strong>分解二重范畴</strong>.</p>
+<p>不妨采取如下约定 (参考 <span class="link local"><a href="./BlomLoubatonRuitAlgd.html" title="Day convolution for algebraic patterns [BlomLoubatonRuitAlgd]">Blom–Loubaton–Ruit</a></span>, 其与 <span class="link local"><a href="./JuranFactDCat.html" title="On orthogonal factorization systems and double categories [JuranFactDCat]">Juran</a></span> 约定相反): 正交分解系中的<strong>左类</strong>在二重范畴中为<strong>纵向</strong>态射, <strong>右类</strong>为<strong>横向</strong>态射. (相反的约定当然也可以.)</p>
+<p>若将二重范畴视为 $\mathsf{Cat}$ 中的<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 对象</a></span> $\mathcal C \colon \Delta^{\mathrm{op}}\to \mathsf{Cat}$, 其中</p>
+<ul>
+<li>$\mathcal C_0$ 的<strong>态射</strong>视为<strong>纵向</strong>态射,</li>
+<li>$\mathcal C_1$ 的<strong>对象</strong>视为<strong>横向</strong>态射,</li>
+<li>$\mathcal C_1$ 的<strong>态射</strong>视为方块 (即 $\mathcal C$ 作为双单纯对象时在 $([1],[1])$ 上的元素),</li>
+</ul>
+<p>则 $\mathcal C$ 为分解二重范畴当且仅当 “取横向态射的终点” 函子 $t\colon \mathcal C_1 \to \mathcal C_0$ 为<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">推前纤维化</a></span>. 这个条件是直观的: 每个图
+$$
+\begin{array}{ccc}
+\bullet &amp; \rightarrow &amp; \bullet \\
+ &amp;  &amp; \downarrow \\
+ &amp;  &amp; \bullet
+\end{array}
+$$
+都能唯一地填充为方块. 这对应着分解系统中 “将错误顺序的复合变为正确顺序的复合” 的操作.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="tutorial-type-theory"><header><h1><span class="taxon"></span>类型论 <a class="slug" href="./tutorial-type-theory.html">[tutorial-type-theory]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是杨家同于 2026 年 1 月在求真书院形式化数学冬令营上的讲座的笔记, 加入了个人的见解. 假想的读者是有一定数学成熟度但对类型论没有了解的同学.</p>
 <h2>什么是类型论</h2>
@@ -1189,7 +1253,7 @@ $$
 \operatorname{Fact}\colon \mathsf{OFS} \to \mathsf{DCat},
 $$
 将每个正交分解系视为一个二重范畴. 直观上, 二重范畴就是有两类互相独立的态射的范畴; 对于分解系 $(L,R)$, 相应的二重范畴 $\operatorname{Fact}(L,R)$ 的两类态射分别就是 $L$ 的态射 (水平态射) 和 $R$ 的态射 (竖直态射).</p>
-<p><strong>定义</strong> (分解条件). 对于二重范畴 $\mathcal C$, 视为双单纯生象 $\mathcal C \colon (\Delta\times\Delta)^{\mathrm{op}} \to \mathsf{Ani}$, 称如下等价条件为<strong>分解条件</strong>:</p>
+<p><strong>定义</strong> (分解条件, 参考 <span class="link local"><a href="./JuranFactDCat.html" title="On orthogonal factorization systems and double categories [JuranFactDCat]">Juran</a></span>). 对于二重范畴 $\mathcal C$, 视为双单纯生象 $\mathcal C \colon (\Delta\times\Delta)^{\mathrm{op}} \to \mathsf{Ani}$, 称如下等价条件为<strong>分解条件</strong>:</p>
 <p>$(1)$ 方块
 $$
 \begin{array}{ccc}
