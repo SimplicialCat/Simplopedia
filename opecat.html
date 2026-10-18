@@ -829,7 +829,7 @@
 <p><span class="link local"><a href="./BarwickOpeCat.html" title="From operator categories to higher operads [BarwickOpeCat]">Clark Barwick 文章</a></span>的笔记. 将原文转写为模型无关语言.</p>
 <hr />
 <p>回忆 $\infty$-范畴可由<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形</a></span> (即一串连续的箭头) <span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>, 给出<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯生象</a></span>. 类似地, <span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 可由类似于<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>的对象探测. 本文建立了一个统一的框架, 由算子范畴 $\Phi$ 出发构造探测用的 “$\Phi$-序列”, 分别在 $\Phi = 1$ 和 $\Phi = \mathsf{Fin}$ 的情形恢复出 $\infty$-范畴与算畴的概念.</p>
-<hr />
+<h2>算子范畴</h2>
 <p><strong>定义</strong>. 一个<strong>算子范畴</strong> (operator category) $\Phi$ 是满足如下条件的范畴:</p>
 <ul>
 <li>$\Phi$ 具有<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span> $1$; 记 $|I|=\operatorname{Hom}(1,I)$, 称之为 $I$ 的<strong>点</strong>的集合;</li>
@@ -842,7 +842,7 @@
 <li>对任意 $I\in\Psi$, $|I|\to |GI|$ 为满射.</li>
 </ul>
 <p>记算子范畴的 $2$-范畴为 $\mathsf{Op}$.</p>
-<p><strong>例</strong>. 终范畴 $1$, 有限全序集范畴 $\mathsf{Ord}$, 有限集范畴 $\mathsf{Fin}$ 均为算子范畴.</p>
+<p><strong>例</strong>. 终范畴 $1$, 有限全序集范畴 $\mathsf{Ord}$ (态射为偏序集映射), 有限集范畴 $\mathsf{Fin}$ 均为算子范畴.</p>
 <p><strong>注</strong>. 范畴 $\mathsf{Ord}$ 就是<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">增广单纯形范畴</a></span> $\Delta_+$, 但在这里我们有意避免使用这个称呼, 因为单纯形范畴 $\Delta$ 将以另一种身份出现, 我们想要避免混淆.</p>
 <p><strong>命题</strong>.</p>
 <ul>
@@ -861,6 +861,7 @@ $$
   (\eta\colon I\to J,(\omega_j\colon M_i\to N_{\eta(i)})_{i\in |I|}).
 $$</li>
 </ul>
+<p><strong>例</strong>. $\mathsf{Ord} \wr \mathsf{Ord}$ 的对象可理解为</p>
 <p><strong>定理</strong>. 圈积是 $\mathsf{Op}$ 上的一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半</a></span>结构.</p>
 <h2>一类重要的态射: 区间含入</h2>
 <p><strong>定义</strong> (区间含入). 设 $\Phi$ 为算子范畴, 称如下<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>图中的态射 $K\to J$ 为纤维含入,
@@ -914,6 +915,18 @@ G_! \dashv G^*\colon \mathsf{Operad}_\Psi
 \rightleftarrows \mathsf{Operad}_\Phi.
 $$</p>
 <p><strong>例</strong>. 考虑态射 $u\colon \mathsf{Ord}\to\mathsf{Fin}$, 称 $u_!\colon \mathsf{Operad}_{\mathsf{Ord}}\to \mathsf{Operad}_{\mathsf{Fin}}$ 为非对称算畴的<strong>对称化</strong>. $\mathsf{Operad}_{\mathsf{Ord}}$ 的终对象的对称化即为算畴 $\mathbb E_1$.</p>
+<h2>算子范畴给出单子</h2>
+<p><strong>定义</strong> (点分类子). 设 $\Phi$ 为算子范畴. 若存在对象 $I$ 与其中的点 $i$, 使得对任意对象 $J$ 和点 $j$, 存在唯一的态射 $f\colon J\to I$ 使得 $f^{-1}(j) = \{i\}$, 则称 $(I,i)$ 为<strong>点分类子</strong> (point classifier).</p>
+<p>由于点分类子由万有性质定义, 当它存在是它就是唯一的.</p>
+<p><strong>例</strong>.</p>
+<ul>
+<li>$\mathsf{Fin}$ 的点分类子为 $(\{0,1\}, 1)$.</li>
+<li>$\mathsf{Ord}$ 的点分类子为 $(\{0&lt;1&lt;2\} , 1)$.</li>
+<li>$\mathsf{Ord}\wr\mathsf{Ord}$ 的点分类子为 $()$</li>
+</ul>
+<p><strong>定义</strong> (完美算子范畴).</p>
+<h2>Leinster 范畴</h2>
+<p><strong>定义</strong>. 设 $\Phi$ 为完美算子范畴, 称 $T_\Phi$ 的 <span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>为 $\Phi$ 的 <strong>Leinster 范畴</strong> $\Lambda (\Phi)$.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="notes"><header><h1><span class="taxon"></span>讲稿, 笔记 <a class="slug" href="./notes.html">[notes]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>较完整的讲稿 / 笔记:</p>
 <ul>
