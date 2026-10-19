@@ -883,13 +883,19 @@ $$
 <li>惰性映射就是定义中的惰性提升;</li>
 <li>活性映射就是居于 $\Gamma$ 中的活性映射之上的映射.</li>
 </ul>
-<p>上述结构的底不必为 $\Gamma$, 而是可以推广到任意代数模式上. 若代数模式的态射 $\mathcal O \to \mathcal P$ 满足上述条件, 则称之为<strong>弱 Segal 纤维化</strong>.</p>
+<p>上述结构的底不必为 $\Gamma$, 而是可以推广到任意代数模式上. 若代数模式的态射 $\mathcal O \to \mathcal P$ 满足上述条件, 则称之为<strong></strong><span class="link local"><a href="./弱Segal纤维化.html" title="弱 Segal 纤维化 (代数体) [弱Segal纤维化]">弱 Segal 纤维化</a></span>.</p>
+<p>以下是一个对照表.</p>
+<table><thead><tr><th><span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span></th><th>HADR</th></tr></thead><tbody>
+<tr><td>$\mathcal O^{\otimes} \to \mathrm{N}(\mathrm{Fin}_*)$</td><td>$\mathcal O \to \Gamma$ (注意约定相反)</td></tr>
+<tr><td>fibration of $\infty$-operads</td><td>弱 Segal 纤维化</td></tr>
+<tr><td>coCartesian fibration of $\infty$-operads</td><td>Segal 纤维化</td></tr>
+</tbody></table>
 <h3>对称算畴的基本例子</h3>
 <p><strong>例</strong>. 记 $\mathsf{Triv} := \Gamma_{\mathrm{int}} \to \Gamma$, 称之为平凡算畴. 平凡算畴的代数就是没有任何结构的对象.</p>
 <p><strong>例</strong>. 记 $\mathbb E_0 \to \Gamma$ 为 $\Gamma$ 中 “将每个元素对应到一个至多一元子集” 的映射构成的宽子范畴, $\mathbb E_0$-代数就是<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点对象</a></span>.</p>
 <p><strong>例</strong>. $\Gamma$ 上的 Segal 纤维化 $\mathcal C \to \Gamma$, 对应于 Segal 对象 $\Gamma^{\mathrm{op}} \to \mathsf{Cat}$, 即<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> (其底层范畴为 $\mathcal C_{\langle 1\rangle}$); 它也构成对称算畴.</p>
 <h2>非对称算畴</h2>
-<p>称 $\Delta$ 上的弱 Segal 纤维化为<strong>非对称算畴</strong>. 直观上, 一个算畴给出一族无序 $n$ 元运算, 而一个非对称算畴给出一族有序 $n$ 元运算.</p>
+<p>称 $\Delta$ 上的<span class="link local"><a href="./弱Segal纤维化.html" title="弱 Segal 纤维化 (代数体) [弱Segal纤维化]">弱 Segal 纤维化</a></span>为<strong>非对称算畴</strong>. 直观上, 一个算畴给出一族无序 $n$ 元运算, 而一个非对称算畴给出一族有序 $n$ 元运算.</p>
 <p><strong>例</strong>. 记 $\Delta_{\leq n} \hookrightarrow \Delta$ 为对象 $[0],[1],\cdots,[n]$ 构成的全子范畴, 则 $\Delta_{\leq n}$ 继承 $\Delta$ 的代数模式结构, 构成一个非对称算畴; 称该模式为 <span class="link local"><a href="./An-代数.html" title="A_n-代数 [An-代数]">$\mathbb A_n$</a></span>.</p>
 <h2>算畴的操作</h2>
 <h3>余积</h3>
@@ -899,6 +905,19 @@ $$
 $$
 其中 $\times\colon \Gamma\times\Gamma\to\Gamma$ 是 $\Gamma$ 中的范畴论积 $\langle n \rangle \times \langle m \rangle = \langle n + m \rangle$.</p>
 <h3>对称幺半包络</h3>
+<p>设 $p\colon \mathcal C \to \mathcal O$ 是弱 Segal 纤维化. 定义其 $\mathcal O$-<strong>幺半包络</strong> (monoidal envelope) 为
+$$
+\operatorname{Env}_{\mathcal O}(\mathcal C) := \mathcal C \times_{\mathcal O}\operatorname{Act}(\mathcal O) = \{(c\in\mathcal C,\alpha\colon o\leadsto p(c))\}.
+$$
+它构成一个 $\mathcal O$-幺半范畴, 也即 Segal 纤维化 $\operatorname{Env}_{\mathcal O}(\mathcal C)\to \mathcal O$, 对应的函子 $\mathcal O^{\mathrm{op}} \to \mathsf{Cat}$ 为
+$$
+o\mapsto \{o\leadsto p(c)\}.
+$$</p>
+<p>特别地, 取 $\mathcal O = \Gamma$, 我们就得到: 对任意对称算畴 $\mathcal C$, 其<strong>对称幺半包络</strong> $\operatorname{Env}_{\Gamma}(\mathcal C)$ 是一个对称幺半范畴 $\Gamma^{\mathrm{op}}\to\mathsf{Cat}$,
+$$
+\langle n\rangle\mapsto \{\langle n \rangle \leadsto p(c)\},
+$$
+其底层范畴为 $\{\langle 1 \rangle \leadsto p(c)\} = \mathcal C$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="lim-colim-dist"><header><h1><span class="taxon"></span>极限对余极限分配 <a class="slug" href="./lim-colim-dist.html">[lim-colim-dist]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>考虑函子
 $$
@@ -1140,6 +1159,44 @@ $$
 <h3>主丛</h3>
 <p><span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的<strong>分类空间</strong>指的是其<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环路空间</a></span> $\mathbf{B}G$, 它是一个带基点连通空间, 带有万有 $G$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span> ${*}\to \mathbf{B}G$.</p>
 <p>另见<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span>, <span class="link local"><a href="./分类叠.html" title="分类叠 (模叠) [分类叠]">分类叠</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="弱Segal纤维化"><header><h1><span class="taxon"></span>弱 Segal 纤维化 (代数体) <a class="slug" href="./弱Segal纤维化.html">[弱Segal纤维化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<h2>定义</h2>
+<h3>直接定义</h3>
+<p><span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>之间的<strong>弱 Segal 纤维化</strong>是满足如下条件的态射 $p\colon \mathcal P \to \mathcal O$:</p>
+<ul>
+<li>$\mathcal O$ 中的惰性映射存在水平提升 (换言之, 有函子 $\mathcal O_{\mathrm{int}}^{\mathrm{op}} \to \mathsf{Cat}$, $N\mapsto \mathcal P_N$);</li>
+<li>对任意 $N\in\mathcal O$, 函子 $\mathcal P_N \to \operatorname{lim}_{E\rightarrowtail N}\mathcal P_{E}$ 为等价;</li>
+<li>给定 $X \in \mathcal P_N$, $Y\in\mathcal P_M$ 以及 $\mathcal O$ 中的态射 $f\colon N\to M$,
+$$
+   \operatorname{Hom}^f(X,Y) \simeq \operatorname{lim}_{g\colon E\rightarrowtail N}\operatorname{Hom}^{fg}(g^*X,Y).
+$$</li>
+</ul>
+<h3>通过分层树的代数模式</h3>
+<p><span class="link local"><a href="./BlomLoubatonRuitAlgd.html" title="Day convolution for algebraic patterns [BlomLoubatonRuitAlgd]">Blom–Loubaton–Ruit</a></span> 证明代数模式 $\mathcal O$ 上的弱 Segal 纤维化等同于 $\mathcal O$-<span class="link local"><a href="./分层树.html" title="分层树 [分层树]">分层树</a></span>构成的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span> $\Omega [\mathcal O]$ 的完备 Segal 对象 (意思是其底层 Segal 生象为<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 生象</a></span>):
+$$
+\mathsf{WSegFib}_{\mathcal O} \simeq \mathsf{CSeg}(\Omega [\mathcal O]).
+$$</p>
+<h2>性质</h2>
+<h3>与 Segal 纤维化的关系</h3>
+<p>代数模式 $\mathcal O$ 上的 <strong>Segal 纤维化</strong>是其 $\mathsf{Cat}$-值 Segal 对象 $\mathcal O^{\mathrm{op}} \to \mathsf{Cat}$ 对应的 $\mathcal O$ 上的<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">拉回纤维化</a></span>.</p>
+<p>Segal 纤维化的全体
+$\mathsf{SegFib}_{\mathcal O}$
+是弱 Segal 纤维化的全体
+$\mathsf{WSegFib}_{\mathcal O}$
+的<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span>:
+$$
+(\operatorname{Env}_{\mathcal O} \dashv U)\colon \mathsf{WSegFib}_{\mathcal O}\rightleftarrows\mathsf{SegFib}_{\mathcal O}.
+$$</p>
+<p>对于弱 Segal 纤维化 $p\colon \mathcal P \to \mathcal O$, 其反射称为 $\mathcal P$ 的 $\mathcal O$-<strong>幺半包络</strong> (monoidal envelope):
+$$
+\operatorname{Env}_{\mathcal O}(\mathcal P) := \mathcal P \times_{\mathcal O}\operatorname{Act}(\mathcal O) = \{(x\in\mathcal P,\alpha\colon o\leadsto p(x))\},
+$$
+其带有到 $\mathcal O$ 的 Segal 纤维化 $\operatorname{Env}_{\mathcal O} (\mathcal P) \to \mathcal O$, $(x\in\mathcal P,\alpha\colon o\leadsto p(x)) \mapsto o$.</p>
+<p>注意 $\operatorname{Env}_{\mathcal O} (\mathcal P)$
+一个直观: $\Gamma$ 上的弱 Segal 纤维化是<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>, 有多个对象到一个对象的态射, 但不一定有张量积; 其 $\Gamma$-幺半包络 (即对称幺半包络) 就是由所有形式记号 $x_1 \otimes \cdots\otimes x_n$ 构成的范畴, 满足态射 $x_1 \otimes \cdots\otimes x_n \to y$ 等同于原来多重范畴中的多重态射 $(x_1,\cdots,x_n) \to y$.</p>
+<h3>与松函子的关系</h3>
+<p>设 $\mathcal C \to \Gamma$, $\mathcal D \to \Gamma$ 为 Segal 纤维化, 对应两个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 将它们遗忘为弱 Segal 纤维化, 则弱 Segal 纤维化的态射 $\mathcal C \to \mathcal D$ 等同于 $\mathcal C$ 到 $\mathcal D$ 的<span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">松对称幺半函子</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="推前"><header><h1><span class="taxon"></span>推前, 拉回 (纤维范畴) <a class="slug" href="./推前.html">[推前]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>对于基范畴 $\mathcal B$ 上的范畴 $p\colon \mathcal E \to \mathcal B$, <strong>推前</strong> (pushforward) 和<strong>拉回</strong> (pullback) 指的是 $\mathcal B$ 中态射的有某种万有性质的<strong>提升</strong>. 具有一切推前或拉回的范畴称为<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">纤维范畴</a></span>.</p>
 <p><span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">范畴论拉回</a></span>是上述概念的特例.</p>

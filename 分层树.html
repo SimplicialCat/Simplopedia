@@ -827,6 +827,44 @@
 
 <article><section class="block" data-taxon=""><details open><summary id="分层树"><header><h1><span class="taxon"></span>分层树 <a class="slug" href="./分层树.html">[分层树]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
+<h3>普通分层树</h3>
+<p><strong>分层树</strong>是有限集的序列
+$$
+1 \leftarrow t_1 \leftarrow \cdots \leftarrow t_n,
+$$
+简记为 $[n;t]$.
+分层树的态射 $[n;t] \to [m;s]$ 是偏序集映射 $\phi\colon [n] \to [m]$ 配上一族<strong>单射</strong> $t_i \rightarrowtail s_{\phi (i)}$.</p>
+<p>直观上一棵分层树就是一棵<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>的每个边带有一个自然数作为层级, 树的根是第 $0$ 层, $t_0 = 1$ (树只有一个根), 第 $n$ 层的边上面是第 $n+1$ 层, 映射 $t_n \leftarrow t_{n+1}$ 对第 $n+1$ 层的边指定其下方紧邻的边.</p>
+<p><strong>注</strong>.</p>
+<ul>
+<li>分层树与<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>的区别在于态射: 分层树的态射必须把第 $i$ 层的边都映射到第 $\phi(i)$ 层的边, 而树的态射则可能将同一层的边映射到不同层的边.</li>
+<li>尽管如此, 分层树和树都构成<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>, 都可用于定义<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">对称算畴</a></span>, <span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span> (参见 <span class="link local"><a href="./CHHoperads.html" title="Two models for the homotopy theory of ∞-operads [CHHoperads]">CHH</a></span>).</li>
+</ul>
+<h3>代数模式的分层树</h3>
+<p>普通的分层树是如下概念的特例. 设 $\mathcal O$ 为<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>, 定义 $\mathcal O$-<strong>分层树</strong>为<strong>活性</strong>映射的序列
+$$
+t_0 \leadsto t_1 \leadsto \cdots \leadsto t_n,
+$$
+且 $t_0$ 为基本对象, 将分层树简记为 $[n;t]$.
+分层树的态射 $[n;t] \to [m;s]$ 是偏序集映射 $\phi\colon [n] \to [m]$ 配上一族<strong>惰性</strong>映射 $t_i \rightarrowtail s_{\phi (i)}$.</p>
+<p><strong>注</strong>.</p>
+<ul>
+<li>注意我们和另一些文献对于代数模式的约定相反.</li>
+<li>有限集的映射 $t_1 \leftarrow t_2$ 等同于 $\Gamma$ 中的活性映射 $t_1 \leadsto t_2$, 而惰性映射 $t \rightarrowtail s$ 等同于有限集的单射 $t\hookrightarrow s$. 故普通的分层树是 $\mathcal O$-分层树在 $\mathcal O = \Gamma$ 的特例.</li>
+</ul>
+<p><strong>定义</strong>. 在 $\mathcal O$-分层树的范畴中,</p>
+<ul>
+<li>对象 $[0;e]$ 称为<strong>根</strong> ($e$ 为基本对象);</li>
+<li>对象 $[1;e\leadsto t_1]$ 称为<strong>花冠</strong>.</li>
+</ul>
+<h2>性质</h2>
+<h3>分层树的代数模式</h3>
+<p>前面说到代数模式 $\mathcal O$ 有分层树的概念, 这些分层树构成一个新的代数模式 $\Omega [\mathcal O]$, 其中</p>
+<ul>
+<li>基本对象为根与花冠;</li>
+<li>态射 $[n;t] \to [m;s]$ 为惰性映射, 当且仅当其对应的偏序集映射 $\phi\colon [n] \to [m]$ 为惰性映射 (区间含入);</li>
+<li>态射 $[n;t] \to [m;s]$ 为活性映射, 当且仅当 $\phi\colon [n] \to [m]$ 为活性映射 (保端点), 且每个 $t_i \to s_{\phi (i)}$ 为等价.</li>
+</ul>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="opecat"><header><h1><span class="taxon"></span>Barwick 算子范畴 <a class="slug" href="./opecat.html">[opecat]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./BarwickOpeCat.html" title="From operator categories to higher operads [BarwickOpeCat]">Clark Barwick 文章</a></span>的笔记. 将原文转写为模型无关语言.</p>
 <hr />
@@ -834,7 +872,7 @@
 <h2>算子范畴</h2>
 <p><strong>定义</strong>. 一个<strong>算子范畴</strong> (operator category) $\Phi$ 是满足如下条件的范畴:</p>
 <ul>
-<li>$\Phi$ 具有<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span> $1$; 记 $|I|=\operatorname{Hom}(1,I)$, 称之为 $I$ 的<strong>点</strong>的集合;</li>
+<li>$\Phi$ 具有<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span> $1$; 记 $|I|:=\operatorname{Hom}(1,I)$, 称之为 $I$ 的<strong>点</strong>的集合;</li>
 <li>态射集 $\operatorname{Hom}(I,J)$ 均为有限集;</li>
 <li>对任意态射 $I\to J$ 以及 $j\in |J|$, 有<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维</a></span> $\{j\}\times_J I$.</li>
 </ul>
@@ -860,10 +898,16 @@ $$
 $$</li>
 <li>态射 $(I,(M_i)) \to (J,(N_j))$ 为
 $$
-  (\eta\colon I\to J,(\omega_j\colon M_i\to N_{\eta(i)})_{i\in |I|}).
+  (\eta\colon I\to J,(\omega_i\colon M_i\to N_{\eta(i)})_{i\in |I|}).
 $$</li>
 </ul>
-<p><strong>例</strong>. $\mathsf{Ord} \wr \mathsf{Ord}$ 的对象可理解为</p>
+<p>容易看到 $\Psi\wr\Phi$ 仍是算子范畴:</p>
+<ul>
+<li>其终对象为 $(1,(1))$;</li>
+<li>对象 $(I,(M_i))$ 的一个点就是 $I$ 的一个点 $i$ 配上 $M_i$ 的一个点, $|(I,(M_i))| \simeq \sum_{i\in I} |M_i|$ 为有限个有限集之<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>;</li>
+<li>态射 $(\eta,(\omega_i))\colon (I,(M_i)) \to (J,(N_j))$ 在点 $(j,n)$ 处的纤维为 $(\eta^{-1}(j),(\omega_i^{-1}(n))_{i\in |\eta^{-1}(j)|})$.</li>
+</ul>
+<p><strong>例</strong>. $\mathsf{Ord} \wr \mathsf{Ord}$ 的对象可理解为一个全序集上的丛, 每个纤维又是一个全序集. 态射就是把每个纤维映射到对方的某个纤维, 保持底和纤维上的序.</p>
 <p><strong>定理</strong>. 圈积是 $\mathsf{Op}$ 上的一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半</a></span>结构.</p>
 <h2>一类重要的态射: 区间含入</h2>
 <p><strong>定义</strong> (区间含入). 设 $\Phi$ 为算子范畴, 称如下<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>图中的态射 $K\to J$ 为纤维含入,
@@ -923,12 +967,71 @@ $$</p>
 <p><strong>例</strong>.</p>
 <ul>
 <li>$\mathsf{Fin}$ 的点分类子为 $(\{0,1\}, 1)$.</li>
-<li>$\mathsf{Ord}$ 的点分类子为 $(\{0&lt;1&lt;2\} , 1)$.</li>
-<li>$\mathsf{Ord}\wr\mathsf{Ord}$ 的点分类子为 $()$</li>
+<li>$\mathsf{Ord}$ 的点分类子为 $(\{0&lt;1&lt;2\} , 1)$; 直观: $0$ 表示基点以下, $1$ 表示基点, $2$ 表示基点以上.</li>
+<li>$\mathsf{Ord}\wr\mathsf{Ord}$ 的点分类子为 $\big({(\{0&lt;1&lt;2\},(\{0\},\{0&lt;1&lt;2\},\{0\}))},(1,1)\big)$. 直观:
+$$
+\begin{array}{ccc}
+&amp; * &amp;\
+<ul>
+<li>&amp; \star &amp; *\
+&amp; * &amp;
+\end{array}
+$$
+其中 $\star$ 表示那个特殊的点.</li>
 </ul>
-<p><strong>定义</strong> (完美算子范畴).</p>
+</li>
+<li>一般地, $\mathsf{Ord}^{\wr \,n}$ 都存在点分类子.</li>
+</ul>
+<p><strong>定义</strong> (完美算子范畴). 称满足如下条件的算子范畴 $\Phi$ 为完美算子范畴:</p>
+<ul>
+<li>$\Phi$ 存在点分类子 $(T,t)$;</li>
+<li>函子 $\operatorname{fib}\colon \Phi_{/T} \to \Phi$ 有<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">右伴随</a></span>.</li>
+</ul>
+<p>由于这对伴随, 完美算子范畴 $\Phi$ <span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出 $\Phi$ 上的单子</a></span> $T_\Phi$.</p>
+<p><strong>例</strong>.</p>
+<ul>
+<li></li>
+</ul>
 <h2>Leinster 范畴</h2>
 <p><strong>定义</strong>. 设 $\Phi$ 为完美算子范畴, 称 $T_\Phi$ 的 <span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>为 $\Phi$ 的 <strong>Leinster 范畴</strong> $\Lambda (\Phi)$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="弱Segal纤维化"><header><h1><span class="taxon"></span>弱 Segal 纤维化 (代数体) <a class="slug" href="./弱Segal纤维化.html">[弱Segal纤维化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<h2>定义</h2>
+<h3>直接定义</h3>
+<p><span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>之间的<strong>弱 Segal 纤维化</strong>是满足如下条件的态射 $p\colon \mathcal P \to \mathcal O$:</p>
+<ul>
+<li>$\mathcal O$ 中的惰性映射存在水平提升 (换言之, 有函子 $\mathcal O_{\mathrm{int}}^{\mathrm{op}} \to \mathsf{Cat}$, $N\mapsto \mathcal P_N$);</li>
+<li>对任意 $N\in\mathcal O$, 函子 $\mathcal P_N \to \operatorname{lim}_{E\rightarrowtail N}\mathcal P_{E}$ 为等价;</li>
+<li>给定 $X \in \mathcal P_N$, $Y\in\mathcal P_M$ 以及 $\mathcal O$ 中的态射 $f\colon N\to M$,
+$$
+   \operatorname{Hom}^f(X,Y) \simeq \operatorname{lim}_{g\colon E\rightarrowtail N}\operatorname{Hom}^{fg}(g^*X,Y).
+$$</li>
+</ul>
+<h3>通过分层树的代数模式</h3>
+<p><span class="link local"><a href="./BlomLoubatonRuitAlgd.html" title="Day convolution for algebraic patterns [BlomLoubatonRuitAlgd]">Blom–Loubaton–Ruit</a></span> 证明代数模式 $\mathcal O$ 上的弱 Segal 纤维化等同于 $\mathcal O$-<span class="link local"><a href="./分层树.html" title="分层树 [分层树]">分层树</a></span>构成的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span> $\Omega [\mathcal O]$ 的完备 Segal 对象 (意思是其底层 Segal 生象为<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 生象</a></span>):
+$$
+\mathsf{WSegFib}_{\mathcal O} \simeq \mathsf{CSeg}(\Omega [\mathcal O]).
+$$</p>
+<h2>性质</h2>
+<h3>与 Segal 纤维化的关系</h3>
+<p>代数模式 $\mathcal O$ 上的 <strong>Segal 纤维化</strong>是其 $\mathsf{Cat}$-值 Segal 对象 $\mathcal O^{\mathrm{op}} \to \mathsf{Cat}$ 对应的 $\mathcal O$ 上的<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">拉回纤维化</a></span>.</p>
+<p>Segal 纤维化的全体
+$\mathsf{SegFib}_{\mathcal O}$
+是弱 Segal 纤维化的全体
+$\mathsf{WSegFib}_{\mathcal O}$
+的<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span>:
+$$
+(\operatorname{Env}_{\mathcal O} \dashv U)\colon \mathsf{WSegFib}_{\mathcal O}\rightleftarrows\mathsf{SegFib}_{\mathcal O}.
+$$</p>
+<p>对于弱 Segal 纤维化 $p\colon \mathcal P \to \mathcal O$, 其反射称为 $\mathcal P$ 的 $\mathcal O$-<strong>幺半包络</strong> (monoidal envelope):
+$$
+\operatorname{Env}_{\mathcal O}(\mathcal P) := \mathcal P \times_{\mathcal O}\operatorname{Act}(\mathcal O) = \{(x\in\mathcal P,\alpha\colon o\leadsto p(x))\},
+$$
+其带有到 $\mathcal O$ 的 Segal 纤维化 $\operatorname{Env}_{\mathcal O} (\mathcal P) \to \mathcal O$, $(x\in\mathcal P,\alpha\colon o\leadsto p(x)) \mapsto o$.</p>
+<p>注意 $\operatorname{Env}_{\mathcal O} (\mathcal P)$
+一个直观: $\Gamma$ 上的弱 Segal 纤维化是<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>, 有多个对象到一个对象的态射, 但不一定有张量积; 其 $\Gamma$-幺半包络 (即对称幺半包络) 就是由所有形式记号 $x_1 \otimes \cdots\otimes x_n$ 构成的范畴, 满足态射 $x_1 \otimes \cdots\otimes x_n \to y$ 等同于原来多重范畴中的多重态射 $(x_1,\cdots,x_n) \to y$.</p>
+<h3>与松函子的关系</h3>
+<p>设 $\mathcal C \to \Gamma$, $\mathcal D \to \Gamma$ 为 Segal 纤维化, 对应两个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 将它们遗忘为弱 Segal 纤维化, 则弱 Segal 纤维化的态射 $\mathcal C \to \mathcal D$ 等同于 $\mathcal C$ 到 $\mathcal D$ 的<span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">松对称幺半函子</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="树"><header><h1><span class="taxon"></span>树 (范畴论) <a class="slug" href="./树.html">[树]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>树是表达 “多个对象到一个对象的态射” 以及这种态射的复合所需的基本结构. 因此, 可被树<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>的对象 (即<span class="link local"><a href="./树形对象.html" title="树形对象 [树形对象]">树形对象</a></span>) 给出<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 的一种定义.</p>

@@ -886,4 +886,42 @@ $$
 \end{array}
 $$
 都能唯一地填充为方块. 这对应着分解系统中 “将错误顺序的复合变为正确顺序的复合” 的操作.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="弱Segal纤维化"><header><h1><span class="taxon"></span>弱 Segal 纤维化 (代数体) <a class="slug" href="./弱Segal纤维化.html">[弱Segal纤维化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<h2>定义</h2>
+<h3>直接定义</h3>
+<p><span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>之间的<strong>弱 Segal 纤维化</strong>是满足如下条件的态射 $p\colon \mathcal P \to \mathcal O$:</p>
+<ul>
+<li>$\mathcal O$ 中的惰性映射存在水平提升 (换言之, 有函子 $\mathcal O_{\mathrm{int}}^{\mathrm{op}} \to \mathsf{Cat}$, $N\mapsto \mathcal P_N$);</li>
+<li>对任意 $N\in\mathcal O$, 函子 $\mathcal P_N \to \operatorname{lim}_{E\rightarrowtail N}\mathcal P_{E}$ 为等价;</li>
+<li>给定 $X \in \mathcal P_N$, $Y\in\mathcal P_M$ 以及 $\mathcal O$ 中的态射 $f\colon N\to M$,
+$$
+   \operatorname{Hom}^f(X,Y) \simeq \operatorname{lim}_{g\colon E\rightarrowtail N}\operatorname{Hom}^{fg}(g^*X,Y).
+$$</li>
+</ul>
+<h3>通过分层树的代数模式</h3>
+<p><span class="link local"><a href="./BlomLoubatonRuitAlgd.html" title="Day convolution for algebraic patterns [BlomLoubatonRuitAlgd]">Blom–Loubaton–Ruit</a></span> 证明代数模式 $\mathcal O$ 上的弱 Segal 纤维化等同于 $\mathcal O$-<span class="link local"><a href="./分层树.html" title="分层树 [分层树]">分层树</a></span>构成的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span> $\Omega [\mathcal O]$ 的完备 Segal 对象 (意思是其底层 Segal 生象为<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 生象</a></span>):
+$$
+\mathsf{WSegFib}_{\mathcal O} \simeq \mathsf{CSeg}(\Omega [\mathcal O]).
+$$</p>
+<h2>性质</h2>
+<h3>与 Segal 纤维化的关系</h3>
+<p>代数模式 $\mathcal O$ 上的 <strong>Segal 纤维化</strong>是其 $\mathsf{Cat}$-值 Segal 对象 $\mathcal O^{\mathrm{op}} \to \mathsf{Cat}$ 对应的 $\mathcal O$ 上的<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">拉回纤维化</a></span>.</p>
+<p>Segal 纤维化的全体
+$\mathsf{SegFib}_{\mathcal O}$
+是弱 Segal 纤维化的全体
+$\mathsf{WSegFib}_{\mathcal O}$
+的<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span>:
+$$
+(\operatorname{Env}_{\mathcal O} \dashv U)\colon \mathsf{WSegFib}_{\mathcal O}\rightleftarrows\mathsf{SegFib}_{\mathcal O}.
+$$</p>
+<p>对于弱 Segal 纤维化 $p\colon \mathcal P \to \mathcal O$, 其反射称为 $\mathcal P$ 的 $\mathcal O$-<strong>幺半包络</strong> (monoidal envelope):
+$$
+\operatorname{Env}_{\mathcal O}(\mathcal P) := \mathcal P \times_{\mathcal O}\operatorname{Act}(\mathcal O) = \{(x\in\mathcal P,\alpha\colon o\leadsto p(x))\},
+$$
+其带有到 $\mathcal O$ 的 Segal 纤维化 $\operatorname{Env}_{\mathcal O} (\mathcal P) \to \mathcal O$, $(x\in\mathcal P,\alpha\colon o\leadsto p(x)) \mapsto o$.</p>
+<p>注意 $\operatorname{Env}_{\mathcal O} (\mathcal P)$
+一个直观: $\Gamma$ 上的弱 Segal 纤维化是<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>, 有多个对象到一个对象的态射, 但不一定有张量积; 其 $\Gamma$-幺半包络 (即对称幺半包络) 就是由所有形式记号 $x_1 \otimes \cdots\otimes x_n$ 构成的范畴, 满足态射 $x_1 \otimes \cdots\otimes x_n \to y$ 等同于原来多重范畴中的多重态射 $(x_1,\cdots,x_n) \to y$.</p>
+<h3>与松函子的关系</h3>
+<p>设 $\mathcal C \to \Gamma$, $\mathcal D \to \Gamma$ 为 Segal 纤维化, 对应两个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 将它们遗忘为弱 Segal 纤维化, 则弱 Segal 纤维化的态射 $\mathcal C \to \mathcal D$ 等同于 $\mathcal C$ 到 $\mathcal D$ 的<span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">松对称幺半函子</a></span>.</p>
 </details></section></details></section></footer></article></div></body></html>

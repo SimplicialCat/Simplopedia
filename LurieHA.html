@@ -883,13 +883,19 @@ $$
 <li>惰性映射就是定义中的惰性提升;</li>
 <li>活性映射就是居于 $\Gamma$ 中的活性映射之上的映射.</li>
 </ul>
-<p>上述结构的底不必为 $\Gamma$, 而是可以推广到任意代数模式上. 若代数模式的态射 $\mathcal O \to \mathcal P$ 满足上述条件, 则称之为<strong>弱 Segal 纤维化</strong>.</p>
+<p>上述结构的底不必为 $\Gamma$, 而是可以推广到任意代数模式上. 若代数模式的态射 $\mathcal O \to \mathcal P$ 满足上述条件, 则称之为<strong></strong><span class="link local"><a href="./弱Segal纤维化.html" title="弱 Segal 纤维化 (代数体) [弱Segal纤维化]">弱 Segal 纤维化</a></span>.</p>
+<p>以下是一个对照表.</p>
+<table><thead><tr><th><span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span></th><th>HADR</th></tr></thead><tbody>
+<tr><td>$\mathcal O^{\otimes} \to \mathrm{N}(\mathrm{Fin}_*)$</td><td>$\mathcal O \to \Gamma$ (注意约定相反)</td></tr>
+<tr><td>fibration of $\infty$-operads</td><td>弱 Segal 纤维化</td></tr>
+<tr><td>coCartesian fibration of $\infty$-operads</td><td>Segal 纤维化</td></tr>
+</tbody></table>
 <h3>对称算畴的基本例子</h3>
 <p><strong>例</strong>. 记 $\mathsf{Triv} := \Gamma_{\mathrm{int}} \to \Gamma$, 称之为平凡算畴. 平凡算畴的代数就是没有任何结构的对象.</p>
 <p><strong>例</strong>. 记 $\mathbb E_0 \to \Gamma$ 为 $\Gamma$ 中 “将每个元素对应到一个至多一元子集” 的映射构成的宽子范畴, $\mathbb E_0$-代数就是<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点对象</a></span>.</p>
 <p><strong>例</strong>. $\Gamma$ 上的 Segal 纤维化 $\mathcal C \to \Gamma$, 对应于 Segal 对象 $\Gamma^{\mathrm{op}} \to \mathsf{Cat}$, 即<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> (其底层范畴为 $\mathcal C_{\langle 1\rangle}$); 它也构成对称算畴.</p>
 <h2>非对称算畴</h2>
-<p>称 $\Delta$ 上的弱 Segal 纤维化为<strong>非对称算畴</strong>. 直观上, 一个算畴给出一族无序 $n$ 元运算, 而一个非对称算畴给出一族有序 $n$ 元运算.</p>
+<p>称 $\Delta$ 上的<span class="link local"><a href="./弱Segal纤维化.html" title="弱 Segal 纤维化 (代数体) [弱Segal纤维化]">弱 Segal 纤维化</a></span>为<strong>非对称算畴</strong>. 直观上, 一个算畴给出一族无序 $n$ 元运算, 而一个非对称算畴给出一族有序 $n$ 元运算.</p>
 <p><strong>例</strong>. 记 $\Delta_{\leq n} \hookrightarrow \Delta$ 为对象 $[0],[1],\cdots,[n]$ 构成的全子范畴, 则 $\Delta_{\leq n}$ 继承 $\Delta$ 的代数模式结构, 构成一个非对称算畴; 称该模式为 <span class="link local"><a href="./An-代数.html" title="A_n-代数 [An-代数]">$\mathbb A_n$</a></span>.</p>
 <h2>算畴的操作</h2>
 <h3>余积</h3>
@@ -899,6 +905,19 @@ $$
 $$
 其中 $\times\colon \Gamma\times\Gamma\to\Gamma$ 是 $\Gamma$ 中的范畴论积 $\langle n \rangle \times \langle m \rangle = \langle n + m \rangle$.</p>
 <h3>对称幺半包络</h3>
+<p>设 $p\colon \mathcal C \to \mathcal O$ 是弱 Segal 纤维化. 定义其 $\mathcal O$-<strong>幺半包络</strong> (monoidal envelope) 为
+$$
+\operatorname{Env}_{\mathcal O}(\mathcal C) := \mathcal C \times_{\mathcal O}\operatorname{Act}(\mathcal O) = \{(c\in\mathcal C,\alpha\colon o\leadsto p(c))\}.
+$$
+它构成一个 $\mathcal O$-幺半范畴, 也即 Segal 纤维化 $\operatorname{Env}_{\mathcal O}(\mathcal C)\to \mathcal O$, 对应的函子 $\mathcal O^{\mathrm{op}} \to \mathsf{Cat}$ 为
+$$
+o\mapsto \{o\leadsto p(c)\}.
+$$</p>
+<p>特别地, 取 $\mathcal O = \Gamma$, 我们就得到: 对任意对称算畴 $\mathcal C$, 其<strong>对称幺半包络</strong> $\operatorname{Env}_{\Gamma}(\mathcal C)$ 是一个对称幺半范畴 $\Gamma^{\mathrm{op}}\to\mathsf{Cat}$,
+$$
+\langle n\rangle\mapsto \{\langle n \rangle \leadsto p(c)\},
+$$
+其底层范畴为 $\{\langle 1 \rangle \leadsto p(c)\} = \mathcal C$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Spanier–Whitehead对偶"><header><h1><span class="taxon"></span>Spanier–Whitehead 对偶 <a class="slug" href="./Spanier–Whitehead对偶.html">[Spanier–Whitehead对偶]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>通过 $\mathsf{Ani}$ 的泛性质</h3>
@@ -939,7 +958,7 @@ $$</p>
 <h2>算子范畴</h2>
 <p><strong>定义</strong>. 一个<strong>算子范畴</strong> (operator category) $\Phi$ 是满足如下条件的范畴:</p>
 <ul>
-<li>$\Phi$ 具有<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span> $1$; 记 $|I|=\operatorname{Hom}(1,I)$, 称之为 $I$ 的<strong>点</strong>的集合;</li>
+<li>$\Phi$ 具有<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span> $1$; 记 $|I|:=\operatorname{Hom}(1,I)$, 称之为 $I$ 的<strong>点</strong>的集合;</li>
 <li>态射集 $\operatorname{Hom}(I,J)$ 均为有限集;</li>
 <li>对任意态射 $I\to J$ 以及 $j\in |J|$, 有<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维</a></span> $\{j\}\times_J I$.</li>
 </ul>
@@ -965,10 +984,16 @@ $$
 $$</li>
 <li>态射 $(I,(M_i)) \to (J,(N_j))$ 为
 $$
-  (\eta\colon I\to J,(\omega_j\colon M_i\to N_{\eta(i)})_{i\in |I|}).
+  (\eta\colon I\to J,(\omega_i\colon M_i\to N_{\eta(i)})_{i\in |I|}).
 $$</li>
 </ul>
-<p><strong>例</strong>. $\mathsf{Ord} \wr \mathsf{Ord}$ 的对象可理解为</p>
+<p>容易看到 $\Psi\wr\Phi$ 仍是算子范畴:</p>
+<ul>
+<li>其终对象为 $(1,(1))$;</li>
+<li>对象 $(I,(M_i))$ 的一个点就是 $I$ 的一个点 $i$ 配上 $M_i$ 的一个点, $|(I,(M_i))| \simeq \sum_{i\in I} |M_i|$ 为有限个有限集之<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>;</li>
+<li>态射 $(\eta,(\omega_i))\colon (I,(M_i)) \to (J,(N_j))$ 在点 $(j,n)$ 处的纤维为 $(\eta^{-1}(j),(\omega_i^{-1}(n))_{i\in |\eta^{-1}(j)|})$.</li>
+</ul>
+<p><strong>例</strong>. $\mathsf{Ord} \wr \mathsf{Ord}$ 的对象可理解为一个全序集上的丛, 每个纤维又是一个全序集. 态射就是把每个纤维映射到对方的某个纤维, 保持底和纤维上的序.</p>
 <p><strong>定理</strong>. 圈积是 $\mathsf{Op}$ 上的一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半</a></span>结构.</p>
 <h2>一类重要的态射: 区间含入</h2>
 <p><strong>定义</strong> (区间含入). 设 $\Phi$ 为算子范畴, 称如下<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>图中的态射 $K\to J$ 为纤维含入,
@@ -1028,10 +1053,31 @@ $$</p>
 <p><strong>例</strong>.</p>
 <ul>
 <li>$\mathsf{Fin}$ 的点分类子为 $(\{0,1\}, 1)$.</li>
-<li>$\mathsf{Ord}$ 的点分类子为 $(\{0&lt;1&lt;2\} , 1)$.</li>
-<li>$\mathsf{Ord}\wr\mathsf{Ord}$ 的点分类子为 $()$</li>
+<li>$\mathsf{Ord}$ 的点分类子为 $(\{0&lt;1&lt;2\} , 1)$; 直观: $0$ 表示基点以下, $1$ 表示基点, $2$ 表示基点以上.</li>
+<li>$\mathsf{Ord}\wr\mathsf{Ord}$ 的点分类子为 $\big({(\{0&lt;1&lt;2\},(\{0\},\{0&lt;1&lt;2\},\{0\}))},(1,1)\big)$. 直观:
+$$
+\begin{array}{ccc}
+&amp; * &amp;\
+<ul>
+<li>&amp; \star &amp; *\
+&amp; * &amp;
+\end{array}
+$$
+其中 $\star$ 表示那个特殊的点.</li>
 </ul>
-<p><strong>定义</strong> (完美算子范畴).</p>
+</li>
+<li>一般地, $\mathsf{Ord}^{\wr \,n}$ 都存在点分类子.</li>
+</ul>
+<p><strong>定义</strong> (完美算子范畴). 称满足如下条件的算子范畴 $\Phi$ 为完美算子范畴:</p>
+<ul>
+<li>$\Phi$ 存在点分类子 $(T,t)$;</li>
+<li>函子 $\operatorname{fib}\colon \Phi_{/T} \to \Phi$ 有<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">右伴随</a></span>.</li>
+</ul>
+<p>由于这对伴随, 完美算子范畴 $\Phi$ <span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出 $\Phi$ 上的单子</a></span> $T_\Phi$.</p>
+<p><strong>例</strong>.</p>
+<ul>
+<li></li>
+</ul>
 <h2>Leinster 范畴</h2>
 <p><strong>定义</strong>. 设 $\Phi$ 为完美算子范畴, 称 $T_\Phi$ 的 <span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>为 $\Phi$ 的 <strong>Leinster 范畴</strong> $\Lambda (\Phi)$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="tutorial-highercat"><header><h1><span class="taxon"></span>高阶范畴论 <a class="slug" href="./tutorial-highercat.html">[tutorial-highercat]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -1244,7 +1290,7 @@ $$
 <li>活性映射就是居于 $\Gamma$ 中的活性映射之上的映射.</li>
 </ul>
 <p>上述结构的底不必为 $\Gamma$, 而是可以推广到任意代数模式上. 这说明 Lurie $\infty$-算畴不过是如下 “弱 Segal 纤维化” 的概念在 $\Gamma$ 上的特例.</p>
-<p><strong>定义</strong>. 设 $\mathcal O$ 为代数模式, 定义<strong>弱 Segal $\mathcal O$-纤维化</strong>为函子 $p\colon \mathcal E \to \mathcal O$, 满足</p>
+<p><strong>定义</strong>. 设 $\mathcal O$ 为代数模式, 定义<strong></strong><span class="link local"><a href="./弱Segal纤维化.html" title="弱 Segal 纤维化 (代数体) [弱Segal纤维化]">弱 Segal $\mathcal O$-纤维化</a></span>为函子 $p\colon \mathcal E \to \mathcal O$, 满足</p>
 <ul>
 <li>$\mathcal O$ 中的惰性映射存在水平提升 (换言之, 有函子 $\mathcal O_{\mathrm{int}}^{\mathrm{op}} \to \mathsf{Cat}$, $N\mapsto \mathcal E_N$);</li>
 <li>对任意 $N\in\mathcal O$, 函子 $\mathcal E_N \to \operatorname{lim}_{E\rightarrowtail N}\mathcal E_{E}$ 为等价;</li>

@@ -931,13 +931,19 @@ $$
 <li>惰性映射就是定义中的惰性提升;</li>
 <li>活性映射就是居于 $\Gamma$ 中的活性映射之上的映射.</li>
 </ul>
-<p>上述结构的底不必为 $\Gamma$, 而是可以推广到任意代数模式上. 若代数模式的态射 $\mathcal O \to \mathcal P$ 满足上述条件, 则称之为<strong>弱 Segal 纤维化</strong>.</p>
+<p>上述结构的底不必为 $\Gamma$, 而是可以推广到任意代数模式上. 若代数模式的态射 $\mathcal O \to \mathcal P$ 满足上述条件, 则称之为<strong></strong><span class="link local"><a href="./弱Segal纤维化.html" title="弱 Segal 纤维化 (代数体) [弱Segal纤维化]">弱 Segal 纤维化</a></span>.</p>
+<p>以下是一个对照表.</p>
+<table><thead><tr><th><span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span></th><th>HADR</th></tr></thead><tbody>
+<tr><td>$\mathcal O^{\otimes} \to \mathrm{N}(\mathrm{Fin}_*)$</td><td>$\mathcal O \to \Gamma$ (注意约定相反)</td></tr>
+<tr><td>fibration of $\infty$-operads</td><td>弱 Segal 纤维化</td></tr>
+<tr><td>coCartesian fibration of $\infty$-operads</td><td>Segal 纤维化</td></tr>
+</tbody></table>
 <h3>对称算畴的基本例子</h3>
 <p><strong>例</strong>. 记 $\mathsf{Triv} := \Gamma_{\mathrm{int}} \to \Gamma$, 称之为平凡算畴. 平凡算畴的代数就是没有任何结构的对象.</p>
 <p><strong>例</strong>. 记 $\mathbb E_0 \to \Gamma$ 为 $\Gamma$ 中 “将每个元素对应到一个至多一元子集” 的映射构成的宽子范畴, $\mathbb E_0$-代数就是<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点对象</a></span>.</p>
 <p><strong>例</strong>. $\Gamma$ 上的 Segal 纤维化 $\mathcal C \to \Gamma$, 对应于 Segal 对象 $\Gamma^{\mathrm{op}} \to \mathsf{Cat}$, 即<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> (其底层范畴为 $\mathcal C_{\langle 1\rangle}$); 它也构成对称算畴.</p>
 <h2>非对称算畴</h2>
-<p>称 $\Delta$ 上的弱 Segal 纤维化为<strong>非对称算畴</strong>. 直观上, 一个算畴给出一族无序 $n$ 元运算, 而一个非对称算畴给出一族有序 $n$ 元运算.</p>
+<p>称 $\Delta$ 上的<span class="link local"><a href="./弱Segal纤维化.html" title="弱 Segal 纤维化 (代数体) [弱Segal纤维化]">弱 Segal 纤维化</a></span>为<strong>非对称算畴</strong>. 直观上, 一个算畴给出一族无序 $n$ 元运算, 而一个非对称算畴给出一族有序 $n$ 元运算.</p>
 <p><strong>例</strong>. 记 $\Delta_{\leq n} \hookrightarrow \Delta$ 为对象 $[0],[1],\cdots,[n]$ 构成的全子范畴, 则 $\Delta_{\leq n}$ 继承 $\Delta$ 的代数模式结构, 构成一个非对称算畴; 称该模式为 <span class="link local"><a href="./An-代数.html" title="A_n-代数 [An-代数]">$\mathbb A_n$</a></span>.</p>
 <h2>算畴的操作</h2>
 <h3>余积</h3>
@@ -947,6 +953,19 @@ $$
 $$
 其中 $\times\colon \Gamma\times\Gamma\to\Gamma$ 是 $\Gamma$ 中的范畴论积 $\langle n \rangle \times \langle m \rangle = \langle n + m \rangle$.</p>
 <h3>对称幺半包络</h3>
+<p>设 $p\colon \mathcal C \to \mathcal O$ 是弱 Segal 纤维化. 定义其 $\mathcal O$-<strong>幺半包络</strong> (monoidal envelope) 为
+$$
+\operatorname{Env}_{\mathcal O}(\mathcal C) := \mathcal C \times_{\mathcal O}\operatorname{Act}(\mathcal O) = \{(c\in\mathcal C,\alpha\colon o\leadsto p(c))\}.
+$$
+它构成一个 $\mathcal O$-幺半范畴, 也即 Segal 纤维化 $\operatorname{Env}_{\mathcal O}(\mathcal C)\to \mathcal O$, 对应的函子 $\mathcal O^{\mathrm{op}} \to \mathsf{Cat}$ 为
+$$
+o\mapsto \{o\leadsto p(c)\}.
+$$</p>
+<p>特别地, 取 $\mathcal O = \Gamma$, 我们就得到: 对任意对称算畴 $\mathcal C$, 其<strong>对称幺半包络</strong> $\operatorname{Env}_{\Gamma}(\mathcal C)$ 是一个对称幺半范畴 $\Gamma^{\mathrm{op}}\to\mathsf{Cat}$,
+$$
+\langle n\rangle\mapsto \{\langle n \rangle \leadsto p(c)\},
+$$
+其底层范畴为 $\{\langle 1 \rangle \leadsto p(c)\} = \mathcal C$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Segal范畴Γ"><header><h1><span class="taxon"></span>Segal 范畴 Γ <a class="slug" href="./Segal范畴Γ.html">[Segal范畴Γ]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <h2>定义</h2>

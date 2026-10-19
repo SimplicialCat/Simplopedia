@@ -1306,7 +1306,7 @@ $$</p>
 <h2>算子范畴</h2>
 <p><strong>定义</strong>. 一个<strong>算子范畴</strong> (operator category) $\Phi$ 是满足如下条件的范畴:</p>
 <ul>
-<li>$\Phi$ 具有<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span> $1$; 记 $|I|=\operatorname{Hom}(1,I)$, 称之为 $I$ 的<strong>点</strong>的集合;</li>
+<li>$\Phi$ 具有<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span> $1$; 记 $|I|:=\operatorname{Hom}(1,I)$, 称之为 $I$ 的<strong>点</strong>的集合;</li>
 <li>态射集 $\operatorname{Hom}(I,J)$ 均为有限集;</li>
 <li>对任意态射 $I\to J$ 以及 $j\in |J|$, 有<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维</a></span> $\{j\}\times_J I$.</li>
 </ul>
@@ -1332,10 +1332,16 @@ $$
 $$</li>
 <li>态射 $(I,(M_i)) \to (J,(N_j))$ 为
 $$
-  (\eta\colon I\to J,(\omega_j\colon M_i\to N_{\eta(i)})_{i\in |I|}).
+  (\eta\colon I\to J,(\omega_i\colon M_i\to N_{\eta(i)})_{i\in |I|}).
 $$</li>
 </ul>
-<p><strong>例</strong>. $\mathsf{Ord} \wr \mathsf{Ord}$ 的对象可理解为</p>
+<p>容易看到 $\Psi\wr\Phi$ 仍是算子范畴:</p>
+<ul>
+<li>其终对象为 $(1,(1))$;</li>
+<li>对象 $(I,(M_i))$ 的一个点就是 $I$ 的一个点 $i$ 配上 $M_i$ 的一个点, $|(I,(M_i))| \simeq \sum_{i\in I} |M_i|$ 为有限个有限集之<span class="link local"><a href="./和(范畴论).html" title="和 (范畴论) [和(范畴论)]">和</a></span>;</li>
+<li>态射 $(\eta,(\omega_i))\colon (I,(M_i)) \to (J,(N_j))$ 在点 $(j,n)$ 处的纤维为 $(\eta^{-1}(j),(\omega_i^{-1}(n))_{i\in |\eta^{-1}(j)|})$.</li>
+</ul>
+<p><strong>例</strong>. $\mathsf{Ord} \wr \mathsf{Ord}$ 的对象可理解为一个全序集上的丛, 每个纤维又是一个全序集. 态射就是把每个纤维映射到对方的某个纤维, 保持底和纤维上的序.</p>
 <p><strong>定理</strong>. 圈积是 $\mathsf{Op}$ 上的一个<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半</a></span>结构.</p>
 <h2>一类重要的态射: 区间含入</h2>
 <p><strong>定义</strong> (区间含入). 设 $\Phi$ 为算子范畴, 称如下<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>图中的态射 $K\to J$ 为纤维含入,
@@ -1395,10 +1401,31 @@ $$</p>
 <p><strong>例</strong>.</p>
 <ul>
 <li>$\mathsf{Fin}$ 的点分类子为 $(\{0,1\}, 1)$.</li>
-<li>$\mathsf{Ord}$ 的点分类子为 $(\{0&lt;1&lt;2\} , 1)$.</li>
-<li>$\mathsf{Ord}\wr\mathsf{Ord}$ 的点分类子为 $()$</li>
+<li>$\mathsf{Ord}$ 的点分类子为 $(\{0&lt;1&lt;2\} , 1)$; 直观: $0$ 表示基点以下, $1$ 表示基点, $2$ 表示基点以上.</li>
+<li>$\mathsf{Ord}\wr\mathsf{Ord}$ 的点分类子为 $\big({(\{0&lt;1&lt;2\},(\{0\},\{0&lt;1&lt;2\},\{0\}))},(1,1)\big)$. 直观:
+$$
+\begin{array}{ccc}
+&amp; * &amp;\
+<ul>
+<li>&amp; \star &amp; *\
+&amp; * &amp;
+\end{array}
+$$
+其中 $\star$ 表示那个特殊的点.</li>
 </ul>
-<p><strong>定义</strong> (完美算子范畴).</p>
+</li>
+<li>一般地, $\mathsf{Ord}^{\wr \,n}$ 都存在点分类子.</li>
+</ul>
+<p><strong>定义</strong> (完美算子范畴). 称满足如下条件的算子范畴 $\Phi$ 为完美算子范畴:</p>
+<ul>
+<li>$\Phi$ 存在点分类子 $(T,t)$;</li>
+<li>函子 $\operatorname{fib}\colon \Phi_{/T} \to \Phi$ 有<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">右伴随</a></span>.</li>
+</ul>
+<p>由于这对伴随, 完美算子范畴 $\Phi$ <span class="link local"><a href="./伴随给出单子.html" title="伴随给出单子 [伴随给出单子]">给出 $\Phi$ 上的单子</a></span> $T_\Phi$.</p>
+<p><strong>例</strong>.</p>
+<ul>
+<li></li>
+</ul>
 <h2>Leinster 范畴</h2>
 <p><strong>定义</strong>. 设 $\Phi$ 为完美算子范畴, 称 $T_\Phi$ 的 <span class="link local"><a href="./Kleisli范畴.html" title="Kleisli 范畴 [Kleisli范畴]">Kleisli 范畴</a></span>为 $\Phi$ 的 <strong>Leinster 范畴</strong> $\Lambda (\Phi)$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="six-functors"><header><h1><span class="taxon"></span>六函子 <a class="slug" href="./six-functors.html">[six-functors]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li></ul></div></header></summary>

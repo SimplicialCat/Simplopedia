@@ -997,7 +997,7 @@ $$
 <li>活性映射就是居于 $\Gamma$ 中的活性映射之上的映射.</li>
 </ul>
 <p>上述结构的底不必为 $\Gamma$, 而是可以推广到任意代数模式上. 这说明 Lurie $\infty$-算畴不过是如下 “弱 Segal 纤维化” 的概念在 $\Gamma$ 上的特例.</p>
-<p><strong>定义</strong>. 设 $\mathcal O$ 为代数模式, 定义<strong>弱 Segal $\mathcal O$-纤维化</strong>为函子 $p\colon \mathcal E \to \mathcal O$, 满足</p>
+<p><strong>定义</strong>. 设 $\mathcal O$ 为代数模式, 定义<strong></strong><span class="link local"><a href="./弱Segal纤维化.html" title="弱 Segal 纤维化 (代数体) [弱Segal纤维化]">弱 Segal $\mathcal O$-纤维化</a></span>为函子 $p\colon \mathcal E \to \mathcal O$, 满足</p>
 <ul>
 <li>$\mathcal O$ 中的惰性映射存在水平提升 (换言之, 有函子 $\mathcal O_{\mathrm{int}}^{\mathrm{op}} \to \mathsf{Cat}$, $N\mapsto \mathcal E_N$);</li>
 <li>对任意 $N\in\mathcal O$, 函子 $\mathcal E_N \to \operatorname{lim}_{E\rightarrowtail N}\mathcal E_{E}$ 为等价;</li>
@@ -1322,4 +1322,44 @@ $$
 $$
 (其中 $\Delta_{\mathsf{Fin}}^1$ 是所有以 $*$ 结尾的 $\mathsf{Fin}$-序列的范畴)
 从而说明算畴的所有定义等价.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="分层树"><header><h1><span class="taxon"></span>分层树 <a class="slug" href="./分层树.html">[分层树]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>普通分层树</h3>
+<p><strong>分层树</strong>是有限集的序列
+$$
+1 \leftarrow t_1 \leftarrow \cdots \leftarrow t_n,
+$$
+简记为 $[n;t]$.
+分层树的态射 $[n;t] \to [m;s]$ 是偏序集映射 $\phi\colon [n] \to [m]$ 配上一族<strong>单射</strong> $t_i \rightarrowtail s_{\phi (i)}$.</p>
+<p>直观上一棵分层树就是一棵<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>的每个边带有一个自然数作为层级, 树的根是第 $0$ 层, $t_0 = 1$ (树只有一个根), 第 $n$ 层的边上面是第 $n+1$ 层, 映射 $t_n \leftarrow t_{n+1}$ 对第 $n+1$ 层的边指定其下方紧邻的边.</p>
+<p><strong>注</strong>.</p>
+<ul>
+<li>分层树与<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>的区别在于态射: 分层树的态射必须把第 $i$ 层的边都映射到第 $\phi(i)$ 层的边, 而树的态射则可能将同一层的边映射到不同层的边.</li>
+<li>尽管如此, 分层树和树都构成<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>, 都可用于定义<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">对称算畴</a></span>, <span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span> (参见 <span class="link local"><a href="./CHHoperads.html" title="Two models for the homotopy theory of ∞-operads [CHHoperads]">CHH</a></span>).</li>
+</ul>
+<h3>代数模式的分层树</h3>
+<p>普通的分层树是如下概念的特例. 设 $\mathcal O$ 为<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>, 定义 $\mathcal O$-<strong>分层树</strong>为<strong>活性</strong>映射的序列
+$$
+t_0 \leadsto t_1 \leadsto \cdots \leadsto t_n,
+$$
+且 $t_0$ 为基本对象, 将分层树简记为 $[n;t]$.
+分层树的态射 $[n;t] \to [m;s]$ 是偏序集映射 $\phi\colon [n] \to [m]$ 配上一族<strong>惰性</strong>映射 $t_i \rightarrowtail s_{\phi (i)}$.</p>
+<p><strong>注</strong>.</p>
+<ul>
+<li>注意我们和另一些文献对于代数模式的约定相反.</li>
+<li>有限集的映射 $t_1 \leftarrow t_2$ 等同于 $\Gamma$ 中的活性映射 $t_1 \leadsto t_2$, 而惰性映射 $t \rightarrowtail s$ 等同于有限集的单射 $t\hookrightarrow s$. 故普通的分层树是 $\mathcal O$-分层树在 $\mathcal O = \Gamma$ 的特例.</li>
+</ul>
+<p><strong>定义</strong>. 在 $\mathcal O$-分层树的范畴中,</p>
+<ul>
+<li>对象 $[0;e]$ 称为<strong>根</strong> ($e$ 为基本对象);</li>
+<li>对象 $[1;e\leadsto t_1]$ 称为<strong>花冠</strong>.</li>
+</ul>
+<h2>性质</h2>
+<h3>分层树的代数模式</h3>
+<p>前面说到代数模式 $\mathcal O$ 有分层树的概念, 这些分层树构成一个新的代数模式 $\Omega [\mathcal O]$, 其中</p>
+<ul>
+<li>基本对象为根与花冠;</li>
+<li>态射 $[n;t] \to [m;s]$ 为惰性映射, 当且仅当其对应的偏序集映射 $\phi\colon [n] \to [m]$ 为惰性映射 (区间含入);</li>
+<li>态射 $[n;t] \to [m;s]$ 为活性映射, 当且仅当 $\phi\colon [n] \to [m]$ 为活性映射 (保端点), 且每个 $t_i \to s_{\phi (i)}$ 为等价.</li>
+</ul>
 </details></section></details></section></footer></article></div></body></html>
