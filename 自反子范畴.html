@@ -1240,6 +1240,9 @@ $$
 <li>$U_{a+b}\leq U_a\lor U_b$.</li>
 </ul>
 <p>详见 <span class="link local"><a href="./Zariski位象.html" title="Zariski 位象 [Zariski位象]">Zariski 位象</a></span>.</p>
+<h3>测度给出位象 (没有点的位象的例子)</h3>
+<p>设 $X$ 为测度空间, 定义其可测子集的全体上的一个 <span class="link local"><a href="./Grothendieck拓扑.html" title="Grothendieck 拓扑 [Grothendieck拓扑]">Grothendieck 拓扑</a></span>; 可测子集 $U$ 被一些子集 $U_i\subset U$ 覆盖当且仅当 $U \setminus (\bigcup_i U_i)$ 为零测集. 那么这个 Grothendieck 拓扑定义了一个位象.</p>
+<p>这个位象的点是 $X$ 中具有正测度的点. 特别地, 若 $X$ 的每个点都是零测的, 那么这个位象没有点.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./凝聚位象.html" title="凝聚位象 [凝聚位象]">凝聚位象</a></span></p>
 <h2>参考资料</h2>
@@ -1341,6 +1344,7 @@ $$
    \operatorname{Hom}^f(X,Y) \simeq \operatorname{lim}_{g\colon E\rightarrowtail N}\operatorname{Hom}^{fg}(g^*X,Y).
 $$</li>
 </ul>
+<p>弱 Segal 纤维化之间的态射是保持惰性映射的水平提升的态射.</p>
 <h3>通过分层树的代数模式</h3>
 <p><span class="link local"><a href="./BlomLoubatonRuitAlgd.html" title="Day convolution for algebraic patterns [BlomLoubatonRuitAlgd]">Blom–Loubaton–Ruit</a></span> 证明代数模式 $\mathcal O$ 上的弱 Segal 纤维化等同于 $\mathcal O$-<span class="link local"><a href="./分层树.html" title="分层树 [分层树]">分层树</a></span>构成的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span> $\Omega [\mathcal O]$ 的完备 Segal 对象 (意思是其底层 Segal 生象为<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 生象</a></span>):
 $$
@@ -1365,7 +1369,8 @@ $$
 <p>注意 $\operatorname{Env}_{\mathcal O} (\mathcal P)$
 一个直观: $\Gamma$ 上的弱 Segal 纤维化是<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>, 有多个对象到一个对象的态射, 但不一定有张量积; 其 $\Gamma$-幺半包络 (即对称幺半包络) 就是由所有形式记号 $x_1 \otimes \cdots\otimes x_n$ 构成的范畴, 满足态射 $x_1 \otimes \cdots\otimes x_n \to y$ 等同于原来多重范畴中的多重态射 $(x_1,\cdots,x_n) \to y$.</p>
 <h3>与松函子的关系</h3>
-<p>设 $\mathcal C \to \Gamma$, $\mathcal D \to \Gamma$ 为 Segal 纤维化, 对应两个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 将它们遗忘为弱 Segal 纤维化, 则弱 Segal 纤维化的态射 $\mathcal C \to \mathcal D$ 等同于 $\mathcal C$ 到 $\mathcal D$ 的<span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">松对称幺半函子</a></span>.</p>
+<p>设 $\mathcal C \to \Gamma$, $\mathcal D \to \Gamma$ 为 Segal 纤维化, 对应两个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 将它们遗忘为弱 Segal 纤维化, 则弱 Segal 纤维化的态射 $\mathcal C \to \mathcal D$ 等同于 $\mathcal C$ 到 $\mathcal D$ 的<span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">余松对称幺半函子</a></span>.</p>
+<p>见<span class="link local"><a href="./松态射.html" title="松态射 [松态射]">松态射</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="截断性"><header><h1><span class="taxon"></span>截断性 <a class="slug" href="./截断性.html">[截断性]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <h2>定义</h2>

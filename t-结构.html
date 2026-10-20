@@ -1297,6 +1297,135 @@ $$</p>
 <p>$\mathcal P|_U = \bigoplus \mathcal L_\alpha [\dim U_\alpha]$, 故 $X$ 实际上只有一个不可约分支.</p>
 <p>我们断言 $\mathcal P|_U$ 单. …</p>
 <p><strong>定理</strong>. $\mathsf{Perv}(X)$ 满足 Artin 条件 (降链稳定) 和 Noether 条件 (升链稳定), 即每个对象都有有限长度.</p>
+<h2>第 5 讲 (2026-10-20)</h2>
+<p>上回定义并研究了 $\mathrm{IC}$ 对象. 我们将看到偏屈 $t$-结构比通常 $t$-结构表现更好.</p>
+<p>我们将研究对于映射 $f\colon X\to Y$, 四个函子何时正合, 以及其上同调振幅.</p>
+<p><strong>命题</strong>. 当 $f$ 的纤维维数不超过 $d$ 时,</p>
+<ul>
+<li>$f^* (D^{p,\leq 0}) \subset D^{p,\leq d}$;</li>
+<li>$f_* (D^{p,\geq 0}) \subset D^{p,\geq -d}$;</li>
+<li>$f^! (D^{p,\geq 0}) \subset D^{p,\geq -d}$;</li>
+<li>$f_! (D^{p,\leq 0}) \subset D^{p,\leq d}$.</li>
+</ul>
+<p>由伴随和 Verdier 对偶, 四个性质等价, 只需证明其中一条.</p>
+<p>需要证明对于 $M\in D^{p,\leq 0}$,
+$$
+\operatorname{dim}\operatorname{supp}H^r (f^* M) \leq -r+d.
+$$
+而
+$$
+\operatorname{dim}\operatorname{supp}H^r (f^* M) = \operatorname{dim} f^*\operatorname{supp}H^r (M),
+$$
+一个支集的原像至多增加纤维的维数.</p>
+<p><strong>推论</strong>. 若 $f$ 是光滑映射, 相对维数为 $d$, 则 $f^! [-d] = f^* [d]$ 为偏屈 $t$-结构下的 $t$-正合函子.</p>
+<p><strong>习题</strong>. 考虑映射 $\mathbb{C}\to\mathbb{C}$, $x\mapsto x^2$.</p>
+<p><strong>定理</strong> (相对 Artin 估计) 若 $f\colon X\to Y$ 为<span class="link local"><a href="./仿射态射.html" title="仿射态射 [仿射态射]">仿射映射</a></span>, $M\in \mathsf{Sh}_c (X)$ 为<span class="link local"><a href="./可构造层.html" title="可构造层 [可构造层]">可构造层</a></span>, 则
+$$
+\operatorname{dim}\operatorname{supp} H^r (f_* M) \leq \operatorname{dim}\operatorname{supp} M - r.
+$$
+(注意此式与纤维的维数无关.)</p>
+<p><strong>推论</strong>. 若 $f\colon X\to Y$ 为<span class="link local"><a href="./仿射态射.html" title="仿射态射 [仿射态射]">仿射映射</a></span>, 则</p>
+<ul>
+<li>$f_* (D^{p,\leq 0}) \subset D^{p,\leq 0}$;</li>
+<li>$f_! (D^{p,\geq 0}) \subset D^{p,\geq 0}$.</li>
+</ul>
+<p><strong>推论</strong> (绝对情形, Artin 消失定理). 设 $X$ 仿射, $M\in \mathsf{Sh}_c (X)$, 则 $H^r (X,M) =0$ ($r &gt; \operatorname{dim}X$).</p>
+<p>此前我们只知道 $r &gt; 2\operatorname{dim}X$ (实维数) 时上同调消失, 所以这个命题令人惊讶. 但实际上我们有如下结论.</p>
+<p><strong>断言</strong>. 仿射复代数簇 $X$ 具有一个不超过 $\operatorname{dim} X$ 维的 CW 复形的同伦型.</p>
+<p>这个结论是用 <span class="link local"><a href="./Morse理论.html" title="Morse 理论 [Morse理论]">Morse 理论</a></span>证明的. 找一个 Morse 函数, 即实函数 $\varphi\colon X \to \mathbb{R}$, 使得 $X$ 的同伦型可通过逐次粘贴胞腔得到, 每次对应 $\varphi$ 的一个临界点, 胞腔维数是临界点的 Morse 指标. 将 $X$ 闭嵌入某个 $\mathbb A^n$, 取一个一般位置的点 $y\in\mathbb A^n$ 使得到 $y$ 的距离的平方给出 Morse 函数. 虽然 $X$ 不是紧的, 但我们可以让 $\varphi$ 在任何一个区间内的部分 $X_{[a,b]}$ 都是紧的.</p>
+<blockquote>
+<p>平展情形的 Artin 消失定理的证明在 SGA 4, 4.5. 这是一个很好的报告主题.</p>
+</blockquote>
+<p>若 $M\in D^b_c$ 不是一个普通的层, 我们还能对 $f_* M$ 说什么? 我们知道 $M$ 有一个<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤过</a></span>, 其关联分次对象为 $H^r (M) [-r]$. 那么 $f_* M$ 有一个<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤过</a></span>, 其关联分次对象为
+$$
+H^s (f_* H^r (M)) [ -r - s ].
+$$</p>
+<p><span class="link local"><a href="./谱序列.html" title="谱序列 [谱序列]">谱序列</a></span>正是用来处理这种对象的: 稳定范畴中的滤过在正合函子下的像.</p>
+<h3>半小性</h3>
+<p>设 $X$ 光滑, $\operatorname{dim}X = d$. 对于映射 $f\colon X\to Y$, 若</p>
+<ul>
+<li>$\operatorname{dim}\{y\in Y\mid\operatorname{dim}f^{-1}(y)\geq r\} \leq d - 2r$,</li>
+<li>(等价地) $\operatorname{dim}(X\times_Y X) \leq \operatorname{dim}X$,</li>
+</ul>
+<p>则称 $f$ 是半小 (semismall) 的.</p>
+<p><strong>习题</strong>. 构造 $Y = \{\det\begin{pmatrix}a&amp;b\\c&amp;d\end{pmatrix} = 0\}$ 的半小消解.</p>
+<p>我们想要用消解研究奇性代数簇 $Y$.</p>
+<p><strong>命题</strong>. 若 $f$ 半小, 则 $f_*\mathrm{IC}_X$ 为偏屈层</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="交换Hopf代数胚"><header><h1><span class="taxon"></span>交换 Hopf 代数胚 <a class="slug" href="./交换Hopf代数胚.html">[交换Hopf代数胚]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>交换 Hopf 代数胚是<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射概形</a></span>范畴中的<span class="link local"><a href="./群胚.html" title="群胚 [群胚]">群胚</a></span>的<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数侧对偶</a></span>概念.</p>
+<h2>定义</h2>
+<p>…</p>
+<h3>余模</h3>
+<p>交换 Hopf 代数胚 $(A,\Gamma)$ 上的<strong>余模</strong>为 $A$-模 $M$, 带有余作用
+$$
+\eta \colon M \to \Gamma\otimes_A M,
+$$
+满足</p>
+<ul>
+<li>(余单位律) $M \to \Gamma\otimes_A M \to M = \operatorname{id}_M$;</li>
+<li>(余结合律) $M\to \Gamma\otimes_A \Gamma\otimes_A M$ 的两个映射相等.</li>
+</ul>
+<p>余模可以理解为<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>沿 $\operatorname{Spec}\Gamma\to\operatorname{Spec} A$ 的 <span class="link local"><a href="./Čech脉.html" title="Čech 脉 [Čech脉]">Čech 脉</a></span>的<span class="link local"><a href="./下降.html" title="下降 [下降]">下降数据</a></span>.</p>
+<h2>性质</h2>
+<h3>与叠的关系</h3>
+<p>一个交换 Hopf 代数胚 $(A,\Gamma)$ 也给出一个<span class="link local"><a href="./叠.html" title="叠 [叠]">叠</a></span> (<span class="link local"><a href="./代数叠.html" title="代数叠 [代数叠]">代数叠</a></span>)
+$$
+\mathcal M_{(A,\Gamma)}\colon \mathsf {Ring} \to \mathsf {Grpd},
+$$
+$$
+R\mapsto \{\operatorname{Hom}_{\mathsf {Ring}}(\Gamma,R)\rightrightarrows \operatorname{Hom}_{\mathsf {Ring}}(A,R)\}.
+$$</p>
+<p>交换 Hopf 代数胚 $(A,\Gamma)$ 上的余模即是叠 $\mathcal M_{(A,\Gamma)}$ 上的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>.</p>
+<h2>例</h2>
+<h3>平坦交换环谱</h3>
+<p>设 $E$ 是满足某种<span class="link local"><a href="./平坦环同态.html" title="平坦环同态 [平坦环同态]">平坦</a></span>条件 (将在下文中说明) 的<span class="link local"><a href="./E∞-环.html" title="E∞-环 [E∞-环]">交换环谱</a></span>, 则有交换 Hopf 代数胚 $(E_* E, E_*)$, 即 <span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">$\mathsf{Aff}$</a></span> 中的<span class="link local"><a href="./群胚对象.html" title="群胚对象 (∞-范畴论) [群胚对象]">群胚对象</a></span>
+$$
+\operatorname{Spec}(E_* E) \rightrightarrows \operatorname{Spec}(E_*).
+$$</p>
+<p>我们解释这一现象. 对任意交换环谱 $E\in\mathsf{CAlg}(\mathsf{Sp})$, 考虑唯一的环同态 $\mathbb S \to E$ 在<span class="link local"><a href="./反范畴.html" title="反范畴 [反范畴]">反范畴</a></span>中的化身
+$$
+\operatorname{Spec}(E) \to \operatorname{Spec}(\mathbb S),
+$$
+其 <span class="link local"><a href="./Čech脉.html" title="Čech 脉 [Čech脉]">Čech 脉</a></span>为 (谱代数几何意义下) 仿射概形中的余离散<span class="link local"><a href="./群胚对象.html" title="群胚对象 (∞-范畴论) [群胚对象]">群胚对象</a></span>
+$$
+\Delta^{\mathrm{op}} \to \mathsf{CAlg}(\mathsf{Sp})^{\mathrm{op}},
+$$
+$$
+[n]\mapsto\operatorname{Spec}(E)^{\times (n+1)} = \operatorname{Spec}(E^{\land (n+1)}).\,(\star)
+$$</p>
+<p>我们知道<span class="link local"><a href="./同伦群(稳定同伦论).html" title="同伦群 (稳定同伦论) [同伦群(稳定同伦论)]">同伦群</a></span>函子
+$$
+\pi_*\colon (\mathsf{Sp},\land) \to (\mathsf{grAb},\otimes)
+$$
+是<span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">松对称幺半函子</a></span>, 从而将<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>变为交换代数:
+$$
+\pi_*\colon \mathsf{CAlg}(\mathsf{Sp}) \to \mathsf{CAlg}(\mathsf{grAb}).
+$$
+因此对 $(\star)$ 作用 $\pi_*$ 即得到 $\mathsf{CAlg}(\mathsf{grAb})^{\mathrm{op}}$ 中的<span class="link local"><a href="./单纯对象.html" title="单纯对象 [单纯对象]">单纯对象</a></span>
+$$
+\Delta^{\mathrm{op}}\to \mathsf{CAlg}(\mathsf{grAb})^{\mathrm{op}},
+$$
+$$
+[n]\mapsto\operatorname{Spec}\pi_* (E^{\land (n+1)}).
+$$
+要让这个单纯对象构成<span class="link local"><a href="./群胚对象.html" title="群胚对象 (∞-范畴论) [群胚对象]">群胚对象</a></span>, 需要 Segal 条件. 我们观察其中最简单的一个非平凡条件, 即对应单形 $[2] = [1]\sqcup_{[0]}[1]$ 的 Segal 条件:
+$$
+\operatorname{Spec}\pi_* (E\land E \land E) \overset{\simeq}{\to} \operatorname{Spec}\pi_* (E\land E)\times_{\operatorname{Spec}\pi_* (E)}\operatorname{Spec}\pi_* (E\land E),
+$$
+也即
+$$
+\pi_* (E\land E \land E) \overset{\simeq}{\leftarrow} \pi_* (E\land E)\otimes_{\pi_* (E)}\pi_* (E\land E).
+$$
+暂记 $F = E \land E$, 那么上述条件可重写为
+$$
+\pi_* (F \land_E F) \overset{\simeq}{\leftarrow} \pi_* (F)\otimes_{\pi_* (E)}\pi_* (F).\,(\dagger)
+$$</p>
+<p><strong>断言</strong>. $E$ 的平坦性保证了 $F\land_E (-)$ 为 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">$t$-正合函子</a></span>, 从而对任意 $E$-<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span> $X$ 有
+$$
+\pi_* (F \land_E X) \overset{\simeq}{\leftarrow} \pi_* (F) \otimes_{\pi_* (E)} \pi_* (X),
+$$
+特别地, 映射 $(\dagger)$ 为同构.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="佐武等价"><header><h1><span class="taxon"></span>佐武等价 <a class="slug" href="./佐武等价.html">[佐武等价]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>佐武 (Satake) 等价</strong>是 <span class="link local"><a href="./Langlands对偶.html" title="Langlands 对偶群 [Langlands对偶]">Langlands 对偶群</a></span>的一种 “实现”: 由 $G$ 构造的某个几何对象上的某种层范畴实现了其对偶群 $^LG$ 的表示范畴; 再由<span class="link local"><a href="./淡中对偶.html" title="淡中对偶 [淡中对偶]">淡中对偶</a></span>可提取出对偶群. 几何佐武等价是<span class="link local"><a href="./几何Langlands对应.html" title="几何 Langlands 对应 [几何Langlands对应]">几何 Langlands 对应</a></span>的基石.</p>

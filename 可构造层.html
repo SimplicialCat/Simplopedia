@@ -1161,6 +1161,60 @@ $$</p>
 <p>$\mathcal P|_U = \bigoplus \mathcal L_\alpha [\dim U_\alpha]$, 故 $X$ 实际上只有一个不可约分支.</p>
 <p>我们断言 $\mathcal P|_U$ 单. …</p>
 <p><strong>定理</strong>. $\mathsf{Perv}(X)$ 满足 Artin 条件 (降链稳定) 和 Noether 条件 (升链稳定), 即每个对象都有有限长度.</p>
+<h2>第 5 讲 (2026-10-20)</h2>
+<p>上回定义并研究了 $\mathrm{IC}$ 对象. 我们将看到偏屈 $t$-结构比通常 $t$-结构表现更好.</p>
+<p>我们将研究对于映射 $f\colon X\to Y$, 四个函子何时正合, 以及其上同调振幅.</p>
+<p><strong>命题</strong>. 当 $f$ 的纤维维数不超过 $d$ 时,</p>
+<ul>
+<li>$f^* (D^{p,\leq 0}) \subset D^{p,\leq d}$;</li>
+<li>$f_* (D^{p,\geq 0}) \subset D^{p,\geq -d}$;</li>
+<li>$f^! (D^{p,\geq 0}) \subset D^{p,\geq -d}$;</li>
+<li>$f_! (D^{p,\leq 0}) \subset D^{p,\leq d}$.</li>
+</ul>
+<p>由伴随和 Verdier 对偶, 四个性质等价, 只需证明其中一条.</p>
+<p>需要证明对于 $M\in D^{p,\leq 0}$,
+$$
+\operatorname{dim}\operatorname{supp}H^r (f^* M) \leq -r+d.
+$$
+而
+$$
+\operatorname{dim}\operatorname{supp}H^r (f^* M) = \operatorname{dim} f^*\operatorname{supp}H^r (M),
+$$
+一个支集的原像至多增加纤维的维数.</p>
+<p><strong>推论</strong>. 若 $f$ 是光滑映射, 相对维数为 $d$, 则 $f^! [-d] = f^* [d]$ 为偏屈 $t$-结构下的 $t$-正合函子.</p>
+<p><strong>习题</strong>. 考虑映射 $\mathbb{C}\to\mathbb{C}$, $x\mapsto x^2$.</p>
+<p><strong>定理</strong> (相对 Artin 估计) 若 $f\colon X\to Y$ 为<span class="link local"><a href="./仿射态射.html" title="仿射态射 [仿射态射]">仿射映射</a></span>, $M\in \mathsf{Sh}_c (X)$ 为<span class="link local"><a href="./可构造层.html" title="可构造层 [可构造层]">可构造层</a></span>, 则
+$$
+\operatorname{dim}\operatorname{supp} H^r (f_* M) \leq \operatorname{dim}\operatorname{supp} M - r.
+$$
+(注意此式与纤维的维数无关.)</p>
+<p><strong>推论</strong>. 若 $f\colon X\to Y$ 为<span class="link local"><a href="./仿射态射.html" title="仿射态射 [仿射态射]">仿射映射</a></span>, 则</p>
+<ul>
+<li>$f_* (D^{p,\leq 0}) \subset D^{p,\leq 0}$;</li>
+<li>$f_! (D^{p,\geq 0}) \subset D^{p,\geq 0}$.</li>
+</ul>
+<p><strong>推论</strong> (绝对情形, Artin 消失定理). 设 $X$ 仿射, $M\in \mathsf{Sh}_c (X)$, 则 $H^r (X,M) =0$ ($r &gt; \operatorname{dim}X$).</p>
+<p>此前我们只知道 $r &gt; 2\operatorname{dim}X$ (实维数) 时上同调消失, 所以这个命题令人惊讶. 但实际上我们有如下结论.</p>
+<p><strong>断言</strong>. 仿射复代数簇 $X$ 具有一个不超过 $\operatorname{dim} X$ 维的 CW 复形的同伦型.</p>
+<p>这个结论是用 <span class="link local"><a href="./Morse理论.html" title="Morse 理论 [Morse理论]">Morse 理论</a></span>证明的. 找一个 Morse 函数, 即实函数 $\varphi\colon X \to \mathbb{R}$, 使得 $X$ 的同伦型可通过逐次粘贴胞腔得到, 每次对应 $\varphi$ 的一个临界点, 胞腔维数是临界点的 Morse 指标. 将 $X$ 闭嵌入某个 $\mathbb A^n$, 取一个一般位置的点 $y\in\mathbb A^n$ 使得到 $y$ 的距离的平方给出 Morse 函数. 虽然 $X$ 不是紧的, 但我们可以让 $\varphi$ 在任何一个区间内的部分 $X_{[a,b]}$ 都是紧的.</p>
+<blockquote>
+<p>平展情形的 Artin 消失定理的证明在 SGA 4, 4.5. 这是一个很好的报告主题.</p>
+</blockquote>
+<p>若 $M\in D^b_c$ 不是一个普通的层, 我们还能对 $f_* M$ 说什么? 我们知道 $M$ 有一个<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤过</a></span>, 其关联分次对象为 $H^r (M) [-r]$. 那么 $f_* M$ 有一个<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤过</a></span>, 其关联分次对象为
+$$
+H^s (f_* H^r (M)) [ -r - s ].
+$$</p>
+<p><span class="link local"><a href="./谱序列.html" title="谱序列 [谱序列]">谱序列</a></span>正是用来处理这种对象的: 稳定范畴中的滤过在正合函子下的像.</p>
+<h3>半小性</h3>
+<p>设 $X$ 光滑, $\operatorname{dim}X = d$. 对于映射 $f\colon X\to Y$, 若</p>
+<ul>
+<li>$\operatorname{dim}\{y\in Y\mid\operatorname{dim}f^{-1}(y)\geq r\} \leq d - 2r$,</li>
+<li>(等价地) $\operatorname{dim}(X\times_Y X) \leq \operatorname{dim}X$,</li>
+</ul>
+<p>则称 $f$ 是半小 (semismall) 的.</p>
+<p><strong>习题</strong>. 构造 $Y = \{\det\begin{pmatrix}a&amp;b\\c&amp;d\end{pmatrix} = 0\}$ 的半小消解.</p>
+<p>我们想要用消解研究奇性代数簇 $Y$.</p>
+<p><strong>命题</strong>. 若 $f$ 半小, 则 $f_*\mathrm{IC}_X$ 为偏屈层</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="偏屈t-结构"><header><h1><span class="taxon"></span>偏屈 t-结构 <a class="slug" href="./偏屈t-结构.html">[偏屈t-结构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>偏屈 t-结构是<span class="link local"><a href="./可构造层.html" title="可构造层 [可构造层]">可构造</a></span>复形范畴 $D_c^b(X)$ 上的 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">t-结构</a></span>,</p>
 <p>$$
