@@ -1008,6 +1008,42 @@ $$
 <li>我们约定中的代数模式 $\mathcal O$ 可视为 “代数侧”, 其对象大致可理解为基本对象生成的自由代数对象, 态射可理解为<strong>变量代换</strong>, 例如 $\mathbb{Z}[t] \to \mathbb{Z}[x,y]$, $t\mapsto x+y$.</li>
 <li>而 Chu–Haugseng 与 Lurie 约定中的范畴 $\mathcal O$ ($\mathcal O^{\otimes}$) 可视为<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">对偶</a></span>的 “几何侧”, 态射可视为<strong>运算</strong>, 例如 $\mathbb A^2 \to \mathbb A^1$, $(x,y)\mapsto x+y$.</li>
 </ul>
+<h2>例子: 游走的自同态</h2>
+<p>记录一个小例子, 可以作为习题检验自己对代数模式的理解.</p>
+<p>考虑仅有一个点 $*$ 和一条边
+$*\to *$
+的有向图, 问这个有向图自由生成的范畴是什么. 注意到它是 $\Delta_{\mathrm{el}}$ 上的预层范畴中的终对象, 通过右 Kan 扩张得到的代数模式 $\Delta_{\mathrm{int}}$ 的 Segal 对象
+$$
+X\colon \Delta_{\mathrm{int}}^{\mathrm{op}}\to\mathsf{Ani}.
+$$
+仍是终对象 (右 Kan 扩张保持终对象):
+$$
+X ([n]) = 1.
+$$
+我们通过左 Kan 扩张求其自由生成的 $\Delta$ 的 Segal 对象:
+$$
+\operatorname{LKE}(X)([1]) = \operatorname{colim}_{[1] \to [n]} X([n]) =
+\big|
+    \{[1]\to [n]\}
+\big|,
+$$
+其中 $|{-}|$ 表示取范畴的底层生象. 这个指标范畴认真写出来是:</p>
+<ul>
+<li>对象为 $[1]\to [n]$,</li>
+<li>态射为交换图 $\begin{array}{ccc}
+[1] &amp;  &amp;  \\
+\downarrow &amp; \searrow &amp;  \\
+[n] &amp; \rightarrowtail &amp; [m]
+\end{array}$, 其中 $[n]\rightarrowtail [m]$ 是惰性的.</li>
+</ul>
+<p><strong>断言</strong>. 指标范畴 $\{[1]\to [n]\}$ 是 $\mathbb{N}$ 个范畴的无交并, 其中每个部分都是<span class="link local"><a href="./弱可缩范畴.html" title="弱可缩范畴 [弱可缩范畴]">弱可缩范畴</a></span>.</p>
+<p>为了证明上述断言, 考虑每个态射 $[1]\to [n]$ 的活性部分. 对指标范畴中的任意态射 $\begin{array}{ccc}
+[1] &amp;  &amp;  \\
+\downarrow &amp; \searrow &amp;  \\
+[n] &amp; \rightarrowtail &amp; [m]
+\end{array}$, 由于 $[n]\rightarrowtail [m]$ 是惰性的, 其两边 $[1]\to [n]$ 和 $[1]\to [m]$ 的活性部分相同, 这就将指标范畴归为了 $\mathbb{N}$ 个连通分支. 另一方面, 设 $[1] \to [n]$ 的活性部分为 $[1] \to [k]$, 则由正交分解, 存在唯一的惰性映射 $[k]\rightarrowtail [n]$ 连接两者; 故这个连通分支是弱可缩的.</p>
+<p>…</p>
+<p>不难发现左 Kan 扩张给出的自由的 <span class="link local"><a href="./Segal空间.html" title="Segal 对象 [Segal空间]">Segal 生象</a></span> $\operatorname{LKE}(X)$ 为<span class="link local"><a href="./游走.html" title="游走 [游走]">游走</a></span>的自同态 $\mathbf{B}\mathbb{N}$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="geometry-DAGV"><header><h1><span class="taxon"></span>几何 (带结构的意象) <a class="slug" href="./geometry-DAGV.html">[geometry-DAGV]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本页介绍 Lurie 的 <span class="link local"><a href="./LurieDAGV.html" title="Derived Algebraic Geometry V: Structured Spaces [LurieDAGV]">DAG V</a></span> 描绘的 “几何” 图景. 加入了一些个人的见解.</p>
 <p>几何学的各个分支研究的<span class="link local"><a href="./概形.html" title="概形 [概形]">经典概形</a></span>, <span class="link local"><a href="./叠.html" title="叠 [叠]">Deligne–Mumford 叠</a></span>, 流形, 复解析流形, <span class="link local"><a href="./导出概形.html" title="导出概形 [导出概形]">导出概形</a></span>等等不同几何对象, 都可以描述为某种带结构的<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $(\mathcal X,\mathcal O_{\mathcal X})$, 类比于<span class="link local"><a href="./局部环化空间.html" title="局部环化空间 [局部环化空间]">局部环化空间</a></span>. 从<span class="link local"><a href="./范畴逻辑.html" title="范畴逻辑 [范畴逻辑]">范畴逻辑</a></span>的角度, 这里的结构 $\mathcal O_{\mathcal X}$ 可以理解为一种<span class="link local"><a href="./本质代数理论.html" title="本质代数理论 [本质代数理论]">本质代数结构</a></span>加上一些 “局部性” (见后文). 同时, 这些结构可用<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span>描述: 一个结构就是一个意象态射 $\mathcal X \to \mathcal K$. 每种结构就是一种<strong>几何</strong>.</p>

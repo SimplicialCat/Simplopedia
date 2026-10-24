@@ -947,8 +947,19 @@ $$</p>
 <p>本文建立高阶范畴中的一种基于流形的图形演算 (graphical calculus), 它是<span class="link local"><a href="./线图.html" title="线图 [线图]">线图</a></span>的推广. 流形图的拼接给出高阶态射的复合, 而形状本身就带有<span class="link local"><a href="./融贯.html" title="融贯 [融贯]">融贯性</a></span>.</p>
 <h2>分层流形</h2>
 <p>拓扑空间的<span class="link local"><a href="./分层.html" title="分层 [分层]">分层</a></span>就是其到一个偏序集的映射, 其中偏序集带有 <span class="link local"><a href="./Alexandroff拓扑.html" title="Alexandroff 拓扑 [Alexandroff拓扑]">Alexandroff 拓扑</a></span>.</p>
-<p>分层空间</p>
+<p>分层空间 $X$ 上的<strong>标架</strong>是其到 $\mathbb{R}^n$ 的一个嵌入 $X\hookrightarrow\mathbb{R}^n$. 这里我们关心的其实是这个嵌入到后 $m$ 分量的投影定义的等价关系. 记 $\sim_m$ 为 $\mathbb{R}^n$ 上由 “后 $m$ 个分量相同” 定义的等价关系. 我们要求带标架分层空间之间的映射保持这些关系, 即若 $x\sim_m y$, 则 $f(x)\sim_m f(y)$.</p>
 <h2>网格与桁架</h2>
+<p><strong>定义</strong> (分层纤维丛).
+满足如下条件的分层空间映射 $p\colon E\to B$ 称为<strong>分层纤维丛</strong>:</p>
+<ul>
+<li>对任意点 $b\in B$, 设 $T_b\subset B$ 为其所在的层, 则存在 $b$ 在 $T_b$ 中的开邻域 $U$ (注意不一定是 $B$ 中的开邻域), 使得 $p\colon E|_U \to U$ 同构于一个形如 $U\times F\to U$ 的分层空间映射.</li>
+</ul>
+<p><strong>定义</strong> (网格). 对自然数 $n$ 归纳定义 $n$ 维的<strong>闭网格</strong>:</p>
+<ul>
+<li>$0$ 维闭网格是一个点;</li>
+<li>$n+1$ 维闭网格是一个分层纤维丛 $E\to B$, 其中每个纤维都是闭区间, 且纤维的分层结构的每一层都是单点或开区间.</li>
+</ul>
+<p>将上述定义中 “闭区间” 改为 “开区间”, 就得到<strong>开网格</strong>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="代数充实于余代数"><header><h1><span class="taxon"></span>代数充实于余代数 <a class="slug" href="./代数充实于余代数.html">[代数充实于余代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>通过余代数测量</h3>
