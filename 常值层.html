@@ -1023,6 +1023,68 @@ $$
 <p><span class="link local"><a href="./关联丛.html" title="关联丛 [关联丛]">关联丛</a></span></p>
 <h2>相关资料</h2>
 <p><span class="link local"><a href="./PB∞T.html" title="∞-意象中的主丛 [PB∞T]">$\infty$-意象中的主丛</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="力迫法"><header><h1><span class="taxon"></span>力迫法 <a class="slug" href="./力迫法.html">[力迫法]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>设有完备 <span class="link local"><a href="./Boole代数.html" title="Boole 代数 [Boole代数]">Boole 代数</a></span> $\mathbb B$, 以及一个赋予某种命题逻辑句子真值的映射
+$$
+[\![-]\!]\colon \mathrm{Sen} \to \mathbb{B},
+$$
+考虑元素 $p\in \mathbb B\setminus \{\bot\}$, 称为<strong>条件</strong>;</p>
+<ul>
+<li>在偏序关系下越小的条件就越强;</li>
+<li>对于 $q\leq p$, 称 $q$ 为 $p$ 的<strong>扩展</strong>;</li>
+<li>最大元 $\top$ 是空条件.</li>
+</ul>
+<p>对任意句子 $\varphi\in\mathrm{Sen}$, 若
+$$
+p \leq [\![\varphi]\!]
+$$
+称 $p$ <strong>力迫</strong> (force) $\varphi$, 记为 $p \Vdash \varphi$.</p>
+<p>那么有如下性质:</p>
+<ul>
+<li>$p \Vdash (\varphi \land \psi)$ 当且仅当 $p \Vdash \varphi$ 且 $p \Vdash \psi$;</li>
+<li>$p \Vdash (\varphi \lor \psi)$ 当且仅当对任意 $q\leq p$ 存在 $r\leq q$, 使得 $r\Vdash\varphi$ 或 $r\Vdash\psi$;</li>
+<li>$p \Vdash (\varphi \to \psi)$ 当且仅当对任意 $q\leq p$, 都有 $q\Vdash\varphi$ 蕴涵 $q\Vdash\psi$;</li>
+<li>$p\Vdash\top$ 永远成立; $p\Vdash\bot$ 永远不成立.</li>
+</ul>
+<h2>例</h2>
+<h3>Cohen 与连续统假设</h3>
+<p>设 $V$ 是 <span class="link local"><a href="./ZFC.html" title="ZFC [ZFC]">ZFC</a></span> 的一个模型. 待定一个完备 Boole 代数 $\mathbb B$. 递归定义 $V^{\mathbb B}$ (它将是<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathsf{Sh}(\mathbb B)$ 中 ZFC 的模型):</p>
+<ul>
+<li>$V^{\mathbb B}$ 中的一个元素就是 $V^{\mathbb B}$ 的子集到 $\mathbb B$ 的一个映射.</li>
+</ul>
+<p>直观上, $V^{\mathbb B}$ 的一个元素 $U\to \mathbb B$ 是一个 “每个元素在一定条件下属于 $U$” 的集合. 一个元素映射到 $\top$ 说明它确定属于这个集合; 映射到 $p$ 说明它在条件 $p$ 之下属于这个集合.</p>
+<p>对于 $V$ 的元素 $v$ 递归定义 $\check{v}\in V^{\mathbb B}$:
+$$
+\check{v} = \{(\check{w},\top)\mid w\in v\}.
+$$
+这也可理解为<span class="link local"><a href="./常值层.html" title="常值层 [常值层]">常值层</a></span>函子 $\Delta\colon \mathsf{Set} \to \mathsf{Sh}(\mathbb B)$ 对.</p>
+<p>我们可以定义一个赋予 <span class="link local"><a href="./ZFC.html" title="ZFC [ZFC]">ZFC</a></span> 的句子在 $\mathbb B$ 中的值的映射
+$$
+[\![-]\!]\colon \mathrm{Sen}(\mathrm{ZFC}) \to \mathbb B,
+$$</p>
+<ul>
+<li>$[\![ u\in v ]\!] := \bigvee_{w} (v(w) \land [\![ u = w ]\!])$;</li>
+<li>$[\![ u = v ]\!] := \bigwedge_{w} (v(w) \Rightarrow [\![ w \in u ]\!])\land ( u(w)\Rightarrow [\![ w\in v ]\!])$;</li>
+<li>…</li>
+</ul>
+<p>令 $\mathbb P = \operatorname{Fn}(\omega,2)$ 为 $\omega$ 的有限子集到 $2=\{\bot,\top\}$ 的映射构成的集合. 令 $\mathbb B = \operatorname{RO}(2^{\omega})$, 那么 $\mathbb P$ 是 $\mathbb B \setminus \{\bot\}$ 的稠密子集, $\mathbb B$ 是 $\mathbb P$ 的 Boole 完备化.</p>
+<p>令
+$$
+c := \{(\check{n},b_n)\colon n\in\omega\}\in V^{\mathbb B},
+$$
+$$
+b_n := \{p\in 2^\omega\colon p(n) = 1\}.
+$$</p>
+<p>那么</p>
+<ul>
+<li>$p \Vdash \check{n}\in c$ 当且仅当 $p(n) = 1$.</li>
+<li>$p \Vdash \check{n}\notin c$ 当且仅当 $p(n) = 0$.</li>
+</ul>
+<p>在上面将 $\omega$ 改成 $\kappa\times\omega$ 可以得到一族 $\kappa$ 个对象 $c_\alpha$, $b_{n,\alpha}$ ($\alpha &lt; \kappa$).</p>
+<p>$$
+\exists q\leq p, \, q \Vdash c_\alpha \neq c_\beta.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="局部系统"><header><h1><span class="taxon"></span>局部系统 <a class="slug" href="./局部系统.html">[局部系统]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>局部系统是空间上局部平凡的 “(<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>) 系数的系统”, 等同于底空间的基本群胚出发的函子, 即基本群的表示. 有时基本群甚至是通过这一原则反向构造出来的; 见<span class="link local"><a href="./淡中对偶.html" title="淡中对偶 [淡中对偶]">淡中对偶</a></span>.</p>

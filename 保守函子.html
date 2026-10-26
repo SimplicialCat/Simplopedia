@@ -1194,6 +1194,32 @@ $$
 <h3>$\infty$-范畴</h3>
 <h3>$(\infty,n)$-范畴</h3>
 <p>$\Theta_T$ 就是 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴 $\Theta_n$</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="桁架"><header><h1><span class="taxon"></span>桁架 <a class="slug" href="./桁架.html">[桁架]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><strong>桁架</strong> (truss) 是用于描述 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n)$-范畴</a></span>的<span class="link local"><a href="./notes-manifold-diagrams.html" title="高阶范畴的流形图示 [notes-manifold-diagrams]">流形图</a></span>的一种纯组合数据, 可通过迭代一个<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>定义.</p>
+<h2>定义</h2>
+<p><strong>定义</strong> ($1$-桁架). 所谓 $1$-<strong>桁架</strong>是如下资料:</p>
+<ul>
+<li>一个<span class="link local"><a href="./全序集.html" title="全序集 [全序集]">全序集</a></span> $(T,\preceq) = \{x_1 \prec \cdots \prec x_n\}$;</li>
+<li>集合 $T$ 上的另一个<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序</a></span>结构 $(T,\leq)$, 满足对任意相邻的 $i,j$ 有 $x_i &lt; x_j$ 或 $x_i &gt; x_j$ (换言之, 偏序 $\leq$ 形如 zig-zag),</li>
+<li>以及一个<span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守</a></span>映射 $\operatorname{dim}\colon (T,\leq) \to \{0\leq 1\}$ (这就是说相邻).</li>
+</ul>
+<p>想象 $T$ 为一个区间的分层结构, 每层均为单点 ($\operatorname{dim} = 0$) 或开区间 ($\operatorname{dim} = 1$). 整个区间可以是开的闭的或者半开半闭, 取决于两端的分层的维数.</p>
+<ul>
+<li>若 $1$-桁架的两端均为 $1$ 维, 称之为<strong>开 $1$-桁架</strong>;</li>
+<li>若 $1$-桁架的两端均为 $0$ 维, 称之为<strong>闭 $1$-桁架</strong>.</li>
+</ul>
+<p>定义 $1$-桁架之间的态射 $T\to S$ 为保持偏序 $\preceq,\leq$ 的映射 $f\colon T\to S$. 注意我们可以不要求 $f$ 保持维数 $\operatorname{dim}$:</p>
+<ul>
+<li>若 $\operatorname{dim}\circ f \geq \operatorname{dim}$, 称 $f$ 为<strong>正则 (regular) 映射</strong>;</li>
+<li>若 $\operatorname{dim}\circ f \leq \operatorname{dim}$, 称 $f$ 为<strong>奇异 (singular) 映射</strong>;</li>
+<li>若 $\operatorname{dim}\circ f = \operatorname{dim}$, 称 $f$ 为<strong>保维数映射</strong>.</li>
+</ul>
+<p><strong>命题</strong>.</p>
+<ul>
+<li>闭 $1$-桁架与保维数映射构成的范畴为 $\Delta^{\mathrm{op}}$.</li>
+<li>开 $1$-桁架与正则映射构成的范畴为 $\Delta$.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="正交分解系"><header><h1><span class="taxon"></span>正交分解系 <a class="slug" href="./正交分解系.html">[正交分解系]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p><strong>命题-定义</strong>. 对于范畴 $\mathcal C$ 的<span class="link local"><a href="./宽子范畴.html" title="宽子范畴 [宽子范畴]">宽子范畴</a></span> (包含所有对象的子范畴) $L,R$, 若以下等价条件成立, 则称 $(L,R)$ 为<strong>正交分解系</strong> (orthogonal factorization system):</p>
@@ -1318,6 +1344,12 @@ $$
 $$
 为<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">拉回纤维化</a></span>.</p>
 <p><strong>命题</strong>. $\operatorname{Fact}$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>, 其本质像正是全体满足分解条件的二重范畴.</p>
+<h3>与模态的关系</h3>
+<p>设<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathcal C$ 上带有正交分解系 $(L,R)$. 若 $L$ 对<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>封闭 (换言之, 任意态射 $f$ 的基变换与取左类相容, $(g^*f)_L = g^* (f_L)$), 则有 $\mathcal C$ 上的一个<span class="link local"><a href="./模态.html" title="模态 [模态]">模态</a></span> (或 <span class="link local"><a href="./Lawvere--Tierney拓扑.html" title="Lawvere–Tierney 拓扑 [Lawvere--Tierney拓扑]">Lawvere–Tierney 拓扑</a></span>) ${(-)}_L\colon \mathcal C \to \mathcal C$, 对对象 $X$ 到终对象的映射 $X\to *$ 作分解得到
+$$
+X \to X_L\to *.
+$$</p>
+<p>有时这也作为<span class="link local"><a href="./模态.html" title="模态 [模态]">模态</a></span>的定义.</p>
 <h2>例</h2>
 <h3>平凡分解系</h3>
 <p>在任何范畴 $\mathcal C$ 中, $(\mathcal C^{\simeq},\mathcal C)$ 与 $(\mathcal C,\mathcal C^{\simeq})$ 均为正交分解系.</p>

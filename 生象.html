@@ -2854,7 +2854,7 @@ $$
 $$
 粗略地说, 对 $\mathcal P$ 的每个对象的每个基本成分, 这个函子给出 $\mathcal O$ 中相关的基本成分的范畴.</p>
 <p>下面的定义是 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span> 的重要概念, 但其本身不提供直观, 因为这个定义只是总结了左 Kan 扩张要保持 Segal 条件所需的计算上的便利条件. 在实践中, 这些条件常常满足.</p>
-<p><strong>定义</strong>. 代数模式的<strong>可延拓态射</strong> (extendable morphism) 是满足如下条件的态射 $f\colon \mathcal O \to \mathcal P$:</p>
+<p><strong>定义</strong>. 代数模式的<strong>可扩张态射</strong> (extendable morphism) 是满足如下条件的态射 $f\colon \mathcal O \to \mathcal P$:</p>
 <ul>
 <li>$f$ 有唯一惰性提升;</li>
 <li>对任意 $p\in \mathcal P$, 记 $\mathcal L_p = \operatorname{lim}_{e\to p}\{e\leadsto f(o)\}$, 则 $\{p\leadsto f(o)\} \to \mathcal L_p$ 为<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首函子</a></span>.</li>
@@ -2864,7 +2864,7 @@ $$
 $$</li>
 </ul>
 <p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Corollary 7.13).
-设 $f\colon \mathcal O \to \mathcal P$ 为代数模式的可延拓态射, $\mathcal C$ 为 $f$-<strong>可容许</strong>范畴 (我们等到需要的时候再来定义这个条件), 则左 Kan 扩张限制为函子
+设 $f\colon \mathcal O \to \mathcal P$ 为代数模式的可扩张态射, $\mathcal C$ 为 $f$-<strong>可容许</strong>范畴 (我们等到需要的时候再来定义这个条件), 则左 Kan 扩张限制为函子
 $$
 f_!\colon \mathsf{Seg}_{\mathcal O}(\mathcal C) \to \mathsf{Seg}_{\mathcal P}(\mathcal C).
 $$</p>
@@ -2882,12 +2882,12 @@ $$
 其中</p>
 <ul>
 <li>$(\star)$ 是因为 $\{p \leadsto f(o)\}$ 在 $\{p\to f(o)\}$ 中为<span class="link local"><a href="./共首函子.html" title="共首函子 [共首函子]">共首</a></span>子范畴, 但此处余极限的指标范畴是这两个范畴的反范畴, 共首变为共尾;</li>
-<li>$(\heartsuit)$ 是因为可延拓性的第三个条件;</li>
-<li>$(\spadesuit)$ 是因为可延拓性的第二个条件;</li>
+<li>$(\heartsuit)$ 是因为可扩张性的第三个条件;</li>
+<li>$(\spadesuit)$ 是因为可扩张性的第二个条件;</li>
 <li>$(\dagger)$ 就是 $\mathcal C$ 的<strong>可容许</strong>条件, 它是一种<span class="link local"><a href="./lim-colim-dist.html" title="极限对余极限分配 [lim-colim-dist]">极限对余极限分配</a></span>的条件.</li>
 </ul>
 <p>当然, 上述命题之所以有意义, 是因为实践中我们真的可以验证这一堆条件.</p>
-<p><strong>例</strong>. 对称算畴作为 $\Gamma^\flat$ 上的弱 Segal 纤维化, 任意两个对称算畴之间的态射都是可延拓的. 见<span class="link local"><a href="./oLKE.html" title="算畴左 Kan 扩张 [oLKE]">算畴左 Kan 扩张</a></span>.</p>
+<p><strong>例</strong>. 对称算畴作为 $\Gamma^\flat$ 上的弱 Segal 纤维化, 任意两个对称算畴之间的态射都是可扩张的. 见<span class="link local"><a href="./oLKE.html" title="算畴左 Kan 扩张 [oLKE]">算畴左 Kan 扩张</a></span>.</p>
 <p>对于 $F\in\widehat {\mathcal O_{\langle 1 \rangle}^{\simeq}}$ 以及 $X\in\mathcal O_{\langle 1 \rangle}$, 自由 $\mathcal O$-代数单子 $T_{\mathcal O}$ 给出
 $$
 \begin{aligned}
@@ -2920,7 +2920,7 @@ $$
  F_{\mathcal O}\colon \mathsf{Fun}(\mathcal O_{\mathrm{el}}^{\mathrm{op}},\mathcal C) \rightleftarrows \mathsf{Seg}_{\mathcal O}(\mathcal C) \colon U_{\mathcal O}
 $$
 是<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的.</p>
-<p><strong>定义</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Definition 8.5). 若代数模式的态射 $\mathcal O_{\mathrm{int}} \to \mathcal O$ 是可延拓的, 则称 $\mathcal O$ <strong>可延拓</strong> (extendable). 具体地, 这等同于如下条件:</p>
+<p><strong>定义</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Definition 8.5). 若代数模式的态射 $\mathcal O_{\mathrm{int}} \to \mathcal O$ 是可扩张的, 则称 $\mathcal O$ <strong></strong><span class="link local"><a href="./可扩张代数模式.html" title="可扩张代数模式 [可扩张代数模式]">可扩张</a></span> (extendable). 具体地, 这等同于如下条件:</p>
 <ol>
 <li>考虑函子 $\operatorname{Act}_{\mathcal O}\colon \mathcal O^{\mathrm{op}} \to \mathsf{Ani}$, $\operatorname{Act}_{\mathcal O}(X)$ 为 $X$ 发出的活性映射构成的生象, 则 $\operatorname{Act}_{\mathcal O}$ 为 Segal $\mathcal O$-生象;</li>
 <li>对 $\mathcal O$ 中任意活性映射 $o''\leadsto o$, 任意函子 $F\colon \mathcal O_{\mathrm{el}}^{\mathrm{op}}\to\mathsf{Ani}$,
@@ -2933,11 +2933,11 @@ $$
 $$
 \Phi(o) \simeq \operatorname{lim}_{e\rightarrowtail o''} F(o').
 $$</p>
-<p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Proposition 8.8). 代数模式 $\mathcal O$ 可延拓当且仅当沿 $j_{\mathcal O}$ 的左 Kan 扩张限制为函子
+<p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Proposition 8.8). 代数模式 $\mathcal O$ 可扩张当且仅当沿 $j_{\mathcal O}$ 的左 Kan 扩张限制为函子
 $$
 j_{\mathcal O,!}\colon \mathsf{Seg}_{\mathcal O_{\mathrm{int}}}(\mathsf{Ani}) \to \mathsf{Seg}_{\mathcal O}(\mathsf{Ani}).
 $$</p>
-<p><strong>推论</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Proposition 8.12). 设 $\mathcal O$ 为可延拓代数模式, $\mathcal C$ 为 $\mathcal O$-可容许范畴 (某些极限对余极限的分配律), 则自由函子 $F_{\mathcal O}\colon \widehat {\mathcal O_{\mathrm{el}}} \to\mathsf{Seg}_{\mathcal O}(\mathsf{Ani})$ 可表达为
+<p><strong>推论</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Proposition 8.12). 设 $\mathcal O$ 为可扩张代数模式, $\mathcal C$ 为 $\mathcal O$-可容许范畴 (某些极限对余极限的分配律), 则自由函子 $F_{\mathcal O}\colon \widehat {\mathcal O_{\mathrm{el}}} \to\mathsf{Seg}_{\mathcal O}(\mathsf{Ani})$ 可表达为
 $$
 \begin{aligned}
 F_{\mathcal O}(\Phi)(X) &amp;= (j_{\mathcal O,!}i_{\mathcal O,*}\Phi) (X) \\
@@ -2946,7 +2946,7 @@ F_{\mathcal O}(\Phi)(X) &amp;= (j_{\mathcal O,!}i_{\mathcal O,*}\Phi) (X) \\
 \end{aligned}
 $$
 其中 $i_{\mathcal O}\colon \mathcal O_{\mathrm{el}}\hookrightarrow\mathcal O_{\mathrm{int}}$ 为基本对象的全子范畴, $j_{\mathcal O}\colon \mathcal O_{\mathrm{int}} \to \mathcal O$ 为惰性映射的宽子范畴.</p>
-<p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Proposition 10.6). 设 $\mathcal O$ 为可延拓代数模式, 则 $\widehat{\mathcal O_{\mathrm{el}}}$ 上的自由 Segal $\mathcal O$-生象单子 $T_{\mathcal O}$ 为多项式单子. 这里多项式单子的定义是 <span class="link local"><a href="./Descartes单子.html" title="Descartes 单子 [Descartes单子]">Descartes 单子</a></span>且为<span class="link local"><a href="./局部右伴随.html" title="局部右伴随 [局部右伴随]">局部右伴随</a></span>.</p>
+<p><strong>命题</strong> (<span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span>, Proposition 10.6). 设 $\mathcal O$ 为可扩张代数模式, 则 $\widehat{\mathcal O_{\mathrm{el}}}$ 上的自由 Segal $\mathcal O$-生象单子 $T_{\mathcal O}$ 为多项式单子. 这里多项式单子的定义是 <span class="link local"><a href="./Descartes单子.html" title="Descartes 单子 [Descartes单子]">Descartes 单子</a></span>且为<span class="link local"><a href="./局部右伴随.html" title="局部右伴随 [局部右伴随]">局部右伴随</a></span>.</p>
 <p>这个结论保证了这些代数模式给出<span class="link local"><a href="./带元数的单子.html" title="带元数的单子 [带元数的单子]">带元数的单子</a></span>.</p>
 <h3>单子给出代数模式</h3>
 <p>设 $F\colon \mathcal C \to \mathcal D$ 为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>之间的<span class="link local"><a href="./局部右伴随.html" title="局部右伴随 [局部右伴随]">局部右伴随</a></span>函子, 即 $F_{/*}\colon \mathcal C \to \mathcal D_{F(*)}$ 有左伴随 $L\colon \mathcal D_{/F(*)} \to \mathcal C$.</p>
@@ -2973,7 +2973,7 @@ $$
 j_{T,!}\nu_{\mathcal U(T)} \overset{\simeq}{\longrightarrow} \nu_{\mathcal W(T)} F_T,
 $$
 且脉函子 $\nu_{\mathcal W(T)}$ 全忠实.</p>
-<p><span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span> 说明 $\mathcal W(T)$ 上有一个可延拓的代数模式结构, … todo</p>
+<p><span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">CH</a></span> 说明 $\mathcal W(T)$ 上有一个可扩张的代数模式结构, … todo</p>
 <h3>极限和余极限</h3>
 <p><strong>命题</strong>. 代数模式的范畴具有极限和<span class="link local"><a href="./滤余极限.html" title="滤余极限 [滤余极限]">滤余极限</a></span>. 具体地, 记
 $$
@@ -3058,7 +3058,7 @@ $$
 <li>基本对象为 $\langle 1 \rangle$;</li>
 <li>惰性和活性映射都与 $\Gamma$ 一致.</li>
 </ul>
-<p>态射 $U\colon \mathsf{Assoc} \to \Gamma$ 是可延拓态射, 其左 Kan 扩张保持 Segal 条件. 结合代数的交换化由左 Kan 扩张的公式给出:
+<p>态射 $U\colon \mathsf{Assoc} \to \Gamma$ 是可扩张态射, 其左 Kan 扩张保持 Segal 条件. 结合代数的交换化由左 Kan 扩张的公式给出:
 $$
 U_! A(\langle n \rangle) = \operatorname{colim}_{\langle n \rangle \to \langle m \rangle} A(\langle m \rangle).
 $$</p>
@@ -3704,6 +3704,32 @@ $$</p>
 <p>对于一个高阶范畴, 将通过 $2$-态射相连的两个态射等同起来, 换言之将映射空间作 $0$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>, 就得到一个 $(1,1)$-范畴, 称为其同伦范畴.</p>
 <h2>例</h2>
 <p><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span> $X$ 视为 $(\infty,1)$-范畴, 其同伦范畴 $hX$ 是<span class="link local"><a href="./基本群胚.html" title=" [基本群胚]">基本群胚</a></span> $\pi_{\leq 1}(X)$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="同伦论"><header><h1><span class="taxon"></span>同伦论 <a class="slug" href="./同伦论.html">[同伦论]</a></h1><div class="metadata"><ul><li class="meta-item">学科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>同伦论是研究<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>或具有类似于 <span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">$\mathsf{Ani}$</a></span> 的性质的范畴 ($\infty$-<span class="link local"><a href="./∞-意象.html" title="∞-意象 [∞-意象]">意象</a></span>) 的对象的学科.</p>
+<ul>
+<li><span class="link local"><a href="./平展同伦论.html" title="平展同伦论 [平展同伦论]">平展同伦论</a></span></li>
+<li><span class="link local"><a href="./稳定同伦论.html" title="稳定同伦论 [稳定同伦论]">稳定同伦论</a></span></li>
+<li><span class="link local"><a href="./色同伦论.html" title="色同伦论 [色同伦论]">色同伦论</a></span></li>
+</ul>
+<p><section class="block" data-taxon=""><details ><summary id="motivation-homotopy-theory"><header><h1><span class="taxon"></span>同伦论的动机 <a class="slug" href="./motivation-homotopy-theory.html">[motivation-homotopy-theory]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文的目标是以尽可能少的前置知识解释同伦论的动机.</p>
+<p>前置知识: 拓扑学基本概念.</p>
+<p>所谓<strong>同</strong>伦论就是研究什么是 “<strong>同</strong>” 的学问. 在拓扑学中, 人们作了如下规定:</p>
+<ul>
+<li>考虑单位区间 $I = [0,1]$. 规定在一个拓扑空间 $X$ 中, 两个点 $p,q$ 之间的 “<strong>同</strong>” 就是它们之间的道路 $\gamma\colon I\to X$, $\gamma(0) = p$, $\gamma(1) = q$.</li>
+</ul>
+<p>对于空间 $X$ 中的两个点 $p,q$, 我们不仅能谈论它们<strong>是否</strong>相同, 而且能 (而且应该) 谈论它们<strong>如何</strong>相同, 毕竟两个点之间的道路可能有许多种. 区分<strong>是否</strong>和<strong>如何</strong>是现代数学的一项重要课题. (参见<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构与性质</a></span>.)</p>
+<p>自然地, 我们应该好奇一个点 $p$ 如何与<strong>自身</strong>相同.
+虽然这个问题有一个平凡的答案, 即等号的自反性, 或着说空间上的常值路径; 但也可能有许多<strong>不平凡</strong>的答案, 如圆圈 $S^1$ 上绕行一周的路径. 正是这些不平凡的答案构成了同伦论这门学科.</p>
+<p>在数学中, 所有的等式满足一个基本的原则: 若对于一种事物 $x$ 有与之相关的另一种事物 $f(x)$, 那么对等式 $\alpha\colon x = y$ 就必须有等式 $f(\alpha)\colon f(x) = f(y)$. 这条基本原则引申出的结果是极为丰富的.</p>
+<p>现在假设点 $p$ 到点 $q$ 有一条指定的道路 $\alpha \colon p = q$, 即一种指定的将 $p$ 等同于 $q$ 的方式. 令 $f(x) := (x = q)$, 那么由 $\alpha$ 就得到 $f(\alpha) \colon f(p) = f(q)$, 即 $(p = q) = (q = q)$. 因此, 要研究 $p$ 到 $q$ 的所有道路, 只需要研究点 $q$ 到<strong>自身</strong>的所有道路.
+了解了每一个点如何与自身相同, 就足以了解任何两个点之间如何相同.</p>
+<p>上面说的空间和点, 并不是只有足球, 甜甜圈这种看得见的空间, 和摸得着的点. <strong>任何类型的数学对象的全体都构成一个空间, 每个对象是其中的一个点.</strong> (参见<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">分类空间</a></span>.) 所以, 有数学的地方就有同伦论.</p>
+<p>特别地, 点 $p$ 到自身的道路, 称为<strong>环路</strong>, 也是一种数学对象; 我们当然应该研究其构成的空间, 称为<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> $\Omega (X,p)$, 或在点 $p$ 明确时简记为 $\Omega X$.</p>
+<p>环路空间和许多事情一样, 没有理由仅做一次就停止, 我们自然地应该关心环路空间 $\Omega X$ 的环路空间 $\Omega^2 X$, 其环路空间 $\Omega^3 X$, … 以至于无穷.
+第 $n$ 阶环路空间 $\Omega^n X$ 所携带的信息粗略地称为 $X$ 的 $n$ 阶<strong>同伦信息</strong>.</p>
+<p>有时我们发现当 $n$ 较大时一个空间没有了 $n$ 阶同伦信息; 这就是说 $\Omega^n X = *$ 是一个点 (那么当然 $\Omega^{n+1}X,\Omega^{n+2}X,\cdots$ 也都是一个点). 例如一个传统数学中的集合, 其中的两个元素要么相等, 要么不相等, 没有任何非平凡的相等的方式; 我们说集合没有 $1$ 阶以上的同伦信息, 或者说集合是 $0$-<span class="link local"><a href="./截断性.html" title="截断性 [截断性]">截断</a></span>的.</p>
+</details></section></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="同调"><header><h1><span class="taxon"></span>同调 <a class="slug" href="./同调.html">[同调]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>同调</strong>在数学上有许多含义. 其共性是一种表现得像<span class="link local"><a href="./张量积.html" title="张量积, 余幂 [张量积]">张量积</a></span>, <span class="link local"><a href="./余极限.html" title="余极限 [余极限]">余极限</a></span>那样的协变函子. 而与之相对的<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>则是一种表现得像 Hom, <span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>那样的反变函子.</p>
@@ -4850,6 +4876,12 @@ $$
 $$
 为<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">拉回纤维化</a></span>.</p>
 <p><strong>命题</strong>. $\operatorname{Fact}$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>, 其本质像正是全体满足分解条件的二重范畴.</p>
+<h3>与模态的关系</h3>
+<p>设<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathcal C$ 上带有正交分解系 $(L,R)$. 若 $L$ 对<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>封闭 (换言之, 任意态射 $f$ 的基变换与取左类相容, $(g^*f)_L = g^* (f_L)$), 则有 $\mathcal C$ 上的一个<span class="link local"><a href="./模态.html" title="模态 [模态]">模态</a></span> (或 <span class="link local"><a href="./Lawvere--Tierney拓扑.html" title="Lawvere–Tierney 拓扑 [Lawvere--Tierney拓扑]">Lawvere–Tierney 拓扑</a></span>) ${(-)}_L\colon \mathcal C \to \mathcal C$, 对对象 $X$ 到终对象的映射 $X\to *$ 作分解得到
+$$
+X \to X_L\to *.
+$$</p>
+<p>有时这也作为<span class="link local"><a href="./模态.html" title="模态 [模态]">模态</a></span>的定义.</p>
 <h2>例</h2>
 <h3>平凡分解系</h3>
 <p>在任何范畴 $\mathcal C$ 中, $(\mathcal C^{\simeq},\mathcal C)$ 与 $(\mathcal C,\mathcal C^{\simeq})$ 均为正交分解系.</p>

@@ -944,11 +944,18 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="notes-manifold-diagrams"><header><h1><span class="taxon"></span>高阶范畴的流形图示 <a class="slug" href="./notes-manifold-diagrams.html">[notes-manifold-diagrams]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文是 <span class="link local"><a href="./HeidemannMfdDiag.html" title="Manifold Diagrams for Higher Categories [HeidemannMfdDiag]">Lukas Heidemann 博士论文</a></span>的阅读笔记.</p>
 <h2>引言</h2>
-<p>本文建立高阶范畴中的一种基于流形的图形演算 (graphical calculus), 它是<span class="link local"><a href="./线图.html" title="线图 [线图]">线图</a></span>的推广. 流形图的拼接给出高阶态射的复合, 而形状本身就带有<span class="link local"><a href="./融贯.html" title="融贯 [融贯]">融贯性</a></span>.</p>
+<p>本文建立高阶范畴中的一种基于流形的图形演算 (graphical calculus), 它是<span class="link local"><a href="./线图.html" title="线图 [线图]">线图</a></span>的推广.</p>
+<p>在流形图中, 维数最大的区域 (开区域) 代表范畴中的对象, 区域之间的余 $1$ 维界面代表 $1$-态射, …, 余 $k$ 维界面代表 $k$-态射.</p>
+<p>流形图的拼接给出高阶态射的复合, 而形状本身就带有<span class="link local"><a href="./融贯.html" title="融贯 [融贯]">融贯性</a></span>.</p>
 <h2>分层流形</h2>
 <p>拓扑空间的<span class="link local"><a href="./分层.html" title="分层 [分层]">分层</a></span>就是其到一个偏序集的映射, 其中偏序集带有 <span class="link local"><a href="./Alexandroff拓扑.html" title="Alexandroff 拓扑 [Alexandroff拓扑]">Alexandroff 拓扑</a></span>.</p>
-<p>分层空间 $X$ 上的<strong>标架</strong>是其到 $\mathbb{R}^n$ 的一个嵌入 $X\hookrightarrow\mathbb{R}^n$. 这里我们关心的其实是这个嵌入到后 $m$ 分量的投影定义的等价关系. 记 $\sim_m$ 为 $\mathbb{R}^n$ 上由 “后 $m$ 个分量相同” 定义的等价关系. 我们要求带标架分层空间之间的映射保持这些关系, 即若 $x\sim_m y$, 则 $f(x)\sim_m f(y)$.</p>
+<p>分层空间 $X$ 上的<strong>标架</strong>是其到 $\mathbb{R}^n$ 的一个嵌入 $X\hookrightarrow\mathbb{R}^n$. 这里我们关心的其实是这个嵌入到后 $m$ 分量的投影定义的等价关系. 记 $\sim_m$ 为 $\mathbb{R}^n$ 上由 “后 $m$ 个分量相同” 定义的等价关系. 我们要求带标架分层空间之间的映射保持这些关系, 即若 $x\sim_m y$, 则 $f(x)\sim_m f(y)$.
+例如下面三幅图中, 左边的竖线和中间的曲线是等同的, 而两者和右边的折返曲线是<strong>不同</strong>的.</p>
+<img src="/assets/notes-manifold-diagrams-framed.svg" alt="不同的标架" width="400" style="display:block; margin:auto;">
+<p>下面三幅图中, 底层两个 $0$ 维的点可以左右移动, 左边和中间是等同的, 而两者和右边是不同的.</p>
+<img src="/assets/notes-manifold-diagrams-framed-2.svg" alt="不同的标架" width="400" style="display:block; margin:auto;">
 <h2>网格与桁架</h2>
+<h3>网格</h3>
 <p><strong>定义</strong> (分层纤维丛).
 满足如下条件的分层空间映射 $p\colon E\to B$ 称为<strong>分层纤维丛</strong>:</p>
 <ul>
@@ -957,9 +964,144 @@ $$</p>
 <p><strong>定义</strong> (网格). 对自然数 $n$ 归纳定义 $n$ 维的<strong>闭网格</strong>:</p>
 <ul>
 <li>$0$ 维闭网格是一个点;</li>
+<li>$1$ 维闭网格是带有分层的闭区间, 其每一层都是单点或开区间;</li>
 <li>$n+1$ 维闭网格是一个分层纤维丛 $E\to B$, 其中每个纤维都是闭区间, 且纤维的分层结构的每一层都是单点或开区间.</li>
 </ul>
-<p>将上述定义中 “闭区间” 改为 “开区间”, 就得到<strong>开网格</strong>.</p>
+<p>将上述定义中 “闭区间” 改为 “开区间”, 就得到<strong>开网格</strong>:</p>
+<ul>
+<li>$1$ 维开网格是带有分层的开区间, 其每一层都是单点或开区间;</li>
+<li>$n+1$ 维开网格是一个分层纤维丛 $E\to B$, 其中每个纤维都是开区间, 且纤维的分层结构的每一层都是单点或开区间.</li>
+</ul>
+<p>注意上述定义可以容易地推广到开/闭 $n$-<strong>网格丛</strong>的定义. 而使用分层单形上的这种丛, 我们就可以定义开 $n$-网格的范畴 $\mathcal M^n$.</p>
+<p>特别地, $1$ 维标准分层单形上的开 $n$-网格丛就是 $\mathcal M^n$ 中的态射, 也叫做<strong>配边</strong> (bordism). (当然这和通常流形的配边不太一样, 只是借用了名字.)</p>
+<h3>桁架</h3>
+<p>桁架是网格的纯组合版本, 是网格的<span class="link local"><a href="./出路范畴.html" title="出路范畴 [出路范畴]">出路范畴</a></span>的隐喻; 桁架的范畴和网格的范畴等价.</p>
+<p><strong>定义</strong> (<span class="link local"><a href="./桁架.html" title="桁架 [桁架]">桁架</a></span>).</p>
+<ul>
+<li>$1$ 维闭桁架的范畴为 $\Delta^{\mathrm{op}}$.</li>
+<li>$1$ 维开桁架的范畴为 $\mathcal{T}^1 := \Delta$.</li>
+<li>$n+1$ 维开桁架 $T$ 是一个 zig-zag
+$$
+  T_{r_0}\leftarrow T_{s_0} \to T_{r_1}\leftarrow\cdots\to T_{r_n},
+$$
+其中每个 $T_{r_i},T_{s_i}$ 都是 $n$ 维开桁架, 态射是偏序集映射 $\alpha\colon [n]\to [m]$ 以及一些态射
+<ul>
+<li>$T_{r_i} \to S_{r_{\alpha(i)}}$,</li>
+<li>$T_{s_i} \to S_{s_j}$ ($\alpha(i)\leq j &lt;\alpha (i+1)$),</li>
+<li>$T_{s_i} \to S_{r_j}$ ($\alpha(i)\leq j \leq\alpha (i+1)$).</li>
+</ul>
+</li>
+</ul>
+<p>我们通过一个<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>归纳定义高维的开桁架:</p>
+<p>由于开 $1$-桁架的范畴为 $\Delta$, 同时一个开 $1$-桁架自身也可视为一个偏序集, 我们可以考虑 “<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">万有</a></span>开 $1$-桁架丛”, 即一个<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">纤维范畴</a></span>
+$$
+p\colon \mathcal {T}^1_*\to \Delta,
+$$
+(实际上是一个 Conduché 纤维化, 即 $\mathsf{Cat}$ 中<span class="link local"><a href="./指数对象.html" title="指数对象 [指数对象]">可作指数</a></span>的态射)</p>
+<ul>
+<li>其落在 $[n]$ 上的纤维 $p^{-1}([n])$ 恰为 $[n]$ 对应的开 $1$-桁架
+$$
+  r_0[n] \leftarrow s_0[n] \to r_1[n]\leftarrow s_1[n]\to\cdots \to r_n[n],
+$$
+(注意它正是开 $1$-网格的<span class="link local"><a href="./出路范畴.html" title="出路范畴 [出路范畴]">出路范畴</a></span>)</li>
+<li>其落在 $\alpha\colon [n]\to [m]$ 上的态射为 $r_i [n] \to r_{\alpha(i)} [m]$, $s_i[n] \to s_j [m]$ ($\alpha(i)\leq j &lt;\alpha (i+1)$), $s_i[n]\to r_j [m]$ ($\alpha(i)\leq j \leq\alpha (i+1)$).</li>
+</ul>
+<p>考虑 $\mathsf{Cat}$ 中的<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式</a></span>
+$$
+  {*} \leftarrow \mathcal{T}^1_{*} \to \Delta \to *,
+$$
+其给出多项式函子
+$$
+\operatorname{T}^1\colon \mathcal C\mapsto \int_{[n]\in\Delta} \mathcal C^{p^{-1}([n])}.
+$$
+直观上, $\operatorname{T}^1 (\mathcal C)$ 的对象为 “带 $\mathcal C$ 标签的 $1$-桁架”.</p>
+<h3>原子与胞腔, 奇异型</h3>
+<p><strong>定义</strong>.</p>
+<ul>
+<li>称偏序集有<strong>最小元</strong>的<strong>开</strong> $n$-网格为<strong>原子</strong>.</li>
+<li>称偏序集有<strong>最大元</strong>的<strong>闭</strong> $n$-网格为<strong>胞腔</strong>.</li>
+</ul>
+<p><strong>定义</strong> (奇异型) 对于原子或胞腔 $X$, 由定义其为一串分层纤维丛
+$$
+X  = X_n \overset{f_{n}}{\to} X_{n-1} \to \cdots \overset{f_1}{\to} X_0 = *.
+$$
+定义 $X$ 的<strong>奇异型</strong> (singularity type) $\operatorname{stype}(X)$ 为 0-1 序列 $[k_1,\cdots,k_n]\in\Delta^n$, $k_i$ 当 $X_i\to X_{i-1}$ 为平凡分层纤维丛时取 $0$, 否则取 $1$.</p>
+<p><strong>构造</strong>. 设 $M\to P$ 为开 $n$-网格, 对 $p\in P$, 记包含 $p$ 的最小的开子网格为 $\operatorname{atom}_M(p)\subset M$; 它是一个原子. 所有这样的子网格 $\operatorname{atom}_M (p)\to M$ 构成 $n$-网格范畴中的余极限余锥.</p>
+<h2>开网格的代数模式</h2>
+<p>本节描述开 $n$-网格或开 $n$-桁架如何构成一个<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span> $\mathcal T^n$, 基本对象为原子, 惰性映射为嵌入.</p>
+<h3>活性映射</h3>
+<p><strong>定义</strong>. 对于开 $n$-网格的配边, 即 $\mathcal M^n$ 中的态射 $X\to Y$, 对应于开 $n$-网格丛 $E\to \|\Delta [1]\|$, 若对任意 $p\in P_Y$, 存在 $q\in P_X$ 使得在 $P_E$ 中 $p\leq q$, 则称之为<strong>活性映射</strong>或活性配边.</p>
+<blockquote>
+<p>其实直观上就是盖满了.</p>
+</blockquote>
+<h3>田字格</h3>
+<p>由开 $n$-网格与桁架的直观很明显有嵌入
+$$
+\boxplus\colon \Delta^n \hookrightarrow \mathcal M^n\simeq\mathcal T^n.
+$$</p>
+<p>函子 $\boxplus\colon \Delta^n \to \mathcal T^n$ 诱导伴随
+$$
+(\boxplus^*\dashv \boxplus_*)\colon \widehat {\mathcal T^n} \rightleftarrows \widehat {\Delta^n},
+$$
+其中右伴随 $\boxplus_*$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>.</p>
+<p><strong>例</strong>. 设 $\mathcal C$ 为 $(\infty ,2)$-范畴, 视为 $2$ 重 Segal 生象. 设 $A$ 为如下原子.</p>
+<img src="/assets/notes-manifold-diagrams-A.svg" alt="原子A" width="150" style="display:block; margin:auto;">
+<p>我们计算 $\boxplus_*\mathcal C (A)$. 由<span class="link local"><a href="./预层范畴之间的伴随.html" title="预层范畴之间的伴随 [预层范畴之间的伴随]">预层之间伴随</a></span>的公式,
+$$
+(\boxplus_* \mathcal C)(A) = \operatorname{lim}_{[i,j]\to A}\mathcal C ([i,j]).
+$$
+给出其一个元素相当于对每个 $[i,j]\to A$ 给出相容的元素 $[i,j]\to\mathcal C$.</p>
+<p>因此, $\boxplus_*\mathcal C (A)$ 的元素相当于 $\mathcal C$ 中的一个 $2$-态射 $fg\to h$.</p>
+<p><strong>命题</strong>. 伴随 $\boxplus^*\dashv \boxplus_*$ 限制到 Segal 对象之间的伴随
+$$
+(\boxplus^*\dashv \boxplus_*)\colon \mathsf{Seg}(\mathcal T^n) \rightleftarrows \mathsf{Seg}(\Delta^n).
+$$</p>
+<p><em>证明</em>. todo</p>
+<h3>正则 Segal 对象</h3>
+<p><strong>定义</strong> (正则性). 设 $F$ 是 $\mathcal M^n\simeq \mathcal T^n$ 上的预层. 若对每个原子 $A$, 如下方块为拉回, 则称 $F$ <strong>正则</strong>:
+$$
+\begin{array}{ccc}
+F(A) &amp; \rightarrow &amp; F(\square A) \\
+\downarrow &amp;  &amp; \downarrow \\
+F(\partial A) &amp; \rightarrow &amp; F(\partial \square A),
+\end{array}
+$$
+其中
+$$
+F(\partial A) := \operatorname{lim}_{B\subsetneq A} F(B),
+$$
+$$
+\square A := \boxplus (\operatorname{stype}(A)).
+$$</p>
+<p>直观上, $F(A)$ 的元素应当是一些低阶态射的复合 (对应 $F(\partial A)$ 的元素) 配上它们之间的一个 $n$-态射 (对应 $F(\square A)$ 的元素).</p>
+<h2>流形图</h2>
+<p>前面说明了开 $n$-网格可用于<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span> $(\infty,n)$-范畴. 不过, 要想得到<span class="link local"><a href="./线图.html" title="线图 [线图]">线图</a></span>那样好用的图形演算, 我们还需要更灵活 (有更多自同构) 的探测对象, 比如允许更自由的同痕.</p>
+<p>现在我们来定义本文的核心对象: $n$-流形图.</p>
+<p>线图的一个重要性质是每一条线都有方向, 毕竟范畴中的态射有方向. (有时伴随可以允许一些线折返, 不过那是额外的条件了.) $n$-流形图也需要规定某种方向性.</p>
+<p><strong>定义</strong>. 一个原子是<strong>前进的</strong>是指:</p>
+<ul>
+<li>其奇异深度 $\operatorname{sdepth}(A)$ 等于 $\ell(A)(\bot_A)$;</li>
+<li>每个真子原子都是前进的.</li>
+</ul>
+<p><strong>定义</strong>. 标架基元 (framed basic) 是标架分层空间 $U$ 带有标签 $\ell(U)\colon \operatorname{Exit}(U) \to [n]$, 使得存在前进原子 $A$ 与细化映射 $A\to U$.</p>
+<p>我们还需要排除一些投影之后产生歧义的图形.</p>
+<p><strong>定义</strong>. 称紧标架分层空间 $M$ <strong>稳定</strong>是指: 对任意<span class="link local"><a href="./形变.html" title="形变 [形变]">形变</a></span> $\widetilde M \to [0,1]$ (标架分层纤维丛, 满足 $M$ 为 $0$ 处的纤维, 且遗忘标架后为平凡分层纤维丛), 存在 $\varepsilon \in (0,1]$ 使得其在 $\left[0,\varepsilon\right)$ 上为平凡标架分层纤维丛. 称一般的标架分层空间稳定是指其紧子空间均稳定.</p>
+<p><strong>例</strong>. 如下标架基元 $U$ 由 $A$ 细化:</p>
+<img src="/assets/notes-manifold-diagrams-framed-3.svg" alt="标架基元" width="300" style="display:block; margin:auto;">
+<p><strong>例</strong>. 如下是表达三个 $1$-态射复合的结合律的标架基元.</p>
+<img src="/assets/notes-manifold-diagrams-framed-4.svg" alt="结合律标架基元" width="300" style="display:block; margin:auto;">
+<p><strong>定义</strong>. $n$-流形图是满足某种驯顺条件的分层空间 $M$, 存在由稳定标架基元构成的覆盖.</p>
+<h3>同痕</h3>
+<p>线图最强大的地方就在于同痕不变性. 只要人们使用线图, 人们就会自动依赖这一性质. 例如<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半范畴</a></span> (<span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span>-范畴) 的线图是 $\mathbb{R}^3$ 中的图, 辫操作可描述为几何上的操作, 其<span class="link local"><a href="./融贯.html" title="融贯 [融贯]">融贯性</a></span>来自同痕; 这就是辫这个名字的由来.</p>
+<p>所以 $n$-流形图最重要的性质也是同痕不变性.</p>
+<p><strong>定义</strong>. 一个 $n$-<strong>流形图丛</strong>是一个驯顺的 $n$-标架分层纤维丛 $p\colon E\to B$, 带 $[n]$ 中的标签, 其中 $B$ 带有<strong>平凡</strong>分层结构, 且每个纤维都是 $n$-流形图. 特别地, 作为普通拓扑空间的区间 $|\Delta [1]|$ 上的 $n$-流形图丛称为 $n$-流形图的<strong>同痕</strong>.</p>
+<p><strong>定义</strong>. 设 一个 $n$-<strong>流形图丛</strong>是一个驯顺的 $n$-标架分层纤维丛 $p\colon E\to B$, 带 $[n]$ 中的标签, 其中 $B$ 带有<strong>平凡</strong>分层结构, 且每个纤维都是 $n$-流形图. 特别地, 作为普通拓扑空间的区间 $|\Delta [1]|$ 上的 $n$-流形图丛称为 $n$-流形图的<strong>同痕</strong>.</p>
+<p><strong>定义</strong> ($n$-流形图的生象). 对 $\mathbb{R}^n$ 中的闭 $n$-网格 $X$ 可以定义 $X$ 上的 $n$-流形图的生象 $\mathbb D^n (X)$: 它具有一个单纯集表现, 其 $k$-单形是逐纤维正交于 $X$ 的 $n$-流形图丛 $E\to |\Delta [k]|$ (的等价类).</p>
+<p>$$
+\mathbb D^n\colon \overline{\mathcal M}^n\simeq(\mathcal M^n)^{\mathrm{op}}\to\mathsf{Ani}
+$$</p>
+<p>下面的定理是文章的主定理, 告诉我们流形图是同痕不变的:</p>
+<p><strong>定理</strong>. $\mathbb D^n$ 是正则 Segal 对象.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="代数充实于余代数"><header><h1><span class="taxon"></span>代数充实于余代数 <a class="slug" href="./代数充实于余代数.html">[代数充实于余代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>通过余代数测量</h3>
