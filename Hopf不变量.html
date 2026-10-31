@@ -842,17 +842,25 @@ $$</p>
 <p>注. 想象 $\eta$ “是” (选取代表元为) 支集在一个纤维上的 $1$ 形式, $d\eta$ “是” 支集在以另一纤维为边界的圆盘上的 $2$-形式, 那么 $\eta \wedge d\eta$ 的积分就是两个纤维的<span class="link local"><a href="./联结数.html" title="“联结数” [联结数]">联结数</a></span>.</p>
 </blockquote>
 <h2>性质</h2>
-<p>$h \colon \pi_{2n-1}(S^n) \to \mathbb{Z}$ 为群同态. 若 $n$ 为奇数, $h$ 是平凡映射 (因为 $\pi_{2n-1}(S^n)$ 是挠群); 若 $n$ 为偶数, 则 $h$ 的像包含 $2$, 因为 <span class="link local"><a href="./Whitehead乘积.html" title="“Whitehead 乘积” [Whitehead乘积]">Whitehead 乘积</a></span> $[\operatorname{id},\operatorname{id}]$ 的 Hopf 不变量是 $2$.</p>
+<p>$h \colon \pi_{2n-1}(S^n) \to \mathbb{Z}$ 为群同态. 若 $n$ 为奇数, $h$ 是平凡映射 (因为 $\pi_{2n-1}(S^n)$ 是挠群); 若 $n$ 为偶数, 则 $h$ 的像包含 $2$, 因为 <span class="link local"><a href="./Whitehead乘积.html" title="Whitehead 乘积 [Whitehead乘积]">Whitehead 乘积</a></span> $[\operatorname{id},\operatorname{id}]$ 的 Hopf 不变量是 $2$.</p>
 <p>$h(\phi)$ 等于 $\phi$ 的任意两个纤维在 $S^{2n-1}$ 中的<span class="link local"><a href="./联结数.html" title="“联结数” [联结数]">联结数</a></span> (linking number).</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Whitehead乘积"><header><h1><span class="taxon"></span>“Whitehead 乘积” <a class="slug" href="./Whitehead乘积.html">[Whitehead乘积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p><span class="link external"><a href="https://en.wikipedia.org/wiki/Whitehead_product" title="Wiki [https://en.wikipedia.org/wiki/Whitehead_product]">Wiki</a></span></p>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Whitehead乘积"><header><h1><span class="taxon"></span>Whitehead 乘积 <a class="slug" href="./Whitehead乘积.html">[Whitehead乘积]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
 <h2>定义</h2>
-<p>给定 $f \in \pi_k(X), g \in \pi_l(X)$, 其 Whitehead 乘积 $[f,g] \in \pi_{k+l-1}(X)$ 定义如下.</p>
+<p>给定 $f \in \pi_k(X), g \in \pi_l(X)$, 其 <strong>Whitehead 乘积</strong> $[f,g] \in \pi_{k+l-1}(X)$ 定义如下.</p>
 <p>球的乘积 $S^k \times S^l$ 可视为一点并 $S^k \vee S^l$ 粘上一个 $(k+l)$-胞腔, 设其粘贴映射为 $\phi \colon S^{k+l-1} \to S^k \vee S^l$. 定义
 $$
 [f,g] \colon  S^{k+l-1} \overset{\phi}{\to} S^k\vee S^l \overset{f\vee g}{\to} X.
 $$</p>
 <p>特别地, $\pi_1(X)$ 可作用于每个 $\pi_k(X)$ 上.</p>
+<h3>广义 Whitehead 乘积</h3>
+<p>给定映射 $f\colon U\to \Omega Z$, $g\colon V\to \Omega Z$,
+定义<span class="link local"><a href="./交换子.html" title="交换子 [交换子]">交换子</a></span>映射 $[f,g]\colon U\times V \to\Omega Z$,
+$$
+(u,v)\mapsto [f(u),g(v)] := f(u)g(v)f(u)^{-1}g(v)^{-1}.
+$$</p>
+<p>由于 $[f,g]$ 在 $U \lor V$ 上的限制等于常值映射, 故 $[f,g]$ 穿过<span class="link local"><a href="./压缩积.html" title="压缩积 [压缩积]">压缩积</a></span> $U \land V = \dfrac{U\times V}{U\lor V}$.</p>
+<p>令 $U = S^{k-1}$, $V = S^{l-1}$, 那么映射 $f\colon U\to \Omega Z$, $g\colon V\to\Omega Z$ 相当于映射 $S^k\to Z$, $S^l\to Z$. 交换子 $[f,g]\colon U\land V \to \Omega Z$ 相当于映射 $S^{k+l-1}\to Z$, 给出前面定义的 Whitehead 乘积.</p>
 <h2>性质</h2>
 <p><strong>双线性性</strong>. 对 $g,h\in\pi_l(X)$, $[f,g+h] = [f,g]+[f,h]$.</p>
 <p><strong>分次交换性</strong>. $[f,g] = (-1)^{kl}[g,f]$.</p>

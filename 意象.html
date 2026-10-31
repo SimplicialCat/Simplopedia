@@ -1108,6 +1108,7 @@ $$
 <h2>例</h2>
 <h3>偏序集上的 Grothendieck 拓扑</h3>
 <p>设 $(P,\leq)$ 为<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span>, $P$ 上的 Grothendieck 拓扑是对每个元素 $x\in P$ 指定何时 $\{x_i \leq x\}$ 为覆盖, 且满足稳定性和传递性. 这定义了一个 $0$-意象, 也即<span class="link local"><a href="./位象.html" title="位象 [位象]">位象</a></span>.</p>
+<p>偏序集上一个重要的 Grothendieck 拓扑是<span class="link local"><a href="./双重否定.html" title="双重否定 [双重否定]">双重否定</a></span> $\neg\neg$ 对应的 Grothendieck 拓扑, 覆盖为稠密族: 子集 $S$ 在元素 $x$ 下稠密是指对任意 $y\leq x$ 都存在 $s\in S$, $s\leq y$.</p>
 <h2>相关概念</h2>
 <ul>
 <li><span class="link local"><a href="./次典范拓扑.html" title="次典范拓扑 [次典范拓扑]">次典范拓扑</a></span></li>
@@ -2198,16 +2199,19 @@ $$
 </ul>
 <h2>例</h2>
 <h3>Cohen 与连续统假设</h3>
+<p>连续统假设说的是在 $\aleph_0$ 与 $2^{\aleph_0}$ 之间不存在一个基数. Cohen 用力迫法构造了一个 ZFC 的模型不满足连续统假设, 从而证明连续统假设独立于 ZFC.</p>
+<p>我们称 $2^{\omega}$ 的元素为实数.</p>
+<p>这个构造的关键可以理解为: 构造任意多两两不同的实数.</p>
 <p>设 $V$ 是 <span class="link local"><a href="./ZFC.html" title="ZFC [ZFC]">ZFC</a></span> 的一个模型. 待定一个完备 Boole 代数 $\mathbb B$. 递归定义 $V^{\mathbb B}$ (它将是<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span> $\mathsf{Sh}(\mathbb B)$ 中 ZFC 的模型):</p>
 <ul>
 <li>$V^{\mathbb B}$ 中的一个元素就是 $V^{\mathbb B}$ 的子集到 $\mathbb B$ 的一个映射.</li>
 </ul>
 <p>直观上, $V^{\mathbb B}$ 的一个元素 $U\to \mathbb B$ 是一个 “每个元素在一定条件下属于 $U$” 的集合. 一个元素映射到 $\top$ 说明它确定属于这个集合; 映射到 $p$ 说明它在条件 $p$ 之下属于这个集合.</p>
-<p>对于 $V$ 的元素 $v$ 递归定义 $\check{v}\in V^{\mathbb B}$:
+<p>对于 $V$ 的元素 $v$ 递归定义 $\check{v}\in V^{\mathbb B}$, 从而 $V$ 典范地嵌入 $V^{\mathbb B}$:
 $$
 \check{v} = \{(\check{w},\top)\mid w\in v\}.
 $$
-这也可理解为<span class="link local"><a href="./常值层.html" title="常值层 [常值层]">常值层</a></span>函子 $\Delta\colon \mathsf{Set} \to \mathsf{Sh}(\mathbb B)$ 对.</p>
+这也可理解为<span class="link local"><a href="./常值层.html" title="常值层 [常值层]">常值层</a></span>函子 $\Delta\colon \mathsf{Set} \to \mathsf{Sh}(\mathbb B)$ 对 $V$ 的作用.</p>
 <p>我们可以定义一个赋予 <span class="link local"><a href="./ZFC.html" title="ZFC [ZFC]">ZFC</a></span> 的句子在 $\mathbb B$ 中的值的映射
 $$
 [\![-]\!]\colon \mathrm{Sen}(\mathrm{ZFC}) \to \mathbb B,
@@ -2217,23 +2221,34 @@ $$</p>
 <li>$[\![ u = v ]\!] := \bigwedge_{w} (v(w) \Rightarrow [\![ w \in u ]\!])\land ( u(w)\Rightarrow [\![ w\in v ]\!])$;</li>
 <li>…</li>
 </ul>
-<p>令 $\mathbb P = \operatorname{Fn}(\omega,2)$ 为 $\omega$ 的有限子集到 $2=\{\bot,\top\}$ 的映射构成的集合. 令 $\mathbb B = \operatorname{RO}(2^{\omega})$, 那么 $\mathbb P$ 是 $\mathbb B \setminus \{\bot\}$ 的稠密子集, $\mathbb B$ 是 $\mathbb P$ 的 Boole 完备化.</p>
-<p>令
+<p>令 $\mathbb P = \operatorname{Fn}(\omega,2)$ 为 $\omega$ 的有限子集到 $2=\{\bot,\top\}$ 的映射构成的集合, 直观上一个部分映射含有的信息越多, 其在偏序中越小. 令 $\mathbb B = \operatorname{RO}(2^{\omega})$, 那么有稠密嵌入
+$$
+\mathbb P\to \mathbb B \setminus \{\bot\},
+p\mapsto (\downarrow p);
+$$
+换言之, $\mathbb B$ 是 $\mathbb P$ 的 Boole 完备化.</p>
+<p>令实数
 $$
 c := \{(\check{n},b_n)\colon n\in\omega\}\in V^{\mathbb B},
 $$
+其中
 $$
-b_n := \{p\in 2^\omega\colon p(n) = 1\}.
+b_n := \{x\in 2^\omega\colon x(n) = 1\}.
 $$</p>
-<p>那么</p>
+<p>那么
+$$
+[\![ \check{n} \in c]\!] = b_n,
+$$</p>
+<p>对于 $p\in\mathbb P$,</p>
 <ul>
-<li>$p \Vdash \check{n}\in c$ 当且仅当 $p(n) = 1$.</li>
-<li>$p \Vdash \check{n}\notin c$ 当且仅当 $p(n) = 0$.</li>
+<li>$p \Vdash (\check{n}\in c)$ 当且仅当 $(\downarrow p)\leq b_n$, 即 $p\in b_n$, 即 $p(n) = 1$.</li>
+<li>$p \Vdash (\check{n}\notin c)$ 当且仅当 $p(n) = 0$.</li>
 </ul>
-<p>在上面将 $\omega$ 改成 $\kappa\times\omega$ 可以得到一族 $\kappa$ 个对象 $c_\alpha$, $b_{n,\alpha}$ ($\alpha &lt; \kappa$).</p>
-<p>$$
-\exists q\leq p, \, q \Vdash c_\alpha \neq c_\beta.
+<p>在上面将 $\omega$ 改成 $\kappa\times\omega$, 那么就有一族 $\kappa$ 个对象 $c_\alpha$, $b_{n,\alpha}$ ($\alpha &lt; \kappa$). 我们发现 $c_\alpha$ 是两两不同的实数. 具体地, 对任意条件 $p$, 总可以加入更多条件得到 $q \leq p$, 使得
+$$
+q \Vdash c_\alpha \neq c_\beta.
 $$</p>
+<p>取 $\kappa$ 为一个巨大的基数, 例如 $\omega_2$, 就得到了巨多的实数.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="区间"><header><h1><span class="taxon"></span>区间 <a class="slug" href="./区间.html">[区间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>直接定义</h3>

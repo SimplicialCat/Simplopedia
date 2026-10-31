@@ -1355,7 +1355,57 @@ $$</p>
 <p>则称 $f$ 是半小 (semismall) 的.</p>
 <p><strong>习题</strong>. 构造 $Y = \{\det\begin{pmatrix}a&amp;b\\c&amp;d\end{pmatrix} = 0\}$ 的半小消解.</p>
 <p>我们想要用消解研究奇性代数簇 $Y$.</p>
-<p><strong>命题</strong>. 若 $f$ 半小, 则 $f_*\mathrm{IC}_X$ 为偏屈层</p>
+<p><strong>命题</strong>. 若 $f$ 半小, 则 $f_*\mathrm{IC}_X$ 为偏屈层.</p>
+<p>(后面有一小节课没听)</p>
+<h2>第 6 讲 (2026-10-27)</h2>
+<p><strong>例</strong>. $\pi\colon \operatorname{Bl}_0\mathbb A^2\to\mathbb A^2$ 为半小映射, $\pi_*\mathrm{IC}$ 为偏屈层, 分解为 $\mathrm{IC}_{\mathbb A^2}\oplus\delta_0$.</p>
+<p><strong>命题</strong> (光滑射影分解).
+设 $Y$ 为光滑代数簇, $f\colon X\to Y$ 为满射, 且为<span class="link local"><a href="./光滑映射.html" title="光滑映射 [光滑映射]">光滑</a></span>, <span class="link local"><a href="./射影簇.html" title="射影簇 [射影簇]">射影</a></span>映射, 相对维数为 $d$. 那么
+$$
+f_*\underline{\mathbb{Q}}_X \simeq \bigoplus_{q=0}^{2d} H^q(f_*\underline{\mathbb{Q}}_X)[-q].
+$$</p>
+<p><strong>注</strong>. 在紧合情形也有此结论.</p>
+<p><strong>推论</strong>. 在前述条件下,
+$$
+f_* \mathrm{IC}_X \simeq \bigoplus_{q=-d}^{d} {^p H}^q (f_* \mathrm{IC}_X) [-q].
+$$</p>
+<p>下面主要的目标就是证明这个定理:</p>
+<p><strong>定理</strong> (BBDG) 设 $f\colon X\to Y$ 紧合,
+$$
+f_* \mathrm{IC}_X \simeq \bigoplus_{q} {^p H}^q (f_* \mathrm{IC}_X) [-q].
+$$</p>
+<p><strong>注</strong>. 对通常 t-结构不成立.</p>
+<p><em>光滑射影分裂的证明</em> (Ehresmann).
+由假设, $f_*\underline{\mathbb{Q}}_X$ 局部常值. (不过仅这一条还不能推出分裂为上同调.)
+考虑典型纤维 $Z$, $\dim Z = d$.</p>
+<ul>
+<li>“Hard Lefschetz” 告诉我们: 若 $\mathcal L$ 为<span class="link local"><a href="./丰沛线丛.html" title="丰沛线丛 [丰沛线丛]">丰沛线丛</a></span>, 记 $\eta = c_1(\mathcal L)\in H^2(Z)$ (“一般超平面”), 则 $\eta\cup (-)\colon H^*\to H^{*+2}$ 迭代 $q$ 次给出一个典范同构 $\eta^q\cup (-)\colon H^{d-q}\simeq H^{d+q}$ (Poincaré 对偶告诉我们它们同构, 但不典范).</li>
+<li>若有关于 $f\colon X\to Y$ 的相对丰沛线丛, 则有典范同构 $\eta^q\cup (-)\colon H^{d-q}(f_*\underline{\mathbb{Q}}_X) \simeq H^{d+q}(f_*\underline{\mathbb{Q}}_X)$.</li>
+<li>事实上, 上述同构由同构 $\eta^q\colon f_*\underline{\mathbb{Q}} \to f_*\underline{\mathbb{Q}} [2q]$ 取上同调得到. 由 Deligne 分裂定理完成证明.</li>
+</ul>
+<p><strong>定理</strong> (Deligne 分裂). 设 $K$ 是带 t-结构的稳定范畴中的有界对象, 且有态射 $\eta\colon K \to K[2]$. 假设对任意 $r$, $K \to K[2r]$ 诱导同构 $H^{-r} (K)\simeq H^r(K)$, 则有 $K = \bigoplus H^i (K) [-i]$.</p>
+<p><strong>本学期剩下的大纲</strong>: BBDG 定理的证明.</p>
+<ol>
+<li>类比到特征 $p$</li>
+<li>纯性 (purity)</li>
+<li>权重理论</li>
+<li>从特征 $p$ 回到特征 $0$: 在 $\operatorname{Spec}\mathbb F_p$ 的特殊纤维上应用 Frobenius 与权重理论证明分解, 再回到 $\operatorname{Spec}\mathbb{C}$ 的一般纤维.</li>
+</ol>
+<p><strong>约定</strong>. $X$, $Y$ 等表示定义在 $\overline{\mathbb F_q}$ 上的代数簇, $X_0$, $Y_0$ 等表示 $\mathbb F_q$ 上的代数簇, $X = X_0\times_{\operatorname{Spec}\mathbb F_q}\operatorname{Spec}\overline{\mathbb F_q}$.</p>
+<p>回忆 $\operatorname{Gal}(\overline{\mathbb F_q}/\mathbb F_q) = \widehat {\mathbb{Z}} = \operatorname{lim}_n \mathbb{Z}/n$.</p>
+<p>回忆 Frobenius 给出 $X$ 的自同构, 与 $\overline{\mathbb F_q}$ 的自同构相容. 它也作用于 $X$ 上的层.</p>
+<p>我们可以定义 “$\ell$-进层” $D^b_c(X,\overline{\mathbb{Q}_\ell})$ 上的偏屈 t-结构:</p>
+<ul>
+<li>首先定义 $f^*,f^!,f_!,f_*,\mathbb D,\operatorname{Hom},\otimes$ (例如将映射分解为开嵌入接着紧合映射…)</li>
+<li>平展局部系统是平展局部常值层, 等同于平展基本群的表示.</li>
+</ul>
+<h3>权重理论与 Tate 扭</h3>
+<ul>
+<li>$\mathbb A^1$ 上, $\widehat {\mathbb{Z}}$ 在 $H^0 = \overline{\mathbb{Q}}_\ell$ 上的作用是平凡的.</li>
+<li>$\widehat {\mathbb{Z}}$ 在 $H^1(\mathbb G_m)$ 以及 $H^2(\mathbb P^1)$ 上的作用不平凡.</li>
+</ul>
+<p>$\mathbb G_m$ 上的 Frobenius 作用是什么? 直观上, 它作用于 $\overline{\mathbb{F}_q}$-点的集合 $\overline{\mathbb{F}}_q^\times$ 上.</p>
+<p>下次我们将介绍 <span class="link local"><a href="./Tate扭.html" title="Tate 扭 [Tate扭]">Tate 扭</a></span>, 一个反复出现的核心对象. 它出现在这两个上同调的 Frobenius 作用的计算中.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="t-结构"><header><h1><span class="taxon"></span>t-结构 <a class="slug" href="./t-结构.html">[t-结构]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设 $\mathcal C$ 为<span class="link local"><a href="./三角范畴.html" title="“三角范畴” [三角范畴]">三角范畴</a></span>或<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定无穷范畴</a></span>, 在<strong>同调指标</strong>中, 其上的一个 $t$-结构是一对子范畴 $(\mathcal C_{\geq 0},\mathcal C_{\leq 0})$, 记 $\mathcal C_{\geq n}=\mathcal C_{\geq 0}[n]$, $\mathcal C_{\leq n}=\mathcal C_{\leq 0}[n]$, 满足</p>

@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width"><title>Tate 扭</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+
+
+<div id="tcomment"></div>
+<script src="https://cdn.jsdelivr.net/npm/twikoo@1.7.9/dist/twikoo.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const footer = document.querySelector('footer');
+    const commentEl = document.getElementById('tcomment');
+    if (footer && commentEl) {
+      footer.parentNode.insertBefore(commentEl, footer.nextSibling);
+    }
+    twikoo.init({
+      envId: 'https://simplopedia.netlify.app/.netlify/functions/twikoo',
+      el: '#tcomment',
+      path: location.pathname,
+    });
+  });
+</script><style>
+  @font-face {
+    font-family: 'NewCM10';
+    src: url(assets/NewCM10-Book.otf) format('opentype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'NewCM10';
+    src: url(assets/NewCM10-Italic.otf) format('opentype');
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'NewCM10';
+    src: url(assets/NewCM10-Bold.otf) format('opentype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  body {
+    --text-font-family: "NewCM10", serif !important;
+  }
+</style><template id="inline-section">
+  <section class="inline block" data-taxon="">
+    <details open="">
+      <summary>
+        <header>
+          <h1>
+            <span class="taxon"></span>
+            <div id="title"></div>
+          </h1>
+        </header>
+      </summary>
+      <div id="content"></div>
+    </details>
+  </section>
+</template>
+
+<script>
+  function inlineSection(template, section, taxon, title) {
+    taxon = taxon || section.getAttribute("taxon") || null;
+    title = title || section.getAttribute("title") || "";
+
+    const clone = template.content.cloneNode(true);
+    clone.querySelector("section").dataset.taxon = taxon;
+    clone.querySelector(".taxon").textContent = taxon ? `${taxon}. ` : "";
+    clone.querySelector("#title").replaceWith(title);
+    clone.querySelector("#content").replaceWith(...section.childNodes);
+
+    if (section.hasAttribute("close")) {
+      clone.querySelector("details").removeAttribute("open");
+    }
+    
+    section.replaceWith(clone);
+  }
+
+  const tagTaxonTable = {
+    "exegesis": "Exegesis",
+    "definition": "Definition",
+    "proposition": "Proposition",
+    "remark": "Remark",
+    "conjecture": "Conjecture",
+    "postulate": "Postulate",
+    "claim": "Claim",
+    "observation": "Observation",
+    "fact": "Fact",
+    "hypothesis": "Hypothesis",
+    "axiom": "Axiom",
+    "lemma": "Lemma",
+    "theorem": "Theorem",
+    "corollary": "Corollary",
+    "example": "Example", 
+    "proof": "Proof",
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const template = document.getElementById("inline-section");
+
+    [...document.getElementsByTagName("block")].forEach(section => inlineSection(template, section));
+
+    Object.entries(tagTaxonTable).forEach(([tag, taxon]) => {
+      [...document.getElementsByTagName(tag)].forEach(section => inlineSection(template, section, taxon));
+    });
+  });
+</script><script>
+  function toggleDetailsOpen() {
+    const details = document.querySelector("#toc>div>details");
+    if (!details) return;
+
+    if (window.matchMedia("(max-width: 1000px)").matches) {
+      details.removeAttribute("open");
+    } else {
+      details.setAttribute("open", "");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", toggleDetailsOpen);
+  window.addEventListener("resize", toggleDetailsOpen);
+</script><style>
+  theme-option {
+    display: inline-block;
+  }
+
+  theme-option>input {
+    display: none;
+  }
+
+  theme-option>label {
+    color: var(--slug-color);
+  }
+
+  theme-option>label:hover {
+    background-color: var(--hover-color-link);
+  }
+
+  theme-option:has(input:checked)>label {
+    color: var(--link-color);
+  }
+
+  theme-option>label::before {
+    content: "[";
+    color: rgba(0, 0, 0, 0);
+  }
+
+  theme-option>label::after {
+    content: "]";
+    color: rgba(0, 0, 0, 0);
+  }
+
+  theme-option:has(input:checked)>label::before {
+    color: var(--link-color);
+  }
+
+  theme-option:has(input:checked)>label::after {
+    color: var(--link-color);
+  }
+</style>
+
+<template id="theme-option-template">
+  <input type="radio" name="theme" />
+  <label></label>
+</template>
+
+<script>
+  const THEME_KEY = `kodama-theme`;
+
+  function storeSelectedTheme(name) {
+    localStorage.setItem(THEME_KEY, name);
+  }
+
+  function getCurrentTheme() {
+    return localStorage.getItem(THEME_KEY) || window.primaryTheme;
+  }
+
+  function selectTheme(themeName) {
+    storeSelectedTheme(themeName);
+    requestAnimationFrame(applyDynamicColorInvert);
+  }
+
+  function applyFavorTheme() {
+    const favoredTheme = getCurrentTheme();
+    if (favoredTheme) {
+      const selector = `input[type='radio'][id='${favoredTheme}']`;
+      const favoredOption = window.themeOptions.querySelector(selector);
+
+      if (favoredOption) {
+        favoredOption.checked = true;
+      } else if (window.primaryOption) {
+        // Fallback to primary theme, if the favored theme is not found
+        // e.g., when the theme options have changed, and the stored theme is no longer available.
+        window.primaryOption.checked = true;
+      }
+    }
+    applyDynamicColorInvert();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    window.themeOptions = document.getElementById("theme-options");
+    const templateContent = document.getElementById("theme-option-template").content;
+
+    customElements.define(
+      "theme-option",
+      class extends HTMLElement {
+        constructor() {
+          super();
+
+          const node = templateContent.cloneNode(true);
+          const themeName = this.getAttribute("name");
+
+          const input = node.querySelector("input");
+          input.setAttribute("id", themeName);
+          input.setAttribute("value", themeName);
+
+          const label = node.querySelector("label");
+          label.setAttribute("for", themeName);
+          label.addEventListener("click", () => selectTheme(themeName));
+
+          while (this.firstChild) {
+            label.appendChild(this.firstChild);
+          }
+          this.appendChild(node);
+        }
+      },
+    );
+
+    window.primaryOption = window.themeOptions.querySelector("input[type='radio']");
+    window.primaryTheme = primaryOption?.value;
+
+    applyFavorTheme();
+  });
+</script>
+
+<script>
+  const clamp = (value) => Math.max(0, Math.min(255, value));
+
+  const multiply = ([r, g, b], matrix) => {
+    const nr = clamp(r * matrix[0] + g * matrix[1] + b * matrix[2]);
+    const ng = clamp(r * matrix[3] + g * matrix[4] + b * matrix[5]);
+    const nb = clamp(r * matrix[6] + g * matrix[7] + b * matrix[8]);
+    return [nr, ng, nb];
+  };
+
+  const hueRotate = ([r, g, b], angle = 0) => {
+    const rad = (angle / 180) * Math.PI;
+    const sin = Math.sin(rad);
+    const cos = Math.cos(rad);
+    const matrix = [
+      0.213 + cos * 0.787 - sin * 0.213,
+      0.715 - cos * 0.715 - sin * 0.715,
+      0.072 - cos * 0.072 + sin * 0.928,
+      0.213 - cos * 0.213 + sin * 0.143,
+      0.715 + cos * 0.285 + sin * 0.140,
+      0.072 - cos * 0.072 - sin * 0.283,
+      0.213 - cos * 0.213 - sin * 0.787,
+      0.715 - cos * 0.715 + sin * 0.715,
+      0.072 + cos * 0.928 + sin * 0.072,
+    ];
+    return multiply([r, g, b], matrix);
+  };
+
+  const grayscale = ([r, g, b], value = 1) => {
+    const matrix = [
+      0.2126 + 0.7874 * (1 - value),
+      0.7152 - 0.7152 * (1 - value),
+      0.0722 - 0.0722 * (1 - value),
+      0.2126 - 0.2126 * (1 - value),
+      0.7152 + 0.2848 * (1 - value),
+      0.0722 - 0.0722 * (1 - value),
+      0.2126 - 0.2126 * (1 - value),
+      0.7152 - 0.7152 * (1 - value),
+      0.0722 + 0.9278 * (1 - value),
+    ];
+    return multiply([r, g, b], matrix);
+  };
+
+  const sepia = ([r, g, b], value = 1) => {
+    const matrix = [
+      0.393 + 0.607 * (1 - value),
+      0.769 - 0.769 * (1 - value),
+      0.189 - 0.189 * (1 - value),
+      0.349 - 0.349 * (1 - value),
+      0.686 + 0.314 * (1 - value),
+      0.168 - 0.168 * (1 - value),
+      0.272 - 0.272 * (1 - value),
+      0.534 - 0.534 * (1 - value),
+      0.131 + 0.869 * (1 - value),
+    ];
+    return multiply([r, g, b], matrix);
+  };
+
+  const saturate = ([r, g, b], value = 1) => {
+    const matrix = [
+      0.213 + 0.787 * value,
+      0.715 - 0.715 * value,
+      0.072 - 0.072 * value,
+      0.213 - 0.213 * value,
+      0.715 + 0.285 * value,
+      0.072 - 0.072 * value,
+      0.213 - 0.213 * value,
+      0.715 - 0.715 * value,
+      0.072 + 0.928 * value,
+    ];
+    return multiply([r, g, b], matrix);
+  };
+
+  const linear = ([r, g, b], slope = 1, intercept = 0) => {
+    const scale = 255;
+    return [
+      clamp(r * slope + intercept * scale),
+      clamp(g * slope + intercept * scale),
+      clamp(b * slope + intercept * scale),
+    ];
+  };
+
+  const brightness = (rgb, value = 1) => linear(rgb, value);
+  const contrast = (rgb, value = 1) => linear(rgb, value, -0.5 * value + 0.5);
+
+  const invert = ([r, g, b], value = 1) => {
+    const nr = (value + r / 255 * (1 - 2 * value)) * 255;
+    const ng = (value + g / 255 * (1 - 2 * value)) * 255;
+    const nb = (value + b / 255 * (1 - 2 * value)) * 255;
+    return [clamp(nr), clamp(ng), clamp(nb)];
+  };
+
+  // Code taken from https://stackoverflow.com/a/9493060/2688027, licensed under CC BY-SA.
+  const rgbToHsl = (r, g, b) => {
+    r /= 255; g /= 255; b /= 255;
+    const max = Math.max(r, g, b);
+    const min = Math.min(r, g, b);
+    let h, s, l = (max + min) / 2;
+    if (max === min) {
+      h = s = 0;
+    } else {
+      const d = max - min;
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      switch (max) {
+        case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+        case g: h = (b - r) / d + 2; break;
+        case b: h = (r - g) / d + 4; break;
+      }
+      h /= 6;
+    }
+    return { h: h * 100, s: s * 100, l: l * 100 };
+  };
+
+  const applyFilters = (rgb, [inv, sep, sat, hue, bri, con]) => {
+    let color = [...rgb];
+    color = invert(color, inv / 100);
+    color = sepia(color, sep / 100);
+    color = saturate(color, sat / 100);
+    color = hueRotate(color, hue * 3.6);
+    color = brightness(color, bri / 100);
+    color = contrast(color, con / 100);
+    return color;
+  };
+
+  const lossFn = (targetRgb, filters) => {
+    const resultRgb = applyFilters([0, 0, 0], filters);
+    const targetHsl = rgbToHsl(...targetRgb);
+    const resultHsl = rgbToHsl(...resultRgb);
+    return (
+      Math.abs(resultRgb[0] - targetRgb[0]) +
+      Math.abs(resultRgb[1] - targetRgb[1]) +
+      Math.abs(resultRgb[2] - targetRgb[2]) +
+      Math.abs(resultHsl.h - targetHsl.h) +
+      Math.abs(resultHsl.s - targetHsl.s) +
+      Math.abs(resultHsl.l - targetHsl.l)
+    );
+  };
+
+  const fix = (value, idx) => {
+    let max = 100;
+    if (idx === 2) max = 7500;                  // saturate
+    else if (idx === 4 || idx === 5) max = 200; // brightness, contrast
+    if (idx === 3) { // hue-rotate
+      if (value > max) return value % max;
+      if (value < 0) return max + (value % max);
+      return value;
+    }
+    return Math.max(0, Math.min(max, value));
+  };
+
+  const spsa = (targetRgb, A, a, c, initial, iters) => {
+    const alpha = 1;
+    const gamma = 1 / 6;
+    let values = [...initial];
+    let best = [...values];
+    let bestLoss = Infinity;
+
+    for (let k = 0; k < iters; k++) {
+      const ck = c / Math.pow(k + 1, gamma);
+      const deltas = Array(6).fill().map(() => (Math.random() > 0.5 ? 1 : -1));
+      const highArgs = values.map((v, i) => v + ck * deltas[i]);
+      const lowArgs = values.map((v, i) => v - ck * deltas[i]);
+      const lossDiff = lossFn(targetRgb, highArgs) - lossFn(targetRgb, lowArgs);
+
+      values = values.map((v, i) => {
+        const g = (lossDiff / (2 * ck)) * deltas[i];
+        const ak = a[i] / Math.pow(A + k + 1, alpha);
+        return fix(v - ak * g, i);
+      });
+
+      const loss = lossFn(targetRgb, values);
+      if (loss < bestLoss) {
+        best = [...values];
+        bestLoss = loss;
+      }
+    }
+    return { values: best, loss: bestLoss };
+  };
+
+  // Threshold for acceptable color loss. This value determines when the SPSA algorithm stops early.
+  // A loss below this value is considered visually indistinguishable for most use cases.
+  // The value 25 was determined empirically to balance performance and color accuracy.
+  const ACCEPTABLE_COLOR_LOSS = 25;
+
+  const solveWide = (targetRgb) => {
+    const A = 5;
+    const c = 15;
+    const a = [60, 180, 18000, 600, 1.2, 1.2];
+    let best = { loss: Infinity, values: null };
+    for (let i = 0; best.loss > ACCEPTABLE_COLOR_LOSS && i < 3; i++) {
+      const initial = [50, 20, 3750, 50, 100, 100];
+      const result = spsa(targetRgb, A, a, c, initial, 1000);
+      if (result.loss < best.loss) best = result;
+    }
+    return best;
+  };
+
+  const solveNarrow = (targetRgb, wideResult) => {
+    const A = wideResult.loss;
+    const c = 2;
+    const A1 = A + 1;
+    const a = [0.25 * A1, 0.25 * A1, A1, 0.25 * A1, 0.2 * A1, 0.2 * A1];
+    return spsa(targetRgb, A, a, c, wideResult.values, 500);
+  };
+
+  const cssFilterString = (filters) => {
+    const [inv, sep, sat, hue, bri, con] = filters.map(Math.round);
+    const hueDeg = Math.round(hue * 3.6);
+    return `filter: invert(${inv}%) sepia(${sep}%) saturate(${sat}%) hue-rotate(${hueDeg}deg) brightness(${bri}%) contrast(${con}%);`;
+  };
+
+  const solveColor = (targetRgb) => {
+    const wide = solveWide(targetRgb);
+    const narrow = solveNarrow(targetRgb, wide);
+    return {
+      values: narrow.values,
+      loss: narrow.loss,
+      filter: cssFilterString(narrow.values),
+    };
+  };
+
+  // Reuse a single canvas / context to avoid memory leaks
+  const colorParseCanvas = document.createElement('canvas');
+  colorParseCanvas.width = 1;
+  colorParseCanvas.height = 1;
+  const colorParseContext = colorParseCanvas.getContext('2d');
+
+  const toRGBArray = (cssColor) => {
+    colorParseContext.fillStyle = cssColor;
+    colorParseContext.fillRect(0, 0, 1, 1);
+
+    // The `getImageData().data` returns a Uint8ClampedArray with 4 values per pixel (RGBA). 
+    // also see: https://developer.mozilla.org/zh-CN/docs/Web/API/ImageData/data
+    const rgba = colorParseContext.getImageData(0, 0, 1, 1).data;
+    return Array.from(rgba.slice(0, 3));
+  };
+
+  const DYNAMIC_STYLE_ID = 'dynamic-color-invert-style';
+  const SOLVED_COLOR_KEY = "solved-";
+
+  function memorizedSolvedFilter(color) {
+    const colorKey = SOLVED_COLOR_KEY + color;
+    const storedFilterOption = localStorage.getItem(colorKey);
+    if (storedFilterOption) {
+      return storedFilterOption;
+    } else {
+      const filter = solveColor(color).filter;
+      localStorage.setItem(colorKey, filter);
+      return filter;
+    }
+  }
+
+  function applyDynamicColorInvert() {
+    const textColor = getComputedStyle(document.body).getPropertyValue('--text-color');
+    if (textColor && textColor.length > 0) {
+      const rgb = toRGBArray(textColor);
+      const filter = memorizedSolvedFilter(rgb);
+
+      const existingStyle = document.getElementById(DYNAMIC_STYLE_ID);
+      if (existingStyle) {
+        existingStyle.textContent = `.color-invert {${filter}}`;
+      } else {
+        const style = document.createElement('style');
+        style.id = DYNAMIC_STYLE_ID;
+        style.textContent = `.color-invert {${filter}}`;
+        document.head.appendChild(style);
+      }
+    }
+  }
+</script><script>
+  (() => {
+    const url = "/kodama.json";
+    const interval = 1000; // 1 second
+
+    let lastModified = null;
+
+    async function check() {
+      try {
+        const res = await fetch(url + "?t=" + Date.now(), {
+          method: "HEAD",
+          cache: "no-store",
+        });
+
+        const lm = res.headers.get("last-modified");
+
+        if (lastModified && lm && lm !== lastModified) {
+          location.reload();
+          return;
+        }
+
+        lastModified = lm || lastModified;
+      } catch (e) {
+        // Ignore
+        console.warn("Reload check failed:", e);
+      }
+
+      setTimeout(check, interval);
+    }
+
+    check();
+  })();
+</script><!-- Also see: https://katex.org/docs/autorender -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.css" integrity="sha384-WcoG4HRXMzYzfCgiyfrySxx90XSl2rxY5mnVY5TwtWE6KLrArNKn0T/mOgNL0Mmi" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.js" integrity="sha384-J+9dG2KMoiR9hqcFao0IBLwxt6zpcyN68IgwzsCSkbreXUjmNVRhPFTssqdSGjwQ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
+<!-- Also see: https://github.com/KaTeX/KaTeX/tree/main/contrib/copy-tex -->
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/contrib/copy-tex.min.js" integrity="sha384-HORx6nWi8j5/mYA+y57/9/CZc5z8HnEw4WUZWy5yOn9ToKBv1l58vJaufFAn9Zzi" crossorigin="anonymous"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true },
+      ],
+      trust: true,
+      strict: false,
+      throwOnError: false,
+      minRuleThickness: 0.05,
+    });
+  });
+</script>
+<link rel="stylesheet" href="./main.css"><style>
+@media only screen and (min-width: 1000px) {
+  #grid-wrapper { grid-template-columns: var(--article-max-width) var(--toc-max-width); }
+  nav#toc { max-width: max-content; }
+}
+</style></head><body><header class="header"><nav class="nav"><div class="logo"><span class="cursor-pointer" onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper" style="grid-template-areas: 'article toc';" data-base-url="./"><nav id="toc" class="sticky-nav mobile-sticky-nav"><div id="theme-options"><style>
+  body:has(input[value="furina"]:checked) {
+    --article-max-width: 110ex; /* default: 90ex */
+
+    --color-Furina-deep-navy: #253085;
+    --color-Furina-royal-blue: #465BCF;
+    --color-Furina-aqua-cyan: #6AC6E8;
+    --color-Furina-frost-white: #FAFBFC;
+    --color-Furina-misty-blue: #C4D7ED;
+    --color-Furina-vivid-sapphire: #5670E9;
+    --color-Furina-luminous-hydro: #70DBFF;
+    --color-Furina-bright-periwinkle: #8D84F1;
+    --color-Furina-vintage-gold: #BD9368;
+    --color-Furina-vintage-gold-light: #DDB368;
+    --color-Furina-vintage-gold-ultra-light: #FDF388;
+
+    --background-color: var(--color-Furina-frost-white);
+    --link-color: var(--color-Furina-vivid-sapphire);
+    --slug-color: var(--color-Furina-aqua-cyan);
+    --logo-color: var(--color-Furina-deep-navy);
+
+    --block-background-color: var(--background-color);
+    --shadow-color: rgba(27, 63, 143, 0.06);
+    --radius: 5px;
+    --margin-left: 14px;
+
+    --hover-color-block: var(--block-background-color);
+    --logo-hover-color: #88d;
+    --span-tag-color: #88d;
+    --article-tag-color: #88d;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body:has(input[value="furina"]:checked) {
+      --color-Furina-deep-navy: #B5C0F5;
+      --color-Furina-royal-blue: #D6EBFF;
+      --color-Furina-vivid-sapphire: #96A0FF;
+
+      --background-color: #2f2f2f;
+      --block-background-color: #2f2f2f;
+    }
+  }
+
+  .block {
+    /*2026-3-16 21:10 新增*/
+    padding: 15px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+
+    /*2026-4-17 新增*/
+    /*margin-left: auto;
+    margin-right: auto; -- 好像没有用, 网站设计上不欢迎 block 居中*/
+
+    border-radius: var(--radius);
+    background-color: var(--block-background-color);
+    box-shadow: 0 2px 12px var(--shadow-color);
+  }
+
+  .footnote-definition {
+    margin-left: var(--margin-left);
+  }
+
+  h5,
+  h6,
+  p {
+    margin: 5px;
+  }
+
+  hr {
+    border: none;
+    height: 0;
+    border-bottom: 1px solid var(--color-Furina-luminous-hydro);
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  tr {
+    border-bottom: 1px solid var(--color-Furina-bright-periwinkle);
+  }
+
+  /* 可选：去除表头下方的重复横线（如果表头需要特殊样式） */
+  thead tr {
+    border-bottom: 2px solid var(--color-Furina-deep-navy);
+  }
+
+  /* 去除最后一行的边框 */
+  tbody tr:last-child {
+    border-bottom: none;
+  }
+
+  .footnote-definition>p {
+    display: inline;
+    margin-left: 0;
+    color: var(--color-Furina-bright-periwinkle);
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    font-weight: 600 !important;
+  }
+
+  article > section > details > summary > header > h1 {
+    font-size: 1.75rem !important;
+  }
+
+  h2 {
+    font-weight: 500;
+    font-size: 1.5rem !important;
+    color: var(--color-Furina-deep-navy);
+    margin-bottom: 10px;
+    border-bottom: 1px solid #88d;
+    padding-bottom: 1px;
+    /* 增加底部内边距让横线和文字有间距 */
+  }
+
+  h2::before {
+    content: "\2726";
+    /* ✦ 的Unicode转义码 */
+    display: inline-block;
+    margin-right: 0.3em;
+    /*color: var(--color-Furina-vintage-gold-light);*/
+    /* 替换 color 属性，改为以下背景和裁剪属性 */
+    background: linear-gradient(150deg,
+        var(--color-Furina-vintage-gold-ultra-light) 30%,
+        var(--color-Furina-vintage-gold-light) 60%,
+        var(--color-Furina-vintage-gold) 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* 将文字颜色设为透明以显示背景 */
+    /* 组合径向渐变（中心高光）和线性渐变（基础色调） */
+    /*background: radial-gradient(
+      ellipse at center,
+      var(--color-Furina-vintage-gold-ultra-light) 20%,
+      transparent 70%
+    ),
+    linear-gradient(
+      to bottom,
+      var(--color-Furina-vintage-gold-light),
+      var(--color-Furina-vintage-gold)
+    );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; */
+    filter: drop-shadow(0px 1px 1px rgba(184, 150, 131, 0.5));
+    /* 可选：增加与主色呼应的柔和投影 */
+    font-weight: normal;
+  }
+
+
+  h3 {
+    font-weight: 500;
+    color: var(--color-Furina-royal-blue);
+    margin-bottom: 5px;
+  }
+
+  h3::before {
+    content: "\2726";
+    /* ✦ 的Unicode转义码 */
+    display: inline-block;
+    margin-left: 0.06em;
+    margin-right: 0.36em;
+    /*color: var(--color-Furina-vintage-gold-ultra-light);*/
+    background: linear-gradient(150deg,
+        var(--color-Furina-vintage-gold-ultra-light) 20%,
+        var(--color-Furina-vintage-gold-light) 90%,
+        var(--color-Furina-vintage-gold) 95%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: normal;
+  }
+
+  h4 {
+    text-indent: var(--margin-left);
+    font-weight: 700;
+    color: #696cd9;
+    margin-bottom: 0;
+  }
+
+  h5 {
+    text-indent: var(--margin-left);
+    font-weight: 700;
+    color: #8a8ff4;
+    margin-bottom: 0;
+  }
+
+  h6 {
+    text-indent: var(--margin-left);
+    font-weight: 700;
+    color: #aaaff4;
+    margin-bottom: 0;
+  }
+
+  code, pre, .mono {
+    font-family: "Liberation Mono", "Courier New", monospace;
+    font-size: 0.9em; /* 可选微调尺寸 */
+  }
+
+  @media only screen and (max-width: 1000px) {
+    #grid-wrapper>nav {
+      display: none !important;
+    }
+  }
+
+  #toc,
+  #toc .block {
+    background: none !important;
+    box-shadow: none !important;
+  }
+
+  ul {
+    margin: 5px;
+    margin-left: calc(5px + 2em);
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  ul li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 0;
+    /*color: var(--text-secondary);*/
+  }
+
+  ul li::before {
+    content: '✦';
+    position: absolute;
+    left : -1em;
+    /*color: var(--color-Furina-vintage-gold-ultra-light);*/
+    font-size: 0.9em;
+  }
+
+  .metadata {
+    color: var(--article-tag-color);
+  }
+
+  .metadata ul {
+    margin : 0;
+  }
+
+  .metadata li::before {
+    content: none;
+  }
+
+  .music-player button {
+    text-decoration: none;
+  }
+
+  .music-player button:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--color-Furina-vintage-gold-light);
+    /* 金色 */
+    text-underline-offset: 6px;
+    /* 调整下划线与文字距离 */
+    text-decoration-thickness: 1px;
+    /* 线条粗细 */
+  }
+</style>
+
+<theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
+
+<article><section class="block" data-taxon=""><details open><summary id="Tate扭"><header><h1><span class="taxon"></span>Tate 扭 <a class="slug" href="./Tate扭.html">[Tate扭]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Tate 扭是一个指定的<span class="link local"><a href="./可逆对象.html" title="可逆对象 [可逆对象]">可逆对象</a></span>.</p>
+<h2>定义</h2>
+<h3>作为 $\mathbb G_m$ 的平展基本群</h3>
+<p>考虑单位根群
+$$
+\mu_{\ell^n} := \operatorname{ker}(x\mapsto x^{\ell^n}\colon \mathbb G_m \to \mathbb G_m),
+$$
+以及映射 $\mu_{\ell^{n+1}} \to \mu_{\ell^{n}}$, $\zeta\mapsto\zeta^\ell$.
+定义
+$$
+\mathbb{Z}_\ell (1) := \operatorname{lim}_n \mu_{\ell^n}.
+$$</p>
+<h3>作为 $\mathbb G_m$ 的上同调</h3>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="notes-perverse"><header><h1><span class="taxon"></span>偏屈层笔记 <a class="slug" href="./notes-perverse.html">[notes-perverse]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>偏屈层始于奇性的代数簇的几何. 常值层的上同调不能正确描述这种几何对象; 人们最初发明<span class="link local"><a href="./相交上同调.html" title=" [相交上同调]">相交上同调</a></span>描述它们.</p>
+<h2>第 1 讲</h2>
+<h3>Poincaré 对偶</h3>
+<p>设 $X$ 为 $d$ 维光滑复射影代数簇,
+$$
+H^r\times H^{2d-r}\to H^{2d}(X,\mathbb{Q}) \to \mathbb{Q}
+$$
+为完美配对.</p>
+<p>对于带奇点的代数簇如结曲线 (nodal curve) $C$, 记 $\widetilde C \simeq \mathbb P^1$ 为其正规化, 映射
+$$
+\nu\colon \widetilde C \to C
+$$
+相当于粘合 $\mathbb P^1$ 的两点. 在这两点之外, 映射为同构. 我们尝试计算 $C$ 的上同调.
+$$
+H^r(C,\mathbb{Q}) = \begin{cases}
+    \mathbb{Q} &amp; r = 0,1,2\\
+    0 &amp; \text{其它.}
+\end{cases}
+$$
+可见 $H^1$ 上的配对退化 (因为杯积分次交换, 在 $H^1$ 上反交换), 没有完美配对.</p>
+<p>为了找一个层尽可能接近常值层, 同时修复 Poincaré 对偶, 考虑
+$$
+\mathcal N = \nu_* \underline{\mathbb{Q}}_{\widetilde C},
+$$
+直观上这个层 “记住了结点的两支”.</p>
+<p><strong>引理</strong>. 有短正合列
+$$
+\underline{\mathbb{Q}}_C \to \mathcal N \to i_*\mathbb{Q},
+$$
+映射 $\mathcal N \to i_*\mathbb{Q}$ 取结点的两支的差.</p>
+<p>暂且定义 “IC 层”
+$$
+\mathrm{IC}_C := \mathcal N[1]
+$$
+以及 (按照历史记号)
+$$
+\mathrm{IH}^r(C,\mathbb{Q}) = H^{r-1}(C,\mathrm{IC}_C) = H^r(C,\mathcal N).
+$$</p>
+<p>取长正合列给出
+$$
+\mathrm{IH}^r(C,\mathbb{Q}) = \begin{cases}
+    \mathbb{Q} &amp; r = 0,2\\
+    0 &amp; \text{其它}.
+\end{cases}
+$$</p>
+<p><strong>定义</strong>. 对于光滑的 $X$,
+$$
+\mathrm{IC}_X := \underline{\mathbb{Q}}_X [\operatorname{dim}X].
+$$</p>
+<p>一般的 $X$ 的 IC 层是奇点消解的常值层的 (导出) 推前.</p>
+<h3>可构造层与六函子</h3>
+<p>回忆, Abel 范畴 $\mathcal A$ 的<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span> $D(\mathcal A)$ 是<span class="link local"><a href="./链复形.html" title="链复形 [链复形]">链复形</a></span>的范畴的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>, 使得链复形之间的拟同构 (诱导上同调之间的同构的映射) 变为导出范畴中的同构.</p>
+<p>$D(\mathcal A)$ 是个<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>, 其中有一些关键的三角 (<span class="link local"><a href="./纤维列.html" title="纤维列 [纤维列]">纤维列</a></span>). 三角给出上同调的长正合列.</p>
+<p>稳定范畴之间的<strong>正合函子</strong>是保持这些特殊三角的函子.</p>
+<p>Abel 范畴之间的正合函子 $F\colon \mathcal A \to \mathcal A'$ 给出导出范畴之间的正合函子 $F\colon D(\mathcal A) \to D(\mathcal A')$.</p>
+<p>不仅如此, Abel 范畴之间的<strong>左</strong>正合函子 $F\colon \mathcal A \to \mathcal A'$ 给出导出范畴之间的正合函子<sup class="footnote-reference" id="notes-perverse_1-back"><a href="#notes-perverse_1">1</a></sup> (称为<strong>右导出函子</strong>) $RF\colon D(\mathcal A) \to D(\mathcal A')$. 通过这个函子再取上同调就得到传统的导出函子 $R^d F$. Abel 范畴之间的<strong>右</strong>正合函子 $F\colon \mathcal A \to \mathcal A'$ 给出导出范畴之间的正合函子 (称为<strong>左导出函子</strong>) $LF\colon D(\mathcal A) \to D(\mathcal A')$. 但在导出范畴语境中, 我们常常直接用 $F$ 的符号表示导出函子 (不写 $R,L$), 因为它是唯一合理的选择.</p>
+<div class="footnote-definition" id="notes-perverse_1">
+  <sup class="footnote-definition-label"><a href="#notes-perverse_1-back">1</a></sup>
+<p>这里忽略了一些有限上同调振幅的限制条件, 或者实际上考虑的是有界导出范畴.</p>
+</div>
+<p>稳定范畴 $\mathcal D$ 的关键性质是移位 $[1]\colon \mathcal D \to \mathcal D$ 是个等价. 对任意三角 $M\to N \to L$, 可旋转得到三角 $N \to L \to M[1]$, $L\to M[1]\to N[1]$ 等等.</p>
+<p>回到正题. <span class="link local"><a href="./可构造层.html" title="可构造层 [可构造层]">可构造层</a></span>是可由有限步基本操作得到的层, 具体地, 称 $X$ 上的层 $F$ <strong>可构造</strong>, 意思是存在 $X$ 的有限分层 $X = \bigsqcup_\alpha S_\alpha$, 每个 $S_\alpha$ 为子簇, 且 $F|_{S_\alpha}$ 为 $\mathbb{Q}$-局部系统 (局部常值的 $\mathbb{Q}$-线性空间层). 记
+$$
+D_c^b (X,\mathbb{Q}) \subset D(\mathsf{Shv}(X))
+$$
+为上同调可构造且有界的对象构成的全子范畴. 这是我们的主要工作范畴, 我们要构造的奇性代数簇 $X$ 上的 IC 层就是其中的对象.</p>
+<p><strong>记号</strong>. $f_*^{\heartsuit}\colon \mathsf{Shv}_c(X) \to \mathsf{Shv}_c(Y)$ 为可构造层的推前, $f_*\colon D_c^b(X) \to D_c^b(Y)$ 为其导出函子.</p>
+<p>对于映射 $f\colon X \to Y$ 有三对伴随 (<span class="link local"><a href="./六函子.html" title="六函子 [六函子]">六函子</a></span>):</p>
+<ul>
+<li>$f^* \dashv f_*$</li>
+<li>$f_! \dashv f^!$</li>
+<li>${(-\otimes K)} \dashv {\operatorname{Hom}(K,-)}$.</li>
+</ul>
+<p>“叹号推前” $f_!$ 是 $f_!^\heartsuit\colon \mathsf{Shv}_c(X) \to \mathsf{Shv}_c(Y)$ 的导出函子. 在拓扑空间中, $f_!^\heartsuit$ 的一个定义是: 对开集 $V\subset Y$, $(f_!^\heartsuit M)(V) = \{s\in M(f^{-1}(V))\mid\operatorname{supp}s \text{ 紧合}\}$. 特别地, 对于 $Y = \mathrm{pt}$ 的情形, $f_!^\heartsuit M = \Gamma_c (X;M)$ 是紧支集截面.</p>
+<p>或许两个更有用的一般性质是</p>
+<ul>
+<li>若 $f$ 为<span class="link local"><a href="./开嵌入.html" title="开嵌入 [开嵌入]">开嵌入</a></span>, 则 $f^! \simeq f^*$;</li>
+<li>若 $f$ <span class="link local"><a href="./紧合映射.html" title="紧合映射 [紧合映射]">紧合</a></span>, 则 $f_! \simeq f_*$.</li>
+</ul>
+<p>我们将视上述结构为黑箱.</p>
+<p><strong>例</strong>. $X = \mathbb A^1$, $X(\mathbb{C}) = \mathbb{C}$, 此时</p>
+<ul>
+<li>$p_*\underline{\mathbb{Q}} = \Gamma(X,\underline{\mathbb{Q}}) = \mathbb{Q}$,</li>
+<li>$p_!\underline{\mathbb{Q}} =\Gamma_c(X,\underline{\mathbb{Q}})=\mathbb{Q}[-2].$</li>
+</ul>
+<p>提示: 考虑紧化 $j\colon X \to \overline{X} = \mathbb P^1$, 记 $i\colon \{\infty\} \to \mathbb P^1$ 为其补闭集, 则有三角
+$$
+j_! \underline{\mathbb{Q}}_X \to \underline{\mathbb{Q}}_{\overline{X}} \to i_*\mathbb{Q}.
+$$</p>
+<h3>Verdier 对偶</h3>
+<p>定义 $X$ 的<strong>对偶复形</strong>为
+$$
+\omega_X := p^!\mathbb{Q}.
+$$
+考虑函子
+$$
+\mathbb D_X \colon M\mapsto\operatorname{Hom}(M,\omega_X).
+$$</p>
+<p><strong>定理</strong> (<span class="link local"><a href="./Poincaré--Verdier对偶.html" title="Poincaré–Verdier 对偶 [Poincaré--Verdier对偶]">Verdier 对偶</a></span>). $\mathbb D_X\colon D_c^b(X)^{\mathrm{op}} \to D_c^b(X)$ 为等价.</p>
+<p><strong>例</strong>. $X = \mathrm{pt}$ 时, $\mathbb D M = M^*$ (线性对偶).</p>
+<p><strong>命题</strong>.</p>
+<ul>
+<li>$\mathbb D$ 为正合函子;</li>
+<li>$\mathbb D\circ\mathbb D = \mathrm{id}$;</li>
+<li>$\mathbb D \circ [1] = [-1] \circ \mathbb D$;</li>
+<li>$\mathbb D \underline{\mathbb{Q}}_X = \omega_X$;</li>
+<li>对于 $f\colon X\to Y$,
+<ul>
+<li>$\mathbb D_Y f_! = f_* \mathbb D_X$,</li>
+<li>$\mathbb D f^! = f^* \mathbb D$,</li>
+</ul>
+</li>
+<li>若 $X$ 为 $d$ 维光滑代数簇, 则 $\omega_X = \underline{\mathbb{Q}}_X [2d]$.</li>
+<li>(Poincaré 对偶) 设 $X$ 光滑紧合, 那么 $\Gamma (X,\underline{\mathbb{Q}})^*=\Gamma_c(\mathbb D_X \underline{\mathbb{Q}}) = \Gamma(\mathbb{Q}[2d])$. (因此 Verdier 对偶可视为相对 Poincaré 对偶.)</li>
+</ul>
+<p>我们将说明
+$$
+\mathbb D \mathrm{IC}_X = \mathrm{IC}_X.
+$$</p>
+<p>对于点 $x\in X$, 称 $i_x^*$ 为<span class="link local"><a href="./茎.html" title="茎 [茎]">茎</a></span>, $i_x^!$ 为余茎 (costalk). 特殊三角可由所有点处的茎探测.</p>
+<p>余茎的一个计算方法是
+$$
+H^r(i_x^! \underline{\mathbb{Q}}_X) = H^r(B, B\setminus\{x\},\mathbb{Q}).
+$$</p>
+<p>考虑映射 $j\colon \mathbb A^1 \setminus 0 \to \mathbb A^1$, $i\colon 0\to\mathbb A^1$. 有自然映射
+$$
+j_! \to j_*
+$$</p>
+<p><strong>定理</strong> (<span class="link local"><a href="./基变换.html" title="基变换 [基变换]">基变换</a></span>). 对于拉回图</p>
+<p>$$
+\begin{CD}
+X' @&gt;{f'}&gt;&gt; Y' \\
+@V{p}VV @VV{q}V \\
+X @&gt;&gt;{f}&gt; Y
+\end{CD}
+$$</p>
+<p>有
+$$
+q^! f_* \simeq (f')_* p^!,
+$$
+$$
+q^* f_! \simeq (f')_! p^*.
+$$</p>
+<p>我们将以 $j_!$ 与 $j_*$ 之间的一种操作 $j_{!*}$ 来定义 $\mathrm{IC}$.</p>
+<hr />
+<p><strong>习题</strong>. $\mathbb A^1 \setminus 0$ 上的 $\mathbb{Q}$-局部系统 $\mathcal L$ 等同于有限维 $\mathbb{Q}$-线性空间 $V$ 带一个自同构 $T$. 证明
+$$
+i^*j_* \mathcal L = [V \overset{T-1}{\to} V].
+$$</p>
+<p><em>解答</em> (我的尝试, 不一定对 / 好).
+$$
+\begin{aligned}
+i^*j_*\mathcal L &amp;= \operatorname{colim}_{0\in U} \Gamma(U,j_*\mathcal L)\\
+&amp;=\operatorname{colim}_{0\in U}\Gamma(U\setminus 0, \mathcal L).
+\end{aligned}
+$$
+考虑 $U$ 为以 $0$ 为中心的圆盘, 将 $U \setminus 0$ 写成两个可缩开集 $U_1, U_2$ 的并, 满足交集 $U_{12}=U_1\times_{U_0} U_2$ 为两个可缩分支, 那么 (假设 $D(-)$ 的下降)
+$$
+D(U\setminus 0) \simeq D(U_1)\times_{D(U_{12})} D(U_2),
+$$
+$D(U \setminus 0)$ 的一个对象等同于三元组 $(F_1\in D(U_1),F_2\in D(U_2),\phi\colon F_1|_{U_{12}}\simeq F_2|_{U_{12}})$. 那么 $\mathcal L$ 对应 $(V,V,(\mathrm{id},T)\colon V\oplus V\simeq V\oplus V)$, 常值层 $\mathbb{Q}_{U\setminus 0}$ 对应 $(\mathbb{Q},\mathbb{Q},\mathrm{id})$.
+$$
+\begin{aligned}
+\Gamma(U\setminus 0,\mathcal L)
+&amp;=\operatorname{Hom}_{U\setminus 0}(\mathbb{Q}_{U\setminus 0},\mathcal L)\\
+&amp;=\operatorname{Hom}_{U_1}(\mathbb{Q}_{U_1},\mathcal L)\times_{\operatorname{Hom}_{U_{12}}(\mathbb{Q}_{U_{12}},\mathcal L)}\operatorname{Hom}_{U_2}(\mathbb{Q}_{U_2},\mathcal L)\\
+&amp;= V\times_{V\oplus V} V \\&amp;= \operatorname{fib}((\mathrm{id},T)\colon V\oplus V \to V\oplus V)\\&amp;=\operatorname{fib}(T-\mathrm{id}\colon V\to V).
+\end{aligned}
+$$</p>
+<h2>第 2 讲</h2>
+<p>设 $X$ 具有分层 $X = \bigsqcup S_\alpha$, 且 $\mathcal F\in D^b_c(X)$ 逐层局部常值. 我们将定义 $D^b_c(X)$ 上的可构造 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">$t$-结构</a></span> (<span class="link local"><a href="./偏屈t-结构.html" title="偏屈 t-结构 [偏屈t-结构]">偏屈 $t$-结构</a></span>), 使得</p>
+<ul>
+<li>$\mathcal F\in D(X)^{\leq 0}$ 当且仅当 $r &gt; -\operatorname{dim}S_\alpha$ 时 $H^r(\mathcal F|^{*}_{S_\alpha}) =0$;</li>
+<li>$\mathcal F\in D(X)^{\geq 0}$ 当且仅当 $r &lt; -\operatorname{dim}S_\alpha$ 时 $H^r(\mathcal F|^{!}_{S_\alpha}) =0$.</li>
+</ul>
+<p>(我们采用上同调指标.)</p>
+<p>本讲内容已经记载在 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">$t$-结构</a></span>, <span class="link local"><a href="./粘t-结构.html" title="粘 t-结构 [粘t-结构]">粘 $t$-结构</a></span>等页面.</p>
+<h2>第 3 讲</h2>
+<p>考虑两层的开闭分解
+$$
+i\colon U\subset X \hookleftarrow Z \colon j,
+$$
+伴随
+$$
+(i^*\dashv i_*\dashv i^!)\colon 
+D_c^b (Z)
+\begin{aligned}
+&amp;\overset{i^*}{\leftarrow}\\
+&amp;\overset{i_*}{\rightarrow}\\
+&amp;\overset{i^!}{\leftarrow}
+\end{aligned}\,
+D_c^b(X)
+\begin{aligned}
+&amp;\overset{j_!}{\leftarrow}\\
+&amp;\overset{j^*}{\rightarrow}\\
+&amp;\overset{j_*}{\leftarrow}
+\end{aligned}\,
+D_c^b(U) \colon (j_!\dashv j^*\dashv j_*)
+$$
+给出如下三角.
+$$
+j_! j^* F \to F\to i_* i^* F
+$$
+$$
+i_* i^! F \to F \to j_* j^* F
+$$</p>
+<p>换言之,
+$$
+F = \operatorname{fib}(j_* F_U \to i_* F_Z [1])
+$$</p>
+<p>一般地, 要定义 $X$ 上关于指定分层 $S$ 的偏屈 $t$-结构, 只需定义各层 $D^b_S(S_\alpha)$ 上的 $t$-结构 (平移通常 $t$-结构使得 $\underline{\mathbb{Q}}[\operatorname{dim}S_\alpha] \in \heartsuit$).</p>
+<p>然后老师详细解释了粘 $t$-结构. 详见<span class="link local"><a href="./粘t-结构.html" title="粘 t-结构 [粘t-结构]">粘 $t$-结构</a></span>.</p>
+<p>设 $S$ 为光滑代数簇, 配备平凡分层 $\mathcal S_{\mathrm{triv}}$ (只有一层).</p>
+<p>由定义, $D^b_{\mathcal S_{\mathrm{triv}}} (S) = D^b_{\mathrm{loc}}(S)$. 注意它不等于它的心 (普通局部系统的 Abel 范畴 $\mathsf{LS}(S)$) 的导出范畴. 例如当 $S$ 单连通时, 局部系统平凡, 但 $D^b_{\mathrm{loc}}(S)$ 包含了 $S$ 的所有<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">上同调</a></span>的信息.</p>
+<p>定义偏屈 $t$-结构满足
+$$
+D^b_{\mathcal{S}_{\mathrm{triv}}}(S)^{p,\leq 0} = D^b_{\mathcal S_{\mathrm{triv}}}(S)^{\leq 0} [\operatorname{dim}S].
+$$</p>
+<p>一般地, 设 $X$ 有分层结构 $\mathcal S \colon X = \bigcup_\alpha S_\alpha$.</p>
+<p><strong>定理</strong>. 通过<span class="link local"><a href="./粘t-结构.html" title="粘 t-结构 [粘t-结构]">粘 $t$-结构</a></span>得到的 $D^b_{\mathcal S}(X)$ 上的<span class="link local"><a href="./偏屈t-结构.html" title="偏屈 t-结构 [偏屈t-结构]">偏屈 $t$-结构</a></span>满足
+$$
+D^b_{\mathcal S}(X)^{p,\leq 0} = \{
+    F\mid H^r(S_\alpha^*F) = 0\,\forall r&gt;{-{\operatorname{dim}S_\alpha}}
+\},
+$$
+$$
+D^b_{\mathcal S}(X)^{p,\geq 0} = \{
+    F\mid H^r(S_\alpha^! F) = 0\,\forall r&lt;{-{\operatorname{dim}S_\alpha}}
+\}.
+$$
+其中 $H^r$ 是对于普通 $t$-结构的上同调.
+条件也可以对偏屈 $t$-结构的上同调表述为
+$$
+H^{p,r}(S_\alpha^* F) = 0 \,\forall r &gt; 0.
+$$</p>
+<p>记 $\mathsf{Perv}_{\mathcal S}(X) := D^b_{\mathcal S}(X)^{\heartsuit}$.</p>
+<p>若分层 $\mathcal S'$ 是 $\mathcal S$ 的细化, 则
+$$
+D_{\mathcal S}^b(X) \subset D_{\mathcal S'}^b (X),
+$$</p>
+<p><strong>习题</strong>. 证明上述包含中 $(p,\leq 0),(p,\geq 0)$ 部分均相容:
+$$
+D^b_{\mathcal S}(X)^{p,\leq 0} = D^b_{\mathcal S'}(X)^{p,\leq 0} \cap D^b_{\mathcal S}(X).
+$$
+提示: 若 $f\colon T\to S$ 为光滑代数簇的映射, 则 $f^*(\mathsf{LS}_S)\subset\mathsf{LS}_T$, $f^*(\mathsf{Perv}(S))[\operatorname{dim}_T - \operatorname{dim}_S]\subset\mathsf{Perv}(T)$.</p>
+<p><strong>习题</strong>. $\mathbb D (\mathsf{Perv}(X)) = \mathsf{Perv}(X)$.</p>
+<p><strong>例</strong>. 考虑 $X=\mathbb A^1$, $Z=\mathrm{pt}$.</p>
+<ul>
+<li>$\mathrm{IC}_X = \underline{\mathbb{Q}}[1]$.</li>
+<li>$i_* i^! \underline{\mathbb{Q}}\to \underline{\mathbb{Q}}\to j_* j^*\underline{\mathbb{Q}}$</li>
+<li>$j_! j^* \underline{\mathbb{Q}} \to \underline{\mathbb{Q}} \to i_* i^* \underline{\mathbb{Q}}$ (通常 $t$-结构的心中的正合列)</li>
+<li>平移后旋转得到心中的正合列 $i_*\mathbb{Q}\to j_! \mathrm{IC}_U \to \mathrm{IC}_X$.</li>
+<li>$j_!\mathrm{IC}_U\to \mathrm{IC}_X\to j_*\mathrm{IC}_U$ 恰好是 $j_!\mathrm{IC}_U\to j_*\mathrm{IC}_U$ 的满-单分解. (一般地, 若 $F^R$ 全忠实则有自然变换 $F^L \to F^R$, 来自 $\mathrm{id} = FF^R$.)</li>
+</ul>
+<h3>IC 延拓</h3>
+<p>记
+$$
+j_!^{\heartsuit} = \tau^{\geq 0} \circ j_!,
+$$
+$$
+j_*^{\heartsuit} = \tau^{\leq 0} \circ j_*.
+$$
+自然变换 $j_! \to j_*$ 给出心中的自然变换 $j_!^{\heartsuit} \to j_*^{\heartsuit}$. (一般地, 右 $t$-正合函子到左 $t$-正合函子的自然变换自动给出心中的自然变换.) 这个自然变换的像称为<strong>中间延拓</strong> (intermediate extension) $j_{! *}$, 由 Goresky–MacPherson 定义.</p>
+<p><strong>命题</strong>. $j_{! *}$ 为全忠实函子.</p>
+<p><strong>引理</strong>. 设 $F\in\mathsf{Perv}(U)$. 则 $j_{! *}F$ 为带有如下结构的唯一对象 $K$:</p>
+<ul>
+<li>$j^* K \simeq F$;</li>
+<li>$K$ 没有非平凡的支在 $Z = X \setminus U$ 上的子对象或商对象.</li>
+</ul>
+<p><strong>命题-定义</strong>.
+$$
+\mathrm{IC}_X = j_{! *}\mathrm{IC}_U.
+$$
+这意味着上式右端不依赖于光滑开集 $U$ 的选取.</p>
+<h2>第 4 讲 (2026-10-13)</h2>
+<p>上回定义了 $D^b_c(X)$ 上的偏屈 $t$-结构, 约化到开闭分解 $j\colon U\subset X \hookleftarrow Y\colon i$ 的情形, 使得 $j^* = j^!$ 与 $i_! = i_*$ 都是 $t$-正合函子.</p>
+<p>我们还定义了 $!*$-延拓 $j_{! *}\colon \mathsf{Perv}(U) \to \mathsf{Perv}(X)$, $j_{! *} \mathcal F$ 是 $\mathcal F$ 唯一的没有支在 $Y$ 上的子/商的偏屈延拓.</p>
+<p><strong>命题</strong>. 对于 $\mathcal M \in\mathsf{Perv}(X)$, 如下条件等价:</p>
+<ul>
+<li>$M \simeq j_{! *} (j^* M)$;</li>
+<li>对任意 $\mathcal N\in\mathsf{Perv}(Y)$, $\operatorname{Hom}(\mathcal M,\mathcal N) = 0$;</li>
+<li>$H^{p,=0}(i^*\mathcal M)$, $H^{p,=0}(i^!\mathcal M)$ 平凡;</li>
+<li>$i^* \mathcal M \in D^b_c (Y) ^{p,\leq -1}$, $i^!\mathcal M \in D^b_c (Y)^{p,\geq 1}$.</li>
+</ul>
+<p><strong>推论</strong>. $\mathbb D j_{! *} \simeq j_{! *} \mathbb D$.</p>
+<p><strong>命题</strong>. 对于一连串包含 $j_1\colon V\subset U$, $j_2\colon U\subset X$, $! *$-延拓与复合相容: $(j_2)_{! *} (j_1)_{! *} = (j_2 j_1)_{! *}$.</p>
+<p>思路是证明 $(j_2)_{! *} (j_1)_{! *} \mathcal M$ 没有支在 $X\setminus V$ 上的非平凡子/商.</p>
+<p><strong>命题</strong>. $j_{! *}$ 保持单射和满射.</p>
+<p><em>证明</em>. 设 $\mathcal M_1 \to \mathcal M_2$ 是 $\mathsf{Perv}(U)$ 中的单射. 令 $K = \ker (j_{! *}\mathcal M_1 \to j_{! *} \mathcal M_2)$.
+对正合列 $K \to j_{! *}\mathcal M_1 \to j_{! *} \mathcal M_2$
+作用正合函子 $j^*$,
+得到 $j^* K = 0$.
+这意味着 $K$ 支于闭部分 $Y$. 由 $j_{! *}$ 的性质, $K = 0$.
+满射的证明是对偶的.</p>
+<p><strong>注</strong>. $j_{! *}$ 不是正合函子 (不保持短正合列的中间项).</p>
+<p>我们来仔细讨论一个反例. 令 $X = \mathbb A^1$, $U = \mathbb A^1 \setminus 0$, $Y = \{0\}$.</p>
+<p>回忆之前的习题, $U$ 上的局部系统 $\mathcal L$ 等同于一个线性空间 $V$ 带有一个自同态 (单值算子) $T$; 偏屈层 $\mathcal L [1]$ 满足 $i^* j_*^{\heartsuit} (\mathcal L [1]) = \ker (T-1) [1]$; 对偶地 $i^! j_!^{\heartsuit} (\mathcal L [1]) = \operatorname{coker} (T-1) [-1]$.</p>
+<p>$j_{! *} (\mathcal L [1])$
+是 $j_* \mathcal L$ 的截断:
+$j_{! *} (\mathcal L [1]) \simeq (j_*^{\heartsuit}) [1]$.</p>
+<p>考虑常值局部系统 $\underline{\mathbb{Q}}$ 之间的非平凡扩张 (Jordan 块 $\begin{pmatrix}1 &amp; 1 \\ 0 &amp; 1\end{pmatrix}$), 正合列 $\underline{\mathbb{Q}} \to \mathcal L \to \underline{\mathbb{Q}}$ 不被 $j_*^{\heartsuit}$ 保持 ($\mathcal L$ 的整体截面是一维的).</p>
+<p><strong>定义</strong>. 对于局部闭嵌入 $Y \overset{j}{\subset} \overline{Y} \overset{i}{\hookrightarrow} X$ (其中 $Y$ 光滑), 定义
+$$
+\mathrm{IC}_X(\mathcal L) = i_* j_{! *} (\mathcal L [\dim Y]).
+$$</p>
+<p><strong>命题</strong>. 对于稠密开集 $f\colon U\subset Y$,
+$f_{! *} (\mathcal L|_U) [\dim Y] = \mathcal L [\dim Y]$;
+进而 $\mathrm{IC}_X (\mathcal L) = \mathrm{IC}_X (\mathcal L|_{U})$. (上同调振幅估计, 使用 $\dim (Y\setminus U) &lt; \dim Y$)</p>
+<p>对于稠密开集 $U\subset X$,
+$$
+\mathrm{IC}_X = \mathrm{IC}_X (\underline{\mathbb{Q}}_U).
+$$</p>
+<p><strong>习题</strong>. 对结曲线的正规化 $\pi\colon \widetilde C \to C$,
+$$
+\mathrm{IC}_C = \pi_* \mathrm{IC}_{\widetilde C}.
+$$</p>
+<p>下面我们说明 $\mathsf{Perv}(X)$ 的所有对象都可由 $\mathrm{IC}_X(\mathcal L)$ 经过有限次扩张得到.</p>
+<p><strong>引理</strong>. 设 $X$ 光滑, 连通, $\mathcal M \in \mathsf{Perv}(X)$ 局部常值 (即所有上同调局部常值), 则 $\mathcal M = \mathcal L [\dim X]$.</p>
+<p><strong>引理</strong>. 设 $X$ 光滑, 连通, $U\subset X$ 为稠密开集, $\mathcal L$ 为 $X$ 上的不可约局部系统 (意指无真子局部系统, 在 Betti 世界即基本群的不可约表示), 则 $\mathcal L |_U$ 也为不可约局部系统. 这是因为复代数簇的子簇的实余维数至少为 $2$, 从而基本群上为满射.</p>
+<p>(平展世界如何呢?)</p>
+<p><strong>命题</strong>. 设 $X$ 光滑, 连通, 则局部系统 $\mathcal L$ 的不可约性等价于其作为可构造层的单性, 也等价于 $\mathcal L [\dim X]$ 在 $\mathsf{Perv}(X)$ 中的单性.</p>
+<p><em>证明</em>. 设 $\mathcal L$ 为不可约局部系统. 假设有可构造层 $\mathcal M \subset \mathcal L$. 取稠密开集 $U$ 使得 $\mathcal M |_U$ 和 $(\mathcal L / \mathcal M) |_U$ 局部常值. 但 $\mathcal L |_U$ 不可约, 故 $\mathcal M |_U$ 和 $(\mathcal L / \mathcal M) |_U$ 之一为零.</p>
+<p><strong>引理</strong>. $j\colon U\subset X$ 开, $\mathcal M\in\mathsf{Perv}(U)$, 那么 $j_{! *}\mathcal M$ 单当且仅当 $\mathcal M$ 单.</p>
+<p><strong>定理</strong> (单偏屈层分类). $\mathsf{Perv}(X)$ 的单对象恰为 $\mathrm{IC}_X (\mathcal L)$, 其中 $\mathcal L$ 为光滑连通子簇上的不可约局部系统.</p>
+<p>设 $\mathcal P\in\mathsf{Perv}(X)$ 为单对象. 考虑支集的闭包 $Z = \overline{\operatorname{supp}\mathcal P}$, $\mathcal P = i_{Z,*} i^! \mathcal P$, 则 $i^!\mathcal P$ 单. 故不妨设 $Z = X$.</p>
+<p>设 $X$ 为不可约分支 $X_\alpha$ 的并. 取稠密开集 $U_\alpha\subset X_\alpha$, $\mathcal P|_{U_\alpha}$ 局部常值且非零 (因为 $\mathcal P$ 的支集为全空间).
+记 $U = \bigsqcup U_\alpha$.</p>
+<p>$\mathcal P|_U = \bigoplus \mathcal L_\alpha [\dim U_\alpha]$, 故 $X$ 实际上只有一个不可约分支.</p>
+<p>我们断言 $\mathcal P|_U$ 单. …</p>
+<p><strong>定理</strong>. $\mathsf{Perv}(X)$ 满足 Artin 条件 (降链稳定) 和 Noether 条件 (升链稳定), 即每个对象都有有限长度.</p>
+<h2>第 5 讲 (2026-10-20)</h2>
+<p>上回定义并研究了 $\mathrm{IC}$ 对象. 我们将看到偏屈 $t$-结构比通常 $t$-结构表现更好.</p>
+<p>我们将研究对于映射 $f\colon X\to Y$, 四个函子何时正合, 以及其上同调振幅.</p>
+<p><strong>命题</strong>. 当 $f$ 的纤维维数不超过 $d$ 时,</p>
+<ul>
+<li>$f^* (D^{p,\leq 0}) \subset D^{p,\leq d}$;</li>
+<li>$f_* (D^{p,\geq 0}) \subset D^{p,\geq -d}$;</li>
+<li>$f^! (D^{p,\geq 0}) \subset D^{p,\geq -d}$;</li>
+<li>$f_! (D^{p,\leq 0}) \subset D^{p,\leq d}$.</li>
+</ul>
+<p>由伴随和 Verdier 对偶, 四个性质等价, 只需证明其中一条.</p>
+<p>需要证明对于 $M\in D^{p,\leq 0}$,
+$$
+\operatorname{dim}\operatorname{supp}H^r (f^* M) \leq -r+d.
+$$
+而
+$$
+\operatorname{dim}\operatorname{supp}H^r (f^* M) = \operatorname{dim} f^*\operatorname{supp}H^r (M),
+$$
+一个支集的原像至多增加纤维的维数.</p>
+<p><strong>推论</strong>. 若 $f$ 是光滑映射, 相对维数为 $d$, 则 $f^! [-d] = f^* [d]$ 为偏屈 $t$-结构下的 $t$-正合函子.</p>
+<p><strong>习题</strong>. 考虑映射 $\mathbb{C}\to\mathbb{C}$, $x\mapsto x^2$.</p>
+<p><strong>定理</strong> (相对 Artin 估计) 若 $f\colon X\to Y$ 为<span class="link local"><a href="./仿射态射.html" title="仿射态射 [仿射态射]">仿射映射</a></span>, $M\in \mathsf{Sh}_c (X)$ 为<span class="link local"><a href="./可构造层.html" title="可构造层 [可构造层]">可构造层</a></span>, 则
+$$
+\operatorname{dim}\operatorname{supp} H^r (f_* M) \leq \operatorname{dim}\operatorname{supp} M - r.
+$$
+(注意此式与纤维的维数无关.)</p>
+<p><strong>推论</strong>. 若 $f\colon X\to Y$ 为<span class="link local"><a href="./仿射态射.html" title="仿射态射 [仿射态射]">仿射映射</a></span>, 则</p>
+<ul>
+<li>$f_* (D^{p,\leq 0}) \subset D^{p,\leq 0}$;</li>
+<li>$f_! (D^{p,\geq 0}) \subset D^{p,\geq 0}$.</li>
+</ul>
+<p><strong>推论</strong> (绝对情形, Artin 消失定理). 设 $X$ 仿射, $M\in \mathsf{Sh}_c (X)$, 则 $H^r (X,M) =0$ ($r &gt; \operatorname{dim}X$).</p>
+<p>此前我们只知道 $r &gt; 2\operatorname{dim}X$ (实维数) 时上同调消失, 所以这个命题令人惊讶. 但实际上我们有如下结论.</p>
+<p><strong>断言</strong>. 仿射复代数簇 $X$ 具有一个不超过 $\operatorname{dim} X$ 维的 CW 复形的同伦型.</p>
+<p>这个结论是用 <span class="link local"><a href="./Morse理论.html" title="Morse 理论 [Morse理论]">Morse 理论</a></span>证明的. 找一个 Morse 函数, 即实函数 $\varphi\colon X \to \mathbb{R}$, 使得 $X$ 的同伦型可通过逐次粘贴胞腔得到, 每次对应 $\varphi$ 的一个临界点, 胞腔维数是临界点的 Morse 指标. 将 $X$ 闭嵌入某个 $\mathbb A^n$, 取一个一般位置的点 $y\in\mathbb A^n$ 使得到 $y$ 的距离的平方给出 Morse 函数. 虽然 $X$ 不是紧的, 但我们可以让 $\varphi$ 在任何一个区间内的部分 $X_{[a,b]}$ 都是紧的.</p>
+<blockquote>
+<p>平展情形的 Artin 消失定理的证明在 SGA 4, 4.5. 这是一个很好的报告主题.</p>
+</blockquote>
+<p>若 $M\in D^b_c$ 不是一个普通的层, 我们还能对 $f_* M$ 说什么? 我们知道 $M$ 有一个<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤过</a></span>, 其关联分次对象为 $H^r (M) [-r]$. 那么 $f_* M$ 有一个<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤过</a></span>, 其关联分次对象为
+$$
+H^s (f_* H^r (M)) [ -r - s ].
+$$</p>
+<p><span class="link local"><a href="./谱序列.html" title="谱序列 [谱序列]">谱序列</a></span>正是用来处理这种对象的: 稳定范畴中的滤过在正合函子下的像.</p>
+<h3>半小性</h3>
+<p>设 $X$ 光滑, $\operatorname{dim}X = d$. 对于映射 $f\colon X\to Y$, 若</p>
+<ul>
+<li>$\operatorname{dim}\{y\in Y\mid\operatorname{dim}f^{-1}(y)\geq r\} \leq d - 2r$,</li>
+<li>(等价地) $\operatorname{dim}(X\times_Y X) \leq \operatorname{dim}X$,</li>
+</ul>
+<p>则称 $f$ 是半小 (semismall) 的.</p>
+<p><strong>习题</strong>. 构造 $Y = \{\det\begin{pmatrix}a&amp;b\\c&amp;d\end{pmatrix} = 0\}$ 的半小消解.</p>
+<p>我们想要用消解研究奇性代数簇 $Y$.</p>
+<p><strong>命题</strong>. 若 $f$ 半小, 则 $f_*\mathrm{IC}_X$ 为偏屈层.</p>
+<p>(后面有一小节课没听)</p>
+<h2>第 6 讲 (2026-10-27)</h2>
+<p><strong>例</strong>. $\pi\colon \operatorname{Bl}_0\mathbb A^2\to\mathbb A^2$ 为半小映射, $\pi_*\mathrm{IC}$ 为偏屈层, 分解为 $\mathrm{IC}_{\mathbb A^2}\oplus\delta_0$.</p>
+<p><strong>命题</strong> (光滑射影分解).
+设 $Y$ 为光滑代数簇, $f\colon X\to Y$ 为满射, 且为<span class="link local"><a href="./光滑映射.html" title="光滑映射 [光滑映射]">光滑</a></span>, <span class="link local"><a href="./射影簇.html" title="射影簇 [射影簇]">射影</a></span>映射, 相对维数为 $d$. 那么
+$$
+f_*\underline{\mathbb{Q}}_X \simeq \bigoplus_{q=0}^{2d} H^q(f_*\underline{\mathbb{Q}}_X)[-q].
+$$</p>
+<p><strong>注</strong>. 在紧合情形也有此结论.</p>
+<p><strong>推论</strong>. 在前述条件下,
+$$
+f_* \mathrm{IC}_X \simeq \bigoplus_{q=-d}^{d} {^p H}^q (f_* \mathrm{IC}_X) [-q].
+$$</p>
+<p>下面主要的目标就是证明这个定理:</p>
+<p><strong>定理</strong> (BBDG) 设 $f\colon X\to Y$ 紧合,
+$$
+f_* \mathrm{IC}_X \simeq \bigoplus_{q} {^p H}^q (f_* \mathrm{IC}_X) [-q].
+$$</p>
+<p><strong>注</strong>. 对通常 t-结构不成立.</p>
+<p><em>光滑射影分裂的证明</em> (Ehresmann).
+由假设, $f_*\underline{\mathbb{Q}}_X$ 局部常值. (不过仅这一条还不能推出分裂为上同调.)
+考虑典型纤维 $Z$, $\dim Z = d$.</p>
+<ul>
+<li>“Hard Lefschetz” 告诉我们: 若 $\mathcal L$ 为<span class="link local"><a href="./丰沛线丛.html" title="丰沛线丛 [丰沛线丛]">丰沛线丛</a></span>, 记 $\eta = c_1(\mathcal L)\in H^2(Z)$ (“一般超平面”), 则 $\eta\cup (-)\colon H^*\to H^{*+2}$ 迭代 $q$ 次给出一个典范同构 $\eta^q\cup (-)\colon H^{d-q}\simeq H^{d+q}$ (Poincaré 对偶告诉我们它们同构, 但不典范).</li>
+<li>若有关于 $f\colon X\to Y$ 的相对丰沛线丛, 则有典范同构 $\eta^q\cup (-)\colon H^{d-q}(f_*\underline{\mathbb{Q}}_X) \simeq H^{d+q}(f_*\underline{\mathbb{Q}}_X)$.</li>
+<li>事实上, 上述同构由同构 $\eta^q\colon f_*\underline{\mathbb{Q}} \to f_*\underline{\mathbb{Q}} [2q]$ 取上同调得到. 由 Deligne 分裂定理完成证明.</li>
+</ul>
+<p><strong>定理</strong> (Deligne 分裂). 设 $K$ 是带 t-结构的稳定范畴中的有界对象, 且有态射 $\eta\colon K \to K[2]$. 假设对任意 $r$, $K \to K[2r]$ 诱导同构 $H^{-r} (K)\simeq H^r(K)$, 则有 $K = \bigoplus H^i (K) [-i]$.</p>
+<p><strong>本学期剩下的大纲</strong>: BBDG 定理的证明.</p>
+<ol>
+<li>类比到特征 $p$</li>
+<li>纯性 (purity)</li>
+<li>权重理论</li>
+<li>从特征 $p$ 回到特征 $0$: 在 $\operatorname{Spec}\mathbb F_p$ 的特殊纤维上应用 Frobenius 与权重理论证明分解, 再回到 $\operatorname{Spec}\mathbb{C}$ 的一般纤维.</li>
+</ol>
+<p><strong>约定</strong>. $X$, $Y$ 等表示定义在 $\overline{\mathbb F_q}$ 上的代数簇, $X_0$, $Y_0$ 等表示 $\mathbb F_q$ 上的代数簇, $X = X_0\times_{\operatorname{Spec}\mathbb F_q}\operatorname{Spec}\overline{\mathbb F_q}$.</p>
+<p>回忆 $\operatorname{Gal}(\overline{\mathbb F_q}/\mathbb F_q) = \widehat {\mathbb{Z}} = \operatorname{lim}_n \mathbb{Z}/n$.</p>
+<p>回忆 Frobenius 给出 $X$ 的自同构, 与 $\overline{\mathbb F_q}$ 的自同构相容. 它也作用于 $X$ 上的层.</p>
+<p>我们可以定义 “$\ell$-进层” $D^b_c(X,\overline{\mathbb{Q}_\ell})$ 上的偏屈 t-结构:</p>
+<ul>
+<li>首先定义 $f^*,f^!,f_!,f_*,\mathbb D,\operatorname{Hom},\otimes$ (例如将映射分解为开嵌入接着紧合映射…)</li>
+<li>平展局部系统是平展局部常值层, 等同于平展基本群的表示.</li>
+</ul>
+<h3>权重理论与 Tate 扭</h3>
+<ul>
+<li>$\mathbb A^1$ 上, $\widehat {\mathbb{Z}}$ 在 $H^0 = \overline{\mathbb{Q}}_\ell$ 上的作用是平凡的.</li>
+<li>$\widehat {\mathbb{Z}}$ 在 $H^1(\mathbb G_m)$ 以及 $H^2(\mathbb P^1)$ 上的作用不平凡.</li>
+</ul>
+<p>$\mathbb G_m$ 上的 Frobenius 作用是什么? 直观上, 它作用于 $\overline{\mathbb{F}_q}$-点的集合 $\overline{\mathbb{F}}_q^\times$ 上.</p>
+<p>下次我们将介绍 <span class="link local"><a href="./Tate扭.html" title="Tate 扭 [Tate扭]">Tate 扭</a></span>, 一个反复出现的核心对象. 它出现在这两个上同调的 Frobenius 作用的计算中.</p>
+</details></section></details></section></footer></article></div></body></html>

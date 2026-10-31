@@ -883,10 +883,32 @@ $$
 \end{aligned}
 $$
 这就是说 $f^*\colon \mathcal C^T\to\mathcal C^S$ 在全子范畴 $\mathsf{Kl}(T)\subset\mathcal C^T$, $\mathsf{Kl}(S)\subset\mathcal C^S$ 上有一个 “部分左伴随” $f_!$, 而范畴论的一般道理告诉我们, 当有一族范畴 $\mathcal C^{\mathrm{op}}\to\mathsf{Cat}$ 且其间每个函子有这样的部分左伴随, 就有相应的一族范畴 $\mathcal C \to \mathsf{Cat}$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="tangle-ribbon-cat"><header><h1><span class="taxon"></span>由带状范畴染色的标架缠结 <a class="slug" href="./tangle-ribbon-cat.html">[tangle-ribbon-cat]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>由范畴 $\mathcal C$ 染色的<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">标架缠结</a></span>范畴 $\mathcal T (\mathcal C)$ 是 $\mathcal C$ <span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的<span class="link local"><a href="./带状范畴.html" title="带状范畴 [带状范畴]">带状范畴</a></span>. 当 $\mathcal C$ 本身为<span class="link local"><a href="./带状范畴.html" title="带状范畴 [带状范畴]">带状范畴</a></span>时, 有结构函子 $\mathcal T(\mathcal C) \to \mathcal C$.</p>
+<p>当然, 无染色的标架<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span>范畴本身可视为 $\mathcal C = 1$ 的特殊情形.</p>
+<h2>定义</h2>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./带状范畴.html" title="带状范畴 [带状范畴]">带状范畴</a></span>, 定义由 $\mathcal C$ 染色的<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span>范畴 $\mathcal T(\mathcal C)$ 如下:</p>
+<ul>
+<li>其对象为 $(A,\varepsilon) := ((A_1,\varepsilon_1),\cdots,(A_n,\varepsilon_n))$, $A_i\in\mathcal C$, $\varepsilon_i \in \{\pm 1\}$,</li>
+<li>态射 $(A,\varepsilon)\to (B,\varepsilon')$ 为由 $\mathcal C$ 的态射染色的<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">标架缠结</a></span>, 缠结端点处标架的方向符合 $\varepsilon,\varepsilon'$ 的符号.</li>
+</ul>
+<p>范畴 $\mathcal T(\mathcal C)$ 带有直观的<span class="link local"><a href="./带状范畴.html" title="带状范畴 [带状范畴]">带状范畴</a></span>结构:</p>
+<ul>
+<li>幺半结构即为并置,</li>
+<li>辫结构即为交换两股线的缠结,</li>
+<li>带状结构中的扭即为扭转缠结,</li>
+<li><span class="link local"><a href="./对偶(范畴论).html" title="对偶 [对偶(范畴论)]">对偶</a></span>是反转正负号 $\varepsilon$.</li>
+</ul>
+<h2>性质</h2>
+<h3>生成元</h3>
+<p>和<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span>范畴类似, 染色缠结范畴由基本缠结生成.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="带状范畴"><header><h1><span class="taxon"></span>带状范畴 <a class="slug" href="./带状范畴.html">[带状范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>带状范畴 (ribbon category) 是 <span class="link local"><a href="./ReshetikhinTuraevRibbon.html" title="Ribbon graphs and their invariants derived from quantum groups [ReshetikhinTuraevRibbon]">Reshetikhin–Turaev</a></span> 基于<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半范畴</a></span>引入的结构, 使得其<span class="link local"><a href="./线图.html" title="线图 [线图]">线图</a></span>可以画成有宽度的丝带状 (标架缠结), 丝带可以扭.</p>
+<p>辫幺半范畴的<span class="link local"><a href="./线图.html" title="线图 [线图]">线图</a></span>是三维空间中的一维<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span>, 而丝带则是缠结上带有法丛的平凡化, 也即标架缠结. 丝带的扭即是沿着一维流形走的过程中标架旋转一圈.</p>
 <img src="/assets/ribbon-twist.svg" alt="" width="60" style="display:block; margin:auto;">
+<p>带状范畴是 $\mathsf{Cat}$ 中标架 $2$-圆盘算畴的代数.</p>
 <h2>定义</h2>
 <p>带状范畴是<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半范畴</a></span> $(\mathcal C,\beta)$ 带有自然变换 $\theta\colon \mathrm{id} \to \mathrm{id}$ (称为<strong>扭</strong>) 以及左右<span class="link local"><a href="./对偶(范畴论).html" title="对偶 [对偶(范畴论)]">对偶</a></span>, 满足</p>
 <p>$$

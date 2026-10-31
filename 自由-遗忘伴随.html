@@ -1000,6 +1000,26 @@ $$
 其中单位的像为<span class="link local"><a href="./球谱.html" title="球谱 [球谱]">球谱</a></span> $\mathbb S = \Sigma^\infty_+(*)$.</p>
 <h3>泛性质</h3>
 <p>$\mathsf{Sp}$ 是一个对象生成的<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span><span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定</a></span><span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="tangle-ribbon-cat"><header><h1><span class="taxon"></span>由带状范畴染色的标架缠结 <a class="slug" href="./tangle-ribbon-cat.html">[tangle-ribbon-cat]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>由范畴 $\mathcal C$ 染色的<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">标架缠结</a></span>范畴 $\mathcal T (\mathcal C)$ 是 $\mathcal C$ <span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的<span class="link local"><a href="./带状范畴.html" title="带状范畴 [带状范畴]">带状范畴</a></span>. 当 $\mathcal C$ 本身为<span class="link local"><a href="./带状范畴.html" title="带状范畴 [带状范畴]">带状范畴</a></span>时, 有结构函子 $\mathcal T(\mathcal C) \to \mathcal C$.</p>
+<p>当然, 无染色的标架<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span>范畴本身可视为 $\mathcal C = 1$ 的特殊情形.</p>
+<h2>定义</h2>
+<p>设 $\mathcal C$ 为<span class="link local"><a href="./带状范畴.html" title="带状范畴 [带状范畴]">带状范畴</a></span>, 定义由 $\mathcal C$ 染色的<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span>范畴 $\mathcal T(\mathcal C)$ 如下:</p>
+<ul>
+<li>其对象为 $(A,\varepsilon) := ((A_1,\varepsilon_1),\cdots,(A_n,\varepsilon_n))$, $A_i\in\mathcal C$, $\varepsilon_i \in \{\pm 1\}$,</li>
+<li>态射 $(A,\varepsilon)\to (B,\varepsilon')$ 为由 $\mathcal C$ 的态射染色的<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">标架缠结</a></span>, 缠结端点处标架的方向符合 $\varepsilon,\varepsilon'$ 的符号.</li>
+</ul>
+<p>范畴 $\mathcal T(\mathcal C)$ 带有直观的<span class="link local"><a href="./带状范畴.html" title="带状范畴 [带状范畴]">带状范畴</a></span>结构:</p>
+<ul>
+<li>幺半结构即为并置,</li>
+<li>辫结构即为交换两股线的缠结,</li>
+<li>带状结构中的扭即为扭转缠结,</li>
+<li><span class="link local"><a href="./对偶(范畴论).html" title="对偶 [对偶(范畴论)]">对偶</a></span>是反转正负号 $\varepsilon$.</li>
+</ul>
+<h2>性质</h2>
+<h3>生成元</h3>
+<p>和<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span>范畴类似, 染色缠结范畴由基本缠结生成.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="tutorial-stable-homotopy"><header><h1><span class="taxon"></span>稳定同伦论 <a class="slug" href="./tutorial-stable-homotopy.html">[tutorial-stable-homotopy]</a></h1><div class="metadata"><ul><li class="meta-item">教程</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本文的目的是, 以尽可能少的前置知识, 解释<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span> (<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>) 这一概念的意义和必要性, 从而使读者能够接受其抽象定义. 为此我试图解释<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>的动机. 许多科普作品从纬悬函子 $\Sigma$ 出发, 而我试图从环路空间函子 $\Omega$ 出发, 借助 $\mathbb E_n$-代数和 $n$-连通空间的关系提供一个直观. (从纬悬函子 $\Sigma$ 出发定义的谱在传统上称为 $\Sigma$-谱, 而我做的事情意味着抛弃 $\Sigma$-谱而仅使用 $\Omega$-谱.)</p>
 <p>前置知识: 拓扑学基本概念, 以及<span class="link local"><a href="./motivation-homotopy-theory.html" title="同伦论的动机 [motivation-homotopy-theory]">同伦论的动机</a></span> (推荐读者先阅读这篇文章). 或许需要一点无穷范畴的直观.</p>
@@ -3021,8 +3041,10 @@ $$</p>
 <p><span class="link local"><a href="./增广结合代数.html" title="增广结合代数 [增广结合代数]">增广结合代数</a></span></p>
 <p><span class="link local"><a href="./An-代数.html" title="A_n-代数 [An-代数]">$\mathbb A_n$-代数</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="缠结假设"><header><h1><span class="taxon"></span>缠结假设 <a class="slug" href="./缠结假设.html">[缠结假设]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<h2>陈述</h2>
+<h2>观念</h2>
 <p><strong>缠结假设</strong> (tangle hypothesis) 是一系列关于各维数的<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span>构成的<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>的万有性质的命题.</p>
+<p>缠结假设可由<span class="link local"><a href="./cob-sing.html" title="带奇点配边假设 [cob-sing]">带奇点配边假设</a></span>推出.</p>
+<h2>陈述</h2>
 <p><strong>注</strong>. 由于文献 (<span class="link local"><a href="./LurieCob.html" title="On the Classification of Topological Field Theories [LurieCob]">Lurie</a></span>, <span class="link local"><a href="./AyalaFrancisCob.html" title="The cobordism hypothesis [AyalaFrancisCob]">Ayala–Francis</a></span> 等) 记号不一, 此处使用的是一个和他们都不相同, 但看上去比较合理的记号.</p>
 <p>我们用 $\operatorname{Tang}_{k}^{\mathbb E_n}$ 表示如下的 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>:</p>
 <ul>
@@ -3184,6 +3206,8 @@ $$
 其中 $(-)^{\sim}$ 表示取<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>.</p>
 <p>函子 $\mathsf{Bord}_n^{\mathrm{fr}} \to \mathcal C$ 又称<span class="link local"><a href="./拓扑场论.html" title="拓扑场论 [拓扑场论]">拓扑场论</a></span> (TFT) 或拓扑量子场论 (TQFT). 配边假设表明拓扑场论由其在一个点上的取值完全确定.</p>
 <p>配边假设可视为<span class="link local"><a href="./缠结假设.html" title="缠结假设 [缠结假设]">缠结假设</a></span>在余维数趋于 $+\infty$ 的极限情形.</p>
+<h3>带奇点配边假设</h3>
+<p>配边假设有一个巨大推广, 称为<span class="link local"><a href="./cob-sing.html" title="带奇点配边假设 [cob-sing]">带奇点配边假设</a></span>; <span class="link local"><a href="./LurieCob.html" title="On the Classification of Topological Field Theories [LurieCob]">Lurie</a></span> 指出它可以推出<span class="link local"><a href="./缠结假设.html" title="缠结假设 [缠结假设]">缠结假设</a></span>.</p>
 <h2>例</h2>
 <h3>有限维线性空间</h3>
 <p>固定一个域 $k$. 有限维 $k$-线性空间 $V$ 是 $k$-线性空间范畴 $(\mathsf{Vect},\otimes)$ 中的可对偶对象, 给出一个函子
