@@ -2594,6 +2594,48 @@ $\mathcal O_{\mathrm{int}}\to \mathcal O$ (注意这是个本质满函子) 的�
 <p>由对偶性, 只需证明第一个命题. $G$ 为全忠实函子, 当且仅当 $\operatorname{Hom}_{\mathcal D}(-,-)\to \operatorname{Hom}_{\mathcal C}(G-,G-)$ 为同构; 由伴随, 这等价于 $\operatorname{Hom}_{\mathcal D}(-,-)\to \operatorname{Hom}_{\mathcal D}(FG-,-)$ 为同构. 由<span class="link local"><a href="./米田引理.html" title="米田引理 [米田引理]">米田引理</a></span>, 这等价于余单位 $FG \to\mathrm{id}_{\mathcal D}$ 为同构.</p>
 <h3>局部化</h3>
 <p>对于自反子范畴 $g\colon \mathcal D\to\mathcal C$, 设其左伴随为 $f$, 记 $W$ 为 $\mathcal C$ 中所有被 $f$ 变为同构的态射构成的类, 则 $f$ 等同于<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span> $\mathcal C \to \mathcal C[W^{-1}]$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="范畴谱"><header><h1><span class="taxon"></span>范畴谱 <a class="slug" href="./范畴谱.html">[范畴谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>范畴谱是<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>在<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>中的推广.</p>
+<h2>定义</h2>
+<p>记 $n\mathsf{Cat}$ 为 <span class="link local"><a href="./∞-∞-范畴.html" title=" [∞-∞-范畴]">$(\infty,n)$-范畴</a></span>的范畴.
+记 $\infty\mathsf{Cat} = \operatorname{lim}_n n\mathsf{Cat}$ 为 <span class="link local"><a href="./∞-∞-范畴.html" title=" [∞-∞-范畴]">$(\infty,\infty)$-范畴</a></span>的范畴.</p>
+<p>对于带基点 $(\infty,\infty)$-范畴 $\mathcal C\in \infty \mathsf{Cat}_*$ 记 $\Omega\mathcal C := \operatorname{End}_{\mathcal C}(*)\in \infty \mathsf{Cat}_*$.</p>
+<p>定义<strong>范畴谱</strong> (categorical spectra) 的范畴 $\mathsf{CatSp}$ 为对 $\Omega\colon \infty\mathsf{Cat}_*\to \infty\mathsf{Cat}_*$ <span class="link local"><a href="./形式取逆.html" title="形式取逆 [形式取逆]">形式取逆</a></span>得到的 $(\infty,1)$-范畴:
+$$
+\mathsf{CatSp}:= \operatorname{lim} (\cdots\overset{\Omega}{\to}\infty \mathsf{Cat}_*\overset{\Omega}{\to}\infty \mathsf{Cat}_*).
+$$
+换言之, 一个范畴谱是一列 $(\infty,\infty)$-范畴 $(X_n)_{n\in\mathbb{N}}$ 带有等价
+$$
+X_n \simeq \Omega X_{n+1}.
+$$</p>
+<h2>性质</h2>
+<h3>与谱的关系</h3>
+<p><strong>命题</strong>. $\mathsf{Sp}\subset\mathsf{CatSp}$ 是<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全子范畴</a></span>.</p>
+<h3>纬悬</h3>
+<p>由<span class="link local"><a href="./形式取逆.html" title="形式取逆 [形式取逆]">形式取逆</a></span>的抽象性质, $\Omega\colon \mathsf{CatSp}\to\mathsf{CatSp}$ 为等价, 且其逆 $\Sigma\colon \mathsf{CatSp}\to\mathsf{CatSp}$ 可由左伴随 $\Sigma\colon \infty \mathsf{Cat}_* \to \infty \mathsf{Cat}_*$ 在 <span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">$\mathsf{Pr}^{\mathrm{L}}$</a></span> 中取余极限得到.</p>
+<p>容易看到, <span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴 $\mathsf{Sp}\subset\mathsf{CatSp}$ 上的环路函子 $\Omega$ 与 $\mathsf{CatSp}$ 上的函子 $\Omega$ 相容.</p>
+<h3>纬悬谱</h3>
+<p>记 $\mathsf{CatSp}$ 到第 $n$ 分量的投影为 $\Omega^{\infty -n}\colon \mathsf{CatSp} \to \infty \mathsf{Cat}_*$.</p>
+<p>记 $\Omega^{\infty-n} \colon \mathsf{CatSp}\to\infty \mathsf{Cat}_*$ 的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">左伴随</a></span>为
+$\Sigma^{\infty-n} \colon \infty \mathsf{Cat}_*\to\mathsf{CatSp}$.</p>
+<p>称形如 $\Sigma^{\infty }X$ 的范畴谱为<strong>纬悬谱</strong>. 当然, 这个名称与<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的<span class="link local"><a href="./纬悬谱.html" title="纬悬谱 [纬悬谱]">纬悬谱</a></span> $\Sigma^\infty \colon \mathsf{Ani}_* \to \mathsf{Sp}$ 也是相容的.</p>
+<h3>连合谱与交换代数</h3>
+<p>由定义以及<span class="link local"><a href="./逆环假设.html" title="逆环假设 [逆环假设]">逆环假设</a></span>, $\mathsf{CatSp}$ 又可理解为如下极限:
+$$
+\mathsf{CatSp} =\operatorname{lim} (\cdots\overset{\Omega}{\to}\mathsf{CAlg}(\infty \mathsf{Cat})\overset{\Omega}{\to}\mathsf{CAlg}(\infty \mathsf{Cat})).
+$$</p>
+<p>记 $\Omega^{\infty-n} \colon \mathsf{CatSp}\to\mathsf{CAlg}(\infty \mathsf{Cat})$ 的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">左伴随</a></span>为
+$\mathbf{B}^{\infty-n} \colon \mathsf{CAlg}(\infty \mathsf{Cat})\to\mathsf{CatSp}$.</p>
+<p>称形如 $\mathbf{B}^{\infty }X_0$ 的范畴谱为<strong>连合</strong> (connective) 范畴谱; 记连合范畴谱构成的全子范畴为
+$$
+\mathsf{CatSp}_{\geq 0}\subset\mathsf{CatSp}.
+$$</p>
+<p>设 $X_0\in \mathsf{CAlg}(\infty \mathsf{Cat})$ 为对称幺半 $(\infty ,\infty )$-范畴. 则范畴谱 $\mathbf{B}^{\infty}X$ 的分量为
+$$
+\mathbf{B}^{\infty}X := (X_n = \mathbf{B}^n X_0).
+$$</p>
+<h3>张量积</h3>
 </details></section><section class="block" data-taxon=""><details ><summary id="预层范畴之间的伴随"><header><h1><span class="taxon"></span>预层范畴之间的伴随 <a class="slug" href="./预层范畴之间的伴随.html">[预层范畴之间的伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>预层范畴之间的伴随是<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中十分常见的一种现象, 指的是范畴 $\mathcal C$, $\mathcal D$ 之间的函子诱导的<span class="link local"><a href="./预层.html" title="预层 [预层]">预层范畴</a></span> $\widehat {\mathcal C} = \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Set}),\widehat {\mathcal D} = \mathsf{Fun}(\mathcal D^{\mathrm{op}},\mathsf{Set})$ 之间的伴随.</p>

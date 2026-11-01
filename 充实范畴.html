@@ -1218,6 +1218,23 @@ $$
 <p>表达代数结构也有其它工具, 如 <span class="link local"><a href="./PROP.html" title="PROP [PROP]">PROP</a></span>; 算畴本身也有许多版本. 不过这些结构都大同小异.</p>
 <h3>结合代数</h3>
 <p>在所有代数结构中, <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>占有一个非常特殊的地位, 因为结合性是范畴的本性: 结合代数就等同于单对象 (<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>) 范畴. 范畴论中的许多结构如<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>, <span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span>都可以视为某些高阶范畴中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="∞-n-范畴"><header><h1><span class="taxon"></span>(∞,n)-范畴 <a class="slug" href="./∞-n-范畴.html">[∞-n-范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>$(\infty,n)$-范畴是具有至多 $n$ 阶不可逆态射的<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>.</p>
+<p>一般而言, 定义 $(\infty,n)$-范畴有两条路线:</p>
+<ul>
+<li>一是<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>, 即用基本对象和运算 (见<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>) 来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>;</li>
+<li>二是<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>, 即 $n$-范畴充实于 $(n-1)$-范畴.</li>
+</ul>
+<h2>定义</h2>
+<h3>作为 $n$ 重 Segal 生象</h3>
+<h3>作为 $\Theta_n$-空间</h3>
+<p>$(\infty,n)$-范畴的一种定义是 <span class="link local"><a href="./Θ-n-空间.html" title="Θn-空间 [Θ-n-空间]">$\Theta_n$-空间</a></span>.</p>
+<h3>作为充实范畴</h3>
+<p>$(\infty,n)$-范畴可归纳地定义为<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于 $(\infty,n-1)$-范畴的范畴:
+$$
+\mathsf{Cat}_{(\infty ,n+1)} := \mathsf{Cat}_{(\infty,n)}\text{-}\mathsf{Cat}.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="中心"><header><h1><span class="taxon"></span>中心 <a class="slug" href="./中心.html">[中心]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>许多不同数学结构都有 “中心” 的概念, 所有这些概念都是相互联系的. 每种中心的概念都是某个 (充实) $2$-范畴中的 “$2$ 阶环路”, 即 $\operatorname{End}(\mathrm{id})$, 这解释了其 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span>-结构.</p>
@@ -3040,7 +3057,7 @@ $$
 <li>第一个数 $n$ 表示有之多 $n$ 阶非平凡态射 (这是个粗略的说法, 详见 <span class="link local"><a href="./n-r-范畴.html" title="(n,r)-范畴 [n-r-范畴]">$(n,r)$-范畴</a></span>),</li>
 <li>第二个数 $r$ 表示有至多 $r$ 阶不可逆态射.</li>
 </ul>
-<p>高阶范畴常常是用基本形状定义的. 例如 $(\infty,1)$-范畴可用<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形</a></span>定义, $(\infty,n)$-范畴可用 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴 $\Theta$</a></span> 的对象定义. 然而不必困于特定的一组基本形状, 我们可以用许多不同形状的胞腔粘成图形. 参见<span class="link local"><a href="./线图.html" title="线图 [线图]">线图</a></span>, <span class="link local"><a href="./notes-manifold-diagrams.html" title="高阶范畴的流形图示 [notes-manifold-diagrams]">流形图</a></span>.</p>
+<p>高阶范畴常常是用基本形状定义的. 例如 $(\infty,1)$-范畴可用<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形</a></span>定义, $(\infty,n)$-范畴可用 <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴 $\Theta$</a></span> 的对象定义. 这些基本形状可用于<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>高阶范畴中的复合运算, 从而将高阶范畴视为相应<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>的 Segal 对象. 然而我们不必困于特定的一组基本形状, 而是可用许多不同形状的胞腔粘成图形. 参见<span class="link local"><a href="./线图.html" title="线图 [线图]">线图</a></span>, <span class="link local"><a href="./notes-manifold-diagrams.html" title="高阶范畴的流形图示 [notes-manifold-diagrams]">流形图</a></span>.</p>
 <p>高阶范畴也可以通过<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实范畴</a></span>理论来归纳地定义; 如 $(n,r)$-范畴就是<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于 $\mathsf{Cat}_{(n-1,r-1)}$ 的范畴.</p>
 <h2>性质</h2>
 <h3>范畴的范畴</h3>
@@ -3052,5 +3069,6 @@ $$
 <p>因此, 高阶范畴的全体也构成一个高阶范畴.
 <span class="link local"><a href="./n-r-范畴.html" title="(n,r)-范畴 [n-r-范畴]">$(n,r)$-范畴</a></span>的全体构成一个 $(n+1,r+1)$-范畴.</p>
 <h2>相关页面</h2>
+<p><span class="link local"><a href="./范畴谱.html" title="范畴谱 [范畴谱]">范畴谱</a></span></p>
 <p><span class="link local"><a href="./naive-highercat.html" title="一种朴素的建立高阶范畴的尝试 [naive-highercat]">一种朴素的建立高阶范畴的尝试</a></span></p>
 </details></section></details></section></footer></article></div></body></html>
