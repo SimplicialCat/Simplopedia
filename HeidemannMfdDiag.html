@@ -900,6 +900,9 @@
 </ul>
 <p>注意上述定义可以容易地推广到开/闭 $n$-<strong>网格丛</strong>的定义. 而使用分层单形上的这种丛, 我们就可以定义开 $n$-网格的范畴 $\mathcal M^n$.</p>
 <p>特别地, $1$ 维标准分层单形上的开 $n$-网格丛就是 $\mathcal M^n$ 中的态射, 也叫做<strong>配边</strong> (bordism). (当然这和通常流形的配边不太一样, 只是借用了名字.)</p>
+<p><strong>命题</strong>. 闭网格的范畴是开网格的范畴的反范畴: $\overline{\mathcal M}^n \simeq (\mathcal M^n)^{\mathrm{op}}$.</p>
+<p>例如, 下图中的 “田” 字形闭网格 $\text{田}\in\overline{\mathcal M}^2$ 对应于 “井” 字形开网格 $\text{井}\in\mathcal M^2$.</p>
+<img src="/assets/notes-manifold-diagrams-田.svg" alt="" width="300" style="display:block; margin:auto;">
 <h3>桁架</h3>
 <p>桁架是网格的纯组合版本, 是网格的<span class="link local"><a href="./出路范畴.html" title="出路范畴 [出路范畴]">出路范畴</a></span>的隐喻; 桁架的范畴和网格的范畴等价.</p>
 <p><strong>定义</strong> (<span class="link local"><a href="./桁架.html" title="桁架 [桁架]">桁架</a></span>).</p>
@@ -1003,7 +1006,7 @@ $$</p>
 <h2>流形图</h2>
 <p>前面说明了开 $n$-网格可用于<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span> $(\infty,n)$-范畴. 不过, 要想得到<span class="link local"><a href="./线图.html" title="线图 [线图]">线图</a></span>那样好用的图形演算, 我们还需要更灵活 (有更多自同构) 的探测对象, 比如允许更自由的同痕.</p>
 <p>现在我们来定义本文的核心对象: $n$-流形图.</p>
-<p>线图的一个重要性质是每一条线都有方向, 毕竟范畴中的态射有方向. (有时伴随可以允许一些线折返, 不过那是额外的条件了.) $n$-流形图也需要规定某种方向性.</p>
+<p>线图的一个重要性质是每一条线都有方向, 毕竟范畴中的态射有方向. 准确地说, 线图中的线在一个指定的方向上的投影必须是递增的. (有时具有伴随的态射可以允许一些线折返, 不过那是额外的条件了.) $n$-流形图也需要规定某种方向性, 其准确表述是如下的<strong>前进性</strong> (progressivity).</p>
 <p><strong>定义</strong>. 一个原子是<strong>前进的</strong>是指:</p>
 <ul>
 <li>其奇异深度 $\operatorname{sdepth}(A)$ 等于 $\ell(A)(\bot_A)$;</li>
@@ -1019,15 +1022,41 @@ $$</p>
 <p><strong>定义</strong>. $n$-流形图是满足某种驯顺条件的分层空间 $M$, 存在由稳定标架基元构成的覆盖.</p>
 <h3>同痕</h3>
 <p>线图最强大的地方就在于同痕不变性. 只要人们使用线图, 人们就会自动依赖这一性质. 例如<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半范畴</a></span> (<span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span>-范畴) 的线图是 $\mathbb{R}^3$ 中的图, 辫操作可描述为几何上的操作, 其<span class="link local"><a href="./融贯.html" title="融贯 [融贯]">融贯性</a></span>来自同痕; 这就是辫这个名字的由来.</p>
-<p>所以 $n$-流形图最重要的性质也是同痕不变性.</p>
+<p>所以 $n$-流形图最重要的性质也是同痕不变性. 在讨论同痕不变性之前我们需要定义同痕. 理想的情况是流形图构成一个生象 (实际上我们用 Kan 复形定义), 而同痕是这个生象中的等式 (道路).
+要定义这个 Kan 复形只需要定义单形上的流形图丛.</p>
 <p><strong>定义</strong>. 一个 $n$-<strong>流形图丛</strong>是一个驯顺的 $n$-标架分层纤维丛 $p\colon E\to B$, 带 $[n]$ 中的标签, 其中 $B$ 带有<strong>平凡</strong>分层结构, 且每个纤维都是 $n$-流形图. 特别地, 作为普通拓扑空间的区间 $|\Delta [1]|$ 上的 $n$-流形图丛称为 $n$-流形图的<strong>同痕</strong>.</p>
 <p><strong>定义</strong>. 设 一个 $n$-<strong>流形图丛</strong>是一个驯顺的 $n$-标架分层纤维丛 $p\colon E\to B$, 带 $[n]$ 中的标签, 其中 $B$ 带有<strong>平凡</strong>分层结构, 且每个纤维都是 $n$-流形图. 特别地, 作为普通拓扑空间的区间 $|\Delta [1]|$ 上的 $n$-流形图丛称为 $n$-流形图的<strong>同痕</strong>.</p>
-<p><strong>定义</strong> ($n$-流形图的生象). 对 $\mathbb{R}^n$ 中的闭 $n$-网格 $X$ 可以定义 $X$ 上的 $n$-流形图的生象 $\mathbb D^n (X)$: 它具有一个单纯集表现, 其 $k$-单形是逐纤维正交于 $X$ 的 $n$-流形图丛 $E\to |\Delta [k]|$ (的等价类).</p>
-<p>$$
-\mathbb D^n\colon \overline{\mathcal M}^n\simeq(\mathcal M^n)^{\mathrm{op}}\to\mathsf{Ani}
+<p><strong>定义</strong> ($n$-流形图的生象). 对 $\mathbb{R}^n$ 中的闭 $n$-网格 $X$ 可以定义 $X$ 上的 $n$-流形图的生象 $\mathbb D^n (X)$: 它具有一个 <span class="link local"><a href="./Kan复形.html" title="“Kan 复形” [Kan复形]">Kan 复形</a></span>的<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>, 其 $k$-单形是逐纤维正交于 $X$ 的 $n$-流形图丛 $E\to |\Delta [k]|$ (的等价类). (我们在此不解释何为正交性, 这只是一些微分拓扑的条件, 直观画出的任何图都满足这一条件.)
+进一步, 该构造关于 $X$ 有函子性:
+$$
+\mathbb D^n\colon \overline{\mathcal M}^n\simeq(\mathcal M^n)^{\mathrm{op}}\to\mathsf{Ani}.
 $$</p>
 <p><strong>定理</strong>. $\mathbb D^n$ 是正则 Segal 对象.</p>
-<h3></h3>
+<blockquote>
+<p>这是一个奇妙的定理, 在我看来有些 “自指” 的性质; 这个定理的结论表明 $\mathbb D^n$ 可视为类似 $(\infty,n)$-范畴的东西, 而这个 “范畴” 包含了所有可能的范畴中的图表形状. 我们看一个例子.</p>
+</blockquote>
+<p><strong>例</strong>. 考虑如下的闭 $2$-网格 $X$.</p>
+<img src="/assets/notes-manifold-diagrams-X.svg" alt="" width="300" style="display:block; margin:auto;">
+<p>由定义, $\mathbb D^2 (X)$ 是如下形状的流形图构成的 Kan 复形:</p>
+<img src="/assets/notes-manifold-diagrams-D(X).svg" alt="" width="250" style="display:block; margin:auto;">
+<p>直观上, $X$ 上的流形图需要与 $X$ 交互良好:</p>
+<ul>
+<li>穿过 $X$ 的水平墙壁必须横截 (原文中的正交性);</li>
+<li>不能穿过 $X$ 中的竖直墙壁 (当然也不能穿过 $X$ 的节点).</li>
+</ul>
+<p>Segal 条件在 $X$ 上说的是 $X$ 上的流形图可由其三个胞腔上在交界处相容的流形图决定.</p>
+<p><strong>例</strong>. 下图展示了 $\mathbb D^2(I^2)$ 中的一个环路:</p>
+<img src="/assets/notes-manifold-diagrams-D(I)-loop.svg" alt="" width="150" style="display:block; margin:auto;">
+<p><strong>断言</strong>. $\mathbb D^n$ 是每个标架基元的一个生成元自由生成的 Segal $\mathcal M^n$-对象.</p>
+<p>例如 $\mathbb D^1$ 正是范畴 $\mathbf{B}\mathbb N$ 对应的 Segal $\mathcal M^1$-对象 (即 Segal 生象).</p>
+<h3>带标签的流形图</h3>
+<p>为了表达具体范畴中的图, 我们需要给流形图贴上标签.</p>
+<p>$$
+\mathcal M_{\mathrm{d}}^n \to \mathcal M^n
+$$</p>
+<p>$$
+\Sigma\colon (\mathcal M_{\mathrm{d}}^n)^{\mathrm{op}} \to\mathsf{Ani}
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="分层"><header><h1><span class="taxon"></span>分层 <a class="slug" href="./分层.html">[分层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>空间上的分层 (stratification) 是将其分解为一个偏序集参数化的若干子空间的方法. 更具体地, 拓扑空间 $X$ 上的分层是其到偏序集的映射 $X \to P$, 其中 $P$ 带有 <span class="link local"><a href="./Alexandroff拓扑.html" title="Alexandroff 拓扑 [Alexandroff拓扑]">Alexandroff 拓扑</a></span>; 这意味着对 $X$ 的任何一点 $x$, 在足够小的邻域之内, 点的层次都不小于 $x$ 的层次.</p>
