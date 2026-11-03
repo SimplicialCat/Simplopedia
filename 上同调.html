@@ -1852,7 +1852,7 @@ $$</p>
 <p><strong>命题</strong>. 设 $M_0\in D^b_{\leq w}(X_0),N_0\in D^b_{\geq w+2}(X_0)$, 则 $\operatorname{Hom}(M_0,N_0) = 0$.</p>
 <h3>Weil I, Weil II</h3>
 <p>设 $X_0$ 为曲线, $L$ 为纯权 $w$ lisse 层. Deligne 证明了 $H^1_c (L)$ 的权 $\leq w+1$.</p>
-<p><section class="block" data-taxon=""><details ><summary id="notes-perverse-summary"><header><h1><span class="taxon"></span>课程小结 <a class="slug" href="./notes-perverse-summary.html">[notes-perverse-summary]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><section class="block" data-taxon=""><details ><summary id="notes-perverse-summary"><header><h1><span class="taxon"></span>偏屈层课程小结 <a class="slug" href="./notes-perverse-summary.html">[notes-perverse-summary]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>学期进行到一半, 让 AI 帮忙用我熟悉的观点总结了一下课程内容.</p>
 <p>以下内容由 AI 生成.</p>
 <p>这门课的主线可以先压缩成一句话:</p>
@@ -2552,6 +2552,7 @@ $$
 <h2>观念</h2>
 <p><strong>切结构</strong>是基于光滑流形的切丛的一大类<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构</a></span>的统称, 包括<strong>定向</strong>, <strong>Riemann 度量</strong>, <strong></strong><span class="link local"><a href="./近复结构.html" title="近复结构 [近复结构]">近复结构</a></span>等. 它是流形的<span class="link local"><a href="./切丛.html" title="切丛 [切丛]">切丛</a></span>对应的 $\mathrm{GL}_n$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>的<span class="link local"><a href="./主丛的约化.html" title="主丛的约化 [主丛的约化]">约化</a></span>.</p>
 <h2>定义</h2>
+<h3>群同态</h3>
 <p>设 $p \colon G\to \mathrm{GL}_n$ 为<span class="link local"><a href="./群.html" title="群 [群]">群</a></span>的同态. (这里的 $\mathrm{GL}_n$ 可以是离散群, 也可以是 Lie 群, <span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>群, 依实际需要决定)</p>
 <p>对于 $m\leq n$, 定义 $m$ 维流形 $M$ 上的一个 $p$-结构是 $TM\oplus\mathbb{R}^{n-m}$ 的分类映射 $M\to \mathbf{B}\mathrm{GL}_n$ 的一个提升
 $$
@@ -2564,6 +2565,19 @@ $$
 $$
 那么 $p$-结构的集合是<span class="link local"><a href="./上同调.html" title="上同调 [上同调]">非 Abel 上同调</a></span>的映射 $H^1(M,G) \to H^1(M,\mathrm{GL}_n)$ 之下, 切丛 $TM$ 对应的元素的原像.</p>
 <p>当群同态 $p\colon G\to \mathrm{GL}_n$ 没有歧义, 或有一个公认的选取 (比如 $G$ 是 $\mathrm{GL}_n$ 的 Lie 子群) 时, 也称 $p$-结构为 $G$-结构.</p>
+<h3>一般定义</h3>
+<p>当然, 上面定义中的 $\mathbf{B}G$ 可以替换为任何拓扑空间, 甚至<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>. 一种切结构由一个映射 $X \to \mathbf{B}\mathrm{GL}_n$ 表示. 注意这也可理解为一个带 $\mathrm{GL}_n$-<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>的拓扑空间 (或生象) $\widetilde X$ (有 $X = \widetilde X / \mathrm{GL}_n$), 又可理解为拓扑空间 (或生象) $X$ 上的一个<span class="link local"><a href="./向量丛.html" title="向量丛 [向量丛]">向量丛</a></span>.</p>
+<p>光滑 $m\leq n$ 维流形 $M$ 的<span class="link local"><a href="./切丛.html" title="切丛 [切丛]">切丛</a></span>直和上 $\mathbb{R}^{n-m}$ 给出映射 $M\to\mathbf{B}\mathrm{GL}_n$, 而 $M$ 上的 $X$-结构则是提升
+$$
+\begin{array}
+	{ccc}
+	&amp;&amp; X\\
+	&amp;\nearrow&amp;\downarrow\\
+	M&amp;\to &amp;\mathbf{B}\mathrm{GL}_n.
+\end{array}
+$$
+若用带 $\mathrm{GL}_n$-作用的空间 $\widetilde X$ 观点来理解, 则 $M$ 上的 $X$-结构给出 $M$ 上的一个 $\widetilde X$-<span class="link local"><a href="./纤维丛.html" title="纤维丛 [纤维丛]">丛</a></span>.
+例如 $X=\mathbf{B}\mathrm{O}_n$ 时, $\widetilde X = \mathrm{GL}_n / \mathrm{O}_n$ 是 “带二次型的线性空间” 的<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">模空间</a></span>, $\mathrm{GL}_n$-作用于其上, $X$-结构给出 $M$ 上每个点处的一个二次型.</p>
 <h3>带 $p$-结构流形的范畴</h3>
 <p><span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>的理论使用如下范畴. 考虑范畴 $\mathsf{Mfd}_n$, 其对象为 $n$ 维光滑流形, 态射空间为光滑<strong>嵌入</strong>的空间 (注意不是光滑映射的空间). 对于群同态 $p \colon G\to \mathrm{GL}_n$, 定义 “带 $p$-结构的 $n$ 维流形的范畴” $\mathsf{Mfd}_n^p$ 为如下拉回.</p>
 <p>$$
