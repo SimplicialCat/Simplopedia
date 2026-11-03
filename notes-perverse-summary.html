@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width"><title>偏屈层课程小结</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+
+
+<div id="tcomment"></div>
+<script src="https://cdn.jsdelivr.net/npm/twikoo@1.7.9/dist/twikoo.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const footer = document.querySelector('footer');
+    const commentEl = document.getElementById('tcomment');
+    if (footer && commentEl) {
+      footer.parentNode.insertBefore(commentEl, footer.nextSibling);
+    }
+    twikoo.init({
+      envId: 'https://simplopedia.netlify.app/.netlify/functions/twikoo',
+      el: '#tcomment',
+      path: location.pathname,
+    });
+  });
+</script><style>
+  @font-face {
+    font-family: 'NewCM10';
+    src: url(assets/NewCM10-Book.otf) format('opentype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'NewCM10';
+    src: url(assets/NewCM10-Italic.otf) format('opentype');
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'NewCM10';
+    src: url(assets/NewCM10-Bold.otf) format('opentype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  body {
+    --text-font-family: "NewCM10", serif !important;
+  }
+</style><template id="inline-section">
+  <section class="inline block" data-taxon="">
+    <details open="">
+      <summary>
+        <header>
+          <h1>
+            <span class="taxon"></span>
+            <div id="title"></div>
+          </h1>
+        </header>
+      </summary>
+      <div id="content"></div>
+    </details>
+  </section>
+</template>
+
+<script>
+  function inlineSection(template, section, taxon, title) {
+    taxon = taxon || section.getAttribute("taxon") || null;
+    title = title || section.getAttribute("title") || "";
+
+    const clone = template.content.cloneNode(true);
+    clone.querySelector("section").dataset.taxon = taxon;
+    clone.querySelector(".taxon").textContent = taxon ? `${taxon}. ` : "";
+    clone.querySelector("#title").replaceWith(title);
+    clone.querySelector("#content").replaceWith(...section.childNodes);
+
+    if (section.hasAttribute("close")) {
+      clone.querySelector("details").removeAttribute("open");
+    }
+    
+    section.replaceWith(clone);
+  }
+
+  const tagTaxonTable = {
+    "exegesis": "Exegesis",
+    "definition": "Definition",
+    "proposition": "Proposition",
+    "remark": "Remark",
+    "conjecture": "Conjecture",
+    "postulate": "Postulate",
+    "claim": "Claim",
+    "observation": "Observation",
+    "fact": "Fact",
+    "hypothesis": "Hypothesis",
+    "axiom": "Axiom",
+    "lemma": "Lemma",
+    "theorem": "Theorem",
+    "corollary": "Corollary",
+    "example": "Example", 
+    "proof": "Proof",
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const template = document.getElementById("inline-section");
+
+    [...document.getElementsByTagName("block")].forEach(section => inlineSection(template, section));
+
+    Object.entries(tagTaxonTable).forEach(([tag, taxon]) => {
+      [...document.getElementsByTagName(tag)].forEach(section => inlineSection(template, section, taxon));
+    });
+  });
+</script><script>
+  function toggleDetailsOpen() {
+    const details = document.querySelector("#toc>div>details");
+    if (!details) return;
+
+    if (window.matchMedia("(max-width: 1000px)").matches) {
+      details.removeAttribute("open");
+    } else {
+      details.setAttribute("open", "");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", toggleDetailsOpen);
+  window.addEventListener("resize", toggleDetailsOpen);
+</script><style>
+  theme-option {
+    display: inline-block;
+  }
+
+  theme-option>input {
+    display: none;
+  }
+
+  theme-option>label {
+    color: var(--slug-color);
+  }
+
+  theme-option>label:hover {
+    background-color: var(--hover-color-link);
+  }
+
+  theme-option:has(input:checked)>label {
+    color: var(--link-color);
+  }
+
+  theme-option>label::before {
+    content: "[";
+    color: rgba(0, 0, 0, 0);
+  }
+
+  theme-option>label::after {
+    content: "]";
+    color: rgba(0, 0, 0, 0);
+  }
+
+  theme-option:has(input:checked)>label::before {
+    color: var(--link-color);
+  }
+
+  theme-option:has(input:checked)>label::after {
+    color: var(--link-color);
+  }
+</style>
+
+<template id="theme-option-template">
+  <input type="radio" name="theme" />
+  <label></label>
+</template>
+
+<script>
+  const THEME_KEY = `kodama-theme`;
+
+  function storeSelectedTheme(name) {
+    localStorage.setItem(THEME_KEY, name);
+  }
+
+  function getCurrentTheme() {
+    return localStorage.getItem(THEME_KEY) || window.primaryTheme;
+  }
+
+  function selectTheme(themeName) {
+    storeSelectedTheme(themeName);
+    requestAnimationFrame(applyDynamicColorInvert);
+  }
+
+  function applyFavorTheme() {
+    const favoredTheme = getCurrentTheme();
+    if (favoredTheme) {
+      const selector = `input[type='radio'][id='${favoredTheme}']`;
+      const favoredOption = window.themeOptions.querySelector(selector);
+
+      if (favoredOption) {
+        favoredOption.checked = true;
+      } else if (window.primaryOption) {
+        // Fallback to primary theme, if the favored theme is not found
+        // e.g., when the theme options have changed, and the stored theme is no longer available.
+        window.primaryOption.checked = true;
+      }
+    }
+    applyDynamicColorInvert();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    window.themeOptions = document.getElementById("theme-options");
+    const templateContent = document.getElementById("theme-option-template").content;
+
+    customElements.define(
+      "theme-option",
+      class extends HTMLElement {
+        constructor() {
+          super();
+
+          const node = templateContent.cloneNode(true);
+          const themeName = this.getAttribute("name");
+
+          const input = node.querySelector("input");
+          input.setAttribute("id", themeName);
+          input.setAttribute("value", themeName);
+
+          const label = node.querySelector("label");
+          label.setAttribute("for", themeName);
+          label.addEventListener("click", () => selectTheme(themeName));
+
+          while (this.firstChild) {
+            label.appendChild(this.firstChild);
+          }
+          this.appendChild(node);
+        }
+      },
+    );
+
+    window.primaryOption = window.themeOptions.querySelector("input[type='radio']");
+    window.primaryTheme = primaryOption?.value;
+
+    applyFavorTheme();
+  });
+</script>
+
+<script>
+  const clamp = (value) => Math.max(0, Math.min(255, value));
+
+  const multiply = ([r, g, b], matrix) => {
+    const nr = clamp(r * matrix[0] + g * matrix[1] + b * matrix[2]);
+    const ng = clamp(r * matrix[3] + g * matrix[4] + b * matrix[5]);
+    const nb = clamp(r * matrix[6] + g * matrix[7] + b * matrix[8]);
+    return [nr, ng, nb];
+  };
+
+  const hueRotate = ([r, g, b], angle = 0) => {
+    const rad = (angle / 180) * Math.PI;
+    const sin = Math.sin(rad);
+    const cos = Math.cos(rad);
+    const matrix = [
+      0.213 + cos * 0.787 - sin * 0.213,
+      0.715 - cos * 0.715 - sin * 0.715,
+      0.072 - cos * 0.072 + sin * 0.928,
+      0.213 - cos * 0.213 + sin * 0.143,
+      0.715 + cos * 0.285 + sin * 0.140,
+      0.072 - cos * 0.072 - sin * 0.283,
+      0.213 - cos * 0.213 - sin * 0.787,
+      0.715 - cos * 0.715 + sin * 0.715,
+      0.072 + cos * 0.928 + sin * 0.072,
+    ];
+    return multiply([r, g, b], matrix);
+  };
+
+  const grayscale = ([r, g, b], value = 1) => {
+    const matrix = [
+      0.2126 + 0.7874 * (1 - value),
+      0.7152 - 0.7152 * (1 - value),
+      0.0722 - 0.0722 * (1 - value),
+      0.2126 - 0.2126 * (1 - value),
+      0.7152 + 0.2848 * (1 - value),
+      0.0722 - 0.0722 * (1 - value),
+      0.2126 - 0.2126 * (1 - value),
+      0.7152 - 0.7152 * (1 - value),
+      0.0722 + 0.9278 * (1 - value),
+    ];
+    return multiply([r, g, b], matrix);
+  };
+
+  const sepia = ([r, g, b], value = 1) => {
+    const matrix = [
+      0.393 + 0.607 * (1 - value),
+      0.769 - 0.769 * (1 - value),
+      0.189 - 0.189 * (1 - value),
+      0.349 - 0.349 * (1 - value),
+      0.686 + 0.314 * (1 - value),
+      0.168 - 0.168 * (1 - value),
+      0.272 - 0.272 * (1 - value),
+      0.534 - 0.534 * (1 - value),
+      0.131 + 0.869 * (1 - value),
+    ];
+    return multiply([r, g, b], matrix);
+  };
+
+  const saturate = ([r, g, b], value = 1) => {
+    const matrix = [
+      0.213 + 0.787 * value,
+      0.715 - 0.715 * value,
+      0.072 - 0.072 * value,
+      0.213 - 0.213 * value,
+      0.715 + 0.285 * value,
+      0.072 - 0.072 * value,
+      0.213 - 0.213 * value,
+      0.715 - 0.715 * value,
+      0.072 + 0.928 * value,
+    ];
+    return multiply([r, g, b], matrix);
+  };
+
+  const linear = ([r, g, b], slope = 1, intercept = 0) => {
+    const scale = 255;
+    return [
+      clamp(r * slope + intercept * scale),
+      clamp(g * slope + intercept * scale),
+      clamp(b * slope + intercept * scale),
+    ];
+  };
+
+  const brightness = (rgb, value = 1) => linear(rgb, value);
+  const contrast = (rgb, value = 1) => linear(rgb, value, -0.5 * value + 0.5);
+
+  const invert = ([r, g, b], value = 1) => {
+    const nr = (value + r / 255 * (1 - 2 * value)) * 255;
+    const ng = (value + g / 255 * (1 - 2 * value)) * 255;
+    const nb = (value + b / 255 * (1 - 2 * value)) * 255;
+    return [clamp(nr), clamp(ng), clamp(nb)];
+  };
+
+  // Code taken from https://stackoverflow.com/a/9493060/2688027, licensed under CC BY-SA.
+  const rgbToHsl = (r, g, b) => {
+    r /= 255; g /= 255; b /= 255;
+    const max = Math.max(r, g, b);
+    const min = Math.min(r, g, b);
+    let h, s, l = (max + min) / 2;
+    if (max === min) {
+      h = s = 0;
+    } else {
+      const d = max - min;
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      switch (max) {
+        case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+        case g: h = (b - r) / d + 2; break;
+        case b: h = (r - g) / d + 4; break;
+      }
+      h /= 6;
+    }
+    return { h: h * 100, s: s * 100, l: l * 100 };
+  };
+
+  const applyFilters = (rgb, [inv, sep, sat, hue, bri, con]) => {
+    let color = [...rgb];
+    color = invert(color, inv / 100);
+    color = sepia(color, sep / 100);
+    color = saturate(color, sat / 100);
+    color = hueRotate(color, hue * 3.6);
+    color = brightness(color, bri / 100);
+    color = contrast(color, con / 100);
+    return color;
+  };
+
+  const lossFn = (targetRgb, filters) => {
+    const resultRgb = applyFilters([0, 0, 0], filters);
+    const targetHsl = rgbToHsl(...targetRgb);
+    const resultHsl = rgbToHsl(...resultRgb);
+    return (
+      Math.abs(resultRgb[0] - targetRgb[0]) +
+      Math.abs(resultRgb[1] - targetRgb[1]) +
+      Math.abs(resultRgb[2] - targetRgb[2]) +
+      Math.abs(resultHsl.h - targetHsl.h) +
+      Math.abs(resultHsl.s - targetHsl.s) +
+      Math.abs(resultHsl.l - targetHsl.l)
+    );
+  };
+
+  const fix = (value, idx) => {
+    let max = 100;
+    if (idx === 2) max = 7500;                  // saturate
+    else if (idx === 4 || idx === 5) max = 200; // brightness, contrast
+    if (idx === 3) { // hue-rotate
+      if (value > max) return value % max;
+      if (value < 0) return max + (value % max);
+      return value;
+    }
+    return Math.max(0, Math.min(max, value));
+  };
+
+  const spsa = (targetRgb, A, a, c, initial, iters) => {
+    const alpha = 1;
+    const gamma = 1 / 6;
+    let values = [...initial];
+    let best = [...values];
+    let bestLoss = Infinity;
+
+    for (let k = 0; k < iters; k++) {
+      const ck = c / Math.pow(k + 1, gamma);
+      const deltas = Array(6).fill().map(() => (Math.random() > 0.5 ? 1 : -1));
+      const highArgs = values.map((v, i) => v + ck * deltas[i]);
+      const lowArgs = values.map((v, i) => v - ck * deltas[i]);
+      const lossDiff = lossFn(targetRgb, highArgs) - lossFn(targetRgb, lowArgs);
+
+      values = values.map((v, i) => {
+        const g = (lossDiff / (2 * ck)) * deltas[i];
+        const ak = a[i] / Math.pow(A + k + 1, alpha);
+        return fix(v - ak * g, i);
+      });
+
+      const loss = lossFn(targetRgb, values);
+      if (loss < bestLoss) {
+        best = [...values];
+        bestLoss = loss;
+      }
+    }
+    return { values: best, loss: bestLoss };
+  };
+
+  // Threshold for acceptable color loss. This value determines when the SPSA algorithm stops early.
+  // A loss below this value is considered visually indistinguishable for most use cases.
+  // The value 25 was determined empirically to balance performance and color accuracy.
+  const ACCEPTABLE_COLOR_LOSS = 25;
+
+  const solveWide = (targetRgb) => {
+    const A = 5;
+    const c = 15;
+    const a = [60, 180, 18000, 600, 1.2, 1.2];
+    let best = { loss: Infinity, values: null };
+    for (let i = 0; best.loss > ACCEPTABLE_COLOR_LOSS && i < 3; i++) {
+      const initial = [50, 20, 3750, 50, 100, 100];
+      const result = spsa(targetRgb, A, a, c, initial, 1000);
+      if (result.loss < best.loss) best = result;
+    }
+    return best;
+  };
+
+  const solveNarrow = (targetRgb, wideResult) => {
+    const A = wideResult.loss;
+    const c = 2;
+    const A1 = A + 1;
+    const a = [0.25 * A1, 0.25 * A1, A1, 0.25 * A1, 0.2 * A1, 0.2 * A1];
+    return spsa(targetRgb, A, a, c, wideResult.values, 500);
+  };
+
+  const cssFilterString = (filters) => {
+    const [inv, sep, sat, hue, bri, con] = filters.map(Math.round);
+    const hueDeg = Math.round(hue * 3.6);
+    return `filter: invert(${inv}%) sepia(${sep}%) saturate(${sat}%) hue-rotate(${hueDeg}deg) brightness(${bri}%) contrast(${con}%);`;
+  };
+
+  const solveColor = (targetRgb) => {
+    const wide = solveWide(targetRgb);
+    const narrow = solveNarrow(targetRgb, wide);
+    return {
+      values: narrow.values,
+      loss: narrow.loss,
+      filter: cssFilterString(narrow.values),
+    };
+  };
+
+  // Reuse a single canvas / context to avoid memory leaks
+  const colorParseCanvas = document.createElement('canvas');
+  colorParseCanvas.width = 1;
+  colorParseCanvas.height = 1;
+  const colorParseContext = colorParseCanvas.getContext('2d');
+
+  const toRGBArray = (cssColor) => {
+    colorParseContext.fillStyle = cssColor;
+    colorParseContext.fillRect(0, 0, 1, 1);
+
+    // The `getImageData().data` returns a Uint8ClampedArray with 4 values per pixel (RGBA). 
+    // also see: https://developer.mozilla.org/zh-CN/docs/Web/API/ImageData/data
+    const rgba = colorParseContext.getImageData(0, 0, 1, 1).data;
+    return Array.from(rgba.slice(0, 3));
+  };
+
+  const DYNAMIC_STYLE_ID = 'dynamic-color-invert-style';
+  const SOLVED_COLOR_KEY = "solved-";
+
+  function memorizedSolvedFilter(color) {
+    const colorKey = SOLVED_COLOR_KEY + color;
+    const storedFilterOption = localStorage.getItem(colorKey);
+    if (storedFilterOption) {
+      return storedFilterOption;
+    } else {
+      const filter = solveColor(color).filter;
+      localStorage.setItem(colorKey, filter);
+      return filter;
+    }
+  }
+
+  function applyDynamicColorInvert() {
+    const textColor = getComputedStyle(document.body).getPropertyValue('--text-color');
+    if (textColor && textColor.length > 0) {
+      const rgb = toRGBArray(textColor);
+      const filter = memorizedSolvedFilter(rgb);
+
+      const existingStyle = document.getElementById(DYNAMIC_STYLE_ID);
+      if (existingStyle) {
+        existingStyle.textContent = `.color-invert {${filter}}`;
+      } else {
+        const style = document.createElement('style');
+        style.id = DYNAMIC_STYLE_ID;
+        style.textContent = `.color-invert {${filter}}`;
+        document.head.appendChild(style);
+      }
+    }
+  }
+</script><script>
+  (() => {
+    const url = "/kodama.json";
+    const interval = 1000; // 1 second
+
+    let lastModified = null;
+
+    async function check() {
+      try {
+        const res = await fetch(url + "?t=" + Date.now(), {
+          method: "HEAD",
+          cache: "no-store",
+        });
+
+        const lm = res.headers.get("last-modified");
+
+        if (lastModified && lm && lm !== lastModified) {
+          location.reload();
+          return;
+        }
+
+        lastModified = lm || lastModified;
+      } catch (e) {
+        // Ignore
+        console.warn("Reload check failed:", e);
+      }
+
+      setTimeout(check, interval);
+    }
+
+    check();
+  })();
+</script><!-- Also see: https://katex.org/docs/autorender -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.css" integrity="sha384-WcoG4HRXMzYzfCgiyfrySxx90XSl2rxY5mnVY5TwtWE6KLrArNKn0T/mOgNL0Mmi" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.js" integrity="sha384-J+9dG2KMoiR9hqcFao0IBLwxt6zpcyN68IgwzsCSkbreXUjmNVRhPFTssqdSGjwQ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
+<!-- Also see: https://github.com/KaTeX/KaTeX/tree/main/contrib/copy-tex -->
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/contrib/copy-tex.min.js" integrity="sha384-HORx6nWi8j5/mYA+y57/9/CZc5z8HnEw4WUZWy5yOn9ToKBv1l58vJaufFAn9Zzi" crossorigin="anonymous"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true },
+      ],
+      trust: true,
+      strict: false,
+      throwOnError: false,
+      minRuleThickness: 0.05,
+    });
+  });
+</script>
+<link rel="stylesheet" href="./main.css"><style>
+@media only screen and (min-width: 1000px) {
+  #grid-wrapper { grid-template-columns: var(--article-max-width) var(--toc-max-width); }
+  nav#toc { max-width: max-content; }
+}
+</style></head><body><header class="header"><nav class="nav"><div class="logo"><span class="cursor-pointer" onclick="window.location.href='./notes-perverse.html'" title="偏屈层笔记">« 偏屈层笔记</span></div></nav></header><div id="grid-wrapper" style="grid-template-areas: 'article toc';" data-base-url="./"><nav id="toc" class="sticky-nav mobile-sticky-nav"><div id="theme-options"><style>
+  body:has(input[value="furina"]:checked) {
+    --article-max-width: 110ex; /* default: 90ex */
+
+    --color-Furina-deep-navy: #253085;
+    --color-Furina-royal-blue: #465BCF;
+    --color-Furina-aqua-cyan: #6AC6E8;
+    --color-Furina-frost-white: #FAFBFC;
+    --color-Furina-misty-blue: #C4D7ED;
+    --color-Furina-vivid-sapphire: #5670E9;
+    --color-Furina-luminous-hydro: #70DBFF;
+    --color-Furina-bright-periwinkle: #8D84F1;
+    --color-Furina-vintage-gold: #BD9368;
+    --color-Furina-vintage-gold-light: #DDB368;
+    --color-Furina-vintage-gold-ultra-light: #FDF388;
+
+    --background-color: var(--color-Furina-frost-white);
+    --link-color: var(--color-Furina-vivid-sapphire);
+    --slug-color: var(--color-Furina-aqua-cyan);
+    --logo-color: var(--color-Furina-deep-navy);
+
+    --block-background-color: var(--background-color);
+    --shadow-color: rgba(27, 63, 143, 0.06);
+    --radius: 5px;
+    --margin-left: 14px;
+
+    --hover-color-block: var(--block-background-color);
+    --logo-hover-color: #88d;
+    --span-tag-color: #88d;
+    --article-tag-color: #88d;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body:has(input[value="furina"]:checked) {
+      --color-Furina-deep-navy: #B5C0F5;
+      --color-Furina-royal-blue: #D6EBFF;
+      --color-Furina-vivid-sapphire: #96A0FF;
+
+      --background-color: #2f2f2f;
+      --block-background-color: #2f2f2f;
+    }
+  }
+
+  .block {
+    /*2026-3-16 21:10 新增*/
+    padding: 15px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+
+    /*2026-4-17 新增*/
+    /*margin-left: auto;
+    margin-right: auto; -- 好像没有用, 网站设计上不欢迎 block 居中*/
+
+    border-radius: var(--radius);
+    background-color: var(--block-background-color);
+    box-shadow: 0 2px 12px var(--shadow-color);
+  }
+
+  .footnote-definition {
+    margin-left: var(--margin-left);
+  }
+
+  h5,
+  h6,
+  p {
+    margin: 5px;
+  }
+
+  hr {
+    border: none;
+    height: 0;
+    border-bottom: 1px solid var(--color-Furina-luminous-hydro);
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  tr {
+    border-bottom: 1px solid var(--color-Furina-bright-periwinkle);
+  }
+
+  /* 可选：去除表头下方的重复横线（如果表头需要特殊样式） */
+  thead tr {
+    border-bottom: 2px solid var(--color-Furina-deep-navy);
+  }
+
+  /* 去除最后一行的边框 */
+  tbody tr:last-child {
+    border-bottom: none;
+  }
+
+  .footnote-definition>p {
+    display: inline;
+    margin-left: 0;
+    color: var(--color-Furina-bright-periwinkle);
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    font-weight: 600 !important;
+  }
+
+  article > section > details > summary > header > h1 {
+    font-size: 1.75rem !important;
+  }
+
+  h2 {
+    font-weight: 500;
+    font-size: 1.5rem !important;
+    color: var(--color-Furina-deep-navy);
+    margin-bottom: 10px;
+    border-bottom: 1px solid #88d;
+    padding-bottom: 1px;
+    /* 增加底部内边距让横线和文字有间距 */
+  }
+
+  h2::before {
+    content: "\2726";
+    /* ✦ 的Unicode转义码 */
+    display: inline-block;
+    margin-right: 0.3em;
+    /*color: var(--color-Furina-vintage-gold-light);*/
+    /* 替换 color 属性，改为以下背景和裁剪属性 */
+    background: linear-gradient(150deg,
+        var(--color-Furina-vintage-gold-ultra-light) 30%,
+        var(--color-Furina-vintage-gold-light) 60%,
+        var(--color-Furina-vintage-gold) 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* 将文字颜色设为透明以显示背景 */
+    /* 组合径向渐变（中心高光）和线性渐变（基础色调） */
+    /*background: radial-gradient(
+      ellipse at center,
+      var(--color-Furina-vintage-gold-ultra-light) 20%,
+      transparent 70%
+    ),
+    linear-gradient(
+      to bottom,
+      var(--color-Furina-vintage-gold-light),
+      var(--color-Furina-vintage-gold)
+    );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; */
+    filter: drop-shadow(0px 1px 1px rgba(184, 150, 131, 0.5));
+    /* 可选：增加与主色呼应的柔和投影 */
+    font-weight: normal;
+  }
+
+
+  h3 {
+    font-weight: 500;
+    color: var(--color-Furina-royal-blue);
+    margin-bottom: 5px;
+  }
+
+  h3::before {
+    content: "\2726";
+    /* ✦ 的Unicode转义码 */
+    display: inline-block;
+    margin-left: 0.06em;
+    margin-right: 0.36em;
+    /*color: var(--color-Furina-vintage-gold-ultra-light);*/
+    background: linear-gradient(150deg,
+        var(--color-Furina-vintage-gold-ultra-light) 20%,
+        var(--color-Furina-vintage-gold-light) 90%,
+        var(--color-Furina-vintage-gold) 95%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: normal;
+  }
+
+  h4 {
+    text-indent: var(--margin-left);
+    font-weight: 700;
+    color: #696cd9;
+    margin-bottom: 0;
+  }
+
+  h5 {
+    text-indent: var(--margin-left);
+    font-weight: 700;
+    color: #8a8ff4;
+    margin-bottom: 0;
+  }
+
+  h6 {
+    text-indent: var(--margin-left);
+    font-weight: 700;
+    color: #aaaff4;
+    margin-bottom: 0;
+  }
+
+  code, pre, .mono {
+    font-family: "Liberation Mono", "Courier New", monospace;
+    font-size: 0.9em; /* 可选微调尺寸 */
+  }
+
+  @media only screen and (max-width: 1000px) {
+    #grid-wrapper>nav {
+      display: none !important;
+    }
+  }
+
+  #toc,
+  #toc .block {
+    background: none !important;
+    box-shadow: none !important;
+  }
+
+  ul {
+    margin: 5px;
+    margin-left: calc(5px + 2em);
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  ul li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 0;
+    /*color: var(--text-secondary);*/
+  }
+
+  ul li::before {
+    content: '✦';
+    position: absolute;
+    left : -1em;
+    /*color: var(--color-Furina-vintage-gold-ultra-light);*/
+    font-size: 0.9em;
+  }
+
+  .metadata {
+    color: var(--article-tag-color);
+  }
+
+  .metadata ul {
+    margin : 0;
+  }
+
+  .metadata li::before {
+    content: none;
+  }
+
+  .music-player button {
+    text-decoration: none;
+  }
+
+  .music-player button:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--color-Furina-vintage-gold-light);
+    /* 金色 */
+    text-underline-offset: 6px;
+    /* 调整下划线与文字距离 */
+    text-decoration-thickness: 1px;
+    /* 线条粗细 */
+  }
+</style>
+
+<theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
+
+<article><section class="block" data-taxon=""><details open><summary id="notes-perverse-summary"><header><h1><span class="taxon"></span>偏屈层课程小结 <a class="slug" href="./notes-perverse-summary.html">[notes-perverse-summary]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>学期进行到一半, 让 AI 帮忙用我熟悉的观点总结了一下课程内容.</p>
+<p>以下内容由 AI 生成.</p>
+<p>这门课的主线可以先压缩成一句话:</p>
+<blockquote>
+<p><strong>在奇性空间上构造一个与 Verdier 对偶相容的 Abel 范畴 $\mathsf{Perv}(X)$; 其单对象是由局部系统作中间延拓得到的 $\mathrm{IC}$ 层; 随后用算术权重证明, 紧合映射推前的 $\mathrm{IC}$ 层自动分裂为半单偏屈层.</strong></p>
+</blockquote>
+<p>因此, 课程的前半部分是在构造并研究 $\mathsf{Perv}(X)$, 后半部分则是在证明其中的<strong>分解定理</strong>. 下面按这条主线重新组织.</p>
+<h2>一、六函子给出了奇性空间上的相对对偶理论</h2>
+<p>在 Betti 情形, 可以先考虑空间值层的 $\infty$-意象 $\operatorname{Shv}(X)$, 再稳定化并取 $\mathbb Q$-线性系数, 得到稳定 $\infty$-范畴</p>
+<p>$$
+\mathcal D(X):=\operatorname{Shv}\bigl(X;\operatorname{Mod}_{\mathbb Q}\bigr).
+$$</p>
+<p>有界可构造对象构成全子范畴 $D_c^b(X)$. 可构造性要求存在有限分层, 使限制到每一层后成为局部系统. 在合适的正则分层假设下, 也可以用出路 $\infty$-范畴理解它: 可构造层大致是</p>
+<p>$$
+\operatorname{Exit}_{\mathcal S}(X)\longrightarrow \operatorname{Mod}_{\mathbb Q}
+$$</p>
+<p>的函子, 再附加有界性等条件. 每一层上的局部系统记录层内单值化, 而不同层之间的态射记录特殊化信息.</p>
+<p>六函子则是在这些范畴之间建立统一的函子形式:</p>
+<p>$$
+f^*\dashv f_*,\qquad f_!\dashv f^!,
+$$</p>
+<p>再加上内 $\operatorname{Hom}$ 与 $\otimes$. 其中 $f^*,f_*$ 是普通几何态射具有的拉回与推前; $f_!,f^!$ 是带支集条件的另一对推出与拉回. 开嵌入满足 $j^!=j^*$, 紧合映射满足 $f_!=f_*$.</p>
+<p>Verdier 对偶由对偶化对象</p>
+<p>$$
+\omega_X=p^!\mathbb Q
+$$</p>
+<p>定义:</p>
+<p>$$
+\mathbb D_X(F)=\underline{\operatorname{Hom}}(F,\omega_X).
+$$</p>
+<p>它交换两套函子:</p>
+<p>$$
+\mathbb D_Yf_!\simeq f_*\mathbb D_X,\qquad
+\mathbb D_Xf^!\simeq f^*\mathbb D_Y.
+$$</p>
+<p>所以, 六函子同时表达了普通上同调、紧支上同调、茎与余茎.</p>
+<p>Poincaré 对偶是这一形式在光滑紧合空间上的特例. 课程一开始的问题便是: 当 $X$ 有奇点时, 应当把什么对象放在常值层的位置, 才能恢复这种对偶性？</p>
+<p>答案将是 $\mathrm{IC}_X$.</p>
+<h2>二、偏屈 $t$-结构是与 Verdier 对偶相容的粘合 $t$-结构</h2>
+<p>普通 $t$-结构的心是可构造层, 但它与 Verdier 对偶不相容. 例如在光滑的复 $d$ 维空间上,</p>
+<p>$$
+\omega_X\simeq \mathbb Q_X[2d],
+$$</p>
+<p>所以</p>
+<p>$$
+\mathbb D_X(\mathbb Q_X)\simeq\mathbb Q_X[2d].
+$$</p>
+<p>常值层被对偶移动了 $2d$ 个上同调次数. 若希望局部系统与其对偶处于同一个心中, 自然的修正是考虑</p>
+<p>$$
+\mathcal L[d].
+$$</p>
+<p>这就是光滑空间上偏屈 $t$-结构的来源: 把普通 $t$-结构平移 $d$, 使 $\mathcal L[d]$ 位于心中. 此时</p>
+<p>$$
+\mathbb D_X(\mathcal L[d])
+$$</p>
+<p>仍具有相同的形式.</p>
+<p>有奇点时, 需要把各层上的这种平移 $t$-结构粘起来. 设</p>
+<p>$$
+j\colon U\hookrightarrow X,\qquad i\colon Z\hookrightarrow X
+$$</p>
+<p>分别是开嵌入与其补闭嵌入. 此时有开闭分解给出的再黏合结构:</p>
+<p>$$
+j_!\dashv j^*=j^!\dashv j_*,\qquad
+i^*\dashv i_*=i_!\dashv i^!.
+$$</p>
+<p>给定 $U$ 与 $Z$ 上的 $t$-结构, 粘合后的两侧定义为</p>
+<p>$$
+F\in{}^{p}D^{\leq0}(X)
+\iff
+j^*F\in{}^{p}D^{\leq0}(U),\quad
+i^*F\in{}^{p}D^{\leq0}(Z),
+$$</p>
+<p>以及</p>
+<p>$$
+F\in{}^{p}D^{\geq0}(X)
+\iff
+j^*F\in{}^{p}D^{\geq0}(U),\quad
+i^!F\in{}^{p}D^{\geq0}(Z).
+$$</p>
+<p>这里出现了茎 $i^*$ 与余茎 $i^!$ 两个条件. 它们分别控制对象在闭层上的“上同调支集”与“局部上同调支集”. 逐层迭代这个粘合过程, 就得到笔记中的条件:</p>
+<p>$$
+H^r(i_\alpha^*F)=0\qquad(r&gt;-\dim S_\alpha),
+$$</p>
+<p>$$
+H^r(i_\alpha^!F)=0\qquad(r&lt;-\dim S_\alpha).
+$$</p>
+<p>这种对称安排使 Verdier 对偶交换 $\leq0$ 与 $\geq0$ 的条件, 从而保持整个偏屈 $t$-结构. 因此</p>
+<p>$$
+\mathbb D_X\bigl(\mathsf{Perv}(X)\bigr)
+=\mathsf{Perv}(X).
+$$</p>
+<p>所以, 偏屈 $t$-结构的核心性质是: <strong>它由分层维数规范化, 并且在开闭分解下粘合, 同时被 Verdier 对偶保持.</strong></p>
+<h2>三、$\mathrm{IC}$ 是边界上没有多余子对象和商对象的延拓</h2>
+<p>有了偏屈心, 就可以解释 $j_!$ 与 $j_*$ 之间的比较映射为何重要.</p>
+<p>对开嵌入 $j\colon U\hookrightarrow X$, 有自然变换</p>
+<p>$$
+j_!\longrightarrow j_*.
+$$</p>
+<p>经过偏屈截断后, 得到心中的函子</p>
+<p>$$
+{}^{p}j_!,\ {}^{p}j_*\colon
+\mathsf{Perv}(U)\longrightarrow\mathsf{Perv}(X),
+$$</p>
+<p>以及自然变换 ${}^{p}j_!\to{}^{p}j_*$. 中间延拓定义为它在 Abel 范畴 $\mathsf{Perv}(X)$ 中的像:</p>
+<p>$$
+j_{!*}(F):=
+\operatorname{im}\bigl({}^{p}j_!F\to{}^{p}j_*F\bigr).
+$$</p>
+<p>其中:</p>
+<ul>
+<li>${}^{p}j_!F$ 是偏小的延拓, 容易带有支在边界上的商对象;</li>
+<li>${}^{p}j_*F$ 是偏大的延拓, 容易带有支在边界上的子对象;</li>
+<li>$j_{!*}F$ 去掉这两类边界贡献.</li>
+</ul>
+<p>它的内蕴刻画正是笔记中的唯一性命题: $j_{!*}F$ 限制回 $U$ 得到 $F$, 并且没有非平凡的、支在 $X\setminus U$ 上的子对象或商对象.</p>
+<p>于是, 对光滑稠密开集 $U\subset X$, 定义</p>
+<p>$$
+\mathrm{IC}_X:=j_{!*}\bigl(\mathbb Q_U[\dim X]\bigr).
+$$</p>
+<p>由刻画可直接得到</p>
+<p>$$
+\mathbb D_X\mathrm{IC}_X\simeq\mathrm{IC}_X.
+$$</p>
+<p>结曲线的例子展示了这一构造的效果: 正规化 $\nu\colon\widetilde C\to C$ 给出</p>
+<p>$$
+\mathrm{IC}_C\simeq\nu_*\mathbb Q_{\widetilde C}[1],
+$$</p>
+<p>它消除了普通常值层在结点处产生的额外一维上同调, 使相交上同调恢复 Poincaré 对偶.</p>
+<p>不过, 笔记第 1 讲中“<strong>一般的 $X$ 的 IC 层是奇点消解的常值层的推前</strong>”需要修正. 对任意奇点消解 $\pi\colon\widetilde X\to X$, 通常只有</p>
+<p>$$
+\mathrm{IC}_X
+\quad\text{是}\quad
+\pi_*\mathrm{IC}_{\widetilde X}
+$$</p>
+<p><strong>的一个直和项</strong>, 一般不与其相等. 你后面写下的吹起例子恰好说明了这一点: 多出来的例外除子会贡献另外的直和项. 这个“多出来什么、为何仍然分裂”的问题, 正是分解定理处理的内容.</p>
+<h2>四、偏屈心的单对象完全由局部系统控制</h2>
+<p>中间延拓还解释了偏屈层的分类定理.</p>
+<p>若 $Z\subset X$ 是不可约闭子簇, $V\subset Z$ 是光滑稠密开集, $\mathcal L$ 是 $V$ 上的不可约局部系统, 那么沿 $V\hookrightarrow Z$ 作中间延拓, 再推前到 $X$, 得到</p>
+<p>$$
+\mathrm{IC}_Z(\mathcal L).
+$$</p>
+<p>单偏屈层恰好都是这种对象. 换言之, 单对象由两项资料决定:</p>
+<ol>
+<li>一个不可约闭子簇 $Z$;</li>
+<li>其光滑开集上的一个不可约局部系统, 即基本群的一个不可约表示.</li>
+</ol>
+<p>而 $\mathsf{Perv}(X)$ 中每个对象都有有限长度, 所以任意偏屈层都可以经过有限次扩张, 由这些 $\mathrm{IC}_Z(\mathcal L)$ 构成.</p>
+<p>这说明偏屈心同时具有两种描述:</p>
+<ul>
+<li><strong>几何描述</strong>: $D_c^b(X)$ 中满足茎、余茎振幅条件的对象;</li>
+<li><strong>Abel 范畴描述</strong>: 由局部系统的中间延拓生成的有限长度范畴.</li>
+</ul>
+<p>课程前半部分的终点, 就是建立了这两种描述之间的联系.</p>
+<h2>五、半小性控制振幅, 分解定理进一步给出分裂</h2>
+<p>接下来研究 $f_*,f_!,f^*,f^!$ 对偏屈 $t$-结构的作用.</p>
+<p>一般纤维维数只能给出振幅估计: 纤维至多为 $d$ 维时, 上述函子最多把偏屈对象移动 $d$ 个次数. 半小性则对“大纤维只能出现在余维足够大的闭集上”作出限制:</p>
+<p>$$
+\dim\{y\mid \dim f^{-1}(y)\geq r\}
+\leq \dim X-2r.
+$$</p>
+<p>这个 $2r$ 正好抵消推前产生的偏屈振幅. 因此, 对光滑 $X$ 上的半小映射 $f$,</p>
+<p>$$
+f_*\mathrm{IC}_X
+$$</p>
+<p>仍是偏屈层, 而不只是一个具有有限偏屈振幅的复形.</p>
+<p>但 BBDG 分解定理更强. 对任意紧合映射 $f$, 它断言</p>
+<p>$$
+f_*\mathrm{IC}_X
+\simeq
+\bigoplus_r
+{}^{p}H^r(f_*\mathrm{IC}_X)[-r],
+$$</p>
+<p>并且每个 ${}^{p}H^r(f_*\mathrm{IC}_X)$ 都是半单偏屈层.</p>
+<p>用稳定 $\infty$-范畴的语言说, 这里有两个独立结论:</p>
+<ol>
+<li><strong>相对于偏屈 $t$-结构的形式性</strong>: 对象等价于其各偏屈上同调对象的移位直和;</li>
+<li><strong>半单性</strong>: 这些偏屈上同调对象本身分解为单偏屈层的直和.</li>
+</ol>
+<p>若 $f$ 还是半小的, 则所有非零偏屈次数都不出现, 于是 $f_*\mathrm{IC}_X$ 直接是半单偏屈层, 因而分解为若干 $\mathrm{IC}_Z(\mathcal L)$.</p>
+<p>光滑射影映射的情形是这一结论的预演. Hard Lefschetz 给出</p>
+<p>$$
+\eta^r\colon H^{-r}(K)\xrightarrow{\sim}H^r(K),
+$$</p>
+<p>Deligne 分裂判据再利用这种左右对称性证明 $K$ 分裂为普通上同调对象的直和. 一般紧合映射没有这样直接的相对 Hard Lefschetz 输入, 课程随后改用算术权重完成证明.</p>
+<h2>六、权重理论提供使分裂必然发生的正交性</h2>
+<p>转到有限域后, 关键在于 $X_0$ 比其几何基变换 $X=X_0\times_{\mathbb F_q}\overline{\mathbb F}_q$ 多带一层算术结构. 平展基本群序列</p>
+<p>$$
+\pi_1^{\mathrm{\acute et}}(X)
+\longrightarrow
+\pi_1^{\mathrm{\acute et}}(X_0)
+\longrightarrow
+\operatorname{Gal}(\overline{\mathbb F}_q/\mathbb F_q)
+$$</p>
+<p>把几何单值化与算术 Frobenius 作用区分开来. 权重正是由 Frobenius 在茎上的特征值定义的.</p>
+<p>Tate 扭则记录循环 Galois 特征. 用意象论的语言, 它是从 $\operatorname{Spec}\mathbb F_q$ 拉回一个秩一局部系统, 再与原层作张量积. 按笔记的约定, $E(1)$ 的权为 $-2$; 上同调移位也会改变权, 所以“权”与普通上同调次数是两套不同的指标.</p>
+<p>混合层允许有一个逐次纯的滤过. 纯对象则同时受到茎与余茎条件的限制, 后者通过对偶条件表达. Weil II 提供的关键输入包括:</p>
+<ul>
+<li>六函子对权重的估计与保持性质;</li>
+<li>紧合推前保持纯性;</li>
+<li>纯偏屈层的半单性;</li>
+<li>不同权重之间的同态消失.</li>
+</ul>
+<p>若 $K=f_*\mathrm{IC}_X$ 纯权 $w$, 则其各偏屈上同调对象满足</p>
+<p>$$
+{}^{p}H^r(K)
+\quad\text{纯权 }w+r.
+$$</p>
+<p>于是, 不同偏屈次数对应不同权重. 笔记最后的两条正交性说明:</p>
+<ul>
+<li>权重相差至少 $1$ 时, 几何对象之间没有 Frobenius 不变的同态;</li>
+<li>权重相差至少 $2$ 时, 算术导出范畴中的相应同态也消失.</li>
+</ul>
+<p>这些消失条件排除了不同偏屈上同调块之间的映射与扩张, 从而得到</p>
+<p>$$
+K\simeq\bigoplus_r{}^{p}H^r(K)[-r].
+$$</p>
+<p>同时, 纯偏屈层的半单性把每一块继续分解为 $\mathrm{IC}_Z(\mathcal L)$.</p>
+<p>所以后半课程的逻辑可以概括为:</p>
+<p>$$
+\boxed{\text{Frobenius 权重}
+\;\Longrightarrow\;
+\text{不同权块之间的同态与扩张消失}
+\;\Longrightarrow\;
+\text{形式性与半单性}.}
+$$</p>
+<p>最后, 通过有限生成底概形上的展开、有限域特殊化以及 Betti–平展比较, 把结论传回复代数簇.</p>
+<h2>七、整门课的总体结构</h2>
+<p>把七讲连起来, 就是下面这条链:</p>
+<p>$$
+\begin{aligned}
+&amp;\text{奇性空间上的 Poincaré 对偶失效}\\
+&amp;\quad\leadsto\ \text{建立可构造导出范畴与六函子}\\
+&amp;\quad\leadsto\ \text{构造被 Verdier 对偶保持的偏屈 }t\text{-结构}\\
+&amp;\quad\leadsto\ \text{用中间延拓定义自对偶的 }\mathrm{IC}\text{ 层}\\
+&amp;\quad\leadsto\ \text{证明偏屈心有限长度并分类单对象}\\
+&amp;\quad\leadsto\ \text{研究推前的偏屈振幅与半小性}\\
+&amp;\quad\leadsto\ \text{用 Frobenius 权重证明 BBDG 分解与半单性}.
+\end{aligned}
+$$</p>
+<p>其中最值得始终保留的三个现代观点是: <strong>开闭分解给出再黏合; 偏屈 $t$-结构是逐层平移后再黏合得到的自对偶心; 分解定理则是权重正交性迫使稳定范畴中的对象按其偏屈上同调分裂.</strong></p>
+</details></section><footer></footer></article></div></body></html>
