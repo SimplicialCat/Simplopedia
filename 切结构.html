@@ -943,12 +943,15 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="cob-sing"><header><h1><span class="taxon"></span>带奇点配边假设 <a class="slug" href="./cob-sing.html">[cob-sing]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>带奇点配边假设是<span class="link local"><a href="./配边假设.html" title="配边假设 [配边假设]">配边假设</a></span>的推广, 是关于 “带奇点流形” (下文将会定义) 的某种配边构成的<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>的万有性质.</p>
-<p>直观上, 配边范畴是一个对象自由生成的含对偶对称幺半 $(\infty,n)$-范畴, 而带奇点配边范畴则是奇点数据给出的各阶态射自由生成的含对偶对称幺半 $(\infty,n)$-范畴, 每维奇点数据 $X_k$ 的每个点给出一个 $k$-态射生成元.</p>
+<blockquote>
+<p>奇点的奇应读 qí, 意为奇异, 反常的.</p>
+</blockquote>
+<p>直观上, 配边范畴是一个对象自由生成的含对偶对称幺半 $(\infty,n)$-范畴, 而带奇点配边范畴则是奇点数据给出的各阶态射自由生成的含对偶对称幺半 $(\infty,n)$-范畴, 每维奇点数据 $X_k$ 的每个点给出一个 $k$-态射生成元, 而 $X_k$ 上的纤维丛 $E_k$ 指定这些 $k$-态射的类型.</p>
 <h2>陈述</h2>
 <h3>带奇点流形</h3>
 <p>带奇点流形是一个非常广泛的概念, 我们先看几个方面的例子.</p>
 <h4>局部锥形流形</h4>
-<p>我们知道, 流形 $Y$ 的锥 $C(Y) = Y\times [0,1] / Y\times\{1\}$ 一般不是流形, 问题在锥点的邻域不同于欧氏空间.</p>
+<p>我们知道, 流形 $Y$ 的<span class="link local"><a href="./锥(拓扑学).html" title="锥 (拓扑学) [锥(拓扑学)]">锥</a></span> $C(Y) = Y\times [0,1] / Y\times\{1\}$ 一般不是流形, 问题在锥点的邻域不同于欧氏空间.</p>
 <p>固定<strong>一个</strong>闭 $(k-1)$-维流形 $Y$, 考虑如下形状的广义流形: 拓扑空间 $M$ 带有子空间 $M_0\subset M$, 满足</p>
 <ul>
 <li>$M - M_0$ 为光滑流形;</li>
@@ -1067,6 +1070,33 @@ $$
 $$
 Z\colon \mathsf{Bord}^{\vec X}_n \to\mathcal C.
 $$</p>
+<h2>证明</h2>
+<p>设 $\mathcal C,\mathcal D$ 为对称幺半范畴, 其中 $\mathcal C$ 为 $(\infty ,n-1)$-范畴, $\mathcal D$ 为 $(\infty ,n)$-范畴. 设 $f\colon \mathcal C\to\mathcal D$ 为对称幺半函子. 可定义 $f$ 的<strong>锥</strong> $\operatorname{Cone}(f)$, 它是一个对称幺半 $(\infty ,n)$-范畴, 粗略描述如下:</p>
+<ul>
+<li>其对象为 $D\in\mathcal D$;</li>
+<li>态射 $D\to D'$ 为二元组 $(C,\eta\colon f(C)\otimes D \to D')$;</li>
+<li>态射 $(C_1,\eta_1),(C_2,\eta_2)$ 的张量积为 $(C_1\otimes C_2,\eta_1\otimes \eta_2)$.</li>
+</ul>
+<p>例如 $\mathcal D = 1$ 时, $f\colon \mathcal C\to 1$ 的锥就是 $\mathcal C$ 的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环</a></span> $\mathbf{B}\mathcal C$, 满足其仅有一个对象, 且 $\Omega\mathbf{B}\mathcal C \simeq\mathcal C$.</p>
+<p>注意到有自然的对称幺半函子 $\mathcal D\to\operatorname{Cone}(f)$, 对象 $D$ 对应 $D$ 自身, 而态射 $\eta\colon D\to D'$ 对应 $(1,\eta)$.</p>
+<p><strong>定理</strong> (相对配边假设). 给定对称幺半函子
+$$
+Z_0\colon \mathcal D\to\mathcal C,
+$$
+$$
+f\colon \mathbf{B}^{k-1}\mathsf{Bord}_{n-k}^{(X,\zeta)}\to\mathcal D,
+$$
+以及 $\Omega^{k-1}\mathcal C$ 中的一族态射
+$$
+\eta_{\widetilde x}\colon 1 = Z_0(1)\to Z_0 (P_{\widetilde x})\,(\widetilde x\in\widetilde X),
+$$
+存在唯一的延拓
+$$
+Z\colon \operatorname{Cone}(f)\to\mathcal C.
+$$</p>
+<p>粗略地说, $\operatorname{Cone}(f)$ 是 $\mathcal D$ 自由添加一族 $k$-态射 $\eta_{\widetilde x}$ 生成的含对偶对称幺半 $(\infty,n)$-范畴.</p>
+<p>例如 $\mathcal D = 1$ 时 $\operatorname{Cone}(f) = \mathbf{B}^k\mathsf{Bord}_{n-k}^{(X,\zeta)}$,
+由配边假设它就是由一族 $k$-态射 $\eta_{\widetilde x}$ 自由生成的含对偶对称幺半 $(\infty,n)$-范畴. 这是普通配边假设应用于 $\Omega^k \mathcal C$ 得到的推论.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="分解同调"><header><h1><span class="taxon"></span>分解同调 <a class="slug" href="./分解同调.html">[分解同调]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>分解同调</strong> (factorization homology), 又叫<strong>手性同调</strong> (chiral homology), 是将 $\mathbb E_n$-代数 “沿 $n$ 维流形作张量积”, 或更一般地将 <span class="link local"><a href="./E_M-算畴.html" title="E_M-算畴 [E_M-算畴]">$\mathbb E_M$-算畴</a></span>的代数在流形 $M$ 上作 “张量积”.</p>

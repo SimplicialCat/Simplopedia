@@ -828,12 +828,15 @@
 <article><section class="block" data-taxon=""><details open><summary id="cob-sing"><header><h1><span class="taxon"></span>带奇点配边假设 <a class="slug" href="./cob-sing.html">[cob-sing]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>带奇点配边假设是<span class="link local"><a href="./配边假设.html" title="配边假设 [配边假设]">配边假设</a></span>的推广, 是关于 “带奇点流形” (下文将会定义) 的某种配边构成的<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>的万有性质.</p>
-<p>直观上, 配边范畴是一个对象自由生成的含对偶对称幺半 $(\infty,n)$-范畴, 而带奇点配边范畴则是奇点数据给出的各阶态射自由生成的含对偶对称幺半 $(\infty,n)$-范畴, 每维奇点数据 $X_k$ 的每个点给出一个 $k$-态射生成元.</p>
+<blockquote>
+<p>奇点的奇应读 qí, 意为奇异, 反常的.</p>
+</blockquote>
+<p>直观上, 配边范畴是一个对象自由生成的含对偶对称幺半 $(\infty,n)$-范畴, 而带奇点配边范畴则是奇点数据给出的各阶态射自由生成的含对偶对称幺半 $(\infty,n)$-范畴, 每维奇点数据 $X_k$ 的每个点给出一个 $k$-态射生成元, 而 $X_k$ 上的纤维丛 $E_k$ 指定这些 $k$-态射的类型.</p>
 <h2>陈述</h2>
 <h3>带奇点流形</h3>
 <p>带奇点流形是一个非常广泛的概念, 我们先看几个方面的例子.</p>
 <h4>局部锥形流形</h4>
-<p>我们知道, 流形 $Y$ 的锥 $C(Y) = Y\times [0,1] / Y\times\{1\}$ 一般不是流形, 问题在锥点的邻域不同于欧氏空间.</p>
+<p>我们知道, 流形 $Y$ 的<span class="link local"><a href="./锥(拓扑学).html" title="锥 (拓扑学) [锥(拓扑学)]">锥</a></span> $C(Y) = Y\times [0,1] / Y\times\{1\}$ 一般不是流形, 问题在锥点的邻域不同于欧氏空间.</p>
 <p>固定<strong>一个</strong>闭 $(k-1)$-维流形 $Y$, 考虑如下形状的广义流形: 拓扑空间 $M$ 带有子空间 $M_0\subset M$, 满足</p>
 <ul>
 <li>$M - M_0$ 为光滑流形;</li>
@@ -952,6 +955,33 @@ $$
 $$
 Z\colon \mathsf{Bord}^{\vec X}_n \to\mathcal C.
 $$</p>
+<h2>证明</h2>
+<p>设 $\mathcal C,\mathcal D$ 为对称幺半范畴, 其中 $\mathcal C$ 为 $(\infty ,n-1)$-范畴, $\mathcal D$ 为 $(\infty ,n)$-范畴. 设 $f\colon \mathcal C\to\mathcal D$ 为对称幺半函子. 可定义 $f$ 的<strong>锥</strong> $\operatorname{Cone}(f)$, 它是一个对称幺半 $(\infty ,n)$-范畴, 粗略描述如下:</p>
+<ul>
+<li>其对象为 $D\in\mathcal D$;</li>
+<li>态射 $D\to D'$ 为二元组 $(C,\eta\colon f(C)\otimes D \to D')$;</li>
+<li>态射 $(C_1,\eta_1),(C_2,\eta_2)$ 的张量积为 $(C_1\otimes C_2,\eta_1\otimes \eta_2)$.</li>
+</ul>
+<p>例如 $\mathcal D = 1$ 时, $f\colon \mathcal C\to 1$ 的锥就是 $\mathcal C$ 的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环</a></span> $\mathbf{B}\mathcal C$, 满足其仅有一个对象, 且 $\Omega\mathbf{B}\mathcal C \simeq\mathcal C$.</p>
+<p>注意到有自然的对称幺半函子 $\mathcal D\to\operatorname{Cone}(f)$, 对象 $D$ 对应 $D$ 自身, 而态射 $\eta\colon D\to D'$ 对应 $(1,\eta)$.</p>
+<p><strong>定理</strong> (相对配边假设). 给定对称幺半函子
+$$
+Z_0\colon \mathcal D\to\mathcal C,
+$$
+$$
+f\colon \mathbf{B}^{k-1}\mathsf{Bord}_{n-k}^{(X,\zeta)}\to\mathcal D,
+$$
+以及 $\Omega^{k-1}\mathcal C$ 中的一族态射
+$$
+\eta_{\widetilde x}\colon 1 = Z_0(1)\to Z_0 (P_{\widetilde x})\,(\widetilde x\in\widetilde X),
+$$
+存在唯一的延拓
+$$
+Z\colon \operatorname{Cone}(f)\to\mathcal C.
+$$</p>
+<p>粗略地说, $\operatorname{Cone}(f)$ 是 $\mathcal D$ 自由添加一族 $k$-态射 $\eta_{\widetilde x}$ 生成的含对偶对称幺半 $(\infty,n)$-范畴.</p>
+<p>例如 $\mathcal D = 1$ 时 $\operatorname{Cone}(f) = \mathbf{B}^k\mathsf{Bord}_{n-k}^{(X,\zeta)}$,
+由配边假设它就是由一族 $k$-态射 $\eta_{\widetilde x}$ 自由生成的含对偶对称幺半 $(\infty,n)$-范畴. 这是普通配边假设应用于 $\Omega^k \mathcal C$ 得到的推论.</p>
 </details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="index"><header><h1><span class="taxon"></span>单纯百科 Simplopedia <a class="slug" href="./index.html">[index]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <img src="/assets/simplopedia.svg" alt="Simplopedia" style="float: right; width: min(200px,30vw); margin-right: 20px; margin-top:-50px; filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));">
 <p>这里是<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>的主目录.</p>
@@ -1119,5 +1149,32 @@ $$
   \operatorname{coev}(1)=\sum_i e_i\otimes f_i.
 $$</li>
 <li>闭流形 $S^1$ 对应取值和余取值映射的复合 $\operatorname{ev}\circ\operatorname{coev}\colon k\to k$, 对应一个数, 即 $\operatorname{dim}V$.</li>
+</ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="锥(拓扑学)"><header><h1><span class="taxon"></span>锥 (拓扑学) <a class="slug" href="./锥(拓扑学).html">[锥(拓扑学)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./拓扑学.html" title="拓扑学 [拓扑学]">拓扑学</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><span class="link local"><a href="./拓扑学.html" title="拓扑学 [拓扑学]">拓扑空间</a></span> $X$ 的<strong>锥</strong> (cone) 是
+$$
+CX := \frac{X\times [0,1]}{X\times \{0\}}.
+$$</p>
+<p>注意, 当 $X = \varnothing$ 时, $CX = {*}$ 为单点. 因为
+$
+C\varnothing = \operatorname{colim}
+(
+{* \leftarrow \varnothing \to \varnothing}
+) = *.
+$</p>
+<h3>作为分层空间</h3>
+<p>若 $X\to P$ 为<span class="link local"><a href="./分层.html" title="分层 [分层]">分层空间</a></span>, 则 $X$ 上的锥带有分层:
+$$
+\frac{X\times [0,1]}{X\times \{0\}}\to P^{\triangleleft},
+$$
+其中 $P^{\triangleleft}$ 是偏序集 $P$ 上的<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">锥</a></span>.</p>
+<h2>例</h2>
+<h3>奇点</h3>
+<p>所谓 “带奇点的流形”, 往往奇点附近的形状是某个流形的锥.</p>
+<p>相关页面:</p>
+<ul>
+<li><span class="link local"><a href="./cob-sing.html" title="带奇点配边假设 [cob-sing]">带奇点配边假设</a></span></li>
+<li><span class="link local"><a href="./Milnor纤维化.html" title="Milnor 纤维化 [Milnor纤维化]">Milnor 纤维化</a></span></li>
 </ul>
 </details></section></details></section></footer></article></div></body></html>

@@ -1779,6 +1779,42 @@ $$</p>
 <p>常相位曲面 (constant phase surface)</p>
 <h2>例</h2>
 <p>$X=\mathbb A^n$, $\mathcal D_X$ 的全局截面是 <span class="link local"><a href="./Weyl代数.html" title="Weyl 代数 [Weyl代数]">Weyl 代数</a></span>, 其生成元为 $x_1,\cdots,x_n,\partial_1,\cdots,\partial_n$, 交换关系为 $[x_i,\partial_j]=\delta_{ij}$. 考虑微分算子阶数的滤过结构, 则在<span class="link local"><a href="./关联分次代数.html" title="关联分次对象 [关联分次代数]">关联分次代数</a></span>的层面上, 所有 $x_i,\partial_j$ 互相交换: 我们得到的是 $T^*\mathbb A^n$ 的坐标环, 即 $2n$ 元多项式环.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="谱序列"><header><h1><span class="taxon"></span>谱序列 <a class="slug" href="./谱序列.html">[谱序列]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>在带有 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">$t$-结构</a></span>的<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>中, 给定对象 $X$ 的一个<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤过</a></span> $X^\bullet$, 谱序列让我们用各<span class="link local"><a href="./关联分次代数.html" title="关联分次对象 [关联分次代数]">分次</a></span> $\operatorname{gr}^s X$ 的<span class="link local"><a href="./同伦群(稳定同伦论).html" title="同伦群 (稳定同伦论) [同伦群(稳定同伦论)]">同伦群</a></span>来研究 $X$ 本身的同伦群.</p>
+<h2>定义</h2>
+<p>设 $\mathcal A$ 为 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>. 定义 $\mathcal A$ 中的一个谱序列为如下资料:</p>
+<ul>
+<li>一族对象 $E^r_{s,t}$ ($r\in\mathbb{N}$, $s,t\in\mathbb{Z}$, 称之为第 $r$ 页);</li>
+<li>微分 $d^r_{s,t}\colon E^r_{s,t}\to E^r_{s-r,t+r-1}$;</li>
+<li>前一页的上同调同构于后一页, $H(E^r_{s,t},d^r)\simeq E^{r+1}_{s,t}$.</li>
+</ul>
+<p>实践中所有的谱序列都来自<span class="link local"><a href="./滤对象的谱序列.html" title="滤对象的谱序列 [滤对象的谱序列]">滤对象的谱序列</a></span>的构造.</p>
+<p>设 $\mathcal C$ 为带有 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">$t$-结构</a></span>的<span class="link local"><a href="./稳定∞-范畴.html" title=" [稳定∞-范畴]">稳定 $\infty$-范畴</a></span>. 设 $X$ 为 $\mathcal C$ 中的<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤对象</a></span>.</p>
+<p>…<span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">todo</a></span></p>
+<p>对于其中的 $\mathbb{Z}$-滤对象 $D_\bullet$, 可构造 $\mathcal C^{\heartsuit}$ 中的谱序列使得
+$$
+E_1^{p,q}=H_{p+q}\operatorname{cofib}(D_p\to D_{p+1}),
+$$
+在某些条件下收敛到 $H_n(\operatorname{colim}_m D_m)$.</p>
+<h2>例</h2>
+<p>$$
+d_r^{p,q}\colon  E_r^{p,q} \to E_r^{p+r,q-r+1}
+$$
+第 $(r+1)$ 页是第 $r$ 页的上同调.</p>
+<h3>Grothendieck 谱序列</h3>
+<p>对于函子
+$$
+A \overset{F}{\to} B \overset{G}{\to} C,
+$$
+其导出函子满足
+$$
+R(G\circ F) \simeq RG \circ RF.
+$$</p>
+<h2>性质</h2>
+<h3>收敛</h3>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./正合偶.html" title="“正合偶” [正合偶]">正合偶</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="象征"><header><h1><span class="taxon"></span>象征 <a class="slug" href="./象征.html">[象征]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>流形 $M$ 上微分算子的象征是<span class="link local"><a href="./余切丛.html" title=" [余切丛]">余切丛</a></span> $T^*M$ 上的函数, 其零点在<span class="link local"><a href="./微局部分析.html" title="微局部分析 [微局部分析]">微局部分析</a></span>中描述了微分方程的解的行为.</p>

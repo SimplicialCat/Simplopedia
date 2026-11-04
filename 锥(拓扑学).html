@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width"><title>锥 (拓扑学)</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+
+
+<div id="tcomment"></div>
+<script src="https://cdn.jsdelivr.net/npm/twikoo@1.7.9/dist/twikoo.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const footer = document.querySelector('footer');
+    const commentEl = document.getElementById('tcomment');
+    if (footer && commentEl) {
+      footer.parentNode.insertBefore(commentEl, footer.nextSibling);
+    }
+    twikoo.init({
+      envId: 'https://simplopedia.netlify.app/.netlify/functions/twikoo',
+      el: '#tcomment',
+      path: location.pathname,
+    });
+  });
+</script><style>
+  @font-face {
+    font-family: 'NewCM10';
+    src: url(assets/NewCM10-Book.otf) format('opentype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'NewCM10';
+    src: url(assets/NewCM10-Italic.otf) format('opentype');
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'NewCM10';
+    src: url(assets/NewCM10-Bold.otf) format('opentype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  body {
+    --text-font-family: "NewCM10", serif !important;
+  }
+</style><template id="inline-section">
+  <section class="inline block" data-taxon="">
+    <details open="">
+      <summary>
+        <header>
+          <h1>
+            <span class="taxon"></span>
+            <div id="title"></div>
+          </h1>
+        </header>
+      </summary>
+      <div id="content"></div>
+    </details>
+  </section>
+</template>
+
+<script>
+  function inlineSection(template, section, taxon, title) {
+    taxon = taxon || section.getAttribute("taxon") || null;
+    title = title || section.getAttribute("title") || "";
+
+    const clone = template.content.cloneNode(true);
+    clone.querySelector("section").dataset.taxon = taxon;
+    clone.querySelector(".taxon").textContent = taxon ? `${taxon}. ` : "";
+    clone.querySelector("#title").replaceWith(title);
+    clone.querySelector("#content").replaceWith(...section.childNodes);
+
+    if (section.hasAttribute("close")) {
+      clone.querySelector("details").removeAttribute("open");
+    }
+    
+    section.replaceWith(clone);
+  }
+
+  const tagTaxonTable = {
+    "exegesis": "Exegesis",
+    "definition": "Definition",
+    "proposition": "Proposition",
+    "remark": "Remark",
+    "conjecture": "Conjecture",
+    "postulate": "Postulate",
+    "claim": "Claim",
+    "observation": "Observation",
+    "fact": "Fact",
+    "hypothesis": "Hypothesis",
+    "axiom": "Axiom",
+    "lemma": "Lemma",
+    "theorem": "Theorem",
+    "corollary": "Corollary",
+    "example": "Example", 
+    "proof": "Proof",
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const template = document.getElementById("inline-section");
+
+    [...document.getElementsByTagName("block")].forEach(section => inlineSection(template, section));
+
+    Object.entries(tagTaxonTable).forEach(([tag, taxon]) => {
+      [...document.getElementsByTagName(tag)].forEach(section => inlineSection(template, section, taxon));
+    });
+  });
+</script><script>
+  function toggleDetailsOpen() {
+    const details = document.querySelector("#toc>div>details");
+    if (!details) return;
+
+    if (window.matchMedia("(max-width: 1000px)").matches) {
+      details.removeAttribute("open");
+    } else {
+      details.setAttribute("open", "");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", toggleDetailsOpen);
+  window.addEventListener("resize", toggleDetailsOpen);
+</script><style>
+  theme-option {
+    display: inline-block;
+  }
+
+  theme-option>input {
+    display: none;
+  }
+
+  theme-option>label {
+    color: var(--slug-color);
+  }
+
+  theme-option>label:hover {
+    background-color: var(--hover-color-link);
+  }
+
+  theme-option:has(input:checked)>label {
+    color: var(--link-color);
+  }
+
+  theme-option>label::before {
+    content: "[";
+    color: rgba(0, 0, 0, 0);
+  }
+
+  theme-option>label::after {
+    content: "]";
+    color: rgba(0, 0, 0, 0);
+  }
+
+  theme-option:has(input:checked)>label::before {
+    color: var(--link-color);
+  }
+
+  theme-option:has(input:checked)>label::after {
+    color: var(--link-color);
+  }
+</style>
+
+<template id="theme-option-template">
+  <input type="radio" name="theme" />
+  <label></label>
+</template>
+
+<script>
+  const THEME_KEY = `kodama-theme`;
+
+  function storeSelectedTheme(name) {
+    localStorage.setItem(THEME_KEY, name);
+  }
+
+  function getCurrentTheme() {
+    return localStorage.getItem(THEME_KEY) || window.primaryTheme;
+  }
+
+  function selectTheme(themeName) {
+    storeSelectedTheme(themeName);
+    requestAnimationFrame(applyDynamicColorInvert);
+  }
+
+  function applyFavorTheme() {
+    const favoredTheme = getCurrentTheme();
+    if (favoredTheme) {
+      const selector = `input[type='radio'][id='${favoredTheme}']`;
+      const favoredOption = window.themeOptions.querySelector(selector);
+
+      if (favoredOption) {
+        favoredOption.checked = true;
+      } else if (window.primaryOption) {
+        // Fallback to primary theme, if the favored theme is not found
+        // e.g., when the theme options have changed, and the stored theme is no longer available.
+        window.primaryOption.checked = true;
+      }
+    }
+    applyDynamicColorInvert();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    window.themeOptions = document.getElementById("theme-options");
+    const templateContent = document.getElementById("theme-option-template").content;
+
+    customElements.define(
+      "theme-option",
+      class extends HTMLElement {
+        constructor() {
+          super();
+
+          const node = templateContent.cloneNode(true);
+          const themeName = this.getAttribute("name");
+
+          const input = node.querySelector("input");
+          input.setAttribute("id", themeName);
+          input.setAttribute("value", themeName);
+
+          const label = node.querySelector("label");
+          label.setAttribute("for", themeName);
+          label.addEventListener("click", () => selectTheme(themeName));
+
+          while (this.firstChild) {
+            label.appendChild(this.firstChild);
+          }
+          this.appendChild(node);
+        }
+      },
+    );
+
+    window.primaryOption = window.themeOptions.querySelector("input[type='radio']");
+    window.primaryTheme = primaryOption?.value;
+
+    applyFavorTheme();
+  });
+</script>
+
+<script>
+  const clamp = (value) => Math.max(0, Math.min(255, value));
+
+  const multiply = ([r, g, b], matrix) => {
+    const nr = clamp(r * matrix[0] + g * matrix[1] + b * matrix[2]);
+    const ng = clamp(r * matrix[3] + g * matrix[4] + b * matrix[5]);
+    const nb = clamp(r * matrix[6] + g * matrix[7] + b * matrix[8]);
+    return [nr, ng, nb];
+  };
+
+  const hueRotate = ([r, g, b], angle = 0) => {
+    const rad = (angle / 180) * Math.PI;
+    const sin = Math.sin(rad);
+    const cos = Math.cos(rad);
+    const matrix = [
+      0.213 + cos * 0.787 - sin * 0.213,
+      0.715 - cos * 0.715 - sin * 0.715,
+      0.072 - cos * 0.072 + sin * 0.928,
+      0.213 - cos * 0.213 + sin * 0.143,
+      0.715 + cos * 0.285 + sin * 0.140,
+      0.072 - cos * 0.072 - sin * 0.283,
+      0.213 - cos * 0.213 - sin * 0.787,
+      0.715 - cos * 0.715 + sin * 0.715,
+      0.072 + cos * 0.928 + sin * 0.072,
+    ];
+    return multiply([r, g, b], matrix);
+  };
+
+  const grayscale = ([r, g, b], value = 1) => {
+    const matrix = [
+      0.2126 + 0.7874 * (1 - value),
+      0.7152 - 0.7152 * (1 - value),
+      0.0722 - 0.0722 * (1 - value),
+      0.2126 - 0.2126 * (1 - value),
+      0.7152 + 0.2848 * (1 - value),
+      0.0722 - 0.0722 * (1 - value),
+      0.2126 - 0.2126 * (1 - value),
+      0.7152 - 0.7152 * (1 - value),
+      0.0722 + 0.9278 * (1 - value),
+    ];
+    return multiply([r, g, b], matrix);
+  };
+
+  const sepia = ([r, g, b], value = 1) => {
+    const matrix = [
+      0.393 + 0.607 * (1 - value),
+      0.769 - 0.769 * (1 - value),
+      0.189 - 0.189 * (1 - value),
+      0.349 - 0.349 * (1 - value),
+      0.686 + 0.314 * (1 - value),
+      0.168 - 0.168 * (1 - value),
+      0.272 - 0.272 * (1 - value),
+      0.534 - 0.534 * (1 - value),
+      0.131 + 0.869 * (1 - value),
+    ];
+    return multiply([r, g, b], matrix);
+  };
+
+  const saturate = ([r, g, b], value = 1) => {
+    const matrix = [
+      0.213 + 0.787 * value,
+      0.715 - 0.715 * value,
+      0.072 - 0.072 * value,
+      0.213 - 0.213 * value,
+      0.715 + 0.285 * value,
+      0.072 - 0.072 * value,
+      0.213 - 0.213 * value,
+      0.715 - 0.715 * value,
+      0.072 + 0.928 * value,
+    ];
+    return multiply([r, g, b], matrix);
+  };
+
+  const linear = ([r, g, b], slope = 1, intercept = 0) => {
+    const scale = 255;
+    return [
+      clamp(r * slope + intercept * scale),
+      clamp(g * slope + intercept * scale),
+      clamp(b * slope + intercept * scale),
+    ];
+  };
+
+  const brightness = (rgb, value = 1) => linear(rgb, value);
+  const contrast = (rgb, value = 1) => linear(rgb, value, -0.5 * value + 0.5);
+
+  const invert = ([r, g, b], value = 1) => {
+    const nr = (value + r / 255 * (1 - 2 * value)) * 255;
+    const ng = (value + g / 255 * (1 - 2 * value)) * 255;
+    const nb = (value + b / 255 * (1 - 2 * value)) * 255;
+    return [clamp(nr), clamp(ng), clamp(nb)];
+  };
+
+  // Code taken from https://stackoverflow.com/a/9493060/2688027, licensed under CC BY-SA.
+  const rgbToHsl = (r, g, b) => {
+    r /= 255; g /= 255; b /= 255;
+    const max = Math.max(r, g, b);
+    const min = Math.min(r, g, b);
+    let h, s, l = (max + min) / 2;
+    if (max === min) {
+      h = s = 0;
+    } else {
+      const d = max - min;
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      switch (max) {
+        case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+        case g: h = (b - r) / d + 2; break;
+        case b: h = (r - g) / d + 4; break;
+      }
+      h /= 6;
+    }
+    return { h: h * 100, s: s * 100, l: l * 100 };
+  };
+
+  const applyFilters = (rgb, [inv, sep, sat, hue, bri, con]) => {
+    let color = [...rgb];
+    color = invert(color, inv / 100);
+    color = sepia(color, sep / 100);
+    color = saturate(color, sat / 100);
+    color = hueRotate(color, hue * 3.6);
+    color = brightness(color, bri / 100);
+    color = contrast(color, con / 100);
+    return color;
+  };
+
+  const lossFn = (targetRgb, filters) => {
+    const resultRgb = applyFilters([0, 0, 0], filters);
+    const targetHsl = rgbToHsl(...targetRgb);
+    const resultHsl = rgbToHsl(...resultRgb);
+    return (
+      Math.abs(resultRgb[0] - targetRgb[0]) +
+      Math.abs(resultRgb[1] - targetRgb[1]) +
+      Math.abs(resultRgb[2] - targetRgb[2]) +
+      Math.abs(resultHsl.h - targetHsl.h) +
+      Math.abs(resultHsl.s - targetHsl.s) +
+      Math.abs(resultHsl.l - targetHsl.l)
+    );
+  };
+
+  const fix = (value, idx) => {
+    let max = 100;
+    if (idx === 2) max = 7500;                  // saturate
+    else if (idx === 4 || idx === 5) max = 200; // brightness, contrast
+    if (idx === 3) { // hue-rotate
+      if (value > max) return value % max;
+      if (value < 0) return max + (value % max);
+      return value;
+    }
+    return Math.max(0, Math.min(max, value));
+  };
+
+  const spsa = (targetRgb, A, a, c, initial, iters) => {
+    const alpha = 1;
+    const gamma = 1 / 6;
+    let values = [...initial];
+    let best = [...values];
+    let bestLoss = Infinity;
+
+    for (let k = 0; k < iters; k++) {
+      const ck = c / Math.pow(k + 1, gamma);
+      const deltas = Array(6).fill().map(() => (Math.random() > 0.5 ? 1 : -1));
+      const highArgs = values.map((v, i) => v + ck * deltas[i]);
+      const lowArgs = values.map((v, i) => v - ck * deltas[i]);
+      const lossDiff = lossFn(targetRgb, highArgs) - lossFn(targetRgb, lowArgs);
+
+      values = values.map((v, i) => {
+        const g = (lossDiff / (2 * ck)) * deltas[i];
+        const ak = a[i] / Math.pow(A + k + 1, alpha);
+        return fix(v - ak * g, i);
+      });
+
+      const loss = lossFn(targetRgb, values);
+      if (loss < bestLoss) {
+        best = [...values];
+        bestLoss = loss;
+      }
+    }
+    return { values: best, loss: bestLoss };
+  };
+
+  // Threshold for acceptable color loss. This value determines when the SPSA algorithm stops early.
+  // A loss below this value is considered visually indistinguishable for most use cases.
+  // The value 25 was determined empirically to balance performance and color accuracy.
+  const ACCEPTABLE_COLOR_LOSS = 25;
+
+  const solveWide = (targetRgb) => {
+    const A = 5;
+    const c = 15;
+    const a = [60, 180, 18000, 600, 1.2, 1.2];
+    let best = { loss: Infinity, values: null };
+    for (let i = 0; best.loss > ACCEPTABLE_COLOR_LOSS && i < 3; i++) {
+      const initial = [50, 20, 3750, 50, 100, 100];
+      const result = spsa(targetRgb, A, a, c, initial, 1000);
+      if (result.loss < best.loss) best = result;
+    }
+    return best;
+  };
+
+  const solveNarrow = (targetRgb, wideResult) => {
+    const A = wideResult.loss;
+    const c = 2;
+    const A1 = A + 1;
+    const a = [0.25 * A1, 0.25 * A1, A1, 0.25 * A1, 0.2 * A1, 0.2 * A1];
+    return spsa(targetRgb, A, a, c, wideResult.values, 500);
+  };
+
+  const cssFilterString = (filters) => {
+    const [inv, sep, sat, hue, bri, con] = filters.map(Math.round);
+    const hueDeg = Math.round(hue * 3.6);
+    return `filter: invert(${inv}%) sepia(${sep}%) saturate(${sat}%) hue-rotate(${hueDeg}deg) brightness(${bri}%) contrast(${con}%);`;
+  };
+
+  const solveColor = (targetRgb) => {
+    const wide = solveWide(targetRgb);
+    const narrow = solveNarrow(targetRgb, wide);
+    return {
+      values: narrow.values,
+      loss: narrow.loss,
+      filter: cssFilterString(narrow.values),
+    };
+  };
+
+  // Reuse a single canvas / context to avoid memory leaks
+  const colorParseCanvas = document.createElement('canvas');
+  colorParseCanvas.width = 1;
+  colorParseCanvas.height = 1;
+  const colorParseContext = colorParseCanvas.getContext('2d');
+
+  const toRGBArray = (cssColor) => {
+    colorParseContext.fillStyle = cssColor;
+    colorParseContext.fillRect(0, 0, 1, 1);
+
+    // The `getImageData().data` returns a Uint8ClampedArray with 4 values per pixel (RGBA). 
+    // also see: https://developer.mozilla.org/zh-CN/docs/Web/API/ImageData/data
+    const rgba = colorParseContext.getImageData(0, 0, 1, 1).data;
+    return Array.from(rgba.slice(0, 3));
+  };
+
+  const DYNAMIC_STYLE_ID = 'dynamic-color-invert-style';
+  const SOLVED_COLOR_KEY = "solved-";
+
+  function memorizedSolvedFilter(color) {
+    const colorKey = SOLVED_COLOR_KEY + color;
+    const storedFilterOption = localStorage.getItem(colorKey);
+    if (storedFilterOption) {
+      return storedFilterOption;
+    } else {
+      const filter = solveColor(color).filter;
+      localStorage.setItem(colorKey, filter);
+      return filter;
+    }
+  }
+
+  function applyDynamicColorInvert() {
+    const textColor = getComputedStyle(document.body).getPropertyValue('--text-color');
+    if (textColor && textColor.length > 0) {
+      const rgb = toRGBArray(textColor);
+      const filter = memorizedSolvedFilter(rgb);
+
+      const existingStyle = document.getElementById(DYNAMIC_STYLE_ID);
+      if (existingStyle) {
+        existingStyle.textContent = `.color-invert {${filter}}`;
+      } else {
+        const style = document.createElement('style');
+        style.id = DYNAMIC_STYLE_ID;
+        style.textContent = `.color-invert {${filter}}`;
+        document.head.appendChild(style);
+      }
+    }
+  }
+</script><script>
+  (() => {
+    const url = "/kodama.json";
+    const interval = 1000; // 1 second
+
+    let lastModified = null;
+
+    async function check() {
+      try {
+        const res = await fetch(url + "?t=" + Date.now(), {
+          method: "HEAD",
+          cache: "no-store",
+        });
+
+        const lm = res.headers.get("last-modified");
+
+        if (lastModified && lm && lm !== lastModified) {
+          location.reload();
+          return;
+        }
+
+        lastModified = lm || lastModified;
+      } catch (e) {
+        // Ignore
+        console.warn("Reload check failed:", e);
+      }
+
+      setTimeout(check, interval);
+    }
+
+    check();
+  })();
+</script><!-- Also see: https://katex.org/docs/autorender -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.css" integrity="sha384-WcoG4HRXMzYzfCgiyfrySxx90XSl2rxY5mnVY5TwtWE6KLrArNKn0T/mOgNL0Mmi" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.js" integrity="sha384-J+9dG2KMoiR9hqcFao0IBLwxt6zpcyN68IgwzsCSkbreXUjmNVRhPFTssqdSGjwQ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
+<!-- Also see: https://github.com/KaTeX/KaTeX/tree/main/contrib/copy-tex -->
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/contrib/copy-tex.min.js" integrity="sha384-HORx6nWi8j5/mYA+y57/9/CZc5z8HnEw4WUZWy5yOn9ToKBv1l58vJaufFAn9Zzi" crossorigin="anonymous"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true },
+      ],
+      trust: true,
+      strict: false,
+      throwOnError: false,
+      minRuleThickness: 0.05,
+    });
+  });
+</script>
+<link rel="stylesheet" href="./main.css"><style>
+@media only screen and (min-width: 1000px) {
+  #grid-wrapper { grid-template-columns: var(--article-max-width) var(--toc-max-width); }
+  nav#toc { max-width: max-content; }
+}
+</style></head><body><header class="header"><nav class="nav"><div class="logo"><span class="cursor-pointer" onclick="window.location.href='./index.html'" title="单纯百科 Simplopedia">« 单纯百科 Simplopedia</span></div></nav></header><div id="grid-wrapper" style="grid-template-areas: 'article toc';" data-base-url="./"><nav id="toc" class="sticky-nav mobile-sticky-nav"><div id="theme-options"><style>
+  body:has(input[value="furina"]:checked) {
+    --article-max-width: 110ex; /* default: 90ex */
+
+    --color-Furina-deep-navy: #253085;
+    --color-Furina-royal-blue: #465BCF;
+    --color-Furina-aqua-cyan: #6AC6E8;
+    --color-Furina-frost-white: #FAFBFC;
+    --color-Furina-misty-blue: #C4D7ED;
+    --color-Furina-vivid-sapphire: #5670E9;
+    --color-Furina-luminous-hydro: #70DBFF;
+    --color-Furina-bright-periwinkle: #8D84F1;
+    --color-Furina-vintage-gold: #BD9368;
+    --color-Furina-vintage-gold-light: #DDB368;
+    --color-Furina-vintage-gold-ultra-light: #FDF388;
+
+    --background-color: var(--color-Furina-frost-white);
+    --link-color: var(--color-Furina-vivid-sapphire);
+    --slug-color: var(--color-Furina-aqua-cyan);
+    --logo-color: var(--color-Furina-deep-navy);
+
+    --block-background-color: var(--background-color);
+    --shadow-color: rgba(27, 63, 143, 0.06);
+    --radius: 5px;
+    --margin-left: 14px;
+
+    --hover-color-block: var(--block-background-color);
+    --logo-hover-color: #88d;
+    --span-tag-color: #88d;
+    --article-tag-color: #88d;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body:has(input[value="furina"]:checked) {
+      --color-Furina-deep-navy: #B5C0F5;
+      --color-Furina-royal-blue: #D6EBFF;
+      --color-Furina-vivid-sapphire: #96A0FF;
+
+      --background-color: #2f2f2f;
+      --block-background-color: #2f2f2f;
+    }
+  }
+
+  .block {
+    /*2026-3-16 21:10 新增*/
+    padding: 15px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+
+    /*2026-4-17 新增*/
+    /*margin-left: auto;
+    margin-right: auto; -- 好像没有用, 网站设计上不欢迎 block 居中*/
+
+    border-radius: var(--radius);
+    background-color: var(--block-background-color);
+    box-shadow: 0 2px 12px var(--shadow-color);
+  }
+
+  .footnote-definition {
+    margin-left: var(--margin-left);
+  }
+
+  h5,
+  h6,
+  p {
+    margin: 5px;
+  }
+
+  hr {
+    border: none;
+    height: 0;
+    border-bottom: 1px solid var(--color-Furina-luminous-hydro);
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  tr {
+    border-bottom: 1px solid var(--color-Furina-bright-periwinkle);
+  }
+
+  /* 可选：去除表头下方的重复横线（如果表头需要特殊样式） */
+  thead tr {
+    border-bottom: 2px solid var(--color-Furina-deep-navy);
+  }
+
+  /* 去除最后一行的边框 */
+  tbody tr:last-child {
+    border-bottom: none;
+  }
+
+  .footnote-definition>p {
+    display: inline;
+    margin-left: 0;
+    color: var(--color-Furina-bright-periwinkle);
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    font-weight: 600 !important;
+  }
+
+  article > section > details > summary > header > h1 {
+    font-size: 1.75rem !important;
+  }
+
+  h2 {
+    font-weight: 500;
+    font-size: 1.5rem !important;
+    color: var(--color-Furina-deep-navy);
+    margin-bottom: 10px;
+    border-bottom: 1px solid #88d;
+    padding-bottom: 1px;
+    /* 增加底部内边距让横线和文字有间距 */
+  }
+
+  h2::before {
+    content: "\2726";
+    /* ✦ 的Unicode转义码 */
+    display: inline-block;
+    margin-right: 0.3em;
+    /*color: var(--color-Furina-vintage-gold-light);*/
+    /* 替换 color 属性，改为以下背景和裁剪属性 */
+    background: linear-gradient(150deg,
+        var(--color-Furina-vintage-gold-ultra-light) 30%,
+        var(--color-Furina-vintage-gold-light) 60%,
+        var(--color-Furina-vintage-gold) 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* 将文字颜色设为透明以显示背景 */
+    /* 组合径向渐变（中心高光）和线性渐变（基础色调） */
+    /*background: radial-gradient(
+      ellipse at center,
+      var(--color-Furina-vintage-gold-ultra-light) 20%,
+      transparent 70%
+    ),
+    linear-gradient(
+      to bottom,
+      var(--color-Furina-vintage-gold-light),
+      var(--color-Furina-vintage-gold)
+    );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; */
+    filter: drop-shadow(0px 1px 1px rgba(184, 150, 131, 0.5));
+    /* 可选：增加与主色呼应的柔和投影 */
+    font-weight: normal;
+  }
+
+
+  h3 {
+    font-weight: 500;
+    color: var(--color-Furina-royal-blue);
+    margin-bottom: 5px;
+  }
+
+  h3::before {
+    content: "\2726";
+    /* ✦ 的Unicode转义码 */
+    display: inline-block;
+    margin-left: 0.06em;
+    margin-right: 0.36em;
+    /*color: var(--color-Furina-vintage-gold-ultra-light);*/
+    background: linear-gradient(150deg,
+        var(--color-Furina-vintage-gold-ultra-light) 20%,
+        var(--color-Furina-vintage-gold-light) 90%,
+        var(--color-Furina-vintage-gold) 95%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: normal;
+  }
+
+  h4 {
+    text-indent: var(--margin-left);
+    font-weight: 700;
+    color: #696cd9;
+    margin-bottom: 0;
+  }
+
+  h5 {
+    text-indent: var(--margin-left);
+    font-weight: 700;
+    color: #8a8ff4;
+    margin-bottom: 0;
+  }
+
+  h6 {
+    text-indent: var(--margin-left);
+    font-weight: 700;
+    color: #aaaff4;
+    margin-bottom: 0;
+  }
+
+  code, pre, .mono {
+    font-family: "Liberation Mono", "Courier New", monospace;
+    font-size: 0.9em; /* 可选微调尺寸 */
+  }
+
+  @media only screen and (max-width: 1000px) {
+    #grid-wrapper>nav {
+      display: none !important;
+    }
+  }
+
+  #toc,
+  #toc .block {
+    background: none !important;
+    box-shadow: none !important;
+  }
+
+  ul {
+    margin: 5px;
+    margin-left: calc(5px + 2em);
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  ul li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 0;
+    /*color: var(--text-secondary);*/
+  }
+
+  ul li::before {
+    content: '✦';
+    position: absolute;
+    left : -1em;
+    /*color: var(--color-Furina-vintage-gold-ultra-light);*/
+    font-size: 0.9em;
+  }
+
+  .metadata {
+    color: var(--article-tag-color);
+  }
+
+  .metadata ul {
+    margin : 0;
+  }
+
+  .metadata li::before {
+    content: none;
+  }
+
+  .music-player button {
+    text-decoration: none;
+  }
+
+  .music-player button:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--color-Furina-vintage-gold-light);
+    /* 金色 */
+    text-underline-offset: 6px;
+    /* 调整下划线与文字距离 */
+    text-decoration-thickness: 1px;
+    /* 线条粗细 */
+  }
+</style>
+
+<theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
+
+<article><section class="block" data-taxon=""><details open><summary id="锥(拓扑学)"><header><h1><span class="taxon"></span>锥 (拓扑学) <a class="slug" href="./锥(拓扑学).html">[锥(拓扑学)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./拓扑学.html" title="拓扑学 [拓扑学]">拓扑学</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><span class="link local"><a href="./拓扑学.html" title="拓扑学 [拓扑学]">拓扑空间</a></span> $X$ 的<strong>锥</strong> (cone) 是
+$$
+CX := \frac{X\times [0,1]}{X\times \{0\}}.
+$$</p>
+<p>注意, 当 $X = \varnothing$ 时, $CX = {*}$ 为单点. 因为
+$
+C\varnothing = \operatorname{colim}
+(
+{* \leftarrow \varnothing \to \varnothing}
+) = *.
+$</p>
+<h3>作为分层空间</h3>
+<p>若 $X\to P$ 为<span class="link local"><a href="./分层.html" title="分层 [分层]">分层空间</a></span>, 则 $X$ 上的锥带有分层:
+$$
+\frac{X\times [0,1]}{X\times \{0\}}\to P^{\triangleleft},
+$$
+其中 $P^{\triangleleft}$ 是偏序集 $P$ 上的<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">锥</a></span>.</p>
+<h2>例</h2>
+<h3>奇点</h3>
+<p>所谓 “带奇点的流形”, 往往奇点附近的形状是某个流形的锥.</p>
+<p>相关页面:</p>
+<ul>
+<li><span class="link local"><a href="./cob-sing.html" title="带奇点配边假设 [cob-sing]">带奇点配边假设</a></span></li>
+<li><span class="link local"><a href="./Milnor纤维化.html" title="Milnor 纤维化 [Milnor纤维化]">Milnor 纤维化</a></span></li>
+</ul>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="Milnor纤维化"><header><h1><span class="taxon"></span>Milnor 纤维化 <a class="slug" href="./Milnor纤维化.html">[Milnor纤维化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>Milnor 纤维化是刻画代数簇奇点 (局部上不是流形的点) 局部的拓扑信息的工具.</p>
+<p>孤立奇点的附近长得像某个低一维子流形的<span class="link local"><a href="./锥(拓扑学).html" title="锥 (拓扑学) [锥(拓扑学)]">锥</a></span>, 称为 <strong>Milnor 扭结</strong>.</p>
+<p>有些奇异球面可构造为 Milnor 扭结.</p>
+<h2>定义</h2>
+<h3>球面版本</h3>
+<p>设 $V$ 是由多项式 $f\colon \mathbb{C}^n\to\mathbb{C}$ 定义的复超曲面, 且 $0\in V$ 为孤立奇点. 对于充分小的正数 $\varepsilon$, 记 $S_\varepsilon$ 为球面 $\{z\in\mathbb{C}^n : |z|=\varepsilon\}$, $K = V \cap S_\varepsilon$, 定义 <strong>Milnor 纤维化</strong>为
+$$
+\phi\colon S_\varepsilon \setminus K \to S^1,\,z\mapsto \frac{f(z)}{|f(z)|}.
+$$</p>
+<h3>开球版本</h3>
+<p>设 $f,V$ 如前, $B_\varepsilon$ 为开球 $\{z\in\mathbb{C}^n : |z|&lt;\varepsilon\}$, $D_\eta^*$ 为去心圆盘 $\{z\in\mathbb{C} : 0&lt;|z|&lt;\eta\}$. 映射
+$$
+f\colon B_\varepsilon \cap f^{-1}(D_\eta^*) \to D_\eta^*
+$$
+有时也称作 <strong>Milnor 纤维化</strong>.</p>
+<h2>性质</h2>
+<p>球面版本的 Milnor 纤维化是 $S^1$ 上的光滑<span class="link local"><a href="./纤维丛.html" title="纤维丛 [纤维丛]">纤维丛</a></span>, 每个纤维是 $2n-2$ 维光滑流形, 同伦型为 $\mu$ 个 $S^{n-1}$ 的一点并, 其中 $\mu$ 称为 Milnor 数.</p>
+<p>开球版本的 Milnor 纤维化是 $D_\eta^*$ 上的光滑纤维丛, 其纤维也是 $2n-2$ 维光滑流形.</p>
+<p>如下命题说明两个版本的 Milnor 纤维至少是同伦等价的 (几乎是同胚的, 只相差边界的开闭).</p>
+<p><strong>命题</strong>. $\phi \colon  \overline{S_\varepsilon \setminus f^{-1}(D_\eta)} \to S^1$
+与
+$f\colon B_\varepsilon\cap f^{-1}(S_\eta) \to S_\eta$ 是同构的纤维丛.</p>
+<p><em>证明概要</em>. 构造一个向量场的<span class="link local"><a href="./向量场的流.html" title="向量场的流 [向量场的流]">流</a></span>. 这个向量场切于 $\operatorname{Arg}f$ 的水平面 (从而其流保持 $f$ 的辐角不变), 使得 $|z|$ 与 $|f(z)|$ 同时增加.</p>
+<h2>例</h2>
+<p>考虑带一个奇点的复曲线
+$$
+V=\{(x,y)\in\mathbb{C}^2\mid y^2 = x^3\},
+$$
+容易看到, 它在奇点 $p=(0,0)$ 附近长得像三叶结 $K$ 的锥 $\operatorname{Cone}(K)$. <sup class="footnote-reference" id="Milnor纤维化_1-back"><a href="#Milnor纤维化_1">1</a></sup></p>
+<div class="footnote-definition" id="Milnor纤维化_1">
+  <sup class="footnote-definition-label"><a href="#Milnor纤维化_1-back">1</a></sup>
+<p>准确地说, 记 $D_\varepsilon = \{|(x,y)|\leq\varepsilon\}$, 当 $\varepsilon$ 充分小时, 三元组
+$(D_\varepsilon,D_\varepsilon \cap V,p)$ 同构于 $(\operatorname{Cone}(S^3),\operatorname{Cone}(K),*)$.</p>
+</div>
+<p>下图是 $V$ 在单位球中的部分 (先投影到 $S^3$ 再球极投影到 $\mathbb{R}^3$, 颜色表示在 $\mathbb{C}^2$ 中的模长).</p>
+<img src="/assets/singularity-x3y2.svg" alt="Milnor 纤维化" width="240" style="display:block; margin:auto;">
+<p>下图是 $t=0.15$ 时的 Milnor 纤维, 它是带边界的光滑曲面.</p>
+<div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+  <img src="/assets/milnor-fiber-1.svg" alt="Milnor 纤维 (俯视图)" style="max-width: 240px; height: auto; object-fit: contain;">
+  <img src="/assets/milnor-fiber-2.svg" alt="Milnor 纤维 (侧视图)" style="max-width: 200px; height: auto; object-fit: contain;">
+</div>
+<p>下图是球面版本的 Milnor 纤维 (球极投影到 $\mathbb{R}^3$).</p>
+<div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+  <img src="/assets/milnor-fiber-3.gif" alt="球面版本 Milnor 纤维 (俯视图)" style="max-width: 200px; height: auto; object-fit: contain;">
+  <img src="/assets/milnor-fiber-4.gif" alt="球面版本 Milnor 纤维 (侧视图)" style="max-width: 200px; height: auto; object-fit: contain;">
+</div></details></section><section class="block" data-taxon=""><details ><summary id="cob-sing"><header><h1><span class="taxon"></span>带奇点配边假设 <a class="slug" href="./cob-sing.html">[cob-sing]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>带奇点配边假设是<span class="link local"><a href="./配边假设.html" title="配边假设 [配边假设]">配边假设</a></span>的推广, 是关于 “带奇点流形” (下文将会定义) 的某种配边构成的<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>的万有性质.</p>
+<blockquote>
+<p>奇点的奇应读 qí, 意为奇异, 反常的.</p>
+</blockquote>
+<p>直观上, 配边范畴是一个对象自由生成的含对偶对称幺半 $(\infty,n)$-范畴, 而带奇点配边范畴则是奇点数据给出的各阶态射自由生成的含对偶对称幺半 $(\infty,n)$-范畴, 每维奇点数据 $X_k$ 的每个点给出一个 $k$-态射生成元, 而 $X_k$ 上的纤维丛 $E_k$ 指定这些 $k$-态射的类型.</p>
+<h2>陈述</h2>
+<h3>带奇点流形</h3>
+<p>带奇点流形是一个非常广泛的概念, 我们先看几个方面的例子.</p>
+<h4>局部锥形流形</h4>
+<p>我们知道, 流形 $Y$ 的<span class="link local"><a href="./锥(拓扑学).html" title="锥 (拓扑学) [锥(拓扑学)]">锥</a></span> $C(Y) = Y\times [0,1] / Y\times\{1\}$ 一般不是流形, 问题在锥点的邻域不同于欧氏空间.</p>
+<p>固定<strong>一个</strong>闭 $(k-1)$-维流形 $Y$, 考虑如下形状的广义流形: 拓扑空间 $M$ 带有子空间 $M_0\subset M$, 满足</p>
+<ul>
+<li>$M - M_0$ 为光滑流形;</li>
+<li>$M_0$ 为光滑流形;</li>
+<li>$M_0$ 的点在 $M$ 中有邻域, 形如 $M_0$ 中的邻域与 $C(Y)$ 的乘积. (注意这里不是说某个 $Y$, 而是指定的那个 $Y$.)</li>
+</ul>
+<p>当然, $M_0$ 可以是空集, 那么 $M$ 本身为光滑流形.</p>
+<p>用这种广义流形可以定义类似于配边范畴的范畴 $\mathsf{Bord}_n'$, 带有对称幺半函子 $\mathsf{Bord}_n\to\mathsf{Bord}'_n$.</p>
+<p>注意到在 $\mathsf{Bord}'_n$ 中有 $k$-态射 $\varnothing \to Y$, 对应于 $C(Y)$. 某种意义上, $\mathsf{Bord}_n'$ 是由 $\mathsf{Bord}_n$ 加上这个态射自由生成的对称幺半 $(\infty,n)$-范畴. 具体地: 对任意含对偶的对称幺半 $(\infty ,n)$-范畴 $\mathcal C$ 与对称幺半函子
+$$
+Z_0\colon \mathsf{Bord}_n\to\mathcal C,
+$$
+对任意态射
+$$
+1=Z_0(\varnothing) \to Z_0(Y),
+$$
+存在唯一的延拓
+$$
+Z\colon \mathsf{Bord}'_n\to\mathcal C.
+$$</p>
+<h4>Feynman 图</h4>
+<p>Feynman 图是一种表示粒子相互作用过程的图 (作为带奇点的 $1$-流形). 若给一个 Feynman 图的每个顶点赋予一个有限维线性空间, 每个边赋予一个线性映射, 则整个图可以计算为一个线性映射. 这体现了如下的直观: Feynman 图的范畴 (对象是有限点集, 态射是 Feynman 图) 是一些对象和一些态射自由生成的含对偶对称幺半 $(\infty,1)$-范畴.</p>
+<p>首先, 我们规定粒子和相互作用的种类数据 $\vec{X}$:</p>
+<ul>
+<li>二重覆叠 (即 $\mathrm{O}(1)$-主丛) $\widetilde X_0 \to X_0$, 表示粒子的可能种类; 覆叠变换 $\widetilde {X}_0\to \widetilde {X}_0$, $p\mapsto \bar p$ 表示反粒子;</li>
+<li>集合 $X_1$ 表示相互作用的可能种类; 覆叠空间 $E\to X_1$ (纤维为有限点集) 带有映射 $E\to \widetilde {X}_0$ 表示每种相互作用涉及的粒子种类.</li>
+</ul>
+<p>现在定义 $\vec{X}$-Feynman 图为如下数据:</p>
+<ul>
+<li>紧空间 $G$ 表示整个 Feynman 图;</li>
+<li>$G_0\subset G$ 是顶点集, $G-G_0$ 的每个连通分支是一条边;</li>
+<li>每条边标记着一种粒子 $p\in P := \pi_0\widetilde X_0$ (与边的定向有关, 若边的定向反转则 $p$ 变为 $\bar p$);</li>
+<li>每个顶点 $g\in G_0$ 标记着一种相互作用 $x\in X_1$, 有一个邻域同胚于 $C(E_x)$.</li>
+</ul>
+<p>考虑这样一个范畴 $\mathsf{Bord}'_1$,</p>
+<ul>
+<li>其对象为有限集, 每个元素标记着一种粒子 $p\in P$;</li>
+<li>其态射为 Feynman 图.</li>
+</ul>
+<p>给定 $\vec{X}$ 以及如下数据,</p>
+<ul>
+<li>对每个粒子 $p$ 一个线性空间 $V_p$, 带有完美配对 $V_{p}\otimes V_{\bar p} \to k$,</li>
+<li>对每个相互作用 $x$ 一个向量 $v_x\in\bigotimes_{e\in E_x} V_{\sigma(e)}$</li>
+</ul>
+<p>便确定了唯一的对称幺半函子
+$$
+  \mathsf{Bord}'_1 \to \mathsf{Vect}.
+$$</p>
+<h4>畴壁</h4>
+<p>考虑带畴壁 (domain wall) 的流形:
+$$
+  M = M_- \sqcup_{M_0} M_+,
+$$
+其中 $\partial M_- = M_0 = \partial M_+ = M_- \cap M_+$. 直观上这是一个红蓝二染色的流形.</p>
+<p>用带畴壁的流形可以定义类似于配边范畴的范畴 $\mathsf{Bord}_n'$, 带有两个对称幺半函子
+$$
+j_-, j_+\colon \mathsf{Bord}_n\to\mathsf{Bord}'_n.
+$$
+直观上 $j_-, j_+$ 就是将一个流形分别视为全红和全蓝的流形.</p>
+<p>给定含对偶的对称幺半 $(\infty ,n)$-范畴 $\mathcal C$ 与两个 “体理论 (bulk theory)”
+$$
+Z_-, Z_+ \colon \mathsf{Bord}_n \to \mathcal C,
+$$
+对任意 $\mathrm{O}(n-1)$-等变态射
+$$
+Z_- (*) \to Z_+ (*),
+$$
+存在唯一的延拓
+$$
+Z\colon \mathsf{Bord}'_n \to \mathcal C.
+$$</p>
+<h4>切结构</h4>
+<p><span class="link local"><a href="./切结构.html" title="切结构 [切结构]">切结构</a></span>也是 “带奇点流形” 这一概念的特例.</p>
+<h4>奇点数据的定义</h4>
+<p><strong>定义</strong> (奇点数据, 粗略定义).</p>
+<ul>
+<li>一个 $n$ 维奇点数据 $\vec X$ 是一列拓扑空间 $(X_0,X_1,\cdots,X_n)$, 一列向量丛 $\zeta_k \colon X_k\to\mathbf{B}\mathrm{O}(n-k)$, 以及一列纤维丛 $E_k\to X_k$.</li>
+<li>一个 $m$ 维 $\vec X$-流形是<span class="link local"><a href="./分层.html" title="分层 [分层]">分层空间</a></span> $M_n\subset \cdots\subset M_1\subset M_0 = M$, 满足 $M_k - M_{k-1}$ 是余 $k$ 维光滑流形, 带有 $(X_k,\zeta_k)$-<span class="link local"><a href="./切结构.html" title="切结构 [切结构]">结构</a></span>. 并且这些流形要以纤维丛 $E_k\to X_k$ 规定的方式相容.</li>
+</ul>
+<p><strong>定义</strong> (奇点数据, 严格定义). 固定自然数 $n$. 我们对 $0\leq k \leq n$ 归纳定义如下两个概念:</p>
+<ul>
+<li><strong>长为</strong> $k$ 的<strong>奇点数据</strong> (singularity datum) $\vec{X}$;</li>
+<li><strong>余维</strong> $V$ 的 $\vec{X}$-<strong>流形</strong>, 其中 $V$ 为不超过 $n-k$ 维的实线性空间.</li>
+</ul>
+<p>定义如下.</p>
+<ul>
+<li>长为 $k=0$ 的奇点数据 $\vec{X} = (X_0,\zeta_0)$ 是一个拓扑空间 $X_0$ 以及其上的 $n$ 阶实向量丛 $\zeta_0\colon X\to\mathbf{B}\mathrm{O}(n)$.</li>
+<li>对于 $0&lt; k\leq n$, 长为 $k$ 的奇点数据 $\vec{X} = (\vec{X}',X_k,\zeta_k,p\colon E_k\to X_k)$ 是一个长为 $(k-1)$ 的奇点数据 $\vec{X}'$ 加上一个拓扑空间 $X_k$, 一个 $(n-k)$ 阶实向量丛 $\zeta_k \colon X_k\to\mathbf{B}\mathrm{O}(n-k)$, 以及纤维丛 $p\colon E_k\to X_k$, 其在 $x\in X_k$ 上的纤维为 $\vec{X}'$-流形, 余维 $(\zeta_k)_x \oplus\mathbb{R}$.</li>
+<li>设 $\vec{X}$ 为长为 $k$ 的奇点数据, 余维 $V$ 的 $\vec{X}$-流形是如下资料:
+<ul>
+<li>拓扑空间 $M$,</li>
+<li>闭子空间 $M_k\subset M$, 构成 $n-k-\dim V$ 维光滑流形,</li>
+<li>映射 $q\colon M_k\to X_k$ 以及同构 $T_{M_k}\oplus V\simeq q^*\zeta_k$,</li>
+<li>$M-M_k$ 上带余维 $V$ 的 $\vec{X}'$-流形结构,</li>
+<li>$M_k$ 的开邻域 $U$, 以及商映射 $\left(0,1\right]\times q^*E\to U$, 其限制在 $(0,1)\times q^*E$ 上为嵌入, 限制在 $\{1\}\times q^*E$ 上为投影 $q^*E\to M_k$.</li>
+</ul>
+</li>
+</ul>
+<p><strong>注</strong>.</p>
+<ul>
+<li>长度为 $n$ 的奇点数据简称为 $n$ 维奇点数据. 长为 $k&lt;n$ 的奇点数据也可以添加一些空的空间视为长为 $n$ 的奇点数据.</li>
+<li>对于 $n$ 维奇点数据 $\vec X$ 与自然数 $m\leq n$, 定义 $m$ 维 $\vec X$-流形即为余维 $\mathbb{R}^{n-m}$ 的 $\vec X$-流形.</li>
+</ul>
+<h3>猜想的陈述</h3>
+<p>设 $\vec{X} = (\vec{X}',X_k,\zeta_k,p\colon E_k\to X_k)$ 为长为 $k$ 的奇点数据. 构造如下准备资料:</p>
+<ul>
+<li>记 $\widetilde X_k\to X_k$ 为 $\zeta_k$ 对应的 $\mathrm{O}(n-k)$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>, 即 $n-k$ 阶向量丛的正交标架丛);</li>
+<li>一点 $\widetilde x \in \widetilde X_k$ 可视为 $x\in X_k$ 配备标架 $\alpha\colon (\zeta_k)_x \simeq \mathbb{R}^{n-k}$;</li>
+<li>通过 $\alpha$, 可将纤维 $p^{-1}(x)$ 视为余维 $\mathbb{R}^{n-k+1}$ 的 $\vec{X}'$-流形, 对应于对象 $E_{\widetilde x} \in \Omega^{k-1}\mathsf{Bord}^{\vec{X}'}_n$ (对应 $\widetilde x\mapsto E_{\widetilde x}$ 关于 $\mathrm{O}(n-k)$-作用等变).</li>
+</ul>
+<p><strong>猜想</strong> (带奇点配边假设). 设 $\mathcal C$ 为含对偶的对称幺半 $(\infty,n)$-范畴. 给定对称幺半函子
+$$
+Z_0\colon \mathsf{Bord}^{\vec{X}'}_n \to \mathcal C
+$$
+以及 $\Omega^{k-1}\mathcal C$ 中的一族态射 $\eta_{\widetilde x}\colon 1=Z_0(\varnothing)\to Z_0(E_{\widetilde x})$ ($\widetilde x\in\widetilde X$, $\mathrm{O}(n-k)$-等变), 存在唯一的延拓
+$$
+Z\colon \mathsf{Bord}^{\vec X}_n \to\mathcal C.
+$$</p>
+<h2>证明</h2>
+<p>设 $\mathcal C,\mathcal D$ 为对称幺半范畴, 其中 $\mathcal C$ 为 $(\infty ,n-1)$-范畴, $\mathcal D$ 为 $(\infty ,n)$-范畴. 设 $f\colon \mathcal C\to\mathcal D$ 为对称幺半函子. 可定义 $f$ 的<strong>锥</strong> $\operatorname{Cone}(f)$, 它是一个对称幺半 $(\infty ,n)$-范畴, 粗略描述如下:</p>
+<ul>
+<li>其对象为 $D\in\mathcal D$;</li>
+<li>态射 $D\to D'$ 为二元组 $(C,\eta\colon f(C)\otimes D \to D')$;</li>
+<li>态射 $(C_1,\eta_1),(C_2,\eta_2)$ 的张量积为 $(C_1\otimes C_2,\eta_1\otimes \eta_2)$.</li>
+</ul>
+<p>例如 $\mathcal D = 1$ 时, $f\colon \mathcal C\to 1$ 的锥就是 $\mathcal C$ 的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环</a></span> $\mathbf{B}\mathcal C$, 满足其仅有一个对象, 且 $\Omega\mathbf{B}\mathcal C \simeq\mathcal C$.</p>
+<p>注意到有自然的对称幺半函子 $\mathcal D\to\operatorname{Cone}(f)$, 对象 $D$ 对应 $D$ 自身, 而态射 $\eta\colon D\to D'$ 对应 $(1,\eta)$.</p>
+<p><strong>定理</strong> (相对配边假设). 给定对称幺半函子
+$$
+Z_0\colon \mathcal D\to\mathcal C,
+$$
+$$
+f\colon \mathbf{B}^{k-1}\mathsf{Bord}_{n-k}^{(X,\zeta)}\to\mathcal D,
+$$
+以及 $\Omega^{k-1}\mathcal C$ 中的一族态射
+$$
+\eta_{\widetilde x}\colon 1 = Z_0(1)\to Z_0 (P_{\widetilde x})\,(\widetilde x\in\widetilde X),
+$$
+存在唯一的延拓
+$$
+Z\colon \operatorname{Cone}(f)\to\mathcal C.
+$$</p>
+<p>粗略地说, $\operatorname{Cone}(f)$ 是 $\mathcal D$ 自由添加一族 $k$-态射 $\eta_{\widetilde x}$ 生成的含对偶对称幺半 $(\infty,n)$-范畴.</p>
+<p>例如 $\mathcal D = 1$ 时 $\operatorname{Cone}(f) = \mathbf{B}^k\mathsf{Bord}_{n-k}^{(X,\zeta)}$,
+由配边假设它就是由一族 $k$-态射 $\eta_{\widetilde x}$ 自由生成的含对偶对称幺半 $(\infty,n)$-范畴. 这是普通配边假设应用于 $\Omega^k \mathcal C$ 得到的推论.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="分层"><header><h1><span class="taxon"></span>分层 <a class="slug" href="./分层.html">[分层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>空间上的分层 (stratification) 是将其分解为一个偏序集参数化的若干子空间的方法. 更具体地, 拓扑空间 $X$ 上的分层是其到偏序集的映射 $X \to P$, 其中 $P$ 带有 <span class="link local"><a href="./Alexandroff拓扑.html" title="Alexandroff 拓扑 [Alexandroff拓扑]">Alexandroff 拓扑</a></span>; 这意味着对 $X$ 的任何一点 $x$, 在足够小的邻域之内, 点的层次都不小于 $x$ 的层次.</p>
+<p>分层空间常用于描述带有 “奇点” 的空间, 如奇性代数簇.</p>
+<p>分层空间可用于<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>范畴. 见<span class="link local"><a href="./strat-cat.html" title="分层空间与范畴 [strat-cat]">分层空间与范畴</a></span>.</p>
+<h2>定义</h2>
+<p>分层空间是拓扑空间 $X$ 带有到某个<span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">偏序集</a></span> $P$ 的连续映射, 其中 $P$ 带有 <span class="link local"><a href="./Alexandroff拓扑.html" title="Alexandroff 拓扑 [Alexandroff拓扑]">Alexandroff 拓扑</a></span>, 即开集为向上封闭集, 闭集为向下封闭集. 分层空间的范畴为
+$$
+\mathsf{Strat} := \mathsf{Top}/\mathsf{Alex}.
+$$</p>
+<p>有些作者 (如 <span class="link local"><a href="./HeidemannMfdDiag.html" title="Manifold Diagrams for Higher Categories [HeidemannMfdDiag]">Heidemann</a></span>) 的定义还对分层有更多要求:</p>
+<ul>
+<li>$X\to P$ 为满射;</li>
+<li>$X$ 带有所有分层单形到它的映射的终拓扑, 这意味着<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">脉–实现伴随</a></span> (见后文) 的余单位 $|{\operatorname{Exit}(X)}|\to X$ 是同构, 即 $X$ 的拓扑能被出路单纯集重构.</li>
+</ul>
+<p>分层空间之间的映射为交换方块
+$$
+\begin{array}{ccc}
+X &amp; \rightarrow &amp; Y \\
+\downarrow &amp;  &amp; \downarrow \\
+P_X &amp; \rightarrow &amp; P_Y.
+\end{array}
+$$</p>
+<ul>
+<li>若 $X\to Y$ 为同构而 $P_X \to P_Y$ 为满射, 则称 $X$ 为 $Y$ 的<strong>细化</strong> (refinement);</li>
+<li>若该方块为<span class="link local"><a href="./拉回.html" title="拉回 (范畴论) [拉回]">拉回</a></span>且 $P_X\to P_Y$ 为单射, 则称 $X$ 为 $Y$ 的<strong>可构造子空间</strong> (constructible subspace).</li>
+</ul>
+<p>定义一个分层空间 $X\to P$ 的<strong>深度</strong>为偏序集 $P$ 中最长严格递增链的长度.</p>
+<h2>性质</h2>
+<ul>
+<li>分层空间的任何开子空间继承分层结构.</li>
+</ul>
+<h2>例</h2>
+<h3>区间</h3>
+<p>区间 $[0,1]$ (或左闭右开区间 $[0,1)$) 是个分层空间, 点 $0$ 是一层, 剩下的部分是一层. 这个分层对应映射 $[0,1] \to \{\bot,\top\}$, $0\mapsto\bot$, $x\mapsto\top\,(x&gt;0)$.</p>
+<p>分层空间的映射 $[0,1]\to X$ 称为分层空间 $X$ 的<strong>出路</strong> (exit path). 见<span class="link local"><a href="./出路范畴.html" title="出路范畴 [出路范畴]">出路范畴</a></span>.</p>
+<h3>锥</h3>
+<p>对任意分层空间 $X\to P$, 定义其<strong></strong><span class="link local"><a href="./锥(拓扑学).html" title="锥 (拓扑学) [锥(拓扑学)]">闭锥</a></span>为分层空间
+$$
+\frac{X\times [0,1]}{X\times \{0\}}\to P^{\triangleleft}
+$$
+(若将 $[0,1]$ 替换为 $[0,1)$, 则称为<strong>开锥</strong>),
+其中 $P^{\triangleleft}$ 表示 $P$ 上的<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">左锥</a></span>.</p>
+<p>注意空集的<span class="link local"><a href="./锥(拓扑学).html" title="锥 (拓扑学) [锥(拓扑学)]">锥</a></span>为单点.</p>
+<h3>单形</h3>
+<p>对于自然数 $n$, 拓扑 $n$ 维<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单形</a></span> $|\Delta^n|$ 上的锥为 $|\Delta^{n+1}|$, 这归纳地给出了拓扑单形上的分层结构
+$$
+(|\Delta^n| \to [n]) \in \mathsf{Strat},
+$$
+进而有<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形范畴</a></span>到分层空间范畴的嵌入
+$$
+\Delta \to \mathsf{Strat},\,[n]\mapsto (|\Delta^n|\to [n]).
+$$</p>
+<p>该嵌入的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子称为<strong></strong><span class="link local"><a href="./出路范畴.html" title="出路范畴 [出路范畴]">出路单纯集</a></span>函子
+$$
+\operatorname{Exit}\colon \mathsf{Strat} \to \mathsf{sSet},
+$$
+其左伴随为<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>
+$$
+|{-}| \colon \mathsf{sSet} \to \mathsf{Strat}.
+$$</p>
+<h3>群作用</h3>
+<p>对于拓扑空间 $X$ 上的有限群作用, 根据各点 $x\in X$ 的稳定子可给出 $X$ 上的分层.</p>
+<h3>碰撞与构形空间</h3>
+<p>对于拓扑空间 $X$ 与有限集 $I$, 空间 $X^I$ 可以根据点的碰撞来分层, 最上层为 $I$ 个点的 <span class="link local"><a href="./构形空间.html" title="构形空间 [构形空间]">(有序) 构形空间</a></span>.</p>
+<p>另见 <span class="link local"><a href="./Ran空间.html" title="Ran 空间 [Ran空间]">Ran 空间</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="锥(范畴论)"><header><h1><span class="taxon"></span>锥 (范畴论) <a class="slug" href="./锥(范畴论).html">[锥(范畴论)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>另见<span class="link local"><a href="./锥(拓扑学).html" title="锥 (拓扑学) [锥(拓扑学)]">锥 (拓扑学)</a></span>.</p>
+<h2>定义</h2>
+<p>对于范畴 $I$, 可<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加一个<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>或<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>, 得到<strong>左锥</strong> $I^{\triangleleft}$ 以及<strong>右锥</strong> $I^{\triangleright}$. 添加的那个始对象或终对象称为锥的<strong>顶点</strong>.</p>
+<p>对于函子 $X\colon I\to \mathcal C$ 以及对象 $c\in\mathcal C$, 以下三个资料等价, 称之为 $X$ 上以 $c$ 为<strong>顶点</strong>的<strong>锥</strong> (cone):</p>
+<ul>
+<li>$X$ 的延拓 $I^{\triangleleft} \to \mathcal C$, 将顶点映射为 $c$;</li>
+<li>$X$ 的分解 $I\to \mathcal C_{c/}\to\mathcal C$;</li>
+<li>自然变换 $\operatorname{const}c\to X$;</li>
+<li>集合 $\operatorname{lim}_{i\in I}\operatorname{Hom}(c,X_i)$ 的元素.</li>
+</ul>
+<p>对应地, 延拓 $I^{\triangleright} \to \mathcal C$ 称为 $X$ 上的<strong>余锥</strong> (cocone).</p>
+</details></section></details></section></footer></article></div></body></html>

@@ -6139,7 +6139,7 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Milnor纤维化"><header><h1><span class="taxon"></span>Milnor 纤维化 <a class="slug" href="./Milnor纤维化.html">[Milnor纤维化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>Milnor 纤维化是刻画代数簇奇点 (局部上不是流形的点) 局部的拓扑信息的工具.</p>
-<p>孤立奇点的附近长得像某个低一维子流形的锥, 称为 <strong>Milnor 扭结</strong>.</p>
+<p>孤立奇点的附近长得像某个低一维子流形的<span class="link local"><a href="./锥(拓扑学).html" title="锥 (拓扑学) [锥(拓扑学)]">锥</a></span>, 称为 <strong>Milnor 扭结</strong>.</p>
 <p>有些奇异球面可构造为 Milnor 扭结.</p>
 <h2>定义</h2>
 <h3>球面版本</h3>
@@ -9598,12 +9598,15 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="cob-sing"><header><h1><span class="taxon"></span>带奇点配边假设 <a class="slug" href="./cob-sing.html">[cob-sing]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>带奇点配边假设是<span class="link local"><a href="./配边假设.html" title="配边假设 [配边假设]">配边假设</a></span>的推广, 是关于 “带奇点流形” (下文将会定义) 的某种配边构成的<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>的万有性质.</p>
-<p>直观上, 配边范畴是一个对象自由生成的含对偶对称幺半 $(\infty,n)$-范畴, 而带奇点配边范畴则是奇点数据给出的各阶态射自由生成的含对偶对称幺半 $(\infty,n)$-范畴, 每维奇点数据 $X_k$ 的每个点给出一个 $k$-态射生成元.</p>
+<blockquote>
+<p>奇点的奇应读 qí, 意为奇异, 反常的.</p>
+</blockquote>
+<p>直观上, 配边范畴是一个对象自由生成的含对偶对称幺半 $(\infty,n)$-范畴, 而带奇点配边范畴则是奇点数据给出的各阶态射自由生成的含对偶对称幺半 $(\infty,n)$-范畴, 每维奇点数据 $X_k$ 的每个点给出一个 $k$-态射生成元, 而 $X_k$ 上的纤维丛 $E_k$ 指定这些 $k$-态射的类型.</p>
 <h2>陈述</h2>
 <h3>带奇点流形</h3>
 <p>带奇点流形是一个非常广泛的概念, 我们先看几个方面的例子.</p>
 <h4>局部锥形流形</h4>
-<p>我们知道, 流形 $Y$ 的锥 $C(Y) = Y\times [0,1] / Y\times\{1\}$ 一般不是流形, 问题在锥点的邻域不同于欧氏空间.</p>
+<p>我们知道, 流形 $Y$ 的<span class="link local"><a href="./锥(拓扑学).html" title="锥 (拓扑学) [锥(拓扑学)]">锥</a></span> $C(Y) = Y\times [0,1] / Y\times\{1\}$ 一般不是流形, 问题在锥点的邻域不同于欧氏空间.</p>
 <p>固定<strong>一个</strong>闭 $(k-1)$-维流形 $Y$, 考虑如下形状的广义流形: 拓扑空间 $M$ 带有子空间 $M_0\subset M$, 满足</p>
 <ul>
 <li>$M - M_0$ 为光滑流形;</li>
@@ -9722,6 +9725,33 @@ $$
 $$
 Z\colon \mathsf{Bord}^{\vec X}_n \to\mathcal C.
 $$</p>
+<h2>证明</h2>
+<p>设 $\mathcal C,\mathcal D$ 为对称幺半范畴, 其中 $\mathcal C$ 为 $(\infty ,n-1)$-范畴, $\mathcal D$ 为 $(\infty ,n)$-范畴. 设 $f\colon \mathcal C\to\mathcal D$ 为对称幺半函子. 可定义 $f$ 的<strong>锥</strong> $\operatorname{Cone}(f)$, 它是一个对称幺半 $(\infty ,n)$-范畴, 粗略描述如下:</p>
+<ul>
+<li>其对象为 $D\in\mathcal D$;</li>
+<li>态射 $D\to D'$ 为二元组 $(C,\eta\colon f(C)\otimes D \to D')$;</li>
+<li>态射 $(C_1,\eta_1),(C_2,\eta_2)$ 的张量积为 $(C_1\otimes C_2,\eta_1\otimes \eta_2)$.</li>
+</ul>
+<p>例如 $\mathcal D = 1$ 时, $f\colon \mathcal C\to 1$ 的锥就是 $\mathcal C$ 的<span class="link local"><a href="./逆环路空间.html" title="逆环路空间 [逆环路空间]">逆环</a></span> $\mathbf{B}\mathcal C$, 满足其仅有一个对象, 且 $\Omega\mathbf{B}\mathcal C \simeq\mathcal C$.</p>
+<p>注意到有自然的对称幺半函子 $\mathcal D\to\operatorname{Cone}(f)$, 对象 $D$ 对应 $D$ 自身, 而态射 $\eta\colon D\to D'$ 对应 $(1,\eta)$.</p>
+<p><strong>定理</strong> (相对配边假设). 给定对称幺半函子
+$$
+Z_0\colon \mathcal D\to\mathcal C,
+$$
+$$
+f\colon \mathbf{B}^{k-1}\mathsf{Bord}_{n-k}^{(X,\zeta)}\to\mathcal D,
+$$
+以及 $\Omega^{k-1}\mathcal C$ 中的一族态射
+$$
+\eta_{\widetilde x}\colon 1 = Z_0(1)\to Z_0 (P_{\widetilde x})\,(\widetilde x\in\widetilde X),
+$$
+存在唯一的延拓
+$$
+Z\colon \operatorname{Cone}(f)\to\mathcal C.
+$$</p>
+<p>粗略地说, $\operatorname{Cone}(f)$ 是 $\mathcal D$ 自由添加一族 $k$-态射 $\eta_{\widetilde x}$ 生成的含对偶对称幺半 $(\infty,n)$-范畴.</p>
+<p>例如 $\mathcal D = 1$ 时 $\operatorname{Cone}(f) = \mathbf{B}^k\mathsf{Bord}_{n-k}^{(X,\zeta)}$,
+由配边假设它就是由一族 $k$-态射 $\eta_{\widetilde x}$ 自由生成的含对偶对称幺半 $(\infty,n)$-范畴. 这是普通配边假设应用于 $\Omega^k \mathcal C$ 得到的推论.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="comments"><header><h1><span class="taxon"></span>评论 <a class="slug" href="./comments.html">[comments]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>2026-05-17</p>
 <p><span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>使用 <span class="link external"><a href="https://twikoo.js.org/intro.html" title="Twikoo [https://twikoo.js.org/intro.html]">Twikoo</a></span> 建立评论模块.</p>
@@ -19446,13 +19476,13 @@ $$</p>
 <p>区间 $[0,1]$ (或左闭右开区间 $[0,1)$) 是个分层空间, 点 $0$ 是一层, 剩下的部分是一层. 这个分层对应映射 $[0,1] \to \{\bot,\top\}$, $0\mapsto\bot$, $x\mapsto\top\,(x&gt;0)$.</p>
 <p>分层空间的映射 $[0,1]\to X$ 称为分层空间 $X$ 的<strong>出路</strong> (exit path). 见<span class="link local"><a href="./出路范畴.html" title="出路范畴 [出路范畴]">出路范畴</a></span>.</p>
 <h3>锥</h3>
-<p>对任意分层空间 $X\to P$, 定义其<strong>闭锥</strong>为分层空间
+<p>对任意分层空间 $X\to P$, 定义其<strong></strong><span class="link local"><a href="./锥(拓扑学).html" title="锥 (拓扑学) [锥(拓扑学)]">闭锥</a></span>为分层空间
 $$
 \frac{X\times [0,1]}{X\times \{0\}}\to P^{\triangleleft}
 $$
 (若将 $[0,1]$ 替换为 $[0,1)$, 则称为<strong>开锥</strong>),
 其中 $P^{\triangleleft}$ 表示 $P$ 上的<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">左锥</a></span>.</p>
-<p>注意空集的锥为单点.</p>
+<p>注意空集的<span class="link local"><a href="./锥(拓扑学).html" title="锥 (拓扑学) [锥(拓扑学)]">锥</a></span>为单点.</p>
 <h3>单形</h3>
 <p>对于自然数 $n$, 拓扑 $n$ 维<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单形</a></span> $|\Delta^n|$ 上的锥为 $|\Delta^{n+1}|$, 这归纳地给出了拓扑单形上的分层结构
 $$
@@ -19601,6 +19631,9 @@ $A\otimes M\to M$
 </li>
 <li>
 <p><span class="link local"><a href="./主丛的模空间.html" title="主丛的模空间 [主丛的模空间]">$\mathrm{Bun}_G$</a></span></p>
+</li>
+<li>
+<p><span class="link local"><a href="./形式群的模叠.html" title="形式群的模叠 [形式群的模叠]">形式群的模叠</a></span></p>
 </li>
 </ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="分类意象"><header><h1><span class="taxon"></span>分类意象 <a class="slug" href="./分类意象.html">[分类意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -21240,7 +21273,7 @@ $$
 <h2>定义</h2>
 <p>对于指标范畴 $I$, 称函子 $F\colon \mathcal C\to \mathcal D$ <strong>反映</strong> $I$-极限是指:</p>
 <ul>
-<li>若 $\mathcal C$ 中的图 $X\colon I\to\mathcal C$ 上的锥 $\operatorname{const}L\to I$ 在 $\mathcal D$ 中被映射为极限锥 $FL=\operatorname{lim}FX$, 则这个锥本身是极限锥, $L = \operatorname{lim}X$.</li>
+<li>若 $\mathcal C$ 中的图 $X\colon I\to\mathcal C$ 上的<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">锥</a></span> $\operatorname{const}L\to I$ 在 $\mathcal D$ 中被映射为极限锥 $FL=\operatorname{lim}FX$, 则这个锥本身是极限锥, $L = \operatorname{lim}X$.</li>
 </ul>
 <p>对余极限可同理定义.</p>
 <h3>反映同构</h3>
@@ -23533,7 +23566,7 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="局部环化空间"><header><h1><span class="taxon"></span>局部环化空间 <a class="slug" href="./局部环化空间.html">[局部环化空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>局部环化空间是指每个<span class="link local"><a href="./茎.html" title="茎 [茎]">茎</a></span>为<span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span>的<span class="link local"><a href="./环化空间.html" title="环化空间 [环化空间]">环化空间</a></span>.</p>
-<p>使用<span class="link local"><a href="./环化意象.html" title="“环化意象” [环化意象]">环化意象</a></span>的语言, 局部环化空间是一个环化意象 $(\mathcal E,R)$, 使得 $R$ 在 $\mathcal E$ 的<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>中是<span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span> (注意内语言中的局部环不用极大理想定义, 而是用可逆元定义).</p>
+<p>使用<span class="link local"><a href="./环化意象.html" title="环化意象 [环化意象]">环化意象</a></span>的语言, 局部环化空间是一个环化意象 $(\mathcal E,R)$, 使得 $R$ 在 $\mathcal E$ 的<span class="link local"><a href="./意象的内语言.html" title="意象的内语言 [意象的内语言]">内语言</a></span>中是<span class="link local"><a href="./局部环.html" title="局部环 [局部环]">局部环</a></span> (注意内语言中的局部环不用极大理想定义, 而是用可逆元定义).</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="局部类"><header><h1><span class="taxon"></span>局部类 <a class="slug" href="./局部类.html">[局部类]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -24804,6 +24837,7 @@ $$
 <p><strong>定理</strong> (Quillen). 典范的同态 $L \to \pi_\bullet MU$ 是同构.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./复定向上同调理论.html" title="复定向上同调理论 [复定向上同调理论]">复定向上同调理论</a></span>, <span class="link local"><a href="./形式谱.html" title="形式谱 [形式谱]">形式谱</a></span>, <span class="link local"><a href="./形式概形.html" title="形式概形 [形式概形]">形式概形</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="形式群的模叠"><header><h1><span class="taxon"></span>形式群的模叠 <a class="slug" href="./形式群的模叠.html">[形式群的模叠]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon=""><details ><summary id="形式谱"><header><h1><span class="taxon"></span>形式谱 <a class="slug" href="./形式谱.html">[形式谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>形式谱是某种带有拓扑的环对应的几何对象, 是一个<span class="link local"><a href="./形式概形.html" title="形式概形 [形式概形]">形式概形</a></span>.</p>
@@ -25573,14 +25607,16 @@ $$
 它是<span class="link local"><a href="./仿射概形.html" title="仿射概形 [仿射概形]">仿射化</a></span>的特例.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="拟凝聚层"><header><h1><span class="taxon"></span>拟凝聚层 <a class="slug" href="./拟凝聚层.html">[拟凝聚层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p><span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span>上的拟凝聚层是环上的模的推广.</p>
-<p>拟凝聚层的范畴 $\mathsf{QCoh}(X)$ 是代数几何中的一种代数对象 (见<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>). 取拟凝聚层 $X \mapsto \mathsf{QCoh}(X)$ 构成一个由 (qcqs) 概形到<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>的嵌入.</p>
+<p><span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span>或<span class="link local"><a href="./环化空间.html" title="环化空间 [环化空间]">环化空间</a></span>上的拟凝聚层是环上的模的推广.</p>
+<p>概形 $X$ 的拟凝聚层的范畴 $\mathsf{QCoh}(X)$ 是代数几何中的一种代数对象 (见<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>). 取拟凝聚层 $X \mapsto \mathsf{QCoh}(X)$ 构成一个由 (qcqs) 概形到<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>的嵌入.</p>
+<p>更一般地, 可定义<span class="link local"><a href="./环化空间.html" title="环化空间 [环化空间]">环化空间</a></span> (甚至<span class="link local"><a href="./环化意象.html" title="环化意象 [环化意象]">环化意象</a></span>) $(X,\mathcal O)$ 的拟凝聚模的范畴 $\mathsf{QCoh}(X,\mathcal O)$. 不过在 $X$ 局部不 “仿射” 的情况, 这个概念似乎不太有意义.</p>
 <p>拟凝聚层有高阶范畴的<span class="link local"><a href="./范畴化.html" title="范畴化 [范畴化]">推广</a></span>: <span class="link local"><a href="./高阶拟凝聚层.html" title="高阶拟凝聚层 [高阶拟凝聚层]">高阶拟凝聚层</a></span>.</p>
 <h2>定义</h2>
 <h3>传统</h3>
-<p>概形 $X$ 上的拟凝聚层是 $\mathcal O_X$-模 $M$, 满足在每个仿射<span class="link local"><a href="./开嵌入.html" title="开嵌入 [开嵌入]">开子概形</a></span> $\operatorname{Spec} A\hookrightarrow X$ 上等同于某个 $A$-模 $M$ 对应的模层 $\widetilde M$.</p>
+<p><span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span> $X$ 上的拟凝聚层是 $\mathcal O_X$-模 $M$, 满足在每个仿射<span class="link local"><a href="./开嵌入.html" title="开嵌入 [开嵌入]">开子概形</a></span> $\operatorname{Spec} A\hookrightarrow X$ 上等同于某个 $A$-模 $M$ 对应的模层 $\widetilde M$.</p>
+<p>更一般地, <span class="link local"><a href="./环化空间.html" title="环化空间 [环化空间]">环化空间</a></span> $(X,\mathcal O)$ 的拟凝聚模的范畴 $\mathsf{QCoh}(X,\mathcal O)$ 是由 “局部上为自由模之间态射的余核” 的 $\mathcal O$-模构成的范畴.</p>
 <h3>函子式</h3>
-<p>概形 $X$ 上的拟凝聚层范畴是
+<p>设 $X$ 为<span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span>, 或更一般的 (定义在 $\mathsf{Aff}$ 上的) <span class="link local"><a href="./叠.html" title="叠 [叠]">叠</a></span>. 定义 $X$ 上的拟凝聚层范畴为
 $$
 \mathsf{QCoh}(X) := \operatorname{lim}_{\operatorname{Spec}A \to X}\mathsf{Mod}(A).
 $$</p>
@@ -25595,7 +25631,7 @@ $$
 其中 $\mathsf{Aff} \to \mathsf{Sch}$ 是<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span>.</p>
 <h2>性质</h2>
 <h3>截面的可控奇异性</h3>
-<p>设 $X$ 为拟紧拟分离概形, $f\in\Gamma(X,\mathcal O_X)$ 为整体函数, 考虑 $f$ 不消失的开子空间 $X_f$, 则对任意拟凝聚层 $F$,
+<p>设 $X$ 为<span class="link local"><a href="./拟紧概形.html" title="拟紧概形 [拟紧概形]">拟紧</a></span><span class="link local"><a href="./拟分离概形.html" title="拟分离概形 [拟分离概形]">拟分离</a></span>概形, $f\in\Gamma(X,\mathcal O_X)$ 为整体函数, 考虑 $f$ 不消失的开子空间 $X_f$, 则对任意拟凝聚层 $F$,
 $$
 F(X)_f \to F(X_f)
 $$
@@ -28219,14 +28255,12 @@ $A = \operatorname{Rep}(\check{G})$ 作用在 $V= D(D\text{-}\mathsf{Mod}(\mathr
 <h2>性质</h2>
 <h3>层范畴</h3>
 <p>特征簇上的一些层范畴可用 $X$ 上的<span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span>计算. 例如<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚层</a></span>范畴 $\mathsf{QCoh}()$ 是表示范畴 $\mathsf{Rep}(G)$ 的分解同调.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="环化意象"><header><h1><span class="taxon"></span>“环化意象” <a class="slug" href="./环化意象.html">[环化意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="环化意象"><header><h1><span class="taxon"></span>环化意象 <a class="slug" href="./环化意象.html">[环化意象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
-<p><span class="link external"><a href="https://ncatlab.org/nlab/show/ringed+topos" title="nLab 页面 [https://ncatlab.org/nlab/show/ringed+topos]">nLab 页面</a></span></p>
-<p>设 $\mathcal E$ 为<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>, 其中有内蕴交换环对象 $R$, 则称 $(\mathcal E,R)$ 为环化意象.</p>
-<p>若 $\mathcal{E}$ 为景 $\mathcal C$ 上的<span class="link local"><a href="./层意象.html" title="层意象 [层意象]">层意象</a></span>, 则 $R$ 为 $\mathcal C$ 上的环层 (结构层).</p>
+<p>设 $\mathcal E$ 为<span class="link local"><a href="./意象.html" title="意象 [意象]">意象</a></span>, 其中有交换环对象 $R$, 则称 $(\mathcal E,R)$ 为环化意象.</p>
 <h2>例</h2>
 <p>一个<span class="link local"><a href="./环化空间.html" title="环化空间 [环化空间]">环化空间</a></span> $(X,\mathcal O_X)$ 诱导了环化意象 $(\operatorname{Sh}(X),\mathcal O_X)$.</p>
-<h2>综合微分几何</h2>
+<h3>综合微分几何</h3>
 <p>在<span class="link local"><a href="./综合微分几何.html" title="综合微分几何 [综合微分几何]">综合微分几何</a></span>中, $\mathcal E$ 的对象称作 “空间” 或 “集合”, $R$ 称作 “数轴”. “环” 指的就是 “环对象”, “映射” 指的就是 “光滑映射”. $R$ 类似于实数轴 $\mathbb{R}$, 但不是一个域, 因为我们需要考虑幂零元. 简单起见我们设 $R$ 是特征 $0$ 的, 且 $1+1+\cdots + 1$ 可逆, 即 $R$ 包含 $\mathbb{Q}$. (但代数几何中人们会认真对待正特征的情形.) 有时我们需要 $R$ 是局部环: 若一些数的和可逆, 则其中至少有一个数可逆.</p>
 <p>$R$-模 $V$ 称作有限维向量空间, 是指存在线性同构 $V\to R^n$. 其中 “存在” 一词应在层的语义 (sheaf semantics) 下理解, 即 $V$ 局部同构于 $R^n$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="环化空间"><header><h1><span class="taxon"></span>环化空间 <a class="slug" href="./环化空间.html">[环化空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -30073,7 +30107,7 @@ $$
 <p><span class="link local"><a href="./SDG-notes.html" title="综合微分几何讲稿 [SDG-notes]">综合微分几何讲稿</a></span></p>
 <p>todo: 重写</p>
 <p>综合微分几何使用无穷小的空间, 以无坐标的方式, 将 “微分” 的过程变成纯粹的代数.</p>
-<p>综合微分几何的公理始于<span class="link local"><a href="./环化意象.html" title="“环化意象” [环化意象]">环化意象</a></span> $(\mathcal E,R)$. <span class="link local"><a href="./无穷小空间.html" title="无穷小对象 (综合微分几何) [无穷小空间]">无穷小空间</a></span>引入了 $k$-阶<span class="link local"><a href="./相邻.html" title="“相邻” [相邻]">相邻</a></span> $(k=0,1,2,\cdots)$ 的概念, 这个关系在所有映射下不变.</p>
+<p>综合微分几何的公理始于<span class="link local"><a href="./环化意象.html" title="环化意象 [环化意象]">环化意象</a></span> $(\mathcal E,R)$. <span class="link local"><a href="./无穷小空间.html" title="无穷小对象 (综合微分几何) [无穷小空间]">无穷小空间</a></span>引入了 $k$-阶<span class="link local"><a href="./相邻.html" title="“相邻” [相邻]">相邻</a></span> $(k=0,1,2,\cdots)$ 的概念, 这个关系在所有映射下不变.</p>
 <h2>开集的概念</h2>
 <p>我们在 $R$ 上公理化地定义开集, 其中最重要的是要求可逆元的集合 $R^*$ 是开集.</p>
 <p>具体地, 我们假定在 $\mathcal E$ 的所有态射中 (先天) 给定了一类态射, 称作 “开含入” (open inclusions), 满足<strong>拉回之下的稳定性</strong> (stability under pullback), 且 $R$ 的可逆元集合到 $R$ 的含入是开含入.</p>
@@ -30854,7 +30888,22 @@ $$</p>
 <h2>定义</h2>
 <p>自由群是集合范畴到群范畴<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>函子的像.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="色同伦论"><header><h1><span class="taxon"></span>色同伦论 <a class="slug" href="./色同伦论.html">[色同伦论]</a></h1><div class="metadata"><ul><li class="meta-item">学科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>色同伦论可认为是对 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 的<span class="link local"><a href="./稳定∞-范畴的素谱.html" title="稳定 ∞-范畴的素谱 [稳定∞-范畴的素谱]">素谱</a></span>的研究.</p>
+<h2>观念</h2>
+<p>色同伦论 (chromatic homotopy theory) 可认为是对 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}$</a></span> 的<span class="link local"><a href="./稳定∞-范畴的素谱.html" title="稳定 ∞-范畴的素谱 [稳定∞-范畴的素谱]">素谱</a></span>的研究. 我们有
+$$
+\mathsf{Sp} \approx \mathsf{QCoh}(\mathcal M_{\mathrm{fg}},\mathcal O^{\mathrm{top}}),
+$$
+其中</p>
+<ul>
+<li>$\mathsf{QCoh}(X,\mathcal O)$ 表示环层 $\mathcal O$ 的<span class="link local"><a href="./拟凝聚层.html" title="拟凝聚层 [拟凝聚层]">拟凝聚模</a></span>范畴 $\mathsf{QCoh}(X,\mathcal O):= \operatorname{lim}_{f\colon \operatorname{Spec}R\to X}\mathsf{Mod}(\mathcal O(f))$,</li>
+<li>$\mathcal M_{\mathrm{fg}}$ 是<span class="link local"><a href="./形式群的模叠.html" title="形式群的模叠 [形式群的模叠]">形式群的模叠</a></span>,</li>
+<li>$\mathcal O^{\mathrm{top}}$ 是环谱层
+$$
+\mathcal O^{\mathrm{top}}
+\colon (f\colon \operatorname{Spec}R\to\mathcal M_{\mathrm{fg}})\mapsto \Gamma_f,
+$$</li>
+<li>$\Gamma_f$ 为形式群 $f$ 对应的<span class="link local"><a href="./复定向上同调理论.html" title="复定向上同调理论 [复定向上同调理论]">复定向环谱</a></span>.</li>
+</ul>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./MoravaK-理论.html" title="Morava K-理论 [MoravaK-理论]">Morava K-理论</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="色展同伦论"><header><h1><span class="taxon"></span>“色展同伦论” <a class="slug" href="./色展同伦论.html">[色展同伦论]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -31463,13 +31512,28 @@ $$</p>
 <p>谱对象构成的范畴是<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>, 称为原范畴的<span class="link local"><a href="./稳定化.html" title="稳定化 [稳定化]">稳定化</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="谱序列"><header><h1><span class="taxon"></span>谱序列 <a class="slug" href="./谱序列.html">[谱序列]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>谱序列是计算<span class="link local"><a href="./同伦群.html" title="同伦群 [同伦群]">同伦群</a></span>的一种算法.</p>
+<p>在带有 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">$t$-结构</a></span>的<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>中, 给定对象 $X$ 的一个<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤过</a></span> $X^\bullet$, 谱序列让我们用各<span class="link local"><a href="./关联分次代数.html" title="关联分次对象 [关联分次代数]">分次</a></span> $\operatorname{gr}^s X$ 的<span class="link local"><a href="./同伦群(稳定同伦论).html" title="同伦群 (稳定同伦论) [同伦群(稳定同伦论)]">同伦群</a></span>来研究 $X$ 本身的同伦群.</p>
 <h2>定义</h2>
+<p>设 $\mathcal A$ 为 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>. 定义 $\mathcal A$ 中的一个谱序列为如下资料:</p>
+<ul>
+<li>一族对象 $E^r_{s,t}$ ($r\in\mathbb{N}$, $s,t\in\mathbb{Z}$, 称之为第 $r$ 页);</li>
+<li>微分 $d^r_{s,t}\colon E^r_{s,t}\to E^r_{s-r,t+r-1}$;</li>
+<li>前一页的上同调同构于后一页, $H(E^r_{s,t},d^r)\simeq E^{r+1}_{s,t}$.</li>
+</ul>
+<p>实践中所有的谱序列都来自<span class="link local"><a href="./滤对象的谱序列.html" title="滤对象的谱序列 [滤对象的谱序列]">滤对象的谱序列</a></span>的构造.</p>
+<p>设 $\mathcal C$ 为带有 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">$t$-结构</a></span>的<span class="link local"><a href="./稳定∞-范畴.html" title=" [稳定∞-范畴]">稳定 $\infty$-范畴</a></span>. 设 $X$ 为 $\mathcal C$ 中的<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤对象</a></span>.</p>
+<p>…<span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">todo</a></span></p>
+<p>对于其中的 $\mathbb{Z}$-滤对象 $D_\bullet$, 可构造 $\mathcal C^{\heartsuit}$ 中的谱序列使得
+$$
+E_1^{p,q}=H_{p+q}\operatorname{cofib}(D_p\to D_{p+1}),
+$$
+在某些条件下收敛到 $H_n(\operatorname{colim}_m D_m)$.</p>
+<h2>例</h2>
 <p>$$
 d_r^{p,q}\colon  E_r^{p,q} \to E_r^{p+r,q-r+1}
 $$
 第 $(r+1)$ 页是第 $r$ 页的上同调.</p>
-<h2>Grothendieck 谱序列</h2>
+<h3>Grothendieck 谱序列</h3>
 <p>对于函子
 $$
 A \overset{F}{\to} B \overset{G}{\to} C,
@@ -31478,12 +31542,8 @@ $$
 $$
 R(G\circ F) \simeq RG \circ RF.
 $$</p>
-<h2>稳定 ∞-范畴中的滤对象的谱序列</h2>
-<p>设 $\mathcal C$ 为带有 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">t-结构</a></span>的<span class="link local"><a href="./稳定∞-范畴.html" title=" [稳定∞-范畴]">稳定无穷范畴</a></span>. 对于其中的 $\mathbb{Z}$-滤对象 $D_\bullet$, 可构造 $\mathcal C^{\heartsuit}$ 中的谱序列使得
-$$
-E_1^{p,q}=H_{p+q}\operatorname{cofib}(D_p\to D_{p+1}),
-$$
-在某些条件下收敛到 $H_n(\operatorname{colim}_m D_m)$.</p>
+<h2>性质</h2>
+<h3>收敛</h3>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./正合偶.html" title="“正合偶” [正合偶]">正合偶</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="谷山–志村猜想"><header><h1><span class="taxon"></span>“谷山–志村猜想” <a class="slug" href="./谷山–志村猜想.html">[谷山–志村猜想]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
@@ -32594,7 +32654,35 @@ $$
 \end{array}
 $$
 <span class="link local"><a href="./凝聚层的导出范畴.html" title="凝聚层的导出范畴 [凝聚层的导出范畴]">凝聚层的导出范畴</a></span>的<span class="link local"><a href="./半正交分解.html" title=" [半正交分解]">半正交分解</a></span> (?)</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="锥(拓扑学)"><header><h1><span class="taxon"></span>锥 (拓扑学) <a class="slug" href="./锥(拓扑学).html">[锥(拓扑学)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./拓扑学.html" title="拓扑学 [拓扑学]">拓扑学</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><span class="link local"><a href="./拓扑学.html" title="拓扑学 [拓扑学]">拓扑空间</a></span> $X$ 的<strong>锥</strong> (cone) 是
+$$
+CX := \frac{X\times [0,1]}{X\times \{0\}}.
+$$</p>
+<p>注意, 当 $X = \varnothing$ 时, $CX = {*}$ 为单点. 因为
+$
+C\varnothing = \operatorname{colim}
+(
+{* \leftarrow \varnothing \to \varnothing}
+) = *.
+$</p>
+<h3>作为分层空间</h3>
+<p>若 $X\to P$ 为<span class="link local"><a href="./分层.html" title="分层 [分层]">分层空间</a></span>, 则 $X$ 上的锥带有分层:
+$$
+\frac{X\times [0,1]}{X\times \{0\}}\to P^{\triangleleft},
+$$
+其中 $P^{\triangleleft}$ 是偏序集 $P$ 上的<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">锥</a></span>.</p>
+<h2>例</h2>
+<h3>奇点</h3>
+<p>所谓 “带奇点的流形”, 往往奇点附近的形状是某个流形的锥.</p>
+<p>相关页面:</p>
+<ul>
+<li><span class="link local"><a href="./cob-sing.html" title="带奇点配边假设 [cob-sing]">带奇点配边假设</a></span></li>
+<li><span class="link local"><a href="./Milnor纤维化.html" title="Milnor 纤维化 [Milnor纤维化]">Milnor 纤维化</a></span></li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="锥(范畴论)"><header><h1><span class="taxon"></span>锥 (范畴论) <a class="slug" href="./锥(范畴论).html">[锥(范畴论)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>另见<span class="link local"><a href="./锥(拓扑学).html" title="锥 (拓扑学) [锥(拓扑学)]">锥 (拓扑学)</a></span>.</p>
 <h2>定义</h2>
 <p>对于范畴 $I$, 可<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加一个<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>或<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>, 得到<strong>左锥</strong> $I^{\triangleleft}$ 以及<strong>右锥</strong> $I^{\triangleright}$. 添加的那个始对象或终对象称为锥的<strong>顶点</strong>.</p>
 <p>对于函子 $X\colon I\to \mathcal C$ 以及对象 $c\in\mathcal C$, 以下三个资料等价, 称之为 $X$ 上以 $c$ 为<strong>顶点</strong>的<strong>锥</strong> (cone):</p>

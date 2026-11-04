@@ -826,6 +826,7 @@
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
 <article><section class="block" data-taxon=""><details open><summary id="锥(范畴论)"><header><h1><span class="taxon"></span>锥 (范畴论) <a class="slug" href="./锥(范畴论).html">[锥(范畴论)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>另见<span class="link local"><a href="./锥(拓扑学).html" title="锥 (拓扑学) [锥(拓扑学)]">锥 (拓扑学)</a></span>.</p>
 <h2>定义</h2>
 <p>对于范畴 $I$, 可<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>地添加一个<span class="link local"><a href="./始对象.html" title="始对象 [始对象]">始对象</a></span>或<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>, 得到<strong>左锥</strong> $I^{\triangleleft}$ 以及<strong>右锥</strong> $I^{\triangleright}$. 添加的那个始对象或终对象称为锥的<strong>顶点</strong>.</p>
 <p>对于函子 $X\colon I\to \mathcal C$ 以及对象 $c\in\mathcal C$, 以下三个资料等价, 称之为 $X$ 上以 $c$ 为<strong>顶点</strong>的<strong>锥</strong> (cone):</p>
@@ -917,13 +918,13 @@ $$</p>
 <p>区间 $[0,1]$ (或左闭右开区间 $[0,1)$) 是个分层空间, 点 $0$ 是一层, 剩下的部分是一层. 这个分层对应映射 $[0,1] \to \{\bot,\top\}$, $0\mapsto\bot$, $x\mapsto\top\,(x&gt;0)$.</p>
 <p>分层空间的映射 $[0,1]\to X$ 称为分层空间 $X$ 的<strong>出路</strong> (exit path). 见<span class="link local"><a href="./出路范畴.html" title="出路范畴 [出路范畴]">出路范畴</a></span>.</p>
 <h3>锥</h3>
-<p>对任意分层空间 $X\to P$, 定义其<strong>闭锥</strong>为分层空间
+<p>对任意分层空间 $X\to P$, 定义其<strong></strong><span class="link local"><a href="./锥(拓扑学).html" title="锥 (拓扑学) [锥(拓扑学)]">闭锥</a></span>为分层空间
 $$
 \frac{X\times [0,1]}{X\times \{0\}}\to P^{\triangleleft}
 $$
 (若将 $[0,1]$ 替换为 $[0,1)$, 则称为<strong>开锥</strong>),
 其中 $P^{\triangleleft}$ 表示 $P$ 上的<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">左锥</a></span>.</p>
-<p>注意空集的锥为单点.</p>
+<p>注意空集的<span class="link local"><a href="./锥(拓扑学).html" title="锥 (拓扑学) [锥(拓扑学)]">锥</a></span>为单点.</p>
 <h3>单形</h3>
 <p>对于自然数 $n$, 拓扑 $n$ 维<span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单形</a></span> $|\Delta^n|$ 上的锥为 $|\Delta^{n+1}|$, 这归纳地给出了拓扑单形上的分层结构
 $$
@@ -985,6 +986,24 @@ $$</p>
 <h3>单子性</h3>
 <h2>参考资料</h2>
 <p>Artin, Mazur, Etale Homotopy Theory</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="反映(范畴论)"><header><h1><span class="taxon"></span>反映 (范畴论) <a class="slug" href="./反映(范畴论).html">[反映(范畴论)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>对于指标范畴 $I$, 称函子 $F\colon \mathcal C\to \mathcal D$ <strong>反映</strong> $I$-极限是指:</p>
+<ul>
+<li>若 $\mathcal C$ 中的图 $X\colon I\to\mathcal C$ 上的<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">锥</a></span> $\operatorname{const}L\to I$ 在 $\mathcal D$ 中被映射为极限锥 $FL=\operatorname{lim}FX$, 则这个锥本身是极限锥, $L = \operatorname{lim}X$.</li>
+</ul>
+<p>对余极限可同理定义.</p>
+<h3>反映同构</h3>
+<p>特别地, 对于 $I=1$, 反映 $I$-极限称为<strong>反映同构</strong>. 这就是说,</p>
+<ul>
+<li>若 $\mathcal C$ 中的态射 $f$ 在 $\mathcal D$ 中被映射为同构, 则 $f$ 本身为同构.</li>
+</ul>
+<p>反映同构的函子又称为<span class="link local"><a href="./保守函子.html" title="保守函子 [保守函子]">保守函子</a></span>.</p>
+<h2>例</h2>
+<h3>嵌入</h3>
+<p><span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>反映所有极限和余极限.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./创生(范畴论).html" title="创生 (范畴论) [创生(范畴论)]">创生</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="局部右伴随"><header><h1><span class="taxon"></span>局部右伴随 <a class="slug" href="./局部右伴随.html">[局部右伴随]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <h2>定义</h2>
@@ -1115,4 +1134,31 @@ $$
 <p>集合 $S$ 的有限子集在包含关系下构成滤范畴. 这一规律同样适用于任何<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>的模型的全体有限生成 (有限表现) 子模型.</p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./筛范畴.html" title="筛范畴 [筛范畴]">筛范畴</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="锥(拓扑学)"><header><h1><span class="taxon"></span>锥 (拓扑学) <a class="slug" href="./锥(拓扑学).html">[锥(拓扑学)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./拓扑学.html" title="拓扑学 [拓扑学]">拓扑学</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p><span class="link local"><a href="./拓扑学.html" title="拓扑学 [拓扑学]">拓扑空间</a></span> $X$ 的<strong>锥</strong> (cone) 是
+$$
+CX := \frac{X\times [0,1]}{X\times \{0\}}.
+$$</p>
+<p>注意, 当 $X = \varnothing$ 时, $CX = {*}$ 为单点. 因为
+$
+C\varnothing = \operatorname{colim}
+(
+{* \leftarrow \varnothing \to \varnothing}
+) = *.
+$</p>
+<h3>作为分层空间</h3>
+<p>若 $X\to P$ 为<span class="link local"><a href="./分层.html" title="分层 [分层]">分层空间</a></span>, 则 $X$ 上的锥带有分层:
+$$
+\frac{X\times [0,1]}{X\times \{0\}}\to P^{\triangleleft},
+$$
+其中 $P^{\triangleleft}$ 是偏序集 $P$ 上的<span class="link local"><a href="./锥(范畴论).html" title="锥 (范畴论) [锥(范畴论)]">锥</a></span>.</p>
+<h2>例</h2>
+<h3>奇点</h3>
+<p>所谓 “带奇点的流形”, 往往奇点附近的形状是某个流形的锥.</p>
+<p>相关页面:</p>
+<ul>
+<li><span class="link local"><a href="./cob-sing.html" title="带奇点配边假设 [cob-sing]">带奇点配边假设</a></span></li>
+<li><span class="link local"><a href="./Milnor纤维化.html" title="Milnor 纤维化 [Milnor纤维化]">Milnor 纤维化</a></span></li>
+</ul>
 </details></section></details></section></footer></article></div></body></html>
