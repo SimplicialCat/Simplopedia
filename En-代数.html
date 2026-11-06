@@ -882,7 +882,11 @@ $$</p>
 <li>态射 $[k] (X_1,\cdots,X_k) \to [\ell] (Y_1,\cdots,Y_\ell)$ 包括单纯形的态射 $\phi\colon [k] \to [\ell]$ 以及 $\Theta_{n-1}$ 中的态射 $X_i \to Y_j$ ($\phi(i-1) &lt; j \leq \phi(i)$);</li>
 <li>函子 $|{-}|\colon \Theta_n\to\Gamma$ 定义为 $|[k] (X_1,\cdots,X_k)| = \prod_{i=1}^k |X_i|$ (注意 $\Gamma$ 中的积为 $\langle n \rangle \times \langle m \rangle = \langle n+m \rangle$).</li>
 </ul>
-<p>直观上, $\Theta_n$ 的对象 $[k] (X_1,\cdots,X_k)$ 是一个<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于 $\widehat {\Theta_{n-1}}$, 以 $0,1,\cdots,k$ 为对象的范畴, 态射对象为 $\operatorname{Hom}(i-1,i)= X_i$.</p>
+<p>直观上,</p>
+<ul>
+<li>$\Theta_n$ 的对象 $[k] (X_1,\cdots,X_k)$ 是一个<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于 $\widehat {\Theta_{n-1}}$, 以 $0,1,\cdots,k$ 为对象的范畴, 态射对象为 $\operatorname{Hom}(i-1,i)= X_i$;</li>
+<li>函子 $\Theta_n\to\Gamma$ 指出了每个对象所含有的基本对象的数目, 使得 $\Theta_n$ 构成<span class="link local"><a href="./HADR-cart-patt.html" title="HADR - 积性模式 [HADR-cart-patt]">积性模式</a></span>.</li>
+</ul>
 <p>如下是 $\Theta_3$ 的一个对象的示意:</p>
 <img src="/assets/globular.svg" alt="" width="300" style="display:block; margin:auto;">
 <p>这个对象写出来是</p>
@@ -1081,6 +1085,7 @@ $$
 <li>单子是<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>的推广. 许多<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数结构</a></span>可理解为某个<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>; 此时这个单子给出 “自由代数”. 这件事可由<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性函子</a></span>描述.</li>
 <li>在 <span class="link local"><a href="./2-范畴.html" title="2-范畴 [2-范畴]">$2$-范畴</a></span>的理论中, 单子可视为 $1$ 到 $\mathsf{Cat}$ 的<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span>, 从而进一步推广为 $1$ 到一般的 $2$-范畴的<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span>.</li>
 </ul>
+<p><strong>注</strong>. 常常, 带额外结构的单子 (如松对称幺半单子, 充实单子, 多项式单子等) 可理解为能提升到适当的 $2$-范畴的单子. 参见 <span class="link local"><a href="./HeineMonadicity.html" title="A duality between monads and monadic morphisms [HeineMonadicity]">Hadrian Heine</a></span>.</p>
 <h3>代数结构</h3>
 <p>单子是记录许多代数结构的统一的工具. 对于每种代数结构都有一个<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>函子, 对应的单子是自由和遗忘的复合, 一般的结构则是<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>.</p>
 <ul>
@@ -1241,7 +1246,7 @@ $$</p>
 <p>缠结假设可由<span class="link local"><a href="./cob-sing.html" title="带奇点配边假设 [cob-sing]">带奇点配边假设</a></span>推出.</p>
 <h2>陈述</h2>
 <p><strong>注</strong>. 由于文献 (<span class="link local"><a href="./LurieCob.html" title="On the Classification of Topological Field Theories [LurieCob]">Lurie</a></span>, <span class="link local"><a href="./AyalaFrancisCob.html" title="The cobordism hypothesis [AyalaFrancisCob]">Ayala–Francis</a></span> 等) 记号不一, 此处使用的是一个和他们都不相同, 但看上去比较合理的记号.</p>
-<p>我们用 $\operatorname{Tang}_{k}^{\mathbb E_n}$ 表示如下的 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>:</p>
+<p>我们用 $\mathsf{Tang}_{k}^{\mathbb E_n}$ 表示如下的 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>:</p>
 <ul>
 <li>其对象为 $\mathbb{R}^n$ (或 $n$ 维圆盘 $D^n$) 中的带标架 $0$ 维子流形, 其上 $\mathbb E_n$-结构是直观的;</li>
 <li>其 $i\leq k$ 阶态射为 $\mathbb{R}^{i+n}$ 中的 $i$ 维带标架<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span>;</li>
@@ -1249,19 +1254,25 @@ $$</p>
 </ul>
 <p>如下是 $\mathsf{Tang}_1^{\mathbb E_2}$ 中的一个 $1$-态射的示意.</p>
 <img src="/assets/tangle-Tang-1-E2.svg" alt="" width="250" style="display:block; margin:auto;">
-<p><strong>命题</strong>. 范畴 $\operatorname{Tang}_{k}^{\mathbb E_n}$ 是一个<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>.</p>
-<p>等价的陈述是: 范畴 $\operatorname{Tang}_{k}^{\mathbb E_n}$ 是一个对象自由生成的<span class="link local"><a href="./刚性幺半范畴.html" title="刚性幺半范畴 [刚性幺半范畴]">刚性</a></span> <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>.</p>
+<p><strong>命题</strong>. 范畴 $\mathsf{Tang}_{k}^{\mathbb E_n}$ 是一个<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>.</p>
+<p>等价的陈述是: 范畴 $\mathsf{Tang}_{k}^{\mathbb E_n}$ 是一个对象自由生成的<span class="link local"><a href="./刚性幺半范畴.html" title="刚性幺半范畴 [刚性幺半范畴]">刚性</a></span> <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>.</p>
 <p>由于<span class="link local"><a href="./逆环假设.html" title="逆环假设 [逆环假设]">逆环假设</a></span>, 上述命题还有一个用 $(\infty,n+k)$-范畴陈述的版本.</p>
-<p>我们用 $\operatorname{Tang}_{k}^{(n)}$ 表示如下的 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n+k)$-范畴</a></span>:</p>
+<p>我们用 $\mathsf{Tang}_{k}^{(n)}$ 表示如下的 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n+k)$-范畴</a></span>:</p>
 <ul>
 <li>其 $i$ 阶态射为 $\mathbb{R}^{i}$ 中的余 $n$ 维带标架<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span>;</li>
 <li>其高于 $n+k$ 阶态射为<span class="link local"><a href="./同痕.html" title="同痕 [同痕]">同痕</a></span>.</li>
 </ul>
-<p>换言之, $\operatorname{Tang}_{k}^{(n)} = \mathrm{B}^n \operatorname{Tang}_{k}^{\mathbb E_n}$.</p>
-<p><strong>命题</strong>. 范畴 $\operatorname{Tang}_{k}^{(n)}$ 是一个基点的<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可伴随</a></span> $n$ 阶自同态所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n+k)$-范畴</a></span>.</p>
+<p>换言之, $\mathsf{Tang}_{k}^{(n)} = \mathrm{B}^n \mathsf{Tang}_{k}^{\mathbb E_n}$.</p>
+<p><strong>命题</strong>. 范畴 $\mathsf{Tang}_{k}^{(n)}$ 是一个基点的<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可伴随</a></span> $n$ 阶自同态所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n+k)$-范畴</a></span>.</p>
+<h3>一般流形版本</h3>
+<p>缠结范畴 $\mathsf{Tang}_k^{\mathbb E_n}$ 可视为范畴 $\mathsf{Tang}_k^{\mathbb E_V}$ 在 $V = \mathbb{R}^n$ 的特例. 其大致描述如下:</p>
+<ul>
+<li>$\mathsf{Tang}_k^{\mathbb E_V}$ 的对象为 $V$ 的 $0$ 维嵌入标架子流形;</li>
+<li>…</li>
+</ul>
 <h3>与配边假设的关系</h3>
 <p><span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span> $\mathsf{Bord}_k$ 是
-$\operatorname{Tang}_{k}^{\mathbb E_n}$
+$\mathsf{Tang}_{k}^{\mathbb E_n}$
 “在 $n \geq \infty$ 的极限”; 人们也称其为<strong>稳定</strong>情形. 此时 (至少直观上) 缠结假设趋向于<span class="link local"><a href="./配边假设.html" title="配边假设 [配边假设]">配边假设</a></span>: $\mathsf{Bord}_k$ 是一个<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span> <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="逆环假设"><header><h1><span class="taxon"></span>逆环假设 <a class="slug" href="./逆环假设.html">[逆环假设]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
@@ -1294,6 +1305,16 @@ $$</p>
 \end{aligned}\ 
 \mathsf{Alg}_{\mathbb E_1}
 (\mathsf{Ani}).
+$$</p>
+<p>$n=1,k=1$ - 仅有一个对象的 <span class="link local"><a href="./2-范畴.html" title="2-范畴 [2-范畴]">$2$-范畴</a></span>等同于<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>:</p>
+<p>$$
+\mathsf{Cat}_{(\infty,2)}^{*,\geq 1}
+\ \begin{aligned}
+\overset{\Omega}{\longrightarrow}\\
+\underset{\mathrm{B}}{\longleftarrow}
+\end{aligned}\ 
+\mathsf{Alg}_{\mathbb E_1}
+(\mathsf{Cat}).
 $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="逆环路空间"><header><h1><span class="taxon"></span>逆环路空间 <a class="slug" href="./逆环路空间.html">[逆环路空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>

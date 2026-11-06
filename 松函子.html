@@ -879,6 +879,7 @@ $$
 <li>单子是<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>的推广. 许多<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数结构</a></span>可理解为某个<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>; 此时这个单子给出 “自由代数”. 这件事可由<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性函子</a></span>描述.</li>
 <li>在 <span class="link local"><a href="./2-范畴.html" title="2-范畴 [2-范畴]">$2$-范畴</a></span>的理论中, 单子可视为 $1$ 到 $\mathsf{Cat}$ 的<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span>, 从而进一步推广为 $1$ 到一般的 $2$-范畴的<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span>.</li>
 </ul>
+<p><strong>注</strong>. 常常, 带额外结构的单子 (如松对称幺半单子, 充实单子, 多项式单子等) 可理解为能提升到适当的 $2$-范畴的单子. 参见 <span class="link local"><a href="./HeineMonadicity.html" title="A duality between monads and monadic morphisms [HeineMonadicity]">Hadrian Heine</a></span>.</p>
 <h3>代数结构</h3>
 <p>单子是记录许多代数结构的统一的工具. 对于每种代数结构都有一个<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>函子, 对应的单子是自由和遗忘的复合, 一般的结构则是<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>.</p>
 <ul>
@@ -1024,13 +1025,15 @@ $$</p>
 </ul>
 <p>见<span class="link local"><a href="./双边杠构造.html" title="双边杠构造 [双边杠构造]">双边杠构造</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="松幺半函子"><header><h1><span class="taxon"></span>松幺半函子 <a class="slug" href="./松幺半函子.html">[松幺半函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
 <p>松幺半函子是<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>之间的一种函子 $F \colon \mathcal C \to\mathcal D$, 它不要求保持幺半结构, 而是要求具有某些单方向的态射, 例如
 $$
  F(X) \otimes F(Y) \to F(X \otimes Y) .
 $$
 这些态射不一定可逆.</p>
 <p>若将幺半范畴视为单对象 $2$-范畴 $\mathbf{B}\mathcal C$, 则松幺半函子是<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span>的特例.</p>
-<p>对一般的算畴 $\mathcal O$, 也可定义松 $\mathcal O$-幺半函子.</p>
+<p>松幺半函子也可视为<span class="link local"><a href="./松态射.html" title="松态射 [松态射]">松态射</a></span>的特例.</p>
+<p>对一般的<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (或<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>) $\mathcal O$, 也可定义松 $\mathcal O$-幺半函子.</p>
 <h2>定义</h2>
 <h3>通过算子范畴</h3>
 <h2>例</h2>
@@ -1038,12 +1041,14 @@ $$
 <p>对于幺半范畴 $\mathcal C$, 松幺半函子 $1\to \mathcal C$ 等同于 $\mathcal C$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="松态射"><header><h1><span class="taxon"></span>松态射 <a class="slug" href="./松态射.html">[松态射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p><span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>中的<span class="link local"><a href="./代数.html" title="代数 [代数]">代数结构</a></span>之间有一种 “态射”, 未必像真正的态射那样保持等式, 而是将等式变成单向的关系. 代数结构之间的这种 “态射” 称为<strong>松态射</strong> (lax morphism).</p>
+<p><span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>中的<span class="link local"><a href="./代数.html" title="代数 [代数]">代数结构</a></span>之间有一种 “态射”, 未必像真正的态射那样保持等式, 而是将等式变成单向的 (不可逆的) 关系. 代数结构之间的这种 “态射” 称为<strong>松态射</strong> (lax morphism).</p>
 <h2>例</h2>
-<ul>
-<li><span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span></li>
-<li><span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">松 (对称) 幺半函子</a></span></li>
-</ul>
+<h3>松函子</h3>
+<p>详见<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span></p>
+<h3>松幺半函子</h3>
+<p>详见<span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">松幺半函子</a></span>.</p>
+<h3>松自然变换</h3>
+<p>$2$-范畴之间的函子之间的<span class="link local"><a href="./松自然变换.html" title="松自然变换 [松自然变换]">松自然变换</a></span>也可以视为松态射.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="松极限"><header><h1><span class="taxon"></span>松极限 <a class="slug" href="./松极限.html">[松极限]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>松极限是<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>在高阶范畴中的推广; 这里高阶范畴是指 <span class="link local"><a href="./n-r-范畴.html" title="(n,r)-范畴 [n-r-范畴]">$(\infty,r)$-范畴</a></span> ($r\geq 2$).</p>

@@ -1080,6 +1080,8 @@ $$
 <h3>Balmer 谱</h3>
 <p>前述<span class="link local"><a href="./geometry-DAGV.html" title="几何 (带结构的意象) [geometry-DAGV]">几何</a></span>构造的谱能够恢复出 <span class="link local"><a href="./Balmer谱.html" title="Balmer 谱 [Balmer谱]">Balmer 谱</a></span>的概念.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="homalg-1-tri-st"><header><h1><span class="taxon"></span>从三角范畴到稳定范畴 <a class="slug" href="./homalg-1-tri-st.html">[homalg-1-tri-st]</a></h1><div class="metadata"><ul><li class="meta-item">讲义</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>三角范畴及其缺陷</h2>
+<h2>稳定 $\infty$-范畴</h2>
 <p><strong>定义</strong> (特殊三角)
 范畴 $\mathcal C$ 中的<strong>特殊三角</strong> (distinguished triangle) 是指下图,
 $$
@@ -1090,6 +1092,7 @@ X &amp; \rightarrow &amp; Y &amp; \rightarrow &amp; 0 \\
 \end{array}
 $$
 其中两个方块均为<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span> (从而整个长方形也是推出).</p>
+<h2>稳定 $\infty$-范畴的同伦范畴</h2>
 <p><strong>定理</strong> (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie</a></span> 定理 1.1.2.14).
 设 $\mathcal C$ 为<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>, 则同伦范畴 $h\mathcal C$ 为三角范畴.</p>
 <p>我们验证八面体公理.</p>
@@ -1102,7 +1105,12 @@ X &amp; \rightarrow &amp; Y &amp; \rightarrow &amp; Z &amp; \rightarrow &amp; 0 
  &amp;  &amp; 0 &amp; \rightarrow &amp; Z/Y &amp; \rightarrow &amp; Y[1] &amp; \rightarrow &amp; (Y/X)[1]
 \end{array}
 $$</p>
+<h2>谱与稳定化</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="homalg-2-der-cat"><header><h1><span class="taxon"></span>导出范畴 <a class="slug" href="./homalg-2-der-cat.html">[homalg-2-der-cat]</a></h1><div class="metadata"><ul><li class="meta-item">讲义</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>引言</h2>
+<p>上一讲介绍了<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>, 并说明它的<span class="link local"><a href="./同伦范畴.html" title="同伦范畴 [同伦范畴]">同伦范畴</a></span>是三角范畴; 实践中, 基本上每个三角范畴都是由某个更体现其本质的稳定 $\infty$-范畴产生的.</p>
+<p>稳定 $\infty$-范畴上可以附加一根衡量同伦信息层级的标尺, 称为 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">$t$-结构</a></span>; 处于标尺最中间的部分称为它的心. 心是一个 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>. 反过来, 从一个 Abel 范畴开始可以典范地构造一个稳定 $\infty$-范畴以之为心, 这就是<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>.</p>
+<h2>Abel 范畴</h2>
 <p>设 $\mathcal A$ 为 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>.</p>
 <h2>导出范畴的泛性质</h2>
 <p><strong>命题</strong> (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 定理 1.3.3.2). 设 $\mathcal A$ 为 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>, 其中<span class="link local"><a href="./投射对象.html" title="投射对象 [投射对象]">投射对象</a></span>充足. 对任意带有左完备 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">t-结构</a></span>的<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span> $\mathcal C$, 右正合函子 $\mathcal A \to \mathcal C^{\heartsuit}$ 可唯一地延拓为右 t-正合函子 $\mathsf{D}^-(\mathcal A)\to \mathcal C$. 换言之, 导出范畴 $\mathsf{D}^-(\mathcal A)$ 是万有的以 $\mathcal A$ 为心的稳定范畴.</p>
@@ -2469,6 +2477,7 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="谱序列"><header><h1><span class="taxon"></span>谱序列 <a class="slug" href="./谱序列.html">[谱序列]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>在带有 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">$t$-结构</a></span>的<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>中, 给定对象 $X$ 的一个<span class="link local"><a href="./滤过.html" title="滤对象 [滤过]">滤过</a></span> $X^\bullet$, 谱序列让我们用各<span class="link local"><a href="./关联分次代数.html" title="关联分次对象 [关联分次代数]">分次</a></span> $\operatorname{gr}^s X$ 的<span class="link local"><a href="./同伦群(稳定同伦论).html" title="同伦群 (稳定同伦论) [同伦群(稳定同伦论)]">同伦群</a></span>来研究 $X$ 本身的同伦群.</p>
+<p>相关讲义: <span class="link local"><a href="./homalg-4-sseq.html" title="谱序列 [homalg-4-sseq]">谱序列</a></span></p>
 <h2>定义</h2>
 <p>设 $\mathcal A$ 为 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>. 定义 $\mathcal A$ 中的一个谱序列为如下资料:</p>
 <ul>

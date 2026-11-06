@@ -1421,6 +1421,7 @@ $A\otimes M\to M$
 <li>单子是<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数理论</a></span>的推广. 许多<span class="link local"><a href="./代数理论.html" title="代数理论 [代数理论]">代数结构</a></span>可理解为某个<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>; 此时这个单子给出 “自由代数”. 这件事可由<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性函子</a></span>描述.</li>
 <li>在 <span class="link local"><a href="./2-范畴.html" title="2-范畴 [2-范畴]">$2$-范畴</a></span>的理论中, 单子可视为 $1$ 到 $\mathsf{Cat}$ 的<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span>, 从而进一步推广为 $1$ 到一般的 $2$-范畴的<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span>.</li>
 </ul>
+<p><strong>注</strong>. 常常, 带额外结构的单子 (如松对称幺半单子, 充实单子, 多项式单子等) 可理解为能提升到适当的 $2$-范畴的单子. 参见 <span class="link local"><a href="./HeineMonadicity.html" title="A duality between monads and monadic morphisms [HeineMonadicity]">Hadrian Heine</a></span>.</p>
 <h3>代数结构</h3>
 <p>单子是记录许多代数结构的统一的工具. 对于每种代数结构都有一个<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>函子, 对应的单子是自由和遗忘的复合, 一般的结构则是<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子上的代数</a></span>.</p>
 <ul>
@@ -2001,6 +2002,15 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="拟三角代数"><header><h1><span class="taxon"></span>拟三角代数 <a class="slug" href="./拟三角代数.html">[拟三角代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link local"><a href="./双代数.html" title="双代数 [双代数]">双代数</a></span>上的<strong>拟三角</strong> (quasitriangular) 结构是使其<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>范畴由<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>升级为<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半范畴</a></span>所需的结构.</p>
+<h2>定义</h2>
+<p>拟三角代数是 <span class="link local"><a href="./Hopf代数.html" title="Hopf 代数 [Hopf代数]">Hopf 代数</a></span> $A$ 配备 $R\in A^{\otimes 2}$ (或某种完备化的元素), 满足</p>
+<ul>
+<li>$\sigma\Delta a = R \cdot \Delta a \cdot R^{-1}$, 其中 $\sigma$ 交换两个分量;</li>
+<li>$(\Delta\otimes\mathrm{id}) R = R_{13} R_{12}$;</li>
+<li>$(\mathrm{id}\otimes\Delta) R = R_{13} R_{23}$.</li>
+</ul>
+<h2>例</h2>
+<p>$U_h \mathfrak {sl}_2$ 为拟三角代数.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="杠–余杠对偶"><header><h1><span class="taxon"></span>杠–余杠对偶 <a class="slug" href="./杠–余杠对偶.html">[杠–余杠对偶]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span> $\mathcal C$ 具有<span class="link local"><a href="./几何实现(单纯图表的余极限).html" title="几何实现 (作为单纯图表的余极限) [几何实现(单纯图表的余极限)]">几何实现</a></span>且单位 $1$ 是<span class="link local"><a href="./终对象.html" title="终对象 [终对象]">终对象</a></span>. 对于<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span> $A$, 通过唯一的<span class="link local"><a href="./增广结合代数.html" title="增广结合代数 [增广结合代数]">增广</a></span> $A\to 1$, 单位 $1$ 具有 $A$ 上的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">左模</a></span>与右模结构. 考虑<span class="link local"><a href="./双边杠构造.html" title="双边杠构造 [双边杠构造]">双边杠构造</a></span>

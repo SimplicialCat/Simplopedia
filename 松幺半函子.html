@@ -826,13 +826,15 @@
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
 <article><section class="block" data-taxon=""><details open><summary id="松幺半函子"><header><h1><span class="taxon"></span>松幺半函子 <a class="slug" href="./松幺半函子.html">[松幺半函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
 <p>松幺半函子是<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>之间的一种函子 $F \colon \mathcal C \to\mathcal D$, 它不要求保持幺半结构, 而是要求具有某些单方向的态射, 例如
 $$
  F(X) \otimes F(Y) \to F(X \otimes Y) .
 $$
 这些态射不一定可逆.</p>
 <p>若将幺半范畴视为单对象 $2$-范畴 $\mathbf{B}\mathcal C$, 则松幺半函子是<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span>的特例.</p>
-<p>对一般的算畴 $\mathcal O$, 也可定义松 $\mathcal O$-幺半函子.</p>
+<p>松幺半函子也可视为<span class="link local"><a href="./松态射.html" title="松态射 [松态射]">松态射</a></span>的特例.</p>
+<p>对一般的<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (或<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>) $\mathcal O$, 也可定义松 $\mathcal O$-幺半函子.</p>
 <h2>定义</h2>
 <h3>通过算子范畴</h3>
 <h2>例</h2>
@@ -1121,8 +1123,9 @@ $$
 <p>注意 $\operatorname{Env}_{\mathcal O} (\mathcal P)$
 一个直观: $\Gamma$ 上的弱 Segal 纤维化是<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>, 有多个对象到一个对象的态射, 但不一定有张量积; 其 $\Gamma$-幺半包络 (即对称幺半包络) 就是由所有形式记号 $x_1 \otimes \cdots\otimes x_n$ 构成的范畴, 满足态射 $x_1 \otimes \cdots\otimes x_n \to y$ 等同于原来多重范畴中的多重态射 $(x_1,\cdots,x_n) \to y$.</p>
 <h3>与松函子的关系</h3>
-<p>设 $\mathcal C \to \Gamma$, $\mathcal D \to \Gamma$ 为 Segal 纤维化, 对应两个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 将它们遗忘为弱 Segal 纤维化, 则弱 Segal 纤维化的态射 $\mathcal C \to \mathcal D$ 等同于 $\mathcal C$ 到 $\mathcal D$ 的<span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">余松对称幺半函子</a></span>.</p>
-<p>见<span class="link local"><a href="./松态射.html" title="松态射 [松态射]">松态射</a></span>.</p>
+<p>设 $\mathcal C \to \Gamma$, $\mathcal D \to \Gamma$ 为 Segal 纤维化, 对应两个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 将它们遗忘为弱 Segal 纤维化, 则弱 Segal 纤维化的态射 $\mathcal C \to \mathcal D$ 等同于 $\mathcal C$ 到 $\mathcal D$ 的 <span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">(余) 松对称幺半函子</a></span>.</p>
+<p>更一般地, 对于代数模式 $\mathcal O$, 设 $\mathcal C,\mathcal D$ 为 $\mathcal O$-幺半范畴, 则其作为弱 Segal 纤维化的态射等同于 (余) 松 $\mathcal O$-幺半函子.</p>
+<p>另见<span class="link local"><a href="./松态射.html" title="松态射 [松态射]">松态射</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="松函子"><header><h1><span class="taxon"></span>松函子 <a class="slug" href="./松函子.html">[松函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>松函子是 <span class="link local"><a href="./2-范畴.html" title="2-范畴 [2-范畴]">$2$-范畴</a></span>及更高阶范畴之间的一种态射 $F \colon \mathcal C \to\mathcal D$, 它不一定是函子, 因为它不要求保持态射的复合等结构, 而是要求具有某些单方向的态射, 例如
 $$
@@ -1136,12 +1139,14 @@ $$
 <p><span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">松幺半函子</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="松态射"><header><h1><span class="taxon"></span>松态射 <a class="slug" href="./松态射.html">[松态射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p><span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>中的<span class="link local"><a href="./代数.html" title="代数 [代数]">代数结构</a></span>之间有一种 “态射”, 未必像真正的态射那样保持等式, 而是将等式变成单向的关系. 代数结构之间的这种 “态射” 称为<strong>松态射</strong> (lax morphism).</p>
+<p><span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>中的<span class="link local"><a href="./代数.html" title="代数 [代数]">代数结构</a></span>之间有一种 “态射”, 未必像真正的态射那样保持等式, 而是将等式变成单向的 (不可逆的) 关系. 代数结构之间的这种 “态射” 称为<strong>松态射</strong> (lax morphism).</p>
 <h2>例</h2>
-<ul>
-<li><span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span></li>
-<li><span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">松 (对称) 幺半函子</a></span></li>
-</ul>
+<h3>松函子</h3>
+<p>详见<span class="link local"><a href="./松函子.html" title="松函子 [松函子]">松函子</a></span></p>
+<h3>松幺半函子</h3>
+<p>详见<span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">松幺半函子</a></span>.</p>
+<h3>松自然变换</h3>
+<p>$2$-范畴之间的函子之间的<span class="link local"><a href="./松自然变换.html" title="松自然变换 [松自然变换]">松自然变换</a></span>也可以视为松态射.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="算畴"><header><h1><span class="taxon"></span>算畴 <a class="slug" href="./算畴.html">[算畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>一个算畴表达了<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>的对象上可能具有的一族多元运算, 以及运算之间的关系. 算畴又叫<strong>多重范畴</strong> (multicategory), 是范畴的推广, 由<strong>颜色</strong> (多重范畴的对象) 与<strong>运算</strong> (多个对象到一个对象的态射) 构成.</p>

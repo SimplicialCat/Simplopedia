@@ -827,8 +827,51 @@
 
 <article><section class="block" data-taxon=""><details open><summary id="直化"><header><h1><span class="taxon"></span>直化 <a class="slug" href="./直化.html">[直化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p>将范畴 $\mathcal C$ 上的<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">纤维范畴</a></span>对应到函子 $\mathcal C \to \mathsf{Cat}$, 称为<strong>直化</strong> (straightening); 反之称为<strong>反直化</strong> (unstraightening).</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="等变映射"><header><h1><span class="taxon"></span>等变映射 <a class="slug" href="./等变映射.html">[等变映射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>将范畴 $\mathcal C$ 上的<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">纤维范畴</a></span>对应到函子 $\mathcal C \to \mathsf{Cat}$, 称为<strong>直化</strong> (straightening); 反之称为<strong>反直化</strong> (unstraightening). (反) 直化也称为 <span class="link local"><a href="./Grothendieck构造.html" title="Grothendieck 构造 [Grothendieck构造]">Grothendieck 构造</a></span>.</p>
+<h2>陈述</h2>
+<p>设 $\mathcal C$ 为范畴, 记 $\mathsf{CartFib}(\mathcal C)$ 为其上<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">拉回纤维化</a></span>的 $2$-范畴, 则
+$$
+\mathsf{CartFib}(\mathcal C) \overset{\simeq}{\to} \mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathsf{Cat}).
+$$</p>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="HADR-cart-patt"><header><h1><span class="taxon"></span>HADR - 积性模式 <a class="slug" href="./HADR-cart-patt.html">[HADR-cart-patt]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><strong>定义</strong>. <strong>积性模式</strong> (Cartesian pattern) 是指一个代数模式 $\mathcal O$ 带有态射 $|\{-\}|\colon \mathcal O \to \Gamma^\flat$, 满足对任意 $X\in\mathcal O_{\mathrm{int}}$, 典范的函子
+$$
+(\mathcal O_{\mathrm{el}})_{/X} \to (\Gamma^\flat_{\mathrm{el}})_{/|X|}
+$$
+为等价. 其中</p>
+<ul>
+<li>$(\mathcal O_{\mathrm{el}})_{/X}$ 指的是 $\mathcal O$ 的基本对象到 $X$ 的<strong>惰性</strong>映射的范畴,</li>
+<li>$(\Gamma^\flat_{\mathrm{el}})_{/|X|}$是一个 $|X|$ 元离散集合.</li>
+</ul>
+<p>这就是说, 积性模式 $\mathcal O$ 的对象 $X$ 包含的基本对象构成离散有限集. 直观上, 每个对象 $X$ 都可想象为 $|X|$ 个基本对象 (颜色) 放在一起构成的对象.</p>
+<p>因此, 积性模式 $\mathcal O$ 的 Segal 对象
+$$
+F\colon \mathcal O^{\mathrm{op}}\to\mathcal C
+$$
+在探测对象 $X$ 上的取值等于其在基本对象上的取值的<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>:
+$$
+F(X) \overset{\simeq}{\to} \prod_{E\rightarrowtail X} F(E).
+$$
+这就是<strong>积性</strong>模式的名称的道理. 为了体现积性模式的特殊性, 我们称积性模式 $\mathcal O$ 的 Segal 对象为 $\mathcal O$-<strong>幺半群</strong> ($\mathcal O$-monoid).</p>
+<p>积性模式之间的态射 $f\colon \mathcal O\to\mathcal P$ 就定义为 $\Gamma$ 之上的代数模式态射:
+$$
+\begin{array}{ccc}
+\mathcal O &amp; \rightarrow &amp; \mathcal P \\
+ &amp; \searrow &amp; \downarrow \\
+ &amp;  &amp; \Gamma.
+\end{array}
+$$
+特别地, 对任意 $X\in\mathcal O$ 有 $|f(X)| = |X|$. 这就是说积性模式的态射保持一个对象的基本成分的数量.</p>
+<p><strong>例</strong>.</p>
+<ul>
+<li>Segal 态射 $\gamma\colon \Delta\to\Gamma$ 是积性模式.</li>
+<li>表达 $n$ 重结合代数的模式 $\Delta^n\to\Gamma$ 是积性模式, $|([k_1],\cdots,[k_n])| := \langle k_1\cdots k_n\rangle$.</li>
+<li><span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴</a></span> $\Theta_n\to\Gamma$ 是积性模式, 若 $|X_i| = \langle m_i\rangle$, 则 $|[k] (X_1,\cdots,X_k)| = \langle m_1+\cdots + m_k \rangle$).</li>
+<li><span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树的范畴</a></span> $\Omega\to\Gamma$ 是积性模式, 其中基本对象为花冠; 对于一棵树 $X\in\Omega$, $|X|$ 就是 $X$ 中节点的数目.</li>
+</ul>
+<h2>$\mathcal O$-幺半范畴和 $\mathcal O$-代数</h2>
+<p>对于积性模式 $\mathcal O$, 定义 $\mathcal O$-<strong>幺半范畴</strong>为 $\mathsf{Cat}$ 中的 $\mathcal O$-幺半群. 其<span class="link local"><a href="./直化.html" title="直化 [直化]">直化</a></span>为 $\mathcal O$ 上的<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">拉回纤维化</a></span> $\mathcal V\to \mathcal O$.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="等变映射"><header><h1><span class="taxon"></span>等变映射 <a class="slug" href="./等变映射.html">[等变映射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>等变映射是<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">群作用</a></span>的范畴中的态射. <span class="link local"><a href="./群.html" title="群 [群]">群</a></span> $G$ 的作用等同于 $\mathbf{B}G$ 出发的函子, 在某些场合下<span class="link local"><a href="./直化.html" title="直化 [直化]">反直化</a></span>得到 $\mathbf{B}G$ 上的对象
 $$

@@ -1153,7 +1153,7 @@ $$
 <li>在 $\infty$-算畴的例子中, 一些花形和边组成了一棵树;</li>
 </ul>
 <h3>3. 惰性映射与活性映射</h3>
-<p>上个公式中有一个没有解释的概念叫<strong>惰性映射</strong> (inert morphism). 直观上, 惰性映射就是是测试对象之间纯粹由 “几何形状的嵌入” 造成的映射, 是不表达任何 “代数运算” 的映射, 比如</p>
+<p>上个公式中有一个没有解释的概念叫<strong>惰性映射</strong> (inert morphism). 直观上, 惰性映射就是是测试对象之间纯粹由 “<strong>几何形状的嵌入</strong>” 造成的映射, 是不表达任何 “<strong>代数运算</strong>” 的映射, 比如</p>
 <ul>
 <li>$\mathbb E_\infty$-代数的测试对象 $\Gamma = \mathsf{Fin}_*^{\mathrm{op}}$ 中, 惰性映射 $S\to T$ 是给 $S$ 的每个元素指定 $T$ 的一个单元子集;</li>
 <li>$\mathbb A_\infty$-代数和 $\infty$-范畴的测试对象 $\Delta$ 中, 惰性映射就是区间的含入 $\{k\leq k+1\leq\cdots\leq l\}\subset [m]$;</li>
@@ -1165,7 +1165,7 @@ $$
 $$
 是全子范畴.</p>
 <p>我们将用 $\rightarrowtail$ 表示惰性映射.</p>
-<p>与惰性映射相对的是<strong>活性映射</strong> (active morphism) $\mathcal O_{\mathrm{act}}$, 就是那些专门用来表达代数运算的映射, 比如</p>
+<p>与惰性映射相对的是<strong>活性映射</strong> (active morphism) $\mathcal O_{\mathrm{act}}$, 就是那些专门用来表达<strong>代数运算</strong>的映射, 比如</p>
 <ul>
 <li>$\mathbb E_\infty$-代数的测试对象 $\Gamma = \mathsf{Fin}_*^{\mathrm{op}}$ 中, 活性映射 $S\to T$ 就是给 $S$ 的所有元素指定的 $T$ 的子集并在一起等于 $T$ 的映射, 其中 $\langle 1\rangle \to \langle 2\rangle$, $1\mapsto \{1,2\}$ 表达了 $\mathbb E_\infty$-代数中的乘法;</li>
 <li>$\mathbb A_\infty$-代数和 $\infty$-范畴的测试对象 $\Delta$ 中, 活性映射 $[n] \to [m]$ 就是保持端点的映射, 其中 $[1] \to [2], 0\mapsto 0, 1\mapsto 2$ 表达了 $\mathbb A_\infty$-代数中的乘法和 $\infty$-范畴中态射的复合;</li>
@@ -1179,6 +1179,12 @@ $$
 <li>$\Delta$ 中, 态射 $f\colon [n] \to [m]$ 可分解为 $[n]\leadsto \{f(0)\leq \cdots \leq f(n)\}\rightarrowtail [m]$.</li>
 </ul>
 <h2>定义</h2>
+<h3>代数模式</h3>
+<p>一个<strong>代数模式</strong>是如下资料:</p>
+<ul>
+<li>一个范畴 $\mathcal O$, 带有<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">正交分解系</a></span> $(\mathcal O_{\mathrm{int}},\mathcal O_{\mathrm{act}})$;</li>
+<li>一个<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全子范畴</a></span> $\mathcal O_{\mathrm{el}}\hookrightarrow\mathcal O_{\mathrm{int}}$.</li>
+</ul>
 <h3>模型 (Segal 对象)</h3>
 <p>给定有适当<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>的范畴 $\mathcal C$, 代数模式 $\mathcal O$ 的<strong>模型</strong> (或称 <strong>Segal 对象</strong>) 是函子 $F\colon \mathcal O^{\mathrm{op}} \to \mathcal C$, 满足 $F|_{\mathcal O_{\mathrm{int}}}$ 是 $F|_{\mathcal O_{\mathrm{el}}}$ 的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">右 Kan 扩张</a></span>, 或等价地
 $$
@@ -1729,8 +1735,9 @@ $$
 <p>注意 $\operatorname{Env}_{\mathcal O} (\mathcal P)$
 一个直观: $\Gamma$ 上的弱 Segal 纤维化是<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>, 有多个对象到一个对象的态射, 但不一定有张量积; 其 $\Gamma$-幺半包络 (即对称幺半包络) 就是由所有形式记号 $x_1 \otimes \cdots\otimes x_n$ 构成的范畴, 满足态射 $x_1 \otimes \cdots\otimes x_n \to y$ 等同于原来多重范畴中的多重态射 $(x_1,\cdots,x_n) \to y$.</p>
 <h3>与松函子的关系</h3>
-<p>设 $\mathcal C \to \Gamma$, $\mathcal D \to \Gamma$ 为 Segal 纤维化, 对应两个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 将它们遗忘为弱 Segal 纤维化, 则弱 Segal 纤维化的态射 $\mathcal C \to \mathcal D$ 等同于 $\mathcal C$ 到 $\mathcal D$ 的<span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">余松对称幺半函子</a></span>.</p>
-<p>见<span class="link local"><a href="./松态射.html" title="松态射 [松态射]">松态射</a></span>.</p>
+<p>设 $\mathcal C \to \Gamma$, $\mathcal D \to \Gamma$ 为 Segal 纤维化, 对应两个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 将它们遗忘为弱 Segal 纤维化, 则弱 Segal 纤维化的态射 $\mathcal C \to \mathcal D$ 等同于 $\mathcal C$ 到 $\mathcal D$ 的 <span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">(余) 松对称幺半函子</a></span>.</p>
+<p>更一般地, 对于代数模式 $\mathcal O$, 设 $\mathcal C,\mathcal D$ 为 $\mathcal O$-幺半范畴, 则其作为弱 Segal 纤维化的态射等同于 (余) 松 $\mathcal O$-幺半函子.</p>
+<p>另见<span class="link local"><a href="./松态射.html" title="松态射 [松态射]">松态射</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="泛等性"><header><h1><span class="taxon"></span>泛等性 <a class="slug" href="./泛等性.html">[泛等性]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>在<span class="link local"><a href="./类型论.html" title="类型论 [类型论]">类型论</a></span>或<span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span>中, <strong>泛等性</strong> (univalence) 是两种相等之间的等价: 对于类型 $A,B$, 有

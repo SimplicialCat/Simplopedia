@@ -956,6 +956,8 @@ $$
 <p><strong>例</strong>. 记 $\mathsf{Triv} := \Gamma_{\mathrm{int}} \to \Gamma$, 称之为平凡算畴. 平凡算畴的代数就是没有任何结构的对象.</p>
 <p><strong>例</strong>. 记 $\mathbb E_0 \to \Gamma$ 为 $\Gamma$ 中 “将每个元素对应到一个至多一元子集” 的映射构成的宽子范畴, $\mathbb E_0$-代数就是<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点对象</a></span>.</p>
 <p><strong>例</strong>. $\Gamma$ 上的 Segal 纤维化 $\mathcal C \to \Gamma$, 对应于 Segal 对象 $\Gamma^{\mathrm{op}} \to \mathsf{Cat}$, 即<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> (其底层范畴为 $\mathcal C_{\langle 1\rangle}$); 它也构成对称算畴.</p>
+<h2>弱 Segal 纤维化</h2>
+<p>详见<span class="link local"><a href="./弱Segal纤维化.html" title="弱 Segal 纤维化 (代数体) [弱Segal纤维化]">弱 Segal 纤维化</a></span>.</p>
 <h2>非对称算畴</h2>
 <p>称 $\Delta$ 上的<span class="link local"><a href="./弱Segal纤维化.html" title="弱 Segal 纤维化 (代数体) [弱Segal纤维化]">弱 Segal 纤维化</a></span>为<strong>非对称算畴</strong>. 直观上, 一个算畴给出一族无序 $n$ 元运算, 而一个非对称算畴给出一族有序 $n$ 元运算.</p>
 <p><strong>例</strong>. 记 $\Delta_{\leq n} \hookrightarrow \Delta$ 为对象 $[0],[1],\cdots,[n]$ 构成的全子范畴, 则 $\Delta_{\leq n}$ 继承 $\Delta$ 的代数模式结构, 构成一个非对称算畴; 称该模式为 <span class="link local"><a href="./An-代数.html" title="A_n-代数 [An-代数]">$\mathbb A_n$</a></span>.</p>
@@ -981,6 +983,45 @@ $$
 $$
 其底层范畴为 $\{\langle 1 \rangle \leadsto p(c)\}$.</p>
 </details></section></p>
+<p><section class="block" data-taxon=""><details ><summary id="HADR-cart-patt"><header><h1><span class="taxon"></span>HADR - 积性模式 <a class="slug" href="./HADR-cart-patt.html">[HADR-cart-patt]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><strong>定义</strong>. <strong>积性模式</strong> (Cartesian pattern) 是指一个代数模式 $\mathcal O$ 带有态射 $|\{-\}|\colon \mathcal O \to \Gamma^\flat$, 满足对任意 $X\in\mathcal O_{\mathrm{int}}$, 典范的函子
+$$
+(\mathcal O_{\mathrm{el}})_{/X} \to (\Gamma^\flat_{\mathrm{el}})_{/|X|}
+$$
+为等价. 其中</p>
+<ul>
+<li>$(\mathcal O_{\mathrm{el}})_{/X}$ 指的是 $\mathcal O$ 的基本对象到 $X$ 的<strong>惰性</strong>映射的范畴,</li>
+<li>$(\Gamma^\flat_{\mathrm{el}})_{/|X|}$是一个 $|X|$ 元离散集合.</li>
+</ul>
+<p>这就是说, 积性模式 $\mathcal O$ 的对象 $X$ 包含的基本对象构成离散有限集. 直观上, 每个对象 $X$ 都可想象为 $|X|$ 个基本对象 (颜色) 放在一起构成的对象.</p>
+<p>因此, 积性模式 $\mathcal O$ 的 Segal 对象
+$$
+F\colon \mathcal O^{\mathrm{op}}\to\mathcal C
+$$
+在探测对象 $X$ 上的取值等于其在基本对象上的取值的<span class="link local"><a href="./积(范畴论).html" title="积 (范畴论) [积(范畴论)]">积</a></span>:
+$$
+F(X) \overset{\simeq}{\to} \prod_{E\rightarrowtail X} F(E).
+$$
+这就是<strong>积性</strong>模式的名称的道理. 为了体现积性模式的特殊性, 我们称积性模式 $\mathcal O$ 的 Segal 对象为 $\mathcal O$-<strong>幺半群</strong> ($\mathcal O$-monoid).</p>
+<p>积性模式之间的态射 $f\colon \mathcal O\to\mathcal P$ 就定义为 $\Gamma$ 之上的代数模式态射:
+$$
+\begin{array}{ccc}
+\mathcal O &amp; \rightarrow &amp; \mathcal P \\
+ &amp; \searrow &amp; \downarrow \\
+ &amp;  &amp; \Gamma.
+\end{array}
+$$
+特别地, 对任意 $X\in\mathcal O$ 有 $|f(X)| = |X|$. 这就是说积性模式的态射保持一个对象的基本成分的数量.</p>
+<p><strong>例</strong>.</p>
+<ul>
+<li>Segal 态射 $\gamma\colon \Delta\to\Gamma$ 是积性模式.</li>
+<li>表达 $n$ 重结合代数的模式 $\Delta^n\to\Gamma$ 是积性模式, $|([k_1],\cdots,[k_n])| := \langle k_1\cdots k_n\rangle$.</li>
+<li><span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">Joyal 范畴</a></span> $\Theta_n\to\Gamma$ 是积性模式, 若 $|X_i| = \langle m_i\rangle$, 则 $|[k] (X_1,\cdots,X_k)| = \langle m_1+\cdots + m_k \rangle$).</li>
+<li><span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树的范畴</a></span> $\Omega\to\Gamma$ 是积性模式, 其中基本对象为花冠; 对于一棵树 $X\in\Omega$, $|X|$ 就是 $X$ 中节点的数目.</li>
+</ul>
+<h2>$\mathcal O$-幺半范畴和 $\mathcal O$-代数</h2>
+<p>对于积性模式 $\mathcal O$, 定义 $\mathcal O$-<strong>幺半范畴</strong>为 $\mathsf{Cat}$ 中的 $\mathcal O$-幺半群. 其<span class="link local"><a href="./直化.html" title="直化 [直化]">直化</a></span>为 $\mathcal O$ 上的<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">拉回纤维化</a></span> $\mathcal V\to \mathcal O$.</p>
+</details></section></p>
 <p><section class="block" data-taxon=""><details ><summary id="HADR-disint-assem"><header><h1><span class="taxon"></span>HADR - 拆解与汇编 <a class="slug" href="./HADR-disint-assem.html">[HADR-disint-assem]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h3>含幺算畴</h3>
 <p>设 $p\colon \mathcal O \to \Gamma$ 为算畴, 即代数模式的弱 Segal 纤维化. 考虑唯一的活性映射 $f\colon \langle 1\rangle \to \langle n \rangle$, $\mathcal O$ 中居于 $f$ 上的态射可理解为 $n$ 元运算. 特别地, $n=1$ 时, 颜色范畴 $\mathcal O_{\langle 1 \rangle}$ 中的活性态射即是 $1$ 元运算.</p>
@@ -996,8 +1037,36 @@ $$
 <p>本部分大致对应 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 第 3 章 Algebras and Modules over $\infty$-Operads.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="HADR-3-assoc"><header><h1><span class="taxon"></span>HADR (3) 结合代数 <a class="slug" href="./HADR-3-assoc.html">[HADR-3-assoc]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本部分大致对应 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 第 4 章 Associative Algebras and Their Modules.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="HADR-4-fact"><header><h1><span class="taxon"></span>HADR (4) En-代数 <a class="slug" href="./HADR-4-fact.html">[HADR-4-fact]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><section class="block" data-taxon=""><details ><summary id="HADR-4-fact"><header><h1><span class="taxon"></span>HADR (4) En-代数与分解同调 <a class="slug" href="./HADR-4-fact.html">[HADR-4-fact]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本部分大致对应 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 第 5 章 Little Cubes and Factorizable Sheaves.</p>
+<p><section class="block" data-taxon=""><details ><summary id="HADR-Ek"><header><h1><span class="taxon"></span>HADR - Ek <a class="slug" href="./HADR-Ek.html">[HADR-Ek]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>固定一个自然数 $k$, 记 $\square^k = (-1,1)^k$ 为 $k$ 维开方块. 开方块之间的<strong>平直嵌入</strong> (rectilinear embedding) 是形如 $(x_1,\cdots,x_k)\mapsto (a_1x_1+b_1,\cdots)$ ($a_i &gt; 0$) 的嵌入. 对于有限集 $S$ 与嵌入 $f\colon \square^k\times S\to \square^k$, 若 $f$ 在每个分支上为平直嵌入, 也称 $f$ 为平直嵌入.</p>
+<p>考虑如下的 $\mathsf{Top}$-充实范畴 $\mathbb E_k$:</p>
+<ul>
+<li>其对象为 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">$\Gamma$</a></span> 的对象 $\langle n\rangle$;</li>
+<li>态射 $\langle n \rangle \to \langle m\rangle$ 是一个 $\Gamma$ 中的态射 $\alpha$, 将每个 $i\in\{1,\cdots,n\}$ 对应到互不相交的子集 $S_i\subset\{1,\cdots,m\}$, 同时对每个 $i$ 有平直嵌入 $\square^k\times S_i \to \square^k$;</li>
+<li>复合是明显的.</li>
+</ul>
+<p>考虑 $\mathsf{Top}$-充实范畴表现的 $\mathsf{Ani}$-充实范畴 (也就是 $(\infty,1)$-范畴) $\mathbb E_k$, 我们得到一个算畴 $\mathbb E_k \to \Gamma$.</p>
+<p><strong>注</strong>. 事实上, 平直嵌入的空间同伦等价于<span class="link local"><a href="./构形空间.html" title="构形空间 [构形空间]">构形空间</a></span>, 所以作为 $\mathsf{Ani}$-充实范畴, $\mathbb E_k$ 的态射空间就是构形空间. 不过用平直嵌入有如下好处:</p>
+<ul>
+<li>容易写出运算的复合;</li>
+<li>容易与拓扑空间的 $k$ 阶<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> $\Omega^k X$ 相联系;</li>
+<li>容易与<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span> $\Delta^k$ 相联系;</li>
+<li>…</li>
+</ul>
+<p>我们不禁要问这个算畴 $\mathbb E_k$ 和此前介绍的 $\mathbb E_k$-代数的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span> $\Delta^k$ 有什么关系. 不难发现有代数模式的态射 $\Delta^k \to \mathbb E_k$:</p>
+<ul>
+<li>对象 $([n_1],\cdots,[n_k])\in\Delta^k$ 映射到 $\langle\prod_{i=1}^k n_i\rangle\in\mathbb E_k$, 想象为一个 $\square^k$ 的 “网格切割”, 每个维度分别切割为 $n_1,\cdots,n_k$ 个区间.</li>
+<li>态射是直观的, 我们仅举一例说明. 当 $k=1$ 时, 单纯形态射 $[n] \to [m]$ 把 $[n]$ 中的 $n$ 个箭头每个对应到 $[m]$ 中连续 $S_i$ 个箭头; 相应地, $\mathbb E_1$ (即 $\mathsf{Assoc}$) 中有一个态射 $\langle n\rangle\to\langle m\rangle$, 表示 $n$ 个区间每个切成 $S_i$ 个小区间, 总共有 $m$ 个小区间.</li>
+</ul>
+<p>所以对于积幺半范畴 $\mathcal C$ 有限制函子
+$$
+\mathsf{Alg}_{\mathbb E_k} (\mathcal C) \to \mathsf{Seg}_{\Delta^k}(\mathcal C).
+$$</p>
+<p><strong>断言</strong>. 上述函子为等价.</p>
+<p>这个断言的内容基本上就是 Dunn–Lurie 加性定理.</p>
+</details></section></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="HADR-ope"><header><h1><span class="taxon"></span>HADR - 算畴 <a class="slug" href="./HADR-ope.html">[HADR-ope]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>代数模式 $\mathrm{Assoc}$</h2>
 <p>前面介绍的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>的态射 $\gamma\colon \Delta \to \Gamma$ (另见 <span class="link local"><a href="./Segal函子γ.html" title="Segal 函子 γ [Segal函子γ]">Segal 函子 $\gamma$</a></span>) 未能通过左 Kan 扩张给出结合代数的交换化, 因为左 Kan 扩张不保持 Segal 条件. 事实上, 我们可以将 $\Delta$ 替换为 (或者说是<strong>补全</strong>为) $\Gamma$ 上的另一个代数模式 $\mathrm{Assoc} \to \Gamma$, 不改变其 Segal 对象, 同时又能通过左 Kan 扩张直接给出结合代数的交换化.</p>
@@ -1053,6 +1122,8 @@ $$
 <p><strong>例</strong>. 记 $\mathsf{Triv} := \Gamma_{\mathrm{int}} \to \Gamma$, 称之为平凡算畴. 平凡算畴的代数就是没有任何结构的对象.</p>
 <p><strong>例</strong>. 记 $\mathbb E_0 \to \Gamma$ 为 $\Gamma$ 中 “将每个元素对应到一个至多一元子集” 的映射构成的宽子范畴, $\mathbb E_0$-代数就是<span class="link local"><a href="./带基点对象.html" title="带基点对象 [带基点对象]">带基点对象</a></span>.</p>
 <p><strong>例</strong>. $\Gamma$ 上的 Segal 纤维化 $\mathcal C \to \Gamma$, 对应于 Segal 对象 $\Gamma^{\mathrm{op}} \to \mathsf{Cat}$, 即<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> (其底层范畴为 $\mathcal C_{\langle 1\rangle}$); 它也构成对称算畴.</p>
+<h2>弱 Segal 纤维化</h2>
+<p>详见<span class="link local"><a href="./弱Segal纤维化.html" title="弱 Segal 纤维化 (代数体) [弱Segal纤维化]">弱 Segal 纤维化</a></span>.</p>
 <h2>非对称算畴</h2>
 <p>称 $\Delta$ 上的<span class="link local"><a href="./弱Segal纤维化.html" title="弱 Segal 纤维化 (代数体) [弱Segal纤维化]">弱 Segal 纤维化</a></span>为<strong>非对称算畴</strong>. 直观上, 一个算畴给出一族无序 $n$ 元运算, 而一个非对称算畴给出一族有序 $n$ 元运算.</p>
 <p><strong>例</strong>. 记 $\Delta_{\leq n} \hookrightarrow \Delta$ 为对象 $[0],[1],\cdots,[n]$ 构成的全子范畴, 则 $\Delta_{\leq n}$ 继承 $\Delta$ 的代数模式结构, 构成一个非对称算畴; 称该模式为 <span class="link local"><a href="./An-代数.html" title="A_n-代数 [An-代数]">$\mathbb A_n$</a></span>.</p>
@@ -1082,6 +1153,8 @@ $$
 <h3>通过 $\mathsf{Ani}$ 的泛性质</h3>
 <p><strong>定义</strong> (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">HA</a></span> 6.3.3.2). 由于范畴 <span class="link local"><a href="./Sp.html" title="Sp [Sp]">$\mathsf{Sp}^{\mathrm{op}}$</a></span> 余完备, 存在唯一的函子 $F\colon \mathsf{Ani} \to \mathsf{Sp}^{\mathrm{op}}$ 满足 $F(*) = \mathbb S$ (<span class="link local"><a href="./球谱.html" title="球谱 [球谱]">球谱</a></span>). 此时称 $F(X)$ 为 $X$ 的 <strong>Spanier–Whitehead 对偶</strong>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="homalg-1-tri-st"><header><h1><span class="taxon"></span>从三角范畴到稳定范畴 <a class="slug" href="./homalg-1-tri-st.html">[homalg-1-tri-st]</a></h1><div class="metadata"><ul><li class="meta-item">讲义</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>三角范畴及其缺陷</h2>
+<h2>稳定 $\infty$-范畴</h2>
 <p><strong>定义</strong> (特殊三角)
 范畴 $\mathcal C$ 中的<strong>特殊三角</strong> (distinguished triangle) 是指下图,
 $$
@@ -1092,6 +1165,7 @@ X &amp; \rightarrow &amp; Y &amp; \rightarrow &amp; 0 \\
 \end{array}
 $$
 其中两个方块均为<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span> (从而整个长方形也是推出).</p>
+<h2>稳定 $\infty$-范畴的同伦范畴</h2>
 <p><strong>定理</strong> (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie</a></span> 定理 1.1.2.14).
 设 $\mathcal C$ 为<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span>, 则同伦范畴 $h\mathcal C$ 为三角范畴.</p>
 <p>我们验证八面体公理.</p>
@@ -1104,7 +1178,12 @@ X &amp; \rightarrow &amp; Y &amp; \rightarrow &amp; Z &amp; \rightarrow &amp; 0 
  &amp;  &amp; 0 &amp; \rightarrow &amp; Z/Y &amp; \rightarrow &amp; Y[1] &amp; \rightarrow &amp; (Y/X)[1]
 \end{array}
 $$</p>
+<h2>谱与稳定化</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="homalg-2-der-cat"><header><h1><span class="taxon"></span>导出范畴 <a class="slug" href="./homalg-2-der-cat.html">[homalg-2-der-cat]</a></h1><div class="metadata"><ul><li class="meta-item">讲义</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>引言</h2>
+<p>上一讲介绍了<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定 $\infty$-范畴</a></span>, 并说明它的<span class="link local"><a href="./同伦范畴.html" title="同伦范畴 [同伦范畴]">同伦范畴</a></span>是三角范畴; 实践中, 基本上每个三角范畴都是由某个更体现其本质的稳定 $\infty$-范畴产生的.</p>
+<p>稳定 $\infty$-范畴上可以附加一根衡量同伦信息层级的标尺, 称为 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">$t$-结构</a></span>; 处于标尺最中间的部分称为它的心. 心是一个 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>. 反过来, 从一个 Abel 范畴开始可以典范地构造一个稳定 $\infty$-范畴以之为心, 这就是<span class="link local"><a href="./导出范畴.html" title="导出范畴 [导出范畴]">导出范畴</a></span>.</p>
+<h2>Abel 范畴</h2>
 <p>设 $\mathcal A$ 为 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>.</p>
 <h2>导出范畴的泛性质</h2>
 <p><strong>命题</strong> (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 定理 1.3.3.2). 设 $\mathcal A$ 为 <span class="link local"><a href="./Abel范畴.html" title="Abel 范畴 [Abel范畴]">Abel 范畴</a></span>, 其中<span class="link local"><a href="./投射对象.html" title="投射对象 [投射对象]">投射对象</a></span>充足. 对任意带有左完备 <span class="link local"><a href="./t-结构.html" title="t-结构 [t-结构]">t-结构</a></span>的<span class="link local"><a href="./稳定无穷范畴.html" title="稳定范畴 [稳定无穷范畴]">稳定范畴</a></span> $\mathcal C$, 右正合函子 $\mathcal A \to \mathcal C^{\heartsuit}$ 可唯一地延拓为右 t-正合函子 $\mathsf{D}^-(\mathcal A)\to \mathcal C$. 换言之, 导出范畴 $\mathsf{D}^-(\mathcal A)$ 是万有的以 $\mathcal A$ 为心的稳定范畴.</p>
@@ -1344,7 +1423,7 @@ $$
 <li>在 $\infty$-算畴的例子中, 一些花形和边组成了一棵树;</li>
 </ul>
 <h3>3. 惰性映射与活性映射</h3>
-<p>上个公式中有一个没有解释的概念叫<strong>惰性映射</strong> (inert morphism). 直观上, 惰性映射就是是测试对象之间纯粹由 “几何形状的嵌入” 造成的映射, 是不表达任何 “代数运算” 的映射, 比如</p>
+<p>上个公式中有一个没有解释的概念叫<strong>惰性映射</strong> (inert morphism). 直观上, 惰性映射就是是测试对象之间纯粹由 “<strong>几何形状的嵌入</strong>” 造成的映射, 是不表达任何 “<strong>代数运算</strong>” 的映射, 比如</p>
 <ul>
 <li>$\mathbb E_\infty$-代数的测试对象 $\Gamma = \mathsf{Fin}_*^{\mathrm{op}}$ 中, 惰性映射 $S\to T$ 是给 $S$ 的每个元素指定 $T$ 的一个单元子集;</li>
 <li>$\mathbb A_\infty$-代数和 $\infty$-范畴的测试对象 $\Delta$ 中, 惰性映射就是区间的含入 $\{k\leq k+1\leq\cdots\leq l\}\subset [m]$;</li>
@@ -1356,7 +1435,7 @@ $$
 $$
 是全子范畴.</p>
 <p>我们将用 $\rightarrowtail$ 表示惰性映射.</p>
-<p>与惰性映射相对的是<strong>活性映射</strong> (active morphism) $\mathcal O_{\mathrm{act}}$, 就是那些专门用来表达代数运算的映射, 比如</p>
+<p>与惰性映射相对的是<strong>活性映射</strong> (active morphism) $\mathcal O_{\mathrm{act}}$, 就是那些专门用来表达<strong>代数运算</strong>的映射, 比如</p>
 <ul>
 <li>$\mathbb E_\infty$-代数的测试对象 $\Gamma = \mathsf{Fin}_*^{\mathrm{op}}$ 中, 活性映射 $S\to T$ 就是给 $S$ 的所有元素指定的 $T$ 的子集并在一起等于 $T$ 的映射, 其中 $\langle 1\rangle \to \langle 2\rangle$, $1\mapsto \{1,2\}$ 表达了 $\mathbb E_\infty$-代数中的乘法;</li>
 <li>$\mathbb A_\infty$-代数和 $\infty$-范畴的测试对象 $\Delta$ 中, 活性映射 $[n] \to [m]$ 就是保持端点的映射, 其中 $[1] \to [2], 0\mapsto 0, 1\mapsto 2$ 表达了 $\mathbb A_\infty$-代数中的乘法和 $\infty$-范畴中态射的复合;</li>
@@ -1370,6 +1449,12 @@ $$
 <li>$\Delta$ 中, 态射 $f\colon [n] \to [m]$ 可分解为 $[n]\leadsto \{f(0)\leq \cdots \leq f(n)\}\rightarrowtail [m]$.</li>
 </ul>
 <h2>定义</h2>
+<h3>代数模式</h3>
+<p>一个<strong>代数模式</strong>是如下资料:</p>
+<ul>
+<li>一个范畴 $\mathcal O$, 带有<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">正交分解系</a></span> $(\mathcal O_{\mathrm{int}},\mathcal O_{\mathrm{act}})$;</li>
+<li>一个<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全子范畴</a></span> $\mathcal O_{\mathrm{el}}\hookrightarrow\mathcal O_{\mathrm{int}}$.</li>
+</ul>
 <h3>模型 (Segal 对象)</h3>
 <p>给定有适当<span class="link local"><a href="./极限.html" title="极限 [极限]">极限</a></span>的范畴 $\mathcal C$, 代数模式 $\mathcal O$ 的<strong>模型</strong> (或称 <strong>Segal 对象</strong>) 是函子 $F\colon \mathcal O^{\mathrm{op}} \to \mathcal C$, 满足 $F|_{\mathcal O_{\mathrm{int}}}$ 是 $F|_{\mathcal O_{\mathrm{el}}}$ 的<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">右 Kan 扩张</a></span>, 或等价地
 $$
