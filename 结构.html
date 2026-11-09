@@ -857,7 +857,7 @@ $$
 \mathsf{CAlg}(\mathcal C)=\mathsf{Alg}_{\mathbb E_{\infty}}(\mathcal C) \to \mathsf{Alg}_{\mathbb E_1}(\mathcal C)
 $$
 不<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实</a></span>.</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="2-范畴"><header><h1><span class="taxon"></span>2-范畴 <a class="slug" href="./2-范畴.html">[2-范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="2-范畴"><header><h1><span class="taxon"></span>2-范畴 <a class="slug" href="./2-范畴.html">[2-范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>$2$-范畴是允许至多 $2$ 阶不可逆态射的<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>, 即 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n)$-范畴</a></span>的 $n=2$ 特例.</p>
 <p>$2$-范畴的概念在文献中也称为 “弱 $2$-范畴 (weak $2$-category)”, 这是为了区分 2-范畴与<span class="link local"><a href="./严格2-范畴.html" title="严格 2-范畴 [严格2-范畴]">严格 2-范畴</a></span> (strict $2$-category). 两者的区别是, 2-范畴中态射复合的结合律和幺元律是由一个可逆 $2$-态射给出, 是<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构而非性质</a></span>.</p>
@@ -1793,6 +1793,13 @@ $$
 $$</p>
 <h2>例</h2>
 <p>较为简单的例子在前面都已讲过.</p>
+<h3>平凡的例子</h3>
+<p>任何范畴 $\mathcal C$ 上都有一个显然的代数模式结构:
+$$
+\mathcal C_{\mathrm{el}} = \mathcal C_{\mathrm{int}} = \mathcal C^{\simeq}, \,\mathcal C_{\mathrm{act}} = \mathcal C.
+$$
+这就是说 $\mathcal C$ 的每个态射都是活性映射. 这个代数模式在另一个范畴 $\mathcal D$ 中的 Segal 对象就是 $\mathcal C^{\mathrm{op}}$ 到 $\mathcal D$ 的函子.</p>
+<p>虽然平凡, 但这观点带来了一个有趣的观察: 当 $\mathcal D$ 为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>时, 函子范畴 $\mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathcal D)$ 在 $\mathsf{Fun}(\mathcal C^{\simeq},\mathcal D)$ 上是<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的.</p>
 <h3>Segal 态射 $\gamma\colon \Delta\to\Gamma$</h3>
 <p>结合代数的模式到交换代数的模式有一个重要的态射 $\gamma\colon \Delta\to\Gamma$.</p>
 <p>函子层面, $\gamma$ 将 $[n]\in\Delta$ 对应到 $\langle n \rangle\in\Gamma$, 详见 <span class="link local"><a href="./Segal函子γ.html" title="Segal 函子 γ [Segal函子γ]">Segal 函子 $\gamma$</a></span>. 唯一的基本对象 $[1]$ 对应基本对象 $\langle 1\rangle$.</p>

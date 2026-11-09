@@ -924,6 +924,11 @@ $$
 <p>You may also want to visit <span class="link external"><a href="https://simplicialcat.github.io/index.html?lang=en" title="my personal main page [https://simplicialcat.github.io/index.html?lang=en]">my personal main page</a></span> (in English).</p>
 <p>可以试试<span class="link local"><a href="./search.html" title="搜索 [search]">搜索单纯百科的页面</a></span>.</p>
 <p>欢迎所有读者在页面下方发布<span class="link local"><a href="./comments.html" title="评论 [comments]">评论</a></span>, 或<span class="link external"><a href="mailto:wangjiny24@mails.tsinghua.edu.cn" title="通过邮箱联系我 [mailto:wangjiny24@mails.tsinghua.edu.cn]">通过邮箱联系我</a></span> <code>wangjiny24@mails.tsinghua.edu.cn</code> , 交流, 催更. (对于好友, 通过微信或 QQ 联系我当然是更加欢迎的.)</p>
+<h2>精选</h2>
+<ul>
+<li><span class="link local"><a href="./HADR.html" title="Higher Algebra Done Right [HADR]">Higher Algebra Done Right</a></span></li>
+<li><span class="link local"><a href="./mfd-cat.html" title="流形与高阶范畴 [mfd-cat]">流形与高阶范畴</a></span></li>
+</ul>
 <h2>分类</h2>
 <p>单纯百科的页面分为以下几类.</p>
 <ul>
@@ -940,6 +945,7 @@ $$
 <p><span class="link local"><a href="./todo.html" title="亟需施工处 [todo]">亟需施工处</a></span>列表 (“TODO list”)</p>
 <p><span class="link local"><a href="./terminologies.html" title="单纯百科 - 术语翻译表 [terminologies]">术语翻译表</a></span></p>
 <h2>最近</h2>
+<p>(这一栏内容是我手动维护的, 而非由程序自动生成.)</p>
 <p><span class="link local"><a href="./范畴谱.html" title="范畴谱 [范畴谱]">范畴谱</a></span></p>
 <p><span class="link local"><a href="./notes-manifold-diagrams.html" title="高阶范畴的流形图示 [notes-manifold-diagrams]">高阶范畴的流形图示</a></span></p>
 <p><span class="link local"><a href="./缠结假设.html" title="缠结假设 [缠结假设]">缠结假设</a></span>, <span class="link local"><a href="./cob-sing.html" title="带奇点配边假设 [cob-sing]">带奇点配边假设</a></span></p>
@@ -1264,11 +1270,29 @@ $$</li>
 </ul>
 <p>弱 Segal 纤维化之间的态射是保持惰性映射的水平提升的态射.</p>
 <h3>通过分层树的代数模式</h3>
-<p><span class="link local"><a href="./BlomLoubatonRuitAlgd.html" title="Day convolution for algebraic patterns [BlomLoubatonRuitAlgd]">Blom–Loubaton–Ruit</a></span> 证明代数模式 $\mathcal O$ 上的弱 Segal 纤维化等同于 $\mathcal O$-<span class="link local"><a href="./分层树.html" title="分层树 [分层树]">分层树</a></span>构成的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span> $\Omega [\mathcal O]$ 的完备 Segal 对象 (意思是其底层 Segal 生象为<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 生象</a></span>):
+<p>对称算畴作为 $\Gamma$ 上的弱 Segal 纤维化, 又可以理解为<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>, 即用<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>探测的结构, 也即代数模式 <span class="link local"><a href="./树.html" title="树 (范畴论) [树]">$\Omega$</a></span> 的 Segal 对象.</p>
+<p>更一般地, <span class="link local"><a href="./BlomLoubatonRuitAlgd.html" title="Day convolution for algebraic patterns [BlomLoubatonRuitAlgd]">Blom–Loubaton–Ruit</a></span> 证明代数模式 $\mathcal O$ 上的弱 Segal 纤维化等同于 $\mathcal O$-<span class="link local"><a href="./分层树.html" title="分层树 [分层树]">分层树</a></span>构成的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span> $\Omega [\mathcal O]$ 的完备 Segal 对象 (意思是其底层 Segal 生象为<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 生象</a></span>):
 $$
 \mathsf{WSegFib}_{\mathcal O} \simeq \mathsf{CSeg}(\Omega [\mathcal O]).
 $$</p>
+<p>直观上,</p>
+<ul>
+<li>算畴即多重范畴, 是 “允许 $n$ 个对象到一个对象的态射” 的范畴, 故多重范畴被<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span> (<span class="link local"><a href="./分层树.html" title="分层树 [分层树]">分层树</a></span>) 探测;</li>
+<li>弱 Segal 纤维化是把算畴中的自然数 $n$ 推广为一般模式 $\mathcal O$ 的对象所得的概念, 故 $\mathcal O$ 上的弱 Segal 纤维化被 $\mathcal O$-<span class="link local"><a href="./分层树.html" title="分层树 [分层树]">分层树</a></span>探测.</li>
+</ul>
 <h2>性质</h2>
+<h3>相对观点</h3>
+<p>弱 Segal 纤维化的理论有个有趣的自相似性: 对于弱 Segal 纤维化 $\mathcal P \to\mathcal O$, 有等价
+$$
+\mathsf{WSegFib}_{\mathcal P} \simeq (\mathsf{WSegFib}_{\mathcal O})_{/P}.
+$$
+这就是说, 对于 $\mathcal O$ 上另一个弱 Segal 纤维化 $\mathcal Q\to \mathcal O$, 保持惰性提升的态射 $\mathcal Q\to\mathcal P$ 自动是 $\mathcal P$ 上的弱 Segal 纤维化.
+这是一个典型的<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对观点</a></span>的例子. 例如</p>
+<ul>
+<li><span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 定义的<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>就是 $\Gamma$ 上的弱 Segal 纤维化,</li>
+<li>非对称算畴就是 $\Delta$ 上的弱 Segal 纤维化.</li>
+</ul>
+<p>因此由相对观点, (非对称) 算畴之间的态射也是这些算畴之间的弱 Segal 纤维化.</p>
 <h3>与 Segal 纤维化的关系</h3>
 <p>代数模式 $\mathcal O$ 上的 <strong>Segal 纤维化</strong>是其 $\mathsf{Cat}$-值 Segal 对象 $\mathcal O^{\mathrm{op}} \to \mathsf{Cat}$ 对应的 $\mathcal O$ 上的<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">拉回纤维化</a></span>.</p>
 <p>Segal 纤维化的全体
@@ -1287,7 +1311,7 @@ $$
 <p>注意 $\operatorname{Env}_{\mathcal O} (\mathcal P)$
 一个直观: $\Gamma$ 上的弱 Segal 纤维化是<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>, 有多个对象到一个对象的态射, 但不一定有张量积; 其 $\Gamma$-幺半包络 (即对称幺半包络) 就是由所有形式记号 $x_1 \otimes \cdots\otimes x_n$ 构成的范畴, 满足态射 $x_1 \otimes \cdots\otimes x_n \to y$ 等同于原来多重范畴中的多重态射 $(x_1,\cdots,x_n) \to y$.</p>
 <h3>与松函子的关系</h3>
-<p>设 $\mathcal C \to \Gamma$, $\mathcal D \to \Gamma$ 为 Segal 纤维化, 对应两个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 将它们遗忘为弱 Segal 纤维化, 则弱 Segal 纤维化的态射 $\mathcal C \to \mathcal D$ 等同于 $\mathcal C$ 到 $\mathcal D$ 的 <span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">(余) 松对称幺半函子</a></span>.</p>
+<p>设 $\mathcal C \to \Gamma$, $\mathcal D \to \Gamma$ 为 Segal 纤维化, 对应两个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 将它们<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>为弱 Segal 纤维化, 则弱 Segal 纤维化的态射 $\mathcal C \to \mathcal D$ 等同于 $\mathcal C$ 到 $\mathcal D$ 的 <span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">(余) 松对称幺半函子</a></span>.</p>
 <p>更一般地, 对于代数模式 $\mathcal O$, 设 $\mathcal C,\mathcal D$ 为 $\mathcal O$-幺半范畴, 则其作为弱 Segal 纤维化的态射等同于 (余) 松 $\mathcal O$-幺半函子.</p>
 <p>另见<span class="link local"><a href="./松态射.html" title="松态射 [松态射]">松态射</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="树"><header><h1><span class="taxon"></span>树 (范畴论) <a class="slug" href="./树.html">[树]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>

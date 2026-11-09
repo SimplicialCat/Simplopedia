@@ -833,6 +833,7 @@
 <li>一是<span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>, 即用基本对象和运算 (见<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>) 来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>;</li>
 <li>二是<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>, 即 $n$-范畴充实于 $(n-1)$-范畴.</li>
 </ul>
+<p>对 $(\infty,n)$-范畴的概念取某种极限可得 <span class="link local"><a href="./∞-∞-范畴.html" title="(∞,∞)-范畴 [∞-∞-范畴]">$(\infty,\infty)$-范畴</a></span>.</p>
 <h2>定义</h2>
 <h3>作为 $n$ 重 Segal 生象</h3>
 <h3>作为 $\Theta_n$-空间</h3>
@@ -842,7 +843,7 @@
 $$
 \mathsf{Cat}_{(\infty ,n+1)} := \mathsf{Cat}_{(\infty,n)}\text{-}\mathsf{Cat}.
 $$</p>
-</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="2-范畴"><header><h1><span class="taxon"></span>2-范畴 <a class="slug" href="./2-范畴.html">[2-范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+</details></section><footer><section class="block link-list" id="backlinks"><details open><summary><header><h1>关联页面</h1></header></summary><section class="block" data-taxon=""><details ><summary id="2-范畴"><header><h1><span class="taxon"></span>2-范畴 <a class="slug" href="./2-范畴.html">[2-范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>$2$-范畴是允许至多 $2$ 阶不可逆态射的<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>, 即 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n)$-范畴</a></span>的 $n=2$ 特例.</p>
 <p>$2$-范畴的概念在文献中也称为 “弱 $2$-范畴 (weak $2$-category)”, 这是为了区分 2-范畴与<span class="link local"><a href="./严格2-范畴.html" title="严格 2-范畴 [严格2-范畴]">严格 2-范畴</a></span> (strict $2$-category). 两者的区别是, 2-范畴中态射复合的结合律和幺元律是由一个可逆 $2$-态射给出, 是<span class="link local"><a href="./结构.html" title="结构, 性质 [结构]">结构而非性质</a></span>.</p>
@@ -1031,6 +1032,34 @@ $$
 <h2>例</h2>
 <h3>$K(\pi,n)$</h3>
 <p>设 $\pi$ 为 Abel 群. 考虑 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">$\Gamma$-空间</a></span></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="∞-∞-范畴"><header><h1><span class="taxon"></span>(∞,∞)-范畴 <a class="slug" href="./∞-∞-范畴.html">[∞-∞-范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>$(\infty,\infty)$-范畴是可有任意高阶不可逆态射的<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>.</p>
+<h2>定义</h2>
+<p>在本页面中, $n$-范畴指的是 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n)$-范畴</a></span>.
+注意到 $(n+1)$-范畴可去掉不可逆 $(n+1)$-态射变为 $n$-范畴, 即有 “遗忘” 函子
+$$
+(n+1)\mathsf{Cat} \to n\mathsf{Cat}.
+$$
+于是可定义 $(\infty,\infty)$-范畴的范畴 $\infty \mathsf{Cat}$ 为如下极限:
+$$
+\infty \mathsf{Cat} = \operatorname{lim}_n n\mathsf{Cat}.
+$$
+换言之, 一个 $(\infty,\infty)$-范畴可由一列相容的 $(\infty,n)$-范畴定义.</p>
+<h2>性质</h2>
+<h3>纬悬</h3>
+<p>对于 $(\infty ,\infty )$-范畴 $X$, 其 (非约化) 纬悬 $\Sigma X$ 为 $(\infty ,\infty )$-范畴, 有两个对象 $\bot,\top$, $\operatorname{Hom}_{\Sigma X}(\bot,\top) = X$.</p>
+<p>纬悬函子
+$$
+\Sigma \colon \infty \mathsf{Cat} \to \infty \mathsf{Cat}_{**}
+$$
+是
+$$
+\infty \mathsf{Cat}_{**}\to\infty \mathsf{Cat}, (X,x_0,x_1)\mapsto \operatorname{Hom}_X (x_0,x_1)
+$$
+的左伴随.</p>
+<h2>相关概念</h2>
+<p><span class="link local"><a href="./范畴谱.html" title="范畴谱 [范畴谱]">范畴谱</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="桁架"><header><h1><span class="taxon"></span>桁架 <a class="slug" href="./桁架.html">[桁架]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>桁架</strong> (truss) 是用于描述 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n)$-范畴</a></span>的<span class="link local"><a href="./notes-manifold-diagrams.html" title="高阶范畴的流形图示 [notes-manifold-diagrams]">流形图</a></span>的一种纯组合数据, 可通过迭代一个<span class="link local"><a href="./多项式函子.html" title="多项式函子 [多项式函子]">多项式函子</a></span>定义.</p>
@@ -1148,4 +1177,46 @@ $$
 \mathsf{Fun}(\mathsf{Fin}_*\times\Delta^{\mathrm{op}},\mathsf{Ani})
 $$
 的全子范畴. 又由于函子范畴中的极限是逐点的, 可验证两个子范畴相同.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="范畴谱"><header><h1><span class="taxon"></span>范畴谱 <a class="slug" href="./范畴谱.html">[范畴谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>范畴谱是<span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>在<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>中的推广.</p>
+<h2>定义</h2>
+<p>记 $n\mathsf{Cat}$ 为 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n)$-范畴</a></span>的范畴.
+记 $\infty\mathsf{Cat} = \operatorname{lim}_n n\mathsf{Cat}$ 为 <span class="link local"><a href="./∞-∞-范畴.html" title="(∞,∞)-范畴 [∞-∞-范畴]">$(\infty,\infty)$-范畴</a></span>的范畴.</p>
+<p>对于带基点 $(\infty,\infty)$-范畴 $\mathcal C\in \infty \mathsf{Cat}_*$ 记 $\Omega\mathcal C := \operatorname{End}_{\mathcal C}(*)\in \infty \mathsf{Cat}_*$.</p>
+<p>定义<strong>范畴谱</strong> (categorical spectra) 的范畴 $\mathsf{CatSp}$ 为对 $\Omega\colon \infty\mathsf{Cat}_*\to \infty\mathsf{Cat}_*$ <span class="link local"><a href="./形式取逆.html" title="形式取逆 [形式取逆]">形式取逆</a></span>得到的 $(\infty,1)$-范畴:
+$$
+\mathsf{CatSp}:= \operatorname{lim} (\cdots\overset{\Omega}{\to}\infty \mathsf{Cat}_*\overset{\Omega}{\to}\infty \mathsf{Cat}_*).
+$$
+换言之, 一个范畴谱是一列 $(\infty,\infty)$-范畴 $(X_n)_{n\in\mathbb{N}}$ 带有等价
+$$
+X_n \simeq \Omega X_{n+1}.
+$$</p>
+<h2>性质</h2>
+<h3>与谱的关系</h3>
+<p><strong>命题</strong>. $\mathsf{Sp}\subset\mathsf{CatSp}$ 是<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全子范畴</a></span>.</p>
+<h3>纬悬</h3>
+<p>由<span class="link local"><a href="./形式取逆.html" title="形式取逆 [形式取逆]">形式取逆</a></span>的抽象性质, $\Omega\colon \mathsf{CatSp}\to\mathsf{CatSp}$ 为等价, 且其逆 $\Sigma\colon \mathsf{CatSp}\to\mathsf{CatSp}$ 可由左伴随 $\Sigma\colon \infty \mathsf{Cat}_* \to \infty \mathsf{Cat}_*$ 在 <span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">$\mathsf{Pr}^{\mathrm{L}}$</a></span> 中取余极限得到.</p>
+<p>容易看到, <span class="link local"><a href="./谱.html" title="谱 (稳定同伦论) [谱]">谱</a></span>的范畴 $\mathsf{Sp}\subset\mathsf{CatSp}$ 上的环路函子 $\Omega$ 与 $\mathsf{CatSp}$ 上的函子 $\Omega$ 相容.</p>
+<h3>纬悬谱</h3>
+<p>记 $\mathsf{CatSp}$ 到第 $n$ 分量的投影为 $\Omega^{\infty -n}\colon \mathsf{CatSp} \to \infty \mathsf{Cat}_*$.</p>
+<p>记 $\Omega^{\infty-n} \colon \mathsf{CatSp}\to\infty \mathsf{Cat}_*$ 的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">左伴随</a></span>为
+$\Sigma^{\infty-n} \colon \infty \mathsf{Cat}_*\to\mathsf{CatSp}$.</p>
+<p>称形如 $\Sigma^{\infty }X$ 的范畴谱为<strong>纬悬谱</strong>. 当然, 这个名称与<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>的<span class="link local"><a href="./纬悬谱.html" title="纬悬谱 [纬悬谱]">纬悬谱</a></span> $\Sigma^\infty \colon \mathsf{Ani}_* \to \mathsf{Sp}$ 也是相容的.</p>
+<h3>连合谱与交换代数</h3>
+<p>由定义以及<span class="link local"><a href="./逆环假设.html" title="逆环假设 [逆环假设]">逆环假设</a></span>, $\mathsf{CatSp}$ 又可理解为如下极限:
+$$
+\mathsf{CatSp} =\operatorname{lim} (\cdots\overset{\Omega}{\to}\mathsf{CAlg}(\infty \mathsf{Cat})\overset{\Omega}{\to}\mathsf{CAlg}(\infty \mathsf{Cat})).
+$$</p>
+<p>记 $\Omega^{\infty-n} \colon \mathsf{CatSp}\to\mathsf{CAlg}(\infty \mathsf{Cat})$ 的<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">左伴随</a></span>为
+$\mathbf{B}^{\infty-n} \colon \mathsf{CAlg}(\infty \mathsf{Cat})\to\mathsf{CatSp}$.</p>
+<p>称形如 $\mathbf{B}^{\infty }X_0$ 的范畴谱为<strong>连合</strong> (connective) 范畴谱; 记连合范畴谱构成的全子范畴为
+$$
+\mathsf{CatSp}_{\geq 0}\subset\mathsf{CatSp}.
+$$</p>
+<p>设 $X_0\in \mathsf{CAlg}(\infty \mathsf{Cat})$ 为对称幺半 $(\infty ,\infty )$-范畴. 则范畴谱 $\mathbf{B}^{\infty}X$ 的分量为
+$$
+\mathbf{B}^{\infty}X := (X_n = \mathbf{B}^n X_0).
+$$</p>
+<h3>张量积</h3>
 </details></section></details></section></footer></article></div></body></html>

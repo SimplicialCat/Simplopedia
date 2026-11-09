@@ -1678,6 +1678,13 @@ $$
 $$</p>
 <h2>例</h2>
 <p>较为简单的例子在前面都已讲过.</p>
+<h3>平凡的例子</h3>
+<p>任何范畴 $\mathcal C$ 上都有一个显然的代数模式结构:
+$$
+\mathcal C_{\mathrm{el}} = \mathcal C_{\mathrm{int}} = \mathcal C^{\simeq}, \,\mathcal C_{\mathrm{act}} = \mathcal C.
+$$
+这就是说 $\mathcal C$ 的每个态射都是活性映射. 这个代数模式在另一个范畴 $\mathcal D$ 中的 Segal 对象就是 $\mathcal C^{\mathrm{op}}$ 到 $\mathcal D$ 的函子.</p>
+<p>虽然平凡, 但这观点带来了一个有趣的观察: 当 $\mathcal D$ 为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>时, 函子范畴 $\mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathcal D)$ 在 $\mathsf{Fun}(\mathcal C^{\simeq},\mathcal D)$ 上是<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的.</p>
 <h3>Segal 态射 $\gamma\colon \Delta\to\Gamma$</h3>
 <p>结合代数的模式到交换代数的模式有一个重要的态射 $\gamma\colon \Delta\to\Gamma$.</p>
 <p>函子层面, $\gamma$ 将 $[n]\in\Delta$ 对应到 $\langle n \rangle\in\Gamma$, 详见 <span class="link local"><a href="./Segal函子γ.html" title="Segal 函子 γ [Segal函子γ]">Segal 函子 $\gamma$</a></span>. 唯一的基本对象 $[1]$ 对应基本对象 $\langle 1\rangle$.</p>
@@ -1925,6 +1932,65 @@ $$
 <p>定义<strong>多重范畴</strong>为 $\Delta_{\mathsf{Fin}}$ 上满足完备性的 Segal 预层 $F$; 完备性即是说 $F$ 在子范畴 $\Delta\hookrightarrow\Delta_{\mathsf{Fin}}$ 上的限制是一个<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 生象</a></span>.</p>
 <h3>树形生象</h3>
 <p>多重范畴的另一种定义使用<span class="link local"><a href="./树形对象.html" title="树形对象 [树形对象]">树形</a></span><span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="弱Segal纤维化"><header><h1><span class="taxon"></span>弱 Segal 纤维化 (代数体) <a class="slug" href="./弱Segal纤维化.html">[弱Segal纤维化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<h2>定义</h2>
+<h3>直接定义</h3>
+<p><span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>之间的<strong>弱 Segal 纤维化</strong>是满足如下条件的态射 $p\colon \mathcal P \to \mathcal O$:</p>
+<ul>
+<li>$\mathcal O$ 中的惰性映射存在水平提升 (换言之, 有函子 $\mathcal O_{\mathrm{int}}^{\mathrm{op}} \to \mathsf{Cat}$, $N\mapsto \mathcal P_N$);</li>
+<li>对任意 $N\in\mathcal O$, 函子 $\mathcal P_N \to \operatorname{lim}_{E\rightarrowtail N}\mathcal P_{E}$ 为等价;</li>
+<li>给定 $X \in \mathcal P_N$, $Y\in\mathcal P_M$ 以及 $\mathcal O$ 中的态射 $f\colon N\to M$,
+$$
+   \operatorname{Hom}^f(X,Y) \simeq \operatorname{lim}_{g\colon E\rightarrowtail N}\operatorname{Hom}^{fg}(g^*X,Y).
+$$</li>
+</ul>
+<p>弱 Segal 纤维化之间的态射是保持惰性映射的水平提升的态射.</p>
+<h3>通过分层树的代数模式</h3>
+<p>对称算畴作为 $\Gamma$ 上的弱 Segal 纤维化, 又可以理解为<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>, 即用<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>探测的结构, 也即代数模式 <span class="link local"><a href="./树.html" title="树 (范畴论) [树]">$\Omega$</a></span> 的 Segal 对象.</p>
+<p>更一般地, <span class="link local"><a href="./BlomLoubatonRuitAlgd.html" title="Day convolution for algebraic patterns [BlomLoubatonRuitAlgd]">Blom–Loubaton–Ruit</a></span> 证明代数模式 $\mathcal O$ 上的弱 Segal 纤维化等同于 $\mathcal O$-<span class="link local"><a href="./分层树.html" title="分层树 [分层树]">分层树</a></span>构成的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span> $\Omega [\mathcal O]$ 的完备 Segal 对象 (意思是其底层 Segal 生象为<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 生象</a></span>):
+$$
+\mathsf{WSegFib}_{\mathcal O} \simeq \mathsf{CSeg}(\Omega [\mathcal O]).
+$$</p>
+<p>直观上,</p>
+<ul>
+<li>算畴即多重范畴, 是 “允许 $n$ 个对象到一个对象的态射” 的范畴, 故多重范畴被<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span> (<span class="link local"><a href="./分层树.html" title="分层树 [分层树]">分层树</a></span>) 探测;</li>
+<li>弱 Segal 纤维化是把算畴中的自然数 $n$ 推广为一般模式 $\mathcal O$ 的对象所得的概念, 故 $\mathcal O$ 上的弱 Segal 纤维化被 $\mathcal O$-<span class="link local"><a href="./分层树.html" title="分层树 [分层树]">分层树</a></span>探测.</li>
+</ul>
+<h2>性质</h2>
+<h3>相对观点</h3>
+<p>弱 Segal 纤维化的理论有个有趣的自相似性: 对于弱 Segal 纤维化 $\mathcal P \to\mathcal O$, 有等价
+$$
+\mathsf{WSegFib}_{\mathcal P} \simeq (\mathsf{WSegFib}_{\mathcal O})_{/P}.
+$$
+这就是说, 对于 $\mathcal O$ 上另一个弱 Segal 纤维化 $\mathcal Q\to \mathcal O$, 保持惰性提升的态射 $\mathcal Q\to\mathcal P$ 自动是 $\mathcal P$ 上的弱 Segal 纤维化.
+这是一个典型的<span class="link local"><a href="./相对.html" title="相对观点 [相对]">相对观点</a></span>的例子. 例如</p>
+<ul>
+<li><span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 定义的<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span>就是 $\Gamma$ 上的弱 Segal 纤维化,</li>
+<li>非对称算畴就是 $\Delta$ 上的弱 Segal 纤维化.</li>
+</ul>
+<p>因此由相对观点, (非对称) 算畴之间的态射也是这些算畴之间的弱 Segal 纤维化.</p>
+<h3>与 Segal 纤维化的关系</h3>
+<p>代数模式 $\mathcal O$ 上的 <strong>Segal 纤维化</strong>是其 $\mathsf{Cat}$-值 Segal 对象 $\mathcal O^{\mathrm{op}} \to \mathsf{Cat}$ 对应的 $\mathcal O$ 上的<span class="link local"><a href="./纤维范畴.html" title="纤维范畴 [纤维范畴]">拉回纤维化</a></span>.</p>
+<p>Segal 纤维化的全体
+$\mathsf{SegFib}_{\mathcal O}$
+是弱 Segal 纤维化的全体
+$\mathsf{WSegFib}_{\mathcal O}$
+的<span class="link local"><a href="./自反子范畴.html" title="自反子范畴 [自反子范畴]">自反子范畴</a></span>:
+$$
+(\operatorname{Env}_{\mathcal O} \dashv U)\colon \mathsf{WSegFib}_{\mathcal O}\rightleftarrows\mathsf{SegFib}_{\mathcal O}.
+$$</p>
+<p>对于弱 Segal 纤维化 $p\colon \mathcal P \to \mathcal O$, 其反射称为 $\mathcal P$ 的 $\mathcal O$-<strong>幺半包络</strong> (monoidal envelope):
+$$
+\operatorname{Env}_{\mathcal O}(\mathcal P) := \mathcal P \times_{\mathcal O}\operatorname{Act}(\mathcal O) = \{(x\in\mathcal P,\alpha\colon o\leadsto p(x))\},
+$$
+其带有到 $\mathcal O$ 的 Segal 纤维化 $\operatorname{Env}_{\mathcal O} (\mathcal P) \to \mathcal O$, $(x\in\mathcal P,\alpha\colon o\leadsto p(x)) \mapsto o$.</p>
+<p>注意 $\operatorname{Env}_{\mathcal O} (\mathcal P)$
+一个直观: $\Gamma$ 上的弱 Segal 纤维化是<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>, 有多个对象到一个对象的态射, 但不一定有张量积; 其 $\Gamma$-幺半包络 (即对称幺半包络) 就是由所有形式记号 $x_1 \otimes \cdots\otimes x_n$ 构成的范畴, 满足态射 $x_1 \otimes \cdots\otimes x_n \to y$ 等同于原来多重范畴中的多重态射 $(x_1,\cdots,x_n) \to y$.</p>
+<h3>与松函子的关系</h3>
+<p>设 $\mathcal C \to \Gamma$, $\mathcal D \to \Gamma$ 为 Segal 纤维化, 对应两个<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>. 将它们<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">遗忘</a></span>为弱 Segal 纤维化, 则弱 Segal 纤维化的态射 $\mathcal C \to \mathcal D$ 等同于 $\mathcal C$ 到 $\mathcal D$ 的 <span class="link local"><a href="./松幺半函子.html" title="松幺半函子 [松幺半函子]">(余) 松对称幺半函子</a></span>.</p>
+<p>更一般地, 对于代数模式 $\mathcal O$, 设 $\mathcal C,\mathcal D$ 为 $\mathcal O$-幺半范畴, 则其作为弱 Segal 纤维化的态射等同于 (余) 松 $\mathcal O$-幺半函子.</p>
+<p>另见<span class="link local"><a href="./松态射.html" title="松态射 [松态射]">松态射</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="树形对象"><header><h1><span class="taxon"></span>树形对象 <a class="slug" href="./树形对象.html">[树形对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>树形对象是能用<span class="link local"><a href="./树.html" title="树 (范畴论) [树]">树</a></span>来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>的结构.</p>

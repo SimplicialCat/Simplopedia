@@ -1407,6 +1407,13 @@ $$
 $$</p>
 <h2>例</h2>
 <p>较为简单的例子在前面都已讲过.</p>
+<h3>平凡的例子</h3>
+<p>任何范畴 $\mathcal C$ 上都有一个显然的代数模式结构:
+$$
+\mathcal C_{\mathrm{el}} = \mathcal C_{\mathrm{int}} = \mathcal C^{\simeq}, \,\mathcal C_{\mathrm{act}} = \mathcal C.
+$$
+这就是说 $\mathcal C$ 的每个态射都是活性映射. 这个代数模式在另一个范畴 $\mathcal D$ 中的 Segal 对象就是 $\mathcal C^{\mathrm{op}}$ 到 $\mathcal D$ 的函子.</p>
+<p>虽然平凡, 但这观点带来了一个有趣的观察: 当 $\mathcal D$ 为<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现范畴</a></span>时, 函子范畴 $\mathsf{Fun}(\mathcal C^{\mathrm{op}},\mathcal D)$ 在 $\mathsf{Fun}(\mathcal C^{\simeq},\mathcal D)$ 上是<span class="link local"><a href="./单子性函子.html" title="单子性函子 [单子性函子]">单子性</a></span>的.</p>
 <h3>Segal 态射 $\gamma\colon \Delta\to\Gamma$</h3>
 <p>结合代数的模式到交换代数的模式有一个重要的态射 $\gamma\colon \Delta\to\Gamma$.</p>
 <p>函子层面, $\gamma$ 将 $[n]\in\Delta$ 对应到 $\langle n \rangle\in\Gamma$, 详见 <span class="link local"><a href="./Segal函子γ.html" title="Segal 函子 γ [Segal函子γ]">Segal 函子 $\gamma$</a></span>. 唯一的基本对象 $[1]$ 对应基本对象 $\langle 1\rangle$.</p>
@@ -1921,6 +1928,13 @@ $$
 </ul>
 <h3>Eilenberg–Moore 对象</h3>
 <p>回忆, $2$-范畴 $\mathcal C$ 的对象 $c$ 上的<span class="link local"><a href="./单子.html" title="单子 [单子]">单子</a></span> $t$ 等同于松函子 $*\to \mathcal C$, 将对象 $*$ 对应到 $c$, 自同态 $\mathrm{id}_c$ 对应到单子 $t\colon c\to c$. 这个图 $*\to \mathcal C$ 的松极限即为单子 $t$ 的 <span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">Eilenberg–Moore 对象</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="松自然变换"><header><h1><span class="taxon"></span>松自然变换 <a class="slug" href="./松自然变换.html">[松自然变换]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>松自然变换是 $2$-范畴 (或更高阶范畴) 之间的函子之间的一种态射, 是自然变换的推广.</p>
+<p>松自然变换也可视为一种<span class="link local"><a href="./松态射.html" title="松态射 [松态射]">松态射</a></span>.</p>
+<h2>定义</h2>
+<p>设 $\mathcal C,\mathcal D$ 为 <span class="link local"><a href="./2-范畴.html" title="2-范畴 [2-范畴]">$2$-范畴</a></span>, 我们知道函子 $\mathcal C\to\mathcal D$ 是范畴
+$\mathsf{Fun}(\mathcal C^{\simeq},\mathcal D)$ 上一个<span class="link local"><a href="./单子上的代数.html" title="单子上的代数 [单子上的代数]">单子的代数</a></span>, 这个单子由平凡的代数模式 $(\mathcal C_{\mathrm{int}} = \mathcal C^{\simeq},\mathcal C_{\mathrm{act}} = \mathcal C)$ 表现. 于是我们可以定义函子 $F,G\colon \mathcal C\to\mathcal D$ 之间的松自然变换为其之间的<span class="link local"><a href="./松态射.html" title="松态射 [松态射]">松态射</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="淡中对偶"><header><h1><span class="taxon"></span>淡中对偶 <a class="slug" href="./淡中对偶.html">[淡中对偶]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>当几何对象的<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数侧对偶</a></span>是一个带有代数结构的范畴时, 这个几何对象的基点体现为<span class="link local"><a href="./纤维函子.html" title="纤维函子 [纤维函子]">纤维函子</a></span>, 而纤维函子的自同构可理解为该几何对象的基本群; 这就是淡中构造.</p>
