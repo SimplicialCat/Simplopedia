@@ -828,7 +828,7 @@
 <article><section class="block" data-taxon=""><details open><summary id="群胚"><header><h1><span class="taxon"></span>群胚 <a class="slug" href="./群胚.html">[群胚]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>群胚是所有态射均为同构的范畴.</p>
-<p>群胚可视为 “集合” 概念的推广, 即 “元素可带有自同构” 的集合. 这种推广的极致是 $\infty$-群胚, 即<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</p>
+<p>群胚可视为 “集合” 概念的推广, 即 “元素可带有自同构” 的集合. 见<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>.</p>
 <p>另见<span class="link local"><a href="./群胚对象.html" title="群胚对象 (∞-范畴论) [群胚对象]">群胚对象</a></span>.</p>
 <h2>定义</h2>
 <h3>严格 1-群胚</h3>
@@ -965,6 +965,53 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="代数K-理论谱"><header><h1><span class="taxon"></span>“代数 K-理论谱” <a class="slug" href="./代数K-理论谱.html">[代数K-理论谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>设 $R$ 为环, 那么<span class="link local"><a href="./投射.html" title=" [投射]">投射对象</a></span> $R$-模构成的<span class="link local"><a href="./群胚.html" title="群胚 [群胚]">群胚</a></span>为一 <span class="link local"><a href="./Abel∞-群.html" title="E∞-群 [Abel∞-群]">Abel ∞-群</a></span>, 其<span class="link local"><a href="./群化.html" title="群化 [群化]">群化</a></span>称为 $R$ 的代数 <span class="link local"><a href="./K-理论.html" title="“K-理论” [K-理论]">K-理论</a></span>谱.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="形式群的模叠"><header><h1><span class="taxon"></span>形式群的模叠 <a class="slug" href="./形式群的模叠.html">[形式群的模叠]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>形式群的<span class="link local"><a href="./分类叠.html" title="分类叠 (模叠) [分类叠]">模叠</a></span>是一个函子
+$$
+\mathcal M_{\mathrm{FG}}\colon \mathsf{Ring} \to \mathsf{Grpd},
+$$
+$\mathcal M_{\mathrm{FG}}(R)$ 是 $R$ 上的<span class="link local"><a href="./形式群律.html" title="形式群律 [形式群律]">形式群律</a></span>以及同构构成的<span class="link local"><a href="./群胚.html" title="群胚 [群胚]">群胚</a></span>.</p>
+<p>另有一个相关的函子 $\mathcal M_{\mathrm{FG}}^{\mathrm{s}}$, 由形式群律及严格同构构成. 所谓严格同构即在 <span class="link local"><a href="./Lie代数.html" title="Lie 代数 [Lie代数]">Lie 代数</a></span>上给出恒等的同构. 它的作用是给出 $\mathcal M_{\mathrm{FG}}$ 的某种 “坐标” <span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>.</p>
+<p><strong>命题</strong>. $\mathcal M_{\mathrm{FG}}^{\mathrm{s}}(R)$ 等价于范畴 $\{(G,\iota)\}$, 其中 $G$ 是 $R$ 上的形式群, $\iota\colon \operatorname{Lie}(G)\to R$ 为同构.</p>
+<p>记 $L$ 为 <span class="link local"><a href="./形式群律.html" title="形式群律 [形式群律]">Lazard 环</a></span>, $G^+$ 为群概形 $R\mapsto\{b_0 t + b_1 t^2 + \cdots\}$, $G$ 为群概形 $R\mapsto \{t + b_1 t^2 + \cdots\}$, 则 $G^+ = \mathbb G_m \rtimes G$, 且 $G^+$ 作用在 $\operatorname{Spec}L$ 上.</p>
+<p><strong>命题</strong>. 有交换图
+$$
+\begin{CD}
+\mathcal M_{\mathrm{FG}}^{\mathrm{s}} @&gt;&gt;&gt; \mathcal M_{\mathrm{FG}} \\
+@| @| \\
+\operatorname{Spec}L / G @&gt;&gt;{\rho}&gt; \operatorname{Spec}L / G^+,
+\end{CD}
+$$
+且 $\rho$ 为 $\mathbb G_m$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>.</p>
+<p>这告诉我们 $\mathcal M_{\mathrm{FG}}^{\mathrm{s}}$ 给出 $\mathcal M_{\mathrm{FG}}$ 上的一个<span class="link local"><a href="./线丛.html" title="线丛 [线丛]">线丛</a></span>.</p>
+<h2>性质</h2>
+<h3>按高度分层</h3>
+<p><span class="link local"><a href="./形式群律.html" title="形式群律 [形式群律]">形式群的高度</a></span>给出了 $\mathcal M_{\mathrm{FG}}$ 上的一个<span class="link local"><a href="./分层.html" title="分层 [分层]">分层</a></span>.</p>
+<p>归纳定义 Hasse 不变量:
+$$
+v_0 := p\in \Gamma (\mathcal M_{\mathrm{FG}},\mathcal O);
+$$
+$$
+\mathcal M_{\mathrm{FG}}^{\geq 1} := Z(v_0) = \mathcal M_{\mathrm{FG}}\otimes\mathbb F_p.
+$$
+对于 $G\in\mathcal M_{\mathrm{FG}}^{\geq 1}(\operatorname{Spec}R)$, 考虑 $[p]\colon G\to G$ 穿过 $G\to G^{(p)}$, 变为 $\widetilde g\colon G^{(p)}\to G$, 映射
+$$
+\omega_G \to \omega_{G^{(p)}} = \omega_G^{\otimes p}
+$$
+对应于元素
+$$
+v_1\in\Gamma (\mathcal M_{\mathrm{FG}}^{\geq 1},\omega_G^{\otimes (p-1)}).
+$$
+以此类推, 定义
+$$
+\mathcal M_{\mathrm{FG}}^{\geq i} := Z(v_{i-1}),
+$$
+$$
+v_i\in\Gamma (\mathcal M_{\mathrm{FG}}^{\geq i},\omega^{\otimes (p^i - 1)}).
+$$</p>
+<p>注意 $v_n$ 都不是全局定义的.</p>
+<p>用坐标表示 (即沿 $\operatorname{Spec}L\to\mathcal M_{\mathrm{FG}}$ 拉回), $v_n$ 是 $\operatorname{Spec}L/(v_0,\cdots,v_{n-1})$ 上的万有形式群律中 $[p] (t)$ 中 $t^{p^n}$ 的系数.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="轨形"><header><h1><span class="taxon"></span>“轨形” <a class="slug" href="./轨形.html">[轨形]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>轨形是局部上像欧氏空间在<strong>有限群</strong>作用下的<strong>商</strong>的空间. 范畴论中的<span class="link local"><a href="./群胚.html" title="群胚 [群胚]">群胚</a></span>概念自然体现出了轨形.</p>
 <h2>定义</h2>

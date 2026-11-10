@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width"><title>“形式群律”</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width"><title>形式群律</title><link rel="icon" href="./assets/favicon.ico" /><link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
 
 
 <div id="tcomment"></div>
@@ -825,26 +825,68 @@
 
 <theme-option name="furina" style="display: none;">furina</theme-option></div></nav>
 
-<article><section class="block" data-taxon=""><details open><summary id="形式群律"><header><h1><span class="taxon"></span>“形式群律” <a class="slug" href="./形式群律.html">[形式群律]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>设 $R$ 为含幺交换环. 称满足如下条件的形式幂级数 $F\in R[x,y](x,y.md)$ 为 $R$ 上的<strong>形式群律</strong>:</p>
+<article><section class="block" data-taxon=""><details open><summary id="形式群律"><header><h1><span class="taxon"></span>形式群律 <a class="slug" href="./形式群律.html">[形式群律]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>形式群律是单参数群的 Taylor 展开, 也即<span class="link local"><a href="./形式概形.html" title="形式概形 [形式概形]">形式概形</a></span> $\operatorname{Spf}R[\![t]\!]$ ($t$ 进拓扑) 上的交换群结构.</p>
+<h2>定义</h2>
+<p>设 $R$ 为含幺交换环. 称满足如下条件的形式幂级数 $f\in R[\![x,y]\!]$ 为 $R$ 上的<strong>形式群律</strong>:</p>
 <ul>
-<li>(单位律) $F(x,0)=x$, $F(0,y)=y$;</li>
-<li>(结合律) $F(F(x,y),z) =F(x,F(y,z))$;</li>
-<li>(交换律) $F(x,y)=F(y,x)$.</li>
+<li>(单位律) $f(x,0)=x$, $f(0,y)=y$;</li>
+<li>(结合律) $f(f(x,y),z) =f(x,f(y,z))$;</li>
+<li>(交换律) $f(x,y)=f(y,x)$.</li>
 </ul>
 <p>由定义, $R$ 上的形式群律形如
 $$
-F(x,y)=x+y+\sum_{ij}a_{ij}x^iy^j,
+f(x,y)=x+y+\sum_{ij}a_{ij}x^iy^j,
 $$
 满足 $a_{ij}=a_{ji}$ 以及结合律要求的一些关系. 这样一个形式群律等同于环 $L$ 到 $R$ 的同态, 其中
 $$
 L=\mathbb{Z}[a_{ij}]/(\cdots),
 $$
 称之为 <strong>Lazard 环</strong>.</p>
-<h2>例</h2>
-<p>形式群律与<span class="link local"><a href="./复配边上同调理论.html" title=" [复配边上同调理论]">MU</a></span>有关. 复配边环 $\Omega_U$ 上有一个形式群律
+<p>设 $f$ 为满足上述条件的形式幂级数, 则有函子
 $$
-F_U(x,y)=x+y+\sum_{k,l\geq 1}\alpha_{kl}x^ky^l,
+G_f\colon \mathsf{Alg}_{R} \to \mathsf{Ab}, S\mapsto\operatorname{Nil}(S),
+$$
+其中 $\operatorname{Nil}(S)$ 上的加法由 $f$ 给出.
+这个 Abel 群就称为 $f$ 对应的<strong>形式群</strong>.</p>
+<p>对于两个形式群律 $f,f'$, 其之间的<strong>同构</strong>是形式幂级数 $g\in R[\![t]\!]$, 满足
+$$
+f'(x,y) = g(f(g^{-1}(x),g^{-1}(y))).
+$$
+当 $g(t) = t+ o(t)$ 时, 称之为<strong>严格同构</strong>.</p>
+<h3>高度</h3>
+<p>在 $\mathbb{Q}$ 上, 每个形式群都同构于 $\widehat {\mathbb G}_a$. 但在特征 $p$ 的情形有很多有趣现象.</p>
+<p><strong>定义</strong>. 设 $R$ 是特征 $p$ 环. 对于 $R$ 上的形式群 $G$, 考虑映射 $[p]\colon G\to G$, $x\mapsto px$.</p>
+<ul>
+<li>若 $[p] = 0$, 则 $G = \widehat {\mathbb G}_a$. 此时称 $G$ 的高度为 $\infty$.</li>
+<li>否则, $\ker [p]$ 为有限群, 其阶为 $p^h$. 称 $h$ 为形式群 $G$ 的<strong>高度</strong>.</li>
+</ul>
+<p>当然, 上述的 $h$ 不一定在整个 $\operatorname{Spec}R$ 上是个常数, 除非 $\operatorname{Spec}R$ “很小” (比如 $R$ 是个域). 它甚至也不是连续函数, 而是<strong>上半连续函数</strong>. 换言之, 高度至少为 $n$ 的地方构成闭集.</p>
+<p>另一种看法. 在 $\mathbb{Q}$ 上, 不变微分形式 $\omega$ (即 Lie 代数的对偶 $e^*\Omega^1_{G}$ 的一个基) 的形式积分给出了 $G$ 到 $\widehat {\mathbb G}_a$ 的群同构
+$$
+x\mapsto\int_0^x\omega.
+$$
+但在特征 $p$ 时, $x^{p-1}$ 的积分会爆炸. 这跟 $[p]$ 不再是<span class="link local"><a href="./平展概形态射.html" title="平展概形态射 [平展概形态射]">平展映射</a></span>有关. 此时 $[p]$ 穿过 <span class="link local"><a href="./Frobenius态射.html" title="Frobenius 态射 [Frobenius态射]">Frobenius 映射</a></span>.</p>
+<p>考虑任意的形式群同态
+$$
+g\colon G_f \to G_{f'},
+$$
+设 $g$ 将不变微分形式 $\omega_{f'}$ 拉回为
+$$
+g^{*}\omega_{f'} = \lambda \omega_f,
+$$
+当 $\lambda = 0$ 时, 我们知道 $g$ 的导数为零, 也即 $g(x) =\widetilde {g}(x^p)$. 故 $g$ 穿过 Frobenius 态射 $G_f \to G_f^{(p)}$. 这个过程不可能无限进行下去, 除非 $g=0$.</p>
+<p>对于 $g = [p]\colon G_f\to G_f$, 它停止在 $G_f^{(p^h)}\to G_f$ (此时它是个平展映射, 也就是同构), 那么 $h$ 就是高度.</p>
+<p>用坐标表示, 高度可以很简单地定义 (但未必能让人看出道理): 对于形式群律 $f$, 设 $[p] ( t )$ 中 $t^{p^n}$ 的系数为 $v_n$.</p>
+<ul>
+<li>若 $v_i = 0 (\forall i &lt; n)$, 则称 $f$ 的高度至少为 $n$.</li>
+<li>若 $v_i = 0 (\forall i &lt; n)$, 而 $v_n\in R^\times$, 则称 $f$ 的高度为 $n$.</li>
+</ul>
+<h2>例</h2>
+<p>形式群律与 <span class="link local"><a href="./复配边上同调理论.html" title=" [复配边上同调理论]">MU</a></span> 有关. 复配边环 $\Omega_U$ 上有一个形式群律
+$$
+f_U(x,y)=x+y+\sum_{k,l\geq 1}\alpha_{kl}x^ky^l,
 $$
 其中 $\alpha_{kl} \in\Omega_U^{-2(k+l-1)}$.</p>
 <p>$\pi_\bullet MU \simeq MU_*(\text{pt}) \simeq\mathbb{Z}[x_1,x_2,\cdots]$, 其中 $x_i$ 的阶数为 $2i$.</p>
@@ -861,7 +903,7 @@ $$
 $$
 c_1^E(L\otimes L') \simeq f(c_1^EL,c_1^E L'),
 $$
-其中 $f$ 为交换环 $R=E^{\text{even}}(*)$ 上的<span class="link local"><a href="./形式群律.html" title="“形式群律” [形式群律]">形式群律</a></span>. 另外, 此时 $t$ 是 $\mathbb{C}P^\infty$ 上万有线丛的 <span class="link local"><a href="./Thom类.html" title="“Thom 类” [Thom类]">Thom 类</a></span>.</p>
+其中 $f$ 为交换环 $R=E^{\text{even}}(*)$ 上的<span class="link local"><a href="./形式群律.html" title="形式群律 [形式群律]">形式群律</a></span>. 另外, 此时 $t$ 是 $\mathbb{C}P^\infty$ 上万有线丛的 <span class="link local"><a href="./Thom类.html" title="“Thom 类” [Thom类]">Thom 类</a></span>.</p>
 <h3>形式群律</h3>
 <p>$R$ 上的形式群律等同于 $\operatorname{Spec}R$ 到形式群律模叠 $\operatorname{Spec}L/G$ 的映射.</p>
 <table><thead><tr><th>谱 (上同调理论)</th><th>$\operatorname{Spec}L/G$ 上的拟凝聚层</th><th></th></tr></thead><tbody>
@@ -875,6 +917,53 @@ $$
 <p>普通交换环对应的 <span class="link local"><a href="./Eilenberg–MacLane谱.html" title="Eilenberg–MacLane 谱 [Eilenberg–MacLane谱]">Eilenberg–MacLane 谱</a></span>都有复定向结构.</p>
 <p><span class="link local"><a href="./KU.html" title=" [KU]">KU</a></span> 带有典范的复定向, 称为 Bott 元素 $\beta = [\mathcal O (-1)] - 1$.</p>
 <p><span class="link local"><a href="./KO.html" title="KO [KO]">KO</a></span> 不是复定向上同调理论.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="形式群的模叠"><header><h1><span class="taxon"></span>形式群的模叠 <a class="slug" href="./形式群的模叠.html">[形式群的模叠]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>形式群的<span class="link local"><a href="./分类叠.html" title="分类叠 (模叠) [分类叠]">模叠</a></span>是一个函子
+$$
+\mathcal M_{\mathrm{FG}}\colon \mathsf{Ring} \to \mathsf{Grpd},
+$$
+$\mathcal M_{\mathrm{FG}}(R)$ 是 $R$ 上的<span class="link local"><a href="./形式群律.html" title="形式群律 [形式群律]">形式群律</a></span>以及同构构成的<span class="link local"><a href="./群胚.html" title="群胚 [群胚]">群胚</a></span>.</p>
+<p>另有一个相关的函子 $\mathcal M_{\mathrm{FG}}^{\mathrm{s}}$, 由形式群律及严格同构构成. 所谓严格同构即在 <span class="link local"><a href="./Lie代数.html" title="Lie 代数 [Lie代数]">Lie 代数</a></span>上给出恒等的同构. 它的作用是给出 $\mathcal M_{\mathrm{FG}}$ 的某种 “坐标” <span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>.</p>
+<p><strong>命题</strong>. $\mathcal M_{\mathrm{FG}}^{\mathrm{s}}(R)$ 等价于范畴 $\{(G,\iota)\}$, 其中 $G$ 是 $R$ 上的形式群, $\iota\colon \operatorname{Lie}(G)\to R$ 为同构.</p>
+<p>记 $L$ 为 <span class="link local"><a href="./形式群律.html" title="形式群律 [形式群律]">Lazard 环</a></span>, $G^+$ 为群概形 $R\mapsto\{b_0 t + b_1 t^2 + \cdots\}$, $G$ 为群概形 $R\mapsto \{t + b_1 t^2 + \cdots\}$, 则 $G^+ = \mathbb G_m \rtimes G$, 且 $G^+$ 作用在 $\operatorname{Spec}L$ 上.</p>
+<p><strong>命题</strong>. 有交换图
+$$
+\begin{CD}
+\mathcal M_{\mathrm{FG}}^{\mathrm{s}} @&gt;&gt;&gt; \mathcal M_{\mathrm{FG}} \\
+@| @| \\
+\operatorname{Spec}L / G @&gt;&gt;{\rho}&gt; \operatorname{Spec}L / G^+,
+\end{CD}
+$$
+且 $\rho$ 为 $\mathbb G_m$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>.</p>
+<p>这告诉我们 $\mathcal M_{\mathrm{FG}}^{\mathrm{s}}$ 给出 $\mathcal M_{\mathrm{FG}}$ 上的一个<span class="link local"><a href="./线丛.html" title="线丛 [线丛]">线丛</a></span>.</p>
+<h2>性质</h2>
+<h3>按高度分层</h3>
+<p><span class="link local"><a href="./形式群律.html" title="形式群律 [形式群律]">形式群的高度</a></span>给出了 $\mathcal M_{\mathrm{FG}}$ 上的一个<span class="link local"><a href="./分层.html" title="分层 [分层]">分层</a></span>.</p>
+<p>归纳定义 Hasse 不变量:
+$$
+v_0 := p\in \Gamma (\mathcal M_{\mathrm{FG}},\mathcal O);
+$$
+$$
+\mathcal M_{\mathrm{FG}}^{\geq 1} := Z(v_0) = \mathcal M_{\mathrm{FG}}\otimes\mathbb F_p.
+$$
+对于 $G\in\mathcal M_{\mathrm{FG}}^{\geq 1}(\operatorname{Spec}R)$, 考虑 $[p]\colon G\to G$ 穿过 $G\to G^{(p)}$, 变为 $\widetilde g\colon G^{(p)}\to G$, 映射
+$$
+\omega_G \to \omega_{G^{(p)}} = \omega_G^{\otimes p}
+$$
+对应于元素
+$$
+v_1\in\Gamma (\mathcal M_{\mathrm{FG}}^{\geq 1},\omega_G^{\otimes (p-1)}).
+$$
+以此类推, 定义
+$$
+\mathcal M_{\mathrm{FG}}^{\geq i} := Z(v_{i-1}),
+$$
+$$
+v_i\in\Gamma (\mathcal M_{\mathrm{FG}}^{\geq i},\omega^{\otimes (p^i - 1)}).
+$$</p>
+<p>注意 $v_n$ 都不是全局定义的.</p>
+<p>用坐标表示 (即沿 $\operatorname{Spec}L\to\mathcal M_{\mathrm{FG}}$ 拉回), $v_n$ 是 $\operatorname{Spec}L/(v_0,\cdots,v_{n-1})$ 上的万有形式群律中 $[p] (t)$ 中 $t^{p^n}$ 的系数.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="形式谱"><header><h1><span class="taxon"></span>形式谱 <a class="slug" href="./形式谱.html">[形式谱]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>形式谱是某种带有拓扑的环对应的几何对象, 是一个<span class="link local"><a href="./形式概形.html" title="形式概形 [形式概形]">形式概形</a></span>.</p>
@@ -908,5 +997,5 @@ $$
 \widehat {R} := \operatorname{lim}_I R/I.
 $$</p>
 <h2>相关概念</h2>
-<p><span class="link local"><a href="./形式群律.html" title="“形式群律” [形式群律]">形式群律</a></span></p>
+<p><span class="link local"><a href="./形式群律.html" title="形式群律 [形式群律]">形式群律</a></span></p>
 </details></section></details></section></footer></article></div></body></html>

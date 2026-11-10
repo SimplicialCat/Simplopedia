@@ -2394,6 +2394,15 @@ $$</p>
 $$</p>
 <p>其中最值得始终保留的三个现代观点是: <strong>开闭分解给出再黏合; 偏屈 $t$-结构是逐层平移后再黏合得到的自对偶心; 分解定理则是权重正交性迫使稳定范畴中的对象按其偏屈上同调分裂.</strong></p>
 </details></section></p>
+<h2>第 8 讲 (2026-11-10)</h2>
+<p><strong>定理</strong> (IC 对象的纯性). 设 $Y_0\subset X_0$ 为光滑子概形, $\mathcal L_0$ 是 $Y_0$ 上的 lisse 层, 纯权 $w$, 则 $\mathrm{IC}_{X_0}(\mathcal L_0) := i_* j_{!*}(\mathcal L_0 [\dim Y_0])$ 为纯权 $w+d$ 层.</p>
+<p>引理. $K_0\leq w$, $L_0\geq w'$, 则
+$$
+\mathcal {Ext}(K,L)\geq w' - w.
+$$</p>
+<ul>
+<li>$\mathbb D (K_0\otimes \mathbb D L_0) \geq w' - w$.</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="terminologies"><header><h1><span class="taxon"></span>单纯百科 - 术语翻译表 <a class="slug" href="./terminologies.html">[terminologies]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>下表的第二列是<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>使用的译文.</p>
 <p>表格第三列是其它地方也曾出现的译文, 它们有的是历史淘汰的选择, 有的是机翻造成的错误. 这个表格的作用是为 LLM 提供正确的术语.</p>
@@ -2830,6 +2839,53 @@ $$
 <p>因此, $G$-集合的意象 $G\mathsf{Set} = \mathsf{Psh}(\mathbf{B}G)$ 是 $G$-主丛的<span class="link local"><a href="./分类意象.html" title="分类意象 [分类意象]">分类意象</a></span>.</p>
 <h2>相关资料</h2>
 <p>见<span class="link local"><a href="./盲人摸象.html" title="盲人摸象 [盲人摸象]">盲人摸象</a></span> A.5 节.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="形式群的模叠"><header><h1><span class="taxon"></span>形式群的模叠 <a class="slug" href="./形式群的模叠.html">[形式群的模叠]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>形式群的<span class="link local"><a href="./分类叠.html" title="分类叠 (模叠) [分类叠]">模叠</a></span>是一个函子
+$$
+\mathcal M_{\mathrm{FG}}\colon \mathsf{Ring} \to \mathsf{Grpd},
+$$
+$\mathcal M_{\mathrm{FG}}(R)$ 是 $R$ 上的<span class="link local"><a href="./形式群律.html" title="形式群律 [形式群律]">形式群律</a></span>以及同构构成的<span class="link local"><a href="./群胚.html" title="群胚 [群胚]">群胚</a></span>.</p>
+<p>另有一个相关的函子 $\mathcal M_{\mathrm{FG}}^{\mathrm{s}}$, 由形式群律及严格同构构成. 所谓严格同构即在 <span class="link local"><a href="./Lie代数.html" title="Lie 代数 [Lie代数]">Lie 代数</a></span>上给出恒等的同构. 它的作用是给出 $\mathcal M_{\mathrm{FG}}$ 的某种 “坐标” <span class="link local"><a href="./数学对象的表现.html" title="数学对象的表现 [数学对象的表现]">表现</a></span>.</p>
+<p><strong>命题</strong>. $\mathcal M_{\mathrm{FG}}^{\mathrm{s}}(R)$ 等价于范畴 $\{(G,\iota)\}$, 其中 $G$ 是 $R$ 上的形式群, $\iota\colon \operatorname{Lie}(G)\to R$ 为同构.</p>
+<p>记 $L$ 为 <span class="link local"><a href="./形式群律.html" title="形式群律 [形式群律]">Lazard 环</a></span>, $G^+$ 为群概形 $R\mapsto\{b_0 t + b_1 t^2 + \cdots\}$, $G$ 为群概形 $R\mapsto \{t + b_1 t^2 + \cdots\}$, 则 $G^+ = \mathbb G_m \rtimes G$, 且 $G^+$ 作用在 $\operatorname{Spec}L$ 上.</p>
+<p><strong>命题</strong>. 有交换图
+$$
+\begin{CD}
+\mathcal M_{\mathrm{FG}}^{\mathrm{s}} @&gt;&gt;&gt; \mathcal M_{\mathrm{FG}} \\
+@| @| \\
+\operatorname{Spec}L / G @&gt;&gt;{\rho}&gt; \operatorname{Spec}L / G^+,
+\end{CD}
+$$
+且 $\rho$ 为 $\mathbb G_m$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>.</p>
+<p>这告诉我们 $\mathcal M_{\mathrm{FG}}^{\mathrm{s}}$ 给出 $\mathcal M_{\mathrm{FG}}$ 上的一个<span class="link local"><a href="./线丛.html" title="线丛 [线丛]">线丛</a></span>.</p>
+<h2>性质</h2>
+<h3>按高度分层</h3>
+<p><span class="link local"><a href="./形式群律.html" title="形式群律 [形式群律]">形式群的高度</a></span>给出了 $\mathcal M_{\mathrm{FG}}$ 上的一个<span class="link local"><a href="./分层.html" title="分层 [分层]">分层</a></span>.</p>
+<p>归纳定义 Hasse 不变量:
+$$
+v_0 := p\in \Gamma (\mathcal M_{\mathrm{FG}},\mathcal O);
+$$
+$$
+\mathcal M_{\mathrm{FG}}^{\geq 1} := Z(v_0) = \mathcal M_{\mathrm{FG}}\otimes\mathbb F_p.
+$$
+对于 $G\in\mathcal M_{\mathrm{FG}}^{\geq 1}(\operatorname{Spec}R)$, 考虑 $[p]\colon G\to G$ 穿过 $G\to G^{(p)}$, 变为 $\widetilde g\colon G^{(p)}\to G$, 映射
+$$
+\omega_G \to \omega_{G^{(p)}} = \omega_G^{\otimes p}
+$$
+对应于元素
+$$
+v_1\in\Gamma (\mathcal M_{\mathrm{FG}}^{\geq 1},\omega_G^{\otimes (p-1)}).
+$$
+以此类推, 定义
+$$
+\mathcal M_{\mathrm{FG}}^{\geq i} := Z(v_{i-1}),
+$$
+$$
+v_i\in\Gamma (\mathcal M_{\mathrm{FG}}^{\geq i},\omega^{\otimes (p^i - 1)}).
+$$</p>
+<p>注意 $v_n$ 都不是全局定义的.</p>
+<p>用坐标表示 (即沿 $\operatorname{Spec}L\to\mathcal M_{\mathrm{FG}}$ 拉回), $v_n$ 是 $\operatorname{Spec}L/(v_0,\cdots,v_{n-1})$ 上的万有形式群律中 $[p] (t)$ 中 $t^{p^n}$ 的系数.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="指数映射(Lie群)"><header><h1><span class="taxon"></span>指数映射 (Lie 群) <a class="slug" href="./指数映射(Lie群).html">[指数映射(Lie群)]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>Lie 群上的指数映射是一个光滑映射 $\exp\colon \mathfrak g\to G$, 定义如下. 对 $a\in\mathfrak g$ 令 $\gamma\colon (-\varepsilon,\varepsilon) \to G$ 为满足方程 $\gamma(0)=e$, $\gamma'(t)=L_{\gamma(t)}a$ ($L_{g}$ 为左平移) 的曲线, 定义
