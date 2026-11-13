@@ -891,33 +891,69 @@
 </details></section><section class="block" data-taxon=""><details ><summary id="缠结假设"><header><h1><span class="taxon"></span>缠结假设 <a class="slug" href="./缠结假设.html">[缠结假设]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>缠结假设</strong> (tangle hypothesis) 是一系列关于各维数的<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span>构成的<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>的万有性质的命题.</p>
-<p>缠结假设可由<span class="link local"><a href="./cob-sing.html" title="带奇点配边假设 [cob-sing]">带奇点配边假设</a></span>推出.</p>
+<p>缠结假设可由<span class="link local"><a href="./cob-sing.html" title="带奇点配边假设 [cob-sing]">带奇点配边假设</a></span>推出, 直观上因为缠结可视为以球面为奇点数据的 “假奇点”.</p>
+<p><strong>注</strong>. 由于文献 (<span class="link local"><a href="./LurieCob.html" title="On the Classification of Topological Field Theories [LurieCob]">Lurie</a></span>, <span class="link local"><a href="./AyalaFrancisCob.html" title="The cobordism hypothesis [AyalaFrancisCob]">Ayala–Francis</a></span> 等) 记号不一 (尤其是指标含义不一), 此处使用的是一个和他们都不相同, 但看上去比较合理的记号.</p>
+<p>我们的指标 $k,n$ 有如下固定的含义:</p>
+<ul>
+<li>缠结范畴 $\mathsf{Tang}_k^{\mathbb E_n}$ 是 $\mathbb E_n$-幺半 $(\infty,k)$-范畴. 它是 $\mathsf{Tang}_k^V$ 在 $V = \mathbb{R}^n$ 的特殊情形, 一般地 $V$ 是个标架 $n$ 维流形.</li>
+</ul>
 <h2>陈述</h2>
-<p><strong>注</strong>. 由于文献 (<span class="link local"><a href="./LurieCob.html" title="On the Classification of Topological Field Theories [LurieCob]">Lurie</a></span>, <span class="link local"><a href="./AyalaFrancisCob.html" title="The cobordism hypothesis [AyalaFrancisCob]">Ayala–Francis</a></span> 等) 记号不一, 此处使用的是一个和他们都不相同, 但看上去比较合理的记号.</p>
+<h3>标架子流形</h3>
+<p>对于 $m\leq n$, 一个 $m$ 维流形 $M$ 带有 $n$-<span class="link local"><a href="./切结构.html" title="切结构 [切结构]">标架</a></span> (即 $TM\oplus \mathbb{R}^{n-m}$ 的平凡化) 时, 我们可以将其 “微小加厚”, 当作标架 $n$ 维流形 $M\times D^{n-m}$. 这样思考的好处是: 当我们谈论标架带边流形的边界 (甚至边界的边界…) 时, 可将边界 “微小加厚”, 于是边界 (边界的边界) 与原流形是同维数的流形, 这样边界标架的相容性就变得完全直观了. 下面的定义都可以采用这一直观来理解.</p>
+<p><strong>定义</strong> (标架子流形, <span class="link local"><a href="./LurieCob.html" title="On the Classification of Topological Field Theories [LurieCob]">Lurie</a></span> 的定义 4.4.1). 设 $k,n$ 为自然数, $M$ 是 $m$ 维流形带有 $(n+k)$-标架 ($m \leq n+k$). 定义 $M$ 的 $k$-<strong>标架子流形</strong> (又称<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">标架缠结</a></span>) 为如下资料:</p>
+<ul>
+<li>余 $n$ 维子流形 $M_0\subset M$ (直观: $M_0$ 通过继承 $M$ 的 “微小加厚” 当作 $k$ 维流形, 余维数在加厚前后不变); 特别地, 当 $m&lt; n$ 时 $M_0 = \varnothing$;</li>
+<li>$M_0$ 的 Gauss 映射 $M_0\to\mathrm{Gr}_{n,n+k} = \mathrm{O}(n+k)/(\mathrm{O}(n)\times\mathrm{O}(k))$ 的一个零伦.</li>
+</ul>
+<p><strong>注</strong>. 标架子流形的 “标架” <strong>不是</strong>切丛或法丛的平凡化, 也不是任何一个单独的向量丛的平凡化; 它是子丛作为一个丛映射的平凡化. 当余维数 $n$ 趋于 $\infty$ 时, $\mathrm{Gr}_{n,n+k}$ 的余极限为 $\mathbf{B}\mathrm{O}(k)$, 它退化到标架流形的 “标架”.</p>
+<p><strong>例</strong>. 如下是 $\mathbb{R}^{1+1}$ 的一个 $1$-标架子流形 ($n=k=1$):</p>
+<img src="/assets/tangle-hypothesis-framed-submanifold-example-1.svg" alt="" width="200" style="display:block; margin:auto;">
+<p>注意, 下图的圆圈<strong>不是</strong> $\mathbb{R}^{1+1}$ 的 $1$-标架子流形! 尽管圆圈的切丛和法丛都平凡, 但 Gauss 映射 $S^1\to\mathrm{Gr}_{1,2} = \mathbb{R}P^1$ 不平凡
+(它是 $\mathrm{Gr}_{1,2}$ 的二重覆叠).</p>
+<img src="/assets/tangle-hypothesis-framed-submanifold-example-2.svg" alt="" width="200" style="display:block; margin:auto;">
+<p><strong>例</strong>. 仍设 $n=k=1$, $n+k=2$. 考虑 $\mathbb{R}$ 作为 $2$-标架流形 (微小加厚), 那么 $\mathbb{R}$ 的一个 $1$-标架子流形是一个离散点集, 每个点带有 $*\to\mathrm{Gr}_{1,2} = \mathbb{R}P^1$ 的一个零伦, 这等同于一个 $\pi_1\mathrm{Gr}_{1,2} \simeq\mathbb{Z}$ 的元素. 作为对比, $1$-标架的 $0$ 维流形等同于离散点集每个点带一个正负号.</p>
+<p><strong>注</strong>. 虽然叫做 $k$-标架子流形, 但在我看来它的余维数 $n$ 是一个更本质的量. 这个余维数 $n$ 正是定义 $\mathsf{Tang}_k^V$ 所用的 “背景流形” $V$ 的维数. 我认为另一件事情也和这个 $n$ 有关: 在<span class="link local"><a href="./notes-manifold-diagrams.html" title="高阶范畴的流形图示 [notes-manifold-diagrams]">流形图</a></span>中, 最高维区域表示对象, 而余 $n$ 维区域表示 $n$-态射.</p>
+<h3>缠结范畴</h3>
 <p>我们用 $\mathsf{Tang}_{k}^{\mathbb E_n}$ 表示如下的 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>:</p>
 <ul>
-<li>其对象为 $\mathbb{R}^n$ (或 $n$ 维圆盘 $D^n$) 中的带标架 $0$ 维子流形, 其上 $\mathbb E_n$-结构是直观的;</li>
-<li>其 $i\leq k$ 阶态射为 $\mathbb{R}^{i+n}$ 中的 $i$ 维带标架<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span>;</li>
+<li>其对象为 $\mathbb{R}^n$ (或 $n$ 维圆盘 $D^n$) 中的 $k$-标架 $0$ 维紧子流形, 其上 $\mathbb E_n$-结构是直观的;</li>
+<li>其 $i\leq k$ 阶态射为 $\mathbb{R}^{i+n}$ 中的 $i$ 维 $k$-标架紧子流形;</li>
 <li>其高于 $k$ 阶态射为<span class="link local"><a href="./同痕.html" title="同痕 [同痕]">同痕</a></span>.</li>
 </ul>
-<p>如下是 $\mathsf{Tang}_1^{\mathbb E_2}$ 中的一个 $1$-态射的示意.</p>
+<p>如下是 $\mathsf{Tang}_1^{\mathbb E_2}$ 中的一个 $1$-态射的示意 (未画出标架).</p>
 <img src="/assets/tangle-Tang-1-E2.svg" alt="" width="250" style="display:block; margin:auto;">
+<h3>缠结假设的陈述</h3>
 <p><strong>命题</strong>. 范畴 $\mathsf{Tang}_{k}^{\mathbb E_n}$ 是一个<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>.</p>
-<p>等价的陈述是: 范畴 $\mathsf{Tang}_{k}^{\mathbb E_n}$ 是一个对象自由生成的<span class="link local"><a href="./刚性幺半范畴.html" title="刚性幺半范畴 [刚性幺半范畴]">刚性</a></span> <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>.</p>
-<p>由于<span class="link local"><a href="./逆环假设.html" title="逆环假设 [逆环假设]">逆环假设</a></span>, 上述命题还有一个用 $(\infty,n+k)$-范畴陈述的版本.</p>
-<p>我们用 $\mathsf{Tang}_{k}^{(n)}$ 表示如下的 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n+k)$-范畴</a></span>:</p>
+<p>等价的陈述是: 范畴 $\mathsf{Tang}_{k}^{\mathbb E_n}$ 是一个对象自由生成的<span class="link local"><a href="./刚性幺半范畴.html" title="刚性幺半范畴 [刚性幺半范畴]">刚性</a></span> <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>.
+这就是说, 对任意含对偶的 $\mathbb E_n$-幺半 $(\infty,k)$-范畴 $\mathcal C$, 有等价
+$$
+\mathsf{Fun}_{\mathbb E_n}(\mathsf{Tang}_k^{\mathbb E_n},\mathcal C) \simeq \mathcal C^{\simeq}.
+$$</p>
+<p><strong>例</strong>. 设 $n=k=1$; $\mathsf{Tang}_1^{\mathbb E_1}$ 是一个<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>自由生成的幺半 $(\infty,1)$-范畴.</p>
 <ul>
-<li>其 $i$ 阶态射为 $\mathbb{R}^{i}$ 中的余 $n$ 维带标架<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span>;</li>
+<li>其对象为 $\mathbb{R}$ 中的 $1$-标架 $0$ 维紧子流形, 即 $\mathbb{R}$ 的有限子集每个元素带一个整数标记 (也就是整数的有限序列).</li>
+<li>带标记 $0$ 的点, 其左右对偶分别为带 $-1$ 和 $1$ 标记的点. $-1$ 和 $1$ 在这里并不同构. 一般地, $(a,b,c)$ 的右对偶是 $(c+1,b+1,a+1)$.</li>
+</ul>
+<img src="/assets/tangle-hypothesis-example-1.svg" alt="" width="450" style="display:block; margin:auto;">
+<h3>逆环版本</h3>
+<p>由于<span class="link local"><a href="./逆环假设.html" title="逆环假设 [逆环假设]">逆环假设</a></span>, 上述命题还有一个用 $(\infty,n+k)$-范畴
+$$
+\mathsf{Tang}_{k}^{(n)}
+:= \mathrm{B}^n \mathsf{Tang}_{k}^{\mathbb E_n}
+$$
+陈述的版本. 这个 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n+k)$-范畴</a></span>可以描述如下:</p>
+<ul>
+<li>其 $i$ 阶态射为 $\mathbb{R}^{i}$ 中的余 $n$ 维带标架<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span> (特别地, $i&lt;n$ 阶态射唯一);</li>
 <li>其高于 $n+k$ 阶态射为<span class="link local"><a href="./同痕.html" title="同痕 [同痕]">同痕</a></span>.</li>
 </ul>
-<p>换言之, $\mathsf{Tang}_{k}^{(n)} = \mathrm{B}^n \mathsf{Tang}_{k}^{\mathbb E_n}$.</p>
 <p><strong>命题</strong>. 范畴 $\mathsf{Tang}_{k}^{(n)}$ 是一个基点的<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可伴随</a></span> $n$ 阶自同态所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n+k)$-范畴</a></span>.</p>
-<h3>一般流形版本</h3>
+<h3>一般背景流形的版本</h3>
 <p>缠结范畴 $\mathsf{Tang}_k^{\mathbb E_n}$ 可视为范畴 $\mathsf{Tang}_k^{\mathbb E_V}$ 在 $V = \mathbb{R}^n$ 的特例. 其大致描述如下:</p>
 <ul>
-<li>$\mathsf{Tang}_k^{\mathbb E_V}$ 的对象为 $V$ 的 $0$ 维嵌入标架子流形;</li>
-<li>…</li>
+<li>$\mathsf{Tang}_k^{\mathbb E_V}$ 的对象为 $V$ 的 $0$ 维 $k$-标架紧子流形;</li>
+<li>一般地, $\mathsf{Tang}_k^{\mathbb E_V}$ 的 $i\leq k$ 阶态射为 $V\times\mathbb{R}^i$ 中的 $k$-标架紧子流形;</li>
 </ul>
+<p>很明显, $\mathsf{Tang}_k^{\mathbb E_V}$ 具有 <span class="link local"><a href="./E_M-算畴.html" title="E_M-算畴 [E_M-算畴]">$\mathbb E_V$</a></span>-结构.</p>
 <h3>与配边假设的关系</h3>
 <p><span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span> $\mathsf{Bord}_k$ 是
 $\mathsf{Tang}_{k}^{\mathbb E_n}$

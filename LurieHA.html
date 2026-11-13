@@ -1172,11 +1172,80 @@ $$
 </details></section></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="HADR-2-mod"><header><h1><span class="taxon"></span>HADR (2) 代数与模 <a class="slug" href="./HADR-2-mod.html">[HADR-2-mod]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本部分大致对应 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 第 3 章 Algebras and Modules over $\infty$-Operads.</p>
+<p><section class="block" data-taxon=""><details ><summary id="HADR-coh-ope"><header><h1><span class="taxon"></span>HADR - 凝聚算畴 <a class="slug" href="./HADR-coh-ope.html">[HADR-coh-ope]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>凝聚算畴</h2>
+<p>凝聚算畴是使得其<span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">代数上的模</a></span>这一概念具有良好表现 (例如具有张量积) 的算畴.</p>
+<h3>半惰性映射</h3>
+<p>设 $f\colon X\to Y$ 是 $\mathcal O$ 中的态射.</p>
+<p><strong>定义</strong>. 称 $\Gamma$ 中的态射为<strong>半惰性</strong>映射, 是指每个元素的像至多含一个元素.</p>
+<p><strong>定义</strong> (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 3.3.1.1). 称 $\mathcal O$ 中的态射 $f\colon X\to Y$ 为<strong>半惰性</strong>映射, 如果</p>
+<ul>
+<li>$f$ 在 $\Gamma$ 中的像是半惰性映射;</li>
+<li>对每个惰性映射 $g\colon Z\rightarrowtail Y$, 若 $gf$ 在 $\Gamma$ 中的像是惰性映射, 则 $gf$ 是惰性映射.</li>
+</ul>
+<p><strong>注</strong>. 半惰性映射中有一种情形会反复用到: 恰有一个元素的像为空, 其余元素的像为单元集.
+这时 $f$ 忘掉了一个分量. 它半惰性, 但不惰性.</p>
+<h3>延拓</h3>
+<p>设 $f\colon X\leadsto Y$ 是活性映射, 其中 $X\in\mathcal O_{\langle n\rangle}$, $Y\in\mathcal O_{\langle m\rangle}$.
+由 Segal 条件, 对任意颜色 $Y_0\in\mathcal O_{\langle 1\rangle}$, 可以把 $Y_0$ 加入 $Y$ 中, 得到对象 $Y\oplus Y_0\in\mathcal O_{\langle m+1\rangle}$.
+记 $c\colon Y\oplus Y_0\to Y$ 为把额外分量忘掉的半惰性映射.</p>
+<p><strong>定义</strong> (延拓). $f$ 的<strong>延拓</strong> (extension) 为活性映射
+$$
+f^{+}\colon X\leadsto Y\oplus Y_0\,(Y_0\in\mathcal O_{\langle 1\rangle}),
+$$
+使得 $c\circ f^{+}=f$. 记 $f$ 的延拓构成的生象为 $\operatorname{Ext}(f)$.</p>
+<p><strong>例</strong>. <span class="link local"><a href="./En-算畴.html" title="En-算畴 [En-算畴]">$\mathbb E_k$</a></span> 中的活性运算 $f\colon \langle 1\rangle\leadsto\langle m\rangle$ 可视为 $\mathbb{R}^k$ 中的 $m$ 个互异的点. $f$ 的延拓 $f^+\colon \langle 1\rangle\leadsto\langle m+1\rangle$ 是再加入一个和 $m$ 个点都互异的点, 故 $\operatorname{Ext}(f) = \mathbb{R}^k\setminus m$.</p>
+<p><strong>定义</strong> (链上的延拓) (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 3.3.1.4). 设
+$$
+\sigma\colon X_0\overset{f_1}{\leadsto}X_1\overset{f_2}{\leadsto}\cdots\overset{f_n}{\leadsto}X_n
+$$
+为活性映射的链, 其中 $X_i\in\mathcal O_{\langle m_i\rangle}$, 并设 $S\subset\{0,1,\dots,n\}$ 向下封闭, 即 $i\in S$ 蕴含 $i-1\in S$.
+定义生象 $\operatorname{Ext}(\sigma,S)$ 如下. 其对象为</p>
+<ul>
+<li>对每个 $i$, 一个对象 $X_i'\in\mathcal O_{\langle m_i+\epsilon_i\rangle}$, 其中 $i\in S$ 时 $\epsilon_i=1$, 否则 $\epsilon_i=0$;</li>
+<li>半惰性映射 $c_i\colon X_i'\to X_i$, 当 $i\in S$ 时恰忘掉一个位于指标 $a_i$ 的分量, 当 $i\notin S$ 时是等价;</li>
+<li>活性映射 $f_i'\colon X_{i-1}'\leadsto X_i'$, 使得 $c_i f_i'=f_i c_{i-1}$;</li>
+</ul>
+<p>并要求当 $0&lt;i\in S$ 时, 底映射 $\varphi_i\colon\langle m_{i-1}+1\rangle\to\langle m_i+1\rangle$ 在指标 $a_{i-1}$ 处的子集 $S_{a_{i-1}}$ 包含 $a_i$.</p>
+<p><strong>注</strong>. 最后一条把各步新增的分量接成一条线: 第 $i-1$ 步新增的分量被 $f_i'$ 送到第 $i$ 步新增的分量上.
+$S$ 的向下封闭保证这条线不断开. 它对应原文的条件 (c).</p>
+<p><strong>注</strong>. 当 $S=\{0\}$ 时, $\operatorname{Ext}(\sigma,S)$ 就是 $\operatorname{Ext}(f_1)$.
+当 $S=\{0,1\}$ 时, 它记录的是同时给 $f_1$ 与 $f_2$ 添一个新输入, 并让 $f_2$ 把这两个新输入对接起来的数据.</p>
+<h3>凝聚性</h3>
+<p><strong>定义</strong> (凝聚算畴) (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 3.3.1.9). 称满足如下条件的算畴 $\mathcal O\to\Gamma$ 为<strong>凝聚算畴</strong> (coherent operad):</p>
+<ol>
+<li>$\mathcal O$ 含幺, 即 $\mathcal O_{\langle 0\rangle}$ 中唯一的对象 $\varnothing$ 是<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>;</li>
+<li>颜色范畴 $\mathcal O_{\langle 1\rangle}$ 是<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>;</li>
+<li>对任意活性映射 $X\overset{f}{\leadsto}Y\overset{g}{\leadsto}Z$, 典范的方块
+$$
+ \begin{array}{ccc}
+ \operatorname{Ext}(\mathrm{id}_Y) &amp; \to &amp; \operatorname{Ext}(g)\\
+ \downarrow &amp; &amp; \downarrow\\
+ \operatorname{Ext}(f) &amp; \to &amp; \operatorname{Ext}(gf)
+ \end{array}
+  $$
+是生象的<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>方块.</li>
+</ol>
+<p><strong>注</strong>. 方块中的映射来自两种操作: 把 $\mathrm{id}_Y$ 的延拓与 $f$ 或 $g$ 复合, 以及把一段的延拓扩张到复合 $gf$ 上.</p>
+<p><strong>注</strong> (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 3.3.1.11). 条件 (3) 只需在 $Z$ 是颜色, 即 $g$ 的靶为颜色的情形检查.</p>
+<p><strong>注</strong> (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 3.3.1.5). 当颜色范畴是生象时, $\operatorname{Ext}(\sigma,S)$ 中每条态射都是等价, 因此 $\operatorname{Ext}(\sigma,S)$ 本身是生象, 条件 (3) 中的推出是生象的推出.</p>
+<p><strong>例</strong>. 取 $\mathcal O=\Gamma$, 则 $\mathcal O$ 凝聚.
+事实上, 对活性映射 $f\colon X\leadsto Y$, 延拓等同于选择 $X$ 的一个分量来吸收新输入, 故 $\operatorname{Ext}(f)$ 等同于 $X$ 的分量集合.
+条件 (3) 的方块于是退化为有限集的分解, 它是推出方块.</p>
+<p><strong>例</strong>. $\mathbb E_0$ 凝聚.
+它的态射给每个元素指定至多一元的子集, 所以条件 (3) 中的方块可以等同于有限集的方块, 直接验证即可.</p>
+<p><strong>注</strong> (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 3.3.1.16). 凝聚性可以按颜色逐个检查: 把算畴拆解为颜色上的一族算畴之后, 它凝聚当且仅当族中每个算畴凝聚.
+拆解与汇编的记号见<span class="link local"><a href="./HADR-disint-assem.html" title="HADR - 拆解与汇编 [HADR-disint-assem]">拆解与汇编</a></span>.</p>
+<p><strong>定理</strong> (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 5.1.1.1). 对每个 $k\geq 0$, 小 $k$ 方块算畴 $\mathbb E_k$ 凝聚.</p>
+<p><strong>注</strong> (与平坦性和模的关系). 凝聚性有一条等价的刻画: 半惰性映射构成的模式沿源点投影平坦 (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 3.3.2.2).
+这与 <span class="link local"><a href="./BlomLoubatonRuitAlgd.html" title="Day convolution for algebraic patterns [BlomLoubatonRuitAlgd]">Blom–Loubaton–Ruit</a></span> 中的平坦性判据属于同一类 Conduché 型条件, 但作用在不同的纤维化上.
+凝聚性的用处在于模: 当 $\mathcal O$ 凝聚时, 代数 $A$ 上的模构成 $\mathcal O$ 上的算畴, 于是可以谈论模的张量积 (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 3.3.3.9).</p>
+</details></section></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="HADR-3-assoc"><header><h1><span class="taxon"></span>HADR (3) 结合代数 <a class="slug" href="./HADR-3-assoc.html">[HADR-3-assoc]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本部分大致对应 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 第 4 章 Associative Algebras and Their Modules.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="HADR-4-fact"><header><h1><span class="taxon"></span>HADR (4) En-代数与分解同调 <a class="slug" href="./HADR-4-fact.html">[HADR-4-fact]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>本部分大致对应 <span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 第 5 章 Little Cubes and Factorizable Sheaves.</p>
-<p><section class="block" data-taxon=""><details ><summary id="HADR-Ek"><header><h1><span class="taxon"></span>HADR - Ek <a class="slug" href="./HADR-Ek.html">[HADR-Ek]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p><section class="block" data-taxon=""><details ><summary id="HADR-Ek"><header><h1><span class="taxon"></span>HADR - E_k 的基本概念 <a class="slug" href="./HADR-Ek.html">[HADR-Ek]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h3>算畴 $\mathbb E_k$</h3>
 <p>固定一个自然数 $k$, 记 $\square^k = (-1,1)^k$ 为 $k$ 维开方块. 开方块之间的<strong>平直嵌入</strong> (rectilinear embedding) 是形如 $(x_1,\cdots,x_k)\mapsto (a_1x_1+b_1,\cdots)$ ($a_i &gt; 0$) 的嵌入. 对于有限集 $S$ 与嵌入 $f\colon \square^k\times S\to \square^k$, 若 $f$ 在每个分支上为平直嵌入, 也称 $f$ 为平直嵌入.</p>
 <p>考虑如下的 $\mathsf{Top}$-充实范畴 $\mathbb E_k$:</p>
 <ul>
@@ -1203,7 +1272,146 @@ $$
 $$</p>
 <p><strong>断言</strong>. 上述函子为等价.</p>
 <p>这个断言的内容基本上就是 Dunn–Lurie 加性定理.</p>
+<h3>算畴 $\mathbb E_k$ 之间的关系; $k\to\infty$ 的余极限</h3>
+<p><strong>命题</strong> (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span>, 5.1.1.4). 映射
+$$
+\operatorname{Hom}_{\mathbb E_k}(\langle m \rangle,\langle n\rangle)\to\operatorname{Hom}_{\Gamma}(\langle m \rangle,\langle n\rangle)
+$$
+是 $(k-2)$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>映射, 也即其每个点处的纤维是 $(k-2)$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>生象.
+如果我们将连通度高的映射视为两个生象 “接近” 的证据, 那么上述命题告诉我们当 $k$ 较大时, $\mathbb E_k$ 接近于 $\Gamma$.</p>
+<p><strong>例</strong>. 考虑活性映射 $f\colon \langle 1\rangle\to\langle 2\rangle$, 有 $\operatorname{Hom}_{\mathbb E_k}^f(\langle 1\rangle,\langle 2\rangle)\simeq S^{k-1}$.</p>
+<p>直观上, 当背景 $\mathbb{R}^k$ 维数越来越大时, 其中的子流形有越来越多的活动空间, 任何不平凡的高阶同伦都会在背景维数更高时变得平凡.</p>
+<p>考虑算畴态射 $\mathbb E_k\to\mathbb E_{k+1}$, 在拓扑空间的层面上将所有态射乘以一个区间.</p>
+<p><strong>推论</strong>. 算畴序列
+$$
+\mathbb E_0 \to \mathbb E_1 \to \mathbb E_2 \to \cdots
+$$
+的余极限为 $\Gamma$. 特别地, 对任意自然数 $k$, <span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>可遗忘为 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_k$-代数</a></span>.</p>
+<p><strong>记号</strong>. 记 $\mathbb E_{\infty} := \Gamma$.</p>
+<p>前述关于 $\mathbb E_k$ 的连通性的命题还有如下推论 (本质上是连通性<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">左正交</a></span>于截断性):</p>
+<p><strong>推论</strong> (5.1.1.7). 若 $\mathcal C$ 为对称幺半 $(n,1)$-范畴, 则当 $k\geq n+1$ 时, 遗忘函子
+$$
+\mathsf{CAlg}(\mathcal C) \to \mathsf{Alg}_{\mathbb E_k}(\mathcal C)
+$$
+为等价.</p>
 </details></section></p>
+</details></section><section class="block" data-taxon=""><details ><summary id="HADR-Ek"><header><h1><span class="taxon"></span>HADR - E_k 的基本概念 <a class="slug" href="./HADR-Ek.html">[HADR-Ek]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h3>算畴 $\mathbb E_k$</h3>
+<p>固定一个自然数 $k$, 记 $\square^k = (-1,1)^k$ 为 $k$ 维开方块. 开方块之间的<strong>平直嵌入</strong> (rectilinear embedding) 是形如 $(x_1,\cdots,x_k)\mapsto (a_1x_1+b_1,\cdots)$ ($a_i &gt; 0$) 的嵌入. 对于有限集 $S$ 与嵌入 $f\colon \square^k\times S\to \square^k$, 若 $f$ 在每个分支上为平直嵌入, 也称 $f$ 为平直嵌入.</p>
+<p>考虑如下的 $\mathsf{Top}$-充实范畴 $\mathbb E_k$:</p>
+<ul>
+<li>其对象为 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">$\Gamma$</a></span> 的对象 $\langle n\rangle$;</li>
+<li>态射 $\langle n \rangle \to \langle m\rangle$ 是一个 $\Gamma$ 中的态射 $\alpha$, 将每个 $i\in\{1,\cdots,n\}$ 对应到互不相交的子集 $S_i\subset\{1,\cdots,m\}$, 同时对每个 $i$ 有平直嵌入 $\square^k\times S_i \to \square^k$;</li>
+<li>复合是明显的.</li>
+</ul>
+<p>考虑 $\mathsf{Top}$-充实范畴表现的 $\mathsf{Ani}$-充实范畴 (也就是 $(\infty,1)$-范畴) $\mathbb E_k$, 我们得到一个算畴 $\mathbb E_k \to \Gamma$.</p>
+<p><strong>注</strong>. 事实上, 平直嵌入的空间同伦等价于<span class="link local"><a href="./构形空间.html" title="构形空间 [构形空间]">构形空间</a></span>, 所以作为 $\mathsf{Ani}$-充实范畴, $\mathbb E_k$ 的态射空间就是构形空间. 不过用平直嵌入有如下好处:</p>
+<ul>
+<li>容易写出运算的复合;</li>
+<li>容易与拓扑空间的 $k$ 阶<span class="link local"><a href="./环路空间.html" title="环路空间 [环路空间]">环路空间</a></span> $\Omega^k X$ 相联系;</li>
+<li>容易与<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span> $\Delta^k$ 相联系;</li>
+<li>…</li>
+</ul>
+<p>我们不禁要问这个算畴 $\mathbb E_k$ 和此前介绍的 $\mathbb E_k$-代数的<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span> $\Delta^k$ 有什么关系. 不难发现有代数模式的态射 $\Delta^k \to \mathbb E_k$:</p>
+<ul>
+<li>对象 $([n_1],\cdots,[n_k])\in\Delta^k$ 映射到 $\langle\prod_{i=1}^k n_i\rangle\in\mathbb E_k$, 想象为一个 $\square^k$ 的 “网格切割”, 每个维度分别切割为 $n_1,\cdots,n_k$ 个区间.</li>
+<li>态射是直观的, 我们仅举一例说明. 当 $k=1$ 时, 单纯形态射 $[n] \to [m]$ 把 $[n]$ 中的 $n$ 个箭头每个对应到 $[m]$ 中连续 $S_i$ 个箭头; 相应地, $\mathbb E_1$ (即 $\mathsf{Assoc}$) 中有一个态射 $\langle n\rangle\to\langle m\rangle$, 表示 $n$ 个区间每个切成 $S_i$ 个小区间, 总共有 $m$ 个小区间.</li>
+</ul>
+<p>所以对于积幺半范畴 $\mathcal C$ 有限制函子
+$$
+\mathsf{Alg}_{\mathbb E_k} (\mathcal C) \to \mathsf{Seg}_{\Delta^k}(\mathcal C).
+$$</p>
+<p><strong>断言</strong>. 上述函子为等价.</p>
+<p>这个断言的内容基本上就是 Dunn–Lurie 加性定理.</p>
+<h3>算畴 $\mathbb E_k$ 之间的关系; $k\to\infty$ 的余极限</h3>
+<p><strong>命题</strong> (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span>, 5.1.1.4). 映射
+$$
+\operatorname{Hom}_{\mathbb E_k}(\langle m \rangle,\langle n\rangle)\to\operatorname{Hom}_{\Gamma}(\langle m \rangle,\langle n\rangle)
+$$
+是 $(k-2)$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>映射, 也即其每个点处的纤维是 $(k-2)$-<span class="link local"><a href="./连通性.html" title="连通性 [连通性]">连通</a></span>生象.
+如果我们将连通度高的映射视为两个生象 “接近” 的证据, 那么上述命题告诉我们当 $k$ 较大时, $\mathbb E_k$ 接近于 $\Gamma$.</p>
+<p><strong>例</strong>. 考虑活性映射 $f\colon \langle 1\rangle\to\langle 2\rangle$, 有 $\operatorname{Hom}_{\mathbb E_k}^f(\langle 1\rangle,\langle 2\rangle)\simeq S^{k-1}$.</p>
+<p>直观上, 当背景 $\mathbb{R}^k$ 维数越来越大时, 其中的子流形有越来越多的活动空间, 任何不平凡的高阶同伦都会在背景维数更高时变得平凡.</p>
+<p>考虑算畴态射 $\mathbb E_k\to\mathbb E_{k+1}$, 在拓扑空间的层面上将所有态射乘以一个区间.</p>
+<p><strong>推论</strong>. 算畴序列
+$$
+\mathbb E_0 \to \mathbb E_1 \to \mathbb E_2 \to \cdots
+$$
+的余极限为 $\Gamma$. 特别地, 对任意自然数 $k$, <span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span>可遗忘为 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_k$-代数</a></span>.</p>
+<p><strong>记号</strong>. 记 $\mathbb E_{\infty} := \Gamma$.</p>
+<p>前述关于 $\mathbb E_k$ 的连通性的命题还有如下推论 (本质上是连通性<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">左正交</a></span>于截断性):</p>
+<p><strong>推论</strong> (5.1.1.7). 若 $\mathcal C$ 为对称幺半 $(n,1)$-范畴, 则当 $k\geq n+1$ 时, 遗忘函子
+$$
+\mathsf{CAlg}(\mathcal C) \to \mathsf{Alg}_{\mathbb E_k}(\mathcal C)
+$$
+为等价.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="HADR-coh-ope"><header><h1><span class="taxon"></span>HADR - 凝聚算畴 <a class="slug" href="./HADR-coh-ope.html">[HADR-coh-ope]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>凝聚算畴</h2>
+<p>凝聚算畴是使得其<span class="link local"><a href="./OpAlgMod.html" title="算畴上的代数上的模 [OpAlgMod]">代数上的模</a></span>这一概念具有良好表现 (例如具有张量积) 的算畴.</p>
+<h3>半惰性映射</h3>
+<p>设 $f\colon X\to Y$ 是 $\mathcal O$ 中的态射.</p>
+<p><strong>定义</strong>. 称 $\Gamma$ 中的态射为<strong>半惰性</strong>映射, 是指每个元素的像至多含一个元素.</p>
+<p><strong>定义</strong> (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 3.3.1.1). 称 $\mathcal O$ 中的态射 $f\colon X\to Y$ 为<strong>半惰性</strong>映射, 如果</p>
+<ul>
+<li>$f$ 在 $\Gamma$ 中的像是半惰性映射;</li>
+<li>对每个惰性映射 $g\colon Z\rightarrowtail Y$, 若 $gf$ 在 $\Gamma$ 中的像是惰性映射, 则 $gf$ 是惰性映射.</li>
+</ul>
+<p><strong>注</strong>. 半惰性映射中有一种情形会反复用到: 恰有一个元素的像为空, 其余元素的像为单元集.
+这时 $f$ 忘掉了一个分量. 它半惰性, 但不惰性.</p>
+<h3>延拓</h3>
+<p>设 $f\colon X\leadsto Y$ 是活性映射, 其中 $X\in\mathcal O_{\langle n\rangle}$, $Y\in\mathcal O_{\langle m\rangle}$.
+由 Segal 条件, 对任意颜色 $Y_0\in\mathcal O_{\langle 1\rangle}$, 可以把 $Y_0$ 加入 $Y$ 中, 得到对象 $Y\oplus Y_0\in\mathcal O_{\langle m+1\rangle}$.
+记 $c\colon Y\oplus Y_0\to Y$ 为把额外分量忘掉的半惰性映射.</p>
+<p><strong>定义</strong> (延拓). $f$ 的<strong>延拓</strong> (extension) 为活性映射
+$$
+f^{+}\colon X\leadsto Y\oplus Y_0\,(Y_0\in\mathcal O_{\langle 1\rangle}),
+$$
+使得 $c\circ f^{+}=f$. 记 $f$ 的延拓构成的生象为 $\operatorname{Ext}(f)$.</p>
+<p><strong>例</strong>. <span class="link local"><a href="./En-算畴.html" title="En-算畴 [En-算畴]">$\mathbb E_k$</a></span> 中的活性运算 $f\colon \langle 1\rangle\leadsto\langle m\rangle$ 可视为 $\mathbb{R}^k$ 中的 $m$ 个互异的点. $f$ 的延拓 $f^+\colon \langle 1\rangle\leadsto\langle m+1\rangle$ 是再加入一个和 $m$ 个点都互异的点, 故 $\operatorname{Ext}(f) = \mathbb{R}^k\setminus m$.</p>
+<p><strong>定义</strong> (链上的延拓) (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 3.3.1.4). 设
+$$
+\sigma\colon X_0\overset{f_1}{\leadsto}X_1\overset{f_2}{\leadsto}\cdots\overset{f_n}{\leadsto}X_n
+$$
+为活性映射的链, 其中 $X_i\in\mathcal O_{\langle m_i\rangle}$, 并设 $S\subset\{0,1,\dots,n\}$ 向下封闭, 即 $i\in S$ 蕴含 $i-1\in S$.
+定义生象 $\operatorname{Ext}(\sigma,S)$ 如下. 其对象为</p>
+<ul>
+<li>对每个 $i$, 一个对象 $X_i'\in\mathcal O_{\langle m_i+\epsilon_i\rangle}$, 其中 $i\in S$ 时 $\epsilon_i=1$, 否则 $\epsilon_i=0$;</li>
+<li>半惰性映射 $c_i\colon X_i'\to X_i$, 当 $i\in S$ 时恰忘掉一个位于指标 $a_i$ 的分量, 当 $i\notin S$ 时是等价;</li>
+<li>活性映射 $f_i'\colon X_{i-1}'\leadsto X_i'$, 使得 $c_i f_i'=f_i c_{i-1}$;</li>
+</ul>
+<p>并要求当 $0&lt;i\in S$ 时, 底映射 $\varphi_i\colon\langle m_{i-1}+1\rangle\to\langle m_i+1\rangle$ 在指标 $a_{i-1}$ 处的子集 $S_{a_{i-1}}$ 包含 $a_i$.</p>
+<p><strong>注</strong>. 最后一条把各步新增的分量接成一条线: 第 $i-1$ 步新增的分量被 $f_i'$ 送到第 $i$ 步新增的分量上.
+$S$ 的向下封闭保证这条线不断开. 它对应原文的条件 (c).</p>
+<p><strong>注</strong>. 当 $S=\{0\}$ 时, $\operatorname{Ext}(\sigma,S)$ 就是 $\operatorname{Ext}(f_1)$.
+当 $S=\{0,1\}$ 时, 它记录的是同时给 $f_1$ 与 $f_2$ 添一个新输入, 并让 $f_2$ 把这两个新输入对接起来的数据.</p>
+<h3>凝聚性</h3>
+<p><strong>定义</strong> (凝聚算畴) (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 3.3.1.9). 称满足如下条件的算畴 $\mathcal O\to\Gamma$ 为<strong>凝聚算畴</strong> (coherent operad):</p>
+<ol>
+<li>$\mathcal O$ 含幺, 即 $\mathcal O_{\langle 0\rangle}$ 中唯一的对象 $\varnothing$ 是<span class="link local"><a href="./零对象.html" title="零对象 [零对象]">零对象</a></span>;</li>
+<li>颜色范畴 $\mathcal O_{\langle 1\rangle}$ 是<span class="link local"><a href="./生象.html" title="生象, ∞-群胚 [生象]">生象</a></span>;</li>
+<li>对任意活性映射 $X\overset{f}{\leadsto}Y\overset{g}{\leadsto}Z$, 典范的方块
+$$
+ \begin{array}{ccc}
+ \operatorname{Ext}(\mathrm{id}_Y) &amp; \to &amp; \operatorname{Ext}(g)\\
+ \downarrow &amp; &amp; \downarrow\\
+ \operatorname{Ext}(f) &amp; \to &amp; \operatorname{Ext}(gf)
+ \end{array}
+  $$
+是生象的<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>方块.</li>
+</ol>
+<p><strong>注</strong>. 方块中的映射来自两种操作: 把 $\mathrm{id}_Y$ 的延拓与 $f$ 或 $g$ 复合, 以及把一段的延拓扩张到复合 $gf$ 上.</p>
+<p><strong>注</strong> (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 3.3.1.11). 条件 (3) 只需在 $Z$ 是颜色, 即 $g$ 的靶为颜色的情形检查.</p>
+<p><strong>注</strong> (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 3.3.1.5). 当颜色范畴是生象时, $\operatorname{Ext}(\sigma,S)$ 中每条态射都是等价, 因此 $\operatorname{Ext}(\sigma,S)$ 本身是生象, 条件 (3) 中的推出是生象的推出.</p>
+<p><strong>例</strong>. 取 $\mathcal O=\Gamma$, 则 $\mathcal O$ 凝聚.
+事实上, 对活性映射 $f\colon X\leadsto Y$, 延拓等同于选择 $X$ 的一个分量来吸收新输入, 故 $\operatorname{Ext}(f)$ 等同于 $X$ 的分量集合.
+条件 (3) 的方块于是退化为有限集的分解, 它是推出方块.</p>
+<p><strong>例</strong>. $\mathbb E_0$ 凝聚.
+它的态射给每个元素指定至多一元的子集, 所以条件 (3) 中的方块可以等同于有限集的方块, 直接验证即可.</p>
+<p><strong>注</strong> (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 3.3.1.16). 凝聚性可以按颜色逐个检查: 把算畴拆解为颜色上的一族算畴之后, 它凝聚当且仅当族中每个算畴凝聚.
+拆解与汇编的记号见<span class="link local"><a href="./HADR-disint-assem.html" title="HADR - 拆解与汇编 [HADR-disint-assem]">拆解与汇编</a></span>.</p>
+<p><strong>定理</strong> (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 5.1.1.1). 对每个 $k\geq 0$, 小 $k$ 方块算畴 $\mathbb E_k$ 凝聚.</p>
+<p><strong>注</strong> (与平坦性和模的关系). 凝聚性有一条等价的刻画: 半惰性映射构成的模式沿源点投影平坦 (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 3.3.2.2).
+这与 <span class="link local"><a href="./BlomLoubatonRuitAlgd.html" title="Day convolution for algebraic patterns [BlomLoubatonRuitAlgd]">Blom–Loubaton–Ruit</a></span> 中的平坦性判据属于同一类 Conduché 型条件, 但作用在不同的纤维化上.
+凝聚性的用处在于模: 当 $\mathcal O$ 凝聚时, 代数 $A$ 上的模构成 $\mathcal O$ 上的算畴, 于是可以谈论模的张量积 (<span class="link local"><a href="./LurieHA.html" title="Higher Algebra [LurieHA]">Lurie HA</a></span> 3.3.3.9).</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="HADR-ope"><header><h1><span class="taxon"></span>HADR - 算畴 <a class="slug" href="./HADR-ope.html">[HADR-ope]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>对称算畴</h2>
 <h3>引子: 代数模式 $\mathrm{Assoc}$</h3>
