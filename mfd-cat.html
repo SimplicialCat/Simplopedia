@@ -842,6 +842,8 @@
 </ul>
 <h3>$(\infty,n)$-范畴的分解同调</h3>
 <ul>
+<li>百科页面: <span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></li>
+<li>相关笔记: <span class="link local"><a href="./notes-fact.html" title="范畴的分解同调 [notes-fact]">范畴的分解同调</a></span></li>
 <li>参考文献: <span class="link local"><a href="./AyalaFrancisRozenblyumI.html" title="Factorization homology I: higher categories [AyalaFrancisRozenblyumI]">Ayala–Francis–Rozenblyum, Factorization homology I: higher categories</a></span></li>
 </ul>
 <h3>配边假设与缠结假设</h3>
@@ -979,6 +981,39 @@
 <li><span class="link local"><a href="./OP-DAHA-QCV.html" title="正交多项式, 双仿射 Hecke 代数与量子特征簇 [OP-DAHA-QCV]">正交多项式, 双仿射 Hecke 代数与量子特征簇</a></span> (2026 年 2 月)</li>
 <li><span class="link local"><a href="./quantumtori.html" title="量子圆环 [quantumtori]">量子圆环</a></span></li>
 </ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="notes-fact"><header><h1><span class="taxon"></span>范畴的分解同调 <a class="slug" href="./notes-fact.html">[notes-fact]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>参考文献: <span class="link local"><a href="./AyalaFrancisRozenblyumI.html" title="Factorization homology I: higher categories [AyalaFrancisRozenblyumI]">Factorization homology I: higher categories</a></span></p>
+<p>合集: <span class="link local"><a href="./mfd-cat.html" title="流形与高阶范畴 [mfd-cat]">流形与高阶范畴</a></span></p>
+<h3>3.8 胞腔几何实现</h3>
+<p>定义函子
+$$
+\langle - \rangle \colon \Delta^{\mathrm{op}} \to \mathsf{cDisk}_1^{\mathrm{vfr}},
+$$
+然后归纳地定义<strong>胞腔几何实现</strong> (<span class="link local"><a href="./AyalaFrancisRozenblyumI.html" title="Factorization homology I: higher categories [AyalaFrancisRozenblyumI]">AFR</a></span> 定义 3.53)
+$$
+\langle - \rangle \colon \Theta_n^{\mathrm{op}} \to \mathsf{cDisk}_n^{\mathrm{vfr}}.
+$$</p>
+<h2>4 分解同调</h2>
+<h3>4.2</h3>
+<p><strong>引理</strong>. 函子 $\Theta_n^{\mathrm{op}} \to \mathsf{cDisk}_n^{\mathrm{vfr}}$ 的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>
+$$
+\mathfrak C \colon (\mathsf{cDisk}_n^{\mathrm{vfr}})^{\mathrm{op}} \to \widehat {\Theta}_n
+$$
+落在全子范畴 $\mathsf{Cat}_{(\infty,n)}$ 中.</p>
+<h3>4.3</h3>
+<p><strong>定义</strong> (4.13). 分解同调为函子
+$$
+\int\colon \mathsf{Cat}_{(\infty ,n)}\to\mathsf{Fun}(\mathsf{cDisk}_n^{\mathrm{vfr}},\mathsf{Ani})\hookrightarrow\mathsf{Fun}(\mathsf{cMfd}_n^{\mathrm{vfr}},\mathsf{Ani}),
+$$
+其中</p>
+<ul>
+<li>第一步为沿 $\Theta_n^{\mathrm{op}}\hookrightarrow \mathsf{cDisk}_n^{\mathrm{vfr}}$ 的右 Kan 扩张;</li>
+<li>第二步为沿 $\mathsf{cDisk}_n^{\mathrm{vfr}} \hookrightarrow \mathsf{cMfd}_n^{\mathrm{vfr}}$ 的左 Kan 扩张.</li>
+</ul>
+<p>具体地, 对于 $(\infty,n)$-范畴 $\mathcal C$ 与标架分层流形 $M$, 分解同调可写为
+$$
+\int_M \mathcal C = \operatorname{colim}_{D\to M}\operatorname{Hom}_{\mathsf{Cat}_{(\infty,n)}}(\mathfrak C(D),\mathcal C).
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="strat-cat"><header><h1><span class="taxon"></span>分层空间与范畴 <a class="slug" href="./strat-cat.html">[strat-cat]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>参考文献: <span class="link local"><a href="./AyalaFrancisRozenblyumStrat.html" title="A stratified homotopy hypothesis [AyalaFrancisRozenblyumStrat]">A stratified homotopy hypothesis</a></span></p>
 <p>合集: <span class="link local"><a href="./mfd-cat.html" title="流形与高阶范畴 [mfd-cat]">流形与高阶范畴</a></span></p>
@@ -988,7 +1023,11 @@ $$
 \mathsf{Exit}\colon \mathsf{Strat} \to \mathsf{Cat}.
 $$
 且在本文研究的 “锥光滑分层空间” 的子范畴上, $\mathsf{Exit}$ 为<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>.</p>
-<p>由于上述构造, $\infty$-范畴可以用锥光滑分层空间来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>, 从而视为这种分层空间的范畴上的层. 本文具体给出了一个层构成 $\infty$-范畴须满足的条件, 称之为<strong>条纹层</strong> (striation sheaves), 证明有范畴等价
+<p>由于上述构造, $\infty$-范畴可以用锥光滑分层空间来<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>, 从而视为这种分层空间的范畴上的层. 本文具体给出了一个层构成 $\infty$-范畴须满足的条件, 称之为<strong>条纹层</strong> (striation sheaves),
+$$
+\mathsf{Stri}\hookrightarrow \mathsf{Psh}(\mathsf{Strat}),
+$$
+并证明有范畴等价
 $$
 \mathsf{Stri} \simeq \mathsf{Cat}.
 $$

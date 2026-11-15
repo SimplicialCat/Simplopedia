@@ -936,6 +936,39 @@ $N(0\overset{\simeq}{\to} 1) \to {*}$
 <h2>例</h2>
 <h3>群胚对象</h3>
 <p><span class="link local"><a href="./群胚对象.html" title="群胚对象 (∞-范畴论) [群胚对象]">群胚对象</a></span>是重要的 Segal 对象.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="notes-fact"><header><h1><span class="taxon"></span>范畴的分解同调 <a class="slug" href="./notes-fact.html">[notes-fact]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>参考文献: <span class="link local"><a href="./AyalaFrancisRozenblyumI.html" title="Factorization homology I: higher categories [AyalaFrancisRozenblyumI]">Factorization homology I: higher categories</a></span></p>
+<p>合集: <span class="link local"><a href="./mfd-cat.html" title="流形与高阶范畴 [mfd-cat]">流形与高阶范畴</a></span></p>
+<h3>3.8 胞腔几何实现</h3>
+<p>定义函子
+$$
+\langle - \rangle \colon \Delta^{\mathrm{op}} \to \mathsf{cDisk}_1^{\mathrm{vfr}},
+$$
+然后归纳地定义<strong>胞腔几何实现</strong> (<span class="link local"><a href="./AyalaFrancisRozenblyumI.html" title="Factorization homology I: higher categories [AyalaFrancisRozenblyumI]">AFR</a></span> 定义 3.53)
+$$
+\langle - \rangle \colon \Theta_n^{\mathrm{op}} \to \mathsf{cDisk}_n^{\mathrm{vfr}}.
+$$</p>
+<h2>4 分解同调</h2>
+<h3>4.2</h3>
+<p><strong>引理</strong>. 函子 $\Theta_n^{\mathrm{op}} \to \mathsf{cDisk}_n^{\mathrm{vfr}}$ 的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>
+$$
+\mathfrak C \colon (\mathsf{cDisk}_n^{\mathrm{vfr}})^{\mathrm{op}} \to \widehat {\Theta}_n
+$$
+落在全子范畴 $\mathsf{Cat}_{(\infty,n)}$ 中.</p>
+<h3>4.3</h3>
+<p><strong>定义</strong> (4.13). 分解同调为函子
+$$
+\int\colon \mathsf{Cat}_{(\infty ,n)}\to\mathsf{Fun}(\mathsf{cDisk}_n^{\mathrm{vfr}},\mathsf{Ani})\hookrightarrow\mathsf{Fun}(\mathsf{cMfd}_n^{\mathrm{vfr}},\mathsf{Ani}),
+$$
+其中</p>
+<ul>
+<li>第一步为沿 $\Theta_n^{\mathrm{op}}\hookrightarrow \mathsf{cDisk}_n^{\mathrm{vfr}}$ 的右 Kan 扩张;</li>
+<li>第二步为沿 $\mathsf{cDisk}_n^{\mathrm{vfr}} \hookrightarrow \mathsf{cMfd}_n^{\mathrm{vfr}}$ 的左 Kan 扩张.</li>
+</ul>
+<p>具体地, 对于 $(\infty,n)$-范畴 $\mathcal C$ 与标架分层流形 $M$, 分解同调可写为
+$$
+\int_M \mathcal C = \operatorname{colim}_{D\to M}\operatorname{Hom}_{\mathsf{Cat}_{(\infty,n)}}(\mathfrak C(D),\mathcal C).
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="terminologies"><header><h1><span class="taxon"></span>单纯百科 - 术语翻译表 <a class="slug" href="./terminologies.html">[terminologies]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>下表的第二列是<span class="link local"><a href="./单纯百科.html" title="单纯百科 [单纯百科]">单纯百科</a></span>使用的译文.</p>
 <p>表格第三列是其它地方也曾出现的译文, 它们有的是历史淘汰的选择, 有的是机翻造成的错误. 这个表格的作用是为 LLM 提供正确的术语.</p>
@@ -1433,12 +1466,12 @@ $$</p>
 <li>$\mathbf{B}\mathbb{Z} \simeq S^1$.</li>
 <li>$\mathbf{B}\mathbb{Z}/2 \simeq \mathbb RP^\infty$.</li>
 <li>$\mathbf{B}S^1 \simeq \mathbb{C}P^{\infty}$.</li>
-<li>$\mathbf{B}\mathrm{O}(n)\simeq\mathbf{B}\mathrm{GL}_n(\mathbb{R})=\text{Gr}_n(\mathbb{R}^{\infty})$ 是 <span class="link local"><a href="./Grassmann流形.html" title=" [Grassmann流形]">Grassmann 流形</a></span>, 其 $\mathbb{Z}_2$ 系数上同调类为 <span class="link local"><a href="./Stiefel--Whitney类.html" title="Stiefel–Whitney 类 [Stiefel--Whitney类]">Stiefel–Whitney 类</a></span>:
+<li>$\mathbf{B}\mathrm{O}(n)\simeq\mathbf{B}\mathrm{GL}_n(\mathbb{R})=\text{Gr}_n(\mathbb{R}^{\infty})$ 是 <span class="link local"><a href="./Grassmann流形.html" title="Grassmann 流形 [Grassmann流形]">Grassmann 流形</a></span>, 其 $\mathbb{Z}_2$ 系数上同调类为 <span class="link local"><a href="./Stiefel--Whitney类.html" title="Stiefel–Whitney 类 [Stiefel--Whitney类]">Stiefel–Whitney 类</a></span>:
 $$
       H^*(\mathbf{B}\mathrm{O}(n);\mathbb{Z}_2)=\mathbb{Z}_2[w_1,\cdots,w_n],
   $$
 其中 $w_k\in H^k$.</li>
-<li>$\mathbf{B}\mathrm{U}(n)\simeq\mathbf{B}\mathrm{GL}_n(\mathbb{C})=\text{Gr}_n(\mathbb{C}^{\infty})$ 是复 <span class="link local"><a href="./Grassmann流形.html" title=" [Grassmann流形]">Grassmann 流形</a></span>, 其 $\mathbb{Z}$ 系数上同调为<span class="link local"><a href="./陈类.html" title="“陈类” [陈类]">陈类</a></span>:
+<li>$\mathbf{B}\mathrm{U}(n)\simeq\mathbf{B}\mathrm{GL}_n(\mathbb{C})=\text{Gr}_n(\mathbb{C}^{\infty})$ 是复 <span class="link local"><a href="./Grassmann流形.html" title="Grassmann 流形 [Grassmann流形]">Grassmann 流形</a></span>, 其 $\mathbb{Z}$ 系数上同调为<span class="link local"><a href="./陈类.html" title="“陈类” [陈类]">陈类</a></span>:
 $$
       H^*(\mathbf{B}\mathrm{U}(n);\mathbb{Z})=\mathbb{Z}[c_1,\cdots,c_n],
   $$

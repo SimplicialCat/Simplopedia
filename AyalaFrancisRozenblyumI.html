@@ -853,6 +853,8 @@
 </ul>
 <h3>$(\infty,n)$-范畴的分解同调</h3>
 <ul>
+<li>百科页面: <span class="link local"><a href="./分解同调.html" title="分解同调 [分解同调]">分解同调</a></span></li>
+<li>相关笔记: <span class="link local"><a href="./notes-fact.html" title="范畴的分解同调 [notes-fact]">范畴的分解同调</a></span></li>
 <li>参考文献: <span class="link local"><a href="./AyalaFrancisRozenblyumI.html" title="Factorization homology I: higher categories [AyalaFrancisRozenblyumI]">Ayala–Francis–Rozenblyum, Factorization homology I: higher categories</a></span></li>
 </ul>
 <h3>配边假设与缠结假设</h3>
@@ -867,6 +869,39 @@
 <li>相关笔记: <span class="link local"><a href="./notes-manifold-diagrams.html" title="高阶范畴的流形图示 [notes-manifold-diagrams]">高阶范畴的流形图示</a></span></li>
 <li>参考文献: <span class="link local"><a href="./HeidemannMfdDiag.html" title="Manifold Diagrams for Higher Categories [HeidemannMfdDiag]">Heidemann, Manifold Diagrams for Higher Categories</a></span></li>
 </ul>
+</details></section><section class="block" data-taxon=""><details ><summary id="notes-fact"><header><h1><span class="taxon"></span>范畴的分解同调 <a class="slug" href="./notes-fact.html">[notes-fact]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>参考文献: <span class="link local"><a href="./AyalaFrancisRozenblyumI.html" title="Factorization homology I: higher categories [AyalaFrancisRozenblyumI]">Factorization homology I: higher categories</a></span></p>
+<p>合集: <span class="link local"><a href="./mfd-cat.html" title="流形与高阶范畴 [mfd-cat]">流形与高阶范畴</a></span></p>
+<h3>3.8 胞腔几何实现</h3>
+<p>定义函子
+$$
+\langle - \rangle \colon \Delta^{\mathrm{op}} \to \mathsf{cDisk}_1^{\mathrm{vfr}},
+$$
+然后归纳地定义<strong>胞腔几何实现</strong> (<span class="link local"><a href="./AyalaFrancisRozenblyumI.html" title="Factorization homology I: higher categories [AyalaFrancisRozenblyumI]">AFR</a></span> 定义 3.53)
+$$
+\langle - \rangle \colon \Theta_n^{\mathrm{op}} \to \mathsf{cDisk}_n^{\mathrm{vfr}}.
+$$</p>
+<h2>4 分解同调</h2>
+<h3>4.2</h3>
+<p><strong>引理</strong>. 函子 $\Theta_n^{\mathrm{op}} \to \mathsf{cDisk}_n^{\mathrm{vfr}}$ 的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>
+$$
+\mathfrak C \colon (\mathsf{cDisk}_n^{\mathrm{vfr}})^{\mathrm{op}} \to \widehat {\Theta}_n
+$$
+落在全子范畴 $\mathsf{Cat}_{(\infty,n)}$ 中.</p>
+<h3>4.3</h3>
+<p><strong>定义</strong> (4.13). 分解同调为函子
+$$
+\int\colon \mathsf{Cat}_{(\infty ,n)}\to\mathsf{Fun}(\mathsf{cDisk}_n^{\mathrm{vfr}},\mathsf{Ani})\hookrightarrow\mathsf{Fun}(\mathsf{cMfd}_n^{\mathrm{vfr}},\mathsf{Ani}),
+$$
+其中</p>
+<ul>
+<li>第一步为沿 $\Theta_n^{\mathrm{op}}\hookrightarrow \mathsf{cDisk}_n^{\mathrm{vfr}}$ 的右 Kan 扩张;</li>
+<li>第二步为沿 $\mathsf{cDisk}_n^{\mathrm{vfr}} \hookrightarrow \mathsf{cMfd}_n^{\mathrm{vfr}}$ 的左 Kan 扩张.</li>
+</ul>
+<p>具体地, 对于 $(\infty,n)$-范畴 $\mathcal C$ 与标架分层流形 $M$, 分解同调可写为
+$$
+\int_M \mathcal C = \operatorname{colim}_{D\to M}\operatorname{Hom}_{\mathsf{Cat}_{(\infty,n)}}(\mathfrak C(D),\mathcal C).
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单射"><header><h1><span class="taxon"></span>单射 <a class="slug" href="./单射.html">[单射]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>生象</h3>
