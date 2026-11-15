@@ -827,7 +827,7 @@
 
 <article><section class="block" data-taxon=""><details open><summary id="缠结"><header><h1><span class="taxon"></span>缠结 <a class="slug" href="./缠结.html">[缠结]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
-<p><strong>缠结</strong> (tangle) 是<span class="link local"><a href="./扭结.html" title="扭结 [扭结]">扭结</a></span>的带边界推广.</p>
+<p><strong>缠结</strong> (tangle) 是<span class="link local"><a href="./扭结.html" title=" [扭结]">扭结</a></span>的带边界推广.</p>
 <h2>定义</h2>
 <p>缠结一般是指 $3$ 维欧氏空间中的 $1$ 维嵌入 (带边 / 带角) 子流形, 也可能指任意流形中的嵌入子流形.</p>
 <h3>标架缠结</h3>
@@ -869,6 +869,89 @@
 <p>$$
 \theta_{X\otimes Y} = \beta_{Y,X}\beta_{X,Y}(\theta_X\otimes\theta_Y).
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="标架流形"><header><h1><span class="taxon"></span>标架流形 <a class="slug" href="./标架流形.html">[标架流形]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<p>标架流形是带有标架的流形. <strong>标架</strong>是平凡群到 $\mathrm{GL}_n$ 的同态 $1\to\mathrm{GL}_n$ 对应的<span class="link local"><a href="./切结构.html" title="切结构 [切结构]">切结构</a></span>.</p>
+<h2>例</h2>
+<h3>标架子流形</h3>
+<p><strong>定义</strong> (标架子流形, <span class="link local"><a href="./LurieCob.html" title="On the Classification of Topological Field Theories [LurieCob]">Lurie</a></span> 4.4.1). 设 $k,n$ 为自然数, $M$ 是 $m$ 维流形带有 $(n+k)$-标架 ($m \leq n+k$). 定义 $M$ 的 $k$-<strong>标架子流形</strong> (又称<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">标架缠结</a></span>) 为如下资料:</p>
+<ul>
+<li>余 $n$ 维子流形 $M_0\subset M$ (直观: $M_0$ 通过继承 $M$ 的 “微小加厚” 当作 $k$ 维流形, 余维数在加厚前后不变); 特别地, 当 $m&lt; n$ 时 $M_0 = \varnothing$;</li>
+<li>$M_0$ 的 Gauss 映射 $M_0\to\mathrm{Gr}_{n,n+k} = \mathrm{O}(n+k)/(\mathrm{O}(n)\times\mathrm{O}(k))$ 的一个零伦.</li>
+</ul>
+<p><strong>注</strong>. 标架子流形的 “标架” <strong>不是</strong>切丛或法丛的平凡化, 也不是任何一个单独的向量丛的平凡化; 它是子丛作为一个丛映射的平凡化. 当余维数 $n$ 趋于 $\infty$ 时, $\mathrm{Gr}_{n,n+k}$ 的余极限为 $\mathbf{B}\mathrm{O}(k)$, 它退化到标架流形的 “标架”.</p>
+<p><strong>例</strong>. 如下是 $\mathbb{R}^{1+1}$ 的一个 $1$-标架子流形 ($n=k=1$):</p>
+<img src="/assets/tangle-hypothesis-framed-submanifold-example-1.svg" alt="" width="200" style="display:block; margin:auto;">
+<p>注意, 下图的圆圈<strong>不是</strong> $\mathbb{R}^{1+1}$ 的 $1$-标架子流形! 尽管圆圈的切丛和法丛都平凡, 但 Gauss 映射 $S^1\to\mathrm{Gr}_{1,2} = \mathbb{R}P^1$ 不平凡
+(它是 $\mathrm{Gr}_{1,2}$ 的二重覆叠).</p>
+<img src="/assets/tangle-hypothesis-framed-submanifold-example-2.svg" alt="" width="200" style="display:block; margin:auto;">
+<p><strong>例</strong>. 仍设 $n=k=1$, $n+k=2$. 考虑 $\mathbb{R}$ 作为 $2$-标架流形 (微小加厚), 那么 $\mathbb{R}$ 的一个 $1$-标架子流形是一个离散点集, 每个点带有 $*\to\mathrm{Gr}_{1,2} = \mathbb{R}P^1$ 的一个零伦, 这等同于一个 $\pi_1\mathrm{Gr}_{1,2} \simeq\mathbb{Z}$ 的元素. 作为对比, $1$-标架的 $0$ 维流形等同于离散点集每个点带一个正负号.</p>
+<p><strong>例</strong>. 设 $n=2$, $k=1$, $n+k=3$. 三维空间中的圆圈 (<span class="link local"><a href="./纽结.html" title="纽结 [纽结]">纽结</a></span>) <strong>是</strong> $\mathbb{R}^{2+1}$ 的 $1$-标架子流形. 因为它的 Gauss 映射 $S^1\to\mathrm{Gr}_{1,3} = \mathbb{R}P^2$ 零伦 (它是 $\pi_1\mathbb{R}P^2 \simeq\mathbb{Z}/2$ 的生成元的两倍). 进一步, 我们知道它上面有 $\pi_2\mathbb{R}P^2\simeq\mathbb{Z}$ 那么多种标架.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="纽结"><header><h1><span class="taxon"></span>纽结 <a class="slug" href="./纽结.html">[纽结]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>纽结是这种东西:</p>
+<h2>定义</h2>
+<p>纽结是 $S^1$ 到 $\mathbb{R}^3$ 的嵌入, 满足<strong>温顺</strong> (tameness) 条件. 温顺性有如下陈述方式:</p>
+<ul>
+<li>可延拓为 $S^1\times D$ 到 $\mathbb{R}^3$ 的嵌入;</li>
+<li>光滑嵌入;</li>
+<li>由若干条直线段组成.</li>
+</ul>
+<p>温顺<span class="link local"><a href="./同痕.html" title="同痕 [同痕]">同痕</a></span>的纽结视为相同的. 这里的温顺仍然是上述三个条件之一.</p>
+<h2>例</h2>
+<ul>
+<li>平凡结</li>
+<li>三叶结 (环面结的一种)</li>
+<li>8 字结</li>
+</ul>
+<h2>性质</h2>
+<h3>投影图</h3>
+<p>纽结可以被投影图描述. 所谓投影图就是纽结在满足一些 “非退化” 条件的投影 $\mathbb{R}^3\to \mathbb{R}$ 下的像.</p>
+<p>投影图之间的等价可由三种基本操作生成, 称为 <strong>Reidemester 操作</strong>.</p>
+<h3>不变量</h3>
+<h4>可三染色性</h4>
+<p>纽结的投影图上的一个<strong>三染色</strong>是将其每一段对应到三种颜色之一, 使得整个纽结不只有一种颜色, 并且在每个交点处要么三种颜色相等, 要么三种颜色均出现. 可三染色的性质在 Reidemester 操作下不变, 从而定义了一个纽结不变量.</p>
+<p>平凡结不可三染色, 而三叶结是可三染色的. 这证明三叶结不是平凡结.</p>
+<h4>极值型不变量</h4>
+<ul>
+<li>解结数, 即通过投影图上一段穿过另一段的操作变为平凡结的最小次数</li>
+<li>交叉数, 即所有投影图的交点数的最小值</li>
+</ul>
+<p><strong>问题</strong> (困难). 两个纽结的连通和的交叉数是否等于交叉数的和?</p>
+<h4>拓扑不变量</h4>
+<p>补空间 $X = S^3 \setminus K$ 的同胚型是纽结不变量, 这是一个不平凡的事实.</p>
+<p>由 <span class="link local"><a href="./Alexander对偶.html" title="Alexander 对偶 [Alexander对偶]">Alexander 对偶</a></span>, 补空间的同调群不能给我们任何信息.
+但补空间的基本群 $\pi_1(X)$ 是一个有用的不变量. 每个圈 $C\colon S^1\to X$ 在 $\operatorname{Ab}\pi_1(X)\simeq H_1(X)\simeq \mathbb{Z}$ 中的像等于 $C$ 与 $K$ 的<span class="link local"><a href="./缠绕数.html" title="缠绕数 [缠绕数]">缠绕数</a></span>.</p>
+<p>考虑 Abel 化 $\pi_1(X)\to\operatorname{Ab}\pi_1(X)$ 的核 $N$, 在覆叠 Galois 对应下对应一个覆叠 $\tilde X\to X$.</p>
+<p>取 Seifert 曲面 $F$, 即一个以 $K$ 为边界的嵌入曲面; 将 $X$ 关于 $F$ (的内部) 切开, 取 $\mathbb{Z}$ 个复制品, 即可粘出覆叠空间 $\tilde X$. (这类似于将 $\mathbb{C}\setminus \{0\}$ 沿射线切开后, 取 $\mathbb{Z}$ 个复制品, 可以粘出 $\operatorname{log}$ 的定义域.)
+此时 $H^1(\tilde X)$ 是 $\mathbb{Z}$-表示, 即 $\mathbb{Z}[t^{\pm 1}]$-模. 其中 $t$ 的行列式 $\Delta_K(t)\in \mathbb{Z}[t^{\pm 1}]$ 称为 <strong>Alexander 多项式</strong>.</p>
+<p>Conway 定义了<span class="link local"><a href="./链环.html" title="链环 [链环]">链环</a></span>的不变量 $\nabla_K(z)$:</p>
+<ul>
+<li>$\nabla(\mathrm{unknot}) = 1$,</li>
+<li>$\nabla(L_+)-\nabla(L_-) = z \nabla (L_0)$,</li>
+<li>$\nabla(\text{split link}) = 0$.</li>
+</ul>
+<p>可计算出</p>
+<ul>
+<li>$\nabla(\text{Hopf link}) = z$,</li>
+<li>$\nabla(\text{trefoil}) = z^2 + 1$,</li>
+<li>等等.</li>
+</ul>
+<h3>与流形拓扑学的关系</h3>
+<p>Whitehead 证明 Poincaré 猜想的尝试中发现了一个可缩却不同胚于 $\mathbb{R}^3$ 的三维开流形 $M$. 它来源于如下的链环,</p>
+<p>…</p>
+<p>其中 $K_1$ 在 $S^3\setminus K_0$ 中同伦于平凡结, 但不同痕于平凡结.</p>
+<p>考虑一个 $S^3$ 的自同胚 $f$ 将 $T_0$ 映射到 $T_1$, 然后迭代这个映射, 定义 $T_n$. 令 $T_\infty =\bigcup_n T_n$. 那么 $S^3\setminus T_\infty$ 可缩但不同胚于 $\mathbb{R}^3$.</p>
+<p>(证明: 可缩性是由于每个 $S^3\setminus T_n$ 在 $S^3\setminus T_{n+1}$ 中可缩; 不同胚于 $\mathbb{R}^3$ 是因为其 “在 $\infty$ 处不单连通”.)</p>
+<h4>四维流形</h4>
+<p>将 $S^3$ 视为 $D^4$ 的边界, 其中的纽结若为 $D^4$ 中 $2$ 维温顺 (光滑) 曲面的边界, 则称之为 (光滑) <strong>切口</strong> (slice) 结.</p>
+<p><strong>定理</strong>. 若 $K$ 为拓扑切口结而不为光滑切口结, 则可构造 $4$ 维流形 $M$ 同胚于 $\mathbb{R}^4$ 但不光滑同胚于 $\mathbb{R}^4$.</p>
+<h2>相关概念</h2>
+<ul>
+<li>有理结</li>
+<li><span class="link local"><a href="./链环.html" title="链环 [链环]">链环</a></span> (多分支推广)</li>
+<li><span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span> (高维推广)</li>
+</ul>
 </details></section><section class="block" data-taxon=""><details ><summary id="缠结假设"><header><h1><span class="taxon"></span>缠结假设 <a class="slug" href="./缠结假设.html">[缠结假设]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>缠结假设</strong> (tangle hypothesis) 是一系列关于各维数的<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span>构成的<span class="link local"><a href="./高阶范畴.html" title="高阶范畴 [高阶范畴]">高阶范畴</a></span>的万有性质的命题.</p>
@@ -880,7 +963,7 @@ $$</p>
 </ul>
 <h2>陈述</h2>
 <h3>标架子流形</h3>
-<p>对于 $m\leq n$, 一个 $m$ 维流形 $M$ 带有 $n$-<span class="link local"><a href="./切结构.html" title="切结构 [切结构]">标架</a></span> (即 $TM\oplus \mathbb{R}^{n-m}$ 的平凡化) 时, 我们可以将其 “微小加厚”, 当作标架 $n$ 维流形 $M\times D^{n-m}$. 这样思考的好处是: 当我们谈论标架带边流形的边界 (甚至边界的边界…) 时, 可将边界 “微小加厚”, 于是边界 (边界的边界) 与原流形是同维数的流形, 这样边界标架的相容性就变得完全直观了. 下面的定义都可以采用这一直观来理解.</p>
+<p>对于 $m\leq n$, 一个 $m$ 维流形 $M$ 带有 $n$-<span class="link local"><a href="./标架流形.html" title="标架流形 [标架流形]">标架</a></span> (即 $TM\oplus \mathbb{R}^{n-m}$ 的平凡化) 时, 我们可以将其 “微小加厚”, 当作标架 $n$ 维流形 $M\times D^{n-m}$. 这样思考的好处是: 当我们谈论标架带边流形的边界 (甚至边界的边界…) 时, 可将边界 “微小加厚”, 于是边界 (边界的边界) 与原流形是同维数的流形, 这样边界标架的相容性就变得完全直观了. 下面的定义都可以采用这一直观来理解.</p>
 <p><strong>定义</strong> (标架子流形, <span class="link local"><a href="./LurieCob.html" title="On the Classification of Topological Field Theories [LurieCob]">Lurie</a></span> 的定义 4.4.1). 设 $k,n$ 为自然数, $M$ 是 $m$ 维流形带有 $(n+k)$-标架 ($m \leq n+k$). 定义 $M$ 的 $k$-<strong>标架子流形</strong> (又称<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">标架缠结</a></span>) 为如下资料:</p>
 <ul>
 <li>余 $n$ 维子流形 $M_0\subset M$ (直观: $M_0$ 通过继承 $M$ 的 “微小加厚” 当作 $k$ 维流形, 余维数在加厚前后不变); 特别地, 当 $m&lt; n$ 时 $M_0 = \varnothing$;</li>
@@ -893,6 +976,7 @@ $$</p>
 (它是 $\mathrm{Gr}_{1,2}$ 的二重覆叠).</p>
 <img src="/assets/tangle-hypothesis-framed-submanifold-example-2.svg" alt="" width="200" style="display:block; margin:auto;">
 <p><strong>例</strong>. 仍设 $n=k=1$, $n+k=2$. 考虑 $\mathbb{R}$ 作为 $2$-标架流形 (微小加厚), 那么 $\mathbb{R}$ 的一个 $1$-标架子流形是一个离散点集, 每个点带有 $*\to\mathrm{Gr}_{1,2} = \mathbb{R}P^1$ 的一个零伦, 这等同于一个 $\pi_1\mathrm{Gr}_{1,2} \simeq\mathbb{Z}$ 的元素. 作为对比, $1$-标架的 $0$ 维流形等同于离散点集每个点带一个正负号.</p>
+<p><strong>例</strong>. 设 $n=2$, $k=1$, $n+k=3$. 三维空间中的圆圈 (<span class="link local"><a href="./纽结.html" title="纽结 [纽结]">纽结</a></span>) <strong>是</strong> $\mathbb{R}^{2+1}$ 的 $1$-标架子流形. 因为它的 Gauss 映射 $S^1\to\mathrm{Gr}_{1,3} = \mathbb{R}P^2$ 零伦 (它是 $\pi_1\mathbb{R}P^2 \simeq\mathbb{Z}/2$ 的生成元的两倍). 进一步, 我们知道它上面有 $\pi_2\mathbb{R}P^2\simeq\mathbb{Z}$ 那么多种标架.</p>
 <p><strong>注</strong>. 虽然叫做 $k$-标架子流形, 但在我看来它的余维数 $n$ 是一个更本质的量. 这个余维数 $n$ 正是定义 $\mathsf{Tang}_k^V$ 所用的 “背景流形” $V$ 的维数. 我认为另一件事情也和这个 $n$ 有关: 在<span class="link local"><a href="./notes-manifold-diagrams.html" title="高阶范畴的流形图示 [notes-manifold-diagrams]">流形图</a></span>中, 最高维区域表示对象, 而余 $n$ 维区域表示 $n$-态射.</p>
 <h3>缠结范畴</h3>
 <p>我们用 $\mathsf{Tang}_{k}^{\mathbb E_n}$ 表示如下的 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>:</p>
@@ -910,12 +994,14 @@ $$</p>
 $$
 \mathsf{Fun}_{\mathbb E_n}(\mathsf{Tang}_k^{\mathbb E_n},\mathcal C) \simeq \mathcal C^{\simeq}.
 $$</p>
-<p><strong>例</strong>. 设 $n=k=1$; $\mathsf{Tang}_1^{\mathbb E_1}$ 是一个<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>自由生成的幺半 $(\infty,1)$-范畴.</p>
+<p><strong>例</strong>. $k=0$ 的情形: $\mathsf{Tang}_0^{\mathbb E_n}$ 是一个元素自由生成的 $\mathbb E_n$-幺半群. 它就是 $\mathbb{R}^n$ 上有限个互异点的<span class="link local"><a href="./构形空间.html" title="构形空间 [构形空间]">构形空间</a></span>.</p>
+<p><strong>例</strong>. 设 $n=k=1$; $\mathsf{Tang}_1^{\mathbb E_1}$ 是一个<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶对象</a></span>自由生成的幺半 $(\infty,1)$-范畴. 由前面关于 $\mathbb{R}$ 与 $\mathbb{R}^{2}$ 的 $1$-标架子流形的讨论, 我们知道</p>
 <ul>
 <li>其对象为 $\mathbb{R}$ 中的 $1$-标架 $0$ 维紧子流形, 即 $\mathbb{R}$ 的有限子集每个元素带一个整数标记 (也就是整数的有限序列).</li>
 <li>带标记 $0$ 的点, 其左右对偶分别为带 $-1$ 和 $1$ 标记的点. $-1$ 和 $1$ 在这里并不同构. 一般地, $(a,b,c)$ 的右对偶是 $(c+1,b+1,a+1)$.</li>
 </ul>
 <img src="/assets/tangle-hypothesis-example-1.svg" alt="" width="450" style="display:block; margin:auto;">
+<p><strong>例</strong>. 设 $n=2$, $k=1$; $\mathsf{Tang}_1^{\mathbb E_2}$ 是一个可对偶对象自由生成的<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半 $(\infty,1)$-范畴</a></span>. 特别地, 给定辫幺半范畴 $\mathcal C$ 的可对偶对象 $V$, 就能给出一个<span class="link local"><a href="./纽结.html" title="纽结 [纽结]">纽结不变量</a></span>, 称为 <span class="link local"><a href="./RTinv.html" title="Reshetikhin–Turaev 不变量 [RTinv]">Reshetikhin–Turaev 不变量</a></span>.</p>
 <h3>逆环版本</h3>
 <p>由于<span class="link local"><a href="./逆环假设.html" title="逆环假设 [逆环假设]">逆环假设</a></span>, 上述命题还有一个用 $(\infty,n+k)$-范畴
 $$

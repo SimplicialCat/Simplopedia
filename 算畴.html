@@ -829,6 +829,7 @@
 <h2>观念</h2>
 <p>一个算畴表达了<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>的对象上可能具有的一族多元运算, 以及运算之间的关系. 算畴又叫<strong>多重范畴</strong> (multicategory), 是范畴的推广, 由<strong>颜色</strong> (多重范畴的对象) 与<strong>运算</strong> (多个对象到一个对象的态射) 构成.</p>
 <p>将一个算畴中记录的颜色与运算按照规定的关系实现到某个具体范畴中的方法称为<span class="link local"><a href="./算畴上的代数.html" title="算畴上的代数 [算畴上的代数]">算畴上的代数</a></span>.</p>
+<p>相关讲义: <span class="link local"><a href="./HADR-1-ope.html" title="HADR (1) 代数模式与算畴 [HADR-1-ope]">HADR (1) 代数模式与算畴</a></span></p>
 <h2>定义</h2>
 <h3>作为多重范畴</h3>
 <p><strong>有色算畴</strong> (colored operad) 等同于<strong></strong><span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span> (multicategory). 所谓多重范畴就是一族对象之间带有 “多个对象到一个对象的态射”
@@ -2777,6 +2778,24 @@ $$
 <h2>例</h2>
 <h3>结合代数</h3>
 <p>对于幺半范畴 $\mathcal C$, 松幺半函子 $1\to \mathcal C$ 等同于 $\mathcal C$ 中的<span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">结合代数</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="构形空间"><header><h1><span class="taxon"></span>构形空间 <a class="slug" href="./构形空间.html">[构形空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p>构形空间在数学和物理上一般指的是某个系统的所有状态构成的空间. 在拓扑学中, 构形空间特指一个空间中的所有 (有序或无序的) 有限点集构成的空间.</p>
+<h2>定义</h2>
+<p>设 $X$ 为拓扑空间, $n$ 为正整数. 定义有序构形空间 $\operatorname{Conf}_n(X)$ 为 $X$ 中 $n$ 个互不相同的有序点的所有构形构成的空间:
+$$
+\operatorname{Conf}_n(X) := \{ (x_1, \ldots, x_n) \in X^n \mid x_i \neq x_j \text{ for } i \neq j \}.
+$$</p>
+<p>无序构形空间是有序构形空间在对称群 $S_n$ <span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span>下的商空间:
+$$
+\operatorname{UConf}_n(X) := \operatorname{Conf}_n(X) / S_n.
+$$</p>
+<h2>性质</h2>
+<h3>基本群</h3>
+<p>$\mathbb R^2$ 上 $n$ 个点的无序构形空间 $\operatorname{UConf}_n(\mathbb R^2)$ 的<span class="link local"><a href="./基本群.html" title="基本群 [基本群]">基本群</a></span>是 $n$ 个生成元的<span class="link local"><a href="./辫群.html" title="辫群 [辫群]">辫群</a></span>.</p>
+<h3>万有性质</h3>
+<p>由于有序构形空间 $\operatorname{Conf}_m (\mathbb{R}^n)$ 是<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> $\mathbb E_n$ 的 $m$ 元运算的空间,
+所有构形空间的无交并 $\bigsqcup_{m\geq 0}\operatorname{Conf}_m (\mathbb{R}^n)$ 是一个点<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$-幺半群</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="树"><header><h1><span class="taxon"></span>树 (范畴论) <a class="slug" href="./树.html">[树]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>树是表达 “多个对象到一个对象的态射” 以及这种态射的复合所需的基本结构. 因此, 可被树<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>的对象 (即<span class="link local"><a href="./树形对象.html" title="树形对象 [树形对象]">树形对象</a></span>) 给出<span class="link local"><a href="./算畴.html" title="算畴 [算畴]">算畴</a></span> (<span class="link local"><a href="./多重范畴.html" title="多重范畴 [多重范畴]">多重范畴</a></span>) 的一种定义.</p>
