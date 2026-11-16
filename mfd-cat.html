@@ -996,8 +996,9 @@
 <ul>
 <li>分层空间被形如 $\mathbb{R}^i \times \mathbb{R}_{\geq 0}^j \times C(Z)$ 的基本开集 (又叫<strong>奇点类型</strong>) 覆盖, 其中 $Z$ 是更低维的分层空间;</li>
 <li>分层空间的态射 $f\colon C(X)\to C(Y)$ (锥点为单独一层, 锥点打到锥点) 给出链环之间的 “切映射” $Df \colon X \to Y$.</li>
+<li>事实上 (后面将介绍), 分层空间的 $(\infty,1)$-范畴 $\mathsf{Strat}$ 通过<span class="link local"><a href="./出路范畴.html" title="出路范畴 [出路范畴]">出路范畴</a></span>函子 $\mathsf{Exit}\colon \mathsf{Strat}\to\mathsf{Cat}$ <span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实</a></span>地嵌入范畴的范畴, 从而分层空间的态射 $X\to Y$ 等同于其出路范畴之间的函子 $\mathsf{Exit}(X)\to\mathsf{Exit}(Y)$.</li>
 </ul>
-<p>光滑流形范畴是分层空间范畴的全子范畴
+<p>光滑流形的 $(1,1)$-范畴是分层空间范畴的全子范畴
 $$
 \mathsf{Mfd}\hookrightarrow\mathsf{Strat}.
 $$</p>
@@ -1025,14 +1026,102 @@ $$
 $$
 它还有一个性质: $(\infty,1)$-范畴版本的 $\mathsf{Strat}$ 是 $(1,1)$-范畴版本关于所有投影 $X\times\mathbb{R}\to X$ 的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>. 后文中我们将<strong>永远使用 $(\infty,1)$-范畴版本</strong> (用 $\operatorname{Hom}_{\mathsf{Strat}}$ 表示态射生象), 所以无需区分记号.</p>
 <h3>1.2 出路范畴</h3>
-<p>“出路范畴” 函子
+<p><strong>命题</strong>.
+“出路范畴” 函子
 $$
-\mathsf{Exit}\colon \mathsf{Strat}\to \mathsf{sAni},\, X\mapsto ([n]\mapsto\operatorname{Hom}_{\mathsf{Strat}}(\Delta^n, X))
+\mathsf{Exit}\colon \mathsf{Strat}\hookrightarrow \mathsf{sAni},\, X\mapsto ([n]\mapsto\operatorname{Hom}_{\mathsf{Strat}}(\Delta^n, X))
 $$
-的像落在范畴的范畴 $\mathsf{Cat}\hookrightarrow\mathsf{sAni}$ 中.</p>
+是<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>, 且其像落在范畴 (即<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 生象</a></span>) 的范畴 $\mathsf{Cat}\hookrightarrow\mathsf{sAni}$ 中.</p>
 <h3>1.3 条纹层</h3>
-<p>由出路范畴函子 $\mathsf{Exit}\colon \mathsf{Strat} \to \mathsf{Cat}$, 我们又可将范畴变为 $\mathsf{Strat}$ 上的预层. 我们甚至可以写出判断这样一个预层何时来自范畴的条件.</p>
+<p>回忆 $\mathsf{Strat}$ 有如下的余极限, 称为<strong>特殊余极限</strong>:</p>
+<ul>
+<li>开覆盖;</li>
+<li>爆破 (详见<span class="link local"><a href="./strat-cat.html" title="分层空间与范畴 [strat-cat]">上一集</a></span>);</li>
+<li>迭代锥 (详见<span class="link local"><a href="./strat-cat.html" title="分层空间与范畴 [strat-cat]">上一集</a></span>);</li>
+<li><span class="link local"><a href="./泛等性.html" title="泛等性 [泛等性]">泛等性</a></span></li>
+</ul>
+<p>$$
+\begin{array}{ccc}
+\Delta^{ \{0 &lt; 2\}} + \Delta^{ \{1 &lt; 3\}} &amp; \rightarrow &amp; \Delta^{\{0 &lt; 1 &lt; 2 &lt; 3\}} \\
+\downarrow &amp;  &amp; \downarrow \\
+{*} + {*} &amp; \rightarrow &amp; {*}.
+\end{array}
+$$</p>
+<p>由出路范畴函子 $\mathsf{Exit}\colon \mathsf{Strat} \hookrightarrow \mathsf{Cat}$, 我们又可将范畴变为 $\mathsf{Strat}$ 上的预层. 我们甚至可以写出判断这样一个预层何时来自范畴的条件.</p>
+<p><strong>定义</strong>. <strong>条纹层</strong> (striation sheaf) 的范畴
+$$
+\mathsf{Stri}\hookrightarrow \mathsf{Psh}(\mathsf{Strat})
+$$
+是 $\mathsf{Strat}$ 上将前述 “特殊余极限” 变为极限图的预层构成的全子范畴.</p>
+<p>当然, 条纹层不构成意象; 事实上这个 “层条件” 不构成 Grothendieck 拓扑. (毕竟 $\mathsf{Stri} \simeq \mathsf{Cat}$ 而 $\mathsf{Cat}$ 不是 $(\infty,1)$-意象.)</p>
+<p><strong>定理</strong>. 出路范畴函子 $\mathsf{Exit}\colon \mathsf{Strat}\to \mathsf{Cat}$ 对应的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子 $\mathsf{Cat}\to\mathsf{Psh}(\mathsf{Strat})$ 将 $\mathsf{Cat}$ 等同于全子范畴 $\mathsf{Stri}$.</p>
+<p><strong>定义</strong>. 通过<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">分类空间</a></span>的观念, 我们定义如下条纹层, 从而定义相应的范畴:</p>
+<ul>
+<li>$\mathsf{Bun}$ 分类可构造丛, 即 $\mathsf{Bun}(K)$ 是 $K\times\Delta^\bullet$ 上的可构造丛集合构成的 Kan 复形表现的生象;</li>
+<li>$\mathsf{cBun}$ 分类紧合可构造丛;</li>
+<li>$\mathsf{Exit}$ 分类带一个截面的可构造丛.</li>
+</ul>
+<p>直观上, 两个范畴 $\mathsf{Bun}$, $\mathsf{Exit}$ 可描述如下:</p>
+<ul>
+<li>$\mathsf{Bun}$ 的对象是分层空间, 态射是 $\Delta^1$ 上的可构造丛 (注意, 态射不仅是分层空间之间的态射, 还包含了 “活性配边”, 参见<span class="link local"><a href="./notes-manifold-diagrams.html" title="高阶范畴的流形图示 [notes-manifold-diagrams]">流形图的笔记</a></span>);</li>
+<li>$\mathsf{Exit}$ 的对象是分层空间带一个指定的点, 态射是 $\Delta^1$ 上的可构造丛带一个截面;</li>
+</ul>
+<p><strong>命题</strong>. 每个可构造丛 $X\to K$ 给出函子 $\mathsf{Exit}(K) \to\mathsf{Bun}$ 以及 $\mathsf{Exit}(X)\to\mathsf{Exit}$; 有拉回图
+$$
+\begin{array}{ccc}
+\mathsf{Exit}(X) &amp; \rightarrow &amp; \mathsf{Exit} \\
+\downarrow &amp;  &amp; \downarrow \\
+\mathsf{Exit}(K) &amp; \rightarrow &amp; \mathsf{Bun}.
+\end{array}
+$$</p>
+<p>特别地, $K = {*}$ 时, 我们知道 $\mathsf{Exit}(X)$ 就是 $\mathsf{Exit}\to\mathsf{Bun}$ 在对象 $X\in\mathsf{Bun}$ 处的纤维.</p>
 <h2>2 切结构</h2>
+<h3>2.1 切丛</h3>
+<p>记 $\mathsf{Vect}^{\mathrm{inj}}$ 为实线性空间, 线性单射以及线性单射中的同伦构成的 $(\infty,1)$-范畴. 其中 $\operatorname{Hom}(\mathbb{R}^i,\mathbb{R}^j)\simeq\mathrm{O}(j) / \mathrm{O}(j-i)$.</p>
+<p>每个分层空间都给出一个函子
+$$
+T_X\colon \mathsf{Exit}(X) \to \mathsf{Vect}^{\mathrm{inj}},
+$$
+称为其<strong>切丛</strong>. 事实上该构造关于 $X$ 有很好的函子性, 以至于可以写成 “万有出路范畴” 出发的函子
+$$
+T\colon \mathsf{Exit} \to \mathsf{Vect}^{\mathrm{inj}}.
+$$</p>
+<h3>2.2 标架</h3>
+<p><strong>定义</strong>. 一种<strong>切结构</strong>是一个函子
+$$
+\mathcal B \to \mathsf{Vect}^{\mathrm{inj}}.
+$$
+我们常将其简记为 $\mathcal B$.</p>
+<p><strong>定义</strong>. 设 $X$ 为分层空间, $\mathcal B$ 为切结构. 定义 $X$ 上的 $\mathcal B$-结构为提升
+$$
+\begin{array}{ccc}
+ &amp;  &amp; \mathcal B \\
+ &amp; \nearrow &amp; \downarrow \\
+\mathsf{Exit}(X) &amp; \underset{T_X}{\rightarrow} &amp; \mathsf{Vect}^{\mathrm{inj}}.
+\end{array}
+$$
+定义 $\mathcal B$-分层空间的范畴为
+$$
+\mathsf{Bun}^{\mathcal B} = \pi_* T^* \mathcal B \to \mathsf{Bun},
+$$
+其中 $\pi_*$ 表示沿 $\pi \colon \mathsf{Exit}\to\mathsf{Bun}$ 的<span class="link local"><a href="./依值积.html" title="依值积 [依值积]">依值积</a></span>.</p>
+<p><strong>定义</strong>. <strong>变标架切结构</strong> (vari-framing) 是函子
+$$
+\mathrm{vfr}\colon \mathbb{N}\to\mathsf{Vect}^{\mathrm{inj}},\,i\mapsto\mathbb{R}^i.
+$$
+这里 “变” (vari-) 意指跨分层时切丛维数改变.
+另外, 对于自然数 $n$, 定义 $n$-变标架切结构为其限制
+$$
+\mathrm{vfr}_n\colon [n]\to\mathsf{Vect}^{\mathrm{inj}},\,i\mapsto\mathbb{R}^i.
+$$</p>
+<p><strong>例</strong>. 考虑闭圆盘 $D^n$, 其边界划分为两个 $n-1$ 维圆盘, 递归向下. 它上面有一个 $n$-变标架切结构. 这可以理解为从 $*$ 反复作纬悬 $X\mapsto SX$ 得到.</p>
+<p><strong>定义</strong>. 变标架分层 $n$-流形的范畴为
+$$
+\mathsf{Mfd}_n^{\mathrm{vfr}} := \mathsf{Bun}^{\mathrm{vfr}_n}.
+$$</p>
+<h2>3 圆盘</h2>
+<h3>3.5</h3>
+<p>定义范畴 $\mathsf{cDisk}_n^{\mathrm{vfr}}$, 其对象简单地说就是由有限个圆盘粘起来的图案.</p>
 <h3>3.8 胞腔几何实现</h3>
 <p>定义函子
 $$
@@ -1113,18 +1202,47 @@ $$
 <li>在 $\mathbb R^i \times C(Y)$ 的锥点之外的部分, 光滑性通过 $Y$ 的各个坐标卡归纳定义. (因为 $Y$ 的深度较小, 可以假设光滑性已经定义好了.)</li>
 <li>考虑 $\mathbb R^i \times C(Y)$ 的锥点, 注意锥点未必打到锥点, 但是若不打到锥点则光滑性可由上一款定义, 故在此假设锥点打到锥点.</li>
 </ul>
+<p>注意光滑映射可以把低维数部分打到高维数部分.</p>
 <h2>2 可构造层</h2>
 <h3>2.4 范畴 $\mathsf{Strat}$</h3>
+<p>分层空间的范畴 $\mathsf{Strat}$ 一开始是 $(1,1)$-范畴, 但实际上它可<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于<span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">生象</a></span>, 即构成 $(\infty,1)$-范畴. 它可由如下的 Kan 复形充实结构 $\underline{\operatorname{Hom}}_{\mathsf{Strat}}$ 定义:
+$$
+\underline{\operatorname{Hom}}_{\mathsf{Strat}}(X,Y)[n] :=\operatorname{Hom}_{\mathsf{Strat}_{/\Delta^n}}(X\times\Delta^n, Y\times\Delta^n).
+$$
+它还有一个性质: $(\infty,1)$-范畴版本的 $\mathsf{Strat}$ 是 $(1,1)$-范畴版本关于所有投影 $X\times\mathbb{R}\to X$ 的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>. 我们将主要使用 $(\infty,1)$-范畴版本, 除非特殊说明.</p>
 <h3>2.5 几类特殊余极限</h3>
-<h4>2.5.1 开覆盖与爆破</h4>
-<p>$$
+<h4>爆破</h4>
+<p>我们心目中的基本图像是, 开锥 $C(L)$ 是由 $L\times \left[0,1\right)$ 将 $L\times\{0\}$ 粘成一点所得. 这也可以想象为对锥点作 “奇点消解”, 又称为<strong>爆破</strong> (blow-up), 得到一个以 $L$ 为边界的分层空间.
+$$
 \begin{CD}
 L @&gt;&gt;&gt; L\times \left[0,1\right) \\
 @VVV @VVV \\
 \{0\} @&gt;&gt;&gt; C(L)
 \end{CD}
 $$</p>
-<p><strong>命题</strong>. 对于锥光滑分层空间 $X$ 的最底层 $X_d\subset X$, 方块
+<p>对于一般的分层空间 $X$, 从最底层逐层往上重复爆破 (每次都消解最底层的奇点), 可得一个<strong>拉开</strong> (unzip) 映射
+$$
+\operatorname{Unzip}(X) \to X.
+$$
+这个操作像是拉开拉链:
+<img src="/assets/strat-unzip.svg" alt="" width="450" style="display:block; margin:auto;"></p>
+<p>一般地, 有如下结论.</p>
+<p><strong>命题-定义</strong> (拉开, 链环). 对于分层空间的闭嵌入 $Y\hookrightarrow X$ 可作 $\operatorname{Unzip}_Y(X) \to X$, 且存在唯一的交换图
+$$
+\begin{CD}
+\operatorname{Link}_Y (X) @&gt;&gt;&gt; \operatorname{Unzip}_Y (X) \\
+@VVV @VVV \\
+Y @&gt;&gt;&gt; X,
+\end{CD}
+$$
+使得</p>
+<ul>
+<li>该方块同时为拉回和推出方块;</li>
+<li>每个态射均为紧合弱可构造层 (即在每个分层内局部平凡);</li>
+<li>$\operatorname{Link}_Y (X) \to\operatorname{Unzip}_Y (X)$ 为 $\operatorname{Unzip}_Y (X)$ 的闭面的嵌入, 称之为 $Y$ 在 $X$ 中的<strong>链环</strong> (link);</li>
+<li>$\operatorname{Unzip}_Y (X) \to X$ 在 $X\setminus Y$ 上为同构.</li>
+</ul>
+<p><strong>推论</strong>. 对于锥光滑分层空间 $X$ 的最底层 $X_d\subset X$, 方块
 $$
 \begin{CD}
 \operatorname{Link}_{X_d}(X) @&gt;&gt;&gt; \operatorname{Unzip}_{X_d}(X) \\
@@ -1132,5 +1250,25 @@ $$
 X_d @&gt;&gt;&gt; X
 \end{CD}
 $$
-为 $\mathsf{Strat}$ 中的推出方块, 称之为<strong>爆破</strong> (blow-up).</p>
+为 $\mathsf{Strat}$ 中的<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>方块.</p>
+<h4>迭代锥</h4>
+<p>记 $\overline{C}(L)$ 为闭锥 $L\times [0,1] / L \times \{0\}$.</p>
+<p><strong>命题</strong>. 对分层空间 $L$, 下图为 $(\infty,1)$-范畴 $\mathsf{Strat}$ 中的推出方块:
+$$
+\begin{CD}
+{*} = \overline{C}(\varnothing) @&gt;&gt;&gt; \overline{C} (L) \\
+@VVV @VVV \\
+[0,1] = \overline{C}^2 (\varnothing) @&gt;&gt;&gt; \overline{C} ^2 (L).
+\end{CD}
+$$
+注意这个图在 $(1,1)$-范畴版本的 $\mathsf{Strat}$ 中不是推出, 在局部化后才是推出.</p>
+<h2>3 出路范畴</h2>
+<p><strong>命题</strong>.
+“出路范畴” 函子
+$$
+\mathsf{Exit}\colon \mathsf{Strat}\hookrightarrow \mathsf{sAni},\, X\mapsto ([n]\mapsto\operatorname{Hom}_{\mathsf{Strat}}(\Delta^n, X))
+$$
+是<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>, 且其像落在范畴 (即<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 生象</a></span>) 的范畴 $\mathsf{Cat}\hookrightarrow\mathsf{sAni}$ 中.</p>
+<p><strong>命题</strong>. 函子 $\mathsf{Exit}\colon \mathsf{Strat}\hookrightarrow\mathsf{Cat}$ 保持上节所述的 “拉开” 以及 “迭代锥” 几种推出方块.</p>
+<h2>4 条纹层</h2>
 </details></section></details></section></footer></article></div></body></html>

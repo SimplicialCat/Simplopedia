@@ -1387,18 +1387,47 @@ $$
 <li>在 $\mathbb R^i \times C(Y)$ 的锥点之外的部分, 光滑性通过 $Y$ 的各个坐标卡归纳定义. (因为 $Y$ 的深度较小, 可以假设光滑性已经定义好了.)</li>
 <li>考虑 $\mathbb R^i \times C(Y)$ 的锥点, 注意锥点未必打到锥点, 但是若不打到锥点则光滑性可由上一款定义, 故在此假设锥点打到锥点.</li>
 </ul>
+<p>注意光滑映射可以把低维数部分打到高维数部分.</p>
 <h2>2 可构造层</h2>
 <h3>2.4 范畴 $\mathsf{Strat}$</h3>
+<p>分层空间的范畴 $\mathsf{Strat}$ 一开始是 $(1,1)$-范畴, 但实际上它可<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于<span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">生象</a></span>, 即构成 $(\infty,1)$-范畴. 它可由如下的 Kan 复形充实结构 $\underline{\operatorname{Hom}}_{\mathsf{Strat}}$ 定义:
+$$
+\underline{\operatorname{Hom}}_{\mathsf{Strat}}(X,Y)[n] :=\operatorname{Hom}_{\mathsf{Strat}_{/\Delta^n}}(X\times\Delta^n, Y\times\Delta^n).
+$$
+它还有一个性质: $(\infty,1)$-范畴版本的 $\mathsf{Strat}$ 是 $(1,1)$-范畴版本关于所有投影 $X\times\mathbb{R}\to X$ 的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>. 我们将主要使用 $(\infty,1)$-范畴版本, 除非特殊说明.</p>
 <h3>2.5 几类特殊余极限</h3>
-<h4>2.5.1 开覆盖与爆破</h4>
-<p>$$
+<h4>爆破</h4>
+<p>我们心目中的基本图像是, 开锥 $C(L)$ 是由 $L\times \left[0,1\right)$ 将 $L\times\{0\}$ 粘成一点所得. 这也可以想象为对锥点作 “奇点消解”, 又称为<strong>爆破</strong> (blow-up), 得到一个以 $L$ 为边界的分层空间.
+$$
 \begin{CD}
 L @&gt;&gt;&gt; L\times \left[0,1\right) \\
 @VVV @VVV \\
 \{0\} @&gt;&gt;&gt; C(L)
 \end{CD}
 $$</p>
-<p><strong>命题</strong>. 对于锥光滑分层空间 $X$ 的最底层 $X_d\subset X$, 方块
+<p>对于一般的分层空间 $X$, 从最底层逐层往上重复爆破 (每次都消解最底层的奇点), 可得一个<strong>拉开</strong> (unzip) 映射
+$$
+\operatorname{Unzip}(X) \to X.
+$$
+这个操作像是拉开拉链:
+<img src="/assets/strat-unzip.svg" alt="" width="450" style="display:block; margin:auto;"></p>
+<p>一般地, 有如下结论.</p>
+<p><strong>命题-定义</strong> (拉开, 链环). 对于分层空间的闭嵌入 $Y\hookrightarrow X$ 可作 $\operatorname{Unzip}_Y(X) \to X$, 且存在唯一的交换图
+$$
+\begin{CD}
+\operatorname{Link}_Y (X) @&gt;&gt;&gt; \operatorname{Unzip}_Y (X) \\
+@VVV @VVV \\
+Y @&gt;&gt;&gt; X,
+\end{CD}
+$$
+使得</p>
+<ul>
+<li>该方块同时为拉回和推出方块;</li>
+<li>每个态射均为紧合弱可构造层 (即在每个分层内局部平凡);</li>
+<li>$\operatorname{Link}_Y (X) \to\operatorname{Unzip}_Y (X)$ 为 $\operatorname{Unzip}_Y (X)$ 的闭面的嵌入, 称之为 $Y$ 在 $X$ 中的<strong>链环</strong> (link);</li>
+<li>$\operatorname{Unzip}_Y (X) \to X$ 在 $X\setminus Y$ 上为同构.</li>
+</ul>
+<p><strong>推论</strong>. 对于锥光滑分层空间 $X$ 的最底层 $X_d\subset X$, 方块
 $$
 \begin{CD}
 \operatorname{Link}_{X_d}(X) @&gt;&gt;&gt; \operatorname{Unzip}_{X_d}(X) \\
@@ -1406,7 +1435,27 @@ $$
 X_d @&gt;&gt;&gt; X
 \end{CD}
 $$
-为 $\mathsf{Strat}$ 中的推出方块, 称之为<strong>爆破</strong> (blow-up).</p>
+为 $\mathsf{Strat}$ 中的<span class="link local"><a href="./推出.html" title="推出 (一种余极限) [推出]">推出</a></span>方块.</p>
+<h4>迭代锥</h4>
+<p>记 $\overline{C}(L)$ 为闭锥 $L\times [0,1] / L \times \{0\}$.</p>
+<p><strong>命题</strong>. 对分层空间 $L$, 下图为 $(\infty,1)$-范畴 $\mathsf{Strat}$ 中的推出方块:
+$$
+\begin{CD}
+{*} = \overline{C}(\varnothing) @&gt;&gt;&gt; \overline{C} (L) \\
+@VVV @VVV \\
+[0,1] = \overline{C}^2 (\varnothing) @&gt;&gt;&gt; \overline{C} ^2 (L).
+\end{CD}
+$$
+注意这个图在 $(1,1)$-范畴版本的 $\mathsf{Strat}$ 中不是推出, 在局部化后才是推出.</p>
+<h2>3 出路范畴</h2>
+<p><strong>命题</strong>.
+“出路范畴” 函子
+$$
+\mathsf{Exit}\colon \mathsf{Strat}\hookrightarrow \mathsf{sAni},\, X\mapsto ([n]\mapsto\operatorname{Hom}_{\mathsf{Strat}}(\Delta^n, X))
+$$
+是<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>, 且其像落在范畴 (即<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 生象</a></span>) 的范畴 $\mathsf{Cat}\hookrightarrow\mathsf{sAni}$ 中.</p>
+<p><strong>命题</strong>. 函子 $\mathsf{Exit}\colon \mathsf{Strat}\hookrightarrow\mathsf{Cat}$ 保持上节所述的 “拉开” 以及 “迭代锥” 几种推出方块.</p>
+<h2>4 条纹层</h2>
 </details></section><section class="block" data-taxon=""><details ><summary id="Γ-空间"><header><h1><span class="taxon"></span>Γ-空间 <a class="slug" href="./Γ-空间.html">[Γ-空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>Γ-空间可给出交换代数的一种定义 (见<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>). 原理在于 <span class="link local"><a href="./Segal范畴Γ.html" title="Segal 范畴 Γ [Segal范畴Γ]">$\Gamma$</a></span> 的对象是有限集, 态射是将每个元素对应到互不相交的子集, 这样的结构恰可用于<span class="link local"><a href="./探测.html" title="探测 [探测]">探测</a></span>一个<span class="link local"><a href="./积幺半范畴.html" title="积幺半范畴 [积幺半范畴]">积幺半范畴</a></span>中的<span class="link local"><a href="./交换代数.html" title="交换代数 [交换代数]">交换代数</a></span> $A$: 用有限集 $\langle n \rangle$ 探测的结果是 $A^n$, 而对于态射 $\langle n \rangle \to \langle m \rangle$, 相应的映射 $A^m \to A^n$ 是将 $m$ 个元素中的一部分相加得到的 $n$ 个元素.</p>
