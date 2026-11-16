@@ -1159,8 +1159,13 @@ $$
 \mathsf{Pro}(\mathcal C) \simeq \mathsf{Fun}^{\mathrm{fin.~lim.}}(\mathcal C,\mathsf{Ani})^{\mathrm{op}}.
 $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="strat-cat"><header><h1><span class="taxon"></span>分层空间与范畴 <a class="slug" href="./strat-cat.html">[strat-cat]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>参考文献: <span class="link local"><a href="./AyalaFrancisRozenblyumStrat.html" title="A stratified homotopy hypothesis [AyalaFrancisRozenblyumStrat]">A stratified homotopy hypothesis</a></span></p>
+<p>参考文献:</p>
+<ul>
+<li><span class="link local"><a href="./AyalaFrancisTanaka.html" title="Local structures on stratified spaces [AyalaFrancisTanaka]">Local structures on stratified spaces</a></span></li>
+<li><span class="link local"><a href="./AyalaFrancisRozenblyumStrat.html" title="A stratified homotopy hypothesis [AyalaFrancisRozenblyumStrat]">A stratified homotopy hypothesis</a></span></li>
+</ul>
 <p>合集: <span class="link local"><a href="./mfd-cat.html" title="流形与高阶范畴 [mfd-cat]">流形与高阶范畴</a></span></p>
+<p>下一集: <span class="link local"><a href="./notes-fact.html" title="范畴的分解同调 [notes-fact]">范畴的分解同调</a></span></p>
 <h2>简介</h2>
 <p>本文说明适当的<span class="link local"><a href="./分层.html" title="分层 [分层]">分层空间</a></span>可通过所谓<span class="link local"><a href="./出路范畴.html" title="出路范畴 [出路范畴]">出路范畴</a></span>的构造得到一个范畴, 直观上即 “只允许走向更高分层” 的道路构成的范畴:
 $$
@@ -1176,7 +1181,7 @@ $$
 \mathsf{Stri} \simeq \mathsf{Cat}.
 $$
 换言之, 条纹层提供了 $\infty$-范畴的一个<span class="link local"><a href="./无穷范畴的模型.html" title="无穷范畴的模型 [无穷范畴的模型]">模型</a></span>, 其特点在于方便通过几何来构造一些通过单纯集等模型难以企及的无穷范畴. 无穷范畴的反转态射的对称性在这种模型中体现为 Poincaré 对偶.</p>
-<h2>锥光滑分层空间</h2>
+<h2>1 锥光滑分层空间</h2>
 <p>定义 $C^0$ 分层空间为如下操作生成的最小类:</p>
 <ul>
 <li>空空间 $\varnothing$;</li>
@@ -1203,6 +1208,26 @@ $$
 <li>在 $\mathbb R^i \times C(Y)$ 的锥点之外的部分, 光滑性通过 $Y$ 的各个坐标卡归纳定义. (因为 $Y$ 的深度较小, 可以假设光滑性已经定义好了.)</li>
 <li>考虑 $\mathbb R^i \times C(Y)$ 的锥点, 注意锥点未必打到锥点, 但是若不打到锥点则光滑性可由上一款定义, 故在此假设锥点打到锥点.</li>
 </ul>
+<h2>2 可构造层</h2>
+<h3>2.4 范畴 $\mathsf{Strat}$</h3>
+<h3>2.5 几类特殊余极限</h3>
+<h4>2.5.1 开覆盖与爆破</h4>
+<p>$$
+\begin{CD}
+L @&gt;&gt;&gt; L\times \left[0,1\right) \\
+@VVV @VVV \\
+\{0\} @&gt;&gt;&gt; C(L)
+\end{CD}
+$$</p>
+<p><strong>命题</strong>. 对于锥光滑分层空间 $X$ 的最底层 $X_d\subset X$, 方块
+$$
+\begin{CD}
+\operatorname{Link}_{X_d}(X) @&gt;&gt;&gt; \operatorname{Unzip}_{X_d}(X) \\
+@VVV @VVV \\
+X_d @&gt;&gt;&gt; X
+\end{CD}
+$$
+为 $\mathsf{Strat}$ 中的推出方块, 称之为<strong>爆破</strong> (blow-up).</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="代数模式"><header><h1><span class="taxon"></span>代数模式 <a class="slug" href="./代数模式.html">[代数模式]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><strong>代数模式</strong> (algebraic pattern) 是 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">Chu–Haugseng</a></span> 对如下现象的抽象:</p>

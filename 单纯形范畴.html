@@ -1257,6 +1257,84 @@ $$
 <p>对于每个高阶范畴 $\mathcal C$, 都可以去掉其中所有不可逆的态射, 仅保留对象与对象之间的同构, 得到一个生象 $\mathcal C^{\simeq}$, 称为 $\mathcal C$ 的<span class="link local"><a href="./对象的生象.html" title="对象的生象 [对象的生象]">对象的生象</a></span>. 一般地, $(n,r)$-范畴也可遗忘为 $(n,r')$-范畴 ($r' &lt; r$).</p>
 <h3>$(\infty,n)$-范畴</h3>
 <p>见 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n)$-范畴</a></span>.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="notes-fact"><header><h1><span class="taxon"></span>范畴的分解同调 <a class="slug" href="./notes-fact.html">[notes-fact]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>参考文献: <span class="link local"><a href="./AyalaFrancisRozenblyumI.html" title="Factorization homology I: higher categories [AyalaFrancisRozenblyumI]">Factorization homology I: higher categories</a></span></p>
+<p>合集: <span class="link local"><a href="./mfd-cat.html" title="流形与高阶范畴 [mfd-cat]">流形与高阶范畴</a></span></p>
+<p>上一集: <span class="link local"><a href="./strat-cat.html" title="分层空间与范畴 [strat-cat]">分层空间与范畴</a></span></p>
+<h2>1 关于条纹层 (striation sheaves) 的回顾</h2>
+<p>本节是对 <span class="link local"><a href="./AyalaFrancisRozenblyumStrat.html" title="A stratified homotopy hypothesis [AyalaFrancisRozenblyumStrat]">AFR</a></span> 的回顾, 参见<span class="link local"><a href="./strat-cat.html" title="分层空间与范畴 [strat-cat]">相关笔记</a></span>.</p>
+<h3>1.1 分层空间</h3>
+<p>本文的 “分层空间” 特指一类具有良好微分拓扑行为的分层空间, 它是光滑流形在分层空间理论中的推广; 它的每一层为光滑流形, 层与层相接处还有额外的相容性. 我们不详细解释定义, 只陈述其性质:</p>
+<ul>
+<li>分层空间被形如 $\mathbb{R}^i \times \mathbb{R}_{\geq 0}^j \times C(Z)$ 的基本开集 (又叫<strong>奇点类型</strong>) 覆盖, 其中 $Z$ 是更低维的分层空间;</li>
+<li>分层空间的态射 $f\colon C(X)\to C(Y)$ (锥点为单独一层, 锥点打到锥点) 给出链环之间的 “切映射” $Df \colon X \to Y$.</li>
+</ul>
+<p>光滑流形范畴是分层空间范畴的全子范畴
+$$
+\mathsf{Mfd}\hookrightarrow\mathsf{Strat}.
+$$</p>
+<p>分层空间有几类重要的态射:</p>
+<ul>
+<li><strong>开嵌入</strong>来自拓扑空间的开嵌入;</li>
+<li><strong>加细</strong>在拓扑空间上为同胚, 只是可能加入新的分层;</li>
+<li><strong>纤维丛</strong>要求在某个开覆盖的每片上为乘积;</li>
+<li><strong>可构造丛</strong> (constructible bundle) 是一个归纳定义的概念, 对于态射 $f\colon X\to Y$, 要求对 $Y$ 的每一层 $Y_q$,
+<ul>
+<li>$f^{-1}Y_q \to Y_q$ 为纤维丛,</li>
+<li>$\operatorname{Link}_{f^{-1}Y_q}(X)\to f^{-1}Y_q\times_{Y_q}\operatorname{Link}(Y)$ 为可构造丛.</li>
+</ul>
+</li>
+<li><strong>紧合可构造丛</strong>是满足紧集的逆像为紧集的可构造丛.</li>
+</ul>
+<p>回忆, <span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形</a></span>可实现为<span class="link local"><a href="./分层.html" title="分层 [分层]">分层空间</a></span>, 即有函子
+$$
+\Delta\to \mathsf{Strat},\,[n]\mapsto\Delta^n.
+$$
+其中 $\Delta^n$ 是通过迭代分层空间上的<span class="link local"><a href="./锥(拓扑学).html" title="锥 (拓扑学) [锥(拓扑学)]">锥</a></span>操作定义的.</p>
+<p>分层空间的范畴 $\mathsf{Strat}$ 一开始是 $(1,1)$-范畴, 但实际上它可<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于<span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">生象</a></span>, 即构成 $(\infty,1)$-范畴. 它可由如下的 Kan 复形充实结构 $\underline{\operatorname{Hom}}_{\mathsf{Strat}}$ 定义:
+$$
+\underline{\operatorname{Hom}}_{\mathsf{Strat}}(X,Y)[n] :=\operatorname{Hom}_{\mathsf{Strat}_{/\Delta^n}}(X\times\Delta^n, Y\times\Delta^n).
+$$
+它还有一个性质: $(\infty,1)$-范畴版本的 $\mathsf{Strat}$ 是 $(1,1)$-范畴版本关于所有投影 $X\times\mathbb{R}\to X$ 的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>. 后文中我们将<strong>永远使用 $(\infty,1)$-范畴版本</strong> (用 $\operatorname{Hom}_{\mathsf{Strat}}$ 表示态射生象), 所以无需区分记号.</p>
+<h3>1.2 出路范畴</h3>
+<p>“出路范畴” 函子
+$$
+\mathsf{Exit}\colon \mathsf{Strat}\to \mathsf{sAni},\, X\mapsto ([n]\mapsto\operatorname{Hom}_{\mathsf{Strat}}(\Delta^n, X))
+$$
+的像落在范畴的范畴 $\mathsf{Cat}\hookrightarrow\mathsf{sAni}$ 中.</p>
+<h3>1.3 条纹层</h3>
+<p>由出路范畴函子 $\mathsf{Exit}\colon \mathsf{Strat} \to \mathsf{Cat}$, 我们又可将范畴变为 $\mathsf{Strat}$ 上的预层. 我们甚至可以写出判断这样一个预层何时来自范畴的条件.</p>
+<h2>2 切结构</h2>
+<h3>3.8 胞腔几何实现</h3>
+<p>定义函子
+$$
+\langle - \rangle \colon \Delta^{\mathrm{op}} \to \mathsf{cDisk}_1^{\mathrm{vfr}},
+$$
+然后归纳地定义<strong>胞腔几何实现</strong> (<span class="link local"><a href="./AyalaFrancisRozenblyumI.html" title="Factorization homology I: higher categories [AyalaFrancisRozenblyumI]">AFR</a></span> 定义 3.53)
+$$
+\langle - \rangle \colon \Theta_n^{\mathrm{op}} \to \mathsf{cDisk}_n^{\mathrm{vfr}}.
+$$</p>
+<h2>4 分解同调</h2>
+<h3>4.2</h3>
+<p><strong>引理</strong>. 函子 $\Theta_n^{\mathrm{op}} \to \mathsf{cDisk}_n^{\mathrm{vfr}}$ 的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>
+$$
+\mathfrak C \colon (\mathsf{cDisk}_n^{\mathrm{vfr}})^{\mathrm{op}} \to \widehat {\Theta}_n
+$$
+落在全子范畴 $\mathsf{Cat}_{(\infty,n)}$ 中.</p>
+<h3>4.3</h3>
+<p><strong>定义</strong> (4.13). 分解同调为函子
+$$
+\int\colon \mathsf{Cat}_{(\infty ,n)}\to\mathsf{Fun}(\mathsf{cDisk}_n^{\mathrm{vfr}},\mathsf{Ani})\hookrightarrow\mathsf{Fun}(\mathsf{cMfd}_n^{\mathrm{vfr}},\mathsf{Ani}),
+$$
+其中</p>
+<ul>
+<li>第一步为沿 $\Theta_n^{\mathrm{op}}\hookrightarrow \mathsf{cDisk}_n^{\mathrm{vfr}}$ 的右 Kan 扩张;</li>
+<li>第二步为沿 $\mathsf{cDisk}_n^{\mathrm{vfr}} \hookrightarrow \mathsf{cMfd}_n^{\mathrm{vfr}}$ 的左 Kan 扩张.</li>
+</ul>
+<p>具体地, 对于 $(\infty,n)$-范畴 $\mathcal C$ 与标架分层流形 $M$, 分解同调可写为
+$$
+\int_M \mathcal C = \operatorname{colim}_{D\to M}\operatorname{Hom}_{\mathsf{Cat}_{(\infty,n)}}(\mathfrak C(D),\mathcal C).
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="opecat"><header><h1><span class="taxon"></span>Barwick 算子范畴 <a class="slug" href="./opecat.html">[opecat]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./BarwickOpeCat.html" title="From operator categories to higher operads [BarwickOpeCat]">Clark Barwick 文章</a></span>的笔记. 将原文转写为模型无关语言.</p>
 <hr />
