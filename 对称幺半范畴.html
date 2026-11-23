@@ -1632,7 +1632,7 @@ $$</p>
 <p><span class="link local"><a href="./仿射代数群.html" title="“仿射代数群” [仿射代数群]">仿射代数群</a></span></p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Cartier对偶.html" title="“Cartier 对偶” [Cartier对偶]">Cartier 对偶</a></span></p>
-<p><span class="link local"><a href="./拟三角Hopf代数.html" title="拟三角 Hopf 代数 [拟三角Hopf代数]">拟三角 Hopf 代数</a></span></p>
+<p><span class="link local"><a href="./拟三角Hopf代数.html" title=" [拟三角Hopf代数]">拟三角 Hopf 代数</a></span></p>
 <p><span class="link local"><a href="./交换Hopf代数.html" title="交换 Hopf 代数 [交换Hopf代数]">交换 Hopf 代数</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Morita等价"><header><h1><span class="taxon"></span>Morita 等价 <a class="slug" href="./Morita等价.html">[Morita等价]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
@@ -3171,7 +3171,28 @@ $$
   \langle \Delta(a), b\otimes c\rangle = \langle a,bc\rangle.
 $$</li>
 </ul>
-<img src="/assets/Bord-6.svg" alt="余乘法是乘法的对偶" width="480" style="display:block; margin:auto;"></details></section><section class="block" data-taxon=""><details ><summary id="拟凝聚层"><header><h1><span class="taxon"></span>拟凝聚层 <a class="slug" href="./拟凝聚层.html">[拟凝聚层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<img src="/assets/Bord-6.svg" alt="余乘法是乘法的对偶" width="480" style="display:block; margin:auto;"></details></section><section class="block" data-taxon=""><details ><summary id="拟三角代数"><header><h1><span class="taxon"></span>拟三角代数 <a class="slug" href="./拟三角代数.html">[拟三角代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>观念</h2>
+<p><span class="link local"><a href="./双代数.html" title="双代数 [双代数]">双代数</a></span>上的<strong>拟三角</strong> (quasitriangular) 结构是使其<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>范畴由<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>升级为<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半范畴</a></span>所需的结构.</p>
+<h2>定义</h2>
+<p>考虑<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $(\mathcal C,\otimes)$ 中的<span class="link local"><a href="./双代数.html" title="双代数 [双代数]">双代数</a></span> $H\in\mathsf{Bialg}(\mathcal C) = \mathsf{Coalg}(\mathsf{Alg}(\mathcal C))$.
+设有一个态射
+$$
+R \colon 1 \to H \otimes H,
+$$
+它对任何 $H$-模 $M,N$ 给出态射
+$$
+R_{M,N} := (R\cdot -)\colon M\otimes N \to M\otimes N = N\otimes M,
+$$
+若这给出 $\mathsf{LMod}(H)$ 上的<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半结构</a></span>, 则称 $(H,R)$ 为<strong>拟三角代数</strong>. 展开辫幺半结构, 可得 $R$ 的具体条件:</p>
+<ul>
+<li>$\sigma\Delta = R  \Delta  R^{-1}$, 其中 $\sigma$ 交换两个分量, $\Delta$ 是 $H$ 上的余乘法, $R^{-1}$ 是 $R$ 在结合代数 $H\otimes H$ 中的乘法逆 (它给出自然变换 $R_{M,N}$ 的逆);</li>
+<li>$(\Delta\otimes\mathrm{id})\circ R = R_{13} R_{12}$, 其中 $(\Delta\otimes\mathrm{id})\colon H\otimes H\to H\otimes H\otimes H$, $R_{12} := R\otimes 1\colon 1\to H\otimes H\otimes H$, $R_{13}$ 是 $R_{12}$ 的排列;</li>
+<li>$(\mathrm{id}\otimes\Delta)\circ R = R_{13} R_{23}$.</li>
+</ul>
+<h2>例</h2>
+<p>$U_h \mathfrak {sl}_2$ 为拟三角代数.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="拟凝聚层"><header><h1><span class="taxon"></span>拟凝聚层 <a class="slug" href="./拟凝聚层.html">[拟凝聚层]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link local"><a href="./概形.html" title="概形 [概形]">概形</a></span>或<span class="link local"><a href="./环化空间.html" title="环化空间 [环化空间]">环化空间</a></span>上的拟凝聚层是环上的模的推广.</p>
 <p>概形 $X$ 的拟凝聚层的范畴 $\mathsf{QCoh}(X)$ 是代数几何中的一种代数对象 (见<span class="link local"><a href="./代数-几何对偶.html" title="代数–几何对偶 [代数-几何对偶]">代数–几何对偶</a></span>). 取拟凝聚层 $X \mapsto \mathsf{QCoh}(X)$ 构成一个由 (qcqs) 概形到<span class="link local"><a href="./可表现范畴.html" title="可表现范畴 [可表现范畴]">可表现</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>的嵌入.</p>
@@ -3565,6 +3586,12 @@ $$
 <p><span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span> $\mathsf{Bord}_k$ 是
 $\mathsf{Tang}_{k}^{\mathbb E_n}$
 “在 $n \geq \infty$ 的极限”; 人们也称其为<strong>稳定</strong>情形. 此时 (至少直观上) 缠结假设趋向于<span class="link local"><a href="./配边假设.html" title="配边假设 [配边假设]">配边假设</a></span>: $\mathsf{Bord}_k$ 是一个<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span> <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>.</p>
+<h2>推论</h2>
+<h3>底层生象</h3>
+<p><strong>命题</strong>. $\mathsf{Tang}_1^{\mathbb E_n}$ 的底层生象是一个点自由生成的 $\mathbb E_n$-群 $\Omega^{n} S^n$. 等价地说, 对任意 $\mathbb E_n$-群 $G$,
+$$
+\operatorname{Hom}_{\mathsf{Grp}_{\mathbb E_n}}(\mathsf{Tang}_1^{\mathbb E_n},G) \simeq G.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="置换范畴"><header><h1><span class="taxon"></span>置换范畴 <a class="slug" href="./置换范畴.html">[置换范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>置换范畴, 又称<span class="link local"><a href="./严格1-范畴.html" title="严格 1-范畴 [严格1-范畴]">严格</a></span><span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>, 其中严格是指结合律与幺元律严格成立.</p>
@@ -3693,6 +3720,12 @@ $$
 </details></section><section class="block" data-taxon=""><details ><summary id="辫幺半范畴"><header><h1><span class="taxon"></span>辫幺半范畴 <a class="slug" href="./辫幺半范畴.html">[辫幺半范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>辫幺半范畴是 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span>-幺半范畴, 是介于<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>和<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>之间的一种结构.</p>
+<h2>性质</h2>
+<h3>辫群作用</h3>
+<p>对于辫幺半范畴 $\mathcal C$ 的任一对象 $X$ 以及自然数 $n$, 有<span class="link local"><a href="./辫群.html" title="辫群 [辫群]">辫群</a></span> $\mathrm{Br}_n$ 在 $X^{\otimes n}$ 上的<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span> $\mathrm{Br}_n\to\operatorname{Aut}(X^{\otimes n})$.</p>
+<h2>例</h2>
+<h3>模范畴</h3>
+<p>某些代数的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>范畴具有辫结构. 见<span class="link local"><a href="./拟三角代数.html" title="拟三角代数 [拟三角代数]">拟三角代数</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="迹"><header><h1><span class="taxon"></span>迹 <a class="slug" href="./迹.html">[迹]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>自映射的迹</h3>

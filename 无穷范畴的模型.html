@@ -849,7 +849,7 @@
 <p>参考文献:</p>
 <ul>
 <li><span class="link local"><a href="./AyalaFrancisTanaka.html" title="Local structures on stratified spaces [AyalaFrancisTanaka]">Local structures on stratified spaces</a></span></li>
-<li><span class="link local"><a href="./AyalaFrancisRozenblyumStrat.html" title="A stratified homotopy hypothesis [AyalaFrancisRozenblyumStrat]">A stratified homotopy hypothesis</a></span></li>
+<li><span class="link local"><a href="./AyalaFrancisRozenblyumStrat.html" title="A stratified homotopy hypothesis [AyalaFrancisRozenblyumStrat]">A stratified homotopy hypothesis</a></span> (主要)</li>
 </ul>
 <p>合集: <span class="link local"><a href="./mfd-cat.html" title="流形与高阶范畴 [mfd-cat]">流形与高阶范畴</a></span></p>
 <p>下一集: <span class="link local"><a href="./notes-fact.html" title="范畴的分解同调 [notes-fact]">范畴的分解同调</a></span></p>
@@ -897,12 +897,39 @@ $$
 </ul>
 <p>注意光滑映射可以把低维数部分打到高维数部分.</p>
 <h2>2 可构造层</h2>
-<h3>2.4 范畴 $\mathsf{Strat}$</h3>
+<h3>2.1 分层同伦</h3>
+<p>分层空间态射 $f,g\colon X\to Y$ 之间的一个分层同伦是一个态射 $X\times\mathbb{R}\to Y$.</p>
+<p>与通常拓扑学类似, 可定义分层空间的同伦等价.</p>
+<p><strong>例</strong>. $\left[0,1\right)$ 同伦等价于 $(0,1)$.</p>
+<p>一般地, 任何带边界分层空间都同伦等价于它的内部.</p>
+<p><strong>命题</strong>. 分层空间的范畴 $\mathsf{Strat}$ 关于所有同伦等价的局部化, 等同于其关于所有态射 $X\times\mathbb{R}\to X$ 的局部化.</p>
+<h3>2.3 同痕层</h3>
+<p><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形</a></span>可通过至少两种不同方式实现为<span class="link local"><a href="./分层.html" title="分层 [分层]">分层空间</a></span>, 即有两个函子
+$$
+\Delta\to \mathsf{Strat},
+$$
+关于这些函子, 各文献记号不一. 本文约定如下记号:</p>
+<ul>
+<li>$\Delta^n$ 表示带标准分层结构的迭代<span class="link local"><a href="./锥(拓扑学).html" title="锥 (拓扑学) [锥(拓扑学)]">闭锥</a></span>, $\Delta^n := \overline{C}(\Delta^{n-1})$, 对任意 $0\leq i\leq n$, $\Delta^n$ 有且仅有一个 $i$ 维分层;</li>
+<li>$\Delta^n_{\mathrm{ext}}$ 表示带<strong>平凡</strong>分层结构, 且无限延伸的 $n$ 维 “扩展单形” $\{x_0 + \cdots + x_n = 1\}$.</li>
+</ul>
+<img src="/assets/stratified-simplexes.svg" alt="" width="350" style="display:block; margin:auto;">
+<img src="/assets/extended-simplexes.svg" alt="" width="450" style="display:block; margin:auto;">
+<blockquote>
+<p>这一节原文写得比较朴素, 没有使用模型无关语言. 似乎 “同痕层” (isotopy sheaves) 的概念并非必要; AF 后续文章就不用这个概念了; 因此我们将其略去. 感觉可以直接处理 ∞-范畴 Strat.</p>
+</blockquote>
+<p>如下是一个多次使用的技巧.</p>
+<p><strong>构造</strong> (“拓扑化”). 对于 $(1,1)$-范畴 $\mathsf{Strat}$ 上的 $\mathsf{Ani}$-值层 $F \colon \mathsf{Strat}^{\mathrm{op}}\to\mathsf{Ani}$, 定义其<strong>拓扑化</strong>为
+$$
+\mathfrak F\colon K\mapsto \big|[n]\mapsto F (K\times\Delta^n_{\mathrm{ext}})\big|.
+$$</p>
+<p>拓扑化操作实际上给出了 $\mathbb{R}$-不变的层, 也即 $(\infty,1)$-范畴 $\mathsf{Strat}$ 上的层.</p>
+<h3>2.4 $(\infty,1)$-范畴 $\mathsf{Strat}$</h3>
 <p>分层空间的范畴 $\mathsf{Strat}$ 一开始是 $(1,1)$-范畴, 但实际上它可<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于<span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">生象</a></span>, 即构成 $(\infty,1)$-范畴. 它可由如下的 Kan 复形充实结构 $\underline{\operatorname{Hom}}_{\mathsf{Strat}}$ 定义:
 $$
-\underline{\operatorname{Hom}}_{\mathsf{Strat}}(X,Y)[n] :=\operatorname{Hom}_{\mathsf{Strat}_{/\Delta^n}}(X\times\Delta^n, Y\times\Delta^n).
-$$
-它还有一个性质: $(\infty,1)$-范畴版本的 $\mathsf{Strat}$ 是 $(1,1)$-范畴版本关于所有投影 $X\times\mathbb{R}\to X$ 的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>. 我们将主要使用 $(\infty,1)$-范畴版本, 除非特殊说明.</p>
+\underline{\operatorname{Hom}}_{\mathsf{Strat}}(X,Y)[n] :=\operatorname{Hom}_{\mathsf{Strat}_{/\Delta^n_{\mathrm{ext}}}}(X\times\Delta^n_{\mathrm{ext}}, Y\times\Delta^n_{\mathrm{ext}}).
+$$</p>
+<p>事实上, 这样定义的 $(\infty,1)$-范畴 $\mathsf{Strat}$ 正是前面提到的 $(1,1)$-范畴版本关于所有投影 $X\times\mathbb{R}\to X$ 的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>. 我们将默认 $\mathsf{Strat}$ 为 $(\infty,1)$-范畴版本, 而谈论 $(1,1)$-范畴时才会特殊说明.</p>
 <h3>2.5 几类特殊余极限</h3>
 <h4>爆破</h4>
 <p>我们心目中的基本图像是, 开锥 $C(L)$ 是由 $L\times \left[0,1\right)$ 将 $L\times\{0\}$ 粘成一点所得. 这也可以想象为对锥点作 “奇点消解”, 又称为<strong>爆破</strong> (blow-up), 得到一个以 $L$ 为边界的分层空间.
@@ -955,6 +982,8 @@ $$
 \end{CD}
 $$
 注意这个图在 $(1,1)$-范畴版本的 $\mathsf{Strat}$ 中不是推出, 在局部化后才是推出.</p>
+<p>下图展示了 $L$ 为 $3$ 个点时的 $\overline{C}(L)$ 和 $\overline{C}^2(L)$.</p>
+<div style="display:flex;justify-content:center;gap:16px"><img src="/assets/cone-Y.svg" width="150"><img src="/assets/iterated-cone.svg" width="200"></div>
 <h2>3 出路范畴</h2>
 <p><strong>命题</strong>.
 “出路范畴” 函子
@@ -964,6 +993,87 @@ $$
 是<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>, 且其像落在范畴 (即<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 生象</a></span>) 的范畴 $\mathsf{Cat}\hookrightarrow\mathsf{sAni}$ 中.</p>
 <p><strong>命题</strong>. 函子 $\mathsf{Exit}\colon \mathsf{Strat}\hookrightarrow\mathsf{Cat}$ 保持上节所述的 “拉开” 以及 “迭代锥” 几种推出方块.</p>
 <h2>4 条纹层</h2>
+<p>考虑函子
+$$
+\mathrm{st}\colon \Delta\to\mathsf{Strat}, [n]\mapsto \Delta^n,
+$$
+通过推前 (右 Kan 扩张) $\mathrm{st}_*\colon \mathsf{Psh}(\Delta)\to\mathsf{Psh}(\mathsf{Strat})$ 可将单纯生象视为 $\mathsf{Strat}$ 上的预层. 由<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>与右 Kan 扩张的一般规律有
+$$
+    \begin{aligned}
+    (\mathrm{st}_* F) (X) &amp;=
+    \operatorname{Hom}_{\mathsf{Psh}(\mathsf{Strat})}(\mathbf{y}(X),\mathrm{st}_* F)
+    \\
+    &amp; = \operatorname{Hom}_{\mathsf{Psh}(\Delta)}(\mathrm{st}^*\mathrm{y}(X),F)
+    \\
+    &amp; = \operatorname{Hom}_{\mathsf{Psh}(\Delta)}(\mathsf{Exit}(X),F),
+    \end{aligned}
+$$
+且
+$$
+\mathrm{st}_*\colon \mathsf{Psh}(\Delta)\to\mathsf{Psh}(\mathsf{Strat})
+$$
+全忠实. 我们将 $\mathsf{Psh}(\Delta)$ 视为 $\mathsf{Psh}(\mathsf{Strat})$ 的全子范畴.</p>
+<p>上述这些都是纯抽象的道理, 唯一的输入条件是 $\mathrm{st}$ 全忠实. 再次提醒这里 $\mathsf{Strat}$ 必须理解为 $(\infty,1)$-范畴.
+另一种看法是 $\mathsf{Exit}$ 是 $\mathrm{st}$ 的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子, $\mathrm{st}_*$ 又是 $\mathsf{Exit}$ 的脉函子. 一开始我们用单形探测分层空间, 后来我们又用分层空间探测范畴.</p>
+<h3>4.1 局部性质</h3>
+<h4>锥局部性</h4>
+<p><strong>定义</strong> (锥局部性).
+设 $F\in\mathsf{Sh}(\mathsf{Strat})$, 称如下性质为<strong>锥-局部</strong> (cone-local) 性质: $F$ 将方块
+$$
+    \begin{array}{ccc}
+    L &amp; \rightarrow &amp; L\times\left[0,1\right) \\
+    \downarrow &amp;  &amp; \downarrow \\
+    {*} &amp; \rightarrow &amp; C(L)
+    \end{array}
+$$
+变为 $\mathsf{Ani}$ 中的拉回图.</p>
+<p>我们实际关心的对象满足一个更强的条件: 对任意分层空间 $K$ 及其最底层 $K_d\subset K$, $F$ 将方块
+$$
+\begin{array}{ccc}
+\operatorname{Link}_{K_d}(K) &amp; \rightarrow &amp; \operatorname{Unzip}_{K_d}(K) \\
+\downarrow &amp;  &amp; \downarrow \\
+K_d &amp; \rightarrow &amp; K
+\end{array}
+$$
+变为拉回图.</p>
+<p>记 $\mathsf{Sh}^{\mathrm{cone}}(\mathsf{Strat})$ 为满足锥局部性质的层构成的范畴.</p>
+<p><strong>引理</strong> (4.2.2). 作为 $\mathsf{Sh}(\mathsf{Strat})$ 的全子范畴有
+$$
+\mathsf{Sh}^{\mathrm{cone}}(\mathsf{Strat}) \simeq \mathsf{Psh}(\Delta).
+$$
+这个结论等价于: 对任意 $F\in\mathsf{Sh}(\mathsf{Strat})$, 余单位 $F\to\mathrm{st}_*\mathrm{st}^* F$ 为同构当且仅当 $F$ 具有锥局部性.</p>
+<p>只需证明两个方面:</p>
+<ul>
+<li>一方面, $\mathrm{st}_*$ 的像落在锥局部性层中.</li>
+<li>另一方面, 若 $F$ 为锥局部性层, 则余单位 $F\to\mathrm{st}_*\mathrm{st}^* F$ 为同构.</li>
+</ul>
+<p>注. 这个引理与 <span class="link local"><a href="./notes-manifold-diagrams.html" title="高阶范畴的流形图示 [notes-manifold-diagrams]">Heidemann</a></span> 的 “$\Theta_n$ 的 Segal 对象等同于网格模式的的正则 Segal 对象” 在精神上一致, 事实上 Heidemann 表明其文章受到 Ayala–Francis 的启发.</p>
+<h4>接续性</h4>
+<p>接下来给出对应于单纯生象的 Segal 条件的性质.</p>
+<p><strong>定义</strong> (接续性). 称满足如下条件的层 $F\in\mathsf{Sh}(\mathsf{Strat})$ 为<strong>接续</strong> (consecutive) 的: $F$ 将方块
+$$
+    \begin{array}{ccc}
+    {*} &amp; \rightarrow &amp; \Delta^n \\
+    \downarrow &amp;  &amp; \downarrow \\
+    \Delta^1 &amp; \rightarrow &amp; \Delta^{n+1}
+    \end{array}
+$$
+变为 $\mathsf{Ani}$ 中的拉回图. 其中 $\Delta^1\to\Delta^{n+1}$ 和 $\Delta^n\to\Delta^{n+1}$ 分别对应 $\{0&lt;1&lt;\cdots &lt; n+1\}$ 的子集 $\{0&lt;1\}$, $\{1&lt;\cdots &lt; n+1\}$.</p>
+<p>我们实际关心的对象满足一个更强的条件: 对任意紧分层空间 $L$,
+$F$ 将方块
+$$
+\begin{array}{ccc}
+*=\overline{C}(\varnothing) &amp; \rightarrow &amp; \overline{C}(L) \\
+\downarrow &amp;  &amp; \downarrow \\
+\Delta^1 = \overline{C}^2(\varnothing) &amp; \rightarrow &amp; \overline{C}^2(L)
+\end{array}
+$$
+变为拉回图.</p>
+<h2>5 横截层</h2>
+<h2>6 可构造丛</h2>
+<h3>6.3 可构造丛的分类</h3>
+<h3>6.4 绝对出路范畴</h3>
+<p><strong>命题</strong>. 惰性映射与活性映射构成 $\mathsf{Bun}$ 的<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">分解系统</a></span>; 任何映射都能分解为先一个惰性映射后一个活性映射. (这里的分解顺序与我们在<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>页面的约定相反, 但与 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">Chu–Haugseng</a></span> 相同; 这只是由于范畴 $\mathsf{Bun}$ 中态射方向的约定.)</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="单纯范畴"><header><h1><span class="taxon"></span>“单纯范畴” <a class="slug" href="./单纯范畴.html">[单纯范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>单纯范畴中的态射集是单纯集, 其中的 $1$-胞腔可视为范畴中的 $2$-态射, $k$-胞腔可视为范畴中的 $(k+1)$-态射. 因此, 单纯范畴可作为<span class="link local"><a href="./无穷范畴的模型.html" title="无穷范畴的模型 [无穷范畴的模型]">无穷范畴的模型</a></span>.</p>
 <h2>定义</h2>

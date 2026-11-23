@@ -1024,6 +1024,13 @@ $$
 \end{array}
 $$
 都能唯一地填充为方块. 这对应着分解系统中 “将错误顺序的复合变为正确顺序的复合” 的操作.</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="pre-tangle"><header><h1><span class="taxon"></span>Tangle Hypothesis <a class="slug" href="./pre-tangle.html">[pre-tangle]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>In this page I collect material for my final presentation of professor Reshetikhin’s course “Knots and 3-manifolds” in 2026 fall. I try to list all essential ideas to the story without technical details. Due to the time limit, I may have to cut some content in the actual presentation, but that is not considered when I write this draft.</p>
+<p>This page contains no AI-generated content.</p>
+<h2>The category of tangles</h2>
+<p>Higher categories (<span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$n$-categories</a></span>) can be regarded as an <span class="link local"><a href="./代数.html" title="代数 [代数]">algebraic structure</a></span>. To define them clearly and elegantly, we may use the concept of an <span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">algebraic pattern</a></span>.</p>
+<p>There are multiple algebraic patterns that can give us the definition of $n$-categories, but we will focus on the pattern <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">$\Theta_n$</a></span>. A</p>
+<p>Given a background manifold $V$ and a dimension $k$, we may define an $k$-category $\mathsf{Tang}_k^V$. The objects of $\mathsf{Tang}_k^V$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Θ-n-空间"><header><h1><span class="taxon"></span>Θn-空间 <a class="slug" href="./Θ-n-空间.html">[Θ-n-空间]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>$\Theta_n$-空间提供了 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n)$-范畴</a></span>的一种定义, 是 <span class="link local"><a href="./Segal空间.html" title="Segal 对象 [Segal空间]">Segal 空间</a></span>的推广.</p>
@@ -1160,6 +1167,12 @@ $$
 <p><span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span> $\mathsf{Bord}_k$ 是
 $\mathsf{Tang}_{k}^{\mathbb E_n}$
 “在 $n \geq \infty$ 的极限”; 人们也称其为<strong>稳定</strong>情形. 此时 (至少直观上) 缠结假设趋向于<span class="link local"><a href="./配边假设.html" title="配边假设 [配边假设]">配边假设</a></span>: $\mathsf{Bord}_k$ 是一个<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span> <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>.</p>
+<h2>推论</h2>
+<h3>底层生象</h3>
+<p><strong>命题</strong>. $\mathsf{Tang}_1^{\mathbb E_n}$ 的底层生象是一个点自由生成的 $\mathbb E_n$-群 $\Omega^{n} S^n$. 等价地说, 对任意 $\mathbb E_n$-群 $G$,
+$$
+\operatorname{Hom}_{\mathsf{Grp}_{\mathbb E_n}}(\mathsf{Tang}_1^{\mathbb E_n},G) \simeq G.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="范畴对象"><header><h1><span class="taxon"></span>范畴对象 (完备 Segal 对象) <a class="slug" href="./范畴对象.html">[范畴对象]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary><h2>观念</h2>
 <p>在 <span class="link local"><a href="./无穷范畴.html" title="无穷范畴 [无穷范畴]">$\infty$-范畴</a></span>中, 一个范畴<span class="link local"><a href="./内部观点.html" title="内部观点 [内部观点]">内部</a></span>的范畴可由完备 <span class="link local"><a href="./Segal空间.html" title="Segal 对象 [Segal空间]">Segal 对象</a></span>描述.</p>
 <p>迭代这一构造可得 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n)$-范畴</a></span>的概念.</p>

@@ -1149,7 +1149,7 @@ In general, notably for $E=H\mathbb F_p$, the 1-image of $\operatorname{Spec
 </details></section><section class="block" data-taxon=""><details ><summary id="Alexandroff拓扑"><header><h1><span class="taxon"></span>Alexandroff 拓扑 <a class="slug" href="./Alexandroff拓扑.html">[Alexandroff拓扑]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>预序集上的 <strong>Alexandroff 拓扑</strong> (又叫<strong>特化拓扑</strong> specialization topology) 是以其向上封闭子集为开集的拓扑.</p>
-<p>一个<span class="link local"><a href="./拓扑学.html" title="拓扑学 [拓扑学]">拓扑空间</a></span>是 Alexandroff 的当且仅当开集的任意交是开集; 此时其上对应的预序是<strong>特化</strong> (specialization): $x\leq y$ 当且仅当 $x$ 的每个邻域都包含 $y$, 也即 $x\in\overline{\{y\}}$, 此时我们称 $x$ 是 $y$ 的一个特化.</p>
+<p>一个<span class="link local"><a href="./拓扑学.html" title="拓扑学 [拓扑学]">拓扑空间</a></span>是 Alexandroff 的当且仅当开集的任意交是开集; 此时其上对应的预序是<strong></strong><span class="link local"><a href="./特化.html" title="特化 [特化]">特化</a></span> (specialization): $x\leq y$ 当且仅当 $x$ 的每个邻域都包含 $y$, 也即 $x\in\overline{\{y\}}$, 此时我们称 $x$ 是 $y$ 的一个特化.</p>
 <h2>性质</h2>
 <h3>与有限空间的关系</h3>
 <p>每个 $T_0$ <span class="link local"><a href="./有限拓扑空间.html" title="有限拓扑空间 [有限拓扑空间]">有限拓扑空间</a></span>都是某个偏序集的 Alexandroff 拓扑.</p>
@@ -2852,6 +2852,17 @@ $$</p>
 <p>算畴 $\mathbb E_n$ 同构于 $n$ 个 <span class="link local"><a href="./结合代数.html" title="结合代数 [结合代数]">$\mathbb E_1$</a></span> 的张量积:
 $$
 \mathbb E_n = \mathbb E_1^{\otimes n}.
+$$</p>
+<h2>性质</h2>
+<h3>到 $\mathbb E_1$ 的遗忘</h3>
+<p>算畴 $\mathbb E_n$ 中有 $S^{n-1}$ 个 $\mathbb E_1$. 具体地说, 有映射
+$$
+S^{n-1}\simeq \{\mathbb{R}\hookrightarrow\mathbb{R}^{n}\}\to\operatorname{Hom}_{\mathsf{Op}}(\mathbb E_1,\mathbb E_n),
+$$
+其中 $\{\mathbb{R}\hookrightarrow\mathbb{R}^{n}\}$ 表示 $\mathbb{R}$ 到 $\mathbb{R}^n$ 的线性嵌入的生象.
+这意味着对任意 $\mathbb E_n$-代数 $A$, 其有 $S^{n-1}$ 种方式遗忘为 $\mathbb E_1$-代数:
+$$
+S^{n-1} \times \mathsf{Alg}_{\mathbb E_n} (\mathcal C)\to \mathsf{Alg}_{\mathbb E_1}(\mathcal C).
 $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Euler示性数"><header><h1><span class="taxon"></span>Euler 示性数 <a class="slug" href="./Euler示性数.html">[Euler示性数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>流形</h2>
@@ -6005,7 +6016,7 @@ $$</p>
 <p><span class="link local"><a href="./仿射代数群.html" title="“仿射代数群” [仿射代数群]">仿射代数群</a></span></p>
 <h2>相关概念</h2>
 <p><span class="link local"><a href="./Cartier对偶.html" title="“Cartier 对偶” [Cartier对偶]">Cartier 对偶</a></span></p>
-<p><span class="link local"><a href="./拟三角Hopf代数.html" title="拟三角 Hopf 代数 [拟三角Hopf代数]">拟三角 Hopf 代数</a></span></p>
+<p><span class="link local"><a href="./拟三角Hopf代数.html" title=" [拟三角Hopf代数]">拟三角 Hopf 代数</a></span></p>
 <p><span class="link local"><a href="./交换Hopf代数.html" title="交换 Hopf 代数 [交换Hopf代数]">交换 Hopf 代数</a></span></p>
 </details></section><section class="block" data-taxon=""><details ><summary id="Idem"><header><h1><span class="taxon"></span>游走的幂等映射 <a class="slug" href="./Idem.html">[Idem]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./范畴论.html" title="范畴论 [范畴论]">范畴论</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
@@ -10804,6 +10815,20 @@ $$</p>
 <p>$$
 \mathsf {QCoh}(X_{\text{dR}})\simeq D\mathsf {-Mod}(X).
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="exodromy"><header><h1><span class="taxon"></span>出路 <a class="slug" href="./exodromy.html">[exodromy]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>本文是 <span class="link local"><a href="./BGHExodromy.html" title="Exodromy [BGHExodromy]">Barwick–Glasman–Haine</a></span> 的阅读笔记.</p>
+<p>Exodromy 意为 “退出的路径”: exo- “退出”, dromos “路径”.</p>
+<h2>引言</h2>
+<p>设 $X$ 为拟紧拟分离概形, 定义一个范畴 $\mathsf{Gal}(X)$:</p>
+<ul>
+<li>对象为 $X$ 的几何点 $x\to X$, 即 Zariski 点的剩余域的可分闭包;</li>
+<li>态射 $x\to y$ 为特化 (specialization) $y \leadsto x$, 即 $y\to X$ 提升到 $y\to X_{(x)}$.</li>
+</ul>
+<p>记 $X^{\mathrm{Zar}}$ 为 $X$ 的 Zariski 拓扑空间的<span class="link local"><a href="./特化.html" title="特化 [特化]">特化偏序</a></span>, 则有函子
+$$
+\mathsf{Gal}(X) \to X^{\mathrm{Zar}}
+$$</p>
+<p>范畴 $\mathsf{Gal}(X)$ 是一点处剩余域<span class="link local"><a href="./绝对Galois群.html" title="绝对 Galois 群 [绝对Galois群]">绝对 Galois 群</a></span> (<span class="link local"><a href="./平展基本群.html" title="平展基本群 [平展基本群]">平展基本群</a></span>) 的<strong>全局</strong>版本, 是分层空间的<span class="link local"><a href="./出路范畴.html" title="出路范畴 [出路范畴]">出路范畴</a></span>在概形理论中的类比.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="fil-gr"><header><h1><span class="taxon"></span>滤与分次的叠观点 <a class="slug" href="./fil-gr.html">[fil-gr]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./代数几何.html" title="代数几何 [代数几何]">代数几何</a></span></li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>陈述</h2>
 <h3>分次与半群作用</h3>
@@ -11140,7 +11165,9 @@ $$</p>
 <p><span class="link local"><a href="./terminologies.html" title="单纯百科 - 术语翻译表 [terminologies]">术语翻译表</a></span></p>
 <h2>最近</h2>
 <p>(这一栏内容是我手动维护的, 而非由程序自动生成.)</p>
-<p><span class="link local"><a href="./范畴谱.html" title="范畴谱 [范畴谱]">范畴谱</a></span></p>
+<p><span class="link local"><a href="./拟三角代数.html" title="拟三角代数 [拟三角代数]">拟三角代数</a></span></p>
+<p><span class="link local"><a href="./形式群的模叠.html" title="形式群的模叠 [形式群的模叠]">形式群的模叠</a></span></p>
+<p><span class="link local"><a href="./范畴谱.html" title="范畴谱 [范畴谱]">范畴谱</a></span>, <span class="link local"><a href="./∞-∞-范畴.html" title="(∞,∞)-范畴 [∞-∞-范畴]">(∞,∞)-范畴</a></span></p>
 <p><span class="link local"><a href="./notes-manifold-diagrams.html" title="高阶范畴的流形图示 [notes-manifold-diagrams]">高阶范畴的流形图示</a></span></p>
 <p><span class="link local"><a href="./缠结假设.html" title="缠结假设 [缠结假设]">缠结假设</a></span>, <span class="link local"><a href="./cob-sing.html" title="带奇点配边假设 [cob-sing]">带奇点配边假设</a></span></p>
 <p><span class="link local"><a href="./融贯子.html" title="融贯子 [融贯子]">融贯子</a></span></p>
@@ -11464,7 +11491,13 @@ Princeton 的会议处理的正是这个问题.</p>
 <h3>配边假设与缠结假设</h3>
 <ul>
 <li>百科页面: <span class="link local"><a href="./配边假设.html" title="配边假设 [配边假设]">配边假设</a></span>, <span class="link local"><a href="./缠结假设.html" title="缠结假设 [缠结假设]">缠结假设</a></span>, <span class="link local"><a href="./cob-sing.html" title="带奇点配边假设 [cob-sing]">带奇点配边假设</a></span></li>
-<li>参考文献: <span class="link local"><a href="./AyalaFrancisCob.html" title="The cobordism hypothesis [AyalaFrancisCob]">Ayala–Francis, The cobordism hypothesis</a></span></li>
+<li>相关笔记: <span class="link local"><a href="./notes-tang-1.html" title="缠结假设 (1 维) [notes-tang-1]">缠结假设 (1 维)</a></span></li>
+<li>参考文献:
+<ul>
+<li><span class="link local"><a href="./AyalaFrancisCob.html" title="The cobordism hypothesis [AyalaFrancisCob]">Ayala–Francis, The cobordism hypothesis</a></span></li>
+<li><span class="link local"><a href="./AyalaFrancisTangDim1.html" title="The Tangle Hypothesis: Dimension 1 [AyalaFrancisTangDim1]">The Tangle Hypothesis: Dimension 1</a></span></li>
+</ul>
+</li>
 </ul>
 <h2>线图与流形图</h2>
 <p><span class="link local"><a href="./HeidemannMfdDiag.html" title="Manifold Diagrams for Higher Categories [HeidemannMfdDiag]">Lukas Heidemann 的博士论文</a></span>引入了流形图, 推广了<span class="link local"><a href="./线图.html" title="线图 [线图]">线图</a></span>.</p>
@@ -11912,6 +11945,8 @@ $$</p>
 </ul>
 <p>计划中的讲稿 / 笔记:</p>
 <ul>
+<li><span class="link local"><a href="./pre-tangle.html" title="Tangle Hypothesis [pre-tangle]">Tangle Hypothesis</a></span></li>
+<li><span class="link local"><a href="./exodromy.html" title="出路 [exodromy]">出路</a></span></li>
 <li><span class="link local"><a href="./plus-principle.html" title="Plus Principle [plus-principle]">Plus Principle</a></span></li>
 <li><span class="link local"><a href="./mfd-cat.html" title="流形与高阶范畴 [mfd-cat]">流形与高阶范畴</a></span>
 <ul>
@@ -12900,6 +12935,7 @@ $$</p>
 <p>参考文献: <span class="link local"><a href="./AyalaFrancisRozenblyumI.html" title="Factorization homology I: higher categories [AyalaFrancisRozenblyumI]">Factorization homology I: higher categories</a></span></p>
 <p>合集: <span class="link local"><a href="./mfd-cat.html" title="流形与高阶范畴 [mfd-cat]">流形与高阶范畴</a></span></p>
 <p>上一集: <span class="link local"><a href="./strat-cat.html" title="分层空间与范畴 [strat-cat]">分层空间与范畴</a></span></p>
+<p>下一集: <span class="link local"><a href="./notes-tang-1.html" title="缠结假设 (1 维) [notes-tang-1]">缠结假设 (1 维)</a></span></p>
 <h2>1 关于条纹层 (striation sheaves) 的回顾</h2>
 <p>本节是对 <span class="link local"><a href="./AyalaFrancisRozenblyumStrat.html" title="A stratified homotopy hypothesis [AyalaFrancisRozenblyumStrat]">AFR</a></span> 的回顾, 参见<span class="link local"><a href="./strat-cat.html" title="分层空间与范畴 [strat-cat]">相关笔记</a></span>.</p>
 <h3>1.1 分层空间</h3>
@@ -12926,14 +12962,18 @@ $$</p>
 </li>
 <li><strong>紧合可构造丛</strong>是满足紧集的逆像为紧集的可构造丛.</li>
 </ul>
-<p>回忆, <span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形</a></span>可实现为<span class="link local"><a href="./分层.html" title="分层 [分层]">分层空间</a></span>, 即有函子
+<p>回忆, <span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形</a></span>可通过至少两种不同方式实现为<span class="link local"><a href="./分层.html" title="分层 [分层]">分层空间</a></span>, 即有两个函子
 $$
-\Delta\to \mathsf{Strat},\,[n]\mapsto\Delta^n.
+\Delta\to \mathsf{Strat},
 $$
-其中 $\Delta^n$ 是通过迭代分层空间上的<span class="link local"><a href="./锥(拓扑学).html" title="锥 (拓扑学) [锥(拓扑学)]">锥</a></span>操作定义的.</p>
+关于这些函子, 各文献记号不一. 本文约定如下记号:</p>
+<ul>
+<li>$\Delta^n$ 表示带标准分层结构的迭代<span class="link local"><a href="./锥(拓扑学).html" title="锥 (拓扑学) [锥(拓扑学)]">闭锥</a></span>, $\Delta^n := \overline{C}(\Delta^{n-1})$, 对任意 $0\leq i\leq n$, $\Delta^n$ 有且仅有一个 $i$ 维分层;</li>
+<li>$\Delta^n_{\mathrm{ext}}$ 表示带<strong>平凡</strong>分层结构, 且无限延伸的 $n$ 维 “扩展单形” $\{x_0 + \cdots + x_n = 1\}$.</li>
+</ul>
 <p>分层空间的范畴 $\mathsf{Strat}$ 一开始是 $(1,1)$-范畴, 但实际上它可<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于<span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">生象</a></span>, 即构成 $(\infty,1)$-范畴. 它可由如下的 Kan 复形充实结构 $\underline{\operatorname{Hom}}_{\mathsf{Strat}}$ 定义:
 $$
-\underline{\operatorname{Hom}}_{\mathsf{Strat}}(X,Y)[n] :=\operatorname{Hom}_{\mathsf{Strat}_{/\Delta^n}}(X\times\Delta^n, Y\times\Delta^n).
+\underline{\operatorname{Hom}}_{\mathsf{Strat}}(X,Y)[n] :=\operatorname{Hom}_{\mathsf{Strat}_{/\Delta^n_{\mathrm{ext}}}}(X\times\Delta^n_{\mathrm{ext}}, Y\times\Delta^n_{\mathrm{ext}}).
 $$
 它还有一个性质: $(\infty,1)$-范畴版本的 $\mathsf{Strat}$ 是 $(1,1)$-范畴版本关于所有投影 $X\times\mathbb{R}\to X$ 的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>. 后文中我们将<strong>永远使用 $(\infty,1)$-范畴版本</strong> (用 $\operatorname{Hom}_{\mathsf{Strat}}$ 表示态射生象), 所以无需区分记号.</p>
 <h3>1.2 出路范畴</h3>
@@ -12947,8 +12987,8 @@ $$
 <p>回忆 $\mathsf{Strat}$ 有如下的余极限, 称为<strong>特殊余极限</strong>:</p>
 <ul>
 <li>开覆盖;</li>
-<li>爆破 (详见<span class="link local"><a href="./strat-cat.html" title="分层空间与范畴 [strat-cat]">上一集</a></span>);</li>
-<li>迭代锥 (详见<span class="link local"><a href="./strat-cat.html" title="分层空间与范畴 [strat-cat]">上一集</a></span>);</li>
+<li>爆破 (又叫锥局部性, 详见<span class="link local"><a href="./strat-cat.html" title="分层空间与范畴 [strat-cat]">上一集</a></span>);</li>
+<li>迭代锥 (又叫接续性, 详见<span class="link local"><a href="./strat-cat.html" title="分层空间与范畴 [strat-cat]">上一集</a></span>);</li>
 <li><span class="link local"><a href="./泛等性.html" title="泛等性 [泛等性]">泛等性</a></span></li>
 </ul>
 <p>$$
@@ -12966,15 +13006,16 @@ $$
 是 $\mathsf{Strat}$ 上将前述 “特殊余极限” 变为极限图的预层构成的全子范畴.</p>
 <p>当然, 条纹层不构成意象; 事实上这个 “层条件” 不构成 Grothendieck 拓扑. (毕竟 $\mathsf{Stri} \simeq \mathsf{Cat}$ 而 $\mathsf{Cat}$ 不是 $(\infty,1)$-意象.)</p>
 <p><strong>定理</strong>. 出路范畴函子 $\mathsf{Exit}\colon \mathsf{Strat}\to \mathsf{Cat}$ 对应的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子 $\mathsf{Cat}\to\mathsf{Psh}(\mathsf{Strat})$ 将 $\mathsf{Cat}$ 等同于全子范畴 $\mathsf{Stri}$.</p>
-<p><strong>定义</strong>. 通过<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">分类空间</a></span>的观念, 我们定义如下条纹层, 从而定义相应的范畴:</p>
+<p>下面我们将定义几个 $\mathsf{Strat}$ 上的条纹层, 可视为分层空间上几种结构的<span class="link local"><a href="./分类空间.html" title="分类空间 [分类空间]">分类空间</a></span>. 在此之前引入一种一般性的构造.</p>
+<p><strong>定义</strong>. 我们定义如下条纹层, 从而定义相应的范畴:</p>
 <ul>
-<li>$\mathsf{Bun}$ 分类可构造丛, 即 $\mathsf{Bun}(K)$ 是 $K\times\Delta^\bullet$ 上的可构造丛集合构成的 Kan 复形表现的生象;</li>
+<li>$\mathsf{Bun}$ 分类可构造丛;</li>
 <li>$\mathsf{cBun}$ 分类紧合可构造丛;</li>
 <li>$\mathsf{Exit}$ 分类带一个截面的可构造丛.</li>
 </ul>
 <p>直观上, 两个范畴 $\mathsf{Bun}$, $\mathsf{Exit}$ 可描述如下:</p>
 <ul>
-<li>$\mathsf{Bun}$ 的对象是分层空间, 态射是 $\Delta^1$ 上的可构造丛 (注意, 态射不仅是分层空间之间的态射, 还包含了 “活性配边”, 参见<span class="link local"><a href="./notes-manifold-diagrams.html" title="高阶范畴的流形图示 [notes-manifold-diagrams]">流形图的笔记</a></span>);</li>
+<li>$\mathsf{Bun}$ 的对象是分层空间, 态射是 $\Delta^1$ 上的可构造丛 (注意, 态射不仅是分层空间之间的态射, 还包含了 “配边”, 更一般地, $\mathsf{Bun}$ 的 $K$-点是分层空间的 $K$ 参数化的 “配边”;</li>
 <li>$\mathsf{Exit}$ 的对象是分层空间带一个指定的点, 态射是 $\Delta^1$ 上的可构造丛带一个截面;</li>
 </ul>
 <p><strong>命题</strong>. 每个可构造丛 $X\to K$ 给出函子 $\mathsf{Exit}(K) \to\mathsf{Bun}$ 以及 $\mathsf{Exit}(X)\to\mathsf{Exit}$; 有拉回图
@@ -12986,6 +13027,39 @@ $$
 \end{array}
 $$</p>
 <p>特别地, $K = {*}$ 时, 我们知道 $\mathsf{Exit}(X)$ 就是 $\mathsf{Exit}\to\mathsf{Bun}$ 在对象 $X\in\mathsf{Bun}$ 处的纤维.</p>
+<h3>1.4 几类态射</h3>
+<p>我们定义 $\mathsf{Bun}$ 中的几类特殊的态射.</p>
+<p>下列是两种构造 $\mathsf{Bun}$ 中的态射 (即 $\Delta^1$ 上的可构造丛) 的方式:</p>
+<p>一是紧合可构造映射的<strong>反向映射柱</strong> (reverse mapping cylinder)
+$$
+\mathsf{Cylr}(X\to Y) := Y \sqcup_{X\times\{0\}} (X\times [0,1]);
+$$</p>
+<ul>
+<li><strong>惰性映射</strong>是指紧合可构造单射的反向映射柱;</li>
+</ul>
+<img src="/assets/Bun-inert-morphism.svg" alt="" width="120" style="display:block; margin:auto;">
+<ul>
+<li><strong>创生映射</strong>是指紧合可构造满射的反向映射柱;</li>
+</ul>
+<img src="/assets/Bun-creation.svg" alt="" width="120" style="display:block; margin:auto;">
+<p>二是<strong>开映射柱</strong> (open mapping cylinder)
+$$
+\mathsf{Cylo}(X\to Y) := (X \times [0,1])\sqcup_{X\times\left(0,1\right]}Y\times\left(0,1\right];
+$$</p>
+<ul>
+<li><strong>开嵌入</strong>是底层拓扑空间上为开嵌入, 且继承子空间分层结构的映射的开映射柱;</li>
+</ul>
+<img src="/assets/Bun-open-embedding.svg" alt="" width="120" style="display:block; margin:auto;">
+<ul>
+<li><strong>细化映射</strong>是底层拓扑空间上为同胚, 且每一层限制为到像的同构的映射的开映射柱;</li>
+</ul>
+<img src="/assets/Bun-refinement.svg" alt="" width="120" style="display:block; margin:auto;">
+<p>最后我们定义</p>
+<ul>
+<li><strong>活性映射</strong>是最小的包含创生, 细化与开嵌入的映射类.</li>
+</ul>
+<p>这里 “惰性” 和 “活性” 的概念与<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>有关, 且与<span class="link local"><a href="./notes-manifold-diagrams.html" title="高阶范畴的流形图示 [notes-manifold-diagrams]">流形图的笔记</a></span>)中的用法非常相似.</p>
+<p><strong>命题</strong>. 惰性映射与活性映射构成 $\mathsf{Bun}$ 的<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">分解系统</a></span>; 任何映射都能分解为先一个惰性映射后一个活性映射. (这里的分解顺序与我们在<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>页面的约定相反, 但与 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">Chu–Haugseng</a></span> 相同; 这只是由于范畴 $\mathsf{Bun}$ 中态射方向的约定.)</p>
 <h2>2 切结构</h2>
 <h3>2.1 切丛</h3>
 <p>记 $\mathsf{Vect}^{\mathrm{inj}}$ 为实线性空间, 线性单射以及线性单射中的同伦构成的 $(\infty,1)$-范畴. 其中 $\operatorname{Hom}(\mathbb{R}^i,\mathbb{R}^j)\simeq\mathrm{O}(j) / \mathrm{O}(j-i)$.</p>
@@ -13030,18 +13104,81 @@ $$</p>
 $$
 \mathsf{Mfd}_n^{\mathrm{vfr}} := \mathsf{Bun}^{\mathrm{vfr}_n}.
 $$</p>
+<h4>稳固切结构</h4>
+<p><strong>定义</strong>. <strong>稳固切结构</strong> (solid tangential structure) 是预层 $(\mathsf{Vect}^{\mathrm{inj}})^{\mathrm{op}} \to \mathsf{Ani}$ (的<span class="link local"><a href="./直化.html" title="直化 [直化]">反直化</a></span>) 给出的切结构.</p>
+<p>我们知道不是所有函子 $\mathcal B\to\mathsf{Vect}^{\mathrm{inj}}$ 都来自预层的反直化, 不是所有切结构都是稳固切结构. 但一般的切结构可以自由地变为一个稳固切结构.</p>
+<p>以下仅考虑 $\mathcal B$ 为生象的情形. 定义 $\mathrm{s}(\mathcal B)\colon (\mathsf{Vect}^{\mathrm{inj}})^{\mathrm{op}} \to \mathsf{Ani}$,
+$$
+\mathrm{s}(\mathcal B) (V) = \{V\hookrightarrow p(b)\},
+$$
+其中 $p$ 表示函子 $\mathcal B\to\mathsf{Vect}^{\mathrm{inj}}$, $b\in\mathcal B$.
+上式也可以写成
+$$
+\mathrm{s}(\mathcal B) (V) = \{(V\hookrightarrow W, b\in p^{-1}(W))\}.
+$$</p>
+<p><strong>例</strong>. 定向结构 $\mathrm{or} := (\bigsqcup_n \mathbf{B}\mathrm{SO}(n) \to \mathsf{Vect}^{\simeq}\to\mathsf{Vect}^{\mathrm{inj}})$ 给出的稳固切结构为 $\mathrm{sor}\colon (\mathsf{Vect}^{\mathrm{inj}})^{\mathrm{op}}\to\mathsf{Ani}$,</p>
+<p>$$
+\mathrm{sor}(V) = \{(V\hookrightarrow W, \alpha\in\mathrm{or}(W))\}.
+$$</p>
+<p><strong>例</strong> (流形结构). 对固定的 $n$, 函子 $\mathbf{B}\mathrm{O}(n)\to\mathsf{Vect}^{\mathrm{inj}}$ 给出的稳固切结构称为 $n$-<strong>流形结构</strong> $\mathrm{mfd}_n\colon (\mathsf{Vect}^{\mathrm{inj}})^{\mathrm{op}}\to\mathsf{Ani}$:</p>
+<p>$$
+  \mathrm{mfd}_n (V) = \{(V\hookrightarrow W, \operatorname{dim}W = n)\}.
+$$</p>
+<p>若分层空间 $X$ 带有 $n$-流形结构, 则其各层维数不超过 $n$, 并且存在 $X$ 上的 $n$ 阶向量丛 $\eta$ (来自函子 $\mathsf{Exit}(X)\to\mathbf{B}\mathrm{O}(n)$) 与可构造丛的嵌入
+$$
+T_X\hookrightarrow\eta;
+$$
+直观上 $X$ 可以 “微小加厚” 成 $n$ 维流形. 例如下图中的十字形具有 $2$-流形结构.</p>
+<img src="/assets/stratified-manifold-structure-thickening.svg" alt="" width="400" style="display:block; margin:auto;">
+<p>称带有 $n$-流形结构的分层空间为<strong>分层 $n$-流形</strong> (stratified $n$-manifold).</p>
+<p><strong>例</strong> (稳固标架结构). 对固定的 $n$, 函子 $1\overset{\mathbb R^n}{\to}\mathsf{Vect}^{\mathrm{inj}}$ 给出的稳固切结构称为<strong>稳固 $n$-标架</strong> (solid $n$-framing) $\mathrm{sfr}_n\colon (\mathsf{Vect}^{\mathrm{inj}})^{\mathrm{op}}\to\mathsf{Ani}$:</p>
+<p>$$
+  \mathrm{sfr}_n (V) = \{V\hookrightarrow \mathbb R^n\}.
+$$</p>
+<p>对于给定的分层 $n$-流形 $(X,T_X\hookrightarrow\eta)$, 其上的稳固 $n$-标架结构相当于 $\eta$ 的平凡化. 相比之下, 其上的<strong>变标架</strong>要求的是态射 $T_X\hookrightarrow\eta$ 的平凡化 (也即两个函子 $\mathsf{Exit}(X)\to\mathsf{Ar}(\mathsf{Vect}^{\mathrm{inj}})$ 自然同构), 这是一个更强的要求.</p>
+<p>一般而言, 稳固 $n$-标架既不能确保存在变标架, 也不能确保其唯一.</p>
+<h4>稳固切结构与变标架的关系</h4>
 <h2>3 圆盘</h2>
 <h3>3.5</h3>
-<p>定义范畴 $\mathsf{cDisk}_n^{\mathrm{vfr}}$, 其对象简单地说就是由有限个圆盘粘起来的图案.</p>
+<p>定义全子范畴
+$$
+\mathsf{cDisk}_n^{\mathrm{vfr}}\hookrightarrow\mathsf{cMfd}_n^{\mathrm{vfr}},
+$$
+其对象简单地说就是由有限个圆盘粘起来的图案. 具体地说它的对象类是包含如下对象的最小类:</p>
+<ul>
+<li>$\varnothing$, $*$;</li>
+<li>沿一个公共闭子分层的粘合;</li>
+<li>todo</li>
+</ul>
+<p><strong>例</strong>.</p>
+<img src="/assets/strat-disk-example-S1.svg" alt="" width="350" style="display:block; margin:auto;">
+<ul>
+<li>$S^1$ 带有平凡分层结构, 不属于 $\mathsf{cDisk}_1^{\mathrm{vfr}}$;</li>
+<li>$S^1$ 带有一个 $0$ 维分层点和一个 $1$ 维分层 $S^1\setminus\{*\}$, 仍然不属于 $\mathsf{cDisk}_1^{\mathrm{vfr}}$;</li>
+<li>$S^1$ 带有两个 $0$ 维分层点和两个 $1$ 维圆弧, 就属于 $\mathsf{cDisk}_1^{\mathrm{vfr}}$.</li>
+</ul>
+<p><strong>例</strong>.</p>
+<ul>
+<li>$S^2$ 带有平凡分层结构时, 甚至不属于 $\mathsf{cMfd}_2^{\mathrm{vfr}}$ ($TS^2$ 不是平凡丛);</li>
+<li>$S^2$ 带有一个 $0$ 维分层点和一个 $2$ 维分层 $S^2\setminus\{*\}$, 属于 $\mathsf{cMfd}_2^{\mathrm{vfr}}$ 但不属于 $\mathsf{cDisk}_2^{\mathrm{vfr}}$;</li>
+</ul>
 <h3>3.8 胞腔几何实现</h3>
 <p>定义函子
 $$
 \langle - \rangle \colon \Delta^{\mathrm{op}} \to \mathsf{cDisk}_1^{\mathrm{vfr}},
-$$
-然后归纳地定义<strong>胞腔几何实现</strong> (<span class="link local"><a href="./AyalaFrancisRozenblyumI.html" title="Factorization homology I: higher categories [AyalaFrancisRozenblyumI]">AFR</a></span> 定义 3.53)
+$$</p>
+<ul>
+<li>$\langle [0] \rangle$ 是点 $D^0$,</li>
+<li>$\langle [1] \rangle$ 是线段 $D^1$,</li>
+<li>$\Delta$ 中的惰性映射 (区间含入) 对应惰性映射,</li>
+<li>$\Delta$ 中的活性映射 (保端点映射) 对应活性映射.</li>
+</ul>
+<p>然后归纳地定义<strong>胞腔几何实现</strong> (<span class="link local"><a href="./AyalaFrancisRozenblyumI.html" title="Factorization homology I: higher categories [AyalaFrancisRozenblyumI]">AFR</a></span> 定义 3.53)
 $$
 \langle - \rangle \colon \Theta_n^{\mathrm{op}} \to \mathsf{cDisk}_n^{\mathrm{vfr}}.
 $$</p>
+<img src="/assets/cellular-realization.svg" alt="450" width="300" style="display:block; margin:auto;">
+<p>注意这个函子不是全忠实的, 也不是本质满的.</p>
 <h2>4 分解同调</h2>
 <h3>4.2</h3>
 <p><strong>引理</strong>. 函子 $\Theta_n^{\mathrm{op}} \to \mathsf{cDisk}_n^{\mathrm{vfr}}$ 的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>
@@ -14022,6 +14159,8 @@ $$</p>
 <ul>
 <li>$\mathbb D (K_0\otimes \mathbb D L_0) \geq w' - w$.</li>
 </ul>
+<h2>(2026-11-17)</h2>
+<p><strong>定理</strong>. $U_0\hookrightarrow X_0$ 光滑, $L_0$ 是 $U_0$ 上的纯权 $w$ lisse 层, 则 $\mathrm{IC}_{X_0} (L_0)$ 为纯权 $w + \operatorname{dim}U_0$ 层.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="notes-perverse-summary"><header><h1><span class="taxon"></span>偏屈层课程小结 <a class="slug" href="./notes-perverse-summary.html">[notes-perverse-summary]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p>学期进行到一半, 让 AI 帮忙用我熟悉的观点总结了一下课程内容.</p>
 <p>以下内容由 AI 生成.</p>
@@ -14433,6 +14572,78 @@ $$</p>
 <h2>5. 应用到经典 Bernstein 投影 $z^0$</h2>
 <p>在 3.4 节的情形,</p>
 <h2>6. 定理 5.1.8 的证明</h2>
+</details></section><section class="block" data-taxon=""><details ><summary id="notes-tang-1"><header><h1><span class="taxon"></span>缠结假设 (1 维) <a class="slug" href="./notes-tang-1.html">[notes-tang-1]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>参考文献: <span class="link local"><a href="./AyalaFrancisTangDim1.html" title="The Tangle Hypothesis: Dimension 1 [AyalaFrancisTangDim1]">The Tangle Hypothesis: Dimension 1</a></span></p>
+<p>合集: <span class="link local"><a href="./mfd-cat.html" title="流形与高阶范畴 [mfd-cat]">流形与高阶范畴</a></span></p>
+<p>上一集: <span class="link local"><a href="./notes-fact.html" title="范畴的分解同调 [notes-fact]">范畴的分解同调</a></span></p>
+<h2>1 标架缠结的拓扑模空间</h2>
+<h2>2 用 $\mathsf{Bun}$ 定义缠结 $(\infty,1)$-范畴</h2>
+<h3>2.1 $\mathcal D_{[k]}^{\mathrm{sfr}}$ 与 $\mathcal D_{[n-1,n]}^{\mathrm{sfr}}$</h3>
+<p><strong>定义</strong>.</p>
+<ul>
+<li>$\mathcal D_{[k]}^{\mathrm{sfr}}$ 是 $\mathsf{Mfd}_k^{\mathrm{sfr}}$ 中由 (带稳固 $k$-标架的) $\mathbb{R}^k$ 的有限无交并构成的全子范畴.</li>
+<li>$\mathcal D_{[n-1,n]}^{\mathrm{sfr}}$ 是 $\mathsf{Mfd}_n^{\mathrm{sfr}}$ 的子范畴, 其对象为带稳固 $n$-标架的 $[n-1,n]$-流形, 且满足
+<ul>
+<li>每层微分同胚于 $\mathbb{R}^{n-1}$ 或 $\mathbb{R}^n$;</li>
+<li>每层的闭包微分同胚于某个闭圆盘的开子空间.</li>
+</ul>
+</li>
+</ul>
+<p>对于标架 $n$-流形中嵌入的由点和线段构成的图, 其 Poincaré 对偶即给出 $\mathcal D_{[n-1,n]}^{\mathrm{sfr}}$ 的对象. 下图是 $\mathcal D_{[2,3]}^{\mathrm{sfr}}$ 的一个对象, 它是 $\mathbb{R}^3$ 中一个嵌入图的开邻域, 带有继承自 $\mathbb{R}^3$ 的稳固标架.</p>
+<img src="/assets/D-sfr-2-3.svg" alt="" width="450" style="display:block; margin:auto;">
+<p>回忆上集定义的胞腔实现
+$$
+\langle - \rangle\colon \Delta^{\mathrm{op}} \to\mathcal D_1^{\mathrm{sfr}}.
+$$
+记 $[p]$ 的胞腔实现为 $\mathbb D[p]$, 它是一条线段带有若干分层点, 包含两端共 $p+1$ 个分层点.</p>
+<p>我们简要提示一下读者为什么这里有一个 $\mathrm{op}$. 如下是 $\Delta$ 中的一个态射 $[3]\to [2]$ 对应的 $\mathcal D_1^{\mathrm{sfr}}$ 中的态射的图示.</p>
+<img src="/assets/cellular-realization-2.svg" alt="" width="150" style="display:block; margin:auto;">
+<p>考虑函子
+$$
+    \rho\colon \mathcal{D}_{[n-1]}^{\mathrm{sfr}}\times\Delta^{\mathrm{op}}
+    \xrightarrow{\mathrm{id}\times\langle-\rangle} \mathcal{D}_{[n-1]}^{\mathrm{sfr}}\times\mathcal D_1^{\mathrm{sfr}}
+    \to\mathcal D_n^{\mathrm{sfr}}.
+$$</p>
+<p>回忆 (见 <span class="link local"><a href="./AyalaFrancisCob.html" title="The cobordism hypothesis [AyalaFrancisCob]">AF 之前的文章</a></span>) $\mathsf{cShv}(\mathcal D)$ 表示 $\mathsf{Fun}(\mathcal D,\mathsf{Ani})$ 的一个全子范畴, 由 “闭层” (将闭覆盖变为极限的函子) 构成.</p>
+<p>如下是一个很有<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>风味的命题, 其证明看上去就是代数模式的比较.</p>
+<p><strong>命题</strong> (2.8).
+$$
+\mathsf{cShv}(\mathcal D_n^{\mathrm{sfr}}) \simeq \mathsf{Alg}_{\mathbb E_n}.
+$$</p>
+<p>回忆 $\mathsf{fCat} := \mathsf{Seg}_{\Delta}(\mathsf{Ani})$ 表示 Segal 生象 (又称旗标范畴, flagged category). 泛等完备化 $(-)^{\land}_{\mathrm{unv}}$ 将其反射回范畴的范畴.</p>
+<p>通过前述函子 $\rho$ 拉回有
+$$
+    \rho^*\colon \mathsf{cShv}(\mathcal D_{[n-1,n]})^{\mathrm{sfr}}
+    \to \mathsf{Alg}_{\mathbb E_{n-1}}(\mathsf{fCat})
+    \xrightarrow{(-)^{\land}_{\mathrm{unv}}}\mathsf{Alg}_{\mathbb E_{n-1}}(\mathsf{Cat}).
+$$</p>
+<p><strong>引理</strong>. 上述函子落在<span class="link local"><a href="./刚性幺半范畴.html" title="刚性幺半范畴 [刚性幺半范畴]">刚性</a></span> $\mathbb E_{n-1}$-幺半范畴中.</p>
+<h3>2.3 缠结范畴</h3>
+<p><strong>定义</strong>. 缠结范畴 $\mathsf{Bord}_1^{\mathrm{fr},\mathbb E_{n-1}}$ 作为 $\mathbb E_{n-1}$-幺半范畴由如下函子定义:
+$$
+\mathcal D_{[n-1]}^{\mathrm{sfr}}\times\Delta^{\mathrm{op}}\overset{\rho}{\to}\mathcal D_{[n-1,n]}^{\mathrm{sfr}}\xrightarrow{\operatorname{Hom}(\mathbb{R}^{n-1},-)}\mathsf{Ani}.
+$$</p>
+<p>直观:</p>
+<ul>
+<li>$\mathsf{Bord}_1^{\mathrm{fr},\mathbb E_{n-1}}$ 的对象的生象 (未经泛等完备化) 是 $\operatorname{Hom}_{\mathsf{Mfd}_n^{\mathrm{sfr}}}(\mathbb{R}^{n-1},\mathbb{R}^{n-1})$.</li>
+</ul>
+<p>如下是 $\mathsf{Bord}_1^{\mathrm{fr},\mathbb E_{n-1}}$ 的一个对象 (即 $\mathsf{Mfd}_2^{\mathrm{sfr}}$ 中的一个态射 $\mathbb{R}^1\to\mathbb{R}^1$) 的例子, 它是由两个态射复合给出的, 我们只画出了两个 $\Delta^1$ 上的丛而没有画出复合所用的 $\Delta^2$.</p>
+<img src="/assets/Bord-1-fr-E1-obj.svg" alt="" width="200" style="display:block; margin:auto;">
+<ul>
+<li>$\mathsf{Bord}_1^{\mathrm{fr},\mathbb E_{n-1}}$ 的态射的生象是 $\operatorname{Hom}_{\mathsf{Mfd}_n^{\mathrm{sfr}}}(\mathbb{R}^{n-1},\mathbb{R}^{n-1}\times \mathbb D [1])$.</li>
+</ul>
+<p>如下是 $\mathsf{Bord}_1^{\mathrm{fr},\mathbb E_{n-1}}$ 的一个态射 (即 $\mathsf{Mfd}_2^{\mathrm{sfr}}$ 中的一个态射 $\mathbb{R}^1\to\mathbb{R}^1\times\mathbb D [1]$) 的例子. 它是由两个态射复合给出的.</p>
+<img src="/assets/Bord-1-fr-E1-mor.svg" alt="" width="420" style="display:block; margin:auto;">
+<p>这体现了如下的一般现象 $(M = \mathbb{R}^1)$.</p>
+<p><strong>命题</strong> (Lemma 2.22 后的评注). $\mathsf{Mfd}_{[n-1,n]}^{\mathrm{sfr}}$ 的每个态射 $M \to X$ 都具有唯一分解
+$$
+M \to E \to X,
+$$
+其中 $M\to E$ 为紧合可构造丛的反向映射柱, $E\to X$ 为分层开嵌入.</p>
+<p><strong>定义</strong> (2.25). $\mathbf{B}^{n-1}\mathsf{Bord}_1^{\mathrm{fr},\mathbb E_{n-1}}$ 作为带基点 $n$-范畴由如下函子定义:
+$$
+\Theta_n^{\mathrm{op}} \overset{\langle-\rangle}{\to}\mathsf{Mfd}_n^{\mathrm{sfr}}\xrightarrow{\operatorname{Hom}(\mathbb{R}^{n-1},-)}\mathsf{Ani}.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="notes-topology"><header><h1><span class="taxon"></span>拓扑学 2026 秋助教讲稿 <a class="slug" href="./notes-topology.html">[notes-topology]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./notes-topology-1.html" title="拓扑学 2026 秋助教讲稿 (1) [notes-topology-1]">拓扑学 2026 秋助教讲稿 (1)</a></span></p>
 <p><span class="link local"><a href="./notes-topology-midterm.html" title="拓扑学 2026 秋助教讲稿 - 期中 [notes-topology-midterm]">拓扑学 2026 秋助教讲稿 - 期中</a></span></p>
@@ -14447,7 +14658,7 @@ $$</p>
 <ul>
 <li>$\{\uparrow x\mid x\in X\}$, where $\uparrow x$ is the subset $\{y\in X\mid y\geq x\}$.</li>
 </ul>
-<p>Remark. When $x\leq y$ we sometimes say that $x$ is a <strong>specialization</strong> of $y$ and that $y$ is a <strong>generalization</strong> of $x$, two terms from algebraic geometry. In algebraic geometry, one often consider <span class="link local"><a href="./一般点.html" title="一般点 [一般点]">generic points</a></span> on varieties (e.g. an affine line) and talk about their specializations. The closure of a generic point contains all its specializations.</p>
+<p>Remark. When $x\leq y$ we sometimes say that $x$ is a <strong></strong><span class="link local"><a href="./特化.html" title="特化 [特化]">specialization</a></span> of $y$ and that $y$ is a <strong>generalization</strong> of $x$, two terms from algebraic geometry. In algebraic geometry, one often consider <span class="link local"><a href="./一般点.html" title="一般点 [一般点]">generic points</a></span> on varieties (e.g. an affine line) and talk about their specializations. The closure of a generic point contains all its specializations.</p>
 <p>Moreover, under the above correspondence, finite <span class="link local"><a href="./T0空间.html" title="T0 空间 [T0空间]">$T_0$ spaces</a></span> are equivalent to finite <span class="link local"><a href="./偏序集.html" title="偏序集 [偏序集]">partial orders</a></span>. Non-$T_0$ spaces (preorders) can be made into $T_0$ spaces (partial orders) by identifying indistinguishable pairs, reducing the classification problem.</p>
 <p>To classify topologies on $\{a,b,c,d\}$, we first classify <em>connected</em> $T_0$ space, which correspond to connected partial orders.</p>
 <p>We list all connected partial orders on finite sets of cardinality at most $4$ (which are relatively easy to enumerate):</p>
@@ -15206,6 +15417,13 @@ $$</p>
 <li>Samuel Lavenir, “The Hilton–Milnor theorem in higher topoi,” <em>Bulletin of the London Mathematical Society</em> <strong>57</strong> (2025), 1468–1481, Proposition 5.1. https://doi.org/10.1112/blms.70041</li>
 <li>Ulrik Buchholtz, Tom de Jong and Egbert Rijke, “Epimorphisms and Acyclic Types in Univalent Foundations,” <em>The Journal of Symbolic Logic</em> (2025), §4 (Plus Principle). https://doi.org/10.1017/jsl.2024.76</li>
 </ol>
+</details></section><section class="block" data-taxon=""><details ><summary id="pre-tangle"><header><h1><span class="taxon"></span>Tangle Hypothesis <a class="slug" href="./pre-tangle.html">[pre-tangle]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>In this page I collect material for my final presentation of professor Reshetikhin’s course “Knots and 3-manifolds” in 2026 fall. I try to list all essential ideas to the story without technical details. Due to the time limit, I may have to cut some content in the actual presentation, but that is not considered when I write this draft.</p>
+<p>This page contains no AI-generated content.</p>
+<h2>The category of tangles</h2>
+<p>Higher categories (<span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$n$-categories</a></span>) can be regarded as an <span class="link local"><a href="./代数.html" title="代数 [代数]">algebraic structure</a></span>. To define them clearly and elegantly, we may use the concept of an <span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">algebraic pattern</a></span>.</p>
+<p>There are multiple algebraic patterns that can give us the definition of $n$-categories, but we will focus on the pattern <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">$\Theta_n$</a></span>. A</p>
+<p>Given a background manifold $V$ and a dimension $k$, we may define an $k$-category $\mathsf{Tang}_k^V$. The objects of $\mathsf{Tang}_k^V$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="pro-可表函子"><header><h1><span class="taxon"></span>pro-可表函子 <a class="slug" href="./pro-可表函子.html">[pro-可表函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>范畴 $\mathcal C$ 到 $\mathsf{Set}$ 的 <strong>pro-可表函子</strong>是 $\mathsf{Fun}(\mathcal C,\mathsf{Set})^{\mathrm{op}}$ 中<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>的余滤极限, 对应 $\mathcal C$ 的 <span class="link local"><a href="./pro-对象.html" title="pro-对象 [pro-对象]">pro-对象</a></span>.</p>
@@ -15392,7 +15610,7 @@ $$</p>
 <p>参考文献:</p>
 <ul>
 <li><span class="link local"><a href="./AyalaFrancisTanaka.html" title="Local structures on stratified spaces [AyalaFrancisTanaka]">Local structures on stratified spaces</a></span></li>
-<li><span class="link local"><a href="./AyalaFrancisRozenblyumStrat.html" title="A stratified homotopy hypothesis [AyalaFrancisRozenblyumStrat]">A stratified homotopy hypothesis</a></span></li>
+<li><span class="link local"><a href="./AyalaFrancisRozenblyumStrat.html" title="A stratified homotopy hypothesis [AyalaFrancisRozenblyumStrat]">A stratified homotopy hypothesis</a></span> (主要)</li>
 </ul>
 <p>合集: <span class="link local"><a href="./mfd-cat.html" title="流形与高阶范畴 [mfd-cat]">流形与高阶范畴</a></span></p>
 <p>下一集: <span class="link local"><a href="./notes-fact.html" title="范畴的分解同调 [notes-fact]">范畴的分解同调</a></span></p>
@@ -15440,12 +15658,39 @@ $$
 </ul>
 <p>注意光滑映射可以把低维数部分打到高维数部分.</p>
 <h2>2 可构造层</h2>
-<h3>2.4 范畴 $\mathsf{Strat}$</h3>
+<h3>2.1 分层同伦</h3>
+<p>分层空间态射 $f,g\colon X\to Y$ 之间的一个分层同伦是一个态射 $X\times\mathbb{R}\to Y$.</p>
+<p>与通常拓扑学类似, 可定义分层空间的同伦等价.</p>
+<p><strong>例</strong>. $\left[0,1\right)$ 同伦等价于 $(0,1)$.</p>
+<p>一般地, 任何带边界分层空间都同伦等价于它的内部.</p>
+<p><strong>命题</strong>. 分层空间的范畴 $\mathsf{Strat}$ 关于所有同伦等价的局部化, 等同于其关于所有态射 $X\times\mathbb{R}\to X$ 的局部化.</p>
+<h3>2.3 同痕层</h3>
+<p><span class="link local"><a href="./单纯形范畴.html" title="单纯形范畴 [单纯形范畴]">单纯形</a></span>可通过至少两种不同方式实现为<span class="link local"><a href="./分层.html" title="分层 [分层]">分层空间</a></span>, 即有两个函子
+$$
+\Delta\to \mathsf{Strat},
+$$
+关于这些函子, 各文献记号不一. 本文约定如下记号:</p>
+<ul>
+<li>$\Delta^n$ 表示带标准分层结构的迭代<span class="link local"><a href="./锥(拓扑学).html" title="锥 (拓扑学) [锥(拓扑学)]">闭锥</a></span>, $\Delta^n := \overline{C}(\Delta^{n-1})$, 对任意 $0\leq i\leq n$, $\Delta^n$ 有且仅有一个 $i$ 维分层;</li>
+<li>$\Delta^n_{\mathrm{ext}}$ 表示带<strong>平凡</strong>分层结构, 且无限延伸的 $n$ 维 “扩展单形” $\{x_0 + \cdots + x_n = 1\}$.</li>
+</ul>
+<img src="/assets/stratified-simplexes.svg" alt="" width="350" style="display:block; margin:auto;">
+<img src="/assets/extended-simplexes.svg" alt="" width="450" style="display:block; margin:auto;">
+<blockquote>
+<p>这一节原文写得比较朴素, 没有使用模型无关语言. 似乎 “同痕层” (isotopy sheaves) 的概念并非必要; AF 后续文章就不用这个概念了; 因此我们将其略去. 感觉可以直接处理 ∞-范畴 Strat.</p>
+</blockquote>
+<p>如下是一个多次使用的技巧.</p>
+<p><strong>构造</strong> (“拓扑化”). 对于 $(1,1)$-范畴 $\mathsf{Strat}$ 上的 $\mathsf{Ani}$-值层 $F \colon \mathsf{Strat}^{\mathrm{op}}\to\mathsf{Ani}$, 定义其<strong>拓扑化</strong>为
+$$
+\mathfrak F\colon K\mapsto \big|[n]\mapsto F (K\times\Delta^n_{\mathrm{ext}})\big|.
+$$</p>
+<p>拓扑化操作实际上给出了 $\mathbb{R}$-不变的层, 也即 $(\infty,1)$-范畴 $\mathsf{Strat}$ 上的层.</p>
+<h3>2.4 $(\infty,1)$-范畴 $\mathsf{Strat}$</h3>
 <p>分层空间的范畴 $\mathsf{Strat}$ 一开始是 $(1,1)$-范畴, 但实际上它可<span class="link local"><a href="./充实范畴.html" title="充实范畴 [充实范畴]">充实</a></span>于<span class="link local"><a href="./Ani.html" title="生象的范畴 [Ani]">生象</a></span>, 即构成 $(\infty,1)$-范畴. 它可由如下的 Kan 复形充实结构 $\underline{\operatorname{Hom}}_{\mathsf{Strat}}$ 定义:
 $$
-\underline{\operatorname{Hom}}_{\mathsf{Strat}}(X,Y)[n] :=\operatorname{Hom}_{\mathsf{Strat}_{/\Delta^n}}(X\times\Delta^n, Y\times\Delta^n).
-$$
-它还有一个性质: $(\infty,1)$-范畴版本的 $\mathsf{Strat}$ 是 $(1,1)$-范畴版本关于所有投影 $X\times\mathbb{R}\to X$ 的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>. 我们将主要使用 $(\infty,1)$-范畴版本, 除非特殊说明.</p>
+\underline{\operatorname{Hom}}_{\mathsf{Strat}}(X,Y)[n] :=\operatorname{Hom}_{\mathsf{Strat}_{/\Delta^n_{\mathrm{ext}}}}(X\times\Delta^n_{\mathrm{ext}}, Y\times\Delta^n_{\mathrm{ext}}).
+$$</p>
+<p>事实上, 这样定义的 $(\infty,1)$-范畴 $\mathsf{Strat}$ 正是前面提到的 $(1,1)$-范畴版本关于所有投影 $X\times\mathbb{R}\to X$ 的<span class="link local"><a href="./局部化(范畴论).html" title="局部化 (范畴论) [局部化(范畴论)]">局部化</a></span>. 我们将默认 $\mathsf{Strat}$ 为 $(\infty,1)$-范畴版本, 而谈论 $(1,1)$-范畴时才会特殊说明.</p>
 <h3>2.5 几类特殊余极限</h3>
 <h4>爆破</h4>
 <p>我们心目中的基本图像是, 开锥 $C(L)$ 是由 $L\times \left[0,1\right)$ 将 $L\times\{0\}$ 粘成一点所得. 这也可以想象为对锥点作 “奇点消解”, 又称为<strong>爆破</strong> (blow-up), 得到一个以 $L$ 为边界的分层空间.
@@ -15498,6 +15743,8 @@ $$
 \end{CD}
 $$
 注意这个图在 $(1,1)$-范畴版本的 $\mathsf{Strat}$ 中不是推出, 在局部化后才是推出.</p>
+<p>下图展示了 $L$ 为 $3$ 个点时的 $\overline{C}(L)$ 和 $\overline{C}^2(L)$.</p>
+<div style="display:flex;justify-content:center;gap:16px"><img src="/assets/cone-Y.svg" width="150"><img src="/assets/iterated-cone.svg" width="200"></div>
 <h2>3 出路范畴</h2>
 <p><strong>命题</strong>.
 “出路范畴” 函子
@@ -15507,6 +15754,87 @@ $$
 是<span class="link local"><a href="./全忠实函子.html" title="全忠实函子 [全忠实函子]">全忠实函子</a></span>, 且其像落在范畴 (即<span class="link local"><a href="./范畴对象.html" title="范畴对象 (完备 Segal 对象) [范畴对象]">完备 Segal 生象</a></span>) 的范畴 $\mathsf{Cat}\hookrightarrow\mathsf{sAni}$ 中.</p>
 <p><strong>命题</strong>. 函子 $\mathsf{Exit}\colon \mathsf{Strat}\hookrightarrow\mathsf{Cat}$ 保持上节所述的 “拉开” 以及 “迭代锥” 几种推出方块.</p>
 <h2>4 条纹层</h2>
+<p>考虑函子
+$$
+\mathrm{st}\colon \Delta\to\mathsf{Strat}, [n]\mapsto \Delta^n,
+$$
+通过推前 (右 Kan 扩张) $\mathrm{st}_*\colon \mathsf{Psh}(\Delta)\to\mathsf{Psh}(\mathsf{Strat})$ 可将单纯生象视为 $\mathsf{Strat}$ 上的预层. 由<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>与右 Kan 扩张的一般规律有
+$$
+    \begin{aligned}
+    (\mathrm{st}_* F) (X) &amp;=
+    \operatorname{Hom}_{\mathsf{Psh}(\mathsf{Strat})}(\mathbf{y}(X),\mathrm{st}_* F)
+    \\
+    &amp; = \operatorname{Hom}_{\mathsf{Psh}(\Delta)}(\mathrm{st}^*\mathrm{y}(X),F)
+    \\
+    &amp; = \operatorname{Hom}_{\mathsf{Psh}(\Delta)}(\mathsf{Exit}(X),F),
+    \end{aligned}
+$$
+且
+$$
+\mathrm{st}_*\colon \mathsf{Psh}(\Delta)\to\mathsf{Psh}(\mathsf{Strat})
+$$
+全忠实. 我们将 $\mathsf{Psh}(\Delta)$ 视为 $\mathsf{Psh}(\mathsf{Strat})$ 的全子范畴.</p>
+<p>上述这些都是纯抽象的道理, 唯一的输入条件是 $\mathrm{st}$ 全忠实. 再次提醒这里 $\mathsf{Strat}$ 必须理解为 $(\infty,1)$-范畴.
+另一种看法是 $\mathsf{Exit}$ 是 $\mathrm{st}$ 的<span class="link local"><a href="./脉.html" title="脉 [脉]">脉</a></span>函子, $\mathrm{st}_*$ 又是 $\mathsf{Exit}$ 的脉函子. 一开始我们用单形探测分层空间, 后来我们又用分层空间探测范畴.</p>
+<h3>4.1 局部性质</h3>
+<h4>锥局部性</h4>
+<p><strong>定义</strong> (锥局部性).
+设 $F\in\mathsf{Sh}(\mathsf{Strat})$, 称如下性质为<strong>锥-局部</strong> (cone-local) 性质: $F$ 将方块
+$$
+    \begin{array}{ccc}
+    L &amp; \rightarrow &amp; L\times\left[0,1\right) \\
+    \downarrow &amp;  &amp; \downarrow \\
+    {*} &amp; \rightarrow &amp; C(L)
+    \end{array}
+$$
+变为 $\mathsf{Ani}$ 中的拉回图.</p>
+<p>我们实际关心的对象满足一个更强的条件: 对任意分层空间 $K$ 及其最底层 $K_d\subset K$, $F$ 将方块
+$$
+\begin{array}{ccc}
+\operatorname{Link}_{K_d}(K) &amp; \rightarrow &amp; \operatorname{Unzip}_{K_d}(K) \\
+\downarrow &amp;  &amp; \downarrow \\
+K_d &amp; \rightarrow &amp; K
+\end{array}
+$$
+变为拉回图.</p>
+<p>记 $\mathsf{Sh}^{\mathrm{cone}}(\mathsf{Strat})$ 为满足锥局部性质的层构成的范畴.</p>
+<p><strong>引理</strong> (4.2.2). 作为 $\mathsf{Sh}(\mathsf{Strat})$ 的全子范畴有
+$$
+\mathsf{Sh}^{\mathrm{cone}}(\mathsf{Strat}) \simeq \mathsf{Psh}(\Delta).
+$$
+这个结论等价于: 对任意 $F\in\mathsf{Sh}(\mathsf{Strat})$, 余单位 $F\to\mathrm{st}_*\mathrm{st}^* F$ 为同构当且仅当 $F$ 具有锥局部性.</p>
+<p>只需证明两个方面:</p>
+<ul>
+<li>一方面, $\mathrm{st}_*$ 的像落在锥局部性层中.</li>
+<li>另一方面, 若 $F$ 为锥局部性层, 则余单位 $F\to\mathrm{st}_*\mathrm{st}^* F$ 为同构.</li>
+</ul>
+<p>注. 这个引理与 <span class="link local"><a href="./notes-manifold-diagrams.html" title="高阶范畴的流形图示 [notes-manifold-diagrams]">Heidemann</a></span> 的 “$\Theta_n$ 的 Segal 对象等同于网格模式的的正则 Segal 对象” 在精神上一致, 事实上 Heidemann 表明其文章受到 Ayala–Francis 的启发.</p>
+<h4>接续性</h4>
+<p>接下来给出对应于单纯生象的 Segal 条件的性质.</p>
+<p><strong>定义</strong> (接续性). 称满足如下条件的层 $F\in\mathsf{Sh}(\mathsf{Strat})$ 为<strong>接续</strong> (consecutive) 的: $F$ 将方块
+$$
+    \begin{array}{ccc}
+    {*} &amp; \rightarrow &amp; \Delta^n \\
+    \downarrow &amp;  &amp; \downarrow \\
+    \Delta^1 &amp; \rightarrow &amp; \Delta^{n+1}
+    \end{array}
+$$
+变为 $\mathsf{Ani}$ 中的拉回图. 其中 $\Delta^1\to\Delta^{n+1}$ 和 $\Delta^n\to\Delta^{n+1}$ 分别对应 $\{0&lt;1&lt;\cdots &lt; n+1\}$ 的子集 $\{0&lt;1\}$, $\{1&lt;\cdots &lt; n+1\}$.</p>
+<p>我们实际关心的对象满足一个更强的条件: 对任意紧分层空间 $L$,
+$F$ 将方块
+$$
+\begin{array}{ccc}
+*=\overline{C}(\varnothing) &amp; \rightarrow &amp; \overline{C}(L) \\
+\downarrow &amp;  &amp; \downarrow \\
+\Delta^1 = \overline{C}^2(\varnothing) &amp; \rightarrow &amp; \overline{C}^2(L)
+\end{array}
+$$
+变为拉回图.</p>
+<h2>5 横截层</h2>
+<h2>6 可构造丛</h2>
+<h3>6.3 可构造丛的分类</h3>
+<h3>6.4 绝对出路范畴</h3>
+<p><strong>命题</strong>. 惰性映射与活性映射构成 $\mathsf{Bun}$ 的<span class="link local"><a href="./正交分解系.html" title="正交分解系 [正交分解系]">分解系统</a></span>; 任何映射都能分解为先一个惰性映射后一个活性映射. (这里的分解顺序与我们在<span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">代数模式</a></span>页面的约定相反, 但与 <span class="link local"><a href="./ChuHaugsengAlgPat.html" title="Homotopy-coherent algebra via Segal conditions [ChuHaugsengAlgPat]">Chu–Haugseng</a></span> 相同; 这只是由于范畴 $\mathsf{Bun}$ 中态射方向的约定.)</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="subject"><header><h1><span class="taxon"></span>学科 <a class="slug" href="./subject.html">[subject]</a></h1><div class="metadata"><ul><li class="meta-item">meta</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <ul>
 <li><span class="link local"><a href="./数学分析.html" title="数学分析 [数学分析]">数学分析</a></span></li>
@@ -22720,6 +23048,11 @@ $$
 	x' \overset{\operatorname{coev}}{\to} x'\otimes x\otimes x' \overset{\operatorname{ev}}{\to} x'
 $$
 均为恒等.</p>
+<h3>通过伴随</h3>
+<p>在幺半范畴中, 对象 $x$ 的右对偶 $x'$ 满足
+$$
+(x\otimes -) \dashv (-\otimes x').
+$$</p>
 <h2>例</h2>
 <ul>
 <li>线性空间范畴的可对偶对象为有限维线性空间.</li>
@@ -26928,17 +27261,24 @@ $$</li>
 <h2>定义</h2>
 <h3>示性类</h3>
 <p>拓扑指标也可定义为<span class="link local"><a href="./陈特征.html" title="“陈特征” [陈特征]">陈特征</a></span>与 <span class="link local"><a href="./Todd类.html" title="“Todd 类” [Todd类]">Todd 类</a></span>之积在整个流形上的积分.</p>
-</details></section><section class="block" data-taxon=""><details ><summary id="拟三角Hopf代数"><header><h1><span class="taxon"></span>拟三角 Hopf 代数 <a class="slug" href="./拟三角Hopf代数.html">[拟三角Hopf代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p><span class="link local"><a href="./拟三角代数.html" title="拟三角代数 [拟三角代数]">拟三角</a></span>代数结构的 <span class="link local"><a href="./Hopf代数.html" title="Hopf 代数 [Hopf代数]">Hopf 代数</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="拟三角代数"><header><h1><span class="taxon"></span>拟三角代数 <a class="slug" href="./拟三角代数.html">[拟三角代数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p><span class="link local"><a href="./双代数.html" title="双代数 [双代数]">双代数</a></span>上的<strong>拟三角</strong> (quasitriangular) 结构是使其<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>范畴由<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>升级为<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半范畴</a></span>所需的结构.</p>
 <h2>定义</h2>
-<p>拟三角代数是 <span class="link local"><a href="./Hopf代数.html" title="Hopf 代数 [Hopf代数]">Hopf 代数</a></span> $A$ 配备 $R\in A^{\otimes 2}$ (或某种完备化的元素), 满足</p>
+<p>考虑<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span> $(\mathcal C,\otimes)$ 中的<span class="link local"><a href="./双代数.html" title="双代数 [双代数]">双代数</a></span> $H\in\mathsf{Bialg}(\mathcal C) = \mathsf{Coalg}(\mathsf{Alg}(\mathcal C))$.
+设有一个态射
+$$
+R \colon 1 \to H \otimes H,
+$$
+它对任何 $H$-模 $M,N$ 给出态射
+$$
+R_{M,N} := (R\cdot -)\colon M\otimes N \to M\otimes N = N\otimes M,
+$$
+若这给出 $\mathsf{LMod}(H)$ 上的<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半结构</a></span>, 则称 $(H,R)$ 为<strong>拟三角代数</strong>. 展开辫幺半结构, 可得 $R$ 的具体条件:</p>
 <ul>
-<li>$\sigma\Delta a = R \cdot \Delta a \cdot R^{-1}$, 其中 $\sigma$ 交换两个分量;</li>
-<li>$(\Delta\otimes\mathrm{id}) R = R_{13} R_{12}$;</li>
-<li>$(\mathrm{id}\otimes\Delta) R = R_{13} R_{23}$.</li>
+<li>$\sigma\Delta = R  \Delta  R^{-1}$, 其中 $\sigma$ 交换两个分量, $\Delta$ 是 $H$ 上的余乘法, $R^{-1}$ 是 $R$ 在结合代数 $H\otimes H$ 中的乘法逆 (它给出自然变换 $R_{M,N}$ 的逆);</li>
+<li>$(\Delta\otimes\mathrm{id})\circ R = R_{13} R_{12}$, 其中 $(\Delta\otimes\mathrm{id})\colon H\otimes H\to H\otimes H\otimes H$, $R_{12} := R\otimes 1\colon 1\to H\otimes H\otimes H$, $R_{13}$ 是 $R_{12}$ 的排列;</li>
+<li>$(\mathrm{id}\otimes\Delta)\circ R = R_{13} R_{23}$.</li>
 </ul>
 <h2>例</h2>
 <p>$U_h \mathfrak {sl}_2$ 为拟三角代数.</p>
@@ -29591,6 +29931,10 @@ $$</p>
 $$
 u_1^i = \frac{t^i}{t^1},
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="特化"><header><h1><span class="taxon"></span>特化 <a class="slug" href="./特化.html">[特化]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<h2>定义</h2>
+<h3>拓扑空间</h3>
+<p>拓扑空间中, 称点 $x$ 是点 $y$ 的<strong>特化</strong>就是说 $x$ 的每个邻域都包含 $y$.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="特征"><header><h1><span class="taxon"></span>特征, 余特征 <a class="slug" href="./特征.html">[特征]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <h3>Lie 群</h3>
@@ -31703,6 +32047,12 @@ $$
 <p><span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span> $\mathsf{Bord}_k$ 是
 $\mathsf{Tang}_{k}^{\mathbb E_n}$
 “在 $n \geq \infty$ 的极限”; 人们也称其为<strong>稳定</strong>情形. 此时 (至少直观上) 缠结假设趋向于<span class="link local"><a href="./配边假设.html" title="配边假设 [配边假设]">配边假设</a></span>: $\mathsf{Bord}_k$ 是一个<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span> <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>.</p>
+<h2>推论</h2>
+<h3>底层生象</h3>
+<p><strong>命题</strong>. $\mathsf{Tang}_1^{\mathbb E_n}$ 的底层生象是一个点自由生成的 $\mathbb E_n$-群 $\Omega^{n} S^n$. 等价地说, 对任意 $\mathbb E_n$-群 $G$,
+$$
+\operatorname{Hom}_{\mathsf{Grp}_{\mathbb E_n}}(\mathsf{Tang}_1^{\mathbb E_n},G) \simeq G.
+$$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="缠绕数"><header><h1><span class="taxon"></span>缠绕数 <a class="slug" href="./缠绕数.html">[缠绕数]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 </details></section><section class="block" data-taxon=""><details ><summary id="置换范畴"><header><h1><span class="taxon"></span>置换范畴 <a class="slug" href="./置换范畴.html">[置换范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
@@ -32053,7 +32403,11 @@ $$
 <h3>脉与几何实现</h3>
 <p>脉的构造往往<span class="link local"><a href="./伴随.html" title="伴随 [伴随]">伴随</a></span>着<span class="link local"><a href="./几何实现.html" title="几何实现 (作为米田扩张) [几何实现]">几何实现</a></span>.</p>
 <h2>定义</h2>
-<p>给定函子 $i\colon \mathcal D \to \mathcal C$, 定义相应的<strong>脉</strong>函子为<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span>的限制
+<p>给定函子 $i\colon \mathcal D \to \mathcal C$, 定义相应的<strong>脉</strong>函子 $\nu\colon \mathcal C\to\widehat {\mathcal D}$:
+$$
+\nu(c) (d) := \operatorname{Hom}_{\mathcal C}(i(d),c).
+$$
+更简洁地, 函子 $\nu$ 为<span class="link local"><a href="./米田嵌入.html" title="米田嵌入 [米田嵌入]">米田嵌入</a></span>的限制:
 $$
 \nu\colon \mathcal C \overset{\mathbf{y}}{\to} \widehat {\mathcal C} \overset{i^*}{\to} \widehat {\mathcal D}.
 $$</p>
@@ -32079,16 +32433,19 @@ $$
 \mathsf{Sh}(X)\to\mathsf{Et}_{/X}.
 $$</p>
 <h2>性质</h2>
-<h3>脉的脉</h3>
-<p>函子 $i\colon \mathcal D \to \mathcal C$ 的脉函子 $\nu_i\colon \mathcal C \to \widehat {\mathcal D}$ 的脉函子 $\nu_{\nu_i}\colon \widehat {\mathcal D} \to \widehat {\mathcal C}$ 恰好等于沿 $i$ 的右 <span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">Kan 扩张</a></span>, 也即 $i^*$ 的<span class="link local"><a href="./预层范畴之间的伴随.html" title="预层范畴之间的伴随 [预层范畴之间的伴随]">右伴随 $i_*$</a></span>.</p>
-<p>证明:
+<h3>“脉的脉”</h3>
+<p>由定义
 $$
-\begin{aligned}
-(\nu_{\nu_i} X) (c) &amp;= \operatorname{Hom}_{\widehat {\mathcal D}}(\nu_i (c), X)\\
-&amp;=\operatorname{Hom}_{\widehat {\mathcal D}}(i^* \mathbf{y}(c), X)\\
-&amp;=\operatorname{Hom}_{\widehat {\mathcal C}}(\mathbf{y}(c), i_*X)\\
-&amp;=(i_*X)(c).
-\end{aligned}
+\nu (c) = i^*\mathbf{y}(c)
+$$
+立刻得到
+$$
+\operatorname{Hom}_{\widehat {\mathcal D}}(\nu(c),F) = \operatorname{Hom}_{\widehat {\mathcal C}}(\mathbf{y}(c),i_* F) = (i_* F) (c),
+$$
+这给出预层 $F\in\widehat {\mathcal D}$ 的推前 (<span class="link local"><a href="./Kan扩张.html" title="Kan 扩张 [Kan扩张]">右 Kan 扩张</a></span>) 的一个逐点计算.</p>
+<p>进一步, 上式的左端可解释为脉函子 $\nu\colon \mathcal C \to \widehat {\mathcal D}$ 的脉函子 $\nu_{\nu}\colon \widehat {\mathcal D} \to \widehat {\mathcal C}$, 即 “脉的脉”;
+$$
+\nu_{\nu} = i_*.
 $$</p>
 <h3>稠密性</h3>
 <p><strong>命题</strong>.</p>
@@ -33463,6 +33820,12 @@ $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="辫幺半范畴"><header><h1><span class="taxon"></span>辫幺半范畴 <a class="slug" href="./辫幺半范畴.html">[辫幺半范畴]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>辫幺半范畴是 <span class="link local"><a href="./E2-代数.html" title="E2 代数 [E2-代数]">$\mathbb E_2$</a></span>-幺半范畴, 是介于<span class="link local"><a href="./幺半范畴.html" title="幺半范畴 [幺半范畴]">幺半范畴</a></span>和<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半范畴</a></span>之间的一种结构.</p>
+<h2>性质</h2>
+<h3>辫群作用</h3>
+<p>对于辫幺半范畴 $\mathcal C$ 的任一对象 $X$ 以及自然数 $n$, 有<span class="link local"><a href="./辫群.html" title="辫群 [辫群]">辫群</a></span> $\mathrm{Br}_n$ 在 $X^{\otimes n}$ 上的<span class="link local"><a href="./群作用.html" title="群作用 [群作用]">作用</a></span> $\mathrm{Br}_n\to\operatorname{Aut}(X^{\otimes n})$.</p>
+<h2>例</h2>
+<h3>模范畴</h3>
+<p>某些代数的<span class="link local"><a href="./结合代数上的模.html" title="结合代数上的模 [结合代数上的模]">模</a></span>范畴具有辫结构. 见<span class="link local"><a href="./拟三角代数.html" title="拟三角代数 [拟三角代数]">拟三角代数</a></span>.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="辫群"><header><h1><span class="taxon"></span>辫群 <a class="slug" href="./辫群.html">[辫群]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>观念</h2>
 <p>辫群是平面上若干个点的有序或无序构形的自同构群, 也即<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span>范畴中的自同构群.</p>
