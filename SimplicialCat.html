@@ -11491,7 +11491,7 @@ Princeton 的会议处理的正是这个问题.</p>
 <h3>配边假设与缠结假设</h3>
 <ul>
 <li>百科页面: <span class="link local"><a href="./配边假设.html" title="配边假设 [配边假设]">配边假设</a></span>, <span class="link local"><a href="./缠结假设.html" title="缠结假设 [缠结假设]">缠结假设</a></span>, <span class="link local"><a href="./cob-sing.html" title="带奇点配边假设 [cob-sing]">带奇点配边假设</a></span></li>
-<li>相关笔记: <span class="link local"><a href="./notes-tang-1.html" title="缠结假设 (1 维) [notes-tang-1]">缠结假设 (1 维)</a></span></li>
+<li>相关笔记: <span class="link local"><a href="./notes-tang-1.html" title="缠结假设 (1 维) [notes-tang-1]">缠结假设 (1 维)</a></span>, <span class="link local"><a href="./notes-tang-V.html" title="缠结假设 (分层流形版本) [notes-tang-V]">缠结假设 (分层流形版本)</a></span></li>
 <li>参考文献:
 <ul>
 <li><span class="link local"><a href="./AyalaFrancisCob.html" title="The cobordism hypothesis [AyalaFrancisCob]">Ayala–Francis, The cobordism hypothesis</a></span></li>
@@ -14644,6 +14644,11 @@ $$
 $$
 \Theta_n^{\mathrm{op}} \overset{\langle-\rangle}{\to}\mathsf{Mfd}_n^{\mathrm{sfr}}\xrightarrow{\operatorname{Hom}(\mathbb{R}^{n-1},-)}\mathsf{Ani}.
 $$</p>
+</details></section><section class="block" data-taxon=""><details ><summary id="notes-tang-V"><header><h1><span class="taxon"></span>缠结假设 (分层流形版本) <a class="slug" href="./notes-tang-V.html">[notes-tang-V]</a></h1><div class="metadata"><ul><li class="meta-item">笔记</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
+<p>合集: <span class="link local"><a href="./mfd-cat.html" title="流形与高阶范畴 [mfd-cat]">流形与高阶范畴</a></span></p>
+<p>上一集: <span class="link local"><a href="./notes-tang-1.html" title="缠结假设 (1 维) [notes-tang-1]">缠结假设 (1 维)</a></span></p>
+<h2>回顾</h2>
+<p>回忆 $\mathsf{Strat}$ 为 (锥光滑) 分层空间的 $(\infty,1)$-范畴.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="notes-topology"><header><h1><span class="taxon"></span>拓扑学 2026 秋助教讲稿 <a class="slug" href="./notes-topology.html">[notes-topology]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><span class="link local"><a href="./notes-topology-1.html" title="拓扑学 2026 秋助教讲稿 (1) [notes-topology-1]">拓扑学 2026 秋助教讲稿 (1)</a></span></p>
 <p><span class="link local"><a href="./notes-topology-midterm.html" title="拓扑学 2026 秋助教讲稿 - 期中 [notes-topology-midterm]">拓扑学 2026 秋助教讲稿 - 期中</a></span></p>
@@ -15418,12 +15423,49 @@ $$</p>
 <li>Ulrik Buchholtz, Tom de Jong and Egbert Rijke, “Epimorphisms and Acyclic Types in Univalent Foundations,” <em>The Journal of Symbolic Logic</em> (2025), §4 (Plus Principle). https://doi.org/10.1017/jsl.2024.76</li>
 </ol>
 </details></section><section class="block" data-taxon=""><details ><summary id="pre-tangle"><header><h1><span class="taxon"></span>Tangle Hypothesis <a class="slug" href="./pre-tangle.html">[pre-tangle]</a></h1><div class="metadata"><ul><li class="meta-item">讲稿</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
-<p>In this page I collect material for my final presentation of professor Reshetikhin’s course “Knots and 3-manifolds” in 2026 fall. I try to list all essential ideas to the story without technical details. Due to the time limit, I may have to cut some content in the actual presentation, but that is not considered when I write this draft.</p>
+<p>In this page I collect material for my final presentation of professor Reshetikhin’s course “Knots and 3-manifolds” in 2026 fall. I try to list all essential ideas to the story. Due to the time limit, some content may not appear in the actual presentation.</p>
 <p>This page contains no AI-generated content.</p>
 <h2>The category of tangles</h2>
-<p>Higher categories (<span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$n$-categories</a></span>) can be regarded as an <span class="link local"><a href="./代数.html" title="代数 [代数]">algebraic structure</a></span>. To define them clearly and elegantly, we may use the concept of an <span class="link local"><a href="./代数模式.html" title="代数模式 [代数模式]">algebraic pattern</a></span>.</p>
-<p>There are multiple algebraic patterns that can give us the definition of $n$-categories, but we will focus on the pattern <span class="link local"><a href="./Joyal范畴.html" title="Joyal 范畴 Θn [Joyal范畴]">$\Theta_n$</a></span>. A</p>
-<p>Given a background manifold $V$ and a dimension $k$, we may define an $k$-category $\mathsf{Tang}_k^V$. The objects of $\mathsf{Tang}_k^V$</p>
+<p>Given a framed manifold $V$ and a natural number $k$, we may define a $k$-category $\mathsf{Tang}_k^V$. It can be roughly described as follows.</p>
+<ul>
+<li>An object $X$ of $\mathsf{Tang}_k^V$ is a framed $0$-dimensional submanifold of $V$.</li>
+<li>A $1$-morphism $X\to Y$ is a framed $1$-dimensional submanifold of $V\times [0,1]$ that intersects $V\times \{0\}$ at $X$, and $V\times \{1\}$ at $Y$.</li>
+<li>For $i \leq k$, an $i$-morphism between $(i-1)$-morphisms is an $i$-dimensional framed submanifold of $V\times [0,1]^i$ that intersects the boundary at prescribed places and satisfies some transversality conditions.</li>
+</ul>
+<p>The following picture shows a $1$-morphism of $\mathsf{Tang}_1^{\mathbb{R}^2}$.</p>
+<img src="/assets/tangle-Tang-1-E2.svg" alt="" width="270" style="display:block; margin:auto;">
+<p>In the case of $\mathsf{Tang}_1^{\mathbb{R}^2}$, the framing on an object can be regarded as the choice of a $+ / -$ sign for each point.</p>
+<p>The case $V = \mathbb{R}^n$ is particularly important because of the following fact.</p>
+<p><strong>Fact</strong>. $\mathsf{Tang}_k^{\mathbb{R}^n}$ is a rigid $\mathbb E_n$-monoidal $k$-category.</p>
+<h2>$\mathbb E_n$-structure</h2>
+<p>We now explain the concept of an $\mathbb E_n$-structure. It is an algebraic structure where elements can be “tensored together along $\mathbb{R}^n$”.</p>
+<ul>
+<li>An $\mathbb E_1$-mondoial category is just a <strong>monoidal category</strong>: objects can be tensored together along a line (so they must be linearly ordered).</li>
+<li>An $\mathbb E_2$-monoidal category is a <strong>braided monoidal category</strong>: objects can be tensored along a plane (so one object can travel around another in loops, resulting in nontrivial automorphisms).</li>
+<li>An $\mathbb E_n$-monoidal category ($2 &lt; n &lt; \infty$) has more structure than a braiding, but still not symmetric in general because of higher homotopies.</li>
+<li>An $\mathbb E_\infty$-monoidal category is a <strong>symmetric monoidal category</strong>: objects can be tensored along any direction in any order.</li>
+</ul>
+<h2>Duals and adjoints</h2>
+<p>The category $\mathsf{Tang}_k^{\mathbb{R}^n}$ has duals for all objects and adjoints for all $i$-morphisms $(i &lt; k)$.</p>
+<p>The folloing picture shows a $1$-morphism $f$ in $\mathsf{Tang}_2^{\mathbb{R}^1}$ and its adjoint $f^\vee$.</p>
+<img src="/assets/tangle-adjoint-example.svg" alt="" width="450" style="display:block; margin:auto;">
+<h2>Statement of the Tangle Hypothesis</h2>
+<p>Let $\mathcal C$ be an $\mathbb E_n$-monoidal $k$-category with duals. The Tangle Hypothesis states that any object $X$ in $\mathcal C$ determines a unique functor
+$$
+\mathsf{Tang}_k^{\mathbb R^n} \to \mathcal C
+$$
+sending the point $*\in\mathbb{R}^n$ to $X$. In other words, $\mathsf{Tang}_k^{\mathbb{R}^n}$ is the free rigid $\mathbb E_n$-monoidal category generated by one object.</p>
+<h2>Relation with the Cobordism Hypothesis</h2>
+<p>The Cobordism Hypothesis concerns the bordism category $\mathsf{Bord}_k$. Objects and morphisms are manifolds but not embedded into any ambient space.</p>
+<p>Let $\mathcal C$ be a symmetric monoidal $k$-category with duals. The Cobordism Hypothesis states that any object $X$ in $\mathcal C$ determines a unique functor
+$$
+\mathsf{Bord}_k \to \mathcal C.
+$$</p>
+<p>When the ambient dimension $n$ tends to infinity, an embedded submanifold in $\mathbb{R}^n$ just becomes a manifold. Similarly the category of tangles tends to the bordism category:
+$$
+\operatorname{colim}_{n\to\infty}\mathsf{Tang}_k^{\mathbb{R}^n} = \mathsf{Bord}_k.
+$$
+Therefore, the Cobordism Hypothesis is a corollary (the limiting case) of the Tangle Hypothesis.</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="pro-可表函子"><header><h1><span class="taxon"></span>pro-可表函子 <a class="slug" href="./pro-可表函子.html">[pro-可表函子]</a></h1><div class="metadata"><ul><li class="meta-item">百科</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <h2>定义</h2>
 <p>范畴 $\mathcal C$ 到 $\mathsf{Set}$ 的 <strong>pro-可表函子</strong>是 $\mathsf{Fun}(\mathcal C,\mathsf{Set})^{\mathrm{op}}$ 中<span class="link local"><a href="./可表函子.html" title="可表函子 [可表函子]">可表函子</a></span>的余滤极限, 对应 $\mathcal C$ 的 <span class="link local"><a href="./pro-对象.html" title="pro-对象 [pro-对象]">pro-对象</a></span>.</p>
