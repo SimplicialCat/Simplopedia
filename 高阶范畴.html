@@ -1358,19 +1358,19 @@ $$
 </blockquote>
 <p>直观上, 配边范畴是一个对象自由生成的含对偶对称幺半 $(\infty,n)$-范畴, 而带奇点配边范畴则是奇点数据给出的各阶态射自由生成的含对偶对称幺半 $(\infty,n)$-范畴, 每维奇点数据 $X_k$ 的每个点给出一个 $k$-态射生成元, 而 $X_k$ 上的纤维丛 $E_k$ 指定这些 $k$-态射的类型.</p>
 <h2>陈述</h2>
-<h3>带奇点流形</h3>
+<h3>带奇点流形的例子</h3>
 <p>带奇点流形是一个非常广泛的概念, 我们先看几个方面的例子.</p>
 <h4>局部锥形流形</h4>
 <p>我们知道, 流形 $Y$ 的<span class="link local"><a href="./锥(拓扑学).html" title="锥 (拓扑学) [锥(拓扑学)]">锥</a></span> $C(Y) = Y\times [0,1] / Y\times\{1\}$ 一般不是流形, 问题在锥点的邻域不同于欧氏空间.</p>
-<p>固定<strong>一个</strong>闭 $(k-1)$-维流形 $Y$, 考虑如下形状的广义流形: 拓扑空间 $M$ 带有子空间 $M_0\subset M$, 满足</p>
+<p>固定<strong>一个</strong>闭 $(k-1)$-维流形 $Y$, 考虑如下形状的广义流形: 拓扑空间 $M$ 带有子空间 $M_k\subset M$, 满足</p>
 <ul>
-<li>$M - M_0$ 为光滑流形;</li>
-<li>$M_0$ 为光滑流形;</li>
-<li>$M_0$ 的点在 $M$ 中有邻域, 形如 $M_0$ 中的邻域与 $C(Y)$ 的乘积. (注意这里不是说某个 $Y$, 而是指定的那个 $Y$.)</li>
+<li>$M - M_k$ 为光滑流形;</li>
+<li>$M_k$ 为光滑流形;</li>
+<li>$M_k$ 的点在 $M$ 中有邻域, 形如 $M_k$ 中的邻域与 $C(Y)$ 的乘积. (注意这里不是说某个 $Y$, 而是指定的那个 $Y$.)</li>
 </ul>
-<p>当然, $M_0$ 可以是空集, 那么 $M$ 本身为光滑流形.</p>
+<p>当然, $M_k$ 可以是空集, 那么 $M$ 本身为光滑流形.</p>
 <p>用这种广义流形可以定义类似于配边范畴的范畴 $\mathsf{Bord}_n'$, 带有对称幺半函子 $\mathsf{Bord}_n\to\mathsf{Bord}'_n$.</p>
-<p>注意到在 $\mathsf{Bord}'_n$ 中有 $k$-态射 $\varnothing \to Y$, 对应于 $C(Y)$. 某种意义上, $\mathsf{Bord}_n'$ 是由 $\mathsf{Bord}_n$ 加上这个态射自由生成的对称幺半 $(\infty,n)$-范畴. 具体地: 对任意含对偶的对称幺半 $(\infty ,n)$-范畴 $\mathcal C$ 与对称幺半函子
+<p>注意到在 $\mathsf{Bord}'_n$ 中有 $k$-态射 $\varnothing \to Y$, 对应于锥形 $C(Y)$. 某种意义上, $\mathsf{Bord}_n'$ 是由 $\mathsf{Bord}_n$ 加上这个态射自由生成的对称幺半 $(\infty,n)$-范畴. 具体地: 对任意含对偶的对称幺半 $(\infty ,n)$-范畴 $\mathcal C$ 与对称幺半函子
 $$
 Z_0\colon \mathsf{Bord}_n\to\mathcal C,
 $$
@@ -1383,28 +1383,28 @@ $$
 Z\colon \mathsf{Bord}'_n\to\mathcal C.
 $$</p>
 <h4>Feynman 图</h4>
-<p>Feynman 图是一种表示粒子相互作用过程的图 (作为带奇点的 $1$-流形). 若给一个 Feynman 图的每个顶点赋予一个有限维线性空间, 每个边赋予一个线性映射, 则整个图可以计算为一个线性映射. 这体现了如下的直观: Feynman 图的范畴 (对象是有限点集, 态射是 Feynman 图) 是一些对象和一些态射自由生成的含对偶对称幺半 $(\infty,1)$-范畴.</p>
+<p>Feynman 图是一种表示粒子相互作用过程的有向图, 是带奇点的 $1$-流形. 若给一个 Feynman 图的每种顶点赋予一个有限维线性空间, 每种边赋予一个线性映射, 则整个图可以计算为一个线性映射. 这体现了如下的直观: Feynman 图的范畴 (对象是有限点集, 态射是 Feynman 图) 是一些对象和一些态射自由生成的含对偶对称幺半 $(\infty,1)$-范畴.</p>
 <p>首先, 我们规定粒子和相互作用的种类数据 $\vec{X}$:</p>
 <ul>
-<li>二重覆叠 (即 $\mathrm{O}(1)$-主丛) $\widetilde X_0 \to X_0$, 表示粒子的可能种类; 覆叠变换 $\widetilde {X}_0\to \widetilde {X}_0$, $p\mapsto \bar p$ 表示反粒子;</li>
-<li>集合 $X_1$ 表示相互作用的可能种类; 覆叠空间 $E\to X_1$ (纤维为有限点集) 带有映射 $E\to \widetilde {X}_0$ 表示每种相互作用涉及的粒子种类.</li>
+<li>集合 $X_0$ 带有二重覆叠 (即 $\mathrm{O}(1)$-主丛) $\widetilde X_0 \to X_0$, 表示粒子的可能种类; 覆叠变换 $\widetilde {X}_0\to \widetilde {X}_0$, $p\mapsto \bar p$ 表示取反粒子;</li>
+<li>集合 $X_1$ 表示相互作用的可能种类; 覆叠空间 $E_1\to X_1$ (纤维为有限点集) 表示每种相互作用涉及的粒子数量, 带有映射 $\sigma\colon E_1\to \widetilde {X}_0$ 表示每种相互作用涉及的粒子种类.</li>
 </ul>
 <p>现在定义 $\vec{X}$-Feynman 图为如下数据:</p>
 <ul>
 <li>紧空间 $G$ 表示整个 Feynman 图;</li>
-<li>$G_0\subset G$ 是顶点集, $G-G_0$ 的每个连通分支是一条边;</li>
-<li>每条边标记着一种粒子 $p\in P := \pi_0\widetilde X_0$ (与边的定向有关, 若边的定向反转则 $p$ 变为 $\bar p$);</li>
-<li>每个顶点 $g\in G_0$ 标记着一种相互作用 $x\in X_1$, 有一个邻域同胚于 $C(E_x)$.</li>
+<li>$G_1\subset G$ 是顶点集 (只包含所谓内部顶点), $G\setminus G_1$ 的每个连通分支是一条边;</li>
+<li>每条边 ($G\setminus G_1$ 的连通分支) 标记着一种粒子 $p\in \widetilde X_0$ (与边的定向有关, 若边的定向反转则 $p$ 变为 $\bar p$);</li>
+<li>每个顶点 $g\in G_1$ 标记着一种相互作用 $x\in X_1$, 有一个邻域同胚于 $C((E_1)_x)$.</li>
 </ul>
 <p>考虑这样一个范畴 $\mathsf{Bord}'_1$,</p>
 <ul>
-<li>其对象为有限集, 每个元素标记着一种粒子 $p\in P$;</li>
-<li>其态射为 Feynman 图.</li>
+<li>其对象为有限集, 每个元素标记着一种粒子 $p\in \widetilde X_0$;</li>
+<li>其态射为 Feynman 图, 两边与两个对象的粒子种类对应.</li>
 </ul>
 <p>给定 $\vec{X}$ 以及如下数据,</p>
 <ul>
-<li>对每个粒子 $p$ 一个线性空间 $V_p$, 带有完美配对 $V_{p}\otimes V_{\bar p} \to k$,</li>
-<li>对每个相互作用 $x$ 一个向量 $v_x\in\bigotimes_{e\in E_x} V_{\sigma(e)}$</li>
+<li>对每个粒子 $p\in\widetilde X_0$ 一个线性空间 $V_p$, 带有完美配对 $V_{p}\otimes V_{\bar p} \to \mathbb{C}$ (换言之, $V_p$ 是 $\mathsf{Vect}_{\mathbb{C}}$ 的<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶对象</a></span>且 $V_{\bar p}\simeq V_p^\vee$),</li>
+<li>对每个相互作用 $x\in X_1$ 一个元素 $v_x\in\bigotimes_{e\in (E_1)_x} V_{\sigma(e)}$ (注意由于对偶性, 这个元素也可以理解为从某些空间到某些空间的线性映射.)</li>
 </ul>
 <p>便确定了唯一的对称幺半函子
 $$
@@ -1413,9 +1413,9 @@ $$</p>
 <h4>畴壁</h4>
 <p>考虑带畴壁 (domain wall) 的流形:
 $$
-  M = M_- \sqcup_{M_0} M_+,
+  M = M_- \sqcup_{M_1} M_+,
 $$
-其中 $\partial M_- = M_0 = \partial M_+ = M_- \cap M_+$. 直观上这是一个红蓝二染色的流形.</p>
+其中 $M_1$ 是余一维子流形 (畴壁), $\partial M_- = M_1 = \partial M_+ = M_- \cap M_+$. 直观上这是一个红蓝二染色的流形.</p>
 <p>用带畴壁的流形可以定义类似于配边范畴的范畴 $\mathsf{Bord}_n'$, 带有两个对称幺半函子
 $$
 j_-, j_+\colon \mathsf{Bord}_n\to\mathsf{Bord}'_n.
@@ -1435,40 +1435,45 @@ Z\colon \mathsf{Bord}'_n \to \mathcal C.
 $$</p>
 <h4>切结构</h4>
 <p><span class="link local"><a href="./切结构.html" title="切结构 [切结构]">切结构</a></span>也是 “带奇点流形” 这一概念的特例.</p>
-<h4>奇点数据的定义</h4>
+<h3>奇点数据</h3>
 <p><strong>定义</strong> (奇点数据, 粗略定义).</p>
 <ul>
-<li>一个 $n$ 维奇点数据 $\vec X$ 是一列拓扑空间 $(X_0,X_1,\cdots,X_n)$, 一列向量丛 $\zeta_k \colon X_k\to\mathbf{B}\mathrm{O}(n-k)$, 以及一列纤维丛 $E_k\to X_k$.</li>
-<li>一个 $m$ 维 $\vec X$-流形是<span class="link local"><a href="./分层.html" title="分层 [分层]">分层空间</a></span> $M_n\subset \cdots\subset M_1\subset M_0 = M$, 满足 $M_k - M_{k-1}$ 是余 $k$ 维光滑流形, 带有 $(X_k,\zeta_k)$-<span class="link local"><a href="./切结构.html" title="切结构 [切结构]">结构</a></span>. 并且这些流形要以纤维丛 $E_k\to X_k$ 规定的方式相容.</li>
+<li>一个 $n$ 维奇点数据 $\vec X$ 是一列拓扑空间 $(X_0,X_1,\cdots,X_n)$, 一列向量丛 $\zeta_k \colon X_{\boxed{k}}\to\mathbf{B}\mathrm{O}(n-\boxed{k})$, 以及一列纤维丛 $E_k\to X_k$.</li>
+<li>一个 $m$ 维 $\vec X$-流形是<span class="link local"><a href="./分层.html" title="分层 [分层]">分层空间</a></span> $M_n\subset \cdots\subset M_1\subset M_0 = M$, 满足 $M_{\boxed{k}} - M_{k+1}$ 是 $m-\boxed{k}$ 维<strong>光滑</strong>流形, 带有 $(X_{\boxed{k}},\zeta_k)$-<span class="link local"><a href="./切结构.html" title="切结构 [切结构]">结构</a></span>. 并且这些流形要以纤维丛 $E_k\to X_k$ 规定的方式相容.</li>
 </ul>
+<p>严格的定义需要归纳.</p>
 <p><strong>定义</strong> (奇点数据, 严格定义). 固定自然数 $n$. 我们对 $0\leq k \leq n$ 归纳定义如下两个概念:</p>
 <ul>
-<li><strong>长为</strong> $k$ 的<strong>奇点数据</strong> (singularity datum) $\vec{X}$;</li>
-<li><strong>余维</strong> $V$ 的 $\vec{X}$-<strong>流形</strong>, 其中 $V$ 为不超过 $n-k$ 维的实线性空间.</li>
+<li>长为 $k$ 的 $n$ 维奇点数据 (singularity datum) $\vec{X}$;</li>
+<li>余维 $V$ 的 $\vec{X}$-流形, 其中 $V$ 为不超过 $n-k$ 维的实线性空间.</li>
 </ul>
-<p>定义如下.</p>
+<p>(这个 “余维” 是相对于 $n$ 的余维数, 即该 $\vec{X}$-流形的主要部分是 $n - \operatorname{dim}V$ 维光滑流形. 而更深层的由 $X_i$ 描述的奇点的维数是 $n - \operatorname{dim}V - i$.)</p>
+<p><strong>长为 $k$ 的 $n$ 维奇点数据</strong>定义如下.</p>
 <ul>
-<li>长为 $k=0$ 的奇点数据 $\vec{X} = (X_0,\zeta_0)$ 是一个拓扑空间 $X_0$ 以及其上的 $n$ 阶实向量丛 $\zeta_0\colon X\to\mathbf{B}\mathrm{O}(n)$.</li>
-<li>对于 $0&lt; k\leq n$, 长为 $k$ 的奇点数据 $\vec{X} = (\vec{X}',X_k,\zeta_k,p\colon E_k\to X_k)$ 是一个长为 $(k-1)$ 的奇点数据 $\vec{X}'$ 加上一个拓扑空间 $X_k$, 一个 $(n-k)$ 阶实向量丛 $\zeta_k \colon X_k\to\mathbf{B}\mathrm{O}(n-k)$, 以及纤维丛 $p\colon E_k\to X_k$, 其在 $x\in X_k$ 上的纤维为 $\vec{X}'$-流形, 余维 $(\zeta_k)_x \oplus\mathbb{R}$.</li>
-<li>设 $\vec{X}$ 为长为 $k$ 的奇点数据, 余维 $V$ 的 $\vec{X}$-流形是如下资料:
+<li>长为 $k = 0$ 的 $n$ 维奇点数据 $\vec{X} = (X_0,\zeta_0)$ 是一个拓扑空间 $X_0$ 以及其上的 $n$ 阶实向量丛 $\zeta_0\colon X\to\mathbf{B}\mathrm{O}(n)$.</li>
+<li>对于 $0&lt; k\leq n$, 长为 $k$ 的奇点数据 $\vec{X} = (\vec{X}',X_k,\zeta_k,p\colon E_k\to X_k)$ 是一个长为 $(k-1)$ 的奇点数据 $\vec{X}'$ 加上一个拓扑空间 $X_{\boxed{k}}$, 一个 $(n-\boxed{k})$ 阶实向量丛 $\zeta_k \colon X_k\to\mathbf{B}\mathrm{O}(n-k)$, 以及纤维丛 $p\colon E_k\to X_k$, 其在 $x\in X_{\boxed{k}}$ 上的纤维为 $\vec{X}'$-流形, 余维 $(\zeta_k)_x \oplus\mathbb{R}$.</li>
+</ul>
+<p>设 $\vec{X}$ 为长为 $k$ 的奇点数据, <strong>余维 $V$ 的 $\vec{X}$-流形</strong>是如下资料:</p>
 <ul>
 <li>拓扑空间 $M$,</li>
-<li>闭子空间 $M_k\subset M$, 构成 $n-k-\dim V$ 维光滑流形,</li>
+<li>闭子空间 $M_{\boxed{k}}\subset M$, 构成 $n-k-\dim V$ 维<strong>光滑</strong>流形 (这是<strong>维数最低, 最深</strong>的一层, 下标 $k$ 表示其相对于 $M$ 的<strong>余维数为 $\boxed{k}$</strong>, 在带奇点配边范畴中本质上来自 <strong>$\boxed{k}$-态射</strong>生成元),</li>
 <li>映射 $q\colon M_k\to X_k$ 以及同构 $T_{M_k}\oplus V\simeq q^*\zeta_k$,</li>
 <li>$M-M_k$ 上带余维 $V$ 的 $\vec{X}'$-流形结构,</li>
 <li>$M_k$ 的开邻域 $U$, 以及商映射 $\left(0,1\right]\times q^*E\to U$, 其限制在 $(0,1)\times q^*E$ 上为嵌入, 限制在 $\{1\}\times q^*E$ 上为投影 $q^*E\to M_k$.</li>
 </ul>
-</li>
-</ul>
 <p><strong>注</strong>.</p>
 <ul>
-<li>长度为 $n$ 的奇点数据简称为 $n$ 维奇点数据. 长为 $k&lt;n$ 的奇点数据也可以添加一些空的空间视为长为 $n$ 的奇点数据.</li>
+<li>长度为 $k = n$ 的 $n$ 维奇点数据简称为 $n$ 维奇点数据. 长为 $k &lt; n$ 的奇点数据也可以添加一些空的空间视为长为 $n$ 的奇点数据. 所以长度 $k$ 并非本质, 我们谈论它只是为了在归纳步骤中指出最深的层.</li>
+<li>每一个 $X_{\boxed{k}}$ 的下标 $\boxed{k}$ 是 $X_k$ 的元素代表的奇点的余维数, 以及其代表的态射生成元的阶数.</li>
 <li>对于 $n$ 维奇点数据 $\vec X$ 与自然数 $m\leq n$, 定义 $m$ 维 $\vec X$-流形即为余维 $\mathbb{R}^{n-m}$ 的 $\vec X$-流形.</li>
 </ul>
+<h3>带奇点配边范畴</h3>
+<p>固定奇点数据 $\vec X$. 类比于<span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">普通配边范畴 $\mathsf{Bord}_n^{\mathrm{fr}}$</a></span>, 可给出 $\mathsf{Bord}_n^{\vec X}$ 的定义.
+大致上将每个流形都替换为 $\vec{X}$-流形. 那么 $\mathsf{Bord}_n^{\vec X}$ 的 $i$-态射为 $i$ 维 $\vec {X}$-流形.</p>
 <h3>猜想的陈述</h3>
 <p>设 $\vec{X} = (\vec{X}',X_k,\zeta_k,p\colon E_k\to X_k)$ 为长为 $k$ 的奇点数据. 构造如下准备资料:</p>
 <ul>
-<li>记 $\widetilde X_k\to X_k$ 为 $\zeta_k$ 对应的 $\mathrm{O}(n-k)$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>, 即 $n-k$ 阶向量丛的正交标架丛);</li>
+<li>记 $\widetilde X_k\to X_k$ 为 $\zeta_k$ 对应的 $\mathrm{O}(n-k)$-<span class="link local"><a href="./主丛.html" title="主齐性空间, 主丛 [主丛]">主丛</a></span>, 即 $n-k$ 阶向量丛的正交标架丛;</li>
 <li>一点 $\widetilde x \in \widetilde X_k$ 可视为 $x\in X_k$ 配备标架 $\alpha\colon (\zeta_k)_x \simeq \mathbb{R}^{n-k}$;</li>
 <li>通过 $\alpha$, 可将纤维 $p^{-1}(x)$ 视为余维 $\mathbb{R}^{n-k+1}$ 的 $\vec{X}'$-流形, 对应于对象 $E_{\widetilde x} \in \Omega^{k-1}\mathsf{Bord}^{\vec{X}'}_n$ (对应 $\widetilde x\mapsto E_{\widetilde x}$ 关于 $\mathrm{O}(n-k)$-作用等变).</li>
 </ul>
@@ -1997,15 +2002,16 @@ $$</li>
 <p><strong>注</strong>. 由于文献 (<span class="link local"><a href="./LurieCob.html" title="On the Classification of Topological Field Theories [LurieCob]">Lurie</a></span>, <span class="link local"><a href="./AyalaFrancisCob.html" title="The cobordism hypothesis [AyalaFrancisCob]">Ayala–Francis</a></span> 等) 记号不一 (尤其是指标含义不一), 此处使用的是一个和他们都不相同, 但看上去比较合理的记号.</p>
 <p>我们的指标 $k,n$ 有如下固定的含义:</p>
 <ul>
-<li>缠结范畴 $\mathsf{Tang}_k^{\mathbb E_n}$ 是 $\mathbb E_n$-幺半 $(\infty,k)$-范畴. 它是 $\mathsf{Tang}_k^V$ 在 $V = \mathbb{R}^n$ 的特殊情形, 一般地 $V$ 是个标架 $n$ 维流形.</li>
+<li>缠结范畴 $\mathsf{Tang}_k^{\mathbb{R}^n}$ 是 $\mathbb E_n$-幺半 $(\infty,k)$-范畴. 它是 $\mathsf{Tang}_k^V$ 在 $V = \mathbb{R}^n$ 的特殊情形, 一般地 $V$ 是个标架 $n$ 维流形.</li>
 </ul>
+<p>相关讲义: <span class="link local"><a href="./pre-tangle.html" title="Tangle Hypothesis [pre-tangle]">Tangle Hypothesis</a></span></p>
 <h2>陈述</h2>
 <h3>标架子流形</h3>
 <p>对于 $m\leq n$, 一个 $m$ 维流形 $M$ 带有 $n$-<span class="link local"><a href="./标架流形.html" title="标架流形 [标架流形]">标架</a></span> (即 $TM\oplus \mathbb{R}^{n-m}$ 的平凡化) 时, 我们可以将其 “微小加厚”, 当作标架 $n$ 维流形 $M\times D^{n-m}$. 这样思考的好处是: 当我们谈论标架带边流形的边界 (甚至边界的边界…) 时, 可将边界 “微小加厚”, 于是边界 (边界的边界) 与原流形是同维数的流形, 这样边界标架的相容性就变得完全直观了. 下面的定义都可以采用这一直观来理解.</p>
-<p><strong>定义</strong> (标架子流形, <span class="link local"><a href="./LurieCob.html" title="On the Classification of Topological Field Theories [LurieCob]">Lurie</a></span> 的定义 4.4.1). 设 $k,n$ 为自然数, $M$ 是 $m$ 维流形带有 $(n+k)$-标架 ($m \leq n+k$). 定义 $M$ 的 $k$-<strong>标架子流形</strong> (又称<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">标架缠结</a></span>) 为如下资料:</p>
+<p><strong>定义</strong> (标架子流形, <span class="link local"><a href="./LurieCob.html" title="On the Classification of Topological Field Theories [LurieCob]">Lurie</a></span> 的定义 4.4.1). 设 $k,n$ 为自然数, $M$ 是 $m$ 维流形带有 $(n+k)$-标架 ($m \leq n+k$, 但 $M$ 通过 “微小加厚” 当作标架 $n$ 维流形). 定义 $M$ 的 $k$-<strong></strong><span class="link local"><a href="./标架流形.html" title="标架流形 [标架流形]">标架子流形</a></span> (又称<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">标架缠结</a></span>) 为如下资料:</p>
 <ul>
-<li>余 $n$ 维子流形 $M_0\subset M$ (直观: $M_0$ 通过继承 $M$ 的 “微小加厚” 当作 $k$ 维流形, 余维数在加厚前后不变); 特别地, 当 $m&lt; n$ 时 $M_0 = \varnothing$;</li>
-<li>$M_0$ 的 Gauss 映射 $M_0\to\mathrm{Gr}_{n,n+k} = \mathrm{O}(n+k)/(\mathrm{O}(n)\times\mathrm{O}(k))$ 的一个零伦.</li>
+<li>余 $n$ 维子流形 $M_n \subset M$ (直观: $M_n$ 通过继承 $M$ 的 “微小加厚” 当作 $k$ 维流形, 余维数在加厚前后不变); 特别地, 当 $m&lt; n$ 时 $M_n = \varnothing$;</li>
+<li>$M_n$ 的 Gauss 映射 $M_n\to\mathrm{Gr}_{n,n+k} = \mathrm{O}(n+k)/(\mathrm{O}(n)\times\mathrm{O}(k))$ 的一个零伦.</li>
 </ul>
 <p><strong>注</strong>. 标架子流形的 “标架” <strong>不是</strong>切丛或法丛的平凡化, 也不是任何一个单独的向量丛的平凡化; 它是子丛作为一个丛映射的平凡化. 当余维数 $n$ 趋于 $\infty$ 时, $\mathrm{Gr}_{n,n+k}$ 的余极限为 $\mathbf{B}\mathrm{O}(k)$, 它退化到标架流形的 “标架”.</p>
 <p><strong>例</strong>. 如下是 $\mathbb{R}^{1+1}$ 的一个 $1$-标架子流形 ($n=k=1$):</p>
@@ -2018,57 +2024,73 @@ $$</li>
 这个整数可理解为丝带的缠绕数. 详见<span class="link local"><a href="./标架流形.html" title="标架流形 [标架流形]">标架流形</a></span>页面中的讨论.</p>
 <p><strong>注</strong>. 虽然叫做 $k$-标架子流形, 但在我看来它的余维数 $n$ 是一个更本质的量. 这个余维数 $n$ 正是定义 $\mathsf{Tang}_k^V$ 所用的 “背景流形” $V$ 的维数. 我认为另一件事情也和这个 $n$ 有关: 在<span class="link local"><a href="./notes-manifold-diagrams.html" title="高阶范畴的流形图示 [notes-manifold-diagrams]">流形图</a></span>中, 最高维区域表示对象, 而余 $n$ 维区域表示 $n$-态射.</p>
 <h3>缠结范畴</h3>
-<p>我们用 $\mathsf{Tang}_{k}^{\mathbb E_n}$ 表示如下的 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>:</p>
+<p>我们用 $\mathsf{Tang}_{k}^{\mathbb{R}^n}$ 表示如下的 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>:</p>
 <ul>
-<li>其对象为 $\mathbb{R}^n$ (或 $n$ 维圆盘 $D^n$) 中的 $k$-标架 $0$ 维紧子流形, 其上 $\mathbb E_n$-结构是直观的;</li>
-<li>其 $i\leq k$ 阶态射为 $\mathbb{R}^{i+n}$ 中的 $i$ 维 $k$-标架紧子流形;</li>
+<li>其对象为 $\mathbb{R}^n$ (带 $(n+k)$-标架) 中的 $k$-<span class="link local"><a href="./标架流形.html" title="标架流形 [标架流形]">标架</a></span> $0$ 维紧子流形, 其上 $\mathbb E_n$-结构是直观的;</li>
+<li>其 $i\leq k$ 阶态射为 $\mathbb{R}^{i+n}$ (注意仍带 $(n+k)$-标架) 中的 $i$ 维 $k$-标架紧子流形;</li>
 <li>其高于 $k$ 阶态射为<span class="link local"><a href="./同痕.html" title="同痕 [同痕]">同痕</a></span>.</li>
 </ul>
-<p>如下是 $\mathsf{Tang}_1^{\mathbb E_2}$ 中的一个 $1$-态射的示意 (未画出标架).</p>
+<p>如下是 $\mathsf{Tang}_1^{\mathbb{R}^2}$ 中的一个 $1$-态射的示意 (未画出标架).</p>
 <img src="/assets/tangle-Tang-1-E2.svg" alt="" width="250" style="display:block; margin:auto;">
 <h3>缠结假设的陈述</h3>
-<p><strong>命题</strong>. 范畴 $\mathsf{Tang}_{k}^{\mathbb E_n}$ 是一个<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>.</p>
-<p>等价的陈述是: 范畴 $\mathsf{Tang}_{k}^{\mathbb E_n}$ 是一个对象自由生成的<span class="link local"><a href="./刚性幺半范畴.html" title="刚性幺半范畴 [刚性幺半范畴]">刚性</a></span> <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>.
+<p><strong>命题</strong>. 范畴 $\mathsf{Tang}_{k}^{\mathbb{R}^n}$ 是一个<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的 <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>.</p>
+<p>等价的陈述是: 范畴 $\mathsf{Tang}_{k}^{\mathbb{R}^n}$ 是一个对象自由生成的<span class="link local"><a href="./刚性幺半范畴.html" title="刚性幺半范畴 [刚性幺半范畴]">刚性</a></span> <span class="link local"><a href="./En-代数.html" title="En-代数 [En-代数]">$\mathbb E_n$</a></span>-幺半 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>.
 这就是说, 对任意含对偶的 $\mathbb E_n$-幺半 $(\infty,k)$-范畴 $\mathcal C$, 有等价
 $$
-\mathsf{Fun}_{\mathbb E_n}(\mathsf{Tang}_k^{\mathbb E_n},\mathcal C) \simeq \mathcal C^{\simeq}.
+\mathsf{Fun}_{\mathbb E_n}(\mathsf{Tang}_k^{\mathbb{R}^n},\mathcal C) \simeq \mathcal C^{\simeq}.
 $$</p>
-<p><strong>例</strong>. $k=0$ 的情形: $\mathsf{Tang}_0^{\mathbb E_n}$ 是一个元素自由生成的 $\mathbb E_n$-幺半群. 它就是 $\mathbb{R}^n$ 上有限个互异点的<span class="link local"><a href="./构形空间.html" title="构形空间 [构形空间]">构形空间</a></span>.</p>
-<p><strong>例</strong>. 设 $n=k=1$; $\mathsf{Tang}_1^{\mathbb E_1}$ 是一个<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶对象</a></span>自由生成的幺半 $(\infty,1)$-范畴. 由前面关于 $\mathbb{R}$ 与 $\mathbb{R}^{2}$ 的 $1$-标架子流形的讨论, 我们知道</p>
+<p><strong>例</strong>. $k=0$ 的情形: $\mathsf{Tang}_0^{\mathbb{R}^n}$ 是一个元素自由生成的 $\mathbb E_n$-幺半群. 它就是 $\mathbb{R}^n$ 上有限个互异点的<span class="link local"><a href="./构形空间.html" title="构形空间 [构形空间]">构形空间</a></span>.</p>
+<p><strong>例</strong>. 设 $n=k=1$; $\mathsf{Tang}_1^{\mathbb{R}^1}$ 是一个<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶对象</a></span>自由生成的幺半 $(\infty,1)$-范畴. 由前面关于 $\mathbb{R}$ 与 $\mathbb{R}^{2}$ 的 $1$-标架子流形的讨论, 我们知道</p>
 <ul>
 <li>其对象为 $\mathbb{R}$ 中的 $1$-标架 $0$ 维紧子流形, 即 $\mathbb{R}$ 的有限子集每个元素带一个整数标记 (也就是整数的有限序列).</li>
 <li>带标记 $0$ 的点, 其左右对偶分别为带 $-1$ 和 $1$ 标记的点. $-1$ 和 $1$ 在这里并不同构. 一般地, $(a,b,c)$ 的右对偶是 $(c+1,b+1,a+1)$.</li>
 </ul>
 <img src="/assets/tangle-hypothesis-example-1.svg" alt="" width="450" style="display:block; margin:auto;">
-<p><strong>例</strong>. 设 $n=2$, $k=1$; $\mathsf{Tang}_1^{\mathbb E_2}$ 是一个可对偶对象自由生成的<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半 $(\infty,1)$-范畴</a></span>. 特别地, 给定辫幺半范畴 $\mathcal C$ 的<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶对象</a></span> $V$, 就能给出一个<span class="link local"><a href="./纽结.html" title="纽结 [纽结]">纽结不变量</a></span>, 称为 <span class="link local"><a href="./RTinv.html" title="Reshetikhin–Turaev 不变量 [RTinv]">Reshetikhin–Turaev 不变量</a></span>.</p>
+<p><strong>例</strong>. 设 $n=2$, $k=1$; $\mathsf{Tang}_1^{\mathbb{R}^2}$ 是一个可对偶对象自由生成的<span class="link local"><a href="./辫幺半范畴.html" title="辫幺半范畴 [辫幺半范畴]">辫幺半 $(\infty,1)$-范畴</a></span>. 特别地, 给定辫幺半范畴 $\mathcal C$ 的<span class="link local"><a href="./可对偶对象.html" title="对偶 [可对偶对象]">可对偶对象</a></span> $V$, 就能给出一个<span class="link local"><a href="./纽结.html" title="纽结 [纽结]">纽结不变量</a></span>, 称为 <span class="link local"><a href="./RTinv.html" title="Reshetikhin–Turaev 不变量 [RTinv]">Reshetikhin–Turaev 不变量</a></span>.</p>
 <h3>逆环版本</h3>
 <p>由于<span class="link local"><a href="./逆环假设.html" title="逆环假设 [逆环假设]">逆环假设</a></span>, 上述命题还有一个用 $(\infty,n+k)$-范畴
 $$
-\mathsf{Tang}_{k}^{(n)}
-:= \mathrm{B}^n \mathsf{Tang}_{k}^{\mathbb E_n}
+\mathbf{B}^n \mathsf{Tang}_{k}^{\mathbb{R}^n}
 $$
 陈述的版本. 这个 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n+k)$-范畴</a></span>可以描述如下:</p>
 <ul>
-<li>其 $i$ 阶态射为 $\mathbb{R}^{i}$ 中的余 $n$ 维带标架<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span> (特别地, $i&lt;n$ 阶态射唯一);</li>
+<li>其 $i$ 阶态射为 $\mathbb{R}^{i}$ (带 $(n+k)$-标架) 中的余 $n$ 维 $k$-标架<span class="link local"><a href="./缠结.html" title="缠结 [缠结]">缠结</a></span> (特别地, $i &lt; n$ 阶态射唯一);</li>
 <li>其高于 $n+k$ 阶态射为<span class="link local"><a href="./同痕.html" title="同痕 [同痕]">同痕</a></span>.</li>
 </ul>
-<p><strong>命题</strong>. 范畴 $\mathsf{Tang}_{k}^{(n)}$ 是一个基点的<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可伴随</a></span> $n$ 阶自同态所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n+k)$-范畴</a></span>.</p>
+<p><strong>命题</strong>. 范畴 $\mathbf{B}^n \mathsf{Tang}_{k}^{\mathbb{R}^n}$ 是一个基点的<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可伴随</a></span> $n$ 阶自同态所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的 <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,n+k)$-范畴</a></span>.</p>
 <h3>一般背景流形的版本</h3>
-<p>缠结范畴 $\mathsf{Tang}_k^{\mathbb E_n}$ 可视为范畴 $\mathsf{Tang}_k^{\mathbb E_V}$ 在 $V = \mathbb{R}^n$ 的特例. 其大致描述如下:</p>
+<p>缠结范畴 $\mathsf{Tang}_k^{\mathbb{R}^n}$ 可视为范畴 $\mathsf{Tang}_k^{V}$ 在 $V = \mathbb{R}^n$ 的特例. 其大致描述如下:</p>
 <ul>
-<li>$\mathsf{Tang}_k^{\mathbb E_V}$ 的对象为 $V$ 的 $0$ 维 $k$-标架紧子流形;</li>
-<li>一般地, $\mathsf{Tang}_k^{\mathbb E_V}$ 的 $i\leq k$ 阶态射为 $V\times\mathbb{R}^i$ 中的 $k$-标架紧子流形;</li>
+<li>$\mathsf{Tang}_k^{V}$ 的对象为 $V$ 的 $0$ 维 $k$-标架紧子流形;</li>
+<li>一般地, $\mathsf{Tang}_k^{V}$ 的 $i\leq k$ 阶态射为 $V\times\mathbb{R}^i$ 中的 $k$-标架紧子流形;</li>
 </ul>
-<p>很明显, $\mathsf{Tang}_k^{\mathbb E_V}$ 具有 <span class="link local"><a href="./E_M-算畴.html" title="E_M-算畴 [E_M-算畴]">$\mathbb E_V$</a></span>-结构.</p>
+<p>很明显, $\mathsf{Tang}_k^{V}$ 具有 <span class="link local"><a href="./E_M-算畴.html" title="E_M-算畴 [E_M-算畴]">$\mathbb E_V$</a></span>-结构.</p>
 <h3>与配边假设的关系</h3>
 <p><span class="link local"><a href="./配边范畴.html" title="配边范畴 [配边范畴]">配边范畴</a></span> $\mathsf{Bord}_k$ 是
-$\mathsf{Tang}_{k}^{\mathbb E_n}$
+$\mathsf{Tang}_{k}^{\mathbb{R}^n}$
 “在 $n \geq \infty$ 的极限”; 人们也称其为<strong>稳定</strong>情形. 此时 (至少直观上) 缠结假设趋向于<span class="link local"><a href="./配边假设.html" title="配边假设 [配边假设]">配边假设</a></span>: $\mathsf{Bord}_k$ 是一个<span class="link local"><a href="./完全可对偶对象.html" title="完全可对偶对象 [完全可对偶对象]">完全可对偶对象</a></span>所<span class="link local"><a href="./自由-遗忘伴随.html" title="自由–遗忘伴随 [自由-遗忘伴随]">自由</a></span>生成的<span class="link local"><a href="./对称幺半范畴.html" title="对称幺半范畴 [对称幺半范畴]">对称幺半</a></span> <span class="link local"><a href="./∞-n-范畴.html" title="(∞,n)-范畴 [∞-n-范畴]">$(\infty,k)$-范畴</a></span>.</p>
+<h3>与带奇点配边假设的关系</h3>
+<p>简要介绍 <span class="link local"><a href="./LurieCob.html" title="On the Classification of Topological Field Theories [LurieCob]">Lurie</a></span> 的思路.</p>
+<p>考虑 $(n+k)$ 维奇点数据 $\vec{X} = (X_0 = *,X_n = *)$, $E_n = S^{n-1}$. 那么 $\vec{X}$-流形相当于 $(n+k)$-<span class="link local"><a href="./标架流形.html" title="标架流形 [标架流形]">标架流形</a></span> $M$ 与余 $n$ 维的 $k$-<span class="link local"><a href="./标架流形.html" title="标架流形 [标架流形]">标架子流形</a></span> $M_n\subset M$.</p>
+<p>考虑<span class="link local"><a href="./cob-sing.html" title="带奇点配边假设 [cob-sing]">带奇点配边范畴</a></span> $\mathsf{Bord}_{n+k}^{\vec{X}}$, 其 $(i\leq n+k)$-态射为 $i$ 维 $\vec{X}$-流形, 即 $i$ 维 $(n+k)$-标架流形带余 $n$ 维 $k$-标架子流形.
+通过遗忘那些余 $n$ 维子流形有到 $\mathsf{Bord}_{n+k}^{\mathrm{fr}}$ 的函子
+$$
+r\colon \mathsf{Bord}_{n+k}^{\vec{X}}\to \mathsf{Bord}_{n+k}^{\mathrm{fr}}.
+$$
+它是 “包含” 函子 $i\colon \mathsf{Bord}_{n+k}^{\mathrm{fr}} \to \mathsf{Bord}_{n+k}^{\vec{X}}$ 的收缩.</p>
+<p>同时, 将 $\mathbf{B}^n\mathsf{Tang}_k^{\mathbb{R}^n}$ 的 $(i\leq n+k)$-态射 (即 $\mathbb{R}^i$ 的余 $n$ 维 $k$-标架子流形) 视为 $i$ 维 $\vec{X}$-流形, 有函子
+$$
+\mathbf{B}^n\mathsf{Tang}_k^{\mathbb{R}^n}\to \mathsf{Bord}_{n+k}^{\vec{X}}.
+$$</p>
+<p>对任意 Morita 完备的含对偶 $(\infty,n+k)$-范畴 $\mathcal C$ 以及基点 $1\in\mathcal C$, 有函子 $Z_0\colon \mathsf{Bord}_{n+k}^{\mathrm{fr}} \to \mathsf{Cat}_{(\infty,n+k)}^{\mathrm{Adj},*}$ 使得 $Z_0(*) = (\mathcal C,1)$. 若又给定 $\eta\in\Omega^n\mathcal C$, 则<span class="link local"><a href="./cob-sing.html" title="带奇点配边假设 [cob-sing]">带奇点配边假设</a></span>给出函子 $Z\colon \mathsf{Bord}_{n+k}^{\vec{X}}\to \mathsf{Cat}_{(\infty,n+k)}^{\mathrm{Adj},*}$
+将 $n$-态射
+$({*}\in\mathbb{R}^n)$ 对应到 $\eta$.</p>
+<p>而函子 $Z$ 将 $\mathbf{B}^n\mathsf{Tang}_k^{\mathbb{R}^n}$ 映射到 $\mathsf{Cat}_{(\infty,n+k)}^{\mathrm{Adj},*}$ 落在 $\mathcal C\in\mathsf{Cat}_{(\infty,n+k)}^{\mathrm{Adj}}$ 上的纤维中. 当 $\mathcal C$ Morita 完备时这个纤维等于 $(\infty,n+k)$-范畴 $\mathcal C$ 自身.</p>
 <h2>推论</h2>
 <h3>底层生象</h3>
-<p><strong>命题</strong>. $\mathsf{Tang}_1^{\mathbb E_n}$ 的底层生象是一个点自由生成的 $\mathbb E_n$-群 $\Omega^{n} S^n$. 等价地说, 对任意 $\mathbb E_n$-群 $G$,
+<p><strong>命题</strong>. $\mathsf{Tang}_1^{\mathbb{R}^n}$ 的底层生象是一个点自由生成的 $\mathbb E_n$-群 $\Omega^{n} S^n$. 等价地说, 对任意 $\mathbb E_n$-群 $G$,
 $$
-\operatorname{Hom}_{\mathsf{Grp}_{\mathbb E_n}}(\mathsf{Tang}_1^{\mathbb E_n},G) \simeq G.
+\operatorname{Hom}_{\mathsf{Grp}_{\mathbb E_n}}(\mathsf{Tang}_1^{\mathbb{R}^n},G) \simeq G.
 $$</p>
 </details></section><section class="block" data-taxon=""><details ><summary id="范畴化"><header><h1><span class="taxon"></span>范畴化 <a class="slug" href="./范畴化.html">[范畴化]</a></h1><div class="metadata"><ul><li class="meta-item">观念</li><li class="meta-item"><span class="link local"><a href="./SimplicialCat.html" title="单纯猫 [SimplicialCat]">SimplicialCat</a></span></li></ul></div></header></summary>
 <p><strong>范畴化</strong> (categorification) 在数学上有多种含义, 但每种范畴化都是提升范畴层级的过程. 所谓范畴层级大致就是指 <span class="link local"><a href="./n-r-范畴.html" title="(n,r)-范畴 [n-r-范畴]">$(n,r)$-范畴</a></span>中的整数 $r$.</p>
